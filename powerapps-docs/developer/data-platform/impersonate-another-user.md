@@ -4,15 +4,11 @@ description: "Use impersonation to execute business logic on behalf of another M
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -48,12 +44,12 @@ More information: [Build web applications using Server-to-Server (S2S) authentic
 
 ## Impersonate another user using the Web API
 
-To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Azure Active Directory (AAD) object id before sending the request to the web service. The user's AAD object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
+To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Microsoft Entra ID object id before sending the request to the web service. The user's Microsoft Entra ID object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
 
 More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
 
 
-## Impersonate another user using the Organization service
+## Impersonate another user using the SDK for .NET
 
 To impersonate another user, set the `CallerId` property to the Guid value of the impersonated user. The following classes that implement <xref:Microsoft.Xrm.Sdk.IOrganizationService> include this property.
 

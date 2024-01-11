@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -127,6 +125,7 @@ In the following example, we used four text labels to display both the area and 
 
 - [Use data from Excel to insert pins](./geospatial-map-excel.md)
 - [Add info cards to pins](./geospatial-map-infocards.md)
+- [Show routes between waypoints](geospatial-map-routing.md)
 
 ## Other geospatial controls
 

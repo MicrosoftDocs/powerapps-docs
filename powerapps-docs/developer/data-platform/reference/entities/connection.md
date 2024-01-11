@@ -1,18 +1,14 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Connection table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Connection table/entity reference
@@ -25,20 +21,20 @@ Relationship between two entities.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/connections<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/connections<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /connections(*connectionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /connections<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /connections(*connectionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /connections(*connectionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /connections<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /connections(*connectionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /connections(*connectionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -228,7 +224,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|record1id|
 |RequiredLevel|None|
-|Targets|account,activitypointer,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
+|Targets|account,activitypointer,adx_invitation,adx_inviteredemption,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,mspp_publishingstatetransitionrule,mspp_shortcut,mspp_website,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
 |Type|Lookup|
 
 
@@ -269,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|record2id|
 |RequiredLevel|None|
-|Targets|account,activitypointer,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
+|Targets|account,activitypointer,adx_invitation,adx_inviteredemption,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,mspp_publishingstatetransitionrule,mspp_shortcut,mspp_website,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
 |Type|Lookup|
 
 
@@ -855,6 +851,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
+|10252|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10253|Invite Redemption|Holds information about the redemption of an invite.|
+|10272|Publishing State Transition Rule||
+|10274|Shortcut||
+|10286|Website|Web Portal|
 
 
 
@@ -927,6 +928,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
+|10252|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10253|Invite Redemption|Holds information about the redemption of an invite.|
+|10272|Publishing State Transition Rule||
+|10274|Shortcut||
+|10286|Website|Web Portal|
 
 
 
@@ -1132,6 +1138,16 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [recurringappointmentmaster_connections2](#BKMK_recurringappointmentmaster_connections2)
 - [territory_connections1](#BKMK_territory_connections1)
 - [territory_connections2](#BKMK_territory_connections2)
+- [adx_invitation_connections1](#BKMK_adx_invitation_connections1)
+- [adx_invitation_connections2](#BKMK_adx_invitation_connections2)
+- [adx_inviteredemption_connections1](#BKMK_adx_inviteredemption_connections1)
+- [adx_inviteredemption_connections2](#BKMK_adx_inviteredemption_connections2)
+- [mspp_publishingstatetransitionrule_connections1](#BKMK_mspp_publishingstatetransitionrule_connections1)
+- [mspp_publishingstatetransitionrule_connections2](#BKMK_mspp_publishingstatetransitionrule_connections2)
+- [mspp_shortcut_connections1](#BKMK_mspp_shortcut_connections1)
+- [mspp_shortcut_connections2](#BKMK_mspp_shortcut_connections2)
+- [mspp_website_connections1](#BKMK_mspp_website_connections1)
+- [mspp_website_connections2](#BKMK_mspp_website_connections2)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -1334,8 +1350,68 @@ See the [territory_connections1](territory.md#BKMK_territory_connections1) one-t
 
 See the [territory_connections2](territory.md#BKMK_territory_connections2) one-to-many relationship for the [territory](territory.md) table/entity.
 
+### <a name="BKMK_adx_invitation_connections1"></a> adx_invitation_connections1
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_connections1](adx_invitation.md#BKMK_adx_invitation_connections1) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_invitation_connections2"></a> adx_invitation_connections2
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_connections2](adx_invitation.md#BKMK_adx_invitation_connections2) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_connections1"></a> adx_inviteredemption_connections1
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_connections1](adx_inviteredemption.md#BKMK_adx_inviteredemption_connections1) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_connections2"></a> adx_inviteredemption_connections2
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_connections2](adx_inviteredemption.md#BKMK_adx_inviteredemption_connections2) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_connections1"></a> mspp_publishingstatetransitionrule_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_connections1](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_connections1) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_connections2"></a> mspp_publishingstatetransitionrule_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_connections2](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_connections2) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_connections1"></a> mspp_shortcut_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_connections1](mspp_shortcut.md#BKMK_mspp_shortcut_connections1) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_connections2"></a> mspp_shortcut_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_connections2](mspp_shortcut.md#BKMK_mspp_shortcut_connections2) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_connections1"></a> mspp_website_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_connections1](mspp_website.md#BKMK_mspp_website_connections1) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
+### <a name="BKMK_mspp_website_connections2"></a> mspp_website_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_connections2](mspp_website.md#BKMK_mspp_website_connections2) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.connection?text=connection EntityType" />

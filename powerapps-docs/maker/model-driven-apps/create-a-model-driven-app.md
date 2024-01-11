@@ -1,17 +1,14 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 05/19/2022
-
+ms.date: 10/26/2023
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
-# Create a model-driven app that has an account table page (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create a model-driven app that has an account table page
 
 Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 
@@ -33,7 +30,8 @@ Select the environment you want, or go to the [Power Platform admin center](http
 
 We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
-1. Select **Solutions** on the left navigation pane, and then select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
+1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
 
 1. Enter a **Display name** for your solution, such as **Power Apps Training**. Next, you add the account table that will be included in your model-driven app.
 
@@ -68,11 +66,10 @@ Next, you add a new page to the model-driven app.
 
    The contact form and view appear in the pages menu.
 
-1. Select **Contact view**, and then select **Add views**.
-
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
-
-1. Select the views that you want to add.
+1. Select **Contact views** to display the table views and charts right pane:
+   - To remove a view, under **In this app** next to the view your want to remove select **...** > **Remove**. 
+   - To add a view, under **Not in this app** next to the view you want to add select **...** > **+ Add**.
+   - To edit a view, next to the view select **...** > **Edit** or **Edit in new tab**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
@@ -80,9 +77,28 @@ Next, you add a new page to the model-driven app.
 
 ## Publish your app
 
-1. On the app designer command bar, select **Publish**.
+On the app designer command bar, select **Publish**.
 
 After publishing the app, it's ready for you to run or share with others.
+
+### Create an app description with Copilot (preview)
+
+[This section is prerelease documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability is in process of rolling out, and may not be available in your region yet.
+> - This capability  may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+
+If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
+
+When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** if you want to replace your current description or, if you do not have a description, Copilot will generate one for you.
+
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
 
 ## Run your app on a desktop computer
 

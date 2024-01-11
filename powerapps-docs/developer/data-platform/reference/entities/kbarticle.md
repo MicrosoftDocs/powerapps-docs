@@ -1,18 +1,14 @@
 ---
 title: "Article (KbArticle)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Article (KbArticle)  table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Article (KbArticle)  table/entity reference
@@ -25,19 +21,19 @@ Structured content that is part of the knowledge base.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/kbarticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST /kbarticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /kbarticles(*kbarticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /kbarticles(*kbarticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveByTopIncidentProductKbArticle||<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentProductKbArticleRequest>|
-|RetrieveByTopIncidentSubjectKbArticle|<xref href="Microsoft.Dynamics.CRM.RetrieveByTopIncidentSubjectKbArticle?text=RetrieveByTopIncidentSubjectKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentSubjectKbArticleRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/kbarticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SearchByBodyKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByBodyKbArticle?text=SearchByBodyKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByBodyKbArticleRequest>|
-|SearchByKeywordsKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByKeywordsKbArticle?text=SearchByKeywordsKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByKeywordsKbArticleRequest>|
-|SearchByTitleKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByTitleKbArticle?text=SearchByTitleKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByTitleKbArticleRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|RetrieveByTopIncidentSubjectKbArticle|<xref:Microsoft.Dynamics.CRM.RetrieveByTopIncidentSubjectKbArticle?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentSubjectKbArticleRequest>|
+|RetrieveMultiple|GET /kbarticles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SearchByBodyKbArticle|<xref:Microsoft.Dynamics.CRM.SearchByBodyKbArticle?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SearchByBodyKbArticleRequest>|
+|SearchByKeywordsKbArticle|<xref:Microsoft.Dynamics.CRM.SearchByKeywordsKbArticle?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SearchByKeywordsKbArticleRequest>|
+|SearchByTitleKbArticle|<xref:Microsoft.Dynamics.CRM.SearchByTitleKbArticle?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SearchByTitleKbArticleRequest>|
+|SetState|PATCH /kbarticles(*kbarticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /kbarticles(*kbarticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -61,6 +57,12 @@ Structured content that is part of the knowledge base.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [adx_averagerating](#BKMK_adx_averagerating)
+- [adx_averagerating_int](#BKMK_adx_averagerating_int)
+- [adx_downvotes](#BKMK_adx_downvotes)
+- [adx_ratingcount](#BKMK_adx_ratingcount)
+- [adx_ratingsum](#BKMK_adx_ratingsum)
+- [adx_upvotes](#BKMK_adx_upvotes)
 - [ArticleXml](#BKMK_ArticleXml)
 - [Comments](#BKMK_Comments)
 - [Description](#BKMK_Description)
@@ -70,12 +72,121 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [KbArticleTemplateId](#BKMK_KbArticleTemplateId)
 - [KeyWords](#BKMK_KeyWords)
 - [LanguageCode](#BKMK_LanguageCode)
+- [msa_publishtoweb](#BKMK_msa_publishtoweb)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
 - [SubjectId](#BKMK_SubjectId)
 - [Title](#BKMK_Title)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
+
+
+### <a name="BKMK_adx_averagerating"></a> adx_averagerating
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The average rating of this article.|
+|DisplayName|Average Rating|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_averagerating|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Double|
+
+
+### <a name="BKMK_adx_averagerating_int"></a> adx_averagerating_int
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The average rating of this article, rounded to a whole number (positive integer).|
+|DisplayName|Average Rating (Whole Number)|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_averagerating_int|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_adx_downvotes"></a> adx_downvotes
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The number of negative vote ratings applied to this article.|
+|DisplayName|Downvotes|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_downvotes|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_adx_ratingcount"></a> adx_ratingcount
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Rating Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_ratingcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_adx_ratingsum"></a> adx_ratingsum
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The sum of the values of all ratings applied to this article.|
+|DisplayName|Rating Sum|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_ratingsum|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_adx_upvotes"></a> adx_upvotes
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The number of positive vote ratings applied to this article.|
+|DisplayName|Upvotes|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_upvotes|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_ArticleXml"></a> ArticleXml
@@ -217,6 +328,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|0|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_msa_publishtoweb"></a> msa_publishtoweb
+
+**Added by**: Power Pages Runtime Core Dependencies Solution
+
+|Property|Value|
+|--------|-----|
+|Description|If set to Yes, the article will be visible and searchable on portals connected to this organization.|
+|DisplayName|Publish to Web|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msa_publishtoweb|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msa_publishtoweb Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -970,9 +1106,38 @@ See the [TransactionCurrency_KbArticle](transactioncurrency.md#BKMK_TransactionC
 ### <a name="BKMK_lk_kbarticlebase_createdby"></a> lk_kbarticlebase_createdby
 
 See the [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbarticlebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the KbArticle table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_adx_kbarticle_kbarticle"></a> adx_kbarticle_kbarticle
+
+IntersectEntityName: adx_kbarticle_kbarticle<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|kbarticleidone|
+|IsCustomizable|True|
+|LogicalName|kbarticle|
+|NavigationPropertyName|adx_kbarticle_kbarticle|
+|AssociatedMenuConfiguration|Behavior: UseLabel<br />Group: Details<br />Label: Related Articles<br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|kbarticle|
+|IntersectAttribute|kbarticleidtwo|
+|NavigationPropertyName|adx_kbarticle_kbarticle|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.kbarticle?text=kbarticle EntityType" />

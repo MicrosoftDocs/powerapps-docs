@@ -1,18 +1,14 @@
 ---
 title: "Recurring Appointment (RecurringAppointmentMaster)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster)  table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Recurring Appointment (RecurringAppointmentMaster)  table/entity reference
@@ -25,25 +21,25 @@ The Master appointment of a recurring appointment series.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|AddRecurrence|<xref href="Microsoft.Dynamics.CRM.AddRecurrence?text=AddRecurrence Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddRecurrenceRequest>|
-|Assign|PATCH [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Book|<xref href="Microsoft.Dynamics.CRM.Book?text=Book Action" />|<xref:Microsoft.Crm.Sdk.Messages.BookRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/recurringappointmentmasters<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateInstance|<xref href="Microsoft.Dynamics.CRM.CreateInstance?text=CreateInstance Action" />|<xref:Microsoft.Crm.Sdk.Messages.CreateInstanceRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|DeleteOpenInstances|<xref href="Microsoft.Dynamics.CRM.DeleteOpenInstances?text=DeleteOpenInstances Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteOpenInstancesRequest>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Reschedule|<xref href="Microsoft.Dynamics.CRM.Reschedule?text=Reschedule Action" />|<xref:Microsoft.Crm.Sdk.Messages.RescheduleRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|AddRecurrence|<xref:Microsoft.Dynamics.CRM.AddRecurrence?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddRecurrenceRequest>|
+|Assign|PATCH /recurringappointmentmasters(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Book|<xref:Microsoft.Dynamics.CRM.Book?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.BookRequest>|
+|Create|POST /recurringappointmentmasters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateInstance|<xref:Microsoft.Dynamics.CRM.CreateInstance?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CreateInstanceRequest>|
+|Delete|DELETE /recurringappointmentmasters(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|DeleteOpenInstances|<xref:Microsoft.Dynamics.CRM.DeleteOpenInstances?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteOpenInstancesRequest>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Reschedule|<xref:Microsoft.Dynamics.CRM.Reschedule?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RescheduleRequest>|
+|Retrieve|GET /recurringappointmentmasters(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /recurringappointmentmasters<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /recurringappointmentmasters(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /recurringappointmentmasters(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -912,7 +908,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -2078,6 +2074,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_recurringappointmentmaster_modifiedonbehalfby](#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby)
 - [user_recurringappointmentmaster](#BKMK_user_recurringappointmentmaster)
 - [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
+- [adx_invitation_RecurringAppointmentMasters](#BKMK_adx_invitation_RecurringAppointmentMasters)
+- [mspp_adplacement_RecurringAppointmentMasters](#BKMK_mspp_adplacement_RecurringAppointmentMasters)
+- [mspp_pollplacement_RecurringAppointmentMasters](#BKMK_mspp_pollplacement_RecurringAppointmentMasters)
+- [mspp_publishingstatetransitionrule_RecurringAppointmentMasters](#BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters)
+- [mspp_redirect_RecurringAppointmentMasters](#BKMK_mspp_redirect_RecurringAppointmentMasters)
+- [mspp_shortcut_RecurringAppointmentMasters](#BKMK_mspp_shortcut_RecurringAppointmentMasters)
+- [mspp_website_RecurringAppointmentMasters](#BKMK_mspp_website_RecurringAppointmentMasters)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
@@ -2140,8 +2143,50 @@ See the [user_recurringappointmentmaster](systemuser.md#BKMK_user_recurringappoi
 
 See the [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
+### <a name="BKMK_adx_invitation_RecurringAppointmentMasters"></a> adx_invitation_RecurringAppointmentMasters
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_RecurringAppointmentMasters](adx_invitation.md#BKMK_adx_invitation_RecurringAppointmentMasters) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_RecurringAppointmentMasters"></a> mspp_adplacement_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_RecurringAppointmentMasters](mspp_adplacement.md#BKMK_mspp_adplacement_RecurringAppointmentMasters) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_RecurringAppointmentMasters"></a> mspp_pollplacement_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_RecurringAppointmentMasters](mspp_pollplacement.md#BKMK_mspp_pollplacement_RecurringAppointmentMasters) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters"></a> mspp_publishingstatetransitionrule_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_RecurringAppointmentMasters](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_RecurringAppointmentMasters"></a> mspp_redirect_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_RecurringAppointmentMasters](mspp_redirect.md#BKMK_mspp_redirect_RecurringAppointmentMasters) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_RecurringAppointmentMasters"></a> mspp_shortcut_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_RecurringAppointmentMasters](mspp_shortcut.md#BKMK_mspp_shortcut_RecurringAppointmentMasters) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_RecurringAppointmentMasters"></a> mspp_website_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_RecurringAppointmentMasters](mspp_website.md#BKMK_mspp_website_RecurringAppointmentMasters) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.recurringappointmentmaster?text=recurringappointmentmaster EntityType" />

@@ -1,9 +1,8 @@
 ---
 title: Code Element | Microsoft Docs
 description: Refers to the path where the resource files are located.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

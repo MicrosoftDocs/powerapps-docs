@@ -1,20 +1,18 @@
 ---
-title: "Supported customizations for Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Supported customizations for Microsoft Dataverse" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
-ms.date: 03/11/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "shmcarth" # GitHub ID
+ms.collection: get-started
+ms.date: 09/02/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: shmcarth # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Supported customizations for Dataverse
@@ -23,7 +21,7 @@ You can customize Microsoft Dataverse by using tools that are available in Power
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Dataverse. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com are supported, but might not be upgradable.
+Topics covered in technical articles published on Microsoft sites such as Microsoft Learn are supported, but might not be upgradable.
 
 ## Customizations using Power Apps
 
@@ -49,7 +47,7 @@ The documentation on this site for developers, technical articles, and sample co
 
 ### Dataverse web services
 
-Use of the web services are fully supported. This includes: Web API, SDK API, Organization service, Discovery service, and the Organization Data service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Table columns may also change in future versions.
+Use of the web services are fully supported. This includes: Web API, Organization service, and Discovery service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Table columns may also change in future versions.
 
 ### Solution file
 
@@ -110,7 +108,7 @@ The following is a list of unsupported action types that are frequently asked ab
     - Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll
     - Microsoft.Xrm.Tooling.WebResourceUtility.dll
 
-- The use of application programming interfaces (APIs) other than the documented APIs in the web services: SDK API, Web API, Organization service, Deployment service, Discovery service, Organization Data service.
+- The use of application programming interfaces (APIs) other than the documented APIs in the web services: Web API, SDK for .NET, Deployment service, Discovery service, Organization Data service.
 
 - Plug-in and workflow assemblies must contain all the necessary logic within the respective DLL. Plugins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 

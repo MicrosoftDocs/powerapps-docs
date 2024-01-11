@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -49,6 +47,7 @@ When the user selects a pin, an info card shows the fields you selected.
 ## Other interactive map features
 
 - [Use data from Excel to insert pins](./geospatial-map-excel.md)
+- [Show routes between waypoints](geospatial-map-routing.md)
 - [Draw and insert shapes onto maps](./geospatial-map-draw-shapes.md)
 
 ## Other geospatial controls

@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
-manager: "jday" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with Quick Find’s search item limit

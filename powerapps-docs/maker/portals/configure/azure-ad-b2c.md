@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 05/24/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -17,7 +17,10 @@ contributors:
 
 # Customize the Azure AD B2C user interface for portals
 
-Azure Active Directory B2C (Azure AD B2C) supports user interface customization for sign-up and sign-in experience. With this feature, you can configure Azure AD B2C tenant with a custom sign-up and sign-in page created inside your portal. In this article, you'll learn about how to create, and configure a custom sign-up/sign-in web page with sample HTML in portals for use with Azure AD B2C authentication.
+
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
+
+Azure AD B2C supports user interface customization for sign-up and sign-in experience. With this feature, you can configure Azure AD B2C tenant with a custom sign-up and sign-in page created inside your portal. In this article, you'll learn about how to create, and configure a custom sign-up/sign-in web page with sample HTML in portals for use with Azure AD B2C authentication.
 
 > [!NOTE]
 > These instructions also let you configure the Azure AD B2C user interface for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
@@ -421,7 +424,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. If not already, select **Overview** from the left pane. 
 
-1. From the right middle section of the screen, select **Azure AD B2C Settings** for the B2C tenant. <br> This action opens B2C tenant in a separate browser tab.
+1. From the right middle section of the screen, select **Azure Active Directory B2C Settings** for the B2C tenant. <br /> This action opens B2C tenant in a separate browser tab.
 
 1. In the B2C tenant browser tab, under **Policies** in the left pane, select **User flows**.
 
@@ -437,8 +440,8 @@ Your Azure AD B2C tenant is now configured to use the custom page for sign-up an
 
 ### See also
 
-[Configure the Azure Active Directory B2C provider (preview)](configure-azure-ad-b2c-provider.md) <br>
-[Configure the Azure Active Directory B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
-[Customize the user interface with HTML templates in Azure Active Directory B2C](/azure/active-directory-b2c/customize-ui-with-html)
+[Configure the Azure AD B2C provider (preview)](configure-azure-ad-b2c-provider.md) <br>
+[Configure the Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
+[Customize the user interface with HTML templates in Azure AD B2C](/azure/active-directory-b2c/customize-ui-with-html)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

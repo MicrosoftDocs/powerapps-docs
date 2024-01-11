@@ -17,13 +17,9 @@ ms.assetid: 7c5aa1c3-bde9-43f1-a369-fdcdbf14dec0
 caps.latest.revision: 33
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Map table columns
  
@@ -56,6 +52,8 @@ When you map table columns for a 1:N table relationship certain items of data fr
 > These mappings aren’t applied to related rows created using a workflow or dialog process. They aren’t automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest)) to create a new row using available mappings. 
 > 
 > These mappings aren't applied for new related table forms that are opened when an app does not have an active network connection to Dataverse, except for parent lookup fields. 
+> 
+> Field mapping between tables isn’t supported when you’re using an app in offline mode. For more information, see the limitations listed in [Mobile offline capabilities and limitations](../../mobile/offline-capabilities.md#limitations).
 
 ## Open solution explorer
 
@@ -98,7 +96,7 @@ The following rules show what kinds of data can be mapped.
 - The target column can’t be mapped to another column already.  
 - The source column must be visible on the form.  
 - The target column must be a column that a user can enter data into.  
-- Address ID values can’t be mapped.
+- Address ID values or columns of type partylist can’t be mapped.
 - If you map to or from a column that isn’t displayed on a form, the mapping won't be done until the column is added to a form.
 - If the columns are choices, the integer values for each option should be identical.  
   

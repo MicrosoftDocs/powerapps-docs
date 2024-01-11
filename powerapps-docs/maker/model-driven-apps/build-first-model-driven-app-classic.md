@@ -2,24 +2,23 @@
 title: Build your first model-driven app from scratch with Power Apps | Microsoft Docs
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
-
-ms.topic: get-started-article
+ms.topic: get-started
 ms.component: model
-ms.date: 04/14/2021
+ms.date: 10/17/2023
 ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Build your first model-driven app using the classic designer
 
-
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
 
 In this article, you build a straightforward model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 

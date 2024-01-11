@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/18/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Enable consistent experience across sessions using LoadData and SaveData functions
@@ -49,7 +49,7 @@ The new team gets created and is listed under the Teams tab.
 
 ![Create a new Team](media/consistent-experience-across-sessions/create-a-new-team-1.gif "Create a new Team")
 
-## Create a Power App in Teams
+## Create a Power Apps app in Teams
 
 To create a Power Apps app in teams, we need to open Power Apps Studio in Teams as shown below.
 
@@ -73,7 +73,7 @@ To create a Power Apps app in teams, we need to open Power Apps Studio in Teams 
 
 1. Enter a name for the app **Persistent session example** app, and select **Save**.
 
-    ![Save a Power App in Teams](media/consistent-experience-across-sessions/create-a-new-team-5.png "Save a Power App in Teams")
+    ![Save a Power Apps app in Teams](media/consistent-experience-across-sessions/create-a-new-team-5.png "Save a Power Apps app in Teams")
 
     The app gets created with a gallery.
 
@@ -109,7 +109,7 @@ To create a Power Apps app in teams, we need to open Power Apps Studio in Teams 
 
 1. Select **Publish to Teams**.
 
-    ![Select  the Power App in Teams](media/consistent-experience-across-sessions/publish-the-power-app-in-microsoft-teams-1.png)
+    ![Select  the Power Apps app in Teams](media/consistent-experience-across-sessions/publish-the-power-app-in-microsoft-teams-1.png)
 
 1. Select **Next**.
 
@@ -291,7 +291,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
 ## How we use SaveData and LoadData in the Inspection app
 
-In the Inspection sample app, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
+In the Inspection sample app template, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
 
 ## Considerations
 
@@ -301,18 +301,5 @@ In Dataverse for Teams, there are some limits to the SaveData() and LoadData() c
 - Doesn't work in a browser.
 - Apps in mobile are limited by the amount of local storage available to the app.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

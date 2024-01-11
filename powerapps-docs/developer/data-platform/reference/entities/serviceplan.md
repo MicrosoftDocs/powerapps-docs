@@ -1,18 +1,14 @@
 ---
 title: "ServicePlan table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ServicePlan table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ServicePlan table/entity reference
@@ -27,9 +23,9 @@ Service Plan
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Retrieve|GET /serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 
 ## Properties
 
@@ -836,6 +832,9 @@ See the [lk_serviceplan_modifiedonbehalfby](systemuser.md#BKMK_lk_serviceplan_mo
 
 Relationship details provided where the ServicePlan table is the first table in the relationship. Listed by **SchemaName**.
 
+- [serviceplan_appmodule](#BKMK_serviceplan_appmodule)
+- [serviceplan_customcontrol](#BKMK_serviceplan_customcontrol)
+
 
 ### <a name="BKMK_serviceplan_appmodule"></a> serviceplan_appmodule
 
@@ -860,8 +859,31 @@ IntersectEntityName: serviceplanappmodules<br />
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
 
+### <a name="BKMK_serviceplan_customcontrol"></a> serviceplan_customcontrol
+
+IntersectEntityName: serviceplancustomcontrol<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|serviceplanid|
+|IsCustomizable|False|
+|LogicalName|serviceplan|
+|NavigationPropertyName|serviceplan_customcontrol_association|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|customcontrol|
+|IntersectAttribute|customcontrolid|
+|NavigationPropertyName|serviceplan_customcontrol_association|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.serviceplan?text=serviceplan EntityType" />

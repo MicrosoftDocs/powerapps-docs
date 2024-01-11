@@ -4,29 +4,27 @@ description: Learn about how to share canvas apps by giving other users in your 
 author: alaug
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 07/08/2022
+ms.reviewer: mkaur
+ms.date: 05/08/2023
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
   - msftsamperl
 ---
 # Share a canvas app with your organization
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Microsoft Entra ID. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
 
 ## Prerequisites
 
-Before you share an app, you must [save it to the cloud](save-publish-app.md#save-changes-to-an-app) (not locally) and then [publish](save-publish-app.md#publish-an-app) it.
+Before you share an app, you must [save it](save-publish-app.md) (not locally) and then [publish](save-publish-app.md) it.
 
 - Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. Select **Settings** > specify a name, and then enter a description.
 
@@ -54,7 +52,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     ![Share an app.](./media/share-app/share-app.png "Share an app")
 
-1. Specify by name or alias the users or security groups in Azure AD with whom you want to share the app.
+1. Specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
 
     - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to "Org apps".
 
@@ -66,6 +64,13 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a group outside your organization.
+
+1. If your app contains premium components, such as a map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+
+    :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
+    
+    > [!Note]
+    > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
@@ -100,10 +105,11 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 
-    - If a user selects the link on a mobile device, the app opens in Power Apps Mobile.
-    - If a user selects the link on a desktop computer, the app opens in a browser.
+    - If a user selects the **Open the app** link on a mobile device, the app opens in Power Apps Mobile.
+    - If a user selects the **Open the app** link on a desktop computer, the app opens in a browser.
+    - If a user selects the **Microsoft Teams** link, the app opens in Microsoft Teams.
 
-    Co-owners who receive an invitation get another link that opens the app for editing in Power Apps Studio.
+    If you selected **Co-owner** while sharing, the recipients will see a link for **Power Apps Studio** that will open the app for editing using Power Apps Studio.
 
 <!--markdownlint-disable MD036-->
 **To change permissions for a user or a security group**
@@ -111,11 +117,41 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 - To allow co-owners to run the app but no longer edit or share it, clear the **Co-owner** check box.
 - To stop sharing the app with that user or group, select the **Remove** (x) icon.
 
+## Share apps using Teams
+
+You can share a link to your app in a Teams chat. The user that you share the app with needs to be on the same tenant and have access to the app that you're sharing.
+
+> [!NOTE]
+> - To add canvas apps to Teams using the web player:
+>     - Your organization must have **Allow interaction with custom apps** turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+>     - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
+> - If you're the sender or receiver and get a **This app cannot be found** error when you select **Add app to Teams**, this means you don't have access to the app. To get access, contact your admin.  
+> - If you're the sender and you don't have the Power Apps personal app installed in Teams, then a preview card will appear with a **Show Preview** button. To unfurl the full adaptive card, select **Show Preview**.
+
+
+To share the app, copy the app link from your web browser and paste it into the Teams chat. Before you send the link, you'll see a preview of your message.
+
+> [!div class="mx-imgBorder"]
+> ![Share your app using Teams.](media/share-app/teams-link.png "Share your app using Teams")
+
+Legend:
+
+1. **Link to app**: Select the web link to open the app.
+2. **Collapse preview**: Select to close the preview. When you collapse the preview then the user that you send the link to will only get a web link to open the app. They won't see the buttons to add the **App to Teams** or **Launch app in web**.
+3. **Name of app**: Shows the name of the app.
+4. **Add app to Teams**: Select to add the app to Teams.
+5. **Launch app in Web**: Open the app directly in your browser.
+
+## Request licenses for your users
+When sharing an app that requires a license for use, you can request Power Apps licenses for your users. For more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
+
 ## Security group considerations
 
 - All existing members of the security group inherit the app permissions. New users joining the security group will inherit the security group permissions on the app. Users leaving the group will no longer have access through that group, but those users can continue to have access either by having permissions assigned to them directly or through membership in another security group.
 
 - Every member of a security group has the same permissions for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app. And then, you can also give User B, who belongs to that group, Co-owner permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A Co-owner permission and User B permission to run the app, that user can still edit the app.
+
+- Users must explicitly be a member of the security group. If a user is an owner of the group, they must also assign themselves as a member of the group to inherit app permissions.
 
 ### Share an app with Microsoft 365 groups
 
@@ -123,11 +159,11 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
 
 **To check whether a Microsoft 365 group has security enabled**
 
-1. Ensure that you have access to the [Azure AD cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+1. Ensure that you have access to the [Microsoft Entra ID cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
-1. Go to [Azure portal](https://portal.azure.com/) \> **Azure Active Directory** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
+1. Go to [Azure portal](https://portal.azure.com/) \> **Microsoft Entra** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
 
-1. [Connect to Azure AD](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
+1. [Connect to Microsoft Entra ID](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
 
     ![Connect-AzureAD.](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
 
@@ -145,7 +181,7 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 
 > [!NOTE]
 > You must be the owner of the Microsoft 365 group to enable security.
-> Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Azure AD.
+> Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Microsoft Entra ID.
 
 After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
 <a name="manage-table-permissions"></a>
@@ -156,18 +192,18 @@ After a few minutes, you can discover this group in the Power Apps sharing panel
 If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the table or tables used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
 
 > [!NOTE]
-> - You can assign security roles to individual users and security groups in Azure AD, but not to Microsoft 365 groups.
+> - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
 
 ### Prerequisite
 
 To assign a role, you must have **System administrator** permissions for a Dataverse database.
 
-**To assign a security group in Azure AD to a role**
+**To assign a security group in Microsoft Entra to a role**
 
 1. In the sharing panel under **Data permissions**, select **Assign a security role**.
 
-1. Select the Dataverse roles that you want to apply to the selected Azure AD users or groups.
+1. Select the Dataverse roles that you want to apply to the selected Microsoft Entra users or groups.
 
      ![Security role list.](media/share-app/cds-assign-security-role-list.png "Security role list")
 

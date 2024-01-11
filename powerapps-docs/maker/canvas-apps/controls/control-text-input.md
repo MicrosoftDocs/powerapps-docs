@@ -5,16 +5,14 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/22/2019
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Text input control in Power Apps
@@ -65,7 +63,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**Format** – Whether the user input is restricted to numbers only or can be any text.
+**Format** – Whether the user input is restricted to numbers only or can be any text. When set to **Number**, only digits and certain numeric symbols can be entered. Supported symbols and formats depend on the browser language and cannot be set on individual controls.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 

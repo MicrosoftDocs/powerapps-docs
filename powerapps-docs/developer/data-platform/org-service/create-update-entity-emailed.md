@@ -6,12 +6,8 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -113,7 +109,7 @@ Console.WriteLine("A second email attribute has been added to the emailable enti
 
 ### See Also
 
-[Create table rows using the Organization service](entity-operations-create.md)  
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)
+[Create table rows using the SDK for .NET](entity-operations-create.md)  
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

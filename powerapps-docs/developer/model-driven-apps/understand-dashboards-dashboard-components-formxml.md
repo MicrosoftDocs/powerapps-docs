@@ -4,15 +4,12 @@ description: "Dashboards are one of the different types of forms in Mode-driven 
 ms.date: 04/01/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"
-author: mspilde # GitHub ID
+author: sriharibs-msft
 ms.subservice: mda-developer
-ms.author: mspilde # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ms.author: srihas
+ # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---

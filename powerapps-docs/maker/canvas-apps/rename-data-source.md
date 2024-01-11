@@ -5,17 +5,15 @@ author: lancedMicrosoft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/29/2021
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
-  - tapanm-msft
+  - mduelae
 ---
 
 # Rename Power Apps action-based data sources

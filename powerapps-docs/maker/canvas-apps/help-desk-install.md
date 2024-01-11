@@ -5,16 +5,14 @@ author: norliu
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/22/2021
 ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - norliu
 ---
 
@@ -48,7 +46,7 @@ The Help Desk sample app is available in [Power Apps](https://make.powerapps.com
 
 1. When prompted, select **Allow** to let the app use the connections.
 
-1. Press **F5** on the keyboard or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
+1. Press **F5** on the keyboard or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to [preview the app](preview-app.md).
 
 > [!NOTE]
 > This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purposes, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
@@ -57,9 +55,9 @@ The Help Desk sample app is available in [Power Apps](https://make.powerapps.com
 
 The Help Desk sample app includes a lot of the functionality commonly used in Power Apps. You can extend the app functionality by using connectors to connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample app.
 
-[Save the app](save-publish-app.md#save-changes-to-an-app) and update it to use a data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
+[Save the app](save-publish-app.md) and update it to use a data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
-You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
+You can also enable the capability to send emails or approval routing using [Power Automate pane](working-with-flows.md) or [Approvals connector](/connectors/approvals).
 
 ## Next steps
 
@@ -70,7 +68,9 @@ You can also enable the capability to send emails or approval routing using [Pow
 [Canvas apps connectors for Power Apps](connections-list.md) <br>
 [Formula reference](formula-reference.md) <br>
 [Controls reference](reference-properties.md) <br>
-[Share a canvas app](share-app.md)
+[Share a canvas app](share-app.md) <br>
+[Enterprise templates for Power Platform](/power-platform/solution-templates/overview)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 

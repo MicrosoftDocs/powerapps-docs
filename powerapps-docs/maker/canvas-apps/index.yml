@@ -10,7 +10,7 @@ metadata:
   ms.subservice: canvas-maker
   ms.topic: landing-page 
   ms.collection: collection
-  author: tapanm-msft
+  author: mduelae
   ms.author: tapanm
   ms.date: 09/04/2020 
 
@@ -32,7 +32,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Get started with canvas apps in Power Apps
-            url: /learn/modules/get-started-with-powerapps/
+            url: /training/modules/get-started-with-powerapps/
 
   # Card
   - title: Explore and create
@@ -48,7 +48,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Create canvas apps in Power Apps
-            url: /learn/paths/create-powerapps/
+            url: /training/paths/create-powerapps/
 
   # Card
   - title: Design the interface
@@ -64,7 +64,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Use the UI and controls in canvas apps
-            url: /learn/paths/ui-controls-canvas-app-powerapps/
+            url: /training/paths/ui-controls-canvas-app-powerapps/
 
   # Card
   - title: Customize
@@ -148,6 +148,6 @@ landingContent:
        - linkListType: learn
          links:
           - text: Use advanced data options and connectors
-            url: /learn/paths/advanced-data-options-and-connectors/
+            url: /training/paths/advanced-data-options-and-connectors/
           - text: Master advanced techniques
-            url: /learn/paths/understand-advanced-topics/
+            url: /training/paths/understand-advanced-topics/

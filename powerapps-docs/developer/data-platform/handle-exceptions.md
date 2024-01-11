@@ -2,17 +2,13 @@
 title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -59,7 +55,7 @@ The exception message for asynchronous registered plug-ins is written to a **Sys
 
 With an asynchronous plug-in step, you can re-try when a plug-in fails. This may be due to a network error or some other re-triable error calling an external resource. 
 
-To retry your plug-in, use the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor using the [OperationStatus Enum](/dotnet/api/microsoft.xrm.sdk.operationstatus) `Retry` member value.
+To retry your plug-in, use the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#microsoft-xrm-sdk-invalidpluginexecutionexception-ctor(microsoft-xrm-sdk-operationstatus-system-int32-system-string)) constructor using the [OperationStatus Enum](/dotnet/api/microsoft.xrm.sdk.operationstatus) `Retry` member value.
 
 When your plug-in throws this type of exception, the asynchronous service will attempt to run your plug-in four times. If it doesn't succeed within four attempts it will fail.
 

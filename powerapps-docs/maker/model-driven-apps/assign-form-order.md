@@ -4,7 +4,6 @@ description: "Learn how to assign the default form in your app"
 ms.custom: ""
 ms.date: 03/07/2019
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,13 +16,9 @@ ms.assetid: 914c5694-9c80-4424-be89-9f63256b4811
 caps.latest.revision: 33
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Assign model-driven app form order
 
@@ -35,7 +30,7 @@ search.app:
 
 ## Set the form order
 
-1. Sign into Power Apps, select **Solutions**, open the solution required, select a table, and then select the **Forms** area.
+1. Sign into Power Apps, select **Solutions**, open the solution required, select a **Tables** on the left navigation pane, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Next to the main form you want to configure the fallback form for, select **...**, and then select **Form settings**.
 3. In the left navigation on the **Form settings** page, select **Form order**.
 4. Select the form set that is required, such as **Main Form**, **Quick Create Form**, **Quick View Form**, or **Card Form**.
@@ -47,7 +42,7 @@ search.app:
 > [!NOTE]
 > To set form order using the new experience, see [Set the form order](control-access-forms.md#set-the-form-order).
 
-1.  Open the [solutions explorer](advanced-navigation.md#solution-explorer), expand the table that you want, and then select **Forms**.  
+1.  Open the [solution explorer](advanced-navigation.md#solution-explorer), expand the table that you want, and then select **Forms**.  
   
 2.  In the form list toolbar, select **Form Order**.  
 

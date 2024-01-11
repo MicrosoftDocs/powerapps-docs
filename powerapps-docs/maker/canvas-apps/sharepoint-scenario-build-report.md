@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ---
@@ -85,7 +83,7 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
     ![Tables in Query Editor.](./media/sharepoint-scenario-build-report/05-01-06-query-editor.png)
 
 ### Remove unnecessary columns from the tables
-1. In the left navigation pane, click or tap **Project Details**.
+1. In the left navigation pane, select **Project Details**.
 2. In the middle pane, select the **FileSystemObjectType** column, then click or tap **Remove Columns**.
    
     ![Remove columns.](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)

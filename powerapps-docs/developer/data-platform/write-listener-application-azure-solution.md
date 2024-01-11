@@ -1,18 +1,14 @@
 ---
 title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
-ms.date: 07/01/2022
+ms.date: 04/05/2023
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -33,7 +29,7 @@ A message *queue* is a repository of messages received at a Service Bus endpoint
 > [!IMPORTANT]
 > When writing a queue listener, check each message header action to determine if the message originated from Dataverse. For information on how to do this see [Filter messages](write-listener-application-azure-solution.md#filter).  
   
-You can do a destructive message read using [Receive](/dotnet/api/microsoft.servicebus.messaging.queueclient.receive) in [ReceiveMode.ReceiveAndDelete](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [ReceiveMode.PeekLock](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read but still available in the queue. The persistent queue listener sample code provided in this SDK does a destructive read. For more information about reading messages from a queue, see [How to receive messages from a queue](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues#receive-messages-from-the-queue).  
+You can do a destructive message read using [Receive](/dotnet/api/microsoft.servicebus.messaging.queueclient.receive) in [ReceiveMode.ReceiveAndDelete](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [ReceiveMode.PeekLock](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read but still available in the queue. For more information about reading messages from a queue, see [How to receive messages from a queue](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues#receive-messages-from-the-queue).  
   
 A *topic* is similar to a queue but implements a publish/subscribe model. One or more listeners can subscribe to the topic and receive messages from its queue. More information: [Queues, topics, and subscriptions](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
@@ -132,7 +128,6 @@ else if (receivedMessage.ContentType == "application/xml")
 
 [Azure extensions](azure-integration.md)<br />
 [Write a custom Azure-aware plug-in](write-custom-azure-aware-plugin.md)<br />
-[Sample: Persistent queue listener](org-service/samples/persistent-queue-listener.md)<br />
 [Sample: One-way listener](org-service/samples/one-way-listener.md)<br />
 [Sample: Two-way listener](org-service/samples/two-way-listener.md)<br />
 [Sample: REST listener](org-service/samples/rest-listener.md)<br />

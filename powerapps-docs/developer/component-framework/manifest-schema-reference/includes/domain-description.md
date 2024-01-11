@@ -1,0 +1,1 @@
+Specifies the domain within the [external-service-usage element](../external-service-usage.md)

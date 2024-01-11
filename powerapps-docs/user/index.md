@@ -1,22 +1,18 @@
 ---
 title: How do I find and run apps in Power Apps? | Microsoft Docs
 description: Overview of how to find and run Power Apps apps.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 2/14/2022
+ms.date: 3/14/2023
 ms.subservice: end-user
-ms.author: mkaur
-manager: "kvivek"
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # How do I find and run apps?
@@ -36,6 +32,7 @@ This section provides information about how to find and run canvas and model-dri
 
 Ensure that you're using a supported web browser and operating system. For more information, see [System requirements, limits, and configuration values for Power Apps](../maker/canvas-apps/limits-and-config.md)
 
+Additionally, you need a Power Apps license to run an app. If you don't have a license, you can request one by following instructions here: [Request a Power Apps license](request-license.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

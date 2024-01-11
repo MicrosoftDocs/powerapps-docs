@@ -1,18 +1,14 @@
 ---
 title: "Column OnChange Event in model-driven apps| MicrosoftDocs"
 description: Learn about how to set the column OnChange event.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -29,7 +25,7 @@ All columns support the `OnChange` event. Data in the column is validated before
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
-The `OnChange` event does not occur if the column is changed programmatically using the [attribute.setValue](../attributes/setValue.md) method. If you want event handlers for the `OnChange` event to run after you set the value you must use the `formContext.data.entity attribute.`[fireOnchange](../attributes/fireOnChange.md) method in your code. 
+The `OnChange` event does not occur if the column is changed programmatically using the [attribute.setValue](../attributes/setValue.md) method. If you want event handlers for the `OnChange` event to run after you set the value you must use the `formContext.data.entity attribute.`[fireOnchange](../attributes/fireOnChange.md) method in your code. The `OnChange` event also does not occur if the column is changed programatically when discarding changes if the user is navigating away from a dirty form.
 
 > [!NOTE]
 > Although the **Status** column supports the`OnChange` event, the column is read-only on the form so the event cannot occur through user interaction. Another script could cause this event to occur by using the [fireOnchange](../attributes/fireOnChange.md) method on the column.
@@ -45,7 +41,7 @@ There are three methods you can use to work with the `OnChange` event for a colu
 - [fireOnChange](../attributes/fireOnChange.md)
 - [removeOnChange](../attributes/removeOnChange.md)
 
-### Related topics
+### Related articles
 
 [Columns (Client API reference)](../attributes.md)
  

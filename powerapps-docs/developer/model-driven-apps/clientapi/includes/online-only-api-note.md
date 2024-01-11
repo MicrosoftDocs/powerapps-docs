@@ -1,0 +1,2 @@
+> [!NOTE]
+> This API is not available for Dynamics 365 Customer Engagement on-premise deployments. More information: [Client APIs not supported in Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/clientapi/reference)

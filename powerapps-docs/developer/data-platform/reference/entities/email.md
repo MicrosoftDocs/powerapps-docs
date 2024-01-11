@@ -1,18 +1,14 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Email table/entity reference
@@ -25,31 +21,31 @@ Activity that is delivered using email protocols.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|BackgroundSendEmail|<xref href="Microsoft.Dynamics.CRM.BackgroundSendEmail?text=BackgroundSendEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
-|CheckIncomingEmail|<xref href="Microsoft.Dynamics.CRM.CheckIncomingEmail?text=CheckIncomingEmail Function" />|<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
-|CheckPromoteEmail|<xref href="Microsoft.Dynamics.CRM.CheckPromoteEmail?text=CheckPromoteEmail Function" />|<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/emails<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/emails(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|DeliverImmediatePromoteEmail|<xref href="Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?text=DeliverImmediatePromoteEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
-|DeliverIncomingEmail|<xref href="Microsoft.Dynamics.CRM.DeliverIncomingEmail?text=DeliverIncomingEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
-|DeliverPromoteEmail|<xref href="Microsoft.Dynamics.CRM.DeliverPromoteEmail?text=DeliverPromoteEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
-|GetTrackingTokenEmail|<xref href="Microsoft.Dynamics.CRM.GetTrackingTokenEmail?text=GetTrackingTokenEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/emails(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/emails<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SendEmail|<xref href="Microsoft.Dynamics.CRM.SendEmail?text=SendEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailRequest>|
-|SendEmailFromTemplate|<xref href="Microsoft.Dynamics.CRM.SendEmailFromTemplate?text=SendEmailFromTemplate Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailFromTemplateRequest>|
-|SendFax|<xref href="Microsoft.Dynamics.CRM.SendFax?text=SendFax Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
-|SendTemplate|<xref href="Microsoft.Dynamics.CRM.SendTemplate?text=SendTemplate Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BackgroundSendEmail|<xref:Microsoft.Dynamics.CRM.BackgroundSendEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
+|CheckIncomingEmail|<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
+|CheckPromoteEmail|<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
+|Create|POST /emails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /emails(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|DeliverImmediatePromoteEmail|<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
+|DeliverIncomingEmail|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
+|DeliverPromoteEmail|<xref:Microsoft.Dynamics.CRM.DeliverPromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
+|GetTrackingTokenEmail|<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /emails(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /emails<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SendEmail|<xref:Microsoft.Dynamics.CRM.SendEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailRequest>|
+|SendEmailFromTemplate|<xref:Microsoft.Dynamics.CRM.SendEmailFromTemplate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailFromTemplateRequest>|
+|SendFax|<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
+|SendTemplate|<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
+|SetState|PATCH /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /emails(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -88,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [cc](#BKMK_cc)
 - [ConversationTrackingId](#BKMK_ConversationTrackingId)
 - [CorrelatedActivityId](#BKMK_CorrelatedActivityId)
+- [correlatedsubjectchanged](#BKMK_correlatedsubjectchanged)
 - [DelayedEmailSendTime](#BKMK_DelayedEmailSendTime)
 - [DeliveryAttempts](#BKMK_DeliveryAttempts)
 - [DeliveryPriorityCode](#BKMK_DeliveryPriorityCode)
@@ -102,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FollowEmailUserPreference](#BKMK_FollowEmailUserPreference)
 - [from](#BKMK_from)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InternetMessageHeaders](#BKMK_InternetMessageHeaders)
 - [IsBilled](#BKMK_IsBilled)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
@@ -122,6 +120,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ReceivingMailboxId](#BKMK_ReceivingMailboxId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [ReminderActionCardId](#BKMK_ReminderActionCardId)
 - [ReservedForInternalUse](#BKMK_ReservedForInternalUse)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
@@ -382,6 +381,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_correlatedsubjectchanged"></a> correlatedsubjectchanged
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if the subject changed compared to the subject of the correlated email|
+|DisplayName|Correlated subject changed|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|correlatedsubjectchanged|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### correlatedsubjectchanged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_DelayedEmailSendTime"></a> DelayedEmailSendTime
 
 |Property|Value|
@@ -634,6 +658,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_InternetMessageHeaders"></a> InternetMessageHeaders
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains a set of internet headers associated to the email message in json format|
+|DisplayName|Internet message headers|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|internetmessageheaders|
+|MaxLength|500|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_IsBilled"></a> IsBilled
@@ -956,7 +998,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,asyncoperation,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,asyncoperation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -971,6 +1013,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|regardingobjecttypecode|
 |RequiredLevel|None|
 |Type|EntityName|
+
+
+### <a name="BKMK_related"></a> related
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enter the related records for the email.|
+|DisplayName|Related|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|related|
+|RequiredLevel|None|
+|Targets|account,contact,knowledgearticle,queue,systemuser,unresolvedaddress|
+|Type|PartyList|
 
 
 ### <a name="BKMK_ReminderActionCardId"></a> ReminderActionCardId
@@ -1347,6 +1405,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [DescriptionBlobId](#BKMK_DescriptionBlobId)
+- [DescriptionBlobId_Name](#BKMK_DescriptionBlobId_Name)
 - [EmailReminderStatus](#BKMK_EmailReminderStatus)
 - [EmailSender](#BKMK_EmailSender)
 - [EmailSenderObjectTypeCode](#BKMK_EmailSenderObjectTypeCode)
@@ -1356,6 +1416,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [IsEmailFollowed](#BKMK_IsEmailFollowed)
 - [IsEmailReminderSet](#BKMK_IsEmailReminderSet)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
+- [IsSafeDescriptionTruncated](#BKMK_IsSafeDescriptionTruncated)
 - [IsUnsafe](#BKMK_IsUnsafe)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -1483,9 +1544,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Shows how an email is matched to an existing email in Microsoft Dynamics 365. For system use only.|
+|Description|Shows how an email is correlated to an existing email in Microsoft Dynamics 365. XHeader and CustomCorrelation are not used. For system use only.|
 |DisplayName|Correlation Method|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|correlationmethod|
 |RequiredLevel|None|
@@ -1609,6 +1670,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_DescriptionBlobId"></a> DescriptionBlobId
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|File that contains description content.|
+|DisplayName|Description File Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DescriptionBlobId_Name"></a> DescriptionBlobId_Name
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid_name|
+|MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1778,6 +1872,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_IsSafeDescriptionTruncated"></a> IsSafeDescriptionTruncated
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|IsSafeDescriptionTruncated|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|issafedescriptiontruncated|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_IsUnsafe"></a> IsUnsafe
@@ -2634,6 +2746,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
 - [email_acceptingentity_queue](#BKMK_email_acceptingentity_queue)
 - [email_acceptingentity_systemuser](#BKMK_email_acceptingentity_systemuser)
+- [adx_invitation_Emails](#BKMK_adx_invitation_Emails)
+- [mspp_adplacement_Emails](#BKMK_mspp_adplacement_Emails)
+- [mspp_pollplacement_Emails](#BKMK_mspp_pollplacement_Emails)
+- [mspp_publishingstatetransitionrule_Emails](#BKMK_mspp_publishingstatetransitionrule_Emails)
+- [mspp_redirect_Emails](#BKMK_mspp_redirect_Emails)
+- [mspp_shortcut_Emails](#BKMK_mspp_shortcut_Emails)
+- [mspp_website_Emails](#BKMK_mspp_website_Emails)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
@@ -2752,8 +2871,50 @@ See the [email_acceptingentity_queue](queue.md#BKMK_email_acceptingentity_queue)
 
 See the [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingentity_systemuser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
+### <a name="BKMK_adx_invitation_Emails"></a> adx_invitation_Emails
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Emails](adx_invitation.md#BKMK_adx_invitation_Emails) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_Emails"></a> mspp_adplacement_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_Emails](mspp_adplacement.md#BKMK_mspp_adplacement_Emails) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_Emails"></a> mspp_pollplacement_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_Emails](mspp_pollplacement.md#BKMK_mspp_pollplacement_Emails) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_Emails"></a> mspp_publishingstatetransitionrule_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_Emails](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_Emails) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_Emails"></a> mspp_redirect_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_Emails](mspp_redirect.md#BKMK_mspp_redirect_Emails) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_Emails"></a> mspp_shortcut_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_Emails](mspp_shortcut.md#BKMK_mspp_shortcut_Emails) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_Emails"></a> mspp_website_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_Emails](mspp_website.md#BKMK_mspp_website_Emails) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.email?text=email EntityType" />

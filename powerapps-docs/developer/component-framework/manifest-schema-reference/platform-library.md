@@ -1,9 +1,8 @@
 ---
 title: platform-library Element | Microsoft Docs
 description: "Platform library resources used in the component."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -38,7 +37,7 @@ Model-driven and canvas apps
 
 ```xml
 <resources>
-    <code path="index.ts" order="1" />
+   <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
    <platform-library name="Fluent" version="8.29.0" />
 </resources>

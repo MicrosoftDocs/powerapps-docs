@@ -2,9 +2,8 @@
 title: "Transform Azure Synapse Link for Dataverse data with Apache Spark | MicrosoftDocs"
 description: "Learn how to transform exported Dataverse table data with Apache Spark"
 ms.custom: ""
-ms.date: 08/06/2021
+ms.date: 08/25/2021
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -14,18 +13,11 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: "sama-zaki"
 ---
-
 # Transform Azure Synapse Link for Dataverse data with Apache Spark
-
-
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to transform your Dataverse data using the Apache Spark engine available in your Synapse workspace.
 

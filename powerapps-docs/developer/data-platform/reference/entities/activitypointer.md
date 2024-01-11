@@ -1,18 +1,14 @@
 ---
 title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Activity (ActivityPointer)  table/entity reference
@@ -25,11 +21,11 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitypointers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
+|Retrieve|GET /activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /activitypointers<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Rollup|<xref:Microsoft.Dynamics.CRM.Rollup?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
 
 ## Properties
 
@@ -441,7 +437,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,interactionforemail,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,interactionforemail,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -718,7 +714,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [DeliveryLastAttemptedOn](#BKMK_DeliveryLastAttemptedOn)
+- [DescriptionBlobId](#BKMK_DescriptionBlobId)
+- [DescriptionBlobId_Name](#BKMK_DescriptionBlobId_Name)
 - [ExchangeRate](#BKMK_ExchangeRate)
+- [FormattedScheduledEnd](#BKMK_FormattedScheduledEnd)
+- [FormattedScheduledStart](#BKMK_FormattedScheduledStart)
 - [InstanceTypeCode](#BKMK_InstanceTypeCode)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -896,6 +896,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_DescriptionBlobId"></a> DescriptionBlobId
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|File that contains description content.|
+|DisplayName|Description File Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DescriptionBlobId_Name"></a> DescriptionBlobId_Name
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
@@ -910,6 +943,40 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
+
+
+### <a name="BKMK_FormattedScheduledEnd"></a> FormattedScheduledEnd
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|Formatted scheduled end time of the activity.|
+|DisplayName|Formatted End Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|formattedscheduledend|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_FormattedScheduledStart"></a> FormattedScheduledStart
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|Formatted scheduled start time of the activity.|
+|DisplayName|Formatted Start Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|formattedscheduledstart|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_InstanceTypeCode"></a> InstanceTypeCode
@@ -1345,6 +1412,8 @@ Listed by **SchemaName**.
 - [ActivityPointer_BulkDeleteFailures](#BKMK_ActivityPointer_BulkDeleteFailures)
 - [activity_pointer_recurringappointmentmaster](#BKMK_activity_pointer_recurringappointmentmaster)
 - [activity_pointer_chat](#BKMK_activity_pointer_chat)
+- [activity_pointer_adx_inviteredemption](#BKMK_activity_pointer_adx_inviteredemption)
+- [activity_pointer_adx_portalcomment](#BKMK_activity_pointer_adx_portalcomment)
 
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
@@ -1618,6 +1687,40 @@ Same as the [activity_pointer_chat](chat.md#BKMK_activity_pointer_chat) many-to-
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_activity_pointer_adx_inviteredemption"></a> activity_pointer_adx_inviteredemption
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_adx_inviteredemption](adx_inviteredemption.md#BKMK_activity_pointer_adx_inviteredemption) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_adx_inviteredemption|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_adx_portalcomment"></a> activity_pointer_adx_portalcomment
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_adx_portalcomment](adx_portalcomment.md#BKMK_activity_pointer_adx_portalcomment) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_adx_portalcomment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1640,6 +1743,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_activitypointer_modifiedby](#BKMK_lk_activitypointer_modifiedby)
 - [lk_activitypointer_createdby](#BKMK_lk_activitypointer_createdby)
 - [user_activity](#BKMK_user_activity)
+- [adx_invitation_ActivityPointers](#BKMK_adx_invitation_ActivityPointers)
+- [mspp_adplacement_ActivityPointers](#BKMK_mspp_adplacement_ActivityPointers)
+- [mspp_pollplacement_ActivityPointers](#BKMK_mspp_pollplacement_ActivityPointers)
+- [mspp_publishingstatetransitionrule_ActivityPointers](#BKMK_mspp_publishingstatetransitionrule_ActivityPointers)
+- [mspp_redirect_ActivityPointers](#BKMK_mspp_redirect_ActivityPointers)
+- [mspp_shortcut_ActivityPointers](#BKMK_mspp_shortcut_ActivityPointers)
+- [mspp_website_ActivityPointers](#BKMK_mspp_website_ActivityPointers)
 
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
@@ -1706,8 +1816,50 @@ See the [lk_activitypointer_createdby](systemuser.md#BKMK_lk_activitypointer_cre
 
 See the [user_activity](systemuser.md#BKMK_user_activity) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
+### <a name="BKMK_adx_invitation_ActivityPointers"></a> adx_invitation_ActivityPointers
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_ActivityPointers](adx_invitation.md#BKMK_adx_invitation_ActivityPointers) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_ActivityPointers"></a> mspp_adplacement_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_ActivityPointers](mspp_adplacement.md#BKMK_mspp_adplacement_ActivityPointers) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_ActivityPointers"></a> mspp_pollplacement_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_ActivityPointers](mspp_pollplacement.md#BKMK_mspp_pollplacement_ActivityPointers) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_ActivityPointers"></a> mspp_publishingstatetransitionrule_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_ActivityPointers](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_ActivityPointers) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_ActivityPointers"></a> mspp_redirect_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_ActivityPointers](mspp_redirect.md#BKMK_mspp_redirect_ActivityPointers) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_ActivityPointers"></a> mspp_shortcut_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_ActivityPointers](mspp_shortcut.md#BKMK_mspp_shortcut_ActivityPointers) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_ActivityPointers"></a> mspp_website_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_ActivityPointers](mspp_website.md#BKMK_mspp_website_ActivityPointers) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.activitypointer?text=activitypointer EntityType" />

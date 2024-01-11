@@ -9,15 +9,11 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 06/14/2022
 ms.topic: how-to
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add an iframe to a model-driven app main form
 
@@ -25,7 +21,8 @@ You can add inline frames (iframes) to a form to integrate content from another 
 
 :::image type="content" source="media/iframe-in-model-app.png" alt-text="Iframe displaying a web page in a model-driven app":::
 
-1.  Expand **Data**, select **Tables**, open the table that you want, and then select **Forms** from the **Data experiences** area.
+1. Select **Tables** on the left navigation pane, and then open the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Forms** from the **Data experiences** area.
 
 1. In the list of forms, open a form of type **Main**.
 
@@ -75,7 +72,8 @@ You can add inline frames (iframes) to a form to integrate content from another 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.
+1. Select **Tables** on the left navigation pane, and then open the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area.
 
 1. In the list of forms, open a form of type **Main**.
 

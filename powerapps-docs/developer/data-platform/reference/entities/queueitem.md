@@ -1,18 +1,14 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # QueueItem table/entity reference
@@ -25,19 +21,19 @@ A specific item in a queue, such as a case record or an activity record.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|AddToQueue|<xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/queueitems<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|PickFromQueue|<xref href="Microsoft.Dynamics.CRM.PickFromQueue?text=PickFromQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
-|ReleaseToQueue|<xref href="Microsoft.Dynamics.CRM.ReleaseToQueue?text=ReleaseToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
-|RemoveFromQueue|<xref href="Microsoft.Dynamics.CRM.RemoveFromQueue?text=RemoveFromQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/queueitems<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RouteTo|<xref href="Microsoft.Dynamics.CRM.RouteTo?text=RouteTo Action" />|<xref:Microsoft.Crm.Sdk.Messages.RouteToRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|AddToQueue|<xref:Microsoft.Dynamics.CRM.AddToQueue?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
+|Create|POST /queueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|PickFromQueue|<xref:Microsoft.Dynamics.CRM.PickFromQueue?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
+|ReleaseToQueue|<xref:Microsoft.Dynamics.CRM.ReleaseToQueue?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
+|RemoveFromQueue|<xref:Microsoft.Dynamics.CRM.RemoveFromQueue?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
+|Retrieve|GET /queueitems(*queueitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /queueitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RouteTo|<xref:Microsoft.Dynamics.CRM.RouteTo?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RouteToRequest>|
+|SetState|PATCH /queueitems(*queueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /queueitems(*queueitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -74,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Status](#BKMK_Status)
 - [StatusCode](#BKMK_StatusCode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [Title](#BKMK_Title)
 - [ToRecipients](#BKMK_ToRecipients)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -109,7 +106,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|activitypointer,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
+|Targets|activitypointer,adx_inviteredemption,adx_portalcomment,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
 |Type|Lookup|
 
 
@@ -295,6 +292,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_Title"></a> Title
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the title or name that describes the queue record. This value is copied from the record that was assigned to the queue.|
+|DisplayName|Title|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|title|
+|MaxLength|850|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ToRecipients"></a> ToRecipients
 
 |Property|Value|
@@ -398,7 +411,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningUser](#BKMK_OwningUser)
 - [QueueIdName](#BKMK_QueueIdName)
-- [Title](#BKMK_Title)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 - [WorkerIdModifiedOn](#BKMK_WorkerIdModifiedOn)
@@ -693,8 +705,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10092|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10105|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10118|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10134|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10253|Invite Redemption|Holds information about the redemption of an invite.|
+|10254|Portal Comment|An activity which is used to share information between the user and the customer on the portal.|
 
 
 
@@ -796,22 +810,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|queueidname|
 |MaxLength|400|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_Title"></a> Title
-
-|Property|Value|
-|--------|-----|
-|Description|Shows the title or name that describes the queue record. This value is copied from the record that was assigned to the queue.|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|300|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -1006,6 +1004,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_queueitembase_modifiedby](#BKMK_lk_queueitembase_modifiedby)
 - [chat_QueueItems](#BKMK_chat_QueueItems)
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
+- [adx_inviteredemption_QueueItems](#BKMK_adx_inviteredemption_QueueItems)
+- [adx_portalcomment_QueueItems](#BKMK_adx_portalcomment_QueueItems)
 
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
@@ -1096,8 +1096,20 @@ See the [chat_QueueItems](chat.md#BKMK_chat_QueueItems) one-to-many relationship
 
 See the [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) one-to-many relationship for the [msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md) table/entity.
 
+### <a name="BKMK_adx_inviteredemption_QueueItems"></a> adx_inviteredemption_QueueItems
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_QueueItems](adx_inviteredemption.md#BKMK_adx_inviteredemption_QueueItems) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_QueueItems"></a> adx_portalcomment_QueueItems
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_QueueItems](adx_portalcomment.md#BKMK_adx_portalcomment_QueueItems) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.queueitem?text=queueitem EntityType" />

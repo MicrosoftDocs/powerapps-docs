@@ -9,11 +9,8 @@ ms.topic: overview
 author: "Mattp123"
 ms.subservice: common
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # What are performance insights? (preview)
 

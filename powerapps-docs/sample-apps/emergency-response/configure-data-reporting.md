@@ -2,7 +2,6 @@
 title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides instructions for hospital IT admins to configure data and view dashboards for their organization.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 
@@ -515,7 +514,7 @@ Before you can view the admin app in one of the supported languages, the languag
 
 ### Set the language of your choice
 
-After the required languages are enabled by your system administrator, each admin user can select the language she/he prefers to see the admin app displayed in.
+After the required languages are enabled by your system administrator, each admin user can select the language they prefer to see the admin app displayed in.
 
 1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
 
@@ -619,7 +618,7 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 
 1. Note the current live version of the app before you import the solution. You can restore the app to this version after you uninstall the solution. For more information: [Restore a canvas app to a previous version in Power Apps](../../maker/canvas-apps/restore-an-app.md).
 
-1. Create a new solution and the existing apps. Export the solution as backup. If you uninstall the Canvas App Strings solution, you can import your backup solution with default apps. To learn how to add apps to solution and export, go to [Link an existing canvas app to a solution](../../maker/canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution).
+1. Create a new solution and the existing apps. Export the solution as backup. If you uninstall the Canvas App Strings solution, you can import your backup solution with default apps. To learn how to add apps to solution and export, go to [Link an existing canvas app to a solution](../../maker/canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 
 ### Considerations when extending mobile app labels
 

@@ -1,7 +1,7 @@
 ---
 title: "App Value Proposition | MicrosoftDocs"
 description: "App Value Proposition"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
 
@@ -15,12 +15,9 @@ ms.assetid:
 caps.latest.revision: 1
 ms.subservice: 
 ms.author: matp
-manager: ""
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 
 ---
 # The benefits of the model-driven approach

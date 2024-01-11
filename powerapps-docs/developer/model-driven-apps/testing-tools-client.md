@@ -3,15 +3,12 @@ title: "Testing tools for client-side development (Microsoft Dataverse) | Micros
 description: "Learn about testing frameworks for client-side development." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/01/2022
 ms.topic: article
-author: aengusheaney # GitHub ID
+author: ChrisBal-MSFT
 ms.subservice: mda-developer
-ms.author: AHEANEY # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ms.author: chrisbal
+ # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Testing tools for client-side development
 

@@ -5,7 +5,6 @@ documentationcenter: na
 
 author: caburke
 reviewer: Mattp123
-manager: kvivek
 
 ms.devlang: na
 ms.topic: overview
@@ -15,9 +14,6 @@ ms.subservice: mda-maker
 ms.author: caburk
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Model-driven sample apps
@@ -123,7 +119,7 @@ Fundraiser provides employees the opportunity to donate time and money towards c
 
 1. Sign in to [powerapps.com](https://powerapps.com)  
 
-2. From the **Create** page, select the sample app, and then select **Create**.
+2. Select **+ Create** from the left navigation pane, select the sample app, and then select **Create**.
 
 > [!div class="mx-imgBorder"]
 > <img src="media/overview-model-driven-samples/model-driven-create-page-sample.png" alt="Create a model-driven sample app" height="427" width="674">

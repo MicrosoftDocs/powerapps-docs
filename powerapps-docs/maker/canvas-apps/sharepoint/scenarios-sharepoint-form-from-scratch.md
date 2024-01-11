@@ -5,16 +5,14 @@ author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
   - emcoope-msft
@@ -276,7 +274,7 @@ Now that you have all the app components configured, ensure the screen looks lik
 
 ## Step 9 – Save the app
 
-Now that the app has view, edit, add, and delete capability added, [save the app](../save-publish-app.md#save-changes-to-an-app).
+Now that the app has view, edit, add, and delete capability added, [save the app](../save-publish-app.md).
 
 1. Select the **File** menu.
 
@@ -313,7 +311,7 @@ Now that the app has view, edit, add, and delete capability added, [save the app
 
 ## Next steps
 
-If you edit the app, you must [publish](../save-publish-app.md#publish-an-app) the changes for others to see.
+If you edit the app, you must [publish](../save-publish-app.md) the changes for others to see.
 
 Once the app is ready to use, [share the app](../share-app.md).
 

@@ -6,15 +6,13 @@ author: mattgon
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.reviewer: mkaur
+ms.date: 11/14/2022
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - maustinjones
 ---
@@ -51,7 +49,6 @@ Monitor doesn't support the scenarios in the following table.
 
 |Description  |App type  |
 |---------|---------|
-|Monitor connected to apps running on a mobile device (native players).     |  Canvas    |
 |Monitor connected to a canvas app embedded in a model-driven app or custom page.     |  Canvas       |
 |Monitor connected to a SharePoint custom form app.     | Canvas        |
 |Monitor connected to a Microsoft Teams embedded app. As an alternative, you can play the app in a web player for diagnostics purposes.     | Canvas        |

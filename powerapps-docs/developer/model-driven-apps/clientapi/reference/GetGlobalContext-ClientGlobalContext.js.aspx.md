@@ -1,18 +1,14 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
 description: "Describes the GetGlobalContext function and ClientGlobalContext.js.aspx used with web resources."
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: conceptual
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -23,7 +19,7 @@ Use the **GetGlobalContext** function when programming with [web resources](../.
 To get access to the **GetGlobalContext** function in your HTML web resource, include a reference to **ClientGlobalContext.js.aspx**.
 
 > [!IMPORTANT]
-> Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
+> Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren't supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won't work.
 
 ## GetGlobalContext function
 
@@ -42,6 +38,7 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
       
     </head>
     ```
+
 - If you are using backslash characters in HTML web resource names to simulate a directory structure, you must reflect this in your script element. The following example is for an HTML web resource named **sdk_/Contoso.htm** and a JavaScript web resource named **sdk_/Scripts/ContosoScript.js** with a CSS web resource named **sdk_/Styles/ContosoStyles.css**.
 
     ```HTML
@@ -60,14 +57,10 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
 
 The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/docs/Web/Events/dragstart) events. 
 
-### Related topics
+### Related articles
 
-[Xrm.Utility.getGlobalContext](Xrm-Utility/getGlobalContext.md)
-
-[Understand Client API object model](../understand-clientapi-object-model.md) 
-
+[Xrm.Utility.getGlobalContext](Xrm-Utility/getGlobalContext.md)   
+[Understand Client API object model](../understand-clientapi-object-model.md)   
 [Web resources for model-driven apps](../../web-resources.md)
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

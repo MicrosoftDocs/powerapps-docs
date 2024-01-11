@@ -1,10 +1,9 @@
 ---
-title: "Configure Bing maps in a model-driven app with Power Apps | MicrosoftDocs"
-description: Learn how to configure a Bing map in a model-driven app
+title: "Configure the map component in a model-driven app with Power Apps | MicrosoftDocs"
+description: Learn how to configure a map in a model-driven app
 ms.custom: ""
-ms.date: 10/18/2019
+ms.date: 08/31/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,69 +16,63 @@ caps.latest.revision: 63
 ms.subservice: mda-maker
 ms.author: "matp"
 author: "Mattp123"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure a map on a form
 
+By default, the map control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table records. Although not configured by default, the map control can be added to the system user table. The map control can also be used with some Dataverse standard tables and Dynamics 365 apps tables. The map control can't be used with custom tables. More information: [Tables that can be used with the map control](#tables-that-can-be-used-with-the-map-control)
 
-
-By default, the Bing maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table rows. Although not configured by default, the Bing maps control can be added to the system user table. The Bing maps control can also be used with some tables included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor tables. The Bing maps control can't be used with custom tables.
-
-[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
-
-When enabled, the map displays the location specified in the address composite columns for the given row.
+When enabled, the map displays the location specified in the address composite columns for the given record.
 
 > [!div class="mx-imgBorder"]
 > ![Bing map control in an app.](media/bing-map-example.png "Bing map control in an app")
 
 > [!IMPORTANT]
-> To use maps the system setting Show Bing Maps on forms must be enabled. More information: [Enable maps for your environment](#enable-maps-for-your-environment)
+> - To use the map component the **Bing Maps** setting must be **On** under the **Embedded content** section of environment settings in the Power Platform admin center. More information: [Manage Bing Maps for your organization](/power-platform/admin/manage-bing-maps-organization)
+>
+> - A form can only have one map component.
 
-You can remove the maps area in the form editor or add it back by using the **Bing Maps** button on the **Insert** tab of the classic form editor.
+## Tables that can be used with the map control
 
-## Enable maps for your environment
+- Contact
+- Account
+- System User
+- Competitor<sup>1</sup>
+- Invoice<sup>1</sup>
+- Quote<sup>1</sup>
+- SalesOrder<sup>1</sup>
+- Lead<sup>1</sup>
 
-1. Open a model driven app and then select **Settings** > **Advanced Settings**.
+<sup>1</sup>Requires a customer engagement app.
 
-1. Select **Settings** > **Administration** > **System Settings**.
-
-1. On the **General** tab, select **Show Bing Maps on forms**, and then select **OK**.
-
-    ![Enable maps on forms.](media/enable-maps.png)
-
-## Configure a map
+## Add and configure a map for a system form
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form.
+1. Select **Tables** on the left navigation pane, and then select the table where you want to configure a map on the main form. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-1. Select the **Forms** area, and then select the main form, and then on the command bar select **Switch to classic**.
+1. Select the **Forms** area, and then open the system main form you want.
 
-1. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
-
-    ![Map view control.](media/map-view-control.png)
-
-To remove the map control from the form, select the **Map View** control, and then press the Delete key.
+1. On the **Components** left pane, expand **Display**, and then select **Map**. Or, if the map component is already on the form, select it on the form designer canvas.
 
 ## View and edit map properties
 
-|      Tab       |                        Property                         |                                                                                                  Description                                                                                                   |
+|      Area       |                        Property                         |                                                                                                  Description                                                                                                   |
 |----------------|---------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  **General**   |                        **Label**                        |                                                                              **Required**: A label to display for the Bing maps.                                                                               |
-|                |              **Display label on the form**              |                                                                                     Whether the label should be displayed.                                                                                     |
-|                | **Select an address to use with the Bing maps control** |                                                                        Choose which address should be used to provide data for the map.                                                                        |
-|                |                 **Visible by default**                  | Showing the Bing maps is optional and can be controlled using business rules or scripts. More information: [Visibility options](visibility-options-legacy.md) |
-| **Formatting** |  **Select the number of columns the control occupies**  |                              When the section containing the Bing maps has more than one column you can set the column to occupy up to the number of columns that the section has.                              |
-|                |   **Select the number of rows the control occupies**    |                                                                  You can control the height of the Bing maps by specifying a number of rows.                                                                   |
-|                |     **Automatically expand to use available space**     |                                                                        You can allow the Bing maps height to expand to available space.                                                                        |
+|  **Display options**   |                        **Label**                        |                                                                              **Required**: A label to display for the map.         |
+|  **Display options**    |              **Hide label**              |                                                                                     Whether the label should be displayed.                                                                                     |
+| **Display options**     |     **Hide**                  | Showing the map is optional and can be controlled using business rules or scripts. More information: [Visibility options](visibility-options-legacy.md) |
+|  **Display options**    | **Bing Maps address** |  Choose which address should be used to provide data for the map.             |
+| **Formatting** |  **Component width**  |    When the section containing the map has more than one column, you can set the column to occupy up to the number of columns that the section has.                              |
+| **Formatting**     |     **Use all available vertical space**    | You can allow the map height to expand to available space.                 |
+
+## Configure a map using the classic form editor
+
+You can remove the maps area in the form editor or add it back by using the **Bing Maps** button on the **Insert** tab of the classic form editor. More information: [Configure Bing Maps to be displayed on forms](/dynamics365/customerengagement/on-premises/customize/configure-bing-maps-legacy)
 
 ### See also
-[Create and design model-driven app forms](create-design-forms.md) 
 
+[Create and design model-driven app forms](create-design-forms.md) 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

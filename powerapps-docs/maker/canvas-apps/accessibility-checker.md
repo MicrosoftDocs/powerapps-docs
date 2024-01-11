@@ -9,10 +9,8 @@ ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Review a canvas app for accessibility in Power Apps

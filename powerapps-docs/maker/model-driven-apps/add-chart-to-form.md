@@ -9,16 +9,12 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: matp
 ms.date: 05/04/2022
 ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a chart to a form
 
@@ -27,7 +23,7 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
 > [!div class="mx-imgBorder"]
 > ![Account main form child accounts grid.](media/main-form-child-accts-chart.png)
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution and then open the table. 
 1. Select the **Forms** area, and then open the form where you want to add a chart.
 1. On the form canvas, select an existing subgrid or add one. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
@@ -39,7 +35,7 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
 
 ## Add a chart to a form (classic)
 
-1. Sign into Power Apps, select **Solutions**.
+1. Sign into Power Apps, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution with the required table and open this table. Then select the **Forms** area.
 1. Open the required form. In the form designer select **Switch to classic** from the command bar.
 1. Add a sub-grid to the form, or to change an existing list in a sub-grid, double-click a sub-grid on the form.

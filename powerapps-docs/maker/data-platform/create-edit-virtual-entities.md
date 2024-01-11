@@ -16,12 +16,8 @@ caps.latest.revision: 11
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create and edit virtual tables that contain data from an external data source
 
@@ -140,7 +136,7 @@ Virtual tables have these restrictions.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
 - Dashboards and charts are not supported with virtual tables.
-- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Dataverse search, and Power Apps portals solutions.  
+- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Dataverse search, and Power Pages solutions.  
 - Virtual tables are organization owned and don't support the row-level Dataverse security concepts. We recommend that you implement your own security model for the external data source.  
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
 - Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service or Azure Synapse Link for Dataverse.
@@ -160,7 +156,7 @@ This issue occurs because virtual tables don't support business process flows.
 
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
 [Create and edit tables](./data-platform-create-entity.md)</br>
-[Create and edit columns](create-edit-fields.md)
+[Configure virtual tables in Power Pages](/power-pages/configure/virtual-tables)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

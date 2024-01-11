@@ -1,3 +1,4 @@
+items:
 - name: Build Windows client applications using the XRM tools
   href: build-windows-client-applications-xrm-tools.md
   items:
@@ -20,15 +21,13 @@
       href: use-xrm-tooling-delete-data.md
     - name: Use messages with the ExecuteCrmOrganizationRequest method
       href: use-messages-executecrmorganizationrequest-method.md
-    - name: Use XRM tooling to execute a web request against web API
+    - name: Use ExecuteWebRequest to send requests to Web API
       href: use-xrm-tooling-to-execute-web-request.md
   - name: Use the XRM tooling common login control in your client applications
     href: use-xrm-tooling-common-login-control-client-applications.md
   - name: Configure tracing for XRM tooling
     href: configure-tracing-xrm-tooling.md
-  - name: Simplified Connection quick start
+  - name: 'Sample: Simplified Connection quick start'
     href: sample-simplified-connection-quick-start.md
-  - name: 'Sample: Quick start for XRM Tooling API'
-    href: sample-quick-start-xrm-tooling-api.md
   - name: 'Sample: Task Parallel Library with CrmServiceClient'
     href: sample-tpl-crmserviceclient.md

@@ -5,15 +5,11 @@ ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
@@ -22,14 +18,17 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.  
+There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.
+
+In the <xref:Microsoft.PowerPlatform.Dataverse.Client?displayProperty=fullName> namespace there are <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.DeleteEntity%2A?displayProperty=nameWithType> and <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.DeleteEntityAssociation%2A?displayProperty=nameWithType> methods.
   
 ## DeleteEntity  
 
 `DeleteEntity` is used to remove a single row of data from Dataverse. To use this method, you need to know the table schema name you wish to affect, and the GUID of the row you want to remove.  
   
 ```csharp  
-CrmServiceClient svc = new CrmServiceClient(connectionstring);  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);
+// ServiceClient svc = new ServiceClient("connectionstring");
   
 // Verify that you are connected  
 if (svc != null && svc.IsReady)  
@@ -57,7 +56,8 @@ else
 `DeleteEntityAssociation` removes the many-to-many association between records in tables. In this example, we will remove the association between a record in the lead and account tables.  
   
 ```csharp  
-CrmServiceClient svc = new CrmServiceClient(connectionstring);  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);
+// ServiceClient svc = new ServiceClient("connectionstring");  
   
 // Verify that you are connected  
 if (svc != null && svc.IsReady)  
@@ -84,7 +84,6 @@ else
   
 ### See also  
 
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
 

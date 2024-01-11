@@ -1,18 +1,15 @@
 ---
 title: "Web resource dependencies (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining dependencies between web resources in Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+author: sriharibs-msft
+ms.author: srihas
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -52,7 +49,7 @@ Before this feature you would need to manually add the column to the form and th
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Script (JScript) web resources](script-jscript-web-resources.md)<br />
+[JavaScript web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) web resources](data-xml-web-resources.md)<br />

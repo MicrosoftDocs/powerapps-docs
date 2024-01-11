@@ -8,13 +8,11 @@ ms.custom: canvas
 ms.date: 06/15/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Web barcode scanner control (experimental) in Power Apps
@@ -23,7 +21,7 @@ The legacy barcode scanning control, which is obsolete but might be useful for s
 
 ## Description
 
-The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
+The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode reader](control-barcodereader.md)** control replaces this control.
 
 > [!NOTE]
 > The web barcode scanner control is only supported on Microsoft Edge, Chrome, Firefox, and Opera browsers. All other browsers will show a warning that some features of the app won't work.

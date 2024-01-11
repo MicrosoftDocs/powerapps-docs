@@ -1,22 +1,19 @@
 ---
 title: Create a canvas app from Azure SQL Database
 description: Describes how to create canvas app from your data in Azure SQL Database
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Create a canvas app from Azure SQL Database
@@ -50,7 +47,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 1. Enter a SQL authentication password and if necessary, change the autofilled username.
     
     > [!NOTE]
-    > If you want to use Azure AD Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](./connections/connection-azure-sqldatabase.md).
+    > If you want to use Microsoft Entra Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](./connections/connection-azure-sqldatabase.md).
 
 1. Select a table from the dropdown list that you want to use to create the app.
 
@@ -100,7 +97,6 @@ As a next step, use [Power Apps](https://make.powerapps.com) studio to customize
 
 - [Share a canvas app in Power Apps](share-app.md) </br>
 - [Add a data connection to a canvas app in Power Apps](add-data-connection.md#add-data-source)</br>
-- [Microsoft Learn: Customize a canvas app in Power Apps](/learn/modules/customize-apps-in-powerapps/)
-
+- [Customize a canvas app in Power Apps](/training/modules/customize-apps-in-powerapps/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,13 +7,11 @@ ms.topic: conceptual
 ms.date: 08/21/2020
 ms.subservice: canvas-maker
 ms.author: caburk
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - caburk
 ---
 
@@ -26,6 +24,7 @@ You can export and import canvas apps by using packages. This feature allows you
 > [!IMPORTANT]
 > - For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](/power-platform/alm/overview-alm)
 > - Canvas app packages can't be used with [Dataverse solution packages](../data-platform/solutions-overview.md) because of the package incompatibility.
+> - An App Insights instrumentation key may be present in imported canvas apps. Inspect the instrumentation key after importing an app to ensure it corresponds to the desired App Insights resource.
 
 ## Resources included in the package
 
@@ -55,7 +54,7 @@ To export a canvas app package, select your app, and then select **Export Packag
 You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will become the default action during the app import.
 
 > [!IMPORTANT]
-> You can only import the exported package. Changes to the the exported package file aren't supported.
+> You can only import the exported package. Changes to the exported package file aren't supported.
 
 <!--markdownlint-disable MD036-->
 **To export a canvas app package**
@@ -102,7 +101,7 @@ To import a canvas app package, select **Import canvas app**. Be sure to select 
 
 ![Import package GIF demo with example export walkthrough.](media/export-import-app/import-app.gif "Import package GIF demo with example export walkthrough")
 
-If you're updating an existing app or resource, be sure to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
+If you're updating an existing app or resource, be sure to [publish](save-publish-app.md) the app so users can see the changes.
 
 > [!TIP]
 > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type.
@@ -171,7 +170,7 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
 1. Select **Import** to import the app package.
 
     > [!IMPORTANT]
-    > If you select to **Update** an existing app, the new changes will be saved as a draft of the app. You'll need to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
+    > If you select to **Update** an existing app, the new changes will be saved as a draft of the app. You'll need to [publish](save-publish-app.md) the app so users can see the changes.
 
 ### See also
 

@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Power App component framework FAQs
+  title: Power Apps component framework FAQs
   description: Get answers to frequently asked questions about Power Apps component framework.
   author: ghurlman
   
@@ -57,6 +57,51 @@ sections:
       - question: Can I access Window object from the component?
         answer: |
           Currently, accessing [Window object](https://developer.mozilla.org/docs/Web/API/Window) from the control is not supported.
+
+      - question: How can I access the record id or table name?
+        answer: |
+          Developers creating Power Apps components might expect that the [Context](reference/context.md) contains information about the 
+          data context in which the control exists. Client-side scripts provide access to this through the 
+          [formContext.data.entity](../model-driven-apps/clientapi/reference/formContext-data-entity.md) object which provides methods 
+          like [getId](../model-driven-apps/clientapi/reference/formContext-data-entity/getId.md) and 
+          [getEntityName](../model-driven-apps/clientapi/reference/formContext-data-entity/getEntityName.md) client-side script 
+          developers can use to access the record id and table type.
+
+          Power Apps components do not provide this because they need to be supported on multiple surfaces where this information may not be available.
+
+          To have access to these properties in a form where they are available, they must be added as options when the control is configured.
+
+          To do this, you need to add  [property elements](manifest-schema-reference/property.md) in the `ControlManifest.Input.xml`. 
+          The `of-type` attribute value must be `SingleLine.Text` and the `usage` must be `input`.
+
+          For example, adding the following properties within the control:
+
+          ```xml
+          <property name="entityId"
+            display-name-key="Entity Id"
+            description-key="The id of the current record."
+            of-type="SingleLine.Text"
+            usage="input"
+            required="true" />
+          <property name="entityName"
+            display-name-key="Entity Name"
+            description-key="The logical name of the type of the current record."
+            of-type="SingleLine.Text"
+            usage="input"
+            required="true" />
+          ```
+
+          With these properties defined, you can access the values using `context.parameters.entityId` and `context.parameters.entityName` respectively.
+          
+          When registering the control in the form for a model-driven app, you must bind the **Entity Id** property to the column representing the unique 
+          identifier for the record. In this case, the `accountid` for the [Account table](../data-platform/reference/entities/account.md).
+
+          :::image type="content" source="media/configure-entityid-property.png" alt-text="Configure the Entity Id property to the accountid field":::
+
+          For the **Entity Name** property, you can bind the value to the `entitylogicalname` field or bind to a static value, such as `account`.
+
+          :::image type="content" source="media/configure-entity-name-property.png" alt-text="Configure the Entity Name property to the accountid field":::
+
      
 additionalContent: |
   ## See also

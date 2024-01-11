@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "jaredha" #TODO: NoOwner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -27,7 +23,7 @@ Use the `Catalog` table to create a two level hierarchy. This will create a **Ca
 
 The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
-For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events.
+For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, custom API, or Custom Process actions you want to be available as events.
 
 > [!IMPORTANT]
 > Users with the **Environment Maker** security role can view the Catalog data in the Power Automate Dataverse connector **When an action is performed** trigger. Other security roles must have an appropriate access level **Read** privilege to these these tables: **Custom API**, **Process**, **SDK Message**.
@@ -58,7 +54,7 @@ Contoso Customer management is a solution which includes the following tables:
 
 ### Custom API
 
-They have also created a number of Custom API actions which are called by their point-of-sale system, their Web site, and ERP systems to notify Dataverse of events that do not originate within Dataverse:
+They have also created a number of custom API actions which are called by their point-of-sale system, their Web site, and ERP systems to notify Dataverse of events that do not originate within Dataverse:
 
 |UniqueName  |DisplayName  |
 |---------|---------|
@@ -107,7 +103,7 @@ Most tables will support **Create**, **Update**, and **Delete** events. There ar
 User-owned tables will expose events for changes to sharing: **GrantAccess**, **ModifyAccess**, and **RevokeAccess**
 
 > [!NOTE]
-> Any Custom API or Custom Process Actions, that are bound to the table will also be included.
+> Any custom API or Custom Process Actions, that are bound to the table will also be included.
 > 
 > Custom Process Actions that are disabled will be shown, but the event will never occur until they are enabled and used.
 
@@ -232,7 +228,7 @@ GET [Organization URI]/api/data/v9.2/entities?$select=entityid&$filter=name eq '
 ```
 
 
-#### Get the Id of a Custom API
+#### Get the Id of a custom API
 
 This is most easily done using the Web API. The following example will return the `customapiid` of a custom api with the `uniquename` of `your_CustomAPIName`.
 
@@ -270,7 +266,7 @@ GET [Organization URI]/api/data/v9.2/catalogassignments?$select=name
 
 ## Create Catalogs and CatalogAssignments with code
 
-You can create catalogs and catalog assignment records using either the Web API or the Organization Service.
+You can create catalogs and catalog assignment records using either the Web API or the SDK for .NET.
 
 ### Using the Web API
 
@@ -285,7 +281,7 @@ See the [Create a record using the Web API](webapi/create-entity-web-api.md) sec
 
 #### Create the root catalog
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
@@ -306,7 +302,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -316,7 +312,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(00000000-0000-0000-000
 
 #### Create the Table Events Sub-catalog
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
@@ -338,7 +334,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -350,7 +346,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-000
 
 See [Get the Id of a table](#get-the-id-of-a-table) for information about the id of a table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogassignments HTTP/1.1
@@ -370,7 +366,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -379,7 +375,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-000
 ```
 
 
-### Using the Organization Service
+### Using the SDK for .NET
 
 The following code shows creating a catalog hierarchy and a catalog assignment in a solution with the UniqueName: `ContosoCustomerManagement`.
 
@@ -399,6 +395,7 @@ LoginPrompt=Auto;
 RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var solutionUniqueName = " ContosoCustomerManagement ";
 
@@ -572,8 +569,8 @@ The `catalogassignment` element includes these elements:
 [Microsoft Dataverse business events](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
-[Create entities using the Organization Service](org-service/entity-operations-create.md)<br />
-[Retrieve an entity using the Organization Service](org-service/entity-operations-retrieve.md)
+[Create entities using the SDK for .NET](org-service/entity-operations-create.md)<br />
+[Retrieve an entity using the SDK for .NET](org-service/entity-operations-retrieve.md)
  
 
 

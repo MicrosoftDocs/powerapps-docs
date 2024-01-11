@@ -10,12 +10,8 @@ ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
     - ProfessorKendrick
 ---
@@ -55,7 +51,7 @@ You can’t delete standard tables, columns, or table relationships. They're con
 
 ## Limitations on creating metadata items  
 
-There's a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
+There's a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Resources In Use** page. 
   
 Within each table there's an upper limit on the number of columns you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It's difficult to provide a specific number because each type of column can use a different amount of space. The upper limit depends on the total space used by all the columns for the table.  
   

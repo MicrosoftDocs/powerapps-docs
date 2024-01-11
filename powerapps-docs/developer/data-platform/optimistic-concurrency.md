@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "Peakerbl" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -29,7 +25,7 @@ On a multi-threaded and multi-user system like Power Apps, operations and data c
 ## Enable optimistic concurrency  
  You can enable optimistic concurrency checking behavior when executing an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> by setting the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.ConcurrencyBehavior> property of the request to <xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior.IfRowVersionMatches>. Similarly, for a <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>, you would set the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest.ConcurrencyBehavior> property.  
   
- When using the organization service context to make data changes, set <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.ConcurrencyBehavior> on the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> object. This value will be passed through to all of the **UpdateRequest** and **DeleteRequest** messages used by the **OrganizationServiceContext** when <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> is called.  
+ When using the SDK for .NET context to make data changes, set <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.ConcurrencyBehavior> on the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> object. This value will be passed through to all of the **UpdateRequest** and **DeleteRequest** messages used by the **OrganizationServiceContext** when <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> is called.  
   
  Optimistic concurrency behavior can only be set through an SDK API call. There is presently no setting for it in a form of the Web application.  
   
@@ -38,9 +34,9 @@ On a multi-threaded and multi-user system like Power Apps, operations and data c
 For information about using Web API to apply optimistic concurrency, see [Apply optimistic concurrency](webapi/perform-conditional-operations-using-web-api.md#apply-optimistic-concurrency)
 
 
-## Apply optimistic concurrency using Organization service
+## Apply optimistic concurrency using SDK for .NET
 
-For information about using Organization service to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md#optimistic-concurrency-behavior)
+For information about using SDK for .NET to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md#optimistic-concurrency-behavior)
   
 <a name="bkmk_handle"></a>   
 ## Handle exceptions  

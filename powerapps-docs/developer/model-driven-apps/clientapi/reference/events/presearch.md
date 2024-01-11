@@ -1,18 +1,14 @@
 ---
 title: "Lookup Control PreSearch event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the PreSearch event.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: chmoncay
+ms.author: chmoncay
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -24,7 +20,7 @@ This event occurs just before the lookup control launches a dialog to search for
 
 Use this event with other lookup control methods to change the results displayed in a lookup based on the form data just before the lookup control shows search results for a user to choose from. 
 
-## Related topics
+## Related articles
 
 [addCustomFilter](../controls/addCustomFilter.md)
 

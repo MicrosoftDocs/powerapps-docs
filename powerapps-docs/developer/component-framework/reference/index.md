@@ -1,9 +1,8 @@
 ---
 title: "Power Apps component framework API reference | MicrosoftDocs"
 description: "The topic provides Power Apps component framework API reference."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -38,12 +37,14 @@ This section contains reference documentation for creating code components using
 |[EntityFormOptions](entityformoptions.md)|[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]|Model-driven apps|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven and canvas apps|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
+|[Events](events.md)|[!INCLUDE [events-description](includes/events-description.md)]|Canvas apps|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven and canvas apps|
 |[FileObject](fileobject.md)|[!INCLUDE [fileobject-description](includes/fileobject-description.md)]|Model-driven apps|
 |[FilterExpression](filterexpression.md)|[!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]|Model-driven apps|
 |[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven and canvas apps|
 |[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven and canvas apps|
 |[ICommand](ICommand.md)|[!INCLUDE [icommand-description](includes/icommand-description.md)]|Model-driven and canvas apps|
+|[ImageObject](imageobject.md)|[!INCLUDE [imageobject-description](includes/imageobject-description.md)]|Canvas apps|
 |[Linking](linking.md)|[!INCLUDE [linking-description](includes/linking-description.md)]|Model-driven apps|
 |[Metadata](metadata.md)|[!INCLUDE [metadata-description](includes/metadata-description.md)]|Model-driven apps|
 |[Mode](mode.md)|[!INCLUDE [mode-description](includes/mode-description.md)]|Model-driven and canvas apps|

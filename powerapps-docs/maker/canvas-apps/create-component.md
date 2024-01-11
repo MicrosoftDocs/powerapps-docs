@@ -1,21 +1,19 @@
 ---
 title: Canvas component overview (contains video)
 description: Learn about how to create reusable components for canvas apps.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/10/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.date: 07/22/2022
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
   - gregli-msft
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Canvas component overview
@@ -53,6 +51,9 @@ Components available inside the app are listed under the **Custom** category in 
 ## Custom properties
 
 A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand [formulas](formula-reference.md) and binding contracts.
+
+> [!NOTE]
+> An experimental feature for enhanced component properties provides even more options for properties, including functions and behavior functions. For more information, see [Canvas component properties (experimental)](./component-properties.md)
 
 **Input property** is how a component receives data to be used in the component. Input properties appear in the **Properties** tab of the right-hand pane if an instance of the component is selected. You can configure input properties with expressions or formulas, just as you configure standard properties in other controls. Other controls have input properties, such as the **Default** property of a **Text input** control.
 
@@ -272,7 +273,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - A custom input property can't be configured to a custom output property value across same or different instances when you have two or more instances of same component in an app. This action will result in a circular reference warning message. To work around this limitation, you can create a copy of the component inside your app.
 - Adding and running Power Automate flows in component libraries is not supported.
-- You can't save data sources, forms, and data tables with components.
+- You can't save data sources or controls that include data from those data sources (such as forms, fluid grids, or data tables) with components.
 - You can't insert a component into a gallery or a form (including SharePoint form).
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 

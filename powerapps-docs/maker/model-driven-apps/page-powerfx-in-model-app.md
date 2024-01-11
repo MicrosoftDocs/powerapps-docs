@@ -2,19 +2,14 @@
 title: "Use Power Fx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
-ms.date: 05/26/2022
+ms.date: 02/03/2023
 ms.reviewer: ""
-
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Use Power Fx in a custom page for your model-driven app
 
@@ -27,14 +22,14 @@ This article outlines how the common [Microsoft Power Fx](../canvas-apps/formula
 
 A notification can be shown to the user in a custom page by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  When the notification messages appear, they're docked above the default page to stay visible until disabled. If a timeout interval is provided, the notification message will disappear after the timeout interval. It is recommended not to use a timeout interval of 10, as this is no longer considered as a timeout interval. More information: [Notify function](../canvas-apps/functions/function-showerror.md).
 
-```powerappsfl
+```powerapps-dot
 Notify( "Custom page notification message" )
 ```
 
 > [!div class="mx-imgBorder"]
 > ![Custom page notify information message bar](media/page-powerfx-in-model-app/custom-page-notify-information.png "Custom page notify information message bar")
 
-```powerappsfl
+```powerapps-dot
 Notify( "Custom page notify warning message", NotificationType.Warning )
 ```
 
@@ -53,7 +48,7 @@ The [Navigate function](../canvas-apps/functions/function-navigate.md) allows th
 
 To navigate from one custom page to another, pass the display name of the custom page as the first parameter.
 
-```powerappsfl
+```powerapps-dot
 Navigate( CustomPage2  )
 ```
 
@@ -61,15 +56,18 @@ Navigate( CustomPage2  )
 
 To navigate to the default view of the table, pass table name as the first parameter.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Accounts )
 ```
+
+> [!IMPORTANT]
+> Make sure you add the accounts Microsoft Dataverse table to the custom page before publishing and testing.
 
 ### Navigate to specific system view of the table
 
 To navigate to a specific system view of the table, pass the GUID of the view.
 
-```powerappsfl
+```powerapps-dot
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
 ```
 
@@ -77,7 +75,7 @@ Navigate( 'Accounts (Views)'.'My Active Accounts' )
 
 To navigate to the default form of the table, pass the record as the first parameter.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Gallery1.Selected )
 ```
 
@@ -85,7 +83,7 @@ Navigate( Gallery1.Selected )
 
 To pass a Dataverse record to a specific form, pass the form name in the second parameter's Page attribute.
 
-```powerappsfl
+```powerapps-dot
 Navigate( 
   AccountGallery.Selected, 
   { Page: 'Accounts (Forms)'.Account  } )
@@ -95,7 +93,7 @@ Navigate(
 
 To pass a Dataverse record to a specific custom page, pass the custom page name in the second parameter's Page attribute.
 
-```powerappsfl
+```powerapps-dot
 Navigate( 
   AccountGallery.Selected, 
   { Page: 'Account Record Page'  } )
@@ -105,7 +103,7 @@ In the target custom page, the record is retrieved using **Param** function to g
 
 Below is an example of loading the record into an **EditForm** control.
 
-```powerappsfl
+```powerapps-dot
 AccountEditForm.DataSource = Accounts
 AccountEditForm.Item = 
   LookUp( Accounts, accountid = GUID( Param("id") ) )
@@ -115,7 +113,7 @@ AccountEditForm.Item =
 
 To navigate to the default form of the table in create mode, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Defaults( Accounts ) )
 ```
 
@@ -123,7 +121,7 @@ Navigate( Defaults( Accounts ) )
 
 To navigate to a new record with some fields defaulted, use **Patch** function to set fields on the default record for the table. 
 
-```powerappsfl
+```powerapps-dot
 Navigate(
 	Patch(
 		Defaults(Accounts), { 'Account Name': "My company", Phone: "555-3423" } ) 
@@ -134,8 +132,8 @@ Navigate(
 
 To navigate back to the last page or to close a dialog, the [Back](../canvas-apps/functions/function-navigate.md) function is called in a custom page. The **Back** function closes the current page and returns to the last model-driven app or custom page in the model-driven app. If the custom page has multiple screens, see the article [Navigating back when custom page has multiple screens](#navigating-back-when-custom-page-has-multiple-screens).
 
-```powerappsfl
-Back( )
+```powerapps-dot
+Back()
 ```
 
 ### Navigating back when custom page has multiple screens
@@ -150,32 +148,6 @@ By default a custom page uses a single screen to encourage separation of the app
 
 > [!div class="mx-imgBorder"]
 > ![Custom page enable multiple screens](media/page-powerfx-in-model-app/custom-page-enable-multiple-screens.png "Custom page enable multiple screens")
-
-## Confirm function
-
-The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform specific.
-
-The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
-
-Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a best effort basis. 
-
-> [!NOTE]
-> The options in the table below aren't currently available with canvas apps.
-
-|Option Field  |Description  |
-|---------|---------|
-|ConfirmButton     |The text to display on the *confirm* button, replacing the default, localized "OK" text.         |
-|CancelButton     |The text to display on the *cancel* button, replacing the default, localized "Cancel" text.         |
-|Title     |The text to display as the *title* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.         |
-|Subtitle     |   The text to display as the *subtitle* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.      |
-
-`Confirm` returns true if the confirm button was selected, false otherwise.
-
-### Syntax
-
-**Confirm**( Message [, OptionsRecord ] )
-- `Message` - Required. Message to display to the user.
-- `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
 
 ### Known issues
 

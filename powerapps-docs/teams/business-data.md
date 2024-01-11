@@ -1,15 +1,15 @@
 ---
 title: Have a conversation about your business data in a Teams app. (contains video)
-description: Learn how to enable conversations about your business from within your Power App in Teams.
+description: Learn how to enable conversations about your business from within your Power Apps in Teams.
 author: joel-lindstrom
 
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/06/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-    - tapanm-msft
+    - mduelae
     - msftsamperl
     - joel-lindstrom
 ---
@@ -18,7 +18,7 @@ contributors:
 
 Apps in Microsoft Teams drive collaboration by enabling users to do work where they communicate and collaborate. One way to make your apps collaborative is by adding the ability to have a conversation about your app or the data in your app. Teams is your go-to place to have such conversations.
 
-For example, in the [Profile+ sample app](profile-app.md) for Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Teams.
+For example, in the [Profile+ sample app template](profile-app.md) for Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Teams.
 
 You might also want to use this capability for your apps. For example, if you're building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the sales person about the opportunity.
 
@@ -287,18 +287,5 @@ Run the app in preview mode or go to the team in which the app is created.
 
     ![Testing the app](media/have-a-conversation-about-your-business-data/testing-the-app-1.png "Testing the app")
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

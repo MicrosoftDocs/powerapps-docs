@@ -1,23 +1,18 @@
 ---
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
 description: How to export data to Excel
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/12/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-lead

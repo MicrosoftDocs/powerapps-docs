@@ -103,7 +103,6 @@ story.](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-f
 
 Virgin Atlantic created an app for employees to request a corporate credit card.
 After an employee submits this request, it goes to the relevant
-manager to approve. This process was previously managed by using paper forms, which
 were printed out and handed to the Procurement team. It has now been digitized
 by using Power Apps.
 

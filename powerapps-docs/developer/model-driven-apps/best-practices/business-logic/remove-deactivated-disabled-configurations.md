@@ -2,17 +2,14 @@
 title: "Remove deactivated or disabled customizations | MicrosoftDocs"
 description: "Deactivated or disabled customizations should be removed from a solution to improve solution management and to decrease the risk of utilizing or managing an outdated component."
 suite: powerapps
-author: jowells
-manager: austinj
+author: shmcarth
+
 ms.topic: article
 ms.date: 1/15/2019
 ms.subservice: mda-developer
-ms.author: jowells
+ms.author: shmcarth
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Remove deactivated or disabled customizations
 

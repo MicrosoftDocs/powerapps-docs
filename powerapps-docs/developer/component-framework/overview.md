@@ -2,9 +2,8 @@
 title: "Power Apps component framework overview in Microsoft Dataverse(contains video) | Microsoft Docs"
 description: "Use the Power Apps component framework to create code components to provide an enhanced experiences for people to view and work with data in forms, views, and dashboards."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: overview
@@ -68,8 +67,8 @@ Power Apps component framework licensing requirements are inline with existing c
 [What are code components?](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
-[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
+[Use code components in Power Pages](../../maker/portals/component-framework.md)
 
 
 

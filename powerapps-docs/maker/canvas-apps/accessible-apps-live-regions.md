@@ -10,12 +10,10 @@ ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - tahoon-ms
   - chmoncay
-  - tapanm-msft
+  - mduelae
 ---
 
 # Announce dynamic changes with live regions for canvas apps

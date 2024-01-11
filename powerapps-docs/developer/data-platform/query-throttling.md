@@ -15,12 +15,8 @@ author: "pnghub"
 ms.subservice: dataverse-developer
 ms.author: "gned"
 ms.reviewer: "pehecke"
-manager: "mayadumesh"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Query throttling

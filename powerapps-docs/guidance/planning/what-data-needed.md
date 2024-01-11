@@ -53,7 +53,7 @@ And if the user is a worker, should they only see their own work items?
 app:
 > - The originator of the expense report: they should be able to see only their own
     expense reports.
-> - Managers (Nick): Nick should only be able to see the expense reports of his
+> - Managers (Nick): Nick should only be able to see the expense reports of their
     direct reports.
 > - Accountant (Abhay): Abhay should have the authority to review *all* the expense
     reports.
@@ -66,7 +66,7 @@ infrequently? How often should the app be updated with new data?
 
 > Example:
 >
-> The data coming from Azure Active Directory doesn't change very often;
+> The data coming from Microsoft Entra ID doesn't change very often;
 however, it does change on occasion as people move from role to role within the
 organization and in the reporting structure. So, for this app, it's
 appropriate to look up the information at the time the user creates the expense

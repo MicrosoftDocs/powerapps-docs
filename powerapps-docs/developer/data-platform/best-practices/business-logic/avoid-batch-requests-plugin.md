@@ -5,7 +5,6 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
 
@@ -18,9 +17,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Do not use batch request types in plug-ins and workflow activities
 
@@ -116,7 +112,7 @@ On the server side, the operations included in a batch request are executed sequ
 
 [Event Framework](../../event-framework.md)<br />
 [Run-time limitations](../../org-service/execute-multiple-requests.md#run-time-limitations)<br/>
-[Execute multiple requests using the Organization service](../../org-service/execute-multiple-requests.md)<br/>
+[Execute multiple requests using the SDK for .NET](../../org-service/execute-multiple-requests.md)<br/>
 [Execute messages in a single database transaction](../../org-service/use-executetransaction.md)
 
 

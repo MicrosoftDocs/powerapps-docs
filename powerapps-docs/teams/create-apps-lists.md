@@ -7,9 +7,9 @@ ms.custom:
 ms.date: 03/23/2022
 ms.subservice: teams
 ms.author: jiawen
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - msftsamperl
   - Steven-Jia
 ---

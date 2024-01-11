@@ -2,8 +2,6 @@
 title: Open table data in Excel | Microsoft Docs
 description: Open table data in Excel for interactive viewing and editing.
 author: lancedMicrosoft
-manager: kvivek
-
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2021
@@ -11,12 +9,8 @@ ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Open table data in Excel
-
 
 By opening table data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. 
 
@@ -26,9 +20,10 @@ By opening table data in Microsoft Excel, you can quickly and easily view and ed
 To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
 ## Open table data in Excel
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the left pane, expand the **Data** section, and select **Tables**. All the tables are shown.
+1. In the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2. Select the ellipsis (...) to the right of the table that you're interested in, and then select **Edit data in Excel**. 
 

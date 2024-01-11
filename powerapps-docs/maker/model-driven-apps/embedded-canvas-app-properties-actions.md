@@ -16,14 +16,10 @@ ms.assetid: 00e62904-2ce9-4730-a113-02b1fedbf22e
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # ModelDrivenFormIntegration control properties and actions
 

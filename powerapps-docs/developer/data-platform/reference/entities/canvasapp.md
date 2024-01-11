@@ -1,18 +1,14 @@
 ---
 title: "CanvasApp table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CanvasApp table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # CanvasApp table/entity reference
@@ -25,18 +21,18 @@ An application built through a canvas-based editing experience.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/canvasapps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/canvasapps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /canvasapps(*canvasappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /canvasapps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /canvasapps(*canvasappid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|Retrieve|GET /canvasapps(*canvasappid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /canvasapps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|Update|PATCH /canvasapps(*canvasappid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -795,13 +791,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [Assets](#BKMK_Assets)
 - [Assets_Name](#BKMK_Assets_Name)
+- [BackgroundImage](#BKMK_BackgroundImage)
 - [BackgroundImage_Name](#BKMK_BackgroundImage_Name)
 - [CanvasAppRowId](#BKMK_CanvasAppRowId)
 - [ComponentState](#BKMK_ComponentState)
+- [Document](#BKMK_Document)
 - [Document_Name](#BKMK_Document_Name)
 - [IsManaged](#BKMK_IsManaged)
+- [LargeIcon](#BKMK_LargeIcon)
 - [LargeIcon_Name](#BKMK_LargeIcon_Name)
+- [MediumIcon](#BKMK_MediumIcon)
 - [MediumIcon_Name](#BKMK_MediumIcon_Name)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -809,17 +810,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [SmallIcon](#BKMK_SmallIcon)
 - [SmallIcon_Name](#BKMK_SmallIcon_Name)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
+- [TeamsIcon](#BKMK_TeamsIcon)
 - [TeamsIcon_Name](#BKMK_TeamsIcon_Name)
 - [VersionNumber](#BKMK_VersionNumber)
+- [WideIcon](#BKMK_WideIcon)
 - [WideIcon_Name](#BKMK_WideIcon_Name)
+
+
+### <a name="BKMK_Assets"></a> Assets
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Assets for Canvas Apps.|
+|DisplayName|Assets|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|assets|
+|RequiredLevel|None|
+|Type|File|
 
 
 ### <a name="BKMK_Assets_Name"></a> Assets_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -835,9 +854,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_BackgroundImage"></a> BackgroundImage
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Background image for Canvas Apps.|
+|DisplayName|Background Image|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|background_image|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_BackgroundImage_Name"></a> BackgroundImage_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -889,9 +923,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 
+### <a name="BKMK_Document"></a> Document
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Document for Canvas Apps.|
+|DisplayName|Document|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|document|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_Document_Name"></a> Document_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -930,9 +979,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 
+### <a name="BKMK_LargeIcon"></a> LargeIcon
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Large icon for Canvas Apps.|
+|DisplayName|Large Icon|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|large_icon|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_LargeIcon_Name"></a> LargeIcon_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -948,9 +1012,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_MediumIcon"></a> MediumIcon
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Medium icon for Canvas Apps.|
+|DisplayName|Medium Icon|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|medium_icon|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_MediumIcon_Name"></a> MediumIcon_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -1055,9 +1134,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_SmallIcon"></a> SmallIcon
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Small icon for Canvas Apps.|
+|DisplayName|Small Icon|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|small_icon|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_SmallIcon_Name"></a> SmallIcon_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -1099,9 +1193,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_TeamsIcon"></a> TeamsIcon
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Teams icon for Canvas Apps.|
+|DisplayName|Teams Icon|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|teams_icon|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_TeamsIcon_Name"></a> TeamsIcon_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -1132,9 +1241,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|BigInt|
 
 
+### <a name="BKMK_WideIcon"></a> WideIcon
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Wide icon for Canvas Apps.|
+|DisplayName|Wide Icon|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|wide_icon|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_WideIcon_Name"></a> WideIcon_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Canvas App Metadata Extension Solution
 
 |Property|Value|
 |--------|-----|
@@ -1155,8 +1279,26 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
+- [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](#BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName)
 - [canvasapp_appaction_onclickeventformulacomponentlibraryid](#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid)
 - [canvasapp_appaction_visibilityformulacomponentlibraryid](#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid)
+
+
+### <a name="BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName"></a> canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName
+
+**Added by**: Mobile Apps Solution Solution
+
+Same as the [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](msdyn_mobileapp.md#BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_mobileapp|
+|ReferencingAttribute|msdyn_primarypublishedappname|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid"></a> canvasapp_appaction_onclickeventformulacomponentlibraryid
@@ -1212,6 +1354,6 @@ See the [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Solution) one-to-m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.canvasapp?text=canvasapp EntityType" />

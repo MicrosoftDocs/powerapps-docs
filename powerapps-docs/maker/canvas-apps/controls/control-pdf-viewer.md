@@ -4,16 +4,14 @@ description: Learn about the details, properties and examples of the PDF viewer 
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # PDF viewer control (experimental) in Power Apps
@@ -99,6 +97,13 @@ App users can work around these limitations by opening PDF documents in an exter
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
+
+## Keyboard shortcuts
+
+- **J** - Page down
+- **K** - Page up
+- **N** - Page down
+- **R** - Rotate all pages 90° clockwise
 
 ## Example
 

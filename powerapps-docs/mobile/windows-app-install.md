@@ -1,20 +1,17 @@
 ---
 title: Install Power Apps for Windows | Microsoft Docs
 description: Install Power Apps for Windows.
-author: mduelae
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/25/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -25,7 +22,8 @@ searchScope:
 Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](/powerapps/powerapps-overview).
 
 > [!IMPORTANT]
-> Power Apps for Windows 8 will be deprecated and replaced with the Windows app covered in this topic. For more information, see [Power Apps for Windows will be deprecated and replaced with a new app](/power-platform/important-changes-coming#power-apps-for-windows-will-be-deprecated-and-replaced-with-a-new-app).
+> - Power Apps for Windows 8 will be deprecated and replaced with the Windows app covered in this topic. For more information, see [Power Apps for Windows will be deprecated and replaced with a new app](/power-platform/important-changes-coming#power-apps-for-windows-will-be-deprecated-and-replaced-with-a-new-app).
+> - The [Microsoft Dynamics 365 (Preview)](https://apps.microsoft.com/store/detail/microsoft-dynamics-365-preview/9N0RWZ9KZZT8?hl=en-us&gl=US) app for Windows was deprecated on June 20, 2022. The app is no longer supported. Now you can run your Dynamics 365 apps on Powers Apps for Windows with the same set of features and capabilities. 
 
 
 ## Install the app
@@ -57,4 +55,12 @@ You need administrator rights on your device to install WebView2. If you don't h
    > ![Download WebView2 Runtime.](media/webview-install.png "Download WebView2")
 3. Go over the license terms and privacy statement and then select **Accept and Download**.
 4. Run **MicroEdgeWebview2Setup.exe**.
+
+## Install from app center
+
+If you don't have access to install Power Apps for Windows from the Microsoft Store then you can install it from the [app center](https://install.appcenter.ms/orgs/dynamics365-mobile/apps/power-apps-windows-store-signed-builds/distribution_groups/windows%20store-signed%20build%20external%20partners).
+
+An administrator can also download the package from the [app center](https://install.appcenter.ms/orgs/dynamics365-mobile/apps/power-apps-windows-store-signed-builds/distribution_groups/windows%20store-signed%20build%20external%20partners) and distribute it to users with Intune.
+
+
 

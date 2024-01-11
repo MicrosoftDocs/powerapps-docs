@@ -1,13 +1,13 @@
 ---
 title: "Design model-driven apps by using the app designer | MicrosoftDocs"
 description: Learn how to design model-driven apps
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 06/27/2018
 ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,15 +15,11 @@ applies_to:
 ms.assetid: aa6aca00-f95a-4f06-bec4-18b427b4618c
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 author: Mattp123
 caps.latest.revision: 17
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Design model-driven apps using the classic app designer

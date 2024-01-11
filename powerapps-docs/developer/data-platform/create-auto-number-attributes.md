@@ -8,12 +8,8 @@ ms.topic: "article"
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -47,7 +43,7 @@ The following examples show how to create a new autonumber column named `new_Ser
 
 You can create and update table definitions using the Web API. More information: [Create and update table definitions using the Web API](/powerapps/developer/data-platform/webapi/create-update-entity-definitions-using-web-api).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='new_widget')/Attributes HTTP/1.1
@@ -96,7 +92,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -108,7 +104,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
 
 #### [SDK for .NET](#tab/sdk)
 
-Using the Organization service with SDK for .NET  <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
+Using the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
 
 ```csharp
 string conn = $@"
@@ -122,6 +118,7 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
   {
@@ -247,7 +244,7 @@ The following samples set the seed to 10000 for an autonumber column named `new_
 
 Using the Web API [SetAutoNumberSeed Action](xref:Microsoft.Dynamics.CRM.SetAutoNumberSeed).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/SetAutoNumberSeed HTTP/1.1
@@ -263,7 +260,7 @@ OData-Version: 4.0
 } 
 ```
 
-**Response**
+**Response:**
 
 ```json
 HTTP/1.1 204 No Content
@@ -289,6 +286,8 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
+
 //Define the seed 
 SetAutoNumberSeedRequest req = new SetAutoNumberSeedRequest();
 req.EntityName = "newWidget";

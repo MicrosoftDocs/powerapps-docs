@@ -1,43 +1,36 @@
 ---
 title: "FetchXML schema (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The FetchXML query language is one available method to create data queries against the Microsoft Dataverse database." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/16/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 05/26/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "mayadu" # MSFT alias of Microsoft employees only
-manager: "jamesol" # MSFT alias of manager or PM counterpart
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # FetchXML schema
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The FetchXML query language is used to create queries against the Microsoft Dataverse database. The following is the schema for the FetchXML query language. For more information, see [Use FetchXML to construct a query](use-fetchxml-construct-query.md).
-
-You can find this schema in the `Schemas\9.0.0.2090\Fetch.xsd` folder when you download the Schemas zip file.
-Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
   
 ## FetchXML Schema  
   
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema id="fetch" elementFormDefault="qualified" xmlns:xs="https://www.w3.org/2001/XMLSchema"
-	xmlns:mstns="https://tempuri.org/fetch/unique">
+<xs:schema id="fetch" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:mstns="http://tempuri.org/fetch/unique">
   <xs:annotation>
     <xs:documentation>Schema name: fetch-schema</xs:documentation>
   </xs:annotation>
   <!--
-	
-		condition element - used for capturing entity and link-entity
-							"where" clause criteria
-		
-	-->
+  
+    condition element - used for capturing entity and link-entity
+              "where" clause criteria
+    
+  -->
   <!-- [XDR-XSD] "value" element  -->
   <xs:element name="value" type="xs:string"></xs:element>
   <!-- [XDR-XSD] "condition" element  -->
@@ -46,10 +39,10 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <!-- -->
         <!--
-		The attribute "value" is used for all operators that compare to a single value (for example, eq).
-		The element "value" is used for operators that compare to multiple values (for example, in).
-		Some operators require neither the attribute "value" or the element "value" (for example, null).
-	-->
+    The attribute "value" is used for all operators that compare to a single value (for example, eq).
+    The element "value" is used for operators that compare to multiple values (for example, in).
+    Some operators require neither the attribute "value" or the element "value" (for example, null).
+  -->
         <xs:element name="value" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
             <xs:simpleContent>
@@ -66,11 +59,12 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
       <xs:attribute name="attribute" type="xs:string"></xs:attribute>
       <xs:attribute name="entityname" type="xs:string"></xs:attribute>
       <xs:attribute name="operator" use="required" type="operator"></xs:attribute>
+      <xs:attribute name="valueof" type="xs:string"></xs:attribute>
       <!--
-		The attribute "value" is used for all operators that compare to a single value (for example, eq).
-		The element "value" is used for operators that compare to multiple values (for example, in).
-		Some operators require neither the attribute "value" or the element "value" (for example, null).
-	-->
+    The attribute "value" is used for all operators that compare to a single value (for example, eq).
+    The element "value" is used for operators that compare to multiple values (for example, in).
+    Some operators require neither the attribute "value" or the element "value" (for example, null).
+  -->
       <xs:attribute name="value" type="xs:string"></xs:attribute>
       <xs:attribute name="aggregate" type="AggregateType"></xs:attribute>
       <xs:attribute name="rowaggregate" type="RowAggregateType"></xs:attribute>
@@ -81,11 +75,11 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     </xs:complexType>
   </xs:element>
   <!--
-	
-		filter element - used for constructing complex conditionals
-						 legal on entity and link-entity
-		
-	-->
+  
+    filter element - used for constructing complex conditionals
+             legal on entity and link-entity
+    
+  -->
   <!-- [XDR-XSD] "filter" element  -->
   <xs:element name="filter">
     <xs:complexType>
@@ -103,16 +97,24 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
+      <xs:attribute name="hint">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="union" />
+            <xs:enumeration value="or" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
       <xs:attribute name="isquickfindfields" type="xs:boolean" />
     </xs:complexType>
   </xs:element>
   <!--
-	
-		attribute elements - used for selecting attributes from the
-							 surrounding entity / link-entity, these
-							 values are returned as part of the fetch
-		
-	-->
+  
+    attribute elements - used for selecting attributes from the
+               surrounding entity / link-entity, these
+               values are returned as part of the fetch
+    
+  -->
   <!-- [XDR-XSD] "all-attributes" element  -->
   <xs:element name="all-attributes">
     <xs:complexType></xs:complexType>
@@ -128,12 +130,13 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     <xs:attribute name="dategrouping" type="DateGroupingType"></xs:attribute>
     <xs:attribute name="usertimezone" type="FetchBoolType"></xs:attribute>
     <xs:attribute name="distinct" type="FetchBoolType"></xs:attribute>
+    <xs:attribute name="latematerialize" type="FetchBoolType"></xs:attribute>
   </xs:complexType>
   <!--
-	
-	order element - used to specify a sort order
+  
+  order element - used to specify a sort order
 
-	-->
+  -->
   <!-- [XDR-XSD] "order" element  -->
   <xs:complexType name="FetchOrderType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -145,10 +148,10 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     <xs:attribute name="descending" default="false" type="xs:boolean"></xs:attribute>
   </xs:complexType>
   <!--
-	
-		link-entity element - used for joining one entity to its "parent"
-		
-	-->
+  
+    link-entity element - used for joining one entity to its "parent"
+    
+  -->
   <!-- [XDR-XSD] "link-entity" element  -->
   <xs:complexType name="FetchLinkEntityType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -164,20 +167,27 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     <xs:attribute name="to" type="xs:string"></xs:attribute>
     <xs:attribute name="from" type="xs:string"></xs:attribute>
     <xs:attribute name="alias" type="xs:string"></xs:attribute>
-    <xs:attribute name="link-type" type="xs:string"></xs:attribute>
+    <xs:attribute name="link-type" use="optional" >
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(|natural|inner|outer|matchfirstrowusingcrossapply|exists|in|any|not any|all|not all)"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
     <xs:attribute name="visible" type="xs:boolean"></xs:attribute>
     <xs:attribute name="intersect" type="xs:boolean"></xs:attribute>
+    <xs:attribute name="forceseek" type="xs:string"></xs:attribute>
     <xs:attribute name="enableprefiltering" type="xs:boolean"></xs:attribute>
     <xs:attribute name="prefilterparametername" type="xs:string"></xs:attribute>
   </xs:complexType>
   <!--
-	
-		entity element - used for specifying the root element for a fetch, only
-						 one root entity is allowed in a given fetch, all others
-						 are dependent on this entity and are marked as
-						 link-entity
-		
-	-->
+  
+    entity element - used for specifying the root element for a fetch, only
+             one root entity is allowed in a given fetch, all others
+             are dependent on this entity and are marked as
+             link-entity
+    
+  -->
   <!-- [XDR-XSD] "entity" element  -->
   <xs:complexType name="FetchEntityType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -190,14 +200,15 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     </xs:choice>
     <!-- -->
     <xs:attribute name="name" use="required" type="xs:string"></xs:attribute>
+    <xs:attribute name="forceseek" type="xs:string"></xs:attribute>
     <xs:attribute name="enableprefiltering" type="xs:boolean"></xs:attribute>
     <xs:attribute name="prefilterparametername" type="xs:string"></xs:attribute>
   </xs:complexType>
   <!--
-	
-		fetch element - root element for the query
-		
-	-->
+  
+    fetch element - root element for the query
+    
+  -->
   <!-- [XDR-XSD] "fetch" element  -->
   <xs:element name="fetch" type="FetchType"/>
   <xs:complexType name="FetchType">
@@ -216,6 +227,14 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     <xs:attribute name="aggregate" type="xs:boolean"/>
     <xs:attribute name="distinct" type="xs:boolean"/>
     <xs:attribute name="top" type="xs:integer"/>
+                <xs:attribute name="aggregatelimit" type="xs:integer" use="optional"/>
+          <xs:attribute name="options" use="optional" >
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(|OptimizeForUnknown|DisableRowGoal|Recompile|ForceOrder|EnableOptimizerHotfixes|LoopJoin|MergeJoin|HashJoin|NO_PERFORMANCE_SPOOL)(,(OptimizeForUnknown|DisableRowGoal|Recompile|ForceOrder|EnableOptimizerHotfixes|LoopJoin|MergeJoin|HashJoin|NO_PERFORMANCE_SPOOL))*"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
     <xs:attribute name="mapping">
       <xs:simpleType>
         <xs:restriction base="xs:NMTOKEN">
@@ -565,11 +584,14 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
     <xs:attribute name="languagecode" use="required" type="xs:positiveInteger" />
   </xs:complexType>
 </xs:schema>
-```  
+```
+
+> [!NOTE]
+> The `forceseek` attribute in the `FetchLinkEntityType` and `FetchEntityType` complexType is for internal use only.
   
 ### See also
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
-[Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)<br />
+
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)
  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

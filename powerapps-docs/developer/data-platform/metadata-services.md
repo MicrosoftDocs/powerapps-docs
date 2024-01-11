@@ -1,6 +1,6 @@
 ---
 title: "Work with definitions using code (Microsoft Dataverse) | Microsoft Docs"
-description: "Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the table schema"
+description: "Both the Web API and the SDK for .NET include capabilities to perform CRUD operations on the table schema"
 ms.custom: ""
 ms.date: 03/12/2021
 
@@ -9,17 +9,13 @@ author: "mayadumesh"
 ms.subservice: dataverse-developer
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "ryjones"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with table definitions using code
 
-Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the table. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read table definitions.
+Both the [Web API](webapi/overview.md) and the [SDK for .NET](org-service/overview.md) include capabilities to perform CRUD operations on the table. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read table definitions.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -39,7 +35,7 @@ Developing a good working understanding of the table definitions in the system c
 
 For more information about programmatically working with table definitions using:
 - **Web API**: [Use Web API with Dataverse table definitions](webapi/use-web-api-metadata.md)
-- **Organization service**: [Use Organization service with Dataverse table definitions](org-service/work-with-metadata.md)
+- **SDK for .NET**: [Use SDK for .NET with Dataverse table definitions](org-service/work-with-metadata.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,18 +1,14 @@
 ---
 title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActivityParty table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ActivityParty table/entity reference
@@ -25,9 +21,9 @@ Person or group associated with an activity. An activity can have multiple activ
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /activityparties<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -60,6 +56,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PartyId](#BKMK_PartyId)
 - [PartyIdName](#BKMK_PartyIdName)
 - [PartyObjectTypeCode](#BKMK_PartyObjectTypeCode)
+- [UnresolvedPartyName](#BKMK_UnresolvedPartyName)
 
 
 ### <a name="BKMK_ActivityId"></a> ActivityId
@@ -165,6 +162,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |9|Owner||
 |10|Resource||
 |11|Customer||
+|12|Chat Participant||
+|13|Related||
 
 
 
@@ -210,6 +209,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|partyobjecttypecode|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_UnresolvedPartyName"></a> UnresolvedPartyName
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the party to be used when the party is not resolved to an entity.|
+|DisplayName|Unresolved Party Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|unresolvedpartyname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 <a name="read-only-attributes"></a>
 
@@ -527,6 +544,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [activitypointer_activity_parties](#BKMK_activitypointer_activity_parties)
 - [chat_activity_parties](#BKMK_chat_activity_parties)
+- [adx_inviteredemption_activity_parties](#BKMK_adx_inviteredemption_activity_parties)
+- [adx_portalcomment_activity_parties](#BKMK_adx_portalcomment_activity_parties)
 
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
@@ -591,8 +610,20 @@ See the [activitypointer_activity_parties](activitypointer.md#BKMK_activitypoint
 
 See the [chat_activity_parties](chat.md#BKMK_chat_activity_parties) one-to-many relationship for the [chat](chat.md) table/entity.
 
+### <a name="BKMK_adx_inviteredemption_activity_parties"></a> adx_inviteredemption_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_activity_parties](adx_inviteredemption.md#BKMK_adx_inviteredemption_activity_parties) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_activity_parties"></a> adx_portalcomment_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_activity_parties](adx_portalcomment.md#BKMK_adx_portalcomment_activity_parties) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType" />

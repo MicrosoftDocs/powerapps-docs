@@ -1,11 +1,11 @@
 ---
-title: "Create and remove pages in model-driven apps | MicrosoftDocs"
-description: Learn how to Create and remove pages in model-driven apps.
+title: "Work with pages in model-driven apps | MicrosoftDocs"
+description: Learn how to create, edit, and remove pages in model-driven apps.
 ms.custom: ""
-ms.date: 03/30/2022
+ms.date: 08/17/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -13,17 +13,10 @@ applies_to:
 author: "Mattp123"
 ms.author: "emcoope"
 ms.reviewer: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
-
-# Create and remove pages
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Work with model-driven app pages
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
 
@@ -40,6 +33,30 @@ To create a page follow these steps:
 1. Select the components you want.
 1. Select **Add**.
 
+## Work with tables on a page
+
+Create and edit tables directly from the app designer.
+
+### Create a table for a page
+
+1. In the model-driven app designer, select **Add page**, select **Table based view and form** as the page type, and then select **Next**.
+1. Select **Create new table**. If your table is already created select it from the list.
+1. If you selected **Create a new table**: 
+   - Enter the table a name in the **Display name** field.
+   - Optionally, specify the table **Record ownership** from the **Advanced options** area.
+   :::image type="content" source="media/create-table-app-designer.png" alt-text="Create a table for a page in app designer":::
+1. Select **Create**.
+
+### Edit a table for a page
+
+From the **Pages** area in app designer, select **...** to the right of the table name, and then select **Edit**.
+:::image type="content" source="media/edit-table-app-designer.png" alt-text="Edit a table for a page in app designer":::
+
+The table designer opens for you to make changes to the table.
+:::image type="content" source="media/table-designer-app-designer.png" alt-text="Table designer for edit a table in app designer":::
+
+To delete the table, **Close** the table hub, select **...** to the right of the table name, and then select **Remove**.
+
 ## Remove a page
 
 To remove a page complete the following steps:
@@ -53,4 +70,4 @@ To remove a page complete the following steps:
 
 [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
-[Add a custom page to your model-driven app (preview)](add-page-to-model-app.md)
+[Add a custom page to your model-driven app](add-page-to-model-app.md)

@@ -1,22 +1,18 @@
 ---
 title: "Find your administrator or support person| MicrosoftDocs"
 description: how to find your admin
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/25/2019
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Find your administrator or support person 
@@ -25,7 +21,7 @@ You may occasionally run across issues that require consultation with your admin
   
 1. Open your app.  
   
-2. On the command bar select the **Advanced Find** button.
+2. On the command bar, select the **Advanced Find** button.
   
 3. On the Advanced Find page, in the **Look for** list, select **Users**.  
   

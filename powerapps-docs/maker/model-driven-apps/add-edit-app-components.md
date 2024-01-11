@@ -2,8 +2,7 @@
 title: "Tutorial to add or edit model-driven app components with Power Apps | MicrosoftDocs"
 description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
-ms.date: 03/05/2020
-
+ms.date: 10/17/2023
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
@@ -21,14 +20,14 @@ caps.latest.revision: 17
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Add or edit model-driven app components in the Power Apps app designer
 
-
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to use the Modern Designers to create and edit your model-driven apps and components.
 
 This tutorial describes how to add components to and remove components from a model-driven app.
 
@@ -97,13 +96,13 @@ To add a dashboard to an app, follow these steps:
 
 1. If users need to use only selected dashboard then select the check box for the component that needs to be added. The following types of dashboards are available:
     - **Classic Dashboards** appear on both the web app and the Unified Interface app.
-    - **Interactive Dashboards** appear only on the Unified Interface app. If you have selected the client type for the app as web app, then the **Interactive Dashboards** option will not be displayed.
+    - **Interactive Dashboards** appear only on the Unified Interface app. If you have selected the client type for the app as web app, then the **Interactive Dashboards** option won't be displayed.
 
-     Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards added to the app. If no dashboard is selected then **All** will appear instead of the dashboard count and all dashboards will be available to users when they use the app.  
+     Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards added to the app. If no dashboard is selected, then **All** will appear instead of the dashboard count, and all dashboards will be available to users when they use the app.  
   
      All tables the dashboard uses are also added to the **Entity View** area. For example, when the Customer Service Manager dashboard is added, the **Case**, **Entitlement**, and **Queue Item** tables are added to the **Entity View** area.
 
-     For each table, tiles for its assets are also added. These tiles can be used to add forms, views, and charts. For more information see: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#edit-or-remove-components)
+     For each table, tiles for its assets are also added. These tiles can be used to add forms, views, and charts. For more information, see: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#edit-or-remove-components)
   
     > [!div class="mx-imgBorder"]
     > ![Add table to the app designer canvas.](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
@@ -113,7 +112,7 @@ To add a dashboard to an app, follow these steps:
      > [!div class="mx-imgBorder"]
      > ![Create New link on the Components tab of app designer.](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
   
-     The dashboard designer opens. For more information see: [Create and edit dashboards](create-edit-dashboards.md)  
+     The dashboard designer opens. For more information, see: [Create and edit dashboards](create-edit-dashboards.md)  
   
 3. Complete the above steps by selecting **Save**.
 
@@ -144,7 +143,7 @@ To add a table to an app, follow these steps:
   
      On the app designer canvas, the right pane shows dashboards that are available in the default solution.  
 
-1. In the **Search** box, type a one or more keywords matching the table name you want.
+1. In the **Search** box, type one or more keywords matching the table name you want.
   
      The table list is filtered to show results that match the keywords.
 
@@ -169,14 +168,14 @@ To add a table to an app, follow these steps:
   
      ![Form tile for case table.](../model-driven-apps/media/add-forms-entity.png "Form tile for case table")  
   
-     If none of the forms for a table are selected then all the forms for that table will be displayed to the users while they use the app. This behavior is similar for views and charts also, if no view or chart is selected. This helps to create apps quickly when all available components are required. There is no need to select each component during app design.  
+     If none of the forms for a table are selected, then all the forms for that table will be displayed to the users while they use the app. This behavior is similar for views and charts also, if no view or chart is selected. This helps to create apps quickly when all available components are required. There's no need to select each component during app design.  
 
-     If no dashboards or business process flows are selected then all the dashboards and business process flows will be available for users while they use the app.
+     If no dashboards or business process flows are selected, then all the dashboards and business process flows will be available for users while they use the app.
   
     > [!NOTE]
     > For the app to run, each table that is added must have at least one active form. If multiple forms are selected then the first active form that appears in the default solution will be used when users run the app.  
   
-1. To add a new form that is not available in the list, select **Create New**.  
+1. To add a new form that isn't available in the list, select **Create New**.  
   
      In the drop-down list, select the type of form that is required.
 

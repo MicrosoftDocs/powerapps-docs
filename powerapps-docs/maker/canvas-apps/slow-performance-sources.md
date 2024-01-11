@@ -5,14 +5,12 @@ author: JinManAhn-MSFT
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/16/2022
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft

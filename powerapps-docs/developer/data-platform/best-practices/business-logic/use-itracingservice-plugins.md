@@ -5,7 +5,6 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
 
@@ -18,9 +17,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use ITracingService in Plug-ins
 

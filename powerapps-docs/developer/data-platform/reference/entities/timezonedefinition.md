@@ -1,18 +1,14 @@
 ---
 title: "TimeZoneDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneDefinition table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # TimeZoneDefinition table/entity reference
@@ -25,13 +21,13 @@ Time zone definition, including name and time zone code.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|GetAllTimeZonesWithDisplayName|<xref href="Microsoft.Dynamics.CRM.GetAllTimeZonesWithDisplayName?text=GetAllTimeZonesWithDisplayName Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetAllTimeZonesWithDisplayNameRequest>|
-|GetTimeZoneCodeByLocalizedName|<xref href="Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName?text=GetTimeZoneCodeByLocalizedName Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetTimeZoneCodeByLocalizedNameRequest>|
-|LocalTimeFromUtcTime|<xref href="Microsoft.Dynamics.CRM.LocalTimeFromUtcTime?text=LocalTimeFromUtcTime Function" />|<xref:Microsoft.Crm.Sdk.Messages.LocalTimeFromUtcTimeRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/timezonedefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|GetAllTimeZonesWithDisplayName|<xref:Microsoft.Dynamics.CRM.GetAllTimeZonesWithDisplayName?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetAllTimeZonesWithDisplayNameRequest>|
+|GetTimeZoneCodeByLocalizedName|<xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetTimeZoneCodeByLocalizedNameRequest>|
+|LocalTimeFromUtcTime|<xref:Microsoft.Dynamics.CRM.LocalTimeFromUtcTime?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.LocalTimeFromUtcTimeRequest>|
+|Retrieve|GET /timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /timezonedefinitions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |UtcTimeFromLocalTime||<xref:Microsoft.Crm.Sdk.Messages.UtcTimeFromLocalTimeRequest>|
 
 ## Properties
@@ -441,6 +437,6 @@ See the [lk_timezonedefinition_createdby](systemuser.md#BKMK_lk_timezonedefiniti
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.timezonedefinition?text=timezonedefinition EntityType" />

@@ -1,18 +1,15 @@
 ---
 title: "Understand charts: Underlying data and chart representation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
-author: mspilde
-ms.author: mspilde
-manager: lwelicki
+author: sriharibs-msft
+ms.author: srihas
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -218,7 +215,7 @@ The root class for the charts.
 
 |Property Name|Description|
 |-------------|------------|
-|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
+|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color palette is specified, chart picks the color from the color palette. <br/> - If none is specified, it picks up the default color palette.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 

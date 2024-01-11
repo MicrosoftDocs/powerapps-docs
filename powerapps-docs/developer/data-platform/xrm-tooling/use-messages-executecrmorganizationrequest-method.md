@@ -5,15 +5,11 @@ ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke
@@ -22,7 +18,10 @@ contributors:
   
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.  
+The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.
+
+> [!NOTE]
+> You could also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteOrganizationRequest%2A?displayProperty=nameWithType> to obtain the same results.
   
 ## Example 1: CreateRequest message  
 
@@ -30,7 +29,8 @@ The following code samples demonstrate how you can execute messages using the <x
   
 ```csharp 
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
-  
+// ServiceClient svc = new ServiceClient(connectionstring); 
+
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
 {  
@@ -63,7 +63,8 @@ else
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
-  
+// ServiceClient svc = new ServiceClient(connectionstring); 
+
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
 {  

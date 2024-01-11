@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Detect duplicate data using code
 
@@ -25,7 +21,7 @@ Duplicate detection lets organizations set duplicate detection policies and crea
 > [!NOTE]
 > For information on how to create rules and run system jobs for detecting duplicate data using the user interface (UI), see [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data).
 
-You can use the Web API or Organization service to detect duplicate data. Topics in this section provide information on how you can detect duplicate data using both web services. 
+You can use the Web API or SDK for .NET to detect duplicate data. Topics in this section provide information on how you can detect duplicate data using both web services. 
 
 ### See also
 

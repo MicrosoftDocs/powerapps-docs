@@ -2,7 +2,6 @@
 title: Power Apps webinars | Microsoft Docs
 description: Power Apps webinars
 author: KumarVivek
-manager: margoc
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/28/2022

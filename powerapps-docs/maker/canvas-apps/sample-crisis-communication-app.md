@@ -5,16 +5,14 @@ author: matthewbolanos
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 04/27/2020
 ms.subservice: canvas-maker
 ms.author: mabolan
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - matthewbolanos
   - kumarvivek
 ---
@@ -94,7 +92,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 
 #### Import the list deployment flow
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 1. Select **My flows** from the left navigation pane.
 1. Select **Import** on the command bar.
 1. Upload the **DeploySPLists.zip** package from the GitHub repository.
@@ -399,7 +397,7 @@ and bring it into your flow. More information about creating a Teams team: [Crea
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 
 1. Select **My flows** from the left navigation pane.
 
@@ -523,8 +521,8 @@ Complete all the fields as shown in the following table, and then select **Save*
 |-|-|-|-|
 | Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you'd like to send notifications to another inbox, see [optional shared inbox configuration](#optional-configure-shared-inbox), earlier in this article. | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that appears in the upper-left corner. | https://contoso.com/logo.png |
-| AAD group ID | AADGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news** flow. Follow the instructions below to get the Azure Active Directory (Azure AD) ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
-| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/\<app URL\>?tenantId=\<tenant ID\>
+| Microsoft Entra group ID | Microsoft Entra IDGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news** flow. Follow the instructions below to get the Microsoft Entra ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
+| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/<app URL\>?tenantId=\<tenant ID\>
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature in the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
 | Notification method | PreferredSentNotification | Used by the **Notify users on new crisis communication news** flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, push notification |
 | Feature flags | Feature1...8 | Used to disable or enable each feature in the application. |  |
@@ -533,17 +531,17 @@ Complete all the fields as shown in the following table, and then select **Save*
 > Teams notification and push notification are currently not supported in GCC.
 
 
-#### Finding the Azure AD ID for your distribution group
+#### Finding the Microsoft Entra ID for your distribution group
 
 1. Go to [aad.portal.azure.com](https://aad.portal.azure.com).
-1. Select **Azure Active Directory** from the left navigation pane.
+1. Select **Microsoft Entra ID** from the left navigation pane.
 1. Select **Groups**.
 1. Search for and select your distribution group.
 1. Copy the **Object Id** field.
 
-    ![Getting the Azure AD ID.](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
+    ![Getting the Microsoft Entra ID.](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
-1. Paste the ID into the **AAD group ID** field in the admin app.
+1. Paste the ID into the **Microsoft Entra group ID** field in the admin app.
 
 ### Set up emergency contacts
 
@@ -557,7 +555,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 |-|-|-|
 | Full name | FullName | The name of the contact. |
 | E-mail | E-mail | The email address that's shown for the contact. |
-| Country | Country | The country for the contact. This field is used to group the contacts; you can use other values to group contacts by if countries don't make sense for you. |
+| Country | Country | The country/region for the contact. This field is used to group the contacts; you can use other values to group contacts by if countries/regions don't make sense for you. |
 | Comments | Comments | Shows additional information about the contact; useful to describe when to reach out to this contact. |
 | Deprecated | Deprecated | Use to hide an existing emergency contact. |
 
@@ -638,7 +636,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 ### Import the news notification flow
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 1. Select **My flows** from the left navigation pane.
 1. Select **Import** on the command bar.
 1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub repository.

@@ -8,12 +8,10 @@ ms.custom:
 ms.subservice: canvas-maker
 ms.date: 06/17/2022
 ms.author: tapanm
-ms.reviewer: tapanm
-search.app: 
-  - PowerApps
+ms.reviewer: mkaur
 contributors:
     - sbahl10
-    - tapanm-msft
+    - mduelae
     - ProfessorKendrick
 ---
 

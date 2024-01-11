@@ -1,18 +1,14 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 06/30/2022
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Entity table/entity reference
@@ -25,9 +21,9 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entities<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /entities<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -329,6 +325,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
+- [IsActivity](#BKMK_IsActivity)
+- [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -355,6 +353,44 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
+
+
+### <a name="BKMK_IsActivity"></a> IsActivity
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Whether this entity is of type activity.|
+|DisplayName|Is Activity|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isactivity|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsActivity Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+
+
+### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The object type code of this entity.|
+|DisplayName|Object Type Code|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|objecttypecode|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
@@ -414,10 +450,15 @@ Listed by **SchemaName**.
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
 - [sharedlinksetting_extensionofrecordid](#BKMK_sharedlinksetting_extensionofrecordid)
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
+- [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
+- [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
+- [AIPluginOperation_Entity_Entity](#BKMK_AIPluginOperation_Entity_Entity)
 - [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
+- [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
+- [msdyn_entity_msdyn_entitylinkchatconfiguration](#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration)
 
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
@@ -539,6 +580,57 @@ Same as the [entity_serviceplanmapping](serviceplanmapping.md#BKMK_entity_servic
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_DVFileSearchEntity_Entity_Entity"></a> DVFileSearchEntity_Entity_Entity
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [DVFileSearchEntity_Entity_Entity](dvfilesearchentity.md#BKMK_DVFileSearchEntity_Entity_Entity) many-to-one relationship for the [dvfilesearchentity](dvfilesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearchentity|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|DVFileSearchEntity_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_DVTableSearchEntity_Entity_Entity"></a> DVTableSearchEntity_Entity_Entity
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [DVTableSearchEntity_Entity_Entity](dvtablesearchentity.md#BKMK_DVTableSearchEntity_Entity_Entity) many-to-one relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearchentity|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|DVTableSearchEntity_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_AIPluginOperation_Entity_Entity"></a> AIPluginOperation_Entity_Entity
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+Same as the [AIPluginOperation_Entity_Entity](aipluginoperation.md#BKMK_AIPluginOperation_Entity_Entity) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|AIPluginOperation_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
 
 **Added by**: Active Solution Solution
@@ -552,6 +644,23 @@ Same as the [virtualentitymetadata_extensionofrecordid](virtualentitymetadata.md
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|virtualentitymetadata_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_metadataforarchival_extensionofrecordid"></a> metadataforarchival_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [metadataforarchival_extensionofrecordid](metadataforarchival.md#BKMK_metadataforarchival_extensionofrecordid) many-to-one relationship for the [metadataforarchival](metadataforarchival.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|metadataforarchival|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|metadataforarchival_extensionofrecordid|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
@@ -607,8 +716,35 @@ Same as the [entity_appactionrule_ContextEntity](appactionrule.md#BKMK_entity_ap
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration"></a> msdyn_entity_msdyn_entitylinkchatconfiguration
+
+**Added by**: Teams Chat Settings Solution Solution
+
+Same as the [msdyn_entity_msdyn_entitylinkchatconfiguration](msdyn_entitylinkchatconfiguration.md#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration) many-to-one relationship for the [msdyn_entitylinkchatconfiguration](msdyn_entitylinkchatconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_entitylinkchatconfiguration|
+|ReferencingAttribute|msdyn_entitytype|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_entity_msdyn_entitylinkchatconfiguration_entitytype|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the Entity table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_card_entity_connections"></a> card_entity_connections
+
+See the [card_entity_connections](card.md#BKMK_card_entity_connections) many-to-many relationship for the [card](card.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.entity?text=entity EntityType" />
