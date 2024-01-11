@@ -1,8 +1,8 @@
 ---
 title: "createRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the createRecord method.
-ms.author: aorth
-author: adrianorth
+author: lancedMicrosoft
+ms.author: lanced
 ms.date: 08/22/2022
 ms.reviewer: jdaly
 ms.topic: reference

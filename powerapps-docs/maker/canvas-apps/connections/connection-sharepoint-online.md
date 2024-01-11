@@ -5,7 +5,7 @@ author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/11/2021
+ms.date: 01/05/2024
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType:
@@ -160,6 +160,9 @@ When you find the file that you want, select it to show it in the **Video**, **I
 > ![Sample image.](./media/connection-sharepoint-online/library-app.png "Sample image")
 
 ## Known issues
+
+**Sharing a Canvas apps using SharePoint connector**
+Power Apps won't show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless you're the creator of the app OR you're explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment. To play such apps, use the direct link to the app.
 
 ### Lists
 
