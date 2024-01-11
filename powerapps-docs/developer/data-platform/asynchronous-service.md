@@ -860,7 +860,7 @@ You can delete system jobs in the application or in code just like any other tab
 > [!NOTE]
 > When registering asynchronous plug-ins, there is an option to automatically delete successful operations. It is recommended that you use it. [Learn to write a plug-in](write-plug-in.md)
 
-The common practice is to create a recurring bulk deletion job that deletes successful jobs.[Learn how to remove a large amount of specific, targeted data with bulk deletion](/power-platform/admin/delete-bulk-records)
+The common practice is to create a recurring bulk deletion job that deletes successful jobs. [Learn how to remove a large amount of specific, targeted data with bulk deletion](/power-platform/admin/delete-bulk-records)
 
 ## Manage system job states
 
