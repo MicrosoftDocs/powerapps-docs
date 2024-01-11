@@ -185,7 +185,7 @@ Use the following FetchXML to retrieve the columns in the table above. [Learn to
 
 #### [SQL](#tab/sql)
 
-You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when enabled.
+You can use SQL to query the `AsyncOperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when enabled.
 
 ```sql
 SELECT TOP (1000) asyncoperationid
@@ -221,9 +221,7 @@ SELECT TOP (1000) asyncoperationid
 
 ---
 
-
-
-### Operation Types
+### Operation types
 
 The [OperationType](reference/entities/asyncoperation.md#BKMK_OperationType) column describes categories of system jobs. Dataverse initiates many of these types to perform maintenance tasks.
 
@@ -275,7 +273,7 @@ If an `INTERVAL` value isn't set, it's interpreted as `1`.
 
 Use the queries in this section to help diagnose problems.
 
-### Jobs by State, Status, and type
+### Jobs by state, status, and type
 
 
 Use this query to understand the distribution and frequency of different types of jobs. The results might tell you which jobs are causing a problem.
@@ -338,9 +336,9 @@ ORDER BY Count DESC
 
 ---
 
-### Top system Jobs that are in waiting status by count
+### Top system jobs that are in suspended state by count
 
-Use this query to extract a count of all jobs within the `asyncoperation` table that are in a 'waiting' state. This query helps you to:
+Use this query to extract a count of all jobs within the `AsyncOperation` table that are in a **Suspended** state. This query helps you to:
 
 - Understand the volume and nature of waiting jobs.
 - Identify where the hold-ups are occurring.
@@ -411,19 +409,17 @@ ORDER BY Count DESC
 
 Here's what to look for in the results:
 
-- **Quantify Waiting Jobs**: The query specifically targets jobs that are waiting to be processed (`statecode` = `1`). The results give you a count of all such jobs, categorized by their `statuscode` and `operationtype`.
+- **Quantify Suspended Jobs**: The query specifically targets jobs that are **Suspended** (`statecode` = `1`). The results give you a count of all such jobs, categorized by their `statuscode` and `operationtype`.
 
-- **Status Code Specifics**: Each `statuscode` for a waiting job can indicate a different reason for the job being in a waiting state. Look for patterns or high counts associated with specific status codes that might highlight specific issues or backlogs.
+- **Operation Type Breakdown**: The count of **Suspended** jobs grouped `operationtype`, showing you the types of operations are most commonly in a **Suspended** state.
 
-- **Operation Type Breakdown**: The count of waiting jobs grouped `operationtype`, showing you the types of operations are most commonly in a waiting state.
+- **Identifying Potential Bottlenecks**: A high count of **Suspended** jobs for extended periods of time might be due to resource limitations, dependencies on other processes, or system misconfigurations.
 
-- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time might be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up or optimizing on such cases.
+- **Capacity and Resource Management**: If certain jobs are consistently in the **Suspended** state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
-- **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
+- **System Health Check**: The jobs in a **Suspended** state serve as a health indicator. A healthy system should ideally have minimal jobs in a **Suspended** state or at least show a quick turnover from **Suspended** to active processing.
 
-- **System Health Check**: The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
-
-- **Workflow Efficiency**: The results can shed light on workflow efficiency. If a particular `operationtype` has a high count of waiting jobs, it might indicate inefficiencies or the need for optimization within that workflow.
+- **Workflow Efficiency**: The results can shed light on workflow efficiency. If a particular `operationtype` has a high count of **Suspended** jobs, it might indicate inefficiencies or the need for optimization within that workflow.
 
 
 ### Workflows by count
@@ -501,9 +497,9 @@ Here's what to look for in the results:
 
 - **Count of Each Category**: The  total number of jobs for each `statecode` and `statuscode` combination. This helps in identifying the most common outcomes of workflow operations.
 
-- **Identifying Common Outcomes**: With the results ordered by count in descending order, you can quickly identify the most frequent outcomes or bottlenecks in workflow processing.
+- **Identifying Common Outcomes**: With the results ordered by count in descending order, you can identify the most frequent outcomes or bottlenecks in workflow processing.
 
-- **Troubleshooting and Optimization**: High counts in failed or suspended states can highlight areas where workflows might be failing or getting stuck, signaling a need for troubleshooting or process optimization.
+- **Troubleshooting and Optimization**: High counts in **Failed** status or **Suspended** states can highlight areas where workflows might be failing or getting stuck, signaling a need for troubleshooting or process optimization.
 
 - **Performance Metrics**: Understanding which workflows are most common and how they're distributed across different states can help in assessing the performance and reliability of the workflow management system.
 
@@ -516,7 +512,7 @@ Here's what to look for in the results:
 
 ### Jobs waiting for system resources to become available
 
-Use this query to retrieve a detailed analysis of jobs from the `asyncoperation` table that are in a specific state of readiness but are pending execution due to unavailability of system resources. This query can identify factors contributing to slowness and making decisions for efficiency and better handling of backlog.
+Use this query to retrieve a detailed analysis of jobs from the `AsyncOperation` table that are in a specific state of readiness but are pending execution due to unavailability of system resources. This query can identify factors contributing to slowness and making decisions for efficiency and better handling of backlog.
 
 #### [Web API](#tab/webapi)
 
@@ -591,17 +587,13 @@ Here's what to look for in the results:
 - **Identifying Underlying Issues**: In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
 
 
-### Queries for File Storage
+### Queries for file storage
 
-When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `asyncoperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
+When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `AsyncOperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
-#### AsyncOperation FileStorage Datablob Count
+#### AsyncOperation file storage datablobid count
 
-Use this query to count the number of records in the `asyncoperation` table where the `datablobid` column isn't null.
-
-
-
-
+Use this query to count the number of records in the `AsyncOperation` table where the `datablobid` column isn't null.
 
 #### [Web API](#tab/webapi)
 
@@ -652,9 +644,9 @@ You may want to delete the records in using file storage to save space so this i
 - **System Performance Considerations**:
 If the `FileStorageCount` is unexpectedly high, you may want to take further action such as Bulk delete and clean up.
 
-#### Async Operations not in Blob Storage
+#### AsyncOperations not in blob storage
 
-Use this query to count the number of records in the `asyncoperation` table where the `datablobid` field is `NULL`.
+Use this query to count the number of records in the `AsyncOperation` table where the `datablobid` field is `NULL`.
 
 #### [Web API](#tab/webapi)
 
@@ -769,7 +761,7 @@ ORDER BY Jobs DESC
 
 ---
 
-#### Getting the Async Operation File Size Breakdown
+#### AsyncOperation file size and record count
 
 Use this query to get total file size and record count for system jobs by state, status and owning extension.
 
@@ -876,14 +868,14 @@ The status of the system job changes multiple times until the operation is compl
 
 |StateCode Value|StateCode Label|StatusCode Value|StatusCode Label|
 |--|--|--|--|
-|`0`|Ready|`0`|Waiting For Resources|
-|`1`|Suspended|`10`|Waiting|
-|`2`|Locked|`20`|In Progress|
-|`2`|Locked|`21`|Pausing|
-|`2`|Locked|`22`|Canceling|
-|`3`|Completed|`30`|Succeeded|
-|`3`|Completed|`31`|Failed|
-|`3`|Completed|`32`|Canceled|
+|`0`|**Ready**|`0`|**Waiting For Resources**|
+|`1`|**Suspended**|`10`|**Waiting**|
+|`2`|**Locked**|`20`|**In Progress**|
+|`2`|**Locked**|`21`|**Pausing**|
+|`2`|**Locked**|`22`|**Canceling**|
+|`3`|**Completed**|`30`|**Succeeded**|
+|`3`|**Completed**|`31`|**Failed**|
+|`3`|**Completed**|`32`|**Canceled**|
 
 You can change the status of system jobs in the application by navigating to **Settings** > **System** > **System Jobs** and using commands available in the **More Actions** menu.
 
@@ -916,7 +908,7 @@ Whether the requested operation occurs depends on the state of the system job. F
 
 ## Postpone system jobs
 
-The `PostPoneUntil` column contains a datetime value when the system job changes state from `1` (**Suspended**) to `0` (**Ready**). The `PostPoneUntil`, `StateCode`, and `StatusCode` columns  are the only `asyncoperation` table columns supported for update.
+The `PostPoneUntil` column contains a datetime value when the system job changes state from `1` (**Suspended**) to `0` (**Ready**). The `PostPoneUntil`, `StateCode`, and `StatusCode` columns  are the only `AsyncOperation` table columns supported for update.
 
 ### See also
 
