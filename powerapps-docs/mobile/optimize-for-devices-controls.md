@@ -31,7 +31,7 @@ For a screen to be optimized for devices, it must use controls that are supporte
 ## Device-optimized controls
 The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
 
-[**Modern controls**](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
+### [Modern controls](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
  - Button
  - Checkbox
  - Date picker
@@ -39,16 +39,16 @@ The following controls are available for screens that are optimized for devices.
  - Text input
  - Toggle
 
-> [!Note]
-> Makers must complete the following steps to turn on modern controls and themes for an app.
-> 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-> 1. In the navigation pane, select **Apps**.
-> 1. Select an app.
-> 1. Select **Settings** in the comand bar.
-> 1. In the **Settings** window, select **General**.
-> 1. Turn on the **Modern controls and themes** option.
+#### Turn on modern controls
+Makers must complete the following steps to turn on modern controls and themes for an app.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Apps**.
+1. Select an app.
+1. Select **Settings** in the comand bar.
+1. In the **Settings** window, select **General**.
+1. Turn on the **Modern controls and themes** option.
 
- [**Controls**](../maker/canvas-apps/reference-properties.md)
+ ### [Controls](../maker/canvas-apps/reference-properties.md)
  - Add picture
  - Barcode reader
  - Button
