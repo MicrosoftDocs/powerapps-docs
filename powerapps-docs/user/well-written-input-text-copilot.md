@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preveiw)
 description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
-ms.date: 12/21/2023
+ms.date: 01/11/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -50,9 +50,9 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
 
 **Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
 
-##Turn off this feature
+## Turn off this feature
 
-Makers can turn off this feature on a per app-basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
+Makers can turn off this feature on a per app basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
 
 1. Go to the [Power Apps](https://make.powerapps.com) maker portal.
 1. Select **Apps** in the navigation pane.
