@@ -126,9 +126,10 @@ To create a Synapse Link profile with incremental data:
 4. Select Subscription, Resource group and a Storage account. You do not need to provide a Synapse workspace or a spark pool.
 6. Select Next. You will see the option to choose tables. 
 7. Select **Advanced**, select **Show advanced configuration settings** and enable the option **Enable incremental update folder structure**
-8. You will be able to choose tables from Dataverse as well as Finance and Operations. Finance and Operations tables will appear in the selection.
-9. Options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned Yearly.
-10. Choose tables and select **Save**. Tables selected will be initialized and you will see incremental data in the storage account
+8. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, system will partition data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
+9. You will be able to choose tables from Dataverse as well as Finance and Operations. Finance and Operations tables will appear in the selection.
+10. Options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned Yearly.
+11. Choose tables and select **Save**. Tables selected will be initialized and you will see incremental data in the storage account
 
 > [!NOTE]
 > 
