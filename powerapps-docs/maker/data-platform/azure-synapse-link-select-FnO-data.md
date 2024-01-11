@@ -39,7 +39,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 >
 > If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead. See Software lifecycle annoucements related to [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from Export to Data Lake to Synapse Link visit [https://aka.ms/TransitiontoSynapseLinkVideos](https://aka.ms/TransitiontoSynapseLinkVideos)
 >
-> Finance and Operations data in Synapse Link is not yet available in GCC regions.
+> Finance and Operations data in Synapse Link is not yet available in "Azure in China" region. 
 > 
 
 ## Prerequisites
@@ -111,10 +111,9 @@ There are several limitations that will be addressed in future releases. To lear
 1. You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
 2. Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 3. Don't see your custom tables? you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
-4. The initial data export of finance and operations apps tables in Delta Lake format might take up to an hour depending on the size of data.
-5. You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
-6. If the table selected contains data fields that secured via **AOS Authorization**, those fields will be ignored and the exported data does not contain the field. For an Example in CustTable, the field TaxLicenseNum has the metadata property AOS Authorization set to Yes. This field is ignored when CustTable data is exported with Synapse Link.  
-7. If the table selected contains data fields that are of Array type, those fields will be ignored anf the exported data does not contain the field. For an Example i WHSInventTable table, fields FilterCode and FilterGroup are of type Array. These fields are not exported with Synapse Link.
+4. You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
+5. If the table selected contains data fields that secured via **AOS Authorization**, those fields will be ignored and the exported data does not contain the field. For an Example in CustTable, the field TaxLicenseNum has the metadata property AOS Authorization set to Yes. This field is ignored when CustTable data is exported with Synapse Link.  
+6. If the table selected contains data fields that are of Array type, those fields will be ignored anf the exported data does not contain the field. For an Example i WHSInventTable table, fields FilterCode and FilterGroup are of type Array. These fields are not exported with Synapse Link.
 
 ## Access incremental data changes from Finance and Operations
 If want to load incremental data changes from Finance and Operations into your own downstream Data warehouse, you can create a Synape Link profile that provides only incremental data. Synapse Link will  provide an initial export of all data rows and then provide you with access to data that changed periodically. The data is provided via CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. See  [Synapse Link - incremental update](azure-synapse-link-incremental.md) for more details.
@@ -124,11 +123,12 @@ To create a Synapse Link profile with incremental data:
 1. Sign in to Power Apps and select your preferred environment
 2. On the left navigation pane, select Azure Synapse Link.
 3. In Synapse Link page, On the command bar, select + New link to data lake.
-4. Select Subscription, Resource group and a Storage account. Optionally, you can provide a Synapse workspace. 5. You do not need to "User spark pool for Delta lake ..." option   
-6. Select Next. 
-7. Select Advanced, select Show advanced configuration settings and enable the option **Enable incremental update folder structure**
-8. You will be able to choose tables from Dataverse as well as Finance and Operations. 
-11. Select Save. Tables selected will be initialized and you will see incremental data in the storage account
+4. Select Subscription, Resource group and a Storage account. You do not need to provide a Synapse workspace or a spark pool.
+6. Select Next. You will see the option to choose tables. 
+7. Select **Advanced**, select **Show advanced configuration settings** and enable the option **Enable incremental update folder structure**
+8. You will be able to choose tables from Dataverse as well as Finance and Operations. Finance and Operations tables will appear in the selection.
+9. Options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned Yearly.
+10. Choose tables and select **Save**. Tables selected will be initialized and you will see incremental data in the storage account
 
 > [!NOTE]
 > 
@@ -137,9 +137,8 @@ To create a Synapse Link profile with incremental data:
 > It is recommended that you create seperate Synapse Link profiles for incremental data and table for ease of management.
 
 ### Known limitations
+All the known limitations applicable to Finance and Operations Tables are applicable to incremental data. 
 
-All the known limitations applicable to Finance and Operations Tables are applicable to incremental data. In addition following limitations apply
-1. 
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
