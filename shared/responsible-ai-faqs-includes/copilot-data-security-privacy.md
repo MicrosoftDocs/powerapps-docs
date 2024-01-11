@@ -7,7 +7,8 @@ ms.topic: include
 
 <!--Any changes to this article must be reviewed by RAI Champ Leads and CELA-->
 
-Copilot for Microsoft Dynamics 365 and Power Platform features follow a set of core security practices and [Responsible AI principles](https://www.microsoft.com/en-us/ai/principles-and-approach).
+
+Copilot for Microsoft Dynamics 365 and Power Platform features follow a set of core security practices and [Responsible AI principles](https://www.microsoft.com/ai/principles-and-approach).
 
 Copilot is built on the Microsoft Azure OpenAI Service and is run completely within the Azure cloud. With Azure OpenAI Service, customers get the security capabilities of Microsoft Azure. Azure OpenAI Service offers private networking, regional availability, and responsible AI content filtering. Microsoft has a technology collaboration agreement with OpenAI, which is an independent organization.
 
@@ -29,11 +30,11 @@ Your prompts (inputs) and results (outputs):
 
 -   Are NOT used to train or improve Microsoft AI models unless your tenant admin has opted into optional data sharing.
 
-To learn more about Azure AI Service data privacy and security reference [Data, privacy, and security for Azure OpenAI Service - Azure AI services \| Microsoft Learn](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about how Microsoft and Microsoft Copilot data privacy, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+To learn more about Azure AI Service data privacy and security reference [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about how Microsoft and Microsoft Copilot data privacy, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 ## Does Copilot block prompt injections (jailbreak attacks)? 
 
-[Jailbreak attacks](https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new#responsible-ai) are user prompts designed to provoke the generative AI model into exhibiting behaviors it was trained to avoid or to break the rules set in the System Message. Services across Dynamics 365 and Power Platform are required to implement prompt injection protection.
+[Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts designed to provoke the generative AI model into exhibiting behaviors it was trained to avoid or to break the rules set in the System Message. Services across Dynamics 365 and Power Platform are required to implement prompt injection protection.
 
 ## Can Copilot access encrypted content?
 
@@ -41,9 +42,9 @@ Data provided to Copilot is only provided based on the access level of the curre
 
 ## How does Copilot protect customer data? 
 
-Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview), Copilot is compliant with our existing privacy, security, and compliance commitments to our customers.
+Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), Copilot is compliant with our existing privacy, security, and compliance commitments to our customers.
 
-- **Multiple forms of protection to safeguard organizational data**. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, go to [Encryption in the Microsoft Cloud](https://learn.microsoft.com/en-us/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS). The transmission of data from Dynamics 365 and Power Platform to Azure OpenAI Service is facilitated through the Microsoft backbone network to ensure the reliability and safety of the transfer.
+- **Multiple forms of protection to safeguard organizational data**. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, go to [Encryption in the Microsoft Cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS). The transmission of data from Dynamics 365 and Power Platform to Azure OpenAI Service is facilitated through the Microsoft backbone network to ensure the reliability and safety of the transfer.
 
 - **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. Large Language Models (LLMs) are not further trained on, or learn from, your tenant data or your prompts. Within your tenant, our permissions model provides safeguards and enterprise-grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we've been using for years to secure customer data.
 
@@ -69,4 +70,5 @@ Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosyst
 
 As regulation in AI evolves, Microsoft will continue to adapt and respond to future regulatory requirements in this space.
 
-Dynamics 365 and Power Platform [trust](https://learn.microsoft.com/en-us/dynamics365/get-started/availability) documentation provides comprehensive information about customer data locations, and compliance with global, regional, and industry-specific requirements for managing data.
+Dynamics 365 and Power Platform [trust](/dynamics365/get-started/availability) documentation provides comprehensive information about customer data locations, and compliance with global, regional, and industry-specific requirements for managing data.
+
