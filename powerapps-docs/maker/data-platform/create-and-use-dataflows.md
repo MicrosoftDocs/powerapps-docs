@@ -217,6 +217,8 @@ The following articles are useful for further information and scenarios when usi
 
 -   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow)
 
+-   [Use dataflows in solutions](/power-query/dataflows/dataflow-solution-awareness)
+
 For more information about the Common Data Model:
 
 -   [Common Data Model - overview](/common-data-model/)
