@@ -7,6 +7,7 @@ ms.topic: include
 
 <!--Any changes to this article must be reviewed by RAI Champ Leads and CELA-->
 
+
 Copilot for Microsoft Dynamics 365 and Power Platform features follow a set of core security practices and [Responsible AI principles](https://www.microsoft.com/ai/principles-and-approach).
 
 Copilot is built on the Microsoft Azure OpenAI Service and is run completely within the Azure cloud. With Azure OpenAI Service, customers get the security capabilities of Microsoft Azure. Azure OpenAI Service offers private networking, regional availability, and responsible AI content filtering. Microsoft has a technology collaboration agreement with OpenAI, which is an independent organization.
@@ -70,3 +71,4 @@ Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosyst
 As regulation in AI evolves, Microsoft will continue to adapt and respond to future regulatory requirements in this space.
 
 Dynamics 365 and Power Platform [trust](/dynamics365/get-started/availability) documentation provides comprehensive information about customer data locations, and compliance with global, regional, and industry-specific requirements for managing data.
+
