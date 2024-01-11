@@ -180,7 +180,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** The customize form can support folders in SharePoint lists when creating new items?
 
-**A:** No.  Items is created in root of a target SharePoint lists.
+**A:** No. Items is created in root of a target SharePoint lists.
 
 ### Manage your custom form
 
