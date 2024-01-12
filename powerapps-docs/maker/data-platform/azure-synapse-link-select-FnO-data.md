@@ -51,9 +51,9 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 | How you plan to consume data  |  Synapse Link feature you'll use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
-| Access finance and operations tables via Synapse query |  [Synapse Link - Delta lake](powerapps-docs-pr/powerapps-docs/maker/data-platform/azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> Your data is saved in delta parquet format enabling better read performance | 
+| Access finance and operations tables via Synapse query |  [Synapse Link - Delta lake](/powerapps-docs-pr/powerapps-docs/maker/data-platform/azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> Your data is saved in delta parquet format enabling better read performance | 
 | Load incremental data changes into your own downstream data warehouse | [Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format |
-| Access finance and operations tables via Microsoft Fabric | [Link to Fabric](powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
+| Access finance and operations tables via Microsoft Fabric | [Link to Fabric](/powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 
 ### Link your finance and operations environment with Microsoft Power Platform
 
@@ -104,12 +104,12 @@ You can enable both finance and operations entities and finance and operations t
 >
 > In the event that the system ran into an error during initial sync or updates, you'll see an error icon and a pointer to trouble-shooting documents that can be used to diagnose and resolve the error.
 
-### Known limitations <!-- Start here-->
+### Known limitations <!-- You have three sections in this article with this same name. Either incorporate the all the known limitations content into one section or rename affected sections to clearly describe what each section represents. -->
 
-There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
+Currently, there are the following limitations. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/).
 
-1. You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
-2. Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+- You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
+- Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 3. Don't see your custom tables? you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 4. You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
 5. If the table selected contains data fields that secured via **AOS Authorization**, those fields will be ignored and the exported data does not contain the field. For an Example in CustTable, the field TaxLicenseNum has the metadata property AOS Authorization set to Yes. This field is ignored when CustTable data is exported with Synapse Link.  
@@ -176,7 +176,7 @@ To enable change tracking, follow these steps.
 
 1. In Dataverse, select the table.
 2. Select **Properties \> Advance Options**.
-3. Select the **Track changes** checkbox. If the checkbox is unavailable, see [The chosen entity doesn't pass the validation rules that are required to enable change tracking](#entity-fails-val-rules) later in this article.
+3. Select the **Track changes** checkbox. If the checkbox is unavailable, see [The chosen entity doesn't pass the validation rules that are required to enable change tracking](#entity-fails-val-rules) later in this article. <!-- There's no section in this article that corresponds to this bookmark -->
 
 ### Knwon limitations
 There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
