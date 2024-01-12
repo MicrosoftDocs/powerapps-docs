@@ -207,7 +207,7 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 ## Enable managed identity for an existing Azure Synapse Link profile
 
 > [!NOTE]
-> To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](powerapps-docs/maker/data-platform/azure-synapse-link-msi.md#connect-enterprise-policy-to-dataverse-environment)
+> To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
 
 1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
 2. Select **Use managed identity**, and then confirm.
