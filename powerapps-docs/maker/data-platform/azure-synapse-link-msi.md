@@ -210,6 +210,8 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 
 1. Navigate to an exisiting Synapse Link profile from maker portal.
 2. Click **Use managed identity** and confirm.
+![Synapse-Link-MSI-Exisiting-Profile](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/102614732/4d6a78a2-338d-4cc4-83c7-fb0fc74c5ca8)
+
 
 
 
