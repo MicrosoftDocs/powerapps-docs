@@ -87,7 +87,7 @@ The following are the main properties for Chatbot control:
 
 1. Chatbot control isn't supported on the Power Apps mobile app.
 2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mooncake.
-3. Chatbot control doesn't support regional Power Virtual Agents bots
+3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in non-default locations of your tenant.
 
 ## See also
 
