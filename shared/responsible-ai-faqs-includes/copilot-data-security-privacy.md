@@ -30,7 +30,7 @@ Your prompts (inputs) and results (outputs):
 
 -   Are NOT used to train or improve Microsoft AI models unless your tenant admin has opted into optional data sharing.
 
-To learn more about Azure AI Service data privacy and security reference [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about how Microsoft and Microsoft Copilot data privacy, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+To learn more about Azure AI Service data privacy and security reference [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about Microsoft Copilot data privacy, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 ## Does Copilot block prompt injections (jailbreak attacks)? 
 
