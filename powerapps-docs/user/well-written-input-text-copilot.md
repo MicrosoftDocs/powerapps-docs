@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preveiw)
 description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
-ms.date: 12/21/2023
+ms.date: 01/11/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -28,7 +28,7 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - This feature is in process of rolling out, and may not be available in your region yet. 
 
-## How to use this feature
+## Use this feature
 
 1. Insert your cursor into a multi-line text box or rich text editor in a canvas app.
 1. Select the **Draft with Copilot** icon, and then select the **Draft with Copilot** option.
@@ -43,11 +43,23 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
     - If you want Copilot to suggest text that has a different tone, select **Tone** and then select the appropriate tone for the text.
     - If you want Copilot to suggest different text, select **Rewrite**.
     - If you are satisfied with the text that Copilot suggested, select **Add** to enter the text in the text box.
+  
+## Turn off this feature
+
+Makers can turn off this feature on a per app basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
+
+1. Go to the [Power Apps](https://make.powerapps.com) maker portal.
+1. Select **Apps** in the navigation pane.
+1. Select the check mark next to a canvas app.
+1. Select **Settings** in the command bar. The **App settings** pane appears.
+1. Select **Off** for the **Text assistance in web player (preview)** feature.
+1. Select **Save**.
 
 ## Known issue
 
 **Error**: There was a problem using this description. Try again.
 
 **Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
