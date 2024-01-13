@@ -103,21 +103,19 @@ Use `link-type` to apply filters on the records returned. The following table de
 |---------|---------|
 |`inner`|Default. Restricts results to rows with matching values in both tables.|
 |`outer`|Includes results from the parent element that don't have a matching value.|
-|`any`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
-|`not any`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
-|`all`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
-|`not all`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
-|`exists`|An [Extended Join Operator](#extended-join-operators) Restricts results to rows with matching values in both tables using an `exists` condition in the `where` clause following this pattern:<br/>`exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)`. This link type does not allow selecting columns values from the link entity and will only return one parent row when multiple matching link entity rows exist.|
-|`in`|An [Extended Join Operator](#extended-join-operators) Restricts results to rows with matching values in both tables using an `in` condition in the `where` clause following this pattern:<br/>`parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)`. This link type does not allow selecting columns values from the link entity and will only return one parent row when multiple matching link entity rows exist.|
-|`matchfirstrowusingcrosscpply`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with matching rows in the linked entity.|
+|`not any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with no matching rows in the linked entity.|
+|`all`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows where every row in the link entity with matching `from` column value satisfies the additional filters defined for this link entity. This includes parent rows which have no link entity rows with matching `from` values at all.|
+|`not all`|A [Filter Link Type](#filter-link-types).  Restricts results to parent rows where at least one row in the link entity with matching `from` column value does not satisfy the additional filters defined for this link entity.|
+|`exists`|Restricts results to rows with matching values in both tables using an `exists` condition in the `where` clause following this pattern:<br/>`exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)`. This link type does not allow selecting columns values from the link entity and will only return the parent row once when multiple matching link entity rows exist. This is equivalent to the `inner` type except for only returning the parent row at most once and not returning column value of the link entity rows.|
+|`in`|Restricts results to rows with matching values in both tables using an `in` condition in the `where` clause following this pattern:<br/>`parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)`. This link type does not allow selecting columns values from the link entity and will only return the parent row once when multiple matching link entity rows exist. This is equivalent to the `inner` type except for only returning the parent row at most once and not returning column value of the link entity rows.|
+|`matchfirstrowusingcrossapply`|Includes results from the parent element that don't have a matching value. When multiple matching link entity rows exist for a given parent row, the parent row will only be returned once and the column values will be included only for one of the matching link entity rows. This is useful when an example of a link entity row is needed but finding the column values for all of them is not required. This is equivalent to the `outer` type except for only finding one link entity row at most.|
 
-#### Extended Join Operators
+#### Filter Link Types
 
-Use extended join operators to include a filter within the join definition.
+Link entities using these types must be defined inside of a [filter element](reference/filter.md) and are interpreted as child conditions following the behavior defined by the `type` attribute of the parent `filter`.
 
-TODO: Add concepts required for using extended Join operators.
-
-
+These link entities always return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
 
 ## Parent elements
 
