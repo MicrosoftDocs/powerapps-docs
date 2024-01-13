@@ -93,7 +93,8 @@ If an environment variable is used in a flow and the display name of the environ
 
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
-- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for third party code to use. 
+- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for third party code to use.
+- To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
 
 ## Frequently asked questions
 
