@@ -187,7 +187,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Add a new **IP firewall rule** based on the client IP address.
 1. Select **Save** when done. More information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
 
-## Create Azure Synapse Link for Dataverse with managed identity
+## Create a new Azure Synapse Link for Dataverse with managed identity
 
 > [!IMPORTANT]
 >
@@ -203,6 +203,15 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 1. On the left navigation pane, select **Azure Synapse Link**, and then select **+ New link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Select Enterprise Policy with Managed Service Identity**, and then select **Next**.
 1. Add the tables you want to export, and then select **Save**.
+
+## Enable managed identity for an existing Azure Synapse Link profile
+
+> [!NOTE]
+> To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
+
+1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
+2. Select **Use managed identity**, and then confirm.
+   :::image type="content" source="media/use-managed-identity-cmd.png" alt-text="Use managed identity command in Power Apps":::
 
 ## Troubleshooting
 
