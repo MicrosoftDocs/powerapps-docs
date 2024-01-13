@@ -63,8 +63,8 @@ Both of these attributes are usually used to explicitly define the columns to ma
 
 If you don't use either of these attributes and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship. Otherwise you will get an error like the following:
 
-> **code** `0x80041102`
-> **message** No system many-to-many relationship exists between `<table A>` and `<table B>`.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes."
+> Error Code: `0x80041102`  
+> Error Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
 
 If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables. However, it is best to explicitly specify values for both the `to` or `from` attributes.
 
@@ -81,8 +81,8 @@ The following attribute values are set in the previous example, but they may hav
 
 |Attribute|Description|
 |---------|---------|
-|`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `contactid`.|
-|`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]<br />In this case, `primarycontactid`.|
+|`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `contactid`. See [Using `to` and `from` attributes](#using-to-and-from-attributes)|
+|`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]<br />In this case, `primarycontactid`. See [Using `to` and `from` attributes](#using-to-and-from-attributes)|
 |`link-type`|[!INCLUDE [link-entity-link-type-description](reference/includes/link-entity-link-type-description.md)]|
 |`alias`|[!INCLUDE [link-entity-alias-description](reference/includes/link-entity-alias-description.md)]|
 |`intersect`|[!INCLUDE [link-entity-intersect-description](reference/includes/link-entity-intersect-description.md)]|
