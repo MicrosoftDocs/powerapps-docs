@@ -134,7 +134,29 @@ You can create filters that compare columns on values in the same row using the 
 </fetch>
 ```
 
-## Limitations on column comparison filters
+### Cross table comparisons
+
+With FetchXML only, you can compare field values in related tables. The following example returns rows where the contact `fullname` column matches the account `name` column.
+
+```xml
+<fetch> 
+  <entity name='contact'>
+    <attribute name='contactid' />
+    <attribute name='fullname' />
+    <filter type='and'>
+      <condition attribute='fullname' operator='eq' valueof='acct.name' />
+    </filter>
+    <link-entity name='account' from='accountid' to='parentcustomerid' link-type='outer' alias='acct'>
+      <attribute name='name' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+The [link-entity element](reference/link-entity.md) must use an `alias` attribute and the value of the `valueof` parameter must reference that alias and the column name in the related table.
+
+
+### Limitations on column comparison filters
 
 There are limitations on these kinds of filters:
 
