@@ -24,12 +24,16 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 A **Video** control plays a video clip from a file or from YouTube or Azure Media Services.  Closed captions can optionally be shown when specified.
 
 > [!NOTE]
-> Closed captions may not be available from certain videos hosted on Azure Media Services.  
+> Closed captions may not be available from certain videos hosted on Azure Media Services.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
 **Media** – An identifier for the clip that an audio or video control plays.
+
+> [!NOTE]
+> - Use HTTPS for all external videos to ensure compatibility with modern browsers.
+> - External videos must be accessible anonymously (without any authentication).
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
