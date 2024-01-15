@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to query data
 description: Learn to compose a query using FetchXml, a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-ms.date: 08/31/2023
+ms.date: 01/20/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -57,8 +57,6 @@ The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fet
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
-
-
 
 ## Use FetchXml to retrieve data
 
@@ -234,22 +232,28 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
     {
         XDocument fetchDoc = XDocument.Parse(fetchXml);
 
+        XElement fetchElement = fetchDoc.Root;
+
+        bool isAggregate = !(fetchElement?.Attributes("aggregate") == null &&
+            (fetchElement?.Attribute("aggregate")?.Value == "true" ||
+            fetchElement?.Attribute("aggregate")?.Value == "1"));
+
         // There can only be one entity element
-        XElement entityElement = fetchDoc.Root.Element("entity");
+        XElement entityElement = fetchElement.Element("entity");
 
         // Get the columns from the entity and any related link-entity elements
-        List<string> columns = GetColumnsFromElement(entityElement);
+        return GetColumnsFromElement(element: entityElement, isAggregate: isAggregate);
 
-        return columns;
     }
 
     /// <summary>
     /// Recursive function to get all column names from an entity or nested link-entity elements
     /// </summary>
     /// <param name="element">The entity or link-entity element</param>
+    /// <param name="isAggregate">Whether the query uses aggregation</param>
     /// <param name="alias">The alias of the link-entity element</param>
     /// <returns></returns>
-    static List<string> GetColumnsFromElement(XElement element, string? alias = null)
+    static List<string> GetColumnsFromElement(XElement element, bool isAggregate, string? alias = null)
     {
         List<string> columns = new();
 
@@ -258,8 +262,9 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
         {
             StringBuilder sb = new();
 
-            // Prepend the alias for link-entities
-            if (!string.IsNullOrWhiteSpace(alias))
+
+            // Prepend the alias for non-aggregate link-entities
+            if (!string.IsNullOrWhiteSpace(alias) && !isAggregate)
             {
                 sb.Append($"{alias}.");
             }
@@ -311,12 +316,11 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
             }
 
             // Recursive call for nested link-entity elements
-            columns.AddRange(GetColumnsFromElement(linkEntity, linkEntityName));
+            columns.AddRange(GetColumnsFromElement(linkEntity, isAggregate, linkEntityName));
         }
 
         return columns;
     }
-
 
     /// <summary>
     /// Returns the values of a row as strings
@@ -332,7 +336,8 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
             if (entity.Attributes.ContainsKey(column))
             {
                 // Use the formatted value if it available
-                if (entity.FormattedValues.ContainsKey(column))
+                if (entity.FormattedValues.ContainsKey(column) &&
+                !string.IsNullOrWhiteSpace(entity.FormattedValues[column]))
                 {
                     values.Add($"{entity.FormattedValues[column]}");
                 }
@@ -341,7 +346,16 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
                     // When an alias is used, the Aliased value must be converted
                     if (entity.Attributes[column] is AliasedValue aliasedValue)
                     {
-                        values.Add($"{aliasedValue.Value}");
+                        // When an EntityReference doesn't have a Name, show the Id
+                        if (aliasedValue.Value is EntityReference lookup &&
+                        string.IsNullOrWhiteSpace(lookup.Name))
+                        {
+                            values.Add($"{lookup.Id:B}");
+                        }
+                        else
+                        {
+                            values.Add($"{aliasedValue.Value}");
+                        }
                     }
                     else
                     {
@@ -501,11 +515,17 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
     {
         XDocument fetchDoc = XDocument.Parse(fetchXml);
 
+        XElement fetchElement = fetchDoc.Root;
+
+        bool isAggregate = !(fetchElement?.Attributes("aggregate") == null &&
+            (fetchElement?.Attribute("aggregate")?.Value == "true" ||
+            fetchElement?.Attribute("aggregate")?.Value == "1"));
+
         // There can only be one entity element
-        XElement entityElement = fetchDoc.Root.Element("entity");
+        XElement entityElement = fetchElement.Element("entity");
 
         // Get the columns from the entity and any related link-entity elements
-        List<string> columns = GetColumnsFromElement(entityElement);
+        List<string> columns = GetColumnsFromElement(element: entityElement, isAggregate: isAggregate);
 
         return columns;
     }
@@ -516,7 +536,7 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
     /// <param name="element">The entity or link-entity element</param>
     /// <param name="alias">The alias of the link-entity element</param>
     /// <returns></returns>
-    static List<string> GetColumnsFromElement(XElement element, string? alias = null)
+    static List<string> GetColumnsFromElement(XElement element, bool isAggregate, string? alias = null)
     {
         List<string> columns = new();
 
@@ -525,8 +545,8 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
         {
             StringBuilder sb = new();
 
-            // Prepend the alias for link-entities
-            if (!string.IsNullOrWhiteSpace(alias))
+            // Prepend the alias for non-aggregate link-entities
+            if (!string.IsNullOrWhiteSpace(alias) && !isAggregate)
             {
                 sb.Append($"{alias}.");
             }
@@ -578,12 +598,11 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
             }
 
             // Recursive call for nested link-entity elements
-            columns.AddRange(GetColumnsFromElement(linkEntity, linkEntityName));
+            columns.AddRange(GetColumnsFromElement(linkEntity, isAggregate, linkEntityName));
         }
 
         return columns;
     }
-
 
     /// <summary>
     /// Returns the values of a row as strings
@@ -594,6 +613,7 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
     static List<string> GetRowValues(List<string> columns, JsonObject record)
     {
         List<string> values = new();
+
         columns.ForEach(column =>
         {
             string lookupPropertyName = $"_{column}_value";
@@ -601,11 +621,12 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
 
             if (record.ContainsKey(column) || isLookup)
             {
-                string formattedValueKey = string.Format("{0}@OData.Community.Display.V1.FormattedValue", isLookup ? lookupPropertyName : column);
+                string formattedValueKey = string.Format("{0}@OData.Community.Display.V1.FormattedValue", 
+                    isLookup ? lookupPropertyName : column);
 
-
-                // Use the formatted value if it available
-                if (record.ContainsKey(formattedValueKey))
+                // Use the formatted value if it available and visible
+                if (record.ContainsKey(formattedValueKey) && 
+                !string.IsNullOrWhiteSpace((string)record[formattedValueKey]))
                 {
                     values.Add($"{record[formattedValueKey]}");
                 }
