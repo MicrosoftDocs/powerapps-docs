@@ -104,7 +104,7 @@ You can enable both finance and operations entities and finance and operations t
 >
 > In the event that the system ran into an error during initial sync or updates, you'll see an error icon and a pointer to trouble-shooting documents that can be used to diagnose and resolve the error.
 
-### Known limitations <!-- You have three sections in this article with this same name. Either incorporate the all the known limitations content into one section or rename affected sections to clearly describe what each section represents. -->
+### Known limitations applicable to Finance and Operations Tables in Synapse Link <!-- DONE ...  You have three sections in this article with this same name. Either incorporate the all the known limitations content into one section or rename affected sections to clearly describe what each section represents. -->
 
 Currently, there are the following limitations. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/).
 
@@ -136,9 +136,9 @@ To create a Synapse Link profile with incremental data:
 > If you are upgrading from Export to Data lake feature, enabling incremental data changes option provides similar change data as the [Change feeds feature](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-change-feeds)
 >
 > It is recommended that you create seperate Synapse Link profiles for incremental data and table for ease of management.
-
-### Known limitations
-All the known limitations applicable to Finance and Operations Tables are applicable to incremental data. 
+>
+> Also see known limitations applicable to Finance and Operations Tables. These limitations are applicable to incremental data from Tables as well.
+> 
 
 
 ## Enable finance and operations data entities in Azure Synapse Link
@@ -178,7 +178,7 @@ To enable change tracking, follow these steps.
 2. Select **Properties \> Advance Options**.
 3. Select the **Track changes** checkbox. If the checkbox is unavailable, see [The chosen entity doesn't pass the validation rules that are required to enable change tracking](#entity-fails-val-rules) later in this article. <!-- There's no section in this article that corresponds to this bookmark -->
 
-### Knwon limitations
+### Knwon limitations with Finance and Operations Entities in Synapse Link
 There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
 1. Enabling change tracking may fail with the error message "chosen entity doesn't pass the validation rules..." or the Track changes checkbox may be disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in Finance and Operations in the past for data migration.  
