@@ -87,8 +87,8 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
-|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)][While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
-|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)][While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
+|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
+|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
@@ -113,7 +113,7 @@ Use `link-type` to apply filters on the records returned. The following table de
 
 #### Filter Link Types
 
-Link entities using these types can be defined inside of a [filter element](reference/filter.md) and are interpreted as child conditions following the behavior defined by the `type` attribute of the parent `filter`.
+Link entities using these types can be defined inside of a [filter element](filter.md) and are interpreted as child conditions following the behavior defined by the `type` attribute of the parent `filter`.
 
 These link entities always return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
 
