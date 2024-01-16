@@ -10,6 +10,8 @@ ms.subservice: end-user
 author: jordanchodak
 ms.author: jordanchodak
 ms.reviewer: sericks
+ms.collection: 
+    - bap-ai-copilot 
 search.audienceType: 
   - enduser
 
