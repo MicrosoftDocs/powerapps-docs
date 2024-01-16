@@ -8,6 +8,8 @@ ms.topic: article
 author: norliu 
 ms.author: norliu
 ms.reviewer: mduelae
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # FAQ for continue to edit your app with Copilot 
