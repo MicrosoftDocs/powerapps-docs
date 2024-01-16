@@ -6,13 +6,14 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/11/2023
+ms.date: 01/16/2024
 ms.topic: overview
 search.audienceType: 
   - maker
 contributors:
   - shmcarth
   - asheehi1
+  - lancedMicrosoft
 ---
 # Environment variables overview
 
@@ -31,7 +32,7 @@ Benefits of using environment variables:
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
 - Additionally, if you need to retire a data source in production environments, you can update the environment variable values with information for the new data source. The apps and flows don't require modification and will start using the new data source.
 - Supported by [SolutionPackager](/power-platform/alm/solution-packager-tool) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
-- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
+- The environment variables can be unpacked and stored in source control. You might also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
 
 ## How do they work?
 
@@ -66,7 +67,7 @@ Environment variables can be created and modified within the modern solution int
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-Starting with an update on December 7th, 2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise are pre-filled with a label beneath the text area denoting the value's source: solution value, target environment value, or default value.
+Starting with an update on December 7, 2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise are pre-filled with a label beneath the text area denoting the value's source: solution value, target environment value, or default value.
 
   > [!div class="mx-imgBorder"] 
   > ![Environment variable visibility during solution import.](media/solution-import-environment-variables.png)
@@ -87,7 +88,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 
 Ensure environment variable names are unique so they can be referenced accurately. Duplicate environment variable display names make environment variables difficult to differentiate and use. Ensure environment variable names are unique so they can be referenced accurately.
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save is blocked if environment variables with those names are used.
-If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer shows both the old and new display name tokens to help with identification. When updating the flow, we recommend to remove the environment variable reference and add it again.
+If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer shows both the old and new display name tokens to help with identification. When updating the flow, we recommend you remove the environment variable reference and add it again.
 
 ## Current limitations
 
@@ -126,7 +127,7 @@ If not already prevented by dependency system, runtime uses the last known value
 
 ### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
-It may take up to an hour to fully publish updated environment variables because the value is pushed into the apps and flows asynchronously.
+It might take up to an hour to fully publish updated environment variables because the value is pushed into the apps and flows asynchronously.
 
 ### Are premium licenses required?
 
