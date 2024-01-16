@@ -4,7 +4,6 @@ description: AI Copilot overview in Power Apps.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
@@ -12,7 +11,8 @@ ms.author: tapanm
 search.audienceType: 
   - maker
 ms.collection: 
-    - bap-ai-copilot 
+    - bap-ai-copilot
+    - get started
 contributors:
   - mduelae
 ---
