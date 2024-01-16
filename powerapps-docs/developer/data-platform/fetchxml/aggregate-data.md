@@ -199,23 +199,19 @@ The following example shows a FetchXML aggregation expression that sums the tota
  </entity>  
 </fetch>
 ```
-## Row aggregate 
-If entity has parent child relationship defined on entity, fetchxml can have rowaggreate on the hierechical column.
-Below sample shows how to return number of children account, entity Account has parent-child relationship defined on parentaccountid => accountid
+
+## Row aggregate
+
+When a table has a [hierarchical relationship defined](../../../maker/data-platform/query-visualize-hierarchical-data.md), you can return a row aggregate on the lookup column for the hierarchical relationship.
+
+The following example returns the number of related accounts in a column named `CountChildren` when the child account records `parentaccountid` column equals the current account `accountid` column.
 
 ```xml
-<fetch distinct='1' page='27' count='500'  version="1.0" aggregate="false">
-  <entity name="account">
-    <attribute name="accountid" />
-    <attribute name="address1_city" />
-    <attribute name="address1_country" />
-    <attribute name="address1_latitude" />
-        <attribute name="accountid"  alias="CountChildren" rowaggregate="CountChildren"/>
-    <filter>
-      <filter type="or">
-        <condition attribute="versionnumber" operator="ge" value="2706199260" />
-       </filter>
-    </filter>   
+<fetch top='5'>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountid' alias='CountChildren' rowaggregate='CountChildren' />
+    <order attribute='accountid' descending='true' />
   </entity>
 </fetch>
 ```
