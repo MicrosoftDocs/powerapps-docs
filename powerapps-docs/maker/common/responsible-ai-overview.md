@@ -12,6 +12,8 @@ ms.topic: overview
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mduelae
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # FAQ about using AI responsibly in Power Apps
