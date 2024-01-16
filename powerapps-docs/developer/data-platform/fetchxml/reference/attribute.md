@@ -39,16 +39,13 @@ contributors:
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`addedby`|No|REMOVE?|
 |`aggregate`|No|The [aggregate function](#aggregate-functions) to apply. [Learn how to aggregate data with FetchXml](../aggregate-data.md)|
 |`alias`|No|The name of the column to return. Each column must have a unique name. Usually used when retrieving aggregate values. [Learn more about column aliases](../select-columns.md#column-aliases).|
-|`build`|No|REMOVE?|
 |`dategrouping`|No|When grouping data by a datetime value, specifies the date part to use. See [Date grouping options](#date-grouping-options)|
 |`distinct`|No|When using the aggregate `countcolumn` function, specifies that only unique values for the column are returned. [Learn more about distinct column values](../aggregate-data.md#distinct-column-values).|
 |`groupby`|No|When aggregating data, specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
 |`name`|Yes|The logical name of the column.|
 |`rowaggregate`|No|When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the results. [Learn how to use this attribute](../../query-hierarchical-data.md#retrieve-the-number-of-hierarchically-related-child-records).|
-|`usertimezone`|No|REMOVE?|
 
 
 ## Parent elements

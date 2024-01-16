@@ -36,9 +36,6 @@ contributors:
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|The logical name of the table that the query is based on.|
-|`forceseek`|No|TODO?|
-|`enableprefiltering`|No|TODO?|
-|`prefilterparametername`|No|TODO?|
 
 ## Parent elements
 

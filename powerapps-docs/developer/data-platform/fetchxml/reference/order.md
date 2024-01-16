@@ -39,9 +39,9 @@ This example return account records in ascending order by `createdon`, `name`, a
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`attribute`|Yes|The name of the attribute value to sort the data by.|
-|`alias`|No|TODO?|
-|`descending`|No|Whether to sort the data in decending order.|
+|`attribute`|Yes|The `name` of the [attribute element](attribute.md) to sort the data by.|
+|`alias`|No|The `alias` of the [attribute element](attribute.md) to sort the data by|
+|`descending`|No|Whether to sort the data in descending order.|
 
 ## Parent elements
 

@@ -46,9 +46,6 @@ This query returns account records where `address1_city` equals 'Redmond'.
 |`entityname`|No|Specify the [link-entity](link-entity.md) `name` or `alias` that the condition should be applied to after the outer join. [Learn more about filters on link-entity](../filter-rows.md#filters-on-link-entity)|
 |`operator`|Yes|The [operator](operators.md) to apply with the filter.|
 |`rowaggregate`|No|TODO?|
-|`uihidden`|No|REMOVE?|
-|`uiname`|No|REMOVE?|
-|`uitype`|No|REMOVE?|
 |`value`|No|The value to test the column value with the operator.|
 |`valueof`|No|The name of the column in the same table that has the value to test the column value with the operator. [Learn more about filtering on other column values](../filter-rows.md#filter-on-column-values-in-the-same-row). |
 

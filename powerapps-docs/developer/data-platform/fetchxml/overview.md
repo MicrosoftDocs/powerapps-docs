@@ -710,7 +710,6 @@ You will also use FetchXml as a parameter for Dataverse messages such as the fol
 |`Rollup`|[RollupRequest](xref:Microsoft.Crm.Sdk.Messages.RollupRequest)|[Rollup function](xref:Microsoft.Dynamics.CRM.Rollup)|
 
 
-
 ## Next steps
 
 Learn how to select columns.
