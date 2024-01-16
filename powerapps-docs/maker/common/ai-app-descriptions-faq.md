@@ -7,6 +7,8 @@ ms.custom:
 ms.topic: article
 author: amchern 
 ms.author: amchern
+ms.collection: 
+    - bap-ai-copilot
 ms.reviewer: 
 ---
 
