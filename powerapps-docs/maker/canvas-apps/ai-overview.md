@@ -11,6 +11,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot 
 contributors:
   - mduelae
 ---
