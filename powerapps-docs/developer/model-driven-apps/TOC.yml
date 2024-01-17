@@ -162,6 +162,8 @@
     - name: Save event arguments
       href: clientapi/reference/save-event-arguments.md
       items:
+      - name: disableAsyncTimeout
+        href: clientapi/reference/save-event-arguments/disableasynctimeout.md
       - name: getEntityReference
         href: clientapi/reference/save-event-arguments/getEntityReference.md
       - name: getIsSaveSuccess
