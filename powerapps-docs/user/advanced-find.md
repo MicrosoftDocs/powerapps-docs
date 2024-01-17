@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2022
+ms.date: 01/16/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -13,11 +13,16 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.contributors:
+ - seokmin.kim
 ---
 
 # Advanced find in model-driven apps
 
 The topic covers the various different ways to use the advanced find experience.
+
+> [!NOTE]
+> Advanced find is not supported for [virtual tables](../maker/data-platform/create-edit-virtual-entities.md).
 
 ## Search for rows and create personal views with modern advanced find
 
