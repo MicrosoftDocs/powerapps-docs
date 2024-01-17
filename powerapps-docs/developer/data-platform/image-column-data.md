@@ -136,7 +136,6 @@ Image columns store the following binary image types:
 |---------|---------|---------|
 |Graphics Interchange Format|`image/gif`|`.gif`|
 |Joint Photographic Expert Group image|`image/jpeg`|`.jpg`, `.jpeg`|
-|Tagged Image File Format|`image/tiff`|`.tif`, `.tiff`|
 |Bitmap file|`image/bmp`|`.bmp`|
 |Portable Network Graphics|`image/png`|`.png`|
 
