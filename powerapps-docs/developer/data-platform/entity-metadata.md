@@ -72,7 +72,7 @@ The `PrimaryImageAttribute` property value is the logical name of the image colu
 
 More information:
 
-- [Image columns](image-attributes.md)
+- [Work with image column definitions using code](image-attributes.md)
 - [Use image column data](image-column-data.md)
 - [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)
 - [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)

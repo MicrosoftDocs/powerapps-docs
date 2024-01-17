@@ -79,7 +79,7 @@ If working with SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetad
 |--------|--------------|
 |**Allow Quick Create**|      Use `IsQuickCreateEnabled` to enable quick create forms for the table. Before you can use quick create forms you must first create and publish a quick create form.<br /> **Note**:<br /> Activity tables do not support quick create forms.      |
 |**Access Teams**|  Use `AutoCreateAccessTeams` to enable the table for access teams. See [About collaborating with team templates](/power-platform/admin/about-team-templates) for more information.  |
-|**Primary Image** |  If a table has an image column you can enable or disable displaying that image in the application using `PrimaryImageAttribute`. For more information see [Image columns](image-attributes.md)|
+|**Primary Image** |  If a table has an image column you can enable or disable displaying that image in the application using `PrimaryImageAttribute`. For more information see [Work with image column definitions using code](image-attributes.md)|
 |**Change display text**|  The managed property `IsRenameable` prevents the display name from being changed in the application. You can still programmatically change the labels by updating the `DisplayName` and `DisplayCollectionName` properties.  |
 |**Edit the table Description** |The managed property `IsRenameable` prevents the table description from being changed in the application. You can still programmatically change the labels by updating the `Description` property.|
 |**Enable for use while offline**| Use `IsAvailableOffline` to enable or disable the ability of Dynamics 365 for Microsoft Office Outlook with Offline Access users to take data for this table offline.  |
