@@ -20,6 +20,16 @@ contributors:
 
 `executionContext.getEventArgs().disableAsyncTimeout()`
 
+## Example
+
+```javascript
+async function myHandler(context) {  
+     context.getEventArgs().disableAsyncTimeout();
+     // The 10000ms time out will not be disabled if the above line does not come before all async awaits
+     await Xrm.Navigation.openConfirmDialog({ text: "Are you sure you want to save?" });
+ }
+```
+
 
 ### Related articles
 
