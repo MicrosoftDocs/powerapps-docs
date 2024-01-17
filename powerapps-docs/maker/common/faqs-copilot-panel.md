@@ -53,7 +53,7 @@ As an AI assistant that helps people find information, Copilot provides the foll
 We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we are conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we are monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
 Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
-## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
+## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of continue to edit your app with Copilot limitations when using the system? 
 
 - To use this capability, you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
 - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 

@@ -28,12 +28,32 @@ For example, you build a formula to determine how your app responds when users s
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
-This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
+This article provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use. 
+
+> [!IMPORTANT]
+> 
+> We're transitioning towards making the previously experimental Power Fx formula bar the default formula bar experience. The updated formula bar has better intellisense and improved error highlighting and lets you to write formulas quickly and accurately.
+>
+> The updated formula bar is **ON** by default for new apps. For existing apps follow these steps to turn on the Power FX formula bar:
+> - Open our app in Power Apps Studio, select **Settings** > **Upcoming features** > **Preview** > set the **Power Fx formula bar** toggle to **ON**.
+>
+> Your feedback is critical as we make this updated formula bar the default experience for all apps. 
+
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-* Learn how to [configure a control](add-configure-controls.md) in Power Apps.
+- [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in Power Apps.
+  
+## Use Power Fx formula bar
+
+The Power FX formula bar offers a more intuitive and efficient way to write formulas for your apps. Follow these steps to use the formula bar:
+
+1. Open your app for editing in Power Apps Studio. 
+2. Select the formula bar at the top of the screen to open it.
+3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
+5. Continue typing your formula or select the suggestions until you're done. 
+
 
 ## Show a simple value
 
@@ -46,12 +66,10 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     :::image type="content" source="media/working-with-formulas/formula-bar.png" alt-text="Formula bar.":::
 
     1. *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
-    1. *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md).
+    1. *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md). As you type, Intellisense helps you with recommendations for formula, syntax, and errors.
     1. *Selected control*: In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.
 
 1. Add a **[Label](controls/control-text-box.md)** control to the screen.
-
-    :::image type="content" source="media/working-with-formulas/add-a-label.png" alt-text="Added a TextBox control.":::
 
     When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 
@@ -147,29 +165,6 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
-
-## Power Fx formula bar (experimental)
-
-[This section is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](/power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
-
-To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the steps below to use the new formula bar:
-
-- From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
-
-### Use Power Fx formula bar
-
-The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
-
-1. Open your app for editing in Power Apps Studio. 
-2. Select the formula bar at the top of the screen to open it.
-3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
-5. Continue typing your formula or select the suggestions until you're done. 
 
 ### See also
 
