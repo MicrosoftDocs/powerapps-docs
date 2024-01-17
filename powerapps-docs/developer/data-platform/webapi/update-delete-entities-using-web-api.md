@@ -115,12 +115,12 @@ OData-Version: 4.0
 
 ## Update multiple records in a single request
 
-The fastest way to update multiple records of the same type in a single request is to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). At the time of this writing, the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) is a preview feature. Not all standard tables support this action, but all elastic tables do.
+The fastest way to update multiple records of the same type in a single request is to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). At the time of this writing, the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). Not all standard tables support this action, but all elastic tables do.
 
 More information:
 
-- [Bulk Operation messages (preview)](../bulk-operations.md)
-- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
+- [Bulk Operation messages](../bulk-operations.md)
+- [Sample: Web API Use bulk operations](samples/create-update-multiple.md)
 - [Use UpdateMultiple with elastic tables](../use-elastic-tables.md#use-updatemultiple-with-elastic-tables)
   
 <a name="bkmk_updateSingleProperty"></a> 
@@ -272,8 +272,8 @@ The fastest way to delete multiple records of the same type in a single request 
 
 More information:
 
-- [Bulk Operation messages (preview)](../bulk-operations.md)
-- [Elastic table sample code (preview)](../elastic-table-samples.md?tabs=webapi)
+- [Bulk Operation messages](../bulk-operations.md)
+- [Elastic table sample code](../elastic-table-samples.md?tabs=webapi)
 - [Use DeleteMultiple with elastic tables](../use-elastic-tables.md#use-deletemultiple-with-elastic-tables)
 
 

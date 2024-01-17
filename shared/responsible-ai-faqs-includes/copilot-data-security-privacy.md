@@ -1,100 +1,74 @@
 ---
-author: KumarVivek
-ms.author: waltsun
-ms.date: 05/19/2023
+author: sericks007
+ms.author: sericks
+ms.date: 01/11/2024
 ms.topic: include
 ---
 
 <!--Any changes to this article must be reviewed by RAI Champ Leads and CELA-->
 
-With the introduction of [generative AI across Microsoft business applications](https://www.microsoft.com/ai/dynamics-365-ai) including Dynamics 365, Viva Sales, and Microsoft Power Platform, interactions with AI across business roles and processes will become second nature. With Copilot, Dynamics 365 and Power Platform introduce a new way to generate ideas, content drafts, and methods to access and organize information across the business.
 
-Before your business starts using Copilot capabilities in Dynamics 365 and Power Platform, you may have questions about how it works, how it keeps your business data secure and adheres to privacy requirements, and other important considerations.
+Copilot for Microsoft Dynamics 365 and Power Platform features follow a set of core security practices and [Responsible AI principles](https://www.microsoft.com/ai/principles-and-approach).
 
-This article provides answers to common questions related to business data security and privacy to help your organization get started with Copilot in Dynamics 365 and Power Platform.
+Copilot is built on the Microsoft Azure OpenAI Service and is run completely within the Azure cloud. With Azure OpenAI Service, customers get the security capabilities of Microsoft Azure. Azure OpenAI Service offers private networking, regional availability, and responsible AI content filtering. Microsoft has a technology collaboration agreement with OpenAI, which is an independent organization.
 
-## What's the difference between ChatGPT and Copilot?
+Microsoft Dynamics 365 and Power Platform data is protected by comprehensive, industry-leading compliance and security controls. Copilot is available in certain regions and may move data across geographies. You can decide which Copilot features you wish to enable. For more information on how your data is handled, refer to the documentation for your product on Microsoft Learn.
 
-ChatGPT is a general-purpose large language model (LLM) trained by OpenAI on a massive dataset of text, designed to engage in human-like conversations and answer a wide range of questions on several topics.
+## What happens to my data when I use Copilot? 
 
-Copilot also uses an LLM, however, the enterprise-ready AI technology powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview) is prompted and optimized for your business processes and your business data to meet security and privacy requirements. For Dynamics 365 and Power Platform users, Copilot suggests optional actions and content recommendations in context with the task at hand.
+You are in control of your data. Data is not shared with a third party unless you've granted permission to do so. Further, Microsoft doesn't use your data to train or improve Copilot or its AI features, unless you've provided consent for Microsoft to do so. Copilot adheres to existing data permissions and policies, and users will only see responses based on data they personally have access to. Refer to the documentation for the product or feature that is using Copilot for details about how you can control your data and how your data is managed.
 
-A few ways in which Copilot for natural language generation is unique:  
+## How does Copilot use my data? 
 
-- The AI-generated responses are uniquely contextual, relevant to the task at hand, and informed by business data whether it's a response to an email from Dynamics 365, an application that automates a specific manual process, or creating a targeted list of customer segments from your CRM system.
+Each service or feature uses Copilot based on the data you've provided or have configured to be processed by Copilot.
 
-- Copilot uses both an LLM (like GPT) and your organization’s business data to produce more accurate, relevant, and personalized results. Your business data is used to improve context only for your scenario, and the LLM itself doesn't learn from your usage. For more information on how Copilot works, go to the next question.
+Your prompts (inputs) and results (outputs):
 
-- Powered by Azure OpenAI Service, Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
-  
-## How does Copilot work in Dynamics 365 and Power Platform?
+-   Are NOT available to other customers.
 
-With Copilot, Dynamics 365 and Power Platform harness the power of foundation models coupled with proprietary Microsoft technologies and apply to your business data with:
+-   Are NOT used to train or improve any third-party products or services (such as OpenAI).
 
-- Search (using Bing and [Azure Cognitive Search](/azure/search/search-what-is-azure-search)), which brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this retrieval augmented generation approach as preprocessing to call an LLM.
+-   Are NOT used to train or improve Microsoft AI models unless your tenant admin has opted into optional data sharing.
 
-- Microsoft applications like Dynamics 365, Viva Sales, Dataverse, and Power Platform.
+To learn more about Azure AI Service data privacy and security reference [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about Microsoft Copilot data privacy, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
-- [Microsoft Graph API](/graph/use-the-api), which brings more context from customer signals into the prompt, such as information from emails, chats, documents, and meetings when you have authorized Copilot to do so.
+## Does Copilot block prompt injections (jailbreak attacks)? 
 
-Here's a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
+[Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts designed to provoke the generative AI model into exhibiting behaviors it was trained to avoid or to break the rules set in the System Message. Services across Dynamics 365 and Power Platform are required to implement prompt injection protection.
 
-:::image type="content" source="/power-apps/media/shared-content/copilot.png" alt-text="<This diagram illustrates how Copilot works in Dynamics 365 and Power Platform, which is also described in the content following the diagram.>":::
+## Can Copilot access encrypted content?
 
-1. Copilot requests an input prompt from a business user in an app, like Dynamics 365 Sales or Power Apps.
+Data provided to Copilot is only provided based on the access level of the current user. Therefore, if a user has access to the encrypted data in Dynamics 365 and Power Platform, and it is provided to Copilot, then Copilot will access it.
 
-1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so the user gets answers that are relevant and actionable to their specific task. It does this, in part, by making a call to Microsoft Graph and Dataverse and accessing the enterprise data the user consents to and grants permissions to use for the retrieval of their business content and context. We also scope the grounding to documents and data that are visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would  return only an answer based on documents relevant to the employee’s role.
+## How does Copilot protect customer data? 
 
-    This retrieval of information is referred to as a *retrieval augmented generation* approach and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
+Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), Copilot is compliant with our existing privacy, security, and compliance commitments to our customers.
 
-1. Copilot takes the response from the LLM and post processes it. Depending on the scenario, this post-processing includes some combination of additional grounding calls to Microsoft Graph, responsible AI checks, filtering with Azure content moderation, and additional business-specific constraints and command generation.
+- **Multiple forms of protection to safeguard organizational data**. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, go to [Encryption in the Microsoft Cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS). The transmission of data from Dynamics 365 and Power Platform to Azure OpenAI Service is facilitated through the Microsoft backbone network to ensure the reliability and safety of the transfer.
 
-1. Finally, Copilot returns a recommended response to the user and sends commands back to the apps where a human-in-the-loop can review. Copilot iteratively processes and orchestrates these sophisticated services to produce results that are relevant to your business, accurate, and secure.
+- **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. Large Language Models (LLMs) are not further trained on, or learn from, your tenant data or your prompts. Within your tenant, our permissions model provides safeguards and enterprise-grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we've been using for years to secure customer data.
 
-## How does Copilot use your proprietary business data? Is it used to train AI models?
-
-Copilot unlocks business value by connecting LLMs to your business data in a secure, compliant, privacy-preserving way.
-
-With your (customer) approval, which you can revoke at any time, Copilot has real-time access to both your content and context in Microsoft 365 Graph and Dataverse. Using this, Copilot:
-
-1. Generates answers anchored in your business content when relevant and with consent. The business data could include, for example, your documents, emails, calendar, chats, meetings, or contacts.
-
-1. Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, or the chat conversations you had last week.
-
-1. Validates that you have appropriate access to receive the information in response.
-
-1. Delivers grounded, relevant, and contextual responses based on the above.
-
-> [!IMPORTANT]
->
-> - Microsoft doesn't use customers’ data to train LLMs. We believe the customers’ data is their data, aligned to the [Microsoft' data privacy policy](https://aka.ms/privacy).
-> - AI-powered LLMs are trained on a large but limited corpus of data. However, prompts, responses, and data accessed through Microsoft 365 Graph and Microsoft services aren't used to train Copilot capabilities in Dynamics 365 and Power Platform for use by other customers.
-> - The foundation models aren't improved through your usage. This means your data is accessible only by authorized users within your organization unless you explicitly consent to other access or use.
+- **Built on Microsoft's comprehensive approach to security, compliance, and privacy**. Copilot is integrated into Microsoft services like Dynamics 365 and Power Platform and inherits these products' security, compliance, and privacy policies and processes. Multi-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
 
 ## Are Copilot responses always factual?
 
-The responses that generative AI produces aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing the output before sending them to others. Our Copilot capabilities provide useful drafts and summaries to help you achieve more while giving you a chance to review the generated AI rather than fully automating these tasks.
+The responses that generative AI produces aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing the output before sending it to others. Our Copilot capabilities provide useful drafts and summaries to help you achieve more while giving you a chance to review the AI-generated content rather than fully automating these tasks.
 
-Our teams continue to improve algorithms to proactively address issues, such as misinformation and disinformation, content blocking, data safety, and preventing the promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5).
+Our teams continue to improve algorithms to proactively address issues such as misinformation and disinformation, content blocking, data safety, and promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5).
 
-We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to effectively use Copilot and suggested actions and content, we provide:  
+We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to effectively use Copilot and suggested actions and content, we provide:
 
-- **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, and to manually check facts, data, and text for accuracy.
+-   Instructive guidance and prompts. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, and to manually check facts, data, and text for accuracy.
 
-- **Cited sources**. Copilot cites public sources when applicable, so you’re able to see links to the web content it references.
+-   Cited sources. Copilot cites public sources when applicable, so you're able to see links to the web content it references.
 
-## How does Copilot protect sensitive business information and data?
+Refer to the Responsible AI FAQ in the product documentation for the product or feature using Copilot to better understand how the specific AI system works.
 
-Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), Copilot features built-in responsible AI and enterprise-grade Azure security.
+## Does Copilot meet requirements for regulatory compliance mandates? 
 
-- **Built on Microsoft’s comprehensive approach to security, compliance, and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and inherits these products' valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
+Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosystem. For details on the regulatory certifications of a Microsoft service, go to [Service Trust Portal](https://servicetrust.microsoft.com/). Additionally, Copilot adheres to our commitment to responsible AI, which is put into action through our [Responsible AI Standard](https://www.microsoft.com/ai/responsible-ai).
 
-- **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. LLMs are not further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we’ve been using for years to secure customer data.
+As regulation in AI evolves, Microsoft will continue to adapt and respond to future regulatory requirements in this space.
 
-- **Designed to learn new skills**. Copilot’s foundation skills are a game changer for productivity and business processes. The capabilities allow you to create, summarize, analyze, collaborate, and automate using your specific business content and context. In addition, Copilot recommends actions for you (for example, "create a time and expense application to enable employees to submit their time and expense reports"). Copilot is designed to learn new skills. For example, with Viva Sales, Copilot can learn how to connect to CRM systems of record to pull customer data, like interaction and order histories, into communications. As Copilot learns about new domains and processes, it will be able to perform even more sophisticated tasks and queries.
+Dynamics 365 and Power Platform [trust](/dynamics365/get-started/availability) documentation provides comprehensive information about customer data locations, and compliance with global, regional, and industry-specific requirements for managing data.
 
-## Will Copilot meet requirements for regulatory compliance mandates?
-
-Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosystem. For details on the regulatory certifications for a Microsoft service, go to [Service Trust Portal](https://servicetrust.microsoft.com). Additionally, Copilot adheres to our commitment to responsible AI, which is described in our [responsible AI principles](https://www.microsoft.com/ai/responsible-ai).
-
-As regulation in the AI space evolves, Microsoft will continue to adapt and respond to fulfill future regulatory requirements in this space.

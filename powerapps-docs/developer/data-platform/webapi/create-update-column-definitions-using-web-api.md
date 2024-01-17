@@ -1,7 +1,7 @@
 ---
 title: "Create and update column definitions using the Web API"
 description: "Learn about creating and updating Dataverse table column definitions using the Web API."
-ms.date: 06/07/2023
+ms.date: 12/12/2023
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -33,6 +33,7 @@ The following examples show how to create different kinds of columns
 - [Create a memo column](#create-a-memo-column)
 - [Create a choice column](#create-a-choice-column)
 - [Create a multi-select choice column](#create-a-multi-select-choice-column)
+- [Create an big integer column](#create-an-big-integer-column)
 
 ### Create a string column
 
@@ -1066,6 +1067,90 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(afd63201-4d05-ee11-8f6e-000d3a993550)
 ```
 
+### Create an big integer column
+
+The following example uses these properties to create an big integer column. 
+  
+|[BigIntAttributeMetadata](xref:Microsoft.Dynamics.CRM.BigIntAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_BigInt`|  
+|`DisplayName`|Sample BigInt|  
+|`Description`|BigInt Attribute|  
+|`RequiredLevel`|`None`|
+  
+The following example creates an integer column using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the column is returned in the response.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Authorization: Bearer <access token>
+Content-Type: application/json; charset=utf-8
+Content-Length: 1301
+
+{
+  "AttributeType": "BigInt",
+  "AttributeTypeName": {
+    "Value": "BigIntType"
+  },
+  "@odata.type": "Microsoft.Dynamics.CRM.BigIntAttributeMetadata",
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "BigInt Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "BigInt Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample BigInt",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample BigInt",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_BigInt"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(28b90018-1d99-ee11-be37-000d3a993223)
+```
   
 <a name="bkmk_updateAttribute"></a>
  

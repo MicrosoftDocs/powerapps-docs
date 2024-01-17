@@ -1,8 +1,8 @@
 ---
-title: Use elastic tables using code (preview)
+title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 07/21/2023
+ms.date: 12/04/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -13,9 +13,7 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use elastic tables using code
 
 This article describes how to use code to perform data operations on elastic tables.
 
@@ -234,6 +232,9 @@ public static Guid CreateExample(
 
 Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+
 #### [Web API](#tab/webapi)
 
 **Request:**
@@ -265,6 +266,9 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 ```
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
+
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
 
 ---
 
@@ -1009,8 +1013,8 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)  
+[Elastic tables for developers](elastic-tables.md)  
+[Create elastic tables using code](create-elastic-tables.md)  
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)

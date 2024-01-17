@@ -47,6 +47,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
 
+**[Slider](modern-control-slider.md)** - A control with which the user can specify a value by dragging a handle.
+
 **[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.

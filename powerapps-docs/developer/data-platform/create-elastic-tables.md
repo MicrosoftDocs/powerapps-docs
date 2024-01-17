@@ -1,5 +1,5 @@
 ---
-title: Create elastic tables using code (preview)
+title: Create elastic tables using code
 description: Learn how to create Dataverse elastic tables with code.
 ms.topic: article
 ms.date: 07/18/2023
@@ -13,9 +13,7 @@ contributors:
  - JimDaly
 ---
 
-# Create elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create elastic tables using code
 
 By using [Power Apps](https://make.powerapps.com/), you can [create and edit elastic tables without writing code](../../maker/data-platform/create-edit-entities-portal.md).
 
@@ -191,7 +189,6 @@ You can also create columns by using the SDK or Web API. However, there are limi
 - MultiSelectPicklist (`MultiSelectPicklistAttributeMetadata`)
 - State (`StateAttributeMetadata`)
 - Status (`StatusAttributeMetadata`)
-- File (`FileAttributeMetadata`)
 - Image (`ImageAttributeMetadata`)
 - Calculated, Rollup, or Formula Columns
 
@@ -333,7 +330,7 @@ Elastic tables support one-to-many relationships, and related rows can be retrie
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)   
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
-[Use bulk operation messages (preview)](bulk-operations.md)   
-[Elastic table sample code (preview)](elastic-table-samples.md)
+[Elastic tables for developers](elastic-tables.md)   
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)   
+[Use bulk operation messages](bulk-operations.md)   
+[Elastic table sample code](elastic-table-samples.md)
