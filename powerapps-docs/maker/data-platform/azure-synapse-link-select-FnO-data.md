@@ -51,9 +51,9 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 | How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
-| Access finance and operations tables via Synapse query |  [Azure Synapse Link - Delta lake](/powerapps-docs-pr/powerapps-docs/maker/data-platform/azure-synapse-link-delta-lake) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> Your data is saved in delta parquet format enabling better read performance | 
+| Access finance and operations tables via Synapse query |  [Azure Synapse Link - Delta lake](azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> Your data is saved in delta parquet format enabling better read performance | 
 | Load incremental data changes into your own downstream data warehouse | [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or Spark pool as your data is saved in CSV format |
-| Access finance and operations tables via Microsoft Fabric | [Link to Fabric](/powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric)  | Microsoft Fabric workspace |
+| Access finance and operations tables via Microsoft Fabric | [Link to Fabric](azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 
 ### Link your finance and operations environment with Microsoft Power Platform
 

@@ -4,9 +4,7 @@ description: "Troubleshoot issues in Azure Synapse Link service in Power Apps"
 ms.custom: ""
 ms.date: 01/05/2024
 ms.reviewer: "Mattp123"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: ""conceptual""
+ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
 author: "MilindaV2"
@@ -18,7 +16,6 @@ contributors:
   - JasonHQX
   - jovanpop
 ---
-
 # Azure Synapse Link for Dataverse trouble-shooting guide
 
 When you open an Azure Synapse Link profile, you might see an error with a message and link to this document https://aka.ms/SynapeLinkErrors. In addition, users might also see **Error** status next to tables that are already in a Azure Synapse Link profile. Use this troubleshooting guide to diagnose and fix error conditions with Azure Synapse Link for Dataverse.
