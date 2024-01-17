@@ -176,9 +176,9 @@ To enable change tracking, follow these steps.
 
 1. In Dataverse, select the table.
 2. Select **Properties \> Advance Options**.
-3. Select the **Track changes** checkbox. If the checkbox is unavailable, see [The chosen entity doesn't pass the validation rules that are required to enable change tracking](#entity-fails-val-rules) later in this article. <!-- There's no section in this article that corresponds to this bookmark -->
+3. Select the **Track changes** checkbox. If the checkbox is unavailable, see known limitations below. 
 
-### Knwon limitations with Finance and Operations Entities in Synapse Link
+### Known limitations with Finance and Operations Entities in Synapse Link
 There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
 1. Enabling change tracking may fail with the error message "chosen entity doesn't pass the validation rules..." or the Track changes checkbox may be disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in Finance and Operations in the past for data migration.  
