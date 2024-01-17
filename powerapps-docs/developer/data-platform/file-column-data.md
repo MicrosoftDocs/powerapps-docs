@@ -15,7 +15,7 @@ contributors:
 ---
 # Use file column data
 
-File columns are different from the other system columns that can store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. You must use the methods described in this article to create, retrieve, update, or delete binary data for file columns.
+File columns are different from the other system columns that can store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. The file column uses both database and file storage. While the database stores the name of the file, thr file itself is stored in [Dataverse File Storage](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/file-attributes?tabs=sdk). You must use the methods described in this article to create, retrieve, update, or delete binary data for file columns.
 
 There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it's frequently necessary to split the file into multiple chunks (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
