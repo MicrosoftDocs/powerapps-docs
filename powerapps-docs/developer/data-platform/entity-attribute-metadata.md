@@ -4,7 +4,7 @@ description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
 author: NHelgren # GitHub ID
 ms.topic: article
-ms.date: 07/19/2023
+ms.date: 12/12/2023
 ms.subservice: dataverse-developer
 ms.author: nhelgren
 search.audienceType:
@@ -68,7 +68,7 @@ In the following table:
 |File| `FileType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>| Yes<br />**File**| Contains data to support retrieving binary data for a table record.<br />More information: [File columns](file-attributes.md)|
 |Image| `ImageType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata>| Yes<br />**Image**| Contains data to support retrieving image data for a table record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property| `ManagedPropertyType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ManagedPropertyAttributeMetadata>| No| Contains data that describe whether the solution component stored in the table record can be customized when included in a managed solution.<br />More information: [Managed Properties](/power-platform/alm/managed-properties-alm)|
-|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| No | Contains a `BigInt` value. For internal use only.|
+|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| Yes | Contains a `BigInt` value.|
 |Quantity| `DecimalType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DecimalAttributeMetadata>| Yes<br />**Decimal Number**| Contains a `Decimal` value. The `Precision` property sets the level of precision. |
 |Quantity| `DoubleType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DoubleAttributeMetadata> | Yes<br />**Floating Point Number**  | Contains a `Double` value. The `Precision` property sets the level of precision.|
 |Quantity| `IntegerType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.IntegerAttributeMetadata>| Yes<br />**Whole Number**  | Contains an `Int` value|

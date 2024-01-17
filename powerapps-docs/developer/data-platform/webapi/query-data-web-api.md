@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 09/12/2023
+ms.date: 01/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -1244,7 +1244,9 @@ The aggregate functions are limited to a collection of 50,000 records.  Further 
 You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
 > [!NOTE]
-> `groupby` with datetime values is not supported.
+> - `groupby` with datetime values is not supported.
+> 
+> - `$orderby` with aggregate values is not supported. This will return the error: `The query node SingleValueOpenPropertyAccess is not supported`.
 
 Following are some examples:
 
