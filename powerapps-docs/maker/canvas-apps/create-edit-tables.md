@@ -98,7 +98,7 @@ Select **Advanced options** to display additional properties that are optional
 | **Schema name** | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved. |
 | **Type** | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can't be owned by an organization. Virtual tables require the table be populated with data from an external source. |
 | **Record ownership** | Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record. |
-| **Choose a table image** | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Work with image column definitions using code](../data-platform/types-of-fields.md#image-columns) |
+| **Choose a table image** | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](../data-platform/types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps. |
 | **Apply duplicate detection rules** | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table. |
 | **Track changes** | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. |
@@ -127,7 +127,7 @@ For more advanced table editing scenarios, using the table hub is required. Some
 
 ### Add and edit data
 
-The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](/power-apps/teams/create-first-app.md#create-your-first-table)
+The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](../../teams/create-first-app.md#create-your-first-table)
 
 ## Remove a table
 
