@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/21/2023
+ms.date: 01/17/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -15,6 +15,7 @@ search.audienceType:
   - enduser
 contributors:
 - brsova
+- amchern 
 ---
 
 # Run an app in a web browser
