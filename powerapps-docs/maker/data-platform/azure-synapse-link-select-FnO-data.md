@@ -52,12 +52,12 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 | How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
 | Access finance and operations tables via Synapse query |  [Azure Synapse Link - Delta lake](/powerapps-docs-pr/powerapps-docs/maker/data-platform/azure-synapse-link-delta-lake) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> Your data is saved in delta parquet format enabling better read performance | 
-| Load incremental data changes into your own downstream data warehouse | [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data is saved in CSV format |
+| Load incremental data changes into your own downstream data warehouse | [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or Spark pool as your data is saved in CSV format |
 | Access finance and operations tables via Microsoft Fabric | [Link to Fabric](/powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric)  | Microsoft Fabric workspace |
 
 ### Link your finance and operations environment with Microsoft Power Platform
 
-Verify with your finance and operations systems administrator whether your Finance and Operations environment is linked to Power platform.
+Verify with your finance and operations systems administrator whether your finance and operations environment is linked to Power platform.
 
 To confirm that the finance and operations apps environment is linked with Microsoft Power Platform, review the **Environment** page in Lifecycle Services.
 
@@ -81,7 +81,7 @@ After row version change tracking is enabled, a system event that's triggered in
 
 ## Add finance and operations tables in Azure Synapse Link
 
-You can enable both finance and operations entities and finance and operations tables in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
+You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
 
 1. Sign in to Power Apps and select the environment you want.
 2. On the left navigation pane, select **Azure Synapse Link**.
@@ -96,7 +96,7 @@ You can enable both finance and operations entities and finance and operations t
 > [!NOTE]
 >
 > - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps.
-> - You don't have to define finance and operations apps tables as virtual entities, and you don't have to enable change tracking for each table.
+> - You don't have to define finance and operations apps tables as virtual tables, and you don't have to enable change tracking for each table.
 >
 > To include finance and operations tables in Synapse Link, you must enable the [Delta lake feature](/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and operations table selection isn't visible if your Synapse Link profile isn't configured for Delta lake.
 >
@@ -110,9 +110,9 @@ Currently, there are the following limitations with finance and operations table
 
 - You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
 - Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables can be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
-- Don't see your custom tables? You must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+- Don't see your custom tables? You must enable change tracking in them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
-- If the table selected contains data columns that secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.  
+- If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.  
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
 
 ## Access incremental data changes from finance and operations
