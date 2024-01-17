@@ -3,7 +3,7 @@ title: "Form OnLoad event (Client API reference) in model-driven apps| Microsoft
 description: Includes description and supported parameters for the OnLoad event.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 06/24/2022
+ms.date: 01/16/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -17,7 +17,7 @@ contributors:
 This event occurs whenever the form is loaded, specifically:
 
 - On initial page load.
-- After a new record is first saved (created). 
+- After a new record is first saved (created).
  
 Use the formContext.ui.[addOnLoad](../formContext-ui/addOnLoad.md) and formContext.ui.[removeOnLoad](../formContext-ui/removeOnLoad.md) methods to manage event handlers for this event. 
 
@@ -53,10 +53,5 @@ To enable the async Onload event handlers for a specific app:
 ### Async OnLoad timeouts
 
 When using an async handler, a form load will wait for the promise to be fulfilled, but only up to 10 seconds. This is to ensure that the form loads within a reasonable amount of time.
-
-There may be scenarios where you want to pause OnLoad for a longer period of time.  An example is opening a dialog in the async OnLoad handler and waiting for the user's input before saving. To make sure the async operation will wait, you can invoke the event argument **disableAsyncTimeout** as follows `executioncontext.getEventArgs().disableAsyncTimeout()`.
-When **disableAsyncTimeout** is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
-
-This should be used with caution as it might affect the performance of the form load.
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
