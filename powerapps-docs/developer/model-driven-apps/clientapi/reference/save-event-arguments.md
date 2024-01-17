@@ -31,7 +31,7 @@ When the form [OnPostSave](events/postsave.md) event occurs, you can use the [ge
 
 |Method|Description|
 |--|--|
-|[getEntityReference](save-event-arguments/getEntityReference.md)|Use this method to know information about a table being saved. It returns the table logical name, record id, and table name if save was successful.|
+|[getEntityReference](save-event-arguments/getEntityReference.md)|Use this method to know information about a table being saved. It returns the table logical name, record ID, and table name if save was successful.|
 |[getIsSaveSuccess](save-event-arguments/getIsSaveSuccess.md)|Use this method to know whether the save operation was successful or failed.|
 |[getSaveErrorInfo](save-event-arguments/getSaveErrorInfo.md)|Use this method to know the error details on why save failed.|
 

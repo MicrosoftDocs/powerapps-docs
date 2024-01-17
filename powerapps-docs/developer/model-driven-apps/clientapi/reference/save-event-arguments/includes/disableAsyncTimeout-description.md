@@ -1,1 +1,1 @@
-Disables the timeout for the event handler. Instead the event waits for the event handler's promise to be fullfilled. [Learn more about Async OnSave timeouts](../../events/form-onsave.md#async-onsave-timeouts)
+Disables the timeout for the event handler. Instead the event waits until the event handler's promise is fulfilled. [Learn more about Async OnSave timeouts](../../events/form-onsave.md#async-onsave-timeouts)
