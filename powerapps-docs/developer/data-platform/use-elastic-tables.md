@@ -2,7 +2,7 @@
 title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 12/04/2023
+ms.date: 01/18/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -233,7 +233,9 @@ public static Guid CreateExample(
 Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
 > [!NOTE]
-> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+> - With elastic tables you can create a record with duplicate primary key values and different partitionid values. However, this is not compatible with Power Apps. You shouldn't do this when it is expected that people will create canvas or model-driven apps with this data.
+>
+> - *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 
 #### [Web API](#tab/webapi)
 
