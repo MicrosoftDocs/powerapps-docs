@@ -77,7 +77,7 @@ Describe what you want the formula to do and get AI generated results. Formula s
 
 #### Prerequisites
 
-To enabled this feature you must enable the AI suggestions for formula columns environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
+To enabled this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 
