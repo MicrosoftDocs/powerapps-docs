@@ -232,11 +232,8 @@ public static Guid CreateExample(
 
 Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
-<!-- This note is duplicated for both SDK and Web API -->
 > [!NOTE]
-[!INCLUDE [cc_elastic-table-duplicate-primary-key](../../includes/cc_elastic-table-duplicate-primary-key.md)]
->
-> - *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 
 #### [Web API](#tab/webapi)
 
@@ -272,11 +269,13 @@ Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken
 
 
 > [!NOTE]
-[!INCLUDE [cc_elastic-table-duplicate-primary-key](../../includes/cc_elastic-table-duplicate-primary-key.md)]
->
-> - *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
 
 ---
+
+### Setting the primary key value
+
+With elastic tables you can create a record with duplicate primary key values and different `partitionid` values. However, this is not compatible with Power Apps. You shouldn't do this when it is expected that people will create canvas or model-driven apps with this data.
 
 ## Update a record in an elastic table
 

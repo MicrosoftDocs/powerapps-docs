@@ -1,1 +1,0 @@
-> - With elastic tables you can create a record with duplicate primary key values and different partitionid values. However, this is not compatible with Power Apps. You shouldn't do this when it is expected that people will create canvas or model-driven apps with this data.
