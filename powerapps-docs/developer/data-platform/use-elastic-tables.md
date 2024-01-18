@@ -121,7 +121,7 @@ This example shows how you can use the special syntax in Web API to refer to rec
 > [!NOTE]
 > Because the primary key value is a globally unique identifier (GUID), no single quotation marks are needed around it. However, because the `partitionid` value is a string, single quotation marks are needed.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')
@@ -146,7 +146,7 @@ request["partitionId"] = "device-001"
 > [!NOTE]
 > The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it is ignored if it's sent.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'
@@ -275,9 +275,9 @@ Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken
 
 ### Setting the primary key value
 
-If you don't specify a primary key value, Dataverse will set a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there is no performance benefit in letting Dataverse set the primary key value.
+If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
 
-Elastic tables will not return an error when you create a record with a primary key value that is not unique. By setting the primary key values with elastic tables you can create records with that have the same primary key values and different `partitionid` values. However, this is not compatible with Power Apps. Don't do this when people will create canvas or model-driven apps with this data.
+Elastic tables don't return an error when you create a record with a primary key value that isn't unique. By setting the primary key values with elastic tables, you can create records with that have the same primary key values and different `partitionid` values. However, this pattern isn't compatible with Power Apps. Don't create records with duplicate primary key values when people need to use this data in canvas or model-driven apps.
 
 ## Update a record in an elastic table
 
