@@ -2291,8 +2291,6 @@
       href: ./data-platform/azure-synapse-link-select-FnO-data.md
     - name: FAQ about Azure Synapse Link
       href: ./data-platform/export-data-lake-faq.yml
-    - name: Troubleshooging Azure Synapse Link for Dataverse     
-      href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
     - name: Application Lifecycle Management
       items:
       - name: Transport a configuration across environments
