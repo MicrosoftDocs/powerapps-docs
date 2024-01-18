@@ -275,7 +275,9 @@ Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken
 
 ### Setting the primary key value
 
-With elastic tables you can create a record with duplicate primary key values and different `partitionid` values. However, this is not compatible with Power Apps. You shouldn't do this when it is expected that people will create canvas or model-driven apps with this data.
+If you don't specify a primary key value, Dataverse will set a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to.
+
+By setting the primary key values with elastic tables you can create records with that have the same primary key values and different `partitionid` values. However, this is not compatible with Power Apps. Don't do this when people will create canvas or model-driven apps with this data.
 
 ## Update a record in an elastic table
 
