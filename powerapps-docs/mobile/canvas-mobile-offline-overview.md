@@ -25,16 +25,14 @@ contributors:
 If users of your Dataverse-based canvas app have spotty or no Internet access, you can easily provide [offline-first](#mobile-offline-first) access with simple switches and a canvas control. Basic offline-first apps are easy to make. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference), and Power Apps offline features handle everything else.
 
 > [!IMPORTANT]
-> The offline-first feature works with Dataverse tables only and doesn't yet support the following Power Fx functions:
->
-> - Sum/Min/Max/Avg
-> - Relate
-> - Unrelate
-> - In (Membership)
-> - UpdateIf
-> - RemoveIf
->   
-> Note: Filter on column lookup only supports 1 level of lookup when the app is enabled for offline. 
+> - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
+>   - Sum/Min/Max/Avg
+>   - Relate
+>   - Unrelate
+>   - In (Membership)
+>   - UpdateIf
+>   - RemoveIf
+> - Filter on column lookup only supports one level of lookup when the app is enabled for offline. 
 
 
 Microsoft plans to support these functions and tokens in the future.
