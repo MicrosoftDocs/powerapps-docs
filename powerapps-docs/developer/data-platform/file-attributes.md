@@ -1,7 +1,7 @@
 ---
-title: "File columns (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn about how to create, retrieve, update and delete file columns using code."
-ms.date: 12/05/2023
+title: "Work with file column definitions using code | Microsoft Docs"
+description: "Learn about how to create, retrieve, update and delete file column definitions using code."
+ms.date: 01/17/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -12,9 +12,11 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# File columns
+# Work with file column definitions using code
 
-Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
+Use file columns to store file data up to a specified maximum size. File columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
+
+A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
 ## Create file columns
 
@@ -158,6 +160,6 @@ More information:
 ### See Also
 
 [Use file column data](file-column-data.md)<br />
-[Image columns](image-attributes.md)
+[Work with image column definitions using code](image-attributes.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -202,7 +202,7 @@ To leave the system in the state before the sample ran, the program does the fol
 ### See Also
 
 [Use image column data](../../image-column-data.md)<br />
-[Image columns](../../image-attributes.md)<br />
+[Work with image column definitions using code](../../image-attributes.md)<br />
 [Use file column data](../../file-column-data.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](../../org-service/samples/set-retrieve-entity-images.md)
 
