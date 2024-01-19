@@ -772,7 +772,7 @@ Use this query to get total file size and record count for system jobs by state,
 This example uses the encoded FetchXml to send the query using Web API. [Learn to use FetchXML with Web API](webapi/use-fetchxml-web-api.md)
 
 ```http
-GET [Organization URI]/api/data/v9.2/asyncoperations?fetchXml=%3Cfetch%20aggregate%3D%27true%27%3E%20%3Centity%20name%3D%27asyncoperation%27%3E%20%3Cattribute%20name%3D%27owningextensionid%27%20alias%3D%27owningextensionid%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statecode%27%20alias%3D%27statecode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statuscode%27%20alias%3D%27statuscode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27operationtype%27%20alias%3D%27operationtype%27%20groupby%3D%27true%27%20%2F%3E%20%3Clink-entity%20name%3D%27fileattachment%27%20to%3D%27datablobid%27%20from%3D%27fileattachmentid%27%20alias%3D%27fileattachment%27%20link-type%3D%27inner%27%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27TotalSize%27%20aggregate%3D%27sum%27%20%2F%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27RecordCount%27%20aggregate%3D%27count%27%20%2F%3E%20%3Cfilter%3E%20%3Ccondition%20attribute%3D%27objectidtypecode%27%20operator%3D%27eq%27%20value%3D%274700%27%20%2F%3E%20%3C%2Ffilter%3E%20%3Corder%20alias%3D%27TotalSize%27%20descending%3D%27true%27%20%2F%3E%20%3C%2Flink-entity%3E%20%3C%2Fentity%3E%20%3C%2Ffetch%3E
+GET [Organization URI]/api/data/v9.2/asyncoperations?fetchXml=%3Cfetch%20aggregate%3D%27true%27%3E%20%3Centity%20name%3D%27asyncoperation%27%3E%20%3Cattribute%20name%3D%27owningextensionid%27%20alias%3D%27owningextension%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statecode%27%20alias%3D%27statecode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statuscode%27%20alias%3D%27statuscode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27operationtype%27%20alias%3D%27operationtype%27%20groupby%3D%27true%27%20%2F%3E%20%3Clink-entity%20name%3D%27fileattachment%27%20to%3D%27datablobid%27%20from%3D%27fileattachmentid%27%20alias%3D%27fileattachment%27%20link-type%3D%27inner%27%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27TotalSize%27%20aggregate%3D%27sum%27%20%2F%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27RecordCount%27%20aggregate%3D%27count%27%20%2F%3E%20%3Cfilter%3E%20%3Ccondition%20attribute%3D%27objectidtypecode%27%20operator%3D%27eq%27%20value%3D%274700%27%20%2F%3E%20%3C%2Ffilter%3E%20%3Corder%20alias%3D%27TotalSize%27%20descending%3D%27true%27%20%2F%3E%20%3C%2Flink-entity%3E%20%3C%2Fentity%3E%20%3C%2Ffetch%3E
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -788,7 +788,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
     <attribute name='owningextensionid'
-      alias='owningextensionid'
+      alias='owningextension'
       groupby='true' />
     <attribute name='statecode'
       alias='statecode'
