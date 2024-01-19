@@ -159,6 +159,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |162|Mobile Offline Profile Item||
 |165|Similarity Rule||
 |166|Data Source Mapping||
+|181|Virtual table data provider||
+|183|Virtual table data source||
 |201|SDKMessage||
 |202|SDKMessageFilter||
 |203|SdkMessagePair||
@@ -176,10 +178,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |400|AI Project Type||
 |401|AI Project||
 |402|AI Configuration||
+|418|Data flow||
 |430|Entity Analytics Configuration||
 |431|Attribute Image Configuration||
 |432|Entity Image Configuration||
-
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
