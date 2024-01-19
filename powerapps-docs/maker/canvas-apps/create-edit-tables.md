@@ -127,7 +127,7 @@ For more advanced table editing scenarios, using the table hub is required. Some
 
 ### Add and edit data
 
-The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](/power-apps/teams/create-first-app.md#create-your-first-table)
+The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](../../teams/create-first-app.md#create-your-first-table)
 
 ## Remove a table
 
