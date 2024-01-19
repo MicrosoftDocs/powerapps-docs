@@ -7,6 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.date: 09/29/2023
+ms.collection: bap-ai-copilot
 ---
 # Configure tables to use Copilot
 

@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
+ms.collection: bap-ai-copilot
 ---
 # Create and edit tables using Power Apps
 

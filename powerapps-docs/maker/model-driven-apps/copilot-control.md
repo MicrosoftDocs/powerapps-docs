@@ -8,6 +8,7 @@ ms.topic: how-to
 ms.date: 08/25/2023
 ms.subservice: mda-maker
 tags:
+ms.collection: bap-ai-copilot
 search.audienceType:
   - maker
 ms.custom:
