@@ -1,15 +1,12 @@
 ---
 title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-keywords: ""
-ms.date: 03/02/2023
-ms.custom: 
+ms.date: 01/17/2024
 ms.topic: article
 author: "Mattp123"
-ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
 ms.subservice: dataverse-maker
 ms.author: matp
-ms.reviewer: 
+ms.reviewer: matp
 search.audienceType: 
   - maker
 ---
@@ -172,19 +169,18 @@ However, you should be aware that not every lookup behaves this way. There are s
 
 ## Image columns
 
-Use image columns to display a single image per row in the application. Each table can have one image column. You can add an image column to custom tables but not to standard tables. Some standard tables have image columns defined.
-  
-Even though a table has an image column, displaying that image in a model-driven app requires that you enable two settings. 
+Use image columns to display images in your applications. Image columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
+
+Each table can have one *primary image* column. With model-driven apps, you can display this image in the upper right corner of the form. Even though a table has an image column, displaying that image in a model-driven app requires that you enable two settings.
+
 - The standard table definition **Primary Image** property value must be set to **Default Image**. Custom tables require a custom image column. Then, you can select that image column for the **Primary Image** value in the custom table definition.  
-- The table form where the image is to be displayed must have the **Show image in the form** property enabled.  
+- The table form where the image is to be displayed must have the **Show image in the form** property enabled.
   
-People choose the image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
+People choose the image to upload a picture from their computer. Images must be less than 30 MB and must be in one of the following formats:  
   
 - jpg
 - jpeg
 - gif
-- tif
-- tiff
 - bmp
 - png
   
@@ -194,6 +190,8 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 
 > [!NOTE]
 > Image columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
+
+[Learn to work with Image column definitions using code](../../developer/data-platform/image-attributes.md)
 
 ### Create an image column and add it to a form
 
@@ -229,9 +227,11 @@ More information for developers working with image data:
 
 ## File columns
 
-The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
+The **File** column is used for storing binary data. File columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 131,072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
+The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
+
+The default **Maximum file size** is 32 MB and the largest size you can set using the designer is 131,072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > - Once the maximum file size has been saved, it can't be changed.
@@ -239,7 +239,7 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 
 To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
-More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
+[Learn to work with file column definitions using code](../../developer/data-platform/file-attributes.md)
 
 ## Fx Formula columns
 
