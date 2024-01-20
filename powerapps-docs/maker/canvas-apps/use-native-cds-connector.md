@@ -20,7 +20,7 @@ contributors:
 
 ## Overview
 
-This article explains several features that were previously optional and are **now default behavior for all new apps since May 2021.** This article explains how, if you created an app previous to those features being on by default, to upgrade your app to use the new features.
+In May 2021, a number of features that were previously optional have become the default behavior for all new apps. This article aims to guide those who have created an app prior to the implementation of these features on how to upgrade their app to utilize the new features.
 
 ### Native Dataverse
 
