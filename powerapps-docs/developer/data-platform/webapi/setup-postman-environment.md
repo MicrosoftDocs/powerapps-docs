@@ -1,7 +1,7 @@
 ---
 title: "Set up a Postman environment (Microsoft Dataverse for Apps)| MicrosoftDocs"
 description: "Learn how to set up and configure a Postman environment that connects with Microsoft Dataverse environments."
-ms.date: 05/04/2022
+ms.date: 01/20/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -15,7 +15,13 @@ contributors:
 
 # Set up a Postman environment
 
- To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
+To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without registering your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
+
+> [!NOTE]
+> You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Postman. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method: 
+>
+> - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
+> - Refreshes your access token automatically so you don't need to keep requesting a new one.
 
 ## Prerequisites
 
