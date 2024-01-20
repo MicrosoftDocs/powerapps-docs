@@ -38,7 +38,7 @@ You can choose the kind of media file to add (for example, images, video, or aud
 > [!NOTE]
 > When adding media files by URL,
 > - Use HTTPS to ensure compatibility with modern browsers.
-> - Ensure the URL is accessible anonymously (without any authentication). Try entering the URL in private browsing mode to verify that it's accessible without logging in.
+> - Ensure the URL is accessible anonymously without any authentication. Try to enter the URL in private browsing mode to verify that it's accessible without signing in.
 
 ### Add images, audio, or video using the media pane
 
