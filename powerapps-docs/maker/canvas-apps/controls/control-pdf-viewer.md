@@ -28,11 +28,11 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 1. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
-1. The file must be accessible anonymously (without any authentication).
+1. The file must be accessible anonymously without any authentication.
 
-1. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
+1. You won't be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
-1. Embedded objects like scripts and buttons will not run.
+1. Embedded objects like scripts and buttons won't run.
 
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
