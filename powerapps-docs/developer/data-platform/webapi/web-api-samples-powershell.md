@@ -13,7 +13,7 @@ contributors:
 
 # Web API Data operations Samples (PowerShell)
 
-This article provides common understanding about Web API samples using PowerShell. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this topic.
+This article provides common understanding about Web API samples using PowerShell. Currently, there is only one sample, but we plan to add more. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this topic.
 
 ## Web API Samples using PowerShell
 
@@ -22,6 +22,10 @@ The following samples use the patterns described here:
 | Sample| Sample Group| Description|
 |---|---|---|
 | [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)| [Web API Basic Operations Sample](web-api-basic-operations-sample.md)| Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse table rows (entity records).|
+|Not available yet| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions as well as Dataverse query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries. |
+|Not available yet| [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) | Demonstrates how to perform conditional operations you specify with ETag criteria.|
+|Not available yet|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)| Demonstrates how to use bound and unbound functions and actions, including custom actions.|
+|Not available yet|[Web API table schema operations sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
 
 
 ## Prerequisites
@@ -39,8 +43,8 @@ These samples have the same prerequisites.
 ### See also
 
 [Use the Dataverse Web API](overview.md)   
-[Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)   
-[Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)   
+[Quick Start Web API with PowerShell and Visual Studio Code](quick-start-ps.md)   
+[Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md)   
 [Web API Samples](web-api-samples.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -46,15 +46,14 @@ These articles have the same prerequisites.
    `Connect 'https://yourorg.crm.dynamics.com/' # change this`
 
 1. (Optional) Set the `$deleteCreatedRecords` variable to `$false` if you do not want to delete the records this sample creates.
-1. Press F5 to run the sample.
+1. Press <kbd>F5</kbd> to run the sample.
 1. The first time you run the sample a browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
 
-To connect as a different user, run the [Disconnect-AzAccount command](/powershell/module/az.accounts/disconnect-azaccount).
+To connect as a different user, run the [Disconnect-AzAccount command](/powershell/module/az.accounts/disconnect-azaccount) and try again.
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/PS/BasicOperations
-/BasicOperations.ps1](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/BasicOperations/BasicOperations.ps1)
+The code for this sample is at: [PowerApps-Samples/dataverse/webapi/PS/BasicOperations/BasicOperations.ps1](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/BasicOperations/BasicOperations.ps1)
 
 ## Demonstrates
 
@@ -74,7 +73,7 @@ Operations:
 
 Operations: Associate a new record to an existing one.
 
-### Section 3: Create related entities
+### Section 3: Create related records
 
 Operations: Create the following entries in one operation: an account, its associated primary contact, and open tasks for that contact.  These entity types have the following relationships:
 
@@ -84,7 +83,7 @@ Accounts
         |---Tasks (1-to-N)
 ```
 
-### Section 4: Associate and Disassociate entities
+### Section 4: Associate and Disassociate records
 
 Operations:
 
@@ -93,7 +92,7 @@ Operations:
 - Associate a security role to a user using the `systemuserroles_association` collection.
 - Remove a security role for a user using the `systemuserroles_association` collection.
 
-### Section 5: Delete sample entities
+### Section 5: Delete sample records
 
 Operations: A reference to each record created in this sample was added to a list as it was created. This section loops through that list and deletes each record.
 
