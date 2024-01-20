@@ -82,18 +82,6 @@ Don't proceed without confirming each of the following prerequisites are met.
    }
    ```
 
-   > [!NOTE]
-   > When you run the script for the first time and login using the browser you may get a warning like the following:
-   > 
-   > ```powershell
-   > WARNING: TenantId '<your tenant id>' contains more than one active subscription. First one will be selected for further use. 
-   > To select another subscription, use Set-AzContext. 
-   > To override which subscription Connect-AzAccount selects by default, use `Update-AzConfig -DefaultSubscriptionForLogin 00000000-0000-0000-0000-000000000000`. 
-   > Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
-   > ```
-   > 
-   > You can ignore this warning if you see it. These requests do not require a subscription.
-
 1. In the terminal window, type `cls` to clear the terminal content.
 1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command to run the script again.
 
@@ -108,7 +96,7 @@ This section describes the details of the PowerShell script included in the [Try
 The script uses the Az PowerShell module [Get-AzTenant](/powershell/module/az.accounts/get-aztenant) command to get tenants authorized for the current user. When you aren't logged in, this command returns an error. This script uses the `-ErrorAction SilentlyContinue` parameter to ignore the error and nothing is returned.
 
 When the `Get-AzTenant` command doesn't return anything, the script uses the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) 
-to open a browser window where you can enter or select your credentials to log in.
+to open an interactive browser window where you can enter or select your credentials to log in. [Learn more about signing into Azure PowerShell interactively](/powershell/azure/authenticate-interactive) or [noninteractively with a service principal](/powershell/azure/authenticate-noninteractive).
 
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
 [PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
@@ -228,6 +216,19 @@ If you see this error after running the script:
 Make sure that the account you select in the browser window is that account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
 
 If you are using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
+
+### WARNING: TenantId '<your tenant id>' contains more than one active subscription
+
+When you run the script for the first time and login using the browser you may get a warning like the following:
+ 
+ ```powershell
+ WARNING: TenantId '<your tenant id>' contains more than one active subscription. First one will be selected for further use. 
+ To select another subscription, use Set-AzContext. 
+ To override which subscription Connect-AzAccount selects by default, use `Update-AzConfig -DefaultSubscriptionForLogin 00000000-0000-0000-0000-000000000000`. 
+ Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
+ ```
+
+You can ignore this warning if you see it. These requests do not require a subscription.
 
 ## Next steps
 
