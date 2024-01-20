@@ -41,7 +41,7 @@ Use the retention policies dashboard to view and manage retention policies. From
 |In progress – Reconciliation     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
 |Pending Delete     |  Waiting to delete all retained rows.       |
 |In progress – Delete     |  Delete of retained rows from applications.       |
-|Succeeded     |  Retention process completed successfully.       |
+|Completed     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
 
 ### View details on failed records
