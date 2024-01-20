@@ -115,6 +115,6 @@ No clean up is required because all data created by this sample was deleted.
 [Cache Schema data](../../cache-schema-data.md)<br />
 [Use the Dataverse Web API](../overview.md)<br />
 [WebAPIService class library (C#)](webapiservice.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

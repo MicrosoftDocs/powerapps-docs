@@ -349,7 +349,7 @@ The `Types` folder contains any classes or enums that correspond to <xref:Micros
 
 ## Metadata
 
-The `Metadata` folder contains `Messages` and `Types` specific to operations that work with Dataverse Schema definitions. These are frequently classes with many properties that return complex types. These types are used in the [Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md).
+The `Metadata` folder contains `Messages` and `Types` specific to operations that work with Dataverse Schema definitions. These are frequently classes with many properties that return complex types. These types are used in the [Web API table schema operations sample (C#)](webapiservice-metadata-operations.md).
 
 ### See also
 
@@ -357,7 +357,7 @@ The `Metadata` folder contains `Messages` and `Types` specific to operations tha
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 

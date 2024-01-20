@@ -41,7 +41,7 @@ The following table lists the samples implemented in C#. Each sample is describe
 |[Web API Query Data sample (C#)](samples/webapiservice-query-data.md)| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions as well as Dataverse query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries. |
 |[Web API Conditional Operations sample (C#)](samples/webapiservice-conditional-operations.md)| [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) | Demonstrates how to perform conditional operations you specify with ETag criteria.|
 |[Web API Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)| Demonstrates how to use bound and unbound functions and actions, including custom actions.|
-|[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)|[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
+|[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)|[Web API table schema operations sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
 
 The following samples demonstrate methods to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within Dataverse.
 

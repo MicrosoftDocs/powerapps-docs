@@ -23,7 +23,7 @@ This sample uses the [Dataverse Web API PowerShell Helper functions](https://git
 . $PSScriptRoot\..\CommonFunctions.ps1
 ```
 
-> **Note**:
+> [!NOTE]
 > This sample should work with Windows, Linux, and macOS, but has only been tested on Windows.
   
 ## Prerequisites

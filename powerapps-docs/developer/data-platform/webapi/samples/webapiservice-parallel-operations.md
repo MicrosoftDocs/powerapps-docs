@@ -80,7 +80,7 @@ By default this sample will delete all the records created in it. If you want to
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

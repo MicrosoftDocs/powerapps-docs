@@ -91,9 +91,9 @@
     href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
-  - name: Web API Metadata Operations Sample
+  - name: Web API table schema operations sample
     href: web-api-metadata-operations-sample.md
-  - name: Web API Metadata Operations Sample (C#)
+  - name: Web API table schema operations sample (C#)
     href: samples/webapiservice-metadata-operations.md
 - name: Use Postman with Web API
   items:
