@@ -1,24 +1,26 @@
 ---
-title: "Image columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create image columns using the Dataverse APIS" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/11/2023
+title: "Work with image column definitions using code"
+description: "Learn about how to create, retrieve, update and delete image column definitions using code." 
+ms.date: 01/17/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: NHelgren
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
+ms.author: nhelgren
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
 ---
-# Image columns
+# Work with image column definitions using code
 
-Use image columns to store image data. A custom or customizable table can have zero or more image columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
+Use image columns to store image data. Image columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
+
+A custom or customizable table can have zero or more image columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
 
 ## Create image columns
 
-The recommended way to create image columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [Image columns](../../maker/data-platform/types-of-fields.md#image-columns).
+The recommended way to create image columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [Image Columns](../../maker/data-platform/types-of-fields.md#image-columns).
 
 You can also create image columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
 
@@ -267,7 +269,7 @@ The same restrictions that apply to file columns also apply to image columns con
 ### See also
 
 [Use image column data](image-column-data.md)<br />
-[File columns](file-attributes.md)<br />
+[Work with file column definitions using code](file-attributes.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
 [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)
 
