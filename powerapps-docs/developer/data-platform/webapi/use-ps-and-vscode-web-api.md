@@ -1,7 +1,7 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 01/10/2024
+ms.date: 01/20/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -16,6 +16,7 @@ This article expands on the [Quick Start Web API with PowerShell](quick-start-ps
 - [Handle exceptions](#handle-exceptions)
 - [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
 - [Debug using Fiddler](#debug-using-fiddler)
+- [Download the Dataverse Web API CSDL $metadata document](#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!NOTE]
 > The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
@@ -765,3 +766,8 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 > [!div class="nextstepaction"]
 > [Web API types and operations](web-api-types-operations.md)
+
+Review and run sample code.
+
+> [!div class="nextstepaction"]
+> [Web API Data operations Samples (PowerShell)](web-api-samples-powershell.md)

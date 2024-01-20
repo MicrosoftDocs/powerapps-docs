@@ -1,7 +1,7 @@
 ---
 title: Quick Start Web API with PowerShell and Visual Studio Code
 description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell with Visual Studio Code
-ms.date: 01/10/2024
+ms.date: 01/20/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -24,6 +24,7 @@ In this quick start, learn how to:
 > - [Handle exceptions](use-ps-and-vscode-web-api.md#handle-exceptions)
 > - [Manage Dataverse service protection limits](use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
 > - [Debug using Fiddler](use-ps-and-vscode-web-api.md#debug-using-fiddler)
+> - [Download the Dataverse Web API CSDL $metadata document](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document)
 >
 > The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
@@ -236,6 +237,7 @@ Learn more advanced capabilities to be more productive using PowerShell and Visu
 - [Handle exceptions](use-ps-and-vscode-web-api.md#handle-exceptions)
 - [Manage Dataverse service protection limits](use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
 - [Debug using Fiddler](use-ps-and-vscode-web-api.md#debug-using-fiddler)
+- [Download the Dataverse Web API CSDL $metadata document](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!div class="nextstepaction"]
 > [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md)
