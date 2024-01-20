@@ -737,12 +737,14 @@ $doc.WriteContentTo($XmlWriter)
 $XmlWriter.Flush()
 $StringWriter.Flush()
 Set-Content -Path $writeFileTo -Value $StringWriter.ToString()
+code $writeFileTo
 ```
 
 1. Copy the script.
 1. Edit the `$environmentUrl` and `$writeFileTo` variables to match your need.
 1. Run the script in Visual Studio Code.
-1. Open the XML file in Visual Studio Code
+
+The Dataverse Web API CSDL $metadata document will open in Visual Studio code.
 
 You'll probably get a notification saying:
 
