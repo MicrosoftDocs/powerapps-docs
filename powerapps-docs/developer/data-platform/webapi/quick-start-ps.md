@@ -217,7 +217,7 @@ Make sure that the account you select in the browser window is that account that
 
 If you are using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
 
-### WARNING: TenantId '<your tenant id>' contains more than one active subscription
+### WARNING: TenantId '&lt;your tenant id&gt;' contains more than one active subscription
 
 When you run the script for the first time and login using the browser you may get a warning like the following:
  

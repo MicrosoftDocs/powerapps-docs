@@ -31,9 +31,12 @@ The content of this article has the same prerequisites as the [Quick Start Web A
 
 ## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This approach might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again. 
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This approach might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again.
 
 In this section, we start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
+
+> [!TIP]
+> You can find fully documented definitions of these functions and more in our [GitHub PowerApps-Samples repo](https://github.com/microsoft/PowerApps-Samples/) at [PowerApps-Samples/dataverse/webapi/PS/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS)
 
 ### Create a Connect function
 
@@ -45,9 +48,6 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 1. Copy and paste the following `Connect` function into the `Core.ps1` file.
 
    ```powershell
-   #Requires -Version 7.4.0
-   #Requires -Modules @{ ModuleName="Az"; ModuleVersion="11.1.0" }
-
    function Connect {
       param (
          [Parameter(Mandatory)] 
@@ -55,7 +55,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
          $uri
       )
 
-      ## Login if not already logged in
+      ## Login interactively if not already logged in
       if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
          Connect-AzAccount | Out-Null
       }
@@ -93,7 +93,8 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
    `. C:\scripts\Core.ps1` at the top of the file shows using dot sourcing to direct the script to load the contents of that file. Set the path to a different folder if you didn't use `C:\scripts`.
 
-1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment
+   Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look something like this:
@@ -143,7 +144,8 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
    Get-WhoAmI | ConvertTo-Json
    ```
 
-1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+   Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look exactly like it did before.
@@ -346,7 +348,8 @@ Let's put functions to perform common table operations a file named `TableOperat
    Write-Host "The account with ID $newAccountID was deleted"
    ```
 
-1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+   Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+
 1. Change the dot source folder references (`. C:\scripts\`) to match the folders you're using.
 1. Press <kbd>F5</kbd> to run the script.
 
@@ -422,7 +425,6 @@ Let's add helper function that can help detect the source of the errors and extr
    The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse are <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
 
    The JSON data in `$_.ErrorDetails.Message` contains some escaped unicode characters. For example: `\u0026` instead of `&` and  `\u0027` instead of `'`. This function includes some code that replaces those characters with the unescaped characters so that they exactly match errors you see elsewhere.
-`
 
    Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
 
@@ -447,7 +449,7 @@ Let's add helper function that can help detect the source of the errors and extr
    }
    ```
 
-   Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+   Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
 1. Press <kbd>F5</kbd> to run the script.
 
