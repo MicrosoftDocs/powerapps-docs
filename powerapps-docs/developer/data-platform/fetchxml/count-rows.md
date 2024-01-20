@@ -47,12 +47,6 @@ If you include this `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.t
 
 The `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` value is useful when exactly 5,000 records are returned. It provides another way to know whether there are more records that match the filter criteria.
 
----
-
-<!-- TODO: 
-What people really want is a very efficient way to get the total number of records in a table in real time (not a snapshot) 
-Can this be achieved with aggregation?
--->
 
 > [!TIP]
 > If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.

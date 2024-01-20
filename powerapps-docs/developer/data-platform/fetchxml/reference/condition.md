@@ -39,13 +39,9 @@ This query returns account records where `address1_city` equals 'Redmond'.
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`aggregate`|No|TODO?|
-|`alias`|No|TODO?|
 |`attribute`|No|The name of the column with the value to apply the filter.|
-|`column`|No|TODO?|
 |`entityname`|No|Specify the [link-entity](link-entity.md) `name` or `alias` that the condition should be applied to after the outer join. [Learn more about filters on link-entity](../filter-rows.md#filters-on-link-entity)|
 |`operator`|Yes|The [operator](operators.md) to apply with the filter.|
-|`rowaggregate`|No|TODO?|
 |`value`|No|The value to test the column value with the operator.|
 |`valueof`|No|The name of the column in the same table that has the value to test the column value with the operator. [Learn more about filtering on other column values](../filter-rows.md#filter-on-column-values-in-the-same-row). |
 

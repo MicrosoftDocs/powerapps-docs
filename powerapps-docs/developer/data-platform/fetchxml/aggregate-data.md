@@ -210,7 +210,7 @@ The following example returns the number of related accounts in a column named `
 <fetch top='5'>
   <entity name='account'>
     <attribute name='name' />
-    <attribute name='accountid' alias='CountChildren' rowaggregate='CountChildren' />
+    <attribute name='accountid' alias='numberOfChildren' rowaggregate='CountChildren' />
     <order attribute='accountid' descending='true' />
   </entity>
 </fetch>

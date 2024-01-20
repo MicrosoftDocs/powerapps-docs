@@ -35,11 +35,15 @@ supports query hints and can pass these query options to SQL Server using the [f
 [!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)]
 
 
+
+
 ## No lock
 
 In earlier versions, the `no-lock` attribute used to prevent shared locks on records. It is no longer necessary to include this.
 
 <!-- TODO: Include other sections for more performance optimization capabilities and best practices. -->
+
+
 
 ### See also
 

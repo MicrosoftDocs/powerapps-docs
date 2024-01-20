@@ -181,6 +181,13 @@ Use the [fetch element](reference/fetch.md) `distinct` attribute to require the 
 
 If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
 
+## TODO: using the hint attribute
+
+Donald will provide an example.
+The valid value is 'union'? 
+ - Related to: The SQL UNION operator is used to combine the results of two or more SELECT statements into a single result set. ??
+
+
 ## Next steps
 
 Learn how to page results.
