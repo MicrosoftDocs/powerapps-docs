@@ -118,7 +118,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 More information:
 
 - [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
-- [Web API Metadata Operations Sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
+- [Web API table schema operations sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
 
 ---
 
@@ -130,8 +130,8 @@ In addition to the properties inherited from the [AttributeMetadata class](xref:
 |Property|Label |Description  |
 |---------|---------|---------|
 |`MaxSizeInKB`|**Maximum image size**|Set this value to the smallest useable data size appropriate for your particular application. The default setting is `10240`, or 10 MB. The maximum value is `30720` KB (30 MB). This value can't be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the image column, but you can change it using the API.|
-|`CanStoreFullImage`|**Can store full images**|When this is false, only thumbnail-sized images will be available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)|
-|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there's only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` can't be set to false, an exception will be thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
+|`CanStoreFullImage`|**Can store full images**|When this value is false, only thumbnail-sized images are available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)|
+|`IsPrimaryImage`|**Primary image column**|Whether the column is used to represent a table row in applications.<br /><br />If there's only one image column for a table, this value is set by default. When another image column already exists for a table, this value is ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` can't be set to false, an exception is thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table is selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
 
 > [!NOTE]
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
@@ -227,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 # [Web API](#tab/webapi)
 
-This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
 **Request:**
 
