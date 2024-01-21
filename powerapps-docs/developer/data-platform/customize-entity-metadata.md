@@ -77,7 +77,7 @@ If working with SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetad
 
 |Property | Description |
 |--------|--------------|
-|**Allow Quick Create**|      Use `IsQuickCreateEnabled` to enable quick create forms for the table. Before you can use quick create forms, you must first create and publish a quick create form.<br /> **Note**:<br /> Activity tables don't support quick create forms.      |
+|**Allow Quick Create**|Use `IsQuickCreateEnabled` to enable quick create forms for the table. Before you can use quick create forms, you must first create and publish a quick create form.<br /> **Note**:<br /> Activity tables don't support quick create forms.      |
 |**Access Teams**|  Use `AutoCreateAccessTeams` to enable the table for access teams. See [About collaborating with team templates](/power-platform/admin/about-team-templates) for more information.  |
 |**Primary Image** |  If a table has an image column, you can enable or disable displaying that image in the application using `PrimaryImageAttribute`. [Learn to work with image column definitions using code](image-attributes.md)|
 |**Change display text**|  The managed property `IsRenameable` prevents the display name from being changed in the application. You can still programmatically change the labels by updating the `DisplayName` and `DisplayCollectionName` properties.  |
@@ -87,7 +87,7 @@ If working with SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetad
 |**Enable Mail Merge**| Use `IsMailMergeEnabled` to enable or disable the ability to generate Office Word merged documents that use data from this table.  |
 |**Enable Duplicate Detection**|Use `IsDuplicateDetectionEnabled` to enable or disable duplicate detection for the table. For more information, see [Detect duplicate data using code](detect-duplicate-data-with-code.md)|
 |**Enable SharePoint Integration**|  Use `IsDocumentManagementEnabled` to enable or disable SharePoint server integration for the table. For more information, see [Enable SharePoint document management for specific entities](/power-platform/admin/enable-sharepoint-document-management-specific-entities).  |
-| **Enable Dynamics 365 for phones**| Use `IsVisibleInMobile` to enable or disable the ability of Dynamics 365 for phones users to see data for this table.|
+|**Enable Dynamics 365 for phones**| Use `IsVisibleInMobile` to enable or disable the ability of Dynamics 365 for phones users to see data for this table.|
 |**Dynamics 365 for tablets** | Use `IsVisibleInMobileClient` to enable or disable the ability of Dynamics 365 for tablets users to see data for this table.<br /><br /> If the table is available for Dynamics 365 for tablets, you can use `IsReadOnlyInMobileClient` to specify that the data for the record is read-only.  |
 |**Enable Auditing**| Use `IsAuditEnabled` to enable or disable auditing for the table. For more information, see [Configure table and columns for Auditing](auditing/configure.md#configure-tables-and-columns).|
 |**Change areas that display the table**|      You can control where table grids appear in the application Navigation Pane. This is controlled by the SiteMap.|
@@ -97,6 +97,7 @@ If working with SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetad
 |**Add or Remove table relationships** |There are several managed properties that control the types of relationships that you can create for a table. For more information, see [Table relationship definitions](entity-relationship-metadata.md).|
 |**Change Icons** | You can change the icons used for custom tables. For more information, see [Change model-driven app custom table icons](../../maker/model-driven-apps/change-custom-entity-icons.md)|
 |**Can Change Hierarchical Relationship** |`CanChangeHierarchicalRelationship.Value` controls whether the hierarchical state of relationships included in your managed solutions can be changed.|
+|**Entity set name**|`EntitySetName` specifies the name used to uniquely identify the table using the Dataverse Web API. This is usually the same as the `LogicalCollectionName`, but you can't change the `LogicalCollectionName`. You should only change `EntitySetName` before any code is written using the default entity set name. [Learn more about entity set names](webapi/web-api-service-documents.md#entity-set-name) |
 
 ## Messages supported by custom tables  
 
