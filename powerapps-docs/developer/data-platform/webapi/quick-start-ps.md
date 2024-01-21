@@ -10,7 +10,7 @@ search.audienceType:
 ---
 # Quick Start Web API with PowerShell and Visual Studio Code
 
-PowerShell is a powerful scripting language that can automate repetitive tasks and streamline workflows, making it an ideal tool for integrating with Dataverse. This quick start focuses on helping you get started using PowerShell with the Dataverse Web API in Visual Studio Code. Visual Studio Code with Powershell provides an alternative to [using Postman with the Dataverse Web API](use-postman-web-api.md).
+PowerShell is a powerful scripting language that can automate repetitive tasks and streamline workflows, making it an ideal tool for integrating with Dataverse. This quick start focuses on helping you get started using PowerShell with the Dataverse Web API in Visual Studio Code. Visual Studio Code with PowerShell provides an alternative to [using Postman with the Dataverse Web API](use-postman-web-api.md).
 
 In this quick start, learn how to:
 
@@ -71,7 +71,7 @@ Don't proceed without confirming each of the following prerequisites are met.
 
 1. Verify the output in the Visual Studio Code terminal window.
 
-   At the bottom of the terminal should find the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) value expected for the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). It should look something like this:
+   At the bottom of the terminal, find the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) value expected for the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). It should look something like this:
 
    ```json
    {
@@ -96,7 +96,7 @@ This section describes the details of the PowerShell script included in the [Try
 The script uses the Az PowerShell module [Get-AzTenant](/powershell/module/az.accounts/get-aztenant) command to get tenants authorized for the current user. When you aren't logged in, this command returns an error. This script uses the `-ErrorAction SilentlyContinue` parameter to ignore the error and nothing is returned.
 
 When the `Get-AzTenant` command doesn't return anything, the script uses the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) 
-to open an interactive browser window where you can enter or select your credentials to log in. [Learn more about signing into Azure PowerShell interactively](/powershell/azure/authenticate-interactive) or [noninteractively with a service principal](/powershell/azure/authenticate-noninteractive).
+to open an interactive browser window where you can enter or select your credentials to sign in. [Learn more about signing into Azure PowerShell interactively](/powershell/azure/authenticate-interactive) or [noninteractively with a service principal](/powershell/azure/authenticate-noninteractive).
 
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
 [PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
@@ -119,12 +119,12 @@ if ($null -eq (az account tenant list  --only-show-errors)) {
 $token = az account get-access-token --resource=$environmentUrl --query accessToken --output tsv
 ```
 
-This table shows the equivalent Az Powershell and Azure CLI commands:
+This table shows the equivalent Az PowerShell and Azure CLI commands:
 
 |Az PowerShell|Azure CLI|Description |
 |---------|---------|---------|
-|[Get-AzTenant](/powershell/module/az.accounts/get-aztenant)|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|Try to retrieve a list of tenants to detect if you are already logged in|
-|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|[az login](/cli/azure/reference-index#az-login)|To login to Azure|
+|[Get-AzTenant](/powershell/module/az.accounts/get-aztenant)|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|Try to retrieve a list of tenants to detect if you're already logged in|
+|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|[az login](/cli/azure/reference-index#az-login)|To log in to Azure|
 |[Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken)|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|To get an access token|
 |[Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount)|[az logout](/cli/azure/reference-index#az-logout)|Log out of Azure|
 
@@ -199,7 +199,7 @@ If you see this error after running the script:
       | No such host is known.
    ```
 
-Check that the `$environmentUrl` represents an environment you have access to. Make sure you have changed it from the default value (`https://yourorg.crm.dynamics.com/`).
+Check that the `$environmentUrl` represents an environment you have access to. Make sure you changed it from the default value (`https://yourorg.crm.dynamics.com/`).
 
 ### The user is not a member of the organization
 
@@ -215,11 +215,11 @@ If you see this error after running the script:
 
 Make sure that the account you select in the browser window is that account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
 
-If you are using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
+If you're using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
 
 ### WARNING: TenantId '&lt;your tenant id&gt;' contains more than one active subscription
 
-When you run the script for the first time and login using the browser you may get a warning like the following:
+When you run the script for the first time and login using the browser, you might get this warning:
  
  ```powershell
  WARNING: TenantId '<your tenant id>' contains more than one active subscription. First one will be selected for further use. 
@@ -228,7 +228,7 @@ When you run the script for the first time and login using the browser you may g
  Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
  ```
 
-You can ignore this warning if you see it. These requests do not require a subscription.
+You can ignore this warning if you see it. These requests don't require a subscription.
 
 ## Next steps
 

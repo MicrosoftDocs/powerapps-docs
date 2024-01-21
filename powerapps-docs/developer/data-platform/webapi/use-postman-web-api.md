@@ -16,7 +16,7 @@ There are many third-party tools that allow you to authenticate to Microsoft Dat
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API.
 
-Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
+Postman offers many other capabilities beyond those covered in this content. More information: [First five things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
 
 > [!NOTE]
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Postman. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md)

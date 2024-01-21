@@ -15,7 +15,7 @@ contributors:
 
 This PowerShell version 7.4.0 sample demonstrates how to perform common data operations using the Dataverse Web API and Visual Studio Code. This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
 
-This sample uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide re-usable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
+This sample uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
 
 ```powershell
 . $PSScriptRoot\..\Core.ps1
@@ -28,7 +28,7 @@ This sample uses the [Dataverse Web API PowerShell Helper functions](https://git
   
 ## Prerequisites
 
-Before running this sample you should read these articles that explain concepts and patterns used by these samples:
+Before running this sample, you should read these articles that explain concepts and patterns used by these samples:
 
 - [Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)
 - [Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)
@@ -45,7 +45,7 @@ These articles have the same prerequisites.
 
    `Connect 'https://yourorg.crm.dynamics.com/' # change this`
 
-1. (Optional) Set the `$deleteCreatedRecords` variable to `$false` if you do not want to delete the records this sample creates.
+1. (Optional) Set the `$deleteCreatedRecords` variable to `$false` if you don't want to delete the records this sample creates.
 1. Press <kbd>F5</kbd> to run the sample.
 1. The first time you run the sample a browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
 
@@ -57,7 +57,7 @@ The code for this sample is at: [PowerApps-Samples/dataverse/webapi/PS/BasicOper
 
 ## Demonstrates
 
-This sample has 5 regions:
+This sample has five regions:
 
 ### Section 1: Basic Create and Update operations
 
@@ -98,7 +98,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ## Clean up
 
-By default this sample will delete all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you will be prompted to decide if you want to delete the records.
+By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you'll be prompted to decide if you want to delete the records.
 
 ### See also
 
