@@ -24,7 +24,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run this sample:
+These are required to build and run this sample:
 
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
@@ -40,7 +40,7 @@ The following is required to build and run this sample:
 
    |Property|Instructions  |
    |---------|---------|
-   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find this. |
+   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find the Url for your environment. |
    |`UserPrincipalName`|Replace the placeholder `you@yourorg.onmicrosoft.com` value with the UPN value you use to access the environment.|
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
@@ -53,7 +53,7 @@ The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/Ba
 
 ## Demonstrates
 
-This sample has 5 regions:
+This sample has five regions:
 
 ### Section 1: Basic Create and Update operations
 
@@ -94,7 +94,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ## Clean up
 
-By default this sample will delete all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you will be prompted to decide if you want to delete the records.
+By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you'll be prompted to decide if you want to delete the records.
 
 ### See also
 
