@@ -5,7 +5,8 @@ ms.date: 01/23/2024
 author: sericks007
 ms.subservice: end-user
 ms.author: sericks
-ms.custom: ""
+ms.custom:
+ms.topic: how-to
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
