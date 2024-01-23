@@ -29,12 +29,19 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 
 ## Prerequisites
 
-A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment
-If you don’t have Power BI premium license or Fabric capacity within the same region, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required.
+
+If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+
+You need to be a System administrator in the Dataverse environment and you need to have Administrator access to a Fabric workspace created within the same region.
 
 ## Link to Fabric from Power Apps
 
-From the **Tables** area in Power Apps (make.powerapps.com), makers link to Fabric by selecting **Analyze** > **Link to Microsoft Fabric** on the command bar. When you select the command for the first time, your Dataverse environment is linked to a Fabric workspace. A Synapse lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts. Authorized users can work with Dataverse data with all Fabric workloads linked via shortcuts. The lakehouse, SQL endpoint, and the Power BI dataset are updated with new data as changes occur in Dataverse.
+From the **Tables** area in Power Apps (make.powerapps.com), makers link to Fabric by selecting **Analyze** > **Link to Microsoft Fabric** on the command bar. 
+
+When you select the command for the first time, a wzard driven experience will link your Dataverse environment to a Fabric workspace. A Synapse lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts.
+
+Once the link is setup, you can grant to other users with access to the Fabric workspace so that they can work with Dataverse data using all Fabric workloads. The lakehouse, SQL endpoint, and the Power BI dataset are updated with new data as changes occur in Dataverse.
 
 ## Access your data in Microsoft OneLake
 
