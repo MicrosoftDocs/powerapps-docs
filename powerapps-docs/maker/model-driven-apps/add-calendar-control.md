@@ -49,7 +49,7 @@ The **Calendar Control** control displays scheduled activities and their associa
     > [!div class="mx-imgBorder"]
     > ![Calendar control added.](media/cal-control-added.png "Calendar control added")
 
-1. **Read-only grid** is the default option, so when users select a table from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control** option buttons.
+1. **Read-only grid** is the default option, so when users select a table from the site map, they see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control** option buttons.
 
 1. Select the edit icon for each of the mandatory columns, and then select the binding values.
 
@@ -62,7 +62,7 @@ The **Calendar Control** control displays scheduled activities and their associa
 
 ### Mobile experience
 
-The **Calendar Control** control is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There is a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown is not available on mobile devices.
+The **Calendar Control** control is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There's a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown isn't available on mobile devices.
 
 ### See also
 

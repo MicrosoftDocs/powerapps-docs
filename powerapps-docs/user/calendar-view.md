@@ -22,7 +22,7 @@ By default, rows are displayed in a read-only grid.
 > [!div class="mx-imgBorder"]
 > ![Default grid view.](media/default-grid-view-1.png "Default grid view")
 
-When the **Calendar Control** control is added to a table and then the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
+When the **Calendar Control** control is added to a table, the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
 
 > [!div class="mx-imgBorder"]
 > ![Default calendar view.](media/cal-view.png "Default calendar view")
@@ -32,7 +32,7 @@ When the **Calendar Control** control is added to a table and then the default v
 
 ## Switch between calendar view and grid view
 
-When the calendar view is turned on, it is the default view for the table. However, you can still switch between the grid view or the calendar view.
+When the calendar view is turned on, it's the default view for the table. However, you can still switch between the grid view or the calendar view.
 
 1. To switch between views, on the left navigation pane, select the table that has the calendar view turned on.
 
@@ -44,7 +44,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
     > [!div class="mx-imgBorder"]
     > ![Switch to calendar view.](media/switch-calendar-view-1.png "Switch to calendar view")
 
-    When you select the **Calendar Control** view activities are displayed in a calendar view.
+    When you select the **Calendar Control** view, activities are displayed in a calendar view.
 
     > [!div class="mx-imgBorder"]
     > ![Default calendar view.](media/cal-view.png "Default calendar view")
@@ -62,7 +62,7 @@ To change the calendar format, on the calendar select the drop-down menu and the
  > [!div class="mx-imgBorder"]
  > ![Select the current calendar view.](media/cal-nav-bar-1.png "Select the current calendar view")
 
-If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](./set-personal-options.md#activities-tab-options).
+If you want to set a calendar view as the default view, use personalization settings. For more information, see [Set personal options](./set-personal-options.md#activities-tab-options).
 
 ## View details of a calendar item and take action
 
@@ -82,7 +82,7 @@ You can view a summary of a row by selecting it in the calendar. A pop-up window
 
 The calendar view allows you to easily create a new row.
 
-1. Depending on your calendar view, do one of the following:
+1. Depending on your calendar view, create a new row:
 
    - On the **Month** view, double-click a date tile, in which you want to create a new row.
 
@@ -99,7 +99,7 @@ The calendar view allows you to easily create a new row.
    > [!div class="mx-imgBorder"]
    > ![Drag to select a time slot in the Day or Week view.](media/new-calendar-item.gif "Drag to select a time slot in the Day or Week view")
 
-2. A new form will open. In this example, a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**.
+2. A new form opens. In this example, a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**.
 
    > [!div class="mx-imgBorder"]
    > ![Save new row.](media/save-new-res.png "Save new row")
