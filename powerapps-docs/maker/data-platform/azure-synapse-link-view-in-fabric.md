@@ -44,10 +44,7 @@ When you select the command for the first time, a wzard driven experience will l
 Once the link is setup, you can grant to other users with access to the Fabric workspace so that they can work with Dataverse data using all Fabric workloads. The lakehouse, SQL endpoint, and the Power BI dataset are updated with new data as changes occur in Dataverse.
 
 ## Access your data in Microsoft OneLake
-
-When you link to Fabric from Power Apps, the system creates an optimized replica of your data in delta parquet format, the native format of Fabric and OneLake, using Dataverse storage such that your operational workloads aren't impacted. This replica is governed and secured by Dataverse and stays within the same region as your Dataverse environment while enabling Fabric workloads to operate on this data.
-
-Authorized users get access to Dataverse data in this replica from Microsoft OneLake.
+Link to Fabric creates a direct and secure Link between your data in Dataverse and a Fabric workspace. There is no need to provide a storage account or Synapse workspaces. When you link to Fabric from Power Apps, the system creates an optimized replica of your data in delta parquet format, the native format of Fabric and OneLake, using Dataverse storage such that your operational workloads aren't impacted. This replica is governed and secured by Dataverse and stays within the same region as your Dataverse environment while enabling Fabric workloads to operate on this data.
 
 Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dataverse** page. By opening the **Microsoft OneLake** link, admins view tables added by makers, add more tables, and migrate the link to other environments. Tables added to OneLake consume Dataverse storage and admins can see storage consumption in the Power Platform admin center.
 
@@ -57,7 +54,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 >
 > If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and re-link existing environments), all tables will be added.  
 >  
-> System administrators can add Dynamics 365 finance and operations tables into the **Microsoft OneLake** link that's created with this feature by selecting **Synapse Link**. These tables aren't automatically added at this time.
+> System administrators can add Dynamics 365 finance and operations tables into the **Microsoft OneLake** link that's created with this feature. If your environment is linked to Finance and Operations, you can add tables by visiting **Synapse Link** menu. Finance and Operations tables aren't automatically added at this time. See 
 >
 > Enabling this feature might result in an increase in Dataverse storage consumption. View additional storage consumption in Power Platform admin center.
 >
