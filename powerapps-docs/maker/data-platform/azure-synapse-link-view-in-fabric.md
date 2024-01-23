@@ -11,7 +11,7 @@ ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
 
-Microsoft Dataverse direct link with Microsoft Fabric enables organizations to extend their Power Apps and Dynamics 365 enterprise applications, and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and Power Apps data available in Microsoft OneLake, the built-in data lake for Microsoft Fabric.
+Microsoft Dataverse direct link to Microsoft Fabric enables organizations to extend their Power Apps and Dynamics 365 enterprise applications, and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and Power Apps data available in Microsoft OneLake, the built-in data lake for Microsoft Fabric.
 
 - No need to export data, build ETL pipelines, or use third-party integration tools.
 - With shortcuts from Dataverse directly into OneLake, your data stays in Dataverse while authorized users get to work with data in Fabric.
@@ -29,9 +29,8 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 
 ## Prerequisites
 
-A Power BI premium license or Fabric capacity.
-
-If you don’t have Power BI premium license or Fabric capacity, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment
+If you don’t have Power BI premium license or Fabric capacity within the same region, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 
 ## Link to Fabric from Power Apps
 
@@ -58,14 +57,18 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
-Azure Synapse Link for Dataverse enables IT admins with provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without data export enabling low code makers to easily work with their data. This table provides a quick comparison between the options.
+Azure Synapse Link for Dataverse enables IT admins to export data to their own storage and build data integration pipelines. Azure Synapse Link asists with provisioning and configuring Azure resources within an integrated experience. 
+
+Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without the need to bring your own storage and Synapse workspaces. Link to Fabric leverages storage built into Dataverse and removes the need to provision and manage your own storage.  
+
+This table provides a quick comparison between the options.
 
 | Link to Fabric                      | Azure Synapse Link                | 
 |:-----------------------------------|:------------------------------|
 | No copy, no ETL direct integration with Microsoft Fabric.  |  Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
-| Data stays in Dataverse - secure access in Microsoft Fabric. | Data stays in your own storage. You manage access. |
+| Data stays in Dataverse - users get secure access in Microsoft Fabric. | Data stays in your own storage. You manage access to users. |
 | All tables chosen by default.<sup>1</sup>  | System administrators can choose required tables. |
-| Consumes additional Dataverse storage.  | Consumes your own storage as well as other compute and integration tools. | 
+| Consumes additional Dataverse storage. | Consumes your own storage as well as other compute and integration tools. | 
 
 <sup>1</sup>You must create an Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
 
@@ -80,6 +83,7 @@ You can use an existing Dataverse environment or create a new developer environm
 Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze** > **Link to Microsoft Fabric** on the command bar. 
 
 1. Sign into [Power Apps](https://make.powerapps.com).
+2. Select the environment you want, select **Tables** on the left navigation pane, and then select **Analyze** > **Link to Microsoft Fabric** on the command bar
    > [!NOTE]
    >
    > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
@@ -87,20 +91,23 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
    > This option has moved from the **Export** menu since public preview. You can no longer select this option from the context menu for specific tables because this option applies to all tables.
    >
 
-2. Select the environment you want, select **Tables** on the left navigation pane, and then select **Analyze** > **Link to Microsoft Fabric** on the command bar
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
-4. The wizard validates your Fabric subscription settings the first time. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step.
+4. The wizard validates your Fabric subscription settings the first time. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. 
 5. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
 6. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
 
 When complete, Fabric lakehouse opens in a separate browser tab.
 
-It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
-
+> [!NOTE]
+>
+> You need a Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment. > If you don’t have Power BI premium license or Fabric capacity within the same region, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+>
+> It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+> 
 The workspace you choose to link with Dataverse must be assigned to a premium capacity in the same region as your Dataverse environment. If you choose to create a new workspace, the system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. The wizard might detect missing prerequisites including insufficient capacity at the beginning.
-
+> 
 Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
-
+> 
 To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
 
 :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
