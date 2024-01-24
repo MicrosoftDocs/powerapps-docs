@@ -140,6 +140,12 @@ To create a Azure Synapse Link profile with incremental data:
 >
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
+## Working with Data and metadata  
+**Enumerated fields** are coded data fields in Finance and Operations. 
+
+
+
+
 ## Enable finance and operations data entities in Azure Synapse Link
 
 You can enable both finance and operations entities and finance and operations apps tables in Azure Synapse Link for Dataverse. This section is focused on finance and operations data entities.
