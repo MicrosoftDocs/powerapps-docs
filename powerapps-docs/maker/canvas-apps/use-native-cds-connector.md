@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/24/2021
+ms.date: 01/24/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -20,13 +20,13 @@ contributors:
 
 ## Overview
 
-In May 2021, a number of features that were previously optional have become the default behavior for all new apps. This article aims to guide those who have created an app prior to the implementation of these features on how to upgrade their app to utilize the new features.
+In May 2021, many features that were previously optional are now the default behavior for all new apps. This article provides guidance to users who developed an app before the introduction of new features, on how to upgrade their app to leverage these latest functionalities.
 
 ### Native Dataverse
 
 If you created a canvas app with either the Dataverse or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Dataverse.
 
-If you created your app prior to November 2019 and you are not using a native Dataverse connection, then in Settings in the Upcoming features tab, in the 'Retired' tab you will find the **Improve data source experience and Microsoft Dataverse views** option along with the **Relational data, choices, and other new features for Microsoft Dataverse**.
+If you created your app prior to November 2019 and you aren't using a native Dataverse connection, then in Settings in the Upcoming features tab, in the 'Retired' tab you'll find the **Improve data source experience and Microsoft Dataverse views** option along with the **Relational data, choices, and other new features for Microsoft Dataverse**.
 
 ## How do I upgrade?
 
@@ -64,7 +64,7 @@ If you don't see **Relational data, option sets and other new features for Micro
 
     *Possible errors and suggestions*:
 
-    It’s possible to have errors at this stage if you're using an choice field or hard-coded GUID text values.  <br><br>
+    It’s possible to have errors at this stage if you're using a choice field or hard-coded GUID text values.  <br><br>
 
   - *Choice values*: If you're using choice field with a text identifier for the choice value, use the dot notation instead to reference the choice value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
     More information: [Detailed Examples](#detailed-examples).
@@ -85,7 +85,7 @@ Use the following instruction to turn **Improve data source experience and Micro
 
 ## Converting canvas apps with the Dynamics 365 connector
 
-To convert your app that uses the Dynamics 365 connector, you'll need to remove and add the connections to your data sources. Use the steps below to convert your connections to your data sources.
+To convert your app that uses the Dynamics 365 connector, you need to remove and add the connections to your data sources. Use the steps below to convert your connections to your data sources.
 
 1. Ensure the **Improve data source experience and Microsoft Dataverse views** feature is turned *On*.
 2. Remove your existing Dynamics 365 data source connections.
@@ -104,7 +104,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using a choice.
 
 - If control name conflicts, change the name of the control to be different and unique.
-- For field and table display name conflicts, you may see a formula that is expecting a table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
+- For field and table display name conflicts, you might see a formula that is expecting a table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
 - *Choice values*: If you're using a choice field with a text identifier for the choice value, use the dot notation instead to reference the choice value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
 More information: [Detailed Examples](#detailed-examples).
 - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`.
@@ -121,7 +121,7 @@ Separate `_myfield` and `_myfield_label` fields were used for choice earlier. No
 
 #### Removing and adding choice Data cards
 
-It's recommended to remove existing data cards and add them back to work with your choice. For example, if you're working with the Account table and the Category choice, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+We recommend that youremove existing data cards and add them back to work with your choice. For example, if you're working with the Account table and the Category choice, you see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name.](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
@@ -131,7 +131,7 @@ With the new *Improved data source experience and Microsoft Dataverse views* fea
 
 #### Editing the Choice Filter expressions to use new syntax
 
-Previously, if you wanted to use an Choice value in a Filter expression you would need to use the *Value* field. For example:
+Previously, if you wanted to use a Choice value in a Filter expression you would need to use the *Value* field. For example:
 
 ```powerapps-dot
 Filter(Account,'Category Value' = "1")
@@ -198,7 +198,7 @@ Using the [Patch](./functions/function-patch.md) function with Two option should
 
 ### Polymorphic lookups
 
-Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple tables.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific table. A record reference carries the table information allowing it to point to a record in several different other table, which differs from a normal lookup that can only point to records in one table.  
+Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple tables.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific table. A record reference carries the table information allowing it to point to a record in several other tables, which differs from a normal lookup that can only point to records in one table.  
 
 #### Access, Set, and Filter on the Owner field of a record
 
@@ -217,7 +217,7 @@ Patch( Accounts, First( Accounts ), { Owner: First( Users ) })
 
 ##### Polymorphic with a Gallery displaying Owner name
 
-Since a reference can point to different tables, you must be specific. You can't use **ThisItem.Owner.Name**, as the name field in the **Team** table is **Team Name**, and the name field in the **User** table is **Full Name**. Power Apps won’t know which type of lookup you're referring to, until you run the app.
+Since a reference can point to different tables, you must be specific. You can't use **ThisItem.Owner.Name**, as the name field in the **Team** table is **Team Name**, and the name field in the **User** table is **Full Name**. Power Apps doesn't know which type of lookup you're referring to, until you run the app.
 
 To fix this issue:
 
@@ -290,7 +290,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 #### Access the list of Notes for a record
 
-When you create a table, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
+When you create a table, you can enable attachments. If you select the check box for enabling attachments, you create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
 
 ![Notes field.](./media/use-native-cds-connector/Notes-Field.png)
 
