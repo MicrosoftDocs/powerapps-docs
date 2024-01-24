@@ -114,6 +114,7 @@ Currently, there are the following limitations with finance and operations table
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.  
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
+- In case of Finance and Operations Tables that exhibit (valid time stamp behavior)[https://learn.microsoft.com/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data], only the data rows that are currently valid are exported with Synapse Link. 
 
 ## Access incremental data changes from finance and operations
 
