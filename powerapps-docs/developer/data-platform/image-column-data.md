@@ -136,7 +136,6 @@ Image columns store the following binary image types:
 |---------|---------|---------|
 |Graphics Interchange Format|`image/gif`|`.gif`|
 |Joint Photographic Expert Group image|`image/jpeg`|`.jpg`, `.jpeg`|
-|Tagged Image File Format|`image/tiff`|`.tif`, `.tiff`|
 |Bitmap file|`image/bmp`|`.bmp`|
 |Portable Network Graphics|`image/png`|`.png`|
 
@@ -610,7 +609,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 ### See also
 
 [Files and images overview](files-images-overview.md)<br />
-[Image columns](image-attributes.md)<br />
+[Work with image column definitions using code](image-attributes.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
 [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)<br />
 [Use file column data](file-column-data.md)

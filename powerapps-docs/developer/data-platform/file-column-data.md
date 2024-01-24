@@ -1075,7 +1075,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 [Files and images overview](files-images-overview.md)<br />
 [Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
-[File columns](file-attributes.md)<br />
+[Work with file column definitions using code](file-attributes.md)<br />
 [Sample: File Operations using Dataverse SDK for .NET](org-service/samples/file-operations.md)<br />
 [Sample: File Operations using Dataverse Web API](webapi/samples/file-operations.md)
 
