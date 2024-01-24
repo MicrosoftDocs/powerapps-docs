@@ -181,6 +181,8 @@ Use the [fetch element](reference/fetch.md) `distinct` attribute to require the 
 
 If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
 
+When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
+
 ## TODO: using the hint attribute
 
 Donald will provide an example.
