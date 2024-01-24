@@ -145,6 +145,9 @@ To create a Azure Synapse Link profile with incremental data:
 
 **Enumerated fields** are coded data fields in Finance and Operations, for an example, < table> contains a field, which is an Enumerated field. While the table field contains a numeric code (ex. ...") the labels that describes the numeric codes are stored elsewhere. 
 
+In case of metadata changes to Finance and Operations tables, for an example, a new field got added to a table, data exported in Synapse Link will reflect the latest metadata inclusive of the change. See (Synapse Link FAQ for more details)[https://learn.microsoft.com/power-apps/maker/data-platform/export-data-lake-faq#what-happens-when-i-add-a-column]. If you are using Synapse to query the data, you will see the updated metadata reflected in Synapse. If you consuming incremental data changes, you can locate updated metadata within the incremental data folder with the latest date stamp. See (incremental folder structure for details)[https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-incremental-updates#view-incremental-folder-at-microsoft-azure-storage]
+
+
 
 
 
