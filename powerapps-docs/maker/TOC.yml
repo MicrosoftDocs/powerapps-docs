@@ -53,6 +53,8 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
+  - name: Use Copilot chat in canvas apps (preview)
+    href: ../user/copilot-chat-in-webplayer.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -430,6 +432,8 @@
               href: ./canvas-apps/add-gallery.md
             - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
+            - name: Best practices and recommendations
+              href: ./canvas-apps/gallery-best-practice.md
           - name: Add and configure a form
             items:
             - name: Add a form
