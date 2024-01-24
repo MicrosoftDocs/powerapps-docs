@@ -20,7 +20,7 @@ contributors:
 
 ## Overview
 
-In May 2021, many features that were previously optional are now the default behavior for all new apps. This article provides guidance to users who developed an app before the introduction of new features, on how to upgrade their app to leverage these latest functionalities.
+In May 2021, many features that were previously optional are now the default behavior for all new apps. This article provides guidance to users who developed an app before the introduction of new features, on how to upgrade their app to leverage the latest functionalities.
 
 ### Native Dataverse
 
