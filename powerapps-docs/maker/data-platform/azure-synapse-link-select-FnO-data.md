@@ -142,7 +142,9 @@ To create a Azure Synapse Link profile with incremental data:
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
 ## Working with Data and metadata  
-**Enumerated fields** are coded data fields in Finance and Operations. 
+
+**Enumerated fields** are coded data fields in Finance and Operations, for an example, < table> contains a field, which is an Enumerated field. While the table field contains a numeric code (ex. ...") the labels that describes the numeric codes are stored elsewhere. 
+
 
 
 
