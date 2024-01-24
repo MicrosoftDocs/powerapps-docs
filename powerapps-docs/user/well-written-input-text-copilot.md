@@ -23,10 +23,6 @@ End users can use Copilot to quickly generate well-written text that can be used
 
 When a user is trying to quickly input text into multi-line text boxes or rich text editors in a canvas app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit the scenario.
 
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in process of rolling out, and may not be available in your region yet. 
 
 ## Use this feature
 
@@ -55,11 +51,25 @@ Makers can turn off this feature on a per app basis within app settings using th
 1. Select **Off** for the **Text assistance in web player (preview)** feature.
 1. Select **Save**.
 
+Power Platform admins can turn off this feature on a per environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
+
+   ```powershell
+   $Set-EnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled false
+   ```
+   
+
+> [!IMPORTANT]
+> - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability may be subject to usage limits or capacity throttling.
+> - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in process of rolling out, and may not be available in your region yet. 
+> - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+
 ## Known issue
 
 **Error**: There was a problem using this description. Try again.
 
 **Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
