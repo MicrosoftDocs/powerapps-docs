@@ -90,7 +90,7 @@ Typically, within your plug-in you will:
 - Access the Organization web service using SDK for .NET calls to perform message request operations like query, create, update, delete, and more.
 - Write messages to the Tracing service so you can evaluate how your plug-in code is executing.
 
-The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService%2A> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service, you invoke the `GetService` method passing the type of service. Read more about this in the next sections.
+The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService%2A> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service, you invoke the `GetService` method passing the type of service. Read more about this method in the next sections.
 
 ### Execution context
 
@@ -121,7 +121,7 @@ IOrganizationService orgService = serviceFactory.CreateOrganizationService(conte
 
 Use the tracing service to write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
-To write to the tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
+To write to the Tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
 ```csharp
 ITracingService tracingService =
@@ -138,7 +138,7 @@ More information: [Use Tracing](debug-plug-in.md#use-tracing), [Tracing and logg
 
 ### Other services
 
-When you write a plug-in that uses Azure Service Bus integration, use the notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this won't be described here.
+When you write a plug-in that uses Azure Service Bus integration, use the notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this interface won't be described here.
 
 More information: [Azure Integration](azure-integration.md)
 
@@ -187,7 +187,7 @@ More information about handling exceptions: [Handle exceptions in plug-ins](hand
 
 ## Plug-in design impacts performance
 
-When writing your plug-in, it's critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this can result in a nonresponsive application UI or worst case a timeout error with pipeline rollback.
+When writing your plug-in, it's critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this performance impact can result in a nonresponsive application UI or worst case a timeout error with pipeline rollback.
 
 > [!IMPORTANT]
 > Plug-ins must adhere to an execution time limit and resource constraints.
