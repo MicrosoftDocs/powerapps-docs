@@ -23,7 +23,7 @@ This article describes how to update existing localized labels that were created
 
 ## Updating localized labels overview
 
-When you create a new model-driven app form and add columns to the form, the form creates a copy of the localized labels for those columns in the base language. Once a form is created, changing the localized label text for a column in the base language doesn't update the localized label on the form. However, you can change the column, tab, and section labels that can be localized for a form using the form designer. For more information about customized text, see [Configure column properties on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form).
+When you create a new model-driven app form and add columns to the form, the form creates a copy of the localized labels for those columns in the base language. Once a form is created, changing the localized label text for a column in the base language doesn't update the localized label on the form. However, you can change the column, tab, and section labels that can be localized for a form using the form designer. For more information about customized text, go to [Configure column properties on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form).
 
 To update localized labels for forms through the export translations Excel file, you need to correctly identify the object ID corresponding to each tab, section, or column. The following sections explain how to do this.
 
@@ -50,7 +50,7 @@ For example, say you want to find the object ID for attribute `websiteurl`. Sear
 
 In the example, since the `labelid` property is defined, the object ID is *67722747-e8af-40cf-a72a-2d8794c7c330*.
 
-Now that you have the object ID, you can follow the steps to export the translations file. Open the file, to locate the object ID to make your localized text updates for the tab, section, or column. For more information about how to translate the customized text into another language, see [Translate customized table, form, and column text into other languages](export-customized-entity-field-text-translation.md).
+Now that you have the object ID, you can follow the steps to export the translations file. Open the file, to locate the object ID to make your localized text updates for the tab, section, or column. For more information about how to translate the customized text into another language, go to [Translate customized table, form, and column text into other languages](export-customized-entity-field-text-translation.md).
 
 ### What if you can't find the asset in customizations XML?
 
@@ -62,6 +62,6 @@ You can modify the label or any other property of the asset using the form desig
 
 There are two alternative ways to find the object ID for a localized label:
 
-- Find the full form XML of the form by viewing the **Properties** page for the solution layers of the model-driven app form. For more information about solution layers, see [View the solution layers for a component](solution-layers.md#view-the-solution-layers-for-a-component).
+- Find the full form XML of the form by viewing the **Properties** page for the solution layers of the model-driven app form. For more information about solution layers, go to [View the solution layers for a component](solution-layers.md#view-the-solution-layers-for-a-component).
 - You can also make an OData call to retrieve the form xml if you know the form ID.
   - `[environmentURL]/api/data/v9.0/systemforms(b0742891-2411-494b-bfe7-93bc20356399)?$select=formxml`
