@@ -175,6 +175,17 @@ There are limitations on these kinds of filters:
 - Extended condition operations aren't supported. For example: `valueof='amount'+ 100`
 - The columns must be the same type. For example: You can't compare a string value with an number value.
 
+## Filter on values in related records
+
+To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
+
+- `any`
+- `not any`
+- `all`
+- `not all`
+
+[Learn more about filter link types](reference/link-entity.md#filter-link-types)
+
 ## Returning distinct results
 
 Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.

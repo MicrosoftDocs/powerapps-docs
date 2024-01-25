@@ -55,8 +55,9 @@ contributors:
 
 |Name|Occurrences|Description|
 |---------|---------|---------|
-|[condition element](condition.md)|0 to 500|[!INCLUDE [condition-description](includes/condition-description.md)]|
-|[filter element](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|
+|[condition](condition.md)|0 to 500|[!INCLUDE [condition-description](includes/condition-description.md)]|
+|[filter](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|
+|[link-entity](link-entity.md)|0 or many|Used to apply [Filter Link Type](link-entity.md#filter-link-types) conditions on column values in related tables|
 
 
 ## Quick find queries

@@ -56,7 +56,7 @@ This query returns account records where `address1_city` equals 'Redmond'.
 
 |Name|Occurrences|Description|
 |---------|---------|---------|
-|[value element](value.md)|0 or Many|[!INCLUDE [value-description](includes/value-description.md)]|
+|[value](value.md)|0 or Many|[!INCLUDE [value-description](includes/value-description.md)]|
 
 ## Remarks
 

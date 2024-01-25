@@ -48,7 +48,7 @@ contributors:
 
 |Name|Occurrences|Description|
 |---------|---------|---------|
-|[entity element](entity.md)|1|[!INCLUDE [entity-description](includes/entity-description.md)]|
+|[entity](entity.md)|1|[!INCLUDE [entity-description](includes/entity-description.md)]|
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
 

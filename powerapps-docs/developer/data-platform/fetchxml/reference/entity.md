@@ -41,17 +41,17 @@ contributors:
 
 |Name|Description|
 |---------|---------|
-|[fetch element](fetch.md)|[!INCLUDE [fetch-description](includes/fetch-description.md)]|
+|[fetch](fetch.md)|[!INCLUDE [fetch-description](includes/fetch-description.md)]|
 
 
 ## Child elements
 
 |Name|Occurrences|Description|
 |---------|---------|---------|
-|[all-attributes element](all-attributes.md)|0 or 1|[!INCLUDE [all-attributes-description](includes/all-attributes-description.md)]|
-|[attribute element](attribute.md)|0 or many|[!INCLUDE [attribute-description](includes/attribute-description.md)]|
-|[order element](order.md)|0 or many|[!INCLUDE [order-description](includes/order-description.md)]|
-|[link-entity element](link-entity.md)|0 or many|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
-|[filter element](filter.md)|0 or 1|[!INCLUDE [filter-description](includes/filter-description.md)]|
+|[all-attributes](all-attributes.md)|0 or 1|[!INCLUDE [all-attributes-description](includes/all-attributes-description.md)]|
+|[attribute](attribute.md)|0 or many|[!INCLUDE [attribute-description](includes/attribute-description.md)]|
+|[order](order.md)|0 or many|[!INCLUDE [order-description](includes/order-description.md)]|
+|[link-entity](link-entity.md)|0 or many|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
+|[filter](filter.md)|0 or 1|[!INCLUDE [filter-description](includes/filter-description.md)]|
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

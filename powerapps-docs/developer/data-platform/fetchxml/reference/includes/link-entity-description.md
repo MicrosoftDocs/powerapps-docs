@@ -1,1 +1,1 @@
-Joins a table related to the [entity](../entity.md) or [link-entity](../link-entity.md) to return additional columns with the result.
+Joins a table related to the [entity](../entity.md) or [link-entity](../link-entity.md) to return additional columns with the result. Also used with [filter](../filter.md) elements to apply [Filter Link Type](../link-entity.md#filter-link-types) conditions on column values in related tables.
