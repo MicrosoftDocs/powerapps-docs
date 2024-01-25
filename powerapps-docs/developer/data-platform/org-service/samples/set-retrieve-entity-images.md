@@ -156,7 +156,7 @@ To leave the system in the state before the sample ran, it does the following:
 ### See Also
 
 [Use image column data](../../image-column-data.md)<br />
-[Image columns](../../image-attributes.md)<br />
+[Work with image column definitions using code](../../image-attributes.md)<br />
 [Use file column data](../../file-column-data.md)<br />
 [Sample: Image Operations using Dataverse Web API](../../webapi/samples/image-operations.md)
 

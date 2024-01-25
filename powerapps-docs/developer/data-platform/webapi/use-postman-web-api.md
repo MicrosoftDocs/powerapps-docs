@@ -1,28 +1,25 @@
 ---
 title: "Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse)| MicrosoftDocs"
 description: "Learn how to use Postman to work with Microsoft Dataverse Web API"
-ms.custom: 
-ms.date: 04/22/2019
-ms.reviewer: "pehecke"
-
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.date: 01/20/2024
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 5829C16D-417D-4A82-9093-C576ADB683D1
-caps.latest.revision: 7
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
 search.audienceType: 
   - developer
 ---
 
 # Use Postman with the Web API
 
-There are a number of third-party tools that allow you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
+There are many third-party tools that allow you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API.
 
-Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
+Postman offers many other capabilities beyond those covered in this content. More information: [First five things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
+
+> [!NOTE]
+> You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Postman. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md)
 
 ## In this section
 
