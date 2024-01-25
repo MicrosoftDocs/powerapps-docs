@@ -40,15 +40,14 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
     - If you want Copilot to suggest different text, select **Rewrite**.
     - If you are satisfied with the text that Copilot suggested, select **Add** to enter the text in the text box.
   
-## Turn off this feature
+## Turn off text assistance in web player
 
 Makers can turn off this feature on a per app basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
 
-1. Go to the [Power Apps](https://make.powerapps.com) maker portal.
-1. Select **Apps** in the navigation pane.
-1. Select the check mark next to a canvas app.
-1. Select **Settings** in the command bar. The **App settings** pane appears.
-1. Select **Off** for the **Text assistance in web player (preview)** feature.
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. On the left navigation pane, select **Apps**.
+1. Select a canvas app, and then on the commbar select **Settings**.
+1. On the **App settings** pane, set the toggle for **Text assistance in web player (preview)** to  **Off**.
 1. Select **Save**.
 
 Power Platform admins can turn off this feature on a per environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
