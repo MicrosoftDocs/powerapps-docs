@@ -1,7 +1,7 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 10/12/2021
+ms.date: 01/25/2024
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
@@ -34,8 +34,8 @@ You can customize a main form XML `sections` node so that it can host an embedde
 
 1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display.
 
-   - If the table already exists in the target environment where you'll import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
-   - If the table doesn’t exist in the target environment where you'll import the solution, choose **Include all components** when you add the table to the solution.
+   - If the table already exists in the target environment where you import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
+   - If the table doesn’t exist in the target environment where you import the solution, choose **Include all components** when you add the table to the solution.
 1. Export the solution as managed.
 2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the `<sections>` block that is inside the `<forms type="main">` node in the customizations.xml file.
 
@@ -155,14 +155,14 @@ Before you import the solution into the target environment, make sure the unmodi
    > [!div class="mx-imgBorder"] 
    > ![User that is signed in doesn't have appropriate permission.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "User that is signed in doesn't have appropriate permission")
 
-- The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
+- The view of the report data shown inside Power Apps is the same as Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 - Embedding a Power BI tile on a form is only supported without contextual filtering.
-- Embedding a Power BI report does not support cross-tenant references.
+- Embedding a Power BI report doesn't support cross-tenant references. For example, trying to embed a Power BI report belonging to the Contoso tenant in a model-driven app belonging to the Fabrikam tenant isn't currently supported, even if the report being embedded has been shared with users in the Fabrikam tenant via Power BI.
 
 ### Common issues
 
-- The group ID isn't specified in the `TileUrl` node of the control parameters when it may need to be. This example includes a group ID.
+- The group ID isn't specified in the `TileUrl` node of the control parameters when it might need to be. This example includes a group ID.
 ```xml
 <parameters>
 	<PowerBIGroupId>fd266a4c-9a02-4553-9310-80e05ee844f3</PowerBIGroupId>
@@ -171,7 +171,7 @@ Before you import the solution into the target environment, make sure the unmodi
 </parameters>
 ```
 - Fields have different data types in Power BI and Dataverse. They need to be the same type, such as string in Power BI and string in Dataverse.
-- String fields don't have escaped quotes in the Power BI filter. Below, notice ```values``` has ```[\"$a\"]``` rather than ```[$a]```.
+- String fields don't have escaped quotes in the Power BI filter. Notice ```values``` has ```[\"$a\"]``` rather than ```[$a]```.
 ```json
 	{
 	        "Filter": "[{
