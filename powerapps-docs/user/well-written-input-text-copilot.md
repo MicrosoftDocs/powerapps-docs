@@ -46,7 +46,7 @@ Makers can turn off this feature on a per app basis within app settings using th
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation pane, select **Apps**.
-1. Select a canvas app and select **Settings** on the command bar.
+1. Select a canvas app and then select **Settings** on the command bar.
 1. On the **App settings** pane, set the toggle for **Text assistance in web player (preview)** to  **Off**.
 1. Select **Save**.
 
