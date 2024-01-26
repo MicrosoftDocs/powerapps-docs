@@ -8,6 +8,7 @@ ms.topic: article
 author: Mattp123
 ms.author: yueshu
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 # FAQ for Excel to table and app
 
