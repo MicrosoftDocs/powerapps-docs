@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 11/27/2023
+ms.date: 01/26/2024
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -29,11 +29,10 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 
 ## Prerequisites
 
-A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required.
-
-If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
-
-You need to be a System administrator in the Dataverse environment and you need to have Administrator access to a Fabric workspace created within the same region.
+- A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required.
+  - If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+- System administrator security role in the Dataverse environment.
+- Administrator access to a Fabric workspace created within the same region as the Dataverse environment.
 
 ## Link to Fabric from Power Apps
 
