@@ -8,6 +8,8 @@ ms.topic: article
 author: franklanmsft
 ms.author: franklan
 ms.reviewer: mduelae
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # FAQ for building apps and tables through conversation
