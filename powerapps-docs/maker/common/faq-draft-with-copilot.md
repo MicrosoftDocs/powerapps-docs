@@ -8,6 +8,8 @@ ms.topic: article
 author: jordanchodak
 ms.author: jordanchodak
 ms.reviewer: sericks
+ms.collection: 
+    - bap-ai-copilot 
 ---
 
 # FAQ for drafting well-written, input text with Copilot
