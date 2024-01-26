@@ -1,7 +1,7 @@
 ---
 title: "Set up a Postman environment (Microsoft Dataverse for Apps)| MicrosoftDocs"
 description: "Learn how to set up and configure a Postman environment that connects with Microsoft Dataverse environments."
-ms.date: 05/04/2022
+ms.date: 01/20/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -15,7 +15,13 @@ contributors:
 
 # Set up a Postman environment
 
- To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
+To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without registering your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
+
+> [!NOTE]
+> You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Postman. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method: 
+>
+> - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
+> - Refreshes your access token automatically so you don't need to keep requesting a new one.
 
 ## Prerequisites
 
@@ -31,13 +37,13 @@ contributors:
 > To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Microsoft Entra ID application to connect with Dataverse API.
 
 1. Launch the Postman desktop application. 
-1. To create a new environment, select **Environments** on the left and click <b>+</b>.
+1. To create a new environment, select **Environments** on the left and select <b>+</b>.
   
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
 1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
 1. Sign into [Power Apps](https://make.powerapps.com/) to get the base url of the Web API endpoint. 
-1. Select your Power Apps environment and then click the <b>Settings</b> button in the top-right corner. Then click <b>Developer resources</b>.
+1. Select your Power Apps environment and then select the <b>Settings</b> button in the top-right corner. Then select <b>Developer resources</b>.
 
     :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
     
@@ -56,11 +62,11 @@ contributors:
    |`callback`|`https://localhost`| Copy the value |
    |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`| Copy the value |
 
-1. Your settings should appear something like below:
+1. Your settings should appear something like the following:
 
     :::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="New environment with values":::     
    
-1. Click **Save** to save your newly created environment named <b>MyNewEnvironment</b>.
+1. Select **Save** to save your newly created environment named <b>MyNewEnvironment</b>.
 
 1. With your newly created environment selected, set it as the *active* one by either:
   - Clicking the ellipses menu near the top-right and selecting **Set as active environment**, or
@@ -70,7 +76,7 @@ contributors:
 
 To connect using **OAuth 2.0**, you must have an access token. Use the following steps to get a new access token:
 
-1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected. Click <b>+</b> right next to <b>MyNewEnvironment</b>. 
+1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected. Select <b>+</b> right next to <b>MyNewEnvironment</b>. 
 
     :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Preauthorization":::
     
@@ -91,37 +97,37 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
    |Auth URL|`{{authurl}}`| Copy the value |  
    |Client ID|`{{clientid}}`| Copy the value |  
 
-1. Your settings should appear something like below: 
+1. Your settings should appear something like the following: 
     
     :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
 
    > [!NOTE]
    > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. 
     
-1. Click **Get New Access Token**. 
+1. Select **Get New Access Token**. 
    
-   Once you click **Get New Access Token**, an Microsoft Entra ID sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
+   Once you select **Get New Access Token**, a Microsoft Entra ID sign-in dialog box appears. Enter your username and password, and then select **Sign In**. Once authentication completes, the following dialogue appears.
 
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
-1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** pane appears. Click **Use Token**. 
+1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** pane appears. Select **Use Token**. 
 
     :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="Access token page":::
 
-1. The newly generated token will automatically appear in the text box below the **Available Tokens** drop-down.
+1. The newly generated token automatically appears in the text box below the **Available Tokens** drop-down.
 
     :::image type="content" source="media/setup-postman-access-token-autopopulate.png" alt-text="Token autopopulate":::
 
 ## Test your connection 
 
-The following shows how to test your connection using [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
+Use these steps to test your connection using [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
 
 1. Select `GET` as the HTTP method and add `{{webapiurl}}WhoAmI` in the editing space.
 
     :::image type="content" source="media/setup-postman-whoami-url.png" alt-text="Calling WhoAmI endpoint":::
    
-1. Click **Send** to send this request.
-1. If your request is successful, you will see the data returning from the `WhoAmI` endpoint, like below:
+1. Select **Send** to send this request.
+1. If your request is successful, see the <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> data returned from the `WhoAmI` function:
 
     :::image type="content" source="media/setup-postman-whoami.png" alt-text="Response from WhoAmI":::
 
