@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 10/20/2023
+  ms.date: 01/26/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -31,13 +31,13 @@ sections:
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
 
-- question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
      answer: |
-        The changes will be reflected in the long term retained data. When retention policies are run, the new custom columns will contain data for the new rows. The data that was retained prior to these changes will not have any value in this column(s). If a column is deleted in the live table, the column remains in the long term retained data with value for all new rows.
+        The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
 
-        question: What if a makers adds custom child table(s)?
+   - question: What if a maker adds custom child tables?
      answer: |
-        Dataverse long term retention ensures that the new child table(s) is a part of the next retention policy run. 
+        Dataverse long term retention ensures that the new child tables are a part of the next retention policy run. 
 
    - question: Can a retention policy run be stopped?
      answer: | 
