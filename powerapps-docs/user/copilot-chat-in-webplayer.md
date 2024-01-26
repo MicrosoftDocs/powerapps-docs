@@ -8,6 +8,8 @@ ms.subservice: end-user
 author: amchern
 ms.author: amchern
 ms.reviewer: sericks
+ms.collection: 
+    - bap-ai-copilot 
 search.audienceType: 
   - enduser
 
