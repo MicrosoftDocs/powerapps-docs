@@ -18,6 +18,8 @@ contributors:
 ms.contributors:
 - arijitba
 - norliu
+ms.collection: 
+    - bap-ai-copilot
 ---
 # System requirements, limits, and configuration values for Power Apps
 
