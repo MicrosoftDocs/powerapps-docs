@@ -96,6 +96,9 @@ Typically, within your plug-in you will:
 - Access the Organization web service using SDK for .NET calls to perform message request operations like query, create, update, delete, and more.
 - Write messages to the Tracing service so you can evaluate how your plug-in code is executing.
 
+> [!NOTE]
+> All Dataverse services your plug-in would typically use and the plug-in execution context are pre-configured and available to your plug-in code when you derive your plug-in from the `PluginBase` class.
+
 The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService%2A> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service, you invoke the `GetService` method passing the type of service. Read more about this method in the next sections.
 
 ### Execution context
