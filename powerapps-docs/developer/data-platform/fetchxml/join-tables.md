@@ -219,7 +219,7 @@ The results should look something like:
 
 It is possible to specify `to` and `from` attributes using columns that are not involved in a relationship.
 
-For example, this query finds pairs of records where the [Name column](../../reference/entities/account.md#BKMK_Name) of an [account](../../reference/entities/account.md) record matches the [FullName column](../../reference/entities/contact.md#BKMK_FullName) of a [contact](../../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
+For example, this query finds pairs of records where the [Name column](../reference/entities/account.md#BKMK_Name) of an [account](../reference/entities/account.md) record matches the [FullName column](../reference/entities/contact.md#BKMK_FullName) of a [contact](../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
 
 ``` xml
 <fetch>
