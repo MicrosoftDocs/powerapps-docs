@@ -1,7 +1,7 @@
 ---
 title: Join tables using FetchXml
 description: Learn how to use FetchXml to join tables when you retrieve data from Microsoft Dataverse.
-ms.date: 08/31/2023
+ms.date: 01/26/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -71,8 +71,8 @@ Both of these attributes are usually used to explicitly define the columns to ma
 
 If you don't use either of these attributes and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship. Otherwise you will get an error like the following:
 
-> Error Code: `0x80041102`  
-> Error Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
+> Code: `0x80041102`  
+> Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
 
 If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
 
@@ -257,9 +257,9 @@ For example, the following query returns all account records with no contacts.
 
 You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:
 
-> Error Code: `0x8004430D`  
-> Error Number: `-2147204339`  
-> Error Message: `Number of link entities in query exceeded maximum limit.`  
+> Code: `0x8004430D`  
+> Number: `-2147204339`  
+> Message: `Number of link entities in query exceeded maximum limit.`  
 
 ## Child elements
 

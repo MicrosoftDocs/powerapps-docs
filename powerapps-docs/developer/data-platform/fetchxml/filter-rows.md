@@ -179,43 +179,57 @@ There are limitations on these kinds of filters:
 
 To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
 
-- `any`
-- `not any`
-- `all`
-- `not all`
+|Name|Description|
+|---------|---------|
+|`any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with matching any rows in the linked entity.|
+|`not any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with no matching rows in the linked entity. |
+|`all`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows where every row  in the link entity with matching `from` column value satisfies the additional filters defined for this link entity. This includes parent rows which have no link entity rows with matching `from` values at all. |
+|`not all`|A [Filter Link Type](#filter-link-types).  Restricts results to parent rows where at least one row in the link 
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
-## Returning distinct results
-
-Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.
-
-If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
-
-When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
-
 ## Union Hint
-Consider using "Union" hint when or-fillter type has condition from different entites, most time, it help performance 
-Note: 
-- One fetchxml can only has 1 union hint. 
-- if filter with union hint is not at top level filter, platform will transform the fetchxml and move filter with union hint to root filter.
-- If union hint is at 3 level filter or below, it will be ignored.
+
+To improve performance, consider using `union` hint when an `or` filter type has conditions from different tables. But there are some restrictions:
+
+- Each query can contain only one `union` hint.
+- If a filter with `union` hint is not at top level filter, Datravers will transform the query and move the filter with a `union` hint to root filter.
+- If `union` hint is more than three levels deep, it will be ignored.
 
 ```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical">
+<fetch >
       <entity name="incident">
-            <attribute name="incidentid"/>
-            <attribute name="title"/>
+            <attribute name="incidentid" />
+            <attribute name="title" />
             <filter type="and">
-                  <condition attribute="ticketnumber" operator="like" value="Case%"/>
-                  <condition attribute="statuscode" operator="eq" value="1"/>
-                  <filter type="or" hint="union">
-                     <condition attribute="telephone1" operator="eq" value="425-425-4021" entityname="ac"/>
-                     <condition attribute="telephone1" operator="eq" value="425-425-4021" entityname="co"/> 
-                   </filter>
+                  <condition attribute="ticketnumber"
+                        operator="like"
+                        value="Case%" />
+                  <condition attribute="statuscode"
+                        operator="eq"
+                        value="1" />
+                  <filter type="or"
+                        hint="union">
+                        <condition attribute="telephone1"
+                              operator="eq"
+                              value="425-425-4021"
+                              entityname="ac" />
+                        <condition attribute="telephone1"
+                              operator="eq"
+                              value="425-425-4021"
+                              entityname="co" />
+                  </filter>
             </filter>
-            <link-entity name="account" from="accountid" to="customerid" link-type="outer" alias="ac"/>
-            <link-entity name="contact" from="contactid" to="customerid" link-type="outer" alias="co"/>
+            <link-entity name="account"
+                  from="accountid"
+                  to="customerid"
+                  link-type="outer"
+                  alias="ac" />
+            <link-entity name="contact"
+                  from="contactid"
+                  to="customerid"
+                  link-type="outer"
+                  alias="co" />
       </entity>
 </fetch>
 ```

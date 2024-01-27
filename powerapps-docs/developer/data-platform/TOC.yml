@@ -142,10 +142,12 @@
           href: org-service/paging-behaviors-and-ordering.md
         - name: Use column comparison in queries
           href: column-comparison.md
-        - name: FetchXML search item limit
-          href: quick-find-limit.md
+        # - name: FetchXML search item limit
+        #   href: quick-find-limit.md
         - name: Improve FetchXML request performance
           href: fetchxml-performance.md
+    - name: Quick find
+      href: quick-find.md
     - name: "Use SQL to query data"
       href: dataverse-sql-query.md
     - name: "Dataverse SQL"

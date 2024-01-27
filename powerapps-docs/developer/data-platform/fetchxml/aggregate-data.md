@@ -220,9 +220,9 @@ The following example returns the number of related accounts in a column named `
 
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
 
-> Error code: `-2147164125`  
-> Hexadecimal error code: `8004E023`  
-> Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
+> Number: `-2147164125`  
+> Code: `8004E023`  
+> Message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
 > Client error message: The maximum record limit is exceeded. Reduce the number of records.
 
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.

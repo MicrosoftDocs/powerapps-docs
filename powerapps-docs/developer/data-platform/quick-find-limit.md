@@ -1,28 +1,38 @@
 ---
-title: "Work with Quick Find’s search item limit (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the record limit of a Quick Search and how to avoid hitting the limit." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/25/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "NHelgren" # GitHub ID
+title: "Work with Quick Find's search item limit"
+description: "Learn about the record limit of a Quick Search and how to avoid hitting the limit."
+ms.date: 01/25/2024
+ms.reviewer: jdaly
+ms.topic: article
+author: NHelgren
 ms.subservice: dataverse-developer
-ms.author: "nhelgren" # MSFT alias of Microsoft employees only
+ms.author: nhelgren
 search.audienceType: 
   - developer
+contributors:
+  - JimDaly
 ---
 
-# Work with Quick Find’s search item limit
+# Work with Quick Find's search item limit
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+Model-driven apps provide experiences to quickly find records using [quick find search](../../user/quick-find.md) or [Grid search](../../user/grid-filters.md#grid-search). With these experiences, users have a single text input that might be applied to multiple columns in a table.
 
-Quick Find provides an easy way to configure the default search experience
-across Dynamics 365 Customer Engagement or Microsoft Dataverse tables. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a query indicating:
+Today, these experiences use [Dataverse search APIs](search/overview.md) by default. With search, the results can include results from multiple tables for a more comprehensive search capability. Historically, quick find  experiences depended on the capability to perform Dataverse data queries optimized for quick retrieval on a single table. This capability remains and you can use it in your applications, but you should consider whether the Dataverse search APIs are a better fit for your requirement.
 
-*The number of records for this search exceeds the Quick Search record limit.*
+Because these queries support specific user experiences in applications, they must return results or fail quickly. The user won't wait a long time for results and these queries can use a lot of system resources because they may have conditions on multiple columns of the table. For these reason, quick find queries return an error when the number results exceeds 10,000 rows. The error returned is:
 
-This error occurs because the query received too many results and has been stopped to prevent the data service's resource consumption from causing potential outages. This article will explain how the 10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
+> Name: `QuickFindQueryRecordLimitExceeded`<br />
+> Code: `0x8004E024`<br />
+> Number: `-2147164124`<br />
+> Message: `The number of records for this search exceeds the Quick Search record limit. Please refine your query and try again.`
+
+You don't need to display this error in your application, but you should expect that it can occur. You can mitigate this by:
+
+- Limiting the number of fields searched by your query
+- Include limiting conditions in your query.
+
+
+This article will explain how the 10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
 
 > [!NOTE]
 > A Quick Find is a FetchXML query that contains one of these filter columns: `isquickfindquery`, `isquickfindfields`.
@@ -52,7 +62,7 @@ Consider the following FetchXML Quick Find query:
 </fetch>
 ```
 
-The query engine will execute the condition on “name” first. Since the search is
+The query engine will execute the condition on "name" first. Since the search is
 using wild cards with a short search string, the query will hit the 10k limit
 before running any other filters. It is important to note that even if the
 result set after the second stage (when applying a state code value) would have

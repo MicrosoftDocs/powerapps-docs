@@ -34,7 +34,7 @@ contributors:
 |`aggregate`|No|Boolean value to specify that the query returns aggregate values. [Learn about aggregating data](../aggregate-data.md)|
 |`aggregatelimit`|No|Set a limit below the standard 50,000  record aggregate limit. [Learn about aggregate limits](../aggregate-data.md#limitations) |
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
-|`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../filter-rows.md#returning-distinct-results)|
+|`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](#returning-distinct-results)|
 |`latematerialize`|No|Boolean value to direct the query to be broken up into smaller parts and reassemble the results before returning them. This may improve performance for some long-running queries. [Learn more about using Late Materialize query](../optimize-performance.md#late-materialize-query). |
 |`no-lock`|No|Legacy setting to prevent shared locks on records. [No longer necessary](../optimize-performance.md#no-lock). |
 |`options`|No|A string value to apply one or more SQL optimizations. See [Options](#options)|
@@ -61,7 +61,16 @@ Use these values with the `options` attribute to specify these SQL Server hints 
 
 ```text
 options='OptimizeForUnknown,DisableRowGoal,Recompile'
-``````
+```
 
 [!INCLUDE [fetch-options-table](includes/fetch-options-table.md)]
+
+
+## Returning distinct results
+
+Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.
+
+If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
+
+When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
 
