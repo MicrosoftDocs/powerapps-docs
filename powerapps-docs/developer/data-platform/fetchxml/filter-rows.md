@@ -193,7 +193,7 @@ To filter on values in related records without returning those values, use a [li
 To improve performance, consider using `union` hint when an `or` filter type has conditions from different tables. But there are some restrictions:
 
 - Each query can contain only one `union` hint.
-- If a filter with `union` hint is not at top level filter, Datravers will transform the query and move the filter with a `union` hint to root filter.
+- If a filter with `union` hint is not at top level filter, Dataverse will transform the query and move the filter with a `union` hint to root filter.
 - If `union` hint is more than three levels deep, it will be ignored.
 
 ```xml
