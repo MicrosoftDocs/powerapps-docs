@@ -196,8 +196,11 @@ When you use the `distinct` attribute, the results returned don't include primar
 
 ## Union Hint
 Consider using "Union" hint when or-fillter type has condition from different entites, most time, it help performance 
-Note: One fetchxml can only has 1 union hint. if filter with union hint is not at top level filter, platform will transform the fetechxml and move filter with union hint to root filter.
-If union hint is at 3 level filter or below, it will be ignored.
+Note: 
+- One fetchxml can only has 1 union hint. 
+- if filter with union hint is not at top level filter, platform will transform the fetchxml and move filter with union hint to root filter.
+- If union hint is at 3 level filter or below, it will be ignored.
+
 ```xml
 <fetch version="1.0" output-format="xml-platform" mapping="logical">
       <entity name="incident">
