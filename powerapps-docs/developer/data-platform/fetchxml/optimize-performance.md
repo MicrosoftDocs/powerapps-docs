@@ -16,13 +16,12 @@ This article describes ways you can optimize preformance when retrieving data us
 
 ## Late Materialize query
 
-If you're experiencing performance issues with an existing long-running query you can try setting a `latematerialize = 'true'` attribute to the [fetch element](reference/fetch.md). Behind the scenes, this setting will break the query up into smaller parts and re-assemble the results before returning them to you.
+If select statement has many Lookup, computed comlumns, and you're experiencing performance issues you can try setting a `latematerialize = 'true'` attribute to the [fetch element](reference/fetch.md). Behind the scenes, this setting will break the query up into smaller parts and re-assemble the results before returning them to you.
 
 Using the `latematerialize` attribute might not always provide a performance benefit. It may make simple queries run more slowly. It is most beneficial when your query:
 
 - Has many joins
-- Contains many columns
-- Contains lookup columns
+- Contains many columns lookup columns or computed columns 
 
 ## Query Hints
 
