@@ -197,17 +197,17 @@ To improve performance, consider using `union` hint when an `or` filter type has
 - If `union` hint is more than three levels deep, it will be ignored.
 
 ```xml
-<fetch >
-      <entity name="incident">
-            <attribute name="incidentid" />
-            <attribute name="title" />
+<fetch>
+      <entity name="email">
+            <attribute name="activityid" />
+            <attribute name="subject" />
             <filter type="and">
-                  <condition attribute="ticketnumber"
+                  <condition attribute="subject"
                         operator="like"
-                        value="Case%" />
-                  <condition attribute="statuscode"
+                        value="Alert:%" />
+                  <condition attribute="statecode"
                         operator="eq"
-                        value="1" />
+                        value="0" />
                   <filter type="or"
                         hint="union">
                         <condition attribute="telephone1"
@@ -222,12 +222,12 @@ To improve performance, consider using `union` hint when an `or` filter type has
             </filter>
             <link-entity name="account"
                   from="accountid"
-                  to="customerid"
+                  to="regardingobjectid"
                   link-type="outer"
                   alias="ac" />
             <link-entity name="contact"
                   from="contactid"
-                  to="customerid"
+                  to="regardingobjectid"
                   link-type="outer"
                   alias="co" />
       </entity>
