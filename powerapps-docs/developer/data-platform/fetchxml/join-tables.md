@@ -217,11 +217,40 @@ The results should look something like:
 
 ## No relationship
 
-TODO:
+It is possible to specify `to` and `from` attributes using columns that are not involved in a relationship.
 
-- Describe how FetchXml can be used to create queries on match values where no relationship exists.
-- Do we support this? https://jonasr.app/my-state-contacts/ claims "not unsupported"..
-- Does this introduce other considerations?
+For example, this query finds pairs of records where the [Name column](../../reference/entities/account.md#BKMK_Name) of an [account](../../reference/entities/account.md) record matches the [FullName column](../../reference/entities/contact.md#BKMK_FullName) of a [contact](../../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
+
+``` xml
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <link-entity name='contact'
+      from='fullname'
+      to='name'
+      link-type='inner'
+      alias='contact'>
+      <attribute name='fullname' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+> [!NOTE]
+> - It is important that the columns specified in the `to` and `from` attributes are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that may have performance impact and may fail for some column values.
+
+The following [column types](../../../../maker/data-platform//types-of-fields) cannot be used in `to` and `from` attributes:
+- **File**
+- **Image**
+- **MultiSelect Field**
+- [**PartyList**](../../../../maker/data-platform/types-of-fields#different-types-of-lookups) lookups
+
+Some columns can be used in `to` and `from` attributes but may result in poor performance:
+- Columns of the **Multiple Lines of Text** type
+- Columns of the **Single Line of Text** type with a maximum length larger than 850
+- [**Formula**](../../../../maker/data-platform/formula-columns) columns
+- [**Calculated**](../../../../maker/data-platform/define-calculated-fields) columns
+- [**Logical**](../../entity-attribute-metadata#logical-columns) columns
 
 ## Find records not in a set
 
