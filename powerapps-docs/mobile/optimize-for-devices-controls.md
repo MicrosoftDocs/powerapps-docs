@@ -49,7 +49,7 @@ Makers must complete the following steps to turn on modern controls and themes f
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Apps**.
 1. Select an app.
-1. Select **Settings** in the comand bar.
+1. Select **Settings** in the command bar.
 1. In the **Settings** window, select **General**.
 1. Turn on the **Modern controls and themes** option.
 
@@ -74,19 +74,19 @@ Makers must complete the following steps to turn on modern controls and themes f
 
 ## Unsupported controls
 
-If a screen is set to be optimized for devices, but has an unsupported control, you see an error message in a box. 
+If a screen is set for optimization for devices, but has an unsupported control, you see an error message in a box.
 
 :::image type="content" source="media/optimized-for-devices-control-error.png" alt-text="The error that shows when an unsupported control is on a screen set to optimize for devices.":::
 
 ## Device-optimized properties
 
-Some properties must be configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
+Some properties must be configured so they're optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
 
 ## Known limitations
 
-Note the following limitations with the optimize for devices feature.
+Note the following limitations with the 'optimize for devices' feature.
 
-- Only the **Segoe UI** font is supported. If a control is using another font, it displays the Segoe UI font instead. Due to the differences in fonts, this can result in the control taking up more or less space than expected. We recommend that you use the Segoe UI font for device-optimized screens.
+- Only the **Segoe UI** font is supported. If a control is using another font, it displays the Segoe UI font instead. Due to the differences in fonts, the control can take up more or less space than expected. We recommend that you use the Segoe UI font for device-optimized screens.
 - The **Image** control, when showing an SVG, only supports the fit and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
 - In the **modern Text** control, the **Semi-bold** and **Medium** font weights aren't supported on Android devices. It displays a regular font weight instead.
 - In the **modern Text input** control, the **Value** property, when set to a Power Fx variable, isn't displayed at first navigation. Instead, it shows the placeholder value until the user navigates away and back to the screen with the **modern Text input** control.
