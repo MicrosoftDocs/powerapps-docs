@@ -1,12 +1,12 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 01/13/2021
+ms.date: 01/23/2024
 author: sericks007
 ms.subservice: end-user
 ms.author: sericks
-
-ms.custom: ""
+ms.custom:
+ms.topic: how-to
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
@@ -15,20 +15,20 @@ search.audienceType:
 
 # Work with rows in the calendar view
 
-The calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md). The **Calendar Control** control can be added to any table.
+The calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md). The **Calendar** control can be added to any table.
 
 By default, rows are displayed in a read-only grid.
 
 > [!div class="mx-imgBorder"]
 > ![Default grid view.](media/default-grid-view-1.png "Default grid view")
 
-When the **Calendar Control** control is added to a table, the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
+When the **Calendar** control is added to a table, the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
 
 > [!div class="mx-imgBorder"]
 > ![Default calendar view.](media/cal-view.png "Default calendar view")
 
 > [!NOTE]
-> The **Calendar Control** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode).
+> The **Calendar** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode).
 
 ## Switch between calendar view and grid view
 
@@ -39,12 +39,12 @@ When the calendar view is turned on, it's the default view for the table. Howeve
    > [!div class="mx-imgBorder"]
    > ![Select a table.](media/cal-view-1.png "Select a table")
 
-1. On the command bar, select the **More commands** icon, and then select **Show As** and choose either **Calendar Control** or **Read Only Grid**.
+1. On the command bar, select the **More commands** icon, and then select **Show As** and choose either **Calendar** or **Read Only Grid**.
 
     > [!div class="mx-imgBorder"]
     > ![Switch to calendar view.](media/switch-calendar-view-1.png "Switch to calendar view")
 
-    When you select the **Calendar Control** view, activities are displayed in a calendar view.
+    When you select the **Calendar** view, activities are displayed in a calendar view.
 
     > [!div class="mx-imgBorder"]
     > ![Default calendar view.](media/cal-view.png "Default calendar view")
