@@ -1,0 +1,1 @@
+Restricts results to parent rows where at least one row in the link entity with matching `from` column value does not satisfy the additional filters defined for this link entity. 

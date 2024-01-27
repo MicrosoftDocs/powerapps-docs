@@ -1,0 +1,1 @@
+Restricts results to parent rows with matching any rows in the linked entity.

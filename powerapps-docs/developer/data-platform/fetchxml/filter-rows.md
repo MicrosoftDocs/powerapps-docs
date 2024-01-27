@@ -177,14 +177,14 @@ There are limitations on these kinds of filters:
 
 ## Filter on values in related records
 
-To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
+To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following [Filter Link Type](reference/link-entity.md#filter-link-types) `link-type` attributes:
 
 |Name|Description|
 |---------|---------|
-|`any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with matching any rows in the linked entity.|
-|`not any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with no matching rows in the linked entity. |
-|`all`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows where every row  in the link entity with matching `from` column value satisfies the additional filters defined for this link entity. This includes parent rows which have no link entity rows with matching `from` values at all. |
-|`not all`|A [Filter Link Type](#filter-link-types).  Restricts results to parent rows where at least one row in the link |
+|`any`|[!INCLUDE [link-type-any-description](reference/includes/link-type-any-description.md)]|
+|`not any`|[!INCLUDE [link-type-not-any-description](reference/includes/link-type-not-any-description.md)]|
+|`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
+|`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
