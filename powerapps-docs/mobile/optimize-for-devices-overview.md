@@ -16,13 +16,14 @@ contributors:
 ---
 
 # Optimize for devices overview (preview)
+
 [This article is prerelease documentation and is subject to change.]
 
 _Optimize for devices_ is a feature that changes the way canvas app screens are loaded and displayed for Android and iOS devices to use native UI. This lets makers build stunning native apps for mobile users with device-optimized screens that use native UI elements instead of rendering inside of web view. This feature provides the following benefits:
 
- - Brings modern mobile user experiences and interaction patterns
- - Improves performance and reliability
- - Integrates device capabilities with maker-defined UI
+- Brings modern mobile user experiences and interaction patterns
+- Improves performance and reliability
+- Integrates device capabilities with maker-defined UI
 
 There's no need to rebuild apps as makers can use all the familiar app building elements to create device-optimized experiences, though there are some limitations around which [controls are supported natively today](./optimize-for-devices-controls.md). Apps that are optimized for devices work with other mobile features like [offline](./canvas-mobile-offline-overview.md), [push notifications](./power-apps-mobile-notification.md), and [wrap](../maker/common/wrap/overview.md).
 
