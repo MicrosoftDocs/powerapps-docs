@@ -184,7 +184,7 @@ To filter on values in related records without returning those values, use a [li
 |`any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with matching any rows in the linked entity.|
 |`not any`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows with no matching rows in the linked entity. |
 |`all`|A [Filter Link Type](#filter-link-types). Restricts results to parent rows where every row  in the link entity with matching `from` column value satisfies the additional filters defined for this link entity. This includes parent rows which have no link entity rows with matching `from` values at all. |
-|`not all`|A [Filter Link Type](#filter-link-types).  Restricts results to parent rows where at least one row in the link 
+|`not all`|A [Filter Link Type](#filter-link-types).  Restricts results to parent rows where at least one row in the link |
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
