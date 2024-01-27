@@ -194,12 +194,28 @@ If you use the `distinct` attribute, you must add at least one order element to 
 
 When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
 
-## TODO: using the hint attribute
-
-Donald will provide an example.
-The valid value is 'union'? 
- - Related to: The SQL UNION operator is used to combine the results of two or more SELECT statements into a single result set. ??
-
+## Union Hint
+Consider using "Union" hint when or-fillter type has condition from different entites, most time, it help performance 
+Note: One fetchxml can only has 1 union hint. if filter with union hint is not at top level filter, platform will transform the fetechxml and move filter with union hint to root filter.
+If union hint is at 3 level filter or below, it will be ignored.
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical">
+      <entity name="incident">
+            <attribute name="incidentid"/>
+            <attribute name="title"/>
+            <filter type="and">
+                  <condition attribute="ticketnumber" operator="like" value="Case%"/>
+                  <condition attribute="statuscode" operator="eq" value="1"/>
+                  <filter type="or" hint="union">
+                     <condition attribute="telephone1" operator="eq" value="425-425-4021" entityname="ac"/>
+                     <condition attribute="telephone1" operator="eq" value="425-425-4021" entityname="co"/> 
+                   </filter>
+            </filter>
+            <link-entity name="account" from="accountid" to="customerid" link-type="outer" alias="ac"/>
+            <link-entity name="contact" from="contactid" to="customerid" link-type="outer" alias="co"/>
+      </entity>
+</fetch>
+```
 
 ## Next steps
 
