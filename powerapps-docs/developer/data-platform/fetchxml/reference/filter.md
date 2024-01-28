@@ -40,9 +40,10 @@ contributors:
 |---------|---------|---------|
 |`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
 |`hint`|No|TODO See new section in [Filter rows using FetchXml](../filter-rows.md)[TODO: using the hint attribute](../filter-rows.md#todo-using-the-hint-attribute)|****
-|`isquickfindfields`|No|Use this to tell Dataverse to execute the query like a Quick find query. [Quick find queries](#quick-find-queries) |
-|`overridequickfindrecordlimitenabled`|No|Use this when the quick find limit **is not enabled**, but you want to apply at limit to this query for better performance|
-|`overridequickfindrecordlimitdisabled`|No|Use this when the quick find **limit is enabled**, but you want to apply at limit to this query for better usability, avoiding the error that would otherwise be returned.|
+|`isquickfindfields`|No| TODO: Is this just an alias for `isquickfindquery`? It isn't in the fetch XSD, but it seems to be more common. |
+|`isquickfindquery`|No|Use this to tell Dataverse to execute the query as a quick find query. [Write quick find queries](../../quick-find.md)|
+|`overridequickfindrecordlimitenabled`|No|TODO: Still not clear on this.Use this when the quick find limit **is not enabled**, but you want to apply at limit to this query for better performance|
+|`overridequickfindrecordlimitdisabled`|No|TODO: Still not clear on this. Use this when the quick find **limit is enabled**, but you want to apply at limit to this query for better usability, avoiding the error that would otherwise be returned.|
 
 ## Parent elements
 
@@ -59,15 +60,5 @@ contributors:
 |[filter](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|
 |[link-entity](link-entity.md)|0 or many|Used to apply [Filter Link Type](link-entity.md#filter-link-types) conditions on column values in related tables|
 
-
-## Quick find queries
-
-**TODO**: Add information about how quick find queries *may* increase query performance and the error that can occur due to them. See https://learn.microsoft.com/en-us/power-apps/developer/data-platform/quick-find-limit
-
-### Quick Find limit
-
-TODO: 
- - Setting to turn it on or off in the UI?
- - Set the quick find query limit for the org. Is it in the UI?
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
