@@ -11,6 +11,8 @@ manager: tapanm
 ms.custom: bap-template
 search.audienceType: 
   - maker, admin
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # AI plugins in Power Platform (preview)
