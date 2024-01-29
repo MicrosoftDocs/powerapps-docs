@@ -14,7 +14,8 @@ search.audienceType:
 
 Dataverse will return up to 5,000 rows of data with each request. If you need to get more rows of data, you need to send additional requests for subsequent pages. If you want your application to efficiently retrieve smaller set of data, you can use paging to specify the number of records to return.
 
-Don't use the [fetch element](reference/fetch.md) `top` attribute to limit results with paging.
+> [!IMPORTANT]
+> Don't use the [fetch element](reference/fetch.md) `top` attribute with paging.
 
 ## Set order when paging
 

@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to query data
 description: Learn to compose a query using FetchXml, a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-ms.date: 01/20/2024
+ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -29,15 +29,17 @@ All queries are based on a single table. When composing a query using FetchXml, 
 </fetch>
 ```
 
-This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the `LogicalName` of the table to set the [entity](reference/entity.md) `name` attribute.
+This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the [LogicalName](../org-service/entity-operations.md#entitylogicalname) of the table to set the [entity](reference/entity.md) `name` attribute.
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. You can set this to a value up to 5,000 because that is the maximum number of rows that can be returned with a single request.  Don't use the `top` attribute when you [request paged results](page-results.md).
+To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse will return up to 5000 rows.
+
+Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 
 ## Refine your query
 
-After you have selected the table to start your query with, you need to refine the query to get the data you need. The following articles in this section explain how to complete your query.
+After you have selected the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.
 
 
 |Article|Task|
