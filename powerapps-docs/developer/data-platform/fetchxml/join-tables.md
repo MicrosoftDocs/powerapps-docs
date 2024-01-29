@@ -22,7 +22,7 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 |`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]|
 |`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]|
 |`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]|
-|`link-type`|The type of link use. Default behavior is `inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `outer`<br />- `any`<br />- `not any`<br />- `all`<br />- `not all`<br />- `exists`<br />- `in`<br />- `matchfirstrowusingcrossapply`<br />[Learn about link-type options](../link-entity.md#link-type-options)|
+|`link-type`|The type of link use. Default behavior is `inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `outer`<br />- `any`<br />- `not any`<br />- `all`<br />- `not all`<br />- `exists`<br />- `in`<br />- `matchfirstrowusingcrossapply`<br />[Learn about link-type options](reference/link-entity.md#link-type-options)|
 |`alias`|Represents the name of the related table in the results. |
 |`intersect`|Indicates that the `link-entity` is used to join tables and not return any columns|
 
@@ -62,47 +62,6 @@ The results look like this:
  -----------------------------------------------------------------
 ```
 
-## Required link-entity attribute values
-
-When you add the [link-entity element](reference/link-entity.md), you must set the `name` attribute:
-
-|Attribute|Description|
-|---------|---------|
-|`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]<br />In this case, `contact`.|
-
-### Using `to` and `from` attributes
-
-It is best to set values for both the `to` or `from` attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `to` and `from` attributes are not technically required.
-
-> [!NOTE]
-> - It is important that the columns specified in the `to` and `from` attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
-> 
-> - The meaning of the `to` and `from` attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../org-service/build-queries-with-queryexpression.md).
-
-
-If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship. Otherwise you will get an error like the following:
-
-> Code: `0x80041102`  
-> Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
-
-If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
-
-
-## Optional link-entity attribute values
-
-The following attribute values are set in the previous example, but they may have default values.
-
-|Attribute|Description|
-|---------|---------|
-|`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `contactid`. See [Using `to` and `from` attributes](#using-to-and-from-attributes)|
-|`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]<br />In this case, `primarycontactid`. See [Using `to` and `from` attributes](#using-to-and-from-attributes)|
-|`link-type`|[!INCLUDE [link-entity-link-type-description](reference/includes/link-entity-link-type-description.md)]|
-|`alias`|[!INCLUDE [link-entity-alias-description](reference/includes/link-entity-alias-description.md)]|
-|`intersect`|[!INCLUDE [link-entity-intersect-description](reference/includes/link-entity-intersect-description.md)]|
-
-
-
-
 ## Many-to-one relationships
 
 The previous example is a many-to-one relationship where many account records can refer to a one contact record. This information is defined in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
@@ -110,7 +69,7 @@ The previous example is a many-to-one relationship where many account records ca
 
 |Property|Value|Comment|
 |---------|---------|---------|
-|`SchemaName`|`account_primary_contact`|Unique Name of the relationship|
+|`SchemaName`|`account_primary_contact`|Unique Name of the relationship. |
 |`ReferencedEntity`|`contact`|The referenced table. The *one* in many-to-one.|
 |`ReferencedAttribute`|`contactid`|The primary key of the referenced table.|
 |`ReferencingEntity`|`account`|The table with a lookup column referencing the other table. The *many* in many-to-one.|

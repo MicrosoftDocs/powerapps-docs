@@ -87,11 +87,28 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
-|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
-|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
+|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](#using-to-and-from-attributes)|
+|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](#using-to-and-from-attributes)|
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
+
+### Using `to` and `from` attributes
+
+It is best to set values for both the `to` or `from` attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `to` and `from` attributes are not technically required.
+
+> [!NOTE]
+> - It is important that the columns specified in the `to` and `from` attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
+> 
+> - The meaning of the `to` and `from` attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../org-service/build-queries-with-queryexpression.md).
+
+If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship. Otherwise you will get an error like the following:
+
+> Code: `0x80041102`  
+> Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
+
+If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
+
 
 ### link-type options
 

@@ -1,7 +1,7 @@
 ---
 title: "Write quick find queries"
 description: "Learn how to write queries to use Dataverse quick find"
-ms.date: 01/25/2024
+ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: pnghub
@@ -281,9 +281,16 @@ function Get-QuickFindActiveAccounts {
 ---
 
 
-## Quick find limits
+## Quick find record limits
 
-Because quick find queries support specific user experiences in applications, they must return results or fail quickly. The user won't wait a long time for results and these queries can use a lot of system resources because they can have conditions on multiple columns of the table. For these reason, quick find queries return an error when the number results exceeds 10,000 rows. The error returned is:
+Within the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), there is [Dataverse setting](/power-platform/admin/admin-settings) called **Quick Find record limits** which is turned on by default.
+
+> [!IMPORTANT]
+> We strongly recommend that you leave the **Quick Find record limits** setting enabled. This setting protects you from system slowness and potential service disruptions when quick find queries exhaust available resources.
+
+Because quick find queries support specific user experiences in applications, they must return results or fail quickly. The user won't wait a long time for results and these queries can use a lot of system resources because they can have conditions on multiple columns of the table. 
+
+When the **Quick Find record limits** setting is enabled, quick find queries return an error when the number results exceeds 10,000 rows. The error returned is:
 
 > Name: `QuickFindQueryRecordLimitExceeded`   
 > Code: `0x8004E024`   
@@ -301,13 +308,13 @@ You don't need to display this error in your application, but you should expect 
 The search item limit is calculated using *ONLY* the items in the quick find filter. When processing the query, Dataverse detects whether there is a quick find filter and processes it first, even before applying security filters. If the results of the quick find filter exceed 10,000 rows, Dataverse throws the `QuickFindQueryRecordLimitExceeded` exception and no other filters are processed. Adding additional filters to get a smaller total number of records returned will not decrease the potentional of the `QuickFindQueryRecordLimitExceeded` exception. Someone querying a table without privileges to view all the matching records can get this error.
 
 
-### Bypass the quick find limit
+### Bypass the quick find record limit
 
-If you need to test a query that exceeds the quick find limit on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'0'`.
+When the **Quick Find record limits** setting is *enabled*, and you need to test a query that exceeds the quick find limit on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'0'`.
 
-### Organizational override
+### Apply the quick find record limit
 
-In extreme cases where a query essential to the business regularly returns the `QuickFindQueryRecordLimitExceeded` exception, an administrator can contact Microsoft Support to request the 10k item limit be disabled. Disabling the limit is not recommended and can result in over consumption of resources and environment wide outages if misused.
+When the **Quick Find record limits** setting is *disabled*, and you need to test a query with the limits applied on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitdisabled` attribute to `'0'`.
 
 ### See Also
 
