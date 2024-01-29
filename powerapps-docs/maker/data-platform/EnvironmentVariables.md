@@ -145,6 +145,10 @@ Yes.
 
 Yes if your configuration data isn't relational. Environment variables should be used for key: value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
+### Why is a different connection value than the one I want getting assigned automatically when importing?
+
+In some cases where there are multiple connections available for a single (data source-type) environment variable, there is a by-design implementation to select the first connection in the list of connections available for the environment variable. Because there is usually only one connection associated with an environment variable, this is not something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, we have made this easier to validate upon import.
+
 ### How do I remove a value from an environment variable?
 
 You might want to remove the value of an environment variable from your solution before exporting the solution. Then, the existing value remains in your development environment, but isn't exported in the solution. This approach allows a new value to be provided while importing the solution into another environment.
