@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 11/27/2023
+ms.date: 01/26/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -85,6 +85,10 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ## Frequently asked questions (FAQs)
 
+### On by default general availability rollout
+
+Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps will be on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+
 ### Preview to general availability rollout
 
 The modern, refreshed look for model-driven apps is generally available in the following release channels:
@@ -117,6 +121,32 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 
     > [!NOTE]
     > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
+
+### Can I enable the modern look for my app and remove the toggle?
+Yes, makers can old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
+
+For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md). 
+
+Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This hides the **Try the new look** toggle and prevents the new look from taking effect.
+
+1. Open https://make.powerapps.com/
+1. Under Solutions open an existing solution with one or more model-driven apps:
+1. Select **Add Existing** > **More** > **Setting**.
+1. Search for **Try**.
+1. Select **Try the new look**. 
+
+    > [!NOTE]
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden as described in this section. The second setting was used in the public preview phase to allow users to have the new look, but the setting did not appear as a toggle.
+
+1. Select **Add** to add it to the solution.
+1. Select **Try the new look** from the solution explorer.
+1. Update **Setting Environment Value** to **No**.
+1. Select **Save**.
+1. Publish all customizations.
+
+    > [!NOTE]
+    > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
+
 
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't supported at this time.
