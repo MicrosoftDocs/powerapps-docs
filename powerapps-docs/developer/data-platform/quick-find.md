@@ -31,14 +31,14 @@ Quick find queries use the following pattern:
 
 1. They include a single filter using an 'OR' filter operator.
 
-   - With FetchXml, the [filter element](fetchxml/reference/filter.md) `type` attribute is set to `'or'`.
+   - With [FetchXml](fetchxml/overview.md), the [filter element](fetchxml/reference/filter.md) `type` attribute is set to `'or'`.
    - With [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), the  [FilterExpression.FilterOperator](xref:Microsoft.Xrm.Sdk.Query.FilterExpression.FilterOperator) is set to [LogicalOperator.Or](xref:Microsoft.Xrm.Sdk.Query.LogicalOperator.Or).
    
    You can add additional filters, but they will be evaluated only after the quick find filter results are processed.
 
 1. The 'OR' filter is marked as a quick find filter:
 
-   - With FetchXml, the [filter element](fetchxml/reference/filter.md) `isquickfindfields` attribute is set to `'1'`. 
+   - With [FetchXml](fetchxml/overview.md), the [filter element](fetchxml/reference/filter.md) `isquickfindfields` attribute is set to `'1'`. 
    - With [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), the [FilterExpression.IsQuickFindFilter](xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter) is set to `true`.
 
 1. The filter has more than one condition. When only one condition is evaluated, the query will have better performance when it is processed as an ordinary query.
@@ -54,7 +54,7 @@ Quick find queries use the following pattern:
 
 ## Examples
 
-How you write a quick find query depends on whether you are using [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) or FetchXml.
+How you write a quick find query depends on whether you are using [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) or [FetchXml](fetchxml/overview.md).
 
 Each of the examples in the tabs below do the same thing:
 
@@ -153,7 +153,7 @@ static EntityCollection QuickFindActiveAccountsQueryExpression(
 
 ### [FetchXml](#tab/fetchxml)
 
-You can use FetchXml with the Dataverse SDK for .NET or Dataverse Web API.
+You can use [FetchXml](fetchxml/overview.md) with the Dataverse SDK for .NET or Dataverse Web API.
 
 With the SDK for .NET, this static `QuickFindActiveAccountsFetchXml` method shows how to use [FetchExpression](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) with a quick find query.
 
@@ -213,7 +213,7 @@ static EntityCollection QuickFindActiveAccountsFetchXml(IOrganizationService ser
 }
 ```
 
-This `Get-QuickFindActiveAccounts` PowerShell function demonstrates how to use FetchXml with the Dataverse Web API. The `$baseURI`  and `$baseHeaders` variables are scoped outside this function. [Learn more about creating reusable PowerShell functions that used the Web API](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions)
+This `Get-QuickFindActiveAccounts` PowerShell function demonstrates how to use [FetchXml](fetchxml/overview.md) with the Dataverse Web API. The `$baseURI`  and `$baseHeaders` variables are scoped outside this function. [Learn more about creating reusable PowerShell functions that used the Web API](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions)
 
 ```powershell
 function Get-QuickFindActiveAccounts {
@@ -303,7 +303,7 @@ The search item limit is calculated using *ONLY* the items in the quick find fil
 
 ### Bypass the quick find limit
 
-If you need to test a query that exceeds the quick find limit on a temporary basis, use FetchXml to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'0'`.
+If you need to test a query that exceeds the quick find limit on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'0'`.
 
 ### Organizational override
 

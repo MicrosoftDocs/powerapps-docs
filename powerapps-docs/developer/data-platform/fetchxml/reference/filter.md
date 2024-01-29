@@ -40,8 +40,7 @@ contributors:
 |---------|---------|---------|
 |`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
 |`hint`|No|TODO See new section in [Filter rows using FetchXml](../filter-rows.md)[TODO: using the hint attribute](../filter-rows.md#todo-using-the-hint-attribute)|****
-|`isquickfindfields`|No| TODO: Is this just an alias for `isquickfindquery`? It isn't in the fetch XSD, but it seems to be more common. |
-|`isquickfindquery`|No|Use this to tell Dataverse to execute the query as a quick find query. [Write quick find queries](../../quick-find.md)|
+|`isquickfindfields`|No| Use this to tell Dataverse to execute the query as a quick find query. [Write quick find queries](../../quick-find.md)|
 |`overridequickfindrecordlimitenabled`|No|TODO: Still not clear on this.Use this when the quick find limit **is not enabled**, but you want to apply at limit to this query for better performance|
 |`overridequickfindrecordlimitdisabled`|No|TODO: Still not clear on this. Use this when the quick find **limit is enabled**, but you want to apply at limit to this query for better usability, avoiding the error that would otherwise be returned.|
 
