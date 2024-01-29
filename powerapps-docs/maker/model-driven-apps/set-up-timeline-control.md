@@ -592,7 +592,10 @@ There's a limit of 15 different tables that can be associated with a timeline. E
 
 This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information:  [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties)
 
-### See also
+## Limitations
+- Timeline control is not supported on the [User] (/developer/data-platform/user-team-entities#users) table.
+
+## See also
 
 [FAQs for timeline control](faqs-timeline-control.md) 
 
