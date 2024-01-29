@@ -40,6 +40,56 @@ supports query hints and can pass these query options to SQL Server using the [f
 
 In earlier versions, the `no-lock` attribute used to prevent shared locks on records. It is no longer necessary to include this.
 
+
+## Union Hint
+
+You can improve performance when adding a [filter element](reference/filter.md) that sets the [condition](reference/condition.md) for columns in different tables by setting the `hint` attribute to `union`. But there are some restrictions:
+
+- The [filter](reference/filter.md) must use the `or` filter type.
+- Each query can contain only one `union` hint.
+- If a filter with `union` hint is not at top level filter, Dataverse will transform the query and move the filter with a `union` hint to root filter.
+- If a `union` hint is more than three levels deep, it will be ignored.
+
+The following example sets a filter with the `union` hint on the `telephone1` column for both the account and contact tables.
+
+```xml
+<fetch>
+      <entity name="email">
+            <attribute name="activityid" />
+            <attribute name="subject" />
+            <filter type="and">
+                  <condition attribute="subject"
+                        operator="like"
+                        value="Alert:%" />
+                  <condition attribute="statecode"
+                        operator="eq"
+                        value="0" />
+                  <filter type="or"
+                        hint="union">
+                        <condition attribute="telephone1"
+                              operator="eq"
+                              value="425-425-4021"
+                              entityname="ac" />
+                        <condition attribute="telephone1"
+                              operator="eq"
+                              value="425-425-4021"
+                              entityname="co" />
+                  </filter>
+            </filter>
+            <link-entity name="account"
+                  from="accountid"
+                  to="regardingobjectid"
+                  link-type="outer"
+                  alias="ac" />
+            <link-entity name="contact"
+                  from="contactid"
+                  to="regardingobjectid"
+                  link-type="outer"
+                  alias="co" />
+      </entity>
+</fetch>
+```
+
 <!-- TODO: Include other sections for more performance optimization capabilities and best practices. -->
 
 

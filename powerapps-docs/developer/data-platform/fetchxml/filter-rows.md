@@ -188,51 +188,7 @@ To filter on values in related records without returning those values, use a [li
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
-## Union Hint
 
-To improve performance, consider using `union` hint when an `or` filter type has conditions from different tables. But there are some restrictions:
-
-- Each query can contain only one `union` hint.
-- If a filter with `union` hint is not at top level filter, Dataverse will transform the query and move the filter with a `union` hint to root filter.
-- If `union` hint is more than three levels deep, it will be ignored.
-
-```xml
-<fetch>
-      <entity name="email">
-            <attribute name="activityid" />
-            <attribute name="subject" />
-            <filter type="and">
-                  <condition attribute="subject"
-                        operator="like"
-                        value="Alert:%" />
-                  <condition attribute="statecode"
-                        operator="eq"
-                        value="0" />
-                  <filter type="or"
-                        hint="union">
-                        <condition attribute="telephone1"
-                              operator="eq"
-                              value="425-425-4021"
-                              entityname="ac" />
-                        <condition attribute="telephone1"
-                              operator="eq"
-                              value="425-425-4021"
-                              entityname="co" />
-                  </filter>
-            </filter>
-            <link-entity name="account"
-                  from="accountid"
-                  to="regardingobjectid"
-                  link-type="outer"
-                  alias="ac" />
-            <link-entity name="contact"
-                  from="contactid"
-                  to="regardingobjectid"
-                  link-type="outer"
-                  alias="co" />
-      </entity>
-</fetch>
-```
 
 ## Next steps
 
