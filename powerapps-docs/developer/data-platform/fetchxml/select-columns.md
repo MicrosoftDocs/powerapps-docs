@@ -167,7 +167,7 @@ How you get these values depends on whether you use the SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
-The `OutputFetchRequest` sample method described in [Sample code](overview.md#sample-code) uses formatted values, so the results of the query look like this:
+The `OutputFetchRequest` sample method described in [Sample code](overview.md#sample-code) uses data from the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collection, so the results of the query look like this:
 
 ```text
  --------------------------------------------------------------------------------------------------
@@ -257,7 +257,7 @@ Learn more about formatted values:
 
 Column aliases are typically used for [aggregate operations](aggregate-data.md), but they also work for simple select operations, so we can introduce them here.
 
-You can use the [attribute](reference/attribute.md) `alias` attribute to specify any unique column name you want for the results returned.
+Use the [attribute](reference/attribute.md) `alias` attribute to specify a unique column name for the results returned.
 
 Each column returned must have a unique name. By default, the column names returned for the entity of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
 
@@ -269,7 +269,7 @@ The behavior you see when using column aliases depends on whether you are using 
 
 This `SimpleAliasOutput` method uses aliases rather than the logical names of the columns. Because of this, the results are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of complex types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
 
-
+This method uses the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables) .
 
 ```csharp
 /// <summary>

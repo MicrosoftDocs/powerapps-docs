@@ -50,7 +50,7 @@ You can improve performance when adding a [filter element](reference/filter.md) 
 - If a filter with `union` hint is not at top level filter, Dataverse will transform the query and move the filter with a `union` hint to root filter.
 - If a `union` hint is more than three levels deep, it will be ignored.
 
-The following example sets a filter with the `union` hint on the `telephone1` column for both the account and contact tables.
+The following example sets a filter with the `union` hint on the `telephone1` column for both the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables.
 
 ```xml
 <fetch>
