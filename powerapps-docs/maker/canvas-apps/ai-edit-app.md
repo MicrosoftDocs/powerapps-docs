@@ -4,7 +4,9 @@ description: Edit your app through conversation with AI Copilot in Power Apps St
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 ms.reviewer: 
 ms.date: 6/5/2022
 ms.subservice: canvas-maker

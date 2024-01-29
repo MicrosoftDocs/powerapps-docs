@@ -4,7 +4,9 @@ description: Add Copilot AI control for apps users to your canvas app.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
