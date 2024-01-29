@@ -49,7 +49,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 > [!IMPORTANT]
 > When deriving from `IPlugin`, the class should be written *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method.
 >
-> When using Power Platform tools for plug-in creation, the generated `PluginBase` class is derived from `IPlugin`.
+> When using Power Platform tools for plug-in creation, the generated `PluginBase` class implements the `IPlugin` interface.
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
@@ -86,7 +86,7 @@ This class diagram provides a visual on the key interfaces and classes related t
 
 :::image type="content" source="media/plugin-base-class-diagram.png" alt-text="PluginBase class and other related types." lightbox="media/plugin-base-class-diagram.png":::
 
-The `Plugin1` class derives from `PluginBase`. You would rename this `Plugin1` class to your own custom name and add code to implement the `ExecuteDataversePlugin` method and class constructor. The `LocalPluginContext` class is automatically initialized with the indicated service references and endpoints available to your plug-in. If you were implementing the `IPlugin` interface, you would have to write code to initialize all these services and endpoints prior to using them.
+The example `Plugin1` class (in the diagram) derives from `PluginBase`. You would rename this `Plugin1` class to your own custom name and add code to implement the `ExecuteDataversePlugin` method and class constructor. The `LocalPluginContext` class is automatically initialized with the indicated service references and endpoints available to your plug-in. If you were implementing the `IPlugin` interface, you would have to write code to initialize all these services and endpoints prior to using them.
 
 ## Services you can use in your code
 
