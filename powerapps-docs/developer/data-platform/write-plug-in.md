@@ -172,7 +172,8 @@ public class MyPlugin : PluginBase
       throw new ArgumentNullException(nameof(localPluginContext));
     }
 
-    var context = localPluginContext.PluginExecutionContext;
+    var context        = localPluginContext.PluginExecutionContext;
+    var serviceFactory = localPluginContext.OrgSvcFactory;
     var tracingService = localPluginContext.TracingService;
 
     try
