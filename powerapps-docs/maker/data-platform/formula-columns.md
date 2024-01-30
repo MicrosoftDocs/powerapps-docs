@@ -9,6 +9,7 @@ ms.date: 11/14/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 contributors:
   - mattp123
   - sanjeevgoyalmsft

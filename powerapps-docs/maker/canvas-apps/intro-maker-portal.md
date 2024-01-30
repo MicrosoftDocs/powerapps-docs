@@ -14,6 +14,8 @@ contributors:
   - mduelae
   - alaug
   - Mattp123
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 

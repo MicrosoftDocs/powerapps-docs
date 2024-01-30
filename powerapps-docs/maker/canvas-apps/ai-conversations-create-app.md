@@ -4,7 +4,9 @@ description: Build apps through conversation with AI.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 ms.reviewer: 
 ms.date: 10/17/2022
 ms.subservice: canvas-maker
