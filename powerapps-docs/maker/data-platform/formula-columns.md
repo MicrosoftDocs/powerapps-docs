@@ -5,26 +5,19 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 10/25/2023
+ms.date: 11/14/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 contributors:
   - mattp123
   - sanjeevgoyalmsft
   - JimDaly
 ---
-
-# Work with formula columns (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Work with formula columns
 
 Formula columns are columns that display a calculated value in a Microsoft Dataverse table. Formulas use [Power Fx](/power-platform/power-fx/overview), a powerful but human-friendly programming language. Build a formula in a Dataverse formula column the same way you would build a formula in Microsoft Excel. As you type, Intellisense suggests functions and syntax, and even helps you fix errors.
-
-> [!IMPORTANT]
-> - This is a preview feature.
->
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Add a formula column
 
@@ -32,15 +25,31 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 1. Select **Tables**, and then select the table where you want to add a formula column. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Columns** area, and then select **New column**.
 1. Enter the following information:
-
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
-   - In **Data type**, select ***fx* Formula**.
-   - Enter the formula in the **Formula** box.
+1. For **Data type** select ***fx* Formula**.
+1. Type the formula or use formula suggestions:
+
+   # [Type a formula](#tab/type-or-paste)
+
+   Enter the Power Fx formula in the **Formula** box. More information: [Type a formula](#type-a-formula-1)
+
+   # [Get formula suggestions (preview)](#tab/natural-language)
+
+   [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+   a.  Select the up and down arrows, and then select **Get formula suggestions**.<br />
+       :::image type="content" source="media/formula-suggestions-selector.png" alt-text="Select the formula suggestions selector":::
+   b. Type your question, such as *what is the Price times Quantity*, in the **Get formula suggestions** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
+
+---
+
+7. Select additional properties:
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
-     - If the formula entered evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
-5. Select **Save**.
+     - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
+8. Select **Save**.
+
+### Type a formula
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
 
@@ -53,6 +62,62 @@ The formula column displays the result of *Price* multiplied by *Number of units
 The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you've created the column only if it doesn't change the column type.
 
 For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn't change the column type. However, you can't change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
+
+### Get formula suggestions (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using GPT-based AI model.
+
+> [!IMPORTANT]
+> This is a preview feature available only in US regions only.
+>
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+>
+> Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
+
+#### Example natural language input
+
+Imagine there's a **Customer rating** column that shows their rating by account.
+:::image type="content" source="media/customer-rating-column.png" alt-text="Example customer rating column":::
+
+In the **Get formula suggestions** box enter the formula in natural language, such as *If the rating on the rating column is equal or greater than 5 then indicate as Good and if less than 5 indicate as Average and if value is blank or zero then display as Bad*, and then select the arrow button (enter).
+
+Then copy the **Suggested Formula**.
+:::image type="content" source="media/suggested-formula.png" alt-text="Suggested formula":::
+
+And paste it into the **Type a formula** box. Select **Save**.
+:::image type="content" source="media/paste-formula.png" alt-text="Paste formula into Type a formula box.":::
+
+Here's how the formula appears when pasted.
+
+```powerappsfl
+Switch(
+    ThisRecord.'Customer Rating',
+    Blank(), "Bad",
+    0, "Bad",
+    1, "Average",
+    2, "Average",
+    3, "Average",
+    4, "Average",
+    5, "Good",
+    6, "Good",
+    7, "Good",
+    8, "Good",
+    9, "Good",
+    10, "Good"
+)
+```
+
+Check the computed **Rating Description** formula column, which appears like this.
+ 
+:::image type="content" source="media/formula-suggestions-results.png" alt-text="Check the results for the formula column":::
+
+#### Responsible AI
+
+For information about responsible AI, go to these resources:
+- [FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
+- [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md)
 
 ## Operators
 
@@ -375,7 +440,7 @@ This section describes guidelines and the known limitations with formula columns
 
 ## See also
 
-[Types of columns](types-of-fields.md)  
+[Types of columns](types-of-fields.md)  <br />
 
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 

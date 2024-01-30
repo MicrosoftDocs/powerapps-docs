@@ -7,6 +7,7 @@ ms.reviewer: shujoshi
 ms.topic: how-to
 ms.date: 08/25/2023
 ms.subservice: mda-maker
+ms.collection: bap-ai-copilot
 tags:
 search.audienceType:
   - maker

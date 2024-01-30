@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 09/12/2023
+ms.date: 01/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -1143,7 +1143,7 @@ OData-Version: 4.0
 Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
+> Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
 
 The following example returns just the first two contact records:
 
@@ -1244,7 +1244,9 @@ The aggregate functions are limited to a collection of 50,000 records.  Further 
 You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
 > [!NOTE]
-> `groupby` with datetime values is not supported.
+> - `groupby` with datetime values is not supported.
+> 
+> - `$orderby` with aggregate values is not supported. This will return the error: `The query node SingleValueOpenPropertyAccess is not supported`.
 
 Following are some examples:
 
@@ -1450,7 +1452,7 @@ GET accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycon
 ### Last created record date and time
 
 ```http
-GET accounts??$apply=aggregate(createdon with max as lastCreate)
+GET accounts?$apply=aggregate(createdon with max as lastCreate)
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 

@@ -1,8 +1,8 @@
 ---
-title: Use elastic tables using code (preview)
+title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 07/21/2023
+ms.date: 01/18/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -13,9 +13,7 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use elastic tables using code
 
 This article describes how to use code to perform data operations on elastic tables.
 
@@ -123,7 +121,7 @@ This example shows how you can use the special syntax in Web API to refer to rec
 > [!NOTE]
 > Because the primary key value is a globally unique identifier (GUID), no single quotation marks are needed around it. However, because the `partitionid` value is a string, single quotation marks are needed.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')
@@ -148,7 +146,7 @@ request["partitionId"] = "device-001"
 > [!NOTE]
 > The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it is ignored if it's sent.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'
@@ -234,6 +232,9 @@ public static Guid CreateExample(
 
 Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+
 #### [Web API](#tab/webapi)
 
 **Request:**
@@ -266,7 +267,17 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
 
+
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
+
 ---
+
+### Setting the primary key value
+
+If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
+
+Elastic tables don't return an error when you create a record with a primary key value that isn't unique. By setting the primary key values with elastic tables, you can create records with that have the same primary key values and different `partitionid` values. However, this pattern isn't compatible with Power Apps. Don't create records with duplicate primary key values when people need to use this data in canvas or model-driven apps.
 
 ## Update a record in an elastic table
 
@@ -1009,8 +1020,8 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)  
+[Elastic tables for developers](elastic-tables.md)  
+[Create elastic tables using code](create-elastic-tables.md)  
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)

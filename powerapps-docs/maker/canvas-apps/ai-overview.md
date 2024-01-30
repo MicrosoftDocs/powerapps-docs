@@ -4,13 +4,15 @@ description: AI Copilot overview in Power Apps.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 contributors:
   - mduelae
 ---
@@ -38,8 +40,6 @@ To learn how to use the new AI features in Power Apps, see:
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 
 ## Prerequisites for the AI features in Power Apps
-
-The following are requirements to access the waitlist for this preview:
 
 - Your environment must be in the United States region.
 

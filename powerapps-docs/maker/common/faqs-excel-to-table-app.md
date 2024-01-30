@@ -8,6 +8,7 @@ ms.topic: article
 author: Mattp123
 ms.author: yueshu
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 # FAQ for Excel to table and app
 
@@ -47,6 +48,10 @@ We have set up reports and dashboards to track the usage, net promoter score (NP
 
 - Users can configure the ownership of the table. Ownership depends on whether the data of the table is owned by specific users, teams, or the entire organization.
 
+## How can I use this feature in a Power Platform environment that is created outside of the United States or Switzerland?
+
+To do this, turn on data movement across regions. More information: [Enable copilots and generative AI features outside United States and Switzerland](https://go.microsoft.com/fwlink/?linkid=2244595)
+
 ## See also
 
-[Upload an Excel file](../data-platform/create-edit-entities-portal.md#upload-an-excel-file-preview)
+[Upload an Excel file](../data-platform/create-edit-entities-portal.md#upload-an-excel-file)

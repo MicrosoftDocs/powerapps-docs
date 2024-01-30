@@ -4,7 +4,9 @@ description: A control that enables embedding of any published Power Virtual Age
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
@@ -21,7 +23,7 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agents bots. A bot picker lists all bots that are in the same environment as your app.
+The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports Teams authenticated Power Virtual Agents bots. A bot picker lists all bots that are in the same environment as your app.
 
 You can use an AI bot or AI boosted conversations bot:
 
@@ -87,6 +89,7 @@ The following are the main properties for Chatbot control:
 
 1. Chatbot control isn't supported on the Power Apps mobile app.
 2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mooncake.
+3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in non-default locations of your tenant.
 
 ## See also
 

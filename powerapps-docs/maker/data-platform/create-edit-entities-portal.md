@@ -2,11 +2,12 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 08/23/2023
+ms.date: 12/06/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
+ms.collection: bap-ai-copilot
 ---
 # Create and edit tables using Power Apps
 
@@ -35,7 +36,7 @@ There are several ways to create a new table:
 - [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file (preview)](#upload-an-excel-file-preview)
+- [Upload an Excel file](#upload-an-excel-file)
 - [Create a virtual table](#create-a-virtual-table)
 
 ### Add columns and data
@@ -50,6 +51,12 @@ More information: [Table designer](#table-designer)
 ### Describe the new table
 
 Create a table with the help of AI Copilot.
+
+> [!NOTE]
+> To use this feature, note the following requirements:
+>
+> - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
+> - This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
@@ -88,41 +95,34 @@ Select **Advanced options** to display additional properties that are optional f
 |Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
-|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can’t be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
+|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can't be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
 |**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
 |**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
-| **Provide custom help**  | When selected, set a **Help URL** to control what page users will see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
+| **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
-| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don’t support quick create forms, the main form will be used when the custom table icon is selected.  |
+| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form will be used when the custom table icon is selected.  |
 |**Creating a new activity**  | Associate activities to records for this table.  |
 | **Doing a mail merge**  | App users can use this table with mail merge.   |
 |**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint.  |
 | **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled.  |
-| **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn’t already exist for this table, a new one will be created when you enable sending email.  |
+| **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one is created when you enable sending email.  |
 | **Have an access team**| Create team templates for this table.  |
 | **Can be linked to feedback**  | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](configure-entity-feedback.md)  |
 |**Appear in search results**   | Enable so that table records can be included in search results when using an app.  |
 |**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network.  |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+Select **Save** to continue, this closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Upload an Excel file (preview)
+### Upload an Excel file
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when Copilot is enabled for the environment.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - [!INCLUDE [cross-geo-support](../../../shared/cross-geo-support.md)]
+Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
-1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
+1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
 
@@ -153,7 +153,7 @@ Displays a few common properties for the table. Select **Properties** on the com
 
 #### Schema
 
-From the **Schema** area select from the following table components to open the area where you can view and open existing components or create a new one.
+From the Schema area, select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Columns. More information: [Create and edit columns](create-edit-fields.md)
 - Relationships. See [Create and edit relationships between tables](create-edit-entity-relationships.md)
@@ -170,7 +170,7 @@ From the **Data experiences** area select from the following table components to
 
 #### Customizations
 
-From the **Customizations** area select from the following table components to open the area where you can view and open existing components or create a new one.
+From the Customizations area, select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Business rules. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Commands. More information: [Customize the command bar using command designer](../model-driven-apps/use-command-designer.md)
@@ -193,7 +193,7 @@ From the table hub, select **Update forms and views** to add selected columns to
 
 ## Delete a table
 
-As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
+As someone with the system administrator security role, you can delete custom tables that aren't part of a managed solution.  
 
 > [!WARNING]
 >  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated records that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
@@ -202,7 +202,7 @@ As someone with the system administrator security role, you can delete custom ta
 
 While [viewing tables](#view-tables), select the table, and then select **Delete** from the menu.
 
-If the table has dependencies that prevent it from being deleted you'll see an error message. To identify and remove any dependencies, you'll need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
+If the table has dependencies that prevent it from being deleted you see an error message. To identify and remove any dependencies, you need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 
 ### See also
 

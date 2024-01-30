@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 10/20/2023
+  ms.date: 01/26/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -25,11 +25,19 @@ sections:
 
    - question: Why can't I view some data in a table while a particular policy is being executed in the background that was a part of the policy criteria?
      answer: |
-        Until all records are purged, records will be available for viewing. Retention is a multi-step process that includes reconciliation to confirm that all the records within the criteria are retained for long-term before delete from Dataverse. <b>We recommend that you set up long term retention only for non-active records, or records that aren't actively required for your business operations.</b> 
+        Until all records are purged, records will be available for viewing. Retention is a multi-step process that includes reconciliation to confirm that all the records within the criteria are retained for long-term before delete from Dataverse. <b>We recommend that you set up long term retention only for nonactive records, or records that aren't actively required for your business operations.</b> 
 
    - question: If a policy run has errors, are the errors available for admin to view?
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
+
+   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+     answer: |
+        The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
+
+   - question: What if a maker adds custom child tables?
+     answer: |
+        Dataverse long term retention ensures that the new child tables are a part of the next retention policy run. 
 
    - question: Can a retention policy run be stopped?
      answer: | 
@@ -47,9 +55,9 @@ sections:
      answer: |
         A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
 
-   - question: What is expected for the performance when accessing retained non-active data from Dataverse?
+   - question: What is expected for the performance when accessing retained nonactive data from Dataverse?
      answer: |
-        Retained data reads are significantly slower than live data reads. Notice that long term data retention is not a feature for transactional operations, but should be used for rarely accessed data required for compliance.
+        Retained data reads are significantly slower than live data reads. Notice that long term data retention isn't a feature for transactional operations, but should be used for rarely accessed data required for compliance.
 
    - question: Are data retention policies solution aware?
      answer: |
@@ -69,7 +77,7 @@ sections:
 
    - question: Can the one Dataverse connector be used with Power BI for reporting long term retained data?
      answer: |
-        This isn't supported. However you can access live and retained data with Microsoft Fabric <link to this section> and build PowerBI reports.
+        This isn't supported. However you can access live and retained data with Microsoft Fabric and build Power BI reports.
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
@@ -79,6 +87,8 @@ sections:
      answer: |
         Yes. When a retention policy runs, the process makes API requests to Microsoft Power Platform. These requests are counted towards your available API request limits.
 
-
+   - question: Is  customer managed key supported for long term retained data?
+     answer: |
+        Yes. Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key.
 
                               

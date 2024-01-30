@@ -4,7 +4,9 @@ description: Build apps through conversation with AI.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 ms.reviewer: 
 ms.date: 10/17/2022
 ms.subservice: canvas-maker
@@ -29,7 +31,9 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 
 ## Prerequisites
 
-Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+
 
 
 ## Step 1: Create an app with the help of AI

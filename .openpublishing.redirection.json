@@ -487,7 +487,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/webapi/relevance-search.md",
-      "redirect_url": "../search/overview.md",
+      "redirect_url": "../search/overview",
       "redirect_document_id": false
     },
     {
@@ -8743,6 +8743,21 @@
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
       "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/performance-tips.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/create-performant-apps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-troubleshooting-guide.md",
+      "redirect_url": "/power-apps/maker/data-platform/export-data-lake-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/slow-performance-sources.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/create-performant-apps-overview",
       "redirect_document_id": false
     }
   ]

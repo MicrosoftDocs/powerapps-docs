@@ -1,7 +1,7 @@
 ---
 title: Use DeleteMultiple (preview)
 description: Learn how to use Delete to delete multiple rows of data in a Microsoft Dataverse elastic table. 
-ms.date: 11/13/2023
+ms.date: 11/15/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -120,28 +120,18 @@ OData-Version: 4.0
 
 `DeleteMultiple` is supported only for elastic tables. Elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md), which can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error: `DeleteMultiple has not yet been implemented.`
 
-## Known issues
-
-The following issues will be addressed before `DeleteMultiple` becomes generally available.
-
-### DeleteMultiple plug-ins not invoked for Delete
-
-As part of the changes we made to [merge message pipelines](bulk-operations.md#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
-
-You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
-
 
 ## Examples
 
 You can find sample code on GitHub in [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
-- [Elastic table sample code (preview)](elastic-table-samples.md)
+- [Elastic table sample code](elastic-table-samples.md)
 - Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md) or [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md), change the `Settings.cs` config file and choose the `UseElastic` option.
 
 ### See also
 
 [Use bulk operation messages](bulk-operations.md)   
-[Elastic tables (preview)](elastic-tables.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)   
+[Elastic tables](elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)   
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)   
 [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)   
