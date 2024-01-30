@@ -39,6 +39,10 @@ Icons of copresent makers appear in both the command bar and the left navigation
 
 You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When you see this notification, consider refreshing the app to get the latest version.
 
+## Inactive during editing
+
+When you're editing an app and are inactive for two hours, your changes are automatically saved and then you'll be switched to read-only mode. A few minutes before this happens, you'll see a **Continue editing?** dialog box asking if you want to continue editing or switch to read-only. If you don't respond, then the system will inform you that you were inactive so Power Apps saved your changes and the app is in read-only mode.
+
 ## Live updates (experimental)
 
 [This section is pre-release documentation and is subject to change.]
