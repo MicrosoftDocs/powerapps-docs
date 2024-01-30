@@ -250,6 +250,24 @@ For example, the following query returns all account records with no contacts.
 </fetch>
 ```
 
+## Use advanced link types
+
+These link types provide more complex capabilities...
+
+<!-- 
+TODO: Dmitry, can you elaborate on why people might use these?
+The descriptions alone seem pretty similar...
+
+See what savvy people are guessing they are for:
+https://markcarrington.dev/2020/04/05/inside-fetchxml-pt-10-link-entity-again/ 
+-->
+
+|Name|Description|
+|---------|---------|
+|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]|
+|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]|
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]|
+
 ## Limitations
 
 You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:

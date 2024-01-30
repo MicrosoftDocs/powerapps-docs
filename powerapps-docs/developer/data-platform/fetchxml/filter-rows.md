@@ -183,20 +183,6 @@ To filter on values in related records without returning those values, use a [li
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
-## Use advanced link types
-
-These link types provide more complex capabilities.
-
-<!-- TODO: Donald, can you elaborate on why people might use these?
-See what savvy people are guessing they are for:
-https://markcarrington.dev/2020/04/05/inside-fetchxml-pt-10-link-entity-again/ -->
-
-|Name|Description|
-|---------|---------|
-|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]|
-|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]|
-|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]|
-
 ## Next steps
 
 Learn how to page results.

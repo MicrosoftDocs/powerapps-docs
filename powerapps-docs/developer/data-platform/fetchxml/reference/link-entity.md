@@ -87,8 +87,8 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
-|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](#using-to-and-from-attributes)|
-|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](#using-to-and-from-attributes)|
+|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](#using-from-and-to-attributes)|
+|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](#using-from-and-to-attributes)|
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
@@ -100,7 +100,7 @@ It is best to set values for both the  `from` and `to`  attributes. Both of thes
 > [!NOTE]
 > - It is important that the columns specified in the `from` and `to`   attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
 > 
-> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../org-service/build-queries-with-queryexpression.md).
+> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/build-queries-with-queryexpression.md).
 
 If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship.
 
@@ -170,9 +170,9 @@ Use `link-type` to apply filters on the records returned. The following table de
 |`not any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)] |
 |`all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-all-description](includes/link-type-all-description.md)]|
 |`not all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)]|
-|`exists`|Restricts results to rows with matching values in both tables using an [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) condition in the `where` clause following this pattern:<br/>`exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)`<br/>This link type does not allow selecting columns values from the link entity and will only return the parent row once when multiple matching link entity rows exist. This is equivalent to the `inner` type except it only returns the parent row at most once and doesn't return column values of the link entity rows.|
-|`in`|Restricts results to rows with matching values in both tables using an [IN](/sql/t-sql/language-elements/in-transact-sql) condition in the `where` clause following this pattern:<br/>`parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)`.<br/>When using this link type, you can't select column values from the link entity and the parent row is only returned once when multiple matching link entity rows exist. This is equivalent to the `inner` type except it only returns the parent row at most once and doesn't return the column values of the link entity rows.|
-|`matchfirstrowusingcrossapply`|Includes results from the parent element that don't have a matching value. When multiple matching link entity rows exist for a given parent row, the parent row is only returned once and the column values are included for only one of the matching link entity rows. This is useful when an example of a link entity row is needed but finding the column values for all of them is not required. This is equivalent to the `outer` type except it only finds at most one link entity row.|
+|`exists`|[!INCLUDE [link-type-exists-description](includes/link-type-exists-description.md)]|
+|`in`|[!INCLUDE [link-type-in-description](includes/link-type-in-description.md)]|
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](includes/link-type-matchfirstrowusingcrossapply-description.md)]|
 
 #### Filter Link Types
 
