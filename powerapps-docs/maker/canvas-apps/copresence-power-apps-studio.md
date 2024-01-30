@@ -41,7 +41,7 @@ You might be working on the app, or you're inactive, but once someone else saves
 
 ## Inactive during editing
 
-When you're editing an app and become inactive for two hours, your changes are automatically saved, and you're switched to read-only mode. A few minutes before this happens, a **Continue editing?** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive, so Power Apps saved your changes and put you in read-only mode.
+When you're editing an app and become inactive for two hours, your changes are automatically saved, and you're switched to read-only mode. A few minutes before this happens, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive, so Power Apps saved your changes and put you in read-only mode.
 
 
 ## Live updates (experimental)
