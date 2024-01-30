@@ -68,7 +68,7 @@ options='OptimizeForUnknown,DisableRowGoal,Recompile'
 
 ## Returning distinct results
 
-Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.
+Use the `fetch` element `distinct` attribute to require the query to exclude any duplicate values in the results.
 
 If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
 
