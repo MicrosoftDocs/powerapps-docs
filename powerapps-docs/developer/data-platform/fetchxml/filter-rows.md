@@ -1,7 +1,7 @@
 ---
 title: Filter rows using FetchXml
 description: Learn how to use FetchXml to filter rows when you retrieve data from Microsoft Dataverse.
-ms.date: 08/31/2023
+ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -114,11 +114,6 @@ When you apply a `filter` within a [link-entity](reference/link-entity.md), the 
 
 When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you may want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you are using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 
-<!-- 
-TODO Example
-Why would you want the filter to be applied after the join?
- -->
-
 ## Filter on column values in the same row
 
 You can create filters that compare columns on values in the same row using the `valueof` attribute. For example, if you want to find any contact records where the `firstname` column value matches the `lastname` column value, you can use this query:
@@ -188,7 +183,19 @@ To filter on values in related records without returning those values, use a [li
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
+## Use advanced link types
 
+These link types provide more complex capabilities.
+
+<!-- TODO: Donald, can you elaborate on why people might use these?
+See what savvy people are guessing they are for:
+https://markcarrington.dev/2020/04/05/inside-fetchxml-pt-10-link-entity-again/ -->
+
+|Name|Description|
+|---------|---------|
+|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]|
+|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]|
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]|
 
 ## Next steps
 

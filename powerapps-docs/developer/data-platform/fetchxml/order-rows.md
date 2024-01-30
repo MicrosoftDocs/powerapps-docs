@@ -1,7 +1,7 @@
 ---
 title: Order rows using FetchXml
 description: Learn how to use FetchXml to order rows when you retrieve data from Microsoft Dataverse.
-ms.date: 08/31/2023
+ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -80,7 +80,7 @@ Always include a column that has a unique identifier. For example:
 - auto-number columns
 - user/contact IDs
 
-Include multiple fields that will most likely result in unique combinations:
+Include multiple fields that will most likely result in unique combinations. For example:
 
 - First name + last name + email address
 - Full name + email address
