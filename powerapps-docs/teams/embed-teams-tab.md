@@ -81,7 +81,7 @@ In the desktop app for Microsoft Teams:
 * Only these audio formats are supported: AAC, H264, OGG Vorbis, and WAV.
 
 In the mobile app for Microsoft Teams:
-* End-users are unable to download attachments from canvas apps. As a mitigation, an end-user can access the same app in the Microsoft Teams desktop to download an attachment.
+* End users can't download attachments from canvas apps. As a workaround, use Microsoft Teams desktop to access the canvas app and download the attachment.
 
 
 ## Clean up resources
