@@ -109,6 +109,50 @@ If you don't use either of these attributes, and a system many-to-many relations
 
 If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
 
+For example, both of these queries use the [teammembership_association](../../reference/entities/team.md#BKMK_teammembership_association) many-to-many relationship between [systemuser](../../reference/entities/systemuser.md) and [team](../../reference/entities/team.md) tables. They will return the same results.
+
+:::row:::
+   :::column span="":::
+      **Specify all attributes**
+      ```xml
+      <fetch top="2">
+         <entity name="systemuser">
+            <attribute name="fullname" />
+            <link-entity
+               name="teammembership"
+               from="systemuserid"
+               to="systemuserid"
+               intersect="true"
+            >
+               <link-entity
+               name="team"
+               from="teamid"
+               to="teamid"
+               link-type="inner"
+               alias="team"
+               >
+               <attribute name="name" />
+               </link-entity>
+            </link-entity>
+         </entity>
+      </fetch>
+      ```
+   :::column-end:::
+   :::column span="":::
+      **Let Dataverse choose**
+      ```xml
+      <fetch top="2">
+         <entity name="systemuser">
+            <attribute name="fullname" />
+            <link-entity name="team" alias="team">
+               <attribute name="name" />
+            </link-entity>
+         </entity>
+      </fetch>
+      ```
+   :::column-end:::
+:::row-end:::
+
 
 ### link-type options
 
