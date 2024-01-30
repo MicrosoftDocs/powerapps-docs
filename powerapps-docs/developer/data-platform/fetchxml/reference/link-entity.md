@@ -93,23 +93,27 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
 
-### Using `to` and `from` attributes
+### Using `from` and `to` attributes
 
-It is best to set values for both the `to` or `from` attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `to` and `from` attributes are not technically required.
+It is best to set values for both the  `from` and `to`  attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `from` and `to`  attributes are not technically required.
 
 > [!NOTE]
-> - It is important that the columns specified in the `to` and `from` attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
+> - It is important that the columns specified in the `from` and `to`   attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
 > 
-> - The meaning of the `to` and `from` attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../org-service/build-queries-with-queryexpression.md).
+> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../org-service/build-queries-with-queryexpression.md).
 
-If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship. Otherwise you will get an error like the following:
+If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship.
+
+If you specify only one of the `from` or `to` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
+
+Otherwise you will get an error like the following:
 
 > Code: `0x80041102`  
 > Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
 
-If you specify only one of the `to` or `from` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
+For example, both of these queries use the [teammembership_association](../../reference/entities/team.md#BKMK_teammembership_association) many-to-many relationship between [systemuser](../../reference/entities/systemuser.md) and [team](../../reference/entities/team.md) tables. In this case, Dataverse can work out the `from` and `to` attributes and the `link-entity` that specifies the intersect table isn't necessary.
 
-For example, both of these queries use the [teammembership_association](../../reference/entities/team.md#BKMK_teammembership_association) many-to-many relationship between [systemuser](../../reference/entities/systemuser.md) and [team](../../reference/entities/team.md) tables. They will return the same results.
+<!-- Unfortunately the formatting of this XML is lost in the column layout -->
 
 :::row:::
    :::column span="":::

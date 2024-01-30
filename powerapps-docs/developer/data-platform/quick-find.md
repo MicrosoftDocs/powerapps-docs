@@ -19,6 +19,8 @@ Model-driven apps provide experiences to quickly find records using [quick find 
 Model-driven apps also provide a search box that uses the [Dataverse search APIs](search/overview.md) when Dataverse search is enabled. With Dataverse search, the results can include results from multiple tables for a more relevant search capability. When Dataverse search is not enabled, model-driven apps provide a [multiple-table quick find (categorized search)](../../user/quick-find.md#multiple-table-quick-find-categorized-search) experience that combines results of up to 10 quick find queries. [Learn more about search options available for model-driven apps.](../../user/search.md)
 
 > [!NOTE]
+> Quick find queries might not provide great experiences for all scenarios. See [When quick find queries can fail](#when-quick-find-queries-can-fail)
+>
 > Consider using the Dataverse search APIs instead of quick find queries for the following scenarios:
 >
 > - [Relevance search on multiple tables](search/query.md)
@@ -303,9 +305,15 @@ You don't need to display this error in your application, but you should expect 
 - Include limiting conditions in your query.
 - Require the user to enter more characters in the search box to provide fewer total matches.
 
+Whether the query succeeds might depend more on the number of records in the table than how the query is defined. To understand this, you need to understand how the search item limit is calculated.
+
 ### How the search item limit is calculated
 
 The search item limit is calculated using *ONLY* the items in the quick find filter. When processing the query, Dataverse detects whether there is a quick find filter and processes it first, even before applying security filters. If the results of the quick find filter exceed 10,000 rows, Dataverse throws the `QuickFindQueryRecordLimitExceeded` exception and no other filters are processed. Adding additional filters to get a smaller total number of records returned will not decrease the potentional of the `QuickFindQueryRecordLimitExceeded` exception. Someone querying a table without privileges to view all the matching records can get this error.
+
+### When quick find queries can fail
+
+Because the search item limit is calculated before applying security filters, the total number of matching records in the system can exceed 10,000 when the table contains large numbers of records, regardless of how many the calling use has security privileges to view. Refining the query or using a more specific search criteria may not be enough.
 
 
 ### Bypass the quick find record limit

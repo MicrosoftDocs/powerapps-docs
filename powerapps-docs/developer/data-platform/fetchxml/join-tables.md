@@ -85,6 +85,7 @@ You can also use other tools and APIs to look up relationship data for the appro
 - [Browse table definitions in your environment](../browse-your-metadata.md)
 - [Query schema definitions](../query-schema-definitions.md)
 
+<!-- Include some example relationship queries here? -->
 
 ## One-to-many relationships
 
