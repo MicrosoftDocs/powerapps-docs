@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose finance and operations data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 01/12/2024
+ms.date: 01/30/2024
 ms.reviewer: johnmichalak
 ms.topic: "how-to"
 applies_to: 
@@ -33,7 +33,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > 
 > This feature is generally available with finance and operations application versions shown in the following list. If you have not yet applied these application versions, install the latest cumulative update to use this feature.
 > 
-> - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later. 
+> - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later.
 > - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
 > - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
 >
@@ -113,17 +113,16 @@ Currently, there are the following limitations with finance and operations table
 - Don't see your custom tables? You must enable change tracking in them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
-- Tables secured with Finance and Operations security policies   
+- Tables secured with Finance and Operations security policies.
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
-- In case of Finance and Operations Tables that exhibit (valid time stamp behavior)[https://learn.microsoft.com/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data], only the data rows that are currently valid are exported with Synapse Link. For example, **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Synapse Link. As a workaround, until this issue is fixed, you can use an entity such as ExchangeRateBIEntity.
-- When a Finance and Operations table added to Synapse Link is secured via (extensible data security policies)[https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies ] the system may not export data.
-
+- In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
+- When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) the system might not export data.
 
 ## Access incremental data changes from finance and operations
 
 To load incremental data changes from finance and operations into your own downstream data warehouse, create an Azure Synapse Link profile that provides only incremental data. Azure Synapse Link provides an initial export of all data rows and then provides you with access to data that changed periodically. The data is provided in CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. More information:  [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md)
 
-To create a Azure Synapse Link profile with incremental data:
+To create an Azure Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select the environment you want.
 1. On the left navigation pane, select **Azure Synapse Link**.
@@ -143,13 +142,11 @@ To create a Azure Synapse Link profile with incremental data:
 >
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
-## Working with Data and metadata  
+## Working with data and metadata  
 
-**Enumerated fields** are coded data fields in Finance and Operations, for an example, **AssetTrans** table contains a field called **TransType** which is an Enumerated field. Table field contains numeric codes like 110, 120, 131 which represent detailed desriptions like "Depreciation", "Lease" or ""Major repairs". You can access these detailed descriptions by using the **GlobalOptionsMetadata** tables that is automatically exported when you choose a table that contains Enumerated fields. Enumerated fields are also called Choice Labels or Options sets. See documentation on using (Choice Labels for more details)[https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-choice-labels]   
+Enumerated fields are coded data fields in finance and operations apps. For example, the **AssetTrans** table contains a field called **TransType**, which is an **Enumerated** field. Table fields contain numeric codes like 110, 120, or 131, which represent detailed descriptions like "Depreciation", "Lease" or "Major repairs". You can access these detailed descriptions by using the **GlobalOptionsMetadata** table that's automatically exported when you choose a table that contains enumerated fields. Enumerated fields are also called choice labels or, formerly, option sets. More information: [Choice labels](/power-apps/maker/data-platform/azure-synapse-link-choice-labels)
 
-In case of **metadata changes to Finance and Operations tables**, for an example, a new field got added to a table, data exported in Synapse Link will reflect the latest metadata inclusive of the change. See (Synapse Link FAQ for more details)[https://learn.microsoft.com/power-apps/maker/data-platform/export-data-lake-faq#what-happens-when-i-add-a-column]. If you are using Synapse to query the data, you will see the updated metadata reflected in Synapse. If you consuming incremental data changes, you can locate updated metadata within the incremental data folder with the latest date stamp. See (incremental folder structure for details)[https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-incremental-updates#view-incremental-folder-at-microsoft-azure-storage]
-
-
+In case of metadata changes to finance and operations tables, for example, a new field is added to a table, and the data exported in Azure Synapse Link reflects the latest metadata inclusive of the change. More information: [Azure Synapse Link FAQ](/power-apps/maker/data-platform/export-data-lake-faq#what-happens-when-i-add-a-column). If you're using Azure Synapse Link to query the data, you see the updated metadata reflected in Azure Synapse Link. If you consume incremental data changes, you can locate updated metadata within the incremental data folder with the latest date stamp. More information: [Incremental folder structure](/power-apps/maker/data-platform/azure-synapse-incremental-updates#view-incremental-folder-at-microsoft-azure-storage)
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
