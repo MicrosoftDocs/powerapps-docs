@@ -41,7 +41,9 @@ You might be working on the app, or you're inactive, but once someone else saves
 
 ## Inactive during editing
 
-When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can to become the editor. If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, you'll have a chance to save a copy of your changes.
+When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can to become the editor. 
+
+If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
 
 ## Live updates (experimental)
