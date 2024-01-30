@@ -1,6 +1,6 @@
 ---
 title: Work offline on your mobile device (classic mode)
-description: How to work on your mobile device in offline mode
+description: Learn how to work on your mobile device in offline mode
 ms.custom: 
 ms.date: 10/27/2023
 ms.reviewer: sericks
@@ -20,15 +20,15 @@ search.audienceType:
 
 # Work offline on your mobile device (classic mode)
 
-You can work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete, along with some special commands, so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
+You can work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete, so you always stay productive. After you're back online, changes made are synchronized with your apps in the Microsoft Dataverse environment.
 
 If you're working on a record and lose your network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it uses the filters, added on the table in the offline profile, for availability in offline mode.
 
 ## Download updates to work in offline mode
 
-After you've installed the mobile app and your admin has [enabled mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app, you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
+After installing the mobile app and your admin [enables mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app, you're prompted to download offline updates. After downloading the updates, you can start using the mobile app in offline mode.
 
-When you see the dialog box that asks you to download updates to work offline, select **Download**. 
+When you see the dialog box that asks you to download updates to work offline, select **Download**.
 
 :::image type="content" source="media/mobile-offline-classic-prompt.png" alt-text="Download updates on your mobile device for mobile offline.":::
 
@@ -36,15 +36,15 @@ Offline data starts downloading as you continue to use the app. Data is download
 
 ## Download offline data later
 
-If you didn't want to download offline data and selected **Skip for now**, you won't be able to use the app in offline mode until you manually download the updates.
+If you don't want to download offline data and select **Skip for now**, you can't use the app in offline mode until you manually download the updates.
 
 1. On the screen, select the **Globe** icon.
 
 1. On the **Device Status** page, select **Download offline updates**.
 
-1. The download will start, and the status will change to **Initializing**.
+1. The download starts, and the status changes to **Initializing**.
 
-1. When the download of offline data is complete, you'll get a notification that you can start working in offline mode.
+1. When the download of offline data is complete, you get a notification that you can start working in offline mode.
 
 ## See whether offline mode is available
 
@@ -54,9 +54,9 @@ When offline updates are complete, you can check to see whether mobile offline m
 
 After the offline download is complete, you can use the mobile app in offline mode.
 
-When you have no connectivity, you'll automatically have access to the downloaded data so you can continue working while you're on the go. The data will be automatically synced with the server as soon as connectivity is restored.
+When you have no connectivity, you automatically have access to the downloaded data so you can continue working while you're on the go. The data automatically syncs with the server as soon as connectivity is restored.
 
-When you have intermittent connectivity, we recommend that you switch to offline mode. As long as offline mode is turned on, the updates that you make on your device won't be synced with the server and you can continue to work with the local data on your device. To push the changes you've made to the server and refresh your local data, turn off the **Work in offline mode** toggle.
+When you have intermittent connectivity, we recommend that you switch to offline mode. As long as offline mode is turned on, the updates you make on your device aren't synced with the server and you can continue working with the local data on your device. To push the changes made to the server and refresh your local data, turn off the **Work in offline mode** toggle.
 
 To work in offline mode, complete the following steps.
 
