@@ -310,11 +310,11 @@ The search item limit is calculated using *ONLY* the items in the quick find fil
 
 ### Bypass the quick find record limit
 
-When the **Quick Find record limits** setting is *enabled*, and you need to test a query that exceeds the quick find limit on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'0'`.
+When the **Quick Find record limits** setting is *enabled*, and you need to test a query that exceeds the quick find limit on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitdisabled` attribute to `'1'`.
 
 ### Apply the quick find record limit
 
-When the **Quick Find record limits** setting is *disabled*, and you need to test a query with the limits applied on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitdisabled` attribute to `'0'`.
+When the **Quick Find record limits** setting is *disabled*, and you need to test a query with the limits applied on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'1'`.
 
 ### See Also
 
