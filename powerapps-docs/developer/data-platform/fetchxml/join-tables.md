@@ -17,7 +17,7 @@ As described in [Query data using FetchXml](overview.md), start your query by se
 Use the [link-entity element](reference/link-entity.md) to describe the data from related tables to return with your query with the following attributes:
 
 
-|Attribute|Short Description|
+|Attribute|Short Description [Find more details in the link-entity element reference](reference/link-entity.md)|
 |---------|---------|
 |`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]|
 |`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]|
