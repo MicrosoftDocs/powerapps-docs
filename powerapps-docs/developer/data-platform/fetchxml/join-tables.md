@@ -169,11 +169,6 @@ There are two nested link-entities.
 - The first one connects `systemuser` to the `teammembership` intersect table where `systemuserid` = `systemuserid`.
 - The second one connects `teammembership` intersect table to team where `teamid` = `teamid`.
 
-<!-- 
-TODO: Is the intersect='true' attribute required? What benefit does it provide? 
-As far as I can see, it isn't required, but provides a flag to indicate that no attributes are expected to be included from the table.
--->
-
 The results should look something like:
 
 ```text
@@ -188,7 +183,7 @@ The results should look something like:
 
 ## No relationship
 
-It is possible to specify `to` and `from` attributes using columns that are not involved in a relationship.
+It is possible to specify `from` and `to` attributes using columns that are not part of a defined relationship.
 
 For example, this query finds pairs of records where the [Name column](../reference/entities/account.md#BKMK_Name) of an [account](../reference/entities/account.md) record matches the [FullName column](../reference/entities/contact.md#BKMK_FullName) of a [contact](../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
 
@@ -208,20 +203,22 @@ For example, this query finds pairs of records where the [Name column](../refere
 ```
 
 > [!NOTE]
-> - It is important that the columns specified in the `to` and `from` attributes are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that may have performance impact and may fail for some column values.
+> It is important that the columns specified in the `from` and `to` attributes are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that may have performance impact and may fail for some column values.
 
-The following [column types](../../../maker/data-platform//types-of-fields) cannot be used in `to` and `from` attributes:
+The following [column types](../../../maker/data-platform/types-of-fields.md) cannot be used in `from` and `to` attributes:
+
 - **File**
 - **Image**
 - **MultiSelect Field**
-- [**PartyList**](../../../maker/data-platform/types-of-fields#different-types-of-lookups) lookups
+- [**PartyList**](../../../maker/data-platform/types-of-fields.md#different-types-of-lookups)
 
-Some columns can be used in `to` and `from` attributes but may result in poor performance:
+Some columns can be used in `from` and `to` attributes but may result in poor performance:
+
 - Columns of the **Multiple Lines of Text** type
 - Columns of the **Single Line of Text** type with a maximum length larger than 850
-- [**Formula**](../../../maker/data-platform/formula-columns) columns
-- [**Calculated**](../../../maker/data-platform/define-calculated-fields) columns
-- [**Logical**](../entity-attribute-metadata#logical-columns) columns
+- [**Formula**](../../../maker/data-platform/formula-columns.md) columns
+- [**Calculated**](../../../maker/data-platform/define-calculated-fields.md) columns
+- [**Logical**](../entity-attribute-metadata.md#logical-columns) columns
 
 ## Find records not in a set
 
