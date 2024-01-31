@@ -61,7 +61,7 @@ sections:
 
    - question: Are data retention policies solution aware?
      answer: |
-        Yes. You can create a solution and add the policy from, from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
+        Yes. You can create a solution and add the policy from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
 
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
@@ -90,5 +90,13 @@ sections:
    - question: Is  customer managed key supported for long term retained data?
      answer: |
         Yes. Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key.
+
+   - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
+     answer: |
+        Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
+
+   - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
+     answer: |
+        Your tenant will be granted an exception to the licensing requirement for Dataverse long term retention. These exceptions will be available by end of February 2024, at which point your environment can continue using the feature.  
 
                               
