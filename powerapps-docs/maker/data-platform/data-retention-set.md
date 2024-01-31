@@ -21,7 +21,10 @@ This article explains how to set up a data retention policy for a Microsoft Data
 
 ## Prerequisites
 
-The following prerequisites must be completed before you can set a table for long term data retention.
+Theses prerequisites must be completed before you can set a table for long term data retention:
+
+- [Enable a table for long term retention](#enable-a-table-for-long-term-retention)
+- [Determine Dataverse views for policy criteria](#determine-dataverse-views-for-policy-criteria)
 
 ### Enable a table for long term retention
 
@@ -50,7 +53,7 @@ When the data retention policy is run, rows from the parent table and all child 
 > [!IMPORTANT]
 > We recommend that you create a Dataverse view specific for identifying only the rows you want retained. Then, create and run an app that has the view to verify before using it as the criteria in your policy. For information about how to create a table view, go to [Create and edit public or system views](../model-driven-apps/create-or-edit-model-driven-app-view.md).
 
-### Setup a retention policy
+## Setup a retention policy
 
 Power Platform administrators set up retention policies.
 
