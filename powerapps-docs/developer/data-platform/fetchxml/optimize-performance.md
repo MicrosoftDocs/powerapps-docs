@@ -1,7 +1,7 @@
 ---
 title: Optimize performance using FetchXml
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using FetchXml.
-ms.date: 08/31/2023
+ms.date: 01/31/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -29,11 +29,9 @@ Using the `latematerialize` attribute might not always provide a performance ben
 > Only apply these options when recommended by Microsoft technical support. Incorrect use of these options can damage the performance of a query.
 
 Microsoft SQL Server supports a number of query hints to optimize queries. FetchXML
-supports query hints and can pass these query options to SQL Server using the [fetch element](reference/fetch.md) `[options](reference/fetch.md#options)` attribute.
+supports query hints and can pass these query options to SQL Server using the [fetch element](reference/fetch.md) [options](reference/fetch.md#options) attribute.
 
 [!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)]
-
-
 
 
 ## No lock

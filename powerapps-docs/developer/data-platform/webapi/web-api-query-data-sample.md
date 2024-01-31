@@ -34,7 +34,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 5: Pagination](#section-5-pagination)|[Page results](query-data-web-api.md#page-results)|
 |[Section 6: Expand results](#section-6-expand-results)|[Join tables](query-data-web-api.md#join-tables)|
 |[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query-data-web-api.md#aggregate-data)|
-|[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
+|[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXml reference](../fetchxml/reference/index.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
 |[Section 9: Use predefined queries](#section-9-use-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
@@ -2776,7 +2776,7 @@ Aggregated Annual Income information for Contoso contacts:
 
 Besides query filter operations, the Web API also supports [FetchXML queries](../use-fetchxml-construct-query.md). FetchXML provides an alternative way to define queries and more options for aggregation. All the query options we would normally define, such as `$select`, `$filter`, and `$orderby`, are defined in the XML.
 
-To use FetchXML, compose a string that represents the query. Make sure the query string conforms to the [FetchXML schema](../fetchxml-schema.md). Before you include the string in the URL, you must URL-encode it.
+To use FetchXML, compose a string that represents the query. Make sure the query string conforms to the [FetchXml reference](../fetchxml/reference/index.md). Before you include the string in the URL, you must URL-encode it.
 
 In this example, we query for all contacts where `fullname` matches `(sample)`, and return the results in descending order by `fullname`.
 

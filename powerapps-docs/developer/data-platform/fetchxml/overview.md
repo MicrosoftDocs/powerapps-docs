@@ -15,7 +15,7 @@ search.audienceType:
 FetchXml is a proprietary XML based query language used to retrieve data from Dataverse. See [FetchXml reference](reference/index.md) for the elements used to retrieve data.
 
 > [!NOTE]
-> FetchXml is also used to define views for model-driven apps and some reporting capabilities. The [FetchXml schema](../fetchxml-schema.md) includes elements and attributes for these use cases. [Learn more about customizing model-driven app views with code](../../model-driven-apps/customize-entity-views.md).
+> FetchXml is also used to define views for model-driven apps and some reporting capabilities. Elements and attributes for those use cases are not included here. [Learn more about customizing model-driven app views with code](../../model-driven-apps/customize-entity-views.md).
 
 ## Compose a query
 

@@ -543,7 +543,7 @@
     - name: Table/entity reference
       href: reference/entities/toc.yml
     - name: Web API Reference
-      href: /dynamics365/customer-engagement/web-api/about
+      href: webapi/reference/about
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: FetchXml reference
@@ -556,7 +556,7 @@
       href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
     - name: Customization solutions file schema
       href: customization-solutions-file-schema.md
-    - name: FetchXML schema
-      href: fetchxml-schema.md
+    - name: FetchXML reference
+      href: fetchxml/reference/index.md
     - name: Web service error codes
       href: reference/web-service-error-codes.md
