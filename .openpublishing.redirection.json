@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-fetchxml-web-api.md",
+      "redirect_url": "fetchxml/overview",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/fetchxml-performance.md",
       "redirect_url": "fetchxml/optimize-performance",
       "redirect_document_id": "false"

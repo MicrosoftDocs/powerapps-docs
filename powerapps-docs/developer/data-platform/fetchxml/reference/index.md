@@ -19,7 +19,7 @@ Use these elements to compose a query using FetchXml to retrieve data from Datav
 Use these elements to define queries to retrieve data in the following use cases:
 
 - Using the SDK for .NET [FetchExpression](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) class with the `RetrieveMultiple` message.
-- Using the Dataverse Web API as described in [Use FetchXml with Web API](../../webapi/use-fetchxml-web-api.md).
+- Using the Dataverse Web API as described in [Query data using FetchXml](../overview.md).
 - [Using a message that has a parameter that requires a query defined using FetchXml](../overview.md#use-fetchxml-as-a-message-parameter).
 
 This reference does not include elements or attributes used in defining views for model-driven application or reports that use FetchXml to define the query. [Learn more about customizing model-driven app views with code](../../../model-driven-apps/customize-entity-views.md).

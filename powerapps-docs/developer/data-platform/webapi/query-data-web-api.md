@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 01/11/2024
+ms.date: 01/31/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly

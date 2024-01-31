@@ -49,7 +49,7 @@ Protocol + Environment Name + Region + Base URL + Web API path + Version + Resou
 
 ### Maximum URL length
 
-The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request).
+The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/overview.md#use-fetchxml-within-a-batch-request).
 
 <a name="version_compatiblity"></a>
 
