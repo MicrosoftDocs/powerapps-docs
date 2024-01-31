@@ -138,7 +138,7 @@ owninguser($select=fullname)
 
 #### [FetchXml](#tab/fetchxml)
 
-Use the following FetchXML to retrieve the columns in the table above. [Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+Use the following FetchXML to retrieve the columns in the table above. [Query data using FetchXml](fetchxml/overview.md)
 
 ```xml
 <fetch top='1000'>
@@ -316,7 +316,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -386,7 +386,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -466,7 +466,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -557,7 +557,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -622,7 +622,7 @@ OData-Version: 4.0
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -675,7 +675,7 @@ OData-Version: 4.0
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -742,7 +742,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 
@@ -822,7 +822,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 </fetch>
 ```
 
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Query data using FetchXml](fetchxml/overview.md)
 
 #### [SQL](#tab/sql)
 

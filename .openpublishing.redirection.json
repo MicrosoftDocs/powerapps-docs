@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-construct-query.md",
+      "redirect_url": "fetchxml/overview",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/fetchxml-schema.md",
       "redirect_url": "fetchxml/reference/index",
       "redirect_document_id": "false"
@@ -4317,7 +4322,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-fetchxml-construct-query.md",
-      "redirect_url": "../data-platform/use-fetchxml-construct-query",
+      "redirect_url": "../data-platform/fetchxml/overview",
       "redirect_document_id": false
     },
     {

@@ -2774,7 +2774,7 @@ Aggregated Annual Income information for Contoso contacts:
 
 ## Section 8: FetchXML queries
 
-Besides query filter operations, the Web API also supports [FetchXML queries](../use-fetchxml-construct-query.md). FetchXML provides an alternative way to define queries and more options for aggregation. All the query options we would normally define, such as `$select`, `$filter`, and `$orderby`, are defined in the XML.
+Besides query filter operations, the Web API also supports [FetchXML queries](../fetchxml/overview.md). FetchXML provides an alternative way to define queries and more options for aggregation. All the query options we would normally define, such as `$select`, `$filter`, and `$orderby`, are defined in the XML.
 
 To use FetchXML, compose a string that represents the query. Make sure the query string conforms to the [FetchXml reference](../fetchxml/reference/index.md). Before you include the string in the URL, you must URL-encode it.
 

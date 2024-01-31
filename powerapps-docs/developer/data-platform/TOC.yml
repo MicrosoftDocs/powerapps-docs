@@ -127,25 +127,6 @@
             href: fetchxml/reference/order.md  
           - name: value
             href: fetchxml/reference/value.md         
-    - name: Use FetchXML to query data (OLD)
-      href: use-fetchxml-construct-query.md
-      items:
-        - name: Use FetchXML aggregation
-          href: use-fetchxml-aggregation.md
-        - name: Fiscal date and older than datetime query operators in FetchXML
-          href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
-        - name: Use a left outer join in FetchXML to query for records "not in"
-          href: use-fetchxml-left-outer-join-query-records-not-in.md
-        - name: Page large result sets with FetchXML
-          href: org-service/page-large-result-sets-with-fetchxml.md
-        - name: Paging behaviors and ordering
-          href: org-service/paging-behaviors-and-ordering.md
-        - name: Use column comparison in queries
-          href: column-comparison.md
-        # - name: FetchXML search item limit
-        #   href: quick-find-limit.md
-        - name: Improve FetchXML request performance
-          href: fetchxml-performance.md
     - name: Quick find
       href: quick-find.md
     - name: "Use SQL to query data"

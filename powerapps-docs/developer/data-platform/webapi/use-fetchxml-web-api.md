@@ -14,7 +14,7 @@ ms.custom: bap-template
 ---
 # Use FetchXML with Web API
 
-FetchXML is a proprietary query language that can retrieve and aggregate data using the Web API and the .NET SDK. More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md).
+FetchXML is a proprietary query language that can retrieve and aggregate data using the Web API and the .NET SDK. More information: [Query data using FetchXml](../fetchxml/overview.md).
 
 > [!NOTE]
 > Unlike queries that use the OData syntax, FetchXML queries don't return properties with `null` values.
@@ -410,7 +410,7 @@ OData-Version: 4.0
 
 ### See also
 
-[Use FetchXML to construct a query](../use-fetchxml-construct-query.md)   
+[Query data using FetchXml](../fetchxml/overview.md)   
 [Query data using the Web API](query-data-web-api.md)   
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)
 

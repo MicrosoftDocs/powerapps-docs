@@ -382,7 +382,7 @@ Guid systemuserid)
 
 Learn more about:
 
-- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+- [Query data using FetchXml](../fetchxml/overview.md)
 - [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 
 ---

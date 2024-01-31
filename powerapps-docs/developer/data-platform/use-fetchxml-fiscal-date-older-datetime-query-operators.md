@@ -165,7 +165,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 ### See also
 
 [Query data using the SDK for .NET](org-service/entity-operations-query-data.md)<br />
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
+[Query data using FetchXml](fetchxml/overview.md)<br />
 [Use a left outer join in FetchXML to query for records "not in"](use-fetchxml-left-outer-join-query-records-not-in.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

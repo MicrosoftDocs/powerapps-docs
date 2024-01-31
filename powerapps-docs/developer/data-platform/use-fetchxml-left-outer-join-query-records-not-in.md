@@ -88,7 +88,7 @@ WHERE ab.RegardingObjectId is null
 
  [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
  [Sample: Use aggregation in FetchXML](org-service/samples/use-aggregation-fetchxml.md)   
- [Use FetchXML to construct a query](use-fetchxml-construct-query.md)   
+ [Query data using FetchXml](fetchxml/overview.md)   
  [Sample: Validate and execute a saved query](org-service/samples/validate-execute-saved-query.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

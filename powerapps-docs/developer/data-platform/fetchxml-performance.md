@@ -165,7 +165,7 @@ The supported FetchXML query hints are listed in the following table. The table 
 
 ### See also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
+[Query data using FetchXml](fetchxml/overview.md)  
 [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 

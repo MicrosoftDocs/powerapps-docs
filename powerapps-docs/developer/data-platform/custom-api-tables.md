@@ -172,7 +172,7 @@ using (var svc = new CrmServiceClient(conn))
 
 # [FetchXML](#tab/fetchxml)
 
-More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 ```xml
 <fetch>
