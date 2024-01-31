@@ -1,5 +1,5 @@
 ---
-title: "Behavior and format of the date and time column (Microsoft Dataverse) | Microsoft Docs" 
+title: "Configure the behavior and format of the date and time column using code (Microsoft Dataverse) | Microsoft Docs" 
 description: "The DateTimeAttributeMetadata class is used to define and manage columns of type DateTime in Microsoft Dataverse."
 ms.date: 10/19/2023
 ms.reviewer: jdaly
@@ -12,7 +12,7 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Behavior and format of the date and time column
+# Configure the behavior and format of the date and time column using code
 
 If you have users and offices around the world, it's important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` ([DateTimeAttributeMetadata entity type](xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata) or [DateTimeAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata) ) is used to define and manage columns of type `DateTime` in Microsoft Dataverse. Use the `DateTimeBehavior` property (For SDK for .NET see, [DateTimeBehavior Property](xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior)) to define whether to store date and time values with or without time zone information, and use the [DateTimeAttributeMetadata.Format Property](xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.Format) to specify the display format of these columns.  
 

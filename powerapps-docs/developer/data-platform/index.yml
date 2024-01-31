@@ -45,7 +45,7 @@ landingContent:
           - text: Entity operations (SDK for .NET)
             url: ./org-service/entity-operations.md
           - text: Query data using FetchXml
-            url: ./fetchxml/overview
+            url: ./fetchxml/overview.md
           - text: Use SQL to query data
             url: ./dataverse-sql-query.md
 

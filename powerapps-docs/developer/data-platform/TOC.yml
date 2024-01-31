@@ -524,7 +524,7 @@
     - name: Table/entity reference
       href: reference/entities/toc.yml
     - name: Web API Reference
-      href: webapi/reference/about
+      href: /dynamics365/customer-engagement/web-api/about
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: FetchXml reference
