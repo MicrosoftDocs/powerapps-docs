@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-left-outer-join-query-records-not-in.md",
+      "redirect_url": "fetchxml/join-tables#find-records-not-in-a-set",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-fiscal-date-older-datetime-query-operators.md",
       "redirect_url": "fetchxml/reference/operators#datetime-data",
       "redirect_document_id": "false"
@@ -4342,7 +4347,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-fetchxml-left-outer-join-query-records-not-in.md",
-      "redirect_url": "../data-platform/use-fetchxml-left-outer-join-query-records-not-in",
+      "redirect_url": "../data-platform/fetchxml/join-tables#find-records-not-in-a-set",
       "redirect_document_id": false
     },
     {
