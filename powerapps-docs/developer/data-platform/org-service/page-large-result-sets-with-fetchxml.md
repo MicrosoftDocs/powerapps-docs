@@ -150,8 +150,6 @@ public static string CreateXml(string xml, string cookie, int page, int count)
 
  [Paging behaviors and ordering](paging-behaviors-and-ordering.md)  
  [Sample: Use FetchXML with a Paging Cookie](samples/use-fetchxml-paging-cookie.md)   
- [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
- [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)   
  [Query data using FetchXml](../fetchxml/overview.md)   
  [Page large result sets with QueryExpression](page-large-result-sets-with-queryexpression.md)
 

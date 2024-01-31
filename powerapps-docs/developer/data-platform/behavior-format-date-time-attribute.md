@@ -97,7 +97,7 @@ Time-related query operators aren't supported for the `DateOnly` behavior. Other
 - Last X Hours  
 - Next X Hours  
   
- More information: [Fiscal date and older than datetime query operators in FetchXML](use-fetchxml-fiscal-date-older-datetime-query-operators.md)  
+ More information: [Datetime data operators](fetchxml/reference/operators.md#datetime-data)  
   
 <a name="ChangeBehavior"></a>
    
