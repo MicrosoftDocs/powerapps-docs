@@ -22,7 +22,7 @@ The behavior you can expect depends on whether you are using the SDK for .NET or
 
 ## [SDK for .NET](#tab/sdk)
 
-When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft.Xrm.Sdk.EntityCollection> returned from the `RetrieveMultiple` operation includes values for the following properties:
+When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft.Xrm.Sdk.EntityCollection> returned from the [RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)  method includes values for the following properties:
 
 
 |Property|Description|
@@ -53,11 +53,11 @@ The following annotations will be returned:
 
 ---
 
-The <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` value is useful when you need to calculate how many more paged requests you need to send to get all the results when <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` equals 5000. 
+The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) value is useful when you need to calculate how many more paged requests you need to send to get all the results when (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000. 
 
-If your page size is less than the maximum and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
+If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
 
-When <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` is `true` and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` equals 5000, you can't perform this calculation.
+When (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) is `true` and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000, you can't perform this calculation.
 
 
 > [!TIP]
