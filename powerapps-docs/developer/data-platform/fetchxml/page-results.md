@@ -1,7 +1,7 @@
 ---
 title: Page results using FetchXml
 description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 08/31/2023
+ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -55,7 +55,14 @@ The [MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) 
 
 # [Web API](#tab/webapi)
 
-When you include the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.morerecords"` (or `Prefer: odata.include-annotations="*"` for all annotations) request header, the boolean `@Microsoft.Dynamics.CRM.morerecords` annotation value will be `true`.
+When you include either of these request headers:
+
+- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.morerecords"`
+- `Prefer: odata.include-annotations="*"`
+
+The boolean `@Microsoft.Dynamics.CRM.morerecords` annotation value will be `true`.
+
+[Learn more about Web API request headers](../webapi/compose-http-requests-handle-errors.md#http-headers)
 
 ---
 
@@ -75,7 +82,7 @@ Simple paging works well for small data sets, but as the size of the data set in
 
 ## PagingCookie example
 
-A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of record, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
+A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of records, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
 
 <!-- 
 TODO: 
@@ -247,7 +254,16 @@ static void Main(string[] args)
 
 <!-- This content comes from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-fetchxml-web-api#paging-with-fetchxml -->
 
-With the Web API you must request a paging cookie as an annotation. Use the `prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header (or `prefer: odata.include-annotations="*"` for all annotations) and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and `@Microsoft.Dynamics.CRM.morerecords` annotations are returned with the result.
+With the Web API you must request a paging cookie as an annotation. Use either of these request headers:
+
+- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`
+   OR
+- `Prefer: odata.include-annotations="*"` for all annotations
+
+And these annotations will be returned with the result:
+
+- `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie`
+- `@Microsoft.Dynamics.CRM.morerecords`
 
 The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity. Normally you wouldn't use paging cookies for such small page sizes.
 
@@ -264,7 +280,13 @@ The following series of FetchXML requests show the use of paging cookies. This e
 
 ### First Page
 
-Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header (or `Prefer: odata.include-annotations="*"` for all annotations) to make sure the paging cookie and more records annotations in the response are returned.
+Send the first page with the `page` value set to `'1'`. 
+
+Use this request header:
+
+`Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`
+
+To make sure the paging cookie and more records annotations in the response are returned.
 
 **Request:**
 
@@ -319,10 +341,15 @@ In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indi
 
 The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML element. You need to use the `pagingcookie` attribute value of that element in the next request.
 
-The `pagingcookie` attribute value is URL-encoded twice. The decoded value looks like this:
+The `pagingcookie` attribute value is URL-encoded *twice*. The decoded and formatted value looks like this:
 
 ```xml
-<cookie page="1"><fullname last="Susanna Stubberod (sample)" first="Yvonne McKay (sample)" /><contactid last="{70BF4D48-34CB-ED11-B596-0022481D68CD}" first="{49B0BE2E-D01C-ED11-B83E-000D3A572421}" /></cookie>
+<cookie page="1">
+  <fullname last="Susanna Stubberod (sample)"
+    first="Yvonne McKay (sample)" />
+  <contactid last="{70BF4D48-34CB-ED11-B596-0022481D68CD}"
+    first="{49B0BE2E-D01C-ED11-B83E-000D3A572421}" />
+</cookie>
 ```
 
 ### Following Pages
@@ -619,7 +646,7 @@ Console.WriteLine($"Success: {records.Count}");
 > [!IMPORTANT]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
 > 
-> The `entitySetName` parameter must be the entity set name for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
+> The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
 ---
 ## Next steps
