@@ -34,6 +34,10 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - The canvas app must use Dataverse data only.
 
+-  Make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. 
+
+    To turn on the explicit column selection feature on the canvas app, go to **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
+
 - You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
 - Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on `Canvas App` and `Mobile offline profile` tables.
@@ -46,6 +50,8 @@ Mobile apps run on small screens with limited connectivity. Before you set up of
 
 Follow these best practices when you build an app for mobile offline use:
 
+- Performance is critical end even more on mobile. Make sure to follow the guidance to [create performant canvas apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-performant-apps-overview)
+    
 - Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
 
 - Reduce the complexity of your app by limiting the number of tables that need to be downloaded. Sometimes it's better to have two apps instead of one.
