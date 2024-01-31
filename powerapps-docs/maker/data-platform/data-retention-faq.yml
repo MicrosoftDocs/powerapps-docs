@@ -93,7 +93,7 @@ sections:
 
    - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
      answer: |
-        Your environment doesn't meet the licensing criteria. More information: [Data retention overview]data-retention-overview.md) Contact your account manager to discuss options on licensing.
+        Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
 
    - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
      answer: |
