@@ -25,7 +25,7 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 >
 > - A minimum of 1000 Dynamics 365 licenses or 1000 Power Apps per user licenses, or 1000 licenses from a combination of both in a single tenant.
 >
-> Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled.
+> Customers who don't meet these requirements can continue to create data retention policies, but the policies are disabled.
 
 Watch this video to learn about Dataverse long term data retention.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
