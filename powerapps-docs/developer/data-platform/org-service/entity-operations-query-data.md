@@ -97,7 +97,7 @@ More information:
 
 - [Query data using FetchXml](../fetchxml/overview.md)
 - [Work with Quick Find's search item limit](../quick-find-limit.md)
-- [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+- [Page results using FetchXml](../fetchxml/page-results.md)
 - [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 - [Sample: Use aggregation in FetchXML](samples/use-aggregation-fetchxml.md)
 - [Sample: Use FetchXML with a paging cookie](samples/use-fetchxml-paging-cookie.md)

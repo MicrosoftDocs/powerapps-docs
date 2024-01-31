@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-fetchxml.md",
+      "redirect_url": "fetchxml/page-results",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-left-outer-join-query-records-not-in.md",
       "redirect_url": "fetchxml/join-tables#find-records-not-in-a-set",
       "redirect_document_id": "false"
@@ -4732,7 +4737,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/page-large-result-sets-with-fetchxml.md",
-      "redirect_url": "../../data-platform/org-service/page-large-result-sets-with-fetchxml",
+      "redirect_url": "../../data-platform/fetchxml/page-results",
       "redirect_document_id": false
     },
     {
