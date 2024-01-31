@@ -76,6 +76,10 @@ Describe what you want the formula to do and get AI generated results. Formula s
 >
 > Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
 
+#### Prerequisites
+
+To enabled this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
+
 #### Example natural language input
 
 Imagine there's a **Customer rating** column that shows their rating by account.
