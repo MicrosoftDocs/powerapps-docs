@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 01/16/2024
+ms.date: 01/31/2024
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -51,7 +51,7 @@ Environment variables can be created and modified within the modern solution int
      > 
      > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. However, the connection is not stored as part of the environment variable. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
      > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
-   - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present, it is used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+   - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present, it's used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
    - **Default Value**. This column is part of the environment variable definition table and isn't required. The default value is used if there's no current value. 
   
 
@@ -67,7 +67,7 @@ Environment variables can be created and modified within the modern solution int
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-Starting with an update on December 7, 2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise are pre-filled with a label beneath the text area denoting the value's source: solution value, target environment value, or default value.
+Starting with an update on December 7, 2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise are prefilled with a label beneath the text area denoting the value's source: solution value, target environment value, or default value.
 
   > [!div class="mx-imgBorder"] 
   > ![Environment variable visibility during solution import.](media/solution-import-environment-variables.png)
@@ -94,7 +94,7 @@ If an environment variable is used in a flow and the display name of the environ
 
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
-- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for third party code to use.
+- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
 - To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
 
 ## Frequently asked questions
@@ -144,6 +144,10 @@ Yes.
 ### Should I use environment variables instead of storing configuration data in custom tables?
 
 Yes if your configuration data isn't relational. Environment variables should be used for key: value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
+
+### Why is a different connection value than the one I want getting assigned automatically when importing?
+
+In some cases where there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections available for the environment variable. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
 
 ### How do I remove a value from an environment variable?
 
