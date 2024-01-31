@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/column-comparison.md",
+      "redirect_url": "fetchxml/filter-rows#filter-on-column-values-in-the-same-row",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/org-service/paging-behaviors-and-ordering.md",
       "redirect_url": "fetchxml/order-rows#best-practices-for-orders-when-paging-data",
       "redirect_document_id": "false"
@@ -3677,7 +3682,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/column-comparison.md",
-      "redirect_url": "../data-platform/column-comparison",
+      "redirect_url": "../data-platform/fetchxml/filter-rows#filter-on-column-values-in-the-same-row",
       "redirect_document_id": false
     },
     {

@@ -839,7 +839,7 @@ The following table describes the operators you can use to compare a property an
 
 #### Column comparison
 
-You can use comparison operators to compare property values in the same row; that is, to [compare columns](../column-comparison.md). Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
+You can use comparison operators to compare property values in the same row. Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname eq lastname
