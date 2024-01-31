@@ -91,12 +91,12 @@ sections:
      answer: |
         Yes. Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key.
 
-  - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
+   - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
      answer: |
-        Your environment does not meet the licensing criteria. See [overview](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-overview) for more details. Contact your account manager to discuss options on licensing.
+        Your environment doesn't meet the licensing criteria. More information: [Data retention overview]data-retention-overview.md) Contact your account manager to discuss options on licensing.
 
-  - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
+   - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
      answer: |
-        Your tenant will be granted an exception to the licensing requirement for Dataverse long term retention. These exceptions will be available by end of February 2024, at which point your org can continue using the feature.  
+        Your tenant will be granted an exception to the licensing requirement for Dataverse long term retention. These exceptions will be available by end of February 2024, at which point your environment can continue using the feature.  
 
                               
