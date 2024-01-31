@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/fetchxml-performance.md",
+      "redirect_url": "fetchxml/optimize-performance",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/column-comparison.md",
       "redirect_url": "fetchxml/filter-rows#filter-on-column-values-in-the-same-row",
       "redirect_document_id": "false"
@@ -3942,7 +3947,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/fetchxml-performance.md",
-      "redirect_url": "../data-platform/fetchxml-performance",
+      "redirect_url": "../data-platform/fetchxml/optimize-performance",
       "redirect_document_id": false
     },
     {
