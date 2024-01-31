@@ -1,6 +1,6 @@
 ---
-title: "Write quick find queries"
-description: "Learn how to write queries to use Dataverse quick find"
+title: "About quick find queries"
+description: "Learn how about Dataverse quick find queries and their limitations."
 ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: article
@@ -12,14 +12,14 @@ search.audienceType:
 contributors:
   - JimDaly
 ---
-# Write quick find queries
+# About quick find queries
 
 Model-driven apps provide experiences to quickly find records using [quick find search](../../user/quick-find.md) or [Grid search](../../user/grid-filters.md#grid-search). With these experiences, users have a single text input that can be applied to multiple columns in a single table.
 
 Model-driven apps also provide a search box that uses the [Dataverse search APIs](search/overview.md) when Dataverse search is enabled. With Dataverse search, the results can include results from multiple tables for a more relevant search capability. When Dataverse search is not enabled, model-driven apps provide a [multiple-table quick find (categorized search)](../../user/quick-find.md#multiple-table-quick-find-categorized-search) experience that combines results of up to 10 quick find queries. [Learn more about search options available for model-driven apps.](../../user/search.md)
 
 > [!NOTE]
-> Quick find queries might not provide great experiences for all scenarios. See [When quick find queries can fail](#when-quick-find-queries-can-fail)
+> Quick find queries might not provide usable experiences for for every situation. See [Limitations](#limitations)
 >
 > Consider using the Dataverse search APIs instead of quick find queries for the following scenarios:
 >
@@ -27,7 +27,7 @@ Model-driven apps also provide a search box that uses the [Dataverse search APIs
 > - [Populating a drop-down with suggestions as people type](search/suggest.md)
 > - [Autocomplete text suggestions as people type in a search box](search/autocomplete.md)
 
-## Write a quick find query
+## What is a quick find query?
 
 Quick find queries use the following pattern:
 
@@ -282,7 +282,6 @@ function Get-QuickFindActiveAccounts {
 
 ---
 
-
 ## Quick find record limits
 
 Within the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), there is [Dataverse setting](/power-platform/admin/admin-settings) called **Quick Find record limits** which is turned on by default.
@@ -309,12 +308,7 @@ Whether the query succeeds might depend more on the number of records in the tab
 
 ### How the search item limit is calculated
 
-The search item limit is calculated using *ONLY* the items in the quick find filter. When processing the query, Dataverse detects whether there is a quick find filter and processes it first, even before applying security filters. If the results of the quick find filter exceed 10,000 rows, Dataverse throws the `QuickFindQueryRecordLimitExceeded` exception and no other filters are processed. Adding additional filters to get a smaller total number of records returned will not decrease the potentional of the `QuickFindQueryRecordLimitExceeded` exception. Someone querying a table without privileges to view all the matching records can get this error.
-
-### When quick find queries can fail
-
-Because the search item limit is calculated before applying security filters, the total number of matching records in the system can exceed 10,000 when the table contains large numbers of records, regardless of how many the calling use has security privileges to view. Refining the query or using a more specific search criteria may not be enough.
-
+The search item limit is calculated using *ONLY* the items in the quick find filter. When processing the query, Dataverse detects whether there is a quick find filter and processes it first, *even before applying security filters*. If the results of the quick find filter exceed 10,000 rows, Dataverse throws the `QuickFindQueryRecordLimitExceeded` exception and no other filters are processed. Adding additional filters to get a smaller total number of records returned will not decrease the potential of the `QuickFindQueryRecordLimitExceeded` exception. Someone querying a table without privileges to view all the matching records can get this error.
 
 ### Bypass the quick find record limit
 
@@ -323,6 +317,14 @@ When the **Quick Find record limits** setting is *enabled*, and you need to test
 ### Apply the quick find record limit
 
 When the **Quick Find record limits** setting is *disabled*, and you need to test a query with the limits applied on a temporary basis, use [FetchXml](fetchxml/overview.md) to compose the query and set the [filter element](fetchxml/reference/filter.md) `overridequickfindrecordlimitenabled` attribute to `'1'`.
+
+## Limitations
+
+Quick find queries might not provide usable experiences for every situation.
+
+[Because the search item limit is calculated before applying security filters](#how-the-search-item-limit-is-calculated), the total number of matching records in the system can exceed the 10,000 record limit when the table contains large numbers of records, regardless of how many records the calling user has security privileges to view. Refining the query or using a more specific search criteria may not be enough to provide a usable experience for a user.
+
+In the worst case scenario, users will see a `QuickFindQueryRecordLimitExceeded` exception unless they enter a very specific search string, which doesn't provide the expected 'quick find' experience.
 
 ### See Also
 

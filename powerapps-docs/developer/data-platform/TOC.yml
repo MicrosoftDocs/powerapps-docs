@@ -81,7 +81,7 @@
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Query data using FetchXml (NEW)
+    - name: Query data using FetchXml
       items:
         - name: Overview
           href: fetchxml/overview.md

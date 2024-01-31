@@ -40,7 +40,7 @@ contributors:
 |---------|---------|---------|
 |`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
 |`hint`|No|Use this to `union` to get a performance benefit for a specific type of query. [Learn how to use the union hint](../optimize-performance.md#union-hint)|
-|`isquickfindfields`|No| Use this to tell Dataverse to execute the query as a quick find query. [Write quick find queries](../../quick-find.md)|
+|`isquickfindfields`|No| Use this to tell Dataverse to execute the query as a quick find query. [About quick find queries](../../quick-find.md)|
 |`overridequickfindrecordlimitenabled`|No|See [Quick find record limits](../../quick-find.md#quick-find-record-limits) and [Apply the quick find record limit](../../quick-find.md#apply-the-quick-find-record-limit)|
 |`overridequickfindrecordlimitdisabled`|No|See [Quick find record limits](../../quick-find.md#quick-find-record-limits) and [Bypass the quick find record limit](../../quick-find.md#bypass-the-quick-find-record-limit)|
 
