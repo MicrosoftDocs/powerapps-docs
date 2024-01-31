@@ -88,11 +88,6 @@ A paging cookie is additional data that is returned when you retrieve multiple r
 TODO: 
  - Should people cache the paging cookie if their application enables navigation from one page to the next?
  - Or is mostly for people to get all the records that match the criteria, regardless of how many records there are? 
- - Update this sample: https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseFetchXMLWithPaging
-   - Add a RetrieveAll function that will apply paging to a FetchExpression.Query
-   - Parameters:
-      - FetchXml
-      - PageSize (optional)
    
    Should we have a more advanced example with a class to manage paged results with methods like GetPage(N), GetNextPage(), GetLastPage()?
 -->
@@ -256,7 +251,7 @@ static void Main(string[] args)
 
 With the Web API you must request a paging cookie as an annotation. Use either of these request headers:
 
-- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`
+- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`<br />
    OR
 - `Prefer: odata.include-annotations="*"` for all annotations
 

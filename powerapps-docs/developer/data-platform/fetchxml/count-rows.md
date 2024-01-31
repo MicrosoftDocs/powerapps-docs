@@ -20,7 +20,7 @@ You can't apply the [fetch element](reference/fetch.md) `top` attribute together
 
 The behavior you can expect depends on whether you are using the SDK for .NET or Web API.
 
-# [SDK for .NET](#tab/sdk)
+## [SDK for .NET](#tab/sdk)
 
 When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft.Xrm.Sdk.EntityCollection> returned from the `RetrieveMultiple` operation includes values for the following properties:
 
@@ -30,22 +30,34 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount>|The total number of records up to 5000; otherwise the value is -1.|
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded>|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
-The `TotalRecordCountLimitExceeded` value is useful when you need to calculate how many more paged requests you need to send to get all the results when `TotalRecordCount` equals 5000. If your page size is less than the maximum and `TotalRecordCount` is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records. When `TotalRecordCountLimitExceeded` is `true` and `TotalRecordCount` equals 5000, you can't perform this calculation.
 
-# [Web API](#tab/webapi)
+
+## [Web API](#tab/webapi)
 
 Setting the `returntotalrecordcount` attribute value to `true` has the same result as setting the OData `$count` query option. You can append `&$count=true` to your FetchXml query to get the same results. [Learn more about the OData $count query option](../webapi/query-data-web-api.md#count-number-of-rows).
 
 When you set the `returntotalrecordcount` attribute (or use the `$count` query option) the data returned includes the `@odata.count` annotation with the total number of records that match the filter criteria, up to 5000.
 
-If you include this `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"` request header (or `Prefer: odata.include-annotations="*"` for all annotations) the following annotations will be returned:
+If you include either of these request headers:
+
+- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"`<br />
+   OR
+- `Prefer: odata.include-annotations="*"` for all annotations
+
+The following annotations will be returned:
 
 |Property|Description|
 |---------|---------|
 |`@Microsoft.Dynamics.CRM.totalrecordcount`|The total number of records up to 5000; otherwise the value is -1. The value is the same as the `@odata.count` annotation.|
 |`@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
-The `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` value is useful when exactly 5,000 records are returned. It provides another way to know whether there are more records that match the filter criteria.
+---
+
+The <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` value is useful when you need to calculate how many more paged requests you need to send to get all the results when <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` equals 5000. 
+
+If your page size is less than the maximum and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
+
+When <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` is `true` and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount` equals 5000, you can't perform this calculation.
 
 
 > [!TIP]

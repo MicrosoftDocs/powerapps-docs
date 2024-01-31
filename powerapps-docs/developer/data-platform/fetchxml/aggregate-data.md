@@ -1,7 +1,7 @@
 ---
 title: Aggregate data using FetchXml
 description: Learn how to use FetchXml to retrieve aggregated data from Microsoft Dataverse.
-ms.date: 08/31/2023
+ms.date: 01/31/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -234,7 +234,7 @@ Even with the default limit for aggregate queries applied, the query may take so
 In this example, the custom maximum rows limit is 10:
 
 ```xml
-<fetch distinct='false' mapping='logical' aggregate='true' aggregatelimit = '10'> 
+<fetch aggregate='true' aggregatelimit = '10'> 
     <entity name='opportunity'> 
        <attribute name='name' alias='opportunity_count' aggregate='count'/> 
     </entity> 
