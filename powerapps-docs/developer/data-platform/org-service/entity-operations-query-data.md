@@ -98,7 +98,7 @@ More information:
 - [Query data using FetchXml](../fetchxml/overview.md)
 - [Work with Quick Find's search item limit](../quick-find-limit.md)
 - [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 - [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)
 - [Use a left outer join in FetchXML to query for rows "not in"](../use-fetchxml-left-outer-join-query-records-not-in.md)
 - [Sample: Use aggregation in FetchXML](samples/use-aggregation-fetchxml.md)

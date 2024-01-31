@@ -383,7 +383,7 @@ Guid systemuserid)
 Learn more about:
 
 - [Query data using FetchXml](../fetchxml/overview.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 
 ---
 
