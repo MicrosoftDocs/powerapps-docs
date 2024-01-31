@@ -208,8 +208,6 @@ Switch(Connection.Sync,
 
 - Non-Dataverse connectors like Sharepoint aren't supported in offline mode.
 
-- Some Dataverse tables aren't supported in offline mode.
-
 - Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
 
 - Many-to-many relationships aren't supported in offline mode.
