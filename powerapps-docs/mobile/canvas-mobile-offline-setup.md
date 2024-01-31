@@ -34,7 +34,7 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - The canvas app must use Dataverse data only.
 
-- Make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. To turn on the explicit column selection feature, open a canvas app for editing and then go to **Settings** > **Upcoming features** > **Preview**. Set the **Explicit column selection** toggle to **On**.
+- [Explicit column selection](use-native-cds-connector.md) must be turned on. To enable the feature, open a canvas app for editing and then go to **Settings** > **Upcoming features** > **Preview**. Set the **Explicit column selection** toggle to **On**.
 
 - You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
