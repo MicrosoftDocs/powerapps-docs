@@ -36,7 +36,7 @@ The **New** command or **Quick create** makes it fast and easy to enter almost a
 >   
 > A plus sign ![Recommended column button.](media/recommended-field-button.png "Recommended column button") next to the column on the screen means your organization recommends that you fill in the column.  
 >   
-> A lock sign ![Read-only column button.](media/recommended-field-button.png "Recommended column button") next to the column on the screen means this field is read-only and cannot be edited.  
+> A lock sign ![Read-only column button.](media/readonly-field-button.png "Read-only column button") next to the column on the screen means this field is read-only and cannot be edited.  
 
 
 ## Create a new row using the New button 
