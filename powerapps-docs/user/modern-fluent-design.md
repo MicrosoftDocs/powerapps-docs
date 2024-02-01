@@ -92,7 +92,7 @@ With the new look, Power Apps is no longer honoring [classic theme customization
 
 ### Is the new look available for custom pages or code components?
 -  Code components: The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
--  Custom pages: The new look is not available for custom pages.  
+-  Custom pages: Modern controls can be used with custom pages and the new look. The modern theme is not currently inherited by custom pages.
 
 ### Do Dynamics 365 applications support the new look?
 Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.
