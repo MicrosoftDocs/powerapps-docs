@@ -73,9 +73,6 @@ The system dashboard page, with independent subgrids and charts, has been update
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
-## Turn on the new look
-End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
-
 ## Known limitations
 The modern, refreshed look for model-driven apps has some limitations:
 
@@ -100,13 +97,16 @@ Dynamics 365 applications have extended the new look across applications based o
 ### Provide feedback on the new look
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
 
-### Preview to general availability rollout
+### Try the new look general availability rollout
 
 The modern, refreshed look for model-driven apps is generally available in the following release channels:
 - Monthly channel in August 2023 
 - Semi-annual Channel as of 2023 Release Wave 2
 
 Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
+
+#### Turn on the new look
+End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
 
 #### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
