@@ -34,14 +34,14 @@ You can attach an unlimited number of files to an email; however, there are file
    ![Switch forms.](media\email-work-with-attachments-1a.png "Switch forms")
    
    1. Under the email subject name, select on the caret (v) next to **Email**
-   2.	A drop-down appears with a list of email form options you can choose from.<BR><BR>
+   2.	A dropdown appears with a list of email form options you can choose from.<BR><BR>
 
 File attachments display differently, depending on the email form you're working in. You can switch email forms without losing information.
 
-If you specify "attach" or "attachments" in the subject or the body of the email and you select **Send** without attaching a file the application displays a warning message  reminding you to attach a file.
+If you specify "attach" or "attachments" in the subject or the body of the email and you select **Send** without attaching a file, the application displays a warning message  reminding you to attach a file.
 
 > [!Important]
-> - This is an early access feature. 
+> - The application displaying a warning message is an early access feature. 
 > - Early access features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can [get early access](/power-platform/admin/opt-in-early-access-updates) and provide feedback.
 
 ## Email form file attachment
