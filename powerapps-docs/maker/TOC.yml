@@ -154,7 +154,7 @@
       - name: FAQ about grids and views
         href: ../user/faq-for-grids-views.md
       - name: View and manage records in focused view
-        href: /dynamics365/sales/focused-view?context=/power-apps/context/maker-context
+        href: /dynamics365/sales/focused-view?toc=/power-apps/maker/toc.json
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service
