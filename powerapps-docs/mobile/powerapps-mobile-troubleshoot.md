@@ -18,15 +18,6 @@ contributors:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
-
-A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
-
--   Android: 3.23031.18
--   iOS: 13.23031.18
--   Windows: 3.23024.21
-
-If you are unable to upgrade, contact your administrator.
 ## Resolve canvas apps performance issues
 In [this article](https://learn.microsoft.com/power-apps/maker/canvas-apps/common-performance-issue-resolutions), you'll learn about some of the most common performance issues that can make canvas apps run slowly, and how to resolve them. 
 
