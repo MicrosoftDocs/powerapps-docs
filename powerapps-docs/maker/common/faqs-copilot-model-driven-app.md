@@ -8,6 +8,7 @@ ms.topic: article
 author: Mattp123 
 ms.author: mijosh
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 
 # FAQ for Copilot in model-driven apps
