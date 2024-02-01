@@ -27,6 +27,8 @@ A major update to the Power Apps offline sync engine has been made. To keep your
 -   Windows: 3.23024.21
 
 If you are unable to upgrade, contact your administrator.
+## Resolve canvas apps performance issues
+In [this article](https://learn.microsoft.com/power-apps/maker/canvas-apps/common-performance-issue-resolutions), you'll learn about some of the most common performance issues that can make canvas apps run slowly, and how to resolve them. 
 
 ## Diagnose mobile apps with Monitor
 
