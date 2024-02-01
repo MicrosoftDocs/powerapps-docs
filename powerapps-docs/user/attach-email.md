@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/27/2023
+ms.date: 02/01/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -34,9 +34,15 @@ You can attach an unlimited number of files to an email; however, there are file
    ![Switch forms.](media\email-work-with-attachments-1a.png "Switch forms")
    
    1. Under the email subject name, select on the caret (v) next to **Email**
-   2.	A drop-down appears with a list of email form options you can choose from.<BR><BR>
+   2.	A dropdown appears with a list of email form options you can choose from.<BR><BR>
 
 File attachments display differently, depending on the email form you're working in. You can switch email forms without losing information.
+
+If you specify "attach" or "attachments" in the subject or the body of the email and you select **Send** without attaching a file, the application displays a warning message  reminding you to attach a file.
+
+> [!Important]
+> - The warning message reminding you to attach a file is an early access feature.
+> - Early access features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can [get early access](/power-platform/admin/opt-in-early-access-updates) and provide feedback.
 
 ## Email form file attachment
 
@@ -53,7 +59,7 @@ File attachments display differently, depending on the email form you're working
    2. **Attached files**. This section displays all your email  attachments in a tile view above your message horizontally. The defaulted setting for the maximum number of files that can display is five attachments before displaying the page forward functionality.
    3. **File count**. This displays when you have files that occupy more than two rows and allows you to see the total number of attached files on the left side under the last attachment with the option to page over to see more files.
    4. **Attachment Commands**. This allows you to use the select, select all, sort, delete, and download functionality when working with your file attachments.  
-
+   
 ## Work with the attachment command bar
 When you’ve attached one or more files to a message, you can manage them using the file attachment commands.  
 
@@ -121,3 +127,4 @@ You can drag-and-drop or copy-and-paste images into the email.
 
       > [!Note]
       > There's a 1 MB file size limitation when adding an inline image to an email for email templates. (For new or replied emails, there isn't a limit to the email size (it becomes part of the total email size).
+
