@@ -12,13 +12,13 @@ search.audienceType:
 ---
 # Optimize performance using FetchXml
 
-This article describes ways you can optimize preformance when retrieving data using FetchXml.
+This article describes ways you can optimize performance when retrieving data using FetchXml.
 
 ## Late Materialize query
 
-If select statement has many Lookup, computed comlumns, and you're experiencing performance issues you can try setting a `latematerialize = 'true'` attribute to the [fetch element](reference/fetch.md). Behind the scenes, this setting will break the query up into smaller parts and re-assemble the results before returning them to you.
+If you select many lookup and computed columns, and you're experiencing performance issues, you can try setting a `latematerialize = 'true'` attribute to the [fetch element](reference/fetch.md). Behind the scenes, this setting breaks the query into smaller parts and reassembles the results before returning them to you.
 
-Using the `latematerialize` attribute might not always provide a performance benefit. It may make simple queries run more slowly. It is most beneficial when your query:
+Using the `latematerialize` attribute might not always provide a performance benefit. It might make simple queries run more slowly. It's most beneficial when your query:
 
 - Has many joins
 - Contains many columns lookup columns or computed columns 
@@ -28,7 +28,7 @@ Using the `latematerialize` attribute might not always provide a performance ben
 > [!IMPORTANT]
 > Only apply these options when recommended by Microsoft technical support. Incorrect use of these options can damage the performance of a query.
 
-Microsoft SQL Server supports a number of query hints to optimize queries. FetchXML
+Microsoft SQL Server supports many query hints to optimize queries. FetchXML
 supports query hints and can pass these query options to SQL Server using the [fetch element](reference/fetch.md) [options](reference/fetch.md#options) attribute.
 
 [!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)]
@@ -36,7 +36,7 @@ supports query hints and can pass these query options to SQL Server using the [f
 
 ## No lock
 
-In earlier versions, the `no-lock` attribute used to prevent shared locks on records. It is no longer necessary to include this.
+In earlier versions, the `no-lock` attribute used to prevent shared locks on records. It's no longer necessary to include this attribute.
 
 
 ## Union Hint
@@ -45,8 +45,8 @@ You can improve performance when adding a [filter element](reference/filter.md) 
 
 - The [filter](reference/filter.md) must use the `or` filter type.
 - Each query can contain only one `union` hint.
-- If a filter with `union` hint is not at top level filter, Dataverse will transform the query and move the filter with a `union` hint to root filter.
-- If a `union` hint is more than three levels deep, it will be ignored.
+- If a filter with `union` hint isn't at top level filter, Dataverse transforms the query and move the filter with a `union` hint to root filter.
+- If a `union` hint is more than three levels deep, it's ignored.
 
 The following example sets a filter with the `union` hint on the `telephone1` column for both the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables.
 

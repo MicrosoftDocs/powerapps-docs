@@ -22,7 +22,7 @@ To return an aggregate value, you must:
 
    [!INCLUDE [aggregate-function-table](reference/includes/aggregate-function-table.md)]
 
-Note the following:
+Note the following points:
 
 - Null values aren't considered when calculating aggregate values.
 - You can use data from tables joined using the [link-entity element](reference/link-entity.md).
@@ -97,7 +97,7 @@ When set for the previous query, the results return 8 rather than 9 because two 
 
 ## Grouping
 
-You can group the results of an aggregate query adding an [attribute element](reference/attribute.md) with the `groupby` attribute rather than the `aggregate` attribute. When grouping, you should specify an [order element](reference/order.md) with an `alias` value set to the `alias` of the group.
+Group the results of an aggregate query by adding an [attribute element](reference/attribute.md) with the `groupby` attribute rather than the `aggregate` attribute. When grouping, you should specify an [order element](reference/order.md) with an `alias` value set to the `alias` of the group.
 
 For example the following query returns the sum of employees, and count by city:
 
@@ -118,7 +118,7 @@ For example the following query returns the sum of employees, and count by city:
 </fetch>
 ```
 
-The results are grouped by City value, combining the results for the three rows where city is 'Redmond'.
+The query groups the results by City value, combining the results for the three rows where city is 'Redmond'.
 
 | Total  | Count | City        |
 |--------|-------|-------------|
@@ -138,7 +138,7 @@ You can select which part of the date to use when grouping by date. Set [attribu
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
-The following query groups accounts showing number of employees by when there records were created:
+The following query groups account records showing number of employees by when the records were created:
 
 ```xml
 <fetch aggregate='true'>
@@ -175,7 +175,7 @@ The following query groups accounts showing number of employees by when there re
 </fetch>
 ```
 
-This is the result using the [example](#example) data set mentioned previously:
+The following table shows the result using the [example](#example) data set mentioned previously:
 
 ```text
  -----------------------------------------------------------------------
@@ -189,7 +189,7 @@ This is the result using the [example](#example) data set mentioned previously:
 
 #### Fiscal period date grouping example
 
-The following example shows a FetchXML aggregation expression that sums the total amount of orders fulfilled and groups the result by fiscal semester and fiscal year.
+The following example shows a FetchXML aggregation expression that sums the total number of orders fulfilled and groups the result by fiscal semester and fiscal year.
 
 ```xml
 <fetch aggregate="true">  
@@ -218,18 +218,18 @@ The following example returns the number of related accounts in a column named `
 
 ## Limitations
 
-Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
+Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query returns more than 50,000 records, you get the following error:
 
 > Number: `-2147164125`  
 > Code: `8004E023`  
 > Message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
 > Client error message: The maximum record limit is exceeded. Reduce the number of records.
 
-To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.
+To avoid this error, add appropriate filters to your query to make sure it doesn't evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.
 
 ### Per query limit
 
-Even with the default limit for aggregate queries applied, the query may take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit which will return the `AggregateQueryRecordLimit exceeded` error if the results are higher than your custom limit.
+Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit that returns the `AggregateQueryRecordLimit exceeded` error if the results are higher than your custom limit.
 
 In this example, the custom maximum rows limit is 10:
 

@@ -40,13 +40,13 @@ contributors:
 |Name|Required?|Description|
 |---------|---------|---------|
 |`aggregate`|No|The [aggregate function](#aggregate-functions) to apply. [Learn how to aggregate data with FetchXml](../aggregate-data.md)|
-|`alias`|No|The name of the column to return. Each column must have a unique name. Usually used when retrieving aggregate values. [Learn more about column aliases](../select-columns.md#column-aliases).|
-|`dategrouping`|No|When grouping data by a datetime value, specifies the date part to use. See [Date grouping options](#date-grouping-options)|
-|`distinct`|No|When using the aggregate `countcolumn` function, specifies that only unique values for the column are returned. [Learn more about distinct column values](../aggregate-data.md#distinct-column-values).|
-|`groupby`|No|When aggregating data, specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
+|`alias`|No|The name of the column to return. Each column must have a unique name. You'll use aliases when you retrieve aggregate values. [Learn more about column aliases](../select-columns.md#column-aliases).|
+|`dategrouping`|No|When you group data by a datetime value, this attribute specifies the date part to use. See [Date grouping options](#date-grouping-options)|
+|`distinct`|No|When you use the aggregate `countcolumn` function, this attribute specifies that only unique values for the column are returned. [Learn more about distinct column values](../aggregate-data.md#distinct-column-values).|
+|`groupby`|No|When you aggregate data, this attribute specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
 |`name`|Yes|The logical name of the column.|
 |`rowaggregate`|No|When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the results. [Learn how to use this attribute](../../query-hierarchical-data.md#retrieve-the-number-of-hierarchically-related-child-records).|
-|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Indicates whether the grouping should be determined by the user's time zone, otherwise UTC is used. Depending on the time zone the same datetime value can fall in different days.|
+|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Specifies that the grouping use the user's time zone, otherwise UTC is used. Depending on the time zone, the same datetime value can fall in different days.|
 
 ## Parent elements
 
@@ -58,7 +58,7 @@ contributors:
 
 ## Aggregate functions
 
-These are the aggregate functions you can use. [Learn how to aggregate data with FetchXml](../aggregate-data.md)
+Use these aggregate functions. [Learn how to aggregate data with FetchXml](../aggregate-data.md)
 
 [!INCLUDE [aggregate-function-table](includes/aggregate-function-table.md)]
 

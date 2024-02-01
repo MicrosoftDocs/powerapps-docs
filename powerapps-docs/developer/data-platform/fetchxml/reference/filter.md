@@ -1,6 +1,6 @@
 ---
 title: filter element
-description: Use this element to specify a set of conditions to be evaluated for each row of the containing entity or link-entity element that will determine if the row is returned.
+description: Use this element to specify a set of conditions to be evaluated for each row of the containing entity or link-entity element that determines if the row is returned.
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -39,8 +39,8 @@ contributors:
 |Name|Required?|Description|
 |---------|---------|---------|
 |`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
-|`hint`|No|Use this to `union` to get a performance benefit for a specific type of query. [Learn how to use the union hint](../optimize-performance.md#union-hint)|
-|`isquickfindfields`|No| Use this to tell Dataverse to execute the query as a quick find query. [About quick find queries](../../quick-find.md)|
+|`hint`|No|Use this attribute to set the `union` hint to get a performance benefit for a specific type of query. [Learn how to use the union hint](../optimize-performance.md#union-hint)|
+|`isquickfindfields`|No| Use this attribute to tell Dataverse to execute the query as a quick find query. [About quick find queries](../../quick-find.md)|
 |`overridequickfindrecordlimitenabled`|No|See [Quick find record limits](../../quick-find.md#quick-find-record-limits) and [Apply the quick find record limit](../../quick-find.md#apply-the-quick-find-record-limit)|
 |`overridequickfindrecordlimitdisabled`|No|See [Quick find record limits](../../quick-find.md#quick-find-record-limits) and [Bypass the quick find record limit](../../quick-find.md#bypass-the-quick-find-record-limit)|
 
