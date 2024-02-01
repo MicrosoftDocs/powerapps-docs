@@ -21,7 +21,9 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. This feature is transitioning from preview to general availability. Learn more about this process in [Preview to general availability rollout](modern-fluent-design.md#preview-to-general-availability-rollout). 
+Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. 
+
+Learn more about this process in [Preview to general availability rollout](modern-fluent-design.md#preview-to-general-availability-rollout). 
 
 The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
@@ -74,20 +76,29 @@ The system dashboard page, with independent subgrids and charts, has been update
 ## Turn on the new look
 End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
 
-## Provide feedback on the new look
-After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
-
 ## Known limitations
 The modern, refreshed look for model-driven apps has some limitations:
 
+### Is the new look available for mobile?
 - The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
-- With the new look, Power Apps is moving away from [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). While the colors for the app header can now be customized to match your personal or organization branding, other theme customization options aren't yet available. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
+
+### Can I switch to a different theme or enable dark mode?
+Switching themes or enabling dark mode isn't supported at this time.
+
+### How do I change the app header colors with the new look? 
+With the new look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the new look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the new look aren't available yet.  
 
 ## Frequently asked questions (FAQs)
 
-### On by default general availability rollout
+### Is the new look available for custom pages or code components?
+-  Code components: The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
+-  Custom pages: The new look is not available for custom pages.  
 
-Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps will be on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+### Do Dynamics 365 applications support the new look?
+Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.
+
+### Provide feedback on the new look
+After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
 
 ### Preview to general availability rollout
 
@@ -97,7 +108,7 @@ The modern, refreshed look for model-driven apps is generally available in the f
 
 Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
 
-### Can I revert to the old UI?
+#### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md). 
@@ -122,7 +133,11 @@ Admins can disable the **Try the new look** setting across all apps in an organi
     > [!NOTE]
     > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
 
-### Can I enable the modern look for my app and remove the toggle?
+### On by default general availability rollout
+
+Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps will be on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+
+#### Can I enable the modern look for my app and remove the toggle?
 Yes, makers and admins can enable an "Always on" experience by enabling the **New look always on** app setting. This will enable the new look for all users of the app and remove the header switch ability for end users to turn off **New look**.
 
 Admins can enable the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and enables the new look for all users.
@@ -138,15 +153,4 @@ Admins can enable the **New look always on** setting across all apps in an organ
 1. Select **Save**.
 1. Publish all customizations.
 
-### Can I switch to a different theme or enable dark mode?
-Switching themes or enabling dark mode isn't supported at this time.
 
-### How do I change the app header colors with the new look? 
-With the new look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the new look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the new look aren't available yet.  
-
-### Is the new look available for custom pages or code components?
--  Code components: The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
--  Custom pages: The new look is not available for custom pages.  
-
-### Do Dynamics 365 applications support the new look?
-Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.
