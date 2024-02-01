@@ -140,6 +140,8 @@ To create an Azure Synapse Link profile with incremental data:
 >
 > We recommend that you create separate Azure Synapse Link profiles for incremental data and tables for ease of management.
 >
+> When you choose tables and enable incremental data changes, the row count shown in Synapse Link details page for each table reflects the total number of changes, not the number of records in the table. 
+> 
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
 ## Working with data and metadata  
