@@ -21,7 +21,7 @@ When you export Dataverse table data, it's exported as a CSV file.
 Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Data** > **Get data** > **Get data**.
 1. From the **Data sources** list, select the connector that you want to import data from.
 
@@ -131,23 +131,23 @@ The following data types aren't currently supported for import or export.
 - Image
 - File
 
-The following fields are system fields and are not supported for import and export.
+The following fields are system fields and aren't supported for import and export.
 
-- Ownerid
-- Createdby
-- Createdonbehalfby
-- Createdon
-- Modifiedby
-- Modifiedonbehalfby
-- Modifiedon
-- Overriddencreatedon
+- `Ownerid`
+- `Createdby`
+- `Createdonbehalfby`
+- `Createdon`
+- `Modifiedby`
+- `Modifiedonbehalfby`
+- `Modifiedon`
+- `Overriddencreatedon`
 
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
 ## Troubleshoot connection issues
 
-Users might receive an error message if the connection they are using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
+Users might receive an error message if the connection they're using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
 
 To fix this issue:
 
