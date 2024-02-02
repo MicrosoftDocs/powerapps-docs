@@ -450,7 +450,7 @@ Data Types:
 - [Number](#number-data)
 - [Unique Identifier](#unique-identifier-data)
 - [Owner](#owner-data)
-- [String](#string-data)
+- [String](#string-data) Up to 850 characters
 
 ### in-fiscal-period
  
