@@ -20,7 +20,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Resolve canvas apps performance issues
 
-Learn about most common performance issues that can make canvas apps run slow and how to improve proformance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md), you'll learn 
+Learn about most common performance issues that can make canvas apps run slow and how to improve proformance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
 
 ## Diagnose mobile apps with Monitor
 
@@ -175,7 +175,7 @@ Access the **Active** users section in the admin center and verify you have a **
 ## Event 10001 messages appear in the Event Log when you run Dynamics 365 for mobile. 
  The following event may be recorded multiple times to the Event Log, when **Show Analytic and Debug Logs** is enabled, on the device where Dynamics 365 for mobile is running. Notice that, by default, **Show Analytic and Debug Logs** is disabled in [!INCLUDE[pn_Event_Viewer](../includes/pn-event-viewer.md)] and these messages won’t be recorded. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Enable Analytic and Debug Logs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749492(v=ws.11))  
   
-- Event Id: 10001  
+- Event ID: 10001  
   
 - Message: `SEC7131 : Security of a sandboxed iframe is potentially compromised by allowing script and same origin access.`  
   
