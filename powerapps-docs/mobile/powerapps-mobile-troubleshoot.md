@@ -19,7 +19,8 @@ contributors:
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
 ## Resolve canvas apps performance issues
-In [this article](https://learn.microsoft.com/power-apps/maker/canvas-apps/common-performance-issue-resolutions), you'll learn about some of the most common performance issues that can make canvas apps run slowly, and how to resolve them. 
+
+Learn about most common performance issues that can make canvas apps run slow and how to improve proformance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md), you'll learn 
 
 ## Diagnose mobile apps with Monitor
 
