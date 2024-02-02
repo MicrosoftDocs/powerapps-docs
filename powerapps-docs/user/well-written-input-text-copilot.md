@@ -55,7 +55,7 @@ Makers can turn off this feature on a per app basis within app settings using th
 Power Platform admins can turn off this feature on a per environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
 
    ```powershell
-   $Set-EnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled false
+   $Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
    ```
    
 
