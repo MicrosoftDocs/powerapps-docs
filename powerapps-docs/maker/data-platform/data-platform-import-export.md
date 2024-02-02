@@ -30,8 +30,12 @@ For information about the connector you want to use as your data source, see [Li
 ## Import from an Excel or CSV file
 
 There are two ways to import data from Excel.
+
 - [Option 1: Import by creating and modifying a file template](#option-1-import-by-creating-and-modifying-a-file-template)
 - [Option 2: Import by bringing your own source file](#option-2-import-by-bringing-your-own-source-file)
+
+> [!IMPORTANT]
+> Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
 
 ### Option 1: Import by creating and modifying a file template
 
