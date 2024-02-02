@@ -117,6 +117,8 @@ Currently, there are the following limitations with finance and operations table
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
 - In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
 - When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) the system might not export data.
+- Finance and Operations tables added to a Synapse Link profile may be removed when a back-up is restored in Dataverse. You will need to add Finance and Operations tables into the profile after a database restore operation.    
+- Finance and Operations tables included in a Synapse Link profile can't be migrated to a different environment using Import and Export profile feature in Synapse Link   
 
 ## Access incremental data changes from finance and operations
 
