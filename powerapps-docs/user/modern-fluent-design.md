@@ -126,7 +126,7 @@ Once generally available, end users will see the **Try the new look** setting to
 
 End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
 
-### Revert to the old UI?
+### Revert to the old UI
 
 Yes, end users can switch back to the old UI by turning off the **Try the new look** toggle. Makers can also disable the new look by updating the app setting.
 
