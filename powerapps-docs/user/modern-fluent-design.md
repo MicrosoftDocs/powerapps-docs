@@ -21,9 +21,9 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
+Model-driven apps have a modern, refreshed look when the **Try the new look** feature is [turned on by end users](modern-fluent-design.md#turn-on-the-modern-refreshed-look.The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look on by default rollout will feature a slower schedule than other features. Learn more about this process in [Managing on by default general availability rollout](managing-on-by-default-general-availability-rollout).
+The modern, refreshed look feature that's now on by default will roll out on a slower schedule than other features. More information: [Managing on by default general availability rollout](modern-fluent-design.md#managing-on-by-default-general-availability-rollout).
 
 ## What's included with the modern, refreshed look
 
@@ -47,7 +47,7 @@ The _floating_ command bar aligns with the Microsoft 365 experience, with consis
 
 View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user's attention.
 
-The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms and dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control.
+The most significant change on view pages is the switch from the read-only grid to the [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms and dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers can manually configure their editable grids to use the Power Apps grid control.
 
 The following example shows a view page with the modern, refreshed look.
 
@@ -65,7 +65,7 @@ The following example shows a form page with the modern, refreshed look.
 
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons have been moved to the right side of field labels. Some redundant icons have been removed for a cleaner layout. For example, the recommended icons have been removed for simplicity. Input and error message styling has also been refreshed based on Fluent design.
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. For example, the recommended icons are removed for simplicity. Input and error message styling is also refreshed based on Fluent design.
 
 The following example shows a set of fields with the modern, refreshed look.
 
@@ -73,7 +73,7 @@ The following example shows a set of fields with the modern, refreshed look.
 
 ### Dashboard page
 
-The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid is not enabled by default.
+The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't enabled by default.
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
@@ -101,11 +101,11 @@ The modern theme in use is passed to [Power Apps component framework](../develop
 
 ### Using the modern, refreshed look in custom pages
 
-Modern controls can be used with custom pages and the modern, refreshed look. The modern theme is not currently inherited by custom pages.
+Modern controls can be used with custom pages and the modern, refreshed look. The modern theme isn't currently inherited by custom pages.
 
 ### Change the color of the app header
 
-It is possible to change the color of the app header to match your organiztion while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
+It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
 
 ## Working with the modern, refreshed look
 
@@ -154,11 +154,11 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 
 ### Managing on by default general availability rollout
 
-Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps will be on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps is on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 
-In scenarios where makers and admins want to turn on an "Always on" modern experience they can enable this by setting the **New look always on** app setting. This will enable the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
+In scenarios where makers and admins want to turn on an "Always on" modern experience they can enable this by setting the **New look always on** app setting. This enables the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
 
 Admins can enable the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and enables the modern, refreshed look for all users.
 
