@@ -35,7 +35,7 @@ To learn how to use these values, see [Filter rows using FetchXml](../filter-row
 |[eq-userteams](#eq-userteams)|[!INCLUDE [operator-eq-userteams-description](includes/operator-eq-userteams-description.md)]|[Owner](#owner-data)|
 |[ge](#ge)|[!INCLUDE [operator-ge-description](includes/operator-ge-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
 |[gt](#gt)|[!INCLUDE [operator-gt-description](includes/operator-gt-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
-|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|[Number](#number-data)|
+|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|[Choice](#choice-data)<br />[Number](#number-data)<br />[Owner](#owner-data)<br />[String](#string-data)<br />[Unique Identifier](#unique-identifier-data)|
 |[in-fiscal-period](#in-fiscal-period)|[!INCLUDE [operator-in-fiscal-period-description](includes/operator-in-fiscal-period-description.md)]|[Datetime](#datetime-data)|
 |[in-fiscal-period-and-year](#in-fiscal-period-and-year)|[!INCLUDE [operator-in-fiscal-period-and-year-description](includes/operator-in-fiscal-period-and-year-description.md)]|[Datetime](#datetime-data)|
 |[in-fiscal-year](#in-fiscal-year)|[!INCLUDE [operator-in-fiscal-year-description](includes/operator-in-fiscal-year-description.md)]|[Datetime](#datetime-data)|
@@ -124,6 +124,7 @@ Use the following operators in [conditions](condition.md) using choice values.
 |---|---|
 |[contain-values](#contain-values)|[!INCLUDE [operator-contain-values-description](includes/operator-contain-values-description.md)]|
 |[eq](#eq)|[!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]|
+|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|
 |[not-contain-values](#not-contain-values)|[!INCLUDE [operator-not-contain-values-description](includes/operator-not-contain-values-description.md)]|
 |[not-null](#not-null)|[!INCLUDE [operator-not-null-description](includes/operator-not-null-description.md)]|
@@ -243,6 +244,7 @@ Use the following operators in [conditions](condition.md) using owner values.
 |[eq-useroruserteams](#eq-useroruserteams)|[!INCLUDE [operator-eq-useroruserteams-description](includes/operator-eq-useroruserteams-description.md)]|
 |[eq-userteams](#eq-userteams)|[!INCLUDE [operator-eq-userteams-description](includes/operator-eq-userteams-description.md)]|
 |[eq](#eq)|[!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]|
+|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|
 
 ### String data
@@ -256,6 +258,7 @@ You can use wildcard characters for the following operators: [like](#like), [not
 |[begins-with](#begins-with)|[!INCLUDE [operator-begins-with-description](includes/operator-begins-with-description.md)]|
 |[ends-with](#ends-with)|[!INCLUDE [operator-ends-with-description](includes/operator-ends-with-description.md)]|
 |[eq](#eq)|[!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]|
+|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|
 |[like](#like)|[!INCLUDE [operator-like-description](includes/operator-like-description.md)]|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|
 |[not-begin-with](#not-begin-with)|[!INCLUDE [operator-not-begin-with-description](includes/operator-not-begin-with-description.md)]|
@@ -274,6 +277,7 @@ Use the following operators in [conditions](condition.md) using unique identifie
 |[eq-businessid](#eq-businessid)|[!INCLUDE [operator-eq-businessid-description](includes/operator-eq-businessid-description.md)]|
 |[eq-userid](#eq-userid)|[!INCLUDE [operator-eq-userid-description](includes/operator-eq-userid-description.md)]|
 |[eq](#eq)|[!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]|
+|[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|
 |[ne-businessid](#ne-businessid)|[!INCLUDE [operator-ne-businessid-description](includes/operator-ne-businessid-description.md)]|
 |[ne-userid](#ne-userid)|[!INCLUDE [operator-ne-userid-description](includes/operator-ne-userid-description.md)]|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|
@@ -440,7 +444,13 @@ Data Types:
  
 [!INCLUDE [operator-in-description](includes/operator-in-description.md)]
 
-Data Type: [Number](#number-data)
+Data Types:
+
+- [Choice](#choice-data)
+- [Number](#number-data)
+- [Unique Identifier](#unique-identifier-data)
+- [Owner](#owner-data)
+- [String](#string-data)
 
 ### in-fiscal-period
  

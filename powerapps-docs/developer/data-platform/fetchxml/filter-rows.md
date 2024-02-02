@@ -183,6 +183,18 @@ To filter on values in related records without returning those values, use a [li
 
 [Learn more about filter link types](reference/link-entity.md#filter-link-types)
 
+## Condition limits
+
+You can include no more than 500 total [condition](reference/condition.md) and  [link-entity](reference/link-entity.md) elements in a FetchXml query. Otherwise, you will see this error:
+
+> Name: `TooManyConditionsInQuery`<br />
+> Code: `0x8004430C`<br />
+> Number: `-2147204340`<br />
+> Message: `Number of conditions in query exceeded maximum limit.`
+
+You need to reduce the number of conditions to execute the query. You may be able to do this by using the [in operator](reference/operators.md#in) which can be used with numbers, unique identifiers, and strings up to 850 characters.
+
+
 ## Next steps
 
 Learn how to page results.
