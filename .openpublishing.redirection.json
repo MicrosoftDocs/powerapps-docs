@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/quick-find-limit.md",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/webapi/use-fetchxml-web-api.md",
       "redirect_url": "fetchxml/overview",
       "redirect_document_id": "false"
@@ -4152,7 +4157,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/quick-find-limit.md",
-      "redirect_url": "../data-platform/quick-find-limit",
+      "redirect_url": "../data-platform/quick-find",
       "redirect_document_id": false
     },
     {

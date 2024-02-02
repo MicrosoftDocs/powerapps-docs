@@ -96,7 +96,7 @@ results.Entities.ToList().ForEach(x => {
 More information:
 
 - [Query data using FetchXml](../fetchxml/overview.md)
-- [Work with Quick Find's search item limit](../quick-find-limit.md)
+- [About quick find queries](../quick-find.md)
 - [Page results using FetchXml](../fetchxml/page-results.md)
 - [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 - [Sample: Use aggregation in FetchXML](samples/use-aggregation-fetchxml.md)

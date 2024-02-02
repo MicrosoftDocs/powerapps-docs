@@ -284,7 +284,7 @@ function Get-QuickFindActiveAccounts {
 
 ## Quick find record limits
 
-Within the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), there is [Dataverse setting](/power-platform/admin/admin-settings) called **Quick Find record limits** which is turned on by default.
+Within the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), there is [Dataverse setting](/power-platform/admin/admin-settings) called **Quick Find record limits** which is turned on by default. The [organization table QuickFindRecordLimitEnabled column](reference/entities/organization.md#BKMK_QuickFindRecordLimitEnabled) stores this setting.
 
 > [!IMPORTANT]
 > We strongly recommend that you leave the **Quick Find record limits** setting enabled. This setting protects you from system slowness and potential service disruptions when quick find queries exhaust available resources.
