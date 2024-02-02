@@ -124,7 +124,7 @@ Once generally available, end users will see the **Try the new look** setting to
 
 ### Turn on the modern, refreshed look
 
-End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
+End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#revert-to-the-old-ui).
 
 ### Revert to the old UI
 
