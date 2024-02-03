@@ -252,7 +252,7 @@ For example, the following query returns all account records with no contacts.
 
 ## Use advanced link types
 
-The following link entity types do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](sql/relational-databases/performance/subqueries) instead. That provides more advanced capabilities that can be useful for improving query performance or defining more complex queries.
+The following link entity types do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. That provides more advanced capabilities that can be useful for improving query performance or defining more complex queries.
 
 |Name|Description|
 |---------|---------|
