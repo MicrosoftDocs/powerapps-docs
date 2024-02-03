@@ -166,13 +166,13 @@ Use `link-type` to apply filters on the records returned. The following table de
 |---------|---------|
 |`inner`|Default. Restricts results to rows with matching values in both tables.|
 |`outer`|Includes results from the parent element that don't have a matching value.|
-|`any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-any-description](includes/link-type-any-description.md)] |
-|`not any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)] |
+|`any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-any-description](includes/link-type-any-description.md)]|
+|`not any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)]|
 |`all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-all-description](includes/link-type-all-description.md)]|
 |`not all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)]|
-|`exists`|[!INCLUDE [link-type-exists-description](includes/link-type-exists-description.md)]|
-|`in`|[!INCLUDE [link-type-in-description](includes/link-type-in-description.md)]|
-|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](includes/link-type-matchfirstrowusingcrossapply-description.md)]|
+|`exists`|[!INCLUDE [link-type-exists-description](includes/link-type-exists-description.md)]<br />See [Use advanced link types](../join-tables.md#use-advanced-link-types) for more details.|
+|`in`|[!INCLUDE [link-type-in-description](includes/link-type-in-description.md)]<br />See [Use advanced link types](../join-tables.md#use-advanced-link-types) for more details.
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](includes/link-type-matchfirstrowusingcrossapply-description.md)]<br />See [Use advanced link types](../join-tables.md#use-advanced-link-types) for more details.|
 
 #### Filter Link Types
 
