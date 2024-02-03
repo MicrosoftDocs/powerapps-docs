@@ -173,12 +173,9 @@ All display rules provide an optional parameter to specify whether the default v
   `<ReferencingAttributeRequiredRule>`
   A rule that detects whether the referencing attribute for an entity is required.
   
-  This is a very specific rule for a very specific case. Use this rule when there is a relationship bound subgrid or an associated grid on the page. This rule will test whether the referencing attribute used in the relationship is required. This rule is used to hide 
-  the Add Existing record type button when it isn’t appropriate to display it.
+  This is a very specific rule for a very specific case. Use this rule when there is a relationship bound subgrid or an associated grid on the page. This rule will test whether the referencing attribute used in the relationship is required. This rule is used to hide the Add Existing record type button when it isn’t appropriate to display it.
 
-  In an entity relationship the lookup field in the related record (the referencing attribute) may be required or not. For example, the Regarding field of an activity is not required yet the Potential Customer field of an opportunity is required. The Add Existing 
-  Activity button will set the Regarding field value to the current record context and it can only work if the Regarding field doesn’t already have a value. All Opportunity records have a value in their Potential Customer field, so it never makes sense to display an 
-  Add Existing Opportunity button. This rule detects that the referencing attribute is required and therefore returns true.
+  In an entity relationship the lookup field in the related record (the referencing attribute) may be required or not. For example, the Regarding field of an activity is not required yet the Potential Customer field of an opportunity is required. The Add Existing Activity button will set the Regarding field value to the current record context and it can only work if the Regarding field doesn’t already have a value. All Opportunity records have a value in their Potential Customer field, so it never makes sense to display an Add Existing Opportunity button. This rule detects that the referencing attribute is required and therefore returns true.
 
   `<RelationshipTypeRule>` 
   This type of rule is applied to records selected in a grid. It lets you determine the type of relationship, as follows:  
