@@ -1,2 +1,1 @@
 Restricts results to parent rows with matching rows in the linked entity using an [IN](/sql/t-sql/language-elements/in-transact-sql) condition in the `where` clause. It only returns the parent row at most once and doesn't return column values of the link entity rows. This can improve query performance when many matching linked entity rows exist for the same parent rows or when multiple link entities are used for the same parent.
-See [Use advanced link types](../,,/join-tables.md#use-advanced-link-types) for more details.
