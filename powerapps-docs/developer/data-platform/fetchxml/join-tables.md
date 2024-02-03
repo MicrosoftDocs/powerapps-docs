@@ -256,9 +256,9 @@ The following link entity types do not directly correspond to T-SQL [JOIN operat
 
 |Name|Description|
 |---------|---------|
-|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]<br />[More details](join-tables.md#exists) below.|
-|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]<br />[More details](join-tables.md#in) below.|
-|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]<br />[More details](join-tables.md#matchfirstrowusingcrossapply) below.|
+|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]<br />[More details](#exists) below.|
+|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]<br />[More details](#in) below.|
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]<br />[More details](#matchfirstrowusingcrossapply) below.|
 
 ### exists
 
