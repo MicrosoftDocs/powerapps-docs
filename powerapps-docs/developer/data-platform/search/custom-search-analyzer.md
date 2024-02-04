@@ -118,7 +118,7 @@ Preference-Applied: odata.include-annotations="*"
 The Web API entity set name for this table is `searchcustomanalyzers`.
 
 In my system there are no rows in this table.
-Note: The [analyzers](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers) and [analyzers_name](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers_name) are marked as **NOT** valid for create or update. No way to set these values using code?
+Note: The [analyzers column](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers) is a File column, so we can refer to these docs about uploading it: [Upload Files](../file-column-data.md#upload-files) and downloading it [Download Files](../file-column-data.md#download-files)
 
 **Request**
 
