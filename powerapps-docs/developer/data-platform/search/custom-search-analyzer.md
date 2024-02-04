@@ -27,7 +27,9 @@ TODO: This is a great place to introduce a scenario, perhaps based on any exampl
 
 TODO: This may be a good place to introduce any prerequisite information, such as we expect the reader to understand [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) with links to content where they can learn more. Make it clear early that this article isn't going to teach them about this Azure capability, only how to apply the analyzers they create to Dataverse.
 
-<!-- You can borrow and adapty some learn.microsoft.com content, like an overview description 
+<!-- 
+
+You can borrow and adapt some learn.microsoft.com content, like an overview description 
 This comes from https://learn.microsoft.com/azure/search/search-analyzers#default-analyzer
 
 You may want to replace 'Azure AI Search' with 'Dataverse Search'?
@@ -35,7 +37,7 @@ You may want to replace 'Azure AI Search' with 'Dataverse Search'?
 
 In Azure AI Search, an analyzer is automatically invoked on all string fields marked as searchable.
 
-By default, Azure AI Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html), which breaks text into elements following the []"Unicode Text Segmentation"](https://unicode.org/reports/tr29/) rules. The standard analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
+By default, Azure AI Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html), which breaks text into elements following the ["Unicode Text Segmentation"](https://unicode.org/reports/tr29/) rules. The standard analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
 
 You can override the default on a field-by-field basis. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
@@ -65,16 +67,20 @@ TODO: Describe the process to perform this at a high level
 ## Placeholder H2 for any other major tasks
 
 
-Links to reference content
+### Links to reference content
 
 [searchattributesettings table](../reference/entities/searchattributesettings.md)
 The Web API entity set name for this table is `searchattributesettingses`.
 
 To refer to specific columns:
-[attributename](../reference/entities/searchattributesettings.md#BKMK_attributename)
-[entityname](../reference/entities/searchattributesettings.md#BKMK_entityname)
-[name](../reference/entities/searchattributesettings.md#BKMK_name)
-[settings](../reference/entities/searchattributesettings.md#BKMK_settings)
+
+- [attributename](../reference/entities/searchattributesettings.md#BKMK_attributename)
+- [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname)
+- [name](../reference/entities/searchattributesettings.md#BKMK_name)
+- [settings](../reference/entities/searchattributesettings.md#BKMK_settings)
+
+
+### Web API examples
 
 In my system there are no rows in this table.
 
@@ -112,7 +118,7 @@ Preference-Applied: odata.include-annotations="*"
 The Web API entity set name for this table is `searchcustomanalyzers`.
 
 In my system there are no rows in this table.
-Note: The `analyzers` and `analyzers_name` are marked as valid for create or update. No way to set these values using code?
+Note: The [analyzers](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers) and [analyzers_name](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers_name) are marked as valid for create or update. No way to set these values using code?
 
 **Request**
 
