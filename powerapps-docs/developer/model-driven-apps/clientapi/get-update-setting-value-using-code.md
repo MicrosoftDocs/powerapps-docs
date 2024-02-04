@@ -59,16 +59,6 @@ var settingValue = Xrm.Utility.getGlobalContext().getCurrentAppSetting(settingNa
 - If the setting is not **Overridable**, the default value as specified in the setting definition is returned.
 - If the setting name is incorrect or the setting could not be found, the return value is null.
 
-<!-- This is too dense 
-
-- If the setting is **Overridable**, and **Value can be overridden** is set to **Environment and app**, the setting app value is returned. If a setting app value does not exist, then the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
-- If the setting is **Overridable**, and **Value can be overridden** is set to **Environment only**, the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
-- If the setting is **Overridable**, and **Value can be overridden** is set to **App only**, the setting app value is returned. If a setting app value does not exist, the default value as specified in the setting definition is returned.
-- If the setting is not **Overridable**, the default value as specified in the setting definition is returned.
-- If the setting name is incorrect or the setting could not be found, the return value is null.
-
--->
-
 ## saveSettingValue
 
 Adds or updates the setting app value for the current app or the setting environment value for the current environment.
