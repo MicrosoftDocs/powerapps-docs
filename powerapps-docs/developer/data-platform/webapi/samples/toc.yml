@@ -43,6 +43,12 @@ items:
       href: retrievemetadatachanges.md
     - name: Use bulk operations
       href: create-update-multiple.md
+- name: PowerShell samples
+  items:
+  - name: About the PowerShell samples
+    href: ../web-api-samples-powershell.md
+  - name: Basic Operations
+    href: basic-operations-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples

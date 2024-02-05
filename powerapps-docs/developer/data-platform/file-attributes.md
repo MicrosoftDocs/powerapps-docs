@@ -130,7 +130,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 More information:
 
 - [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
-- [Web API Metadata Operations Sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
+- [Web API table schema operations sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Web API Metadata Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+title: "Web API table schema operations sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to perform operations that change the Dataverse data structures using the Web API."
 ms.date: 09/02/2022
 author: NHelgren
@@ -11,7 +11,7 @@ contributors:
   - JimDaly
 ---
 
-# Web API Metadata Operations Sample (C#)
+# Web API table schema operations sample (C#)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -20,7 +20,7 @@ This .NET 6.0 sample demonstrates how to perform operations that create and modi
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
   
 > [!NOTE]
-> This sample implements the Dataverse operations and console output detailed in [Web API Metadata Operations Sample](../web-api-metadata-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).
+> This sample implements the Dataverse operations and console output detailed in [Web API table schema operations sample](../web-api-metadata-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).
 
 ## Prerequisites
 
