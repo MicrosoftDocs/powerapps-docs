@@ -57,7 +57,7 @@ contributors:
 |---------|---------|---------|
 |[condition](condition.md)|0 to 500|[!INCLUDE [condition-description](includes/condition-description.md)]|
 |[filter](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|
-|[link-entity](link-entity.md)|0 or many|Used to apply [Filter Link Type](link-entity.md#filter-link-types) conditions on column values in related tables|
+|[link-entity](link-entity.md)|0 or many|Used when [filtering on values in related records](../filter-rows.md#filter-on-values-in-related-records)|
 
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

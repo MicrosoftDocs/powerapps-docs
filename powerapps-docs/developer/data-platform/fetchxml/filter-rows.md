@@ -181,7 +181,7 @@ To filter on values in related records without returning those values, use a [li
 |`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
 |`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
 
-When you use these link types inside of a [filter element](filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
+When you use these link types inside of a [filter element](reference/filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
 
 Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
 
