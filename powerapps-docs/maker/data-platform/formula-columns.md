@@ -9,6 +9,7 @@ ms.date: 11/14/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 contributors:
   - mattp123
   - sanjeevgoyalmsft
@@ -74,6 +75,10 @@ Describe what you want the formula to do and get AI generated results. Formula s
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
 > Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
+
+#### Prerequisites
+
+To enabled this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 

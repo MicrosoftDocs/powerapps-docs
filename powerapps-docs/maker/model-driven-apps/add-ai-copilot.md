@@ -14,6 +14,7 @@ search.audienceType:
   - maker
 contributors:
   - makolomi
+ms.collection: bap-ai-copilot
 ---
 # Add copilot for app users in model-driven apps (preview)
 

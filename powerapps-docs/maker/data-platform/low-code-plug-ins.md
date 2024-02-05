@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 11/10/2023
+ms.date: 01/22/2024
 ms.custom: template-how-to
 contributors:
 - denise-msft
@@ -285,6 +285,16 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
    Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
    ```
 - Plug-ins that use connectors can only output results from specific fields. Due to this, you need to map specific primitive values from the connector response to output values.
+
+### Low-code plugins that have custom connectors limitation
+
+If you have low-code plugins with custom connectors, the custom connectors must be imported first, before connection references or flows.
+
+If your environment doesn’t contain the custom connector in a solution, import a separate solution that only includes the custom connector. Do this import before you import the actual solution. You need to do this first because Azure must register the custom connector before the other solution components can be imported.
+
+If you import a solution that contains custom connectors and flows, Azure isn't able to register the custom connector while it's registering your connection references or flows. This also applies to connection references for the custom connector that wasn't previously imported in a separate solution. If Azure didn't register your custom connector, the import fails, or you aren't able to start the import.
+
+More information: [Create custom connectors in solutions: Known limitations](/connectors/custom-connectors/customconnectorssolutions#known-limitations)
 
 ## See also
 

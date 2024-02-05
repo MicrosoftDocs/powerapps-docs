@@ -7,6 +7,8 @@ ms.custom:
 ms.topic: article
 author: mduelae 
 ms.author: mkaur
+ms.collection: 
+    - bap-ai-copilot
 ms.reviewer:
 
 ---
