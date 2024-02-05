@@ -252,50 +252,50 @@ For example, the following query returns all account records with no contacts.
 
 ## Use advanced link types
 
-The following link entity types do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. That provides more advanced capabilities that can be useful for improving query performance or defining more complex queries.
+The following link entity types do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. These types provides more advanced capabilities you can use to improve query performance and define more complex queries.
 
 |Name|Description|
 |---------|---------|
-|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]<br />[More details](#exists) below.|
-|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]<br />[More details](#in) below.|
-|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]<br />[More details](#matchfirstrowusingcrossapply) below.|
+|`exists`|[!INCLUDE [link-type-exists-description](reference/includes/link-type-exists-description.md)]|
+|`in`|[!INCLUDE [link-type-in-description](reference/includes/link-type-in-description.md)]|
+|`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]|
 
-### exists
+### Use `exists` or `in` link types
 
-This link type produces an [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) condition in the `where` clause following this pattern:
-``` sql
-exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)
-```
+`exists` and `in` are variants of `inner` that use different conditions ([EXISTS](/sql/t-sql/language-elements/exists-transact-sql) and [IN](/sql/t-sql/language-elements/in-transact-sql) respectively) in the `where` clause so that multiple copies of the parent row aren't returned in the results. Neither of these return the column values of the link entity rows.
 
-This is equivalent to the `inner` type except it only returns the parent row at most once and doesn't return the column values of the link entity rows. This can be useful when multiple copies of the parent row in the results are not necessary.
+This table shows the generic patterns both of these link types apply:
 
-Using this link type can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent (which requires returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row if the `inner` type is used). This can improve performance of the query.
+:::row:::
+   :::column span="":::
+      **exists**
+      ```sql
+      exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)
+      ```
+   :::column-end:::
+   :::column span="":::
+      **in**
+      ```sql
+      parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)
+      ```
+   :::column-end:::
+:::row-end:::
 
-It may also allow the query engine to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `inner` join.
+Using these link types can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent (which requires returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row if the `inner` type is used). This can improve performance of the query.
 
-### in
+These types may also allow the query engine to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `inner` join.
 
-This link type produces an [IN](/sql/t-sql/language-elements/in-transact-sql) condition in the `where` clause following this pattern:
-``` sql
-parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)
-```
-
-This is equivalent to the `inner` type except it only returns the parent row at most once and doesn't return the column values of the link entity rows. This can be useful when multiple copies of the parent row in the results are not necessary.
-
-Using this link type can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent (which requires returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row if the `inner` type is used). This can improve performance of the query.
-
-It may also allow the query engine to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `inner` join.
-
-### matchfirstrowusingcrossapply
+### Use `matchfirstrowusingcrossapply` link type
 
 This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
+
 ``` sql
 select <...>
 from parentEntity
 cross apply (select top 1 <...> from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)
 ```
 
-This is equivalent to the `outer` type except it only returns the parent row at most once, however, unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist (but the parent row is returned even if there are no matching rows in the linked entity). This can be useful when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
+This is equivalent to the `outer` type except it only returns the parent row at most once. Unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
 
 ## Limitations
 
