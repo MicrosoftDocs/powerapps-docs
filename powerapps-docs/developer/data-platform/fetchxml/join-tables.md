@@ -270,13 +270,19 @@ This table shows the generic patterns both of these link types apply:
    :::column span="":::
       **exists**
       ```sql
-      exists (select linkEntity.Id from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)
+      exists (
+         select linkEntity.Id
+         from linkEntity
+         where parentEntity.LinkTo = linkEntity.LinkFrom
+         <additional filters>)
       ```
    :::column-end:::
    :::column span="":::
       **in**
       ```sql
-      parentEntity.LinkTo in (select linkEntity.LinkFrom from linkEntity <additional filters>)
+      parentEntity.LinkTo 
+      in (select linkEntity.LinkFrom from linkEntity
+      <additional filters>)
       ```
    :::column-end:::
 :::row-end:::
@@ -292,7 +298,11 @@ This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#usi
 ``` sql
 select <...>
 from parentEntity
-cross apply (select top 1 <...> from linkEntity where parentEntity.LinkTo = linkEntity.LinkFrom <additional filters>)
+cross apply (
+   select top 1 <...> 
+   from linkEntity 
+   where parentEntity.LinkTo = linkEntity.LinkFrom 
+   <additional filters>)
 ```
 
 This is equivalent to the `outer` type except it only returns the parent row at most once. Unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
