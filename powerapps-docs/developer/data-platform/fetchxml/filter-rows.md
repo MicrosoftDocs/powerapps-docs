@@ -172,7 +172,7 @@ There are limitations on these kinds of filters:
 
 ## Filter on values in related records
 
-To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following [Filter Link Type](reference/link-entity.md#filter-link-types) `link-type` attributes:
+To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
 
 |Name|Description|
 |---------|---------|
@@ -181,7 +181,64 @@ To filter on values in related records without returning those values, use a [li
 |`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
 |`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
 
-[Learn more about filter link types](reference/link-entity.md#filter-link-types)
+When you use these link types inside of a [filter element](filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
+
+Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
+
+The following query using the `any` link type returns records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record:
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter type='and'>
+      <link-entity name='account' 
+       from='primarycontactid' 
+       to='contactid' 
+       link-type='any'>
+      </link-entity>
+    </filter>
+  </entity>
+</fetch>
+```
+
+This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record _or_ have the [Contact.StateCode picklist column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter type='or'>
+      <link-entity name='account' 
+       from='primarycontactid' 
+       to='contactid' 
+       link-type='any'>
+      </link-entity>
+      <condition attribute='statecode' operator='eq' value='1' />
+    </filter>
+  </entity>
+</fetch>
+```
+
+This query uses a `link-entity` of type `not all` to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) **not** equal to 'Contoso':
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter type='and'>
+      <link-entity name='account' 
+       from='primarycontactid' 
+       to='contactid' 
+       link-type='not all'>
+        <filter type='and'>
+          <condition attribute='name' operator='eq' value='Contoso' />
+        </filter>
+      </link-entity>
+    </filter>
+  </entity>
+</fetch>
+```
 
 ## Condition limits
 

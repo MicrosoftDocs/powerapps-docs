@@ -222,11 +222,9 @@ Some columns can be used in `from` and `to` attributes but may result in poor pe
 
 ## Find records not in a set
 
-<!-- Summarizes this article: https://learn.microsoft.com/power-apps/developer/data-platform/use-fetchxml-left-outer-join-query-records-not-in -->
-
 You can use FetchXml to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
 
-You can perform a left outer join in FetchXML by using the `entityname` attribute as a condition operator. The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
+You can perform a left outer join in FetchXML by using the `entityname` attribute in a [condition element](reference/condition.md). The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
 
 
 For example, the following query returns all account records with no contacts.
@@ -280,8 +278,9 @@ This table shows the generic patterns both of these link types apply:
    :::column span="":::
       **in**
       ```sql
-      parentEntity.LinkTo 
-      in (select linkEntity.LinkFrom from linkEntity
+      parentEntity.LinkTo
+      in (select linkEntity.LinkFrom
+      from linkEntity
       <additional filters>)
       ```
    :::column-end:::

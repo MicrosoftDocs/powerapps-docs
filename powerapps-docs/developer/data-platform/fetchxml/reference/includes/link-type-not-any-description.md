@@ -1,1 +1,1 @@
-Restricts results to parent rows with no matching rows in the linked entity.
+Use this within a [filter element](../filter.md). Restricts results to parent rows with no matching rows in the linked entity.

@@ -166,77 +166,14 @@ Use `link-type` to apply filters on the records returned. The following table de
 |---------|---------|
 |`inner`|Default. Restricts results to rows with matching values in both tables.|
 |`outer`|Includes results from the parent element that don't have a matching value.|
-|`any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-any-description](includes/link-type-any-description.md)]|
-|`not any`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)]|
-|`all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-all-description](includes/link-type-all-description.md)]|
-|`not all`|A [Filter Link Type](#filter-link-types). [!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)]|
+|`any`|[!INCLUDE [link-type-any-description](includes/link-type-any-description.md)] [Learn to use `any` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`not any`|[!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)][Learn to use `not any` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`all`|[!INCLUDE [link-type-all-description](includes/link-type-all-description.md)][Learn to use `all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`not all`|[!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)][Learn to use `not all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
 |`exists`|[!INCLUDE [link-type-exists-description](includes/link-type-exists-description.md)]|
 |`in`|[!INCLUDE [link-type-in-description](includes/link-type-in-description.md)]|
 |`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](includes/link-type-matchfirstrowusingcrossapply-description.md)]|
 
-#### Filter Link Types
-
-Use these types inside of a [filter element](filter.md). These filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
-
-Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
-
-The following query using the `any` link type returns records from the [contact](../../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record:
-
-``` xml
-<fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='any'>
-      </link-entity>
-    </filter>
-  </entity>
-</fetch>
-```
-
-This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../../reference/entities/contact.md) that _either_ are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record _or_ have the [Contact.StateCode picklist column](../../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
-
-``` xml
-<fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='or'>
-      <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='any'>
-      </link-entity>
-      <condition attribute='statecode' operator='eq' value='1' />
-    </filter>
-  </entity>
-</fetch>
-```
-
-This query uses a `link-entity` of type `not all` to return records from the [contact](../../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) **not** equal to 'Contoso':
-
-``` xml
-<fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='not all'>
-        <filter type='and'>
-          <condition attribute='name' operator='eq' value='Contoso' />
-        </filter>
-      </link-entity>
-    </filter>
-  </entity>
-</fetch>
-```
-
-<!-- TODO: Show FetchXML equivalent of OData Lambda operator examples
-https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/query-data-web-api#lambda-operator-examples -->
 
 ## Parent elements
 
