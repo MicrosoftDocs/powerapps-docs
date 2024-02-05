@@ -74,7 +74,7 @@ Follow these steps to enable or disable **Copilot** for your environment.
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Select one of the following options:
-   - To turn it one, set the toggle to **On** for **Copilot**.
+   - To turn it on, set the toggle to **On** for **Copilot**.
    - To turn it off, set the toggle to **Off** for **Copilot**.
 
 
