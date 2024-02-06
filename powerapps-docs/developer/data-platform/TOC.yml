@@ -85,6 +85,11 @@
       items:
         - name: Overview
           href: fetchxml/overview.md
+          items:
+            - name: Retrieve data
+              href: fetchxml/retrieve-data.md
+            - name: Sample Code
+              href: fetchxml/sample.md
         - name: Select columns
           href: fetchxml/select-columns.md
         - name: Join tables
@@ -127,10 +132,7 @@
             href: fetchxml/reference/order.md  
           - name: value
             href: fetchxml/reference/value.md
-        - name: Retrieve data
-          href: fetchxml/retrieve-data.md
-        - name: Sample Code
-          href: fetchxml/sample.md
+
     - name: Quick find
       href: quick-find.md
     - name: "Use SQL to query data"
