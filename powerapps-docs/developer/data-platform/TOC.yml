@@ -50,11 +50,8 @@
       items:
         - name: Overview
           href: fetchxml/overview.md
-          items:
-            - name: Retrieve data
-              href: fetchxml/retrieve-data.md
-            - name: Sample code
-              href: fetchxml/sample.md
+        - name: Retrieve data
+          href: fetchxml/retrieve-data.md
         - name: Select columns
           href: fetchxml/select-columns.md
         - name: Join tables
@@ -97,6 +94,8 @@
             href: fetchxml/reference/order.md  
           - name: value
             href: fetchxml/reference/value.md
+        - name: Sample code
+          href: fetchxml/sample.md
     - name: Bulk Operation messages
       href: bulk-operations.md
       items:
