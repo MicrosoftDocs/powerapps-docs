@@ -1,6 +1,6 @@
 ---
 title: Set an app as a startup app (preview)
-description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
+description: Learn how to set an app as a startup app for mobile experience in Power Apps mobile app.
 ms.date: 2/5/2024
 ms.topic: overview
 ms.component: pa-user
