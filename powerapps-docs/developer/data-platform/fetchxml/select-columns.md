@@ -167,7 +167,7 @@ How you get these values depends on whether you use the SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
-The `OutputFetchRequest` sample method described in [Sample code](overview.md#sample-code) uses data from the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collection, so the results of the query look like this:
+The `OutputFetchRequest` sample method described in [FetchXml Sample code](sample.md) uses data from the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collection, so the results of the query look like this:
 
 ```text
  --------------------------------------------------------------------------------------------------

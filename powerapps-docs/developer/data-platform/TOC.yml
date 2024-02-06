@@ -130,7 +130,7 @@
         - name: Retrieve data
           href: fetchxml/retrieve-data.md
         - name: Sample Code
-          href: fetchxml/sample-code.md
+          href: fetchxml/sample.md
     - name: Quick find
       href: quick-find.md
     - name: "Use SQL to query data"
