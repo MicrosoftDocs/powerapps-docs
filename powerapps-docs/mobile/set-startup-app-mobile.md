@@ -47,19 +47,19 @@ Users can mark any canvas or model-driven app as a startup app in two ways:
 
 If a user opens the same app for seven days, a suggestion appears, at the top of the home page, when they close the app.  
 
-1. **View the startup app suggestion.**
+1. View the startup app suggestion.
 
    You might see an in-app suggestion, asking users if they want to open the app as a Power Apps mobile startup app.
 
    :::image type="content" source="media/set-startup-app-mobile/startup-app-suggestion.png" alt-text="Screenshot showing the notification ":::
 
-2. **Set the start up app.**
+2. Set the start up app.
 
    Tap on **Set** to set the app as the startup. The user sees a success message that confirms the app is set to open as the startup app.
 
    :::image type="content" source="media/set-startup-app-mobile/success-message-after-tap.png" alt-text="Screenshot that shows the success message that appears after you tap Set.":::
 
-3. **Confirm success with the startup app icon.**
+3. Confirm success with the startup app icon.
 
    If an app is successfully marked as the startup app, an icon appears next to the app title on the home page.
 
@@ -77,7 +77,7 @@ If a user opens the same app for seven days, a suggestion appears, at the top of
 
 ## Set a startup app from the **Details** page
 
-### Set a startup app
+To set a startup app from the **Details** page, follow these steps.
 
 1. Tap the **Open at startup** icon on the app **Details** page.
 
@@ -91,7 +91,7 @@ If a user opens the same app for seven days, a suggestion appears, at the top of
 
    :::image type="content" source="media/set-startup-app-mobile/usage-message-from-details-page.png" alt-text="Screenshot that shows usage details for offline scenarios in a message.":::
 
-### Reset a startup app
+## Reset a startup app
 
 If an app is already marked as the startup app, the app **Details** page shows a **Remove from startup** icon.
 
