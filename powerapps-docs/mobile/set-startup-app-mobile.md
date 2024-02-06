@@ -109,10 +109,7 @@ If an app is already marked as the startup app, the app **Details** page shows a
 
 ## Known limitations
 
-1. Only canvas and model driven apps are eligible for this feature.
-
-1. This feature works only on iOS and Android devices.
-
-1. Users can set only one app as the startup app.
-
-1. Only end users can set a startup app.
+- Only canvas and model driven apps are eligible for this feature.
+- This feature works only on iOS and Android devices.
+- Users can set only one app as the startup app.
+- Only end users can set a startup app.
