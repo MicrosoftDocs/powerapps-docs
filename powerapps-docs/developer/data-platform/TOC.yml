@@ -126,7 +126,11 @@
           - name: order
             href: fetchxml/reference/order.md  
           - name: value
-            href: fetchxml/reference/value.md         
+            href: fetchxml/reference/value.md
+        - name: Retrieve data
+          href: fetchxml/retrieve-data.md
+        - name: Sample Code
+          href: fetchxml/sample-code.md
     - name: Quick find
       href: quick-find.md
     - name: "Use SQL to query data"
