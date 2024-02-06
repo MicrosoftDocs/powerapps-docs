@@ -53,7 +53,7 @@
           items:
             - name: Retrieve data
               href: fetchxml/retrieve-data.md
-            - name: Sample Code
+            - name: Sample code
               href: fetchxml/sample.md
         - name: Select columns
           href: fetchxml/select-columns.md
