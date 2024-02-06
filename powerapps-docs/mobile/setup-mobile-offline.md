@@ -88,7 +88,7 @@ A table needs to be enabled for offline to add it to an offline profile. Some ta
 
 An app can only be linked to one profile. However, a profile can be shared between multiple apps. This can be useful when multiple apps share the same dataset, as it only needs to be downloaded once on the device and is shared between the apps.
 
-    :::image type="content" source="media/mobile-offline-image8.png" alt-text="Enable a table for offline use.":::
+:::image type="content" source="media/mobile-offline-image8.png" alt-text="Enable a table for offline use.":::
 
 ### Generate a default profile
 
