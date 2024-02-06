@@ -1,5 +1,5 @@
 ---
-title: Set an app as a startup app
+title: Set an app as a startup app (preview)
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
 ms.date: 2/5/2024
 ms.topic: overview
@@ -14,7 +14,9 @@ searchScope:
   - "Power Apps"
 ---
 
-# Set an app as a startup app
+# Set an app as a startup app (preview)
+
+[!INCLUDE [preview-banner](../../shared/preview-includes/preview-banner.md)]
 
 Users can set an app as a startup app in Power Apps mobile app. This feature is available for the iOS and Android versions of Power Apps mobile app.
 
@@ -22,6 +24,8 @@ Users can mark any canvas or model-driven app as a startup app in two ways:
 
 - [From an in-app suggestion](#set-a-startup-app-from-a-suggestion)
 - [On the app **Details** page](#set-a-startup-app-from-the-details-page)
+
+[!INCLUDE [preview-banner](../../shared/preview-includes/preview-note.md)]
 
 ## Benefits of setting a startup app
 
