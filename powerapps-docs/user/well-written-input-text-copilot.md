@@ -14,17 +14,15 @@ ms.collection:
     - bap-ai-copilot 
 search.audienceType: 
   - enduser
-
 ---
 
-# Draft well-written, input text with Copilot (preview)
+# Draft well-written input text with Copilot (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
 You can use Copilot to quickly generate well-written text to use as input text in text boxes in canvas apps. Using Copilot saves time because you won’t have to worry about creating text that meets grammar rules. Copilot is especially helpful for users who are using apps that aren’t in their native language. 
 
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly jot down ideas in a text box without worrying about format and grammar. Copilot corrects errors in grammar and eloquently refines your ideas. You can also change the tone and length of the output to fit the scenario.
-
 
 ## Use this feature
 
@@ -55,7 +53,7 @@ Makers can turn off this feature on a per-app basis within app settings using th
 Power Platform admins can turn off this feature on a per-environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
 
    ```powershell
-   $Set-EnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled false
+   $Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
    ```
    
 
