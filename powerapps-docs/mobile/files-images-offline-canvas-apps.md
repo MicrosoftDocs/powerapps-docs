@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: article
-ms.date: 12/05/2023
+ms.date: 2/6/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -21,37 +21,55 @@ searchScope:
 
 [This article is prerelease documentation and is subject to change.]
 
-This article explains how to configure files and images in offline canvas apps.
+This article explains how to configure files and images in a Power Apps table for offline canvas apps.
 
 > [!Important]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Prerequisite: View column properties for a file or image
+## Prerequisites
+
+- Have an existing canvas Power App. To create one, see [Build an app](/maker/canvas-apps/getting-started#build-an-app).
+- Have an exsiting table in your app or create one.
+
+### View column properties for a file or image
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left side panel, select **Tables**.
+1. In the navigation menu, select **Tables**.
 
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+   For example, when you create a new table, you see options to set the **Display name** and **Data type**.
 
-   > [!div class="mx-imgBorder"]
-   >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
+   :::image type="content" source="media/files-images-offline-canvas-apps/new-table.png" alt-text="Screenshot that shows how you can choose the Display name and Data type when creating a new table.":::
+
+   In an existing table the **Name** and **Type** columns represent the **Display name** and **Data type**, respectively.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/existing-table.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
+
+1. Once you select a table from the **Table** column, you see the properties card of that table.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/table-properties.png" alt-text="Screenshot that shows the Properties card of a selected table.":::
+
+1. You can select **Properties** from the **Table properties** card to edit the table if needed.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/edit-properties.png" alt-text="Screenshot that shows the pane that appears when you select Properties on the Table properties card.":::
 
 ## Turn on support for file and image columns in Dataverse offline feature
 
-1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), select **Apps** from the navigation menu.
 
-1. Select your canvas app, and then select **Edit**.
+1. Select your canvas app to go into **Editing** mode.
 
-1. Select **Settings**.
+1. Select **Settings** from the navigation menu.
 
 1. Select **Upcoming features**, and then select the **Preview** tab.
 
 1. Turn on the **Enable support for file/image column in Dataverse offline** option.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/enable-dataverse-support.png" alt-text="Screenshot that shows how to enable Dataverse support from Settings." lightbox="media/files-images-offline-canvas-apps/enable-dataverse-support.png":::
 
 In an offline-enabled canvas app, you can either allow the files and images to be downloaded **on view**, which is the default option or **on sync**. We recommend that you download files and images on sync if you don't expect to download a large number of files or images.
 
