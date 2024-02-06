@@ -7,6 +7,7 @@ ms.topic: tutorial
 author: joel-lindstrom
 ms.author: matp
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 # Create a model-driven app that has an account table page
 

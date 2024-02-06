@@ -1,6 +1,6 @@
 ---
-title: Configure mobile offline profiles for files and images
-description: Learn how to configure mobile offline profiles for files and images.
+title: Configure mobile offline profiles for files and images| Microsoft Docs
+description: Configure mobile offline profiles for files and images.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
@@ -20,15 +20,13 @@ searchScope:
 
 To work with file and image columns in offline mode, you need to add the corresponding columns to the offline profile.
 
-Follow the steps in this article, to configure a mobile offline profile that has a table with a column where **Data type** is set to **File** or **Image**.
+This article helps you configure a mobile offline profile that has a table with a column where **Data type** is set to **File** or **Image**.
 
 ## View column properties for a file or image
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left side panel, select **Tables**.
-
-    [!include [left nav](../includes/left-navigation-pane.md)]
+1. In the navigation menu, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)]
   
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
@@ -39,7 +37,7 @@ Follow the steps in this article, to configure a mobile offline profile that has
 
 ## Add file and image columns to mobile offline
 
-Adding the column where **Data Type** is set to **File** or **Image** in your mobile offline profile enables offline access to files and images.
+Add the column where **Data Type** is set to **File** or **Image** to your mobile offline profile to make files and images available in offline mode.
 
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 
@@ -55,9 +53,7 @@ Adding the column where **Data Type** is set to **File** or **Image** in your mo
 
 1. Select the table that contains the file or image column to enable for offline, and then select **Edit** from the **More actions** button.
 
-1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image**.  
-
-    The columns are grouped by **Files** or **Images**
+1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image**  (the columns are grouped by **Files** or **Images**).
 
 1. Select **Save**.
 

@@ -12,6 +12,7 @@ ms.topic: faq
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
+ms.collection: bap-ai-copilot
 ---
 
 # FAQ about using Copilot in the rich text editor
