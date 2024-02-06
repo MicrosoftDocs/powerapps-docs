@@ -48,6 +48,10 @@ Initially, defining a virtual table is the same as defining a custom table: you 
 
 In this example, a corresponding virtual table data source would also be provided to supply user and connection information for the external database.
 
+## Security roles
+
+Like any other table in Dataverse, you need to add table priveledges to security roles for the users to see your virtual table data. In addition to virtual table priveledges, enable read privelege on Connection Reference table to the security role.
+
 ## Limitations of virtual tables
 
 Following are the limitations in virtual tables that must be considered.
