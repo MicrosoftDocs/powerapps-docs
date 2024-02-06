@@ -26,7 +26,7 @@ When you're in read-only mode the command bar, add new screen, and edit control 
 
 Legend
 
-1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
+1. The command bar displays the names and icons of other makers who are working on the app and are making changes. 
 1. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
 
 ## How copresence works
@@ -37,7 +37,14 @@ The maker that opens the app first has editing control. If a second user tries t
 
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
-You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When you see this notification, consider refreshing the app to get the latest version.
+You might be working on the app, or you're inactive, but once someone else saves a change to the app, a notification appears letting you know that another maker made changes. When you get the notification, refresh the app to get the latest version.
+
+## Inactive during editing
+
+When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can to become the editor. 
+
+If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
+
 
 ## Live updates (experimental)
 

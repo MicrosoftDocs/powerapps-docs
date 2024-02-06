@@ -187,9 +187,6 @@ additionalContent:
         - title: Power Pages
           summary: Design, host, and administer secure, modern, and low-code business websites.
           url: /power-pages
-        - title: Power Virtual Agents
-          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
-          url: /power-virtual-agents
         - title: Dynamics 365
           summary: Empower your organization with the next generation of CRM and ERP applications.
           url: /dynamics365/
