@@ -24,6 +24,15 @@ You can use Copilot to quickly generate well-written text to use as input text i
 
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly jot down ideas in a text box without worrying about format and grammar. Copilot corrects errors in grammar and eloquently refines your ideas. You can also change the tone and length of the output to fit the scenario.
 
+> [!IMPORTANT]
+> - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability may be subject to usage limits or capacity throttling.
+> - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in the process of rolling out, and may not be available in your region yet. 
+> - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+
 ## Use this feature
 
 1. Insert your cursor into a multiline text box or rich text editor in a canvas app.
@@ -56,16 +65,6 @@ Power Platform admins can turn off this feature on a per-environment basis using
    $Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
    ```
    
-
-> [!IMPORTANT]
-> - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
-> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability may be subject to usage limits or capacity throttling.
-> - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out, and may not be available in your region yet. 
-> - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-
 ## Known issue
 
 **Error**: There was a problem using this description. Try again.
