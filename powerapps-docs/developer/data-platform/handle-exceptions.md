@@ -1,7 +1,7 @@
 ---
 title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
-ms.date: 04/03/2022
+ms.date: 02/05/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -41,7 +41,9 @@ When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> excep
 
 ## Unexpected errors
 
-However, when any exception occurs in the plug-in code for a synchronous step, the operation will be cancelled and rolled back whether you throw an `InvalidPluginExecutionException` or not. `InvalidPluginExecutionException` is the only exception that provides you with the ability to control what exception message will be displayed to the user. This is particularly true in the case of model-driven apps used by Dynamics 365 solutions.
+However, when any exception occurs in the plug-in code for a synchronous step, the pipeline operation being processed in the database transaction will be cancelled and rolled back whether you throw an `InvalidPluginExecutionException` or not. `InvalidPluginExecutionException` is the only exception that provides you with the ability to control what exception message will be displayed to the user. This is particularly true in the case of model-driven apps used by Dynamics 365 solutions.
+
+Take a look at the available <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor%2A> constructors to see what kind of data you can pass back to the platform.
 
 > [!TIP]
 > We recommend that you catch any error and throw an `InvalidPluginExecutionException` exception so you can control what is displayed to the user. This may simply be "`An unexpected error occurred`", but you could also add some information that will help the administrator troubleshoot the issue. This way, you have some control. If you allow other types of exceptions to bubble up, the error will be presented as an `IsvUnExpected` error with the message `An unexpected error occurred from ISV code.`, which is not very helpful.
