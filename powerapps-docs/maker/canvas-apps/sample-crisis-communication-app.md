@@ -14,7 +14,7 @@ search.audienceType:
 contributors:
   - mduelae
   - matthewbolanos
-  - kumarvivek
+  - mduelae
 ---
 
 # Set up and learn about the Crisis Communication sample app in Power Apps
