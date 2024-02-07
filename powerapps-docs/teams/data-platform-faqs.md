@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
-ms.author: kvivek
-ms.reviewer: kvivek
+ms.author: mkaur
+ms.reviewer: mkaur
 contributors:
-  - kvivek
+  - mkaur
   - mduelae
 ---
 # FAQs for Dataverse for Teams 

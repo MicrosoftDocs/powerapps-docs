@@ -1,7 +1,7 @@
 ---
 title: Create an app to edit tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
-author: denisem-msft
+author: denise-msft
 
 ms.topic: tutorial
 ms.custom: canvas
@@ -12,7 +12,7 @@ ms.author: denisem
 search.audienceType: 
   - maker
 contributors:
-  - denisem-msft
+  - denise-msft
   - mduelae
 ---
 
