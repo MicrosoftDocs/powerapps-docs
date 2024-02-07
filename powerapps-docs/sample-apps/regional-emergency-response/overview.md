@@ -7,7 +7,7 @@ ms.topic: overview
 ms.custom: 
 ms.date: 05/06/2020
 ms.author: pankar
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 ---
 # Regional Government Emergency Response and Monitoring - Power Platform solution for state and local governments
 

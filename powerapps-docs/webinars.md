@@ -1,17 +1,17 @@
 ---
 title: Power Apps webinars | Microsoft Docs
 description: Power Apps webinars
-author: KumarVivek
+author: tapanm-msft
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/28/2022
-ms.author: kvivek
-ms.reviewer: kvivek
+ms.author: tapanm
+ms.reviewer: tapanm
 ms.subservice: common
 searchScope:
   - "Power Apps"
 contributors:
-  - kumarvivek
+  - tapanm-msft
 ---
 # Power Apps webinars
 
