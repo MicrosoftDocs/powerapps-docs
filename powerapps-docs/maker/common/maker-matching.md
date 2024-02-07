@@ -7,7 +7,6 @@ ms.author: mkaur
 ms.reviewer: mkaur
 ms.topic: how-to
 ms.subservice: common
-manager: kvivek
 ms.custom: bap-template
 search.audienceType: 
   - maker, admin
