@@ -23,10 +23,10 @@ searchScope:
 
 This article explains how to configure files and images in a Power Apps table for offline canvas apps.
 
-> [!Important]
+> [!IMPORTANT]
 >
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - File and image use in offline canvas apps is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -41,21 +41,9 @@ This article explains how to configure files and images in a Power Apps table fo
 
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-   For example, when you create a new table, you see options to set the **Display name** and **Data type**.
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
 
-   :::image type="content" source="media/files-images-offline-canvas-apps/new-table.png" alt-text="Screenshot that shows how you can choose the Display name and Data type when creating a new table.":::
-
-   In an existing table the **Name** and **Type** columns represent the **Display name** and **Data type**, respectively.
-
-   :::image type="content" source="media/files-images-offline-canvas-apps/existing-table.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
-
-1. Once you select a table from the **Table** column, you see the properties card of that table.
-
-   :::image type="content" source="media/files-images-offline-canvas-apps/table-properties.png" alt-text="Screenshot that shows the Properties card of a selected table.":::
-
-1. You can select **Properties** from the **Table properties** card to edit the table if needed.
-
-   :::image type="content" source="media/files-images-offline-canvas-apps/edit-properties.png" alt-text="Screenshot that shows the pane that appears when you select Properties on the Table properties card.":::
+   :::image type="content" source="media/files-images-offline-canvas-apps/offline-file-images-1.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
 
 ## Turn on support for file and image columns in Dataverse offline feature
 
@@ -71,86 +59,83 @@ This article explains how to configure files and images in a Power Apps table fo
 
    :::image type="content" source="media/files-images-offline-canvas-apps/enable-dataverse-support.png" alt-text="Screenshot that shows how to enable Dataverse support from Settings." lightbox="media/files-images-offline-canvas-apps/enable-dataverse-support.png":::
 
-In an offline-enabled canvas app, you can either allow the files and images to be downloaded **on view**, which is the default option or **on sync**. We recommend that you download files and images on sync if you don't expect to download a large number of files or images.
+## Download options
 
-## Download files and images on view
+In an offline-enabled canvas app, there are two ways to download files and images:
+
+- **On view**: Downloaded when you view them—the default option.
+- **On sync**: Downloaded during offline sync when device is connected.
+
+### Download files and images on view
 
 When files and images are configured to download **on view**, the content is downloaded on the device when the user opens a file or when an image is presented to the user. Files and images are downloaded when the device is connected to the network and can be used afterward without connectivity.
 
 This mode is enabled by default without any specific configuration.
 
-## Download files and images on sync
+If you want to keep this default, then you don't need to proceed with this article.
 
-When files and images are configured to download **on sync**, files and images are downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified in the application when the download of the files and images is completed.
+### Download files and images on sync
 
-To configure automatic download of files and images on sync, create a mobile offline profile in the Power Platform admin center and edit it to include files and images. To learn how to create a new mobile offline profile and select it from your app, see [Create a mobile offline profile](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile).
+When files and images are configured to download **on sync**, they're downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified when the download of the files and images is completed. **On sync** is recommended if you don't need to download a large number of files or images.
 
-### Add image columns to mobile offline
+The remainder of this article helps you configure on sync.
 
-Adding both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile enables offline access to images.
+## Configure on sync
+
+### Prerequisites - mobile offline profile
+
+To configure the automatic download of files and images on sync, you need to  [create a mobile offline profile](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) in the Power Platform admin center.
+
+### Enable offline access to images and files
+
+You can add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile by configuring the settings of your environment.
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-1. In the left side panel, select **Environments**.
+1. Select **Environments** from the navigation menu.
 
-1. Choose an environment and then select **Settings**.
+1. Choose an environment and then select **Settings** on the menu bar.
 
-1. Expand **Users + permissions** and then select **Mobile configuration**.
+1. Expand **Users + permissions**, then select **Mobile configuration**.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/mobile-configuration.png" alt-text="Screenshot that shows where the mobile configuration setting is located in your environment settings.":::
 
 1. Select a mobile offline profile to edit it.
 
 1. In the **Data available offline** section, select **Add table**.
+
+1. Proceed with adding [image columns](#add-image-columns-to-mobile-offline-with-image-descriptor) and [file columns](#add-file-columns-to-mobile-offline-with-fileattachment).
+
+#### Add image columns to mobile offline with Image Descriptor
+
+In your mobile configuration setting, you can add the **Image Descriptor** table to enable image downloads.
 
 1. Select **Image Descriptor** and then select **Next**.
 
+   :::image type="content" source="media/files-images-offline-canvas-apps/select-image-descriptor.png" alt-text="Screenshot that shows where to select the Image Descriptor table." lightbox="media/files-images-offline-canvas-apps/select-image-descriptor.png":::
+
 1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-1. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the following screenshot for the **DemoTable1** and **DemoTable3** tables).
+1. Expand **Relationships** and select **Column name: Display name** for each column where **Data type** is set to **Image**. In this example, we select the unnamed column names from the **DemoTable1** and **DemoTable3** tables.
 
-    > [!div class="mx-imgBorder"]
-    > ![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
+   :::image type="content" source="media/offline-file-images-2.png" alt-text="Screenshot that shows the Image Descriptor table settings.":::
   
 1. Select **Save**.
 
-1. In the **Data available offline** section, select **Add table**.
+#### Add file columns to mobile offline with FileAttachment
+
+In your mobile configuration setting, you can add a **FileAttachment** table to enable file downloads.
 
 1. Select **FileAttachment** and then select **Next**.
 
-1. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Add FileAttachment table.](media/mobile-offline-edit-image.png "Add FileAttachment table")
-
-1. Select **Save**.
-
-### Add file columns to mobile offline
-
-Adding the **FileAttachment** tables in your mobile offline profile enables offline access to files.
-
-1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
-
-1. In the left side panel, select **Environments**.
-
-1. Choose an environment and then select **Settings**.
-
-1. Expand **Users + permissions**  and then select **Mobile configuration**.
-
-1. Select a mobile offline profile to edit it.
-
-1. In the **Data available offline** section, select **Add table**.
-
-1. Select **FileAttachment** and then select **Next**.
-
-   > [!div class="mx-imgBorder"]
-    >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
+   :::image type="content" source="media/offline-file-images-4.png" alt-text="Screenshot that shows how to add the FileAttachment table.":::
 
 1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-1. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the following screenshot for the **DemoTable3** table).
+1. Expand **Relationships** and select **Column name: My column name** for each column where **Data type** is set to **File**. In this example we add **Column name: MyFile** from the **DemoTable3** table.
 
-      Don't select **Column name: Regarding.**.
+   _Don't_ select **Column name: Regarding.**.
 
-    > [!div class="mx-imgBorder"]
-    >![Edit FileAttachment table.](media/offline-file-images-9.png "Edit FileAttachment table.")
+   :::image type="content" source="media/offline-file-images-9.png" alt-text="Screenshot that shows how to edit the FileAttachment table.":::
 
 1. Select **Save**.
