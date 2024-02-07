@@ -7,7 +7,7 @@ ms.custom: Focus-center
 ms.date: 09/06/2022
 ms.subservice: guidance
 ms.author: lucamino
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 ---
 
 # Co-development governance

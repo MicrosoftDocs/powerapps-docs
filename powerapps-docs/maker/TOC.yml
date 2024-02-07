@@ -2286,7 +2286,7 @@
   - name: For admins
     items:
     - name: Security in Dataverse
-      href: /power-platform/admin/wp-security-cds
+      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
