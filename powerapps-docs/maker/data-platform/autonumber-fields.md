@@ -12,7 +12,7 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: kvivek
+ms.author: matp
 ms.reviewer: Mattp123
 ms.suite: 
 ms.tgt_pltfrm: 
