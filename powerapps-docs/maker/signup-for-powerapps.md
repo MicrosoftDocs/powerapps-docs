@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.collection: get-started
 ms.date: 07/14/2022
 ms.author: alaug
-ms.reviewer: kvivek
+ms.reviewer: mkaur
 contributors:
   - mduelae
   - alaug

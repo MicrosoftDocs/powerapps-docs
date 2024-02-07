@@ -6,10 +6,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 12/04/2022
 ms.author: angieandrews
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 contributors:
   - v-aangie
-  - kumarvivek
+  - tapanm-msft
 ---
 # Use AI Builder in Power Apps
 
