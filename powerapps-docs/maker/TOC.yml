@@ -1855,8 +1855,6 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Terminology changes
-      href: ./portals/terminology-changes.md
     - name: Create and manage sites
       items:
         - name: Create a site using the older add-on
@@ -1867,68 +1865,18 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing sites
           href: ./portals/manage-existing-portals.md
-    - name: Build using legacy studio
-      items:
-        - name: Studio overview
-          href: ./portals/portal-designer-anatomy.md
-        - name: Create and manage webpages
-          href: ./portals/create-manage-webpages.md
-        - name: Customize web pages
-          items:
-            - name: WYSIWYG editor overview
-              href: ./portals/compose-page.md
-            - name: Add sections
-              href: ./portals/add-sections.md
-            - name: Add Components
-              items:
-                - name: Add text
-                  href: ./portals/add-text.md
-                - name: Add image
-                  href: ./portals/add-image.md
-                - name: Add IFrame
-                  href: ./portals/add-iframe.md
-                - name: Add form
-                  href: ./portals/add-form.md
-                - name: Add list
-                  href: ./portals/add-list.md
-                - name: Add breadcrumb
-                  href: ./portals/add-breadcrumb.md
-                - name: Add custom menu
-                  href: ./portals/add-custom-menu.md
-                - name: Use code editor
-                  href: ./portals/use-code-editor.md
-                - name: Add Power BI
-                  href: ./portals/add-powerbi.md
-                - name: Add a chatbot
-                  href: ./portals/add-chatbot.md
-        - name: Work with templates
-          href: ./portals/work-with-templates.md
-        - name: Work with themes
-          items:
-            - name: Basic themes
-              href: ./portals/theme-overview.md
-            - name: Edit CSS
-              href: ./portals/edit-css.md
     - name: Sites as Progressive Web Apps
       items:
         - name: Overview
           href: ./portals/progressive-web-apps.md
         - name: Build Progressive Web Apps
           href: ./portals/build-progressive-web-apps.md
-    - name: Supported browsers for studio
-      href: ./portals/supported-browser.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create and show site content
       href: ./portals/configure/create-show-portal-content.md
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Edit site using site content editor
-      items:
-         - name: Get started with the portal content editor
-           href: ./portals/portal-content-editor.md
-         - name: Edit page content using portal content editor
-           href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
     - name: Customize the Microsoft Entra B2C user interface
@@ -1939,8 +1887,6 @@
           href: ./portals/add-powerbi.md
         - name: Add Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
-    - name: FAQ about legacy Adxstudio v7
-      href: ./portals/legacy-portal-faq.yml
 - name: Dataverse
   items:
   - name: Dataverse
