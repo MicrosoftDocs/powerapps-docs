@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.collection: get-started
 ms.date: 05/06/2021
 ms.subservice: teams
-ms.author: kvivek
+ms.author: mkaur
 ms.reviewer: matp
 contributors:
   - mattp123
