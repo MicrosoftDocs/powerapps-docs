@@ -30,8 +30,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 ## Prerequisites
 
-- Have an existing canvas Power App. To create one, see [Build an app](/maker/canvas-apps/getting-started.md#build-an-app).
-- Have an exsiting table in your app or create one.
+- Have an existing canvas with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
 
 ### View column properties for a file or image
 
@@ -39,7 +38,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 1. In the navigation menu, select **Tables**.
 
-1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)] 
 
 1. Under **Schema**, select **Columns**.
   
