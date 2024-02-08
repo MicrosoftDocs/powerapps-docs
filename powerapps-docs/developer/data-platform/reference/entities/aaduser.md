@@ -1,7 +1,7 @@
 ---
-title: "aaduser table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the aaduser table/entity."
-ms.date: 10/27/2023
+title: "Microsoft Entra ID (aaduser)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Microsoft Entra ID (aaduser)  table/entity."
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,12 +11,12 @@ search.audienceType:
   - developer
 ---
 
-# aaduser table/entity reference
+# Microsoft Entra ID (aaduser)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Virtual entity that represents AAD user
+Virtual entity that represents Microsoft Entra ID
 
 **Added by**: Metadata Extension Solution
 
@@ -37,8 +37,8 @@ Virtual entity that represents AAD user
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|aadusers|
-|DisplayCollectionName|AAD Users|
-|DisplayName|AAD User|
+|DisplayCollectionName|Microsoft Entra IDs|
+|DisplayName|Microsoft Entra ID|
 |EntitySetName|aadusers|
 |IsBPFEntity|False|
 |LogicalCollectionName|aadusers|
@@ -79,8 +79,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of an aad user.|
-|DisplayName|AAD user id|
+|Description|Unique identifier of a Microsoft Entra ID.|
+|DisplayName|Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -93,8 +93,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates if the Account of an AAD User is enabled.|
-|DisplayName|AAD User Account Enabled|
+|Description|Indicates if the Account of an Microsoft Entra ID is enabled.|
+|DisplayName|Microsoft Entra ID Account Enabled|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|accountenabled|
@@ -196,8 +196,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|A unique identifer for AAD User|
-|DisplayName|A unique identifer for AAD User|
+|Description|A unique identifer for Microsoft Entra ID|
+|DisplayName|A unique identifer for Microsoft Entra ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -393,7 +393,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the AAD user was created.|
+|Description|Date and time when the Microsoft Entra ID was created.|
 |DisplayName|Created Date Time|
 |Format|DateAndTime|
 |IsValidForForm|True|

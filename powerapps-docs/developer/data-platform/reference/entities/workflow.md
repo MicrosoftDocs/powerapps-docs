@@ -1,7 +1,7 @@
 ---
 title: "Process (Workflow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Process (Workflow)  table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Category](#BKMK_Category)
 - [ClientData](#BKMK_ClientData)
 - [ConnectionReferences](#BKMK_ConnectionReferences)
+- [CreateMetadata](#BKMK_CreateMetadata)
 - [CreateStage](#BKMK_CreateStage)
 - [Definition](#BKMK_Definition)
 - [DeleteStage](#BKMK_DeleteStage)
@@ -149,7 +150,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_BillingContext"></a> BillingContext
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -232,7 +233,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ConnectionReferences"></a> ConnectionReferences
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -243,6 +244,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|connectionreferences|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_CreateMetadata"></a> CreateMetadata
+
+**Added by**: Power Automate Workflow Table Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Create metadata for this workflow.|
+|DisplayName|Create metadata|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|createmetadata|
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
@@ -271,7 +291,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Definition"></a> Definition
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -310,7 +330,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Dependencies"></a> Dependencies
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -344,7 +364,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_DesktopFlowModules"></a> DesktopFlowModules
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -362,7 +382,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_DynamicsSolutionContext"></a> DynamicsSolutionContext
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -425,7 +445,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Inputs"></a> Inputs
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -528,7 +548,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Metadata"></a> Metadata
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -606,7 +626,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Outputs"></a> Outputs
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -781,7 +801,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_SchemaVersion"></a> SchemaVersion
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -890,7 +910,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_SuspensionReasonDetails"></a> SuspensionReasonDetails
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -931,7 +951,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ThrottlingBehavior"></a> ThrottlingBehavior
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -1683,7 +1703,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ResourceContainer"></a> ResourceContainer
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -1701,7 +1721,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ResourceId"></a> ResourceId
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -1756,7 +1776,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_TrustedAccess"></a> TrustedAccess
 
-**Added by**: Power Automate Extensions Workflow Customization package Solution
+**Added by**: Power Automate Workflow Table Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -1842,11 +1862,14 @@ Listed by **SchemaName**.
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
 - [workflow_active_workflow](#BKMK_workflow_active_workflow)
 - [catalogassignment_workflow](#BKMK_catalogassignment_workflow)
+- [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
+- [workflow_componentversions](#BKMK_workflow_componentversions)
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
 - [workflow_desktopflowbinary_Process](#BKMK_workflow_desktopflowbinary_Process)
-- [msdyn_workflow_slaitem_customtimecalculationworkflowid](#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid)
+- [workflow_flowrun_Workflow](#BKMK_workflow_flowrun_Workflow)
 - [AIPluginOperation_Workflow_Workflow](#BKMK_AIPluginOperation_Workflow_Workflow)
+- [msdyn_workflow_slaitem_customtimecalculationworkflowid](#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid)
 - [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel)
 - [msdyn_workflow_msdyn_pmrecording](#BKMK_msdyn_workflow_msdyn_pmrecording)
@@ -2067,9 +2090,43 @@ Same as the [catalogassignment_workflow](catalogassignment.md#BKMK_catalogassign
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_workflow_componentversionnrddatasourceset"></a> workflow_componentversionnrddatasourceset
+
+**Added by**: Component Versioning Solution
+
+Same as the [workflow_componentversionnrddatasourceset](componentversionnrddatasource.md#BKMK_workflow_componentversionnrddatasourceset) many-to-one relationship for the [componentversionnrddatasource](componentversionnrddatasource.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|componentversionnrddatasource|
+|ReferencingAttribute|component|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|componentversionnrddatasourceset|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_workflow_componentversions"></a> workflow_componentversions
+
+**Added by**: Component Versioning Solution
+
+Same as the [workflow_componentversions](componentversion.md#BKMK_workflow_componentversions) many-to-one relationship for the [componentversion](componentversion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|componentversion|
+|ReferencingAttribute|component|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|componentversions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 Same as the [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_process) many-to-one relationship for the [flowsession](flowsession.md) table/entity.
 
@@ -2086,7 +2143,7 @@ Same as the [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_pr
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 Same as the [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_workflowbinary_Process) many-to-one relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
@@ -2103,7 +2160,7 @@ Same as the [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_wo
 
 ### <a name="BKMK_workflow_desktopflowbinary_Process"></a> workflow_desktopflowbinary_Process
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 Same as the [workflow_desktopflowbinary_Process](desktopflowbinary.md#BKMK_workflow_desktopflowbinary_Process) many-to-one relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
 
@@ -2118,21 +2175,21 @@ Same as the [workflow_desktopflowbinary_Process](desktopflowbinary.md#BKMK_workf
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
-### <a name="BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid"></a> msdyn_workflow_slaitem_customtimecalculationworkflowid
+### <a name="BKMK_workflow_flowrun_Workflow"></a> workflow_flowrun_Workflow
 
-**Added by**: Service Level Agreement (SLA) Extension Solution
+**Added by**: Power Automate Online Solution
 
-Same as the [msdyn_workflow_slaitem_customtimecalculationworkflowid](slaitem.md#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
+Same as the [workflow_flowrun_Workflow](flowrun.md#BKMK_workflow_flowrun_Workflow) many-to-one relationship for the [flowrun](flowrun.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|slaitem|
-|ReferencingAttribute|msdyn_customtimecalculationworkflowid|
+|ReferencingEntity|flowrun|
+|ReferencingAttribute|workflow|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_workflow_slaitem_customtimecalculationworkflowid|
+|ReferencedEntityNavigationPropertyName|workflow_flowrun_Workflow|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_AIPluginOperation_Workflow_Workflow"></a> AIPluginOperation_Workflow_Workflow
@@ -2148,6 +2205,23 @@ Same as the [AIPluginOperation_Workflow_Workflow](aipluginoperation.md#BKMK_AIPl
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|AIPluginOperation_Workflow_Workflow|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid"></a> msdyn_workflow_slaitem_customtimecalculationworkflowid
+
+**Added by**: Service Level Agreement (SLA) Extension Solution
+
+Same as the [msdyn_workflow_slaitem_customtimecalculationworkflowid](slaitem.md#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|slaitem|
+|ReferencingAttribute|msdyn_customtimecalculationworkflowid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_workflow_slaitem_customtimecalculationworkflowid|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

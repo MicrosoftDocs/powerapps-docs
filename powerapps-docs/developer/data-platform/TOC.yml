@@ -48,6 +48,11 @@
         href: ./search/legacy.md
     - name: Bulk Operation messages
       href: bulk-operations.md
+      items:
+      - name: Use UpsertMultiple (preview)
+        href: upsertmultiple.md
+      - name: Use DeleteMultiple (preview)
+        href: deletemultiple.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -188,7 +193,7 @@
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+        - name: Write plug-ins for CreateMultiple and UpdateMultiple
           href: write-plugin-multiple-operation.md
         - name: Quickstarts
           items:
@@ -374,9 +379,9 @@
           href: create-auto-number-attributes.md
         - name: Choices
           href: multi-select-picklist.md
-        - name: File columns
+        - name: File column definitions
           href: file-attributes.md
-        - name: Image columns
+        - name: Image column definitions
           href: image-attributes.md
         - name: Define custom state model transitions
           href: define-custom-state-model-transitions.md
@@ -410,7 +415,7 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
-- name: Work with elastic tables using code (preview)  
+- name: Work with elastic tables using code  
   items:
     - name: Overview of elastic tables
       href: elastic-tables.md

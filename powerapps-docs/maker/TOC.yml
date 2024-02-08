@@ -51,6 +51,10 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Draft well-written, input text with Copilot (preview)
+    href: ../user/well-written-input-text-copilot.md
+  - name: Use Copilot chat in canvas apps (preview)
+    href: ../user/copilot-chat-in-webplayer.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -149,6 +153,8 @@
         href: ../user/grid-filters-advanced.md
       - name: FAQ about grids and views
         href: ../user/faq-for-grids-views.md
+      - name: View and manage records in focused view
+        href: /dynamics365/sales/focused-view?context=/power-apps/maker/context
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service
@@ -428,6 +434,8 @@
               href: ./canvas-apps/add-gallery.md
             - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
+            - name: Best practices and recommendations
+              href: ./canvas-apps/gallery-best-practice.md
           - name: Add and configure a form
             items:
             - name: Add a form
@@ -1320,18 +1328,24 @@
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
+    - name: Overview
+      href: ./canvas-apps/create-performant-apps-overview.md
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
-    - name: Common sources of slow performance
-      href: ./canvas-apps/slow-performance-sources.md
-    - name: Common performance issues and resolutions
-      href: ./canvas-apps/common-performance-issue-resolutions.md
-    - name: Performance tips and best practices
-      href: ./canvas-apps/performance-tips.md
-    - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+    - name: Small data payload
+      href: ./canvas-apps/small-data-payloads.md
+    - name: Optimized query data patterns 
+      href: ./canvas-apps/optimized-query-data-patterns.md 
+    - name: Speed up app or page load
+      href: ./canvas-apps/fast-app-page-load.md
+    - name: Fast calculations
+      href: ./canvas-apps/efficient-calculations.md
+    - name: Other performance considerations
+      href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1785,6 +1799,12 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
+  - name: Optimize canvas app screens for devices
+    items:
+    - name: Optimize for devices overview (preview)
+      href: ../mobile/optimize-for-devices-overview.md
+    - name: Optimize for devices controls (preview)
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Mobile offline overview
@@ -1815,6 +1835,8 @@
       href: ../mobile/canvas-mobile-offline-overview.md
     - name: Set up mobile offline for canvas apps (preview)
       href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Configure files and images in offline canvas apps (preview)
+      href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Troubleshoot issues in the mobile app
@@ -1974,7 +1996,7 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables (preview)
+    - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
@@ -2054,7 +2076,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Fx formula columns (preview)
+    - name: Fx formula columns
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
@@ -2142,7 +2164,17 @@
         - name: View component dependencies
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
-          href: ./data-platform/EnvironmentVariables.md
+          items:
+          - name: Environment variables overview
+            href: ./data-platform/EnvironmentVariables.md
+          - name: Use data source environment variables in canvas apps
+            href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
+          - name: Use environment variables in Power Automate solution cloud flows
+            href: ./data-platform/EnvironmentVariables-power-automate.md
+          - name: Use Azure Key Vault secrets
+            href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
+          - name: Environment variables FAQ
+            href: ./data-platform/environment-variables-faq.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
@@ -2247,79 +2279,82 @@
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
     href: ./data-platform/import-translated-entity-field-text.md
-  - name: Azure Synapse Link
-    items:
-    - name: Azure Synapse Link Overview
-      href: ./data-platform/export-to-data-lake.md
-    - name: Create an Azure Synapse Link with a Synapse Workspace
-      href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Create an Azure Synapse Link with Data Lake
-      href: ./data-platform/azure-synapse-link-data-lake.md
-    - name: Advanced Configuration Settings
-      href: ./data-platform/azure-synapse-link-advanced-configuration.md
-    - name: Use managed identities for Azure
-      href: ./data-platform/azure-synapse-link-msi.md  
-    - name: Choose finance and operations data in Azure Synapse Link for Dataverse
-      href: ./data-platform/azure-synapse-link-select-FnO-data.md
-    - name: FAQ about Azure Synapse Link
-      href: ./data-platform/export-data-lake-faq.yml
-    - name: Application Lifecycle Management
-      items:
-      - name: Transport a configuration across environments
-        href: ./data-platform/azure-synapse-link-solution.md
-      - name: Environment Lifecycle Events
-        href: ./data-platform/azure-synapse-link-olc.md
-    - name: Analyze with Azure Synapse Analytics
-      items:
-      - name: Query data with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-serverless.md
-      - name: Query and analyze incremental updates
-        href: ./data-platform/azure-synapse-incremental-updates.md
-      - name: Create a view on your Dataverse data
-        href: ./data-platform/azure-synapse-link-create-view.md
-      - name: Transform data with Apache Spark
-        href: ./data-platform/azure-synapse-link-spark.md
-      - name: Copy Dataverse into Azure SQL
-        href: ./data-platform/azure-synapse-link-pipelines.md
-      - name: Visualize data with Power BI
-        href: ./data-platform/azure-synapse-link-powerbi.md
-      - name: Copy data to Dedicated SQL
-        href: ./data-platform/azure-synapse-link-dedicated.md
-      - name: Read Incremental Updates
-        href: ./data-platform/azure-synapse-link-incremental.md
-      - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md
-      - name: Export data in Delta Lake format
-        href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric (preview)
-        href: ./data-platform/azure-synapse-link-view-in-fabric.md
-    - name: Analyze in Azure Data Lake Storage Gen2
-      items:
-      - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Copy data from multiple data lakes to single data lake
-        href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
-      - name: Transform data from CSV to Parquet
-        href: ./data-platform/azure-synapse-link-parquet.md
-      - name: Analyze exported data with Power BI
-        href: ./data-platform/export-to-data-lake-data-powerbi.md
-      - name: Access Dataverse choices with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-choices-adf.md
-      - name: Access choice labels from Azure Synapse Link for Dataverse
-        href: ./data-platform/azure-synapse-link-choice-labels.md
-      - name: Access Dataverse choices with Power BI
-        href: ./data-platform/azure-synapse-link-choices-powerbi.md
-  - name: Security in Dataverse
-    href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
+  - name: For admins
+    items:
+    - name: Security in Dataverse
+      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Azure Synapse Link
+      items:
+      - name: Azure Synapse Link Overview
+        href: ./data-platform/export-to-data-lake.md
+      - name: Create an Azure Synapse Link with a Synapse Workspace
+        href: ./data-platform/azure-synapse-link-synapse.md
+      - name: Create an Azure Synapse Link with Data Lake
+        href: ./data-platform/azure-synapse-link-data-lake.md
+      - name: Advanced Configuration Settings
+        href: ./data-platform/azure-synapse-link-advanced-configuration.md
+      - name: Use managed identities for Azure
+        href: ./data-platform/azure-synapse-link-msi.md  
+      - name: Choose finance and operations data in Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-select-FnO-data.md
+      - name: FAQ about Azure Synapse Link
+        href: ./data-platform/export-data-lake-faq.yml
+      - name: Application Lifecycle Management
+        items:
+        - name: Transport a configuration across environments
+          href: ./data-platform/azure-synapse-link-solution.md
+        - name: Environment Lifecycle Events
+          href: ./data-platform/azure-synapse-link-olc.md
+      - name: Analyze with Azure Synapse Analytics
+        items:
+        - name: Query data with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-serverless.md
+        - name: Query and analyze incremental updates
+          href: ./data-platform/azure-synapse-incremental-updates.md
+        - name: Create a view on your Dataverse data
+          href: ./data-platform/azure-synapse-link-create-view.md
+        - name: Transform data with Apache Spark
+          href: ./data-platform/azure-synapse-link-spark.md
+        - name: Copy Dataverse into Azure SQL
+          href: ./data-platform/azure-synapse-link-pipelines.md
+        - name: Visualize data with Power BI
+          href: ./data-platform/azure-synapse-link-powerbi.md
+        - name: Copy data to Dedicated SQL
+          href: ./data-platform/azure-synapse-link-dedicated.md
+        - name: Read Incremental Updates
+          href: ./data-platform/azure-synapse-link-incremental.md
+        - name: Access Dataverse choices with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-choices-serverless.md
+        - name: Export data in Delta Lake format
+          href: ./data-platform/azure-synapse-link-delta-lake.md
+        - name: View Dataverse data in Microsoft Fabric
+          href: ./data-platform/azure-synapse-link-view-in-fabric.md
+        - name: Build apps using Fabric data (preview)
+          href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Analyze in Azure Data Lake Storage Gen2
+        items:
+        - name: Ingest exported data with Azure Data Factory
+          href: ./data-platform/export-to-data-lake-data-adf.md
+        - name: Copy data from multiple data lakes to single data lake
+          href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
+        - name: Transform data from CSV to Parquet
+          href: ./data-platform/azure-synapse-link-parquet.md
+        - name: Analyze exported data with Power BI
+          href: ./data-platform/export-to-data-lake-data-powerbi.md
+        - name: Access Dataverse choices with Azure Data Factory
+          href: ./data-platform/azure-synapse-link-choices-adf.md
+        - name: Access choice labels from Azure Synapse Link for Dataverse
+          href: ./data-platform/azure-synapse-link-choice-labels.md
+        - name: Access Dataverse choices with Power BI
+          href: ./data-platform/azure-synapse-link-choices-powerbi.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
     href: ./model-driven-apps/model-driven-app-community.md
-
 - name: Teams integration
   items:
   - name: Overview
@@ -2536,6 +2571,12 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+- name: AI plugins (preview)
+  items:
+  - name: AI plugins in Power Platform
+    href: common/ai-plugin.md 
+  - name: Building AI plugins for discovery by Copilot
+    href: common/build-ai-plugin-for-copilot.md   
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
@@ -2600,6 +2641,8 @@
     href: ./common/faqs-email-assist-rte.md
   - name: FAQ for Excel to table and app
     href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
 - name: Resources
   items:
   - name: Blog

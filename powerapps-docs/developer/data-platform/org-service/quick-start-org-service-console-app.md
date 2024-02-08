@@ -24,7 +24,7 @@ Your application will call the [IOrganizationService.Execute method](xref:Micros
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
 
-You can download the complete code sample from GitHub [quickstart-execute-request](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/).
+You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/README.md) for more details.
 
 ## Prerequisites
 
@@ -150,7 +150,7 @@ To see and understand the `IOrganizationService` interface a little better, try 
         //ServiceClient implements IOrganizationService interface
         IOrganizationService service = new ServiceClient(connectionString);
 
-        WhoAmIExample(service: serviceClient);
+        WhoAmIExample(service: service);
 
         // Pause the console so it does not close.
         Console.WriteLine("Press the <Enter> key to exit.");

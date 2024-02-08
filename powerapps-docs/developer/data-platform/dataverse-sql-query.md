@@ -137,7 +137,7 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
-The TDS endpoint can't be used with elastic tables. More information: [Elastic tables (Preview)](elastic-tables.md)
+The TDS endpoint can't be used with elastic tables. More information: [Elastic tables](elastic-tables.md)
 
 ## Troubleshooting connection problems
 
