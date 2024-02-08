@@ -103,25 +103,13 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 7. If you are not seeing any workspaces, you can ask the system to create a workspace. See NOTES section if you don't see the desired workspace.  
 8. All Dataverse tables where "Change tracking" property is enabled are linked to Fabric. If this environment is linked to Finance Operations, you can add Finance and operations tables later. See [manage links section](## Manage link to Fabric).
 9. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
-10. When complete, Fabric lakehouse opens in a separate browser tab. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+10. When complete, Fabric lakehouse opens in a separate browser tab. 
 
 > [!NOTE]
 >
-> You need to be a **Systems Administrator in the Dataverse environment**. You must also be an **Administrator of the Power BI workpace**. In case you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as your dataverse environment. 
-> 
-> The workspace you choose to link with Dataverse must be assigned to a premium of a fabric capacity in the same region as your Dataverse environment.
-> Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
-> 
-> If you choose to create a new workspace, the system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. The wizard might detect missing prerequisites including insufficient capacity at the beginning.
->
-> To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
->:::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
->
-> If you don’t have Power BI premium license or Fabric capacity within the same region, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
->
 > It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 >
-> Contact your Power BI administrator if you don't have required permissions to capacities
+> See [Troubleshooting common issues](#troubleshooting-common-issues) section if you are running into issues
 > 
 
 ## Manage link to Fabric
