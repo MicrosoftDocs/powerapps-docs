@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 11/13/2023
+ms.date: 02/08/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -20,7 +20,7 @@ To get the best performance when you run operations on multiple rows of a Micros
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
+- [`UpsertMultiple`](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 > [!NOTE]
@@ -137,6 +137,7 @@ Updates multiple records of the same type in a single request.
 
 Just like when you update individual records, the data you send with `UpdateMultiple` must contain only the values you're changing. Learn how to [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
 
+
 ##### [SDK for .NET](#tab/sdk)
 
 Uses the [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest).
@@ -221,6 +222,151 @@ OData-Version: 4.0
 
 Multiple records with the same primary key or alternate key values in the payload are not supported with `UpdateMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
 
+### UpsertMultiple
+
+Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not.`Upsert` operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
+
+##### [SDK for .NET](#tab/sdk)
+
+Uses the [UpsertMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest).
+
+This static `UpsertMultipleExample` method depends on a `samples_bankaccount`table that has a string column named 
+`samples_accountname` configured as an alternate key. It also has a string column named `samples_description`. This code uses the [Entity constructor that sets the keyName and keyValue](use-alternate-key-reference-record.md#using-the-entity-class) to specify the alternate key value.
+
+```csharp
+/// <summary>
+/// Demonstrates using UpsertMultiple with alternate key values
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+static void UpsertMultipleExample(IOrganizationService service)
+{
+    var tableLogicalName = "samples_bankaccount";
+    // samples_accountname string column is configued as an alternate key
+    // for the samples_bankaccount table
+    var altKeyColumnLogicalName = "samples_accountname";
+
+    // Create one record to update with upsert
+    service.Create(new Entity(tableLogicalName)
+    {
+        Attributes =
+        {
+            {altKeyColumnLogicalName, "Record For Update"},
+            {"samples_description","A record to update using Upsert" }
+        }
+    });
+
+    // Using the Entity constructor to specify alternate key
+    Entity toUpdate = new(
+            entityName: tableLogicalName,
+            keyName: altKeyColumnLogicalName,
+            // Same alternate key value as created record.
+            keyValue: "Record For Update");
+    toUpdate["samples_description"] = "Updated using Upsert";
+
+    Entity toCreate = new(
+        entityName: tableLogicalName,
+        keyName: altKeyColumnLogicalName,
+        keyValue: "Record For Create");
+    toCreate["samples_description"] = "A record to create using Upsert";
+
+    // Add the records to a collection
+    EntityCollection records = new()
+    {
+        EntityName = tableLogicalName,
+        Entities = { toUpdate, toCreate }
+    };
+
+    // Send the request
+    UpsertMultipleRequest request = new()
+    {
+        Targets = records
+    };
+
+    var response = (UpsertMultipleResponse)service.Execute(request);
+
+    // Process the responses:
+    foreach (UpsertResponse item in response.Results)
+    {
+        Console.WriteLine($"Record {(item.RecordCreated ? "Created" : "Updated")}");
+    }
+}
+```
+
+**Output:**
+
+```
+Record Updated
+Record Created
+```
+
+#### SDK examples
+
+Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
+
+##### [Web API](#tab/webapi)
+
+Uses the [UpsertMultiple action](xref:Microsoft.Dynamics.CRM.UpsertMultiple).
+
+> [!IMPORTANT]
+> 
+> - You must set the `@odata.type` property for each item in the `Targets` parameter.
+> - The `UpsertMultiple` action returns `204 NoContent`. The `UpsertMultipleResponse` complex type is not returned.
+
+The following example shows using the `UpsertMultiple` action with a standard table named `sample_example`.
+These requests identify the records using an alternate key defined using a column named `sample_keyattribute`. 
+The `@odata.id` annotation identifies the record with a relative URL as described in [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpsertMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Authorization: Bearer <access token>
+Content-Type: application/json; charset=utf-8
+Content-Length: 850
+
+{
+  "Targets": [
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_name": "sample record 0000001",
+      "@odata.id": "sample_examples(sample_keyattribute='0000001')"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_name": "sample record 0000002",
+      "@odata.id": "sample_examples(sample_keyattribute='0000002')"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_name": "sample record 0000003",
+      "@odata.id": "sample_examples(sample_keyattribute='0000003')"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_name": "sample record 0000004",
+      "@odata.id": "sample_examples(sample_keyattribute='0000004')"
+      
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+---
+
+#### Availability
+
+`UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`, but you can use them to detect whether a table supports both `CreateMultiple` and `UpdateMultiple`.
+
 
 ## Standard and elastic table usage
 
@@ -293,8 +439,6 @@ When you use the Web API to perform a bulk operation on an elastic table, you ne
 Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, `UpsertMultiple`, and `DeleteMultiple` messages.
 
 See also:
-
-- [UpsertMultiple Availability](upsertmultiple.md#availability)
 - [DeleteMultiple Availability](deletemultiple.md#availability)
 
 #### Availability with standard tables
