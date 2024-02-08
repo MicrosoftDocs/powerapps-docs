@@ -224,14 +224,13 @@ Multiple records with the same primary key or alternate key values in the payloa
 
 ### UpsertMultiple
 
-Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not.`Upsert` operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
+Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not. `Upsert` operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
 
 ##### [SDK for .NET](#tab/sdk)
 
 Uses the [UpsertMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest).
 
-This static `UpsertMultipleExample` method depends on a `samples_bankaccount`table that has a string column named 
-`samples_accountname` configured as an alternate key. It also has a string column named `samples_description`. This code uses the [Entity constructor that sets the keyName and keyValue](use-alternate-key-reference-record.md#using-the-entity-class) to specify the alternate key value.
+This static `UpsertMultipleExample` method depends on a `samples_bankaccount` table that has a string column named `samples_accountname` configured as an alternate key. It also has a string column named `samples_description`. This code uses the [Entity constructor that sets the keyName and keyValue](use-alternate-key-reference-record.md#using-the-entity-class) to specify the alternate key value.
 
 ```csharp
 /// <summary>
@@ -298,6 +297,8 @@ static void UpsertMultipleExample(IOrganizationService service)
 Record Updated
 Record Created
 ```
+
+Whether a record is created or updated in this example depends on whether records exist with the matching `sample_keyattribute` value. No data is returned to indicate whether a record was created or updated.
 
 #### SDK examples
 
@@ -366,6 +367,8 @@ OData-Version: 4.0
 #### Availability
 
 `UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`, but you can use them to detect whether a table supports both `CreateMultiple` and `UpdateMultiple`.
+
+These queries will not return results for the `UpsertMultiple` message. A table that supports both `CreateMultiple` and `UpdateMultiple` will support `UpsertMultiple`.
 
 #### Duplicate records in UpsertMultiple Targets parameter
 
@@ -588,6 +591,8 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 ### Not supported for use in plug-ins
 
 At this time, we don't support using bulk operation messages in plug-ins. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
+
+However, you *should* write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages as describe in [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 ## Troubleshooting common errors
 
