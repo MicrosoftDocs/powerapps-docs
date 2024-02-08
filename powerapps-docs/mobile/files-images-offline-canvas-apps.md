@@ -30,7 +30,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 ## Prerequisites
 
-- Have an existing canvas Power App. To create one, see [Build an app](/maker/canvas-apps/getting-started#build-an-app).
+- Have an existing canvas Power App. To create one, see [Build an app](/maker/canvas-apps/getting-started.md#build-an-app).
 - Have an exsiting table in your app or create one.
 
 ### View column properties for a file or image
@@ -43,7 +43,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
 
-   :::image type="content" source="media/files-images-offline-canvas-apps/offline-file-images-1.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
+   :::image type="content" source="media/offline-file-images-1.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
 
 ## Turn on support for file and image columns in Dataverse offline feature
 

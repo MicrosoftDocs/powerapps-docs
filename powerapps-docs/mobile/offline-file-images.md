@@ -18,7 +18,7 @@ searchScope:
 
 # Configure mobile offline profiles for files and images
 
-To work with file and image columns in offline mode, you need to add the corresponding columns to the offline profile.
+To work with file and image columns in offline mode, you need to add them to your mobile offline profile.
 
 This article helps you configure a mobile offline profile that has a table with a column where **Data type** is set to **File** or **Image**.
 
@@ -32,8 +32,7 @@ This article helps you configure a mobile offline profile that has a table with 
 
 1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
 
-   > [!div class="mx-imgBorder"]
-   >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
+   :::image type="content" source="media/offline-file-images-1.png" alt-text="Screenshot that shows the Data type image and the Maximum image size.in the image properties pane.":::
 
 ## Add file and image columns to mobile offline
 
