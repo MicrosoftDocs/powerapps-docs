@@ -28,7 +28,7 @@ This article helps you configure a mobile offline profile that has a table with 
 
 1. In the navigation menu, select **Tables**.
 
-1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)] 
 
 1. Under **Schema**, select **Columns**.
   
