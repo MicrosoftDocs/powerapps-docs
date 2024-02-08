@@ -39,25 +39,24 @@ This article explains how to configure files and images in a Power Apps table fo
 
 1. In the navigation menu, select **Tables**.
 
+1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+
+1. Under **Schema**, select **Columns**.
+  
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
 1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+   <br> For more information on columns, see [Columns overview](../maker/data-platform/fields-overview.md).
 
-   :::image type="content" source="media/offline-file-images-1.png" alt-text="Screenshot that shows the Name and Type column in an existing table.":::
 
 ## Turn on support for file and image columns in Dataverse offline feature
 
-1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), select **Apps** from the navigation menu.
-
-1. Select your canvas app to go into **Editing** mode.
-
-1. Select **Settings** from the navigation menu.
-
-1. Select **Upcoming features**, and then select the **Preview** tab.
-
-1. Turn on the **Enable support for file/image column in Dataverse offline** option.
-
-   :::image type="content" source="media/files-images-offline-canvas-apps/enable-dataverse-support.png" alt-text="Screenshot that shows how to enable Dataverse support from Settings." lightbox="media/files-images-offline-canvas-apps/enable-dataverse-support.png":::
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** in the left navigation pane.
+1. Select a canvas app and on the command bar select **Edit**.
+ <br> <br>This opens your app in editing mode in [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md).
+1. On the command bar, select **Settings** > **Upcoming features**.
+2. Select the **Preview** tab and set the **Enable support for file/image column in Dataverse offline** toggle to **On**.
 
 ## Download options
 
