@@ -590,9 +590,9 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### Not supported for use in plug-ins
 
-At this time, we don't support using bulk operation messages in plug-ins. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
+At this time, we don't support using bulk operation messages in plug-in code. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
 
-However, you *should* write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages as describe in [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
+However, you *should* write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages as described in [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 ## Troubleshooting common errors
 
