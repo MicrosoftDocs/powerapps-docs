@@ -218,9 +218,9 @@ OData-Version: 4.0
 
 ---
 
-#### Duplicate records in the payload
+#### Duplicate records in UpdateMultiple Targets parameter
 
-Multiple records with the same primary key or alternate key values in the payload are not supported with `UpdateMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
+Multiple records with the same primary key or alternate key values in the payload are not supported with `UpdateMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored. [This behavior is different from `UpsertMultiple`](#duplicate-records-in-upsertmultiple-targets-parameter).
 
 ### UpsertMultiple
 
@@ -366,6 +366,10 @@ OData-Version: 4.0
 #### Availability
 
 `UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`, but you can use them to detect whether a table supports both `CreateMultiple` and `UpdateMultiple`.
+
+#### Duplicate records in UpsertMultiple Targets parameter
+
+Multiple records with the same primary key or alternate key values in the payload are not supported with `UpsertMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, `UpsertMultiple` will return an error. [This behavior is different from `UpdateMultiple`](#duplicate-records-in-updatemultiple-targets-parameter).
 
 
 ## Standard and elastic table usage
