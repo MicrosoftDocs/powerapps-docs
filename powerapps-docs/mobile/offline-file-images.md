@@ -44,8 +44,7 @@ Add the column where **Data Type** is set to **File** or **Image** to your mobil
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** in the left navigation pane.
-1. Select a model-driven app and on the command bar select **Edit**. 
- <br> <br>This opens your app in editing mode in [model-driven app designer](../maker/model-driven-apps/app-designer-overview.md). 
+1. Select a model-driven app and on the command bar select **Edit**. This opens your app in editing mode in [model-driven app designer](../maker/model-driven-apps/app-designer-overview.md). 
 1. Select **Settings** > **General**.
 1. Set the toggle **Can be used offline** toggle to **On**.
 1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
