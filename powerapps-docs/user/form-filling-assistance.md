@@ -22,7 +22,7 @@ When you use model-driven apps on the web with the [New look](modern-fluent-desi
 
 ## Enable form filling assistance for your environment 
 
-The from filling assistance featuere needs needs to be turned on in [Power Platform admin center](https://admin.powerplatform.microsoft.com/) by going to Environments > [select an environment] > Settings > Product > Behavior. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+The from filling assistance feature needs to be turned on in [Power Platform admin center](https://admin.powerplatform.microsoft.com/) by going to Environments > [select an environment] > Settings > Product > Behavior. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 
 ## Using Form filling assistance 
