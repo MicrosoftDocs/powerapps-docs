@@ -12,7 +12,7 @@ ms.collection:
     - bap-ai-copilot 
 ---
 
-# FAQs about Form Filling Assistance
+# FAQs about form filling assistance
 
 These frequently asked questions (FAQs) describe the AI impact of Form Filling Assistance in model-driven apps.
 
