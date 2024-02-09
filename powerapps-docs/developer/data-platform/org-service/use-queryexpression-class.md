@@ -60,8 +60,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |---------|---------|
 |OptimizeForUnknown | Optimize For Unknown|
 |ForceOrder | Force Order |
-|Recompile &nbsp;(see note)| Recompile |
-|DisableRowGoal | use hint(‘Disable_Optimizer_RowGoal’) |
+|DisableRowGoal | use hint('Disable_Optimizer_RowGoal') |
 |EnableOptimizerHotfixes | use hint('ENABLE_QUERY_OPTIMIZER_HOTFIXES') |
 |LoopJoin | Loop Join |
 |MergeJoin | Merge Join |
@@ -69,9 +68,6 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion | MAXRECURSION number |
 |ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS | ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS |
-
-> [!IMPORTANT]
-> In general, the “Recompile” query hint should be avoided. This query hint will require extra computation and database resources for every execution of the query on the database. Please read Microsoft’s documentation on the “OPTION (RECOMPILE)” query hint, or work with Microsoft customer support, to find out more about the appropriate use cases of this query hint.
 
 More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
