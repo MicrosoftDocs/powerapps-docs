@@ -44,13 +44,13 @@ This article explains how to configure files and images in a Power Apps table fo
   
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image. For more information on columns, see [Columns overview](../maker/data-platform/fields-overview.md).
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image. For more information about columns, see [Columns overview](../maker/data-platform/fields-overview.md).
 
 
 ## Turn on support for file and image columns in Dataverse offline feature
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** in the left navigation pane.
+1. In the left navigation pane, select **Apps**.
 1. Select a canvas app and on the command bar select **Edit**. This opens your app in editing mode in [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md).
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. Select the **Preview** tab and set the **Enable support for file/image column in Dataverse offline** toggle to **On**.
