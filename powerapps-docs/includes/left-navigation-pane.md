@@ -1,1 +1,1 @@
-If the item isn’t in the left navigation pane, select […More](../maker/canvas-apps/intro-maker-portal.md#1--left-navigation-pane) and then select the item you want.
+If the item isn’t in the side panel pane, select […More](../maker/canvas-apps/intro-maker-portal.md#1--left-navigation-pane) and then select the item you want.
