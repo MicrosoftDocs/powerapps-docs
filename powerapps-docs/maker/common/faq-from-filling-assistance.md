@@ -1,6 +1,6 @@
 ---
 title: FAQs about Form Filling Assistance
-description: These FAQs provide information about the AI technology used in Form Filling Assistance with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+description: These FAQs provide information about the AI technology used in the Form Filling Assistance feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 2/09/2024
 ms.custom: 
   - responsible-ai-faqs
@@ -18,7 +18,7 @@ These frequently asked questions (FAQs) describe the AI impact of Form Filling A
 
 ## What is form filling assistance?  
 
-Form filling assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use. These suggestions are entirely optional, and do not get saved until the user explicitly accepts them. 
+Form filling assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use. These suggestions are entirely optional, and don't get saved until the user explicitly accepts them. 
 
 ## What can form filling assistance do?   
 
@@ -30,7 +30,7 @@ Help users fill forms more efficiently by providing optional suggestions based
 
 ## How was form filling assistance evaluated? What metrics are used to measure performance?  
 
-In our evaluations, we look at how good the suggestions are based on how often they are accepted in the form. We also look at how often suggestions are generated. Moreover, the suggestions are evaluated for satisfying Microsoft’s responsible AI principles. 
+In our evaluations, we look at how good the suggestions are based on how often they're accepted in the form. We also look at how often suggestions are generated. Moreover, the suggestions are evaluated for satisfying Microsoft’s responsible AI principles. 
 
 ## What are the limitations of form filling assistance? How can users minimize the impact of form filling assistance’s limitations when using the system?  
 
