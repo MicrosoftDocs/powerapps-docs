@@ -34,8 +34,7 @@ This article helps you configure a mobile offline profile that has a table with 
   
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
-   <br> For more information on columns, see [Columns overview](../maker/data-platform/fields-overview.md).
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image. For more information about columns, see [Columns overview](../maker/data-platform/fields-overview.md).
 
 ## Add file and image columns to mobile offline
 
@@ -43,7 +42,7 @@ Add the column where **Data Type** is set to **File** or **Image** to your mobil
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** in the left navigation pane.
+1. In the left navigation pane, select **Apps**.
 1. Select a model-driven app and on the command bar select **Edit**. This opens your app in editing mode in [model-driven app designer](../maker/model-driven-apps/app-designer-overview.md). 
 1. Select **Settings** > **General**.
 1. Set the toggle **Can be used offline** toggle to **On**.
