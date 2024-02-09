@@ -36,9 +36,9 @@ This article explains how to configure files and images in a Power Apps table fo
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left navigation menu, select **Tables**.
+1. In the left navigation menu, select **Tables**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)] 
 
-1. Select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)] 
+1. Select the table that has the columns you want to view. 
 
 1. Under **Schema**, select **Columns**.
   
