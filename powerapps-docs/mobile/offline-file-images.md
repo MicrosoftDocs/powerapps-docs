@@ -45,7 +45,7 @@ Add the column where **Data Type** is set to **File** or **Image** to your mobil
 1. In the left navigation pane, select **Apps**.
 1. Select a model-driven app and on the command bar select **Edit**. This opens your app in editing mode in [model-driven app designer](../maker/model-driven-apps/app-designer-overview.md). 
 1. Select **Settings** > **General**.
-1. Set the toggle **Can be used offline** toggle to **On**.
+1. Set the **Can be used offline** toggle to **On**.
 1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
 1. Find the table that contains the file or image column to enable for offline, and then select **Edit** from the **More actions** button.
 1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image**  (the columns are grouped by **Files** or **Images**).
