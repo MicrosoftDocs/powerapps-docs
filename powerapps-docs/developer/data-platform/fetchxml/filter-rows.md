@@ -174,13 +174,13 @@ There are limitations on these kinds of filters:
 
 To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
 
-[!div class="mx-tdCol2BreakAll"]
-|Name|Description|
-|---------|---------|
-|`any`|[!INCLUDE [link-type-any-description](reference/includes/link-type-any-description.md)]|
-|`not any`|[!INCLUDE [link-type-not-any-description](reference/includes/link-type-not-any-description.md)]|
-|`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
-|`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
+> [!div class="mx-tdCol2BreakAll"]
+> |Name|Description|
+> |---------|---------|
+> |`any`|[!INCLUDE [link-type-any-description](reference/includes/link-type-any-description.md)]|
+> |`not any`|[!INCLUDE [link-type-not-any-description](reference/includes/link-type-not-any-description.md)]|
+> |`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
+> |`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
 
 When you use these link types inside of a [filter element](reference/filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
 
