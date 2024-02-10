@@ -307,6 +307,8 @@ where exists (
 
 This query uses a `link-entity` of type `all` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
+#### [FetchXml](#tab/fetchxml)
+
 ``` xml
 <fetch>
   <entity name='contact'>
