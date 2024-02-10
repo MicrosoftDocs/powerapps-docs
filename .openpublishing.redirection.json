@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/upsertmultiple.md",
+      "redirect_url": "bulk-operations#upsertmultiple",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/quick-find-limit.md",
       "redirect_url": "quick-find",
       "redirect_document_id": "false"
