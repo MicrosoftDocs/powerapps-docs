@@ -167,9 +167,9 @@ Use `link-type` to apply filters on the records returned. The following table de
 |`inner`|Default. Restricts results to rows with matching values in both tables.|
 |`outer`|Includes results from the parent element that don't have a matching value.|
 |`any`|[!INCLUDE [link-type-any-description](includes/link-type-any-description.md)] [Learn to use `any` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
-|`not any`|[!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)][Learn to use `not any` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
-|`all`|[!INCLUDE [link-type-all-description](includes/link-type-all-description.md)][Learn to use `all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
-|`not all`|[!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)][Learn to use `not all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`not any`|[!INCLUDE [link-type-not-any-description](includes/link-type-not-any-description.md)] [Learn to use `not any` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`all`|[!INCLUDE [link-type-all-description](includes/link-type-all-description.md)] [Learn to use `all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
+|`not all`|[!INCLUDE [link-type-not-all-description](includes/link-type-not-all-description.md)] [Learn to use `not all` to filter values on related tables](../filter-rows.md#filter-on-values-in-related-records)|
 |`exists`|[!INCLUDE [link-type-exists-description](includes/link-type-exists-description.md)]|
 |`in`|[!INCLUDE [link-type-in-description](includes/link-type-in-description.md)]|
 |`matchfirstrowusingcrossapply`|[!INCLUDE [link-type-matchfirstrowusingcrossapply-description](includes/link-type-matchfirstrowusingcrossapply-description.md)]|
