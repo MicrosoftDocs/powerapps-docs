@@ -12,9 +12,9 @@ search.audienceType:
 ---
 # Filter rows using FetchXml
 
-Use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element to set conditions on the rows of data to return.
+To set conditions on the rows of data to return, use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element.
 
-Add one or more [condition elements](reference/condition.md) to the filter to set the conditions. The containing `filter` `type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
+To set the conditions, add one or more [condition elements](reference/condition.md) to the filter. The containing `filter` `type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
 
 Each `condition` has an `operator` attribute to evaluate a row column value. There are many [operator conditions](reference/operators.md) for you to choose from.
 
@@ -76,7 +76,7 @@ The previous query can also be represented using the `in` operator with a single
 
 ## Operator parameters
 
-Operators can require no parameters, a single parameter, or multiple parameters. This determines how you set the value to evaluate.
+Operators can require no parameters, a single parameter, or multiple parameters. The operator determines how you set the value to evaluate.
 
 ### No parameters
 
@@ -112,7 +112,7 @@ For example, you can use the `between` operator to evaluate a number to determin
 
 When you apply a `filter` within a [link-entity](reference/link-entity.md), the filter will be applied with the join unless you configure the filter to occur *after* the join.
 
-When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you may want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you are using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
+When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you might want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you're using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 
 ## Filter on column values in the same row
 
@@ -166,9 +166,9 @@ There are limitations on these kinds of filters:
   |[lt](reference/operators.md#lt)|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
   |[le](reference/operators.md#le)|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
 
-- Only two columns may be compared at a time
+- Only two columns can be compared at a time
 - Extended condition operations aren't supported. For example: `valueof='amount'+ 100`
-- The columns must be the same type. For example: You can't compare a string value with an number value.
+- The columns must be the same type. For example: You can't compare a string value with a number value
 
 ## Filter on values in related records
 
@@ -184,9 +184,15 @@ To filter on values in related records without returning those values, use a [li
 
 When you use these link types inside of a [filter element](reference/filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
 
-Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
+Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They don't allow returning column values from the link entity rows.
 
-This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that
+### Examples of filters on values in related records
+
+The following examples demonstrate filtering on values of related records. These examples include the equivalent SQL statements to help explain the behavior.
+
+#### Or filter with `link-type` `any`
+
+This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that:
 - _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
 - _or_ have the [Contact.StateCode picklist column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
 
@@ -227,7 +233,9 @@ where "contact0".statecode = 1
 
 ---
 
-This query uses the `not any` link type to return records from the [contact](../reference/entities/contact.md) table that is **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record may still be referenced by _account_ records with **other** _Name column_ values.
+#### `link-type` `not any`
+
+This query uses the `not any` link type to return records from the [contact](../reference/entities/contact.md) table that is **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -263,8 +271,11 @@ where not exists (
 
 ---
 
+#### `link-type` `not all`
+
 > [!NOTE]
 > The meaning of `all` and `not all` link types is the opposite of what the names might imply, and they are typically used with inverted filters:
+>
 > - A link entity of type `not all` is equivalent to `any` and returns parent records that have link entity records matching the filters.
 > - A link entity of type `all` returns parent records when some link entity records with a matching `from` column value exist but **none** of those link entity rows satisfy the additional filters defined inside of the [link-entity element](reference/link-entity.md).
 
@@ -304,6 +315,8 @@ where exists (
 ```
 
 ---
+
+#### `link-type` `all`
 
 This query uses a `link-entity` of type `all` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
@@ -348,14 +361,14 @@ where exists (
 
 ## Condition limits
 
-You can include no more than 500 total [condition](reference/condition.md) and  [link-entity](reference/link-entity.md) elements in a FetchXml query. Otherwise, you will see this error:
+You can include no more than 500 total [condition](reference/condition.md) and  [link-entity](reference/link-entity.md) elements in a FetchXml query. Otherwise, you see this error:
 
 > Name: `TooManyConditionsInQuery`<br />
 > Code: `0x8004430C`<br />
 > Number: `-2147204340`<br />
 > Message: `Number of conditions in query exceeded maximum limit.`
 
-You need to reduce the number of conditions to execute the query. You may be able to do this by using the [in operator](reference/operators.md#in) which can be used with numbers, unique identifiers, and strings up to 850 characters.
+You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the [in operator](reference/operators.md#in) that can be used with numbers, unique identifiers, and strings up to 850 characters.
 
 
 ## Next steps
