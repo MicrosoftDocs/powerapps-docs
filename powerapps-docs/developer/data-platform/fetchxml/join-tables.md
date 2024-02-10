@@ -264,27 +264,72 @@ The following link entity types do not directly correspond to T-SQL [JOIN operat
 
 This table shows the generic patterns both of these link types apply:
 
-:::row:::
-   :::column span="":::
-      **exists**
-      ```sql
-      exists (
-         select linkEntity.Id
-         from linkEntity
-         where parentEntity.LinkTo = linkEntity.LinkFrom
-         <additional filters>)
-      ```
-   :::column-end:::
-   :::column span="":::
-      **in**
-      ```sql
-      parentEntity.LinkTo
-      in (select linkEntity.LinkFrom
-      from linkEntity
-      <additional filters>)
-      ```
-   :::column-end:::
-:::row-end:::
+#### [FetchXml](#tab/fetchxml)
+
+**exists**
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <link-entity name='account' 
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='exists'>
+      <filter type='and'>
+        <condition attribute='statecode' operator='eq' value='1' />
+      </filter>
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+**in**
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <link-entity name='account' 
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='in'>
+      <filter type='and'>
+        <condition attribute='statecode' operator='eq' value='1' />
+      </filter>
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+#### [SQL](#tab/sql)
+
+**exists**
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".statecode = 1
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+**in**
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where "contact0".contactid in (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".statecode = 1)
+```
+
+---
 
 Using these link types can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent (which requires returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row if the `inner` type is used). This can improve performance of the query.
 
@@ -294,15 +339,41 @@ These types may also allow the query engine to only find the first matching link
 
 This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
 
-``` sql
-select <...>
-from parentEntity
-cross apply (
-   select top 1 <...> 
-   from linkEntity 
-   where parentEntity.LinkTo = linkEntity.LinkFrom 
-   <additional filters>)
+#### [FetchXml](#tab/fetchxml)
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <link-entity name='account' 
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='matchfirstrowusingcrossapply'>
+      <attribute name='accountid' />
+      <attribute name='name' />
+    </link-entity>
+  </entity>
+</fetch>
 ```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname",
+    "account1".accountid as "accountid",
+    "account1".name as "name" 
+from Contact as "contact0"
+cross apply (
+    select top 1
+        "account1".accountid as "accountid",
+        "account1".name as "name"
+    from Account as "account1"
+    where "contact0".contactid = "account1".primarycontactid
+  ) "account1"
+```
+
+---
 
 This is equivalent to the `outer` type except it only returns the parent row at most once. Unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
 
