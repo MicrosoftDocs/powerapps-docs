@@ -186,24 +186,11 @@ When you use these link types inside of a [filter element](reference/filter.md),
 
 Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They do not allow returning column values from the link entity rows.
 
-The following query using the `any` link type returns records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record:
+This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that
+- _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
+- _or_ have the [Contact.StateCode picklist column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
 
-``` xml
-<fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='any'>
-      </link-entity>
-    </filter>
-  </entity>
-</fetch>
-```
-
-This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record _or_ have the [Contact.StateCode picklist column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
+#### [FetchXml](#tab/fetchxml)
 
 ``` xml
 <fetch>
@@ -211,9 +198,12 @@ This query uses a `filter` of type `or` with a child `link-entity` of type `any`
     <attribute name='fullname' />
     <filter type='or'>
       <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='any'>
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='any'>
+        <filter type='and'>
+          <condition attribute='name' operator='eq' value='Contoso' />
+        </filter>
       </link-entity>
       <condition attribute='statecode' operator='eq' value='1' />
     </filter>
@@ -221,7 +211,25 @@ This query uses a `filter` of type `or` with a child `link-entity` of type `any`
 </fetch>
 ```
 
-This query uses a `link-entity` of type `not all` to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) **not** equal to 'Contoso':
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where "contact0".statecode = 1
+    or exists (
+        select "account1".primarycontactid
+        from Account as "account1"
+        where "account1".name = N'Contoso'
+            and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
+
+This query uses the `not any` link type to return records from the [contact](../reference/entities/contact.md) table that is **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record may still be referenced by _account_ records with **other** _Name column_ values.
+
+#### [FetchXml](#tab/fetchxml)
 
 ``` xml
 <fetch>
@@ -229,9 +237,9 @@ This query uses a `link-entity` of type `not all` to return records from the [co
     <attribute name='fullname' />
     <filter type='and'>
       <link-entity name='account' 
-       from='primarycontactid' 
-       to='contactid' 
-       link-type='not all'>
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='not any'>
         <filter type='and'>
           <condition attribute='name' operator='eq' value='Contoso' />
         </filter>
@@ -240,6 +248,101 @@ This query uses a `link-entity` of type `not all` to return records from the [co
   </entity>
 </fetch>
 ```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where not exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".name = N'Contoso' and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
+
+> [!NOTE]
+> The meaning of `all` and `not all` link types is the opposite of what the names might imply, and they are typically used with inverted filters:
+> - A link entity of type `not all` is equivalent to `any` and returns parent records that have link entity records matching the filters.
+> - A link entity of type `all` returns parent records when some link entity records with a matching `from` column value exist but **none** of those link entity rows satisfy the additional filters defined inside of the [link-entity element](reference/link-entity.md).
+
+This query uses a `link-entity` of type `not all` to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+
+#### [FetchXml](#tab/fetchxml)
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter type='and'>
+      <link-entity name='account' 
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='not all'>
+        <filter type='and'>
+          <condition attribute='name' operator='eq' value='Contoso' />
+        </filter>
+      </link-entity>
+    </filter>
+  </entity>
+</fetch>
+```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from  Account as "account1"
+    where "account1".name = N'Contoso'
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
+
+This query uses a `link-entity` of type `all` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+
+``` xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter type='and'>
+      <link-entity name='account' 
+         from='primarycontactid' 
+         to='contactid' 
+         link-type='all'>
+        <filter type='and'>
+          <condition attribute='name' operator='eq' value='Contoso' />
+        </filter>
+      </link-entity>
+    </filter>
+  </entity>
+</fetch>
+```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "contact0".contactid = "account1".primarycontactid
+) and not exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".name = N'Contoso'
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
 
 ## Condition limits
 
