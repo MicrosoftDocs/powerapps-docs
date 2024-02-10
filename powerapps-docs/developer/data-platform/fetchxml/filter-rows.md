@@ -174,6 +174,7 @@ There are limitations on these kinds of filters:
 
 To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
 
+[!div class="mx-tdCol2BreakAll"]
 |Name|Description|
 |---------|---------|
 |`any`|[!INCLUDE [link-type-any-description](reference/includes/link-type-any-description.md)]|
