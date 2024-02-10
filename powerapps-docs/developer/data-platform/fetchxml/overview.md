@@ -19,7 +19,7 @@ FetchXml is a proprietary XML based query language used to retrieve data from Da
 
 ## Compose a query
 
-All queries are based on a single table. When composing a query using FetchXml, the root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query will retrieve data from. The following example represents a simple FetchXml query:
+All queries are based on a single table. The root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query retrieves data from. The following example represents a simple FetchXml query:
 
 ```xml
 <fetch top='5'>
@@ -29,17 +29,17 @@ All queries are based on a single table. When composing a query using FetchXml, 
 </fetch>
 ```
 
-This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the [LogicalName](../org-service/entity-operations.md#entitylogicalname) of the table to set the [entity](reference/entity.md) `name` attribute.
+This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../reference/entities/account.md), using the [LogicalName](../org-service/entity-operations.md#entitylogicalname) of the table to set the [entity](reference/entity.md) `name` attribute.
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse will return up to 5000 rows.
+To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 rows.
 
 Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 
 ## Refine your query
 
-After you have selected the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.
+After you select the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.
 
 
 |Article|Task|
@@ -62,7 +62,7 @@ The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fet
 
 ## Use FetchXml as a message parameter
 
-You will also use FetchXml as a parameter for Dataverse messages such as the following:
+You also use FetchXml as a parameter for Dataverse operations such as the following messages:
 
 |Message Name|SDK for .NET Request class|Web API Operation|
 |---------|---------|---------|
