@@ -1,1 +1,1 @@
-Use this within a [filter element](../filter.md). Restricts results to parent rows where at least one row in the link entity with matching `from` column value does not satisfy the additional filters defined for this link entity. 
+Use this within a [filter element](../filter.md). Restricts results to parent rows with any matching rows in the linked entity. This link type is equivalent to `any` despite the name.
