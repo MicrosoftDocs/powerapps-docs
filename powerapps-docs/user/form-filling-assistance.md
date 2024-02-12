@@ -22,7 +22,7 @@ With Copilot assistance for filling forms for model-driven apps, users receive s
 
 ## Enable form filling assistance
 
-Copilot assistance is available in English only for model-driven apps on the web with [New look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. 
+Copilot assistance is available in English only for model-driven apps on the web with the [New look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. 
 
 This feature is rolling out gradually, which means some users have access before others.
 
