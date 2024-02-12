@@ -27,14 +27,14 @@ Copilot assistance is available for English language model-driven apps on the we
 To enable form filling assistance: 
 
 1. Enable either one of the two options: 
-  - [Monthly release channel](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/channel-change) (this feature is part of the February release) 
-  - [Early access](https://learn.microsoft.com/en-us/power-platform/admin/opt-in-early-access-updates) for 2024 release wave 1 
-2. Enable [Copilot setting](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot?source=docs#enable-copilot-for-model-driven-apps-feature-for-your-environment) in Power Platform Admin Center 
+  - [Monthly release channel](../maker/model-driven-apps/channel-change.md) (this feature is part of the February release) 
+  - [Early access](/power-platform/admin/opt-in-early-access-updates) for 2024 release wave 1 
+2. Enable [Copilot setting](../maker/model-driven-apps/add-ai-copilot?source=docs#enable-copilot-for-model-driven-apps-feature-for-your-environment) in Power Platform Admin Center 
 
 Note that this feature is rolling out gradually, which means some users will have access before others. To disable form fill assistance: 
 
-- Disable [Copilot setting](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot?source=docs#enable-copilot-for-model-driven-apps-feature-for-your-environment) in Power Platform Admin Center, or 
-- Disable either the [Early access](https://learn.microsoft.com/en-us/power-platform/admin/opt-in-early-access-updates) for 2024 release wave 1 or switch out of [Monthly release channel](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/channel-change) (depending on which option was selected for enablement above) 
+- Disable [Copilot setting](../maker/model-driven-apps/add-ai-copilot?source=docs#enable-copilot-for-model-driven-apps-feature-for-your-environment) in Power Platform Admin Center, or 
+- Disable either the [Early access](/power-platform/admin/opt-in-early-access-updates) for 2024 release wave 1 or switch out of [Monthly release channel](../maker/model-driven-apps/channel-change) (depending on which option was selected for enablement above) 
 
 If you would like to specifically disable form fill assistance only without disabling any of the above, please contact Microsoft.
 
