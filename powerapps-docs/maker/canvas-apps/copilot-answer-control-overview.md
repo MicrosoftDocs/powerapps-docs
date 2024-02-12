@@ -1,4 +1,25 @@
-﻿# Overview of Copilot answer control for Power Apps.
+---
+title: Overivew of Copilot answer control for canvas apps
+description: Use the Copilot answer control for canvas app.
+author: mduelae
+ms.topic: conceptual
+ms.custom: canvas
+ms.collection: 
+    - bap-ai-copilot
+    - get started
+ms.reviewer: mkaur
+ms.date: 2/13/2024
+ms.subservice: canvas-maker
+ms.author: arijitba
+search.audienceType: 
+  - maker
+contributors:
+  - mduelae
+---
+
+#  Use Copilot answer control for canvas apps (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 The Copilot answer control for Power Apps enables you Power Apps makers to set predefined questions that end users can quickly use to get generative answers through single click. This control has been optimized for mobile experiences and is powered by Microsoft Copilot.
 
