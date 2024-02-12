@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 06/10/2020
 ms.subservice: sample-apps
 ms.author: pankar
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 # Transfer data from Hospital to Regional System
