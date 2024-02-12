@@ -357,6 +357,51 @@ where exists (
         and "contact0".contactid = "account1".primarycontactid)
 ```
 
+``` tsql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "contact0".contactid = "account1".primarycontactid
+) and not exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".name = N'Contoso'
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+``` sql
+select 
+    [contact0].fullname as [fullname] 
+from Contact as [contact0] 
+where exists (
+    select [account1].primarycontactid
+    from Account as [account1]
+    where [contact0].contactid = [account1].primarycontactid
+) and not exists (
+    select [account1].primarycontactid
+    from Account as [account1]
+    where [account1].name = N'Contoso'
+        and [contact0].contactid = [account1].primarycontactid)
+```
+
+``` tsql
+select 
+    [contact0].fullname as [fullname] 
+from Contact as [contact0] 
+where exists (
+    select [account1].primarycontactid
+    from Account as [account1]
+    where [contact0].contactid = [account1].primarycontactid
+) and not exists (
+    select [account1].primarycontactid
+    from Account as [account1]
+    where [account1].name = N'Contoso'
+        and [contact0].contactid = [account1].primarycontactid)
+```
+
 ---
 
 ## Condition limits
