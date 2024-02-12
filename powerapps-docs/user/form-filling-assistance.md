@@ -37,9 +37,9 @@ Follow these steps to enable form filling assistance:
 
 The way you disable form fill assistance depends on how you enabled it. Make one of the following changes:
 
-Disable [Copilot setting](../maker/model-driven-apps/add-ai-copilot.md#enable-copilot-for-model-driven-apps-feature-for-your-environmentd) in Power Platform Admin Center 
-Disable [Early access](/power-platform/admin/opt-in-early-access-updates) for 2024 Release Wave 1.
-Switch out of [Monthly release channel](../maker/model-driven-apps/channel-change.md) 
+- Disable [Copilot setting](../maker/model-driven-apps/add-ai-copilot.md#enable-copilot-for-model-driven-apps-feature-for-your-environmentd) in Power Platform Admin Center 
+- Disable [Early access](/power-platform/admin/opt-in-early-access-updates) for 2024 Release Wave 1.
+- Switch out of [Monthly release channel](../maker/model-driven-apps/channel-change.md) 
 
 You need to contact Microsoft support to only disable form fill assistance without disabling any of the features listed above.
 
