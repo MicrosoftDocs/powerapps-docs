@@ -56,7 +56,8 @@ In the solution that we opened earlier, create a new table or find an existing t
 1. In the view designer, the following tasks can be performed:
 
    - To change the column filtering select the header of the column where the filter is required, and then in the dropdown list select **Filter by**.
-   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.  
+   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.
+       - You can configure multi-column sorts by holding Shift when selecting a sort option to add a sort condition to the set of the existing sorts.  
    - Configure column width by selecting and dragging the column to the desired position.
    - Reorder columns by dragging a column to the desired position.
     > [!NOTE]
