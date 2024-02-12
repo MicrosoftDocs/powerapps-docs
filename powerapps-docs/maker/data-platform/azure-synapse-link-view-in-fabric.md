@@ -6,14 +6,14 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/26/2024
+ms.date: 02/12/2024
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
 
 Microsoft Dataverse direct link to Microsoft Fabric enables organizations to extend their Power Apps and Dynamics 365 enterprise applications, and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and Power Apps data available in Microsoft OneLake, the built-in data lake for Microsoft Fabric.
 
-- No need to export data, build ETL pipelines, or use our partner integration tools.
+- No need to export data, build extract, transform, load (ETL) pipelines, or use our partner integration tools.
 - With shortcuts from Dataverse directly into OneLake, your data stays in Dataverse while authorized users get to work with data in Fabric.
 - Link data from all Dynamics 365 apps, including Dynamics 365 Finance and Operations apps.
 - Build Power Apps and automations to drive action from insights in OneLake.
@@ -32,12 +32,9 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 - A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
 
 - If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
-
-- You need to be a **Systems Administrator in the Dataverse environment**. You must also be an **Administrator of the Power BI workpace**. In case you want the system to create a Power BI workspace, you need to be a **Power BI Capacity Administrator or have contributor access** to a capacity within the same region as your dataverse environment. 
-
+- You must have the System Administrator security role in the Dataverse environment. You must also be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
->:::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
->
+   :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
 ## Link to Fabric from Power Apps
 
@@ -98,9 +95,9 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
 4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same region as your Dataverse environment, the wizard notifies you to get a capacity in the required region. 
-5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You will need to sign in and then save the connection to proceed.
+5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
 6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
-7. If you are not seeing any workspaces, you can ask the system to create a workspace. See NOTES section if you don't see the desired workspace.  
+7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](#troubleshooting-common-issues) if you don't see the desired workspace.  
 8. All Dataverse tables where "Change tracking" property is enabled are linked to Fabric. If this environment is linked to Finance Operations, you can add Finance and operations tables later. See [manage links section](## Manage link to Fabric).
 9. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
 10. When complete, Fabric lakehouse opens in a separate browser tab. 
@@ -109,8 +106,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 >
-> See [Troubleshooting common issues](#troubleshooting-common-issues) section if you are running into issues
-> 
+> Go to [Troubleshooting common issues](#troubleshooting-common-issues) for help resolving issues.
 
 ## Manage link to Fabric
 
@@ -200,9 +196,9 @@ If you experience an error message, here are suggestions to resolve the issue.
 
 | Error message                      | How to resolve                | 
 |:-----------------------------------|:------------------------------|
-| .. You need to get a Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> Also see [NOTES section for pre-requisites](## Link to Microsoft Fabric)  | 
-| ... Creation of Fabric workspace failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | You must be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as your dataverse environment. <br> Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1" <br> Verify with your Power BI Tenant admin that you have permissions to create workspaces. You can find this setting in Power BI Admin portal under **Tenant settings > workspace settings > Create workspaces**. <br> Also see [NOTES section for pre-requisites](## Link to Microsoft Fabric) <br> If the issue isn't resolved, contact Microsoft Customer Support with the provided reference ID |
-| Creation of Fabric lakehouse failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | Verify with your Power BI Tenant admin that you have permissions to create OneLake shortcuts. You can find this setting in Power BI Admin portal under **Tenant settings > oneLake settings > Users can access data stored in OneLake with apps expertnal to Fabric**. <br> Also see [NOTES section for pre-requisites](## Link to Microsoft Fabric) <br> If the issue isn't resolved after several retries, you can contact Microsoft Customer Support with the provided reference ID. |
+| .. You need to get a Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> Also see [NOTES section for prerequisites](## Link to Microsoft Fabric)  | 
+| ... Creation of Fabric workspace failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | You must be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as your Dataverse environment. <br> Currently, the system supports these premium capacity SKUs described in the [Prerequisites](#prerequisites). <br> Verify with your Power BI Tenant admin that you have permissions to create workspaces. You can find this setting in Power BI Admin portal under **Tenant settings > workspace settings > Create workspaces**. <br> If the issue isn't resolved, contact Microsoft Customer Support with the provided reference ID |
+| Creation of Fabric lakehouse failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | Verify with your Power BI Tenant admin that you have permissions to create OneLake shortcuts. You can find this setting in Power BI Admin portal under **Tenant settings > oneLake settings > Users can access data stored in OneLake with apps external to Fabric**. <br> More information: [Prerequisites](#prerequisites) <br> If the issue isn't resolved after several retries, you can contact Microsoft Customer Support with the provided reference ID. |
 | Your organization doesn't appear to have Microsoft Fabric. You can get a trial. | Contact your administrator or get a trial version of Microsoft Fabric. |
 |You need to get a trial version of Fabric to get started. | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting: [Fabric (preview) trial](/fabric/get-started/fabric-trial) |
 | You need to be a system administrator to link to Fabric. | You need the system administrator security role in Dataverse to perform this operation. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)  |
