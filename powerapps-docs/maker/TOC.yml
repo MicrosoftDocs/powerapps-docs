@@ -460,6 +460,8 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name:  Use Copilot answer control (preview)
+            href: ./canvas-app/copilot-answer-contorl.overview.md
           - name: "Add mixed reality controls"
             items:
             - name: Mixed reality controls
