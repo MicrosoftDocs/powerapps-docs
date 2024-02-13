@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 04/23/2020
 ms.subservice: sample-apps
 ms.author: pankar
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 ---
 # Hospital Emergency Response - Power Platform sample solution
 

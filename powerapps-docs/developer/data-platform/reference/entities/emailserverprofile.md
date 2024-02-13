@@ -1,7 +1,7 @@
 ---
 title: "EmailServerProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -123,8 +123,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|AAD ResourceId used for OAuth athentication scheme|
-|DisplayName|AAD ResourceId|
+|Description|Microsoft Entra resource ID used for OAuth athentication scheme|
+|DisplayName|Microsoft Entra resource ID|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -301,7 +301,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Without Credentials (Anonymous)||
 |5|Gmail OAuth||
 |6|Exchange Hybrid Modern Auth (HMA)||
-|7|Azure Active Directory OAuth||
+|7|OAuth with Microsoft Entra ID||
 
 
 
@@ -762,7 +762,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Without Credentials (Anonymous)||
 |5|Gmail OAuth||
 |6|Exchange Hybrid Modern Auth (HMA)||
-|7|Azure Active Directory OAuth||
+|7|OAuth with Microsoft Entra ID||
 
 
 

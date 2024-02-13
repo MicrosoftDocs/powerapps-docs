@@ -24,7 +24,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run this sample:
+These are required to build and run this sample:
 
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
@@ -40,7 +40,7 @@ The following is required to build and run this sample:
 
    |Property|Instructions  |
    |---------|---------|
-   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find this. |
+   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find the Url for your environment. |
    |`UserPrincipalName`|Replace the placeholder `you@yourorg.onmicrosoft.com` value with the UPN value you use to access the environment.|
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
@@ -53,7 +53,7 @@ The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/Co
 
 ## Demonstrates
 
-This sample has 4 regions:
+This sample has four regions:
 
 ### Section 0: Create sample records
 
@@ -73,7 +73,7 @@ Operations:
 1. Update the record `telephone1` column value.
 1. Attempt to retrieve the record again setting the `If-None-Match` header with the `initialAcctETagVal` value.
 
-   Request succeeds becaused the initial ETag value doesn't match anymore.
+   Request succeeds because the initial ETag value doesn't match anymore.
 
 1. Store the new ETag value as `updatedAcctETagVal`.
 
@@ -91,7 +91,7 @@ Operations:
 
 1. Attempt to update the original account setting the `If-Match` header with the `updatedAcctETagVal` value.
 
-   Request succeeds becaused the ETag value matches the current value for the record.
+   Request succeeds because the ETag value matches the current value for the record.
 
 ### Section 3: Delete sample records
 
@@ -99,7 +99,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ## Clean up
 
-By default this sample will delete all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you will be prompted to decide if you want to delete the records.
+By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you'll be prompted to decide if you want to delete the records.
 
 ### See also
 
@@ -110,7 +110,7 @@ By default this sample will delete all the records created in it. If you want to
 [Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 
