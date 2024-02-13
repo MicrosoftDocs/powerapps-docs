@@ -24,10 +24,10 @@ contributors:
 Makers can use the Copilot answer control to set predefined questions that end users can use to get generative answers with a single click. The control is optimized for mobile users and is powered by Microsoft Copilot.
 
 :::image type="content" source="media/answer-control/answer-control-shown-on-mobile.png" alt-text="Answers shown on mobile":::
+
 ## Enable Copilot answer control for your environment
 
-
-In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow canvas editors to insert the Copilot answer component, which allows users to receive an AL-powered answer to a predefined data query** in their environment. 
+In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow canvas editors to insert the Copilot answer component, which allows users to receive an AI-powered answer to a predefined data query** in their environment. 
 
 This setting can be found in the [Power Platform admin center]((https://admin.powerplatform.microsoft.com)) by going to **Environments** > [select an environment] > **Settings** > **Product** > **Features**. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
