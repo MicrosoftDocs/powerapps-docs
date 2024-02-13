@@ -461,7 +461,7 @@
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
           - name:  Use Copilot answer control (preview)
-            href: ./canvas-app/copilot-answer-contorl.overview.md
+            href: ./canvas-apps/copilot-answer-control-overview.md
           - name: "Add mixed reality controls"
             items:
             - name: Mixed reality controls
