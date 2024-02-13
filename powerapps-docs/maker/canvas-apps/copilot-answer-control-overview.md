@@ -40,7 +40,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
     - **Classic** > **Copilot answer (preview)**
 1. When the **Copilot answer (preview)** control is added to the canvas app, select a data source from the pane. Copilot only supports Dataverse tables.
 1. On the control properties pane, select the **Properties** tab.
-1. Enter the **Title**, **Questions for Copilot**, and **Show answer** for the question. You can edit other control properties as needed.
+1. In the properties, enter the **Title**, **Questions for Copilot**, and **Show answer** for the question. You can edit other control properties as needed.
 :::image type="content" source="media/answer-control/answer-control-properties.png" alt-text="Answer control properties":::
 
 1. When you're done, [save and publish](ave-publish-app.md) your app.
