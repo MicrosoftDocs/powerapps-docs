@@ -18,6 +18,8 @@ You can create business rules and recommendations to apply logic and validations
 > [!IMPORTANT]
 > Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
 >
+> In a model-driven app, not all business rule actions are available for [editable grids](../model-driven-apps/the-power-apps-grid-control.md).  For [table based view pages](../model-driven-apps/create-remove-pages.md), recommendations can't be created. Editable [subgrids](../model-driven-apps/form-designer-add-configure-subgrid.md) don't support business rules. Business rules won't work with other types of dataset controls.
+>
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
 By combining conditions and actions, you can do any of the following with business rules:  
@@ -32,7 +34,7 @@ By combining conditions and actions, you can do any of the following with busine
   
 ## Differences between canvas and model-driven apps
 
-Model driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
+Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
 
 * Show or hide columns  
 * Enable or disable columns  
