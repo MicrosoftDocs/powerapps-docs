@@ -42,7 +42,7 @@ Workflow processes and plug-ins continue to provide similar capabilities for def
 
 ## Global messages 
  
-Unlike Microsoft Dataverse workflows or [plug-ins](../../developer/data-platform/apply-business-logic-with-code.md?branch=master#create-a-plug-in), an custom process action doesn’t have to be associated with a specific table. You can define global custom process actions that can be called on their own.
+Unlike Microsoft Dataverse workflows or [plug-ins](../../developer/data-platform/apply-business-logic-with-code.md?branch=master#create-a-plug-in), a custom process action doesn’t have to be associated with a specific table. You can define global custom process actions that can be called on their own.
 
 ## Next steps
 
