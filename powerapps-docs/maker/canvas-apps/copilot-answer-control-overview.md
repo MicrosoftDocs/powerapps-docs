@@ -27,9 +27,9 @@ Makers can use the Copilot answer control to set predefined questions that end u
 
 ## Enable Copilot answer control for your environment
 
-In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow canvas editors to insert the Copilot answer component, which allows users to receive an AI-powered answer to a predefined data query** in their environment. 
+To use the Copilot answer control in a canvas app, an admin must first turn on the feature, **Allow canvas editors to insert the Copilot answer component, which allows users to receive an AI-powered answer to a predefined data query** in their environment. 
 
-This setting can be found in the [Power Platform admin center]((https://admin.powerplatform.microsoft.com)) by going to **Environments** > [select an environment] > **Settings** > **Product** > **Features**. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
+This setting can be found in the [Power Platform admin center](https://admin.powerplatform.microsoft.com) by going to **Environments** > [select an environment] > **Settings** > **Product** > **Features**. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 ## Add Copilot answer control
 
