@@ -1,26 +1,25 @@
 ---
-title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Dataverse long-term data retention enables customers to retain their historical transactional data with Dataverse long term retention." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs"
+description: "Dataverse long-term data retention enables customers to retain their historical transactional data with Dataverse long term retention."
 ms.custom: 
 ms.date: 05/23/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "kagoswami" # GitHub ID
+author: "kagoswami"
 ms.subservice: dataverse-developer
-ms.author: "kagoswami" # MSFT alias of Microsoft employees only
+ms.author: "kagoswami"
 search.audienceType: 
   - developer
 ---
 
 # Long-term data retention
 
-*Long-term retention* (LTR) is a capability that enables customers to retain their historical transactional data with Dataverse long term retention. To perform retention operations, you're required to set up retention policies by defining criteria for a given parent(root) data table. Based on the policy, retention runs at the scheduled time and retain row,s across the parent and child tables, matching the criteria.
+*Long-term retention* (LTR) is a capability that enables customers to retain their historical transactional data with Dataverse long term retention. To perform retention operations, you're required to set up retention policies by defining criteria for a given parent (root) data table. Based on the policy, retention runs at the scheduled time and rows are retained across the parent and child tables that match the criteria.
 
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
 > [!IMPORTANT]
-> You must meet one these [requirements](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-overview) to use all long term data retention features:
->
+> To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview (preview)](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview-preview).
   
 ## Retention policy setup and validation
 
