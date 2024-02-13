@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/upsertmultiple.md",
+      "redirect_url": "bulk-operations#upsertmultiple",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/org-service/extend-code-generation-tool.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/org-service/extend-code-generation-tool",
       "redirect_document_id": "false"
@@ -8747,6 +8752,16 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/performance-tips.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/create-performant-apps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-troubleshooting-guide.md",
+      "redirect_url": "/power-apps/maker/data-platform/export-data-lake-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/slow-performance-sources.md",
       "redirect_url": "/power-apps/maker/canvas-apps/create-performant-apps-overview",
       "redirect_document_id": false
     }

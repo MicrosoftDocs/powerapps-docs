@@ -4,13 +4,15 @@ description: AI Copilot overview in Power Apps.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
-ms.collection: get-started
 ms.reviewer: 
-ms.date: 3/13/2023
+ms.date: 02/07/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 contributors:
   - mduelae
 ---
@@ -53,7 +55,7 @@ To learn how to use the new AI features in Power Apps, see:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-## Disable Copilot in Power Apps
+## Enable or disable Copilot in Power Apps
 
 For this preview, Copilot in Power Apps is enabled by default. To disable it, you need to have administrator access.
 
@@ -66,14 +68,19 @@ Follow these steps to disable **Copilot** in Power Apps for your tenant.
 > [!NOTE]
 > Turning off Copilot for your tenant will only disable Copilot for makers. It won't disable [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
 
-Follow these steps to disable **Copilot** for your environment.
+Follow these steps to enable or disable **Copilot** for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
-4. Set the toggle to **Off** for **Copilot**.
+4. Select one of the following options:
+   - To turn it on, set the toggle to **On** for **Copilot**.
+   - To turn it off, set the toggle to **Off** for **Copilot**.
 
 
 ## See also
 
-[Transparency notes for Power Apps](../common/transparency-note.md)
+- [Transparency notes for Power Apps](../common/transparency-note.md)
+- [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
+- [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)
+  

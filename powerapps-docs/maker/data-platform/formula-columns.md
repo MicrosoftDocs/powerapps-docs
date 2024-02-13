@@ -9,6 +9,7 @@ ms.date: 11/14/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 contributors:
   - mattp123
   - sanjeevgoyalmsft
@@ -74,6 +75,10 @@ Describe what you want the formula to do and get AI generated results. Formula s
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
 > Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
+
+#### Prerequisites
+
+To enabled this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 
@@ -380,6 +385,8 @@ This section describes guidelines and the known limitations with formula columns
   - `DateTime(TZI)` behavior columns can be compared or used in `DateDiff` functions with another `DateTime(TZI)/DateOnly` behavior column.
   - `DateOnly` behavior columns can be compared or used in DateDiff function with another `DateTime(TZI)/DateOnly` behavior column.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
+- Date time columns and date time functions `UTCNow()`, `Now()` cannot be passed as a pararmeter to string functions.
+  :::image type="content" source="media/formula-column-date-time-arg.png" alt-text="Formula column with unsupported date time parameter passed in formula":::
 
 ### Formula column usage in rollup fields
 
@@ -401,6 +408,8 @@ This section describes guidelines and the known limitations with formula columns
    Concatenate(Text(123,"#"),"ab")
    Text(123,"#") & "foo"
    ```
+- Locale-specific formatting tokens such as "." and "," are not supported in formula columns.
+  :::image type="content" source="media/formula-column-locale-specific-arg.png" alt-text="Unsupported locale-specific formatting token passed as parameter to Text function in formula":::
 
 ### Range validations on formula columns
 

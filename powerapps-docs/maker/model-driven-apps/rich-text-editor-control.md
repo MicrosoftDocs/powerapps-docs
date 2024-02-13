@@ -7,6 +7,7 @@ ms.author: "craigm"
 author: Mattp123
 ms.reviewer: matp
 ms.subservice: mda-maker
+ms.collection: bap-ai-copilot
 search.audienceType:
  - maker
 ms.custom:

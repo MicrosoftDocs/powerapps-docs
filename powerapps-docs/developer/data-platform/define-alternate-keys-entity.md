@@ -126,7 +126,7 @@ If the alternate key is deleted while an index creation job is still pending or 
 
  [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
  [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)<br />
- [Use Upsert to insert or update a record](use-upsert-insert-update-record.md)
+ [Use Upsert to insert or update a record](use-upsert-insert-update-record.md)<br />
  [Define alternate keys to reference records](../../maker/data-platform/define-alternate-keys-reference-records.md)
  
 

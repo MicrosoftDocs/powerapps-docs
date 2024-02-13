@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 10/20/2023
+  ms.date: 01/26/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -31,6 +31,14 @@ sections:
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
 
+   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+     answer: |
+        The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
+
+   - question: What if a maker adds custom child tables?
+     answer: |
+        Dataverse long term retention ensures that the new child tables are a part of the next retention policy run. 
+
    - question: Can a retention policy run be stopped?
      answer: | 
         No. A policy being executed currently can't be stopped.
@@ -53,7 +61,7 @@ sections:
 
    - question: Are data retention policies solution aware?
      answer: |
-        Yes. You can create a solution and add the policy from, from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
+        Yes. You can create a solution and add the policy from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
 
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
@@ -82,5 +90,13 @@ sections:
    - question: Is  customer managed key supported for long term retained data?
      answer: |
         Yes. Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key.
+
+   - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
+     answer: |
+        Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
+
+   - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
+     answer: |
+        Your tenant will be granted an exception to the licensing requirement for Dataverse long term retention. These exceptions will be available by end of February 2024, at which point your environment can continue using the feature.  
 
                               
