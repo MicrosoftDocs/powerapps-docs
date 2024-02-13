@@ -118,6 +118,9 @@ You should use care when doing this with system tables. Use this when you create
 Because column mappings are not metadata, you must publish them before changes take effect. 
 <!-- TODO Need a general topic about publishing to link to in situations like this -->
 
+## Known limitations
+- Mappings are automatically generated for lookup fields and cannot be deleted.  As a result, if multiple lookups to the same parent table have been created, all of the lookups will be auto populated with the same value opening a create form.  As a workaround, you can implement custom form logic to clear any unneeded referential lookup values.
+
 ### See also
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Developer Documentation: Customize table and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
