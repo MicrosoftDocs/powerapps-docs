@@ -2,7 +2,7 @@
 title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs"
 description: "Dataverse long-term data retention enables customers to retain their historical transactional data with Dataverse long term retention."
 ms.custom: 
-ms.date: 05/23/2023
+ms.date: 02/13/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "kagoswami"
