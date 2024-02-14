@@ -1,9 +1,9 @@
 ---
 title: "Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 author: divkamath
 ms.author: dikamath
-ms.date: 10/18/2023
+ms.date: 02/14/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -11,6 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
+ - SomaDaDe
 ---
 # Create and use custom APIs
 
@@ -24,7 +25,7 @@ Custom APIs are an alternative to custom process actions. Custom process actions
 
 A custom API can include logic implemented with a plug-in. Using [Microsoft Dataverse business events](business-events.md), you can create a custom API without a plug-in to pass data about an event that other subscribers respond to.
 
-However, in other cases you'll combine a custom API with a plug-in to define some operation that is delegated to Dataverse to compute and return the result.
+However, in other cases you combine a custom API with a plug-in to define some operation that is delegated to Dataverse to compute and return the result.
 
 There are several different ways to create a custom API:
 
@@ -64,20 +65,20 @@ More information [Managed properties](/power-platform/alm/managed-properties-alm
 
 ### Add more request parameters and response properties
 
-Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your custom API. However, these request parameters can't be made required. If you choose to allow custom processing steps on your custom API, other plug-ins registered for the message created by your custom API can use them. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom API can ignore them and isn't responsible for using any custom request parameters or setting any custom response properties.
+Even when you set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your custom API. However, these request parameters can't be made required. If you choose to allow custom processing steps on your custom API, other plug-ins registered for the message created by your custom API can use them. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom API can ignore them and isn't responsible for using any custom request parameters or setting any custom response properties.
 
 ## Custom API tables/entities
 
-See [CustomAPI tables](custom-api-tables.md) for information about the tables and column values to use when creating Custom APIs.
+See [CustomAPI tables](custom-api-tables.md) for information about the tables and column values to use when creating custom APIs.
 
 
-## Select a Custom Processing Step Type
+## Select a custom processing step type
 
 The following table describes which custom API **Custom Processing Step Type** (`AllowedCustomProcessingStepType`) you should use. 
 
 |Option |When to use  |
 |---------|---------|
-|**None**|When the plug-in set for this custom API using [CustomAPI.PluginTypeId](reference/entities/customapi.md#BKMK_PluginTypeId) is the only logic that occurs when this operation executes.<br/>You won't allow another developer to register any more steps that can trigger other logic, modify the behavior of this operation, or cancel the operation.<br/>Use this option when the custom API provides some capability that shouldn't be customizable.|
+|**None**|When the plug-in set for this custom API using [CustomAPI.PluginTypeId](reference/entities/customapi.md#BKMK_PluginTypeId) is the only logic that occurs when this operation executes.<br/>You don't allow other developers to register any more steps that can trigger other logic, modify the behavior of this operation, or cancel the operation.<br/>Use this option when the custom API provides some capability that shouldn't be customizable.|
 |**Async Only**|When you want to allow other developers to detect when this operation occurs, but you don't want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This option is recommended if you're using the business events pattern. A business event creates a trigger in Power Automate to you can use when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
 |**Sync and Async**|When you want to allow other developers to have the ability to change the behavior of the operation, and even cancel it if their business logic dictates.<br/>If the operation succeeds, other developers can also detect this event and add logic to run asynchronously.<br/>Most Dataverse messages enable extension in this manner.  Use this option when your message represents a business process that should be customizable.|
 
@@ -149,7 +150,10 @@ If you don't set the custom API **Plugin Type** (`PluginTypeId`)  to specify mai
 
 You might choose to not include any logic in the plug-in because you're using the custom API as a business event. More information: [Microsoft Dataverse business events](business-events.md).
 
-You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them.
+You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them. Otherwise, see [Write a Plug-in for your custom API](#write-a-plug-in-for-your-custom-api)
+
+> [!NOTE]
+> You can't pass configuration data to the plug-in specified for the main operation logic. [There is a workaround for this](#secure-and-unsecure-configuration-cant-be-set-for-the-custom-api-main-operation-plug-in).
 
 ## Use a custom API in a workflow
 
@@ -260,7 +264,7 @@ The logic to be performed using a background operation must be defined as a cust
 
 ## Write a Plug-in for your custom API
 
-Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step.
+Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step and [you can't specify configuration data to pass to the plug-in](#secure-and-unsecure-configuration-cant-be-set-for-the-custom-api-main-operation-plug-in).
 
 You need to know the following information:
 
@@ -465,7 +469,7 @@ More information:
 
 ## Known issues with custom APIs
 
-Custom API is now generally available, but there are still some related capabilities that we expect to change.
+Custom APIs are now generally available, but there are still some related capabilities that we expect to change.
 
 ### Not able to use profiler for debugging
 
@@ -476,6 +480,14 @@ To debug using the Plug-in Registration tool and the Plug-in profiler solution, 
 ### Private messages can't be used in plug-ins
 
 If you define your custom API to be private, you can't use that message in a plug-in. More information: [Private Messages](org-service/use-messages.md#private-messages)
+
+### Secure and unsecure configuration can't be set for the custom API main operation plug-in
+
+You can't pass [secure or unsecure configuration](write-plug-in.md#pass-configuration-data-to-your-plug-in) in to the main operation Plugin for the custom API.
+
+**Workaround**: Rather than associate the plug-in with the custom API, register the plug-in on the `PostOperation` stage using the Plug-in Registration tool (PRT). This way, you can [specify configuration data in the `PostOperation` plug-in step as you usually do](register-plug-in.md#set-configuration-data).
+
+To use this workaround, you must configure your custom API to enable **Sync and Async** [custom processing step types](#select-a-custom-processing-step-type) when you create the custom api. You can't change this after you create it.
 
 ### Next Steps
 
