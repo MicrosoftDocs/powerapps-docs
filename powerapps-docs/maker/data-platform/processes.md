@@ -38,7 +38,7 @@ You can also use the following Dataverse processes:
 
 - [Real-time workflows](overview-realtime-workflows.md)
 
-- [Actions](actions.md).
+- [Actions](actions.md)
 
 ## Power Automate
 Power Automate has several different flows you can use to create automated workflows within Dataverse or between Dataverse and another app or service that can be used to synchronize files, get notifications, collect data, and more. 
