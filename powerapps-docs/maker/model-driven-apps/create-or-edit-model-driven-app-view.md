@@ -1,16 +1,16 @@
 ---
 title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
-ms.date: 07/04/2021
+ms.date: 02/12/2024
 ms.subservice: mda-maker
 ms.topic: tutorial
-author: Joel-Lindstrom
-ms.author: matp
+author: jasongre
+ms.author: jasongre
 ms.reviewer: matp
 ---
 # Create and edit public or system views
 
-Model-driven apps can contain a range of views, so that app users can open the most suitably presented and filtered version of the table.  Views can be **Personal**, **System** or **Public**.
+Model-driven apps can contain a range of views, so that app users can open the most suitably presented and filtered version of the table.  Views can be **Personal**, **System, or **Public**.
 
 > [!NOTE]
 > Views are tied to a given table. However, you can select views during the process of creating a model driven app. By default, ALL views are made available in an app.
@@ -38,7 +38,7 @@ In the solution that we opened earlier, create a new table or find an existing t
    > It is best practice to create tables inside a custom solution. More information: [Solution (glossary)](model-driven-app-glossary.md#solution)
 
 1. Select **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the **Views** area.  If using a custom solution, open the solution, open the table, and then select the **Views** area.
+1. Select the **Views** area. If using a custom solution, open the solution, open the table, and then select the **Views** area.
 1. On the toolbar, select **Add view**.
    :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
 1. On the **Create a view** dialog, enter a name and, optionally, a description, and then select **Create**.
@@ -56,7 +56,8 @@ In the solution that we opened earlier, create a new table or find an existing t
 1. In the view designer, the following tasks can be performed:
 
    - To change the column filtering select the header of the column where the filter is required, and then in the dropdown list select **Filter by**.
-   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.  
+   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.
+       - You can configure multi-column sorts by holding Shift when selecting a sort option to add a sort condition to the set of the existing sorts.  
    - Configure column width by selecting and dragging the column to the desired position.
    - Reorder columns by dragging a column to the desired position.
     > [!NOTE]
