@@ -150,7 +150,10 @@ If you don't set the custom API **Plugin Type** (`PluginTypeId`)  to specify mai
 
 You might choose to not include any logic in the plug-in because you're using the custom API as a business event. More information: [Microsoft Dataverse business events](business-events.md).
 
-You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them.
+You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them. Otherwise, see [Write a Plug-in for your custom API](#write-a-plug-in-for-your-custom-api)
+
+> [!NOTE]
+> You can't pass configuration data to the plug-in specified for the main operation logic. [There is a workaround for this](#secure-and-unsecure-configuration-cannot-be-set-for-the-custom-api-main-operation-plug-in).
 
 ## Use a custom API in a workflow
 
@@ -261,7 +264,7 @@ The logic to be performed using a background operation must be defined as a cust
 
 ## Write a Plug-in for your custom API
 
-Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step.
+Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step and [you can't specify configuration data to pass to the plug-in](#secure-and-unsecure-configuration-cannot-be-set-for-the-custom-api-main-operation-plug-in).
 
 You need to know the following information:
 
