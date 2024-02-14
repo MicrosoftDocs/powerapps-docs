@@ -93,6 +93,10 @@ Switching themes or enabling dark mode isn't supported at this time.
 
 With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. See [change the color of the app header](#change-the-color-of-the-app-header) for more details.  Other theme customization options for the modern, refreshed look aren't available yet.  
 
+### Custom icons
+
+Only icons in SVG format are supported at this time. Other formats like PNG will not be rendered in the navigation and a default icon will be used instead.
+
 ## Frequently asked questions (FAQs)
 
 ### Using the modern, refreshed look in Power Apps Component Framework / custom code components
