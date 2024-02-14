@@ -3,7 +3,7 @@ title: "Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs" # Int
 description: "custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 author: divkamath
 ms.author: dikamath
-ms.date: 10/18/2023
+ms.date: 02/14/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -11,6 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
+ - SomaDaDe
 ---
 # Create and use custom APIs
 
@@ -477,11 +478,13 @@ To debug using the Plug-in Registration tool and the Plug-in profiler solution, 
 
 If you define your custom API to be private, you can't use that message in a plug-in. More information: [Private Messages](org-service/use-messages.md#private-messages)
 
-### Secure Configuration and Unsecure Configuration cannot be sent in CustomAPI Main Operation plug-in
+### Secure and Unsecure Configuration cannot be set for the Custom API Main Operation plug-in
 
-You cannot pass [Secure and Unsecure Configuration](write-plug-in.md#pass-configuration-data-to-your-plug-in) in to your Stage 30 Main operation Plugin for the CustomAPI. 
+You cannot pass [Secure and Unsecure Configuration](write-plug-in.md#pass-configuration-data-to-your-plug-in) in to the Main operation Plugin for the CustomAPI.
 
-**Workaround**: Do not register the plugin, where you want send the secure and unsecure configuration, during CustomAPI creation through UI. Register the plugin as a `PreOperation` or `PostOperation` plugin through PRT and you should be able to set the configuration values as any other plug-in. More information: [Register Plug-in and set configuration data](register-plug-in.md#set-configuration-data)
+**Workaround**: Rather than associate the plug-in with the Custom API, register the plug-in on the `PostOperation` stage using the Plug-in Registration tool (PRT). This way, you can [specify configuration data in the `PostOperation` plug-in step as you usually do](register-plug-in.md#set-configuration-data).
+
+For this to work, you must configure your Custom API to enable **Sync and Async** [custom processing step types](#select-a-custom-processing-step-type) when you create the custom api. You can't change this after you create it.
 
 ### Next Steps
 
