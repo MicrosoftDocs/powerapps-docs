@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 2/9/2023
 ms.subservice: canvas-maker
-ms.author: makolomi
+ms.author: clromano
 search.audienceType: 
   - maker
 contributors:
