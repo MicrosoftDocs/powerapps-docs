@@ -37,7 +37,7 @@ Use the retention policies dashboard to view and manage retention policies. From
 |---------|---------|
 |Scheduled     |  The policy has been scheduled to run.       |
 |In progress - Retention     | The process of moving and changing the data state from active to non-active (retained) for the rows in the parent root table and all child tables.        |
-|Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
+|Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse long term retention.      |
 |In progress – Reconciliation     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
 |Pending Delete     |  Waiting to delete all retained rows.       |
 |In progress – Delete     |  Delete of retained rows from applications.       |

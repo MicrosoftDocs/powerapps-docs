@@ -51,10 +51,10 @@ Dataverse delivers native platform support for long term retention of data. It a
 
 ## How it works
 
-Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it's stored in a Dataverse managed data lake. The data is always secured with Dataverse security backed by Microsoft Entra ID.  
+Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it's stored in Dataverse long term retention. The data is always secured with Dataverse security backed by Microsoft Entra ID.  
 
 > [!IMPORTANT]
-> - Once data is retained in the Dataverse long term (inactive) store it can't be moved back to the Dataverse live (active) data store.
+> - Once data is retained with Dataverse long term retention it can't be moved back to the Dataverse live (active) application state.
 > - Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key. More information: [Migrate bring-your-own-key environments to customer-managed key](/power-platform/admin/cmk-migrate-from-byok)
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
@@ -111,7 +111,7 @@ For more information about capacity reports, go to [New Microsoft Dataverse stor
 
 ## Understanding long term retention storage costs
 
-Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved from Dataverse database to Dataverse long term retention (Dataverse managed data lake), will consume, on average, 50% less database capacity. This is because the data is compressed in Dataverse long term retention.
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved from Dataverse database to Dataverse long term retention, will consume, on average, 50% less database capacity. This is because the data is compressed in Dataverse long term retention.
 
 For example:
 
@@ -122,7 +122,7 @@ For example:
 
 > [!NOTE]
 >
-> - Dataverse managed data lake compresses the database data and this saving is passed onto the customer. The amount of compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice larger than 50% savings while in others you might notice lower than 50%. You might also notice that savings are more evident when higher volumes of data (hundreds of GB) is retained with long term retention.
+> - Dataverse long term retention compresses the database data. The amount of compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice larger than 50% savings while in others you might notice lower than 50%. You might also notice that savings are more evident when higher volumes of data (hundreds of GB) is retained with long term retention.
 > - For file and image attachments, Dataverse long term retention doesn't reduce capacity consumed. In rare cases, depending on the file or image, you might experience negligible file capacity savings.
 
 ## Solution aware retention policies
