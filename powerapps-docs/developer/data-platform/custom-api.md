@@ -477,6 +477,12 @@ To debug using the Plug-in Registration tool and the Plug-in profiler solution, 
 
 If you define your custom API to be private, you can't use that message in a plug-in. More information: [Private Messages](org-service/use-messages.md#private-messages)
 
+### Secure Configuration and Unsecure Configuration cannot be sent in CustomAPI Main Operation plug-in
+
+You cannot pass [Secure and Unsecure Configuration](write-plug-in.md#pass-configuration-data-to-your-plug-in) in to your Stage 30 Main operation Plugin for the CustomAPI. 
+
+**Workaround**: Do not register the plugin, where you want send the secure and unsecure configuration, during CustomAPI creation through UI. Register the plugin as a `PreOperation` or `PostOperation` plugin through PRT and you should be able to set the configuration values as any other plug-in. More information: [Register Plug-in and set configuration data](register-plug-in.md#set-configuration-data)
+
 ### Next Steps
 
 [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
