@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preview)
 description: Learn how to use Copilot to quickly generate well-written text that can be used in text boxes in apps made with Power Apps.
-ms.date: 01/11/2024
+ms.date: 02/15/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -26,7 +26,7 @@ When trying to quickly input text into multiline text boxes or rich text editors
 
 > [!IMPORTANT]
 > - To use this feature, your environment must be in a US region.
-> - To use this feature, the browser language must be 'en'
+> - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
@@ -52,7 +52,16 @@ When trying to quickly input text into multiline text boxes or rich text editors
   
 ## Turn off text assistance in web player
 
-Makers can turn off this feature on a per-app basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
+You can turn off text assistance on for an app using app setting or PowerShell cmdlet, or an environment using PowerShell cmdlet. 
+
+> [!NOTE]
+> When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+
+### Turn off text assistance for an app
+
+You can use either the app setting, or PowerShell cmdlet to turn this setting off for an app.
+
+To turn off for an app using the app settings:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation pane, select **Apps**.
@@ -60,28 +69,23 @@ Makers can turn off this feature on a per-app basis within app settings using th
 1. On the **App settings** pane, set the toggle for **Text assistance in web player (preview)** to  **Off**.
 1. Select **Save**.
 
-To disable features via PowerShell, you must install the correct module 
+To turn off for an app using PowerShell:
 
-   ```powershell
-   $Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -RequiredVersion 2.0.179
-   ```
-Makers can turn off this feature on a per-app basis using Windows PowerShell **Set-PowerAppSettings** cmdlet.
+```powershell
+$Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
+```
 
-   ```powershell
-   $Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
-   ```
+### Turn off text assistance for an environment
 
-Power Platform admins can turn off this feature on a per-environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
+To turn off text assistance for a specific environment, use the following cmdlet.
 
-   ```powershell
-   $Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
-   ```
+```powershell
+$Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
+```
    
 ## Known issue
 
-**Error**: There was a problem using this description. Try again.
-
-**Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you haven't given the system enough information to properly generate output. Add more details to try again.
-
-There is not a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
-
+- You might see "There was a problem using this description. Try again." error. This error occurs due to the following possibilities:
+  - You've reached capacity limits. In this case, try again after some time.
+  - You've not provided enough information to properly generate output. In this case, add more details to try again.
+- There is not a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
