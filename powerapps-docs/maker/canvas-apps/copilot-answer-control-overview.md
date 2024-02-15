@@ -44,7 +44,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. When the **Copilot answer (preview)** control is added to the canvas app, select a data source from the pane. Copilot only supports Dataverse tables.
 
-    :::image type="content" source="media/answer-control/answer-control-select-data-type.png" alt-text="Select data source":::
+   :::image type="content" source="media/answer-control/answer-control-select-data-type.png" alt-text="Select data source":::
 
 1. On the control properties pane, select the **Properties** tab.
 
