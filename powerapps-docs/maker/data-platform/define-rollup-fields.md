@@ -1,7 +1,7 @@
 ---
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns"
-ms.date: 06/21/2022
+ms.date: 02/15/2024
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -173,7 +173,8 @@ The following example shows how to calculate an average estimated revenue from r
 
 You should be aware of certain conditions and restrictions when working with rollup columns:  
   
-- You can define a maximum of 100 rollup columns for the organization and up to 10 rollup columns per table.  
+- You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. Previously, the default value was 100 per environment and 10 per table. To apply the latest update, to to Power Apps (make.powerapps.com) > **Table** > Organization > Update Attribute value for MaxRollupFieldsPerOrg and/or MaxRollupFieldsPerEntity. <!-- steps appear incomplete -->
+- Having more than 100 rollup columns for an organization might result in degraded performance of rollup column and increased storage consumption.  
 - A workflow can't be triggered by the rollup column updates.  
 - A workflow wait condition cannot use a rollup column.  
 - A rollup over the rollup column is not supported.  
