@@ -41,7 +41,7 @@ Makers can use the Copilot answer control to set predefined questions that end u
 
 ## Additional properties
 
-**Show answer** –  Should the Copilot answer control when the user selects **Send** (After sending) or immediately when the question is defined in the properties window (Immediate).
+**Show answer** – Should the Copilot answer control answer a question when the user clicks on the ‘Arrow’ icon (After sending) or as soon as the control loads when the question is defined in the properties window (Immediate).
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
