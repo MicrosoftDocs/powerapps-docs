@@ -25,7 +25,8 @@ You can use Copilot to quickly generate well-written text to use as input text i
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly jot down ideas in a text box without worrying about format and grammar. Copilot corrects errors in grammar and eloquently refines your ideas. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
-> - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
+> - To use this feature, your environment must be in a US region.
+> - To use this feature, the browser language must be 'en'
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
@@ -36,7 +37,7 @@ When trying to quickly input text into multiline text boxes or rich text editors
 ## Use this feature
 
 1. Insert your cursor into a multiline text box or rich text editor in a canvas app.
-1. Select the **Draft with Copilot** icon, and then select the **Draft with Copilot** option.
+1. The option to **Draft with Copilot** should appear. Select that option.
 2. Insert text into the text box. For example, you can quickly jot down an idea.
 
      > [!Note]
@@ -59,6 +60,17 @@ Makers can turn off this feature on a per-app basis within app settings using th
 1. On the **App settings** pane, set the toggle for **Text assistance in web player (preview)** to  **Off**.
 1. Select **Save**.
 
+To disable features via PowerShell, you must install the correct module 
+
+   ```powershell
+   $Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -RequiredVersion 2.0.179
+   ```
+Makers can turn off this feature on a per-app basis using Windows PowerShell **Set-PowerAppSettings** cmdlet.
+
+   ```powershell
+   $Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
+   ```
+
 Power Platform admins can turn off this feature on a per-environment basis using Windows PowerShell **Set-EnvironmentCopilotSettings** cmdlet.
 
    ```powershell
@@ -70,4 +82,6 @@ Power Platform admins can turn off this feature on a per-environment basis using
 **Error**: There was a problem using this description. Try again.
 
 **Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you haven't given the system enough information to properly generate output. Add more details to try again.
+
+There is not a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
 
