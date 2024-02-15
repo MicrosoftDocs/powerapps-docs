@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Micr
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
-ms.date: 11/06/2023
+ms.date: 12/24/2023
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: article
@@ -349,6 +349,56 @@ Audit history isn't supported in these cases:
 - Offline mode
 - Dynamics for Outlook
 
+
+## Unexpected related menu item appears in related tab
+
+A **Related menu item** might appear when it shouldn't.
+
+### How to troubleshoot
+
+A related menu item might appear because:
+
+#### Related table has self-referencing many-to-many relationship with the main table
+
+The system ignores form XML customizations for self-referencing many-to-many relationships. The system ignores these customizations because it isn't possible to indicate whether the customizations are for the primary table or the related table, which are both the same table in this case. Therefore, the system ignores these customizations.
+
+If you modify the form XML to hide the related menu item, it still appears. Any form XML customizations for self-referencing relationships are ignored, like changing the order or the label of the related item.
+
+#### Some system tables can't be hidden
+
+For example, custom tables always show **Activities** related menu item. It isn't possible to hide it with the form designer or by modifying the form XML.
+
+## Related menu items aren't translated as expected
+
+The text for related menu items aren't in the expected language.
+
+### How to troubleshoot
+
+If some related menu items are displaying in a different language from the user's language, check whether the form XML is missing translated labels.
+
+Check the form XML to see if there are labels defined for each language. For example, this form XML shows that the `navContacts` item only has a US English (1033) label: `Contacts`.
+
+```xml
+<NavBarByRelationshipItem Id="navContacts" Area="Sales" Sequence="10064" RelationshipName="contact_customer_accounts" Show="true">
+  <Titles>
+    <Title LCID="1033" Title="Contacts" />
+  </Titles>
+</NavBarByRelationshipItem>
+```
+
+To fix this issue, add the translated labels to the form XML. For example, this form XML shows that the `navContacts` item with both US English (1033) and German (1031) labels.
+
+```xml
+<NavBarByRelationshipItem Id="navContacts" Area="Sales" Sequence="10064" RelationshipName="contact_customer_accounts" Show="true">
+  <Titles>
+    <Title LCID="1033" Title="Contacts" />
+    <Title LCID="1031" Title="Kontakte" />
+  </Titles>
+</NavBarByRelationshipItem>
+```
+
+If the text for the user's language isn't defined, the system uses the organization's base language. If that doesn't exist either, the system uses the US English text.
+
 ## Why is a form showing or not showing in the form selector?
 
 The form selector is a dropdown that allows users to switch between different forms for a particular table.
@@ -391,6 +441,8 @@ A form is available to the user when:
 
 1. [User has permission to access the form](../../maker/model-driven-apps/control-access-forms.md).
 1. [Form is added to the app module](../../maker/model-driven-apps/add-edit-app-components.md#add-table-assets).
+
+If no forms are available to the user, then the [the fallback form](../../maker/model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table) is used.
 
 ## Why a control is disabled/enabled or visible/hidden
 

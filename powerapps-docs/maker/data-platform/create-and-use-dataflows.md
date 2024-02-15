@@ -205,7 +205,7 @@ issues. This section provides troubleshooting tips when issues occur.
     basic authentication for this scenario.
 
 > [!NOTE]
-> If you use data loss prevention (DLP) policies to block the **HTTP with Microsoft Entra** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Microsoft Entra** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
+> If you use data loss prevention (DLP) policies to block the **HTTP with Microsoft Entra (preauthorized)** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Microsoft Entra (preauthorized)** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
 
 ## Next steps
 
@@ -216,6 +216,8 @@ The following articles are useful for further information and scenarios when usi
 -   [Using an on-premises data gateway in Power Platform dataflows](/power-query/dataflows/using-dataflows-with-on-premises-data)
 
 -   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow)
+
+-   [Use dataflows in solutions](/power-query/dataflows/dataflow-solution-awareness)
 
 For more information about the Common Data Model:
 

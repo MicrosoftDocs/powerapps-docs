@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 06/21/2023
+ms.date: 01/24/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -35,7 +35,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 
@@ -45,7 +45,8 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account and Synapse workspace must be created in the same Microsoft Entra tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
-> - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
+> - To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create an Azure Synapse Link with managed identities. More information: [Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable **public network access** for Azure resources for both initial setup and delta sync.)
+> - Synapse workspaces featuring managed private endpoints, data exfiltration protection, or managed virtual networks aren't supported.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 > - The creation of Synapse Link profiles under a single DV environment is limited to a maximum of 10.
@@ -91,7 +92,7 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
 - The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
 - The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
@@ -107,13 +108,13 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 ## Relinking an Azure Synapse Link
 
-If you deleted the file system when unlinking, follow the steps above to relink the same Synapse workspace and data lake. If you did not delete the file system when unlinking, you must clear the data to relink:
+If you deleted the file system when unlinking, follow the steps above to relink the same Synapse workspace and data lake. If you didn't delete the file system when unlinking, you must clear the data to relink:
 
 1. Navigate the Azure Synapse Analytics.
 
 2. Select the **...** for the unlinked database and select **New notebook** > **Empty notebook**.
 
-3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
+3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop-down menu. If you don't have an Apache Spark pool, select **Manage pools** to create one.
 
 4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
@@ -130,7 +131,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
-- Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
+- Near real-time data: Provides a copy of data synchronized from Dataverse via Azure Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
 
 > [!NOTE]
@@ -142,9 +143,6 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
-
-> [!IMPORTANT]
-> Make sure that your serverless SQL pool in Azure Synapse Analytics workspace can access the Azure Data Lake storage account if you want to use snapshot data. Without managed identity access, the snapshot data table won't be accessible using the serverless SQL pool.
 
 ### What's next?
 
