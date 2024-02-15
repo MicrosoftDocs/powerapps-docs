@@ -17,6 +17,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 > [!IMPORTANT]
 > Using custom pages with mobile devices is currently in public preview. Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files isn't supported.
+>
+> Custom pages are not supported within **App for Outlook** and will provide an error on loading.
 
 ## Maker-related issues
 
