@@ -49,7 +49,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 1. On the control properties pane, select the **Properties** tab.
 
 1. In the properties, enter the **Title**, **Questions for Copilot**, and **Show answer** for the question. You can edit other control properties as needed.
-:::image type="content" source="media/answer-control/answer-control-properties.png" alt-text="Answer control properties":::
+  :::image type="content" source="media/answer-control/answer-control-properties.png" alt-text="Answer control properties":::
 
 1. When you're done, [save and publish](save-publish-app.md) your app.
 
