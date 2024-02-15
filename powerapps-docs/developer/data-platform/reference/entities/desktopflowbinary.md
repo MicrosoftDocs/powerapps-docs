@@ -1,7 +1,7 @@
 ---
 title: "desktopflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the desktopflowbinary table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -64,6 +64,7 @@ search.audienceType:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [desktopflowbinaryId](#BKMK_desktopflowbinaryId)
+- [DesktopFlowModule](#BKMK_DesktopFlowModule)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Metadata](#BKMK_Metadata)
@@ -94,6 +95,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|desktopflowbinaryid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_DesktopFlowModule"></a> DesktopFlowModule
+
+|Property|Value|
+|--------|-----|
+|Description|The ID of the desktop flow module entity that the binary belongs to|
+|DisplayName|Desktop flow module Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|desktopflowmodule|
+|RequiredLevel|None|
+|Targets|desktopflowmodule|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -234,7 +249,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|process|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Targets|workflow|
 |Type|Lookup|
 
@@ -378,6 +393,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [Data](#BKMK_Data)
 - [Data_Name](#BKMK_Data_Name)
+- [desktopflowmoduleName](#BKMK_desktopflowmoduleName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -583,6 +599,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|data_name|
 |MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_desktopflowmoduleName"></a> desktopflowmoduleName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|desktopflowmodulename|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1041,6 +1073,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_desktopflowbinary](#BKMK_team_desktopflowbinary)
 - [business_unit_desktopflowbinary](#BKMK_business_unit_desktopflowbinary)
 - [workflow_desktopflowbinary_Process](#BKMK_workflow_desktopflowbinary_Process)
+- [dfm_desktopflowbinary_DFM](#BKMK_dfm_desktopflowbinary_DFM)
 
 
 ### <a name="BKMK_lk_desktopflowbinary_createdby"></a> lk_desktopflowbinary_createdby
@@ -1090,6 +1123,10 @@ See the [business_unit_desktopflowbinary](businessunit.md#BKMK_business_unit_des
 **Added by**: System Solution Solution
 
 See the [workflow_desktopflowbinary_Process](workflow.md#BKMK_workflow_desktopflowbinary_Process) one-to-many relationship for the [workflow](workflow.md) table/entity.
+
+### <a name="BKMK_dfm_desktopflowbinary_DFM"></a> dfm_desktopflowbinary_DFM
+
+See the [dfm_desktopflowbinary_DFM](desktopflowmodule.md#BKMK_dfm_desktopflowbinary_DFM) one-to-many relationship for the [desktopflowmodule](desktopflowmodule.md) table/entity.
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -98,8 +98,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The Azure active directory object Id for a group.|
-|DisplayName|Azure AD Object Id for a group|
+|Description|The object Id for a group.|
+|DisplayName|Object Id for a group|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -363,8 +363,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |0|Owner||
 |1|Access||
-|2|AAD Security Group||
-|3|AAD Office Group||
+|2|Security Group||
+|3|Office Group||
 
 
 
@@ -1007,6 +1007,7 @@ Listed by **SchemaName**.
 - [team_workflowbinary](#BKMK_team_workflowbinary)
 - [team_credential](#BKMK_team_credential)
 - [team_desktopflowmodule](#BKMK_team_desktopflowmodule)
+- [team_flowcapacityassignment](#BKMK_team_flowcapacityassignment)
 - [team_flowevent](#BKMK_team_flowevent)
 - [team_flowmachine](#BKMK_team_flowmachine)
 - [team_flowmachinegroup](#BKMK_team_flowmachinegroup)
@@ -1060,6 +1061,7 @@ Listed by **SchemaName**.
 - [team_retentionconfig](#BKMK_team_retentionconfig)
 - [team_retentionfailuredetail](#BKMK_team_retentionfailuredetail)
 - [team_retentionoperation](#BKMK_team_retentionoperation)
+- [team_msdyn_dataflowconnectionreference](#BKMK_team_msdyn_dataflowconnectionreference)
 - [team_msdyn_schedule](#BKMK_team_msdyn_schedule)
 - [team_msdyn_dataflowtemplate](#BKMK_team_msdyn_dataflowtemplate)
 - [team_msdyn_dataflow_datalakefolder](#BKMK_team_msdyn_dataflow_datalakefolder)
@@ -2265,6 +2267,23 @@ Same as the [team_desktopflowmodule](desktopflowmodule.md#BKMK_team_desktopflowm
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_flowcapacityassignment"></a> team_flowcapacityassignment
+
+**Added by**: Active Solution Solution
+
+Same as the [team_flowcapacityassignment](flowcapacityassignment.md#BKMK_team_flowcapacityassignment) many-to-one relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowcapacityassignment|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_flowcapacityassignment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_flowevent"></a> team_flowevent
 
 **Added by**: Active Solution Solution
@@ -3162,6 +3181,23 @@ Same as the [team_retentionoperation](retentionoperation.md#BKMK_team_retentiono
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|team_retentionoperation|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_msdyn_dataflowconnectionreference"></a> team_msdyn_dataflowconnectionreference
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md#BKMK_team_msdyn_dataflowconnectionreference) many-to-one relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflowconnectionreference|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_dataflowconnectionreference|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

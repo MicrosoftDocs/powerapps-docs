@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1067,7 +1067,7 @@ See the [adx_portalcomment_Annotations](adx_portalcomment.md#BKMK_adx_portalcomm
 
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_Annotations"></a> mspcat_catalogsubmissionfiles_Annotations
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: Catalog in Power Platform Packaging Solution
 
 See the [mspcat_catalogsubmissionfiles_Annotations](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_Annotations) one-to-many relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
 

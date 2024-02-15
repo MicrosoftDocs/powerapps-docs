@@ -134,6 +134,8 @@
   href: contact.md
 - name: conversationtranscript
   href: conversationtranscript.md
+- name: CopilotExampleQuestion
+  href: copilotexamplequestion.md
 - name: credential
   href: credential.md
 - name: CustomAPI
@@ -236,6 +238,8 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowcapacityassignment
+  href: flowcapacityassignment.md
 - name: flowevent
   href: flowevent.md
 - name: flowmachine
@@ -380,6 +384,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflow_datalakefolder
   href: msdyn_dataflow_datalakefolder.md
+- name: msdyn_DataflowConnectionReference
+  href: msdyn_dataflowconnectionreference.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_DataflowTemplate
@@ -732,6 +738,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspaceaccesstoken
+  href: sharedworkspaceaccesstoken.md
 - name: sharedworkspacepool
   href: sharedworkspacepool.md
 - name: SharePointDocumentLocation

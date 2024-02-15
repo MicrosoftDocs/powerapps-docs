@@ -1,7 +1,7 @@
 ---
 title: "flowrun table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowrun table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,7 @@ search.audienceType:
 |Update|PATCH /flowruns(*flowrunid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -60,7 +60,7 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [Duration](#BKMK_Duration)
+- [DurationInMs](#BKMK_DurationInMs)
 - [EndTime](#BKMK_EndTime)
 - [ErrorCode](#BKMK_ErrorCode)
 - [ErrorMessage](#BKMK_ErrorMessage)
@@ -84,20 +84,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [WorkflowId](#BKMK_WorkflowId)
 
 
-### <a name="BKMK_Duration"></a> Duration
+### <a name="BKMK_DurationInMs"></a> DurationInMs
 
 |Property|Value|
 |--------|-----|
-|Description|Duration of the run|
+|Description|Duration of the run in milliseconds|
 |DisplayName|Duration|
-|Format|Duration|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|duration|
-|MaxValue|2147483647|
-|MinValue|0|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 |RequiredLevel|None|
-|Type|Integer|
+|Type|BigInt|
 
 
 ### <a name="BKMK_EndTime"></a> EndTime
@@ -318,7 +317,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DateTimeBehavior|UserLocal|
 |Description|The date and time at which the flow run started|
 |DisplayName|Start time|
-|Format|DateOnly|
+|Format|DateAndTime|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|starttime|

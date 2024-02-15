@@ -1,7 +1,7 @@
 ---
 title: "flowmachinegroup table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachinegroup table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -597,6 +597,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|KeyExpired|1|
 |5|HmgIslandMove|2|
 |6|Quarantined|2|
+|7|HmgCmkOperation|2|
 
 
 
@@ -1290,6 +1291,7 @@ Listed by **SchemaName**.
 - [flowmachinegroup_flowmachine](#BKMK_flowmachinegroup_flowmachine)
 - [flowmachinegroup_flowsession_MachineGroupId](#BKMK_flowmachinegroup_flowsession_MachineGroupId)
 - [flowevent_flowmachinegroup](#BKMK_flowevent_flowmachinegroup)
+- [flowcapacityassignment_flowmachinegroup](#BKMK_flowcapacityassignment_flowmachinegroup)
 
 
 ### <a name="BKMK_flowmachinegroup_SyncErrors"></a> flowmachinegroup_SyncErrors
@@ -1469,6 +1471,21 @@ Same as the [flowevent_flowmachinegroup](flowevent.md#BKMK_flowevent_flowmachine
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|flowevent_flowmachinegroup|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_flowcapacityassignment_flowmachinegroup"></a> flowcapacityassignment_flowmachinegroup
+
+Same as the [flowcapacityassignment_flowmachinegroup](flowcapacityassignment.md#BKMK_flowcapacityassignment_flowmachinegroup) many-to-one relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowcapacityassignment|
+|ReferencingAttribute|regarding|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|flowcapacityassignment_flowmachinegroup|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

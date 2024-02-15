@@ -1,7 +1,7 @@
 ---
 title: "Portal Comment (adx_portalcomment)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Portal Comment (adx_portalcomment)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1840,6 +1840,7 @@ Same as the [adx_portalcomment_Annotations](annotation.md#BKMK_adx_portalcomment
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [interactionforemail_adx_portalcomments](#BKMK_interactionforemail_adx_portalcomments)
+- [adx_invitation_adx_portalcomments](#BKMK_adx_invitation_adx_portalcomments)
 - [knowledgebaserecord_adx_portalcomments](#BKMK_knowledgebaserecord_adx_portalcomments)
 - [account_adx_portalcomments](#BKMK_account_adx_portalcomments)
 - [adx_portalcomment_systemuser_createdby](#BKMK_adx_portalcomment_systemuser_createdby)
@@ -1850,7 +1851,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [adx_portalcomment_sla_slaid](#BKMK_adx_portalcomment_sla_slaid)
 - [adx_portalcomment_businessunit_owningbusinessunit](#BKMK_adx_portalcomment_businessunit_owningbusinessunit)
 - [knowledgearticle_adx_portalcomments](#BKMK_knowledgearticle_adx_portalcomments)
-- [adx_invitation_adx_portalcomments](#BKMK_adx_invitation_adx_portalcomments)
 - [adx_portalcomment_systemuser_modifiedonbehalfby](#BKMK_adx_portalcomment_systemuser_modifiedonbehalfby)
 - [adx_portalcomment_systemuser_createdonbehalfby](#BKMK_adx_portalcomment_systemuser_createdonbehalfby)
 - [adx_portalcomment_systemuser_modifiedby](#BKMK_adx_portalcomment_systemuser_modifiedby)
@@ -1871,6 +1871,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 **Added by**: System Solution Solution
 
 See the [interactionforemail_adx_portalcomments](interactionforemail.md#BKMK_interactionforemail_adx_portalcomments) one-to-many relationship for the [interactionforemail](interactionforemail.md) table/entity.
+
+### <a name="BKMK_adx_invitation_adx_portalcomments"></a> adx_invitation_adx_portalcomments
+
+See the [adx_invitation_adx_portalcomments](adx_invitation.md#BKMK_adx_invitation_adx_portalcomments) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
 
 ### <a name="BKMK_knowledgebaserecord_adx_portalcomments"></a> knowledgebaserecord_adx_portalcomments
 
@@ -1931,10 +1935,6 @@ See the [adx_portalcomment_businessunit_owningbusinessunit](businessunit.md#BKMK
 **Added by**: System Solution Solution
 
 See the [knowledgearticle_adx_portalcomments](knowledgearticle.md#BKMK_knowledgearticle_adx_portalcomments) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-### <a name="BKMK_adx_invitation_adx_portalcomments"></a> adx_invitation_adx_portalcomments
-
-See the [adx_invitation_adx_portalcomments](adx_invitation.md#BKMK_adx_invitation_adx_portalcomments) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
 
 ### <a name="BKMK_adx_portalcomment_systemuser_modifiedonbehalfby"></a> adx_portalcomment_systemuser_modifiedonbehalfby
 

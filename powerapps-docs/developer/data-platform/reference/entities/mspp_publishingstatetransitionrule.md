@@ -1,7 +1,7 @@
 ---
 title: "Publishing State Transition Rule (mspp_publishingstatetransitionrule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Publishing State Transition Rule (mspp_publishingstatetransitionrule)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -379,9 +379,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [mspp_publishingstatetransitionrule_ActivityPointers](#BKMK_mspp_publishingstatetransitionrule_ActivityPointers)
+- [mspp_publishingstatetransitionrule_adx_portalcomments](#BKMK_mspp_publishingstatetransitionrule_adx_portalcomments)
 - [mspp_publishingstatetransitionrule_adx_inviteredemptions](#BKMK_mspp_publishingstatetransitionrule_adx_inviteredemptions)
 - [mspp_publishingstatetransitionrule_chats](#BKMK_mspp_publishingstatetransitionrule_chats)
-- [mspp_publishingstatetransitionrule_adx_portalcomments](#BKMK_mspp_publishingstatetransitionrule_adx_portalcomments)
 - [mspp_publishingstatetransitionrule_Appointments](#BKMK_mspp_publishingstatetransitionrule_Appointments)
 - [mspp_publishingstatetransitionrule_Emails](#BKMK_mspp_publishingstatetransitionrule_Emails)
 - [mspp_publishingstatetransitionrule_Faxes](#BKMK_mspp_publishingstatetransitionrule_Faxes)
@@ -409,6 +409,23 @@ Same as the [mspp_publishingstatetransitionrule_ActivityPointers](activitypointe
 |ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_ActivityPointers|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_adx_portalcomments"></a> mspp_publishingstatetransitionrule_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [mspp_publishingstatetransitionrule_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_publishingstatetransitionrule_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_mspp_publishingstatetransitionrule_adx_inviteredemptions"></a> mspp_publishingstatetransitionrule_adx_inviteredemptions
@@ -441,23 +458,6 @@ Same as the [mspp_publishingstatetransitionrule_chats](chat.md#BKMK_mspp_publish
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_chats|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_publishingstatetransitionrule_adx_portalcomments"></a> mspp_publishingstatetransitionrule_adx_portalcomments
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_publishingstatetransitionrule_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_publishingstatetransitionrule_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

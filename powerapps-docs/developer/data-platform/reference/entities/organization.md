@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowAutoUnsubscribeAcknowledgement](#BKMK_AllowAutoUnsubscribeAcknowledgement)
 - [AllowClientMessageBarAd](#BKMK_AllowClientMessageBarAd)
 - [AllowConnectorsOnPowerFXActions](#BKMK_AllowConnectorsOnPowerFXActions)
+- [AllowedApplicationsForDVAccess](#BKMK_AllowedApplicationsForDVAccess)
 - [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
 - [AllowedIpRangeForStorageAccessSignatures](#BKMK_AllowedIpRangeForStorageAccessSignatures)
 - [AllowedMimeTypes](#BKMK_AllowedMimeTypes)
@@ -86,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowWebExcelExport](#BKMK_AllowWebExcelExport)
 - [AMDesignator](#BKMK_AMDesignator)
 - [AppDesignerExperienceEnabled](#BKMK_AppDesignerExperienceEnabled)
+- [ApplicationBasedAccessControlMode](#BKMK_ApplicationBasedAccessControlMode)
 - [AppointmentRichEditorExperience](#BKMK_AppointmentRichEditorExperience)
 - [AppointmentWithTeamsMeeting](#BKMK_AppointmentWithTeamsMeeting)
 - [AppointmentWithTeamsMeetingV2](#BKMK_AppointmentWithTeamsMeetingV2)
@@ -97,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AzureSchedulerJobCollectionName](#BKMK_AzureSchedulerJobCollectionName)
 - [BaseCurrencyId](#BKMK_BaseCurrencyId)
 - [BingMapsApiKey](#BKMK_BingMapsApiKey)
+- [BlockedApplicationsForDVAccess](#BKMK_BlockedApplicationsForDVAccess)
 - [BlockedAttachments](#BKMK_BlockedAttachments)
 - [BlockedMimeTypes](#BKMK_BlockedMimeTypes)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
@@ -398,6 +401,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RequireApprovalForQueueEmail](#BKMK_RequireApprovalForQueueEmail)
 - [RequireApprovalForUserEmail](#BKMK_RequireApprovalForUserEmail)
 - [ResolveSimilarUnresolvedEmailAddress](#BKMK_ResolveSimilarUnresolvedEmailAddress)
+- [RestrictGuestUserAccess](#BKMK_RestrictGuestUserAccess)
 - [RestrictStatusUpdate](#BKMK_RestrictStatusUpdate)
 - [ReverseProxyIpAddresses](#BKMK_ReverseProxyIpAddresses)
 - [RiErrorStatus](#BKMK_RiErrorStatus)
@@ -832,6 +836,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 1
 
+
+
+### <a name="BKMK_AllowedApplicationsForDVAccess"></a> AllowedApplicationsForDVAccess
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies the Applications that are in allow list for the accessing DV resources.|
+|DisplayName|List of Applications that are in allow list for the accessing DV resources.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowedapplicationsfordvaccess|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_AllowedIpRangeForFirewall"></a> AllowedIpRangeForFirewall
@@ -1294,6 +1316,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_ApplicationBasedAccessControlMode"></a> ApplicationBasedAccessControlMode
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Application Based Access Control Mode. 0 is Disabled, 1 is audit mode , 2 is enforcement mode|
+|DisplayName|Application Based Access Control Mode|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|applicationbasedaccesscontrolmode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ApplicationBasedAccessControlMode Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Disabled||
+|1|Enabled||
+|2|AuditMode||
+
+
+
 ### <a name="BKMK_AppointmentRichEditorExperience"></a> AppointmentRichEditorExperience
 
 **Added by**: Activities Solution
@@ -1515,6 +1561,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|bingmapsapikey|
 |MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_BlockedApplicationsForDVAccess"></a> BlockedApplicationsForDVAccess
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies the Applications that are in block list for the accessing DV resources.|
+|DisplayName|List of Applications that are in block list for the accessing DV resources.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|blockedapplicationsfordvaccess|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -7575,6 +7639,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_RestrictGuestUserAccess"></a> RestrictGuestUserAccess
+
+**Added by**: msft_powerpolicy Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether guest user restriction is enabled|
+|DisplayName|Restrict guest users access to the organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|restrictGuestUserAccess|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### RestrictGuestUserAccess Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_RestrictStatusUpdate"></a> RestrictStatusUpdate
 
 |Property|Value|
@@ -9848,6 +9937,7 @@ Listed by **SchemaName**.
 - [organization_searchattributesettings](#BKMK_organization_searchattributesettings)
 - [organization_searchcustomanalyzer](#BKMK_organization_searchcustomanalyzer)
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
+- [organization_copilotexamplequestion](#BKMK_organization_copilotexamplequestion)
 - [organization_adx_externalidentity](#BKMK_organization_adx_externalidentity)
 - [organization_adx_webformsession](#BKMK_organization_adx_webformsession)
 
@@ -11767,6 +11857,23 @@ Same as the [organization_searchrelationshipsettings](searchrelationshipsettings
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_searchrelationshipsettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_copilotexamplequestion"></a> organization_copilotexamplequestion
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_copilotexamplequestion](copilotexamplequestion.md#BKMK_organization_copilotexamplequestion) many-to-one relationship for the [copilotexamplequestion](copilotexamplequestion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|copilotexamplequestion|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_copilotexamplequestion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

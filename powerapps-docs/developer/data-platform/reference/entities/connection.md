@@ -1,7 +1,7 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Connection table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -851,11 +851,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10252|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
-|10253|Invite Redemption|Holds information about the redemption of an invite.|
-|10272|Publishing State Transition Rule||
-|10274|Shortcut||
-|10286|Website|Web Portal|
+|10256|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10257|Invite Redemption|Holds information about the redemption of an invite.|
+|10276|Publishing State Transition Rule||
+|10278|Shortcut||
+|10290|Website|Web Portal|
 
 
 
@@ -928,11 +928,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10252|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
-|10253|Invite Redemption|Holds information about the redemption of an invite.|
-|10272|Publishing State Transition Rule||
-|10274|Shortcut||
-|10286|Website|Web Portal|
+|10256|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10257|Invite Redemption|Holds information about the redemption of an invite.|
+|10276|Publishing State Transition Rule||
+|10278|Shortcut||
+|10290|Website|Web Portal|
 
 
 

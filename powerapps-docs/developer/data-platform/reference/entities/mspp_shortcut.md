@@ -1,7 +1,7 @@
 ---
 title: "Shortcut (mspp_shortcut)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Shortcut (mspp_shortcut)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/14/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -503,9 +503,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [mspp_shortcut_ActivityPointers](#BKMK_mspp_shortcut_ActivityPointers)
+- [mspp_shortcut_adx_portalcomments](#BKMK_mspp_shortcut_adx_portalcomments)
 - [mspp_shortcut_adx_inviteredemptions](#BKMK_mspp_shortcut_adx_inviteredemptions)
 - [mspp_shortcut_chats](#BKMK_mspp_shortcut_chats)
-- [mspp_shortcut_adx_portalcomments](#BKMK_mspp_shortcut_adx_portalcomments)
 - [mspp_shortcut_Appointments](#BKMK_mspp_shortcut_Appointments)
 - [mspp_shortcut_Emails](#BKMK_mspp_shortcut_Emails)
 - [mspp_shortcut_Faxes](#BKMK_mspp_shortcut_Faxes)
@@ -533,6 +533,23 @@ Same as the [mspp_shortcut_ActivityPointers](activitypointer.md#BKMK_mspp_shortc
 |ReferencedEntityNavigationPropertyName|mspp_shortcut_ActivityPointers|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mspp_shortcut_adx_portalcomments"></a> mspp_shortcut_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [mspp_shortcut_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_shortcut_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mspp_shortcut_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_mspp_shortcut_adx_inviteredemptions"></a> mspp_shortcut_adx_inviteredemptions
@@ -565,23 +582,6 @@ Same as the [mspp_shortcut_chats](chat.md#BKMK_mspp_shortcut_chats) many-to-one 
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_shortcut_chats|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_shortcut_adx_portalcomments"></a> mspp_shortcut_adx_portalcomments
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_shortcut_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_shortcut_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_shortcut_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
