@@ -36,10 +36,11 @@ This setting can be found in the [Power Platform admin center](https://admin.pow
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. On the command bar, select **Insert** and then select one of the following options:
-1. 
+   
     - **Modern** > **Copilot answer (preview)**
     - **Classic** > **Copilot answer (preview)**
-      :::image type="content" source="media/answer-control/answer-control-insert.png" alt-text="Insert answer control":::
+      
+    :::image type="content" source="media/answer-control/answer-control-insert.png" alt-text="Insert answer control":::
 
 1. When the **Copilot answer (preview)** control is added to the canvas app, select a data source from the pane. Copilot only supports Dataverse tables.
 
