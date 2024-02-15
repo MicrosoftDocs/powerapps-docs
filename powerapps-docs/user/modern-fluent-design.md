@@ -95,7 +95,7 @@ With the modern, refreshed look, Power Apps is no longer honoring [classic theme
 
 ### Custom icons
 
-Only icons in SVG format are supported at this time. Other formats like PNG will not be rendered in the navigation and a default icon will be used instead.
+Only SVG icons are supported. If you use other formats such as PNG, the navigation won't display them and a default icon will appear instead.
 
 ## Frequently asked questions (FAQs)
 
