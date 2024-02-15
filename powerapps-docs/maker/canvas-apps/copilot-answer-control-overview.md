@@ -31,6 +31,8 @@ To use the Copilot answer control in a canvas app, an admin must first turn on t
 
 This setting can be found in the [Power Platform admin center](https://admin.powerplatform.microsoft.com) by going to **Environments** > [select an environment] > **Settings** > **Product** > **Features**. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
+:::image type="content" source="media/answer-control/answer-control-enable-by-admin.jpg" alt-text="Turn on Copilot answer control on Power Platform admin center":::
+
 ## Add Copilot answer control
 
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
