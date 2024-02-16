@@ -74,7 +74,7 @@ In this article, you will learn how to use an existing Azure Key Vault or create
      - **iOS** 
        1. Select the .cer into Keychain Access app to install it. For more information, see [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate).
        2. Right-click your certificate file to export the file as a pfx file, select **Export**, and then select the file format pfx.
-       3. iOS Certificate extension p12 should be renamed to **.pfx** because Key Vault doesn't accept other formats.
+       3. The iOS Certificate extension (.p12) should be renamed to **.pfx** as it is the accepted format by Key Vault
        
          > [!NOTE]
          > When you upload to the Key Vault, you'll need to provide the password that you set in previous step for the .p12 file.
