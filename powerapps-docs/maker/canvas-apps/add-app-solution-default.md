@@ -114,7 +114,7 @@ Take the following considerations into account before you decide to create canva
 The following scenarios were improved to support cloud flows and canvas apps defined in Dataverse:
 
 - The **Monitor** > **Cloud flow activity** page now supports solution cloud flows.
-- The [List Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. 
+- The [List My Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. 
   
 ## Known issues
 
