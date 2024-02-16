@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
-ms.date: 08/22/2023
+ms.date: 02/16/2024
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: "article"
@@ -18,7 +18,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 > [!IMPORTANT]
 > Using custom pages with mobile devices is currently in public preview. Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files isn't supported.
 >
-> Custom pages are not supported within **App for Outlook** and will provide an error on loading.
+> Custom pages aren't supported within **App for Outlook** and return an error on loading.
 
 ## Maker-related issues
 
