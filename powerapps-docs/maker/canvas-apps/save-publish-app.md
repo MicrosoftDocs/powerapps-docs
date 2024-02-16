@@ -36,11 +36,9 @@ With your app open for editing in [Power Apps](https://make.powerapps.com), you 
   - **Save as**: Duplicate the app with a different name.
   - **Download a copy**: Download a local copy of the app.
 
-## Auto save
+## Switch AutoSave on or off
 
 You can also set Power Apps to automatically save every two minutes.
-
-Follow these steps to turn **Auto save** on or off:
 
 1. Select **More** **...** > **Settings**.
 
