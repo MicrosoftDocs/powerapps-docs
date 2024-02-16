@@ -95,7 +95,7 @@ Once the feature is enabled, use solutions [export](../data-platform/export-solu
 
 Take the following considerations into account before you decide to create canvas apps and cloud flows in a solution by default.
 
-- Your Dataverse environment capacity consumption and related cost may increase.
+- Your Dataverse environment capacity consumption and related cost might increase.
 
 - Known solution limitations related to canvas apps still apply to canvas apps created in solutions by default.
 
@@ -119,9 +119,9 @@ The following scenarios were improved to support cloud flows and canvas apps def
 ## Known issues
 
 - [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing aren't updated for solution cloud flows.
-- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published). This API will be updated to return all solution cloud flows.
+- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published). This API is updated to return all solution cloud flows.
 - Flows with delegated authentication to Roadmap can't be added into a solution and migrated to Dataverse.
-- Flows with delegated authentication to SharePoint can't be added into a solution and migrated into Dataverse directly, but the delegated authentication can be removed to allow migration and then be added back after migration.
+- You can't add flows with delegated authentication to SharePoint into a solution and migrate them into Dataverse directly. However, you can remove the delegated authentication to allow migration and then add it back after migration.
 
 ### See also
 
