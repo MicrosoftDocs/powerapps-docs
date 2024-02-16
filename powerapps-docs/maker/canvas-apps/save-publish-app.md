@@ -32,7 +32,7 @@ Save icon :::image type="icon" source="media/save-publish-app/save-icon.png"::::
 
 - **Save**: Saves any unsaved changes you made to your app. With each **Save**, a new version is created in **App version history**.
 
-Dropdown save menu:
+The dropdown save menu:
 
 - **Save with version notes**: Save and add notes about your updates.
 - **Save as**: Duplicate the app with a different name.
@@ -84,9 +84,9 @@ Admins can disable this feature for Managed Environments in the Power Platform a
 
 ## Identify the live version
 
-To see all versions of an app, go to:
+To see all versions of an app:
 
-1. [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps**
+1. Go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps**.
 1. Select the :::image type="icon" source="media/save-publish-app/vertical-ellipses.png"::: next to an app name.
 1. Select **Details**, then the **Versions** tab.
 
@@ -115,7 +115,7 @@ When the published changes are ready, users see a notification stating **You're 
 | Canvas app on web | Generally available |
 | Customized SharePoint Forms | Not available |
 | Canvas app embedded in Teams | Not available |
-| Canvas app embedded in PowerBI | Not available |
+| Canvas app embedded in Power BI | Not available |
 | Power Apps web part | Not available |
 | Canvas app embedded in iframe | Generally available |
 
