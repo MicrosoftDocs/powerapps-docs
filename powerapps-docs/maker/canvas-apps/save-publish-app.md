@@ -28,7 +28,7 @@ For information about how to share an app, see [Share an app](share-app.md).
 
 Use the save option to save any unsaved changes you made to your app. With each **Save**, a new version is created in **App version history**.
 
-With your app open for editing in [Power Apps](https://make.powerapps.com), select **Save** :::image type="icon" source="media/save-publish-app/save-icon.png"::::: and then choose one of the following options:
+With your app open for editing in [Power Apps](https://make.powerapps.com), select **Save** :::image type="icon" source="media/save-publish-app/save-icon.png"::: and then choose one of the following options:
 
 - **Save with version notes**: Save and add notes about your updates.
 - **Save as**: Duplicate the app with a different name.
