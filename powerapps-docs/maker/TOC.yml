@@ -63,6 +63,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Form filling assistance
+      href: ../user/form-filling-assistance.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -2581,7 +2583,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Solution templates for Power Platform (preview)
+  - name: Enterprise templates for Power Platform
     href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
@@ -2643,6 +2645,8 @@
     href: ./common/faqs-excel-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
+  - name: FAQ about form filling assistance  
+    href: ./common/faq-from-filling-assistance.md
 - name: Resources
   items:
   - name: Blog
