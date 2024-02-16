@@ -26,13 +26,9 @@ For information about how to share an app, see [Share an app](share-app.md).
 
 ## Save your app
 
-With your app open for editing in [Power Apps](https://make.powerapps.com), you can save in several ways:
+Use the save option to save any unsaved changes you made to your app. With each **Save**, a new version is created in **App version history**.
 
-Save icon :::image type="icon" source="media/save-publish-app/save-icon.png"::::
-
-- **Save**: Saves any unsaved changes you made to your app. With each **Save**, a new version is created in **App version history**.
-
-The dropdown save menu:
+With your app open for editing in [Power Apps](https://make.powerapps.com), select **Save** :::image type="icon" source="media/save-publish-app/save-icon.png"::::: and then choose one of the following options:
 
 - **Save with version notes**: Save and add notes about your updates.
 - **Save as**: Duplicate the app with a different name.
@@ -40,25 +36,24 @@ The dropdown save menu:
 
 ## Auto save
 
-You can optionally set Power Apps to automatically save every 2 minutes.
+You can also set Power Apps to automatically save every two minutes.
 
-Enable or disable the **Auto save**:
+Follow these steps to turn **Auto save** on or off:
 
-1. Select the three dots **...** from the menu bar and choose **Settings**.
+1. Select **More** **...** > **Settings**.
 
    :::image type="content" source="media/save-publish-app/autosave.png" alt-text="Screenshot that shows where the ellipses points are located that opens a dropdown menu to reveal the Settings option.":::
 
-1. In the **Settings** popup, select the **General** tab.
+1. Select the **General** tab.
 
-1. In the **Auto save** section, toggle the auto save feature on or off.
+1. In the **Auto save** section, set the **Auto save** toggle to **On** or **Off**.
 
    :::image type="content" source="media/save-publish-app/autosave2.png" alt-text="Screenshot that shows where the Auto save toggle is located.":::
 
 > [!NOTE]
 >
-> - Whenever you publish a canvas app, your app is updated and runs on the latest version of Power Apps. Your app gets the benefit of all the latest features and performance upgrades added since you last published.
-> - If you haven’t published an update in several months, you might see an immediate performance benefit from republishing now.
-> - To retrieve app details faster upon startup, some data is stored locally on user devices in the browser cache. Information stored includes app, environment, and connection details. This data stays stored in the browser based on browser storage limits. Users can clear stored data based on these [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues#clear-your-browser-cache).
+> - When you publish a canvas app, your app is updated and runs on the latest version of Power Apps. Your app gets the benefit of all the latest features and performance upgrades added since you last published. If you haven’t published an update in several months, you might see an immediate performance benefit when you republish the app.
+> - To retrieve app details faster during startup, some data is stored locally on user devices in the browser cache. Information stored includes app environment and connection details. This data stays stored in the browser based on browser storage limits. Users can clear stored data based on these [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues#clear-your-browser-cache).
 
 ## Create an app description with Copilot (preview)
 
