@@ -120,8 +120,8 @@ The following scenarios were improved to support cloud flows and canvas apps def
 
 - [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing aren't updated for solution cloud flows.
 - The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published). This API will be updated to return all solution cloud flows.
-- Flows with delegated authentication to Roadmap cannot be added into a solution and migrated to Dataverse.
-- Flows with delegated authentication to SharePoint cannot be added into a solution and migrated into Dataverse directly, but the delegated authentication can be removed to allow migration and then be added back after migration.
+- Flows with delegated authentication to Roadmap can't be added into a solution and migrated to Dataverse.
+- Flows with delegated authentication to SharePoint can't be added into a solution and migrated into Dataverse directly, but the delegated authentication can be removed to allow migration and then be added back after migration.
 
 ### See also
 
