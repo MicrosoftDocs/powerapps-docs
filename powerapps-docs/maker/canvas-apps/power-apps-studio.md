@@ -23,7 +23,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 :::image type="content" source="media/studio/pa-studio.png" alt-text="Screenshot showing the Power Apps Studio user interface." lightbox="media/studio/pa-studio-1.png":::
 
-1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control that's selected.
+1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control selected.
 
 1. [App actions](#2--app-actions): Options to rename, share, run the app checker, add comments, preview, save, or publish the app.
 
@@ -45,26 +45,21 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [Change canvas screen size](#11--change-canvas-screen-size): Change the size of the canvas during an authoring experience in Power Apps Studio.
 
-
 Let's understand each option in Power Apps Studio in detail.
-
 
 ## 1 – Power Apps Studio modern command bar
 
-Power Apps Studio options are available on the command bar. The options are relevant to the current session and app-related settings. 
+Power Apps Studio options are available on the command bar. The options are relevant to the current session and app-related settings.
 
-> [!div class="mx-imgBorder"] 
-> ![Power Apps Studio options.](media/studio/pa-studio-options.png)
-
+:::image type="content" source="media/studio/pa-studio-options.png" alt-text="Screenshot that shows the command bar menu with lots of development options." lightbox="media/studio/pa-studio-options.png":::
 
 ### Modern command bar
 
-The modern command bar displays the relevant set of commands depending on the control that is selected. 
+The modern command bar displays the relevant set of commands depending on the control that is selected.
 
-![This image shows how the command bar changes depending on which control is selected.](media/studio/pa-studio-command-bar.gif)
+:::image type="content" source="media/studio/pa-studio-command-bar.gif" alt-text="Moving image that shows how the command bar changes depending on which control is selected." lightbox="media/studio/pa-studio-command-bar.gif":::
 
-
-The command bar changes when one of the following controls or objects is selected: 
+The command bar changes when one of the following controls or objects is selected:
 
 1. App object
 2. Screen
@@ -79,14 +74,7 @@ The command bar changes when one of the following controls or objects is selecte
 11. Text input
 12. Date picker
 
-When more than one type of control is selected, the command bar shows the common commands between the selected controls. 
-
-### Default command bar options
-
-When you open Power Apps Studio you'll see the default command bar. 
-
-> [!div class="mx-imgBorder"] 
-> ![Power Apps Studio options.](media/studio/pa-studio-options.png)
+When more than one type of control is selected, the command bar shows the common commands between the selected controls.
 
 #### Back
 
@@ -94,16 +82,14 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 #### Undo and redo
 
-> [!div class="mx-imgBorder"] 
-> ![Undo and redo.](media/studio/pa-undo-redo.png)
+:::image type="content" source="media/studio/pa-undo-redo.png" alt-text="Screenshot that shows where the undo and redo controls are located in the command bar.":::
 
 - **Undo**: Undo the last action.
 - **Redo**: Repeat the last action.
 
 #### Cut, copy, and paste
 
-> [!div class="mx-imgBorder"] 
-> ![Cut, copy and paste.](media/studio/pa-studio-cut-copy-paste.png)
+:::image type="content" source="media/studio/pa-studio-cut-copy-paste.png" alt-text="Screenshot that shows where the cut, copy, and paste controls are located in the command bar.":::
 
 - **Cut**: Cut the selection, and store it in the clipboard.
 - **Copy**: Copy the selection, and store it in the clipboard.
@@ -111,17 +97,16 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 #### Insert
 
-> [!div class="mx-imgBorder"] 
-> ![Insert controls to the screen.](media/studio/pa-insert-controls.png)
+:::image type="content" source="media/studio/pa-insert-controls.png" alt-text="Screenshot that shows where the two insert controls are located. One is in the command bar and the other control (plus sign) is in the navigation menu.":::
 
-The **Insert** menu is available from the command bar and from the app authoring menu on the left.
+The **Insert** menu is available from the command bar and from the app authoring menu.
 
 Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
 
 To insert controls on the canvas, you can drag the control to the canvas or select the control.
 
-
 ##### Popular controls
+
 | **Name**      | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
 |*Text label* | A box that shows data such as text, numbers, dates, or currency. |
@@ -191,8 +176,8 @@ Advanced settings allow you to further customize the app screen configuration.
 - **Scale to it**: Scales the app to fit available space.
 - **Lock aspect ratio**: Locks the height and width ratio.
 - **Lock orientation**: Maintains app orientation when device rotates.
--  **Optimize embedding appearance**: Optimizes for embedded experiences by aligning the app to the top left.
--  **Replace formula notification**: Displays notifications to prevent replacing customized size and position properties.
+- **Optimize embedding appearance**: Optimizes for embedded experiences by aligning the app to the top left.
+- **Replace formula notification**: Displays notifications to prevent replacing customized size and position properties.
 
 To change the setting, toggle the switch.
 
@@ -202,7 +187,7 @@ More information: [Change screen size and orientation](set-aspect-ratio-portrait
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
-More information: [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md)
+For more information, see [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md).
 
 ##### Support
 
@@ -214,7 +199,7 @@ Create a new flow with Power Automate, or select any available flow.
 
 ![Create a flow using Power Automate.](media/studio/pa-studio-create-flow.gif)
 
-More information: [Use Power Automate pane](working-with-flows.md)
+For more information, see [Use Power Automate pane](working-with-flows.md).
 
 #### Collections
 
@@ -230,18 +215,16 @@ You can save data such as the result values from a data set into temporary stora
 > [!div class="mx-imgBorder"] 
 > ![Variables.](media/studio/pa-studio-variables.png)
 
-
 ## 2 – App actions
 
-Use the options in the upper-right corner of Power Apps Studio to work with app-specific actions.
+To work with app-specific actions, use the options in the upper-right corner of Power Apps Studio.
 
 > [!div class="mx-imgBorder"] 
 > ![App actions.](media/studio/pa-studio-actions-menu.png)
 
-
 ### App name editor
 
-Select the name of the app to edit it.
+To edit the app name, select it.
 
 > [!div class="mx-imgBorder"] 
 > ![App name editor.](media/studio/pa-studio-app-name-editor.png)
@@ -262,7 +245,7 @@ Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-no
 
 ### Comments
 
-Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.
+Comments are notes associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.
 
 
 > [!div class="mx-imgBorder"] 
@@ -282,7 +265,7 @@ This shows a preview version of the app that you can interact with.
 Save allows you to perform the following actions:
 
 - **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
-- **Save with version notes**: Save and add notes about the updates you've made.
+- **Save with version notes**: Save and add notes about the updates you made.
 - **Save as**: Duplicate the app by saving the app with a different name.
 - **Save and publish**: Allows you to save the app and publish it at the same time.
 - **Download a copy**: Download a local copy of the app.
@@ -320,7 +303,7 @@ If a formula returns an error, tips relevant to the syntax error and mitigation 
 > [!div class="mx-imgBorder"] 
 > ![Resolve errors in the formula bar.](media/studio/pa-studio-formula-bar-3.png)
 
-Similarly, you'll find help when working with complex functions, nested functions, or when correcting a formula syntax.
+Similarly, you find help when working with complex functions, nested functions, or when correcting a formula syntax.
 
 For a quick and easy function reference, you can also select the formula dropdown menu.
 
@@ -381,14 +364,14 @@ Select the tree view to show the screens available in the app.
 > [!TIP]
 > Select **App** in the tree view to work with app-specific controls or to change app behavior, such as adding a formula on *OnStart* event of the app.
 
-Switch to the **Components** tab to work with component library features. You can add new components or reuse those that were already published from published component libraries. More information: [Component library](component-library.md)
+Switch to the **Components** tab to work with component library features. You can add new components or reuse ones from the published component libraries. More information: [Component library](component-library.md)
 
 > [!div class="mx-imgBorder"] 
 > ![Tree view - components.](media/studio/pa-studio-components-tab.png)
 
 ### Insert
 
-For information, see the [Insert](power-apps-studio.md#insert) section above.
+For information, see the [Insert](power-apps-studio.md#insert) section.
 
 ### Data
 
@@ -438,6 +421,4 @@ Use the screen selector to switch between screens when your canvas app has multi
 
 ## 11 – Change canvas screen size
 
-You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size you use while authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
-
-
+You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size used in authoring a canvas app has no affect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
