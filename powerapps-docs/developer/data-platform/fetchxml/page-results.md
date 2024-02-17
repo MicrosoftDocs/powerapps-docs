@@ -12,30 +12,30 @@ search.audienceType:
 ---
 # Page results using FetchXml
 
-Dataverse will return up to 5,000 rows of data with each request. If you need to get more rows of data, you need to send additional requests for subsequent pages. If you want your application to efficiently retrieve smaller set of data, you can use paging to specify the number of records to return.
+When running fetchxml queries with large amounts of rows, Dataverse will return the first page if the result set is above the specified limit for the given page (5,000) by default. If the dataset has more than 5,000 rows, the client will need to make multiple calls to get the full dataset.
 
 > [!IMPORTANT]
 > Don't use the [fetch element](reference/fetch.md) `top` attribute with paging.
 
-## Set order when paging
+## Page results using Paging Cookies
 
-The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page. [Learn more about best practices for orders when paging data](order-rows.md#best-practices-for-orders-when-paging-data).
-
-<!-- TODO: Update examples to include ordering best practices -->
+If there are more rows to retrieve after requesting the first page, Dataverse will return a paging cookie (when accplicable) to be used on the following requests for the next pages. This can be attached to the fetchxml with the "paging-cookie" attribute in the Fetch element. The paging cookie will help Dataverse retrieve the next row of data as quickly as possible and should be used when provided. 
 
 ## Simple paging
 
-<!-- 
-TODO: Clarify 'Legacy Paging'
+> [!Note]
+> Paging on Paging cookie should be used when possible for the best performance (especially with larger datasets)
 
-Is Legacy Paging = Simple paging?
-Docs suggest that no paging cookie returned with legacy paging.
+If the paging cookie is not provided (or paging by paging cookie is not supported), Dataverse will resort to a simplified paging model to retrieve the next set of records. This model will process all the records up to the current page in Dataverse, which has some performance concerns as the age count increases. It is recommended to avoid using simple paging when possible.
 
- -->
 
-You can implement simple client-side paging using FetchXml by setting the [fetch element](reference/fetch.md) `page` and `count` attributes together. Set the `count` to the number of records and the `page` number you want.
+### Simple Paging and ordering by link entity attributes.
 
-To get the first three records:
+When a given fetchxml query is ordering by a link-entity attributes, The system will automatically prevent the query from using paging cookies (and will return no paging cookie in the response). This is because paging cookies are incompatiable with ordering on link-entity attributes and can cause bad performance in some scenarios. Queries that are ordered in this way will also be limited to the first 50k (equal to the aggregate item limit) records of the query, even if there are more to retrieve in the database. See [Paging Behaviors and Ordering](/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering) for more info.
+
+## Paging using Simple Paging:
+
+You can request to the first page by setting the `page` and `count` properties before sending the request 
 
 ```xml
 <fetch count='3' page='1'>
@@ -46,25 +46,6 @@ To get the first three records:
   </entity>
 </fetch>
 ```
-
-The results of the query will tell you if there are more records that meet the filter criteria. These results depend on whether you use the SDK for .NET or Web API.
-
-# [SDK for .NET](#tab/sdk)
-
-The [MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) of the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) object returned by the `RetrieveMultiple` operation will be `true`.
-
-# [Web API](#tab/webapi)
-
-When you include either of these request headers:
-
-- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.morerecords"`
-- `Prefer: odata.include-annotations="*"`
-
-The boolean `@Microsoft.Dynamics.CRM.morerecords` annotation value will be `true`.
-
-[Learn more about Web API request headers](../webapi/compose-http-requests-handle-errors.md#http-headers)
-
----
 
 To get the next three records, increment the `page` value and send another request.
 
@@ -78,11 +59,11 @@ To get the next three records, increment the `page` value and send another reque
 </fetch>
 ```
 
-Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For this reason, you can only retrieve up to 50,000 total records using simple paging. For best performance in all cases, we recommend consistently using the *paging cookie*.
+Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For best performance in all cases, we recommend consistently using the *paging cookie*.
 
-## PagingCookie example
+## Full example of paging with a paging cookie
 
-A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of records, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
+A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of record, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
 
 <!-- 
 TODO: 

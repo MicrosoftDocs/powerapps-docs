@@ -53,15 +53,64 @@ If you want to use *descending* order, set the `descending` attribute to `true`.
 </fetch>
 ```
 
-## Lookup and choice columns
+## Specifying link attribute ordering (using entityName) on root entity for more control
 
-Lookup and choice column values are sorted using the display values rather than the values stored in the database.
-As mentioned in [formatted values](select-columns.md#formatted-values), the values stored in the database for lookup and choice columns is a GUID value and an integer value respectively. Sorting by these values is meaningless, therefore when you use order on these columns, the display value is used for sorting. For lookups, it's the primary name field for the related table. For choice columns, it's the value of the option label.
+Below is an example of how to normally order on both link-entity attributes and root-entity attributes. The results will be ordered by the following attributes (first -> last): 
 
-<!-- TODO: The option Label can be localized, so I expect this will impact the results returned -->
+1) parentaccountname.name
+2) account.name
+
+```xml
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountnumber' />
+    <attribute name='createdon' />
+    <link-entity name='account' from='accountid' to='accountid' link-type='inner' alias='parentaccount'>
+	<attribute name='name' alias='parentaccount' />
+	    <order attribute='name' />
+    </link-entity>
+    <order attribute='name' />
+  </entity>
+</fetch>
+```
+Dataverse will always order by the link-entity first due to how the query is processed. You can change up this order by using 'entityname' and moving the link-entity orders to the root entity:
+
+
+```xml
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountnumber' />
+    <attribute name='createdon' />
+    <link-entity name='account' from='accountid' to='accountid' link-type='inner' alias='parentaccount'>
+	<attribute name='name' alias='parentaccount' />
+    </link-entity>
+    <order attribute='name' />
+    <order entityname='parentaccount' attribute='name' />
+  </entity>
+</fetch>
+```
+
+The results will now be ordered by the following attributes (first -> last): 
+1) account.name
+2) parentaccountname.name
+
+## Special Cases
+
+### Lookup Columns
+When ordering on lookups, the results will be ordered by the primary name field for the related table.
+
+### Choice Columns
+Choice column values are sorted using the display values rather than the values stored in the database.
+As mentioned in [formatted values](select-columns.md#formatted-values), these columns are created as int. Sorting by the raw values can be non-intuitive, therefore when you use order on these columns, the display value is used for sorting. The string value that is sotred on is the localized label based on the users language.  
+
+> [!NOTE]
+> Since choice sorting is based on the localized label of the users's language, This will lead to different ordering for the results set if the user's language differs.
 
 ## Best practices for orders when paging data
-
+> [!NOTE]
+> When possible, queries should order on the table ID for the table as Dataverse is optimized for ordering on the tableid by default. Ordering by non-unique / complex fields can cause excess overhead and slower queries.
 <!-- 
 
 TODO: Does this capture all the guidance from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering? 
@@ -70,7 +119,7 @@ Can it be simplified?
 
 -->
 
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to [page the results](page-results.md). The choices you make in determining the order of the results can affect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 rows of data, you will need to [page the results](page-results.md). The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 
@@ -95,6 +144,7 @@ Include multiple fields that will most likely result in unique combinations. For
 The following are ordering choices to avoid:
 
 - Orders that don't include unique identifiers
+- Orders on calculated fields
 - Orders that have single or multiple fields that aren't likely to provide uniqueness such as:
 
   - Status and state
