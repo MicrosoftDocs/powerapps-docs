@@ -36,6 +36,10 @@ The actual set of privileges that is used to modify data is the intersection of 
 
 In other words, the *impersonator* is allowed to do something *if and only if* the *impersonator* and the *impersonated user* have the privilege necessary for the action.
 
+### Direct assignment required
+
+The **Act on Behalf of Another User** privilege (`prvActOnBehalfOfAnotherUser`), or a role containing that privilege, must be assigned directly to users since it cannot be inherited through a Team. This direct assignment is needed because of the sensitive nature of the privilege.
+
 ## Impersonation with Server-to-Server authentication
 
 If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid Dataverse user license.
