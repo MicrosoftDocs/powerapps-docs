@@ -15,22 +15,16 @@ contributors:
   
 ---
 
-
-<!-- Check the See also link at the end -->
-
-
 # Understand Power Apps Studio
 
-
-When you create a canvas app by using any method, you're taken to the canvas app builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
-
+You can use Power Apps Studio to design, build, and manage your canvas app.
 
 ## Overview of Power Apps Studio
 
-![Screenshot of Power Apps Studio.](media/studio/pa-studio-1.png "Power Apps Studio")
+:::image type="content" source="media/studio/pa-studio.png" alt-text="Screenshot showing the Power Apps Studio user interface." lightbox="media/studio/pa-studio-1.png":::
 
 1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control that's selected.
- 
+
 1. [App actions](#2--app-actions): Options to rename, share, run the app checker, add comments, preview, save, or publish the app.
 
 1. [Properties list](#3--properties-list): List of properties for the selected object.
@@ -45,7 +39,7 @@ When you create a canvas app by using any method, you're taken to the canvas app
 
 1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
 
-1. [Virtual agent](#9--virtual-agent): Get help building your app from a virtual agent.
+1. [Settings and virtual agent](#9--virtual-agent): Go to the settings or get help building your app from a virtual agent.
 
 1. [Screen selector](#10--screen-selector): Switch between different screens in an app.
 
