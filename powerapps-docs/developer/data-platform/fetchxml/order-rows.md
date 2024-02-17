@@ -66,8 +66,8 @@ Below is an example of how to normally order on both link-entity attributes and 
     <attribute name='name' />
     <attribute name='accountnumber' />
     <attribute name='createdon' />
-    <link-entity name='account' from='accountid' to='accountid' link-type='inner' alias='parentaccount'>
-	<attribute name='name' alias='parentaccount' />
+    <link-entity name='account' from='accountid' to='parentaccountid' link-type='inner' alias='parentaccount'>
+	    <attribute name='name' alias='parentaccount' />
 	    <order attribute='name' />
     </link-entity>
     <order attribute='name' />
@@ -83,8 +83,8 @@ Dataverse will always order by the link-entity first due to how the query is pro
     <attribute name='name' />
     <attribute name='accountnumber' />
     <attribute name='createdon' />
-    <link-entity name='account' from='accountid' to='accountid' link-type='inner' alias='parentaccount'>
-	<attribute name='name' alias='parentaccount' />
+    <link-entity name='account' from='accountid' to='parentaccountid' link-type='inner' alias='parentaccount'>
+	    <attribute name='name' alias='parentaccount' />
     </link-entity>
     <order attribute='name' />
     <order entityname='parentaccount' attribute='name' />
