@@ -169,12 +169,11 @@ The following example shows how to calculate an average estimated revenue from r
   
 <a name="BKMK_considerations"></a> 
 
-## Rollup column considerations 
+## Rollup column considerations
 
 You should be aware of certain conditions and restrictions when working with rollup columns:  
   
-- You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. Previously, the default value was 100 per environment and 10 per table. To apply the latest update, to to Power Apps (make.powerapps.com) > **Table** > Organization > Update Attribute value for MaxRollupFieldsPerOrg and/or MaxRollupFieldsPerEntity. <!-- steps appear incomplete -->
-- Having more than 100 rollup columns for an organization might result in degraded performance of rollup column and increased storage consumption.  
+- You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. The current default values and previous maximum are 100 per environment and 10 per table. More information: [Define the maximum number of rollup columns in an environment or table](#define-the-maximum-number-of-rollup-columns-in-an-environment-or-table) 
 - A workflow can't be triggered by the rollup column updates.  
 - A workflow wait condition cannot use a rollup column.  
 - A rollup over the rollup column is not supported.  
@@ -184,6 +183,20 @@ You should be aware of certain conditions and restrictions when working with rol
 - A rollup can't be done over the 1:N relationship for the Activity table or the Activity Party table.  
 - The business rules, workflows or calculated columns always use the last calculated value of the rollup column.  
 - A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Column level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
+
+### Define the maximum number of rollup columns in an environment or table
+
+You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. The current default values and previous maximums are 100 per environment and 10 per table.
+
+To increase the maximums, follow these steps:
+
+1. Go to Power Apps (make.powerapps.com), select **Table** on the left navigation pane, and then open the **Organization** table. 
+1. Select the *n* **more** list, and then type *maxr* in the **Search** box. Select the **MaxRollupFieldsPerOrg** and **MaxRollupFieldsPerEntity** columns, and then select **Save**.
+1. Change the values for **MaxRollupFieldsPerOrg** (up to 200) and **MaxRollupFieldsPerEntity** (up to 50) that you want.
+   :::image type="content" source="media/max-rollup-properties.png" alt-text="Select max rollup columns to increase values":::
+
+> [!IMPORTANT]
+> Having more than 100 rollup columns for an environment might result in degraded performance of rollup columns and increased storage consumption.  
 
 ### Precision rounding
  
