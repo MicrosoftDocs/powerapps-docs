@@ -682,7 +682,7 @@ You can also use the `partitionId` parameter:
 
 ## Associate a record of elastic table.
 
-To associate a record of elastic table which doesnot contain `partitionid`, refer [Associate with a single-valued navigation property](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api#associate-with-a-single-valued-navigation-property)
+To associate a record of elastic table which doesnot contain `partitionid`, refer [Associate with a single-valued navigation property](./webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property)
 
 To associate a record of elastic table that contains `partitionid`, the `partitionid` of the record should be explicitly specified in the paylod of the operation.
 
