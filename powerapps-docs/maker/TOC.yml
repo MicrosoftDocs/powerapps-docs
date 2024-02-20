@@ -2587,7 +2587,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Solution templates for Power Platform (preview)
+  - name: Enterprise templates for Power Platform
     href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
