@@ -680,6 +680,77 @@ You can also use the `partitionId` parameter:
 
 ---
 
+## Associate a record of elastic table.
+
+To associate a record of elastic table which doesnot contain `partitionid`, refer [Associate with a single-valued navigation property](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api#associate-with-a-single-valued-navigation-property)
+
+To associate a record of elastic table that contains `partitionid`, the `partitionid` of the record should be explicitly specified in the paylod of the operation.
+
+#### [SDK for .NET](#tab/sdk)
+
+This example associates a row of the `contoso_SensorData` table with the specified ID and `partitionid` to account record during create.
+
+```csharp
+/// <summary>
+/// Demonstrates associate operation.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+public static void AssociateExample(
+    IOrganizationService service, 
+    Guid sensordataid, 
+    string deviceId)
+{
+   var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensordataid },
+        { "partitionid", deviceId }
+    };
+    var sensorDataReference = new EntityReference("contoso_sensordata", keys);
+
+    var request = new CreateRequest
+    {
+        Target = new Entity("Account")
+        {
+            Attributes = 
+            {
+                {"accountnumber" , "Account123"},
+                {"sensordataid_account", sensorDataReference}
+            }
+        }
+    };
+
+    var response = service.Execute(request);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'` to a account record during create.
+
+**Request:**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{
+    "accountnumber": "Account123",
+    "sensordataid_account@odata.bind": "/contoso_sensordatas(contoso_sensordataid=02d82842-f3f4-ed11-8848-000d3a993550,partitionid='deviceid-001')"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
+---
+
 ## Bulk operations with elastic tables
 
 Often, applications must ingest a large amount of data into Dataverse in a short time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be even higher.
