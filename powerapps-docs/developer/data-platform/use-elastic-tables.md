@@ -726,7 +726,7 @@ public static void AssociateExample(
 
 #### [Web API](#tab/webapi)
 
-This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'` to a account record during create.
+This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'` to account record during create.
 
 **Request:**
 
