@@ -107,9 +107,9 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 
 ##### Popular controls
 
-| **Name**      | **Description**                                                                                      |
-|-----------------|------------------------------------------------------------------------------------------------------|
-|*Text label* | A box that shows data such as text, numbers, dates, or currency. |
+| **Name**      | **Description** |
+|---------------|-----------------|
+|*Text label* | A box that shows data such as text, numbers, dates, or currency.|
 |*Edit form*|Display, edit, or create a record in a data source.|
 |*Text input*|A box that shows text.|
 |*Vertical gallery*|A control that contains other controls and shows a set of data.|
@@ -117,71 +117,73 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 |*Date picker*|A control that the user can select to specify a date.|
 |*Button*|A control that the user can select to interact with the app.|
 
-For more information about the controls that you can insert, and their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
+For more information about the controls you can insert, inclduing their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
 
 #### Add data
 
-> [!div class="mx-imgBorder"] 
-> ![Add data.](media/studio/pa-studio-add-data.png)
+:::image type="content" source="media/studio/pa-studio-add-data.png" alt-text="Screenshot that shows how to add data from the Add data dropdown list.":::
+
+From the **Add data** menu, you can:
 
 - Select any other existing tables from the current environment.
 - Search and select a connector, such as **SharePoint** or **SQL Server**.
 
 #### New screen layouts
 
-> [!div class="mx-imgBorder"] 
-> ![Add new screen.](media/studio/pa-add-screen.png)
+Select from the list of available screen layouts.
 
-Add screens and select from the list of available screen layouts.
+:::image type="content" source="media/studio/pa-add-screen.png" alt-text="Screenshot that shows how to choose a layout from the New screen menu":::
 
-##### Scenarios 
+##### Templates
 
-> [!div class="mx-imgBorder"] 
-> ![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
+You can use a template for a screen. Select **Templates** and choose **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
-Or, select the **Scenarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
-
+:::image type="content" source="media/studio/pa-studio-add-screen-templates.png" alt-text="Screenshot that shows how to choose a template from the New screen menu":::
 
 #### Background color
 
-> [!div class="mx-imgBorder"] 
-> ![Screen background color.](media/studio/pa-studio-background-color.png)
+Select a background color for a screen. You can select from the list of standard colors or select the **Custom** tab and choose your own color.
 
-Select a background color for a screen. You can select from the list of standard colors or select the **Custom** table and choose your own color.
+:::image type="content" source="media/studio/pa-studio-background-color.png" alt-text="Screenshot that shows where to choose a background color from the command bar.":::
 
 #### Background image
 
-> [!div class="mx-imgBorder"] 
-> ![Screen background image.](media/studio/pa-studio-background-image.png)
-
 Select **Upload** to upload images to set as the background image.
+
+:::image type="content" source="media/studio/pa-studio-background-image.png" alt-text="Screenshot that shows where to choose a background image from the command bar.":::
 
 #### Settings
 
-Configure the app's general settings.
+Configure the app's settings from the **General**, **Display**, **Upcoming features**, or **Support** tab.
 
-> [!div class="mx-imgBorder"] 
-> ![App settings.](media/studio/pa-studio-general-settings.png)
+:::image type="content" source="media/studio/pa-studio-general-settings.png" alt-text="Screenshot that shows where to choose settings from the command bar."  lightbox="media/studio/pa-studio-general-settings.png":::
 
 ##### General
 
-Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Add image** option.
+- Edit the app **Name** and **Description**.
+- Add or update the **App icon**. Add a custom icon with **+ Add image**.
+- Select an **Icon background fill** or **Icon fill** color.
+- Toggle **Auto save** to save every two minutes automatically.
+- Configure offline use.
+- Enable modern controls and themes to update automatically.
+- Set your **Data row limit**.
+- Include debug information when you publish.
+- Enable auto-creation of environment variables.
+- **Enable App.OnStart property**.
+
+For example, to edit the app **Name**, go to the **General** tab of **Settings**.
+
+:::image type="content" source="media/studio/pa-studio-app-name-editor.png" alt-text="Screenshot where you edit your app name in the Settings popup.":::
 
 ##### Display
 
-Shows the screen size and orientation. To change, select the radio buttons for **Orientation** and **Size**.
-
-Advanced settings allow you to further customize the app screen configuration.
-
-- **Scale to it**: Scales the app to fit available space.
+- Select the **Orientation** and screen **Size**.
+- **Scale to fit**: Scales the app to fit available space.
 - **Lock aspect ratio**: Locks the height and width ratio.
 - **Lock orientation**: Maintains app orientation when device rotates.
-- **Optimize embedding appearance**: Optimizes for embedded experiences by aligning the app to the top left.
-- **Replace formula notification**: Displays notifications to prevent replacing customized size and position properties.
+- **Show mobile device notifications area**: Displays notifications at the top of the screen.
 
-To change the setting, toggle the switch.
-
-More information: [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md)
+For more information, see [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md).
 
 ##### Upcoming features
 
@@ -191,95 +193,86 @@ For more information, see [Understand experimental, preview, and retired feature
 
 ##### Support
 
-Shows current Power Apps Studio session details, version, and other information useful when working with Microsoft support.
+Access current Power Apps Studio information such as environment, authoring version, session ID and session details. This information is useful for Microsoft Support sessions.
 
 #### Power Automate
 
 Create a new flow with Power Automate, or select any available flow.
 
-![Create a flow using Power Automate.](media/studio/pa-studio-create-flow.gif)
+:::image type="content" source="media/studio/pa-studio-create-flow.png" alt-text="Screenshot that shows where the Power Automate section is located.":::
 
 For more information, see [Use Power Automate pane](working-with-flows.md).
 
 #### Collections
 
-A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](create-update-collection.md) used by the app.
+A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. For more information, see [Collections in canvas apps](create-update-collection.md).
 
-> [!div class="mx-imgBorder"] 
-> ![Collections.](media/studio/pa-studio-collections.png )
+:::image type="content" source="media/studio/pa-studio-collections.png" alt-text="Screenshot that shows the collections in the app that are found in the Variables section.":::
 
 #### Variables
 
-You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](working-with-variables.md) used by the app.
+You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. For more more information, see [Variables in canvas apps](working-with-variables.md).
 
-> [!div class="mx-imgBorder"] 
-> ![Variables.](media/studio/pa-studio-variables.png)
+:::image type="content" source="media/studio/pa-studio-variables.png" alt-text="Screenshot that shows the Variables section.":::
 
 ## 2 – App actions
 
-To work with app-specific actions, use the options in the upper-right corner of Power Apps Studio.
+To work with app-specific actions, use the options such as **Share**, **App checker**, **Comments**, **Preview the app**, **Save**, and **Publish**.
 
-> [!div class="mx-imgBorder"] 
-> ![App actions.](media/studio/pa-studio-actions-menu.png)
-
-### App name editor
-
-To edit the app name, select it.
-
-> [!div class="mx-imgBorder"] 
-> ![App name editor.](media/studio/pa-studio-app-name-editor.png)
+:::image type="content" source="media/studio/pa-studio-actions-menu.png" alt-text="Screenshot that shows the app actions in the command bar.":::
 
 ### Share
 
-> [!div class="mx-imgBorder"] 
-> ![Share app.](media/studio/pa-studio-share-app.png)
+When you select the **Share** app action, you see a new tab or window open where you can share the app. You can share with other users or add them as co-owners of your app.
 
-Lets you share the app with other users and add them as co-owners of your app. You must save the app before you can share it.
+:::image type="content" source="media/studio/pa-studio-share-app.png" alt-text="Screenshot that shows the Share app action selected, opening in a new window or tab, where you can share the app with users and co-owners." lightbox="media/studio/pa-studio-share-app.png":::
+
+> [!TIP]
+> You must save the app before you can share it.
 
 ### App checker
 
-Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
+Select **App checker** to run a check.
 
-> [!div class="mx-imgBorder"] 
-> ![App-checker.](media/studio/pa-studio-app-checker.png)
+For more information, see [PowerApps checker now includes App checker results for Canvas apps in solutions](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/).
+:::image type="content" source="media/studio/pa-studio-app-checker.png" alt-text="Screenshot that shows where the App checker app action is located and its menu contents.":::
 
 ### Comments
 
 Comments are notes associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.
 
-
-> [!div class="mx-imgBorder"] 
-> ![Add comments.](media/studio/pa-studio-comments.png)
+:::image type="content" source="media/studio/pa-studio-comments.png" alt-text=Screenshot that shows where the Comments app action is located and its menu where you can add a new comment.":::
 
 ### Preview
 
-This shows a preview version of the app that you can interact with.
+Select **Preview the app** to go into preview mode. Here you can view and interact with the current version of the app.
+
+:::image type="content" source="media/studio/pa-studio-preview.png" alt-text="Screenshot that shows where the Preview app action is located.":::
 
 ### Save
 
+You can save your app in different ways, such as **Save**, **Save with version notes**, **Save as**, or **Download a copy**. The save options dropdown is located next to the **Save** app action.
 
-> [!div class="mx-imgBorder"] 
-> ![Studio save options.](media/studio/pa-studio-save-options.png)
+:::image type="content" source="media/studio/pa-studio-save-options.png" alt-text="Screenshot that shows where save options are located.":::
 
+Save options include:
 
-Save allows you to perform the following actions:
-
-- **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
-- **Save with version notes**: Save and add notes about the updates you made.
-- **Save as**: Duplicate the app by saving the app with a different name.
-- **Save and publish**: Allows you to save the app and publish it at the same time.
+- **Save**: Saves recent and unsaved changes you made to the app. Each time you save changes, a new version is created.
+- **Save with version notes**: Save and add notes about your updates.
+- **Save as**: Duplicate the app by saving it with a different name.
 - **Download a copy**: Download a local copy of the app.
 
 ### Publish
 
-Publishes the app’s current version. For more information about publishing an app, go to [Save and publish canvas apps](save-publish-app.md).
+Select **Publish** to publish the app’s current version. For more information, see [Save and publish canvas apps](save-publish-app.md).
+
+:::image type="content" source="media/studio/pa-studio-publish.png" alt-text="Screenshot that shows where the Publish app action is located and its popup where you can add details to the publishing of your app." lightbox="media/studio/pa-studio-publish.png":::
 
 ## 3 – Properties list
 
-Shows the list of available properties for the selected object on the canvas. The properties list changes based on your selection. For a complete list of all properties, go to [All properties](reference-properties.md#all-properties).
+When you select an object in your canvas, you can choose one of the object's properties from its properties list. For a complete list of all possible properties, go to [All properties](reference-properties.md#all-properties).
 
-> [!div class="mx-imgBorder"] 
-> ![Properties list.](media/studio/pa-studio-prop-list.png)
+:::image type="content" source="media/studio/pa-studio-prop-list.png" alt-text="Screenshot that show the properties list based on an object you select in your app canvas.":::
 
 ## 4 – Formula bar
 
