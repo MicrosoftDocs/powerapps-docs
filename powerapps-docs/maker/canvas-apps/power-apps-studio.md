@@ -290,7 +290,7 @@ When you select a function, the formula bar shows inline function help and highl
 
 If a formula returns an error, you can view the error details in **App checker**.
 
-:::image type="content" source="media/studio/pa-studio-formula-bar-3.png" alt-text="Screenshot that shows formula errors viewed, using the App checker." lightbox="media/studio/pa-studio-formula-bar-3.png.png":::
+:::image type="content" source="media/studio/pa-studio-formula-bar-3.png" alt-text="Screenshot that shows formula errors viewed, using the App checker." lightbox="media/studio/pa-studio-formula-bar-3.png":::
 
 Similarly, you find help when working with complex functions, nested functions, or when correcting a formula syntax.
 
@@ -323,7 +323,7 @@ The options for working with canvas apps change depending on the selection on th
 
 Select the tree view to show the screens available in the app.
 
-:::image type="content" source="media/studio/pa-studio-tree-view.png" alt-text=Screenshot that shows the Tree view pane when you select Tree view from the authoring menu.":::
+:::image type="content" source="media/studio/pa-studio-tree-view.png" alt-text="Screenshot that shows the Tree view pane when you select Tree view from the authoring menu.":::
 
 > [!TIP]
 > Select **App** in the tree view to work with app-specific controls. You can change app behavior, such as adding a formula for the *OnStart* event of the app.
