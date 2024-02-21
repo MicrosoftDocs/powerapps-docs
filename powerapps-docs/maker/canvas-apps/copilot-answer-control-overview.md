@@ -21,7 +21,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Makers can use the Copilot answer control to set predefined questions that end users can use to get AI-generated information with a single click. The control is powered by Microsoft Copilot and is designed for mobile users to provid them with immediate answers to frequently asked questions.
+Makers can use the Copilot answer control to set predefined questions that end users can use to get AI-generated information with a single click. The control is powered by Microsoft Copilot and is designed for mobile users to provide them with immediate answers to frequently asked questions.
 
 :::image type="content" source="media/answer-control/answer-control-shown-on-mobile.png" alt-text="Answers shown on mobile":::
 
