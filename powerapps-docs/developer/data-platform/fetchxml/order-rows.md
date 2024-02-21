@@ -29,8 +29,6 @@ The following query returns [account](../reference/entities/account.md) records 
 </fetch>
 ```
 
-## Order with multiple columns
-
 The order of the elements determines how the ordering is applied. To have ordering applied using `accountnumber`, move that element to the first position.
 
 ```xml
@@ -53,29 +51,11 @@ If you want to use *descending* order, set the `descending` attribute to `true`.
 </fetch>
 ```
 
-## Specifying link attribute ordering (using entityName) on root entity for more control
+## Process `link-entity` orders last
 
-Below is an example of how to normally order on both link-entity attributes and root-entity attributes. The results will be ordered by the following attributes (first -> last): 
+Dataverse always orders attributes specified by the `link-entity` before attributes for the `entity` element.
 
-1) parentaccountname.name
-2) account.name
-
-```xml
-<fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <attribute name='accountnumber' />
-    <attribute name='createdon' />
-    <link-entity name='account' from='accountid' to='parentaccountid' link-type='inner' alias='parentaccount'>
-	    <attribute name='name' alias='parentaccount' />
-	    <order attribute='name' />
-    </link-entity>
-    <order attribute='name' />
-  </entity>
-</fetch>
-```
-Dataverse will always order by the link-entity first due to how the query is processed. You can change up this order by using 'entityname' and moving the link-entity orders to the root entity:
-
+The following example shows a conventional ordering pattern for both `link-entity` attributes and `entity` attributes.
 
 ```xml
 <fetch>
@@ -83,51 +63,84 @@ Dataverse will always order by the link-entity first due to how the query is pro
     <attribute name='name' />
     <attribute name='accountnumber' />
     <attribute name='createdon' />
-    <link-entity name='account' from='accountid' to='parentaccountid' link-type='inner' alias='parentaccount'>
-	    <attribute name='name' alias='parentaccount' />
+    <link-entity name='account'
+      from='accountid'
+      to='parentaccountid'
+      link-type='inner'
+      alias='parentaccount'>
+      <attribute name='name'
+        alias='parentaccount' />
+      <order attribute='name' />
     </link-entity>
     <order attribute='name' />
-    <order entityname='parentaccount' attribute='name' />
   </entity>
 </fetch>
 ```
 
-The results will now be ordered by the following attributes (first -> last): 
-1) account.name
-2) parentaccountname.name
+In this case, the results are ordered using following attributes:
 
-## Special Cases
+- First => `parentaccountname.name`
+- Last => `account.name`
+
+
+To change this so that the `link-entity` order isn't applied first, move the `order` element from the `link-entity` element to the `entity` element and use the `entityname` attribute on the `order` element to refer to the `link-entity` `alias` value.
+
+
+```xml
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountnumber' />
+    <attribute name='createdon' />
+    <link-entity name='account'
+      from='accountid'
+      to='parentaccountid'
+      link-type='inner'
+      alias='parentaccount'>
+      <attribute name='name'
+        alias='parentaccount' />
+    </link-entity>
+    <order attribute='name' />
+    <order entityname='parentaccount'
+      attribute='name' />
+  </entity>
+</fetch>
+```
+
+Now, the results are ordered using the following attributes:
+
+- First => `account.name`
+- Last => `parentaccount.name`
+
+## Ordering lookup and choice columns
+
+For most column types, the data they contain is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data store in the database is not meaningful.
 
 ### Lookup Columns
-When ordering on lookups, the results will be ordered by the primary name field for the related table.
+
+When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](select-columns.md#formatted-values) returned is the corresponding primary name field.
 
 ### Choice Columns
-Choice column values are sorted using the display values rather than the values stored in the database.
-As mentioned in [formatted values](select-columns.md#formatted-values), these columns are created as int. Sorting by the raw values can be non-intuitive, therefore when you use order on these columns, the display value is used for sorting. The string value that is sotred on is the localized label based on the users language.  
+
+Choice column values are also sorted using the [formatted values](select-columns.md#formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
 
 > [!NOTE]
 > Since choice sorting is based on the localized label of the users's language, This will lead to different ordering for the results set if the user's language differs.
 
 ## Best practices for orders when paging data
+
 > [!NOTE]
-> When possible, queries should order on the table ID for the table as Dataverse is optimized for ordering on the tableid by default. Ordering by non-unique / complex fields can cause excess overhead and slower queries.
-<!-- 
+> When possible, queries should order on the primary key for the table as Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique / complex fields can cause excess overhead and slower queries.
 
-TODO: Does this capture all the guidance from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering? 
-Does it need more examples?
-Can it be simplified?
-
--->
-
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 rows of data, you will need to [page the results](page-results.md). The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to [page the results](page-results.md). The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 
 Always include a column that has a unique identifier. For example:
 
-- table ID columns
-- autonumber columns
-- user/contact IDs
+- Table primary key columns
+- Autonumber columns
+- User/contact IDs
 
 Include multiple fields that will most likely result in unique combinations. For example:
 
@@ -137,7 +150,7 @@ Include multiple fields that will most likely result in unique combinations. For
 
 
 > [!NOTE]
-> If no order element is included in the query, and the [fetch element](reference/fetch.md) `distinct` attribute is not used, Dataverse automatically adds an order element using the entity primary key to provide some basic ordering.
+> If no `order` element is included in the query, and the [fetch element](reference/fetch.md) `distinct` attribute is not used, Dataverse automatically adds an `order` element using the table primary key to provide some basic ordering.
 
 ### Anti-patterns
 
@@ -150,7 +163,7 @@ The following are ordering choices to avoid:
   - Status and state
   - Choices or Yes/No
   - Name values by themselves. For example `name`, `firstname`, `lastname`
-  - Text fields like titles, descriptions,  and multi-line text
+  - Text fields like titles, descriptions, and multi-line text
   - Non unique number fields
 
 

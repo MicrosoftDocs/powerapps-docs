@@ -12,30 +12,41 @@ search.audienceType:
 ---
 # Page results using FetchXml
 
-When running fetchxml queries with large amounts of rows, Dataverse will return the first page if the result set is above the specified limit for the given page (5,000) by default. If the dataset has more than 5,000 rows, the client will need to make multiple calls to get the full dataset.
+You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
 
-> [!IMPORTANT]
-> Don't use the [fetch element](reference/fetch.md) `top` attribute with paging.
+The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
 
-## Page results using Paging Cookies
+> [!NOTE]
+> Don't use the [fetch element](reference/fetch.md) `top` attribute with paging. These different methods of limiting the results of a query are not compatible.
 
-If there are more rows to retrieve after requesting the first page, Dataverse will return a paging cookie (when accplicable) to be used on the following requests for the next pages. This can be attached to the fetchxml with the "paging-cookie" attribute in the Fetch element. The paging cookie will help Dataverse retrieve the next row of data as quickly as possible and should be used when provided. 
+## Paging models
+
+Dataverse has two paging models: *simple* and using *paging cookies*:
+
+:::row:::
+   :::column span="":::
+      **Simple**
+
+      - Uses only the [fetch element](reference/fetch.md) `count` and `page` attributes
+      - Suitable for small data sets only
+      - Can't be used to return a data set larger than 50,000 records
+      - Performance reduced as the number of rows increases
+      - [Learn more about simple paging](#simple-paging)
+   :::column-end:::
+   :::column span="":::
+      **Paging cookies**
+
+      - Uses the [fetch element](reference/fetch.md) `count`, `page`, and `paging-cookie` attributes
+      - Recommended for all data set sizes
+      - Some queries do not allow for paging cookies
+      - [Learn more about using paging cookies](#paging-cookies)
+   :::column-end:::
+:::row-end:::
+
 
 ## Simple paging
 
-> [!Note]
-> Paging on Paging cookie should be used when possible for the best performance (especially with larger datasets)
-
-If the paging cookie is not provided (or paging by paging cookie is not supported), Dataverse will resort to a simplified paging model to retrieve the next set of records. This model will process all the records up to the current page in Dataverse, which has some performance concerns as the age count increases. It is recommended to avoid using simple paging when possible.
-
-
-### Simple Paging and ordering by link entity attributes.
-
-When a given fetchxml query is ordering by a link-entity attributes, The system will automatically prevent the query from using paging cookies (and will return no paging cookie in the response). This is because paging cookies are incompatiable with ordering on link-entity attributes and can cause bad performance in some scenarios. Queries that are ordered in this way will also be limited to the first 50k (equal to the aggregate item limit) records of the query, even if there are more to retrieve in the database. See [Paging Behaviors and Ordering](/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering) for more info.
-
-## Paging using Simple Paging:
-
-You can request to the first page by setting the `page` and `count` properties before sending the request 
+You can request to the first page by setting the [fetch element](reference/fetch.md) `page` attribute to 1 and the `count` attribute to the page size before sending the request:
 
 ```xml
 <fetch count='3' page='1'>
@@ -59,19 +70,29 @@ To get the next three records, increment the `page` value and send another reque
 </fetch>
 ```
 
-Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For best performance in all cases, we recommend consistently using the *paging cookie*.
+With simple paging, sometimes called `legacy paging`, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and  arbitrarily sorted distinct query results.
 
-## Full example of paging with a paging cookie
+Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using the *paging cookie*.
 
-A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of record, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
 
-<!-- 
-TODO: 
- - Should people cache the paging cookie if their application enables navigation from one page to the next?
- - Or is mostly for people to get all the records that match the criteria, regardless of how many records there are? 
-   
-   Should we have a more advanced example with a class to manage paged results with methods like GetPage(N), GetNextPage(), GetLastPage()?
--->
+## Paging cookies
+
+When there are more rows to retrieve after requesting the first page, Dataverse *usually* returns a paging cookie to be used on the following requests for the next pages.
+
+The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [fetch element](reference/fetch.md) `paging-cookie` attribute and increment the `page` attribute value for subsequent requests.
+
+### Queries that don't support paging cookies
+
+Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute don't support paging cookies.
+
+When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that includes.
+
+### Simple Paging and ordering by link entity attributes
+
+When a query is sorted using a `link-entity` element attribute, Dataverse will automatically prevent the query from using paging cookies (and will return no paging cookie in the response). This is because paging cookies are incompatible with ordering on `link-entity` attributes. Ordering on `link-entity` attributes can cause bad performance in some scenarios. Queries that are ordered in this way will also be limited to the first 50,000 records of the query, even if there are more records that match the query criteria. See [Paging Behaviors and Ordering](/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering) for more info.
+
+## Paging cookie examples
+
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -227,8 +248,6 @@ static void Main(string[] args)
 
 
 ### [Web API](#tab/webapi)
-
-<!-- This content comes from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-fetchxml-web-api#paging-with-fetchxml -->
 
 With the Web API you must request a paging cookie as an annotation. Use either of these request headers:
 
