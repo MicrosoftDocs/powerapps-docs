@@ -22,55 +22,55 @@ For example, the following query returns account records where `address1_city` e
 
 ```xml
 <fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <filter type='and'>
-      <condition attribute='address1_city'
-        operator='eq'
-        value='Redmond' />
-    </filter>
-  </entity>
+   <entity name='account'>
+      <attribute name='name' />
+      <filter type='and'>
+         <condition attribute='address1_city'
+            operator='eq'
+            value='Redmond' />
+      </filter>
+   </entity>
 </fetch>
 ```
 
-This query returns account records where `address1_city` equals 'Redmond', 'Seattle', or 'Bellevue'. It uses `<filter type='or'>` with three [condition elements](reference/condition.md).
+This query returns account records where `address1_city` equals 'Redmond', 'Seattle', or 'Bellevue'. It uses `<filter type='or'>` with three [condition elements](reference/condition.md) that each use the [eq operator](reference/operators.md#eq).
 
 ```xml
 <fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <attribute name='address1_city' />
-    <filter type='or'>
-      <condition attribute='address1_city'
-        operator='eq'
-        value='Redmond' />
-      <condition attribute='address1_city'
-        operator='eq'
-        value='Seattle' />
-      <condition attribute='address1_city'
-        operator='eq'
-        value='Bellevue' />
-    </filter>
-  </entity>
+   <entity name='account'>
+      <attribute name='name' />
+      <attribute name='address1_city' />
+      <filter type='or'>
+         <condition attribute='address1_city'
+            operator='eq'
+            value='Redmond' />
+         <condition attribute='address1_city'
+            operator='eq'
+            value='Seattle' />
+         <condition attribute='address1_city'
+            operator='eq'
+            value='Bellevue' />
+      </filter>
+   </entity>
 </fetch>
 ```
 
-The previous query can also be represented using the `in` operator with a single `condition` element. This condition contains multiple [value elements](reference/value.md) to specify the values to compare to `address1_city`.
+The previous query can also be represented using the [in operator](reference/operators.md#in) with a single `condition` element. This condition contains multiple [value elements](reference/value.md) to specify the values to compare to `address1_city`.
 
 ```xml
 <fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <attribute name='address1_city' />
-    <filter type='and'>
-      <condition attribute='address1_city'
-        operator='in'>
-        <value>Redmond</value>
-        <value>Seattle</value>
-        <value>Bellevue</value>
-      </condition>
-    </filter>
-  </entity>
+   <entity name='account'>
+      <attribute name='name' />
+      <attribute name='address1_city' />
+      <filter type='and'>
+         <condition attribute='address1_city'
+            operator='in'>
+            <value>Redmond</value>
+            <value>Seattle</value>
+            <value>Bellevue</value>
+         </condition>
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -81,30 +81,34 @@ Operators can require no parameters, a single parameter, or multiple parameters.
 ### No parameters
 
 Some operators don't require any parameters.
-For example, you can use the `eq-userid` operator to evaluate any unique identifier to determine if it matches the calling user's ID.
+For example, you can use the [eq-userid operator](reference/operators.md#eq-userid) to evaluate any unique identifier to determine if it matches the calling user's ID.
 
 ```xml
-<condition attribute='ownerid' operator='eq-userid' />
+<condition attribute='ownerid'
+   operator='eq-userid' />
 ```
 
 ### Single parameter
 
 When an operator requires a single parameter, use the `value` attribute to set the value to evaluate.
-For example, you can use the `eq` operator to evaluate the `statecode` choice column value of a record by setting the `value` attribute.
+For example, you can use the [eq operator](reference/operators.md#eq) to evaluate the `statecode` choice column value of a record by setting the `value` attribute.
 
 ```xml
-<condition attribute='statecode' operator='eq' value='0' />
+<condition attribute='statecode'
+   operator='eq'
+   value='0' />
 ```
 
 ### Multiple parameters
 
 When an operator requires multiple parameters, use the [value element](reference/value.md) to specify the values to evaluate.
-For example, you can use the `between` operator to evaluate a number to determine if it is between a set of values.
+For example, you can use the [between operator](reference/operators.md#between) to evaluate a number to determine if it is between a set of values.
 
 ```xml
-<condition attribute="numberofemployees" operator="between">
-  <value>6</value>
-  <value>20</value>
+<condition attribute="numberofemployees"
+   operator="between">
+   <value>6</value>
+   <value>20</value>
 </condition>
 ```
 
@@ -120,12 +124,14 @@ You can create filters that compare columns on values in the same row using the 
 
 ```xml
 <fetch>
-  <entity name='contact' >
-    <attribute name='firstname' />
-    <filter>
-      <condition attribute='firstname' operator='eq' valueof='lastname'/>
-    </filter>
-  </entity>
+   <entity name='contact' >
+      <attribute name='firstname' />
+      <filter>
+         <condition attribute='firstname'
+            operator='eq'
+            valueof='lastname' />
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -134,17 +140,23 @@ You can create filters that compare columns on values in the same row using the 
 With FetchXML only, you can compare field values in related tables. The following example returns rows where the contact `fullname` column matches the account `name` column.
 
 ```xml
-<fetch> 
-  <entity name='contact'>
-    <attribute name='contactid' />
-    <attribute name='fullname' />
-    <filter type='and'>
-      <condition attribute='fullname' operator='eq' valueof='acct.name' />
-    </filter>
-    <link-entity name='account' from='accountid' to='parentcustomerid' link-type='outer' alias='acct'>
-      <attribute name='name' />
-    </link-entity>
-  </entity>
+<fetch>
+   <entity name='contact'>
+      <attribute name='contactid' />
+      <attribute name='fullname' />
+      <filter type='and'>
+         <condition attribute='fullname'
+            operator='eq'
+            valueof='acct.name' />
+      </filter>
+      <link-entity name='account'
+         from='accountid'
+         to='parentcustomerid'
+         link-type='outer'
+         alias='acct'>
+         <attribute name='name' />
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -200,20 +212,24 @@ This query uses a `filter` of type `or` with a child `link-entity` of type `any`
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='or'>
-      <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
-         link-type='any'>
-        <filter type='and'>
-          <condition attribute='name' operator='eq' value='Contoso' />
-        </filter>
-      </link-entity>
-      <condition attribute='statecode' operator='eq' value='1' />
-    </filter>
-  </entity>
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <filter type='or'>
+         <link-entity name='account'
+            from='primarycontactid'
+            to='contactid'
+            link-type='any'>
+            <filter type='and'>
+               <condition attribute='name'
+                  operator='eq'
+                  value='Contoso' />
+            </filter>
+         </link-entity>
+         <condition attribute='statecode'
+            operator='eq'
+            value='1' />
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -241,19 +257,21 @@ This query uses the `not any` link type to return records from the [contact](../
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
-         link-type='not any'>
-        <filter type='and'>
-          <condition attribute='name' operator='eq' value='Contoso' />
-        </filter>
-      </link-entity>
-    </filter>
-  </entity>
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <filter type='and'>
+         <link-entity name='account'
+            from='primarycontactid'
+            to='contactid'
+            link-type='not any'>
+            <filter type='and'>
+               <condition attribute='name'
+                  operator='eq'
+                  value='Contoso' />
+            </filter>
+         </link-entity>
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -285,19 +303,21 @@ This query uses a `link-entity` of type `not all` to return records from the [co
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
-         link-type='not all'>
-        <filter type='and'>
-          <condition attribute='name' operator='eq' value='Contoso' />
-        </filter>
-      </link-entity>
-    </filter>
-  </entity>
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <filter type='and'>
+         <link-entity name='account'
+            from='primarycontactid'
+            to='contactid'
+            link-type='not all'>
+            <filter type='and'>
+               <condition attribute='name'
+                  operator='eq'
+                  value='Contoso' />
+            </filter>
+         </link-entity>
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -324,19 +344,21 @@ This query uses a `link-entity` of type `all` to return records from the [contac
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <filter type='and'>
-      <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
-         link-type='all'>
-        <filter type='and'>
-          <condition attribute='name' operator='eq' value='Contoso' />
-        </filter>
-      </link-entity>
-    </filter>
-  </entity>
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <filter type='and'>
+         <link-entity name='account'
+            from='primarycontactid'
+            to='contactid'
+            link-type='all'>
+            <filter type='and'>
+               <condition attribute='name'
+                  operator='eq'
+                  value='Contoso' />
+            </filter>
+         </link-entity>
+      </filter>
+   </entity>
 </fetch>
 ```
 

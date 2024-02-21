@@ -113,7 +113,6 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 
     XElement fetchNode = XElement.Parse(fetchXml);
 
-
     int page = 1; //Start with page 1
 
     //Set the page
@@ -206,7 +205,7 @@ And these annotations will be returned with the result:
 - `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie`
 - `@Microsoft.Dynamics.CRM.morerecords`
 
-The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity. Normally you wouldn't use paging cookies for such small page sizes.
+The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity.
 
 ```xml
 <fetch count='3' page='1'>
@@ -225,7 +224,9 @@ Send the first page with the `page` value set to `'1'`.
 
 Use this request header:
 
-`Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`
+```
+Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
+```
 
 To make sure the paging cookie and more records annotations in the response are returned.
 
@@ -282,7 +283,7 @@ In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indi
 
 The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML element. You need to use the `pagingcookie` attribute value of that element in the next request.
 
-The `pagingcookie` attribute value is URL-encoded *twice*. The decoded and formatted value looks like this:
+The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't need to check this, the decoded and formatted value looks like this:
 
 ```xml
 <cookie page="1">
