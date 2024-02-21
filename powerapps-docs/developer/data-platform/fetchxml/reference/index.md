@@ -39,13 +39,16 @@ This reference does not include elements or attributes used in defining views fo
 
 ### See also
 
-[Query data using FetchXml](../overview.md)  
+[Query data using FetchXml](../overview.md)   
+[Use FetchXml to retrieve data](../retrieve-data.md)   
 [Select columns using FetchXml](../select-columns.md)  
 [Join tables using FetchXml](../join-tables.md)  
 [Order rows using FetchXml](../order-rows.md)  
 [Filter rows using FetchXml](../filter-rows.md)  
-[Page results using FetchXml](../page-results.md)  
+[Page results using FetchXml](../page-results.md)   
+[Aggregate data using FetchXml](../aggregate-data.md)   
 [Count rows using FetchXml](../count-rows.md)  
-[Optimize performance using FetchXml](../optimize-performance.md)
+[Optimize performance using FetchXml](../optimize-performance.md)   
+[FetchXml sample code](../sample.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

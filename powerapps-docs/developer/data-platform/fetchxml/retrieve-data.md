@@ -134,6 +134,11 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 
 ## Next steps
 
+Learn how to select columns.
+
+> [!div class="nextstepaction"]
+> [Select columns](select-columns.md)
+
 Try some sample code
 
 > [!div class="nextstepaction"]

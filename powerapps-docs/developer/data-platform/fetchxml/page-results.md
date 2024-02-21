@@ -29,14 +29,14 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
 
       - Uses only the [fetch element](reference/fetch.md) `count` and `page` attributes
       - Suitable for small data sets only
-      - Can't be used to return a data set larger than 50,000 records
+      - Can't return a data set larger than 50,000 records
       - Performance reduced as the number of rows increases
    :::column-end:::
    :::column span="":::
       **Paging cookies**
 
       - Uses the [fetch element](reference/fetch.md) `count`, `page`, and `paging-cookie` attributes
-      - Set the `paging-cookie` attribute value to the value returned with previous page.
+      - Set the `paging-cookie` attribute value to the value returned with previous page
       - Recommended for all data set sizes
       - [Some queries do not allow for paging cookies](#queries-that-dont-support-paging-cookies)
       - [Learn more about using paging cookies](#paging-cookies)
@@ -70,9 +70,9 @@ To get the next three records, increment the `page` value and send another reque
 </fetch>
 ```
 
-With simple paging, sometimes called `legacy paging`, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and  arbitrarily sorted distinct query results.
+With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
 
-Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using the *paging cookie*.
+Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using paging cookies.
 
 
 ## Paging cookies
@@ -85,7 +85,7 @@ The paging cookie contains data about the first and last record in the results a
 
 Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute don't support paging cookies.
 
-When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that includes.
+When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that come with it.
 
 ## Paging cookie examples
 

@@ -27,7 +27,7 @@ Use the [attribute element](reference/attribute.md) to select the columns to ret
 </fetch>
 ```
 
-This query returns the [AccountClassificationCode](../reference/entities/account.md#BKMK_AccountClassificationCode), [CreatedBy](../reference/entities/account.md#BKMK_CreatedBy), [CreatedOn](../reference/entities/account.md#BKMK_CreatedOn), and [Name](../reference/entities/account.md#BKMK_Name) columns of the first 5,000 rows from the [Account table](../reference/entities/account.md). If you need more rows than this, or you want to iterate through smaller sets of data, [learn how to page results using FetchXml](page-results.md)
+This query returns the [AccountClassificationCode](../reference/entities/account.md#BKMK_AccountClassificationCode), [CreatedBy](../reference/entities/account.md#BKMK_CreatedBy), [CreatedOn](../reference/entities/account.md#BKMK_CreatedOn), and [Name](../reference/entities/account.md#BKMK_Name) columns of the first 5,000 rows from the [Account table](../reference/entities/account.md). If you need more rows than this, or you want to iterate through smaller sets of data, [learn how to page results using FetchXml](page-results.md).
 
 For each attribute you want returned, add an [attribute element](reference/attribute.md) and set the `name` attribute value to the `LogicalName` of the column.
 
@@ -42,7 +42,7 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 The typed data returned may not be suitable to display in your application. Formatted values are string values returned with the request that you can display in your application.
 
-For example, the results of the example query above look something like this:
+Let's look at the results *without* using formatted values first.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -97,7 +97,6 @@ static void SimpleOutput(IOrganizationService service) {
  ----------------------------------------------------------------------------------------------
  | 1                  | FirstName LastName  | 8/13/2023 10:30:10 PM | Adventure Works (sample)|
  ----------------------------------------------------------------------------------------------
-
 ```
 
 ### [Web API](#tab/webapi)
@@ -179,8 +178,64 @@ The `OutputFetchRequest` sample method described in [FetchXml Sample code](sampl
  --------------------------------------------------------------------------------------------------
  | Default Value             | FirstName LastName  | 8/13/2023 10:30 PM | Adventure Works (sample)|
  --------------------------------------------------------------------------------------------------
-
 ```
+
+This `GetRowValues` method extracts a list of string values for a record from the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) when they are available.
+
+```csharp
+/// <summary>
+/// Returns the values of a row as strings
+/// </summary>
+/// <param name="columns">The names of the columns</param>
+/// <param name="entity">The entity with the data</param>
+/// <returns></returns>
+static List<string> GetRowValues(List<string> columns, Entity entity)
+{
+   List<string> values = new();
+   columns.ForEach(column =>
+   {
+      if (entity.Attributes.ContainsKey(column))
+      {
+            // Use the formatted value if it available
+            if (entity.FormattedValues.ContainsKey(column) &&
+            !string.IsNullOrWhiteSpace(entity.FormattedValues[column]))
+            {
+               values.Add($"{entity.FormattedValues[column]}");
+            }
+            else
+            {
+               // When an alias is used, the Aliased value must be converted
+               if (entity.Attributes[column] is AliasedValue aliasedValue)
+               {
+                  // When an EntityReference doesn't have a Name, show the Id
+                  if (aliasedValue.Value is EntityReference lookup &&
+                  string.IsNullOrWhiteSpace(lookup.Name))
+                  {
+                        values.Add($"{lookup.Id:B}");
+                  }
+                  else
+                  {
+                        values.Add($"{aliasedValue.Value}");
+                  }
+               }
+               else
+               {
+                  // Use the simple attribute value
+                  values.Add($"{entity.Attributes[column]}");
+               }
+            }
+      }
+      // Null values are not in the Attributes collection
+      else
+      {
+            values.Add("NULL");
+      }
+
+   });
+   return values;
+}
+```
+
 
 ### [Web API](#tab/webapi)
 
@@ -259,7 +314,7 @@ Column aliases are typically used for [aggregate operations](aggregate-data.md),
 
 Use the [attribute](reference/attribute.md) `alias` attribute to specify a unique column name for the results returned.
 
-Each column returned must have a unique name. By default, the column names returned for the entity of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
+Each column returned must have a unique name. By default, the column names returned for the table of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
 
 When you use a [link-entity element](reference/link-entity.md) to [join tables](join-tables.md), the default column names follow this naming convention: `{Linked table LogicalName}.{Column LogicalName}`.  This prevents any duplicate column names. You can override this by using a unique alias. You can also set an `alias` value for the `link-entity` representing the joined table.
 

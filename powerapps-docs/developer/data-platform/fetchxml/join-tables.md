@@ -17,7 +17,7 @@ As described in [Query data using FetchXml](overview.md), start your query by se
 Use the [link-entity element](reference/link-entity.md) to describe the data from related tables to return with your query with the following attributes:
 
 
-|Attribute|Short Description [Find more details in the link-entity element reference](reference/link-entity.md)|
+|Attribute|Short Description *[Find more details in the link-entity element reference](reference/link-entity.md)*|
 |---------|---------|
 |`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]|
 |`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]|
@@ -31,16 +31,16 @@ For example, the following query returns up to 5 records from the [account](../r
 
 ```xml
 <fetch top='5'>
-  <entity name='account'>
-    <attribute name='name' />
-    <link-entity name='contact'
-      from='contactid'
-      to='primarycontactid'
-      link-type='inner'
-      alias='contact'>
-      <attribute name='fullname' />
-    </link-entity>
-  </entity>
+   <entity name='account'>
+      <attribute name='name' />
+      <link-entity name='contact'
+         from='contactid'
+         to='primarycontactid'
+         link-type='inner'
+         alias='contact'>
+         <attribute name='fullname' />
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -85,25 +85,23 @@ You can also use other tools and APIs to look up relationship data for the appro
 - [Browse table definitions in your environment](../browse-your-metadata.md)
 - [Query schema definitions](../query-schema-definitions.md)
 
-<!-- Include some example relationship queries here? -->
-
 ## One-to-many relationships
 
 Many-to-one and one-to-many relationships are like looking at two sides of a coin. The relationship exists between the tables, so the way you use it depends on which table is the base table for your query.
 
-You can retrieve the same data as the previous example from the contact table using the same relationship, except from the side of the contact table. Use the data from the [Contact account_primary_contact one-to-many relationship](../reference/entities/contact.md#BKMK_account_primary_contact), but adjust the values for the different view of the relationship.
+You can retrieve the same data as the previous example from the contact table using the same relationship, except from the side of the contact table. Use the data from the same [Contact account_primary_contact one-to-many relationship](../reference/entities/contact.md#BKMK_account_primary_contact), but adjust the values for the different view of the relationship.
 
 ```xml
 <fetch top='5'>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <link-entity name='account' 
-     from='primarycontactid' 
-     to='contactid' 
-     alias='account'>
-      <attribute name='name' />
-    </link-entity>
-  </entity>
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <link-entity name='account'
+         from='primarycontactid'
+         to='contactid'
+         alias='account'>
+         <attribute name='name' />
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -146,21 +144,21 @@ If you want to retrieve information about users and the teams they belong to usi
 
 ```xml
 <fetch top='2'>
-  <entity name='systemuser'>
-    <attribute name='fullname' />
-    <link-entity name='teammembership'
-      from='systemuserid'
-      to='systemuserid'
-      intersect='true' >
-      <link-entity name='team'
-        from='teamid'
-        to='teamid'
-        link-type='inner'
-        alias='team'>
-        <attribute name='name' />
+   <entity name='systemuser'>
+      <attribute name='fullname' />
+      <link-entity name='teammembership'
+         from='systemuserid'
+         to='systemuserid'
+         intersect='true' >
+         <link-entity name='team'
+            from='teamid'
+            to='teamid'
+            link-type='inner'
+            alias='team'>
+            <attribute name='name' />
+         </link-entity>
       </link-entity>
-    </link-entity>
-  </entity>
+   </entity>
 </fetch>
 ```
 
@@ -189,17 +187,17 @@ For example, this query finds pairs of records where the [Name column](../refere
 
 ``` xml
 <fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <link-entity name='contact'
-      from='fullname'
-      to='name'
-      link-type='inner'
-      alias='contact'>
-      <attribute name='fullname' />
-    </link-entity>
-  </entity>
-</fetch>
+   <entity name='account'>
+     <attribute name='name' />
+     <link-entity name='contact'
+       from='fullname'
+       to='name'
+       link-type='inner'
+       alias='contact'>
+       <attribute name='fullname' />
+     </link-entity>
+   </entity>
+ </fetch>
 ```
 
 > [!NOTE]
@@ -270,17 +268,19 @@ This table shows the generic patterns both of these link types apply:
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <link-entity name='account'
+         from='primarycontactid'
+         to='contactid'
          link-type='exists'>
-      <filter type='and'>
-        <condition attribute='statecode' operator='eq' value='1' />
-      </filter>
-    </link-entity>
-  </entity>
+         <filter type='and'>
+            <condition attribute='statecode'
+               operator='eq'
+               value='1' />
+         </filter>
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -288,17 +288,19 @@ This table shows the generic patterns both of these link types apply:
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <link-entity name='account'
+         from='primarycontactid'
+         to='contactid'
          link-type='in'>
-      <filter type='and'>
-        <condition attribute='statecode' operator='eq' value='1' />
-      </filter>
-    </link-entity>
-  </entity>
+         <filter type='and'>
+            <condition attribute='statecode'
+               operator='eq'
+               value='1' />
+         </filter>
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -343,16 +345,16 @@ This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#usi
 
 ``` xml
 <fetch>
-  <entity name='contact'>
-    <attribute name='fullname' />
-    <link-entity name='account' 
-         from='primarycontactid' 
-         to='contactid' 
+   <entity name='contact'>
+      <attribute name='fullname' />
+      <link-entity name='account'
+         from='primarycontactid'
+         to='contactid'
          link-type='matchfirstrowusingcrossapply'>
-      <attribute name='accountid' />
-      <attribute name='name' />
-    </link-entity>
-  </entity>
+         <attribute name='accountid' />
+         <attribute name='name' />
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
