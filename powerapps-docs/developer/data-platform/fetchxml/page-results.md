@@ -31,14 +31,14 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
       - Suitable for small data sets only
       - Can't be used to return a data set larger than 50,000 records
       - Performance reduced as the number of rows increases
-      - [Learn more about simple paging](#simple-paging)
    :::column-end:::
    :::column span="":::
       **Paging cookies**
 
       - Uses the [fetch element](reference/fetch.md) `count`, `page`, and `paging-cookie` attributes
+      - Set the `paging-cookie` attribute value to the value returned with previous page.
       - Recommended for all data set sizes
-      - Some queries do not allow for paging cookies
+      - [Some queries do not allow for paging cookies](#queries-that-dont-support-paging-cookies)
       - [Learn more about using paging cookies](#paging-cookies)
    :::column-end:::
 :::row-end:::
@@ -77,7 +77,7 @@ Simple paging works well for small data sets, but as the number of rows in the d
 
 ## Paging cookies
 
-When there are more rows to retrieve after requesting the first page, Dataverse *usually* returns a paging cookie to be used on the following requests for the next pages.
+When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to be used on the following requests for the next pages.
 
 The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [fetch element](reference/fetch.md) `paging-cookie` attribute and increment the `page` attribute value for subsequent requests.
 
@@ -87,12 +87,9 @@ Some queries do not support paging cookies. When paging cookies aren't supported
 
 When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that includes.
 
-### Simple Paging and ordering by link entity attributes
-
-When a query is sorted using a `link-entity` element attribute, Dataverse will automatically prevent the query from using paging cookies (and will return no paging cookie in the response). This is because paging cookies are incompatible with ordering on `link-entity` attributes. Ordering on `link-entity` attributes can cause bad performance in some scenarios. Queries that are ordered in this way will also be limited to the first 50,000 records of the query, even if there are more records that match the query criteria. See [Paging Behaviors and Ordering](/power-apps/developer/data-platform/org-service/paging-behaviors-and-ordering) for more info.
-
 ## Paging cookie examples
 
+How you use paging cookies depends on whether you are using the SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -116,84 +113,33 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 
     XElement fetchNode = XElement.Parse(fetchXml);
 
+
     int page = 1; //Start with page 1
 
-    //Set the fetch page attribute
-    SetPage(fetchNode, page);
+    //Set the page
+    fetchNode.SetAttributeValue("page", page);
 
-    // Set the fetch count attribute
-    SetCount(fetchNode, pageSize);
+    // Set the page size
+    fetchNode.SetAttributeValue("count", pageSize);
 
     while (true)
     {
-        // Retrieve records
+        // Get the page
         EntityCollection results = service.RetrieveMultiple(new FetchExpression(fetchNode.ToString()));
 
         entities.AddRange(results.Entities);
 
         if (!results.MoreRecords)
         {
-         // Stop sending requests
             break;
         }
 
         // Set the fetch paging-cookie attribute with the paging cookie from the previous query
-        SetPagingCookie(fetchNode, results);
+        fetchNode.SetAttributeValue("paging-cookie", results.PagingCookie);
 
-        page++;
-
-        // Set the fetch page attribute
-        SetPage(fetchNode, page);
+        fetchNode.SetAttributeValue("page", page++);
     }
-
-    // Return the records from all requests
     return new EntityCollection(entities);
-
-    // Sets the fetch page attribute value
-    void SetPage(XElement fetchNode, int page)
-    {
-
-        if (fetchNode.Attribute("page") != null)
-        {
-            // Set the value if attribute exists
-            fetchNode.Attribute("page").SetValue(page);
-        }
-        else
-        {
-            // Add the attribute if it doesn't
-            fetchNode.Add(new XAttribute("page", page));
-        }
-    }
-   
-   // Sets the fetch count attribute value
-    void SetCount(XElement fetchNode, int count)
-    {
-        if (fetchNode.Attribute("count") != null)
-        {
-            // Set the value if attribute exists
-            fetchNode.Attribute("count").SetValue(count);
-        }
-        else
-        {
-            // Add the attribute if it doesn't
-            fetchNode.Add(new XAttribute("count", count));
-        }
-    }
-
-    // Sets the fetch paging-cookie attribute value
-    void SetPagingCookie(XElement fetchNode, EntityCollection results)
-    {
-        if (fetchNode.Attribute("paging-cookie") != null)
-        {
-            // Set the value if attribute exists
-            fetchNode.Attribute("paging-cookie").SetValue(results.PagingCookie);
-        }
-        else
-        {
-            // Add the attribute if it doesn't
-            fetchNode.Add(new XAttribute("paging-cookie", results.PagingCookie));
-        }
-    }
 }
 ```
 
@@ -483,10 +429,10 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client,
     int page = 1; //Start with page 1
 
     // Set the fetch page attribute
-    SetPage(fetchNode, page);
+    fetchNode.SetAttributeValue("page", page);
 
     // Set the fetch count attribute
-    SetCount(fetchNode, pageSize);
+    fetchNode.SetAttributeValue("count", pageSize);
 
     while (true)
     {
@@ -547,67 +493,21 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client,
             break;
         }
 
-        // Set the fetch paging-cookie attribute with the paging cookie from the previous query
-        SetPagingCookie(fetchNode, pagingCookie);
+        XElement cookieElement = XElement.Parse(pagingCookie);
+        // Extract the pagingcookie attribute
+        XAttribute pagingcookieAttribute = cookieElement.Attribute("pagingcookie");
+        // Decode the pagingcookie attribute twice
+        pagingCookie = HttpUtility.UrlDecode(HttpUtility.UrlDecode(pagingcookieAttribute.Value));
 
-        page++;
+        // Set the fetch paging-cookie attribute with the paging cookie from the previous query
+        fetchNode.SetAttributeValue("paging-cookie", pagingCookie);
+
         // Increment the fetch page attribute value
-        SetPage(fetchNode, page);
+        fetchNode.SetAttributeValue("page", page++);
     }
 
     // Return the records from all requests
     return entities;
-
-    // Sets the fetch page attribute value
-    void SetPage(XElement fetchNode, int page)
-    {
-        if (fetchNode.Attribute("page") != null)
-        {
-            // Set the value if attribute exists
-            fetchNode.Attribute("page").SetValue(page);
-        }
-        else
-        {
-            // Add the attribute if it doesn't
-            fetchNode.Add(new XAttribute("page", page));
-        }
-    }
-
-    // Sets the fetch count attribute value
-    void SetCount(XElement fetchNode, int count)
-    {
-        if (fetchNode.Attribute("count") != null)
-        {
-            // Set the value if attribute exists
-            fetchNode.Attribute("count").SetValue(count);
-        }
-        else
-        {
-            // Add the attribute if it doesn't
-            fetchNode.Add(new XAttribute("count", count));
-        }
-    }
-
-    // Sets the fetch paging-cookie attribute value
-    void SetPagingCookie(XElement fetchNode, string fetchxmlpagingcookie)
-    {
-        XElement cookieElement = XElement.Parse(fetchxmlpagingcookie);
-        // Extract the pagingcookie attribute
-        XAttribute pagingcookieAttribute = cookieElement.Attribute("pagingcookie");
-        // Decode the pagingcookie attribute twice
-        string pagingCookie = HttpUtility.UrlDecode(HttpUtility.UrlDecode(pagingcookieAttribute.Value));
-
-        if (fetchNode.Attribute("paging-cookie") != null)
-        {
-            // Set the value if attribute exists, XML encodes value
-            fetchNode.Attribute("paging-cookie").SetValue(pagingCookie);
-        }
-        else
-        {
-            // Add the attribute if it doesn't exist, XML encodes value
-            fetchNode.Add(new XAttribute("paging-cookie", pagingCookie));
-        }
-    }
 }
 ```
 

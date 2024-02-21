@@ -18,7 +18,7 @@ To try using FetchXml with C#, you can use the `OutputFetchRequest` static metho
 - [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md)
 
 > [!NOTE]
-> See [PagingCookie example](page-results.md#pagingcookie-example) for sample code to retrieve data in pages.
+> See [Paging Cookie examples](page-results.md#paging-cookie-examples) for sample code to retrieve data in pages.
 
 ## [SDK for .NET](#tab/sdk)
 
