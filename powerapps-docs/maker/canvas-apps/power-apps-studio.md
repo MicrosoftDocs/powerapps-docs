@@ -21,7 +21,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 ## Overview of Power Apps Studio
 
-:::image type="content" source="media/studio/pa-studio.png" alt-text="Screenshot showing the Power Apps Studio user interface." lightbox="media/studio/pa-studio-1.png":::
+:::image type="content" source="media/studio/pa-studio.png" alt-text="Screenshot showing the Power Apps Studio user interface." lightbox="media/studio/pa-studio.png":::
 
 1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control selected.
 
@@ -117,7 +117,7 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 |*Date picker*|A control that the user can select to specify a date.|
 |*Button*|A control that the user can select to interact with the app.|
 
-For more information about the controls you can insert, inclduing their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
+For more information about the controls you can insert, including their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
 
 #### Add data
 
@@ -168,7 +168,7 @@ Configure the app's settings from the **General**, **Display**, **Upcoming featu
 - Enable modern controls and themes to update automatically.
 - Set your **Data row limit**.
 - Include debug information when you publish.
-- Enable auto-creation of environment variables.
+- Enable autocreation of environment variables.
 - **Enable App.OnStart property**.
 
 For example, to edit the app **Name**, go to the **General** tab of **Settings**.
@@ -193,7 +193,7 @@ For more information, see [Understand experimental, preview, and retired feature
 
 ##### Support
 
-Access current Power Apps Studio information such as environment, authoring version, session ID and session details. This information is useful for Microsoft Support sessions.
+Access current Power Apps Studio information such as environment, authoring version, session ID, and session details. This information is useful for Microsoft Support sessions.
 
 #### Power Automate
 
@@ -211,7 +211,7 @@ A collection is a group of items that are similar, such as products in a product
 
 #### Variables
 
-You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. For more more information, see [Variables in canvas apps](working-with-variables.md).
+You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. For more information, see [Variables in canvas apps](working-with-variables.md).
 
 :::image type="content" source="media/studio/pa-studio-variables.png" alt-text="Screenshot that shows the Variables section.":::
 
@@ -241,7 +241,7 @@ For more information, see [PowerApps checker now includes App checker results fo
 
 Comments are notes associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.
 
-:::image type="content" source="media/studio/pa-studio-comments.png" alt-text=Screenshot that shows where the Comments app action is located and its menu where you can add a new comment.":::
+:::image type="content" source="media/studio/pa-studio-comments.png" alt-text="Screenshot that shows where the Comments app action is located and its menu where you can add a new comment.":::
 
 ### Preview
 
@@ -270,69 +270,41 @@ Select **Publish** to publish the app’s current version. For more information,
 
 ## 3 – Properties list
 
-When you select an object in your canvas, you can choose one of the object's properties from its properties list. For a complete list of all possible properties, go to [All properties](reference-properties.md#all-properties).
+When you select an object in your canvas, you can choose one of the object's properties from its properties list. For a complete list of all possible properties, see [All properties](reference-properties.md#all-properties).
 
-:::image type="content" source="media/studio/pa-studio-prop-list.png" alt-text="Screenshot that show the properties list based on an object you select in your app canvas.":::
+:::image type="content" source="media/studio/pa-studio-prop-list.png" alt-text="Screenshot that shows the properties list of an object you select in your app canvas.":::
 
 ## 4 – Formula bar
 
-Use the formula bar to add, edit, or remove functions relevant to the selected object and the property selected from the properties list. For example, select the screen to update the background by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
+The formula bar lets you add, edit, or remove functions of a property from your selected object. For example, select the app screen to update the background color by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
 
-> [!div class="mx-imgBorder"] 
-> ![Formula bar.](media/studio/pa-studio-formula-bar.png)
+:::image type="content" source="media/studio/pa-studio-formula-bar.png" alt-text="Screenshot that shows the formula bar." lightbox="media/studio/pa-studio-formula-bar.png":::
 
-The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows the list of functions.
+The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows a list of functions.
 
-> [!div class="mx-imgBorder"] 
-> ![Function in the formula bar.](media/studio/pa-studio-formula-bar-1.png)
+:::image type="content" source="media/studio/pa-studio-formula-bar-1.png" alt-text="Screenshot that shows the formula bar with IntelliSense in action as you type." lightbox="media/studio/pa-studio-formula-bar-1.png":::
 
 When you select a function, the formula bar shows inline function help and highlights help text relevant to the cursor position.
 
-> [!div class="mx-imgBorder"] 
-> ![Inline help for function in the formula bar.](media/studio/pa-studio-formula-bar-2.png)
+:::image type="content" source="media/studio/pa-studio-formula-bar-2.png" alt-text="Screenshot that shows inline help for a function in the formula bar." lightbox="media/studio/pa-studio-formula-bar-2.png":::
 
-If a formula returns an error, tips relevant to the syntax error and mitigation steps are displayed. 
+If a formula returns an error, you can view the error details in **App checker**.
 
-> [!div class="mx-imgBorder"] 
-> ![Resolve errors in the formula bar.](media/studio/pa-studio-formula-bar-3.png)
+:::image type="content" source="media/studio/pa-studio-formula-bar-3.png" alt-text="Screenshot that shows formula errors viewed, using the App checker." lightbox="media/studio/pa-studio-formula-bar-3.png.png":::
 
 Similarly, you find help when working with complex functions, nested functions, or when correcting a formula syntax.
 
-For a quick and easy function reference, you can also select the formula dropdown menu.
-
-> [!div class="mx-imgBorder"] 
-> ![Formula dropdown menu.](media/studio/pa-studio-function-list.png)
-
-Select an event type from the dropdown menu at the top of the dialog box, such as **Action** instead of **Text**.
-
-> [!div class="mx-imgBorder"] 
-> ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
-
-Select an action that you want to add a function for. The available functions for the selected event type are dynamically updated depending on the object you select.
-
-> [!div class="mx-imgBorder"] 
-> ![Change in function event selection.](media/studio/pa-studio-select-function-1.png "Change in function event selection")
-
-For example, if you selected a button on the canvas, the available **Action** functions also include the function *ClearCollect()*.
-
-> [!div class="mx-imgBorder"] 
-> ![Function ClearCollect() selected.](media/studio/pa-studio-select-function-2.png "Function ClearCollect() selected")
-
-You can read the description of the selected **Action** function. Double-click the function name to add it into the formula bar.
-
-For a complete list of all canvas app functions, go to [Power Fx formula reference for Power Apps](/power-platform/power-fx/formula-reference).
-
+For a complete list of all canvas app functions, see [Formula reference - Power Apps](/power-platform/power-fx/formula-reference).
 
 ## 5 – App authoring menu
 
 Switch between various authoring options while working with the app.
 
-
-> [!div class="mx-imgBorder"] 
-> ![App authoring menu.](media/studio/pa-studio-app-authoring-menu.png)
+:::image type="content" source="media/studio/pa-studio-app-authoring-menu.png" alt-text="Screenshot that shows the app authoring menu.":::
 
 > [!TIP]
-> You can also select the expand button to expand the list to include names instead of just icons.
+> You can select the tree view icon to collapse or expand the list to either include icons only or full names with icons.
+> :::image type="content" source="media/studio/pa-studio-collapse-tree.png" alt-text="Screenshot that showswhere to select the tree view icon in order to collapse the menu.":::
 
 - **Tree view**: Shows a tree view of all screens and controls in the current app.
 - **Insert**: Allows you to add different controls to the screen.
@@ -351,20 +323,16 @@ The options for working with canvas apps change depending on the selection on th
 
 Select the tree view to show the screens available in the app.
 
-> [!div class="mx-imgBorder"] 
-> ![Tree view.](media/studio/pa-studio-tree-view.png)
+:::image type="content" source="media/studio/pa-studio-tree-view.png" alt-text=Screenshot that shows the Tree view pane when you select Tree view from the authoring menu.":::
 
 > [!TIP]
-> Select **App** in the tree view to work with app-specific controls or to change app behavior, such as adding a formula on *OnStart* event of the app.
+> Select **App** in the tree view to work with app-specific controls. You can change app behavior, such as adding a formula for the *OnStart* event of the app.
 
-Switch to the **Components** tab to work with component library features. You can add new components or reuse ones from the published component libraries. More information: [Component library](component-library.md)
+Switch to the **Components** tab of **Tree view** to work with component library features. You can add new components or reuse ones from the published component libraries. For more information, see [Component library](component-library.md).
 
-> [!div class="mx-imgBorder"] 
-> ![Tree view - components.](media/studio/pa-studio-components-tab.png)
+:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screeshot showing the Components tab of the Tree view pane.":::
 
-### Insert
-
-For information, see the [Insert](power-apps-studio.md#insert) section.
+For information on adding components, see the [Insert](#insert) section.
 
 ### Data
 
@@ -406,7 +374,7 @@ The properties pane shows properties and options available for the currently sel
 
 ## 9 – Virtual agent
 
-Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md)
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. For more information, see [Get help building your app from a virtual agent](../common/virtual-agent.md).
 
 ## 10 – Screen selector
 
@@ -414,4 +382,4 @@ Use the screen selector to switch between screens when your canvas app has multi
 
 ## 11 – Change canvas screen size
 
-You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size used in authoring a canvas app has no affect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
+You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size used in authoring a canvas app has no effect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
