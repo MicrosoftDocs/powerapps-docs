@@ -386,7 +386,7 @@ For more information, see [Get help building your app from a virtual agent](../c
 
 Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the authoring menu by selecting the tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
 
-:::image type="content" source="media/studio/pa-studio-screen-selector.png" alt-text=Screenshot that shows the location of the screen selector.":::
+:::image type="content" source="media/studio/pa-studio-screen-selector.png" alt-text="Screenshot that shows the location of the screen selector.":::
 
 ## 11 – Change canvas screen size
 
