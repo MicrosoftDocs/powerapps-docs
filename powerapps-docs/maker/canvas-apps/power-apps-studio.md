@@ -317,7 +317,7 @@ Switch between various authoring options while working with the app.
 
 ## 6 – App authoring options
 
-The options for working with canvas apps change depending on the selection on the left pane.
+The options for working with canvas apps change depending on the selection on the authoring menu.
 
 ### Tree view
 
@@ -332,7 +332,7 @@ Switch to the **Components** tab of **Tree view** to work with component library
 
 :::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screeshot showing the Components tab of the Tree view pane.":::
 
-For information on adding components, see the [Insert](#insert) section.
+For more information on adding components, see the [Insert](#insert) section.
 
 ### Data
 
@@ -340,46 +340,57 @@ Add, refresh, or remove data sources from your canvas app. You can add one or mo
 
 In addition to data stored within tables, there are many connectors available to interact with data in popular software as a service (SaaS), services, and systems.
 
-> [!div class="mx-imgBorder"] 
-> ![Data.](media/studio/pa-studio-data.png)
+:::image type="content" source="media/studio/pa-studio-data.png" alt-text="Screenshot that shows where the Data section is located from the authoring menu. You can add data here.":::
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can enter text in the data source search box or select from the list of connectors.
 
-> [!div class="mx-imgBorder"] 
-> ![Select data source.](media/studio/pa-studio-data-source.png)
+:::image type="content" source="media/studio/pa-studio-data-source.png" alt-text="Screenshot that shows how to select a data source by choosing the Add data dropdown.":::
 
-More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
-
+For more information, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 ### Media
 
-Select **Media** to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media must be 64 MB or smaller, and the size of all media files uploaded to an app can't exceed 200 MB.
+Select **Media** to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage.
 
-> [!div class="mx-imgBorder"] 
-> ![Add media.](media/studio/pa-studio-add-media.png)
+:::image type="content" source="media/studio/pa-studio-add-media.png" alt-text="Screenshot that shows how to select the Media option from the authoring menu.":::
 
-If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls), using media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services), or from [Microsoft Stream](./controls/control-stream-video.md#example). More information: [Using multimedia files in Power Apps](add-images-pictures-audio-video.md)
+> [!TIP]
+>
+> - Each file uploaded to the app as media must be 64 MB or smaller.
+> - The size of all media files uploaded to an app can't exceed 200 MB.
+
+If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls), media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services), or from [Microsoft Stream](./controls/control-stream-video.md#example).
+
+For more information, see [Using multimedia files in Power Apps](add-images-pictures-audio-video.md).
 
 ## 7 – Canvas/screen
 
-The canvas shows the currently selected screen from the left pane.
+The canvas shows the currently selected screen from the authoring menu.
 
 ## 8 – Properties pane
 
-The properties pane shows properties and options available for the currently selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
+The properties pane shows properties and options available for the currently selected object on the canvas.
 
-> [!div class="mx-imgBorder"] 
-> ![Properties pane.](media/studio/pa-studio-prop-pane.png)
+- The **Properties** tab shows generic options such as the name, color, size, or position.
+- The **Advanced** tab shows options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
 
+:::image type="content" source="media/studio/pa-studio-prop-pane.png" alt-text="Screenshot that shows the properties pane that appears when you select an object in your canvas. Advanced properties is a tab in that same pane.":::
 
 ## 9 – Virtual agent
 
-Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. For more information, see [Get help building your app from a virtual agent](../common/virtual-agent.md).
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios.
+
+For more information, see [Get help building your app from a virtual agent](../common/virtual-agent.md).
 
 ## 10 – Screen selector
 
-Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane by selecting the tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
+Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the authoring menu by selecting the tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
+
+:::image type="content" source="media/studio/pa-studio-screen-selector.png" alt-text=Screenshot that shows the location of the screen selector.":::
 
 ## 11 – Change canvas screen size
 
-You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size used in authoring a canvas app has no effect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
+You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size.
+
+> [!NOTE]
+> The zoom percentage or screen size used in authoring a canvas app has no effect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
