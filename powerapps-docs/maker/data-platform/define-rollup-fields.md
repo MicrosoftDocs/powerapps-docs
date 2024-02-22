@@ -192,8 +192,8 @@ To increase the maximums, follow these steps:
 
 1. Go to Power Apps (make.powerapps.com), select **Table** on the left navigation pane, and then open the **Organization** table. 
 1. Select the *n* **more** list, and then type *maxr* in the **Search** box. Select the **MaxRollupFieldsPerOrg** and **MaxRollupFieldsPerEntity** columns, and then select **Save**.
-1. Change the values for **MaxRollupFieldsPerOrg** (up to 200) and **MaxRollupFieldsPerEntity** (up to 50) that you want.
    :::image type="content" source="media/max-rollup-properties.png" alt-text="Select max rollup columns to increase values":::
+1. Change the values for **MaxRollupFieldsPerOrg** (up to 200) and **MaxRollupFieldsPerEntity** (up to 50) that you want.
 
 > [!IMPORTANT]
 > Having more than 100 rollup columns for an environment might result in degraded performance of rollup columns and increased storage consumption.  
