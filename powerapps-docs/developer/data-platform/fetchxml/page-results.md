@@ -83,7 +83,7 @@ The paging cookie contains data about the first and last record in the results a
 
 ### Queries that don't support paging cookies
 
-Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute don't support paging cookies.
+Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute may not support paging cookies.
 
 When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that come with it.
 
@@ -196,9 +196,11 @@ static void Main(string[] args)
 
 With the Web API you must request a paging cookie as an annotation. Use either of these request headers:
 
-- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"`<br />
-   OR
-- `Prefer: odata.include-annotations="*"` for all annotations
+```
+Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
+   OR for all annotations: 
+Prefer: odata.include-annotations="*"
+```
 
 And these annotations will be returned with the result:
 
@@ -283,7 +285,7 @@ In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indi
 
 The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML element. You need to use the `pagingcookie` attribute value of that element in the next request.
 
-The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't need to check this, the decoded and formatted value looks like this:
+The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't need to check this, the decoded and formatted value in this example looks like this:
 
 ```xml
 <cookie page="1">

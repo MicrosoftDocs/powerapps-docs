@@ -46,7 +46,7 @@ contributors:
 |`groupby`|No|When you aggregate data, this attribute specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
 |`name`|Yes|The logical name of the column.|
 |`rowaggregate`|No|When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the results. [Learn how to use this attribute](../../query-hierarchical-data.md#retrieve-the-number-of-hierarchically-related-child-records).|
-|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Specifies that the grouping use the user's time zone, otherwise UTC is used. Depending on the time zone, the same datetime value can fall in different days.|
+|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Specifies that the grouping use the user's time zone, otherwise UTC is used. Depending on the time zone, the same datetime value can fall in different days. [Learn about grouping by parts of a date](../aggregate-data.md#grouping-by-parts-of-a-date)|
 
 ## Parent elements
 

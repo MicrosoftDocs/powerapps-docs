@@ -14,11 +14,11 @@ search.audienceType:
 
 To set conditions on the rows of data to return, use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element.
 
-To set the conditions, add one or more [condition elements](reference/condition.md) to the filter. The containing `filter` `type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
+To set the conditions, add one or more [condition elements](reference/condition.md) to the filter. The containing `filter` `type` attribute determines whether *all* (`and`) or *any* (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
 
-Each `condition` has an `operator` attribute to evaluate a row column value. There are many [operator conditions](reference/operators.md) for you to choose from.
+Each `condition` has an `operator` attribute to evaluate a row column value. There are many [condition operator values](reference/operators.md) for you to choose from.
 
-For example, the following query returns account records where `address1_city` equals 'Redmond'. It uses `<filter type='and'>`.
+For example, the following query returns account records where `address1_city` equals 'Redmond'. It uses `<filter type='and'>` with the [eq operator](reference/operators.md#eq).
 
 ```xml
 <fetch>
@@ -114,7 +114,7 @@ For example, you can use the [between operator](reference/operators.md#between) 
 
 ## Filters on link-entity
 
-When you apply a `filter` within a [link-entity](reference/link-entity.md), the filter will be applied with the join unless you configure the filter to occur *after* the join.
+When you apply a [filter](reference/filter.md) within a [link-entity](reference/link-entity.md), the filter will be applied with the join unless you configure the filter to occur *after* the join.
 
 When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you might want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you're using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 

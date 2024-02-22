@@ -16,12 +16,12 @@ This article describes ways you can optimize performance when retrieving data us
 
 ## Late Materialize query
 
-If you select many lookup and computed columns, and you're experiencing performance issues, you can try setting a `latematerialize = 'true'` attribute to the [fetch element](reference/fetch.md). Behind the scenes, this setting breaks the query into smaller parts and reassembles the results before returning them to you.
+If you select many lookup and computed columns, and you're experiencing performance issues, you can try setting the [fetch element](reference/fetch.md) boolean `latematerialize` attribute. Behind the scenes, this setting breaks the query into smaller parts and reassembles the results before returning them to you.
 
 Using the `latematerialize` attribute might not always provide a performance benefit. It might make simple queries run more slowly. It's most beneficial when your query:
 
 - Has many joins
-- Contains many columns lookup columns or computed columns 
+- Contains many columns lookup columns or computed columns
 
 ## Query Hints
 
@@ -52,54 +52,56 @@ The following example sets a filter with the `union` hint on the `telephone1` co
 
 ```xml
 <fetch>
-      <entity name="email">
-            <attribute name="activityid" />
-            <attribute name="subject" />
-            <filter type="and">
-                  <condition attribute="subject"
-                        operator="like"
-                        value="Alert:%" />
-                  <condition attribute="statecode"
-                        operator="eq"
-                        value="0" />
-                  <filter type="or"
-                        hint="union">
-                        <condition attribute="telephone1"
-                              operator="eq"
-                              value="425-425-4021"
-                              entityname="ac" />
-                        <condition attribute="telephone1"
-                              operator="eq"
-                              value="425-425-4021"
-                              entityname="co" />
-                  </filter>
-            </filter>
-            <link-entity name="account"
-                  from="accountid"
-                  to="regardingobjectid"
-                  link-type="outer"
-                  alias="ac" />
-            <link-entity name="contact"
-                  from="contactid"
-                  to="regardingobjectid"
-                  link-type="outer"
-                  alias="co" />
-      </entity>
+   <entity name="email">
+      <attribute name="activityid" />
+      <attribute name="subject" />
+      <filter type="and">
+         <condition attribute="subject"
+            operator="like"
+            value="Alert:%" />
+         <condition attribute="statecode"
+            operator="eq"
+            value="0" />
+         <filter type="or"
+            hint="union">
+            <condition attribute="telephone1"
+               operator="eq"
+               value="555-123-4567"
+               entityname="ac" />
+            <condition attribute="telephone1"
+               operator="eq"
+               value="555-123-4567"
+               entityname="co" />
+         </filter>
+      </filter>
+      <link-entity name="account"
+         from="accountid"
+         to="regardingobjectid"
+         link-type="outer"
+         alias="ac" />
+      <link-entity name="contact"
+         from="contactid"
+         to="regardingobjectid"
+         link-type="outer"
+         alias="co" />
+   </entity>
 </fetch>
 ```
-
-<!-- TODO: Include other sections for more performance optimization capabilities and best practices. -->
 
 
 
 ### See also
 
-[Query data using FetchXml](overview.md)  
+[Query data using FetchXml](overview.md)   
+[Use FetchXml to retrieve data](retrieve-data.md)   
 [Select columns using FetchXml](select-columns.md)  
 [Join tables using FetchXml](join-tables.md)  
 [Order rows using FetchXml](order-rows.md)  
 [Filter rows using FetchXml](filter-rows.md)  
-[Page results using FetchXml](page-results.md)  
-[Count rows using FetchXml](count-rows.md)
+[Page results using FetchXml](page-results.md)   
+[Aggregate data using FetchXml](aggregate-data.md)   
+[Count rows using FetchXml](count-rows.md)  
+[FetchXml reference](reference/index.md)   
+[FetchXml sample code](../sample.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

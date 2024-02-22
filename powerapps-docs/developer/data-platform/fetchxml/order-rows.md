@@ -114,7 +114,7 @@ Now, the results are ordered using the following attributes:
 
 ## Ordering lookup and choice columns
 
-For most column types, the data they contain is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database is not meaningful.
+The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database is not meaningful out of context.
 
 ### Lookup Columns
 
@@ -130,7 +130,7 @@ Choice column values are also sorted using the [formatted values](select-columns
 ## Best practices for orders when paging data
 
 > [!NOTE]
-> When possible, queries should order on the primary key for the table because Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique / complex fields can cause excess overhead and slower queries.
+> When possible, queries should order on the primary key for the table because Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique or complex fields cause excess overhead and slower queries.
 
 When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to [page the results](page-results.md). The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 

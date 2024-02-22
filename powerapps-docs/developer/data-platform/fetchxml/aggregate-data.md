@@ -138,6 +138,8 @@ You can select which part of the date to use when grouping by date. Set [attribu
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
+By default date groupings use the UTC time. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to specify that the user's time zone be used instead.
+
 The following query groups account records showing number of employees by when the records were created:
 
 ```xml
@@ -192,11 +194,15 @@ The following table shows the result using the [example](#example) data set ment
 The following example shows a FetchXML aggregation expression that sums the total number of orders fulfilled and groups the result by fiscal semester and fiscal year.
 
 ```xml
-<fetch aggregate="true">  
- <entity name="order">  
-  <attribute name="totalamount" aggregate="sum" alias="total"/>  
-  <attribute name="datefulfilled" groupby="true" dategrouping="fiscal-period"/>  
- </entity>  
+<fetch aggregate="true">
+   <entity name="order">
+      <attribute name="totalamount"
+         aggregate="sum"
+         alias="total" />
+      <attribute name="datefulfilled"
+         groupby="true"
+         dategrouping="fiscal-period" />
+   </entity>
 </fetch>
 ```
 
@@ -208,11 +214,14 @@ The following example returns the number of related accounts in a column named `
 
 ```xml
 <fetch top='5'>
-  <entity name='account'>
-    <attribute name='name' />
-    <attribute name='accountid' alias='numberOfChildren' rowaggregate='CountChildren' />
-    <order attribute='accountid' descending='true' />
-  </entity>
+   <entity name='account'>
+      <attribute name='name' />
+      <attribute name='accountid'
+         alias='numberOfChildren'
+         rowaggregate='CountChildren' />
+      <order attribute='accountid'
+         descending='true' />
+   </entity>
 </fetch>
 ```
 
@@ -234,10 +243,13 @@ Even with the default limit for aggregate queries applied, the query might take 
 In this example, the custom maximum rows limit is 10:
 
 ```xml
-<fetch aggregate='true' aggregatelimit = '10'> 
-    <entity name='opportunity'> 
-       <attribute name='name' alias='opportunity_count' aggregate='count'/> 
-    </entity> 
+<fetch aggregate='true'
+   aggregatelimit = '10'>
+   <entity name='opportunity'>
+      <attribute name='name'
+         alias='opportunity_count'
+         aggregate='count' />
+   </entity>
 </fetch>
 ```
 

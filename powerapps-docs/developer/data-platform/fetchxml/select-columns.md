@@ -300,6 +300,53 @@ Preference-Applied: odata.include-annotations="*"
 }
 ```
 
+This `GetRowValues` method extracts a list of formatted string values for a <xref:System.Json.JsonObject> instance of a record where they exist. This method is part of the `OutputFetchRequest` method in the [FetchXml sample code](sample.md).
+
+```csharp
+/// <summary>
+/// Returns the values of a row as strings
+/// </summary>
+/// <param name="columns">The names of the columns</param>
+/// <param name="record">The record with the data</param>
+/// <returns></returns>
+static List<string> GetRowValues(List<string> columns, JsonObject record)
+{
+   List<string> values = new();
+
+   columns.ForEach(column =>
+   {
+      string lookupPropertyName = $"_{column}_value";
+      bool isLookup = record.ContainsKey(lookupPropertyName);
+
+      if (record.ContainsKey(column) || isLookup)
+      {
+            string formattedValueKey = string.Format("{0}@OData.Community.Display.V1.FormattedValue", 
+               isLookup ? lookupPropertyName : column);
+
+            // Use the formatted value if it available and visible
+            if (record.ContainsKey(formattedValueKey) && 
+            !string.IsNullOrWhiteSpace((string)record[formattedValueKey]))
+            {
+               values.Add($"{record[formattedValueKey]}");
+            }
+            else
+            {
+               // Use the simple property value
+               values.Add($"{record[column]}");
+            }
+      }
+      // Null values are not returned
+      else
+      {
+            values.Add("NULL");
+      }
+
+   });
+   return values;
+}
+```
+
+
 ---
 
 Learn more about formatted values:

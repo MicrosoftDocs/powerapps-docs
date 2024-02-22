@@ -37,6 +37,17 @@ To limit the number of rows returned, use the [fetch element](reference/fetch.md
 
 Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 
+You can't use `top` when you request a count of rows using the `returntotalrecordcount` attribute. [Learn to count rows](count-rows.md)
+
+## Return distinct results
+
+Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.
+
+If you use the `distinct` attribute, you must add at least one [order element](reference/order.md) to have consistent paging.
+
+When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
+
+
 ## Refine your query
 
 After you select the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.

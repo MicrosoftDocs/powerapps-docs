@@ -26,7 +26,6 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 |`alias`|Represents the name of the related table in the results. |
 |`intersect`|Indicates that the `link-entity` is used to join tables and not return any columns|
 
-
 For example, the following query returns up to 5 records from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
 ```xml
@@ -61,6 +60,22 @@ The results look like this:
  | City Power & Light (sample)      | Scott Konersmann (sample)  |
  -----------------------------------------------------------------
 ```
+
+## Limitations
+
+You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:
+
+> Code: `0x8004430D`  
+> Number: `-2147204339`  
+> Message: `Number of link entities in query exceeded maximum limit.`  
+
+## Child elements
+
+Within the `link-entity` element you can add child elements just like on the parent element to:
+
+- [Select columns](select-columns.md) from the related table
+- [Filter rows](filter-rows.md) from the related table
+- Join another related table
 
 ## Many-to-one relationships
 
@@ -116,7 +131,7 @@ The following table shows the [link-entity](reference/link-entity.md) attribute 
 |`alias`|`account`|A value is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated. In this example, if no alias is provided, the data is returned with a column named `account1.name`.|
 |`link-type`|Not set|When no value is set, it will default to `inner`|
 
-The results look like this:
+The results include the same records and data as the previous query using the many-to-one relationship, except the *'parent entity'* is now `contact` instead of `account`.
 
 ```text
  -----------------------------------------------------------------
@@ -218,6 +233,8 @@ Some columns can be used in `from` and `to` attributes but may result in poor pe
 - [**Calculated**](../../../maker/data-platform/define-calculated-fields.md) columns
 - [**Logical**](../entity-attribute-metadata.md#logical-columns) columns
 
+
+
 ## Find records not in a set
 
 You can use FetchXml to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
@@ -260,11 +277,11 @@ The following link entity types do not directly correspond to T-SQL [JOIN operat
 
 `exists` and `in` are variants of `inner` that use different conditions ([EXISTS](/sql/t-sql/language-elements/exists-transact-sql) and [IN](/sql/t-sql/language-elements/in-transact-sql) respectively) in the `where` clause so that multiple copies of the parent row aren't returned in the results. Neither of these return the column values of the link entity rows.
 
-This table shows the generic patterns both of these link types apply:
+#### `exists`
 
-#### [FetchXml](#tab/fetchxml)
+These FetchXml and SQL examples show the patterns applied with `exists`.
 
-**exists**
+##### [FetchXml](#tab/fetchxml)
 
 ``` xml
 <fetch>
@@ -284,7 +301,26 @@ This table shows the generic patterns both of these link types apply:
 </fetch>
 ```
 
-**in**
+##### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".statecode = 1
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
+
+#### `in`
+
+These FetchXml and SQL examples show the patterns applied with `in`.
+
+##### [FetchXml](#tab/fetchxml)
 
 ``` xml
 <fetch>
@@ -306,21 +342,6 @@ This table shows the generic patterns both of these link types apply:
 
 #### [SQL](#tab/sql)
 
-**exists**
-
-``` sql
-select 
-    "contact0".fullname as "fullname" 
-from Contact as "contact0" 
-where exists (
-    select "account1".primarycontactid
-    from Account as "account1"
-    where "account1".statecode = 1
-        and "contact0".contactid = "account1".primarycontactid)
-```
-
-**in**
-
 ``` sql
 select 
     "contact0".fullname as "fullname" 
@@ -333,11 +354,13 @@ where "contact0".contactid in (
 
 ---
 
-Using these link types can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent (which requires returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row if the `inner` type is used). This can improve performance of the query.
+Using `exists` or `in` link types can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent  Using `exists` or `in` link types can can improve performance of the query compared to the `inner` type because it doesn't require returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row.
 
-These types may also allow the query engine to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `inner` join.
+These link types may also allow Dataverse to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `inner` join.
 
 ### Use `matchfirstrowusingcrossapply` link type
+
+
 
 This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
 
@@ -379,21 +402,7 @@ cross apply (
 
 This is equivalent to the `outer` type except it only returns the parent row at most once. Unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
 
-## Limitations
 
-You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:
-
-> Code: `0x8004430D`  
-> Number: `-2147204339`  
-> Message: `Number of link entities in query exceeded maximum limit.`  
-
-## Child elements
-
-Within the `link-entity` element you can add child elements just like on the parent element to:
-
-- [Select columns](select-columns.md) from the related table
-- [Filter rows](filter-rows.md) from the related table
-- Join another related table
 
 
 ## Next steps

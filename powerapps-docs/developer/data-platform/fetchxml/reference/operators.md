@@ -461,14 +461,16 @@ Data Types:
 The following example shows a FetchXML query that finds all orders fulfilled in period three of any fiscal year, according to the organization's fiscal year settings. The fiscal period value is specified in the value column of the condition element. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out of range.
 
 ```xml
-<fetch>  
- <entity name="order">  
-  <attribute name="name"/>  
-  <filter type="and">  
-   <condition attribute="datefulfilled" operator="in-fiscal-period" value="3"/>  
-  </filter>  
- </entity>  
-</fetch>  
+<fetch>
+   <entity name="order">
+      <attribute name="name" />
+      <filter type="and">
+         <condition attribute="datefulfilled"
+            operator="in-fiscal-period"
+            value="3" />
+      </filter>
+   </entity>
+</fetch>
 ```
 
 Data Type: [Datetime](#datetime-data)
@@ -482,16 +484,17 @@ Data Type: [Datetime](#datetime-data)
 The following example shows a FetchXML expression that finds all orders fulfilled in period three of fiscal year 2023, according to the organization's fiscal year settings. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out-of-range
 
 ```xml
-<fetch>  
- <entity name="order">  
-  <attribute name="name"/>  
-  <filter type="and">  
-   <condition attribute="datefulfilled" operator="in-fiscal-period-and-year">  
-    <value>3</value>  
-    <value>2023</value>  
-   </condition>  
-  </filter>  
- </entity>  
+<fetch>
+   <entity name="order">
+      <attribute name="name" />
+      <filter type="and">
+         <condition attribute="datefulfilled"
+            operator="in-fiscal-period-and-year">
+            <value>3</value>
+            <value>2023</value>
+         </condition>
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -506,13 +509,15 @@ Data Type: [Datetime](#datetime-data)
 The following example shows a FetchXML expression that finds all accounts created in fiscal year 2023.
 
 ```xml
-<fetch>  
- <entity name="account">  
-  <attribute name="name"/>  
-  <filter type="and">  
-   <condition attribute="createdon" operator="in-fiscal-year" value="2023"/>  
-  </filter>  
- </entity>  
+<fetch>
+   <entity name="account">
+      <attribute name="name" />
+      <filter type="and">
+         <condition attribute="createdon"
+            operator="in-fiscal-year"
+            value="2023" />
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -543,13 +548,14 @@ Data Type: [Datetime](#datetime-data)
 The following example shows a FetchXML expression that finds all orders fulfilled in the last fiscal period, according to the organization's fiscal year settings. For example, if the organization uses fiscal months, the query returns orders fulfilled in the last fiscal month. If the organization uses fiscal quarters, the query returns orders fulfilled in the last fiscal quarter. If the organization uses fiscal semesters, orders fulfilled in the last fiscal semester are returned.
 
 ```xml
-<fetch>  
- <entity name="order">  
-  <attribute name="name"/>  
-  <filter type="and">  
-   <condition attribute="datefulfilled" operator="last-fiscal-period"/>  
-  </filter>  
- </entity>  
+<fetch>
+   <entity name="order">
+      <attribute name="name" />
+      <filter type="and">
+         <condition attribute="datefulfilled"
+            operator="last-fiscal-period" />
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -751,13 +757,15 @@ Data Type: [Datetime](#datetime-data)
 The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization's fiscal year settings. The value for `x` is specified in the value column of the condition element.
 
 ```xml
-<fetch>  
- <entity name="opportunity">  
-  <attribute name="name"/>  
-  <filter type="and">  
-   <condition attribute="estimatedclosedate" operator="next-x-fiscal-years" value="3"/>  
-  </filter>  
- </entity>  
+<fetch>
+   <entity name="opportunity">
+      <attribute name="name" />
+      <filter type="and">
+         <condition attribute="estimatedclosedate"
+            operator="next-x-fiscal-years"
+            value="3" />
+      </filter>
+   </entity>
 </fetch>
 ```
 
@@ -900,16 +908,18 @@ Data Type: [Datetime](#datetime-data)
 The following example shows a FetchXML query that returns incidents that are older than 30 minutes.
 
 ```xml
-<fetch>  
-  <entity name="incident">  
-    <attribute name="title" />  
-    <attribute name="ticketnumber" />  
-    <attribute name="createdon" />  
-    <attribute name="incidentid" />  
-    <filter type="and">  
-      <condition attribute="createdon" operator="olderthan-x-minutes" value="30" />  
-    </filter>  
-  </entity>  
+<fetch>
+   <entity name="incident">
+      <attribute name="title" />
+      <attribute name="ticketnumber" />
+      <attribute name="createdon" />
+      <attribute name="incidentid" />
+      <filter type="and">
+         <condition attribute="createdon"
+            operator="olderthan-x-minutes"
+            value="30" />
+      </filter>
+   </entity>
 </fetch>
 ```
 

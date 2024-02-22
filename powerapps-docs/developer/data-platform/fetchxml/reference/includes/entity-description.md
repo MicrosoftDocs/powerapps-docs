@@ -1,1 +1,1 @@
-Specifies the child element for a [fetch element](../fetch.md). Only one entity is allowed.
+Specifies the child element for a [fetch element](../fetch.md), the 'parent entity' for the query. Only one entity is allowed.

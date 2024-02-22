@@ -16,8 +16,6 @@ Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` att
 
 You can't apply the [fetch element](reference/fetch.md) `top` attribute together with `returntotalrecordcount`.
 
-
-
 The behavior you can expect depends on whether you are using the SDK for .NET or Web API.
 
 ## [SDK for .NET](#tab/sdk)
@@ -40,9 +38,11 @@ When you set the `returntotalrecordcount` attribute (or use the `$count` query o
 
 If you include either of these request headers:
 
-- `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"`<br />
-   OR
-- `Prefer: odata.include-annotations="*"` for all annotations
+```
+Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"
+   OR for all annotations:
+Prefer: odata.include-annotations="*"
+```
 
 The following annotations will be returned:
 
