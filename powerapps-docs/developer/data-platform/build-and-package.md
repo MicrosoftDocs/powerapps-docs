@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building plug-in code into assemblies and packages for later registration and upload to the Microsoft Dataverse service.
-ms.date: 11/02/2023
+ms.date: 02/20/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -73,7 +73,6 @@ When you register individual plug-in assemblies without the dependent assemblies
 The following limitations apply when using plug-in dependent assemblies.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *custom workflow activities* aren't supported when using the dependent assemblies capability.
-- Plug-ins for virtual table data providers aren't supported.
 - On-premises environments aren't supported.
 - Un-managed code isn't supported. You can't include references to unmanaged resources.
 
