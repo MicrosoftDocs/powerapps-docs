@@ -8819,6 +8819,16 @@
       "source_path": "powerapps-docs/maker/canvas-apps/slow-performance-sources.md",
       "redirect_url": "/power-apps/maker/canvas-apps/create-performant-apps-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/create-show-portal-content.md",
+      "redirect_url": "/power-pages/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/update-portal-domain.md",
+      "redirect_url": "/power-pages/",
+      "redirect_document_id": false
     }
   ]
 }

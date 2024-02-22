@@ -2,7 +2,7 @@
 title: "Release channel for your model-driven app | MicrosoftDocs" 
 description: "This article outlines how release channels enable features within a model-driven app."
 ms.custom: ""
-ms.date: 11/06/2023
+ms.date: 2/19/2024
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -51,15 +51,15 @@ Model-driven apps release updates every week, which is gradually rolled out to g
 1. Europe
 1. United States
 
-The monthly release is the first weekly release of each month. The release matches ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches the region group 2. Region group 2 is used because it's the first region group for production customer environments and region group 1 is used for customer early validation.
+The monthly release is the first weekly release of each month. The release typically matches ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches the region group 2. Region group 2 is used because it's the first region group for production customer environments and region group 1 is used for customer early validation.
 
 | Monthly release | Doc published | Feature release | Group 1 | Group 2 | Group 3 | Group 4 | Group 5 | 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| May 2023 | Apr 14 | 2305.1 | May 5 | May 12 | May 19 | May 26 | Jun 2 |
-| June 2023 |  May 19 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 |
-| July 2023 | Jun 16 | 2307.1 | Jul 7 | Jul 14 | Jul 21 | Jul 28 | Aug 4 |
-| August 2023 | Jul 21 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 |
-| September 2023 | Aug 18 | 2309.1 | Sep 8 | Sep 15 | Sep 22 | Sep 29 | Oct 6 |
+| Jan 2024 | Dec 22 | 2401.2 | Jan 12 | Jan 19 | Jan 26 | Feb 2  | Feb 9 
+| Feb 2024 | Jan 19 | 2402.1 | Feb 9 | Feb 16 | Feb 23 | Mar 1 | Mar 8
+| Mar 2024 | Feb 16 | 2403.1 | Mar 8 | Mar 15 | Mar 22 | Mar 29 | Apr 5 
+| Apr 2024 | Mar 22 | 2404.1 | Apr 5 | Apr 12 | Apr 19 | Apr 26 | May 3
+| May 2024 | Apr 19 | 2405.1 | May 10 | May 17 | May 24 | May 31 | Jun 7
 
 ## See also
 
