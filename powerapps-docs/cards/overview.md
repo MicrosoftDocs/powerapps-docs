@@ -1,7 +1,7 @@
 ---
 title: Cards for Power Apps overview
 description: Learn about cards for Microsoft Power Apps.
-ms.date: 09/20/2022
+ms.date: 2/22/2024
 ms.topic: overview
 author: iaanw
 ms.author: iawilt
@@ -12,19 +12,24 @@ ms.collection:
 
 # Cards for Power Apps overview
 
-Power Apps cards are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content. Because they're part of the Power Apps ecosystem, cards can add business logic through Power Fx and integration with business data through Power Platform connectors. Using cards, you can quickly build and share rich, actionable apps without any coding or IT expertise.
+Power Apps cards are micro-apps with enterprise data, workflows, and interactive, lightweight UI elements that other applications can use as content. Because cards are part of the Power Apps ecosystem, they can add business logic through Power Fx and integration with business data through Power Platform connectors. Using cards, you can quickly build and share rich, actionable apps without any coding or IT expertise.
 
 ## Get started with cards
 
-You can create cards with just a few clicks. There are no complex systems or services to deploy and maintain.
+You can create cards with just a few steps. There are no complex systems or services to deploy and maintain.
 
-To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards**, and then select **+ Create a card**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)]
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **... More** in the navigation menu.
+1. Select **Cards**. You see **Cards** added to your navigation menu. You can pin  **Cards** to leave it in your navigation menu permanently.
+1. Select **New card**, then add a **Card name** and **Card description**.
 
 ### Drag and drop UI elements in the card designer
 
-With the drag-and-drop card designer, add buttons, tables, labels, images, check boxes, text boxes, and many other controls to your cards, all without writing a single line of code.
+With the drag-and-drop card designer, you can add buttons, tables, labels, images, check boxes, text boxes, and many other controls to your cards. You don't need to write a single line of code.
 
-:::image type="content" source="media/overview/cards-designer-get-started.png" alt-text="Screenshot of the card designer in Power Apps, with two buttons added to a card.":::
+Use the **Input** dropdown menu to add elements to your card. In this example, you see a text input, date picker, and button added.
+
+:::image type="content" source="media/overview/cards-designer-get-started.png" alt-text="Screenshot of the card designer in Power Apps, with two buttons added to a card." lightbox="media/overview/cards-designer-get-started.png":::
 
 ### Add data and services with connectors
 
