@@ -173,7 +173,8 @@ The following example shows how to calculate an average estimated revenue from r
 
 You should be aware of certain conditions and restrictions when working with rollup columns:  
   
-- You can define a maximum of 100 rollup columns for the organization and up to 10 rollup columns per table.  
+- Now you can define a maximum of 200 rollup columns for the organization and up to 50 rollup columns per table. Previously, the default value was 100 per organization and 10 per table. To update this limit as per latest update - Go to Maker Portal -> Table -> Organization -> Update Attribute value for MaxRollupFieldsPerOrg and/or MaxRollupFieldsPerEntity.
+- Having more than 100 rollup columns for an organization may result in degraded performance of rollup field and increased storage consumption. 
 - A workflow can't be triggered by the rollup column updates.  
 - A workflow wait condition cannot use a rollup column.  
 - A rollup over the rollup column is not supported.  
