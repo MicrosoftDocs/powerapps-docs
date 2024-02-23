@@ -1,7 +1,7 @@
 ---
 title: "DVTableSearch table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the DVTableSearch table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -64,6 +64,8 @@ DVTableSearches component
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AppId](#BKMK_AppId)
+- [AppModuleId](#BKMK_AppModuleId)
+- [AppModuleUniqueName](#BKMK_AppModuleUniqueName)
 - [AppType](#BKMK_AppType)
 - [DVTableSearchId](#BKMK_DVTableSearchId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -89,6 +91,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|appid|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_AppModuleId"></a> AppModuleId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|AppModuleId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|appmoduleid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_AppModuleUniqueName"></a> AppModuleUniqueName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|AppModuleUniqueName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|appmoduleuniquename|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_AppType"></a> AppType
