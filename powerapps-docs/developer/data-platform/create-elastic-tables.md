@@ -326,13 +326,13 @@ Elastic tables support one-to-many relationships, and related rows can be retrie
 
 ### Partitionid value column on referencing table
 
-When you create a many-to-one relationship on a table that refers to an elastic table, a lookup column is created on the referencing table as you would expect, except lookup column name will not end with `id`.
+When you create a many-to-one relationship on a table that refers to an elastic table, a lookup column is created on the referencing table as you would expect.
 
 At the same time, a string column is created that follows this naming convention `<lookup name>pid`. This column stores the `partitionid` value for the related elastic table record.
 
-A lookup column can only store a single GUID value.  The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column. [Learn to associate elastic table records](use-elastic-tables.md#associate-elastic-table-records)
+The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column. [Learn to associate elastic table records](use-elastic-tables.md#associate-elastic-table-records)
 
-If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column should be null, and you shouldn't set or retrieve it.
+If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column would be null, and you shouldn't set or retrieve it.
 
 If you *are* using a partitioning strategy for your elastic table, and you want to retrieve the related elastic table record, you can't rely on the value of the lookup column alone. You must also include the `partitionid` value from the `<lookup name>pid` column to uniquely identify the related table. [Learn more about partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling)
 
