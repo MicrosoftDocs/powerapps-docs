@@ -1,7 +1,7 @@
 ---
 title: "workqueue table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workqueue table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -68,6 +68,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [defaultitemtimetoliveinminutes](#BKMK_defaultitemtimetoliveinminutes)
 - [description](#BKMK_description)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [inputschema](#BKMK_inputschema)
+- [inputschematype](#BKMK_inputschematype)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [itemmaxrequeuecount](#BKMK_itemmaxrequeuecount)
 - [name](#BKMK_name)
@@ -133,6 +135,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_inputschema"></a> inputschema
+
+|Property|Value|
+|--------|-----|
+|Description|The input schema field contains the expected input schema used for input validation at enqueue time.|
+|DisplayName|Input Schema|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|inputschema|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_inputschematype"></a> inputschematype
+
+|Property|Value|
+|--------|-----|
+|Description|The input schema type allows to validate the input field at enqueue time against a specific schema.|
+|DisplayName|Input Schema Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|inputschematype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### inputschematype Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|No Schema||
+|1|Json||
+|2|Xml||
+
 
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable

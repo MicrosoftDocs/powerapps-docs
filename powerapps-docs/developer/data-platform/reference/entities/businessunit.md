@@ -1,7 +1,7 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1621,6 +1621,7 @@ Listed by **SchemaName**.
 - [business_unit_workflowbinary](#BKMK_business_unit_workflowbinary)
 - [business_unit_credential](#BKMK_business_unit_credential)
 - [business_unit_desktopflowmodule](#BKMK_business_unit_desktopflowmodule)
+- [business_unit_flowcapacityassignment](#BKMK_business_unit_flowcapacityassignment)
 - [business_unit_flowevent](#BKMK_business_unit_flowevent)
 - [business_unit_flowmachine](#BKMK_business_unit_flowmachine)
 - [business_unit_flowmachinegroup](#BKMK_business_unit_flowmachinegroup)
@@ -1674,6 +1675,7 @@ Listed by **SchemaName**.
 - [business_unit_retentionconfig](#BKMK_business_unit_retentionconfig)
 - [business_unit_retentionfailuredetail](#BKMK_business_unit_retentionfailuredetail)
 - [business_unit_retentionoperation](#BKMK_business_unit_retentionoperation)
+- [business_unit_msdyn_dataflowconnectionreference](#BKMK_business_unit_msdyn_dataflowconnectionreference)
 - [business_unit_msdyn_schedule](#BKMK_business_unit_msdyn_schedule)
 - [business_unit_msdyn_dataflowtemplate](#BKMK_business_unit_msdyn_dataflowtemplate)
 - [business_unit_msdyn_dataflow_datalakefolder](#BKMK_business_unit_msdyn_dataflow_datalakefolder)
@@ -1738,6 +1740,8 @@ Listed by **SchemaName**.
 - [business_unit_adx_setting](#BKMK_business_unit_adx_setting)
 - [business_unit_mspcat_catalogsubmissionfiles](#BKMK_business_unit_mspcat_catalogsubmissionfiles)
 - [business_unit_mspcat_packagestore](#BKMK_business_unit_mspcat_packagestore)
+- [business_unit_msdyn_dmssyncrequest](#BKMK_business_unit_msdyn_dmssyncrequest)
+- [business_unit_msdyn_dmssyncstatus](#BKMK_business_unit_msdyn_dmssyncstatus)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -2634,7 +2638,7 @@ Same as the [business_unit_parent_business_unit](businessunit.md#BKMK_business_u
 |ReferencingEntity|businessunit|
 |ReferencingAttribute|parentbusinessunitid|
 |IsHierarchical|True|
-|IsCustomizable|True|
+|IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|business_unit_parent_business_unit|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
@@ -2714,7 +2718,7 @@ Same as the [business_unit_solutioncomponentbatchconfiguration](solutioncomponen
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_solutioncomponentbatchconfiguration|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_stagesolutionupload"></a> business_unit_stagesolutionupload
@@ -2731,7 +2735,7 @@ Same as the [business_unit_stagesolutionupload](stagesolutionupload.md#BKMK_busi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_stagesolutionupload|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_exportsolutionupload"></a> business_unit_exportsolutionupload
@@ -2748,7 +2752,7 @@ Same as the [business_unit_exportsolutionupload](exportsolutionupload.md#BKMK_bu
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_exportsolutionupload|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_featurecontrolsetting"></a> business_unit_featurecontrolsetting
@@ -2765,7 +2769,7 @@ Same as the [business_unit_featurecontrolsetting](featurecontrolsetting.md#BKMK_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_featurecontrolsetting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_keyvaultreference"></a> business_unit_keyvaultreference
@@ -2782,7 +2786,7 @@ Same as the [business_unit_keyvaultreference](keyvaultreference.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_keyvaultreference|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_managedidentity"></a> business_unit_managedidentity
@@ -2799,7 +2803,7 @@ Same as the [business_unit_managedidentity](managedidentity.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_managedidentity|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_customapi"></a> business_unit_customapi
@@ -2816,7 +2820,7 @@ Same as the [business_unit_customapi](customapi.md#BKMK_business_unit_customapi)
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_customapi|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_datalakefolder"></a> business_unit_datalakefolder
@@ -2833,7 +2837,7 @@ Same as the [business_unit_datalakefolder](datalakefolder.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_datalakefolder|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_exportedexcel"></a> business_unit_exportedexcel
@@ -2850,7 +2854,7 @@ Same as the [business_unit_exportedexcel](exportedexcel.md#BKMK_business_unit_ex
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_exportedexcel|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_retaineddataexcel"></a> business_unit_retaineddataexcel
@@ -2867,7 +2871,7 @@ Same as the [business_unit_retaineddataexcel](retaineddataexcel.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_retaineddataexcel|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_synapsedatabase"></a> business_unit_synapsedatabase
@@ -2884,7 +2888,7 @@ Same as the [business_unit_synapsedatabase](synapsedatabase.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_synapsedatabase|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_componentversionnrddatasource"></a> business_unit_componentversionnrddatasource
@@ -2918,7 +2922,7 @@ Same as the [business_unit_msdyn_dataflow](msdyn_dataflow.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflow|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_dataflowrefreshhistory"></a> business_unit_msdyn_dataflowrefreshhistory
@@ -2935,7 +2939,7 @@ Same as the [business_unit_msdyn_dataflowrefreshhistory](msdyn_dataflowrefreshhi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflowrefreshhistory|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_entityrefreshhistory"></a> business_unit_msdyn_entityrefreshhistory
@@ -2952,7 +2956,7 @@ Same as the [business_unit_msdyn_entityrefreshhistory](msdyn_entityrefreshhistor
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_entityrefreshhistory|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_applicationuser"></a> business_unit_applicationuser
@@ -2969,7 +2973,7 @@ Same as the [business_unit_applicationuser](applicationuser.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_applicationuser|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_connector"></a> business_unit_connector
@@ -2986,7 +2990,7 @@ Same as the [business_unit_connector](connector.md#BKMK_business_unit_connector)
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_connector|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_environmentvariabledefinition"></a> business_unit_environmentvariabledefinition
@@ -3003,7 +3007,7 @@ Same as the [business_unit_environmentvariabledefinition](environmentvariabledef
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_environmentvariabledefinition|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_environmentvariablevalue"></a> business_unit_environmentvariablevalue
@@ -3020,7 +3024,7 @@ Same as the [business_unit_environmentvariablevalue](environmentvariablevalue.md
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_environmentvariablevalue|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_workflowbinary"></a> business_unit_workflowbinary
@@ -3037,7 +3041,7 @@ Same as the [business_unit_workflowbinary](workflowbinary.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_workflowbinary|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_credential"></a> business_unit_credential
@@ -3054,7 +3058,7 @@ Same as the [business_unit_credential](credential.md#BKMK_business_unit_credenti
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_credential|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_desktopflowmodule"></a> business_unit_desktopflowmodule
@@ -3071,7 +3075,24 @@ Same as the [business_unit_desktopflowmodule](desktopflowmodule.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_desktopflowmodule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_flowcapacityassignment"></a> business_unit_flowcapacityassignment
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_flowcapacityassignment](flowcapacityassignment.md#BKMK_business_unit_flowcapacityassignment) many-to-one relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowcapacityassignment|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_flowcapacityassignment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowevent"></a> business_unit_flowevent
@@ -3088,7 +3109,7 @@ Same as the [business_unit_flowevent](flowevent.md#BKMK_business_unit_flowevent)
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowevent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowmachine"></a> business_unit_flowmachine
@@ -3105,7 +3126,7 @@ Same as the [business_unit_flowmachine](flowmachine.md#BKMK_business_unit_flowma
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowmachine|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowmachinegroup"></a> business_unit_flowmachinegroup
@@ -3122,7 +3143,7 @@ Same as the [business_unit_flowmachinegroup](flowmachinegroup.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowmachinegroup|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowmachineimage"></a> business_unit_flowmachineimage
@@ -3139,7 +3160,7 @@ Same as the [business_unit_flowmachineimage](flowmachineimage.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowmachineimage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowmachineimageversion"></a> business_unit_flowmachineimageversion
@@ -3156,7 +3177,7 @@ Same as the [business_unit_flowmachineimageversion](flowmachineimageversion.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowmachineimageversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowmachinenetwork"></a> business_unit_flowmachinenetwork
@@ -3173,7 +3194,7 @@ Same as the [business_unit_flowmachinenetwork](flowmachinenetwork.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowmachinenetwork|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_processstageparameter"></a> business_unit_processstageparameter
@@ -3190,7 +3211,7 @@ Same as the [business_unit_processstageparameter](processstageparameter.md#BKMK_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_processstageparameter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_workqueue"></a> business_unit_workqueue
@@ -3207,7 +3228,7 @@ Same as the [business_unit_workqueue](workqueue.md#BKMK_business_unit_workqueue)
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_workqueue|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_workqueueitem"></a> business_unit_workqueueitem
@@ -3224,7 +3245,7 @@ Same as the [business_unit_workqueueitem](workqueueitem.md#BKMK_business_unit_wo
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_workqueueitem|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_desktopflowbinary"></a> business_unit_desktopflowbinary
@@ -3241,7 +3262,7 @@ Same as the [business_unit_desktopflowbinary](desktopflowbinary.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_desktopflowbinary|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowsession"></a> business_unit_flowsession
@@ -3258,7 +3279,7 @@ Same as the [business_unit_flowsession](flowsession.md#BKMK_business_unit_flowse
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_flowsession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_flowrun"></a> business_unit_flowrun
@@ -3292,7 +3313,7 @@ Same as the [business_unit_connectionreference](connectionreference.md#BKMK_busi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_connectionreference|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_connectioninstance"></a> business_unit_connectioninstance
@@ -3309,7 +3330,7 @@ Same as the [business_unit_connectioninstance](connectioninstance.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_connectioninstance|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvfilesearch"></a> business_unit_dvfilesearch
@@ -3326,7 +3347,7 @@ Same as the [business_unit_dvfilesearch](dvfilesearch.md#BKMK_business_unit_dvfi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvfilesearch|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvfilesearchattribute"></a> business_unit_dvfilesearchattribute
@@ -3343,7 +3364,7 @@ Same as the [business_unit_dvfilesearchattribute](dvfilesearchattribute.md#BKMK_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvfilesearchattribute|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvfilesearchentity"></a> business_unit_dvfilesearchentity
@@ -3360,7 +3381,7 @@ Same as the [business_unit_dvfilesearchentity](dvfilesearchentity.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvfilesearchentity|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvtablesearch"></a> business_unit_dvtablesearch
@@ -3377,7 +3398,7 @@ Same as the [business_unit_dvtablesearch](dvtablesearch.md#BKMK_business_unit_dv
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvtablesearch|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvtablesearchattribute"></a> business_unit_dvtablesearchattribute
@@ -3394,7 +3415,7 @@ Same as the [business_unit_dvtablesearchattribute](dvtablesearchattribute.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvtablesearchattribute|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_dvtablesearchentity"></a> business_unit_dvtablesearchentity
@@ -3411,7 +3432,7 @@ Same as the [business_unit_dvtablesearchentity](dvtablesearchentity.md#BKMK_busi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_dvtablesearchentity|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aiplugin"></a> business_unit_aiplugin
@@ -3428,7 +3449,7 @@ Same as the [business_unit_aiplugin](aiplugin.md#BKMK_business_unit_aiplugin) ma
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aiplugin|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aipluginexternalschema"></a> business_unit_aipluginexternalschema
@@ -3445,7 +3466,7 @@ Same as the [business_unit_aipluginexternalschema](aipluginexternalschema.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aipluginexternalschema|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aipluginexternalschemaproperty"></a> business_unit_aipluginexternalschemaproperty
@@ -3462,7 +3483,7 @@ Same as the [business_unit_aipluginexternalschemaproperty](aipluginexternalschem
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aipluginexternalschemaproperty|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aiplugininstance"></a> business_unit_aiplugininstance
@@ -3479,7 +3500,7 @@ Same as the [business_unit_aiplugininstance](aiplugininstance.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aiplugininstance|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aipluginoperation"></a> business_unit_aipluginoperation
@@ -3496,7 +3517,7 @@ Same as the [business_unit_aipluginoperation](aipluginoperation.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aipluginoperation|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aipluginoperationparameter"></a> business_unit_aipluginoperationparameter
@@ -3513,7 +3534,7 @@ Same as the [business_unit_aipluginoperationparameter](aipluginoperationparamete
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aipluginoperationparameter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_aipluginusersetting"></a> business_unit_aipluginusersetting
@@ -3530,7 +3551,7 @@ Same as the [business_unit_aipluginusersetting](aipluginusersetting.md#BKMK_busi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_aipluginusersetting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdynce_botcontent"></a> business_unit_msdynce_botcontent
@@ -3547,7 +3568,7 @@ Same as the [business_unit_msdynce_botcontent](msdynce_botcontent.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdynce_botcontent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_conversationtranscript"></a> business_unit_conversationtranscript
@@ -3564,7 +3585,7 @@ Same as the [business_unit_conversationtranscript](conversationtranscript.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_conversationtranscript|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_bot"></a> business_unit_bot
@@ -3581,7 +3602,7 @@ Same as the [business_unit_bot](bot.md#BKMK_business_unit_bot) many-to-one relat
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_bot|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_botcomponent"></a> business_unit_botcomponent
@@ -3598,7 +3619,7 @@ Same as the [business_unit_botcomponent](botcomponent.md#BKMK_business_unit_botc
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_botcomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_activityfileattachment"></a> business_unit_activityfileattachment
@@ -3615,7 +3636,7 @@ Same as the [business_unit_activityfileattachment](activityfileattachment.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_activityfileattachment|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_chat_businessunit_owningbusinessunit"></a> chat_businessunit_owningbusinessunit
@@ -3649,7 +3670,7 @@ Same as the [business_unit_msdyn_serviceconfiguration](msdyn_serviceconfiguratio
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_serviceconfiguration|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_slakpi"></a> business_unit_msdyn_slakpi
@@ -3666,7 +3687,7 @@ Same as the [business_unit_msdyn_slakpi](msdyn_slakpi.md#BKMK_business_unit_msdy
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_slakpi|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_integratedsearchprovider"></a> business_unit_msdyn_integratedsearchprovider
@@ -3683,7 +3704,7 @@ Same as the [business_unit_msdyn_integratedsearchprovider](msdyn_integratedsearc
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_integratedsearchprovider|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgemanagementsetting"></a> business_unit_msdyn_knowledgemanagementsetting
@@ -3700,7 +3721,7 @@ Same as the [business_unit_msdyn_knowledgemanagementsetting](msdyn_knowledgemana
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgemanagementsetting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_federatedarticle"></a> business_unit_msdyn_federatedarticle
@@ -3717,7 +3738,7 @@ Same as the [business_unit_msdyn_federatedarticle](msdyn_federatedarticle.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_federatedarticle|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_kmfederatedsearchconfig"></a> business_unit_msdyn_kmfederatedsearchconfig
@@ -3734,7 +3755,7 @@ Same as the [business_unit_msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearc
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_kmfederatedsearchconfig|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgearticleimage"></a> business_unit_msdyn_knowledgearticleimage
@@ -3751,7 +3772,7 @@ Same as the [business_unit_msdyn_knowledgearticleimage](msdyn_knowledgearticleim
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgearticleimage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgeinteractioninsight"></a> business_unit_msdyn_knowledgeinteractioninsight
@@ -3768,7 +3789,7 @@ Same as the [business_unit_msdyn_knowledgeinteractioninsight](msdyn_knowledgeint
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgeinteractioninsight|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgesearchinsight"></a> business_unit_msdyn_knowledgesearchinsight
@@ -3785,7 +3806,7 @@ Same as the [business_unit_msdyn_knowledgesearchinsight](msdyn_knowledgesearchin
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgesearchinsight|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_favoriteknowledgearticle"></a> business_unit_msdyn_favoriteknowledgearticle
@@ -3802,7 +3823,7 @@ Same as the [business_unit_msdyn_favoriteknowledgearticle](msdyn_favoriteknowled
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_favoriteknowledgearticle|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_kalanguagesetting"></a> business_unit_msdyn_kalanguagesetting
@@ -3819,7 +3840,7 @@ Same as the [business_unit_msdyn_kalanguagesetting](msdyn_kalanguagesetting.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_kalanguagesetting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_kbattachment"></a> business_unit_msdyn_kbattachment
@@ -3836,7 +3857,7 @@ Same as the [business_unit_msdyn_kbattachment](msdyn_kbattachment.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_kbattachment|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgearticletemplate"></a> business_unit_msdyn_knowledgearticletemplate
@@ -3853,7 +3874,7 @@ Same as the [business_unit_msdyn_knowledgearticletemplate](msdyn_knowledgearticl
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgearticletemplate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgepersonalfilter"></a> business_unit_msdyn_knowledgepersonalfilter
@@ -3870,7 +3891,7 @@ Same as the [business_unit_msdyn_knowledgepersonalfilter](msdyn_knowledgepersona
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgepersonalfilter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_knowledgesearchfilter"></a> business_unit_msdyn_knowledgesearchfilter
@@ -3887,7 +3908,7 @@ Same as the [business_unit_msdyn_knowledgesearchfilter](msdyn_knowledgesearchfil
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_knowledgesearchfilter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
@@ -3904,7 +3925,7 @@ Same as the [business_unit_fxexpression](fxexpression.md#BKMK_business_unit_fxex
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_fxexpression|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerfxrule"></a> business_unit_powerfxrule
@@ -3921,7 +3942,7 @@ Same as the [business_unit_powerfxrule](powerfxrule.md#BKMK_business_unit_powerf
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerfxrule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_retentionconfig"></a> business_unit_retentionconfig
@@ -3938,7 +3959,7 @@ Same as the [business_unit_retentionconfig](retentionconfig.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_retentionconfig|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_retentionfailuredetail"></a> business_unit_retentionfailuredetail
@@ -3955,7 +3976,7 @@ Same as the [business_unit_retentionfailuredetail](retentionfailuredetail.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_retentionfailuredetail|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_retentionoperation"></a> business_unit_retentionoperation
@@ -3972,7 +3993,24 @@ Same as the [business_unit_retentionoperation](retentionoperation.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_retentionoperation|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_dataflowconnectionreference"></a> business_unit_msdyn_dataflowconnectionreference
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md#BKMK_business_unit_msdyn_dataflowconnectionreference) many-to-one relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflowconnectionreference|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflowconnectionreference|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_schedule"></a> business_unit_msdyn_schedule
@@ -3989,7 +4027,7 @@ Same as the [business_unit_msdyn_schedule](msdyn_schedule.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_schedule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_dataflowtemplate"></a> business_unit_msdyn_dataflowtemplate
@@ -4006,7 +4044,7 @@ Same as the [business_unit_msdyn_dataflowtemplate](msdyn_dataflowtemplate.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflowtemplate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_dataflow_datalakefolder"></a> business_unit_msdyn_dataflow_datalakefolder
@@ -4023,7 +4061,7 @@ Same as the [business_unit_msdyn_dataflow_datalakefolder](msdyn_dataflow_datalak
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflow_datalakefolder|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_dmsrequest"></a> business_unit_msdyn_dmsrequest
@@ -4040,7 +4078,7 @@ Same as the [business_unit_msdyn_dmsrequest](msdyn_dmsrequest.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmsrequest|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_dmsrequeststatus"></a> business_unit_msdyn_dmsrequeststatus
@@ -4057,7 +4095,7 @@ Same as the [business_unit_msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmsrequeststatus|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_appnotification"></a> business_unit_appnotification
@@ -4091,7 +4129,7 @@ Same as the [business_unit_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_mobileapp|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_card"></a> business_unit_card
@@ -4108,7 +4146,7 @@ Same as the [business_unit_card](card.md#BKMK_business_unit_card) many-to-one re
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_card|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_entitylinkchatconfiguration"></a> business_unit_msdyn_entitylinkchatconfiguration
@@ -4125,7 +4163,7 @@ Same as the [business_unit_msdyn_entitylinkchatconfiguration](msdyn_entitylinkch
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_entitylinkchatconfiguration|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_richtextfile"></a> business_unit_msdyn_richtextfile
@@ -4142,7 +4180,7 @@ Same as the [business_unit_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_richtextfile|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_customcontrolextendedsettings"></a> business_unit_msdyn_customcontrolextendedsettings
@@ -4159,7 +4197,7 @@ Same as the [business_unit_msdyn_customcontrolextendedsettings](msdyn_customcont
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_customcontrolextendedsettings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_virtualtablecolumncandidate"></a> business_unit_msdyn_virtualtablecolumncandidate
@@ -4176,7 +4214,7 @@ Same as the [business_unit_msdyn_virtualtablecolumncandidate](msdyn_virtualtable
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_virtualtablecolumncandidate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aievent"></a> business_unit_msdyn_aievent
@@ -4193,7 +4231,7 @@ Same as the [business_unit_msdyn_aievent](msdyn_aievent.md#BKMK_business_unit_ms
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aievent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aimodel"></a> business_unit_msdyn_aimodel
@@ -4210,7 +4248,7 @@ Same as the [business_unit_msdyn_aimodel](msdyn_aimodel.md#BKMK_business_unit_ms
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aimodel|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aitemplate"></a> business_unit_msdyn_aitemplate
@@ -4227,7 +4265,7 @@ Same as the [business_unit_msdyn_aitemplate](msdyn_aitemplate.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aitemplate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibfeedbackloop"></a> business_unit_msdyn_aibfeedbackloop
@@ -4244,7 +4282,7 @@ Same as the [business_unit_msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md#BKMK_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibfeedbackloop|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aifptrainingdocument"></a> business_unit_msdyn_aifptrainingdocument
@@ -4261,7 +4299,7 @@ Same as the [business_unit_msdyn_aifptrainingdocument](msdyn_aifptrainingdocumen
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aifptrainingdocument|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aiodimage"></a> business_unit_msdyn_aiodimage
@@ -4278,7 +4316,7 @@ Same as the [business_unit_msdyn_aiodimage](msdyn_aiodimage.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aiodimage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aiodlabel"></a> business_unit_msdyn_aiodlabel
@@ -4295,7 +4333,7 @@ Same as the [business_unit_msdyn_aiodlabel](msdyn_aiodlabel.md#BKMK_business_uni
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aiodlabel|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aiodtrainingboundingbox"></a> business_unit_msdyn_aiodtrainingboundingbox
@@ -4312,7 +4350,7 @@ Same as the [business_unit_msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboun
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aiodtrainingboundingbox|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aiodtrainingimage"></a> business_unit_msdyn_aiodtrainingimage
@@ -4329,7 +4367,7 @@ Same as the [business_unit_msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aiodtrainingimage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibdataset"></a> business_unit_msdyn_aibdataset
@@ -4346,7 +4384,7 @@ Same as the [business_unit_msdyn_aibdataset](msdyn_aibdataset.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibdataset|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibdatasetfile"></a> business_unit_msdyn_aibdatasetfile
@@ -4363,7 +4401,7 @@ Same as the [business_unit_msdyn_aibdatasetfile](msdyn_aibdatasetfile.md#BKMK_bu
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibdatasetfile|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibdatasetrecord"></a> business_unit_msdyn_aibdatasetrecord
@@ -4380,7 +4418,7 @@ Same as the [business_unit_msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibdatasetrecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibdatasetscontainer"></a> business_unit_msdyn_aibdatasetscontainer
@@ -4397,7 +4435,7 @@ Same as the [business_unit_msdyn_aibdatasetscontainer](msdyn_aibdatasetscontaine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibdatasetscontainer|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibfile"></a> business_unit_msdyn_aibfile
@@ -4414,7 +4452,7 @@ Same as the [business_unit_msdyn_aibfile](msdyn_aibfile.md#BKMK_business_unit_ms
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibfile|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_aibfileattacheddata"></a> business_unit_msdyn_aibfileattacheddata
@@ -4431,7 +4469,7 @@ Same as the [business_unit_msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aibfileattacheddata|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmanalysishistory"></a> business_unit_msdyn_pmanalysishistory
@@ -4448,7 +4486,7 @@ Same as the [business_unit_msdyn_pmanalysishistory](msdyn_pmanalysishistory.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmanalysishistory|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmbusinessruleautomationconfig"></a> business_unit_msdyn_pmbusinessruleautomationconfig
@@ -4465,7 +4503,7 @@ Same as the [business_unit_msdyn_pmbusinessruleautomationconfig](msdyn_pmbusines
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmbusinessruleautomationconfig|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmcalendar"></a> business_unit_msdyn_pmcalendar
@@ -4482,7 +4520,7 @@ Same as the [business_unit_msdyn_pmcalendar](msdyn_pmcalendar.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmcalendar|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmcalendarversion"></a> business_unit_msdyn_pmcalendarversion
@@ -4499,7 +4537,7 @@ Same as the [business_unit_msdyn_pmcalendarversion](msdyn_pmcalendarversion.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmcalendarversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pminferredtask"></a> business_unit_msdyn_pminferredtask
@@ -4516,7 +4554,7 @@ Same as the [business_unit_msdyn_pminferredtask](msdyn_pminferredtask.md#BKMK_bu
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pminferredtask|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmprocessextendedmetadataversion"></a> business_unit_msdyn_pmprocessextendedmetadataversion
@@ -4533,7 +4571,7 @@ Same as the [business_unit_msdyn_pmprocessextendedmetadataversion](msdyn_pmproce
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmprocessextendedmetadataversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmprocesstemplate"></a> business_unit_msdyn_pmprocesstemplate
@@ -4550,7 +4588,7 @@ Same as the [business_unit_msdyn_pmprocesstemplate](msdyn_pmprocesstemplate.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmprocesstemplate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmprocessusersettings"></a> business_unit_msdyn_pmprocessusersettings
@@ -4567,7 +4605,7 @@ Same as the [business_unit_msdyn_pmprocessusersettings](msdyn_pmprocessusersetti
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmprocessusersettings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmprocessversion"></a> business_unit_msdyn_pmprocessversion
@@ -4584,7 +4622,7 @@ Same as the [business_unit_msdyn_pmprocessversion](msdyn_pmprocessversion.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmprocessversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmrecording"></a> business_unit_msdyn_pmrecording
@@ -4601,7 +4639,7 @@ Same as the [business_unit_msdyn_pmrecording](msdyn_pmrecording.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmrecording|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmtemplate"></a> business_unit_msdyn_pmtemplate
@@ -4618,7 +4656,7 @@ Same as the [business_unit_msdyn_pmtemplate](msdyn_pmtemplate.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmtemplate|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_pmview"></a> business_unit_msdyn_pmview
@@ -4635,7 +4673,7 @@ Same as the [business_unit_msdyn_pmview](msdyn_pmview.md#BKMK_business_unit_msdy
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_pmview|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_analysiscomponent"></a> business_unit_msdyn_analysiscomponent
@@ -4652,7 +4690,7 @@ Same as the [business_unit_msdyn_analysiscomponent](msdyn_analysiscomponent.md#B
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysiscomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_analysisjob"></a> business_unit_msdyn_analysisjob
@@ -4669,7 +4707,7 @@ Same as the [business_unit_msdyn_analysisjob](msdyn_analysisjob.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysisjob|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_analysisoverride"></a> business_unit_msdyn_analysisoverride
@@ -4686,7 +4724,7 @@ Same as the [business_unit_msdyn_analysisoverride](msdyn_analysisoverride.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysisoverride|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_analysisresult"></a> business_unit_msdyn_analysisresult
@@ -4703,7 +4741,7 @@ Same as the [business_unit_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_bu
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysisresult|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_analysisresultdetail"></a> business_unit_msdyn_analysisresultdetail
@@ -4720,7 +4758,7 @@ Same as the [business_unit_msdyn_analysisresultdetail](msdyn_analysisresultdetai
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysisresultdetail|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_solutionhealthrule"></a> business_unit_msdyn_solutionhealthrule
@@ -4737,7 +4775,7 @@ Same as the [business_unit_msdyn_solutionhealthrule](msdyn_solutionhealthrule.md
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_solutionhealthrule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_solutionhealthruleargument"></a> business_unit_msdyn_solutionhealthruleargument
@@ -4754,7 +4792,7 @@ Same as the [business_unit_msdyn_solutionhealthruleargument](msdyn_solutionhealt
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_solutionhealthruleargument|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerbidataset"></a> business_unit_powerbidataset
@@ -4771,7 +4809,7 @@ Same as the [business_unit_powerbidataset](powerbidataset.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerbidataset|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerbidatasetapdx"></a> business_unit_powerbidatasetapdx
@@ -4788,7 +4826,7 @@ Same as the [business_unit_powerbidatasetapdx](powerbidatasetapdx.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerbidatasetapdx|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerbimashupparameter"></a> business_unit_powerbimashupparameter
@@ -4805,7 +4843,7 @@ Same as the [business_unit_powerbimashupparameter](powerbimashupparameter.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerbimashupparameter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerbireport"></a> business_unit_powerbireport
@@ -4822,7 +4860,7 @@ Same as the [business_unit_powerbireport](powerbireport.md#BKMK_business_unit_po
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerbireport|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerbireportapdx"></a> business_unit_powerbireportapdx
@@ -4839,7 +4877,7 @@ Same as the [business_unit_powerbireportapdx](powerbireportapdx.md#BKMK_business
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerbireportapdx|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_msdyn_fileupload"></a> business_unit_msdyn_fileupload
@@ -4856,7 +4894,7 @@ Same as the [business_unit_msdyn_fileupload](msdyn_fileupload.md#BKMK_business_u
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_fileupload|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_nlsqregistration"></a> business_unit_nlsqregistration
@@ -4907,7 +4945,7 @@ Same as the [business_unit_powerpagecomponent](powerpagecomponent.md#BKMK_busine
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerpagecomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerpagesite"></a> business_unit_powerpagesite
@@ -4924,7 +4962,7 @@ Same as the [business_unit_powerpagesite](powerpagesite.md#BKMK_business_unit_po
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerpagesite|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerpagesitelanguage"></a> business_unit_powerpagesitelanguage
@@ -4941,7 +4979,7 @@ Same as the [business_unit_powerpagesitelanguage](powerpagesitelanguage.md#BKMK_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerpagesitelanguage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_powerpagesitepublished"></a> business_unit_powerpagesitepublished
@@ -4958,7 +4996,7 @@ Same as the [business_unit_powerpagesitepublished](powerpagesitepublished.md#BKM
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_powerpagesitepublished|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_adx_invitation"></a> business_unit_adx_invitation
@@ -4975,7 +5013,7 @@ Same as the [business_unit_adx_invitation](adx_invitation.md#BKMK_business_unit_
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_adx_invitation|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_adx_inviteredemption_businessunit_owningbusinessunit"></a> adx_inviteredemption_businessunit_owningbusinessunit
@@ -5026,7 +5064,7 @@ Same as the [business_unit_adx_setting](adx_setting.md#BKMK_business_unit_adx_se
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_adx_setting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_mspcat_catalogsubmissionfiles"></a> business_unit_mspcat_catalogsubmissionfiles
@@ -5043,7 +5081,7 @@ Same as the [business_unit_mspcat_catalogsubmissionfiles](mspcat_catalogsubmissi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_mspcat_catalogsubmissionfiles|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_business_unit_mspcat_packagestore"></a> business_unit_mspcat_packagestore
@@ -5060,7 +5098,41 @@ Same as the [business_unit_mspcat_packagestore](mspcat_packagestore.md#BKMK_busi
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_mspcat_packagestore|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_dmssyncrequest"></a> business_unit_msdyn_dmssyncrequest
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_dmssyncrequest](msdyn_dmssyncrequest.md#BKMK_business_unit_msdyn_dmssyncrequest) many-to-one relationship for the [msdyn_dmssyncrequest](msdyn_dmssyncrequest.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dmssyncrequest|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmssyncrequest|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_dmssyncstatus"></a> business_unit_msdyn_dmssyncstatus
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_dmssyncstatus](msdyn_dmssyncstatus.md#BKMK_business_unit_msdyn_dmssyncstatus) many-to-one relationship for the [msdyn_dmssyncstatus](msdyn_dmssyncstatus.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dmssyncstatus|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmssyncstatus|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
