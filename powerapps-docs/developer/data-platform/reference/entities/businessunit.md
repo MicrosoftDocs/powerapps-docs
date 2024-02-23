@@ -1,7 +1,7 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1740,6 +1740,8 @@ Listed by **SchemaName**.
 - [business_unit_adx_setting](#BKMK_business_unit_adx_setting)
 - [business_unit_mspcat_catalogsubmissionfiles](#BKMK_business_unit_mspcat_catalogsubmissionfiles)
 - [business_unit_mspcat_packagestore](#BKMK_business_unit_mspcat_packagestore)
+- [business_unit_msdyn_dmssyncrequest](#BKMK_business_unit_msdyn_dmssyncrequest)
+- [business_unit_msdyn_dmssyncstatus](#BKMK_business_unit_msdyn_dmssyncstatus)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -5095,6 +5097,40 @@ Same as the [business_unit_mspcat_packagestore](mspcat_packagestore.md#BKMK_busi
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_mspcat_packagestore|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_dmssyncrequest"></a> business_unit_msdyn_dmssyncrequest
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_dmssyncrequest](msdyn_dmssyncrequest.md#BKMK_business_unit_msdyn_dmssyncrequest) many-to-one relationship for the [msdyn_dmssyncrequest](msdyn_dmssyncrequest.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dmssyncrequest|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmssyncrequest|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_dmssyncstatus"></a> business_unit_msdyn_dmssyncstatus
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_dmssyncstatus](msdyn_dmssyncstatus.md#BKMK_business_unit_msdyn_dmssyncstatus) many-to-one relationship for the [msdyn_dmssyncstatus](msdyn_dmssyncstatus.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dmssyncstatus|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmssyncstatus|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

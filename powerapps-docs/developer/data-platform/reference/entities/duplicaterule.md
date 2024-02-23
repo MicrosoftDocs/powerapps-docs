@@ -1,7 +1,7 @@
 ---
 title: "Duplicate Detection Rule (DuplicateRule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Duplicate Detection Rule (DuplicateRule)  table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -998,6 +998,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10293|Web Template||
 |10303|Catalog Submission Files|Files associated with the package that will be used as part of the submission to the catalog system.|
 |10304|Package Submission Store|Manages submissions to the Catalog and provisioning|
+|10389|DMS Sync Request|An entity to save DMS sync requests.|
+|10391|DMS Sync Status|An entity to save DMS sync statuses.|
+|10393|Deployment Orchestration||
+|10394|Deleted Item Reference|Deleted Item References|
+|10395|Recycle Bin Configuration|Holds recyclebin configuration for entities|
+|18085|Event Expander Breadcrumb|Table to store breadcrumb records of Event Expander pipeline.|
 
 
 
@@ -1813,6 +1819,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10293|Web Template||
 |10303|Catalog Submission Files|Files associated with the package that will be used as part of the submission to the catalog system.|
 |10304|Package Submission Store|Manages submissions to the Catalog and provisioning|
+|10389|DMS Sync Request|An entity to save DMS sync requests.|
+|10391|DMS Sync Status|An entity to save DMS sync statuses.|
+|10393|Deployment Orchestration||
+|10394|Deleted Item Reference|Deleted Item References|
+|10395|Recycle Bin Configuration|Holds recyclebin configuration for entities|
+|18085|Event Expander Breadcrumb|Table to store breadcrumb records of Event Expander pipeline.|
 
 
 

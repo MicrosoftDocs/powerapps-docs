@@ -1,7 +1,7 @@
 ---
 title: "MaskingRule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MaskingRule table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -77,7 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Description of the masking rule|
+|Description|Description of the secured masking rule|
 |DisplayName|Description|
 |FormatName|TextArea|
 |IsLocalizable|True|
@@ -93,7 +93,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The display name of the masking rule.|
+|Description|The display name of the secured masking rule.|
 |DisplayName|Display Name|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -102,7 +102,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|displayname|
 |MaxLength|100|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -141,7 +141,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Test data evaluated by a masking rule|
+|Description|Test data evaluated by a secured masking rule|
 |DisplayName|Masked Test Data|
 |FormatName|TextArea|
 |IsLocalizable|False|
@@ -171,7 +171,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The unique name of the masking rule.|
+|Description|The unique name of the secured masking rule.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -204,7 +204,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Test data to evaluate a masking rule|
+|Description|Test data to evaluate a secured masking rule|
 |DisplayName|Enter Test Data|
 |FormatName|TextArea|
 |IsLocalizable|False|

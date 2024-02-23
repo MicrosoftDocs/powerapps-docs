@@ -1,7 +1,7 @@
 ---
 title: "flowcapacityassignment table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowcapacityassignment table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -63,6 +63,7 @@ Capacity assignment for usage in Power Automate
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AllocationOrigin](#BKMK_AllocationOrigin)
 - [AllowAutoAllocation](#BKMK_AllowAutoAllocation)
 - [CapacityOverage](#BKMK_CapacityOverage)
 - [CapacitySource](#BKMK_CapacitySource)
@@ -80,6 +81,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AllocationOrigin"></a> AllocationOrigin
+
+|Property|Value|
+|--------|-----|
+|Description|Origin of the capacity assigned to a target entity.|
+|DisplayName|Allocation Origin|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allocationorigin|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### AllocationOrigin Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|User|Capacity was assigned by a user.|
+|1|System|Capacity was assigned by the system.|
+
 
 
 ### <a name="BKMK_AllowAutoAllocation"></a> AllowAutoAllocation

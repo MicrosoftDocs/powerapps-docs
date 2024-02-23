@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -9914,6 +9914,8 @@ Listed by **SchemaName**.
 - [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
 - [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
+- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
+- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncsubscriptionfnotable](#BKMK_organization_organizationdatasyncsubscriptionfnotable)
@@ -9940,6 +9942,8 @@ Listed by **SchemaName**.
 - [organization_copilotexamplequestion](#BKMK_organization_copilotexamplequestion)
 - [organization_adx_externalidentity](#BKMK_organization_adx_externalidentity)
 - [organization_adx_webformsession](#BKMK_organization_adx_webformsession)
+- [organization_deploymentorchestration](#BKMK_organization_deploymentorchestration)
+- [organization_recyclebinconfig](#BKMK_organization_recyclebinconfig)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -11470,6 +11474,40 @@ Same as the [organization_mobileofflineprofileextension](mobileofflineprofileext
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_teammobileofflineprofilemembership](teammobileofflineprofilemembership.md#BKMK_organization_teammobileofflineprofilemembership) many-to-one relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|teammobileofflineprofilemembership|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_teammobileofflineprofilemembership|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_usermobileofflineprofilemembership](usermobileofflineprofilemembership.md#BKMK_organization_usermobileofflineprofilemembership) many-to-one relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|usermobileofflineprofilemembership|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_usermobileofflineprofilemembership|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_organizationdatasyncsubscription"></a> organization_organizationdatasyncsubscription
 
 **Added by**: Active Solution Solution
@@ -11908,6 +11946,40 @@ Same as the [organization_adx_webformsession](adx_webformsession.md#BKMK_organiz
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_adx_webformsession|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_deploymentorchestration"></a> organization_deploymentorchestration
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_deploymentorchestration](deploymentorchestration.md#BKMK_organization_deploymentorchestration) many-to-one relationship for the [deploymentorchestration](deploymentorchestration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|deploymentorchestration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_deploymentorchestration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_recyclebinconfig"></a> organization_recyclebinconfig
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_recyclebinconfig](recyclebinconfig.md#BKMK_organization_recyclebinconfig) many-to-one relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recyclebinconfig|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_recyclebinconfig|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: "AIPluginOperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the AIPluginOperation table/entity."
-ms.date: 02/14/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -82,8 +82,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ReferencedOperationId](#BKMK_ReferencedOperationId)
 - [SharedConnector](#BKMK_SharedConnector)
-- [statecode](#BKMK_statecode)
-- [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [Workflow](#BKMK_Workflow)
@@ -380,49 +378,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
-
-
-### <a name="BKMK_statecode"></a> statecode
-
-|Property|Value|
-|--------|-----|
-|Description|Status of the AIPluginOperation|
-|DisplayName|Status|
-|IsValidForCreate|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statecode|
-|RequiredLevel|SystemRequired|
-|Type|State|
-
-#### statecode Choices/Options
-
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
-
-### <a name="BKMK_statuscode"></a> statuscode
-
-|Property|Value|
-|--------|-----|
-|Description|Reason for the status of the AIPluginOperation|
-|DisplayName|Status Reason|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statuscode|
-|RequiredLevel|None|
-|Type|Status|
-
-#### statuscode Choices/Options
-
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber

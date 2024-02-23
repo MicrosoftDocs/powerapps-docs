@@ -168,6 +168,8 @@
   href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
+- name: deploymentorchestration
+  href: deploymentorchestration.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
 - name: desktopflowmodule
@@ -218,6 +220,8 @@
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
   href: environmentvariablevalue.md
+- name: EventExpanderBreadcrumb
+  href: eventexpanderbreadcrumb.md
 - name: ExchangeSyncIdMapping
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
@@ -396,6 +400,10 @@
   href: msdyn_dmsrequest.md
 - name: msdyn_dmsrequeststatus
   href: msdyn_dmsrequeststatus.md
+- name: msdyn_dmssyncrequest
+  href: msdyn_dmssyncrequest.md
+- name: msdyn_dmssyncstatus
+  href: msdyn_dmssyncstatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
@@ -478,14 +486,6 @@
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
-- name: msdyn_solutioncomponentcountdatasource
-  href: msdyn_solutioncomponentcountdatasource.md
-- name: msdyn_solutioncomponentcountsummary
-  href: msdyn_solutioncomponentcountsummary.md
-- name: msdyn_solutioncomponentdatasource
-  href: msdyn_solutioncomponentdatasource.md
-- name: msdyn_solutioncomponentsummary
-  href: msdyn_solutioncomponentsummary.md
 - name: msdyn_solutionhealthrule
   href: msdyn_solutionhealthrule.md
 - name: msdyn_solutionhealthruleargument
@@ -676,6 +676,8 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: RecycleBinConfig
+  href: recyclebinconfig.md
 - name: Relationship
   href: relationship.md
 - name: RelationshipAttribute
@@ -804,6 +806,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -832,6 +836,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization
