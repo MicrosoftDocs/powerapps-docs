@@ -330,7 +330,7 @@ When you create a many-to-one relationship on a table that refers to an elastic 
 
 At the same time, a string column is created that follows this naming convention `<lookup name>pid`. This column stores the `partitionid` value for the related elastic table record.
 
-A lookup column can only store a single GUID value.  The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column.[Learn to associate a record of an elastic table.](use-elastic-tables.md#associate-a-record-of-elastic-table)
+A lookup column can only store a single GUID value.  The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column. [Learn to associate elastic table records](use-elastic-tables.md#associate-elastic-table-records)
 
 If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column should be null, and you shouldn't set or retrieve it.
 
