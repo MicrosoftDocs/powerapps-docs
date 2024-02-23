@@ -199,6 +199,7 @@ Switch(Connection.Sync,
 
    ConnectionSync.NotConnectedSyncError, Icon.GlobeError) 
 ```
+You can also set the ""OnSelect"" property using the Power Fx function 'ShowHostInfo(HostInfo.OfflineSync)' to show the [Device status page](/power-apps/mobile/offline-sync-icon#device-status-page) when selecting the globe icon. 
 
 ## Limitations and known issues
 
