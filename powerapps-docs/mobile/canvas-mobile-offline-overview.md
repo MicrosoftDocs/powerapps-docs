@@ -26,7 +26,7 @@ If users of your Dataverse-based canvas app have spotty or no Internet access, y
 
 > [!IMPORTANT]
 > - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
->   - Sum/Min/Max/Avg
+>   - Min/Max/Avg
 >   - Relate
 >   - Unrelate
 >   - In (Membership)
