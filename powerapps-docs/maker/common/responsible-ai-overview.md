@@ -12,6 +12,8 @@ ms.topic: overview
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mduelae
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # FAQ about using AI responsibly in Power Apps
@@ -35,3 +37,5 @@ ms.reviewer: mduelae
 - [FAQ about using Copilot in the rich text editor](faqs-email-assist-rte.md)
 - [Draft well-written, input text with Copilot](../../user/well-written-input-text-copilot.md)
 - [FAQ for drafting well-written, input text with Copilot](faq-draft-with-copilot.md)
+- [Use form filling assistance in model-driven apps](../../user/form-filling-assistance.md)
+- [FAQs about form filling assistance](faq-from-filling-assistance.md)

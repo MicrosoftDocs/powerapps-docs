@@ -1,7 +1,7 @@
 ---
 title: "Package Submission Store (mspcat_PackageStore)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Package Submission Store (mspcat_PackageStore)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,9 +16,9 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Manages submissions to Power Catalog and provisioning
+Manages submissions to the Catalog and provisioning
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: Catalog in Power Platform Packaging Solution
 
 
 ## Messages
@@ -211,7 +211,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|UniqueName of Solution to Package, Present b/c i cannot link to solution table. |
+|Description|Link between the solution unique name and the catalog package|
 |DisplayName|Solution Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|

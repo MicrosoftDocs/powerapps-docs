@@ -1,7 +1,7 @@
 ---
 title: "desktopflowmodule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the desktopflowmodule table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -848,6 +848,7 @@ Listed by **SchemaName**.
 - [desktopflowmodule_ProcessSession](#BKMK_desktopflowmodule_ProcessSession)
 - [desktopflowmodule_BulkDeleteFailures](#BKMK_desktopflowmodule_BulkDeleteFailures)
 - [desktopflowmodule_PrincipalObjectAttributeAccesses](#BKMK_desktopflowmodule_PrincipalObjectAttributeAccesses)
+- [dfm_desktopflowbinary_DFM](#BKMK_dfm_desktopflowbinary_DFM)
 
 
 ### <a name="BKMK_desktopflowmodule_SyncErrors"></a> desktopflowmodule_SyncErrors
@@ -984,6 +985,21 @@ Same as the [desktopflowmodule_PrincipalObjectAttributeAccesses](principalobject
 |ReferencedEntityNavigationPropertyName|desktopflowmodule_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_dfm_desktopflowbinary_DFM"></a> dfm_desktopflowbinary_DFM
+
+Same as the [dfm_desktopflowbinary_DFM](desktopflowbinary.md#BKMK_dfm_desktopflowbinary_DFM) many-to-one relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|desktopflowbinary|
+|ReferencingAttribute|desktopflowmodule|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|dfm_desktopflowbinary_DFM|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 

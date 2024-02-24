@@ -63,6 +63,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Form filling assistance
+      href: ../user/form-filling-assistance.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -153,6 +155,8 @@
         href: ../user/grid-filters-advanced.md
       - name: FAQ about grids and views
         href: ../user/faq-for-grids-views.md
+      - name: View and manage records in focused view
+        href: /dynamics365/sales/focused-view?context=/power-apps/maker/context
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service
@@ -432,6 +436,8 @@
               href: ./canvas-apps/add-gallery.md
             - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
+            - name: Best practices and recommendations
+              href: ./canvas-apps/gallery-best-practice.md
           - name: Add and configure a form
             items:
             - name: Add a form
@@ -1915,8 +1921,6 @@
       href: ./portals/supported-browser.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
-    - name: Create and show site content
-      href: ./portals/configure/create-show-portal-content.md
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
     - name: Edit site using site content editor
@@ -1925,8 +1929,6 @@
            href: ./portals/portal-content-editor.md
          - name: Edit page content using portal content editor
            href: ./portals/use-content-editor.md
-    - name: Update domain name
-      href: ./portals/admin/update-portal-domain.md
     - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
@@ -2275,83 +2277,82 @@
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
     href: ./data-platform/import-translated-entity-field-text.md
-  - name: Azure Synapse Link
-    items:
-    - name: Azure Synapse Link Overview
-      href: ./data-platform/export-to-data-lake.md
-    - name: Create an Azure Synapse Link with a Synapse Workspace
-      href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Create an Azure Synapse Link with Data Lake
-      href: ./data-platform/azure-synapse-link-data-lake.md
-    - name: Advanced Configuration Settings
-      href: ./data-platform/azure-synapse-link-advanced-configuration.md
-    - name: Use managed identities for Azure
-      href: ./data-platform/azure-synapse-link-msi.md  
-    - name: Choose finance and operations data in Azure Synapse Link for Dataverse
-      href: ./data-platform/azure-synapse-link-select-FnO-data.md
-    - name: FAQ about Azure Synapse Link
-      href: ./data-platform/export-data-lake-faq.yml
-    - name: Troubleshooging Azure Synapse Link for Dataverse     
-      href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
-    - name: Application Lifecycle Management
-      items:
-      - name: Transport a configuration across environments
-        href: ./data-platform/azure-synapse-link-solution.md
-      - name: Environment Lifecycle Events
-        href: ./data-platform/azure-synapse-link-olc.md
-    - name: Analyze with Azure Synapse Analytics
-      items:
-      - name: Query data with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-serverless.md
-      - name: Query and analyze incremental updates
-        href: ./data-platform/azure-synapse-incremental-updates.md
-      - name: Create a view on your Dataverse data
-        href: ./data-platform/azure-synapse-link-create-view.md
-      - name: Transform data with Apache Spark
-        href: ./data-platform/azure-synapse-link-spark.md
-      - name: Copy Dataverse into Azure SQL
-        href: ./data-platform/azure-synapse-link-pipelines.md
-      - name: Visualize data with Power BI
-        href: ./data-platform/azure-synapse-link-powerbi.md
-      - name: Copy data to Dedicated SQL
-        href: ./data-platform/azure-synapse-link-dedicated.md
-      - name: Read Incremental Updates
-        href: ./data-platform/azure-synapse-link-incremental.md
-      - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md
-      - name: Export data in Delta Lake format
-        href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric
-        href: ./data-platform/azure-synapse-link-view-in-fabric.md
-      - name: Build apps using Fabric data (preview)
-        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
-    - name: Analyze in Azure Data Lake Storage Gen2
-      items:
-      - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Copy data from multiple data lakes to single data lake
-        href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
-      - name: Transform data from CSV to Parquet
-        href: ./data-platform/azure-synapse-link-parquet.md
-      - name: Analyze exported data with Power BI
-        href: ./data-platform/export-to-data-lake-data-powerbi.md
-      - name: Access Dataverse choices with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-choices-adf.md
-      - name: Access choice labels from Azure Synapse Link for Dataverse
-        href: ./data-platform/azure-synapse-link-choice-labels.md
-      - name: Access Dataverse choices with Power BI
-        href: ./data-platform/azure-synapse-link-choices-powerbi.md
-  - name: Security in Dataverse
-    href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
+  - name: For admins
+    items:
+    - name: Security in Dataverse
+      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Azure Synapse Link
+      items:
+      - name: Azure Synapse Link Overview
+        href: ./data-platform/export-to-data-lake.md
+      - name: Create an Azure Synapse Link with a Synapse Workspace
+        href: ./data-platform/azure-synapse-link-synapse.md
+      - name: Create an Azure Synapse Link with Data Lake
+        href: ./data-platform/azure-synapse-link-data-lake.md
+      - name: Advanced Configuration Settings
+        href: ./data-platform/azure-synapse-link-advanced-configuration.md
+      - name: Use managed identities for Azure
+        href: ./data-platform/azure-synapse-link-msi.md  
+      - name: Choose finance and operations data in Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-select-FnO-data.md
+      - name: FAQ about Azure Synapse Link
+        href: ./data-platform/export-data-lake-faq.yml
+      - name: Application Lifecycle Management
+        items:
+        - name: Transport a configuration across environments
+          href: ./data-platform/azure-synapse-link-solution.md
+        - name: Environment Lifecycle Events
+          href: ./data-platform/azure-synapse-link-olc.md
+      - name: Analyze with Azure Synapse Analytics
+        items:
+        - name: Query data with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-serverless.md
+        - name: Query and analyze incremental updates
+          href: ./data-platform/azure-synapse-incremental-updates.md
+        - name: Create a view on your Dataverse data
+          href: ./data-platform/azure-synapse-link-create-view.md
+        - name: Transform data with Apache Spark
+          href: ./data-platform/azure-synapse-link-spark.md
+        - name: Copy Dataverse into Azure SQL
+          href: ./data-platform/azure-synapse-link-pipelines.md
+        - name: Visualize data with Power BI
+          href: ./data-platform/azure-synapse-link-powerbi.md
+        - name: Copy data to Dedicated SQL
+          href: ./data-platform/azure-synapse-link-dedicated.md
+        - name: Read Incremental Updates
+          href: ./data-platform/azure-synapse-link-incremental.md
+        - name: Access Dataverse choices with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-choices-serverless.md
+        - name: Export data in Delta Lake format
+          href: ./data-platform/azure-synapse-link-delta-lake.md
+        - name: View Dataverse data in Microsoft Fabric
+          href: ./data-platform/azure-synapse-link-view-in-fabric.md
+        - name: Build apps using Fabric data (preview)
+          href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Analyze in Azure Data Lake Storage Gen2
+        items:
+        - name: Ingest exported data with Azure Data Factory
+          href: ./data-platform/export-to-data-lake-data-adf.md
+        - name: Copy data from multiple data lakes to single data lake
+          href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
+        - name: Transform data from CSV to Parquet
+          href: ./data-platform/azure-synapse-link-parquet.md
+        - name: Analyze exported data with Power BI
+          href: ./data-platform/export-to-data-lake-data-powerbi.md
+        - name: Access Dataverse choices with Azure Data Factory
+          href: ./data-platform/azure-synapse-link-choices-adf.md
+        - name: Access choice labels from Azure Synapse Link for Dataverse
+          href: ./data-platform/azure-synapse-link-choice-labels.md
+        - name: Access Dataverse choices with Power BI
+          href: ./data-platform/azure-synapse-link-choices-powerbi.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
     href: ./model-driven-apps/model-driven-app-community.md
-
 - name: Teams integration
   items:
   - name: Overview
@@ -2578,7 +2579,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Solution templates for Power Platform (preview)
+  - name: Enterprise templates for Power Platform
     href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
@@ -2640,6 +2641,8 @@
     href: ./common/faqs-excel-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
+  - name: FAQ about form filling assistance  
+    href: ./common/faq-from-filling-assistance.md
 - name: Resources
   items:
   - name: Blog

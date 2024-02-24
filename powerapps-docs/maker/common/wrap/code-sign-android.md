@@ -54,7 +54,7 @@ Example:
 
 
 
-- If preparing Keyvault, PATH_TO_KEYSTORE should have .pfx extension.
+- If preparing Key Vault, PATH_TO_KEYSTORE should have .pfx extension.
 
   `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
 

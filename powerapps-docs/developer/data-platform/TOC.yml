@@ -49,8 +49,6 @@
     - name: Bulk Operation messages
       href: bulk-operations.md
       items:
-      - name: Use UpsertMultiple (preview)
-        href: upsertmultiple.md
       - name: Use DeleteMultiple (preview)
         href: deletemultiple.md
     - name: Create your own messages
@@ -379,9 +377,9 @@
           href: create-auto-number-attributes.md
         - name: Choices
           href: multi-select-picklist.md
-        - name: File columns
+        - name: File column definitions
           href: file-attributes.md
-        - name: Image columns
+        - name: Image column definitions
           href: image-attributes.md
         - name: Define custom state model transitions
           href: define-custom-state-model-transitions.md

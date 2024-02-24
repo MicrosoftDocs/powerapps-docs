@@ -134,6 +134,8 @@
   href: contact.md
 - name: conversationtranscript
   href: conversationtranscript.md
+- name: CopilotExampleQuestion
+  href: copilotexamplequestion.md
 - name: credential
   href: credential.md
 - name: CustomAPI
@@ -166,6 +168,8 @@
   href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
+- name: deploymentorchestration
+  href: deploymentorchestration.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
 - name: desktopflowmodule
@@ -216,6 +220,8 @@
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
   href: environmentvariablevalue.md
+- name: EventExpanderBreadcrumb
+  href: eventexpanderbreadcrumb.md
 - name: ExchangeSyncIdMapping
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
@@ -236,6 +242,8 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowcapacityassignment
+  href: flowcapacityassignment.md
 - name: flowevent
   href: flowevent.md
 - name: flowmachine
@@ -380,6 +388,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflow_datalakefolder
   href: msdyn_dataflow_datalakefolder.md
+- name: msdyn_DataflowConnectionReference
+  href: msdyn_dataflowconnectionreference.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_DataflowTemplate
@@ -390,6 +400,10 @@
   href: msdyn_dmsrequest.md
 - name: msdyn_dmsrequeststatus
   href: msdyn_dmsrequeststatus.md
+- name: msdyn_dmssyncrequest
+  href: msdyn_dmssyncrequest.md
+- name: msdyn_dmssyncstatus
+  href: msdyn_dmssyncstatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
@@ -472,14 +486,6 @@
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
-- name: msdyn_solutioncomponentcountdatasource
-  href: msdyn_solutioncomponentcountdatasource.md
-- name: msdyn_solutioncomponentcountsummary
-  href: msdyn_solutioncomponentcountsummary.md
-- name: msdyn_solutioncomponentdatasource
-  href: msdyn_solutioncomponentdatasource.md
-- name: msdyn_solutioncomponentsummary
-  href: msdyn_solutioncomponentsummary.md
 - name: msdyn_solutionhealthrule
   href: msdyn_solutionhealthrule.md
 - name: msdyn_solutionhealthruleargument
@@ -670,6 +676,8 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: RecycleBinConfig
+  href: recyclebinconfig.md
 - name: Relationship
   href: relationship.md
 - name: RelationshipAttribute
@@ -732,6 +740,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspaceaccesstoken
+  href: sharedworkspaceaccesstoken.md
 - name: sharedworkspacepool
   href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
@@ -796,6 +806,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -824,6 +836,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization
