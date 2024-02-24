@@ -127,7 +127,67 @@ Choice column values are also sorted using the [formatted values](select-columns
 > [!NOTE]
 > Since choice sorting is based on the localized label of the users's language, This will lead to different ordering for the results set if the user's language differs.
 
-## Best practices for orders when paging data
+## Ordering and paging
+
+How a page is ordered makes a big difference when paging data. If the information about how the results are ordered is ambiguous, Dataverse can't consistently or efficiently return paged data.
+
+Add an order element to your query. If you don't add any order elements to your query, Dataverse will add an order based on the primary key of the table. However, when your query uses the `distinct` attribute, no primary key values are returned, so Dataverse will not add this default order. You must specify a paging order. Without any order specified, `distinct` query results may be returned in random order. [Learn more about returning distinct results](overview.md#return-distinct-results)
+
+Paging is dynamic. Each request is evaluated independently when it is received. A paging cookie tells Dataverse the previous page. With this paging cookie data, Dataverse can start with the next record after the last one on the preceding page.
+
+Paging works best going forward. If you go back and retrieve a page you previously retrieved, the results can be different because records could be added, deleted, or modified during since you last retrieved the page. In other words, if your page size is 50 and you go back, you will get 50 records, but they may not be the same 50 records. If you keep progressing forward through the pages of a data set, you can expect all the records will be returned in a consistent sequence.
+
+### Deterministic ordering is important
+
+*Deterministic ordering* means that there is a way to calculate an order consistently. With a given set of records, they will always be returned in the same order. If you need consistent orders and paging, you must include some unique column values and specify an order for them for them to be evaluated.
+
+Let's look at an example that is *non-deterministic*. This data set contains only **State** and **Status** information and is filtered to only return records in an open **State**. The results are ordered by **Status**. The first three pages are requested. The results look like this:
+
+**Non-deterministic example**
+
+| State | Status | Page      |
+|-----------|------------|---------------|
+| Open      | Active     | 1             |
+| Open      | Active     | 1             |
+| Open      | Active     | End of page 1 |
+| Open      | Active     |               |
+| Open      | Active     |               |
+| Open      | Inactive   |               |
+| Open      | Inactive   |               |
+
+The paging cookie saves information about the last record on the page. When the next page is requested, the last record from the first page is not included, but given the non-deterministic data, there is no guarantee that the other two records on the first page are not included in the second page.
+
+To make it possible to achieve deterministic ordering, add orders on columns that contain unique values, or values that are semi-unique.
+
+**Deterministic example**
+
+This query is like the previous one, but it includes the **Case ID** column that includes unique values. It is still ordered by **Status**, but they are also ordered using **Case ID**. The results look like this:
+
+| State | Status | Case ID | Page      |
+|-----------|------------|-------------|---------------|
+| Open      | Active     | Case-0010   | 1             |
+| Open      | Active     | Case-0021   | 1             |
+| Open      | Active     | Case-0032   | End of Page 1 |
+| Open      | Active     | Case-0034   |               |
+| Open      | Active     | Case-0070   |               |
+| Open      | Inactive   | Case-0015   |               |
+| Open      | Inactive   | Case-0047   |               |
+
+In the next page, the cookie will have `Case-0032` stored as the last record in the first page, so page two will start with the next record after that record. The results look like this:
+
+| State | Status | Case ID | Page      |
+|-----------|------------|-------------|---------------|
+| Open      | Active     | Case-0010   |               |
+| Open      | Active     | Case-0021   |               |
+| Open      | Active     | Case-0032   | End of Page 1 |
+| Open      | Active     | Case-0034   | 2             |
+| Open      | Active     | Case-0070   | 2             |
+| Open      | Inactive   | Case-0015   | End of Page 2 |
+| Open      | Inactive   | Case-0047   |               |
+
+Because this query orders unique column values, the order is consistent.
+
+### Best practices for orders when paging data
 
 > [!NOTE]
 > When possible, queries should order on the primary key for the table because Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique or complex fields cause excess overhead and slower queries.
@@ -136,23 +196,20 @@ When you retrieve a limited set of data to display in an application, or if you 
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 
-Always include a column that has a unique identifier. For example:
+It is best to  include a column that has a unique identifier. For example:
 
 - Table primary key columns
 - Autonumber columns
 - User/contact IDs
 
-Include multiple fields that will most likely result in unique combinations. For example:
+If you can't include a column with a unique identifier, include multiple fields that will most likely result in unique combinations. For example:
 
 - First name + last name + email address
 - Full name + email address
 - Email address + company name
 
 
-> [!NOTE]
-> If no `order` element is included in the query, and the [fetch element](reference/fetch.md) `distinct` attribute is not used, Dataverse automatically adds an `order` element using the table primary key to provide some basic ordering.
-
-### Anti-patterns
+#### Anti-patterns for orders when paging data
 
 The following are ordering choices to avoid:
 

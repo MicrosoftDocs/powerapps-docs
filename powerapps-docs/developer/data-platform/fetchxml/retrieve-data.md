@@ -14,6 +14,10 @@ search.audienceType:
 
 You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
 
+You may also want to use [Community tools](overview.md#community-tools) like the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/)
+
+How you retrieve data depends on whether you are using the [SDK for .NET](../org-service/overview.md) or [Dataverse Web API](../webapi/overview.md).
+
 ## [SDK for .NET](#tab/sdk)
 
 Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
@@ -43,6 +47,7 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 }
 ```
 
+[Quickstart: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)   
 [Learn more about using messages with the SDK for .NET](../org-service/use-messages.md)
 
 ## [Web API](#tab/webapi)
@@ -129,6 +134,10 @@ OData-Version: 4.0
 ## Use FetchXML within a batch request
 
 The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../webapi/compose-http-requests-handle-errors.md#maximum-url-length). Including FetchXML as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where the limit doesn't apply. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. More than with a normal `GET` request, but it isn't unlimited. More information: [Execute batch operations using the Web API](../webapi/execute-batch-operations-using-web-api.md).
+
+
+[Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md)   
+[Use the Microsoft Dataverse Web API](../webapi/overview.md)
 
 ---
 
