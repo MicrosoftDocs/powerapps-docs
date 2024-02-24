@@ -47,6 +47,10 @@ If you use the `distinct` attribute, you must add at least one [order element](r
 
 When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
 
+## Retrieve Data
+
+To get results from your query, you need to send your request to Dataverse. [Learn to retrieve data from Dataverse using FetchXml](retrieve-data.md)
+
 
 ## Refine your query
 

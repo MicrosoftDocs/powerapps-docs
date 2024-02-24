@@ -407,7 +407,7 @@ OData-Version: 4.0
 
 ### Web API paging example
 
-When using C#, the following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
+When using C# with [HttpClient](xref:System.Net.Http.HttpClient), the following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
 
 ```csharp
 /// <summary>
