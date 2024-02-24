@@ -24,7 +24,7 @@ View the [PowerApps-TestEngine/samples](https://github.com/microsoft/PowerApps-T
 
 | Property | Description |
 |---|---|
-| [test](#testSuite) | Defines one test suite, the test cases in the test suite and configuration specific to the test suite |
+| [test](#testsuite) | Defines one test suite, the test cases in the test suite and configuration specific to the test suite |
 | [testSettings](#testsettings) | Defines settings for the test suite that are reused across multiple test cases |
 | [environmentVariables](#environment-variables)| Defines variables that could potentially change as the app is ported across different environments |
 
