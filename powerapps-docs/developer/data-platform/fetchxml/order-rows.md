@@ -83,7 +83,7 @@ In this case, the results are ordered using following attributes:
 - Last => `account.name`
 
 
-To change this so that the `link-entity` order isn't applied first, move the `order` element from the `link-entity` element to the `entity` element and use the `entityname` attribute on the `order` element to refer to the `link-entity` `alias` value.
+To ensure the `link-entity` order isn't applied first, move the `order` element from the `link-entity` element to the `entity` element and use the `entityname` attribute on the `order` element to refer to the `link-entity` `alias` value.
 
 
 ```xml
@@ -114,7 +114,7 @@ Now, the results are ordered using the following attributes:
 
 ## Ordering lookup and choice columns
 
-The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database is not meaningful out of context.
+The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database isn't meaningful out of context.
 
 ### Lookup Columns
 
@@ -131,43 +131,43 @@ Choice column values are also sorted using the [formatted values](select-columns
 
 How a page is ordered makes a big difference when paging data. If the information about how the results are ordered is ambiguous, Dataverse can't consistently or efficiently return paged data.
 
-Add an order element to your query. If you don't add any order elements to your query, Dataverse will add an order based on the primary key of the table. However, when your query uses the `distinct` attribute, no primary key values are returned, so Dataverse will not add this default order. You must specify a paging order. Without any order specified, `distinct` query results may be returned in random order. [Learn more about returning distinct results](overview.md#return-distinct-results)
+Add an order element to your query. If you don't add any order elements to your query, Dataverse adds an order based on the primary key of the table. However, when your query uses the `distinct` attribute, no primary key values are returned, so Dataverse can't add this default order. You must specify a paging order. Without any order specified, `distinct` query results might be returned in random order. [Learn more about returning distinct results](overview.md#return-distinct-results)
 
-Paging is dynamic. Each request is evaluated independently when it is received. A paging cookie tells Dataverse the previous page. With this paging cookie data, Dataverse can start with the next record after the last one on the preceding page.
+Paging is dynamic. Each request is evaluated independently as they're received. A paging cookie tells Dataverse the previous page. With this paging cookie data, Dataverse can start with the next record after the last one on the preceding page.
 
-Paging works best going forward. If you go back and retrieve a page you previously retrieved, the results can be different because records could be added, deleted, or modified during since you last retrieved the page. In other words, if your page size is 50 and you go back, you will get 50 records, but they may not be the same 50 records. If you keep progressing forward through the pages of a data set, you can expect all the records will be returned in a consistent sequence.
+Paging works best going forward. If you go back and retrieve a page you previously retrieved, the results can be different because records could be added, deleted, or modified during since you last retrieved the page. In other words, if your page size is 50 and you go back, you get 50 records, but they might not be the same 50 records. If you keep progressing forward through the pages of a data set, you can expect all the records are returned in a consistent sequence.
 
 ### Deterministic ordering is important
 
-*Deterministic ordering* means that there is a way to calculate an order consistently. With a given set of records, they will always be returned in the same order. If you need consistent orders and paging, you must include some unique column values and specify an order for them for them to be evaluated.
+*Deterministic ordering* means that there's a way to calculate an order consistently. With a given set of records, the records are always returned in the same order. If you need consistent orders and paging, you must include some unique or semi-unique column values and specify an order for them to be evaluated.
 
-Let's look at an example that is *non-deterministic*. This data set contains only **State** and **Status** information and is filtered to only return records in an open **State**. The results are ordered by **Status**. The first three pages are requested. The results look like this:
+#### Nondeterministic example
 
-**Non-deterministic example**
+Let's look at an example that is *nondeterministic*. This data set contains only **State** and **Status** information and is filtered to only return records in an open **State**. The results are ordered by **Status**. The first three pages are requested. The results look like this:
 
 | State | Status | Page      |
 |-----------|------------|---------------|
+| Open      | Active     | 1 Start       |
 | Open      | Active     | 1             |
-| Open      | Active     | 1             |
-| Open      | Active     | End of page 1 |
+| Open      | Active     | 1 End         |
 | Open      | Active     |               |
 | Open      | Active     |               |
 | Open      | Inactive   |               |
 | Open      | Inactive   |               |
 
-The paging cookie saves information about the last record on the page. When the next page is requested, the last record from the first page is not included, but given the non-deterministic data, there is no guarantee that the other two records on the first page are not included in the second page.
+The paging cookie saves information about the last record on the page. When the next page is requested, the last record from the first page isn't included. However, given the nondeterministic data, there's no guarantee that the other two records on the first page aren't included in the second page.
 
-To make it possible to achieve deterministic ordering, add orders on columns that contain unique values, or values that are semi-unique.
+To achieve deterministic ordering, add orders on columns that contain unique values, or values that are semi-unique.
 
-**Deterministic example**
+#### Deterministic example
 
-This query is like the previous one, but it includes the **Case ID** column that includes unique values. It is still ordered by **Status**, but they are also ordered using **Case ID**. The results look like this:
+This query is like the [nondeterministic one](#nondeterministic-example), but it includes the **Case ID** column that includes unique values. It's also ordered by **Status**, but also ordered using **Case ID**. The results look like this:
 
 | State | Status | Case ID | Page      |
 |-----------|------------|-------------|---------------|
-| Open      | Active     | Case-0010   | 1             |
+| Open      | Active     | Case-0010   | 1 Start       |
 | Open      | Active     | Case-0021   | 1             |
-| Open      | Active     | Case-0032   | End of Page 1 |
+| Open      | Active     | Case-0032   | 1 End         |
 | Open      | Active     | Case-0034   |               |
 | Open      | Active     | Case-0070   |               |
 | Open      | Inactive   | Case-0015   |               |
@@ -177,12 +177,12 @@ In the next page, the cookie will have `Case-0032` stored as the last record in 
 
 | State | Status | Case ID | Page      |
 |-----------|------------|-------------|---------------|
-| Open      | Active     | Case-0010   |               |
-| Open      | Active     | Case-0021   |               |
-| Open      | Active     | Case-0032   | End of Page 1 |
-| Open      | Active     | Case-0034   | 2             |
+| Open      | Active     | Case-0010   | 1 Start       |
+| Open      | Active     | Case-0021   | 1             |
+| Open      | Active     | Case-0032   | 1 End         |
+| Open      | Active     | Case-0034   | 2 Start       |
 | Open      | Active     | Case-0070   | 2             |
-| Open      | Inactive   | Case-0015   | End of Page 2 |
+| Open      | Inactive   | Case-0015   | 2 End         |
 | Open      | Inactive   | Case-0047   |               |
 
 Because this query orders unique column values, the order is consistent.
@@ -196,7 +196,7 @@ When you retrieve a limited set of data to display in an application, or if you 
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 
-It is best to  include a column that has a unique identifier. For example:
+It's best to  include a column that has a unique identifier. For example:
 
 - Table primary key columns
 - Autonumber columns
