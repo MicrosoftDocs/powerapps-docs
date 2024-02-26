@@ -1,7 +1,7 @@
 ---
 title: "Website (mspp_website)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Website (mspp_website)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -479,9 +479,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [mspp_website_ActivityPointers](#BKMK_mspp_website_ActivityPointers)
+- [mspp_website_adx_portalcomments](#BKMK_mspp_website_adx_portalcomments)
 - [mspp_website_adx_inviteredemptions](#BKMK_mspp_website_adx_inviteredemptions)
 - [mspp_website_chats](#BKMK_mspp_website_chats)
-- [mspp_website_adx_portalcomments](#BKMK_mspp_website_adx_portalcomments)
 - [mspp_website_SharePointDocumentLocations](#BKMK_mspp_website_SharePointDocumentLocations)
 - [mspp_website_Appointments](#BKMK_mspp_website_Appointments)
 - [mspp_website_Emails](#BKMK_mspp_website_Emails)
@@ -536,6 +536,23 @@ Same as the [mspp_website_ActivityPointers](activitypointer.md#BKMK_mspp_website
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_mspp_website_adx_portalcomments"></a> mspp_website_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [mspp_website_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_website_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mspp_website_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_mspp_website_adx_inviteredemptions"></a> mspp_website_adx_inviteredemptions
 
 **Added by**: Active Solution Solution
@@ -566,23 +583,6 @@ Same as the [mspp_website_chats](chat.md#BKMK_mspp_website_chats) many-to-one re
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_website_chats|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_website_adx_portalcomments"></a> mspp_website_adx_portalcomments
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_website_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_website_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_website_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
