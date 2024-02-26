@@ -44,9 +44,12 @@ specified.
 |---|---|
 | Create a record and be the record owner | CREATE, READ  |
 | Share a record | SHARE. This right is required by the person doing the share operation.<p/> READ. This right is required by the person doing the share operation and also by the person with whom the record is being shared.|
-| Assign a record | ASSIGN, WRITE, READ |
+| Assign a record | ASSIGN, WRITE, READ <sup>1</sup> |
 | Append to a record | WRITE, READ, APPENDTO |
 | Append a record | WRITE, READ, APPEND |
+
+<sup>1</sup> To provide granular level of control on whom can a record be assigned to, you can switch the *AssertOwnershipAppendToAccess* [orgdbsettings](https://learn.microsoft.com/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) to **true**, to additionally require the caller to have **AppendTo** access on the assignee (user/ team record being assigned as the owner).
+When [Record ownership in Modernized Business units](https://learn.microsoft.com/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) is enabled, and OwningBusinessUnit is getting changed, you will additionally require the caller to have **AppendTo** access on the new Business Unit. 
 
 Another type of dependency exists when objects are subordinate to another
 object. For example, the opportunity object cannot exist on its own. Each
