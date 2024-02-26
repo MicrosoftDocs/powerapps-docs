@@ -199,6 +199,16 @@ Switch(Connection.Sync,
 
    ConnectionSync.NotConnectedSyncError, Icon.GlobeError) 
 ```
+You can set the **OnSelect** property using the Power Fx function `ShowHostInfo` to show the [Device status page](/power-apps/mobile/offline-sync-icon#device-status-page) when selecting the globe icon. 
+
+```powerappsfl
+ShowHostInfo(HostInfo.OfflineSync)
+```
+You can set the **Visible** property using the Power Fx function `Host` to only show the globe icon when the app is used on a player that is supporting the offline mode. 
+
+```powerappsfl
+Host.OfflineEnabled
+```
 
 ## Limitations and known issues
 

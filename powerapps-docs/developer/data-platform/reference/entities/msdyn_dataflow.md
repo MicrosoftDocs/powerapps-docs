@@ -1,7 +1,7 @@
 ---
 title: "msdyn_dataflow table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_dataflow table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -950,6 +950,7 @@ Listed by **SchemaName**.
 - [msdyn_dataflow_PrincipalObjectAttributeAccesses](#BKMK_msdyn_dataflow_PrincipalObjectAttributeAccesses)
 - [msdyn_dataflow_dataflowschedule](#BKMK_msdyn_dataflow_dataflowschedule)
 - [msdyn_dataflow_datalakefolder_dataflow](#BKMK_msdyn_dataflow_datalakefolder_dataflow)
+- [msdyn_dfcr_dataflow_connect](#BKMK_msdyn_dfcr_dataflow_connect)
 
 
 ### <a name="BKMK_msdyn_dataflow_SyncErrors"></a> msdyn_dataflow_SyncErrors
@@ -1118,6 +1119,23 @@ Same as the [msdyn_dataflow_datalakefolder_dataflow](msdyn_dataflow_datalakefold
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_dataflow_datalakefolder_dataflow|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_dfcr_dataflow_connect"></a> msdyn_dfcr_dataflow_connect
+
+**Added by**: Insights App Platform Base Solution
+
+Same as the [msdyn_dfcr_dataflow_connect](msdyn_dataflowconnectionreference.md#BKMK_msdyn_dfcr_dataflow_connect) many-to-one relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflowconnectionreference|
+|ReferencingAttribute|msdyn_dataflow|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_msdyn_dataflowconnectionreference_Dataflo|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
