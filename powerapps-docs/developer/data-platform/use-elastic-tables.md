@@ -86,7 +86,7 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 As was mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
 
 > [!IMPORTANT]
-> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There is no error thrown if `partitionid` is not specified in the lookup value of referencing table and the lookup will be broken when attempted to expand. You must document and enforce this requirement via code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all the operations.
+> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There is no error thrown if `partitionid` is not specified in the lookup value of referencing table, but the lookup will fail to locate the record when you use it. You must document and enforce this requirement via code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all the operations.
 
 After you specify a non-null value for the `partitionid` column when you create a row, you must specify it when you perform any other data operation on that row. You can't change the value later.
 
@@ -101,7 +101,7 @@ You can set the `partitionid` value in following ways when you perform various d
 
 As was mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key that is named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
 
-If you are using a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you create/update a lookup column for another table that refers to an elastic table record.
+If you are using a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you set a lookup column for another table that refers to an elastic table record.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -686,9 +686,9 @@ You can also use the `partitionId` parameter:
 
 ## Associate elastic table records
 
-When a table record refers to an elastic table record that doesn't use the `partitionid` column, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
+When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
 
-When a table record refers to an elastic table record which has `partitionid`, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key. 
+When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key. 
 
 As described in [Partitionid value column on referencing table](create-elastic-tables.md#partitionid-value-column-on-referencing-table), when a one-to-many relationship is created and the elastic table is the *referenced* table, a string column and a lookup column is created on the *referencing* table. The string column stores the `partitionid` value of the referenced elastic table record.
 

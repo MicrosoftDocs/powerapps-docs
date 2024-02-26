@@ -332,7 +332,7 @@ At the same time, a string column is created that follows this naming convention
 
 The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column. [Learn to associate elastic table records](use-elastic-tables.md#associate-elastic-table-records)
 
-If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column would be null, and you shouldn't set or retrieve it.
+If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column is null, and you shouldn't change it after the record is created.
 
 If you *are* using a partitioning strategy for your elastic table, and you want to retrieve the related elastic table record, you can't rely on the value of the lookup column alone. You must also include the `partitionid` value from the `<lookup name>pid` column to uniquely identify the related table. [Learn more about partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling)
 
