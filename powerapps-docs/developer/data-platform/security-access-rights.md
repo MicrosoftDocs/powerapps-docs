@@ -2,7 +2,7 @@
 title: "Data operations and access rights (Microsoft Dataverse) | Microsoft Docs" 
 description: "Describes the access rights needed for specific data operations." 
 ms.custom: ""
-ms.date: 03/11/2021
+ms.date: 02/26/2024
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -48,8 +48,8 @@ specified.
 | Append to a record | WRITE, READ, APPENDTO |
 | Append a record | WRITE, READ, APPEND |
 
-<sup>1</sup> To provide granular level of control on whom can a record be assigned to, you can switch the *AssertOwnershipAppendToAccess* [orgdbsettings](https://learn.microsoft.com/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) to **true**, to additionally require the caller to have **AppendTo** access on the assignee (user/ team record being assigned as the owner).
-When [Record ownership in Modernized Business units](https://learn.microsoft.com/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) is enabled, and OwningBusinessUnit is getting changed, you will additionally require the caller to have **AppendTo** access on the new Business Unit. 
+<sup>1</sup> To provide granular level control on whom a record can be assigned to, switch the **AssertOwnershipAppendToAccess** [orgdbsettings](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) to **true**. This setting additionally requires the caller to have **AppendTo** access on the assignee (the user/team record being assigned as the owner).
+When [record ownership](/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) in modernized business units is enabled, and **OwningBusinessUnit** is being changed, you will additionally require the caller to have **AppendTo** access on the new business unit. 
 
 Another type of dependency exists when objects are subordinate to another
 object. For example, the opportunity object cannot exist on its own. Each
