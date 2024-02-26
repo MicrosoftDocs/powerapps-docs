@@ -2,6 +2,8 @@
 title: Sharing a model-driven app - assigning security roles and privileges
 description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data.
 author: Mattp123
+editor: ''
+tags: ''
 ms.topic: how-to
 ms.component: model
 ms.date: 10/18/2023
