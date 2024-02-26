@@ -1,7 +1,6 @@
 ---
 title: Sharing a model-driven app - assigning security roles and privileges
 description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data.
-documentationcenter: ''
 author: Mattp123
 editor: ''
 tags: ''
@@ -175,7 +174,7 @@ There are several predefined roles available with Dataverse. To run apps that us
 
 ## Use Microsoft Entra groups to manage access
 
-Administrators can use their organization’s Microsoft Entra groups to manage access rights for licensed Dataverse users. Both types of Microsoft Entra groups—Microsoft 365 and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams)
+Administrators can use their organization's Microsoft Entra groups to manage access rights for licensed Dataverse users. Both types of Microsoft Entra groups—Microsoft 365 and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams)
 
 ### See also
 
