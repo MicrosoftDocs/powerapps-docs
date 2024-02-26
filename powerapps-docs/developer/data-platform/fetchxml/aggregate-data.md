@@ -9,6 +9,12 @@ ms.subservice: dataverse-developer
 ms.author: gned
 search.audienceType: 
   - developer
+contributors:
+ - JimDaly
+ - dmitmikh
+ - dasussMS
+ - apahwa-lab
+ - DonaldlaGithub
 ---
 # Aggregate data using FetchXml
 

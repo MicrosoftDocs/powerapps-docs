@@ -4,13 +4,17 @@ description: The articles in this section describe elements you use to compose a
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-ms.date: 01/31/2024
+ms.date: 03/01/2024
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
+ - dmitmikh
+ - dasussMS
+ - apahwa-lab
+ - DonaldlaGithub
 ---
 # FetchXml reference
 

@@ -4,13 +4,17 @@ description: Use these values in a condition element operator attribute to speci
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-ms.date: 08/31/2023
+ms.date: 03/01/2024
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
+ - dmitmikh
+ - dasussMS
+ - apahwa-lab
+ - DonaldlaGithub
 ---
 # condition operator values
 
