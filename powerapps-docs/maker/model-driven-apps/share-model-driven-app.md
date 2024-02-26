@@ -5,7 +5,6 @@ documentationcenter: ''
 author: Mattp123
 editor: ''
 tags: ''
-ms.devlang: na
 ms.topic: how-to
 ms.component: model
 ms.date: 10/18/2023
