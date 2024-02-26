@@ -3,15 +3,8 @@ title: "Best practices and guidance when coding for Microsoft Dataverse | Micros
 description: Best practices and guidance for developers writing code for Microsoft Dataverse.
 services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/18/2021
 ms.subservice: dataverse-developer
 ms.author: jowells

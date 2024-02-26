@@ -1,18 +1,10 @@
 ---
 title: "Develop IPlugin implementations as stateless | MicrosoftDocs"
 description: "Members of classes that implement IPlugin are exposed to potential thread-safety issues, which could lead to data inconsistency or performance problems."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
 ms.reviewer: phecke
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 9/05/2019
 ms.subservice: dataverse-developer
 ms.author: jowells

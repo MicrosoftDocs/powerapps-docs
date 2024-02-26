@@ -1,17 +1,9 @@
 ---
 title: "Do not duplicate plug-in step registration | MicrosoftDocs"
 description: "Duplicate plug-in step registration will cause the plug-in to fire multiple times on the same message/event."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 1/15/2019
 ms.subservice: dataverse-developer
 ms.author: jowells
