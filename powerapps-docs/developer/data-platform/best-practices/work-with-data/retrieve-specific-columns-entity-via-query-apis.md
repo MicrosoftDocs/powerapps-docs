@@ -1,17 +1,9 @@
 ---
 title: "Retrieve specific columns for an entity via query APIs | MicrosoftDocs"
 description: "Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 12/12/2018
 ms.subservice: dataverse-developer
 ms.author: jowells

@@ -175,7 +175,7 @@ To create a distribution certificate, create a new certificate signing request f
 1. If signing with enterprise certificate, open the **Distribution-exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
   > [!NOTE]
-  > Enterprise signing is not supported with Keyvault signing.
+  > Enterprise signing is not supported with Key Vault signing.
 
 1. Open terminal, and change directory to the unzipped folder.
 
