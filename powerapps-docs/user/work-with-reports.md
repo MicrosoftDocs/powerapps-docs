@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/27/2019
+ms.date: 02/27/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -81,7 +81,7 @@ The RDL file contains the fetchXML that the report is based on.
 
 ### Known issue
 
-Reports rely on a hybrid experience called out in [Enable hybrid experience](power-platform/admin/enable-hybrid-experience) which are not supported in mobile or Teams.
+Reports rely on a hybrid experience called out in [Enable hybrid experience](/power-platform/admin/enable-hybrid-experience) which are not supported in mobile or Teams.
 
 ### See Also
 
