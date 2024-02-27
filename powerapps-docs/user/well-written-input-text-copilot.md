@@ -72,7 +72,7 @@ To turn off for an app using the app settings:
 To turn off for an app using PowerShell:
 
 ```powershell
-$Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
+Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
 ```
 
 ### Turn off text assistance for an environment
@@ -80,7 +80,7 @@ $Set-PowerAppSettings -AppName 'AppName' -DraftingCopilotEnabled $false
 To turn off text assistance for a specific environment, use the following cmdlet.
 
 ```powershell
-$Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
+Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
 ```
    
 ## Known issue

@@ -1,7 +1,7 @@
 ---
 title: "flowmachine table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachine table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -77,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [KeyDeliveryStatus](#BKMK_KeyDeliveryStatus)
 - [KeyReceivedDate](#BKMK_KeyReceivedDate)
+- [LastHeartbeatDate](#BKMK_LastHeartbeatDate)
 - [MachineMetadata](#BKMK_MachineMetadata)
 - [name](#BKMK_name)
 - [OvercapacitySince](#BKMK_OvercapacitySince)
@@ -290,6 +291,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|keyreceiveddate|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastHeartbeatDate"></a> LastHeartbeatDate
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Last date at which a heartbeat call was received from the machine.|
+|DisplayName|Last heartbeat date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastheartbeatdate|
 |RequiredLevel|None|
 |Type|DateTime|
 
@@ -955,6 +971,7 @@ Listed by **SchemaName**.
 - [flowmachine_BulkDeleteFailures](#BKMK_flowmachine_BulkDeleteFailures)
 - [flowmachine_PrincipalObjectAttributeAccesses](#BKMK_flowmachine_PrincipalObjectAttributeAccesses)
 - [flowmachine_flowsession_MachineId](#BKMK_flowmachine_flowsession_MachineId)
+- [flowcapacityassignment_flowmachine](#BKMK_flowcapacityassignment_flowmachine)
 
 
 ### <a name="BKMK_flowmachine_SyncErrors"></a> flowmachine_SyncErrors
@@ -1072,6 +1089,21 @@ Same as the [flowmachine_flowsession_MachineId](flowsession.md#BKMK_flowmachine_
 |ReferencedEntityNavigationPropertyName|flowmachine_flowsession_MachineId|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_flowcapacityassignment_flowmachine"></a> flowcapacityassignment_flowmachine
+
+Same as the [flowcapacityassignment_flowmachine](flowcapacityassignment.md#BKMK_flowcapacityassignment_flowmachine) many-to-one relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowcapacityassignment|
+|ReferencingAttribute|regarding|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|flowcapacityassignment_flowmachine|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
