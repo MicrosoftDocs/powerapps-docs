@@ -2,9 +2,8 @@
 title: "Set properties for a model-driven app chart or list included in a dashboard in Power Apps | MicrosoftDocs"
 description: "Learn how to set properties for  chart or list included in a dashboard"
 ms.custom: ""
-ms.date: 06/06/2018
+ms.date: 02/27/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -52,7 +51,7 @@ search.audienceType:
       
     - **Show Chart Only**. Select this check box if you want to display just the chart. Clear this check box if you want to display the chart and its associated data.  
       
-    - **Display Chart Selection**. Select this check box to enable users to change the chart displayed in the component at runtime. The component will revert to displaying the Default Chart next time the Dashboard is opened.
+    - **Display Chart Selection**. Select this check box to enable users to change the chart displayed in the component at runtime. The component reverts to displaying the Default Chart next time the dashboard is opened.
   
 1. You can set the following **list** properties from the **Set Properties** dialog box:  
       
