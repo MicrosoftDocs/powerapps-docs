@@ -18,7 +18,7 @@ search.audienceType:
 
 Let's talk about the data operations that you can perform and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
 
-| Message(s) | Access rights required |
+| Messages | Access rights required |
 |---|---|
 | **Create** | CREATE |
 | **Retrieve**, **RetrieveMultiple** | READ |
@@ -31,11 +31,11 @@ Let's talk about the data operations that you can perform and the access rights 
 
 ## Dependencies between access rights
 
-Sometimes, security dependencies exist because it is necessary to have more than
+Sometimes, security dependencies exist because it's necessary to have more than
 one access right to perform a given action. For example, if you have the
 **create** access right for accounts, you can create a record of the account
 table type. However, unless you also have **read** access for accounts, you
-cannot create an account record and be the owner of that new record.
+can't create an account record and be the owner of that new record.
 
 The following table lists the access right dependencies for the actions
 specified.
@@ -52,7 +52,7 @@ specified.
 When [record ownership](/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) in modernized business units is enabled, and **OwningBusinessUnit** is being changed, the caller is required to have **AppendTo** access on the new business unit. 
 
 Another type of dependency exists when objects are subordinate to another
-object. For example, the opportunity object cannot exist on its own. Each
+object. For example, the opportunity object can't exist on its own. Each
 opportunity is always attached to an account or contact. To create an
 opportunity, you must have the access right **appendto** on accounts and the
 access right **append** on opportunities.
