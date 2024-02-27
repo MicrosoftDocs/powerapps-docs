@@ -79,9 +79,9 @@ The reporting features need to be enabled for your model-driven app for you to s
 The RDL file contains the fetchXML that the report is based on.
 5. Open the report once the download is complete.
 
+### Known issue
 
-
-
+Reports rely on a hybrid experience called out in [Enable hybrid experience](power-platform/admin/enable-hybrid-experience) which are not supported in mobile or Teams.
 
 ### See Also
 
