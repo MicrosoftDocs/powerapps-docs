@@ -49,7 +49,7 @@ specified.
 | Append a record | WRITE, READ, APPEND |
 
 <sup>1</sup> To provide granular level control on whom a record can be assigned to, switch the **AssertOwnershipAppendToAccess** [orgdbsettings](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) to **true**. This setting additionally requires the caller to have **AppendTo** access on the assignee (the user/team record being assigned as the owner).
-When [record ownership](/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) in modernized business units is enabled, and **OwningBusinessUnit** is being changed, you will additionally require the caller to have **AppendTo** access on the new business unit. 
+When [record ownership](/power-platform/admin/wp-security-cds#record-ownership-in-modernized-business-units) in modernized business units is enabled, and **OwningBusinessUnit** is being changed, the caller is required to have **AppendTo** access on the new business unit. 
 
 Another type of dependency exists when objects are subordinate to another
 object. For example, the opportunity object cannot exist on its own. Each
