@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building plug-in code into assemblies and packages for later registration and upload to the Microsoft Dataverse service.
-ms.date: 02/20/2024
+ms.date: 02/26/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -56,6 +56,9 @@ This NuGet package file is stored in the [PluginPackage](reference/entities/plug
 When you upload your NuGet package, any assemblies containing classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface are registered in the [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the plug-in package. As you develop and maintain your project, you continue to update the `PluginPackage` table row and changes to the related plug-in assemblies are managed on the server.
 
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
+
+> [!IMPORTANT]
+> The name and version of the plug-in package cannot be changed once created. Attempting to do so using an API call results in an error.
 
 ### Signed assemblies are not required
 
