@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/18/2023
+ms.date: 02/28/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
@@ -121,7 +121,7 @@ When building queries do not use the table hint NOLOCK. This will prevent Datave
   
 ## Limitations
 
-The Dataverse TDS endpoint no longer has a hard maximum size limit instead there is a fixed 5 minute timeout.  Data streaming has been introduced which allows retrival of as much data as can be completed in the fixed 5 minute timeout. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that require more than 5 mintues to complete. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
+The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, there is a fixed five (5) minute timeout. Data streaming has been introduced which allows retreval of as much data as can be completed in the fixed five (5) minute timeout. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that require more than five (5) mintues to complete. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 > [!TIP]
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
