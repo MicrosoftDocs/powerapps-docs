@@ -68,7 +68,7 @@ Enable this option only if:
 
 When you add a stored procedure, you might see more than one data source in your project.
 
-:::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text=Screenshot that shows SQL data sources.":::
+:::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text="Screenshot that shows SQL data sources.":::
 
 Prefix the stored procedure name with the name of connector associated with it. For example, _DataCardValue3_1.Text_ is from the _DataCard_ connector.
 
