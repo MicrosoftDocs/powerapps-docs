@@ -27,7 +27,7 @@
    },
    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/paging-behaviors-and-ordering.md",
-      "redirect_url": "fetchxml/order-rows#best-practices-for-orders-when-paging-data",
+      "redirect_url": "fetchxml/order-rows#ordering-and-paging",
       "redirect_document_id": "false"
    },
    {
