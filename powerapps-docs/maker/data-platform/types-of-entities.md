@@ -60,13 +60,42 @@ Enable activities to add activities to a table and use the Regarding lookup for 
   
 2. On the left nav, select **Tables**, and then open the table you want.
 
-3. Select **Properties**. 
+3. Select **Properties**.
 
-4. Expand **Advanced options**, and then select **Creating a new activity**. 
+4. Expand **Advanced options**, and then select **Creating a new activity**.
   
    > [!IMPORTANT]
    > Once enabled this setting can't be disabled.
 5. Select **Save**.
+
+### Enable users to associate activities to multiple records (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
+Users may sometimes need to associate an email to multiple records. For example, a customer may send an email which is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/activityparty-entity#activity-party-types) column named **related**. When an email is associated to multiple records, it will appear in the [timeline](https://learn.microsoft.com/en-us/power-apps/user/add-activities) for each of the associated records.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [preview-tags](../includes/cc-preview-features-definition.md)]
+
+The related column is not added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, see [Add columns to a form](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form#add-columns-to-a-form).
+
+After you add the related column to the form, users will be able to associate an email record with additional related party records (parties) like cases or opportunities.
+
+### Differences between regarding and related columns
+
+**Supported tables**  
+The related column is currently only available for the Email table. The related column does not currently support the same relationships utilized by the regarding column. The list of supported tables is currently limited to the tables that [can have a contact email](https://learn.microsoft.com/power-apps/maker/data-platform/create-edit-entities-portal#advanced-options).
+
+**Relationship type**  
+The regarding column acts as a [parental relationship](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entity-relationships#parental-table-relationships) from a parent record. For example, if an account has multiple activity records associated with it and that account is later deleted, the same action will by default be applied to the child activity records. The related column is not a parental relationship. Actions performed on related records do not affect the related activities.
+  
+**When the column value is set**  
+After the related column is added to the email form, users can manually add one or more records to indicate the records are related to the activity. The regarding and related columns are independent. Setting a value for the regarding lookup column does not affect the value(s) for related. Like the regarding column, if a new email is correlated to a previously existing email such as in the case of an email reply, the values from the correlated email's related and regarding columns are copied to the new activity. When creating a new email from the timeline control in the context of a record, the related column is not set to the current record by default. This behavior can be modified by enabling an [OrgDBOrgSetting](http://OrgDBOrgSetting) named AddParentEntityToRelatedOnNewActivityCreate.
+
+**Outlook add-in scenarios**  
+Some features such as Dynamics 365 App for Outlook and Copilot for Sales include an ability to save an Outlook email as an email record while also setting the regarding column. These features do not set the value of the related column.
 
 ## Table ownership
 
@@ -82,7 +111,7 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 - **Business Unit**. A few system tables are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
 
 > [!IMPORTANT]
->  After a custom table is created, you can't change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
+> After a custom table is created, you can't change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
 
 ## Virtual tables
 
@@ -96,6 +125,5 @@ Elastic tables offer performance benefits over standard tables when the table co
 
 [Create tables](./data-platform-create-entity.md)<br/>
 [Edit tables](./edit-entities.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
