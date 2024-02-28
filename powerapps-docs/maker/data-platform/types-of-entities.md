@@ -81,20 +81,22 @@ Users sometimes need to associate an email to multiple records. For example, a c
 
 The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, see [Add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
 
-After you add the related column to the form, users will be able to associate an email record with other related party records (parties) like cases or opportunities.
+After you add the related column to the form, users can associate an email record with other related party records (parties) like cases or opportunities.
 
-### Differences between regarding and related columns
+#### Differences between regarding and related columns
 
-**Supported tables**  
+While there are similarities between the regarding and related columns, the following are important differences to note:
+
+- **Supported tables**  
 The related column is currently only available for the Email table. The related column doesn't currently support the same relationships utilized by the regarding column. The list of supported tables is currently limited to the tables that [can have a contact email](../../maker/data-platform/create-edit-entities-portal.md#advanced-options).
 
-**Relationship type**  
+- **Relationship type**  
 The regarding column acts as a [parental relationship](../../maker/data-platform/create-edit-entity-relationships.md#parental-table-relationships) from a parent record. For example, if an account has multiple activities and is later deleted, the same action is automatically applied to the child activity records. The related column isn't a parental relationship. Actions performed on related records don't affect the related activities.
   
-**When the column value is set**  
+- **When the column value is set**  
 After the related column is added to the email form, users can manually add one or more records to indicate the records are related to the activity. The regarding and related columns are independent. Setting a value for the regarding lookup column doesn't affect the values for related. When a new email is related to an existing email (for example, as a reply), the values from the related and regarding columns of the correlated email are copied to the new activity. However, when you create a new email from the timeline control within a record’s context, the related column isn't automatically set to the current record. This behavior can be modified by enabling an [OrgDBOrgSetting](/power-platform/admin/orgdborgsettings) named AddParentEntityToRelatedOnNewActivityCreate.
 
-**Outlook add-in scenarios**  
+- **Outlook add-in scenarios**  
 Some features such as Dynamics 365 App for Outlook and Copilot for Sales include an ability to save an Outlook email as an email record while also setting the regarding column. These features don't set the value of the related column.
 
 ## Table ownership
