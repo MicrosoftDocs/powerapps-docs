@@ -55,11 +55,13 @@ To learn how to use the new AI features in Power Apps, see:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-## Enable or disable Copilot in Power Apps
+## Enable or disable Copilot (preview) in Power Apps
 
-For this preview, Copilot in Power Apps is enabled by default. To disable it, you need to have administrator access.
+[Generally available](/power-platform/admin/general-availability-deployment) Copilot features are enabled by default and cannot be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
-Follow these steps to disable **Copilot** in Power Apps for your tenant.
+Copilot features in preview are also enabled by default, but can be disabled by an administrator.
+
+Follow these steps to disable **Copilot** (preview) in Power Apps for your tenant.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
@@ -68,7 +70,7 @@ Follow these steps to disable **Copilot** in Power Apps for your tenant.
 > [!NOTE]
 > Turning off Copilot for your tenant will only disable Copilot for makers. It won't disable [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
 
-Follow these steps to enable or disable **Copilot** for your environment.
+Follow these steps to enable or disable **Copilot** preview features for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. In the left-side navigation pane **Environment**.
