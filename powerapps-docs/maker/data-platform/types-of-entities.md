@@ -70,32 +70,32 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 
 ### Enable users to associate activities to multiple records (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Users may sometimes need to associate an email to multiple records. For example, a customer may send an email which is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/activityparty-entity#activity-party-types) column named **related**. When an email is associated to multiple records, it will appear in the [timeline](https://learn.microsoft.com/en-us/power-apps/user/add-activities) for each of the associated records.
+Users sometimes need to associate an email to multiple records. For example, a customer sends an email that is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](../../developer/data-platform/activityparty-entity.md#activity-party-types) column named **related**. When an email is associated to multiple records, it appears in the [timeline](../../user/add-activities.md) for each of the associated records.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - [!INCLUDE [preview-tags](../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [preview-tags](../../includes/cc-preview-features-definition.md)]
 
-The related column is not added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, see [Add columns to a form](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form#add-columns-to-a-form).
+The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, see [Add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
 
-After you add the related column to the form, users will be able to associate an email record with additional related party records (parties) like cases or opportunities.
+After you add the related column to the form, users will be able to associate an email record with other related party records (parties) like cases or opportunities.
 
 ### Differences between regarding and related columns
 
 **Supported tables**  
-The related column is currently only available for the Email table. The related column does not currently support the same relationships utilized by the regarding column. The list of supported tables is currently limited to the tables that [can have a contact email](https://learn.microsoft.com/power-apps/maker/data-platform/create-edit-entities-portal#advanced-options).
+The related column is currently only available for the Email table. The related column doesn't currently support the same relationships utilized by the regarding column. The list of supported tables is currently limited to the tables that [can have a contact email](../../maker/data-platform/create-edit-entities-portal.md#advanced-options).
 
 **Relationship type**  
-The regarding column acts as a [parental relationship](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entity-relationships#parental-table-relationships) from a parent record. For example, if an account has multiple activity records associated with it and that account is later deleted, the same action will by default be applied to the child activity records. The related column is not a parental relationship. Actions performed on related records do not affect the related activities.
+The regarding column acts as a [parental relationship](../../maker/data-platform/create-edit-entity-relationships.md#parental-table-relationships) from a parent record. For example, if an account has multiple activities and is later deleted, the same action is automatically applied to the child activity records. The related column isn't a parental relationship. Actions performed on related records don't affect the related activities.
   
 **When the column value is set**  
-After the related column is added to the email form, users can manually add one or more records to indicate the records are related to the activity. The regarding and related columns are independent. Setting a value for the regarding lookup column does not affect the value(s) for related. Like the regarding column, if a new email is correlated to a previously existing email such as in the case of an email reply, the values from the correlated email's related and regarding columns are copied to the new activity. When creating a new email from the timeline control in the context of a record, the related column is not set to the current record by default. This behavior can be modified by enabling an [OrgDBOrgSetting](http://OrgDBOrgSetting) named AddParentEntityToRelatedOnNewActivityCreate.
+After the related column is added to the email form, users can manually add one or more records to indicate the records are related to the activity. The regarding and related columns are independent. Setting a value for the regarding lookup column doesn't affect the values for related. When a new email is related to an existing email (for example, as a reply), the values from the related and regarding columns of the correlated email are copied to the new activity. However, when you create a new email from the timeline control within a record’s context, the related column isn't automatically set to the current record. This behavior can be modified by enabling an [OrgDBOrgSetting](/power-platform/admin/orgdborgsettings) named AddParentEntityToRelatedOnNewActivityCreate.
 
 **Outlook add-in scenarios**  
-Some features such as Dynamics 365 App for Outlook and Copilot for Sales include an ability to save an Outlook email as an email record while also setting the regarding column. These features do not set the value of the related column.
+Some features such as Dynamics 365 App for Outlook and Copilot for Sales include an ability to save an Outlook email as an email record while also setting the regarding column. These features don't set the value of the related column.
 
 ## Table ownership
 
@@ -115,7 +115,7 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 
 ## Virtual tables
 
-A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services. More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ## Elastic tables
 
