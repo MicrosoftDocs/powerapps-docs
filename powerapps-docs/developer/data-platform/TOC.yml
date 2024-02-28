@@ -36,21 +36,21 @@
     - name: Search for records
       href: ./search/overview.md
       items:
-      - name: Query
-        href: ./search/query.md
-      - name: Suggest
-        href: ./search/suggest.md
-      - name: Autocomplete
-        href: ./search/autocomplete.md
-      - name: Statistics and Status
-        href: ./search/statistics-status.md
-      - name: Legacy search
-        href: ./search/legacy.md
+        - name: Query
+          href: ./search/query.md
+        - name: Suggest
+          href: ./search/suggest.md
+        - name: Autocomplete
+          href: ./search/autocomplete.md
+        - name: Statistics and Status
+          href: ./search/statistics-status.md
+        - name: Legacy search
+          href: ./search/legacy.md
     - name: Bulk Operation messages
       href: bulk-operations.md
       items:
-      - name: Use DeleteMultiple (preview)
-        href: deletemultiple.md
+        - name: Use DeleteMultiple (preview)
+          href: deletemultiple.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -73,7 +73,7 @@
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with custom APIs 
+    - name: Use open types with custom APIs
       href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
@@ -348,7 +348,7 @@
           href: aaduser-entity.md
     - name: Template tables
       href: upload-manage-document-templates.md
-    - name: Long-term data retention (preview)
+    - name: Long-term data retention
       href: long-term-retention.md
 - name: Work with table definitions using code
   href: metadata-services.md
@@ -413,7 +413,7 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
-- name: Work with elastic tables using code  
+- name: Work with elastic tables using code
   items:
     - name: Overview of elastic tables
       href: elastic-tables.md
