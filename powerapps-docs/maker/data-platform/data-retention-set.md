@@ -6,18 +6,12 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 10/20/2023
+ms.date: 02/29/2024
 ms.custom: template-how-to
 ---
-# Set a data retention policy for a table (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Set a data retention policy for a table
 
 This article explains how to set up a data retention policy for a Microsoft Dataverse table.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
