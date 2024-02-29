@@ -41,13 +41,15 @@ Power Platform connectors incorporate enterprise data and cloud-based services i
 
 Use Power Fx to add inline calculations, dynamic actions, and data operations and assign them to interactive UI elements in your cards.
 
-:::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer, showing Power Fx logic.":::
+For example, you can type your  name into a text input control, then press a button to add (with the **Set** function) that name to a text label, saying "Hello, My Name".
+
+:::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer, showing Power Fx logic." lightbox="media/overview/placeholder-cards-power-fx.png":::
 
 ### Share cards in Teams
 
- Send cards from the card designer to a Microsoft Teams chat or channel to share your cards with others.
+To share your cards with others, send cards from the card designer to a Microsoft Teams chat or channel. These sharing options are found when you play the app.
 
-:::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer Play page, showing the Send button.":::
+:::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer Play page, showing the Send button." lightbox="media/overview/placeholder-cards-play-page.png":::
 
 ### Next steps
 
