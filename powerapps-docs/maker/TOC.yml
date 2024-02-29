@@ -1971,7 +1971,7 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables (preview)
+    - name: Long term data retention for tables
       items:
       - name: Long term data retention overview
         href: ./data-platform/data-retention-overview.md
@@ -2147,7 +2147,7 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
-      - name: Set the preferred solution (preview)
+      - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
