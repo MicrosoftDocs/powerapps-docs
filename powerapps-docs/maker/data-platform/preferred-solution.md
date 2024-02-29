@@ -20,17 +20,17 @@ By default, unless already in the context of an unmanaged solution, all solution
 
 Using preferred solutions is a way to set which solution will support each maker's edits that happen anywhere in Power Apps. It enables makers to view and update which solution they're using. After you set your preferred solution, you can create components in the solution you specify and those components will automatically be in that solution so that you control the components within the solution. Then, you can export your preferred solution and import the solution to other Microsoft Dataverse environments.
 
+> [!NOTE]
+> When your preferred solution isn't set, by default, the **Common Data Services Default Solution** is your preferred solution. If **Common Data Services Default Solution** isn't available, the solution named **Default Solution** is used as your preferred solution. You can change this to your desired solution by following the steps in this article. For more information about the **Common Data Services Default Solution** and **Default Solution**, go to [Default solutions](solutions-overview.md#default-solutions).
+
 ## Prerequisites
 
-Power Platform admins enable the ability for makers to set their preferred solution by setting **Preferred solution** to **On** for the environment settings in the Power Platform admin center. More information: [Preferred solution](/power-platform/admin/settings-features#preferred-solution)
-
-> [!IMPORTANT]
-> We recommend that admins also enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. More information: [Create new canvas apps and cloud flows in a Dataverse solution](/power-platform/admin/settings-features#create-new-canvas-apps-and-cloud-flows-in-a-dataverse-solution)
+We recommend that admins enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. More information: [Create new canvas apps and cloud flows in a Dataverse solution](/power-platform/admin/settings-features#create-new-canvas-apps-and-cloud-flows-in-a-dataverse-solution)
 
 ## Set your preferred solution
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the unmanaged solution that you want to make your preferred solution.
+1. Select the unmanaged solution that you want to make your preferred solution. Don't have one? More information: [Create a solution](create-solution.md)
 1. Select **Set preferred solution** on the command bar.
 
 Once your preferred solution is set, notice the **preferred solution** indicator, which can be viewed from the **Solutions** area or when you hover over the **Environment** switcher.
