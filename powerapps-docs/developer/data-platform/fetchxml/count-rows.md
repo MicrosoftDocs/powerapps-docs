@@ -1,7 +1,7 @@
 ---
 title: Count rows using FetchXml
 description: Learn how to use FetchXml to count rows from Microsoft Dataverse tables.
-ms.date: 08/31/2023
+ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub

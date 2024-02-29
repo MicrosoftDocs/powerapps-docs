@@ -1,7 +1,7 @@
 ---
 title: Aggregate data using FetchXml
 description: Learn how to use FetchXml to retrieve aggregated data from Microsoft Dataverse.
-ms.date: 01/31/2024
+ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub

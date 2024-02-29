@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to query data
 description: Learn to compose a query using FetchXml, a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-ms.date: 03/01/2024
+ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub

@@ -1,7 +1,7 @@
 ---
 title: Page results using FetchXml
 description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 03/01/2024
+ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub

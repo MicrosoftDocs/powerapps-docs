@@ -1,7 +1,7 @@
 ---
 title: FetchXml Sample code
 description: Try using FetchXML to retrieve Dataverse data using this sample code.
-ms.date: 03/01/2024
+ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
