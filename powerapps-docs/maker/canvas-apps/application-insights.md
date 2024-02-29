@@ -27,6 +27,9 @@ In this quickstart, we use a canvas app called Kudos to explore concepts of syst
 - You must have access to the [Azure portal](https://portal.azure.com).
 - You must have the permissions to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
+> [!NOTE]
+> To view telemetry information, your tenant admin must enable **Canvas app insights**. Sign in as an admin in [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Go to **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, set the toggle to **On** and save you changes. 
+
 ### Optional
 
 - Download and install the Kudos app from the [Employee Experience Starter Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit). You can also use an existing app instead.
