@@ -57,7 +57,7 @@ The **Welcome screen** contains the following controls:
           - Feature item button 
           - Text 
 
-### Add and customize the Welcome screen
+#### Add and customize the Welcome screen
 
 1. In Power Apps Studio, select **Add Screen** > **Welcome screen**.
 1. To change the image, select the image and then select **Edit**. 
@@ -88,7 +88,7 @@ The **Header and gallery** screen contains the following controls:
          - Button 
 
 
-### Add and customize Header and gallery screen
+#### Add and customize Header and gallery screen
 
 1. In Power Apps Studio, select **Add Screen** > **Header and gallery**.
 1. In the tree view, select **Gallery**  and connect it to a data source such as Dataverse.
@@ -114,7 +114,7 @@ The **Approval request** screen contains the following controls:
          - Gallery (Classic) 
 
 
-### Add and customize Approval request screen
+#### Add and customize Approval request screen
 
 1. In Power Apps Studio, select **Add Screen** > **Approval request**.
 1. In the tree view, select **Approval form** and connect it to a data source such as Dataverse.
