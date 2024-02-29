@@ -400,34 +400,12 @@
             href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
-          - name: Add and configure a screen
-            items:
-              - name: Add a screen
-                href: ./canvas-apps/add-screen-context-variables.md
-              - name: Add a scrolling screen
-                href: ./canvas-apps/add-scrolling-screen.md
-              - name: Add a chatbot (preview)
-                href: ./canvas-apps/add-ai-chatbot.md
-              - name: Add a copilot (preview)
-                href: ./canvas-apps/add-ai-copilot.md
-              - name: Configure Office 365 screens
-                items:
-                  - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
-                  - name: Calendar-screen reference
-                    href: ./canvas-apps/screen-templates/calendar-screen-reference.md
-                  - name: Email-screen overview
-                    href: ./canvas-apps/screen-templates/email-screen-overview.md
-                  - name: Email-screen reference
-                    href: ./canvas-apps/screen-templates/email-screen-reference.md
-                  - name: Meeting-screen overview
-                    href: ./canvas-apps/screen-templates/meeting-screen-overview.md
-                  - name: Meeting-screen reference
-                    href: ./canvas-apps/screen-templates/meeting-screen-reference.md
-                  - name: People-screen overview
-                    href: ./canvas-apps/screen-templates/people-screen-overview.md
-                  - name: People-screen reference
-                    href: ./canvas-apps/screen-templates/people-screen-reference.md
+          - name: Add a screen
+            href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add a chatbot (preview)
+            href: ./canvas-apps/add-ai-chatbot.md
+          - name: Add a copilot (preview)
+            href: ./canvas-apps/add-ai-copilot.md
           - name: Create and edit tables
             href: ./canvas-apps/create-edit-tables.md
           - name: Work with a gallery
