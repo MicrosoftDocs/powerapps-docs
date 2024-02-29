@@ -25,7 +25,7 @@ Prebuilt screens allow makers to easily create modern, responsive app by simply 
 > ![Screen layouts.](./media/add-screen-context-variables/add-a-screen.png)
 
 
-The following new screen are available:
+The following new screens are available:
 
 - Welcome screen
 - Header and gallery
