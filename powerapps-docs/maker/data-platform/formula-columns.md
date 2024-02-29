@@ -427,6 +427,7 @@ This section describes guidelines and the known limitations with formula columns
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
   - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - Formula columns don't display values when the app is in mobile offline mode.
+- You can't trigger workflows or plug-ins on formula columns.
 - We don't recommend using calculated columns in formula columns and vice versa.
 - Duplicate detection rules aren't triggered on formula columns.
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
