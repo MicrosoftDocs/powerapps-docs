@@ -1,0 +1,1 @@
+A variant of `inner` that can provide performance benefits. Uses an [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) condition in the `where` clause. Use this when multiple copies of the parent row are not necessary in the results. [Learn more about exists and in](../../join-tables.md#use-exists-or-in-link-types)

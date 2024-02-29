@@ -133,8 +133,6 @@ var expression = new ConditionExpression(
     value: "John");
 ```
 
-More information: [Use column comparison in queries](../column-comparison.md)
-
 ## Use Wildcard characters in conditions using string values
 
 You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)

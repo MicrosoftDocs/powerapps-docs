@@ -348,7 +348,7 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 
 ### [Web API](#tab/webapi)
 
-More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 ---
 
