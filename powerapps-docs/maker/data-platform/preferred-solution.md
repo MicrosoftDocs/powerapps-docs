@@ -30,7 +30,7 @@ We recommend that admins enable the **Cloud flows** environment setting in Power
 ## Set your preferred solution
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the unmanaged solution that you want to make your preferred solution.
+1. Select the unmanaged solution that you want to make your preferred solution. Don't have one? More information: [Create a solution](create-solution.md)
 1. Select **Set preferred solution** on the command bar.
 
 Once your preferred solution is set, notice the **preferred solution** indicator, which can be viewed from the **Solutions** area or when you hover over the **Environment** switcher.
