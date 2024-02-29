@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 01/11/2024
+ms.date: 01/31/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -839,7 +839,7 @@ The following table describes the operators you can use to compare a property an
 
 #### Column comparison
 
-You can use comparison operators to compare property values in the same row; that is, to [compare columns](../column-comparison.md). Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
+You can use comparison operators to compare property values in the same row. Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname eq lastname
@@ -1239,7 +1239,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 
 Use the `$apply` option to aggregate and group your data dynamically.
 
-The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Use FetchXML aggregation](../use-fetchxml-aggregation.md).
+The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Aggregate data using FetchXml](../fetchxml/aggregate-data.md).
 
 You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
@@ -1633,7 +1633,6 @@ OData-Version: 4.0
 ### See also
 
 [Search for Dataverse records](../search/overview.md)<br />
-[Work with Quick Find's search item limit](../quick-find-limit.md)<br />
 [Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
