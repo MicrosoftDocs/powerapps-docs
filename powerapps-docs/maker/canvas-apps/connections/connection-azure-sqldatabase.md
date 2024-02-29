@@ -70,14 +70,14 @@ When you add a stored procedure, you might see more than one data source in your
 
 :::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text="Screenshot that shows SQL data sources.":::
 
-Prefix the stored procedure name with the name of connector associated with it. For example, _DataCardValue3_1.Text_ is from the _DataCard_ connector.
+Prefix the stored procedure name with the name of connector associated with it (data_source_name).(stored_proc_name). In the example this is  'Paruntimedb.dbonewlibrarybook' in the example image. Note also that when Power Apps brings the stored procedure in, it concatenates the full name. So, 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
 
-Label the values, for example using a number, as necessary since you're reading from a text value in Power Apps.
+Convert values appropriately as necessary since you're reading from a text value in Power Apps. For example, if you are updating an integer in SQL you must convert the text in the field using 'Value()'.
 
 ![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
 
 > [!TIP]
-> To use a stored procedure in an **Item** property for a gallery or table, use the stored procedure name where you'd use the table name.
+> To use a stored procedure in an **Item** property for a gallery or table, use the stored procedure name where you'd use the table name. Views do not have primary keys so you will need to supply a key value for record specific operations. 
 
 ## Known issues
 
