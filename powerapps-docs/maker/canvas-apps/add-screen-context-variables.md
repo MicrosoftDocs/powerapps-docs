@@ -19,7 +19,6 @@ contributors:
 
 Prebuilt screens allow makers to easily create modern, responsive app by simply selecting a screen. The screens are designed with common app scenarios and compositions in mind, and feature responsive containers and modern controls.
 
- When the **[Scale to fit](create-responsive-layout.md#disable-scale-to-fit)** option is turned off, the screen layout of the app adapts to the size of the device's screen it is being run on.
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts.](./media/add-screen-context-variables/add-a-screen.png)
@@ -27,18 +26,22 @@ Prebuilt screens allow makers to easily create modern, responsive app by simply 
 
 The following new screens are available:
 
-- Welcome screen
-- Header and gallery
-- Approval request
+- [Welcome screen](add-screen-context-variables.md#welcome-screen)
+- [Header and gallery](add-screen-context-variables.md#header-and-gallery-screen)
+- [Approval request](add-screen-context-variables.md#approval-request-screen)
 
 
 ## Add a new screen
 
+When you add a new screen, you can also select a screen layout such as blank or split screen that adapt to different screen sizes.
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Create a canvas app in tablet format.
-3. In Power Apps Studio, on the command bar, select **New screen** and then select a screen template.
+3. In Power Apps Studio, on the command bar, select **New screen** and then select a screen.
+1. When you're done, preview the app and see how the app displays on different devices. More information, see [Preview an app](preview-app.md).
 
-When you're done, you can preview the app and see how the app displays on different devices. More information, see [Preview an app](preview-app.md).
+
+When the **[Scale to fit](create-responsive-layout.md#disable-scale-to-fit)** option is turned off, the screen layout of the app adapts to the size of the device's screen it's being run on.
 
 
 ## Welcome screen 
@@ -63,15 +66,15 @@ The **Welcome screen** contains the following controls:
 1. To change the image, select the image and then select **Edit**. 
 1. Select **Feature Item** button control and add your own text. 
 1. Select **Short description or engaging message** and edit the description text.
-1. To add additional tiles, in the tree view copy and paste a **Container** item.
+1. To add more tiles, in the tree view copy and paste a **Container** item.
 1. To remove a tile, in the tree view right click a **Container** and select **Delete**.  
 
 
-## Header and gallery 
+## Header and gallery screen
 
-Use the **Header and gallery** screen to showcase a wide range of product or service information, like a product catalog. When you connect a gallery control to a data source, an catalog is automaticlly generated with little customization required.
+Use the **Header and gallery** screen to showcase a wide range of product or service information, like a product catalog. When you connect a gallery control to a data source, a catalog is automatically generated with little customization required.
 
-The [gallery control](controls/control-gallery.md) in **Header and gallery** screen is a classic control. However, when the modern gallery control is released, the **Header and gallery** screen will use the modern gallery control. For more information, see [Overview of modern controls and themes in canvas apps](controls/modern-controls/overview-modern-controls.md).
+The [gallery control](controls/control-gallery.md) in **Header and gallery** screen is a classic control. However, when the modern gallery control is released, the **Header and gallery** screen use the modern gallery control. For more information, see [Overview of modern controls and themes in canvas apps](controls/modern-controls/overview-modern-controls.md).
 
 The **Header and gallery** screen contains the following controls:
 
@@ -96,9 +99,9 @@ The **Header and gallery** screen contains the following controls:
 
     In the Image property, utilize the *ThisItem* syntax to set the desired image. Apply the same method to the title text and text description.
 
-## Approval request  
+## Approval request screen
 
-The **Approval request** screen includes a header, a form featuring a submit button, and a gallery with predefined stages. he Approval request is useful in scenarios where actions are triggered by form submissions, such as submitting an approval request or displaying a workflow process for a business.
+The **Approval request** screen includes a header, a form featuring a submit button, and a gallery with predefined stages. The **Approval request** screen is useful in scenarios where actions are triggered by form submissions, such as submitting an approval request or displaying a workflow process for a business.
 
 The **Approval request** screen contains the following controls:
 
@@ -118,7 +121,7 @@ The **Approval request** screen contains the following controls:
 
 1. In Power Apps Studio, select **Add Screen** > **Approval request**.
 1. In the tree view, select **Approval form** and connect it to a data source such as Dataverse.
-1. To view the details of the approval stages, in the tree view, select **ReviewersGallery** and in the properties pane select the **Advacned** tab and go to **Items**. 
+1. To view the details of the approval stages, in the tree view, select **ReviewersGallery** and in the properties pane select the **Advanced** tab and go to **Items**. 
 
     The following details are part of the approval stage:
    - **Name**: Name of the stage or approver.  
