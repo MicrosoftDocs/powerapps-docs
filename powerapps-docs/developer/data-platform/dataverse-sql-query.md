@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/18/2023
+ms.date: 02/28/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
@@ -13,7 +13,6 @@ search.audienceType:
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change.]
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
@@ -29,10 +28,6 @@ The **Enable TDS endpoint** setting must be enabled in your environment. It is e
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
 
 ### SQL Server Management Studio (Preview)
-
-> [!NOTE]
-> A compatibility issue has been found with the SQL Server Management Studio 19.0.1 build. A fix is being investigated. Until the fix is available please use build [18.12.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891).
-> This note will be updated once a fix is available.
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
@@ -126,7 +121,7 @@ When building queries do not use the table hint NOLOCK. This will prevent Datave
   
 ## Limitations
 
-There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
+The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, there is a fixed five (5) minute timeout. Data streaming has been introduced which allows retreval of as much data as can be completed in the fixed five (5) minute timeout. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that require more than five (5) mintues to complete. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 > [!TIP]
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
