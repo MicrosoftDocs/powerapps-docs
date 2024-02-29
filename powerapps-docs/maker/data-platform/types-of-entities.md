@@ -79,7 +79,7 @@ Users sometimes need to associate an email to multiple records. For example, a c
 > - This is a preview feature.
 > - [!INCLUDE [preview-tags](../../includes/cc-preview-features-definition.md)]
 
-The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, see [Add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
+The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, go to [add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
 
 After you add the related column to the form, users can associate an email record with other related party records (parties) like cases or opportunities.
 
