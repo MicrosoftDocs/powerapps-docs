@@ -122,6 +122,8 @@ Now, the results are ordered using the following attributes:
 
 The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database isn't meaningful out of context.
 
+This behavior can be overridden by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of lookup and choice columns will use the raw data, Guid or integer values respectively.
+
 ### Lookup Columns
 
 When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](select-columns.md#formatted-values) returned is the corresponding primary name field.
