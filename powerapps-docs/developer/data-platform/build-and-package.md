@@ -111,6 +111,13 @@ When creating a plug-in project using one of our tools, for example the Power Pl
 </Project>
 ```
 
+If you are adding another project to the Visual Studio solution, say a class library project, you can create an SDK style project by following these steps.
+
+1. In Visual Studio, add the new project to your solution using a .NET Core template
+1. Edit the project file by right-clicking on the project name in Solution Explorer and select **Edit project file**, or simply open the project's .csproj file in a separate editor.
+1. You should see the line `<Project Sdk="Microsoft.NET.Sdk">` in the project file. Change the TargetFramework property to be `<TargetFramework>net462</TargetFramework>` and save the file.
+1. Verify your solution builds, and you are done.
+
 ### Don't depend on System.Text.Json
 
 Because the Microsoft.CrmSdk.CoreAssemblies NuGet package has a [dependency](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab) on System.Text.Json, you're able to refer to [System.Text.Json](xref:System.Text.Json) types at design time. However, the System.Text.Json.dll file in the sandbox run-time can't be guaranteed to be the same version that you reference in your project. If you need to use `System.Text.Json`, you should use the dependent assembly feature and explicitly include it in your NuGet package.
