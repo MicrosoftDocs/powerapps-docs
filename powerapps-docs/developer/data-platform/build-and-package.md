@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building plug-in code into assemblies and packages for later registration and upload to the Microsoft Dataverse service.
-ms.date: 02/26/2024
+ms.date: 02/29/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -68,7 +68,7 @@ When you register individual plug-in assemblies without the dependent assemblies
 
 > [!IMPORTANT]
 > If you sign your assemblies, be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed.
-> 
+>
 > If any signed assemblies depend on unsigned assemblies, you will get an error similar to the following: Could not load file or assembly \<AssemblyName>, Version=\<Version>, Culture=neutral, PublicKeyToken=null or one of its dependencies. A strongly-named assembly is required.
 
 ### Dependent assemblies limitations
@@ -85,6 +85,31 @@ Your plug-in assembly plus any required dependent assemblies can be placed toget
 
 <!-- Add correct links when available -->
 Instructions for creating a plug-in package using an interactive tool can be found in these separate how-to's: [Create and register a plug-in package using PAC CLI](/power-platform/developer/howto/cli-create-package), [Create and register a plug-in package using Visual Studio](/power-platform/developer/howto/vs-create-package).
+
+## All projects must be in the SDK style
+
+A plug-in package must only contain custom assemblies that have been built from a project file in a specific format known as the *SDK style*. Failure to follow this rule results in an error ("file can not be found") when attempting to register the package using the Plug-in Registration tool.
+
+> [!IMPORTANT]
+> All MSBuild projects, where the resulting compiled assembly is to be added to a plug-in package, must be in the "SDK style" format.
+
+An SDK style project is one where the contents of the project's .csproj file contains the following line of code: `<Project Sdk="Microsoft.NET.Sdk">`.
+
+When creating a plug-in project using one of our tools, for example the Power Platform CLI `pac plugin init` command, the plug-in project file is in the correct format. Here is an example of such a project file.
+
+```makefile
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <PowerAppsTargetsPath>$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\PowerApps</PowerAppsTargetsPath>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <ProjectTypeGuids>{4C25E9B5-9FA6-436c-8E19-B395D2A65FAF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  ...
+</Project>
+```
 
 ### Don't depend on System.Text.Json
 
