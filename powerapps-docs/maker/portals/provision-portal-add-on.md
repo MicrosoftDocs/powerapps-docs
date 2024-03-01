@@ -96,7 +96,7 @@ After you've provisioned a portal, the option to change the portal audience is d
 However, you can change the audience and type of portal after it's provisioned by following the steps in [Change the Dynamics 365 instance, audience, or type of portal](admin/change-dynamics-instance.md).
 
 > [!NOTE]
-> - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
+> - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/dynamics/crm/how-to-change-audience-and-type-of-dynamics-365-portal)
 > - The changing of Dynamics 365 instance is applicable only to the portals provisioned using the older portal add-ons.
 
 ## Next steps
