@@ -82,7 +82,7 @@ Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create
 
 
 ## Licensing
-For more information on Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
+For more information on Power Apps, Power Automate, Power Pages, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
 
 
 
