@@ -2,7 +2,7 @@
 title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs"
 description: "Dataverse long-term data retention enables customers to retain their historical transactional data with Dataverse long term retention."
 ms.custom: 
-ms.date: 02/13/2024
+ms.date: 02/28/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "kagoswami"
@@ -19,7 +19,7 @@ search.audienceType:
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
 > [!IMPORTANT]
-> To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview (preview)](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview-preview).
+> To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview).
   
 ## Retention policy setup and validation
 
@@ -348,7 +348,7 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 
 ### [Web API](#tab/webapi)
 
-More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 ---
 

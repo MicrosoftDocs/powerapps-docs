@@ -6,20 +6,14 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 01/31/2024
+ms.date: 02/29/2024
 ms.custom: template-overview
 ---
-# Dataverse long term data retention overview (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Dataverse long term data retention overview
 
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
->
 > You must meet *both* of the following two requirements to use all long term data retention features:
 > - The Power Platform environment must be a [Managed Environment](/power-platform/admin/managed-environment-overview). This also applies to Dynamics 365 customers who will be required to upgrade to a Managed Environment if the environment isn't already a Managed Environment.
 >

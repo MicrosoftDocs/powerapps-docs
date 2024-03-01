@@ -2,12 +2,11 @@
 title: "Developers: Understand terminology in Microsoft Dataverse | Microsoft Docs"
 description: "Developers: Understand terminology in Dataverse."
 suite: powerapps
-author: KumarVivek
-
+author: phecke
 ms.date: 03/04/2021
 ms.subservice: dataverse-developer
-ms.author: kvivek
-ms.reviewer: "pehecke"
+ms.author: pehecke
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 ---
