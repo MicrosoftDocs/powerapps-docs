@@ -113,7 +113,7 @@ When you create a plug-in project using one of our tools, for example the Power 
 
 If you're adding another project to the Visual Studio solution, say a class library project, you can create an SDK style project by following these steps.
 
-1. In Visual Studio, add the new project to your solution using a .NET Core template.
+1. In Visual Studio, add the new project to your solution using a .NET or .NET Standard template. Do not target .NET Framework.
 1. Edit the project file by right-clicking on the project name in Solution Explorer and select **Edit project file**, or simply open the project's .csproj file in a separate editor.
 1. You should see the line `<Project Sdk="Microsoft.NET.Sdk">` in the project file. Change the TargetFramework property to be `<TargetFramework>net462</TargetFramework>` and save the file.
 1. Verify your solution builds, and you're done.
