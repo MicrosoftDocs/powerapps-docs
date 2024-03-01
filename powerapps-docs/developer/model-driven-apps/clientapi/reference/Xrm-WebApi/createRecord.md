@@ -57,7 +57,8 @@ var data =
         "address1_latitude": 47.639583,
         "description": "This is the description of the sample account",
         "revenue": 5000000,
-        "accountcategorycode": 1
+        "accountcategorycode": 1,
+        "opendeals_date": new Date(2024-02-03)
     }
 
 // create account record
