@@ -46,7 +46,7 @@ This example return account records in ascending order by `createdon`, `name`, a
 |`attribute`|Yes|The `name` of the [attribute element](attribute.md) to sort the data by.|
 |`alias`|No|The `alias` of the [attribute element](attribute.md) to sort the data by|
 |`descending`|No|Whether to sort the data in descending order.|
-|`entityname`|No|Use this to specify sort order for `link-entity` elements so that they are not applied last. In an `order` within an `entity` element, set `entityname` to the  `alias` value of a `link-entity`. [Learn how to apply `link-entity` orders first](../order-rows.md#process-link-entity-orders-first)|
+|`entityname`|No|Use this attribute to specify sort order for `link-entity` elements so that they aren't applied last. In an `order` within an `entity` element, set `entityname` to the  `alias` value of a `link-entity`. [Learn how to apply `link-entity` orders first](../order-rows.md#process-link-entity-orders-first)|
 
 ## Parent elements
 
