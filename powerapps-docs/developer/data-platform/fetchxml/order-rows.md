@@ -57,9 +57,9 @@ If you want to use *descending* order, set the `descending` attribute to `true`.
 </fetch>
 ```
 
-## Process `link-entity` orders last
+## Process `link-entity` orders first
 
-Dataverse always orders attributes specified by the `link-entity` before attributes for the `entity` element.
+Dataverse always orders attributes specified by the `link-entity` after attributes for the `entity` element.
 
 The following example shows a conventional ordering pattern for both `link-entity` attributes and `entity` attributes.
 
@@ -76,8 +76,10 @@ The following example shows a conventional ordering pattern for both `link-entit
       alias='parentaccount'>
       <attribute name='name'
         alias='parentaccount' />
+        <!-- The link-entity parentaccount name -->
       <order attribute='name' />
     </link-entity>
+    <!-- The entity account name -->
     <order attribute='name' />
   </entity>
 </fetch>
@@ -85,11 +87,11 @@ The following example shows a conventional ordering pattern for both `link-entit
 
 In this case, the results are ordered using following attributes:
 
-- First => `parentaccountname.name`
-- Last => `account.name`
+- First => `account.name`
+- Last => `parentaccountname.name`
 
 
-To ensure the `link-entity` order isn't applied first, move the `order` element from the `link-entity` element to the `entity` element and use the `entityname` attribute on the `order` element to refer to the `link-entity` `alias` value.
+To ensure the `link-entity` order is applied first, move the `order` element from the `link-entity` element to the `entity` element above the other `order` element, and use the `entityname` attribute on the `order` element to refer to the `link-entity` `alias` value.
 
 
 ```xml
@@ -106,17 +108,19 @@ To ensure the `link-entity` order isn't applied first, move the `order` element 
       <attribute name='name'
         alias='parentaccount' />
     </link-entity>
-    <order attribute='name' />
+    <!-- The link-entity parentaccount name -->
     <order entityname='parentaccount'
       attribute='name' />
+      <!-- The entity account name -->
+    <order attribute='name' />
   </entity>
 </fetch>
 ```
 
 Now, the results are ordered using the following attributes:
 
-- First => `account.name`
-- Last => `parentaccount.name`
+- First => `parentaccount.name`
+- Last => `account.name`
 
 ## Ordering lookup and choice columns
 
