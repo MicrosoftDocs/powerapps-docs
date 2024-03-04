@@ -41,10 +41,6 @@ To learn how to use the new AI features in Power Apps, see:
 
 ## Prerequisites for the AI features in Power Apps
 
-- Your environment must be in the United States region.
-
-- Your account must have **English (United States)** as the browser language.
-
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 
 - AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
