@@ -31,6 +31,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
+**[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
+
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.

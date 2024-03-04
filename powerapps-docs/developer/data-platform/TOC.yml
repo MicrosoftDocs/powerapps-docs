@@ -46,11 +46,61 @@
         href: ./search/statistics-status.md
       - name: Legacy search
         href: ./search/legacy.md
+    - name: Query data using FetchXml
+      items:
+        - name: Overview
+          href: fetchxml/overview.md
+        - name: Retrieve data
+          href: fetchxml/retrieve-data.md
+        - name: Select columns
+          href: fetchxml/select-columns.md
+        - name: Join tables
+          href: fetchxml/join-tables.md
+        - name: Order rows
+          href: fetchxml/order-rows.md
+        - name: Filter rows
+          href: fetchxml/filter-rows.md
+        - name: Page results
+          href: fetchxml/page-results.md
+        - name: Aggregate data
+          href: fetchxml/aggregate-data.md
+        - name: Count rows
+          href: fetchxml/count-rows.md
+        - name: Optimize performance
+          href: fetchxml/optimize-performance.md
+        - name: FetchXml reference
+          items:
+          - name: Overview
+            href: fetchxml/reference/index.md
+          - name: all-attributes
+            href: fetchxml/reference/all-attributes.md
+          - name: attribute
+            href: fetchxml/reference/attribute.md
+          - name: condition
+            items:
+            - name: element
+              href: fetchxml/reference/condition.md
+            - name: operators
+              href: fetchxml/reference/operators.md
+          - name: entity
+            href: fetchxml/reference/entity.md
+          - name: fetch
+            href: fetchxml/reference/fetch.md
+          - name: filter
+            href: fetchxml/reference/filter.md
+          - name: link-entity
+            href: fetchxml/reference/link-entity.md
+          - name: order
+            href: fetchxml/reference/order.md  
+          - name: value
+            href: fetchxml/reference/value.md
+        - name: Sample code
+          href: fetchxml/sample.md
     - name: Bulk Operation messages
       href: bulk-operations.md
       items:
-      - name: Use DeleteMultiple (preview)
-        href: deletemultiple.md
+        - name: Use DeleteMultiple (preview)
+          href: deletemultiple.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -73,31 +123,14 @@
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with custom APIs 
+    - name: Use open types with custom APIs
       href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Use FetchXML to query data
-      href: use-fetchxml-construct-query.md
-      items:
-        - name: Use FetchXML aggregation
-          href: use-fetchxml-aggregation.md
-        - name: Fiscal date and older than datetime query operators in FetchXML
-          href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
-        - name: Use a left outer join in FetchXML to query for records "not in"
-          href: use-fetchxml-left-outer-join-query-records-not-in.md
-        - name: Page large result sets with FetchXML
-          href: org-service/page-large-result-sets-with-fetchxml.md
-        - name: Paging behaviors and ordering
-          href: org-service/paging-behaviors-and-ordering.md
-        - name: Use column comparison in queries
-          href: column-comparison.md
-        - name: FetchXML search item limit
-          href: quick-find-limit.md
-        - name: Improve FetchXML request performance
-          href: fetchxml-performance.md
+    - name: Quick find
+      href: quick-find.md
     - name: "Use SQL to query data"
       href: dataverse-sql-query.md
     - name: "Dataverse SQL"
@@ -348,7 +381,7 @@
           href: aaduser-entity.md
     - name: Template tables
       href: upload-manage-document-templates.md
-    - name: Long-term data retention (preview)
+    - name: Long-term data retention
       href: long-term-retention.md
 - name: Work with table definitions using code
   href: metadata-services.md
@@ -413,7 +446,7 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
-- name: Work with elastic tables using code  
+- name: Work with elastic tables using code
   items:
     - name: Overview of elastic tables
       href: elastic-tables.md
@@ -496,6 +529,8 @@
       href: /dynamics365/customer-engagement/web-api/about
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
+    - name: FetchXml reference
+      href: fetchxml/reference/index.md            
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector
     - name: Workflow
@@ -504,7 +539,7 @@
       href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
     - name: Customization solutions file schema
       href: customization-solutions-file-schema.md
-    - name: FetchXML schema
-      href: fetchxml-schema.md
+    - name: FetchXML reference
+      href: fetchxml/reference/index.md
     - name: Web service error codes
       href: reference/web-service-error-codes.md

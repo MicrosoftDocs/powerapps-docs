@@ -72,7 +72,7 @@ Query throttling depends on the query and the scenario where it is executed but 
     efficient
 
     - Some common guidelines for improving the query performance can be found
-        in [Improve FetchXML request performance](fetchxml-performance.md)
+        in [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
 
 - For non-interactive applications the common ways to reduce the database load
     are:

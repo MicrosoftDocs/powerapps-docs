@@ -1,0 +1,1 @@
+The string ends with another string.
