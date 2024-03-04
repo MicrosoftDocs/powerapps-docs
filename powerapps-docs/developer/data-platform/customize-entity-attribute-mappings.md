@@ -75,7 +75,7 @@ For more information see [Create a new record from another record](webapi/create
 
 ## Retrieve the table and column mappings
 
- An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Use FetchXML to query data](use-fetchxml-construct-query.md).
+ An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Query data using FetchXml](fetchxml/overview.md).
 
 ```xml
 
