@@ -1845,6 +1845,8 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+  - name: Set an app as a startup app (preview)
+    href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app
