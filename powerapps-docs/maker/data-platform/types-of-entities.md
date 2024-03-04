@@ -25,7 +25,7 @@ A table defines information that you want to track in the form of rows (records)
 
 Tables appear in Power Apps as one of these different types:
 
-- **Standard**: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment, that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
+- **Standard**: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
 - **Activity**: Are a special kind of table and are best for rows that have an activity-based element, which can include a subject, start time, stop time, due date, and duration. Dataverse already comes with several out-of-the-box activity tables, such as appointment, task, email, and phone call. More information: [Activity tables](#activity-tables)
 - **Virtual**: Are when you need the table to be populated with data from an external source outside of Dataverse.
 - **Elastic**: Are for when the table will store a very large dataset in excess of tens of millions of rows.
@@ -60,13 +60,44 @@ Enable activities to add activities to a table and use the Regarding lookup for 
   
 2. On the left nav, select **Tables**, and then open the table you want.
 
-3. Select **Properties**. 
+3. Select **Properties**.
 
-4. Expand **Advanced options**, and then select **Creating a new activity**. 
+4. Expand **Advanced options**, and then select **Creating a new activity**.
   
    > [!IMPORTANT]
    > Once enabled this setting can't be disabled.
 5. Select **Save**.
+
+### Enable users to associate activities to multiple records (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Users sometimes need to associate an email to multiple records. For example, a customer sends an email that is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](../../developer/data-platform/activityparty-entity.md#activity-party-types) column named **related**. When an email is associated to multiple records, it appears in the [timeline](../../user/add-activities.md) for each of the associated records.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [preview-tags](../../includes/cc-preview-features-definition.md)]
+
+The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, go to [add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
+
+After you add the related column to the form, users can associate an email record with other related party records (parties) like cases or opportunities.
+
+#### Differences between regarding and related columns
+
+While there are similarities between the regarding and related columns, the following are important differences to note:
+
+- **Supported tables**  
+The related column is currently only available for the Email table. The related column doesn't currently support the same relationships utilized by the regarding column. The list of supported tables is currently limited to the tables that [can have a contact email](../../maker/data-platform/create-edit-entities-portal.md#advanced-options).
+
+- **Relationship type**  
+The regarding column acts as a [parental relationship](../../maker/data-platform/create-edit-entity-relationships.md#parental-table-relationships) from a parent record. For example, if an account has multiple activities and is later deleted, the same action is automatically applied to the child activity records. The related column isn't a parental relationship. Actions performed on related records don't affect the related activities.
+  
+- **When the column value is set**  
+After the related column is added to the email form, users can manually add one or more records to indicate the records are related to the activity. The regarding and related columns are independent. Setting a value for the regarding lookup column doesn't affect the values for related. When a new email is related to an existing email (for example, as a reply), the values from the related and regarding columns of the correlated email are copied to the new activity. However, when you create a new email from the timeline control within a record’s context, the related column isn't automatically set to the current record. This behavior can be modified by enabling an [OrgDBOrgSetting](/power-platform/admin/orgdborgsettings) named AddParentEntityToRelatedOnNewActivityCreate.
+
+- **Outlook add-in scenarios**  
+Some features such as Dynamics 365 App for Outlook and Copilot for Sales include an ability to save an Outlook email as an email record while also setting the regarding column. These features don't set the value of the related column.
 
 ## Table ownership
 
@@ -82,11 +113,11 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 - **Business Unit**. A few system tables are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
 
 > [!IMPORTANT]
->  After a custom table is created, you can't change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
+> After a custom table is created, you can't change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
 
 ## Virtual tables
 
-A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services. More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ## Elastic tables
 
@@ -96,6 +127,5 @@ Elastic tables offer performance benefits over standard tables when the table co
 
 [Create tables](./data-platform-create-entity.md)<br/>
 [Edit tables](./edit-entities.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

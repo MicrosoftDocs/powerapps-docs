@@ -98,7 +98,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
 6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
 7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](#troubleshooting-common-issues) if you don't see the desired workspace.  
-8. All Dataverse tables where "Change tracking" property is enabled are linked to Fabric. If this environment is linked to Finance Operations, you can add Finance and operations tables later. See [manage links section](## Manage link to Fabric).
+8. All Dataverse tables where "Change tracking" property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later. More information: [Manage link to Fabric](#manage-link-to-fabric).
 9. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
 10. When complete, Fabric lakehouse opens in a separate browser tab. 
 
@@ -123,7 +123,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**.
 
    > [!NOTE]
-   > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: (Choose finance and operations data in Azure Synapse Link for Dataverse)[azure-synapse-link-select-FnO-data.md]
+   > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
 
 6. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
 7. If a new column is added to a table that’s already added (also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.

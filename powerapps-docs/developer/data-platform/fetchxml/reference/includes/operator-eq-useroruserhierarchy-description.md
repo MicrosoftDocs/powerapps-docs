@@ -1,0 +1,1 @@
+When hierarchical security models are used, Equals current user or their reporting hierarchy.

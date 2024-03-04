@@ -2,7 +2,7 @@
 title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 01/18/2024
+ms.date: 02/22/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -11,6 +11,7 @@ search.audienceType:
 contributors:
  - sumantb-msft
  - JimDaly
+ - bhavana95
 ---
 
 # Use elastic tables using code
@@ -84,6 +85,9 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 As was mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
 
+> [!IMPORTANT]
+> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There is no error thrown if `partitionid` is not specified in the lookup value of referencing table, but the lookup will fail to locate the record when you use it. You must document and enforce this requirement via code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all the operations.
+
 After you specify a non-null value for the `partitionid` column when you create a row, you must specify it when you perform any other data operation on that row. You can't change the value later.
 
 If you don't set a `partitionid` value for a record when you create it, the `partitionid` column value remains null, and you can't change it later. In this case, you can identify records by using the primary key, just as you do with standard tables. Specifying a `partitionid` value isn't required.
@@ -97,7 +101,7 @@ You can set the `partitionid` value in following ways when you perform various d
 
 As was mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key that is named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
 
-You can use this alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations.
+If you are using a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you set a lookup column for another table that refers to an elastic table record.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -677,6 +681,173 @@ OData-Version: 4.0
 You can also use the `partitionId` parameter:
 
 `sensordata(02d82842-f3f4-ed11-8848-000d3a993550)?partitionId=deviceid-001`
+
+---
+
+## Associate elastic table records
+
+When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
+
+When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key. 
+
+As described in [Partitionid value column on referencing table](create-elastic-tables.md#partitionid-value-column-on-referencing-table), when a one-to-many relationship is created and the elastic table is the *referenced* table, a string column and a lookup column is created on the *referencing* table. The string column stores the `partitionid` value of the referenced elastic table record.
+
+You can set both the lookup and the string column values with their respective values by:
+
+- Using an alternate key reference to set only the lookup
+- Setting the two column values together in one update
+
+How you do this depends on whether you are using the SDK for .NET or Web API
+
+
+#### [SDK for .NET](#tab/sdk)
+
+This example associates an elastic `contoso_SensorData` table record with the specified ID and `partitionid` to an existing account record by setting the lookup column with an alternate key:
+
+```csharp
+/// <summary>
+/// Demonstrates associate to elastic table operation.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="accountId">The unique identifier of the account record to update.</param>
+public static void AssociateAccountAlternateKeyExample(
+    IOrganizationService service,
+    Guid sensordataId,
+    string deviceId,
+    Guid accountId)
+{
+    var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensordataId },
+        { "partitionid", deviceId }
+    };
+
+    var sensorDataReference = new EntityReference("contoso_sensordata", keys);
+
+    Entity account = new("account", accountId)
+    {
+        Attributes =
+            {
+                {"contoso_sensordata", sensorDataReference}
+            }
+    };
+
+    service.Update(account);
+}
+```
+
+This example does the same thing, but sets both of the columns together:
+
+```csharp
+/// <summary>
+/// Demonstrates associate to elastic table operation.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="deviceId">The unique identifier of the account record to update.</param>
+public static void AssociateAccountBothColumnsExample(
+    IOrganizationService service,
+    Guid sensordataId,
+    string deviceId,
+    Guid accountId)
+{
+    Entity account = new("account", accountId) {
+        Attributes =
+            {
+                {"contoso_sensordata", new EntityReference("contoso_sensordata", sensordataId)},
+                {"contoso_sensordatapid", deviceId }
+            }
+    };
+
+    service.Update(account);
+}
+```
+
+Finally, this example shows using the [AssociateRequest](xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest) to associate a collection of `account` records to the same `contoso_SensorData` table record in one operation.
+
+```csharp
+/// <summary>
+/// Demonstrates associating multiple accounts to a contoso_sensordata elastic table record
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="relatedEntities">A collection of references to account records to associate to the contoso_sensordata elastic table record</param>
+public static void AssociateMultipleElasticTableExample(
+   IOrganizationService service,
+   Guid sensordataId,
+   string deviceId,
+   EntityReferenceCollection relatedEntities)
+{
+
+   // The keys to the elastic table record including the partitionid
+   var keys = new KeyAttributeCollection() {
+         { "contoso_sensordataid", sensordataId },
+         { "partitionid", deviceId }
+   };
+
+   AssociateRequest request = new()
+   {
+         Target = new EntityReference("contoso_sensordata", keys),
+         Relationship = new Relationship("contoso_SensorData_contoso_SensorData_Acc"),
+         RelatedEntities = relatedEntities
+   };
+
+   service.Execute(request);
+}
+```
+
+
+#### [Web API](#tab/webapi)
+
+This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `490c3c40-e8d1-ee11-9079-000d3a993550` and `partitionid` = `'DEVICE-123'` to account record with `accountid` value of `2ada33e7-ef8b-ee11-8179-000d3a9933c9`.
+
+**Request:**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/accounts(2ada33e7-ef8b-ee11-8179-000d3a9933c9)
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{
+  "contoso_SensorData@odata.bind": "contoso_sensordatas(contoso_sensordataid=490c3c40-e8d1-ee11-9079-000d3a993550,partitionid='DEVICE-123')"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
+This example does the same thing, but sets both of the columns together:
+
+**Request:**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/accounts(2ada33e7-ef8b-ee11-8179-000d3a9933c9)
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+
+{
+  "contoso_sensordatapid": "DEVICE-123",
+  "contoso_SensorData@odata.bind": "contoso_sensordatas(490c3c40-e8d1-ee11-9079-000d3a993550)"
+}
+
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
 
 ---
 
