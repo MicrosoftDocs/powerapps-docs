@@ -1,7 +1,7 @@
 ---
 title: Set an app as a startup app (preview)
 description: Learn how to set an app as a startup app for mobile experience in Power Apps mobile app.
-ms.date: 2/5/2024
+ms.date: 3/4/2024
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
