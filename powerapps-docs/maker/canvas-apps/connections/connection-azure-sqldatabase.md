@@ -47,11 +47,11 @@ You can directly call SQL Server stored procedures from Power Fx by turning on t
 
 1. Go to **Settings** > **Upcoming features** > **Preview**.
 1. Search for _stored procedures_.
-1. Turn on the preview switch as shown.
+1. Turn on the preview switch as shown.  (You will need to save and reopen the app.)
 
 :::image type="content" source="media/connection-azure-sqldatabase/previewflag-call-sp-direct.png" alt-text="Screenshot that shows the SQL Server stored procedures toggle set to On.":::
 
-When you add a SQL Server connection to your app, you can now add tables and views or stored procedures.
+When you add a SQL Server connection to your app, you can now add tables and views or stored procedures. This feature also works with secure implicit connections.
 
 :::image type="content" source="media/connection-azure-sqldatabase/tables-views-stored-proc-selector.png" alt-text="Screenshot that shows lists of tables, views, and stored procedures available to be added to your app.":::
 
@@ -59,10 +59,10 @@ If you don't immediately see your stored procedure, it's faster to search for it
 
 Once you select a stored procedure, a child node appears and you can designate the stored procedure as **Safe to use for galleries and tables**. If you check this option, you can assign your stored procedure as an **Items** property for galleries for tables to use in your app.
 
-Enable this option only if:
+Enable this option **only if**:
 
-1. There are no side effects to calling this procedure on demand, multiple times, whenever Power Apps refreshes the control. When used with an **Items** property of a gallery or table, Power Apps calls the stored procedure whenever the system determines a refresh is needed. You can't control when the stored procedure is called.
-2. The stored procedure returns less than the delegable limit (500/2000) of records. When a table or view is assigned to an **Items** property, Power Apps can control the paging and bring in 100 records at a time, when it needs it. Stored procedures are different and might be pageable through an argument to the stored procedure. But Power Apps can't bring in pages automatically like it can for tables and views. The author must configure pageability.
+1. There are **no side effects** to calling this procedure on demand, multiple times, whenever Power Apps refreshes the control. When used with an **Items** property of a gallery or table, Power Apps calls the stored procedure whenever the system determines a refresh is needed. You can't control when the stored procedure is called.
+2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, do not have a limit on the number of rows retrieved. They are not automatically paged in 100 record increments like tabular data sources (tables or views.) So, if the stored procedure returns a lot of data (many thousands of records) then your app may slow down or crash. For performance reasons you should bring in less than 2000 records.
 
 ### Example
 
@@ -70,14 +70,18 @@ When you add a stored procedure, you might see more than one data source in your
 
 :::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text="Screenshot that shows SQL data sources.":::
 
-Prefix the stored procedure name with the name of connector associated with it. For example, _DataCardValue3_1.Text_ is from the _DataCard_ connector.
+To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. Note also that when Power Apps brings the stored procedure in, it concatenates the full name. So, 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
 
-Label the values, for example using a number, as necessary since you're reading from a text value in Power Apps.
+Remember to convert values appropriately as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you are updating an integer in SQL you must convert the text in the field using 'Value()'.
 
 ![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
 
 > [!TIP]
-> To use a stored procedure in an **Item** property for a gallery or table, use the stored procedure name where you'd use the table name.
+> To use a stored procedure in an **Item** property for a gallery or table, use the stored procedure name where you'd use the table name. Views do not have primary keys so you will need to supply a key value for record specific operations. You can access the stored procedure after you declare it safe for the UI. Reference the data source name and the the name of the stored procedure followed by 'ResultSets'. You can access multiple results by indexing through list of tables returned.
+>
+```powerapps-dot
+Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
+```
 
 ## Known issues
 
