@@ -38,20 +38,22 @@ As the volume of data held in the app's database continues to grow it becomes mo
 
 ## Reporting infrastructure
 
-In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. 
+In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers' individual database instance. 
   
 The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
 - Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provide significant flexibility to satisfy most operational reporting needs. 
   
-- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report. More information: [Fetch XML aggregation](../../developer/data-platform/use-fetchxml-aggregation.md) and [report prefiltering](/dynamics365/customerengagement/on-premises/analytics/improve-report-performance-by-using-filters).
+- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report. More information: [Aggregate data using FetchXml](../../developer/data-platform/fetchxml/aggregate-data.md) and [report prefiltering](/dynamics365/customerengagement/on-premises/analytics/improve-report-performance-by-using-filters).
 
 - The Report Viewer page is subject to the platform [API limits](../../developer/data-platform/api-limits.md). Multiple executions of a long-running report might result in an error, and the user can wait few minutes and try again. This is a per user limit and shouldn't affect the normal usage of reports by multiple users.
   
 - For charts and grids displayed in dashboards, your apps allow users to run queries that have a dataset that has fewer than 50,000 rows. Should a user run a dashboard query that spans a dataset of 50,000 or more rows, the message "The maximum row limit is exceeded. Reduce the number of rows" is returned.  The dataset practical setting helps to ensure optimal performance of the app. 
   
-<a name="BKMK_ReportTips"></a>   
-## Tips and solutions for reporting  
+<a name="BKMK_ReportTips"></a>
+
+## Tips and solutions for reporting
+
  Typically, for most organizations' reporting needs, these settings are adequate. To make sure that your users don't exceed these settings and to improve report querying performance in general, consider the following best practices.  
   
 - When creating custom reports or dashboards, design them to query smaller datasets over shorter periods of time by adding a time-based filter in the report, such as the current month or quarter, to limit the results.  
@@ -99,7 +101,7 @@ If users must run reports that exceed these settings, we recommend that you revi
  [Report Authoring Extension (with SQL Server Data Tools support)](https://www.microsoft.com/download/details.aspx?id=45013) <br />
   
  [Introduction to Microsoft Power Query for Excel](https://office.microsoft.com/en-ca/excel-help/introduction-to-microsoft-power-query-for-excel-HA104003940.aspx?CTT=5&origin=HA104003813)   <br />
- [Dynamics 365 for Customer Engagement OData Feeds and Power Query: What’s the &#91;Record&#93;?](https://community.dynamics.com/crm/b/survivingcrm/archive/2014/02/16/dynamics-crm-odata-feeds-and-power-query-what-s-the-record.aspx)   <br />
+ [Dynamics 365 for Customer Engagement OData Feeds and Power Query: What's the &#91;Record&#93;?](https://community.dynamics.com/crm/b/survivingcrm/archive/2014/02/16/dynamics-crm-odata-feeds-and-power-query-what-s-the-record.aspx)   <br />
  
 
 

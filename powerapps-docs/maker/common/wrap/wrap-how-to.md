@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 2/9/2023
 ms.subservice: canvas-maker
-ms.author: makolomi
+ms.author: clromano
 search.audienceType: 
   - maker
 contributors:
@@ -90,7 +90,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure key valut for wrap for Power Apps](create-key-vault-for-code-signing.md).
+If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
@@ -258,5 +258,5 @@ You can automatically sign your mobile app package during wrap process in **Step
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Create your Azure key vault for automated code signing](create-key-vault-for-code-signing.md)
+- [Create your Azure Key Vault for automated code signing](create-Key-Vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)

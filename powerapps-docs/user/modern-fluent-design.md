@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 01/26/2024
+ms.date: 02/07/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -93,6 +93,10 @@ Switching themes or enabling dark mode isn't supported at this time.
 
 With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. See [change the color of the app header](#change-the-color-of-the-app-header) for more details.  Other theme customization options for the modern, refreshed look aren't available yet.  
 
+### Custom icons
+
+Only SVG icons are supported. If you use other formats such as PNG, the navigation won't display them and a default icon will appear instead.
+
 ## Frequently asked questions (FAQs)
 
 ### Using the modern, refreshed look in Power Apps Component Framework / custom code components
@@ -128,29 +132,25 @@ End users can enable the modern, refreshed look for their model-driven apps in t
 
 ### Revert to the old UI
 
-Yes, end users can switch back to the old UI by turning off the **Try the new look** toggle. Makers can also disable the new look by updating the app setting.
+Yes, end users can switch back to the old UI by turning off the **New look** toggle. Makers can also disable the new look by updating the app setting.
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
-Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This hides the **Try the new look** toggle and prevents the modern, refreshed look from taking effect.
+Admins can disable the **New look** setting across all apps in an organization by using the solution explorer to set the **New look for model driven apps** value to **No**. This hides the **New look** toggle and prevents the modern, refreshed look from taking effect.
 
 1. Open <https://make.powerapps.com/>
 1. Under Solutions open an existing solution with one or more model-driven apps:
 1. Select **Add Existing** > **More** > **Setting**.
-1. Search for **Try**.
-1. Select **Try the new look**.
-
-    > [!NOTE]
-    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden as described in this section. The second setting was used in the public preview phase to allow users to have the modern, refreshed look, but the setting did not appear as a toggle.
-
+1. Search for **New look**.
+1. Select **New look for model driven apps**.
 1. Select **Add** to add it to the solution.
-1. Select **Try the new look** from the solution explorer.
+1. Select ****New look for model driven apps** from the solution explorer.
 1. Update **Setting Environment Value** to **No**.
 1. Select **Save**.
 1. Publish all customizations.
 
     > [!NOTE]
-    > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
+    > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
 
 ### Managing on by default general availability rollout
 

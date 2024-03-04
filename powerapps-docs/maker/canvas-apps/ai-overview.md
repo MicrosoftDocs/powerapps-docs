@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 3/13/2023
+ms.date: 02/07/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -80,4 +80,7 @@ Follow these steps to enable or disable **Copilot** for your environment.
 
 ## See also
 
-[Transparency notes for Power Apps](../common/transparency-note.md)
+- [Transparency notes for Power Apps](../common/transparency-note.md)
+- [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
+- [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)
+  

@@ -1,29 +1,25 @@
 ---
-title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Dataverse long-term data retention enables customers to transfer data from their transactional database to the Dataverse managed data lake." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs"
+description: "Dataverse long-term data retention enables customers to retain their historical transactional data with Dataverse long term retention."
 ms.custom: 
-ms.date: 05/23/2023
+ms.date: 02/28/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "kagoswami" # GitHub ID
+author: "kagoswami"
 ms.subservice: dataverse-developer
-ms.author: "kagoswami" # MSFT alias of Microsoft employees only
+ms.author: "kagoswami"
 search.audienceType: 
   - developer
 ---
 
 # Long-term data retention
 
-*Long-term retention* (LTR) is a capability that enables customers to transfer their data from a Dataverse transactional database to a managed data lake. To perform LTR operations, you're required to set up retention policies by defining criteria for a given data table. Based on the policy, retention runs at the scheduled time and retain rows matching the criteria.
+*Long-term retention* (LTR) is a capability that enables customers to retain their historical transactional data with Dataverse long term retention. To perform retention operations, you're required to set up retention policies by defining criteria for a given parent (root) data table. Based on the policy, retention runs at the scheduled time and rows are retained across the parent and child tables that match the criteria.
 
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
 > [!IMPORTANT]
-> You must meet one of the following two requirements to use all long term data retention features:
-> - Be a licensed Dynamics 365 customer engagement app customer.
-> - Be a licensed Power Apps customer with a managed environment.
->
-> Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
+> To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview).
   
 ## Retention policy setup and validation
 
@@ -129,7 +125,7 @@ Accept: application/json
 
 ### Custom plug-in on ValidateRetentionConfig
 
-The data retention process moves data from Dataverse transactional storage to a managed data lake. Once data is moved to the data lake, you cann't perform any transactional operations on that data. It's important to make sure that incorrect policies aren't being set up for data retention. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the `ValidateRetentionConfig` message.
+The data retention process moves data from Dataverse transactional storage to Dataverse long term retention. Once data is retained with long term retention, you can't perform any transactional operations on that data. It's important to make sure that incorrect policies aren't being set up for data retention. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the `ValidateRetentionConfig` message.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -232,7 +228,7 @@ class SampleBulkRetainPlugin : IPlugin
 
 ### Custom logic while row gets deleted due to retention
 
-Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows that were successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the retained table rows that were successfully moved.
+Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows that were successfully retained with Dataverse long term retention. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the retained table rows that were successfully moved.
 
 You can optionally register a custom plug-in on the `PurgeRetainedContent` message if you need any custom logic invoked during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row gets deleted due to retention. You can identify whether the delete happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent".
 
@@ -352,7 +348,7 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 
 ### [Web API](#tab/webapi)
 
-More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 ---
 
