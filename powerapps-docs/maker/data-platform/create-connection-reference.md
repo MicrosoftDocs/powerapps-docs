@@ -82,11 +82,11 @@ When an action is added to a solution flow, Power Automate will try to reuse exi
 
 ## Share connections with another user so flows can be enabled
 
-When a flow is turned on (enabled), the user turning on the flow needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the flow owner provides the connections on a flow, then the flow needs to be turned on by the owner of those connections or the connections need to be shared with the user who is turning on the flow. 
+When a flow is turned on (enabled), the user turning on the flow needs to own or have permission to use all the connections in the flow. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the flow owner provides the connections on a flow, then the flow needs to be turned on by the owner of those connections or the connections need to be shared with the user who is turning on the flow. 
 
 > [!NOTE]
 >
-> Connections can only be explicitly shared with a user representing a service principal.
+> [OAuth connections](/connectors/custom-connectors/#2-secure-your-api) can only be explicitly shared with a user representing a service principal. 
 
 ### Manual sharing of connections for flow enablement
 
