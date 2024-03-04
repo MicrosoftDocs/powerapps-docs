@@ -460,6 +460,8 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name:  Use Copilot answer control (preview)
+            href: ./canvas-apps/copilot-answer-control-overview.md
           - name: "Add mixed reality controls"
             items:
             - name: Mixed reality controls
@@ -540,6 +542,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Copilot answer (preview) 
+              href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Date picker (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown (preview)
@@ -1841,6 +1845,8 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+  - name: Set an app as a startup app (preview)
+    href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app
