@@ -62,7 +62,7 @@ To avoid this when using the late-bound style, you can use two strategies:
 
 ## Use FetchXML with FetchExpression
 
-FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
+FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Query data using FetchXml](../fetchxml/overview.md)
 
 The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
 
@@ -95,13 +95,10 @@ results.Entities.ToList().ForEach(x => {
 
 More information:
 
-- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
-- [FetchXML schema](../fetchxml-schema.md)
-- [Work with Quick Find's search item limit](../quick-find-limit.md)
-- [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
-- [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)
-- [Use a left outer join in FetchXML to query for rows "not in"](../use-fetchxml-left-outer-join-query-records-not-in.md)
+- [Query data using FetchXml](../fetchxml/overview.md)
+- [About quick find queries](../quick-find.md)
+- [Page results using FetchXml](../fetchxml/page-results.md)
+- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 - [Sample: Use aggregation in FetchXML](samples/use-aggregation-fetchxml.md)
 - [Sample: Use FetchXML with a paging cookie](samples/use-fetchxml-paging-cookie.md)
 
