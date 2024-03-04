@@ -17,3 +17,28 @@ contributors:
  - DonaldlaGithub
 ---
 # Filter rows using QueryExpression
+
+<!-- 
+Related: Seems you can filter on 'child column' values, those columns which have the naming convention:
+<lookupname>name and have AttributeOf = lookupname
+There is a 'emitVirtualAttributes' parameter for pac modelbuilder
+https://github.com/microsoft/powerplatform-vscode/issues/509
+ -->
+
+## Operator parameters
+
+### No parameters
+
+### Single parameter
+
+### Multiple parameters
+
+## Filters on link-entity
+
+## Filter on column values in the same row
+
+## Filter on values in related records
+
+## Condition limits
+
+## Next steps

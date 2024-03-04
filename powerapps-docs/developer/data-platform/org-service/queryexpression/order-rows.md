@@ -17,3 +17,13 @@ contributors:
  - DonaldlaGithub
 ---
 # Order rows using QueryExpression
+
+## Descending order
+
+## Process link-entity orders last
+
+## Ordering lookup and choice columns
+
+## Ordering and paging
+
+## Next steps

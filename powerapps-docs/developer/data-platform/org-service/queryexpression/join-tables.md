@@ -17,3 +17,21 @@ contributors:
  - DonaldlaGithub
 ---
 # Join tables using QueryExpression
+
+## Limitations
+
+## Child elements
+
+## Many-to-one relationships
+
+## One-to-many relationships
+
+## Many-to-many relationships
+
+## No relationship
+
+## Find records not in a set
+
+## Use advanced link types?
+
+## Next steps

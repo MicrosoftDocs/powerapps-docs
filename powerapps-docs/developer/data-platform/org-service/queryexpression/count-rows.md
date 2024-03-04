@@ -17,3 +17,7 @@ contributors:
  - DonaldlaGithub
 ---
 # Count rows using QueryExpression
+
+<!-- 
+   This is essentially the same as FetchXML
+ -->

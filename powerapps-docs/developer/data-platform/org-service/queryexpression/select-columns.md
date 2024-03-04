@@ -17,3 +17,11 @@ contributors:
  - DonaldlaGithub
 ---
 # Select columns using QueryExpression
+
+<!-- 
+   How to use ColumnSet
+    - Using generated constants from pac modelbuilder
+    - Using Formatted values
+    - Column Aliases?
+
+ -->

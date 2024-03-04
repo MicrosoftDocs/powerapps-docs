@@ -19,3 +19,19 @@ contributors:
 # Query data using QueryExpression
 <!-- Does not replace entity-operations-query-data.md -->
 <!-- Replaces build-queries-with-queryexpression.md -->
+
+## Compose a query
+
+## Limit the number of rows
+
+## Return distinct results
+
+## Retrieve Data
+
+## Refine your query
+
+## Community tools
+
+## Use FetchXml as a message parameter
+
+## Next steps
