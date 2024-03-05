@@ -11,9 +11,5 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
- - dmitmikh
- - dasussMS
- - apahwa-lab
- - DonaldlaGithub
 ---
 # QueryExpression sample code

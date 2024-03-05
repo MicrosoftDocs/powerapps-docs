@@ -11,10 +11,6 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
- - dmitmikh
- - dasussMS
- - apahwa-lab
- - DonaldlaGithub
 ---
 # Use QueryExpression to retrieve data
 
