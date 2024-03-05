@@ -41,6 +41,8 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme.
 
+**Font** - The name of the family of fonts in which text appears.
+
 ## Additional properties
 **AccessibleLabel** – Label for screen readers.
 
