@@ -1,13 +1,13 @@
 ---
-title: Button modern control in Power Apps
+title: Icon modern control in Power Apps
 description: Learn about the details, properties and examples of the button modern control in Power Apps.
-author: yogeshgupta698
+author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
 ms.date: 3/23/2023
 ms.subservice: canvas-maker
-ms.author: yogupt
+ms.author: noazarur
 
 
 ms.reviewer: mkaur
@@ -16,10 +16,10 @@ search.audienceType:
 contributors:
   - mduelae
   - yogeshgupta698
-  - noazarur-microsoft
+  - noazarur-micrsoft
   
 ---
-# Button modern control in Power Apps
+# Icon modern control in Power Apps
 
 A control that the user can select to interact with the app.
 
