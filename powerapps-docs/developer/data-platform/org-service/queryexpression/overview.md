@@ -37,11 +37,11 @@ EntityCollection results = service.RetrieveMultiple(query);
 
 This query returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md).
 
-- Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName)  using the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.%23ctor%2A?displayProperty=fullName> constructor.
+- Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName)  using the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression(System.String)?displayProperty=fullName> constructor.
 - Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet.%23ctor%2A?displayProperty=fullName> constructor.
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount)
 
-You can compose the same query without the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.%23ctor%2A?displayProperty=fullName> constructor or object initialization pattern and just set the properties to the instantiated instance as shown in the following example:
+You can compose the same query without the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression(System.String)?displayProperty=fullName> constructor or object initialization pattern and just set the properties to the instantiated instance as shown in the following example:
 
 ```csharp
 QueryExpression query = new();
