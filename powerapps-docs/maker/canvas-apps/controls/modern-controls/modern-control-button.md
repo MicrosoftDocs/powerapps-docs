@@ -43,6 +43,8 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **Font** - The name of the family of fonts in which text appears.
 
+**FontColor** - The color of text in a control. 
+
 ## Additional properties
 **AccessibleLabel** – Label for screen readers.
 
