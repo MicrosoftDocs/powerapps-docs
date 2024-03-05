@@ -25,6 +25,12 @@ sections:
    - question: How can I access my table relationships?
      answer: |
         To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a pre-existing link.
+   - question: How can I get estimated costs before adding Azure Synapse Link?
+     answer: |
+        Azure Synapse Link is a free OOB solution in Dataverse. Utilizing Azure Synapse Link for Dataverse does not incur additional charges under Dataverse. However, consider potential costs for Azure service:
+        - Data storage in ADLS gen2:  [Azure Storage Data Lake Gen2 Pricing | Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/storage/data-lake/)
+        - Data consumption cost (e.g., Synapse Workspace):  [Pricing - Azure Synapse Analytics | Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/)
+        For comprehensive Azure cost management information, please check: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs)
    - question: What happens when I add a column?
      answer: |
         When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed prior to the addition of the column won't show the new column, new or updated rows will show the newly added column.
@@ -39,6 +45,9 @@ sections:
         Deleting a row is handled differently based on which data write options you choose:
         - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
         - Append-only: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
+   - question: Why I am not seeing column header in exported file?
+     answer: |
+        Azure Synapse Link follow Common Data Model to makes it possible for data and its meaning to be shared across applications and business processes such as Microsoft PowerApps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like column header is stored in model.json file. For more information: [Common Data Model and Azure Data Lake Storage Gen2 - Common Data Model | Microsoft Learn](https://learn.microsoft.com/en-us/common-data-model/data-lake)   
    - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
      answer: |
         Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and MaxLength to 100. What you see in Model.json is `DBLength`` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns.
@@ -71,6 +80,9 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
+    - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
+     answer: |
+         It is expected: Modifiedon is the datetime that record being changed in Dataverse; Sinkmodifiedon is the datetime that record being modified in the Datalake.  
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled won't be supported in addition to following system tables:
@@ -80,6 +92,9 @@ sections:
 
         > [!NOTE]
         > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+   - question: I am using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
+     answer: |
+        The Delta Lake conversion job will be triggered if there was a data change in the configured time interval. There is no option to stop/pause the Apache Spark Pool. However, user can modify the time interval after the link creation under Manage tables – Advanced – Time interval.
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Calculated columns are only supported when the lookup field is located within the same table. Data updates occur only when change tracking is triggered: Lookup values will change on the root tables only when the root table records are changed. To better reflect the value of a lookup field, it's recommended to join with the original table to get the latest value.
@@ -99,6 +114,10 @@ sections:
    - question: Why do I see the error message - can't bulk load because the file is incomplete or couldn't be read?
      answer: |
         Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you're reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
+   - question: How can I use Azure Synapse Link to archive critical data?
+     answer: |
+        Synapse Link for DV is designed for analytics purposes, we recommend customers to use long-term-retention for archive purposes: [Dataverse long term data retention overview - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-retention-overview)
+
 additionalContent: |
 
   ## See also
