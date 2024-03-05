@@ -1,11 +1,11 @@
 ---
-title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
+description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies."
+ms.date: 03/22/2024
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath
+ms.author: jdaly
 search.audienceType: 
   - developer
 contributors:
@@ -21,9 +21,9 @@ The SDK for .NET provides several methods to query data. Each provides different
 
 |Method|Advantages|
 |--|--|
-|[FetchExpression](#use-fetchxml-with-fetchexpression)|Use the proprietary FetchXML query language to create complex queries that return aggregates such as the sum of a value for all returned records. You can also perform group by operations with FetchXML. Can include data from linked table rows (entity records).|
-|[QueryExpression](#use-queryexpression)|You have a strongly typed object model to construct complex queries. Supports all the features in FetchXML except for aggregates and grouping. Can include data from linked table rows (entity records).|
-|[QueryByAttribute](#use-querybyattribute)|A simpler object model than `QueryExpression`. Use `QueryByAttribute` for queries where you are testing whether all the table column (attribute) value criteria in your query are a match. Can only return data from a single table (entity type).|
+|[FetchExpression](#use-fetchxml-with-fetchexpression)|Use the proprietary FetchXML query language to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. FetchXml provides capabilities that other options do not.|
+|[QueryExpression](#use-queryexpression)|Use a strongly-typed object model to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. Supports [most the features](queryexpression/overview.md#limitations) in FetchXML.|
+|[QueryByAttribute](#use-querybyattribute)|A simpler object model for common queries to return rows that match all the criteria in your query. Supports paging, but not groups and aggregated data sets. Can only return data from a single table.|
 |[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider> to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br /> This topic will focus on the styles of queries available via the SDK assembly classes. More information: [Build queries with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
 
 <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> derive from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase> abstract class. There are two ways to get the results of a query defined using these classes:
