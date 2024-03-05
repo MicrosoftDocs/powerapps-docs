@@ -20,7 +20,7 @@ contributors:
 In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object (table) searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for table rows where columns match specified values.
 
 > [!NOTE]
-> The third derived class, `FetchExpression` is used with FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+> The third derived class, `FetchExpression` is used with FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Query data using FetchXml](../fetchxml/overview.md)[Query data using FetchXml](../fetchxml/overview.md)
   
 Query expressions are used in methods that retrieve more than one row, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific record is not known.  
 
@@ -33,7 +33,7 @@ To save a query so you can re-use it, you can convert it to FetchXML by using th
 
 There are two additional ways to create queries to retrieve records from Dataverse. 
 
-- FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md). 
+- FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Query data using FetchXml](../fetchxml/overview.md). 
 - .NET Language-Integrated Query (LINQ). More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
 
 <!-- This doesn't belong here. It should be in model driven app configuration -->

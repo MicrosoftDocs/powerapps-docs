@@ -460,6 +460,8 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name:  Use Copilot answer control (preview)
+            href: ./canvas-apps/copilot-answer-control-overview.md
           - name: "Add mixed reality controls"
             items:
             - name: Mixed reality controls
@@ -540,6 +542,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Copilot answer (preview) 
+              href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Date picker (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown (preview)
@@ -1841,6 +1845,8 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+  - name: Set an app as a startup app (preview)
+    href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app
@@ -1875,8 +1881,6 @@
           href: ./portals/build-progressive-web-apps.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
-    - name: Create and show site content
-      href: ./portals/configure/create-show-portal-content.md
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
     - name: Update domain name
@@ -1921,7 +1925,7 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables (preview)
+    - name: Long term data retention for tables
       items:
       - name: Long term data retention overview
         href: ./data-platform/data-retention-overview.md
@@ -2097,7 +2101,7 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
-      - name: Set the preferred solution (preview)
+      - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
@@ -2249,6 +2253,8 @@
         href: ./data-platform/azure-synapse-link-msi.md  
       - name: Choose finance and operations data in Azure Synapse Link for Dataverse
         href: ./data-platform/azure-synapse-link-select-FnO-data.md
+      - name: Azure Synapse Link for Dataverse troubleshooting guide
+        href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2529,7 +2535,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Solution templates for Power Platform (preview)
+  - name: Enterprise templates for Power Platform
     href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
