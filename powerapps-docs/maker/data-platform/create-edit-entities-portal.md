@@ -1,6 +1,6 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
-description: "Understand how to create and edit tables using Power Apps portal"
+description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
 ms.date: 01/30/2024
 ms.reviewer: ""
@@ -36,7 +36,7 @@ There are several ways to create a new table:
 - [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file](#upload-an-excel-file)
+- [Create with external data](#create-with-external-data)
 - [Create a virtual table](#create-a-virtual-table)
 
 ### Add columns and data
@@ -64,9 +64,6 @@ Create a table with the help of AI Copilot.
 
 ### Set advanced properties
 
-<!-- Watch this video for a quick overview about how to create a table:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
-
 Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
@@ -77,8 +74,8 @@ Enter data for the following properties.
 
 |Property |Description|
 |--|--|
-|**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
-|**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
+|**Display name**|This is the singular name for the table that is shown in the app. This can be changed later.|
+|**Plural display name**|This is the plural name for the table that is shown in the app. This can be changed later.|
 |**Description**|Provide a meaningful description of the purpose of the table.|
 
 Select **Enable Attachments** to append notes and files to records for this table.
@@ -103,7 +100,7 @@ Select **Advanced options** to display additional properties that are optional f
 |**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
-| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form will be used when the custom table icon is selected.  |
+| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected.  |
 |**Creating a new activity**  | Associate activities to records for this table.  |
 | **Doing a mail merge**  | App users can use this table with mail merge.   |
 |**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint.  |
@@ -117,14 +114,40 @@ Select **Advanced options** to display additional properties that are optional f
 
 Select **Save** to continue, this closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Upload an Excel file
+### Create with external data
 
-Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
+Choose between an Excel file or SharePoint list to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
 
-1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
+1. From the **Tables** area, on the command bar select **New table** > **Create with external data**.
+
+# [Excel file](#tab/excel)
+
+1. On the **To get data, select an option** dialog, select **File (Excel, .CSV)**.
 1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
+
+# [SharePoint list (preview)](#tab/sharepoint)
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+1. On the **To get data, select an option** dialog, select **SharePoint list**.
+1. Select the SharePoint site you want from the following options:
+
+   - **Enter the SharePoint URL** for the SharePoint site that has the list you want, and then select **Connect**.
+   - Select the SharePoint site with the list you want under **Recent sites**.
+   - Alternatively, you can create a new connection to a SharePoint site by selecting **...** > **Add a new connection** on the left pane.
+
+1. Under **Select a list**, select the list you want, and then select **Next**.
+1. The table preview appears. Select from the following options:
+
+   - Select **Edit table properties** if you want to change the table name and description that are generated for you.
+   - Select **Row ownership** if you want to change the table row ownership to either user\group or organization owned. More information: [Table ownership](types-of-entities.md#table-ownership)
+1. Select **Create** to create the table.
+
+---
 
 For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
 
