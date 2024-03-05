@@ -77,6 +77,9 @@ sections:
    - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
      answer: |
         In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
+   - question: If I drop and relink the table, will VersionNumber make any changes?
+     answer: |
+        **VersionNumber** is a rowversion data type and will be changed after any operation.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
