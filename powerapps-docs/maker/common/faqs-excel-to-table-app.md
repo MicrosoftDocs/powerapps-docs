@@ -1,7 +1,7 @@
 ---
 title: FAQ for Excel or SharePoint list to table and app
-description: This FAQ provides information about the AI technology that's used in Excel to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 02/02/2024
+description: This FAQ provides information about the AI technology that's used in Excel or SharePoint list to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+ms.date: 03/05/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -10,7 +10,7 @@ ms.author: yueshu
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 ---
-# FAQ for Excel to table and app
+# FAQ for Excel or SharePoint list to table and app
 
 These frequently asked questions (FAQ) describe the AI impact of the Excel or SharePoint list to table and app feature.
 
