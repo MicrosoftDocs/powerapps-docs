@@ -32,7 +32,7 @@ provides the following information and shows you how to perform the following ta
 > The Azure Synapse Link status in Power Apps (make.powerapps.com) reflects the delta lake conversion state:
 > - `Count` shows the number of records in the delta lake table.
 > - `Last synchronized on` Datetime represents the last successful conversion timestamp.
-> - `Sync status` is shown as **active** once the delta lake conversion completes.
+> - `Sync status` is shown as **active** once the data sync and delta lake conversion complete, indicating that the data is ready for consumption.
 
 ## What is Delta Lake?
 
