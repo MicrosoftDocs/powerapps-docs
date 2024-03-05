@@ -119,33 +119,33 @@ Select **Save** to continue, this closes the **New table** panel and display the
 Choose between an Excel file or SharePoint list to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
 
 1. From the **Tables** area, on the command bar select **New table** > **Create with external data**.
+1. Select either Excel or SharePoint list.
+   # [Excel file](#tab/excel)
 
-# [Excel file](#tab/excel)
+   1. On the **To get data, select an option** dialog, select **File (Excel, .CSV)**.
+   1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
+   1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
+   1. When you're finished, select **Create**.
 
-1. On the **To get data, select an option** dialog, select **File (Excel, .CSV)**.
-1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
-1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
-1. When you're finished, select **Create**.
+   # [SharePoint list (preview)](#tab/sharepoint)
 
-# [SharePoint list (preview)](#tab/sharepoint)
+   > [!IMPORTANT]
+   > - This is a preview feature.
+   > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+   1. On the **To get data, select an option** dialog, select **SharePoint list**.
+   1. Select the SharePoint site you want from the following options:
 
-1. On the **To get data, select an option** dialog, select **SharePoint list**.
-1. Select the SharePoint site you want from the following options:
+      - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as *https://microsoft.sharepoint.com/teams/ContosoSite*, and then select **Connect**.
+      - Select the SharePoint site with the list you want under **Recent sites**.
+      - Alternatively, you can create a new connection to a SharePoint site by selecting **...** > **Add a new connection** on the left pane.
 
-   - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as *https://microsoft.sharepoint.com/teams/ContosoSite*, and then select **Connect**.
-   - Select the SharePoint site with the list you want under **Recent sites**.
-   - Alternatively, you can create a new connection to a SharePoint site by selecting **...** > **Add a new connection** on the left pane.
+   1. Under **Select a list**, select the list you want, and then select **Next**.
+   1. The table preview appears. Select from the following options:
 
-1. Under **Select a list**, select the list you want, and then select **Next**.
-1. The table preview appears. Select from the following options:
-
-   - Select **Edit table properties** if you want to change the table name and description that are generated for you.
-   - Select **Row ownership** if you want to change the table row ownership to either user\group or organization owned. More information: [Table ownership](types-of-entities.md#table-ownership)
-1. Select **Create** to create the table.
+      - Select **Edit table properties** if you want to change the table name and description that are generated for you.
+      - Select **Row ownership** if you want to change the table row ownership to either user\group or organization owned. More information: [Table ownership](types-of-entities.md#table-ownership)
+   1. Select **Create** to create the table.
 
 ---
 
