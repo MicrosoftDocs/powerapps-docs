@@ -8824,6 +8824,116 @@
       "source_path": "powerapps-docs/maker/portals/admin/update-portal-domain.md",
       "redirect_url": "/power-pages/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/terminology-changes.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-designer-anatomy.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-manage-webpages.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/compose-page.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-sections.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-text.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-image.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-iframe.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-form.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-list.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-breadcrumb.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-custom-menu.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/use-code-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-powerbi.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-chatbot.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/work-with-templates.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/theme-overview.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/edit-css.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/supported-browser.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-content-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/use-content-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/legacy-portal-faq.yml",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
     }
   ]
 }
