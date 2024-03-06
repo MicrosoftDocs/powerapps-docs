@@ -15,6 +15,8 @@ contributors:
 # Use QueryExpression to retrieve data
 
 <!-- 
+Will probably remove this unless there is some need for it.
+
 The mechanics of using RetrieveMultiple with QE. 
 
  - Inherits from QueryBase
