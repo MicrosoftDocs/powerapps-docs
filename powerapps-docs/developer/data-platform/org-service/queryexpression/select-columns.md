@@ -14,8 +14,6 @@ contributors:
 ---
 # Select columns using QueryExpression
 
-As described in [Query data using QueryExpression](overview.md), start your query by selecting a table using the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName), typically with the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)).
-
 > [!IMPORTANT]
 > We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned. This is [opposite of the behavior using FetchXml, where all columns are returned if you don't specify any](../../fetchxml/select-columns.md).
 

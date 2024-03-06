@@ -14,6 +14,12 @@ contributors:
 ---
 # Join tables using QueryExpression
 
+Use the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) property to describe the data from related tables to return with your query. This property contains a collection of [Query.LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that describe:
+
+Which related table rows to return
+Which columns of those records to return
+How to filter any records
+
 ## Limitations
 
 ## Child elements
