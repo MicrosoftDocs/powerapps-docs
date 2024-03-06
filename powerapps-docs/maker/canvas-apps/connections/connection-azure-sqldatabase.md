@@ -48,8 +48,9 @@ You can directly call SQL Server stored procedures from Power Fx by turning on t
 > Output parameters aren't supported.
 
 1. Go to **Settings** > **Upcoming features** > **Preview**.
-1. Search for _stored procedures_.
-1. Turn on the preview switch as shown.  (You'll need to save and reopen the app.)
+1. Search for **stored procedures**.
+1. Set the toggle to **On** for **SQL Server stored procedures**.
+2. Save and reopen the app.
 
 :::image type="content" source="media/connection-azure-sqldatabase/previewflag-call-sp-direct.png" alt-text="Screenshot that shows the SQL Server stored procedures toggle set to On.":::
 
