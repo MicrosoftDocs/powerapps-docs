@@ -270,6 +270,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - App
 - Compass
 - Connection
+- Dataverse file type columns
 - Environment
 - Host
 - Layout
