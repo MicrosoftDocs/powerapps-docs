@@ -20,7 +20,7 @@ This sample showcases how localization is done for code components. In this samp
 > [!NOTE]
 > Code component runtime localization is in Public Preview for Custom page and Canvas applications. More information: [Blog: Runtime localization support for Code components on Custom pages and Canvas apps](https://powerapps.microsoft.com/en-us/blog/runtime-localization-support-for-code-components-on-custom-pages-and-canvas-apps/). 
 
-Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](/dynamics365/customer-engagement/developer/resx-web-resources). 
+Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [RESX web resources](../../model-driven-apps/resx-web-resources.md). 
 > [!div class="mx-imgBorder"]
 > ![Localization API component.](../media/localization-api-control.png "Localization API component")
 
