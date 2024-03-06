@@ -14,13 +14,19 @@ contributors:
 ---
 # Join tables using QueryExpression
 
-Use the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) property to describe the data from related tables to return with your query. This property contains a collection of [Query.LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that describe:
+Use the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) property to describe the data from related tables to return with your query. This property contains a collection of [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that describe:
 
-Which related table rows to return
-Which columns of those records to return
-How to filter any records
+- Which related table rows to return
+- Which columns of those records to return
+- Any filters to apply with the join
 
 ## Limitations
+
+You can add up to 15 [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances to a query. Each `LinkEntity` adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 `LinkEntity` to the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) you will get this runtime error:
+
+> Code: `0x8004430D`  
+> Number: `-2147204339`  
+> Message: `Number of link entities in query exceeded maximum limit.`  
 
 ## Child elements
 

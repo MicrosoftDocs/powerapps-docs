@@ -7,7 +7,7 @@ It could also be used in the Web API content
 
 How a page is ordered makes a big difference when paging data. If the information about how the results are ordered is ambiguous, Dataverse can't consistently or efficiently return paged data.
 
-Add an order element to your query. If you don't add any order elements to your query, Dataverse adds an order based on the primary key of the table. However, when your query uses the `distinct` attribute, no primary key values are returned, so Dataverse can't add this default order. You must specify a paging order. Without any order specified, `distinct` query results might be returned in random order. [Learn more about returning distinct results](overview.md#return-distinct-results)
+Specify an order for your query. With [FetchXml](../fetchxml/overview.md), if you don't add any order elements to your query, Dataverse adds an order based on the primary key of the table. However [QueryExpression](../org-service/queryexpression/overview.md) does not, and when your query specifies `distinct` results, no primary key values are returned, so Dataverse can't add this default order. You must specify a paging order. Without any order specified, `distinct` query results might be returned in random order.
 
 Paging is dynamic. Each request is evaluated independently as they're received. A paging cookie tells Dataverse the previous page. With this paging cookie data, Dataverse can start with the next record after the last one on the preceding page.
 
@@ -15,7 +15,7 @@ Paging works best going forward. If you go back and retrieve a page you previous
 
 ### Deterministic ordering is important
 
-*Deterministic ordering* means that there's a way to calculate an order consistently. With a given set of records, the records are always returned in the same order. If you need consistent orders and paging, you must include some unique or semi-unique column values and specify an order for them to be evaluated.
+*Deterministic ordering* means that there's a way to calculate an order consistently. With a given set of records, the records are always returned in the same order. If you need consistent orders and paging, you must include some unique values or combination of column values that are and specify an order for them to be evaluated.
 
 #### Nondeterministic example
 
@@ -68,7 +68,7 @@ Because this query orders unique column values, the order is consistent.
 > [!NOTE]
 > When possible, queries should order on the primary key for the table because Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique or complex fields cause excess overhead and slower queries.
 
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to [page the results](page-results.md). The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to page the results. The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 
