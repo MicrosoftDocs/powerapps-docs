@@ -115,10 +115,10 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Take a note of the **Name** of the certificate (usually like **iPhone Distribution: Name (Team ID)**). This value is the code signing identity that needs to be provided for signing.
 
-## Add all the devices where the iPA needs to be installed
+## Add all the devices where the IPA needs to be installed
 
  > [!NOTE]
- > This step is only necessary if you distributing to app to external users. It's not required if the app is only for internal users. 
+ > This step is only necessary if you're distributing to app to external users. It's not required if the app is only for internal users. 
 
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
