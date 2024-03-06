@@ -16,24 +16,29 @@ contributors:
 <!-- Does not replace entity-operations-query-data.md -->
 <!-- Replaces build-queries-with-queryexpression.md -->
 
-The [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), together with other classes in the [Microsoft.Xrm.Sdk.Query namespace](xref:Microsoft.Xrm.Sdk.Query), provides an object model to compose queries to retrieve records from Dataverse. [Compare options when querying data using the SDK for .NET](../entity-operations-query-data.md)
+The [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), together with other classes in the [Microsoft.Xrm.Sdk.Query namespace](xref:Microsoft.Xrm.Sdk.Query), provides an object model to compose complex queries to retrieve records from Dataverse using the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A). [Compare options when querying data using the SDK for .NET](../entity-operations-query-data.md)
 
 
 ## Compose a query
 
-Use the object model `QueryExpression` provides to compose queries that you can manipulate without depending on string manipulation using FetchXml.
+Use `QueryExpression` to compose dynamic queries that you can modify without the string/xml manipulation required [using FetchXml](../../fetchxml/overview.md).
 
-All queries are based on a single table. Use the `QueryExpression` class to select the table the query retrieves data from. The following example represents a simple `QueryExpression` query:
+All queries are based on a single table. Use the `QueryExpression` class to select the table the query retrieves data from. The following example represents a simple `QueryExpression` query that returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md):
 
 ```csharp
-QueryExpression query = new("account")
-{
-      ColumnSet = new ColumnSet("name"),
-      TopCount = 5
-};
+public static EntityCollection SimpleExample(IOrganizationService service) {
+
+   QueryExpression query = new("account")
+   {
+         ColumnSet = new ColumnSet("name"),
+         TopCount = 5
+   };
+
+   return service.RetrieveMultiple(query);
+}
 ```
 
-This query returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md).
+When the query instance is initialized, you can:
 
 - Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) using the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)).
 - Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())).
@@ -42,14 +47,25 @@ This query returns the [Name column](../../reference/entities/account.md#BKMK_Na
 You can compose the same query without the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)) or object initialization pattern and just set the properties to the instantiated instance as shown in the following example:
 
 ```csharp
-QueryExpression query = new();
-query.EntityName = "account";
-query.ColumnSet = new ColumnSet();
-query.ColumnSet.AddColumn("name");
-query.TopCount = 5;
+public static EntityCollection SimpleExample(IOrganizationService service)
+{
+
+   QueryExpression query = new();
+   query.EntityName = "account";
+   query.ColumnSet = new ColumnSet();
+   query.ColumnSet.AddColumn("name");
+   query.TopCount = 5;
+
+   return service.RetrieveMultiple(query);
+}
 ```
 
-This example uses the [ColumnSet.AddColumn method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumn*). Some classes in the [Microsoft.Xrm.Sdk.Query namespace](xref:Microsoft.Xrm.Sdk.Query) have methods like this to enable adding items.
+This example shows how you can:
+
+- Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) directly after initializing the QueryExpression instance.
+- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and then using the [ColumnSet.AddColumn method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumn*) to add the column name. Use the [ColumnSet.AddColumns method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumns*) to add multiple columns at a time.
+- Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount) *after* object initialization.
+
 
 Examples in this documentation will use a combination of both patterns. As queries become more complex, the object initialization pattern can become unwieldy. You can always define the query properties separately and add them to the query by setting the properties or using the available methods.
 
@@ -77,7 +93,7 @@ As explained in [Query data using the SDK for .NET](../entity-operations-query-d
 EntityCollection results = service.RetrieveMultiple(query);
 ```
 
-You can also set the query to the [RetrieveMultipleRequest.Query](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) property to sent the request using the [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+You can also use the  [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) set the query to the [RetrieveMultipleRequest.Query property](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) to sent the request using the [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 ```csharp
 RetrieveMultipleRequest request = new()
@@ -88,6 +104,11 @@ var response = (RetrieveMultipleResponse)service.Execute(request);
 
 EntityCollection results = response.EntityCollection;
 ```
+
+Use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) when you want to:
+
+- [Send an optional parameter with the request](../../optional-parameters.md)
+- Include the operation as part of a batch using the [ExecuteMultiple message](../execute-multiple-requests.md) or [ExecuteTransaction message](../use-executetransaction.md)
 
 
 ## Refine your query
@@ -110,14 +131,14 @@ After you select the table to start your query with, refine the query to get the
 
 There are some things that you can do using FetchXml that `QueryExpression` doesn't support.
 
-- Retrieve data using the Dataverse Web API. Some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
-- [Cross table comparisons](../../fetchxml/filter-rows.md#cross-table-comparisons)
+- Retrieve data using the Dataverse Web API. There are some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
+- [Cross table comparisons](../../fetchxml/filter-rows.md#cross-table-comparisons).
    `QueryExpression` supports [Filter on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
 - Set arbitrary aliases for columns.
 
 ## Community tools
 
-The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for `QueryExpression` queries using the same designer experience.
+The [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for `QueryExpression` queries using the same designer experience.
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
