@@ -16,7 +16,12 @@ contributors:
 
 As described in [Query data using QueryExpression](overview.md), start your query by selecting a table using the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName), typically with the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)).
 
-Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the logical names for the columns to return with your query. For example:
+> [!IMPORTANT]
+> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned. This is [opposite of the behavior using FetchXml, where all columns are returned if you don't specify any](../../fetchxml/select-columns.md).
+
+Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the logical names for the columns to return with your query. 
+
+You can specify the columns with the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())) when you initialize the `QueryExpression`.
 
 ```csharp
 QueryExpression query = new("account")
@@ -25,10 +30,23 @@ QueryExpression query = new("account")
 };
 ```
 
-> [!IMPORTANT]
-> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned.
+And you can use the [ColumnSet.AddColumn](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumn%2A) or [ColumnSet.AddColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumns%2A) methods to add additional columns.
 
-If you are using early-bound classes generated using the [pac modelbuilder command](/power-platform/developer/cli/reference/modelbuilder) with the [emitfieldsclasses](/power-platform/developer/cli/reference/modelbuilder#--emitfieldsclasses--efc) switch enabled, you can use the generated constants for all the field names rather than using the logical names directly as strings.
+```csharp
+QueryExpression query = new("account");
+query.ColumnSet.AddColumn("name");
+query.ColumnSet.AddColumns("accountclassificationcode", "createdby", "createdon");
+```
+
+> [!NOTE]
+> The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [DataCollection<string>](xref:Microsoft.Xrm.Sdk.DataCollection%602) that extends [Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection%602), so you can use the methods of those classes to interact with the strings in the collection.
+> 
+> Unlike FetchXml, the `ColumnSet` class provides no capability to set arbitrary alias values for columns when retrieving data without aggregation. When aggregating data, you can specify aliases using the [ColumnSet.AttributeExpressions property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AttributeExpressions). [Learn more about aggregating data using QueryExpression](aggregate-data.md)
+
+
+## Early bound field classes
+
+If you are using early-bound field classes generated using the [pac modelbuilder command](/power-platform/developer/cli/reference/modelbuilder) with the [emitfieldsclasses](/power-platform/developer/cli/reference/modelbuilder#--emitfieldsclasses--efc) switch enabled, you can use the generated constants for all the field names rather than using the logical names directly as strings.
 
 ```csharp
 QueryExpression query = new(Account.EntityLogicalName)
@@ -45,8 +63,6 @@ This helps avoid runtime errors. Learn more about:
 - [Generating early-bound classes for the SDK for .NET](../generate-early-bound-classes.md) 
 - [Late-bound and early-bound programming using the SDK for .NET](../early-bound-programming.md)
 
-> [!NOTE]
-> Unlike FetchXml, the `ColumnSet` class provides no capability to set arbitrary alias values for columns when retrieving data without aggregation. When aggregating data, you can specify aliases using the [ColumnSet.AttributeExpressions property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AttributeExpressions). [Learn more about aggregating data using QueryExpression](aggregate-data.md)
 
 
 <!-- 

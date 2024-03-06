@@ -41,7 +41,7 @@ public static EntityCollection SimpleExample(IOrganizationService service) {
 When the query instance is initialized, you can:
 
 - Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) using the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)).
-- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())).
+- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())). [Learn more about selecting columns](select-columns.md)
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount)
 
 You can compose the same query without the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)) or object initialization pattern and just set the properties to the instantiated instance as shown in the following example:
@@ -52,7 +52,6 @@ public static EntityCollection SimpleExample(IOrganizationService service)
 
    QueryExpression query = new();
    query.EntityName = "account";
-   query.ColumnSet = new ColumnSet();
    query.ColumnSet.AddColumn("name");
    query.TopCount = 5;
 
@@ -62,8 +61,8 @@ public static EntityCollection SimpleExample(IOrganizationService service)
 
 This example shows how you can:
 
-- Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) directly after initializing the QueryExpression instance.
-- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and then using the [ColumnSet.AddColumn method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumn*) to add the column name. Use the [ColumnSet.AddColumns method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumns*) to add multiple columns at a time.
+- Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) directly after initializing the `QueryExpression` instance using the default constructor.
+- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) using the [ColumnSet.AddColumn method](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AddColumn%2A) to add the column name. [Learn more about selecting columns](select-columns.md)
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount) *after* object initialization.
 
 
@@ -138,7 +137,7 @@ There are some things that you can do using FetchXml that `QueryExpression` does
 
 ## Community tools
 
-The [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for `QueryExpression` queries using the same designer experience.
+The [XrmToolBox](../../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for `QueryExpression` queries using the same designer experience.
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
@@ -159,7 +158,7 @@ You also use `QueryExpression` as a parameter for Dataverse operations such as t
 |`Rollup`|[RollupRequest](xref:Microsoft.Crm.Sdk.Messages.RollupRequest)|[Rollup function](xref:Microsoft.Dynamics.CRM.Rollup)|
 
 > [!NOTE]
-> Web API Operations other than [BulkDelete](xref:Microsoft.Dynamics.CRM.BulkDelete), [SyncBulkOperation](xref:Microsoft.Dynamics.CRM.SyncBulkOperation), and [QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml) can use FetchXml via the [FetchExpression complex type](xref:Microsoft.Crm.Sdk.Messages.FetchExpression). While the Web API contains the structures to compose queries using `QueryExpression`, such as the [QueryExpression](xref:Microsoft.Crm.Sdk.Messages.QueryExpression),[ColumnSet](xref:Microsoft.Crm.Sdk.Messages.ColumnSet), and [FilterExpression](xref:Microsoft.Crm.Sdk.Messages.FilterExpression) complex types, there is currently no way to use these to retrieve data with `QueryExpression` using the Web API [as you can with FetchXml](../../fetchxml/retrieve-data.md). This means it isn't possible to test the results of the query you would send as a parameter.
+> Web API Operations other than [BulkDelete](xref:Microsoft.Dynamics.CRM.BulkDelete), [SyncBulkOperation](xref:Microsoft.Dynamics.CRM.SyncBulkOperation), and [QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml) can use FetchXml via the [FetchExpression complex type](xref:Microsoft.Dynamics.CRM.FetchExpression). While the Web API contains the structures to compose queries using `QueryExpression`, such as the [QueryExpression](xref:Microsoft.Dynamics.CRM.QueryExpression),[ColumnSet](xref:Microsoft.Dynamics.CRM.ColumnSet), and [FilterExpression](xref:Microsoft.Dynamics.CRM.FilterExpression) complex types, there is currently no way to use these to retrieve data with `QueryExpression` using the Web API [as you can with FetchXml](../../fetchxml/retrieve-data.md). This means it isn't possible to test the results of the query you would send as a parameter.
 
 
 ## Next steps
