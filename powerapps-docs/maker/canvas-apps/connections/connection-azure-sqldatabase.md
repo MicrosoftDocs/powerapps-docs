@@ -91,7 +91,7 @@ For example, your access of a stored procedure off of a data source named 'Parun
 ```powerapps-dot
 Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
 ```
-This populates the gallery with records. However, stored procedures are an addition of **action** behaviors to the tabular model. Refresh() only works with tabular data sources and can't be used with stored procedures. And you'll need to refresh the gallery when a record is created, updated, or deleted. When you use a Submit() on a form for a tabular data source it effectively calls Refresh() under the covers and updates the gallery.
+This populates the gallery with records. However, stored procedures are an addition of **action** behaviors to the tabular model. Refresh() only works with tabular data sources and can't be used with stored procedures. Then you need to refresh the gallery when a record is created, updated, or deleted. When you use a Submit() on a form for a tabular data source it effectively calls Refresh() under the covers and updates the gallery.
 
 To get around this limitation, use a variable in the OnVisible property for the screen and set the stored procedure to the variable.
 
@@ -105,7 +105,7 @@ And then set the 'Items' property of the gallery to the variable name.
 SP_Books
 ```
 
-Then after you create, update, or delete a record with a call to the stored procedure, set the variable again. This will update the gallery.
+Then after you create, update, or delete a record with a call to the stored procedure, set the variable again. This updates the gallery.
 
 ```powerapps-dot
 Paruntimedb.dbonewlibrarybook({   
