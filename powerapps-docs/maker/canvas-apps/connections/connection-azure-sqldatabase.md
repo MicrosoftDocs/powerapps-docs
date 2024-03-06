@@ -45,9 +45,7 @@ Depending on which Power Apps interface you're using, reference the [new look](.
 
 You can directly call SQL Server stored procedures from Power Fx by turning on the SQL Server stored procedure preview switch.
 > [!NOTE]
-> Output parameters are not yet supported
->
-
+> Output parameters aren't supported.
 
 1. Go to **Settings** > **Upcoming features** > **Preview**.
 1. Search for _stored procedures_.
@@ -66,7 +64,7 @@ Once you select a stored procedure, a child node appears and you can designate t
 Enable this option **only if**:
 
 1. There are **no side effects** to calling this procedure on demand, multiple times, whenever Power Apps refreshes the control. When used with an **Items** property of a gallery or table, Power Apps calls the stored procedure whenever the system determines a refresh is needed. You can't control when the stored procedure is called.
-2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved.** They aren't automatically paged in 100 record increments like tabular data sources (tables or views.) So, if the stored procedure returns too much data (many thousands of records) then your app may slow down or crash. For performance reasons you should bring in less than 2,000 records.
+2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons you should bring in less than 2,000 records.
 
 > [!IMPORTANT]
 > The schema of the return values of the stored procedure should be **static**. Meaning that it does not change from call to call. For example, if you call a stored procedure and it returns two tables then it should **always** return two tables. If the schema of the results are **dynamic** then you should not use it with Power Apps. For example if you call the stored procedure and it sometimes returns one table and sometimes returns two tables then it will not work correctly in Power Apps. Power Apps requires a static schema for this call.
@@ -85,7 +83,7 @@ Remember to convert values appropriately as you pass them into your stored proce
 ![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
 
 ### Working with a gallery
-You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by 'ResultSets'. You can access multiple results by referencing the set of tables returned. (Table 1, Table 2, ...) 
+You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by 'ResultSets'. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
 
 For example, your access of a stored procedure off of a data source named 'Paruntimedb' with a stored procedure named 'dbo.spo_show_all_library_books()' will look like the following.
 
