@@ -39,7 +39,7 @@ query.ColumnSet.AddColumns("accountclassificationcode", "createdby", "createdon"
 ```
 
 > [!NOTE]
-> The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [DataCollection<string>](xref:Microsoft.Xrm.Sdk.DataCollection%602) that extends [Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection%602), so you can use the methods of those classes to interact with the strings in the collection.
+> The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [Microsoft.Xrm.Sdk.DataCollection&lt;string&gt;](xref:Microsoft.Xrm.Sdk.DataCollection%602) that extends [System.Collections.ObjectModel.Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection`1), so you can also use the methods of those classes to interact with the strings in the collection.
 > 
 > Unlike FetchXml, the `ColumnSet` class provides no capability to set arbitrary alias values for columns when retrieving data without aggregation. When aggregating data, you can specify aliases using the [ColumnSet.AttributeExpressions property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AttributeExpressions). [Learn more about aggregating data using QueryExpression](aggregate-data.md)
 
@@ -58,7 +58,7 @@ QueryExpression query = new(Account.EntityLogicalName)
 };
 ```
 
-This helps avoid runtime errors. Learn more about:
+This helps avoid runtime errors due to typing the wrong name. Learn more about:
 
 - [Generating early-bound classes for the SDK for .NET](../generate-early-bound-classes.md) 
 - [Late-bound and early-bound programming using the SDK for .NET](../early-bound-programming.md)
