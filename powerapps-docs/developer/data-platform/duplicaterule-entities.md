@@ -15,7 +15,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
+For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 Duplicate detection rules are defined using the following tables:
 
@@ -111,8 +111,8 @@ The following special messages can also be used:
 |[DuplicateRuleConditionId](reference/entities/duplicaterulecondition.md#BKMK_DuplicateRuleConditionId)|Unique identifier of the condition.|
 |[IgnoreBlankValues](reference/entities/duplicaterulecondition.md#BKMK_IgnoreBlankValues)|Determines whether to consider blank values as nonduplicate values. <br /> **Note**: <br />The default value of this column is `false`. Set it to `true` if you don't want the duplicate detection rule to consider `null` values as equal. <br /> **Important**: <br /> For a duplicate detection rule with one condition, if you set the column value to `false`, it's treated by the system as a `true` value. |
 |[MatchingAttributeName](reference/entities/duplicaterulecondition.md#BKMK_MatchingAttributeName)|Field that is being compared with the base field.|
-|[OperatorCode](reference/entities/duplicaterulecondition.md#BKMK_OperatorCode)|Operator for this rule condition.<br /> **Important**: <br />If you set the `OperatorCode` column to `ExactMatch`, don’t set the `OperatorParam` column to any value|
-|[OperatorParam](reference/entities/duplicaterulecondition.md#BKMK_OperatorParam)|Parameter value of N if the operator is Same First Characters or Same Last Characters.<br /> **Important**: <br />Don’t set the `OperatorParam` to zero during create or update operations.|
+|[OperatorCode](reference/entities/duplicaterulecondition.md#BKMK_OperatorCode)|Operator for this rule condition.<br /> **Important**: <br />If you set the `OperatorCode` column to `ExactMatch`, don't set the `OperatorParam` column to any value|
+|[OperatorParam](reference/entities/duplicaterulecondition.md#BKMK_OperatorParam)|Parameter value of N if the operator is Same First Characters or Same Last Characters.<br /> **Important**: <br />Don't set the `OperatorParam` to zero during create or update operations.|
 |[RegardingObjectId](reference/entities/duplicaterulecondition.md#BKMK_RegardingObjectId)|Unique identifier of the object with which the condition is associated.|
 
 ## DuplicateRuleCondition Special messages
