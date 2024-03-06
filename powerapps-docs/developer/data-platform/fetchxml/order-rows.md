@@ -1,7 +1,7 @@
 ---
 title: Order rows using FetchXml
 description: Learn how to use FetchXml to order rows when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 03/06/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -126,7 +126,7 @@ Now, the results are ordered using the following attributes:
 
 The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database isn't meaningful out of context.
 
-This behavior can be overridden by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of lookup and choice columns will use the raw data, Guid or integer values respectively.
+This behavior can be overridden for choice columns by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of choice columns will use the integer values.
 
 ### Lookup Columns
 

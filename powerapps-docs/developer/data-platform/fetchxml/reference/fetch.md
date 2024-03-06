@@ -47,7 +47,7 @@ contributors:
 |`paging-cookie`|No|String value from a previous page of data to make retrieving the next page of data more efficient. [Learn about paging results](../page-results.md) |
 |`returntotalrecordcount`|No|Boolean value to specify whether the total number of records matching the criteria is returned. [Learn how to count rows using FetchXml](../count-rows.md)|
 |`top`|No|Positive integer value to specify the number of records to return.<br />This value can't exceed 5,000.<br />Don't use `top` together with the `page`, `count`, or `returntotalrecordcount` attributes.<br />[Learn more about limiting the number of rows](../overview.md#limit-the-number-of-rows)|
-|`useraworderby`|No|Boolean value to specify that lookup and choice column data sorting should *Use Raw Order By* mode. Without this, the default is to sort columns using the string formatted values. |
+|`useraworderby`|No|Boolean value to specify that choice column data sorting should *Use Raw Order By* mode. This sorts the choice options by the integer value. Without this, the default is to sort choice columns using the choice label values. |
 
 ## Child elements
 
