@@ -2107,6 +2107,8 @@
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
+      - name: Work with catalogs
+        href: ./data-platform/catalog-overview.md  
       - name: Other solution tasks
         items:
         - name: View solution layers
