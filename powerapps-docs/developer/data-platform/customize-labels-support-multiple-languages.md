@@ -90,7 +90,7 @@ Because customization is supported only in the base language, you may be working
 
 ## Manage languages for your organization
 
- Dataverse enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/dynamics365/customer-engagement/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
+ Dataverse enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/power-platform/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
 
 The following table lists the messages that you use to work with language packs. Use these messages with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method.
 
