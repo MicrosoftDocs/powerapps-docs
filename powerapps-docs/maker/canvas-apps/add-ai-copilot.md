@@ -64,26 +64,11 @@ Add the **Copilot (preview)** control to your canvas app enabling end users to g
 
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
-1. On the app authoring menu, select **Insert** and select **Copilot (preview)** to add this control.
+- On the app authoring menu, select **Insert** and select **Copilot (preview)** to add this control.
 
    > [!div class="mx-imgBorder"]
    > ![Add the copilot control.](media/copilot/Copilot-Insert-menu.png)
 
-### Choose data for Copilot
-
-1. When the Copilot control is added to the canvas app, select a data source from the pane. Copilot can only provide data insights on a single Dataverse table when an end user asks a question. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select a data source.](media/copilot/copilot-3.png)
-
-   Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
-
-2. Select the specific **Fields** and/or **View** that the Copilot control answers questions for.
-   
-3. To configure the selected table and its columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
-
-  > [!NOTE]
-  > Copilot can only answer questions for smaller datasets in a canvas app. The only exception to the dataset limit is when a Dataverse table is selected as the data source. 
 
 
 ## Provide feedback
