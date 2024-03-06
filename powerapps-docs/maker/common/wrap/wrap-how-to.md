@@ -134,7 +134,7 @@ Select **New app registration** to create a new registration for your app automa
 
 You can also create a **new app registration** manually. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
 
-The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
 ### Step 5: Manage output
 
