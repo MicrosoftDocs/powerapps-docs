@@ -20,6 +20,7 @@ contributors:
 
 ## Ordering lookup and choice columns
 
-## Ordering and paging
+<!-- ## Ordering and paging -->
+[!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
 
 ## Next steps

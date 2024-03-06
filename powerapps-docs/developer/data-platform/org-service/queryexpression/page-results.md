@@ -22,4 +22,7 @@ contributors:
 
 ## Paging cookie examples
 
+<!-- ## Ordering and paging -->
+[!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
+
 ## Next steps
