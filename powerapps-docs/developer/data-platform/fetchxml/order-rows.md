@@ -126,8 +126,6 @@ Now, the results are ordered using the following attributes:
 
 The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database isn't meaningful out of context.
 
-This behavior can be overridden for choice columns by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of choice columns will use the integer values.
-
 ### Lookup Columns
 
 When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](select-columns.md#formatted-values) returned is the corresponding primary name field.
@@ -136,8 +134,10 @@ When you order using lookup columns, the results are sorted using the primary na
 
 Choice column values are also sorted using the [formatted values](select-columns.md#formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
 
+This behavior can be overridden by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of choice columns will use the integer values instead.
+
 > [!NOTE]
-> Since choice sorting is based on the localized label of the users's language, This will lead to different ordering for the results set if the user's language differs.
+> Since choice sorting is based on the localized label of the users's language, expect different ordering for the results set if the user's language differs.
 
 ## Ordering and paging
 
