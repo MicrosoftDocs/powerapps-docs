@@ -13,7 +13,7 @@ contributors:
 
 # Code components
 
-Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. [Learn how to package and distribute extensions using solutions](/power-platform/alm/solution-concepts-alm).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
