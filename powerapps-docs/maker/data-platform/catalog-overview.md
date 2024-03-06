@@ -4,7 +4,7 @@ description: Provides an overview of catalogs in Power Apps.
 ms.date: 05/04/2023
 ms.reviewer: matp
 ms.topic: overview
-author: derekkwanpm"
+author: Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "derekkwan"
 search.audienceType:
@@ -29,7 +29,7 @@ The default catalog is designed for makers of any level of experience to publish
 
 More information: <!-- Link to PPAC article for admins do this so needs to go in the PPAC docs-->
 
-## Work with a catalog
+## Work with the catalog
 
 When you create a solution, consider whether it contains solution objects that would be useful for resuse for yourself or others in your organization.
 
@@ -40,3 +40,7 @@ When you create a solution, consider whether it contains solution objects that w
 1. Select **Publish to catalog** on the command bar.
 
 Makers with access to the catalog can publish to the catalog. However, after a solution has been published to the catalog, the maker must be a part of the catalog publishing group to publish that same solution to the catalog again. If you do not have access, you receive the message "Access needed. This solution has already been published to the catalog as &lt;catalog name &gt;. You need to be a member of the publisher group that owns this:" When this occurs, contact your admin for publishing permission.
+
+## See also
+
+[Enterprise templates for Power Platform](/power-platform/enterprise-templates/overview)
