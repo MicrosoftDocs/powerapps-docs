@@ -144,7 +144,7 @@ Admins can disable the **New look** setting across all apps in an organization b
 1. Search for **New look**.
 1. Select **New look for model driven apps**.
 1. Select **Add** to add it to the solution.
-1. Select ****New look for model driven apps** from the solution explorer.
+1. Select **New look for model driven apps** from the solution explorer.
 1. Update **Setting Environment Value** to **No**.
 1. Select **Save**.
 1. Publish all customizations.
