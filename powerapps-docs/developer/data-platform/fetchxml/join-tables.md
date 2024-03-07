@@ -99,7 +99,7 @@ The previous example is a many-to-one relationship where many account records ca
 
 ### Retrieve relationship information
 
-If you use the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
+If you use the [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXML Builder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
 
 You can also use other tools and APIs to look up relationship data for the appropriate `name`, `from`, and `to` attribute values to use. For more information see:
 
