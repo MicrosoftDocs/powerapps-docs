@@ -33,11 +33,32 @@ More information: <!-- Link to PPAC article for admins do this so needs to go in
 
 When you create a solution, consider whether it contains solution objects that would be useful for resuse for yourself or others in your organization.
 
-### Add an unmanaged solution to the catalog
+### Add a solution to the catalog
 
 1. Sign in to Power Apps.
 1. Select **Solutions** on the left navigation pane, and then select the unmanaged solution you want to add to the catalog. 
 1. Select **Publish to catalog** on the command bar.
+1. The **Add your solution** step appears. On the **Select catalog** pane, select the catalog you want to publish to and then select **Next**.
+1. Select from the following choices:
+   1. **What kind of submission is this?**
+      - **Template**. For unmanaged solutions that can be customized by you and other makers.
+      - **Managed item**. For managed solutions with objects that you typically don't want customized.
+   1. **Select primary component**. Select the solution object, such as an app or a flow, that is the primary component. Optionally, leave the primary component as **Undefined**.
+1. Select **Next**.
+1. On the **Add some details about you solution** step, enter the following information:
+   - **Title**. Leave the name of the solution or change it.
+   - **Description**. Enter a description for the solution.
+   - **Business justification** (optional). Enter a business justification that is viewed by catalog approvers.
+   - **Select business catagories** (optional). Select among the relevant categories that were configured for the catalog.
+   - **Publisher**. Select the solution publisher or create a new one.
+   - **Author**. Add the user that will be identified as the author of the solution.
+   - **Add you solution icon** (optional). Browse or drag and drop a 216 x 216 pixel dimension icon for the solution.
+1. On the **Solution info** step, enter the following optional links to available resources:
+   - **Help link**
+   - **Privacy policy link**
+   - **Legal terms link**
+1. Select **Next**.
+1. On the **Review + finish** step, review the publishing settings and if no changes are needed select **Submit**.
 
 Makers with access to the catalog can publish to the catalog. However, after a solution has been published to the catalog, the maker must be a part of the catalog publishing group to publish that same solution to the catalog again. If you do not have access, you receive the message "Access needed. This solution has already been published to the catalog as &lt;catalog name &gt;. You need to be a member of the publisher group that owns this:" When this occurs, contact your admin for publishing permission.
 
