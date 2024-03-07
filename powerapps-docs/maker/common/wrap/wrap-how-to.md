@@ -17,7 +17,7 @@ contributors:
 
 # Use the wrap wizard to build your mobile app
 
-Use the wrap feature to package one or more canvas app(s) as a single native mobile app package using the step-by-step wizard.
+Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
 You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
@@ -134,7 +134,7 @@ Select **New app registration** to create a new registration for your app automa
 
 You can also create a **new app registration** manually. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
 
-The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
 ### Step 5: Manage output
 
@@ -236,7 +236,7 @@ You have an option to automatically create a new **app center location** to stor
 
 1. Select **Add new app**.
 
-1. Copy the app's app center URL that you need later when your configure the wrap project inside Power Apps.
+1. Copy the app's app center URL. You'll need it later, to configure the wrap project in Power Apps.
 
     For example, `https://appcenter.ms/orgs/Contoso-sales/apps/Sample-canvas-app-for-Android-OS/`
 
