@@ -17,6 +17,9 @@ Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and cust
 
 For instance, you can't set up a relationship between a virtual table created using the OData virtual table provider and a virtual table created using the virtual connector provider.
 
+> [!NOTE]
+> In virtual table relationship behaviors only Cascade None is supported.
+
 ## Defining relationships in virtual tables
 
 Virtual tables created using the virtual connector provider automatically creates all the columns that are represented in the external source table. This will also include columns on which relationships are defined. However, the relationship definition won't be automatically created. You'll have to define this relationship in Dataverse manually.
