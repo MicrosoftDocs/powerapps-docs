@@ -58,7 +58,7 @@ var data =
         "description": "This is the description of the sample account",
         "revenue": 5000000,
         "accountcategorycode": 1,
-        "opendeals_date": new Date(2024-02-03)
+        "opendeals_date": new Date("2024-02-03T00:00:00Z")
     }
 
 // create account record
