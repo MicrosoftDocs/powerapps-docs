@@ -113,7 +113,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
-| *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images for usage in Apps |
+| *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
