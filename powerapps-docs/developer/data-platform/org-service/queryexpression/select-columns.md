@@ -63,7 +63,9 @@ This helps avoid runtime errors due to typing the wrong name. Learn more about:
 - [Generating early-bound classes for the SDK for .NET](../generate-early-bound-classes.md) 
 - [Late-bound and early-bound programming using the SDK for .NET](../early-bound-programming.md)
 
+## Select columns for joined tables
 
+When you [Join tables using QueryExpression](join-tables.md), you use the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity). The [LinkEntity.Columns property](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns) property is a [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet), so you will define the columns to return for the joined tables in the same way.
 
 <!-- 
    How to use ColumnSet
