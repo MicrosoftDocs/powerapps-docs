@@ -32,7 +32,8 @@ If users of your Dataverse-based canvas app have spotty or no Internet access, y
 >   - In (Membership)
 >   - UpdateIf
 >   - RemoveIf
-> - Filter on column lookup only supports one level of lookup when the app is enabled for offline. 
+> - Filter on column lookup only supports one level of lookup when the app is enabled for offline.
+> - Many to many relationships are not supported.
 
 
 Microsoft plans to support these functions and tokens in the future.
