@@ -40,7 +40,9 @@ More information: <!-- Link to PPAC article for admins do this so needs to go in
 
 When you create a solution, consider whether it contains solution objects that would be useful for resuse for yourself or others in your organization.
 
-### Add a solution to the catalog
+### Publish a solution to the catalog
+
+Publish a solution to the catalog so that you and other makers can use it to quickly build solutions that use the same solution objects.
 
 1. Sign in to Power Apps.
 1. Select **Solutions** on the left navigation pane, and then select the unmanaged solution you want to add to the catalog. 
@@ -69,15 +71,15 @@ When you create a solution, consider whether it contains solution objects that w
 
 Makers with access to the catalog can publish to the catalog. However, after a solution has been published to the catalog, the maker must be a part of the catalog publishing group to publish that same solution to the catalog again. If you do not have access, you receive the message "Access needed. This solution has already been published to the catalog as &lt;catalog name &gt;. You need to be a member of the publisher group that owns this:" When this occurs, contact your admin for publishing permission.
 
-### Acquire a solution template from the catalog
+### Discover and acquire a solution template from the catalog
 
 As you browse the **Catalog** area and find artifacts that are useful for you, you can acquire those artifacts and save you own copies to start building from.
 
-1. From the **Catalog** area, select **Get** on any template or managed item. 
-1. A details page appears that contains the description, links, included components, business categories, expandable screenshots, and more. Select **Get**.
-1. On the **Connections** step,  connections for the solution are validated to make sure they are working. If there are any connection issues, you a red status notification appears. Resolve each error by selecting **...** next to the problematic connection to update it.
+1. From the **Catalog** area, select **Get** on any template or managed item.
+1. A details page appears that contains the description, links, included components, business categories, expandable screenshots, and more. To acquire the solution, select **Get**.
+1. On the **Connections** step,  if there are connections for the solution validation occurs to make sure they work. If there are any issues found, a red status notification appears. Resolve each error by selecting **...** next to the problematic connection to update it. Select **Next**.
 1. On the **Environment variables** step, environment variables might be required before you can acquire the solution. Provide values or select the default values. If unsure of what to provide, check with the author of the solution. Select **Next**.
-1. On the **Configuration** step, provide additional information for using the solution. This might include things like, "what days of the week do you run a report?."
+1. On the **Configuration** step, provide additional information for using the solution if required. This might include things like, "what days of the week do you run a report?."
 1. Select **Install**.
 1. Select **Complete** to close the wizard.
 
