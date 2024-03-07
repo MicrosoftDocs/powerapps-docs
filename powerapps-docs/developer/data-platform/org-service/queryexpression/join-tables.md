@@ -36,7 +36,7 @@ TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Que
 -->
 
 
-For example, the following query returns up to 5 records from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
+For example, the following query returns up to 5 records from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
 ```csharp
 QueryExpression query = new("account")
@@ -58,7 +58,7 @@ QueryExpression query = new("account")
 };
 ```
 
-Or you may prefer to compose the query this way using the [LinkEntity(String, String, String, String, JoinOperator) constructor](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.#ctor%2A) with the [LinkEntities.Add method](xref:System.Collections.ObjectModel.Collection%601.Add%2A) inherited from [System.Collections.ObjectModel.Collection](xref:System.Collections.ObjectModel.Collection):
+Or you may prefer to compose the query this way using the [LinkEntity(String, String, String, String, JoinOperator) constructor](/dotnet/api/microsoft.xrm.sdk.query.linkentity.-ctor#microsoft-xrm-sdk-query-linkentity-ctor(system-string-system-string-system-string-system-string-microsoft-xrm-sdk-query-joinoperator)) with the  [LinkEntities.Add method](xref:System.Collections.ObjectModel.Collection%601.Add%2A) inherited from <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>:
 
 ```csharp
 QueryExpression query = new();
