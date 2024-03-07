@@ -32,6 +32,9 @@ A view consists of the following elements:
 - Default sorting options
 - Filters to show rows that match specific criteria, if needed
 
+> [!IMPORTANT]
+> To ensure proper functionality of all views, it is recommended to create all views with the Vew designer in ther maker portal or the Edit filters panel in the view page. Custom views imported from solutions may include invalid fetchXML and may not be supported.
+
 For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md).
 
 ## Select columns in the column editor
