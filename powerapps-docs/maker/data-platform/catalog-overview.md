@@ -20,7 +20,9 @@ A catalog allows makers to publish, discover, and acquire company specific Power
 
 Building from templates customized for your company reduces duplicative work and inconsistencies in implementation. For example, imagine building a webpage from scratch rather than using a webpage already designed with your company header and footer, branding, privacy links, and so on that can be reused as needed.
 
-Every Power Platform tenant has a single catalog, which contains re-usable solution objects for your organization. You can choose to have multiple catalogs across environments for different regions or departments, however in most cases, you only need one catalog.
+Every Power Platform tenant can have a single catalog, which contains re-usable solution objects for their organization. You can choose to have multiple catalogs across environments for different regions or departments, however in most cases, you only need one catalog.
+
+:::image type="content" source="media/catalog-area-power-automate.png" alt-text="Catalog area in Power Automate" lightbox="media/catalog-area-power-automate.png":::
 
 Solutions can be published to the catalog for other makers to acquire and use, as one of these two artifact types:
 
@@ -29,8 +31,9 @@ Solutions can be published to the catalog for other makers to acquire and use, a
 
 ## Catalog governance and creation
 
-The default catalog is designed for makers of any level of experience to publish, discover, and acquire useful artifacts. However, Power Platform admins can create additional catalogs, manage access and security, approve catalog items, and more in the *Catalogs* area in the Power Platform admin center. The Catalog Manager is the dedicated workspace for admins of the catalogs.
+The catalog feature is designed for makers of any level of experience to publish, discover, and acquire useful artifacts. Power Platform admins can manage catalog access and security, approve catalog items, and more using the *Catalog Manager* model-driven app. The Catalog Manager is the dedicated app for admins of the catalogs.
 
+<!-- How do approvals work? Requires the Power Platform Catalog Manager model-driven app right? -->
 More information: <!-- Link to PPAC article for admins do this so needs to go in the PPAC docs-->
 
 ## Work with the catalog
@@ -54,7 +57,7 @@ When you create a solution, consider whether it contains solution objects that w
    - **Description**. Enter a description for the solution.
    - **Business justification** (optional). Enter a business justification that is viewed by catalog approvers.
    - **Select business catagories** (optional). Select among the relevant categories that were configured for the catalog.
-   - **Publisher**. Select the solution publisher or create a new one.
+   - **Publisher**. Select the catalog publisher or create one. Notice that the catalog publisher is different from the solution publisher.
    - **Author**. Add the user that will be identified as the author of the solution.
    - **Add you solution icon** (optional). Browse or drag and drop a 216 x 216 pixel dimension icon for the solution.
 1. On the **Solution info** step, enter the following optional links to available resources:
@@ -65,6 +68,20 @@ When you create a solution, consider whether it contains solution objects that w
 1. On the **Review + finish** step, review the publishing settings and if no changes are needed select **Submit**.
 
 Makers with access to the catalog can publish to the catalog. However, after a solution has been published to the catalog, the maker must be a part of the catalog publishing group to publish that same solution to the catalog again. If you do not have access, you receive the message "Access needed. This solution has already been published to the catalog as &lt;catalog name &gt;. You need to be a member of the publisher group that owns this:" When this occurs, contact your admin for publishing permission.
+
+### Acquire a solution template from the catalog
+
+As you browse the **Catalog** area and find artifacts that are useful for you, you can acquire those artifacts and save you own copies to start building from.
+
+1. From the **Catalog** area, select **Get** on any template or managed item. 
+1. A details page appears that contains the description, links, included components, business categories, expandable screenshots, and more. Select **Get**.
+1. On the **Connections** step,  connections for the solution are validated to make sure they are working. If there are any connection issues, you a red status notification appears. Resolve each error by selecting **...** next to the problematic connection to update it.
+1. On the **Environment variables** step, environment variables might be required before you can acquire the solution. Provide values or select the default values. If unsure of what to provide, check with the author of the solution. Select **Next**.
+1. On the **Configuration** step, provide additional information for using the solution. This might include things like, "what days of the week do you run a report?."
+1. Select **Install**.
+1. Select **Complete** to close the wizard.
+
+The item now appears in your list of solutions in the **Solutions** area of Power Apps. You can edit the solution as you would any other unmanaged solution you have access to.
 
 ## See also
 
