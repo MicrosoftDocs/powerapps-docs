@@ -16,7 +16,7 @@ contributors:
   
 ---
 
-# Use inline action bar in Power Apps Stuido
+# Use inline action in Power Apps Stuido
 
 The inline action bar is a feature that lets you to update layouts, work with data, collaborate with your colleagues, and use Copilot directly on the canvas for specific controls. This means you can make changes and interact without leaving the context of your current view while editing a canvas app in Power Apps Studio.
 
