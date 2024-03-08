@@ -11,11 +11,11 @@ Copilot for Dynamics 365 and Power Platform features follow a set of core securi
 
 Copilot is built on [Microsoft Azure OpenAI Service](/azure/cognitive-services/openai/overview) and runs completely within the Azure cloud. Azure OpenAI offers regional availability and responsible AI content filtering. Copilot uses OpenAI models with all the [security capabilities of Microsoft Azure](/azure/security/fundamentals/overview). OpenAI is an independent organization. We don't share your data with OpenAI.
 
-Copilot features aren't available in all Azure geographies and languages. Depending on where your environment is hosted, you might need to allow data movement across geographies to use them. For more information, see the articles listed under [Data movement across geographies](#_Data_movement_across).
+Copilot features aren't available in all Azure geographies and languages. Depending on where your environment is hosted, you might need to allow data movement across geographies to use them. For more information, see the articles listed under [Data movement across geographies](#data-movement-across-geographies).
 
 ## What happens to my data when I use Copilot? 
 
-You are in control of your data. Microsoft doesn't share your data with a third party unless you've granted permission to do so. Further, we don't use your customer data to train Copilot or its AI features, unless you provide consent for us to do so. Copilot adheres to existing data permissions and policies, and its responses to you're based only on data that you personally can access. For more information about how you can control your data and how your data is handled, see the articles listed under [Copilot Overview](#_Copilot_Overview).
+You are in control of your data. Microsoft doesn't share your data with a third party unless you've granted permission to do so. Further, we don't use your customer data to train Copilot or its AI features, unless you provide consent for us to do so. Copilot adheres to existing data permissions and policies, and its responses to you're based only on data that you personally can access. For more information about how you can control your data and how your data is handled, see the articles listed under [Copilot Overview](#copilot-in-dynamics-365-apps-and-power-platform).
 
 Copilot monitors for abusive or harmful uses of the service with transient processing. We don't store or conduct eyes-on review of Copilot inputs and outputs for abuse monitoring purposes.
 
