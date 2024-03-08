@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: mijosh
 ms.reviewer: matp
-ms.date: 12/12/2023
+ms.date: 03/06/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -36,14 +36,16 @@ When enabled, copilot can be accessed through the copilot icon in the right navi
 
 :::image type="content" source="media/model-driven-app-copilot.png" alt-text="Copilot right pane in a model-driven app" lightbox="media/model-driven-app-copilot.png":::
 
-Copilot in model-driven apps can answer questions about the configured Microsoft Dataverse table data in the environment. Copilot can also help you navigate the model-driven app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*, the copilot in the model-driven app automatically opens the relevant app screens.
+Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the environment. Copilot can also help you navigate the model-driven app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*, the copilot in the model-driven app automatically opens the relevant app screens.
 
 ## Enable copilot for model-driven apps feature for your environment
 
 Power Platform administrators enable the copilot feature in model-driven apps for all the users in their environments from the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
-  > [!IMPORTANT]
-  > The copilot for app users in model-driven apps feature isn't enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+> [!IMPORTANT]
+>
+> - The copilot for app users in model-driven apps feature isn't enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+> - Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from copilot, but they won't be based on your Dataverse database.
 
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
@@ -74,16 +76,6 @@ Makers must set their environment to receive monthly model-driven apps updates a
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
 
 More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
-
-## Configure Dataverse tables and columns for copilot
-
-Administrators must configure the Dataverse tables that copilot will use for the responses. You must choose both the tables and the columns of importance for copilot to search across to produce relevant, high quality data insights. More information: [Configure tables to use copilot](../data-platform/table-settings-for-copilot.md).
-
-> [!IMPORTANT]
-> Not configuring standard and custom Dataverse tables for copilot might result in poor quality of copilot insights. Configure your Dataverse tables and columns of importance to receive relevant, accurate copilot responses in model-driven apps.
-
-> [!NOTE]
-> Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from copilot, but they won't be based on your Dataverse database.
 
 ## Disable copilot for a model driven app
 

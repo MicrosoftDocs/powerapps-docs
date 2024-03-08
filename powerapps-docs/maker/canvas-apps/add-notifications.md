@@ -94,7 +94,7 @@ Send a notification that opens an app and passes along specific parameters.
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["email1@contoso.com", "email2@contoso.com"],
-		message: "message in the notif toast",
+		message: "message in the notification toast",
 		params: Table({key:"notificationKey", value:"The value for notificationKey"}),
 		openApp: true
  	}
