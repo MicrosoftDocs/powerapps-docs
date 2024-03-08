@@ -100,7 +100,7 @@ If you encounter an issue that isn't described here, contact us via the [support
 
 #Add-in support for GCC
 The add-in is currently not supported in the Government Community Cloud (GCC), GCC High or US Department of Defense (US DoD) regions.
-For more information, refer to [Dynamics 365 Customer Service and Dynamics 365 US Government availability](https://learn.microsoft.com/en-us/dynamics365/customer-service/implement/government-availability).
+For more information, refer to [Dynamics 365 Customer Service and Dynamics 365 US Government availability](/dynamics365/customer-service/implement/government-availability).
 
 ### Office Store add-in download disabling
 
