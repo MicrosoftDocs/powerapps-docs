@@ -102,18 +102,11 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 ### Copilot in Dynamics 365 apps and Power Platform
 
 - [Enable copilots and generative AI features in Power Platform](/power-platform/admin/geographical-availability-copilot)
-
 - [Enable Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features#region-availability-and-data-movement)
-
 - [Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-
 - [Copilot for Sales architecture](/microsoft-sales-copilot/architecture)
-
 - [Microsoft Copilot Studio overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
-
-
 - [AI Copilot overview in Power Apps](/power-apps/maker/canvas-apps/ai-overview)
-
 - [Get started with Copilot in cloud flows – Power Automate](/power-automate/get-started-with-copilot)
 
 ### Regional and language availability
@@ -123,31 +116,23 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 ### Data movement across geographies
 
 - [How data movement across regions works](/power-platform/admin/geographical-availability-copilot#how-data-movement-across-regions-works)
-
 - [Configure data movement across geographic locations for generative AI features outside United States](/microsoft-copilot-studio/manage-data-movement-outside-us)
-
 - [Copilot data movement across geographies in Dynamics 365 Sales](/dynamics365/sales/sales-copilot-data-movement)
-
 - [Copilot data movement across geographies in Dynamics 365 Business Central](/dynamics365/business-central/ai-copilot-data-movement)
 
 ### Security at Microsoft
 
 - [Introduction to Azure security](/azure/security/fundamentals/overview)
-
 - [Encryption in the Microsoft Cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview)
-
 - [Data, privacy, and security for Azure OpenAI Service – Azure AI services](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fcognitive-services%2Fopenai%2Fcontext%2Fcontext)
 
 ### Privacy at Microsoft
 
-- [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)
 
 ### Responsible AI
 
 - [Microsoft Responsible AI Standard](https://www.microsoft.com/ai/responsible-ai)
-
 - [Responsible AI FAQ for Microsoft Power Platform](/power-platform/responsible-ai-overview)
-
 - [Responsible AI FAQ for Dynamics 365](/dynamics365/responsible-ai-overview)
-
 - [Responsible AI FAQs for Microsoft Copilot Studio](/microsoft-copilot-studio/responsible-ai-overview)
