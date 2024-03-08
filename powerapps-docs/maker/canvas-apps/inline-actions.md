@@ -46,7 +46,7 @@ Add a blank, select **Templates** and then select a new layout.
 
 Add a gallery control and then use the the **Layout** button to change the layout for the control. Different layout options appear depending on whether you add a **Vertical gallery** or **Horizonal gallery**. When you add or remove controls after applying a layout, changing the layout will remove your customizations.  
 
-:::image type="content" source="media/inline-actions/inline-actions-gallery-layout.png" alt-text=""Use inline actions to select a layout":::
+:::image type="content" source="media/inline-actions/inline-actions-gallery-layout.png" alt-text="Use inline actions to select a layout":::
 
 ### Form control (modern or classic) layouts
 
