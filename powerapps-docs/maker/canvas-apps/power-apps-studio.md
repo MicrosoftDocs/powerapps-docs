@@ -367,6 +367,8 @@ For more information, see [Using multimedia files in Power Apps](add-images-pict
 
 The canvas shows the currently selected screen from the authoring menu.
 
+Use inline actions when you're editing app. For mor information, see [Use inline actions in Power Apps Stuido](inline-actions.md).
+
 ## 8 – Properties pane
 
 The properties pane shows properties and options available for the currently selected object on the canvas.
