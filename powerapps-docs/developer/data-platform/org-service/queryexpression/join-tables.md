@@ -144,8 +144,14 @@ The previous example is a many-to-one relationship where many account records ca
 
 You can also use other tools and APIs to look up relationship data for the appropriate `linkToEntityName`, `linkToAttributeName`, `LinkFromEntityName` and `linkFromAttributeName` values to use. For more information see:
 
-- [Browse table definitions in your environment](../browse-your-metadata.md)
-- [Query schema definitions](../query-schema-definitions.md)
+- [Browse table definitions in your environment](../../browse-your-metadata.md)
+- [Query schema definitions](../../query-schema-definitions.md)
+
+<!-- 
+
+TODO Add an example query to retrieve this relationship information, or make sure it is in the articles linked 
+Maybe have it generate code for the relationship??
+-->
 
 
 ## One-to-many relationships
@@ -250,8 +256,216 @@ The results should look something like:
 
 ## No relationship
 
+It is possible to specify `linkFromAttributeName` and `linkToAttributeName` properties using columns that are not part of a defined relationship.
+
+For example, this query finds pairs of records where the [Name column](../../reference/entities/account.md#BKMK_Name) of an [account](../../reference/entities/account.md) record matches the [FullName column](../../reference/entities/contact.md#BKMK_FullName) of a [contact](../../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
+
+```csharp
+var query = new QueryExpression("account")
+{
+      ColumnSet = new ColumnSet("name"),
+};
+
+LinkEntity linkedContact = query.AddLink(
+      linkToEntityName: "contact", 
+      linkFromAttributeName: "name", 
+      linkToAttributeName: "fullname");
+linkedContact.EntityAlias = "contact";
+linkedContact.Columns = new ColumnSet("fullname");
+```
+
+> [!NOTE]
+> It is important that the columns specified in the `linkFromAttributeName` and `linkToAttributeName` properties are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that may have performance impact and may fail for some column values.
+
+The following [column types](../../../../maker/data-platform/types-of-fields.md) cannot be used in `linkFromAttributeName` and `linkToAttributeName` properties:
+
+- **File**
+- **Image**
+- **MultiSelect Field**
+- [**PartyList**](../../../../maker/data-platform/types-of-fields.md#different-types-of-lookups)
+
+Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` properties but may result in poor performance:
+
+- Columns of the **Multiple Lines of Text** type
+- Columns of the **Single Line of Text** type with a maximum length larger than 850
+- [**Formula**](../../../../maker/data-platform/formula-columns.md) columns
+- [**Calculated**](../../../../maker/data-platform/define-calculated-fields.md) columns
+- [**Logical**](../../entity-attribute-metadata.md#logical-columns) columns
+
+
 ## Find records not in a set
 
-## Use advanced link types?
+You can use [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
+
+You can perform a left outer join in `QueryExpression` by using 
+
+the `entityname` attribute in a [condition element](reference/condition.md). The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
+
+
+For example, the following query returns all account records with no contacts.
+
+```csharp
+QueryExpression query = new("account");
+query.ColumnSet.AddColumn("name");
+query.AddOrder("name", OrderType.Descending);
+
+LinkEntity linkedContact = query.AddLink(
+      linkToEntityName: "contact",
+      linkFromAttributeName: "accountid",
+      linkToAttributeName: "parentcustomerid", 
+      joinOperator: JoinOperator.LeftOuter);
+linkedContact.EntityAlias = "contact";
+linkedContact.Columns.AddColumn("fullname");
+
+query.Criteria = new FilterExpression();
+query.Criteria.AddCondition("contact", "parentcustomerid", ConditionOperator.Null);
+```
+
+## Use advanced JoinOperators
+
+The following [JoinOperator members](/dotnet/api/microsoft.xrm.sdk.query.joinoperator) do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. These types provides more advanced capabilities you can use to improve query performance and define more complex queries.
+
+|Name|Description|
+|---------|---------|
+|`Exists`|Link-entity is generated as a Correlated Subquery. The outer entity uses "exists" operator on the Correlated Subquery. **OR** [!INCLUDE [link-type-exists-description](../../fetchxml/reference/includes/link-type-exists-description.md)] |
+|`In`|[!INCLUDE [link-type-in-description](../../fetchxml/reference/includes/link-type-in-description.md)]|
+|`MatchFirstRowUsingCrossApply`| Link-entity is generated as Correlated Subquery. The outer entity uses the "cross apply" operator on the Correlated Subquery. Pick the top 1 row. **OR** [!INCLUDE [link-type-matchfirstrowusingcrossapply-description](../../fetchxml/reference/includes/link-type-matchfirstrowusingcrossapply-description.md)]|
+
+### Use `Exists` or `In` JoinOperators
+
+`Exists` and `In` are variants of `Inner` that use different conditions ([EXISTS](/sql/t-sql/language-elements/exists-transact-sql) and [IN](/sql/t-sql/language-elements/in-transact-sql) respectively) in the `where` clause so that multiple copies of the parent row aren't returned in the results. Neither of these return the column values of the link entity rows.
+
+#### `Exists`
+
+These [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) and SQL examples show the patterns applied with `Exists`.
+
+##### [QueryExpression](#tab/qe)
+
+```csharp
+QueryExpression query = new("contact");
+query.ColumnSet.AddColumn("fullname");
+
+LinkEntity linkedAccount = query.AddLink(
+      linkToEntityName: "account",
+      linkFromAttributeName: "contactid",
+      linkToAttributeName: "primarycontactid",
+      joinOperator: JoinOperator.Exists);
+
+linkedAccount.EntityAlias = "account";
+
+linkedAccount.LinkCriteria.AddCondition(
+      entityName:"account", 
+      attributeName: "statecode", 
+      conditionOperator: ConditionOperator.Equal,
+      values: 1);
+```
+
+##### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where exists (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".statecode = 1
+        and "contact0".contactid = "account1".primarycontactid)
+```
+
+---
+
+#### `In`
+
+These [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) and SQL examples show the patterns applied with `In`.
+
+##### [QueryExpression](#tab/qe)
+
+```csharp
+QueryExpression query = new("contact");
+query.ColumnSet.AddColumn("fullname");
+
+LinkEntity linkedAccount = query.AddLink(
+      linkToEntityName: "account",
+      linkFromAttributeName: "contactid",
+      linkToAttributeName: "primarycontactid",
+      joinOperator: JoinOperator.In);
+
+linkedAccount.EntityAlias = "account";
+
+linkedAccount.LinkCriteria.AddCondition(
+      entityName: "account",
+      attributeName: "statecode",
+      conditionOperator: ConditionOperator.Equal,
+      values: 1);
+```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname" 
+from Contact as "contact0" 
+where "contact0".contactid in (
+    select "account1".primarycontactid
+    from Account as "account1"
+    where "account1".statecode = 1)
+```
+
+---
+
+Using `Exists` or `In` JoinOperators can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent  Using `Exists` or `In` JoinOperators can can improve performance of the query compared to the `Inner` type because it doesn't require returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row.
+
+These JoinOperators may also allow Dataverse to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity in an `Inner` join.
+
+### Use `MatchFirstRowUsingCrossApply` JoinOperator
+
+This JoinOperator produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
+
+#### [QueryExpression](#tab/qe)
+
+```csharp
+QueryExpression query = new("contact");
+query.ColumnSet.AddColumn("fullname");
+
+LinkEntity linkedAccount = query.AddLink(
+      linkToEntityName: "account",
+      linkFromAttributeName: "contactid",
+      linkToAttributeName: "primarycontactid",
+      joinOperator: JoinOperator.MatchFirstRowUsingCrossApply);
+
+linkedAccount.EntityAlias = "account";
+linkedAccount.Columns = new ColumnSet("accountid", "name");
+```
+
+#### [SQL](#tab/sql)
+
+``` sql
+select 
+    "contact0".fullname as "fullname",
+    "account1".accountid as "accountid",
+    "account1".name as "name" 
+from Contact as "contact0"
+cross apply (
+    select top 1
+        "account1".accountid as "accountid",
+        "account1".name as "name"
+    from Account as "account1"
+    where "contact0".contactid = "account1".primarycontactid
+  ) "account1"
+```
+
+---
+
+This is equivalent to the `Outer` type except it only returns the parent row at most once. Unlike `In` and `Exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
+
+<!-- TODO: What is the Natural JoinOperator? -->
 
 ## Next steps
+
+Learn how to order rows.
+
+> [!div class="nextstepaction"]
+> [Order rows](order-rows.md)
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
