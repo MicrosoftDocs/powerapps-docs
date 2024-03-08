@@ -116,6 +116,10 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 
 - [Get started with Copilot in cloud flows – Power Automate](/power-automate/get-started-with-copilot)
 
+### Regional and language availability
+
+[Copilot international availability](https://dynamics.microsoft.com/availability-reports/copilotreport/)
+
 ### Data movement across geographies
 
 - [How data movement across regions works](/power-platform/admin/geographical-availability-copilot#how-data-movement-across-regions-works)
