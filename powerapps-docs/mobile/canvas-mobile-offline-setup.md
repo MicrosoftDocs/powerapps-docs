@@ -209,7 +209,7 @@ You can set the **Visible** property using the Power Fx function `Host` to only 
 ```powerappsfl
 Host.OfflineEnabled
 ```
-## Export a solution that contains a canvas App enabled for offline
+## Export a solution that contains a canvas app enabled for offline
 
 When you export a solution with an offline canvas app, you also need export the offline profile for the app, as it is a dependency of the app.
 
