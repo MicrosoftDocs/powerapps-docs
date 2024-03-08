@@ -23,7 +23,7 @@ The inline action bar is a feature that lets you update layouts, work with data,
 
 ## Use Copilot in the formula bar
 
- Use Copilot in the inline actions to help you write Power Fx formulas. Use Copilot to apply conditional formatting, sort and filter your data, and more with the help of Power Apps Ideas. The Copilot button appears where applicable, offering suggestions for supported controls such as **Gallery**, **Data table**, **Text input**, **Drop down**, **Combo box**, and **Text label**. For more information, see [Power Apps Ideas](power-apps-ideas.md).
+Use Copilot inline to help you write Power Fx formulas. Use Copilot to apply conditional formatting, sort and filter your data, and more with the help of Power Apps Ideas. The Copilot button appears where applicable, offering suggestions for supported controls such as **Gallery**, **Data table**, **Text input**, **Drop down**, **Combo box**, and **Text label**. For more information, see [Power Apps Ideas](power-apps-ideas.md).
 
 :::image type="content" source="media/inline-actions/inline-actions-power-fx.png" alt-text="Inline actions for Power Fx formulas":::
 
