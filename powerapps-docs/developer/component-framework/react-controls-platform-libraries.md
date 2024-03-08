@@ -117,6 +117,9 @@ Platform libraries are made available both at the build and runtime to the contr
 | ------ | ---------------- | ------- |
 | React  | react            | 16.8.6  |
 | Fluent | @fluentui/react  | 8.29.0  |
+| Fluent | @fluentui/react  | 9.4.0   |
+
+Note that we may load a higher compatible version of a platform library at runtime, but that it may not be the latest version available.
 
 ## FAQ
 
