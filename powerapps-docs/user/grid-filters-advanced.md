@@ -4,7 +4,7 @@ description: Create and manage personal views on a grid page in model-driven Pow
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/18/2023
+ms.date: 03/08/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
