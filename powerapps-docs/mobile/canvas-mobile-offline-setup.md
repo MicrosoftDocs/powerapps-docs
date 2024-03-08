@@ -209,6 +209,16 @@ You can set the **Visible** property using the Power Fx function `Host` to only 
 ```powerappsfl
 Host.OfflineEnabled
 ```
+## Export a solution containing an offline canvas app
+To export a solution that contains an offline enabled canvas app, you also need to export the offline profile which is a dependency of the canvas app.
+
+1. go to [make.powerapps.com](https://make.powerapps.com) and go to **Solutions**
+2. Select the Solution that you want to Export and click **Edit**
+3. Select the canvas app that is enabled for offline, click **Advanced** and click **Add required objects**
+
+Validate that the associated offline profile is in the Solution and now you can Export it.  
+
+Note that when the offline-enabled canvas app is exported to a new anvironement within the solution, the new canvas app is not enabled for offline. You need to [set it up for offline](canvas-mobile-offline-setup.md#Turn-on-offline-capability-for-your-app).   
 
 ## Limitations and known issues
 
