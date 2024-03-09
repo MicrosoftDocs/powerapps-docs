@@ -79,10 +79,9 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 > [!NOTE]
 > If you use a Tier-1 (cloud-hosted) environment, you must do a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 >
-> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the RecId and SysRowVersion fields if they are missing when enabling change tracking on a table or data entity. You can enable the flights, by running following SQL statements in Tier 1 environments. These indexes are created in higher environments
+> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the RecId and SysRowVersion fields if they are missing. You can enable the flights, by running following SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an Entity.
 > 
-> INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1)
-> 
+> INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1) <br>
 > INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableCreateRecIdIndexForDataSynchronization', 1)
 > 
 
