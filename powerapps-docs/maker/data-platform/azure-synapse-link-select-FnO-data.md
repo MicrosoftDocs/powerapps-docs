@@ -37,7 +37,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
 > - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
 >
-> You may need to apply additional updates for recent fixes. See (known limitations section in this document)[### Known limitations with finance and operations tables].
+> You may need to apply additional updates for recent fixes. See (known limitations section in this document)[#Known limitations with finance and operations tables].
 > 
 > If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Synapse Link go to [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
 >
@@ -126,7 +126,7 @@ Currently, there are the following limitations with finance and operations table
   > Version 10.0.38 (PU62) cumulative update 10.0.1777.135 or later <br>
   > Version 10.0.39 (PU63) cumulative update update 10.0.1725.175 or later <br>
   > You will need to apply a quality build and the system will apply a bypass for Extensible data security policies for Synapse Link service
-- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[### Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
+- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[#Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 
 ## Access incremental data changes from finance and operations
@@ -207,3 +207,5 @@ Currently, there are the following limitations with finance and operations entit
 
 > [!NOTE]
 > For a list of ready-made finance and operations entities that pass validation rules, go to [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048). You must be a member of the preview Yammer group to access this list. To join, visit [Dynamics 365 and Power Platform Preview Programs External Network](https://aka.ms/SynapseLinkforDynamics).
+>
+- In case of a database restore operation in Dataverse, Finance and Operations entities enabled in Synapse Link will be removed. To re-enable Entities, you will need to re-enable corresponding virtual entities for all selected entities, re-enable change tracking and re-select the entities in Synapse Link. 
