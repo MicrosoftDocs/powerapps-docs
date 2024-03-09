@@ -4,7 +4,7 @@ description: Use these values in a condition element operator attribute to speci
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-ms.date: 02/29/2024
+ms.date: 03/08/2024
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -37,8 +37,8 @@ To learn how to use these values, see [Filter rows using FetchXml](../filter-row
 |[eq-useroruserhierarchyandteams](#eq-useroruserhierarchyandteams)|[!INCLUDE [operator-eq-useroruserhierarchyandteams-description](includes/operator-eq-useroruserhierarchyandteams-description.md)]|[Hierarchical](#hierarchical-data)|
 |[eq-useroruserteams](#eq-useroruserteams)|[!INCLUDE [operator-eq-useroruserteams-description](includes/operator-eq-useroruserteams-description.md)]|[Owner](#owner-data)|
 |[eq-userteams](#eq-userteams)|[!INCLUDE [operator-eq-userteams-description](includes/operator-eq-userteams-description.md)]|[Owner](#owner-data)|
-|[ge](#ge)|[!INCLUDE [operator-ge-description](includes/operator-ge-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
-|[gt](#gt)|[!INCLUDE [operator-gt-description](includes/operator-gt-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
+|[ge](#ge)|[!INCLUDE [operator-ge-description](includes/operator-ge-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)<br />[String](#string-data)|
+|[gt](#gt)|[!INCLUDE [operator-gt-description](includes/operator-gt-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)<br />[String](#string-data)|
 |[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|[Choice](#choice-data)<br />[Number](#number-data)<br />[Owner](#owner-data)<br />[String](#string-data)<br />[Unique Identifier](#unique-identifier-data)|
 |[in-fiscal-period](#in-fiscal-period)|[!INCLUDE [operator-in-fiscal-period-description](includes/operator-in-fiscal-period-description.md)]|[Datetime](#datetime-data)|
 |[in-fiscal-period-and-year](#in-fiscal-period-and-year)|[!INCLUDE [operator-in-fiscal-period-and-year-description](includes/operator-in-fiscal-period-and-year-description.md)]|[Datetime](#datetime-data)|
@@ -58,9 +58,9 @@ To learn how to use these values, see [Filter rows using FetchXml](../filter-row
 |[last-x-weeks](#last-x-weeks)|[!INCLUDE [operator-last-x-weeks-description](includes/operator-last-x-weeks-description.md)]|[Datetime](#datetime-data)|
 |[last-x-years](#last-x-years)|[!INCLUDE [operator-last-x-years-description](includes/operator-last-x-years-description.md)]|[Datetime](#datetime-data)|
 |[last-year](#last-year)|[!INCLUDE [operator-last-year-description](includes/operator-last-year-description.md)]|[Datetime](#datetime-data)|
-|[le](#le)|[!INCLUDE [operator-le-description](includes/operator-le-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
+|[le](#le)|[!INCLUDE [operator-le-description](includes/operator-le-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)<br />[String](#string-data)|
 |[like](#like)|[!INCLUDE [operator-like-description](includes/operator-like-description.md)]|[String](#string-data)|
-|[lt](#lt)|[!INCLUDE [operator-lt-description](includes/operator-lt-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)|
+|[lt](#lt)|[!INCLUDE [operator-lt-description](includes/operator-lt-description.md)]|[Number](#number-data)<br />[Datetime](#datetime-data)<br />[String](#string-data)|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|[Choice](#choice-data)<br />[Datetime](#datetime-data)<br />[Hierarchical](#hierarchical-data)<br />[Number](#number-data)<br />[Owner](#owner-data)<br />[String](#string-data)<br />[Unique Identifier](#unique-identifier-data)|
 |[ne-businessid](#ne-businessid)|[!INCLUDE [operator-ne-businessid-description](includes/operator-ne-businessid-description.md)]|[Unique Identifier](#unique-identifier-data)|
 |[ne-userid](#ne-userid)|[!INCLUDE [operator-ne-userid-description](includes/operator-ne-userid-description.md)]|[Unique Identifier](#unique-identifier-data)|
@@ -262,8 +262,12 @@ You can use wildcard characters for the following operators: [like](#like), [not
 |[begins-with](#begins-with)|[!INCLUDE [operator-begins-with-description](includes/operator-begins-with-description.md)]|
 |[ends-with](#ends-with)|[!INCLUDE [operator-ends-with-description](includes/operator-ends-with-description.md)]|
 |[eq](#eq)|[!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]|
+|[ge](#ge)|[!INCLUDE [operator-ge-description](includes/operator-ge-description.md)]|
+|[gt](#gt)|[!INCLUDE [operator-gt-description](includes/operator-gt-description.md)]|
 |[in](#in)|[!INCLUDE [operator-in-description](includes/operator-in-description.md)]|
+|[le](#le)|[!INCLUDE [operator-le-description](includes/operator-le-description.md)]|
 |[like](#like)|[!INCLUDE [operator-like-description](includes/operator-like-description.md)]|
+|[lt](#lt)|[!INCLUDE [operator-lt-description](includes/operator-lt-description.md)]|
 |[ne](#ne)|[!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]|
 |[not-begin-with](#not-begin-with)|[!INCLUDE [operator-not-begin-with-description](includes/operator-not-begin-with-description.md)]|
 |[not-end-with](#not-end-with)|[!INCLUDE [operator-not-end-with-description](includes/operator-not-end-with-description.md)]|
@@ -434,6 +438,7 @@ Data Types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
+- [String](#string-data)
 
 ### gt
  
@@ -443,6 +448,7 @@ Data Types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
+- [String](#string-data)
 
 ### in
  
@@ -654,6 +660,7 @@ Data Types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
+- [String](#string-data)
 
 ### like
  
@@ -671,6 +678,7 @@ Data Types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
+- [String](#string-data)
 
 ### ne
  
@@ -685,8 +693,6 @@ Data Types:
 - [Owner](#owner-data)
 - [String](#string-data)
 - [Unique Identifier](#unique-identifier-data)
-
-
 
 ### ne-businessid
  
