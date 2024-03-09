@@ -400,6 +400,8 @@ Data Type: [Unique Identifier](#unique-identifier-data)
  
 [!INCLUDE [operator-eq-userlanguage-description](includes/operator-eq-userlanguage-description.md)]
 
+When a column uses the Power Apps *Language* type, it is an integer value that stores the [Microsoft Locale ID Value](https://go.microsoft.com/fwlink/?LinkId=122128) for the language. The value is compared to the [UserSettings.UILanguageId](../../reference/entities/usersettings.md) that represents the calling user's preferred language. These columns have  [AttributeMetadata.AttributeTypeName.Value](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename) equal to [IntegerType](/dotnet/api/microsoft.xrm.sdk.metadata.attributetypedisplayname.integertype) and a [Format](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.format) value of [IntegerFormat.Language](/dotnet/api/microsoft.xrm.sdk.metadata.integerformat).
+
 Data Type: [Number](#number-data)
 
 ### eq-useroruserhierarchy
