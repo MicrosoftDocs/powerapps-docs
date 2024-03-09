@@ -49,7 +49,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - You must have a finance and operations sandbox (Tier-2) or higher environment. You can also use a Tier-1 environment (also known as a cloud-hosted environment) for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
-- You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL Link profile. Depending on how you plan to consume data, you might need additional Azure resources as shown here.
+- You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL Link profile. 
 - Depending on how you plan to consume Finance and operations data, there are additional pre-requisites as shown below
 
 | How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
