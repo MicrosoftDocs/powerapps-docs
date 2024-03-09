@@ -406,7 +406,7 @@ cross apply (
 
 ---
 
-This is equivalent to the `outer` type except it only returns the parent row at most once. Unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity when matching rows exist, but the parent row is returned even if there are no matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
+This is equivalent to the `inner` type except it only returns the parent row at most once. The parent row is returned only if there are matching rows in the linked entity but, unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results are not necessary.
 
 
 
