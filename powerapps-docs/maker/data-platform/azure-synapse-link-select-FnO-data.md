@@ -41,8 +41,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > 
 > If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Synapse Link go to [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
 >
-> Finance and operations data in Synapse Link is not yet available in the "Azure in China" region.
->
+
 
 ## Prerequisites
 
@@ -138,6 +137,7 @@ Currently, there are the following limitations with finance and operations table
   > 
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[#Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
+- **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features are not available in China region. 
 
 ## Access incremental data changes from finance and operations
 
