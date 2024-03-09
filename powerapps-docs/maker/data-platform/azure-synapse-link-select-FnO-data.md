@@ -119,12 +119,14 @@ Currently, there are the following limitations with finance and operations table
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
 - In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
-- When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) the system might not export data. This issue is fixed in following updates: 
-  > Version 10.0.37 (PU61) cumulative update 10.0.1725.175 or later.
-  > Version 10.0.38 (PU62) cumulative update 10.0.1777.135 or later.
-  > Version 10.0.39 (PU63) cumulative update update 10.0.1725.175 or later
+- When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) the system might not export data.
+  > [!NOTE]> This issue is fixed in following updates:
+  > 
+  > Version 10.0.37 (PU61) cumulative update 10.0.1725.175 or later <br>
+  > Version 10.0.38 (PU62) cumulative update 10.0.1777.135 or later <br>
+  > Version 10.0.39 (PU63) cumulative update update 10.0.1725.175 or later <br>
   > You will need to apply a quality build and the system will apply a bypass for Extensible data security policies for Synapse Link service
-- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. See Finance and Operations Entity section for details on re-enabling entities after a database restore operation.
+- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[### Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 
 ## Access incremental data changes from finance and operations
