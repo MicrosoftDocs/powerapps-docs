@@ -35,16 +35,16 @@ Use the inline actions to select layout options for certain controls to create t
 
 Use inline actions to apply a layout to blank screens. 
 
-Add a blank, select **Templates** and then select a new layout. 
+Add a blank screen, select **Templates** and then select a new layout. 
 
 > [!NOTE]
-> When a screen has content the **Templates** button isn't available anymore.
+> When a screen contains content the **Templates** button isn't available anymore.
 
 :::image type="content" source="media/inline-actions/inline-actions-screen-template.png" alt-text="Use inline actions to select a screen template":::
 
 ### Gallery control (classic) layouts
 
-Add a gallery control and then use the **Layout** button to change the layout for the control. Different layout options appear depending on whether you add a **Vertical gallery** or **Horizonal gallery**. When you add or remove controls after applying a layout, changing the layout will remove your customizations.  
+Add a gallery control and then use the **Layout** button to change the layout for the control. Different layout options appear to depend on whether you add a **Vertical gallery** or **Horizontal gallery**. When you add or remove controls after applying a layout, changing the layout will remove your customizations.  
 
 :::image type="content" source="media/inline-actions/inline-actions-gallery-layout.png" alt-text="Use inline actions to select a layout":::
 
@@ -69,7 +69,7 @@ Maintain your workflow using the inline actions to bind data to a control and ad
 
  In a **Table** control, you can drag and drop the fields to change the order they appear in the table.
 
-In a **Form** control, if you choose a new data source, you’ll be prompted to replace the data cards. When you confirm this option, it will remove any customizations and generate a new form with fields corresponding to the new data source.  
+In a **Form** control, if you choose a new data source, you’ll be prompted to replace the data cards. When you confirm this option, it removes any customizations and generate a new form with fields corresponding to the new data source.  
 
 The **Data** and **Fields** buttons are always available in the inline actions to update the data used in the gallery or **Table** control.
 
@@ -79,7 +79,7 @@ Comments allow you to tag peers in your app to ask questions, leave instructions
 comments on a screen and any control from the inline actions.  
 
 
-The screenshot shows how the comment button will look when there is no comment or when a comment is added.
+The screenshot shows how the comment button looks when there's no comment or when a comment is added.
 
 - Comment button when there's no comment: :::image type="content" source="media/inline-actions/no-comment.png" alt-text="No comment has been added":::
 - Comment button when a comment is added: :::image type="content" source="media/inline-actions/comment-added.png" alt-text="Comment button when there's a comment":::
