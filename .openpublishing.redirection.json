@@ -6,6 +6,61 @@
       "redirect_document_id": "false"
    },
    {
+      "source_path": "powerapps-docs/developer/data-platform/quick-find-limit.md",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-fetchxml-web-api.md",
+      "redirect_url": "fetchxml/retrieve-data",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/fetchxml-performance.md",
+      "redirect_url": "fetchxml/optimize-performance",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/column-comparison.md",
+      "redirect_url": "fetchxml/filter-rows#filter-on-column-values-in-the-same-row",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/paging-behaviors-and-ordering.md",
+      "redirect_url": "fetchxml/order-rows#ordering-and-paging",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-fetchxml.md",
+      "redirect_url": "fetchxml/page-results",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-left-outer-join-query-records-not-in.md",
+      "redirect_url": "fetchxml/join-tables#find-records-not-in-a-set",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-fiscal-date-older-datetime-query-operators.md",
+      "redirect_url": "fetchxml/reference/operators#datetime-data",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-aggregation.md",
+      "redirect_url": "fetchxml/aggregate-data",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/use-fetchxml-construct-query.md",
+      "redirect_url": "fetchxml/overview",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/fetchxml-schema.md",
+      "redirect_url": "fetchxml/reference/index",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/org-service/extend-code-generation-tool.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/org-service/extend-code-generation-tool",
       "redirect_document_id": "false"
@@ -3647,7 +3702,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/column-comparison.md",
-      "redirect_url": "../data-platform/column-comparison",
+      "redirect_url": "../data-platform/fetchxml/filter-rows#filter-on-column-values-in-the-same-row",
       "redirect_document_id": false
     },
     {
@@ -3907,7 +3962,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/fetchxml-performance.md",
-      "redirect_url": "../data-platform/fetchxml-performance",
+      "redirect_url": "../data-platform/fetchxml/optimize-performance",
       "redirect_document_id": false
     },
     {
@@ -4107,7 +4162,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/quick-find-limit.md",
-      "redirect_url": "../data-platform/quick-find-limit",
+      "redirect_url": "../data-platform/quick-find",
       "redirect_document_id": false
     },
     {
@@ -4317,7 +4372,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-fetchxml-construct-query.md",
-      "redirect_url": "../data-platform/use-fetchxml-construct-query",
+      "redirect_url": "../data-platform/fetchxml/overview",
       "redirect_document_id": false
     },
     {
@@ -4327,7 +4382,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-fetchxml-left-outer-join-query-records-not-in.md",
-      "redirect_url": "../data-platform/use-fetchxml-left-outer-join-query-records-not-in",
+      "redirect_url": "../data-platform/fetchxml/join-tables#find-records-not-in-a-set",
       "redirect_document_id": false
     },
     {
@@ -4712,7 +4767,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/page-large-result-sets-with-fetchxml.md",
-      "redirect_url": "../../data-platform/org-service/page-large-result-sets-with-fetchxml",
+      "redirect_url": "../../data-platform/fetchxml/page-results",
       "redirect_document_id": false
     },
     {
@@ -4722,7 +4777,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/paging-behaviors-and-ordering.md",
-      "redirect_url": "../../data-platform/org-service/paging-behaviors-and-ordering",
+      "redirect_url": "../../data-platform/fetchxml/order-rows#best-practices-for-orders-when-paging-data",
       "redirect_document_id": false
     },
     {
@@ -8768,6 +8823,121 @@
     {
       "source_path": "powerapps-docs/maker/portals/admin/update-portal-domain.md",
       "redirect_url": "/power-pages/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/terminology-changes.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-designer-anatomy.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-manage-webpages.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/compose-page.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-sections.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-text.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-image.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-iframe.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-form.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-list.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-breadcrumb.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-custom-menu.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/use-code-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-powerbi.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-chatbot.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/work-with-templates.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/theme-overview.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/edit-css.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/supported-browser.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-content-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/use-content-editor.md",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/legacy-portal-faq.yml",
+      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/table-settings-for-copilot.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/add-ai-copilot",
       "redirect_document_id": false
     }
   ]
