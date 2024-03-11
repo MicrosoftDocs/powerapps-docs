@@ -58,7 +58,7 @@ These restrictions are enforced by Dataverse for each environment:
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric (preview)](#view-retained-data-with-microsoft-fabric-preview)
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
-## View retained data with Microsoft Fabric (preview)
+## View retained data with Microsoft Fabric 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
