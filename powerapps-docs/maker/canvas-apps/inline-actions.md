@@ -51,7 +51,7 @@ When you add or remove controls after applying a layout, changing the layout rem
 
 ### Form control (modern or classic) layouts
 
-On a **Form** control (modern or classic), you need to connect it to a data source and then the **Layout** button appears in inline actions. Use the layout option to choose whether labels and inputs are arranged together vertically or horizontal.
+To access the **Layout** button on a modern or classic **Form** control, you must first link it to a data source. Once linked, the **Layout** button appears in the inline actions. You can then use the **Layout** option to select whether the labels and inputs are arranged vertically or horizontally.
 
 - Select the **Vertical** layout to place the label above the corresponding input control.
 - Select the **Horizontal** layout to place the label to the left of the input control.
@@ -79,7 +79,7 @@ You can always access the **Data** and **Fields** buttons from inline actions to
 Comments allow you to tag peers in your app to ask questions, leave instructions, and propose next steps. You can add and read
 comments on a screen and any control from inline actions.  
 
-The following images shows how the comment button looks when there's no comment and when a comment is added.
+The following images show how the comment button looks when there's no comment and when a comment is added.
 
 - Comment button when there's no comment: :::image type="content" source="media/inline-actions/no-comment.png" alt-text="No comment has been added":::
 - Comment button when a comment is added: :::image type="content" source="media/inline-actions/comment-added.png" alt-text="Comment button when there's a comment":::
