@@ -55,20 +55,13 @@ These restrictions are enforced by Dataverse for each environment:
 - Up to five users can query and retrieve retained data at the same time.
 - Up to 100 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
-- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric (preview)](#view-retained-data-with-microsoft-fabric)
+- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric](#view-retained-data-with-microsoft-fabric)
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
 ## View retained data with Microsoft Fabric 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can view the active (live) and inactive (long term retained) application data in Dataverse using Microsoft Fabric.
 To do this, link your Dataverse environment to Fabric. More information: [Link your Dataverse environment to Microsoft Fabric and unlock deep insights](azure-synapse-link-view-in-fabric.md).
-
-> [!IMPORTANT]
-> Linking your Dataverse environment to Microsoft Fabric is a preview feature.
->
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The [limitations applied to retrieval of retained data](#limitations-for-retrieval-of-retained-data) don't apply to this mode of access.
 
