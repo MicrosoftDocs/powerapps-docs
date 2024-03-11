@@ -69,7 +69,7 @@ Maintain your workflow using the inline actions to bind data to a control and ad
 
  In a **Table** control, you can drag and drop the fields to change the order they appear in the table.
 
-In a **Form** control, if you choose a new data source, you’ll be prompted to replace the data cards. When you confirm this option, it removes any customizations and generate a new form with fields corresponding to the new data source.  
+In a **Form** control, if you choose a new data source, you are prompted to replace the data cards. When you confirm this option, it removes any customizations and generates a new form with fields corresponding to the new data source.  
 
 The **Data** and **Fields** buttons are always available in the inline actions to update the data used in the gallery or **Table** control.
 
