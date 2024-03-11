@@ -132,6 +132,7 @@ Choose between an Excel file or SharePoint list to populate a table with your da
    > [!IMPORTANT]
    > - This is a preview feature.
    > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+   > - For SharePoint columns not supported, go to [SharePoint columns not used in Dataverse table generation](#sharepoint-columns-not-used-in-dataverse-table-generation).
 
    1. On the **To get data, select an option** dialog, select **SharePoint list**.
    1. Select the SharePoint site you want from the following options:
@@ -150,6 +151,21 @@ Choose between an Excel file or SharePoint list to populate a table with your da
 ---
 
 For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+
+#### SharePoint columns not used in Dataverse table generation
+
+The following tables aren’t included when generating a Dataverse table from a SharePoint list because the respective data types aren’t supported with Dataverse:
+
+- Image
+- Task outcome
+- External data
+- Managed metadata
+- Attachment (single)
+- Multiple attachments / images
+- SharePoint list system columns
+- Symbol at column level (currency, prefix, postfix) in numbers
+- Adding value manually to choice column
+- Unique values
 
 ### Create a virtual table
 
