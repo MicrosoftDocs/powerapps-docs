@@ -44,6 +44,9 @@ In this example, A appears first in the sequence since it's closest to the top. 
 > [!NOTE]
 > - In **Preview** mode when editing an app, the control order is not updated for performance reasons. The order will be correct when the app is published and run.
 > - Control order is not the same as that shown in the [tree view of controls](add-configure-controls.md#add-and-select-a-control) in Power Apps Studio. The tree view sorts controls according to when they were added to the app. It does not affect the order of controls when the app is run.
+> - When a control's **X** or **Y** value is set to an expression, the control order is not updated when the expression changes. The order is computed and fixed when the app is saved, using the initial state of the app to evaluate expressions.
+>     - If you're changing its position because other controls are being hidden or shown, you can use [auto-layout containers](./build-responsive-apps.md#auto-layout-containers) to manage **X** and **Y** for you.
+>     - You can also position all controls in a logical way regardless of expression values. For example, if control A should always be below control B and B may be hidden sometimes, set A's **Y** to be `If(B.Visible, B.Y + B.Height, B.Y + 1)`. The addition of 1 ensures that A is always below B, even if B is hidden.
 
 ### Grouped controls
 

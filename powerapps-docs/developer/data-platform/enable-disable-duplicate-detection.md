@@ -37,7 +37,7 @@ Before running duplicate detection, enable it for each of the following:
 ### Enable duplicate detection globally  
   
 -   Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message to set the `Organization.IsDuplicateDetectionEnabled` column to `true`.
--   Read [Turn duplicate detection rules on or off for the whole organization](/dynamics365/customer-engagement/admin/turn-duplicate-detection-rules-off-whole-organization) to find out how you can use the user interface to enable duplicate detection for the entire organization.
+-   Read [Turn duplicate detection rules on or off for the whole organization](/power-platform/admin/turn-duplicate-detection-rules-off-whole-organization) to find out how you can use the user interface to enable duplicate detection for the entire organization.
   
 ### Enable duplicate detection for a table  
   
