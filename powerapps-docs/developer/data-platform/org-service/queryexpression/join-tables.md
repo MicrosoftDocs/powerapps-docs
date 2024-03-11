@@ -84,7 +84,7 @@ The results look like this:
 
 ## AddLink methods
 
-You can compose the entire query in the object initialization as shown, but we recommend using the [QueryExpression.AddLink](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink) and [LinkEntity.AddLink](/dotnet/api/microsoft.xrm.sdk.query.linkentity.addlink) methods. These methods return a reference to the link created so that you can easily access and modify the query within the collection. For example, if you compose the query this way using the [QueryExpression.AddLink method](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink):
+You can compose the entire query using object initialization as shown, but we recommend using the [QueryExpression.AddLink](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink) and [LinkEntity.AddLink](/dotnet/api/microsoft.xrm.sdk.query.linkentity.addlink) methods. These methods return a reference to the link created so that you can easily access and modify the query within the collection. For example, if you compose the query this way using the [QueryExpression.AddLink method](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink):
 
 ```csharp
 var query = new QueryExpression("account")

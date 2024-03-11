@@ -23,7 +23,11 @@ The [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), toget
 
 Use `QueryExpression` to compose dynamic queries that you can modify without the string/xml manipulation required [using FetchXml](../../fetchxml/overview.md).
 
-All queries are based on a single table. Use the `QueryExpression` class to select the table the query retrieves data from. The following example represents a simple `QueryExpression` query that returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md):
+All queries are based on a single table. Use the `QueryExpression` class to select the table the query retrieves data from.
+
+### Object initialization style
+
+The following example represents a simple `QueryExpression` query that returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md) using the [object initializer](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers) so that the query is defined in a single assignment.
 
 ```csharp
 public static EntityCollection SimpleExample(IOrganizationService service) {
@@ -44,7 +48,9 @@ When the query instance is initialized, you can:
 - Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())). [Learn more about selecting columns](select-columns.md)
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount)
 
-You can compose the same query without the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)) or object initialization pattern and just set the properties to the instantiated instance as shown in the following example:
+### Property assignment style
+
+You can compose the same query without the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)) or object initialization style and just set the properties to the instantiated instance as shown in the following example:
 
 ```csharp
 public static EntityCollection SimpleExample(IOrganizationService service)
@@ -66,7 +72,7 @@ This example shows how you can:
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount) *after* object initialization.
 
 
-Examples in this documentation will use a combination of both patterns. As queries become more complex, the object initialization pattern can become unwieldy. You can always define the query properties separately and add them to the query by setting the properties or using the available methods.
+Examples in this documentation will use a combination of object initialization and property assignment styles. As queries become more complex, the object initialization style can become unwieldy. You can always define the query properties separately and add them to the query by setting the properties or using the available methods.
 
 ## Limit the number of rows
 
