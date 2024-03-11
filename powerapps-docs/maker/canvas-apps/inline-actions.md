@@ -18,7 +18,7 @@ contributors:
 
 # Use inline actions in Power Apps Studio 
 
-Use inline actions to update layouts, work with data, collaborate with your colleagues, and use Copilot directly on the canvas for specific controls. This means you can build and modify your app in Power Apps Studio without navigating away from your current view. This provides a more streamlined and efficient way to work.
+Use inline actions to update layouts, work with data, collaborate with your colleagues, and use Copilot directly on the canvas for specific controls. This means you can build and modify your app without navigating away from your current view in Power Apps Studio. This provides a more streamlined and efficient way to work.
 
 ## Use Copilot in the formula bar
 
