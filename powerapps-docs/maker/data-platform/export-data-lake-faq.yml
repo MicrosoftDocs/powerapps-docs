@@ -14,7 +14,7 @@ summary: This article provides information on frequently asked questions about e
 sections:
 - name: General
   questions:
-   - question: Can I manually perform tasks such as creating, updating, deleting, or setting retention policies for data files in the connected Azure storage?
+   - question: Can I manually perform tasks such as creating, updating, deleting, or setting auto-delete policies for data files in the connected Azure storage?
      answer: |
         Data files shouldn't be modified by a customer and no customer files should be placed in the data folders.
         > [!NOTE]
@@ -65,6 +65,9 @@ sections:
         > **CreatedOn** data type changed from datetime to datetimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and readd the table.
         > 
         > You can choose different column behaviors for a Date and Time column in Dataverse, which updates the data type format. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
+   - question: Why I am seeing 1.csv or 1_001.csv file name instead of regular date time partitioned file name for some dataverse tables?
+     answer: |
+        This behavior is expected when you choose append-only export mode and have tables without a valid **CreatedOn** column. Blobs are organized into files such as 1.csv, 2.csv (employing custom partitioning due to the absence of a valid creation date). When any partition approaches 95% of the MaxBlockPerBlobLimit, the system automatically generates a new file—illustrated here as 1_001.csv.   
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files helps improve performance in the case of in-place update scenarios.
@@ -79,7 +82,7 @@ sections:
         In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
    - question: If I drop and relink the table, will VersionNumber make any changes?
      answer: |
-        **VersionNumber** is a rowversion data type and will be changed after any operation.
+        **VersionNumber** is a rowversion data type and will be changed after any operation including drop and relink.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
