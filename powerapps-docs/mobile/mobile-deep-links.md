@@ -43,7 +43,7 @@ Deep links for the Power Apps mobile app should start with the following:
 
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
-| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li>                                                                     |
+| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones (Deprecated)</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li><li>`ms-apps-sales` -> Dynamics 365 Sales App</li>                                                                    |
 | &lt;org-url&gt;      | Connects to the correct org URL.                                              |
 | &lt;app-id&gt;       | Opens the correct app module.                                                 |
 | tenantId             | Connects to the correct tenant.                                               |
