@@ -154,7 +154,7 @@ For more information about how AI is used with this feature, go to [FAQ for Exce
 
 #### SharePoint columns not used in Dataverse table generation
 
-The following tables aren’t included when generating a Dataverse table from a SharePoint list because the respective data types aren’t supported with Dataverse:
+The following columns aren’t included when generating a Dataverse table from a SharePoint list because the respective data types aren’t supported with Dataverse:
 
 - Image
 - Task outcome
@@ -164,7 +164,6 @@ The following tables aren’t included when generating a Dataverse table from a 
 - Multiple attachments / images
 - SharePoint list system columns
 - Symbol at column level (currency, prefix, postfix) in numbers
-- Adding value manually to choice column
 - Unique values
 
 ### Create a virtual table
