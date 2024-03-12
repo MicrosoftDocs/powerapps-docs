@@ -33,8 +33,7 @@ Solutions can be published to the catalog for other makers to acquire and use, a
 
 The catalog feature is designed for makers of any level of experience to publish, discover, and acquire useful artifacts. Power Platform admins can manage catalog access and security, approve catalog items, and more using the *Catalog Manager* model-driven app. The Catalog Manager is the dedicated app for admins of the catalogs.
 
-<!-- How do approvals work? Requires the Power Platform Catalog Manager model-driven app right? -->
-More information: <!-- Link to PPAC article for admins do this so needs to go in the PPAC docs-->
+More information: [Catalog in Power Platform](/power-platform/developer/catalog)
 
 ## Work with the catalog
 
