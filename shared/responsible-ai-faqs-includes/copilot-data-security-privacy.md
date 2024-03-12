@@ -15,7 +15,7 @@ Copilot features aren't available in all Azure geographies and languages. Depend
 
 ## What happens to my data when I use Copilot? 
 
-You are in control of your data. Microsoft doesn't share your data with a third party unless you've granted permission to do so. Further, we don't use your customer data to train Copilot or its AI features, unless you provide consent for us to do so. Copilot adheres to existing data permissions and policies, and its responses to you're based only on data that you personally can access. For more information about how you can control your data and how your data is handled, see the articles listed under [Copilot Overview](#copilot-in-dynamics-365-apps-and-power-platform).
+You are in control of your data. Microsoft doesn't share your data with a third party unless you've granted permission to do so. Further, we don't use your customer data to train Copilot or its AI features, unless you provide consent for us to do so. Copilot adheres to existing data permissions and policies, and its responses to you're based only on data that you personally can access. For more information about how you can control your data and how your data is handled, see the articles listed under [Copilot in Dynamics 365 apps and Power Platform](#copilot-in-dynamics-365-apps-and-power-platform).
 
 Copilot monitors for abusive or harmful uses of the service with transient processing. We don't store or conduct eyes-on review of Copilot inputs and outputs for abuse monitoring purposes.
 
