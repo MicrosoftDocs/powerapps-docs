@@ -63,6 +63,7 @@ You can follow the steps above to create a link from one environment to multiple
 
 > [!NOTE]
 > The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an Out-of-the-Box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
+> 
 > The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
 
