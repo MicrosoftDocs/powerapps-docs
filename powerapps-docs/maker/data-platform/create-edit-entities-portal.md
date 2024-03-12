@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 01/30/2024
+ms.date: 02/28/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -64,9 +64,6 @@ Create a table with the help of AI Copilot.
 
 ### Set advanced properties
 
-<!-- Watch this video for a quick overview about how to create a table:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
-
 Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
@@ -119,7 +116,10 @@ Select **Save** to continue, this closes the **New table** panel and display the
 
 ### Upload an Excel file
 
-Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
+Use an Excel file to populate a table with your data, which uses copilot to assist with the table generation.
+
+> [!NOTE]
+> [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
