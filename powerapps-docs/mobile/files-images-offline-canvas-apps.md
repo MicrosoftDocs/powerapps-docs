@@ -19,8 +19,6 @@ searchScope:
 
 # Configure files and images in offline canvas apps
 
-[This article is prerelease documentation and is subject to change.]
-
 This article explains how to configure files and images in a Power Apps table for offline canvas apps.
 
 ## Prerequisites
