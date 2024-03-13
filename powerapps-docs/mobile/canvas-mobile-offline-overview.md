@@ -18,9 +18,7 @@ contributors:
   
 ---
 
-# Mobile offline for canvas apps (preview)
-
-[This article is prerelease documentation and is subject to change.]
+# Mobile offline for canvas apps 
 
 If users of your Dataverse-based canvas app have spotty or no Internet access, you can easily provide [offline-first](#mobile-offline-first) access with simple switches and a canvas control. Basic offline-first apps are easy to make. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference), and Power Apps offline features handle everything else.
 
@@ -42,11 +40,6 @@ You can also build complex offline apps using custom *offline profiles*. An offl
 
 To get started with mobile offline, turn on the offline feature in your app and in the tables your app uses. A basic offline screen template is automatically inserted into the app for you to use directly or as a starting point. [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md).
 
-> [!IMPORTANT]
-> [!INCLUDE [preview](../includes/cc-preview-features-definition.md)]
->
-> This feature is in the process of rolling out and may not be available in your region yet.
-
 ## Mobile offline-first
 
 *Offline-first* means that all the data users need when they're offline is copied to their mobile device. It requires network access to download the data initially, but after that, users work exclusively with the data stored locally on their device, even when they're online. Moving on and off the network doesn't affect the performance of the app because it's using local data. Power Apps monitors your app's network access. When it detects a connection, it automatically syncs any local changes to the server and downloads any updates from the server. The offline features handle conflict detection and minimize the use of system resources.
@@ -55,7 +48,7 @@ When you turn on the offline capability in your app, the app always runs offline
 
 ## Why use offline for canvas apps instead of LoadData/SaveData?
 
-Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
+There are some key benefits of using the built-in offline instead of LoadData/SaveData Power Fx functions.  
 
 |Topic    |LoadData/SaveData | Built-in offline |
 |---------|--------------------|------------------|
