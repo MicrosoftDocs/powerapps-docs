@@ -1,6 +1,6 @@
 ---
-title: "Use Insomnia with Dataverse Web API"
-description: "Learn how to set up and configure Insomnia with environments that connect with Microsoft Dataverse environments."
+title: "Use Insomnia local Scratch Pad with Dataverse Web API"
+description: "Learn how to set up and configure Insomnia local Scratch Pad with environments that connect with Microsoft Dataverse environments."
 ms.date: 03/11/2024
 author: divkamath
 ms.author: dikamath
@@ -13,11 +13,13 @@ contributors:
  - phecke
 ---
 
-# Use Insomnia with Dataverse Web API
+# Use Insomnia local Scratch Pad with Dataverse Web API
 
-There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests. This article describes a strategy to authenticate and connect to Dataverse using a Microsoft Entra application (client) ID for an application registered by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API. This article describes how to use this client ID with the popular [Insomnia API client](https://insomnia.rest/).
+There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests.
 
-One of the benefits that Insomnia provides is that it doesn't require that you create an account and doesn't store information about requests you send.
+This article describes a strategy to authenticate and connect to Dataverse using a Microsoft Entra application (client) ID for an application registered by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API. This article describes how to use this client ID with the popular [Insomnia API client](https://insomnia.rest/) local Scratch Pad feature. This article does not demonstrate other ways to authenticate to Dataverse using Insomnia.
+
+The Insomnia local Scratch Pad doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad. Of course, you may choose to create an account and use all the Insomnia features if you wish.
 
 > [!NOTE]
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
@@ -25,8 +27,7 @@ One of the benefits that Insomnia provides is that it doesn't require that you c
 > - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
 > - Refreshes your access token automatically so you don't need to keep requesting a new one when they expire.
 >
-> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the authentication procedure described here.
-
+> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here.
 
 ## Install Insomnia
 
@@ -35,19 +36,17 @@ See the [Insomnia documentation for steps to install Insomnia](https://docs.inso
 For Windows, the installer is an executable (exe) that you download and run. When the installation completes, you might be offered different options. These options shouldn't interfere with the instructions in this article, but not all were tested. At the time this article was written, these option were presented:
 
 - For the option to enable features to sync data with the cloud, choose **Keep storing locally in Local Vault**.
-- For the option to create an account, choose **Use the local Scratch Pad**. This limits some of the capabilities of Insomnia. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
+- For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
 
    :::image type="content" source="media/welcome-to-insomnia.png" alt-text="The welcome to insomnia dialog including the Use the local Scratch Pad option.":::
 
-## Create an environment
+## Configure the base environment
 
-Use Insomnia environments to store environment variables that you will use to connect to Dataverse environments. An Insomnia environment is a JSON object containing key-value pairs of data that you can reference for many purposes.
+Use Insomnia environments to store [environment variables](https://docs.insomnia.rest/insomnia/environment-variables). Environment variables are a JSON object containing key-value pairs of data that you can reference for many purposes.
 
-The *[base environment](https://docs.insomnia.rest/insomnia/environment-variables#base-environment)* is assigned to every workspace and the variables within it can be accessed throughout the workspace. If you only ever need to connect to a single environment, you could use the instructions below with the base environment. However, since you will probably need to connect to more than one environment, we recommend creating a *[sub environment](https://docs.insomnia.rest/insomnia/environment-variables#sub-environments)* for each environment you need to connect to. For example, you can create a sub environment for your development, test, and production environments.
+The *[base environment](https://docs.insomnia.rest/insomnia/environment-variables#base-environment)* is assigned to every workspace and the variables within it can be accessed throughout the workspace.
 
-1. After you have opened Insomnia, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog.
-1. Select the :::image type="icon" source="media/insomnia-plus-icon.png" border="false"::: icon to create a new environment. Environments can be *shared* or *private*. Choose **Private environment**.
-1. Double click the name of the **New Environment** you just created and rename it as you like, you can give it the name of the Dataverse environment you want to connect to, or something like **Dev environment.**
+1. After you have opened Insomnia, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
 1. Copy the following JSON:
 
    ```json
@@ -61,8 +60,8 @@ The *[base environment](https://docs.insomnia.rest/insomnia/environment-variable
    }
    ```
 
-1. Paste the JSON into the environment you created.
-1. Edit the `url` and replace the `https://yourorg.api.crm.dynamics.com` value  match the URL for your environment.
+1. Paste the JSON into the base environment.
+1. Edit the `url` property value and replace the `https://yourorg.api.crm.dynamics.com` value  match the URL for your environment.
 
    You can find the Web API endpoint for your environment using the instructions in [View developer resources](../view-download-developer-resources.md). Remove `/api/data/v9.2` from the Web API endpoint URL. This URL must end in `dynamics.com`.
 
@@ -75,137 +74,321 @@ The *[base environment](https://docs.insomnia.rest/insomnia/environment-variable
    :::image type="content" source="media/insomnia-resolved-environment-variables.png" alt-text="Resolved environment variables":::
 
 
+## Create additional environments (optional)
 
+If you only ever need to connect to a single Dataverse environment, you can just use the base environment. If you need to connect to multiple environments, you can create more *[sub environments](https://docs.insomnia.rest/insomnia/environment-variables#sub-environments)* for each Dataverse environment. For example, you can create a sub environment for your development and test Dataverse environments.
 
+1. As you did with the base environment, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
+1. Select the :::image type="icon" source="media/insomnia-plus-icon.png" border="false"::: icon to create a new environment. Environments can be *shared* or *private*. Choose **Private environment**.
+1. Double click the name of the **New Environment** you just created and rename it as you like, you can give it the name of the Dataverse environment you want to connect to, or something like **Dev environment.**
+1. Copy the following JSON:
 
-<!-- OLD -->
+   ```json
+   {
+      "url": "https://yourdevorg.api.crm.dynamics.com"
+   }
+   ```
 
-To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without registering your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
-
-> [!NOTE]
-> You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Postman. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method: 
->
-> - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
-> - Refreshes your access token automatically so you don't need to keep requesting a new one.
-
-## Prerequisites
-
-* Have a Power Apps Dataverse environment that you can connect to. 
-* Download and install the [Postman desktop application](https://www.getpostman.com/apps).
-* Have a Postman account [Postman Sign up](https://identity.getpostman.com/signup).
-
-<a name="bkmk_connectcds"></a> 
-
-## Connect with your Dataverse environment
-
-> [!IMPORTANT]
-> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Microsoft Entra ID application to connect with Dataverse API.
-
-1. Launch the Postman desktop application. 
-1. To create a new environment, select **Environments** on the left and select <b>+</b>.
-  
-   :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
-   
-1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
-1. Sign into [Power Apps](https://make.powerapps.com/) to get the base url of the Web API endpoint. 
-1. Select your Power Apps environment and then select the <b>Settings</b> button in the top-right corner. Then select <b>Developer resources</b>.
-
-    :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
-    
-1. In the **Developer resources** pane, retrieve the base url of the Web API endpoint.
-
-    :::image type="content" source="media/setup-postman-developerresource.png" alt-text="Postman developer resources":::
-    
-1. In Postman, add the following key-value pairs into the editing space and use initial value for current value.
-
-   | VARIABLE | INITIAL VALUE | ACTION |
-   |----|---|---|
-   |`url`| `https://<your org name>.api.crm.dynamics.com` | Use the base url of the Web API endpoint|
-   |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
-   |`version`|`9.2`| Copy the value | 
-   |`webapiurl`|`{{url}}/api/data/v{{version}}/`| Copy the value |
-   |`callback`|`https://localhost`| Copy the value |
-   |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`| Copy the value |
-
-1. Your settings should appear something like the following:
-
-    :::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="New environment with values":::     
-   
-1. Select **Save** to save your newly created environment named <b>MyNewEnvironment</b>.
-
-1. With your newly created environment selected, set it as the *active* one by either:
-  - Clicking the ellipses menu near the top-right and selecting **Set as active environment**, or
-  - Clicking the environment dropdown in the top-right and selecting **MyNewEnvironment**".
-
-### Generate an access token to use with your environment
-
-To connect using **OAuth 2.0**, you must have an access token. Use the following steps to get a new access token:
-
-1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected. Select <b>+</b> right next to <b>MyNewEnvironment</b>. 
-
-    :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Preauthorization":::
-    
-1. The following pane appears. Select the **Authorization** tab. 
-
-    :::image type="content" source="media/setup-postman-untitledrequest.PNG" alt-text="Untitled request":::
-    
-1. Set the **Type** to **OAuth 2.0** and set **Add authorization data to** to **Request Headers**.
-
-    :::image type="content" source="media/setup-postman-oauth-request-headers.png" alt-text="Auth request headers":::
-    
-1. In the **Configure New Token** pane, set the following values: 
-   
-   | Name | Value | Action |
-   |----|---|---|
-   |Grant Type| implicit| Choose implicit from the drop-down |
-   |Callback URL| `{{callback}}`| Copy the value |
-   |Auth URL|`{{authurl}}`| Copy the value |  
-   |Client ID|`{{clientid}}`| Copy the value |  
-
-1. Your settings should appear something like the following: 
-    
-    :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
+1. Paste the JSON into the environment you created.
+1. Edit the `url` property value to represent the Web API endpoint for your other environment, just as you did for the base environment.
 
    > [!NOTE]
-   > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. 
-    
-1. Select **Get New Access Token**. 
+   > You only need to include the `url` property in the sub environment. This will override the `url` value specified in the base environment. You can also include any of the 5 other properties if you wish, but the `url` property value is the only one that is different for each Dataverse environment.
+
+## Configure requests
+
+After you have configured your base environment and any sub-environments, you are ready to configure a request.
+
+1. Click the **New HTTP Request** button, or use the <kbd>Ctrl+N</kbd> keyboard shortcut.
+1. After the HTTP method, which is `GET` by default, type `_.` and wait a moment. Insomnia will show a list of available variables to choose from:
+
+   :::image type="content" source="media/insomnia-variables-url.png" alt-text="Environment variables for url.":::
+
+1. Choose the `_.webapiurl` variable. The **URL PREVIEW** field should show the value using the `url` property value for your selected environment.
+1. In the **Auth** tab, use the drop-down to select **OAuth 2.0** AUTH TYPE.
+
+:::image type="content" source="media/insomnia-choose-oauth-2.0-auth-type.png" alt-text="Select the OAuth 2.0 auth type":::
+
+1. Edit the authentication configuration as shown in the following table, using the environment variables you created:
+
+   |Field  |Value|
+   |---------|---------|
+   |**GRANT TYPE**|Implicit|
+   |**AUTHORIZATION URL**|`_.authurl`|
+   |**CLIENT ID**|`_.clientid`|
+   |**REDIRECT URL**|`_.redirecturl`|
+
+1. Select **Send**.
+
+   A dialog should open to enter the credentials for the environment.
+
+   After you enter your credentials, you should see results in the **Preview** window that look something like this:
+
+   ```json
+   {
+   "@odata.context": "https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata",
+   "value": [
+      {
+         "name": "aadusers",
+         "kind": "EntitySet",
+         "url": "aadusers"
+      },
+      {
+         "name": "accounts",
+         "kind": "EntitySet",
+         "url": "accounts"
+      },
+      {
+         "name": "aciviewmappers",
+         "kind": "EntitySet",
+         "url": "aciviewmappers"
+      },
+      {
+         "name": "actioncards",
+         "kind": "EntitySet",
+         "url": "actioncards"
+      },
+      ...
+   ```
+
+   This result is the [Web API service document](web-api-service-documents.md#service-document). You view this by sending a **GET** request to the root of the Web API service url. It lists the entity type names for all the tables in your Dataverse environment. When you can see this, you have successfully authenticated to your Dataverse environment.
+
+## Send a WhoAmI request
+
+Now that you have successfully authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because this is a function, you will use a `GET` method. This function has no parameters, so it is very easy to use. [Learn more about using Web API Functions](use-web-api-functions.md)
+
+1. Edit the URL by appending `WhoAmI` after the `_.webapiurl` variable.
+1. Select `Send`.
+
+   In the **Preview** pane, you should see data corresponding to the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
    
-   Once you select **Get New Access Token**, a Microsoft Entra ID sign-in dialog box appears. Enter your username and password, and then select **Sign In**. Once authentication completes, the following dialogue appears.
+   ```json
+   {
+      "@odata.context": "https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
+      "BusinessUnitId": "77164db8-dbc7-ee11-907a-00224803d046",
+      "UserId": "e6b56e50-a3d5-ee11-9078-000d3a59a579",
+      "OrganizationId": "100462a3-76cb-ee11-9075-00224806e300"
+   }
+   ```
 
-    :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
+## Set request headers
 
-1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** pane appears. Select **Use Token**. 
+As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers and you may need to modify header values for different behaviors.
 
-    :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="Access token page":::
+1. In the **Headers** tab, select the **Add** button to enter each of the following common headers:
 
-1. The newly generated token automatically appears in the text box below the **Available Tokens** drop-down.
+   |Header  |Value|
+   |---------|---------|
+   |`Accept`|`application/json`|
+   |`OData-MaxVersion`|`4.0`|
+   |`OData-Version`|`4.0`|
+   |`If-None-Match`|`null`|
+   |`Prefer`|`odata.include-annotations="*"`|
 
-    :::image type="content" source="media/setup-postman-access-token-autopopulate.png" alt-text="Token autopopulate":::
+## Retrieve data
 
-## Test your connection 
+To use Insomnia to retrieve records, you must set the entity set name for the resource.
 
-Use these steps to test your connection using [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
+1. Change the URL to remove `WhoAmI` after the `_.webapiurl` variable, and replace it with `accounts`, the entity set name for the [account entity type](/power-apps/developer/data-platform/webapi/reference/account).
 
-1. Select `GET` as the HTTP method and add `{{webapiurl}}WhoAmI` in the editing space.
+1. In the **Parameters** tab, set the parameters for your query.
 
-    :::image type="content" source="media/setup-postman-whoami-url.png" alt-text="Calling WhoAmI endpoint":::
+   You have the option to add parameters individually by selecting the **Add** button. But you can also select the **Bulk Edit** option, which you may find easier.
+
+   1. Click the **Bulk Edit** option
+   1. Copy the following parameters:
+
+   ```text
+   $top: 3
+   $select: name,revenue,address1_city
+   $expand: primarycontactid($select=fullname)
+   $filter: address1_city eq 'Redmond'
+   ```
+
+   [Learn more about how to query data](query-data-web-api.md)
+
+   1. Paste the values in the **QUERY PARAMETERS** field.
+
+      Your query should look like this:
+
+      :::image type="content" source="media/insomnia-account-query.png" alt-text="A query that retrieves account records":::
+
+1. Select **Send**.
+
+   In the **Preview** pane, you should see results like the following:
+
+   ```json
+   {
+   "@odata.context": "https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,revenue,address1_city,primarycontactid(fullname))",
+   "@Microsoft.Dynamics.CRM.totalrecordcount": -1,
+   "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+   "@Microsoft.Dynamics.CRM.globalmetadataversion": "2341840",
+   "value": [
+      {
+         "@odata.etag": "W/\"2343103\"",
+         "name": "City Power & Light (sample)",
+         "revenue@OData.Community.Display.V1.FormattedValue": "$100,000.00",
+         "revenue": 100000.0,
+         "address1_city": "Redmond",
+         "accountid": "01eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
+         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "address1_composite": "Redmond",
+         "primarycontactid": {
+         "fullname": "Scott Konersmann (sample)",
+         "contactid": "15eaf28f-81e1-ee11-904d-000d3a3517c4"
+         }
+      },
+      {
+         "@odata.etag": "W/\"2343104\"",
+         "name": "Contoso Pharmaceuticals (sample)",
+         "revenue@OData.Community.Display.V1.FormattedValue": "$60,000.00",
+         "revenue": 60000.0,
+         "address1_city": "Redmond",
+         "accountid": "03eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
+         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "address1_composite": "Redmond",
+         "primarycontactid": {
+         "fullname": "Robert Lyon (sample)",
+         "contactid": "17eaf28f-81e1-ee11-904d-000d3a3517c4"
+         }
+      },
+      {
+         "@odata.etag": "W/\"2343106\"",
+         "name": "A. Datum Corporation (sample)",
+         "revenue@OData.Community.Display.V1.FormattedValue": "$10,000.00",
+         "revenue": 10000.0,
+         "address1_city": "Redmond",
+         "accountid": "07eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
+         "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
+         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "address1_composite": "Redmond",
+         "primarycontactid": {
+         "fullname": "Rene Valdes (sample)",
+         "contactid": "1beaf28f-81e1-ee11-904d-000d3a3517c4"
+         }
+      }
+   ]
+   }
+   ```
    
-1. Select **Send** to send this request.
-1. If your request is successful, see the <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> data returned from the `WhoAmI` function:
+   > [!NOTE]
+   > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` and when the `Prefer: odata.include-annotations="*"` request header set in [Set request headers](#set-request-headers) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
 
-    :::image type="content" source="media/setup-postman-whoami.png" alt-text="Response from WhoAmI":::
+
+## Create a record
+
+You can define multiple requests that you can re-use. The easy way to create a new request that keeps any configurations you have set is to duplicate a request. In this step we will duplicate the request defined in the [Retrieve data](#retrieve-data) section and create a new request to create a record.
+
+1. The request you created in [Retrieve data](#retrieve-data) has the default name **New Request**, unless you changed it. Re-name the request **Retrieve Accounts**.
+1. When you hover over the **Retrieve Accounts** request, select the drop-down menu and select **Duplicate**.
+
+   :::image type="content" source="media/insomnia-duplicate-request.png" alt-text="Duplicating a request in Insomnia":::
+
+1. In the **Duplicate Request** dialog, set the **New Name** to **Create Account**.
+1. In the new **Create Account** request, change the HTTP method from **GET** to **POST**. The url is already set to use the `accounts` entity set name, so you don't need to change anything else here.
+1. In the **Parameters** tab, you can delete all the parameters because they won't be used for the create operation.
+1. In the **Body** tab, use the drop-down to select **JSON** from the **TEXT** group:
+
+:::image type="content" source="media/insomnia-select-body-json.png" alt-text="Selecting the JSON body type":::
+1. Copy the following JSON:
+
+```json
+{
+   "name": "An Example Account record (sample)",
+   "revenue": 10000.0,
+   "address1_city": "Redmond"
+}
+```
+
+1. Paste the JSON in the **Body** field.
+
+> [!NOTE]
+> Before you press **Send** to create the record, look at the data in the **Auth** and **Headers** tabs. Because you created this request by duplicating the **Retrieve Accounts** request, all the information you previously configured is re-used.
+
+1. Press **Send** to create the record.
+
+You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** window.
+
+The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
+
+```text
+https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)
+```
+
+This URL contains the primary key field value for the created record, in this case the `accountid` property value.
+
+## Retrieve a record
+
+Now that you have created an account record and know the primary key field value, you can retrieve it using that value. Start by duplicating the **Retrieve Accounts** request.
+
+1. Duplicate the **Retrieve Accounts** request.
+1. Name it **Retrieve account**.
+1. Edit the URL to append the `accountid` value in parentheses after the entity set name. If the `accountid` of the account you created in [Create a record](#create-a-record) was `5b4ced1c-88e1-ee11-904c-6045bd05e9d4`, edit the url to be:
+   
+   `GET _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
+
+1. In the **Parameters** tab, remove the `$top`, `$expand`, and `$filter` parameters, leaving only the `$select` parameter to limit the number of columns returned.
+1. In the **Headers** tab, remove the `Prefer` header so that no annotations are returned.
+1. Select **Send**.
+
+   The response should return **200 OK**, and the **Preview** pane should contain data like the following:
+
+   ```json
+   {
+      "@odata.context": "https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,revenue,address1_city)/$entity",
+      "@odata.etag": "W/\"2343128\"",
+      "name": "An Example Account record (sample)",
+      "revenue": 10000.0000000000,
+      "address1_city": "Redmond",
+      "accountid": "5b4ced1c-88e1-ee11-904c-6045bd05e9d4",
+      "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+      "address1_composite": "Redmond"
+   }
+   ```
+
+## Delete a record
+
+Now that you have create and retrieved a record using the primary key value, you can now delete it.
+
+1. Duplicate the **Retrieve account** request. Name the new request **Delete account**.
+1. Change the HTTP method from `GET` to `DELETE`.
+   
+   The URL should still contain the data with the `accountid` of the record you created and retrieved.
+
+   `DELETE _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
+
+1. In the **Parameters** tab, remove the `$select` parameter because it is meaningless for a delete operation.
+1. Select **Send**.
+
+You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** window.
+
+If you send the **Retrieve account** request now, it will return 404 Not Found and the **Preview** pane will show this error:
+
+```json
+{
+   "error": {
+      "code": "0x80040217",
+      "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+   }
+}
+```
 
 ## Next steps
 
-Learn about using Postman to perform operations with the Web API.
+Learn more about what you can do with the Dataverse Web API:
 
 > [!div class="nextstepaction"]
-> [Service Documents](use-postman-perform-operations.md)<br/>
+> [Learn about Web API types and operations](web-api-types-operations.md)<br/>
 
-## See also
-
-[Use Postman to perform operations](use-postman-perform-operations.md)<br/>
-[Walkthrough: Register a Dataverse app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
+> [!div class="nextstepaction"]
+> [Perform operations using the Web API](perform-operations-web-api.md)<br/>
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
