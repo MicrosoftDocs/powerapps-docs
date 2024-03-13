@@ -195,6 +195,16 @@ You can set the **Visible** property using the Power Fx function `Host` to only 
 ```powerappsfl
 Host.OfflineEnabled
 ```
+## How to get the best of the offline built-in canvas? 
+Follow the recommendation below to create a faster user experience. 
+
+ |Scenario                      |  don't do                      |  do                 |
+ |-------------------------------|----------------------------|--------------------------------|
+ | Show related tables' information in a gallery | Use a lookup to fetch the data | Use a view containing the column of the related table|
+ | Create a filterable gallery with a lot of records  | Load the records from Dataverse and store them in a collection. Set the items of the Gallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse filtered data |
+ | Update multiple records | Loop the records and patch them individually | Bulk patch a collection containing all the modifications |
+
+    
 ## Export a solution that contains a canvas app enabled for offline
 
 When you export a solution with an offline canvas app, you also need export the offline profile for the app, as it is a dependency of the app.
