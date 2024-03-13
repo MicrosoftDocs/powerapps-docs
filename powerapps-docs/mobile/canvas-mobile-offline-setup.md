@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 10/11/2023
+ms.date: 03/13/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -196,13 +196,13 @@ You can set the **Visible** property using the Power Fx function `Host` to only 
 Host.OfflineEnabled
 ```
 ## How to get the best of the offline built-in canvas? 
-Follow the recommendation below to create a faster user experience. 
+Use the following recommendations to create a faster user experience for specific scenarious. 
 
- |Scenario                      |  don't do                      |  do                 |
+ |Scenario                      |  Approach that is not recommended                     |  Recommended approach               |
  |-------------------------------|----------------------------|--------------------------------|
- | Show related tables' information in a gallery | Use a lookup to fetch the data | Use a view containing the column of the related table|
- | Create a filterable gallery with a lot of records  | Load the records from Dataverse and store them in a collection. Set the items of the Gallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse filtered data |
- | Update multiple records | Loop the records and patch them individually | Bulk patch a collection containing all the modifications |
+ | Show related tables' information in a gallery. | Use a look-up to fetch the data. | Use a view containing the column of the related table.|
+ | Create a filterable gallery with a lot of records.  | Load the records from Dataverse and store them in a collection. Set the items of the fallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse-filtered data. |
+ | Update multiple records. | Loop the records and patch them individually. | Bulk patch a collection containing all the modifications. |
 
     
 ## Export a solution that contains a canvas app enabled for offline
