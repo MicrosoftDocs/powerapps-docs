@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 12/12/2023
+ms.date: 03/13/2024
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format

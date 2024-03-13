@@ -1,8 +1,8 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
-description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
+description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 01/24/2024
+ms.date: 03/13/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -71,7 +71,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 You can follow the steps above to create a link from one environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
-> The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an Out-of-the-Box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
+> The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an out-of-the-box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
 > 
 > The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
@@ -92,7 +92,7 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- There are different stages the sync status circulates through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync is **Completed**, there's a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
 - The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
 - The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
