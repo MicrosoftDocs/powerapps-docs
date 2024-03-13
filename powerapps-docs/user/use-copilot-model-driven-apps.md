@@ -44,3 +44,29 @@ You see more suggested prompts by selecting View prompts within the Copilot pane
 
 picture
 
+## Record picker to select object of the question 
+
+You can use the record picker to select the object of your question. Type “/” character to open the record picker and continue typing the name of the record. Then select the record of your choice and complete the question to make it meaningful. Submit the question to Copilot to view the response. 
+
+picture
+
+> [!Note]
+> - Using record picker will increase the chances of Copilot understanding the question, and thus responding with an accurate answer.
+> - Record picker needs [Dataverse Search to be enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the typeahead search capability. 
+
+## Provide feedback 
+
+To provide feedback to help improve copilot, select the thumb up or thumb down icon included in each copilot response. Feedback can be submitted for each copilot response. 
+
+### Provide positive feedback 
+
+1. On the right navigation bar, select the thumb up icon. 
+2. Optionally, provide feedback in your own words about what you liked. 
+3. Select **Submit** after you're done entering your feedback. 
+
+### Provide feedback for improvement 
+
+1. On the right navigation bar, select the thumb down icon. 
+2. Optionally, provide feedback, such as feedback about the content of copilot’s response, or a description in your own words about what went wrong, or how you would like copilot to improve. 
+3. Select **Submit** after you're done entering your feedback. 
+
