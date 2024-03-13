@@ -14,6 +14,6 @@ search.audienceType:
   - enduser
 ---
 
-## Use Copilot in model-driven apps (preview)
+# Use Copilot in model-driven apps (preview)
 
 Content goes here.
