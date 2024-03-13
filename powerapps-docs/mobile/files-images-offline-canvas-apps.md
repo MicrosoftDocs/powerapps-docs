@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: article
-ms.date: 2/6/2024
+ms.date: 03/13/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
