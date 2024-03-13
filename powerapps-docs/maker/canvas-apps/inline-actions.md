@@ -64,7 +64,7 @@ Maintain your workflow using inline actions to bind data to a control and then a
 
 ### Gallery, Table, and Form
 
- When you add a gallery, **Table**, or **Form** control, the **Data** button is automatically selected. You can then add a data source to the control. Once the data source is added, the control displays the data.
+ When you add a **Gallery**, **Table**, or **Form** control, the **Data** button is automatically selected. You can then add a data source to the control. Once the data source is added, the control displays the data.
 
  Use the **Fields** button to select which fields are shown on the control from the selected data source.
 
@@ -72,7 +72,7 @@ Maintain your workflow using inline actions to bind data to a control and then a
 
 In a **Form** control, if you choose a new data source, you're prompted to replace the data card. When you confirm your selection, it removes any customizations and generates a new form with fields corresponding to the new data source.  
 
-You can always access the **Data** and **Fields** buttons from inline actions to modify the information used in the gallery or **Table**  control.
+You can always access the **Data** and **Fields** buttons from inline actions to modify the information used in the **Form**, **Gallery**, or **Table**  control.
 
 ## Add comments
 
