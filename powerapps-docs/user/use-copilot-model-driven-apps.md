@@ -28,13 +28,13 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant fo
 
 When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar or through the Copilot icon in the top bar in a model-driven app. The copilot pane can be expanded or collapsed as desired. When enabled, the pane is expanded by default.
 
-<picture>
+picture
 
 ## Use Copilot to ask questions 
 
 Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters Navigate me to Online Cases, the copilot in the model-driven app automatically opens the relevant page in the app. 
 
-<picture>
+picture
 
 ## Copilot suggested questions 
 
@@ -42,5 +42,5 @@ Copilot can suggest questions for you to ask to help you get started. These ques
 
 You see more suggested prompts by selecting View prompts within the Copilot pane. Many of the suggested questions have placeholders that you need to replace with an appropriate text that completes the question. 
 
-<picture>
+picture
 
