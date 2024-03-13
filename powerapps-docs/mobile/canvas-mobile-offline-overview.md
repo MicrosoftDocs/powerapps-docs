@@ -1,7 +1,7 @@
 ---
 title: Mobile offline for canvas apps
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 10/11/2023
+ms.date: 03/13/2024
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
@@ -48,7 +48,7 @@ When you turn on the offline capability in your app, the app always runs offline
 
 ## Why use offline for canvas apps instead of LoadData/SaveData?
 
-There are some key benefits of using the built-in offline instead of LoadData/SaveData Power Fx functions.  
+There are some key benefits of using the built-in offline functionality for canvas apps instead of LoadData/SaveData Power Fx functions.  
 
 |Topic    |LoadData/SaveData | Built-in offline |
 |---------|--------------------|------------------|
