@@ -1,5 +1,5 @@
 ---
-title: Mobile offline for canvas apps (preview)
+title: Mobile offline for canvas apps
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
 ms.date: 10/11/2023
 ms.topic: overview
