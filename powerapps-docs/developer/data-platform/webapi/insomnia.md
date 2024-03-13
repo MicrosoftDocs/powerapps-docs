@@ -15,9 +15,12 @@ contributors:
 
 # Use Insomnia local Scratch Pad with Dataverse Web API
 
-There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests.
+There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests. These tools make it easier to learn, test, and perform ad-hoc queries using the Dataverse Web API.
 
-This article describes a strategy to authenticate and connect to Dataverse using a Microsoft Entra application (client) ID for an application registered by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API. This article describes how to use this client ID with the popular [Insomnia API client](https://insomnia.rest/) local Scratch Pad feature. This article does not demonstrate other ways to authenticate to Dataverse using Insomnia.
+This article has two goals:
+
+1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
+1. Introduce you to some basic data operations you can perform using the Dataverse Web API. This way, you can use Insomnia to continue to experiment and learn about the Datverse Web API.
 
 The Insomnia local Scratch Pad doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad. Of course, you may choose to create an account and use all the Insomnia features if you wish.
 
@@ -33,7 +36,7 @@ The Insomnia local Scratch Pad doesn't require that you create an account and do
 
 See the [Insomnia documentation for steps to install Insomnia](https://docs.insomnia.rest/insomnia/install). The instructions are different for MacOS, Windows, and Linux.
 
-For Windows, the installer is an executable (exe) that you download and run. When the installation completes, you might be offered different options. These options shouldn't interfere with the instructions in this article, but not all were tested. At the time this article was written, these option were presented:
+For Windows, the installer is an executable (exe) that you download and run. When the installation completes, you might be offered different options. These options shouldn't interfere with the instructions in this article, but they may change. At the time this article was written, these option were presented:
 
 - For the option to enable features to sync data with the cloud, choose **Keep storing locally in Local Vault**.
 - For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
@@ -61,7 +64,7 @@ The *[base environment](https://docs.insomnia.rest/insomnia/environment-variable
    ```
 
 1. Paste the JSON into the base environment.
-1. Edit the `url` property value and replace the `https://yourorg.api.crm.dynamics.com` value  match the URL for your environment.
+1. Edit the `url` property value and replace the `https://yourorg.api.crm.dynamics.com` value  match the URL for your Dataverse environment.
 
    You can find the Web API endpoint for your environment using the instructions in [View developer resources](../view-download-developer-resources.md). Remove `/api/data/v9.2` from the Web API endpoint URL. This URL must end in `dynamics.com`.
 
@@ -93,7 +96,7 @@ If you only ever need to connect to a single Dataverse environment, you can just
 1. Edit the `url` property value to represent the Web API endpoint for your other environment, just as you did for the base environment.
 
    > [!NOTE]
-   > You only need to include the `url` property in the sub environment. This will override the `url` value specified in the base environment. You can also include any of the 5 other properties if you wish, but the `url` property value is the only one that is different for each Dataverse environment.
+   > You only need to include the `url` property in the sub environment. When the sub environment is selected, this value will override the `url` value specified in the base environment. You can also include any of the 5 other properties if you wish, but the `url` property value is the only one that is different for each Dataverse environment.
 
 ## Configure requests
 
@@ -122,7 +125,7 @@ After you have configured your base environment and any sub-environments, you ar
 
    A dialog should open to enter the credentials for the environment.
 
-   After you enter your credentials, you should see results in the **Preview** window that look something like this:
+   After you enter your credentials, you should see results in the **Preview** pane that look something like this:
 
    ```json
    {
@@ -293,11 +296,12 @@ You can define multiple requests that you can re-use. The easy way to create a n
    :::image type="content" source="media/insomnia-duplicate-request.png" alt-text="Duplicating a request in Insomnia":::
 
 1. In the **Duplicate Request** dialog, set the **New Name** to **Create Account**.
-1. In the new **Create Account** request, change the HTTP method from **GET** to **POST**. The url is already set to use the `accounts` entity set name, so you don't need to change anything else here.
+1. In the new **Create Account** request, change the HTTP method from `GET` to `POST`. The url is already set to use the `accounts` entity set name, so you don't need to change anything else here.
 1. In the **Parameters** tab, you can delete all the parameters because they won't be used for the create operation.
 1. In the **Body** tab, use the drop-down to select **JSON** from the **TEXT** group:
 
 :::image type="content" source="media/insomnia-select-body-json.png" alt-text="Selecting the JSON body type":::
+
 1. Copy the following JSON:
 
 ```json
@@ -315,7 +319,7 @@ You can define multiple requests that you can re-use. The easy way to create a n
 
 1. Press **Send** to create the record.
 
-You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** window.
+You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
 
 The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
 
@@ -336,7 +340,7 @@ Now that you have created an account record and know the primary key field value
    `GET _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
 
 1. In the **Parameters** tab, remove the `$top`, `$expand`, and `$filter` parameters, leaving only the `$select` parameter to limit the number of columns returned.
-1. In the **Headers** tab, remove the `Prefer` header so that no annotations are returned.
+1. In the **Headers** tab, select the checkbox next to the the `Prefer` header to disable it so that no annotations are returned.
 1. Select **Send**.
 
    The response should return **200 OK**, and the **Preview** pane should contain data like the following:
@@ -368,18 +372,44 @@ Now that you have create and retrieved a record using the primary key value, you
 1. In the **Parameters** tab, remove the `$select` parameter because it is meaningless for a delete operation.
 1. Select **Send**.
 
-You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** window.
+You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
 
-If you send the **Retrieve account** request now, it will return 404 Not Found and the **Preview** pane will show this error:
+1. Try sending the **Retrieve account** request now, it will return 404 Not Found and the **Preview** pane will show this error:
 
-```json
-{
-   "error": {
-      "code": "0x80040217",
-      "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+   ```json
+   {
+      "error": {
+         "code": "0x80040217",
+         "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+      }
    }
-}
-```
+   ```
+
+1. Re-enable the `Prefer` header for the **Retrieve account** request so that all annotations are returned.
+1. Send the request again, and you can now see many additional annotations are returned with the **404 Not Found** response:
+
+   ```json
+   {
+      "error": {
+         "code": "0x80040217",
+         "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionSourceKey": "Plugin/Microsoft.Crm.Common.ObjectModel.AccountService",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepKey": "81cbbb1b-ea3e-db11-86a7-000a3a5473e8",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiDepthKey": "1",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiActivityIdKey": "ef7da2d8-c3bc-40f3-b67f-9d2981341086",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiPluginSolutionNameKey": "System",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepSolutionNameKey": "System",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionCategory": "ClientError",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionMessageName": "ObjectDoesNotExist",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionHttpStatusCode": "404",
+         "@Microsoft.PowerApps.CDS.HelpLink": "http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040217&client=platform",
+         "@Microsoft.PowerApps.CDS.InnerError.Message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+      }
+   }
+   ```
+
+   These details are not very useful in this context, because the issue is obvious. But these details might be useful in other scenarios.
+
 
 ## Next steps
 
