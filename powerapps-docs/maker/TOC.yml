@@ -245,8 +245,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Maker matching using an integrated virtual agent (preview)
-    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1923,8 +1921,6 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
-    - name: "Configure tables to use Copilot"
-      href: ./data-platform/table-settings-for-copilot.md  
     - name: Long term data retention for tables
       items:
       - name: Long term data retention overview
