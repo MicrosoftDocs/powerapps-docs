@@ -160,8 +160,27 @@ After you have configured your base environment and any sub-environments, you ar
 
 Now that you have successfully authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because this is a function, you will use a `GET` method. This function has no parameters, so it is very easy to use. [Learn more about using Web API Functions](use-web-api-functions.md)
 
-1. Edit the URL by appending `WhoAmI` after the `_.webapiurl` variable.
-1. Select `Send`.
+1. Edit the URL by appending `WhoAmI` after the `_.webapiurl` variable. The URL should be:
+   
+   `GET _.webapiurl WhoAmI`
+
+1. Set request headers.
+
+   As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers and you may need to modify header values for different behaviors.
+
+   In the **Headers** tab, select the **Add** button to enter each of the following common headers:
+
+   |Header  |Value|
+   |---------|---------|
+   |`Accept`|`application/json`|
+   |`OData-MaxVersion`|`4.0`|
+   |`OData-Version`|`4.0`|
+   |`If-None-Match`|`null`|
+   |`Prefer`|`odata.include-annotations="*"`|
+
+   These headers won't change the behavior of the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami), but it is good to start adding them at the beginning.
+
+1. Select **Send**.
 
    In the **Preview** pane, you should see data corresponding to the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
    
@@ -174,31 +193,19 @@ Now that you have successfully authenticated, modify your request to invoke the 
    }
    ```
 
-## Set request headers
-
-As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers and you may need to modify header values for different behaviors.
-
-1. In the **Headers** tab, select the **Add** button to enter each of the following common headers:
-
-   |Header  |Value|
-   |---------|---------|
-   |`Accept`|`application/json`|
-   |`OData-MaxVersion`|`4.0`|
-   |`OData-Version`|`4.0`|
-   |`If-None-Match`|`null`|
-   |`Prefer`|`odata.include-annotations="*"`|
-
 ## Retrieve data
 
 To use Insomnia to retrieve records, you must set the entity set name for the resource.
 
-1. Change the URL to remove `WhoAmI` after the `_.webapiurl` variable, and replace it with `accounts`, the entity set name for the [account entity type](/power-apps/developer/data-platform/webapi/reference/account).
+1. Change the URL to remove `WhoAmI` after the `_.webapiurl` variable, and replace it with `accounts`, the entity set name for the [account entity type](/power-apps/developer/data-platform/webapi/reference/account). The URL should be:
+   
+   `GET _.webapiurl accounts`
 
 1. In the **Parameters** tab, set the parameters for your query.
 
    You have the option to add parameters individually by selecting the **Add** button. But you can also select the **Bulk Edit** option, which you may find easier.
 
-   1. Click the **Bulk Edit** option
+   1. Select the **Bulk Edit** option.
    1. Copy the following parameters:
 
    ```text
@@ -207,6 +214,8 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
    $expand: primarycontactid($select=fullname)
    $filter: address1_city eq 'Redmond'
    ```
+
+   This query will return selected columns from the top 3 account records located in the city of Redmond, and include information about any related contact specified as the primary contact for the accounts.
 
    [Learn more about how to query data](query-data-web-api.md)
 
@@ -288,7 +297,7 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
 
 ## Create a record
 
-You can define multiple requests that you can re-use. The easy way to create a new request that keeps any configurations you have set is to duplicate a request. In this step we will duplicate the request defined in the [Retrieve data](#retrieve-data) section and create a new request to create a record.
+With Insomnia, you can define multiple requests that you can re-use. The easy way to create a new request that keeps any configurations you have set is to duplicate an existing request. In this step we will duplicate the request defined in the [Retrieve data](#retrieve-data) section and create a new request to create a record.
 
 1. The request you created in [Retrieve data](#retrieve-data) has the default name **New Request**, unless you changed it. Re-name the request **Retrieve Accounts**.
 1. When you hover over the **Retrieve Accounts** request, select the drop-down menu and select **Duplicate**.
@@ -296,7 +305,10 @@ You can define multiple requests that you can re-use. The easy way to create a n
    :::image type="content" source="media/insomnia-duplicate-request.png" alt-text="Duplicating a request in Insomnia":::
 
 1. In the **Duplicate Request** dialog, set the **New Name** to **Create Account**.
-1. In the new **Create Account** request, change the HTTP method from `GET` to `POST`. The url is already set to use the `accounts` entity set name, so you don't need to change anything else here.
+1. In the new **Create Account** request, change the HTTP method from `GET` to `POST`. The url is already set to use the `accounts` entity set name, so you don't need to change anything else here. The URL should be:
+   
+   `POST _.webapiurl accounts`
+
 1. In the **Parameters** tab, you can delete all the parameters because they won't be used for the create operation.
 1. In the **Body** tab, use the drop-down to select **JSON** from the **TEXT** group:
 
@@ -329,6 +341,8 @@ https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(5b4ced1c-88e1-ee11-9
 
 This URL contains the primary key field value for the created record, in this case the `accountid` property value.
 
+[Learn more about creating records](create-entity-web-api.md)
+
 ## Retrieve a record
 
 Now that you have created an account record and know the primary key field value, you can retrieve it using that value. Start by duplicating the **Retrieve Accounts** request.
@@ -358,6 +372,8 @@ Now that you have created an account record and know the primary key field value
    }
    ```
 
+[Learn more about retrieving records](retrieve-entity-using-web-api.md)
+
 ## Delete a record
 
 Now that you have create and retrieved a record using the primary key value, you can now delete it.
@@ -373,6 +389,8 @@ Now that you have create and retrieved a record using the primary key value, you
 1. Select **Send**.
 
 You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
+
+[Learn more about deleting records](update-delete-entities-using-web-api.md#basic-delete)
 
 1. Try sending the **Retrieve account** request now, it will return 404 Not Found and the **Preview** pane will show this error:
 
@@ -408,7 +426,7 @@ You should see that the service returned **204 No Content**, so there is no cont
    }
    ```
 
-   These details are not very useful in this context, because the issue is obvious. But these details might be useful in other scenarios.
+   These details are not very useful in this context, because the issue is obvious. But these details might be useful in other scenarios. [Learn more about including more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
 
 ## Next steps
