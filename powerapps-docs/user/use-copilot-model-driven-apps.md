@@ -18,7 +18,7 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-Copilot for model-driven apps in Power Apps is a next-generation AI assistant for you to get insights about the data in your apps through conversation in natural language. Copilot helps you boost your productivity through AI-powered insights and navigation assistance. 
+Copilot for model-driven apps in Power Apps is a next-generation AI assistant to help you get insights about the data in your apps through conversation in natural language. Copilot helps you boost your productivity through AI-powered insights and navigation assistance. 
 
 > [!IMPORTANT]
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
