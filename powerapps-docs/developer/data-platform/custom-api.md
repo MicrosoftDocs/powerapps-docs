@@ -33,7 +33,7 @@ There are several different ways to create a custom API:
 |---------|---------|
 |[Plug-in registration tool](create-custom-api-prt.md)|An easy-to-use GUI tool integrated with tools used to develop plug-ins.|
 |[Power Apps](create-custom-api-maker-portal.md)|Using forms to enter data. You don't need to install a separate tool, you must create a separate record for each part of the custom API.|
-|[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create custom API quickly using Postman. Or you can build your own experience to create custom API.|
+|[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create custom API quickly using an API Client like Postman or [Insomnia](webapi/insomnia.md). Or you can build your own experience to create custom API.|
 |[With solution files](create-custom-api-solution.md)|When you use Application Lifecycle Management (ALM) tools, you can create or modify custom API definitions with XML files in a solution that is included in your source code repository. The custom API is created when you import the solution generated from your source code.|
 
 > [!NOTE]
@@ -186,7 +186,7 @@ A custom API creates a new message that can be invoked via the Web API or Datave
 
 ### Invoking custom APIs from the Web API
 
-While testing, you can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
+While testing, you can invoke your API using an API client like Postman or Insomnia. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
 See the following examples:
 

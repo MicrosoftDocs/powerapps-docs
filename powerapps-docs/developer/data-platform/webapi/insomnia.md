@@ -1,5 +1,5 @@
 ---
-title: "Use Insomnia local Scratch Pad with Dataverse Web API"
+title: "Use Insomnia with Dataverse Web API"
 description: "Learn how to set up and configure Insomnia local Scratch Pad with environments that connect with Microsoft Dataverse environments."
 ms.date: 03/11/2024
 author: divkamath
@@ -13,7 +13,7 @@ contributors:
  - phecke
 ---
 
-# Use Insomnia local Scratch Pad with Dataverse Web API
+# Use Insomnia with Dataverse Web API
 
 There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests. These tools make it easier to learn, test, and perform ad-hoc queries using the Dataverse Web API.
 
@@ -22,7 +22,11 @@ This article has two goals:
 1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
 1. Introduce you to some basic data operations you can perform using the Dataverse Web API in the context of the Insomnia API client. This way, you can use Insomnia to continue to experiment and learn about the Datverse Web API.
 
-The Insomnia local Scratch Pad doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. Of course, you may choose to create an account and use all the Insomnia features if you wish. If you want a version which has that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
+## Security
+
+Requests you send with a API client tools contain information that could be sensitive. Many developers do not want to have this information uploaded to a third party service.
+
+The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. Of course, you may choose to create an account and use all the Insomnia features if you wish. If you want a version which has that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
 
 > [!NOTE]
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
@@ -30,7 +34,7 @@ The Insomnia local Scratch Pad doesn't require that you create an account and do
 > - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
 > - Refreshes your access token automatically so you don't need to keep requesting a new one when they expire.
 >
-> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here.
+> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here. See the [Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started) for more information.
 
 ## Install Insomnia
 
