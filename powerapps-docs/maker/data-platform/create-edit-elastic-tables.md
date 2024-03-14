@@ -102,7 +102,7 @@ Table features currently not supported with elastic tables:
 - Duplicate detection
 - Calculated and rollup columns
 - Currency columns
-- [Column comparison in queries using FetchXML, Web API, or the SDK API](../../developer/data-platform/column-comparison.md)
+- Column comparison in queries
 - Table sharing
 - Composite indexes
 - Cascade operations: Delete, Reparent, Assign, Share, Unshare
@@ -144,7 +144,7 @@ More information about Tables: [Advanced options](create-edit-entities-portal.md
 ## Known issues
 
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row gets deleted from the elastic table when TTL expires. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
-- Point in time restore doesn't restore “updated” records as updates aren't backed up. Only created and deleted records are restored.
+- Point in time restore doesn't restore "updated" records as updates aren't backed up. Only created and deleted records are restored.
 - If a specific column in an elastic table is deleted, the columns value isn't removed from the table rows if it has data. Before deleting a specific column, delete the data from all rows for the column.
 
 ## High volume elastic tables and managing Dataverse API throttling limits

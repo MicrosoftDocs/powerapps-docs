@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 12/06/2023
+ms.date: 02/28/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -56,16 +56,13 @@ Create a table with the help of AI Copilot.
 > To use this feature, note the following requirements:
 >
 > - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
-> - This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+> - This feature is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
 1. When you're finished, select **Create**.
 
 ### Set advanced properties
-
-<!-- Watch this video for a quick overview about how to create a table:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
 
 Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
@@ -119,7 +116,10 @@ Select **Save** to continue, this closes the **New table** panel and display the
 
 ### Upload an Excel file
 
-Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
+Use an Excel file to populate a table with your data, which uses copilot to assist with the table generation.
+
+> [!NOTE]
+> [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.

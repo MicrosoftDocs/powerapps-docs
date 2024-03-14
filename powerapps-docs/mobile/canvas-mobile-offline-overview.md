@@ -26,13 +26,14 @@ If users of your Dataverse-based canvas app have spotty or no Internet access, y
 
 > [!IMPORTANT]
 > - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
->   - Sum/Min/Max/Avg
+>   - Min/Max/Avg
 >   - Relate
 >   - Unrelate
 >   - In (Membership)
 >   - UpdateIf
 >   - RemoveIf
-> - Filter on column lookup only supports one level of lookup when the app is enabled for offline. 
+> - Filter on column lookup only supports one level of lookup when the app is enabled for offline.
+> - Many to many relationships are not supported.
 
 
 Microsoft plans to support these functions and tokens in the future.

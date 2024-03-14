@@ -1,7 +1,7 @@
 ---
 title: "ServicePlanMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ServicePlanMapping table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -53,6 +53,7 @@ Service Plan Mapping
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CustomAPI](#BKMK_CustomAPI)
 - [Entity](#BKMK_Entity)
 - [FeatureControl](#BKMK_FeatureControl)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -66,6 +67,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_CustomAPI"></a> CustomAPI
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Custom API|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|customapi|
+|RequiredLevel|None|
+|Targets|customapi|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Entity"></a> Entity
@@ -295,6 +311,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [CustomAPIName](#BKMK_CustomAPIName)
 - [EntityName](#BKMK_EntityName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -468,6 +485,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_CustomAPIName"></a> CustomAPIName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|customapiname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -890,6 +923,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
 - [sdkmessage_serviceplanmapping](#BKMK_sdkmessage_serviceplanmapping)
 - [serviceplan_serviceplanmapping](#BKMK_serviceplan_serviceplanmapping)
+- [customapi_serviceplanmapping](#BKMK_customapi_serviceplanmapping)
 
 
 ### <a name="BKMK_lk_serviceplanmapping_createdby"></a> lk_serviceplanmapping_createdby
@@ -931,6 +965,12 @@ See the [sdkmessage_serviceplanmapping](sdkmessage.md#BKMK_sdkmessage_servicepla
 ### <a name="BKMK_serviceplan_serviceplanmapping"></a> serviceplan_serviceplanmapping
 
 See the [serviceplan_serviceplanmapping](serviceplan.md#BKMK_serviceplan_serviceplanmapping) one-to-many relationship for the [serviceplan](serviceplan.md) table/entity.
+
+### <a name="BKMK_customapi_serviceplanmapping"></a> customapi_serviceplanmapping
+
+**Added by**: Custom API Framework Solution
+
+See the [customapi_serviceplanmapping](customapi.md#BKMK_customapi_serviceplanmapping) one-to-many relationship for the [customapi](customapi.md) table/entity.
 
 ### See also
 

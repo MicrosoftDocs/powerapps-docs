@@ -37,6 +37,10 @@ Deep links for the Power Apps mobile app should start with the following:
 
 ```ms-apps://<org-url>_<app-id>?tenantId=<tenant-id>&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true```
 
+> [!IMPORTANT]
+> The org-url can't contain **https://**. The following is a example of a model-driven app deeplink: <br>
+> ms-apps://contoso.onmicrosoft.com_e6429eba-2204-40e8-b9dd-fc74791ff2c2?tenantId=219f9bd4-8c16-4dfa-b87e-f4a33764f1dd
+
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
 | &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li>                                                                     |

@@ -199,6 +199,25 @@ Switch(Connection.Sync,
 
    ConnectionSync.NotConnectedSyncError, Icon.GlobeError) 
 ```
+You can set the **OnSelect** property using the Power Fx function `ShowHostInfo` to show the [Device status page](/power-apps/mobile/offline-sync-icon#device-status-page) when selecting the globe icon. 
+
+```powerappsfl
+ShowHostInfo(HostInfo.OfflineSync)
+```
+You can set the **Visible** property using the Power Fx function `Host` to only show the globe icon when the app is used on a player that is supporting the offline mode. 
+
+```powerappsfl
+Host.OfflineEnabled
+```
+## Export a solution that contains a canvas app enabled for offline
+
+When you export a solution with an offline canvas app, you also need export the offline profile for the app, as it is a dependency of the app.
+
+1. Sign in to [Power Apps](https://make.powerapps.com) and in the left navigation pane, select **Solutions**.
+2. Select the solution that you want to export and then select **Edit**.
+3. Select the canvas app that is enabled for offline and then select **Advanced** > **Add required objects**.
+
+Make sure that the associated offline profile is in the solution and then you can export it.  
 
 ## Limitations and known issues
 

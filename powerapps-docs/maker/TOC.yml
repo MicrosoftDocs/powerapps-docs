@@ -63,6 +63,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Form filling assistance
+      href: ../user/form-filling-assistance.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -243,8 +245,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Maker matching using an integrated virtual agent (preview)
-    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -458,6 +458,8 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name:  Use Copilot answer control (preview)
+            href: ./canvas-apps/copilot-answer-control-overview.md
           - name: "Add mixed reality controls"
             items:
             - name: Mixed reality controls
@@ -538,6 +540,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Copilot answer (preview) 
+              href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Date picker (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown (preview)
@@ -1839,6 +1843,8 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+  - name: Set an app as a startup app (preview)
+    href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app
@@ -1855,8 +1861,6 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Terminology changes
-      href: ./portals/terminology-changes.md
     - name: Create and manage sites
       items:
         - name: Create a site using the older add-on
@@ -1867,68 +1871,16 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing sites
           href: ./portals/manage-existing-portals.md
-    - name: Build using legacy studio
-      items:
-        - name: Studio overview
-          href: ./portals/portal-designer-anatomy.md
-        - name: Create and manage webpages
-          href: ./portals/create-manage-webpages.md
-        - name: Customize web pages
-          items:
-            - name: WYSIWYG editor overview
-              href: ./portals/compose-page.md
-            - name: Add sections
-              href: ./portals/add-sections.md
-            - name: Add Components
-              items:
-                - name: Add text
-                  href: ./portals/add-text.md
-                - name: Add image
-                  href: ./portals/add-image.md
-                - name: Add IFrame
-                  href: ./portals/add-iframe.md
-                - name: Add form
-                  href: ./portals/add-form.md
-                - name: Add list
-                  href: ./portals/add-list.md
-                - name: Add breadcrumb
-                  href: ./portals/add-breadcrumb.md
-                - name: Add custom menu
-                  href: ./portals/add-custom-menu.md
-                - name: Use code editor
-                  href: ./portals/use-code-editor.md
-                - name: Add Power BI
-                  href: ./portals/add-powerbi.md
-                - name: Add a chatbot
-                  href: ./portals/add-chatbot.md
-        - name: Work with templates
-          href: ./portals/work-with-templates.md
-        - name: Work with themes
-          items:
-            - name: Basic themes
-              href: ./portals/theme-overview.md
-            - name: Edit CSS
-              href: ./portals/edit-css.md
     - name: Sites as Progressive Web Apps
       items:
         - name: Overview
           href: ./portals/progressive-web-apps.md
         - name: Build Progressive Web Apps
           href: ./portals/build-progressive-web-apps.md
-    - name: Supported browsers for studio
-      href: ./portals/supported-browser.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
-    - name: Create and show site content
-      href: ./portals/configure/create-show-portal-content.md
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Edit site using site content editor
-      items:
-         - name: Get started with the portal content editor
-           href: ./portals/portal-content-editor.md
-         - name: Edit page content using portal content editor
-           href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
     - name: Customize the Microsoft Entra B2C user interface
@@ -1939,8 +1891,6 @@
           href: ./portals/add-powerbi.md
         - name: Add Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
-    - name: FAQ about legacy Adxstudio v7
-      href: ./portals/legacy-portal-faq.yml
 - name: Dataverse
   items:
   - name: Dataverse
@@ -1971,9 +1921,7 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
-    - name: "Configure tables to use Copilot"
-      href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables (preview)
+    - name: Long term data retention for tables
       items:
       - name: Long term data retention overview
         href: ./data-platform/data-retention-overview.md
@@ -2149,7 +2097,7 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
-      - name: Set the preferred solution (preview)
+      - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
@@ -2301,6 +2249,8 @@
         href: ./data-platform/azure-synapse-link-msi.md  
       - name: Choose finance and operations data in Azure Synapse Link for Dataverse
         href: ./data-platform/azure-synapse-link-select-FnO-data.md
+      - name: Azure Synapse Link for Dataverse troubleshooting guide
+        href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2581,7 +2531,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Solution templates for Power Platform (preview)
+  - name: Enterprise templates for Power Platform
     href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
@@ -2643,6 +2593,8 @@
     href: ./common/faqs-excel-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
+  - name: FAQ about form filling assistance  
+    href: ./common/faq-from-filling-assistance.md
 - name: Resources
   items:
   - name: Blog
