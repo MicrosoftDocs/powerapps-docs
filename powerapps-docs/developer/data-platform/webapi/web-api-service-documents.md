@@ -23,9 +23,9 @@ Perform a `GET` request on Web API endpoint to see the service document for your
 
 Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`. This part: `yourorg.api.crm`, depends on your environment. See [View developer resources](../view-download-developer-resources.md) to learn how to find it.
 
-### [Using Postman](#tab/postman)
+### [Using Insomnia](#tab/insomnia)
 
-If you are using [Postman with the recommended environment settings](setup-postman-environment.md), just use the `{{webapiurl}}` environment variable.
+If you are using [Insomnia with the recommended environment settings](insomnia.md), just use the `{{webapiurl}}` environment variable.
 
 ### [Using PowerShell with Visual Studio Code](#tab/ps)
 

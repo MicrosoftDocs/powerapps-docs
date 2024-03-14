@@ -1,6 +1,21 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/setup-postman-environment.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-postman-perform-operations.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-postman-web-api.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },   
+   {
       "source_path": "powerapps-docs/developer/data-platform/upsertmultiple.md",
       "redirect_url": "bulk-operations#upsertmultiple",
       "redirect_document_id": "false"

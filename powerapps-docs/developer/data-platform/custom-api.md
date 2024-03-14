@@ -186,7 +186,7 @@ A custom API creates a new message that can be invoked via the Web API or Datave
 
 ### Invoking custom APIs from the Web API
 
-While testing, you can invoke your API using an API client like Postman or Insomnia. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
+While testing, you can invoke your API using an API client like Postman or Insomnia. Use the steps described in [Use Insomnia with Dataverse Web API](webapi/insomnia.md) to set up a Insomnia environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
 See the following examples:
 
