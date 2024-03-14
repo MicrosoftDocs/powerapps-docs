@@ -245,8 +245,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Maker matching using an integrated virtual agent (preview)
-    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -394,6 +392,8 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
+          - name: Use inline actions in Power Apps Studio  
+            href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
           - name: Understand copresence
