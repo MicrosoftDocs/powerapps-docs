@@ -20,9 +20,9 @@ There are many third-party tools you can use to authenticate to Microsoft Datave
 This article has two goals:
 
 1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
-1. Introduce you to some basic data operations you can perform using the Dataverse Web API. This way, you can use Insomnia to continue to experiment and learn about the Datverse Web API.
+1. Introduce you to some basic data operations you can perform using the Dataverse Web API in the context of the Insomnia API client. This way, you can use Insomnia to continue to experiment and learn about the Datverse Web API.
 
-The Insomnia local Scratch Pad doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad. Of course, you may choose to create an account and use all the Insomnia features if you wish.
+The Insomnia local Scratch Pad doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. Of course, you may choose to create an account and use all the Insomnia features if you wish. If you want a version which has that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
 
 > [!NOTE]
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
@@ -77,9 +77,9 @@ The *[base environment](https://docs.insomnia.rest/insomnia/environment-variable
    :::image type="content" source="media/insomnia-resolved-environment-variables.png" alt-text="Resolved environment variables":::
 
 
-## Create additional environments (optional)
+## Create sub environments (optional)
 
-If you only ever need to connect to a single Dataverse environment, you can just use the base environment. If you need to connect to multiple environments, you can create more *[sub environments](https://docs.insomnia.rest/insomnia/environment-variables#sub-environments)* for each Dataverse environment. For example, you can create a sub environment for your development and test Dataverse environments.
+If you only ever need to connect to a single Dataverse environment, you can just use the base environment. If you need to connect to multiple environments, you can create *[sub environments](https://docs.insomnia.rest/insomnia/environment-variables#sub-environments)* for each Dataverse environment. For example, you can create a sub environment for your development and test Dataverse environments.
 
 1. As you did with the base environment, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
 1. Select the :::image type="icon" source="media/insomnia-plus-icon.png" border="false"::: icon to create a new environment. Environments can be *shared* or *private*. Choose **Private environment**.
@@ -110,7 +110,7 @@ After you have configured your base environment and any sub-environments, you ar
 1. Choose the `_.webapiurl` variable. The **URL PREVIEW** field should show the value using the `url` property value for your selected environment.
 1. In the **Auth** tab, use the drop-down to select **OAuth 2.0** AUTH TYPE.
 
-:::image type="content" source="media/insomnia-choose-oauth-2.0-auth-type.png" alt-text="Select the OAuth 2.0 auth type":::
+   :::image type="content" source="media/insomnia-choose-oauth-2.0-auth-type.png" alt-text="Select the OAuth 2.0 auth type":::
 
 1. Edit the authentication configuration as shown in the following table, using the environment variables you created:
 
@@ -292,7 +292,7 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
    ```
    
    > [!NOTE]
-   > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` and when the `Prefer: odata.include-annotations="*"` request header set in [Set request headers](#set-request-headers) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
+   > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` and when the `Prefer: odata.include-annotations="*"` request header set in [Send a WhoAmI request](#send-a-whoami-request) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 
 ## Create a record
@@ -312,34 +312,34 @@ With Insomnia, you can define multiple requests that you can re-use. The easy wa
 1. In the **Parameters** tab, you can delete all the parameters because they won't be used for the create operation.
 1. In the **Body** tab, use the drop-down to select **JSON** from the **TEXT** group:
 
-:::image type="content" source="media/insomnia-select-body-json.png" alt-text="Selecting the JSON body type":::
+   :::image type="content" source="media/insomnia-select-body-json.png" alt-text="Selecting the JSON body type":::
 
 1. Copy the following JSON:
 
-```json
-{
-   "name": "An Example Account record (sample)",
-   "revenue": 10000.0,
-   "address1_city": "Redmond"
-}
-```
+   ```json
+   {
+      "name": "An Example Account record (sample)",
+      "revenue": 10000.0,
+      "address1_city": "Redmond"
+   }
+   ```
 
 1. Paste the JSON in the **Body** field.
 
-> [!NOTE]
-> Before you press **Send** to create the record, look at the data in the **Auth** and **Headers** tabs. Because you created this request by duplicating the **Retrieve Accounts** request, all the information you previously configured is re-used.
+   > [!NOTE]
+   > Before you press **Send** to create the record, look at the data in the **Auth** and **Headers** tabs. Because you created this request by duplicating the **Retrieve Accounts** request, all the information you previously configured is re-used.
 
 1. Press **Send** to create the record.
 
-You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
+   You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
 
-The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
+   The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
 
-```text
-https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)
-```
+   ```text
+   https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)
+   ```
 
-This URL contains the primary key field value for the created record, in this case the `accountid` property value.
+   This URL contains the primary key field value for the created record, in this case the `accountid` property value.
 
 [Learn more about creating records](create-entity-web-api.md)
 
@@ -376,23 +376,21 @@ Now that you have created an account record and know the primary key field value
 
 ## Delete a record
 
-Now that you have create and retrieved a record using the primary key value, you can now delete it.
+Now that you have created and retrieved a record using the primary key value, you can now delete it.
 
 1. Duplicate the **Retrieve account** request. Name the new request **Delete account**.
 1. Change the HTTP method from `GET` to `DELETE`.
    
-   The URL should still contain the data with the `accountid` of the record you created and retrieved.
+   The URL should still contain the data with the `accountid` of the record you created and retrieved before:
 
    `DELETE _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
 
 1. In the **Parameters** tab, remove the `$select` parameter because it is meaningless for a delete operation.
 1. Select **Send**.
 
-You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
+   You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
 
-[Learn more about deleting records](update-delete-entities-using-web-api.md#basic-delete)
-
-1. Try sending the **Retrieve account** request now, it will return 404 Not Found and the **Preview** pane will show this error:
+1. Try sending the **Retrieve account** request now, it will return **404 Not Found** and the **Preview** pane will show this error:
 
    ```json
    {
@@ -428,6 +426,7 @@ You should see that the service returned **204 No Content**, so there is no cont
 
    These details are not very useful in this context, because the issue is obvious. But these details might be useful in other scenarios. [Learn more about including more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
+[Learn more about deleting records](update-delete-entities-using-web-api.md#basic-delete)
 
 ## Next steps
 
