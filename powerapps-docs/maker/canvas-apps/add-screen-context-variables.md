@@ -138,7 +138,7 @@ When you have more than one screen, you can reorder them.
 In the left pane, hover over a screen that you want to move up or down, and then select **Move up** or **Move down**.
 
 > [!NOTE]
-> Use the **[StartScreen](/power-platform/power-fx/reference/object-app#startscreen-property)** property set which screen will be displayed first.
+> Use the **[StartScreen](/power-platform/power-fx/reference/object-app#startscreen-property)** property to set which screen will be displayed first.
 
 ## Add navigation
 
