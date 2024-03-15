@@ -245,8 +245,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Maker matching using an integrated virtual agent (preview)
-    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -394,40 +392,20 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
+          - name: Use inline actions in Power Apps Studio  
+            href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
           - name: Understand copresence
             href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
-          - name: Add and configure a screen
-            items:
-              - name: Add a screen
-                href: ./canvas-apps/add-screen-context-variables.md
-              - name: Add a scrolling screen
-                href: ./canvas-apps/add-scrolling-screen.md
-              - name: Add a chatbot (preview)
-                href: ./canvas-apps/add-ai-chatbot.md
-              - name: Add a copilot (preview)
-                href: ./canvas-apps/add-ai-copilot.md
-              - name: Configure Office 365 screens
-                items:
-                  - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
-                  - name: Calendar-screen reference
-                    href: ./canvas-apps/screen-templates/calendar-screen-reference.md
-                  - name: Email-screen overview
-                    href: ./canvas-apps/screen-templates/email-screen-overview.md
-                  - name: Email-screen reference
-                    href: ./canvas-apps/screen-templates/email-screen-reference.md
-                  - name: Meeting-screen overview
-                    href: ./canvas-apps/screen-templates/meeting-screen-overview.md
-                  - name: Meeting-screen reference
-                    href: ./canvas-apps/screen-templates/meeting-screen-reference.md
-                  - name: People-screen overview
-                    href: ./canvas-apps/screen-templates/people-screen-overview.md
-                  - name: People-screen reference
-                    href: ./canvas-apps/screen-templates/people-screen-reference.md
+          - name: Add a screen
+            href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add a chatbot (preview)
+            href: ./canvas-apps/add-ai-chatbot.md
+          - name: Add a copilot (preview)
+            href: ./canvas-apps/add-ai-copilot.md
           - name: Create and edit tables
             href: ./canvas-apps/create-edit-tables.md
           - name: Work with a gallery
@@ -1835,15 +1813,15 @@
         href: ../mobile/offline-sync-icon.md
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
-  - name: Mobile offline for canvas apps (preview)
+  - name: Mobile offline for canvas apps 
     items:
-    - name: Mobile offline for canvas apps overview (preview)
+    - name: Mobile offline for canvas apps overview 
       href: ../mobile/canvas-mobile-offline-overview.md
-    - name: Set up mobile offline for canvas apps (preview)
+    - name: Set up mobile offline for canvas apps 
       href: ../mobile/canvas-mobile-offline-setup.md
-    - name: Configure files and images in offline canvas apps (preview)
+    - name: Configure files and images in offline canvas apps 
       href: ../mobile/files-images-offline-canvas-apps.md
-    - name: Work with canvas apps offline (preview)
+    - name: Work with canvas apps offline 
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Set an app as a startup app (preview)
     href: ../mobile/set-startup-app-mobile.md

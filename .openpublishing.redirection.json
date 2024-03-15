@@ -8841,6 +8841,51 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-scrolling-screen.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/calendar-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/calendar-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/email-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/email-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/meeting-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/meeting-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/people-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/people-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/terminology-changes.md",
       "redirect_url": "/power-pages/configure/design-build-overview",
       "redirect_document_id": false
