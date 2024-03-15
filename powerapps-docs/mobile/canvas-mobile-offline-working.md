@@ -1,7 +1,7 @@
 ---
-title: Work with canvas apps offline (preview)
+title: Work with canvas apps offline
 description: Learn how to work with canvas apps in offline mode on your mobile device.
-ms.date: 10/11/2023
+ms.date: 03/13/2024
 ms.topic: how-to
 ms.component: pa-user
 ms.subservice: mobile
@@ -15,16 +15,10 @@ searchScope:
 ms.custom: bap-template
 ---
 
-# Work with canvas apps offline (preview)
+# Work with canvas apps offline
 
-[This article is prerelease documentation and is subject to change.]
 
 [Canvas apps](../maker/index.md) are a type of app that nondevelopers can make with Microsoft Power Apps. If a canvas app is designed for [offline use](canvas-mobile-offline-overview.md), you can work with it on your mobile device even when you don't have Internet access. All the data the app needs is stored locally on your device. Any changes you make are synchronized with the app server the next time your device connects to the network. If you're in the middle of changing some data and you lose your network connection, the app saves your changes and uploads them to the server when you're back online.
-
-> [!IMPORTANT]
-> [!INCLUDE [preview](../includes/cc-preview-features-definition.md)]
->
-> This feature is in the process of rolling out and may not be available in your region yet.
 
 ## Initial offline sync
 
