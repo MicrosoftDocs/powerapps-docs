@@ -1,13 +1,13 @@
 ---
-title: Badge control in Power Apps
-description: Learn about the details, properties and examples of the Badge control in Power Apps.
-author: yogeshgupta698
+title: Toggle modern control in Power Apps
+description: Learn about the details, properties and examples of the toggle modern control in Power Apps.
+author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 4/4/2023
+ms.date: 3/15/2024
 ms.subservice: canvas-maker
-ms.author: yogupt
+ms.author: noazarur
 
 
 ms.reviewer: mkaur
@@ -15,26 +15,36 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Badge control in Power Apps (preview)
+# Toggle modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
-A badge is a visual decoration for UI elements.
+A control that the user can turn on or off by moving its handle. 
 
 ## Description
-Badge can be used to display content in a visually better way.  Key properties for this control are Content, Shape, and Appearance. 
 
+A toggle is a user interface element that allows you to switch a feature or setting on or off. Key properties for this control are Checked and Label.
+ 
 ## General
 
-**Content** – The content to be displayed inside Badge control
+**Label** – The text shown next to the toggle. 
+
+**AccessibleLabel** – Label for screen readers. 
 
 **Visible** - Whether a control appears or is hidden. 
 
-## Size and position
+## Behavior
+
+**Checked** - The initial value of a control before it is changed by the user. 
+
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
+
+## Size and position 
+
+**LabelPostion** – The text shown next to the toggle can be placed before, after, or above the toggle. 
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
@@ -46,13 +56,7 @@ Badge can be used to display content in a visually better way.  Key properties f
 
 ## Style and theme
 
-**Appearance** – A Badge can be filled, outline, ghost, inverted.
-
-**Shape** – The shape of the badge can be circular, square, or rounded. 
-
-**ThemeColor** – The style of the badge has different visual representations based on the selected scenarios: brand, danger, important, informative, severe, subtle, success, or warning. 
-
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. This property is on in effect if the **Color** property has a value of **Brand**.  
+**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. 
 
 **Font** - The name of the family of fonts in which text appears. 
 
@@ -68,14 +72,10 @@ Badge can be used to display content in a visually better way.  Key properties f
 
 **FontStrikethrough** - Whether a line appears through the text that appears on a control. 
 
-
 ## Additional properties
 
-**Accessible label** – Label for screen readers. 
+**OnCheck** – Actions to perform when the value of the toggle changes to **true**. 
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
+**OnSelect** – Actions to perform when the user taps or clicks a control. 
 
-
-
-
-
+**OnUncheck** – Actions to perform when the value of the toggle changes to **false**. 

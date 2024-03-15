@@ -67,8 +67,6 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
 
-container (screen if no parent container). 
-
 **FontItalic** - Whether the text in a control is italic. 
 
 **FontUnderline** - Whether a line appears under the text that appears on a control. 

@@ -16,6 +16,7 @@ search.audienceType:
 contributors:
   - mduelae
   - yogeshgupta698
+  - noazarur-microsoft
   
 ---
 # Spinner modern control in Power Apps (preview)
@@ -25,29 +26,55 @@ contributors:
 Displays state in motion such as loading a page or table.
 
 ## Description
-**Spinner** control can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
+**Spinner** control can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios. Key properties for this control are Label, Apperance, and SpinnerSize.
 
-## Key properties
+## General
+
 **Label** – The label to the spinner. The label slot receives the styling related to the text associated with the Spinner.
 
-**Appearance** – The appearance of the Spinner. Primary or Inverted. 
-
-**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
-
-**Label position** – Where the label is positioned relative to the Spinner
-
-**Spinner size** – The size of the spinner.
-
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
-
-## Additional properties
 **Accessible label** – Label for screen readers.
+
+**Visible** - Whether a control appears or is hidden. 
+
+## Size and position
+
+**LabelPosition** – Where the label is positioned relative to the Spinner.
+
+**SpinnerSize** – The size of the spinner.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**[Size](../properties-text.md)** – The size of the control on the canvas.
+**Width** - The distance between a control's left and right edges. 
+
+**Height** - The distance between a control's top and bottom edges. 
+
+## Style and theme
+
+**Appearance** – The appearance of the Spinner. Primary or Inverted. 
+
+**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
+**Font** - The name of the family of fonts in which text appears. 
+
+**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+
+**FontColor** - The color of text in a control. 
+
+**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+
+**FontItalic** - Whether the text in a control is italic. 
+
+**FontUnderline** - Whether a line appears under the text that appears on a control. 
+
+**FontStrikethrough** - Whether a line appears through the text that appears on a control. 
+
+## Additional properties
+
+**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+
+**OnChange** - Actions to perform when the user changes the value of a control.  
 
 
 
