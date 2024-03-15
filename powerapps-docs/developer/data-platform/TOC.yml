@@ -36,16 +36,16 @@
     - name: Search for records
       href: ./search/overview.md
       items:
-      - name: Query
-        href: ./search/query.md
-      - name: Suggest
-        href: ./search/suggest.md
-      - name: Autocomplete
-        href: ./search/autocomplete.md
-      - name: Statistics and Status
-        href: ./search/statistics-status.md
-      - name: Legacy search
-        href: ./search/legacy.md
+        - name: Query
+          href: ./search/query.md
+        - name: Suggest
+          href: ./search/suggest.md
+        - name: Autocomplete
+          href: ./search/autocomplete.md
+        - name: Statistics and Status
+          href: ./search/statistics-status.md
+        - name: Legacy search
+          href: ./search/legacy.md
     - name: Query data using FetchXml
       items:
         - name: Overview
@@ -70,30 +70,30 @@
           href: fetchxml/optimize-performance.md
         - name: FetchXml reference
           items:
-          - name: Overview
-            href: fetchxml/reference/index.md
-          - name: all-attributes
-            href: fetchxml/reference/all-attributes.md
-          - name: attribute
-            href: fetchxml/reference/attribute.md
-          - name: condition
-            items:
-            - name: element
-              href: fetchxml/reference/condition.md
-            - name: operators
-              href: fetchxml/reference/operators.md
-          - name: entity
-            href: fetchxml/reference/entity.md
-          - name: fetch
-            href: fetchxml/reference/fetch.md
-          - name: filter
-            href: fetchxml/reference/filter.md
-          - name: link-entity
-            href: fetchxml/reference/link-entity.md
-          - name: order
-            href: fetchxml/reference/order.md  
-          - name: value
-            href: fetchxml/reference/value.md
+            - name: Overview
+              href: fetchxml/reference/index.md
+            - name: all-attributes
+              href: fetchxml/reference/all-attributes.md
+            - name: attribute
+              href: fetchxml/reference/attribute.md
+            - name: condition
+              items:
+                - name: element
+                  href: fetchxml/reference/condition.md
+                - name: operators
+                  href: fetchxml/reference/operators.md
+            - name: entity
+              href: fetchxml/reference/entity.md
+            - name: fetch
+              href: fetchxml/reference/fetch.md
+            - name: filter
+              href: fetchxml/reference/filter.md
+            - name: link-entity
+              href: fetchxml/reference/link-entity.md
+            - name: order
+              href: fetchxml/reference/order.md
+            - name: value
+              href: fetchxml/reference/value.md
         - name: Sample code
           href: fetchxml/sample.md
     - name: Bulk Operation messages
@@ -226,14 +226,16 @@
           href: access-web-services.md
         - name: Write plug-ins for CreateMultiple and UpdateMultiple
           href: write-plugin-multiple-operation.md
-        - name: Quickstarts
-          items:
-            - name: Create a plug-in using Power Platform Tools
-              href: tools/devtools-create-plugin.md
-        - name: Tutorials
+        - name: How-to
           items:
             - name: Write and register a plug-in
               href: tutorial-write-plug-in.md
+            - name: Create a plug-in using Power Platform Tools
+              href: tools/devtools-create-plugin.md
+            - name: Create and register a plug-in package using Visual Studio
+              href: /power-platform/developer/howto/vs-create-package
+            - name: Create and register a plug-in package using PAC CLI
+              href: /power-platform/developer/howto/cli-create-package
             - name: Debug a plug-in
               href: tutorial-debug-plug-in.md
             - name: Update a plug-in
@@ -530,7 +532,7 @@
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: FetchXml reference
-      href: fetchxml/reference/index.md            
+      href: fetchxml/reference/index.md
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector
     - name: Workflow
