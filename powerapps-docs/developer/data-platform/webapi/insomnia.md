@@ -15,18 +15,18 @@ contributors:
 
 # Use Insomnia with Dataverse Web API
 
-There are many third-party tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests. These tools make it easier to learn, test, and perform ad-hoc queries using the Dataverse Web API.
+There are many client API tools you can use to authenticate to Microsoft Dataverse environments to compose and send Web API requests. These tools make it easier to learn, test, and perform ad-hoc queries using the Dataverse Web API.
 
 This article has two goals:
 
-1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is pre-approved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
-1. Introduce you to some basic data operations you can perform using the Dataverse Web API in the context of the Insomnia API client. This way, you can use Insomnia to continue to experiment and learn about the Datverse Web API.
+1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is preapproved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
+1. Introduce you to some basic data operations you can perform using the Dataverse Web API in the context of the Insomnia API client. This way, you can use Insomnia to continue to experiment and learn about the Dataverse Web API.
 
 ## Security
 
-Requests you send with a API client tools contain information that could be sensitive. Many developers do not want to have this information uploaded to a third party service.
+Requests you send with client API tools contain information that could be sensitive. Many developers don't want to have this information uploaded to a cloud service.
 
-The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. Of course, you may choose to create an account and use all the Insomnia features if you wish. If you want a version which has that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
+The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. You can choose to create an account and use all the Insomnia features if you wish. If you want a version that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
 
 > [!NOTE]
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
@@ -34,13 +34,13 @@ The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
 > - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
 > - Refreshes your access token automatically so you don't need to keep requesting a new one when they expire.
 >
-> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here. See the [Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started) for more information.
+> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here. [Learn more in the Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started)
 
 ## Install Insomnia
 
-See the [Insomnia documentation for steps to install Insomnia](https://docs.insomnia.rest/insomnia/install). The instructions are different for MacOS, Windows, and Linux.
+See the [Insomnia documentation for steps to install Insomnia](https://docs.insomnia.rest/insomnia/install). The instructions are different for macOS, Windows, and Linux.
 
-For Windows, the installer is an executable (exe) that you download and run. When the installation completes, you might be offered different options. These options shouldn't interfere with the instructions in this article, but they may change. At the time this article was written, these option were presented:
+For Windows, the installer is an executable (exe) that you download and run. When the installation completes, you might be offered different options. These options shouldn't interfere with the instructions in this article, but they might change. At the time this article was written, these options were presented:
 
 - For the option to enable features to sync data with the cloud, choose **Keep storing locally in Local Vault**.
 - For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
@@ -53,7 +53,7 @@ Use Insomnia environments to store [environment variables](https://docs.insomnia
 
 The *[base environment](https://docs.insomnia.rest/insomnia/environment-variables#base-environment)* is assigned to every workspace and the variables within it can be accessed throughout the workspace.
 
-1. After you have opened Insomnia, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
+1. After you open Insomnia, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
 1. Copy the following JSON:
 
    ```json
@@ -72,11 +72,11 @@ The *[base environment](https://docs.insomnia.rest/insomnia/environment-variable
 
    You can find the Web API endpoint for your environment using the instructions in [View developer resources](../view-download-developer-resources.md). Remove `/api/data/v9.2` from the Web API endpoint URL. This URL must end in `dynamics.com`.
 
-   You should expect that the references to the `_.url` and `_.version` variables will not resolve immediately, so you will see warnings like this:
+   You should expect that the references to the `_.url` and `_.version` variables might not resolve immediately, so you see warnings like this:
 
    :::image type="content" source="media/insomnia-unresolved-environment-variables.png" alt-text="Unresolved environment variables":::
 
-   However, after you close the window and re-open it, you can see that the variables are now known and resolved.
+   However, after you close the window and reopen it, you can see that the variables are now known and resolved.
 
    :::image type="content" source="media/insomnia-resolved-environment-variables.png" alt-text="Resolved environment variables":::
 
@@ -87,7 +87,7 @@ If you only ever need to connect to a single Dataverse environment, you can just
 
 1. As you did with the base environment, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
 1. Select the :::image type="icon" source="media/insomnia-plus-icon.png" border="false"::: icon to create a new environment. Environments can be *shared* or *private*. Choose **Private environment**.
-1. Double click the name of the **New Environment** you just created and rename it as you like, you can give it the name of the Dataverse environment you want to connect to, or something like **Dev environment.**
+1. Double click the name of the **New Environment** you created and rename it as you like, you can give it the name of the Dataverse environment you want to connect to, or something like **Dev environment.**
 1. Copy the following JSON:
 
    ```json
@@ -104,15 +104,15 @@ If you only ever need to connect to a single Dataverse environment, you can just
 
 ## Configure requests
 
-After you have configured your base environment and any sub-environments, you are ready to configure a request.
+After you configured your base environment and any sub-environments, you're ready to configure a request.
 
-1. Click the **New HTTP Request** button, or use the <kbd>Ctrl+N</kbd> keyboard shortcut.
-1. After the HTTP method, which is `GET` by default, type `_.` and wait a moment. Insomnia will show a list of available variables to choose from:
+1. Select the **New HTTP Request** button, or use the <kbd>Ctrl+N</kbd> keyboard shortcut.
+1. After the HTTP method, which is `GET` by default, type `_.` and wait a moment. Insomnia shows a list of available variables to choose from:
 
    :::image type="content" source="media/insomnia-variables-url.png" alt-text="Environment variables for url.":::
 
 1. Choose the `_.webapiurl` variable. The **URL PREVIEW** field should show the value using the `url` property value for your selected environment.
-1. In the **Auth** tab, use the drop-down to select **OAuth 2.0** AUTH TYPE.
+1. In the **Auth** tab, use the drop-down to select **OAuth 2.0** **AUTH TYPE**.
 
    :::image type="content" source="media/insomnia-choose-oauth-2.0-auth-type.png" alt-text="Select the OAuth 2.0 auth type":::
 
@@ -158,11 +158,11 @@ After you have configured your base environment and any sub-environments, you ar
       ...
    ```
 
-   This result is the [Web API service document](web-api-service-documents.md#service-document). You view this by sending a **GET** request to the root of the Web API service url. It lists the entity type names for all the tables in your Dataverse environment. When you can see this, you have successfully authenticated to your Dataverse environment.
+   This result is the [Web API service document](web-api-service-documents.md#service-document). You view the service document by sending a **GET** request to the root of the Web API service url. It lists the entity type names for all the tables in your Dataverse environment. When you can see the service document, you have successfully authenticated to your Dataverse environment.
 
 ## Send a WhoAmI request
 
-Now that you have successfully authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because this is a function, you will use a `GET` method. This function has no parameters, so it is very easy to use. [Learn more about using Web API Functions](use-web-api-functions.md)
+Now that you're authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because `WhoAmI` is a function, you use a `GET` method. This function has no parameters, so it's easy to use. [Learn more about using Web API Functions](use-web-api-functions.md)
 
 1. Edit the URL by appending `WhoAmI` after the `_.webapiurl` variable. The URL should be:
    
@@ -170,7 +170,7 @@ Now that you have successfully authenticated, modify your request to invoke the 
 
 1. Set request headers.
 
-   As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers and you may need to modify header values for different behaviors.
+   As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers and you might need to modify header values for different behaviors.
 
    In the **Headers** tab, select the **Add** button to enter each of the following common headers:
 
@@ -182,7 +182,7 @@ Now that you have successfully authenticated, modify your request to invoke the 
    |`If-None-Match`|`null`|
    |`Prefer`|`odata.include-annotations="*"`|
 
-   These headers won't change the behavior of the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami), but it is good to start adding them at the beginning.
+   These headers don't change the behavior of the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami), but it's good to start adding them at the beginning.
 
 1. Select **Send**.
 
@@ -207,7 +207,7 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
 
 1. In the **Parameters** tab, set the parameters for your query.
 
-   You have the option to add parameters individually by selecting the **Add** button. But you can also select the **Bulk Edit** option, which you may find easier.
+   You can add parameters individually by selecting the **Add** button. But you can also select the **Bulk Edit** option, which you might find easier.
 
    1. Select the **Bulk Edit** option.
    1. Copy the following parameters:
@@ -219,7 +219,7 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
    $filter: address1_city eq 'Redmond'
    ```
 
-   This query will return selected columns from the top 3 account records located in the city of Redmond, and include information about any related contact specified as the primary contact for the accounts.
+   This query returns selected columns from the top three account records located in the city of Redmond, and includes information about any related contact specified as the primary contact for the accounts.
 
    [Learn more about how to query data](query-data-web-api.md)
 
@@ -301,9 +301,9 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
 
 ## Create a record
 
-With Insomnia, you can define multiple requests that you can re-use. The easy way to create a new request that keeps any configurations you have set is to duplicate an existing request. In this step we will duplicate the request defined in the [Retrieve data](#retrieve-data) section and create a new request to create a record.
+With Insomnia, you can define multiple requests that you can reuse. The easy way to create a new request that keeps any configurations you have is to duplicate an existing request. In this step, we duplicate the request defined in the [Retrieve data](#retrieve-data) section and create a new request to create a record.
 
-1. The request you created in [Retrieve data](#retrieve-data) has the default name **New Request**, unless you changed it. Re-name the request **Retrieve Accounts**.
+1. The request you created in [Retrieve data](#retrieve-data) has the default name **New Request**, unless you changed it. Rename the request **Retrieve Accounts**.
 1. When you hover over the **Retrieve Accounts** request, select the drop-down menu and select **Duplicate**.
 
    :::image type="content" source="media/insomnia-duplicate-request.png" alt-text="Duplicating a request in Insomnia":::
@@ -313,7 +313,7 @@ With Insomnia, you can define multiple requests that you can re-use. The easy wa
    
    `POST _.webapiurl accounts`
 
-1. In the **Parameters** tab, you can delete all the parameters because they won't be used for the create operation.
+1. In the **Parameters** tab, you can delete all the parameters because they aren't used for the create operation.
 1. In the **Body** tab, use the drop-down to select **JSON** from the **TEXT** group:
 
    :::image type="content" source="media/insomnia-select-body-json.png" alt-text="Selecting the JSON body type":::
@@ -335,7 +335,7 @@ With Insomnia, you can define multiple requests that you can re-use. The easy wa
 
 1. Press **Send** to create the record.
 
-   You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
+   You should see that the service returned **204 No Content**, so there's no content to see in the **Preview** pane.
 
    The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
 
@@ -349,7 +349,7 @@ With Insomnia, you can define multiple requests that you can re-use. The easy wa
 
 ## Retrieve a record
 
-Now that you have created an account record and know the primary key field value, you can retrieve it using that value. Start by duplicating the **Retrieve Accounts** request.
+Now that you created an account record and know the primary key field value, you can retrieve it using that value. Start by duplicating the **Retrieve Accounts** request.
 
 1. Duplicate the **Retrieve Accounts** request.
 1. Name it **Retrieve account**.
@@ -358,7 +358,7 @@ Now that you have created an account record and know the primary key field value
    `GET _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
 
 1. In the **Parameters** tab, remove the `$top`, `$expand`, and `$filter` parameters, leaving only the `$select` parameter to limit the number of columns returned.
-1. In the **Headers** tab, select the checkbox next to the the `Prefer` header to disable it so that no annotations are returned.
+1. In the **Headers** tab, select the checkbox next to the `Prefer` header to disable it so that no annotations are returned.
 1. Select **Send**.
 
    The response should return **200 OK**, and the **Preview** pane should contain data like the following:
@@ -389,12 +389,12 @@ Now that you have created and retrieved a record using the primary key value, yo
 
    `DELETE _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
 
-1. In the **Parameters** tab, remove the `$select` parameter because it is meaningless for a delete operation.
+1. In the **Parameters** tab, remove the `$select` parameter because it's meaningless for a delete operation.
 1. Select **Send**.
 
-   You should see that the service returned **204 No Content**, so there is no content to see in the **Preview** pane.
+   You should see that the service returned **204 No Content**, so there's no content to see in the **Preview** pane.
 
-1. Try sending the **Retrieve account** request now, it will return **404 Not Found** and the **Preview** pane will show this error:
+1. Try sending the **Retrieve account** request now, it returns **404 Not Found** and the **Preview** pane shows this error:
 
    ```json
    {
@@ -406,7 +406,7 @@ Now that you have created and retrieved a record using the primary key value, yo
    ```
 
 1. Re-enable the `Prefer` header for the **Retrieve account** request so that all annotations are returned.
-1. Send the request again, and you can now see many additional annotations are returned with the **404 Not Found** response:
+1. Send the request again, and you can now see many annotations are returned with the **404 Not Found** response:
 
    ```json
    {
@@ -428,7 +428,7 @@ Now that you have created and retrieved a record using the primary key value, yo
    }
    ```
 
-   These details are not very useful in this context, because the issue is obvious. But these details might be useful in other scenarios. [Learn more about including more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)
+   These details aren't useful in this context, because the issue is obvious. But these details might be useful in other scenarios. [Learn more about including more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
 [Learn more about deleting records](update-delete-entities-using-web-api.md#basic-delete)
 
