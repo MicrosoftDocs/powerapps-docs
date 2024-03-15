@@ -52,7 +52,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 | How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
 | **Access finance and operations tables via Synapse query** <br><br> Finance and Operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. | See [step by step instructions](## Add finance and operations tables in Azure Synapse Link) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
-| **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | See [step by step instructions](## Access incremental data changes from finance and operations)  <br> Also see [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake  |
+| **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | See [step by step instructions](## Access incremental data changes from finance and operations)  <br> Also see [Azure Synapse Link - incremental update](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-incremental-updates)) | Azure data lake  |
 | **Access finance and operations tables via Microsoft Fabric** <br><br>  No need to bring your own storage, Synapse workspace, or Spark pool because the system uses Dataverse storage and compute resources| [Link to Fabric](azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 
 ### Link your finance and operations environment with Microsoft Power Platform
@@ -146,14 +146,14 @@ To load incremental data changes from finance and operations into your own downs
 To create an Azure Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select the environment you want.
-1. On the left navigation pane, select **Azure Synapse Link**.
-1. On the **Azure Synapse Link for Dataverse** page, select **+ New link** on the command bar.
-1. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
-1. Select **Next**. The option to choose tables appears.
-1. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
-1. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
-1. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
-1. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
+2. On the left navigation pane, select **Azure Synapse Link**.
+3. On the **Azure Synapse Link for Dataverse** page, select **+ New link** on the command bar.
+4. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
+4. Select **Next**. The option to choose tables appears.
+5. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
+6. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
+7. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
+8. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
 
 ![Adding incremental data changes](media/Synapse_link_Incremental.gif)
 
@@ -218,6 +218,8 @@ Currently, there are the following limitations with finance and operations entit
 - If the chosen entity is unavailable because of the limitation above, you might be able to choose the tables that comprise the data from that entity.
 
 > [!NOTE]
-> For a list of ready-made finance and operations entities that pass validation rules, go to [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048). You must be a member of the preview Yammer group to access this list. To join, visit [Dynamics 365 and Power Platform Preview Programs External Network](https://aka.ms/SynapseLinkforDynamics).
+> For a list of ready-made finance and operations entities that pass validation rules, You can run the **Data entity row version change tracking validation report** 
+available in Finance and Operations app at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report**
 >
+> 
 - In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you'll need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking and re-select the tables in Azure Synapse Link. 
