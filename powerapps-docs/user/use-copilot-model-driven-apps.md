@@ -32,21 +32,21 @@ When enabled, Copilot can be accessed through the Copilot icon near the top-righ
 
 ## Use Copilot to ask questions 
 
-Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters Navigate me to Online Cases, the copilot in the model-driven app automatically opens the relevant page in the app. 
+Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters **Navigate me to online cases**, Copilot in the model-driven app automatically opens the relevant page in the app. 
 
 picture
 
 ## Copilot suggested questions 
 
-Copilot can suggest questions for you to ask to help you get started. These questions (also called prompts) can be edited and personalized for your app and the type of insight you need from Copilot. 
+Copilot can suggest questions for you to ask to help you get started. These questions (also called _prompts_) can be edited and personalized for your app and the type of insight you need from Copilot. 
 
-You see more suggested prompts by selecting View prompts within the Copilot pane. Many of the suggested questions have placeholders that you need to replace with an appropriate text that completes the question. 
+You see more suggested prompts by selecting **View prompts** within the Copilot pane. Many of the suggested questions have placeholders that you need to replace with an appropriate text that completes the question. 
 
 picture
 
 ## Record picker to select object of the question 
 
-You can use the record picker to select the object of your question. Type “/” character to open the record picker and continue typing the name of the record. Then select the record of your choice and complete the question to make it meaningful. Submit the question to Copilot to view the response. 
+You can use the record picker to select the object of your question. Type “**/**” character to open the record picker and continue typing the name of the record. Then select the record of your choice and complete the question to make it meaningful. Submit the question to Copilot to view the response. 
 
 picture
 
@@ -56,7 +56,7 @@ picture
 
 ## Provide feedback 
 
-To provide feedback to help improve copilot, select the thumb up or thumb down icon included in each copilot response. Feedback can be submitted for each copilot response. 
+To provide feedback to help improve copilot, select the thumbs up or thumbs down icon included in each copilot response. Feedback can be submitted for each copilot response. 
 
 ### Provide positive feedback 
 
