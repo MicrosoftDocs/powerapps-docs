@@ -26,9 +26,9 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant to
 
 ## Copilot pane 
 
-When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar or through the Copilot icon in the top bar in a model-driven app. The copilot pane can be expanded or collapsed as desired. When enabled, the pane is expanded by default.
+When enabled, Copilot can be accessed through the Copilot icon near the top-right part of your screen or through the Copilot icon that is left of the command bar. The Copilot pane can be expanded or collapsed, as desired. When enabled, the pane is expanded by default.
 
-picture
+:::image type="content" source="media/copilot-icons.png" alt-text="Copilot icons":::
 
 ## Use Copilot to ask questions 
 
