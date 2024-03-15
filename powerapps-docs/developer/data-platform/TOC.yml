@@ -228,7 +228,7 @@
           href: write-plugin-multiple-operation.md
         - name: How-to
           items:
-            - name: Write code then register a plug-in
+            - name: Write and register a plug-in
               href: tutorial-write-plug-in.md
             - name: Create and register a plug-in using Visual Studio
               href: /power-platform/developer/howto/vs-create-plugin.md
