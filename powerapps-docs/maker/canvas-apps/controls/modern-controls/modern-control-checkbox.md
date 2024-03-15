@@ -32,7 +32,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **Label** – The Checkbox's label.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 
@@ -40,7 +40,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **Checked** – The controlled value for the checkbox.
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 ## Size and position 
 

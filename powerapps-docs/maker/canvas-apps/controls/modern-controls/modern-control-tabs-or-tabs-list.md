@@ -30,7 +30,7 @@ A **Tab** is a navigation control which can help users switch between different 
 
 **Items** – List of items to be shown in tabs. This can be array (select value in field) or this can be a data column from a table.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden.
 

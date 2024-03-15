@@ -32,7 +32,7 @@ The progress bar can be configured to show various states of progress in the app
 
 **Max** - The maximum value, which indicates the task is complete. The ProgressBar bar is full when value equals max. This is useful for instances where you want to show capacity, or how much of a total has been uploaded or downloaded.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden.
 

@@ -108,7 +108,7 @@ Currently, the listed capabilities aren't supported. However, since the **Table*
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
-**Accessible label** – Label for screen readers. 
+**AccessibleLabel** – Label for screen readers. 
 
 
 

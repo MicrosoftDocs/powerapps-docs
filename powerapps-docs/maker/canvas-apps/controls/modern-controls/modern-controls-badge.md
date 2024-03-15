@@ -26,7 +26,7 @@ contributors:
 A badge is a visual decoration for UI elements.
 
 ## Description
-Badge can be used to display content in a visually better way.  Key properties for this control are Content, Shape, and Appearance. 
+Badge can be used to display content in a visually better way. Key properties for this control are Content, Shape, and Appearance. 
 
 ## General
 
@@ -71,7 +71,7 @@ Badge can be used to display content in a visually better way.  Key properties f
 
 ## Additional properties
 
-**Accessible label** – Label for screen readers. 
+**AccessibleLabel** – Label for screen readers. 
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
 

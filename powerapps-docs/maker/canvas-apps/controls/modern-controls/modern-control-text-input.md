@@ -32,7 +32,7 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 **PlaceHolder** - Instructional text that appears if no dates are entered. 
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 

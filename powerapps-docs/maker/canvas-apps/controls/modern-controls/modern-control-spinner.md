@@ -32,7 +32,7 @@ Displays state in motion such as loading a page or table.
 
 **Label** – The label to the spinner. The label slot receives the styling related to the text associated with the Spinner.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 
@@ -72,7 +72,7 @@ Displays state in motion such as loading a page or table.
 
 ## Additional properties
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 **OnChange** - Actions to perform when the user changes the value of a control.  
 

@@ -40,13 +40,13 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 -  YearMonth - February 2024 
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 
 ## Behavior 
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 ## Size and position
 

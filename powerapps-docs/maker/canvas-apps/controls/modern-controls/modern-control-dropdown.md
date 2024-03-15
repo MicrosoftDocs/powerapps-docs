@@ -32,7 +32,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Items](../properties-core.md)** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 
@@ -40,7 +40,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **Required** - Can mandate if one must fill in field.
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 ## Size and position
 
@@ -66,6 +66,3 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the control’s border is highlighted in red. 
 
 **DefaultSelectedItems** - The initial value of a control before the user specifies a different value. 
-
-
-

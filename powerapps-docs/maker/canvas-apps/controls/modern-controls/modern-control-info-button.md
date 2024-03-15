@@ -32,13 +32,13 @@ Use **Info button** control to provide additional information to users.
 
 **Content** – Content to be displayed when users interact with the control.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden. 
 
 ## Size and position
 
-**Icon size** - Whether the information icon is small, medium, or large.
+**IconSize** - Whether the information icon is small, medium, or large.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
@@ -68,7 +68,7 @@ Use **Info button** control to provide additional information to users.
 
 ## Additional properties
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 **AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 

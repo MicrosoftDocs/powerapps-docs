@@ -31,7 +31,7 @@ Use **Link** control to provide links that can be defined with accessibility com
 
 **URL** - URL for the users to navigate through the link.
 
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden.
 

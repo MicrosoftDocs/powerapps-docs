@@ -72,6 +72,6 @@ Use this versatile **Text** control to display text, messages, information on th
 
 ## Additional properties
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
