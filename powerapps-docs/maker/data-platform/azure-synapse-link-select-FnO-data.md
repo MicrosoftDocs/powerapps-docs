@@ -90,9 +90,6 @@ After row version change tracking is enabled, a system event that's triggered in
 
 You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
 
-![Adding Finance and Operations tables](media/synapse_link_delta.gif)
-
-
 1. Sign in to Power Apps and select the environment you want.
 2. On the left navigation pane, select **Azure Synapse Link**.
 3. On the command bar of the **Synapse Link** page, select **+ New link to data lake**.
@@ -102,6 +99,9 @@ You can enable both finance and operations tables and finance and operations ent
 7. Add the tables you want to export. You can choose finance and operations tables provided the [prerequisites](#prerequisites) are met.
 8. Select **Advanced**, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured.
 9. Select **Save**. Tables selected are initialized and ready for reporting.
+
+
+![Adding Finance and Operations tables](media/synapse_link_delta.gif)
 
 > [!NOTE]
 >
@@ -143,8 +143,6 @@ Currently, there are the following limitations with finance and operations table
 
 To load incremental data changes from finance and operations into your own downstream data warehouse, create an Azure Synapse Link profile that provides only incremental data. Azure Synapse Link provides an initial export of all data rows and then provides you with access to data that changed periodically. The data is provided in CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. More information:  [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md)
 
-![Adding incremental data changes](media/Synapse_link_Incremental.gif)
-
 To create an Azure Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select the environment you want.
@@ -156,6 +154,8 @@ To create an Azure Synapse Link profile with incremental data:
 1. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
 1. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
 1. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
+
+![Adding incremental data changes](media/Synapse_link_Incremental.gif)
 
 > [!NOTE]
 >
