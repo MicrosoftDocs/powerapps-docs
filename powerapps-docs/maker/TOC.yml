@@ -1813,15 +1813,15 @@
         href: ../mobile/offline-sync-icon.md
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
-  - name: Mobile offline for canvas apps (preview)
+  - name: Mobile offline for canvas apps 
     items:
-    - name: Mobile offline for canvas apps overview (preview)
+    - name: Mobile offline for canvas apps overview 
       href: ../mobile/canvas-mobile-offline-overview.md
-    - name: Set up mobile offline for canvas apps (preview)
+    - name: Set up mobile offline for canvas apps 
       href: ../mobile/canvas-mobile-offline-setup.md
-    - name: Configure files and images in offline canvas apps (preview)
+    - name: Configure files and images in offline canvas apps 
       href: ../mobile/files-images-offline-canvas-apps.md
-    - name: Work with canvas apps offline (preview)
+    - name: Work with canvas apps offline 
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Set an app as a startup app (preview)
     href: ../mobile/set-startup-app-mobile.md
