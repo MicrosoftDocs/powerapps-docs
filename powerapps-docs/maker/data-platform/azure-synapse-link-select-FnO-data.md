@@ -90,6 +90,9 @@ After row version change tracking is enabled, a system event that's triggered in
 
 You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
 
+![Adding Finance and Operations tables](media/synapse_link_delta.gif)
+
+
 1. Sign in to Power Apps and select the environment you want.
 2. On the left navigation pane, select **Azure Synapse Link**.
 3. On the command bar of the **Synapse Link** page, select **+ New link to data lake**.
@@ -139,6 +142,8 @@ Currently, there are the following limitations with finance and operations table
 ## Access incremental data changes from finance and operations
 
 To load incremental data changes from finance and operations into your own downstream data warehouse, create an Azure Synapse Link profile that provides only incremental data. Azure Synapse Link provides an initial export of all data rows and then provides you with access to data that changed periodically. The data is provided in CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. More information:  [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md)
+
+![Adding incremental data changes](media/Synapse_link_Incremental.gif)
 
 To create an Azure Synapse Link profile with incremental data:
 
