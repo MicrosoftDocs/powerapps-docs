@@ -257,8 +257,6 @@ To use Insomnia to retrieve records, you must set the [entity set name](web-api-
 
    This query returns selected columns from the top three account records located in the city of Redmond, and includes information about any related contact specified as the primary contact for the accounts.
 
-   [Learn more about how to query data](query-data-web-api.md)
-
    1. Paste the values in the **QUERY PARAMETERS** field.
 
       Your query should look like this:
@@ -334,6 +332,7 @@ To use Insomnia to retrieve records, you must set the [entity set name](web-api-
    > [!NOTE]
    > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` because the `Prefer: odata.include-annotations="*"` request header set in [Send a WhoAmI request](#send-a-whoami-request) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
 
+[Learn more about how to query data](query-data-web-api.md)
 
 ## Create a record
 
