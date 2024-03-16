@@ -75,7 +75,7 @@ This custom API is defined with the following data:
 }
 ```
 
-You can use this data to create the custom API using Postman and the Web API by following the example here: [Create a custom API with code](../../create-custom-api-with-code.md).
+You can use this data to create the custom API using [Insomnia and the Web API](../../webapi/insomnia.md) by following the example here: [Create a custom API with code](../../create-custom-api-with-code.md).
 
 For information about the values passed see these topics: [CustomAPI tables](../../custom-api-tables.md)
 

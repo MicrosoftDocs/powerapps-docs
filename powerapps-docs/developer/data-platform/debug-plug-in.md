@@ -76,7 +76,7 @@ The JSON results will be returned to your browser like so:
 ```
 
 > [!TIP]
-> This works best if you install a browser plug-in that will format the returned JSON. Or you may want to use Postman. More information: [Use Postman with the Web API](webapi/use-postman-web-api.md)
+> This works best if you install a browser plug-in that will format the returned JSON. Or you may want to use an API client like Postman or [Insomnia](webapi/insomnia.md), or you may want to use [VS Code with PowerShell](webapi/quick-start-ps.md).
 > 
 > You may prefer to use the [XrmToolbox Plugin Trace Viewer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.PluginTraceViewer/). This community tool is not supported by Microsoft. If you have questions pertaining to this tool, contact the publisher.
 
