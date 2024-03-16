@@ -1,7 +1,7 @@
 ---
 title: "Use Insomnia with Dataverse Web API"
 description: "Learn how to set up and configure Insomnia local Scratch Pad with environments that connect with Microsoft Dataverse environments."
-ms.date: 03/11/2024
+ms.date: 03/15/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -22,7 +22,7 @@ This article has two goals:
 1. Demonstrate a strategy to authenticate and connect to Dataverse using [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that is preapproved for all Dataverse environments. This means you don't need to register an application to get started using the Dataverse Web API.
 1. Introduce you to some basic data operations you can perform using the Dataverse Web API in the context of the Insomnia API client. This way, you can use Insomnia to continue to experiment and learn about the Dataverse Web API.
 
-## Security
+## Privacy
 
 Requests you send with client API tools contain information that could be sensitive. Many developers don't want to have this information uploaded to a cloud service.
 
@@ -32,7 +32,7 @@ The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
 > You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
 >
 > - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
-> - Refreshes your access token automatically so you don't need to keep requesting a new one when they expire.
+> - Doesn't send any information about your requests anywhere.
 >
 > The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience will probably change over time and this article might not represent the current experience. This article will be updated only when changes occur that fundamentally break the steps described here. [Learn more in the Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started)
 
@@ -158,7 +158,43 @@ After you configured your base environment and any sub-environments, you're read
       ...
    ```
 
-   This result is the [Web API service document](web-api-service-documents.md#service-document). You view the service document by sending a **GET** request to the root of the Web API service url. It lists the entity type names for all the tables in your Dataverse environment. When you can see the service document, you have successfully authenticated to your Dataverse environment.
+   This result is the [Web API service document](web-api-service-documents.md#service-document). You view the service document by sending a **GET** request to the root of the Web API service url. It lists the [entity set names](web-api-service-documents.md#entity-set-name) for all the tables in your Dataverse environment. When you can see the service document, you have successfully authenticated to your Dataverse environment.
+
+   > [!TIP]
+   > This is a convenient way to find or verify the entity set name for a table you are working with.
+
+## View the CSDL $metadata document
+
+The Common Schema Definition Language (CSDL) $metadata document is the source of truth for everything related to Web API. You will want to reference it frequently.
+
+1. Edit the URL by appending `$metadata?annotations=true` after the `_.webapiurl` variable. The URL should be:
+   
+   `GET _.webapiurl $metadata?annotations=true`
+
+1. Select **Send**.
+
+In the **Preview** pane, you should see a message saying Response over 5MB hidden for performance reasons, with the options to **Save To File** and **Show Anyway**. The file is large, but you should be able to preview it without problems.
+
+### Find definitions of types
+
+CSDL $metadata document is large. The Insomnia preview provides a response filtering tool at the bottom. You can use [XPath queries](https://developer.mozilla.org/docs/Web/XPath) to filter the response to find what you need. The following table shows some examples:
+
+
+|Find|XPath query|
+|---------|---------|
+|All entity types|`//*[local-name() = 'EntityType']`|
+|The [account EntityType](/power-apps/developer/data-platform/webapi/reference/account)|`//*[local-name() = 'EntityType'][@Name = 'account']`|
+|All functions|`//*[local-name() = 'Function']`|
+|The [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami)|`//*[local-name() = 'Function'][@Name = 'WhoAmI']`|
+|All actions|`//*[local-name() = 'Action']`|
+|The [CreateMultiple action](/power-apps/developer/data-platform/webapi/reference/createmultiple)|`//*[local-name() = 'Action'][@Name = 'CreateMultiple']`|
+|All complex types|`//*[local-name() = 'ComplexType']`|
+|The [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse)|`//*[local-name() = 'ComplexType'][@Name = 'WhoAmIResponse']`|
+|All enum types|`//*[local-name() = 'EnumType']`|
+|The [AccessRights enum type](/power-apps/developer/data-platform/webapi/reference/accessrights)|`//*[local-name() = 'EnumType'][@Name = 'AccessRights']`|
+
+[Learn more about the types defined in the CSDL $metadata document](web-api-types-operations.md)
+
 
 ## Send a WhoAmI request
 
@@ -199,7 +235,7 @@ Now that you're authenticated, modify your request to invoke the [WhoAmI functio
 
 ## Retrieve data
 
-To use Insomnia to retrieve records, you must set the entity set name for the resource.
+To use Insomnia to retrieve records, you must set the [entity set name](web-api-service-documents.md#entity-set-name) for the resource.
 
 1. Change the URL to remove `WhoAmI` after the `_.webapiurl` variable, and replace it with `accounts`, the entity set name for the [account entity type](/power-apps/developer/data-platform/webapi/reference/account). The URL should be:
    
@@ -208,10 +244,10 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
 1. In the **Parameters** tab, set the parameters for your query.
 
    You can add parameters individually by selecting the **Add** button. But you can also select the **Bulk Edit** option, which you might find easier.
-
+   
    1. Select the **Bulk Edit** option.
    1. Copy the following parameters:
-
+   
    ```text
    $top: 3
    $select: name,revenue,address1_city
@@ -296,7 +332,7 @@ To use Insomnia to retrieve records, you must set the entity set name for the re
    ```
    
    > [!NOTE]
-   > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` and when the `Prefer: odata.include-annotations="*"` request header set in [Send a WhoAmI request](#send-a-whoami-request) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
+   > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` because the `Prefer: odata.include-annotations="*"` request header set in [Send a WhoAmI request](#send-a-whoami-request) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 
 ## Create a record

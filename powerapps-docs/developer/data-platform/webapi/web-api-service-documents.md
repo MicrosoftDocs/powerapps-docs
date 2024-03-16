@@ -25,7 +25,7 @@ Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynami
 
 ### [Using Insomnia](#tab/insomnia)
 
-If you are using [Insomnia with the recommended environment settings](insomnia.md), just use the `{{webapiurl}}` environment variable.
+If you are using [Insomnia with the recommended environment settings](insomnia.md), just use the `_.webapiurl` environment variable.
 
 ### [Using PowerShell with Visual Studio Code](#tab/ps)
 
