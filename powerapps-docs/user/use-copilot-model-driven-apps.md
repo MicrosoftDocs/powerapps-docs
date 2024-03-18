@@ -56,7 +56,7 @@ picture
 
 ## Provide feedback 
 
-To provide feedback to help improve copilot, select the **Like** or **Dislike** icon included in each copilot response. Feedback can be submitted for each copilot response. 
+To provide feedback to help improve Copilot, select the **Like** or **Dislike** icon included in each Copilot response. Feedback can be submitted for each Copilot response. 
 
 ### Provide positive feedback 
 
