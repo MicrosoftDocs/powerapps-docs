@@ -82,9 +82,9 @@ There are also two operations you can use to understand whether search is enable
 |`searchstatistics`<br />[searchstatistics Function](xref:Microsoft.Dynamics.CRM.searchstatistics)<br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics-status.md#statistics)|
 |`searchstatus`<br />[searchstatus Function](xref:Microsoft.Dynamics.CRM.searchstatus)<br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search Status](statistics-status.md#status) |
 
-## Use Postman with Dataverse search
+## Use Insomnia with Dataverse search
 
-If you have used Postman with Dataverse Web API, you know how useful it's to try using the APIs. We have some instructions about setting up a Postman environment to authenticate with the Dataverse Web API here: [Set up a Postman environment](../webapi/setup-postman-environment.md).
+If you have used Insomnia with Dataverse Web API, you know how useful it's to try using the APIs. We have some instructions about setting up a Insomnia environment to authenticate with the Dataverse Web API here: [Use Insomnia with Dataverse Web API](../webapi/insomnia.md)
 
 You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, change these two environment variables:
 
@@ -92,33 +92,6 @@ You can use the same instructions with the search operations using Web API funct
 |---------|---------|---------|
 |`version`|`9.2`|`2.0`|
 |`webapiurl`|`{{url}}/api/data/v{{version}}/`|`{{url}}/api/search/v{{version}}/`|
-
-### Extract response JSON with Postman
-
-Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It's difficult to read this string value, but you can use the [Postman Visualize feature](https://learning.postman.com/docs/sending-requests/visualizer/) to transform this string value into readable JSON.
-
-1. In your Postman request select the **Tests** tab and enter the following script:
-
-   ```javascript
-   let responseString = JSON.stringify(JSON.parse(pm.response.json().response),null,1);
-   
-   template = '<pre>{{response}}</pre>';
-   
-   pm.visualizer.set(template, {
-       response: responseString
-   });
-   ```
-
-1. Execute your request and select the **Visualize** button.
-
-You can now see the unescaped JSON data returned in the `response` property.
-
-:::image type="content" source="../media/postman-query-visualize-script.png" alt-text="Postman query with test script to extract JSON from escaped string":::
-
-More information:
-
-- [Postman Learning Center: Visualizing responses](https://learning.postman.com/docs/sending-requests/visualizer/)
-- [Postman Learning Center: Visualizing responses > Rendering HTML](https://learning.postman.com/docs/sending-requests/visualizer/#rendering-html)
 
 
 ## Detect if search is enabled

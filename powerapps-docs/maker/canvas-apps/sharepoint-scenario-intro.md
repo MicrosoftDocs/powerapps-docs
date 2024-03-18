@@ -58,6 +58,7 @@ The next step in this tutorial series is to [set up the SharePoint Online lists]
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+- [SharePoint custom forms in Power Apps](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

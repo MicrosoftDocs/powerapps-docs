@@ -26,15 +26,15 @@ Use the instructions in [View developer resources](../view-download-developer-re
 
 ## Authenticate to the service
 
-There are several ways you can authenticate to interact with the service. Postman is a popular choice with wide adoption. You can also use PowerShell with Visual Studio Code.
+There are several ways you can authenticate to interact with the service. Insomnia is a popular choice with wide adoption. You can also use PowerShell with Visual Studio Code.
 
 You can use either method to retrieve the service documents and see examples showing how the information in the articles in this section applies to your environment. You can also perform any other operation to try the capabilities of the Web API.
 
-### Set up a Postman environment
+### Set up an Insomnia environment
 
-[Postman API client](https://learning.postman.com/docs/getting-started/introduction/) provides a great way to connect to your environments and explore the Dataverse Web API. Postman can greatly simplify managing getting an access token when using Dataverse Web API.
+[Insomnia API client](https://docs.insomnia.rest/insomnia/get-started) provides a great way to connect to your environments and explore the Dataverse Web API. Insomnia can greatly simplify managing getting an access token when using Dataverse Web API.
 
-Use the steps in [Set up a Postman environment](setup-postman-environment.md) and watch this video [Get started using Postman with Microsoft Dataverse Web API](https://youtu.be/HpUj11yU0fY).
+Use the steps in [Use Insomnia with Dataverse Web API](insomnia.md)
 
 
 ### Use PowerShell with Visual Studio Code

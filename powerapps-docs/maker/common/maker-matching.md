@@ -25,7 +25,8 @@ Maker matching allows you to use an integrated chat bot in Power Apps to find in
 **Admins** tell the chat bot where to find internal documentation and which advisors can help new makers.
 
 > [!IMPORTANT]
-> This is a preview feature. Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature. Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature will be deprecated on April 30, 2024.
 
 ## Find maker resources
 

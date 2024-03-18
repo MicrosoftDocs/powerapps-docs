@@ -44,7 +44,7 @@ With model-driven apps, this enables an experience that enables you to view and 
 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
-More information: [Microsoft Dataverse Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data).
+More information: [Query and visualize hierarchically related data](../../maker/data-platform/query-visualize-hierarchical-data.md).
 
 ### See also
 
