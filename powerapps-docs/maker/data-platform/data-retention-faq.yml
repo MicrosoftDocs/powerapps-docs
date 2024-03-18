@@ -95,8 +95,8 @@ sections:
      answer: |
         Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
 
-   - question: I was using Dataverse long term retention in public preview. Why are my existing policies showing a deactivated status?
+   - question: I had used Dataverse long term retention in the public preview phase without meeting the licensing requirement. Will my tenant/org/environment still be able to use Dataverse long term retention?
      answer: |
-        Your tenant will be granted an exception to the licensing requirement for Dataverse long term retention. These exceptions will be available by end of February 2024, at which point your environment can continue using the feature.  
+        Yes. Since your tenant/org/environment participated in the public preview, Dataverse long term retention is being made available for continued use.  
 
                               
