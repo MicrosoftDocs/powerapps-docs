@@ -1,6 +1,6 @@
 ---
 title: Radio group control in Power Apps
-description: Learn about the details, properties and examples of the radio group modern control in Power Apps.
+description: Learn about the details, properties, and examples of the radio group modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 An input control that shows multiple options, of which users can select only one at a time.
 
 ## Description
-A Radio group control is best used with only a few, mutually exclusive options. Key properties for this control are Items and DefaultSelectedItems.
+A Radio group control is best used with only a few, mutually exclusive options. The key properties for this control are **Items** and **DefaultSelectedItems**.
 
 ## General
 
@@ -62,7 +62,7 @@ A Radio group control is best used with only a few, mutually exclusive options. 
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -77,7 +77,7 @@ A Radio group control is best used with only a few, mutually exclusive options. 
 
 **OnChange** - Actions to perform when the user changes the value of a control. 
 
-**OnSelect** - Actions to perform when the user taps or clicks a control.  
+**OnSelect** - Actions to perform when the user selects a control.  
 
 
 

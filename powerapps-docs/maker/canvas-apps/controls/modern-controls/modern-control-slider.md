@@ -21,7 +21,8 @@ contributors:
 A control with which the user can specify a value by dragging a handle.
 
 ## Description
-The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose. Key properties for this control are OnChange, Value, Min, and Max.
+
+The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose. The key properties for this control are **OnChange**, **Value**, **Min**, and **Max**.
 
 ## General
 

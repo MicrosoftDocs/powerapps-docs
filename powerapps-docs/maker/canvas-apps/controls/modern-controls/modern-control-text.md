@@ -1,6 +1,6 @@
 ---
 title: Text modern control in Power Apps
-description: Learn about the details, properties and examples of the text modern control in Power Apps.
+description: Learn about the details, properties, and examples of the text modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -23,10 +23,10 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-Display text on the app, can also be used as label for fields.
+Display text on the app. This can also be used as a label for fields.
 
 ## Description
-Use this versatile **Text** control to display text, messages, information on the app. Key properties for this control are Text, Size, and FontColor.
+Use this versatile **Text** control to display text, messages, information on the app. The key properties for this control are **Text**, **Size**, and **FontColor**.
 
 ## General
 
@@ -62,7 +62,7 @@ Use this versatile **Text** control to display text, messages, information on th
 
 **FontColor** - The color of text in a control. 
 
-**Weight** - The weight of the text in a control: Bold, Semibold, Regular, or Medium. 
+**Weight** - The weight of the text in a control: **Bold**, **Semibold**, **Regular**, or **Medium**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 

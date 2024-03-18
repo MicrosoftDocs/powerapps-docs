@@ -508,6 +508,8 @@
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Combobox   
+              href: ./canvas-apps/controls/control-combo-box.md 
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Progress bar 
@@ -530,6 +532,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Info button (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Number input (preview)
+              href: ./canvas/modern-controls/modern-control-number-input.md
             - name: Radio group (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner (preview)
@@ -540,6 +544,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
             - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
+            - name: Toggle 
+              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md 
           - name: Control reference
             items:
             - name: List of controls and properties

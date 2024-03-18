@@ -1,6 +1,6 @@
 ---
 title: Drop down modern control in Power Apps
-description: Learn about the details, properties and examples of the dropdown modern control in Power Apps.
+description: Learn about the details, properties, and examples of the dropdown modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 Select a value from the list of items.
 
 ## Description
-A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices. Key properties for this control are Items, ValidationState, and OnChange.
+A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices. The key properties for this control are **Items**, **ValidationState**, and **OnChange**.
 
 ## General
 
@@ -63,6 +63,6 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **OnChange** – Actions to perform when the user changes the value of a control.  
 
-**ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the control’s border is highlighted in red. 
+**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the control’s border is highlighted in red. 
 
 **DefaultSelectedItems** - The initial value of a control before the user specifies a different value. 

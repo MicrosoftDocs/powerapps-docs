@@ -1,6 +1,6 @@
 ---
 title: Link modern control in Power Apps
-description: Learn about the details, properties and examples of the link modern control in Power Apps.
+description: Learn about the details, properties, and examples of the link modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -24,9 +24,10 @@ contributors:
 Open hyperlinks in new tab.
 
 ## Description
-Use **Link** control to provide links that can be defined with accessibility compliance. The link opens in a new tab on your device. Key properties for this control are Text and URL. 
+Use **Link** control to provide links that can be defined with accessibility compliance. The link opens in a new tab on your device. The key properties for this control are **Text** and **URL**. 
 
 ## General
+
 **Text** – The text to be displayed on the app with link enabled.
 
 **URL** - URL for the users to navigate through the link.
@@ -43,7 +44,7 @@ Use **Link** control to provide links that can be defined with accessibility com
 
 ## Size and position 
 
-**Align** - The location of text in relation to the horizontal center of its control. The options are updated to Start, End, Center and Justify to better accomodate left to right languages.
+**Align** - The location of text in relation to the horizontal center of its control. The options are updated to **Start**, **End**, **Center**, and **Justify** to better accommodate left to right languages.
 
 **VerticalAlign** - – The location of text on a control in relation to the vertical center of that control.
 

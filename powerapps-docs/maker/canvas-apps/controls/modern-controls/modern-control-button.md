@@ -1,6 +1,6 @@
 ---
 title: Button modern control in Power Apps
-description: Learn about the details, properties and examples of the button modern control in Power Apps.
+description: Learn about the details, properties, and examples of the button modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -24,7 +24,7 @@ contributors:
 A control that the user can select to interact with the app.
 
 ## Description
-With the modern button you can set a button to be primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button to the right of it. Key properties for this control are OnSelect and Text.
+Use the modern button to set a button to be primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button to the right of it. The key properties for this control are **OnSelect** and **Text**.
 
 ## General
 
@@ -65,7 +65,7 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -77,7 +77,7 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
-**[OnSelect](../properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
 
 
 

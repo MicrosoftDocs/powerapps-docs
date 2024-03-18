@@ -1,6 +1,6 @@
 ---
 title: Date picker control in Power Apps
-description: Learn about the details, properties and examples of the date picker modern control in Power Apps.
+description: Learn about the details, properties, and examples of the date picker modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 A control that the user can select to specify a date.
 
 ## Description
-If you add a Date Picker control instead of a Text input control, you help ensure that the user specifies a date in the correct format. Key properties for this control are Format, ValidationState, and OnChange.
+If you add a Date Picker control instead of a Text input control, you help ensure that the user specifies a date in the correct format. The key properties for this control are **Format**, **ValidationState**, and **OnChange**.
 
 ## General
 
@@ -68,7 +68,7 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -92,7 +92,7 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 **StartOfWeek** - The day of the week to display in the first day column of the date-picker control. 
 
-**ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the date picker border is highlighted in red. 
+**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the date picker border is highlighted in red. 
 
 
 

@@ -24,13 +24,13 @@ contributors:
 Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
 ## Description
-The progress bar can be configured to show various states of progress in the apps. This versatile control can be used to inform users on their progress as they work on the app or can be used to show loading scenarios. Key properties for this control are Value, Max, and Indeterminate. 
+The progress bar can be configured to show various states of progress in the apps. This versatile control can be used to inform users on their progress as they work on the app or can be used to show loading scenarios. The key properties for this control are **Value**, **Max**, and **Indeterminate**. 
 
 ## General
 
 **Value** – Number between 0 and 'max', which specifies how much of the task is completed. Only applicable for determinate state.
 
-**Max** - The maximum value, which indicates the task is complete. The ProgressBar bar is full when value equals max. This is useful for instances where you want to show capacity, or how much of a total has been uploaded or downloaded.
+**Max** - The maximum value, which indicates the task is complete. The ProgressBar bar is full when value equals max. This is useful when you want to show capacity or how much of the total is uploaded or downloaded.
 
 **AccessibleLabel** – Label for screen readers.
 
@@ -38,7 +38,7 @@ The progress bar can be configured to show various states of progress in the app
 
 ## Behavior
 
-**Indeterminate** – Set the bar to determinate or indeterminate. In the indeterminate state the value property and max property are not honored.
+**Indeterminate** – Set the bar to determinate or indeterminate. In the indeterminate state the value property and max property aren't honored.
 
 ## Size and position 
 

@@ -26,7 +26,7 @@ contributors:
 Use **Info button** control to provide additional information to users.
 
 ## Description
-**Info button** control enables developers to provide help and guidance to app users in an accessible way. Key properties for this control are Content, Icon Size, and OnSelect.
+**Info button** control enables developers to provide help and guidance to app users in an accessible way. The key properties for this control are **Content**, **Icon Siz**e, and **OnSelec**.
 
 ## General 
 
@@ -58,7 +58,7 @@ Use **Info button** control to provide additional information to users.
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -72,7 +72,7 @@ Use **Info button** control to provide additional information to users.
 
 **AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
-**OnSelect** - Actions to perform when the user taps or clicks a control.  
+**OnSelect** - Actions to perform when the user selects a control.  
 
 
 

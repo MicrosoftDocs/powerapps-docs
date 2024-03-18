@@ -24,7 +24,7 @@ contributors:
 Select a tab to move between screens or take action on app.
 
 ## Description
-A **Tab** is a navigation control which can help users switch between different context within the app. You can add list of items to tabs or select a data table field for the list in tabs to appear. Key properties for this control are Items, OnChange, and OnSelect.
+A **Tab** is a navigation control, which can help users switch between different context within the app. You can add list of items to tabs or select a data table field for the list in tabs to appear. The key properties for this control are **Items**, **OnChange**, and **OnSelect**.
 
 ## General
 
@@ -40,7 +40,7 @@ A **Tab** is a navigation control which can help users switch between different 
 
 ## Size and position
 
-**Size** – Choose tabs to be shown as small, medium or large
+**Size** – Choose tabs to be shown as small, medium, or large
 
 **Alignment** – Option for tabs to be displayed as vertical or horizontal
 
@@ -62,7 +62,7 @@ A **Tab** is a navigation control which can help users switch between different 
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -76,7 +76,7 @@ A **Tab** is a navigation control which can help users switch between different 
 
 **[OnChange](../properties-core.md)** – Actions to perform when the user changes the value of a control.
 
-**[OnSelect](../properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
 
 
 

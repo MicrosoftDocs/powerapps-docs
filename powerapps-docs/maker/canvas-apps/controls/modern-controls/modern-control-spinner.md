@@ -1,6 +1,6 @@
 ---
 title: Spinner modern control in Power Apps
-description: Learn about the details, properties and examples of the spinner modern control in Power Apps.
+description: Learn about the details, properties, and examples of the spinner modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 Displays state in motion such as loading a page or table.
 
 ## Description
-**Spinner** control can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios. Key properties for this control are Label, Apperance, and SpinnerSize.
+**Spinner** control can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios. The key properties for this control are **Label**, **Appearance**, and **SpinnerSize**.
 
 ## General
 
@@ -34,11 +34,11 @@ Displays state in motion such as loading a page or table.
 
 **AccessibleLabel** – Label for screen readers.
 
-**Visible** - Whether a control appears or is hidden. 
+**Visible** - Whether a control appears or is hidden.
 
 ## Size and position
 
-**LabelPosition** – Where the label is positioned relative to the Spinner.
+**LabelPosition** – Where the label is positioned relative to the spinner.
 
 **SpinnerSize** – The size of the spinner.
 

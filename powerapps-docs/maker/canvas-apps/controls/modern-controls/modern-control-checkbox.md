@@ -1,6 +1,6 @@
 ---
 title: Checkbox modern control in Power Apps
-description: Learn about the details, properties and examples of the checkbox modern control in Power Apps.
+description: Learn about the details, properties, and examples of the checkbox modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description
-The user can specify a Boolean value by using this familiar control, which has been used in GUIs for decades. Key properties for this control are Checked, Label, OnCheck, and OnUncheck.
+The user can specify a Boolean value by using this familiar control that is used in Graphical User Interface (GUI) for decades. The key properties for this control are **Checked**, **Label**, **OnCheck**, and **OnUncheck**.
 
 ## General
 
@@ -75,7 +75,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **OnCheck** - Actions to perform when the user checks the control. 
 
-**OnSelect** - Actions to perform when the user taps or clicks a control. 
+**OnSelect** - Actions to perform when the user selects a control. 
 
 **OnUncheck** - Actions to perform when the user unchecks the control. 
 

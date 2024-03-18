@@ -1,6 +1,6 @@
 ---
 title: Toggle modern control in Power Apps
-description: Learn about the details, properties and examples of the toggle modern control in Power Apps.
+description: Learn about the details, properties, and examples of the toggle modern control in Power Apps.
 author: noazarur-microsoft
 
 ms.topic: reference
@@ -22,11 +22,11 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-A control that the user can turn on or off by moving its handle. 
+A control that the user can turn on or off by moving its handle.
 
 ## Description
 
-A toggle is designed for recent GUIs but behaves the same way as a check box. Key properties for this control are Checked, Label, OnCheck, OnSelect, and OnUncheck.
+A toggle is designed for recent GUIs but behaves the same way as a check box. The key properties for this control are **Checked**, **Label**, **OnCheck**, **OnSelect**, and **OnUncheck**.
  
 ## General
 
@@ -38,7 +38,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box. Ke
 
 ## Behavior
 
-**Checked** - The initial value of a control before it is changed by the user. 
+**Checked** - The initial value of a control before it's changed by the user. 
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
 
@@ -64,7 +64,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box. Ke
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 
@@ -76,6 +76,6 @@ A toggle is designed for recent GUIs but behaves the same way as a check box. Ke
 
 **OnCheck** – Actions to perform when the value of the toggle changes to **true**. 
 
-**OnSelect** – Actions to perform when the user taps or clicks a control. 
+**OnSelect** – Actions to perform when the user selects a control. 
 
 **OnUncheck** – Actions to perform when the value of the toggle changes to **false**. 

@@ -1,6 +1,6 @@
 ---
 title: Combobox modern control in Power Apps
-description: Learn about the details, properties and examples of the combobox modern control in Power Apps.
+description: Learn about the details, properties, and examples of the combobox modern control in Power Apps.
 author: noazarur-microsoft
 
 ms.topic: reference
@@ -20,11 +20,11 @@ contributors:
 ---
 # Combobox modern control in Power Apps
 
-A control that allows users to make selections from provided choices. Supports search and multiple selections. 
+A control that allows users to make selections from provided choices and supports search and multiple selections. 
 
 ## Description
 
-A **Combobox** control allows you to search for items you will select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
+A **Combobox** control allows you to search for items that you select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
 
 ## General
 
@@ -78,7 +78,7 @@ A **Combobox** control allows you to search for items you will select. Single or
 
 **MultiValueDelimiter** -  If a user selects multiple items, you can select what delimiter is added in-between items such as a comma.
 
-**ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the control’s border is highlighted in red. 
+**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the control’s border is highlighted in red.
 
 **DefaultSelectedItems** - The initial value of a control before the user specifies a different value. 
 

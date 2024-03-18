@@ -1,6 +1,6 @@
 ---
 title: Badge control in Power Apps
-description: Learn about the details, properties and examples of the Badge control in Power Apps.
+description: Learn about the details, properties, and examples of the Badge control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 A badge is a visual decoration for UI elements.
 
 ## Description
-Badge can be used to display content in a visually better way. Key properties for this control are Content, Shape, and Appearance. 
+Badge can be used to display content in a visually better way. The key properties for this control are **Content**, **Shape**, and **Appearance**. 
 
 ## General
 
@@ -60,7 +60,7 @@ Badge can be used to display content in a visually better way. Key properties fo
 
 **FontColor** - The color of text in a control. 
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
 **FontItalic** - Whether the text in a control is italic. 
 

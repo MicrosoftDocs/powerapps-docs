@@ -1,6 +1,6 @@
 ---
 title: Text input modern control in Power Apps
-description: Learn about the details, properties and examples of the text input modern control in Power Apps.
+description: Learn about the details, properties, and examples of the text input modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -26,7 +26,7 @@ contributors:
 A box in which the user can type text, numbers, and other data.
 
 ## Description
-The user can specify data by typing into a **Text input** control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way. Key properties for this control are Value, Mode, and ValidationState.
+The user can specify data by typing into a **Text input** control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way. The key properties for this control are **Value**, **Mode**, and **ValidationState**.
 
 ## General
 
@@ -38,9 +38,9 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 ## Behavior
 
-**Mode** – The control is in SingleLine or MultiLine mode.
+**Mode** – The control is in **SingleLine** or **MultiLine** mode.
 
-**Type** – The type of text that will be entered: text, password, or search. 
+**Type** – The type of text that that is entered such as text, password, or search. 
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
@@ -80,12 +80,12 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 **Required** – Must fill in field or not.
 
-**DelayOutput** - When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas). 
+**DelayOutput** - When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text such as for filtering when input is used in other formulas.
 
 **MaxLength** - The number of characters that the user can type into a text-input control. 
 
 **OnChange** - Actions to perform when the user changes the value of a control.  
 
-**ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the control’s border is highlighted in red
+**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the control’s border is highlighted in red.
 
 
