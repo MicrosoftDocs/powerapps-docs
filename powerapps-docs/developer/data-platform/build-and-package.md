@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building plug-in code into assemblies and packages for later registration and upload to the Microsoft Dataverse service.
-ms.date: 02/29/2024
+ms.date: 03/18/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -117,6 +117,8 @@ If you're adding another project to the Visual Studio solution, say a class libr
 1. Edit the project file by right-clicking on the project name in Solution Explorer and select **Edit project file**, or simply open the project's .csproj file in a separate editor.
 1. You should see the line `<Project Sdk="Microsoft.NET.Sdk">` in the project file. Change the TargetFramework property to be `<TargetFramework>net462</TargetFramework>` and save the file.
 1. Verify your solution builds, and you're done.
+
+More information: [.NET Project SDKs](/dotnet/core/project-sdk/overview#project-files)
 
 ### Don't depend on System.Text.Json
 
