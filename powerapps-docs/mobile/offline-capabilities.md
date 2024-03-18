@@ -149,6 +149,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Work order service tasks** - Work order service tasks created through *custom* code require msdyn_lineorder to be set to -1. An actual value will be automatically set after the next synchronization cycle.
 
+- **Quick find search** - When you search offline, the results might be different from online searches. Characters in your search terms must match exactly when searching offline, while online equivalent results might be found.
+
 ## Tips
 
 ### Mobile offline synchronization

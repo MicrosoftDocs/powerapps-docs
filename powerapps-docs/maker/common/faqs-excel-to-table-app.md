@@ -1,7 +1,7 @@
 ---
 title: FAQ for Excel to table and app
 description: This FAQ provides information about the AI technology that's used in Excel to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 02/02/2024
+ms.date: 03/06/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -32,7 +32,7 @@ We have set up reports and dashboards to track the usage, net promoter score (NP
 
 ## What are the limitations of Excel to table and app? How can users minimize the impact of Excel to table and app’s limitations when using the system?
 
-- When Copilot is enabled for the environment, Excel to table and app currently only produces metadata output in U.S. English, Danish, German, Spanish, French, Italian, Japanese, and Dutch. Users can manually update their metadata before creating their tables and apps to minimize the impact.  
+- When Copilot is enabled for the environment, Excel to table and app currently only produces metadata output in U.S. English, Danish, German, Spanish, French, Italian, and Dutch. Users can manually update their metadata before creating their tables and apps to minimize the impact.  
 
 - The Copilot capability of Excel to table and app is currently supported in [limited regions](#how-can-i-use-this-feature-in-a-power-platform-environment-that-is-created-outside-of-the-united-states-or-switzerland). Users located in regions that don’t currently support this Copilot feature are still able to use the upload and table and app creation feature without Copilot assistance.  
 

@@ -1,7 +1,7 @@
 ---
 title: Order rows using FetchXml
 description: Learn how to use FetchXml to order rows when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 03/06/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -134,8 +134,10 @@ When you order using lookup columns, the results are sorted using the primary na
 
 Choice column values are also sorted using the [formatted values](select-columns.md#formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
 
+This behavior can be overridden by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of choice columns will use the integer values instead.
+
 > [!NOTE]
-> Since choice sorting is based on the localized label of the users's language, This will lead to different ordering for the results set if the user's language differs.
+> Since choice sorting is based on the localized label of the users's language, expect different ordering for the results set if the user's language differs.
 
 [!INCLUDE [cc-ordering-paging](../includes/cc-ordering-paging.md)]
 

@@ -55,7 +55,8 @@ AI Copilot supports the following commands:
     - Text label
     - Text input
     > [!NOTE]
-    > [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
+    > - [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
+    > - This feature supports English and its variants.
 
 ## Sample commands you can try
 | Scenario      | Commands |
