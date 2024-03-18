@@ -195,8 +195,8 @@ You can set the **Visible** property using the Power Fx function `Host` to only 
 ```powerappsfl
 Host.OfflineEnabled
 ```
-## How to get the best of the offline built-in canvas? 
-Use the following recommendations to create a faster user experience for specific scenarious. 
+## How to create the best offline user experience? 
+Use the following recommendations to create a faster user experience for specific scenarios. 
 
  |Scenario                      |  Approach that is not recommended                     |  Recommended approach               |
  |-------------------------------|----------------------------|--------------------------------|
