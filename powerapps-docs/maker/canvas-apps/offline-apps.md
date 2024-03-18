@@ -19,11 +19,11 @@ contributors:
 
 Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
-- Open Power Apps Mobile and run apps when offline.
+- Open Power Apps Mobile and run apps when the device is not connected to the network.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
-- There are two ways to enable and app for offline:
-    - Use the [built-in offline](../../mobile/canvas-mobile-offline-overview.md) functionality for Dataverse-based canvas apps and harness the advantages of robust offline support
-    - And/Or use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic non Dataverse data storage when the device is not connected to the network.
+- Synchronize data between your device and the server
+
+If your app connects to Dataverse, offline support is [**built-in**](../../mobile/canvas-mobile-offline-overview.md). Power Apps will do the work for you to sync data down to the device and upload changes back to Dataverse. If your app does not use Dataverse, you can use collections and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic storage when offline.
 
 > [!NOTE]
 > - Offline capability for canvas apps is available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
