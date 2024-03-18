@@ -1,4 +1,3 @@
-
 ---
 title: FAQ for SharePoint List to table and app
 description: This FAQ provides information about the AI technology that's used in SharePoint List to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
@@ -11,7 +10,7 @@ ms.author: yueshu
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 ---
-# FAQ for SharePoint List to table and app 
+# FAQ for SharePoint List to table and app
 
 These frequently asked questions (FAQ) describe the AI impact of the SharePoint List to table and app feature.
 
