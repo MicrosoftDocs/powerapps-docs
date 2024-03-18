@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 01/30/2024
+ms.date: 02/28/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -116,7 +116,10 @@ Select **Save** to continue, this closes the **New table** panel and display the
 
 ### Create with external data
 
-Choose between an Excel file or SharePoint list to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
+Use an Excel file to populate a table with your data, which uses copilot to assist with the table generation.
+
+> [!NOTE]
+> [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
 1. From the **Tables** area, on the command bar select **New table** > **Create with external data**.
 1. Select either Excel or SharePoint list.
