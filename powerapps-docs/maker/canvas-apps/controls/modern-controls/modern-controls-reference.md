@@ -63,7 +63,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
-**[Toggle (preview)](modern-control-text-toggle.md)** – A control that the user can turn on or off by moving the handle.
+**[Toggle (preview)](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
 
 
 ### See also
