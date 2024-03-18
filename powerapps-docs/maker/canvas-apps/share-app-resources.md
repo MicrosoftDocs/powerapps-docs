@@ -36,7 +36,7 @@ You can also share your connections, custom connectors and on-premises data gate
 
 ## Connections
 
-Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privleges (such as security roles for the Dataverse, OneDrive for Business, SQL Server with Microsoft Entra authentication).
+Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privileges (such as security roles for the Dataverse, OneDrive for Business, SQL Server with Microsoft Entra authentication).
 
 You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 
@@ -46,7 +46,7 @@ You can determine whether a connection is automatically shared as part of the ap
 
 ### Implicit sharing
 
-When you share an app that uses a connection that can be shared, the app connection is **implicitly shared** along with the app. For example, following message appears when you go to make.powerapps.com, select **Apps**, choose an app that uses such connection, select *More Commands* (...) and then select **Share**:
+When you share an app that uses a connection that can be shared, the app connection is **implicitly shared** along with the app. For example, the following message appears when you go to make.powerapps.com, select **Apps**, choose an app that uses such connection, select *More Commands* (...) and then select **Share**:
 
   ![Implicit permission warning.](./media/share-app-resources/share-app-implicit-permission.png)
 
