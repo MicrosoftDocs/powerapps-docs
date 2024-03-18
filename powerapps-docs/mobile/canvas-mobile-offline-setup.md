@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 03/13/2024
+ms.date: 03/18/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
