@@ -2569,8 +2569,10 @@
     href: ./common/faq-copilot-control.md
   - name: FAQ about using Copilot in the rich text editor
     href: ./common/faqs-email-assist-rte.md
-  - name: FAQ for Excel or SharePoint to table and app
+  - name: FAQ for Excel to table and app
     href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for SharePoint list to table and app
+    href: ./common/faqs-sharepoint-list-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
   - name: FAQ about form filling assistance  
