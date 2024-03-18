@@ -25,23 +25,27 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 ## Modern controls
 
-**[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
+**[Badge (preview)](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
-**[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
+**[Checkbox (preview)](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
+
+**[Combobox](modern-control-combobox.md)** - A control that allows users to make selections from provided choices and supports search and multiple selections.
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
-**[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
+**[Date picker (preview)](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
-**[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
+**[Dropdown (preview)](modern-control-dropdown.md)** – Select a value from the list of items.
 
-**[Header](modern-controls-header.md)** – A control that creates a modern app header.
+**[Header (preview)](modern-controls-header.md)** – A control that creates a modern app header.
 
-**[Info button](modern-control-info-button.md)** – Use this control to provide additional information to users.
+**[Info button (preview)](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
+
+**[Number input](modern-control-number-input.md)** - A number input control the user can modify.
 
 **[Progress bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
@@ -59,6 +63,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
+**[Toggle (preview)](modern-control-text-toggle.md)** – A control that the user can turn on or off by moving the handle.
 
 
 ### See also
