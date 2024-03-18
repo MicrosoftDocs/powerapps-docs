@@ -60,13 +60,13 @@ To provide feedback to help improve Copilot, select the **Like** or **Dislike** 
 
 ### Provide positive feedback 
 
-1. In the **Copilot** pane, select the **Like** icon. 
+1. In the **Copilot** pane, select the **Like** icon on a Copilot response. 
 2. Optionally, provide feedback in your own words about what you liked. 
 3. Select **Submit** after you're done entering your feedback. 
 
 ### Provide feedback for improvement 
 
-1. In the **Copilot** pane, select the **Dislike** icon. 
+1. In the **Copilot** pane, select the **Dislike** icon on a Copilot response. 
 2. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve. 
 3. Select **Submit** after you're done entering your feedback. 
 
