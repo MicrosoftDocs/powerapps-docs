@@ -130,6 +130,8 @@ Use an Excel file to populate a table with your data, which uses copilot to assi
    1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
    1. When you're finished, select **Create**.
 
+   For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+
    # [SharePoint list (preview)](#tab/sharepoint)
 
    > [!IMPORTANT]
@@ -151,9 +153,8 @@ Use an Excel file to populate a table with your data, which uses copilot to assi
       - Select **Row ownership** if you want to change the table row ownership to either user\group or organization owned. More information: [Table ownership](types-of-entities.md#table-ownership)
    1. Select **Create** to create the table.
 
+   For more information about how AI is used with this feature, go to [FAQ for SharePoint list to table and app](../common/faqs-sharepoint-list-to-table-app.md).
 ---
-
-For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
 
 #### SharePoint columns not used in Dataverse table generation
 
