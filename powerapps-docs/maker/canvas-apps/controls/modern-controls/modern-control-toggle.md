@@ -22,7 +22,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-A control that the user can turn on or off by moving its handle.
+A control that the user can turn on or off by moving the handle.
 
 ## Description
 
