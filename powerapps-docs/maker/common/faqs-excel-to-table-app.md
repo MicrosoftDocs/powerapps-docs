@@ -32,7 +32,7 @@ We have set up reports and dashboards to track the usage, net promoter score (NP
 
 ## What are the limitations of Excel to table and app? How can users minimize the impact of Excel to table and app’s limitations when using the system?
 
-- When Copilot is enabled for the environment, Excel to table and app currently only produces metadata output in U.S. English, Danish, German, Spanish, French, Italian, and Dutch. Users can manually update their metadata before creating their tables and apps to minimize the impact.  
+- When Copilot is enabled for the environment, Excel to table and app currently produces metadata output in U.S. English, Czech, Danish, German, Spanish, Finnish, French, Italian, Dutch, Norwegian, Polish, Portuguese, Swedish, or Turkish. Users can manually update their metadata before creating their tables and apps to minimize the impact.  
 
 - The Copilot capability of Excel to table and app is currently supported in [limited regions](#how-can-i-use-this-feature-in-a-power-platform-environment-that-is-created-outside-of-the-united-states-or-switzerland). Users located in regions that don’t currently support this Copilot feature are still able to use the upload and table and app creation feature without Copilot assistance.  
 
