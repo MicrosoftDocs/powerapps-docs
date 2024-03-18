@@ -4,7 +4,7 @@ description: Learn how to use Copilot in model-driven apps.
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/13/2024
+ms.date: 03/18/2024
 ms.subservice: end-user
 ms.author: srihas
 ms.custom: ""
@@ -32,7 +32,7 @@ When enabled, Copilot can be accessed through the Copilot icon near the top-righ
 
 ## Use Copilot to ask questions 
 
-Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters **Navigate me to online cases**, Copilot in the model-driven app automatically opens the relevant page in the app. 
+Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters **Navigate to Challenges**, Copilot in the model-driven app automatically opens the relevant page in the app. 
 
 picture
 
@@ -56,17 +56,17 @@ picture
 
 ## Provide feedback 
 
-To provide feedback to help improve copilot, select the thumbs up or thumbs down icon included in each copilot response. Feedback can be submitted for each copilot response. 
+To provide feedback to help improve copilot, select the **Like** or **Dislike** icon included in each copilot response. Feedback can be submitted for each copilot response. 
 
 ### Provide positive feedback 
 
-1. On the right navigation bar, select the thumb up icon. 
+1. In the **Copilot** pane, select the **Like** icon. 
 2. Optionally, provide feedback in your own words about what you liked. 
 3. Select **Submit** after you're done entering your feedback. 
 
 ### Provide feedback for improvement 
 
-1. On the right navigation bar, select the thumb down icon. 
-2. Optionally, provide feedback, such as feedback about the content of copilot’s response, or a description in your own words about what went wrong, or how you would like copilot to improve. 
+1. In the **Copilot** pane, select the **Dislike** icon. 
+2. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve. 
 3. Select **Submit** after you're done entering your feedback. 
 
