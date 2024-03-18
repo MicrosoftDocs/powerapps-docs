@@ -533,7 +533,7 @@
             - name: Info button (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Number input (preview)
-              href: ./canvas/modern-controls/modern-control-number-input.md
+              href: ./canvas-apps/modern-controls/modern-control-number-input.md
             - name: Radio group (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner (preview)
