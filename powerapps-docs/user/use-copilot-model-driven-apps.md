@@ -42,13 +42,9 @@ Copilot can suggest questions for you to ask to help you get started. These ques
 
 You see more suggested prompts by selecting **View prompts** within the Copilot pane. Many of the suggested questions have placeholders that you need to replace with an appropriate text that completes the question. 
 
-picture
-
 ## Record picker to select object of the question 
 
 You can use the record picker to select the object of your question. Type “**/**” character to open the record picker and continue typing the name of the record. Then select the record of your choice and complete the question to make it meaningful. Submit the question to Copilot to view the response. 
-
-picture
 
 > [!Note]
 > - Using record picker will increase the chances of Copilot understanding the question, and thus responding with an accurate answer.
