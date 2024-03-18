@@ -121,7 +121,7 @@ Use an Excel file/CSV file or SharePoint list to populate a table with your data
 > [!NOTE]
 > [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
-1. From the **Tables** area, on the command bar select **New table** > **Create with external data**, select either **File (Excel, .CSV)** or **SharePoint list**.
+1. From the **Tables** area, on the command bar select **New table** > **Create with external data**, and then select either **File (Excel, .CSV)** or **SharePoint list**.
    # [File (Excel, .CSV)](#tab/excel)
 
    1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
