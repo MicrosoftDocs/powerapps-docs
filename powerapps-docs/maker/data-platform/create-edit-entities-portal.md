@@ -142,7 +142,7 @@ Use an Excel file to populate a table with your data, which uses copilot to assi
    1. On the **To get data, select an option** dialog, select **SharePoint list**.
    1. Select the SharePoint site you want from the following options:
 
-      - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as *https://microsoft.sharepoint.com/teams/ContosoSite*, and then select **Connect**.
+      - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as `https://microsoft.sharepoint.com/teams/ContosoSite`, and then select **Connect**.
       - Select the SharePoint site with the list you want under **Recent sites**.
       - Alternatively, you can create a new connection to a SharePoint site by selecting **...** > **Add a new connection** on the left pane.
 
