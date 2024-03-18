@@ -116,16 +116,14 @@ Select **Save** to continue, this closes the **New table** panel and display the
 
 ### Create with external data
 
-Use an Excel file to populate a table with your data, which uses copilot to assist with the table generation.
+Use an Excel file/CSV file or SharePoint list to populate a table with your data, which uses copilot to assist with the table generation.
 
 > [!NOTE]
 > [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
-1. From the **Tables** area, on the command bar select **New table** > **Create with external data**.
-1. Select either Excel or SharePoint list.
-   # [Excel file](#tab/excel)
+1. From the **Tables** area, on the command bar select **New table** > **Create with external data**, select either **File (Excel, .CSV)** or **SharePoint list**.
+   # [File (Excel, .CSV)](#tab/excel)
 
-   1. On the **To get data, select an option** dialog, select **File (Excel, .CSV)**.
    1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
    1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
    1. When you're finished, select **Create**.
@@ -139,7 +137,7 @@ Use an Excel file to populate a table with your data, which uses copilot to assi
    > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
    > - For SharePoint columns not supported, go to [SharePoint columns not used in Dataverse table generation](#sharepoint-columns-not-used-in-dataverse-table-generation).
 
-   1. On the **To get data, select an option** dialog, select **SharePoint list**.
+   1. If you agree to the terms, select **Continue**.
    1. Select the SharePoint site you want from the following options:
 
       - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as `https://microsoft.sharepoint.com/teams/ContosoSite`, and then select **Connect**.
