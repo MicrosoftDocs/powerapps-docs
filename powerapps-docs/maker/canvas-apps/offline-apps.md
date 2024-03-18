@@ -30,10 +30,10 @@ If your app connects to Dataverse, offline support is [**built-in**](../../mobil
 > - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 > - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)
 
-# Enable a Dataverse-based canvas app for offline 
+# Enable offline support in a Dataverse-based canvas app
 For Microsoft Dataverse-based canvas app, you must use the offline capability built-in with the [offline-first](../../mobile/canvas-mobile-offline-overview.md) experience.  Learn more: [Set up mobile offline for canvas apps](../../mobile/canvas-mobile-offline-setup.md), [Working with canvas apps offline](../../mobile/canvas-mobile-offline-working.md). With the flip of a switch, your app can work with Dataverse data wherever you are–with or without network connection. Just build your app with standard Power Fx formulas and the offline feature handles all the complexity for you. 
 
-# Enable all other canvas app for offline 
+# Use LoadData and SaveData for all other connectors
 This section includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
 Watch this video to learn how to create offline enabled canvas apps which don't use Dataverse data:
