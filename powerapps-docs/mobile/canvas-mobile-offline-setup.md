@@ -201,7 +201,7 @@ Use the following recommendations to create a faster user experience for specifi
  |Scenario                      |  Approach that is not recommended                     |  Recommended approach               |
  |-------------------------------|----------------------------|--------------------------------|
  | Show related tables information in a gallery. | Use a look-up to fetch the data. | Use a view containing the column of the related table.|
- | Create a filterable gallery with a lot of records.  | Load the records from Dataverse and store them in a collection. Set the items of the fallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse-filtered data. |
+ | Create a filterable gallery with a lot of records.  | Load the records from Dataverse and store them in a collection. Set the items of the gallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse-filtered data. |
  | Update multiple records. | Loop the records and patch them individually. | Bulk patch a collection containing all the modifications. |
 
     
