@@ -18,20 +18,13 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Combobox modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Combobox modern control in Power Apps
 
 A control that allows users to make selections from provided choices. Supports search and multiple selections. 
 
 ## Description
 
-A **Combobox** control allows you to search for items you will select. The search is performed server-side on the SearchField property so performance is not affected by large data sources. 
-
-Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
-
-> [!NOTE]
-> If you want to search for items with numbers, convert numbers to text with Text() function For example, Text(12345).  
+A **Combobox** control allows you to search for items you will select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
 
 ## General
 
@@ -83,7 +76,7 @@ Single or multi-select mode is configured via the SelectMultiple property. Key p
 
 **TextInputPlaceholder** - Instructional text shown to end users when no items are selected. 
 
-**MultiValueDelimiter** -  
+**MultiValueDelimiter** -  If a user selects multiple items, you can select what delimiter is added in-between items such as a comma.
 
 **ValidationState** - The control has two states: “Error” and “None”. When the error state is selected the control’s border is highlighted in red. 
 

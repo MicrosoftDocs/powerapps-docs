@@ -26,7 +26,7 @@ A control that the user can turn on or off by moving its handle.
 
 ## Description
 
-A toggle is a user interface element that allows you to switch a feature or setting on or off. Key properties for this control are Checked and Label.
+A toggle is designed for recent GUIs but behaves the same way as a check box. Key properties for this control are Checked, Label, OnCheck, OnSelect, and OnUncheck.
  
 ## General
 
