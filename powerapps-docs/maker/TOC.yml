@@ -1867,12 +1867,6 @@
       href: ./portals/admin/update-portal-domain.md
     - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
-    - name: Integrate Power BI
-      items:
-        - name: Add Power BI as a component to a webpage
-          href: ./portals/add-powerbi.md
-        - name: Add Power BI using powerbi liquid tag
-          href: ./portals/admin/add-powerbi-report.md
 - name: Dataverse
   items:
   - name: Dataverse
