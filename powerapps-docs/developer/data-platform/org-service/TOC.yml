@@ -29,8 +29,6 @@
     - name: Query data using QueryExpression (NEW)
       href: queryexpression/overview.md
       items:
-      - name: Retrieve data (NEW)
-        href: queryexpression/retrieve-data.md
       - name: Select columns (NEW)
         href: queryexpression/select-columns.md
       - name: Join tables (NEW)
