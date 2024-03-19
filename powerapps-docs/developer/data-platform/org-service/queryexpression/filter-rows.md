@@ -189,55 +189,63 @@ There are limitations on these kinds of filters:
 
 ## Filter on values in related records
 
-<!-- TODO: Continue from here -->
+To filter on values in related records without returning those values, use the `FilterExpression.AnyAllFilterLinkEntity` property with a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) instance where the [LinkEntity.JoinOperator](/dotnet/api/microsoft.xrm.sdk.query.linkentity.joinoperator) uses one of the following [JoinOperator enum](/dotnet/api/microsoft.xrm.sdk.query.joinoperator) members:
 
-To filter on values in related records without returning those values, use a [link-entity element](reference/link-entity.md) within the [filter element](reference/filter.md) with one of the following `link-type` attributes:
-
-<!-- Don't want first column to have line breaks -->
-|Name&nbsp;&nbsp;&nbsp;&nbsp;|Description|
+|Name|Description|
 |---------|---------|
-|`any`|[!INCLUDE [link-type-any-description](reference/includes/link-type-any-description.md)]|
-|`not any`|[!INCLUDE [link-type-not-any-description](reference/includes/link-type-not-any-description.md)]|
-|`all`|[!INCLUDE [link-type-all-description](reference/includes/link-type-all-description.md)]|
-|`not all`|[!INCLUDE [link-type-not-all-description](reference/includes/link-type-not-all-description.md)]|
+|`Any`|Restricts results to parent rows with any matching rows in the linked entity.|
+|`NotAny`|Restricts results to parent rows with no matching rows in the linked entity.|
+|`All`|Restricts results to parent rows where rows with matching `from` column value exist in the link entity but **none of those matching rows** satisfy the additional filters defined for this link entity. You need to **invert** the additional filters to find parent rows where **every** matching link entity row satisfies some additional criteria.|
+|`NotAll`|Restricts results to parent rows with any matching rows in the linked entity. This link type is equivalent to `any` despite the name.|
 
-When you use these link types inside of a [filter element](reference/filter.md), these filters are child conditions following the behavior defined by the `type` attribute of the parent `filter`.
+When you use these `JoinOperator` member values with a `LinkEntity` specified by the  `FilterExpression.AnyAllFilterLinkEntity`, these filters are child conditions following the behavior defined by the `FilterExpression.FilterOperator` (And/Or).
 
-Filters using these types return the parent row at most once even if multiple matching rows exist in the link entity. They don't allow returning column values from the link entity rows.
+Filters using these `JoinOperator` member values return the parent row at most once even if multiple matching rows exist in the `LinkEntity`. Any columns specified in the [LinkEntity.Columns property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.columns) will be ignored.
 
 ### Examples of filters on values in related records
 
 The following examples demonstrate filtering on values of related records. These examples include the equivalent SQL statements to help explain the behavior.
 
-#### Or filter with `link-type` `any`
+#### Or filter with `JoinOperator.Any`
 
-This query uses a `filter` of type `or` with a child `link-entity` of type `any` to return records in [contact](../reference/entities/contact.md) that:
+This query uses a `FilterExpression` with the `FilterOperator` property set to `LogicalOperator.Or` and a `AnyAllFilterLinkEntity` property set with a `LinkEntity` that has the `JoinOperator` property set to `JoinOperator.Any`. This query will return [contact](../reference/entities/contact.md) records that:
+
 - _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
-- _or_ have the [Contact.StateCode picklist column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
+- _or_ have the [Contact.StateCode column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
 
-#### [FetchXml](#tab/fetchxml)
+#### [QueryExpression](#tab/qe)
 
-``` xml
-<fetch>
-   <entity name='contact'>
-      <attribute name='fullname' />
-      <filter type='or'>
-         <link-entity name='account'
-            from='primarycontactid'
-            to='contactid'
-            link-type='any'>
-            <filter type='and'>
-               <condition attribute='name'
-                  operator='eq'
-                  value='Contoso' />
-            </filter>
-         </link-entity>
-         <condition attribute='statecode'
-            operator='eq'
-            value='1' />
-      </filter>
-   </entity>
-</fetch>
+``` csharp
+var query = new QueryExpression("contact")
+{
+    ColumnSet = new ColumnSet("fullname"),
+    Criteria = new FilterExpression(filterOperator: LogicalOperator.Or)
+    {
+        AnyAllFilterLinkEntity = new LinkEntity(
+            linkFromEntityName: "contact",
+            linkToEntityName: "account",
+            linkFromAttributeName: "contactid",
+            linkToAttributeName: "primarycontactid",
+            joinOperator: JoinOperator.Any)
+        {
+            LinkCriteria = new FilterExpression(filterOperator: LogicalOperator.And)
+            {
+                Conditions = {
+                    new ConditionExpression(
+                        attributeName: "name",
+                        conditionOperator: ConditionOperator.Equal,
+                        value: "Contoso")
+                }
+            }
+        },
+        Conditions = {
+            new ConditionExpression(
+                attributeName:"statecode",
+                conditionOperator: ConditionOperator.Equal,
+                value: 1)
+        }
+    }
+};
 ```
 
 #### [SQL](#tab/sql)
@@ -256,30 +264,37 @@ where "contact0".statecode = 1
 
 ---
 
-#### `link-type` `not any`
+#### `JoinOperator.NotAny`
 
-This query uses the `not any` link type to return records from the [contact](../reference/entities/contact.md) table that is **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
+This query uses `JoinOperator.NotAny` to return records from the [contact](../reference/entities/contact.md) table that are **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
 
-#### [FetchXml](#tab/fetchxml)
+#### [QueryExpression](#tab/qe)
 
-``` xml
-<fetch>
-   <entity name='contact'>
-      <attribute name='fullname' />
-      <filter type='and'>
-         <link-entity name='account'
-            from='primarycontactid'
-            to='contactid'
-            link-type='not any'>
-            <filter type='and'>
-               <condition attribute='name'
-                  operator='eq'
-                  value='Contoso' />
-            </filter>
-         </link-entity>
-      </filter>
-   </entity>
-</fetch>
+``` csharp
+var query = new QueryExpression("contact")
+{
+      ColumnSet = new ColumnSet("fullname"),
+      Criteria = new FilterExpression(filterOperator: LogicalOperator.And)
+      {
+         AnyAllFilterLinkEntity = new LinkEntity(
+            linkFromEntityName: "contact",
+            linkToEntityName: "account",
+            linkFromAttributeName: "contactid",
+            linkToAttributeName: "primarycontactid",
+            joinOperator: JoinOperator.NotAny)
+         {
+            LinkCriteria = new FilterExpression(filterOperator: LogicalOperator.And)
+            {
+                  Conditions = {
+                     new ConditionExpression(
+                        attributeName: "name",
+                        conditionOperator: ConditionOperator.Equal,
+                        value: "Contoso")
+                  }
+            }
+         }
+      }
+};
 ```
 
 #### [SQL](#tab/sql)
@@ -296,36 +311,43 @@ where not exists (
 
 ---
 
-#### `link-type` `not all`
+#### `JoinOperator.NotAll`
 
 > [!NOTE]
-> The meaning of `all` and `not all` link types is the opposite of what the names might imply, and they are typically used with inverted filters:
+> The meaning of `JoinOperator.All` and `JoinOperator.NotAll` is the opposite of what the names might imply, and they are typically used with inverted filters:
 >
-> - A link entity of type `not all` is equivalent to `any` and returns parent records that have link entity records matching the filters.
-> - A link entity of type `all` returns parent records when some link entity records with a matching `from` column value exist but **none** of those link entity rows satisfy the additional filters defined inside of the [link-entity element](reference/link-entity.md).
+> - `JoinOperator.NotAll` is equivalent to `JoinOperator.Any` and returns parent records that have related table records matching the filters.
+> - `JoinOperator.All` returns parent records when some related entity records with a matching `LinkFromAttributeName` column value exist but **none** of those link entity rows satisfy the additional filters defined inside of the `LinkEntity`.
 
-This query uses a `link-entity` of type `not all` to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+This query uses `JoinOperator.NotAll` to to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
-#### [FetchXml](#tab/fetchxml)
+#### [QueryExpression](#tab/qe)
 
-``` xml
-<fetch>
-   <entity name='contact'>
-      <attribute name='fullname' />
-      <filter type='and'>
-         <link-entity name='account'
-            from='primarycontactid'
-            to='contactid'
-            link-type='not all'>
-            <filter type='and'>
-               <condition attribute='name'
-                  operator='eq'
-                  value='Contoso' />
-            </filter>
-         </link-entity>
-      </filter>
-   </entity>
-</fetch>
+```csharp
+var query = new QueryExpression("contact")
+{
+    ColumnSet = new ColumnSet("fullname"),
+    Criteria = new FilterExpression(filterOperator: LogicalOperator.And)
+    {
+        AnyAllFilterLinkEntity = new LinkEntity(
+            linkFromEntityName: "contact",
+            linkToEntityName: "account",
+            linkFromAttributeName: "contactid",
+            linkToAttributeName: "primarycontactid",
+            joinOperator: JoinOperator.NotAll)
+        {
+            LinkCriteria = new FilterExpression(filterOperator: LogicalOperator.And)
+            {
+                Conditions = {
+                    new ConditionExpression(
+                        attributeName: "name",
+                        conditionOperator: ConditionOperator.Equal,
+                        value: "Contoso")
+                }
+            }
+        }
+    }
+};
 ```
 
 #### [SQL](#tab/sql)
@@ -343,30 +365,37 @@ where exists (
 
 ---
 
-#### `link-type` `all`
+#### `JoinOperator.All`
 
-This query uses a `link-entity` of type `all` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+This query uses `JoinOperator.All` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
-#### [FetchXml](#tab/fetchxml)
+#### [QueryExpression](#tab/qe)
 
-``` xml
-<fetch>
-   <entity name='contact'>
-      <attribute name='fullname' />
-      <filter type='and'>
-         <link-entity name='account'
-            from='primarycontactid'
-            to='contactid'
-            link-type='all'>
-            <filter type='and'>
-               <condition attribute='name'
-                  operator='eq'
-                  value='Contoso' />
-            </filter>
-         </link-entity>
-      </filter>
-   </entity>
-</fetch>
+```csharp
+var query = new QueryExpression("contact")
+{
+    ColumnSet = new ColumnSet("fullname"),
+    Criteria = new FilterExpression(filterOperator: LogicalOperator.And)
+    {
+        AnyAllFilterLinkEntity = new LinkEntity(
+            linkFromEntityName: "contact",
+            linkToEntityName: "account",
+            linkFromAttributeName: "contactid",
+            linkToAttributeName: "primarycontactid",
+            joinOperator: JoinOperator.All)
+        {
+            LinkCriteria = new FilterExpression(filterOperator: LogicalOperator.And)
+            {
+                Conditions = {
+                    new ConditionExpression(
+                        attributeName: "name",
+                        conditionOperator: ConditionOperator.Equal,
+                        value: "Contoso")
+                }
+            }
+        }
+    }
+};
 ```
 
 #### [SQL](#tab/sql)
@@ -390,14 +419,14 @@ where exists (
 
 ## Condition limits
 
-You can include no more than 500 total [condition](reference/condition.md) and  [link-entity](reference/link-entity.md) elements in a FetchXml query. Otherwise, you see this error:
+You can include no more than 500 total [ConditionExpression](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression)  and [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) instances in a query. Otherwise, you see this error:
 
 > Name: `TooManyConditionsInQuery`<br />
 > Code: `0x8004430C`<br />
 > Number: `-2147204340`<br />
 > Message: `Number of conditions in query exceeded maximum limit.`
 
-You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the [in operator](reference/operators.md#in) that can be used with numbers, unique identifiers, and strings up to 850 characters.
+You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the `ConditionOperator.In` that can be used with numbers, unique identifiers, and strings up to 850 characters.
 
 
 ## Next steps
