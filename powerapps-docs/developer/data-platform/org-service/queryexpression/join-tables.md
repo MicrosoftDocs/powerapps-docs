@@ -17,22 +17,26 @@ contributors:
 Use the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) property to describe the data from related tables to return with your query. This property contains a collection of [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that describe:
 
 - Which related table rows to return
+- Which column values to base the join on
 - Which columns of those records to return
 - Any filters to apply with the join
 
 > [!NOTE]
-> This property is read-only. You can set `LinkEntity` instances to this collection using object initialization or using the [QueryExpression.AddLink method](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink).
+> The `LinkEntities` property is read-only. You can set `LinkEntity` instances to this collection using object initialization or using the [QueryExpression.AddLink method](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.addlink).
 >
-> You can also use [System.Collections.ObjectModel.Collection&lt;T&gt; methods](/dotnet/api/system.collections.objectmodel.collection-1?view=net-8.0) the `LinkEntities` property inherits.
+> You can also use [System.Collections.ObjectModel.Collection&lt;T&gt; methods](/dotnet/api/system.collections.objectmodel.collection-1#methods) the `LinkEntities` property inherits.
 
+## LinkEntity properties
+
+The following table provides details about the [LinkEntity properties](/dotnet/api/microsoft.xrm.sdk.query.linkentity#properties)
 
 |Property|Description|
 |---------|---------|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you are linking from.<br /> For a `LinkEntity` that isn't nested, this is the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is included in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), this is the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName). |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you are linking from.<br /> For a `LinkEntity` that isn't nested, this is the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is nested in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), this is the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName). |
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName>|The logical name of the entity that you are linking to.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you are linking from. This is the name of the lookup column for the relationship.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you are linking to. This is the name of the primary key column for the table named in the <xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName> property |
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. The default is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `All`<br />- `Any`<br />- `Exists`<br />- `In`<br />- `LeftOuter`<br />- `MatchFirstRowUsingCrossApply`<br />- `Natural`<br />- `NotAll`<br />- `NotAny`|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Set this to a value of the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator). The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `All`<br />- `Any`<br />- `Exists` See [Use advanced JoinOperators](#use-advanced-joinoperators)<br />- `In` See [Use advanced JoinOperators](#use-advanced-joinoperators)<br />- `LeftOuter`<br />- `MatchFirstRowUsingCrossApply` See [Use advanced JoinOperators](#use-advanced-joinoperators)<br />- `Natural`<br />- `NotAll`<br />- `NotAny`|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias>|The alias for the table.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> as described in [Select columns using QueryExpression](select-columns.md)|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkCriteria>|The complex condition and logical filter expressions that filter the results of the query. [Learn how to filter rows using QueryExpression](filter-rows.md)|

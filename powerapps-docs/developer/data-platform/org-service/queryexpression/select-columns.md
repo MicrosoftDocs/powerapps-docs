@@ -15,11 +15,11 @@ contributors:
 # Select columns using QueryExpression
 
 > [!IMPORTANT]
-> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned. This is [opposite of the behavior using FetchXml, where all columns are returned if you don't specify any](../../fetchxml/select-columns.md).
+> We strongly discourage returning all columns in a table with your query. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned. This is [opposite of the behavior using FetchXml, where all columns are returned if you don't specify any](../../fetchxml/select-columns.md).
 
-Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the names for the columns to return with your query. Use the [AttributeMetadata.LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) value for each column. These are always lower-case.
+Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the names for the columns to return with your query. Use the [AttributeMetadata.LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) value for each column. Logical Name values are always lower-case.
 
-You can specify the columns with the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())) when you initialize the `QueryExpression`.
+You can specify the columns with the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())) when you initialize the `QueryExpression`:
 
 ```csharp
 QueryExpression query = new("account")
@@ -39,7 +39,7 @@ query.ColumnSet.AddColumns("accountclassificationcode", "createdby", "createdon"
 > [!NOTE]
 > Some columns are not valid for read. The [AttributeMetadata.IsValidForRead](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForRead) indicates whether a columns is valid for read. If you include the names for these columns, no values are returned.
 > 
-> The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [Microsoft.Xrm.Sdk.DataCollection&lt;string&gt;](xref:Microsoft.Xrm.Sdk.DataCollection%601) that extends [System.Collections.ObjectModel.Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection%601), so you can also use the methods of those classes to interact with the strings in the collection.
+> The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [Microsoft.Xrm.Sdk.DataCollection&lt;string&gt;](xref:Microsoft.Xrm.Sdk.DataCollection%601) that extends [System.Collections.ObjectModel.Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection%601), so you can also use the methods of those base classes to interact with the strings in the collection.
 > 
 > Unlike FetchXml, the `ColumnSet` class provides no capability to set arbitrary alias values for columns when retrieving data without aggregation. When aggregating data, you can specify aliases using the [ColumnSet.AttributeExpressions property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AttributeExpressions). [Learn more about aggregating data using QueryExpression](aggregate-data.md)
 
@@ -54,7 +54,8 @@ QueryExpression query = new(Account.EntityLogicalName)
    ColumnSet = new ColumnSet(
       Account.Fields.Name, 
       Account.Fields.AccountClassificationCode,
-      Account.Fields.CreatedBy, Account.Fields.CreatedOn)
+      Account.Fields.CreatedBy, 
+      Account.Fields.CreatedOn)
 };
 ```
 
@@ -67,10 +68,9 @@ This helps avoid runtime errors due to typing the wrong name. Learn more about:
 
 When you [Join tables using QueryExpression](join-tables.md), you use the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity). The [LinkEntity.Columns property](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns) property is a [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet), so you will define the columns to return for the joined tables in the same way.
 
-<!-- 
-   How to use ColumnSet
-    - Using generated constants from pac modelbuilder
-    - Using Formatted values
-    - Column Aliases?
+## Next steps
 
- -->
+Learn how to join tables.
+
+> [!div class="nextstepaction"]
+> [Join tables](join-tables.md)
