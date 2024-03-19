@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: sericks
-ms.date: 01/10/2024
+ms.date: 03/14/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -56,6 +56,7 @@ Makers must complete the following steps to turn on modern controls and themes f
 ### [Controls](../maker/canvas-apps/reference-properties.md)
 
 - Add picture
+- Attachment
 - Barcode reader
 - Button
 - Camera
