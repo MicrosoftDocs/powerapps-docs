@@ -48,6 +48,8 @@ You see more suggested prompts by selecting **View prompts** within the Copilot 
 
 You can use the record picker to select the object of your question. Type “**/**” character to open the record picker and continue typing the name of the record. Then select the record of your choice and complete the question to make it meaningful. Submit the question to Copilot to view the response. 
 
+:::image type="content" source="media/record-picker.png" alt-text="Use the record picker to select the object of your question.":::
+
 > [!Note]
 > - Using record picker will increase the chances of Copilot understanding the question, and thus responding with an accurate answer.
 > - Record picker needs [Dataverse Search to be enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the typeahead search capability. 
