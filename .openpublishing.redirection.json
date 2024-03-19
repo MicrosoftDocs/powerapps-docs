@@ -1,6 +1,21 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/setup-postman-environment.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-postman-perform-operations.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/use-postman-web-api.md",
+      "redirect_url": "insomnia",
+      "redirect_document_id": "false"
+   },   
+   {
       "source_path": "powerapps-docs/developer/data-platform/upsertmultiple.md",
       "redirect_url": "bulk-operations#upsertmultiple",
       "redirect_document_id": "false"
@@ -8823,6 +8838,51 @@
     {
       "source_path": "powerapps-docs/maker/portals/admin/update-portal-domain.md",
       "redirect_url": "/power-pages/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-scrolling-screen.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/calendar-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/calendar-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/email-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/email-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/meeting-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/meeting-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/people-screen-overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/screen-templates/people-screen-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-screen-context-variables",
       "redirect_document_id": false
     },
     {
