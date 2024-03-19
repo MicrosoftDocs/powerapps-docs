@@ -1,13 +1,13 @@
 ---
-title: Radio group control in Power Apps
-description: Learn about the details, properties, and examples of the radio group modern control in Power Apps.
-author: yogeshgupta698
+title: Toggle modern control in Power Apps
+description: Learn about the details, properties, and examples of the toggle modern control in Power Apps.
+author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 4/4/2023
+ms.date: 3/15/2024
 ms.subservice: canvas-maker
-ms.author: yogupt
+ms.author: noazarur
 
 
 ms.reviewer: mkaur
@@ -15,34 +15,36 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Radio group control in Power Apps (preview)
+# Toggle modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
-An input control that shows multiple options, of which users can select only one at a time.
+A control that the user can turn on or off by moving the handle.
 
 ## Description
-A Radio group control is best used with only a few, mutually exclusive options. The key properties for this control are **Items** and **DefaultSelectedItems**.
 
+A toggle is a user interface element that has been created for modern graphical user interfaces (GUIs), but it functions in the same manner as a checkbo. The key properties for this control are **Checked**, **Label**, **OnCheck**, **OnSelect**, and **OnUncheck**.
+ 
 ## General
 
-**Items** – List of items to be shown in radio group. This can be array (select value in field) or this can be a data column from a table.
+**Label** – The text shown next to the toggle. 
 
-**AccessibleLabel** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers. 
 
 **Visible** - Whether a control appears or is hidden. 
 
-## Behavior 
+## Behavior
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**Checked** - The initial value of a control before it's changed by the user. 
 
-## Size and position
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
 
-**Layout** - Whether the options are laid out vertically, horizontally, or horizontally stacked. 
+## Size and position 
+
+**LabelPostion** – The text shown next to the toggle can be placed before, after, or above the toggle. 
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
@@ -70,14 +72,10 @@ A Radio group control is best used with only a few, mutually exclusive options. 
 
 **FontStrikethrough** - Whether a line appears through the text that appears on a control. 
 
-
 ## Additional properties
 
-**DefaultSelectedItems** - The value of a control before the user changes it. 
+**OnCheck** – Actions to perform when the value of the toggle changes to **true**. 
 
-**OnChange** - Actions to perform when the user changes the value of a control. 
+**OnSelect** – Actions to perform when the user selects a control. 
 
-**OnSelect** - Actions to perform when the user selects a control.  
-
-
-
+**OnUncheck** – Actions to perform when the value of the toggle changes to **false**. 
