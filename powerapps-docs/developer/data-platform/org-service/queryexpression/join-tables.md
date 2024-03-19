@@ -301,28 +301,29 @@ Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` pr
 
 You can use [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
 
-You can perform a left outer join in `QueryExpression` by using 
-
-the `entityname` attribute in a [condition element](reference/condition.md). The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
+You can perform a left outer join in `QueryExpression` by using the [ConditionExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.entityname). The `EntityName` property is valid in conditions, filters, and nested filters. [Learn more about filters on LinkEntity](filter-rows.md#filters-on-linkentity)
 
 
 For example, the following query returns all account records with no contacts.
 
 ```csharp
-QueryExpression query = new("account");
+var query = new QueryExpression(entityName:"account");
 query.ColumnSet.AddColumn("name");
-query.AddOrder("name", OrderType.Descending);
+query.AddOrder(attributeName:"name", orderType: OrderType.Descending);
 
 LinkEntity linkedContact = query.AddLink(
       linkToEntityName: "contact",
       linkFromAttributeName: "accountid",
-      linkToAttributeName: "parentcustomerid", 
+      linkToAttributeName: "parentcustomerid",
       joinOperator: JoinOperator.LeftOuter);
 linkedContact.EntityAlias = "contact";
 linkedContact.Columns.AddColumn("fullname");
 
 query.Criteria = new FilterExpression();
-query.Criteria.AddCondition("contact", "parentcustomerid", ConditionOperator.Null);
+query.Criteria.AddCondition(
+      entityName: "contact", 
+      attributeName: "parentcustomerid", 
+      conditionOperator: ConditionOperator.Null);
 ```
 
 ## Use advanced JoinOperators

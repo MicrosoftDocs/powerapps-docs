@@ -77,7 +77,7 @@ QueryExpression query = new("account")
 };
 ```
 
-The previous query can also be represented using `ConditionOperator.In`, with a single `ConditionExpression`. This condition is created using the [ConditionExpression(String, ConditionOperator, Object[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-query-conditionexpression-ctor(system-string-system-string-microsoft-xrm-sdk-query-conditionoperator-system-object())) that sets multiple values to compare to `address1_city`.
+The previous query can also be represented using `ConditionOperator.In`, with a single `ConditionExpression`. This condition is created using the [ConditionExpression(String, ConditionOperator, Object[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.-ctor#microsoft-xrm-sdk-query-conditionexpression-ctor(system-string-system-string-microsoft-xrm-sdk-query-conditionoperator-system-object())) that sets multiple values to compare to `address1_city`.
 
 ```csharp
 QueryExpression query = new("account")
@@ -138,7 +138,7 @@ new ConditionExpression(
     values: new object[] {6,20 })
 ```
 
-## Filters on link-entity
+## Filters on LinkEntity
 
 When you use the [LinkEntity.LinkCriteria property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkcriteria) to apply a filter, the filter will be applied with the join unless you configure the filter *after* the join.
 
@@ -208,10 +208,10 @@ The following examples demonstrate filtering on values of related records. These
 
 #### Or filter with `JoinOperator.Any`
 
-This query uses a `FilterExpression` with the `FilterOperator` property set to `LogicalOperator.Or` and a `AnyAllFilterLinkEntity` property set with a `LinkEntity` that has the `JoinOperator` property set to `JoinOperator.Any`. This query will return [contact](../reference/entities/contact.md) records that:
+This query uses a `FilterExpression` with the `FilterOperator` property set to `LogicalOperator.Or` and a `AnyAllFilterLinkEntity` property set with a `LinkEntity` that has the `JoinOperator` property set to `JoinOperator.Any`. This query will return [contact](../../reference/entities/contact.md) records that:
 
-- _either_ are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
-- _or_ have the [Contact.StateCode column](../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
+- _either_ are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
+- _or_ have the [Contact.StateCode column](../../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
 
 #### [QueryExpression](#tab/qe)
 
@@ -266,7 +266,7 @@ where "contact0".statecode = 1
 
 #### `JoinOperator.NotAny`
 
-This query uses `JoinOperator.NotAny` to return records from the [contact](../reference/entities/contact.md) table that are **not** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
+This query uses `JoinOperator.NotAny` to return records from the [contact](../../reference/entities/contact.md) table that are **not** referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
 
 #### [QueryExpression](#tab/qe)
 
@@ -319,7 +319,7 @@ where not exists (
 > - `JoinOperator.NotAll` is equivalent to `JoinOperator.Any` and returns parent records that have related table records matching the filters.
 > - `JoinOperator.All` returns parent records when some related entity records with a matching `LinkFromAttributeName` column value exist but **none** of those link entity rows satisfy the additional filters defined inside of the `LinkEntity`.
 
-This query uses `JoinOperator.NotAll` to to return records from the [contact](../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../reference/entities/account.md) record that has its [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+This query uses `JoinOperator.NotAll` to to return records from the [contact](../../reference/entities/contact.md) table that are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
 #### [QueryExpression](#tab/qe)
 
@@ -367,7 +367,7 @@ where exists (
 
 #### `JoinOperator.All`
 
-This query uses `JoinOperator.All` to return records from the [contact](../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
+This query uses `JoinOperator.All` to return records from the [contact](../../reference/entities/contact.md) table that **are** referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of **some** [account](../../reference/entities/account.md) record, but **none** of those _account_ records have their [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso':
 
 #### [QueryExpression](#tab/qe)
 
@@ -436,4 +436,4 @@ Learn how to page results.
 > [!div class="nextstepaction"]
 > [Page results](page-results.md)
 
-[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
