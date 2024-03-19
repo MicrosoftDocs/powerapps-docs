@@ -51,8 +51,8 @@ You can use the record picker to select the object of your question. Type “**/
 :::image type="content" source="media/record-picker.png" alt-text="Use the record picker to select the object of your question.":::
 
 > [!Note]
-> - Using record picker will increase the chances of Copilot understanding the question, and thus responding with an accurate answer.
-> - Record picker needs [Dataverse Search to be enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the typeahead search capability. 
+> - Using record picker increases the chances of Copilot understanding the question, and thus responding with an accurate answer.
+> - Record picker needs [Dataverse Search to be enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the type-ahead search capability. 
 
 ## Provide feedback 
 
@@ -61,12 +61,14 @@ To provide feedback to help improve Copilot, select the **Like** or **Dislike** 
 ### Provide positive feedback 
 
 1. In the **Copilot** pane, select the **Like** icon on a Copilot response. 
-2. Optionally, provide feedback in your own words about what you liked. 
-3. Select **Submit** after you're done entering your feedback. 
+2. Optionally, provide feedback in your own words about what you liked.
+3. Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
+4. Select **Submit** after you're done entering your feedback. 
 
 ### Provide feedback for improvement 
 
 1. In the **Copilot** pane, select the **Dislike** icon on a Copilot response. 
-2. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve. 
-3. Select **Submit** after you're done entering your feedback. 
+2. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve.
+3.  Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
+4. Select **Submit** after you're done entering your feedback. 
 
