@@ -4,7 +4,7 @@ description: Learn how to use Copilot in model-driven apps.
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/18/2024
+ms.date: 03/19/2024
 ms.subservice: end-user
 ms.author: srihas
 ms.custom: ""
@@ -61,14 +61,14 @@ To provide feedback to help improve Copilot, select the **Like** or **Dislike** 
 ### Provide positive feedback 
 
 1. In the **Copilot** pane, select the **Like** icon on a Copilot response. 
-2. Optionally, provide feedback in your own words about what you liked.
-3. Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
-4. Select **Submit** after you're done entering your feedback. 
+1. Optionally, provide feedback in your own words about what you liked.
+1. Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
+1. Select **Submit** after you're done entering your feedback. 
 
 ### Provide feedback for improvement 
 
 1. In the **Copilot** pane, select the **Dislike** icon on a Copilot response. 
-2. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve.
-3.  Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
-4. Select **Submit** after you're done entering your feedback. 
+1. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve.
+1.  Indicate if you want to share your prompt and generated response with Microsoft to improve the service.
+1. Select **Submit** after you're done entering your feedback. 
 
