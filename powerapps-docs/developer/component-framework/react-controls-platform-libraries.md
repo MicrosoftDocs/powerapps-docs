@@ -83,14 +83,14 @@ Within the [resources element](manifest-schema-reference/resources.md), you'll f
 <resources>
     <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="8.29.0" />
+   <platform-library name="Fluent" version="9.4.0" />
 </resources>
 ```
 
 > [!NOTE]
 > Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
 
-We recommend using Fluent platform libraries. If you don't use Fluent, you should remove this element: `<platform-library name="Fluent" version="8.29.0" />`
+We recommend using platform libraries for Fluent 8 and 9. If you don't use Fluent, you should remove this element: `<platform-library name="Fluent" version="9.4.0" />`
 
 ### Index.ts
 
