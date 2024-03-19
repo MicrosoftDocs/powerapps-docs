@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 01/26/2024
+  ms.date: 03/18/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -95,8 +95,8 @@ sections:
      answer: |
         Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
 
-   - question: I had used Dataverse long term retention in the public preview phase without meeting the licensing requirement. Will my tenant/org/environment still be able to use Dataverse long term retention?
+   - question: I used Dataverse long term retention during the public preview phase without meeting the current licensing requirement. Will my tenant and environment still be able to use Dataverse long term retention?
      answer: |
-        Yes. Since your tenant/org/environment participated in the public preview, Dataverse long term retention is being made available for continued use.  
+        Yes. Since your tenant and environment participated in the public preview, Dataverse long term retention is being made available for continued use.  
 
                               
