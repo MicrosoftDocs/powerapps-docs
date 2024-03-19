@@ -22,7 +22,7 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 -  **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are not page boundaries, users are able to select more rows at once (up to 1000 rows) to facilitate taking action against a set of records or performing bulk editing. 
 -  **Inline editing**: This singular grid control can be utilized for read-only or editable scenarios. 
 -  **Nested grids**: Makers can configure the grid to show surface related records. When configured, users can expand a row to see a subgrid of related records. Multiple rows in the grid can be expanded simultaneously, an improvement over older grid experiences.  
--  **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired.  
+-  **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of Lookup columns.   
 -  **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping has been applied, this aggregate value will also be displayed for each group.
 -  **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
 
