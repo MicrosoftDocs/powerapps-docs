@@ -6,7 +6,7 @@ ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 03/02/2022
+ms.date: 03/18/2024
 ms.author: mustlaz
 search.audienceType: 
   - maker
@@ -19,19 +19,24 @@ contributors:
 
 Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
-- Open Power Apps Mobile and run apps when offline.
+- Open Power Apps Mobile and run apps when the device is not connected to the network.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
-- Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+- Synchronize data between your device and the server.
+
+If your app connects to Dataverse, offline support is [**built-in**](../../mobile/canvas-mobile-offline-overview.md). Power Apps will allows you to download data to your device and upload changes back to Dataverse. If your app does not use Dataverse, you can use collections and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic storage when offline.
 
 > [!NOTE]
-> - Offline capability is now built-in with the preview of [offline-first](../../mobile/canvas-mobile-offline-overview.md) experience for apps based on Microsoft Dataverse. Learn more: [Set up mobile offline for canvas apps (preview)](../../mobile/canvas-mobile-offline-setup.md), [Working with canvas apps offline (preview)](../../mobile/canvas-mobile-offline-working.md)
-> - Offline capability for canvas apps is only available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
+> - Offline capability for canvas apps is available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
 > - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 > - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)
 
-This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+## Enable offline support in a Dataverse-based canvas app
+For Microsoft Dataverse-based canvas apps, you must use the offline capability built-in with the [offline-first](../../mobile/canvas-mobile-offline-overview.md) experience.  For more information, see [Set up mobile offline for canvas apps](../../mobile/canvas-mobile-offline-setup.md) and [Working with canvas apps offline](../../mobile/canvas-mobile-offline-working.md). With the flip of a switch, your app can work with Dataverse data wherever you are, with or without a network connection. Just build your app with standard Power Fx formulas and the offline feature handles all the complexity for you. 
 
-Watch this video to learn how to create offline enabled canvas apps:
+## Use LoadData and SaveData for all other connectors
+This section includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+
+Watch this video to learn how to create offline enabled canvas apps which don't use Dataverse data:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
 
 ## Limitations
