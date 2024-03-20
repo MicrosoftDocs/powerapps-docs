@@ -67,7 +67,7 @@ query.AddOrder(attributeName: "accountid", orderType: OrderType.Ascending);
 To get the next three records, increment the `PageInfo.PageNumber` value and send another request.
 
 ```csharp
-query.PageInfo.PageNumber = 2;
+query.PageInfo.PageNumber++;
 ```
 
 With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
@@ -78,7 +78,7 @@ Simple paging works well for small data sets, but as the number of rows in the d
 
 When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to be used on the following requests for the next pages.
 
-The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [QueryExpression.PageInfo.PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) property and increment the `QueryExpression.PageInfo.Count` value for subsequent requests.
+The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [QueryExpression.PageInfo.PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) property and increment the `QueryExpression.PageInfo.PageNumber` value for subsequent requests.
 
 ### Queries that don't support paging cookies
 
@@ -130,7 +130,7 @@ static EntityCollection RetrieveAll(IOrganizationService service, QueryExpressio
 }
 ```
 
-You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)  sample to test `QueryExpression` queries with the following steps:
+You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../../org-service/quick-start-org-service-console-app.md)  sample to test `QueryExpression` queries with the following steps:
 
 1. Add the `RetrieveAll` static method to the `Program` class.
 1. Modify the `Main` method as shown below:
