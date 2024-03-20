@@ -139,8 +139,9 @@ There are some things that you can do using FetchXml that `QueryExpression` does
 - Retrieve data using the Dataverse Web API. There are some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
 - [Cross table comparisons](../../fetchxml/filter-rows.md#cross-table-comparisons).
    `QueryExpression` supports [Filter on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
-- Set arbitrary aliases for columns.
-- Override the default sort order for choice columns as you can with FetchXML [as you can with FetchXML](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
+- [Set arbitrary aliases for columns](../../fetchxml/select-columns.md#column-aliases).
+- [Override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
+- Use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query).
 
 ## Community tools
 
