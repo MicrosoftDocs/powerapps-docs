@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The first of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+description: "Learn how to write plug-in code and then register the compiled assembly and step with Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 03/20/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
@@ -18,17 +18,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-This tutorial is the first in a series that will show you how to work with plug-ins. This tutorial is a pre-requisite for the following tutorials:
-
-- [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
-- [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
-
-For detailed explanation of supporting concepts and technical details see:
-
-- [Use plug-ins to extend business processes](plug-ins.md)
-- [Write a plug-in](write-plug-in.md)
-- [Register a plug-in](register-plug-in.md)
-- [Debug Plug-ins](debug-plug-in.md)
+This tutorial guides you through writing a plug-in and registering it with Microsoft Dataverse. You should first read the [Write a plug-in](write-plug-in.md) article to familiarize yourself with writing a plug-in.
 
 ## Goal
 
@@ -39,20 +29,22 @@ Create an asynchronous plug-in registered on the Create message of the account t
 
 ## Prerequisites
 
-- Administrator level access to a Microsoft Dataverse environment
+- A System User account with the Administrator or System Customizer role in the target Microsoft Dataverse environment
 - A model-driven app that includes the account and task tables.
-    - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
-- Visual Studio 2017 (or later version)
+  - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
+- Visual Studio 2019 (or later version)
 - Knowledge of the Visual C# programming language
 - Download the Plug-in Registration tool by following the instructions here: [Dataverse development tools](download-tools-nuget.md).
 
-<a name="BKMK_create"></a>
-
 ## Create a plug-in project
 
-You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can use [Power Platform CLI](/power-platform/developer/cli/reference/plugin-command) to create a new project using the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init).
+This article demonstrates using Visual Studio to write the plug-in and build the assembly. However, you could use your favorite editor for coding and use MSBuild to build the assembly. In either case, you must use the Plug-in Registration tool to register the plug-in with Dataverse.
 
-You can also find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
+Alternately, you can use [Power Platform CLI](/power-platform/developer/cli/reference/plugin-command) to quickly create a new project with boilerplate plug-in code using the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init). You would still use the Plug-in Registration tool to register the plug-in with Dataverse.
+
+Another alternative is to use the Power Platform Tools extension as described here: [Create and register a plug-in package using Visual Studio](/power-platform/developer/howto/vs-create-plugin). In this case, the extension can create and register the plug-in so the Plug-in Registration Tool is not needed.
+
+You can find the complete plug-in solution files for this tutorial here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
 
 ### Create a Visual Studio project for the plug-in
 
@@ -109,9 +101,7 @@ You can also find the complete plug-in solution files here: [Sample: Create a ba
     }
     ```
 
-
 1. Replace the contents of the `Execute` method with the following code:
-
 
 ```csharp
 // Obtain the tracing service
@@ -160,13 +150,11 @@ if (context.InputParameters.Contains("Target") &&
 - The code verifies that the context <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> includes the expected parameters for the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> that this plug-in will be registered for. If the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target> property is present, the <xref:Microsoft.Xrm.Sdk.Entity> that was passed to the request will be available.
 - The <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface provides access to a service variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface which provides the methods you will use to interact with the service to create the task.
 
-
 ## Add business logic
 
 The plug-in will create a task activity that will remind the creator of the account to follow up one week later.
 
 Add the following code to the try block. Replace the comment: `// Plug-in business logic goes here`. with the following:
-
 
 ```csharp
 // Create a task activity to follow up with the account customer in 7 days. 
@@ -214,7 +202,7 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 
     ![Sign the assembly.](media/tutorial-write-plug-in-sign-assembly.png)
 
-1. In the **Choose a strong name key file**: dropdown, select **<New…>**. 
+1. In the **Choose a strong name key file**: dropdown, select **<New…>**.
 1. In the **Create Strong Name Key** dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
 1. Click **OK** to close the **Create Strong Name Key** dialog.
 1. In the project properties **Build** tab, verify that the **Configuration** is set to **Debug**.
@@ -223,8 +211,6 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 
 > [!NOTE]
 > Build the assembly using **Debug** configuration because you will use the Plug-in Profiler to debug it in a later tutorial. Before you include a plug-in with your solution, you should build it using the release configuration.
-
-<a name="BKMK_register"></a>
 
 ## Register plug-in
 
@@ -252,7 +238,7 @@ To register a plug-in, you will need the Plug-in Registration tool
 
     ![Registerd plug-ins confirmation dialog.](media/tutorial-write-plug-in-register-new-assembly-dialog-confirm.png)
 
-1. Click **OK** to close the dialog and close the **Register New Assembly** dialog. 
+1. Click **OK** to close the dialog and close the **Register New Assembly** dialog.
 1. You should now see the **(Assembly) BasicPlugin** assembly which you can expand to view the **(Plugin) BasicPlugin.FollowUpPlugin** plugin.
 
     ![(Plugin) BasicPlugin.FollowUpPlugin plugin.](media/tutorial-write-plug-in-basic-followupplugin-plugin.png)
@@ -408,7 +394,14 @@ Use the following steps to enable them in a model-driven app.
 
 ## Next steps
 
-In this tutorial you have created a simple plug-in and registered it. Complete [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md) to learn how to debug this plug-in.
+In this tutorial, you have created a simple plug-in and registered it. Complete [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md) to learn how to debug this plug-in.
 
+### See also
+
+[Tutorial: Update a plug-in](tutorial-update-plug-in.md)  
+[Use plug-ins to extend business processes](plug-ins.md)  
+[Write a plug-in](write-plug-in.md)  
+[Register a plug-in](register-plug-in.md)  
+[Debug Plug-ins](debug-plug-in.md)  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

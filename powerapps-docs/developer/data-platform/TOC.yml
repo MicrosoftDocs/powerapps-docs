@@ -230,12 +230,6 @@
           items:
             - name: Write and register a plug-in
               href: tutorial-write-plug-in.md
-            - name: Create a plug-in using Visual Studio
-              href: /power-platform/developer/howto/vs-create-plugin
-            - name: Create and register a plug-in package using PAC CLI
-              href: /power-platform/developer/howto/cli-create-package
-            - name: Create and register a plug-in package using Visual Studio
-              href: /power-platform/developer/howto/vs-create-package
             - name: Debug a plug-in
               href: tutorial-debug-plug-in.md
             - name: Update a plug-in
