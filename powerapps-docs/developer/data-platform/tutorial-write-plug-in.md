@@ -20,6 +20,8 @@ contributors:
 
 This tutorial guides you through writing a plug-in and registering it with Microsoft Dataverse. You should first read the [Write a plug-in](write-plug-in.md) article to familiarize yourself with writing a plug-in.
 
+You can find the complete plug-in solution files for this tutorial here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
+
 ## Goal
 
 Create an asynchronous plug-in registered on the Create message of the account table. The plug-in will create a task activity that will remind the creator of the account to follow up one week later.
@@ -34,7 +36,7 @@ Create an asynchronous plug-in registered on the Create message of the account t
   - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
 - Visual Studio 2019 (or later version)
 - Knowledge of the Visual C# programming language
-- Download the Plug-in Registration tool by following the instructions here: [Dataverse development tools](download-tools-nuget.md).
+- Plug-in Registration tool installed on the development computer. See [Dataverse development tools](download-tools-nuget.md).
 
 ## Create a plug-in project
 
@@ -43,8 +45,6 @@ This article demonstrates using Visual Studio to write the plug-in and build the
 Alternately, you can use [Power Platform CLI](/power-platform/developer/cli/reference/plugin-command) to quickly create a new project with boilerplate plug-in code using the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init). You would still use the Plug-in Registration tool to register the plug-in with Dataverse.
 
 Another alternative is to use the Power Platform Tools extension as described here: [Create and register a plug-in package using Visual Studio](/power-platform/developer/howto/vs-create-plugin). In this case, the extension can create and register the plug-in so the Plug-in Registration Tool is not needed.
-
-You can find the complete plug-in solution files for this tutorial here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
 
 ### Create a Visual Studio project for the plug-in
 
@@ -399,7 +399,6 @@ In this tutorial, you have created a simple plug-in and registered it. Complete 
 ### See also
 
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)  
-[Use plug-ins to extend business processes](plug-ins.md)  
 [Write a plug-in](write-plug-in.md)  
 [Register a plug-in](register-plug-in.md)  
 [Debug Plug-ins](debug-plug-in.md)  
