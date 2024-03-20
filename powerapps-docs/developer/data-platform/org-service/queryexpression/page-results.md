@@ -90,56 +90,47 @@ When Dataverse doesn't return a paging cookie, the paging model falls back to si
 
 The following `RetrieveAll` static method will return all records that match the [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression) query, sending multiple requests if the number of records exceeds the page size.
 
-After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to determine if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `paging-cookie` attribute of the [fetch element](reference/fetch.md) and sends another request.
-
-<!-- TODO: Continue from here -->
+After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to determine if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `PageInfo.PagingCookie` property of the `QueryExpression` and sends another request.
 
 ```csharp
 /// <summary>
 /// Returns all records matching the criteria
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
-/// <param name="fetchXml">The fetchXml Query string</param>
-/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <param name="query">The QueryExpression query</param>
 /// <returns>All the records that match the criteria</returns>
-static EntityCollection RetrieveAll(IOrganizationService service, string fetchXml, int pageSize = 5000)
+static EntityCollection RetrieveAll(IOrganizationService service, QueryExpression query)
 {
-
     // The records to return
     List<Entity> entities = new();
 
-    XElement fetchNode = XElement.Parse(fetchXml);
-
-    int page = 1; //Start with page 1
-
-    //Set the page
-    fetchNode.SetAttributeValue("page", page);
-
-    // Set the page size
-    fetchNode.SetAttributeValue("count", pageSize);
+    // Set the page
+    query.PageInfo.PageNumber = 1;
 
     while (true)
     {
-        // Get the page
-        EntityCollection results = service.RetrieveMultiple(new FetchExpression(fetchNode.ToString()));
+        // Get the records
+        EntityCollection results = service.RetrieveMultiple(query);
 
         entities.AddRange(results.Entities);
 
         if (!results.MoreRecords)
         {
+            //Stop if there are no more records
             break;
         }
+        // Set the PagingCookie with the PagingCookie from the previous query
+        query.PageInfo.PagingCookie = results.PagingCookie;
 
-        // Set the fetch paging-cookie attribute with the paging cookie from the previous query
-        fetchNode.SetAttributeValue("paging-cookie", results.PagingCookie);
-
-        fetchNode.SetAttributeValue("page", page++);
+        // Update the PageNumber
+        query.PageInfo.PageNumber++;
     }
+
     return new EntityCollection(entities);
 }
 ```
 
-You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)  sample to test FetchXml queries with the following steps:
+You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)  sample to test `QueryExpression` queries with the following steps:
 
 1. Add the `RetrieveAll` static method to the `Program` class.
 1. Modify the `Main` method as shown below:
@@ -156,18 +147,24 @@ static void Main(string[] args)
 
             //Console.WriteLine("User ID is {0}.", response.UserId);
 
-            string fetchQuery = @"<fetch count='3' page='1'>
-                <entity name='contact'>
-                    <attribute name='fullname'/>
-                    <attribute name='jobtitle'/>
-                    <attribute name='annualincome'/>
-                    <order descending='true' attribute='fullname'/>
-                </entity>
-        </fetch>";
+            QueryExpression query = new("contact")
+            {
+                ColumnSet = new ColumnSet("fullname", "jobtitle", "annualincome"),
+                PageInfo = new PagingInfo() { 
+                  // Set the page size
+                     Count = 25;
+                },
+                Orders = {
+                    { 
+                        new OrderExpression(
+                            attributeName: "fullname", 
+                            orderType: OrderType.Descending) 
+                    }
+                }
+            };
 
             EntityCollection records = RetrieveAll(service: serviceClient,
-                        fetchXml: fetchQuery,
-                        pageSize: 25);
+                        query: query)
 
             Console.WriteLine($"Success: {records.Entities.Count}");
         }
