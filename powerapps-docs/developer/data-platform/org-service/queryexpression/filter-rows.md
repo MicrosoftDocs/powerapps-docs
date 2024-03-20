@@ -147,7 +147,7 @@ When the [LinkEntity.JoinOperator property](/dotnet/api/microsoft.xrm.sdk.query.
 
 ## Filter on column values in the same row
 
-You can create filters that compare columns on values in the same row using by setting the [ConditionExpression.CompareColumns property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.comparecolumns) using constructors like [ConditionExpression(String, String, ConditionOperator, Boolean, Object)](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.-ctor#microsoft-xrm-sdk-query-conditionexpression-ctor(system-string-system-string-microsoft-xrm-sdk-query-conditionoperator-system-boolean-system-object)) that allow you to set this using the `compareColumns` parameter.
+You can create filters that compare columns on values in the same row using by setting the [ConditionExpression.CompareColumns property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.comparecolumns) using constructors like [ConditionExpression(String, String, ConditionOperator, Boolean, Object)](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.-ctor#microsoft-xrm-sdk-query-conditionexpression-ctor(system-string-system-string-microsoft-xrm-sdk-query-conditionoperator-system-boolean-system-object)) that allow you to set this using the `compareColumns` parameter. When `CompareColumns` is true, the value represents the name of the other column.
 
 For example, if you want to find any contact records where the `firstname` column value matches the `lastname` column value, you can use this query:
 

@@ -23,7 +23,7 @@ To specify the sort order for the rows in tables, use the [QueryExpression.Order
 
 The default sort order is [OrderType](/dotnet/api/microsoft.xrm.sdk.query.ordertype).`Ascending`.
 
-The following query returns [account](../reference/entities/account.md) records in ascending order by `createdon`, `name`, and `accountnumber` values.
+The following query returns [account](../../reference/entities/account.md) records in ascending order by `createdon`, `name`, and `accountnumber` values.
 
 ```csharp
 var query = new QueryExpression(entityName: "account") { 
@@ -189,12 +189,6 @@ When you order using lookup columns, the results are sorted using the primary na
 ### Choice Columns
 
 Choice column values are also sorted using the [formatted values](select-columns.md#formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
-
-<!-- 
-
-I don't see how this is possible using QE. Adding it to the limitations
-This behavior can be overridden by setting the [fetch element](reference/fetch.md) `useraworderby` (*Use Raw Order By*) boolean attribute. When this attribute is set, all sorting of choice columns will use the integer values instead. 
--->
 
 > [!NOTE]
 > Since choice sorting is based on the localized label of the users's language, expect different ordering for the results set if the user's language differs.

@@ -350,7 +350,7 @@ You can't get a distinct number of values using [CountColumn](xref:Microsoft.Xrm
 
 ### Row aggregate
 
-When a table has a [hierarchical relationship defined](../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate)
+When a table has a [hierarchical relationship defined](../../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate)
 
 
 
@@ -383,4 +383,4 @@ Learn how to count rows.
 > [Count rows](count-rows.md)
 
 
-[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
