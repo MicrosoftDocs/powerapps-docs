@@ -19,8 +19,9 @@ You can specify a limit on the number of rows retrieved for each request by sett
 The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
 
 > [!NOTE]
-> - Don't use the [fetch element](reference/fetch.md) `top` attribute with paging. These different methods of limiting the results of a query are not compatible.
-> - Ordering plays an important part in getting consistent paging results. [Learn more about ordering and paging](order-rows.md#ordering-and-paging)
+>
+> - Don't use the [QueryExpression.TopCount property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.topcount) with paging. These different methods of limiting the results of a query are not compatible.
+> - Ordering plays an important part in getting consistent paging results. [Learn more about ordering and paging](#ordering-and-paging)
 
 ## Paging models
 
@@ -30,7 +31,7 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
    :::column span="":::
       **Simple**
 
-      - Uses only the [fetch element](reference/fetch.md) `count` and `page` attributes
+      - Uses only the [QueryExpression.PageInfo](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.pageinfo) [Count](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.count) and [PageNumber](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagenumber) properties
       - Suitable for small data sets only
       - Can't return a data set larger than 50,000 records
       - Performance reduced as the number of rows increases
@@ -38,8 +39,8 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
    :::column span="":::
       **Paging cookies**
 
-      - Uses the [fetch element](reference/fetch.md) `count`, `page`, and `paging-cookie` attributes
-      - Set the `paging-cookie` attribute value to the value returned with previous page
+      - Uses the [QueryExpression.PageInfo](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.pageinfo) [Count](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.count), [PageNumber](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagenumber), and [PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) properties.
+      - Set the `PagingCookie` property value to the value returned with previous page
       - Recommended for all data set sizes
       - [Some queries do not allow for paging cookies](#queries-that-dont-support-paging-cookies)
       - [Learn more about using paging cookies](#paging-cookies)
@@ -48,28 +49,25 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
 
 ## Simple paging
 
-You can request to the first page by setting the [fetch element](reference/fetch.md) `page` attribute to 1 and the `count` attribute to the page size before sending the request:
+You can request to the first page by setting the [QueryExpression.PageInfo property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.pageinfo) with a [PagingInfo class](/dotnet/api/microsoft.xrm.sdk.query.paginginfo) instance with the [PagingInfo.PageNumber](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagenumber) to 1 and the [PagingInfo.Count](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.count) to the page size before sending the request:
 
-```xml
-<fetch count='3' page='1'>
-  <entity name='account'>
-    <attribute name='name' />
-    <order attribute='name' />
-    <order attribute='accountid' />
-  </entity>
-</fetch>
+```csharp
+var query = new QueryExpression(entityName: "account")
+{
+      ColumnSet = new ColumnSet("name"),
+      PageInfo = new PagingInfo() { 
+         Count = 3,
+         PageNumber = 1
+      }
+};
+query.AddOrder(attributeName:"name",orderType: OrderType.Ascending);
+query.AddOrder(attributeName: "accountid", orderType: OrderType.Ascending);
 ```
 
-To get the next three records, increment the `page` value and send another request.
+To get the next three records, increment the `PageInfo.PageNumber` value and send another request.
 
-```xml
-<fetch count='3' page='2'>
-  <entity name='account'>
-    <attribute name='name' />
-    <order attribute='name' />
-    <order attribute='accountid' />    
-  </entity>
-</fetch>
+```csharp
+query.PageInfo.PageNumber = 2;
 ```
 
 With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
@@ -80,19 +78,21 @@ Simple paging works well for small data sets, but as the number of rows in the d
 
 When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to be used on the following requests for the next pages.
 
-The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [fetch element](reference/fetch.md) `paging-cookie` attribute and increment the `page` attribute value for subsequent requests.
+The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [QueryExpression.PageInfo.PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) property and increment the `QueryExpression.PageInfo.Count` value for subsequent requests.
 
 ### Queries that don't support paging cookies
 
-Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute may not support paging cookies.
+Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `LinkEntity` column may not support paging cookies.
 
 When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that come with it.
 
 ## Paging cookie examples
 
-The following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
+The following `RetrieveAll` static method will return all records that match the [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression) query, sending multiple requests if the number of records exceeds the page size.
 
 After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to determine if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `paging-cookie` attribute of the [fetch element](reference/fetch.md) and sends another request.
+
+<!-- TODO: Continue from here -->
 
 ```csharp
 /// <summary>
