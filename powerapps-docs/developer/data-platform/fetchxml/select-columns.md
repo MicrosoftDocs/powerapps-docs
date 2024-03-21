@@ -48,7 +48,7 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 The typed data returned may not be suitable to display in your application. Formatted values are string values returned with the request that you can display in your application.
 
-Let's look at the results *without* using formatted values first.
+Let's look at the results *without* using formatted values first. These functions use the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/) to show the table in a console application.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -58,7 +58,7 @@ This `SimpleOutput` method only accesses values in the [Entity.Attributes collec
 /// <summary>
 /// Output the entity attribute values
 /// </summary>
-/// <param name="service">The authenticated IOrganizaitonService instance</param>
+/// <param name="service">The authenticated IOrganizationService instance</param>
 static void SimpleOutput(IOrganizationService service) {
 
     string fetchXml = @"<fetch>

@@ -128,7 +128,7 @@ These values may not be the user-friendly values you need to display in an appli
 - The `accountclassificationcode` choice column returns the integer value.
 - The SDK reference to `createdby` must use the [EntityReference.Name property](xref:Microsoft.Xrm.Sdk.EntityReference.Name)
 
-To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse. This static `OutputQueryExpressionRequest` method shows how to access the formatted values
+To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse. This static `OutputQueryExpressionRequest` method shows how to access the formatted values. It uses the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/) to show the table in a console application and should render the results of any query you pass to it.
 
 ```csharp
 /// <summary>
