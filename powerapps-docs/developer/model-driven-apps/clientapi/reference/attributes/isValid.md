@@ -31,7 +31,8 @@ All
 
 **Type**: Boolean. 
 
-**Description**: true if the column value is valid; false otherwise.
+**Description**: true if the column value is valid; false otherwise. <br />
+The validity logic is performed against the properties of the [Dataverse column](../maker/data-platform/types-of-fields). For instance, if the column is of type [whole number](../maker/data-platform/types-of-fields) with a minimun of 0 and a maximum of 100, the `isValid` function will return `false` when the current unsaved value on the form is 1000 and `true` whenever the current value falls between 0 and 100.
 
 
 
