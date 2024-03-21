@@ -329,5 +329,5 @@ In the worst case scenario, users will see a `QuickFindQueryRecordLimitExceeded`
 ### See Also
 
 [Query data using FetchXml](fetchxml/overview.md)   
-[Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)   
+[Build queries with QueryExpression](org-service/queryexpression/overview.md)   
 [Dataverse search APIs](search/overview.md)

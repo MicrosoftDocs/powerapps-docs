@@ -282,7 +282,7 @@ static void PrintPrimaryImageColumns(IOrganizationService service)
 account.sample_sampleimage
 ```
 
-More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 # [Web API](#tab/webapi)
 

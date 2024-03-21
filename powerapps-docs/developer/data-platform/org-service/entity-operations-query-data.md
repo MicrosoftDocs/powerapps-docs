@@ -131,12 +131,10 @@ results.Entities.ToList().ForEach(x =>
 
 
 More information:
-- [Build queries with QueryExpression](build-queries-with-queryexpression.md)
-- [Page large result sets with QueryExpression](page-large-result-sets-with-queryexpression.md)
-- [Use the QueryExpression class](use-queryexpression-class.md)
-- [Use the ConditionExpression class](use-conditionexpression-class.md)
-- [Use the ColumnSet class](use-the-columnset-class.md)
-- [Use the FilterExpression class](use-filterexpression-class.md)
+- [Query data using QueryExpression](queryexpression/overview.md)
+- [Page results using QueryExpression](queryexpression/page-results.md)
+- [Filter rows using QueryExpression](queryexpression/filter-rows.md)
+- [Select columns using QueryExpression](queryexpression/select-columns.md)
 - [Sample: Retrieve multiple with the QueryExpression class](samples/retrieve-multiple-queryexpression-class.md)
 - [Sample: Use QueryExpression with a paging cookie](samples/use-queryexpression-with-a-paging-cookie.md)
 

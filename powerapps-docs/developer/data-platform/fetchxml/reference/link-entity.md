@@ -104,7 +104,7 @@ It is best to set values for both the  `from` and `to`  attributes. Both of thes
 > [!NOTE]
 > - It is important that the columns specified in the `from` and `to`   attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
 > 
-> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/build-queries-with-queryexpression.md).
+> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/queryexpression/overview.md).
 
 If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship.
 
