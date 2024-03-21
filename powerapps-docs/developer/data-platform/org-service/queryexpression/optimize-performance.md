@@ -43,7 +43,7 @@ You can improve performance when adding a [FilterExpression](/dotnet/api/microso
 - If a `FilterExpression` with `union` hint isn't at top level filter, Dataverse transforms the query and move the filter with a `union` hint to root filter.
 - If a `union` hint is more than three levels deep, it's ignored.
 
-The following example sets a filter with the `union` hint on the `telephone1` column for both the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables.
+The following example sets a filter with the `union` hint on the `telephone1` column for both the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables.
 
 ```csharp
 QueryExpression query = new("email")
@@ -121,4 +121,4 @@ linkToContact.EntityAlias = "co";
 [Aggregate data using QueryExpression](aggregate-data.md)   
 [Count rows using QueryExpression](count-rows.md)
 
-[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
