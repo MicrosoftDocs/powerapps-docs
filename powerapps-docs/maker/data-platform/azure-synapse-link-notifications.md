@@ -15,7 +15,7 @@ The state of your Azure Synapse Link for Dataverse is stored in a Microsoft Data
 
 The Azure Synapse Link for Dataverse profile and its synchronization status are stored in six system generated read-only tables within Dataverse. These tables are designed to refresh and update in real-time, ensuring that the information contained within them remains accurate and up to date at all times.
 
-## How notification work with Azure Synapse Link for Dataverse
+## How notification works with Azure Synapse Link for Dataverse
 
 To customize a notification, monitor the data changes in a Dataverse table related to the synchronization status of Azure Synapse Link. By tracking these changes, you can export the updated data for visualization using Power BI or set up an automated cloud flow that activates whenever there's a change in the Azure Synapse Link for Dataverse state. This is achieved by reading the row change from any of the Azure Synapse Link state tables.
 
@@ -34,7 +34,7 @@ There are several options available for using Power Automate to send notificatio
 
 ## Dataverse tables and columns used to track state
 
-There are six tables that store all Azure Synapse Link profile information. The two main tables listed below provide all sync state information for your Azure Synapse Link profile.
+There are tables that store all Azure Synapse Link profile information. The two main tables listed below provide all sync state information for your Azure Synapse Link profile.
 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
@@ -60,6 +60,7 @@ Azure Synapse Link profile entity state tables:
 
 > [!NOTE]
 > `LakeRecordCount` is different from Dataverse record count for the following reasons:
+>
 > - Sync latency.
 > - Append-only mode captures transactions and appends one additional row for each CUD operation.
 
