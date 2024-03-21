@@ -1,6 +1,6 @@
 ---
 title: "View dependencies for a component in Power Apps | MicrosoftDocs"
-description: "Understand how to view dependencies for a component in Power Apps and take action"
+description: "Understand how to view dependencies for a component in Power Apps and take action."
 ms.custom: ""
 ms.date: 03/21/2024
 ms.reviewer: ""
@@ -38,7 +38,7 @@ The **Dependencies** page has tabs covering reports for **Delete blocked by**, *
 
 The **Dependencies** page has multiple actions you can take for each dependency. The actions can be used to inspect, delete the component, or remove a dependency with the listed dependencies.
 
-Select the vertical ellipsis next to any component to select one of the following actions:
+To choose an action, select the vertical ellipsis next to any component and then select one of the following actions:
 
 - **Open**: This action takes you to the particular component using the default solution. The open action helps you navigate to the component where you can inspect or edit it.
 - **Delete**: This action allows you to delete the component. Ensure to use this action only if the component is no longer required and can be deleted. This action is available only for unmanaged components.
@@ -49,7 +49,7 @@ You can also select a grouped solution and perform delete solution action:
 
 **Delete Solution**: If you need to delete (uninstall) a solution that has dependencies on the solution component, use **Delete**. This action deletes the solution.
 
-![Solution dependencies action.](media/solution-component-dependencies.png "Solution dependencies action")
+:::image type="content" source="media/solution-component-dependencies.png" alt-text="Solution component dependencies actions":::
 
 ### See also
 
