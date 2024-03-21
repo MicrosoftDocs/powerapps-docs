@@ -34,10 +34,10 @@ All
 
 **Description**: `true` if the column value is valid; `false` otherwise.
 
-The validity logic uses the properties of the [Dataverse column](../../../../data-platform/entity-attribute-metadata.md#column-types). Each type of column may have properties that limit valid values.
+The validity logic uses the properties of the [Dataverse column](../../../../data-platform/entity-attribute-metadata.md#column-types). Each type of column might have properties that limit valid values.
 
-For example, a **Whole Number** column uses the [IntegerAttributeMetadata class](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata) which provides the [MaxValue](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.maxvalue) and [MinValue](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.minvalue) properties. These properties are editable in the column definition in [Power Apps](https://make.powerapps.com) designer as **Maximum value** and **Minimum value** respectively.
+For example, a **Whole Number** column uses the [IntegerAttributeMetadata class](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata) that provides the [MaxValue](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.maxvalue) and [MinValue](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.minvalue) properties. These properties are editable in the column definition in [Power Apps](https://make.powerapps.com) designer as **Maximum value** and **Minimum value** respectively.
 
-If a Whole Number column has **Maximum value** of 0 and **Minimum value** of 100, the `isValid` function will return `false` when the current unsaved value on the form is 1000 and `true` whenever the current value falls between 0 and 100.
+If a Whole Number column has **Maximum value** of 0 and **Minimum value** of 100, the `isValid` function returns `false` when the current unsaved value on the form is 1000 and `true` whenever the current value falls between 0 and 100.
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
