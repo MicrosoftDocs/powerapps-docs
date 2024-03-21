@@ -277,7 +277,7 @@ With this method, the results of the query look like this:
  --------------------------------------------------------------------------------------------------
 ```
 
-[Learn more about formatted values](../org-service/entity-operations-query-data.md#access-formatted-values)
+[Learn more about formatted values](../entity-operations-query-data.md#access-formatted-values)
 
 ## Next steps
 
