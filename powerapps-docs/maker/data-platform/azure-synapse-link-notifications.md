@@ -11,9 +11,9 @@ ms.custom: template-how-to
 ---
 # Receive Azure Synapse Link for Dataverse notifications in Power Apps
 
-State of your Azure Synapse Link for Dataverse is stored in your Microsoft Dataverse table with real-time updates. Users can customize a notification using flows or Power BI to stay on top of the state of their Azure Synapse Link for Dataverse instead of manually checking the Azure Synapse Link for Dataverse profile page in Power Apps (make.powerapps.com).
+The state of your Azure Synapse Link for Dataverse is stored in a Microsoft Dataverse table with real-time updates. You can customize a notification using Power Automate flows or Power BI to stay on top of the state of your Azure Synapse Link for Dataverse activity instead of manually checking the Azure Synapse Link for Dataverse profile page in Power Apps (make.powerapps.com).
 
-Azure Synapse Link for Dataverse profile and its synchronization status is stored in six system generated read-only tables within Dataverse. These tables are designed to refresh and update in real-time, ensuring that the information contained within them remains accurate and up to date at all times.
+The Azure Synapse Link for Dataverse profile and its synchronization status are stored in six system generated read-only tables within Dataverse. These tables are designed to refresh and update in real-time, ensuring that the information contained within them remains accurate and up to date at all times.
 
 ## How notification work with Azure Synapse Link for Dataverse
 
@@ -39,7 +39,7 @@ There are six tables that store all Azure Synapse Link profile information. The 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
 |Azure Synapse Link external table state      |  This table has data only if you have Delta Lake profile. <br /><br /> This table represents external nonpartitioned tables state in connected Synapse workspace. <br /><br /> One record per synced entity including metadata table like option set.       |  [synapselinkexternaltablestate](/power-apps/developer/data-platform/reference/entities/synapselinkexternaltablestate)       |
-|Azure Synapse Link profile table state   |  This table represents the sync state of the Azure Synapse Link entity in Azure Data Lake storage. <br />One record per synced entity excluding metadata table like option set.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
+|Azure Synapse Link profile table state   |  This table represents the sync state of the Azure Synapse Link entity in Azure Data Lake storage. <br />One record per synced entity excluding metadata table such as option set.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
 
 Here are some useful columns for monitoring the health of your Azure Synapse Link in each table:
 
@@ -48,7 +48,7 @@ Here are some useful columns for monitoring the health of your Azure Synapse Lin
 - `RecordCount` returns the total number of records in the Delta Lake profile, minus soft delete records for each table.
 - `TableState` is marked as **created** if the link to the data lake and Delta Lake conversion is active and error-free.
 
-A soft-delete in the Azure Synapse Link external table state table is performed: `LastSyncState` and `TableState` is marked as deleted for removed tables.
+A soft-delete in the Azure Synapse Link external table state table is performed: `LastSyncState` and `TableState` are marked as deleted for removed tables.
 
 Azure Synapse Link profile entity state tables:
 
@@ -59,7 +59,7 @@ Azure Synapse Link profile entity state tables:
 - `SyncState` shows as **InProgress** if the link to data lake is active and error-free.
 
 > [!NOTE]
-> LakeRecordCount is different from Dataverse record count for the following reasons:
+> `LakeRecordCount` is different from Dataverse record count for the following reasons:
 > - Sync latency.
 > - Append-only mode captures transactions and appends one additional row for each CUD operation.
 
