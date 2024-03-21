@@ -49,7 +49,7 @@ You can also select a grouped solution and perform delete solution action:
 
 **Delete Solution**: If you need to delete (uninstall) a solution that has dependencies on the solution component, use **Delete**. This action deletes the solution.
 
-<!-- MOVE THIS  --> ![Solution dependencies action.](media/solution-component-dependencies.png "Solution dependencies action")
+![Solution dependencies action.](media/solution-component-dependencies.png "Solution dependencies action")
 
 ### See also
 
