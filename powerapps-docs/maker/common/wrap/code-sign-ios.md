@@ -192,6 +192,7 @@ To create a distribution certificate, create a new certificate signing request f
    :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
 1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
+   - If the command ./SignAndGenerateIPA.ps1 fails, delete the unzipped folder and files as they might be corrupted. Unzip "iOS-Archive.zip" one more time before attempting to sign again.
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
