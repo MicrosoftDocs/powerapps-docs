@@ -579,7 +579,7 @@ Power platform administrators can restrict the file size of attachments users ca
 You can enable Copilot in the timeline to help users quickly access record details to help them get up to speed faster on their records. Timeline highlights are comprised of a bulleted list of the activities on a record, including notes, emails, tasks, appointments, phonecalls, and conversations.
 
 > [!IMPORTANT]
-> Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md).
+> Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](responsible-ai-faq-timeline.md).
 
 There are two ways to enable timeline highlights:
 
@@ -588,13 +588,13 @@ There are two ways to enable timeline highlights:
 
 ### Enable timeline highlights in Power Apps
 
-1. Go to [Power Apps](make.powerapps.com), and select **Settings**. 
+1. Go to [Power Apps](https://make.preview.powerapps.com/environments/), and select **Settings**. 
 1. Select **Upcoming**, and then turn on the **Enable Copilot in Timeline** setting. 
 1. Select **Save and Publish**.
 
 ### Enable timeline highlights on the form entity
 
-1. In [Power Apps](make.powerapps.com), go to the activity for which you want to enable timeline highlights
+1. In [Power Apps](https://make.preview.powerapps.com/environments/), go to the activity for which you want to enable timeline highlights
 1. Select **Properties**, and then in **Record types to show**, select **Enable Timeline Highlights powered by Generative AI**.
 4. Select **Save and Publish**.
 
