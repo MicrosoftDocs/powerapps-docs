@@ -2,7 +2,7 @@
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid"
 ms.custom: ""
-ms.date: 07/26/2023
+ms.date: 03/22/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,16 +15,16 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Power Apps grid control 
+# Power Apps grid control
 
-The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, and aggregation and is very customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
+The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, aggregation, and is very customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
--  **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are not page boundaries, users are able to select more rows at once (up to 1000 rows) to facilitate taking action against a set of records or performing bulk editing. 
--  **Inline editing**: This singular grid control can be utilized for read-only or editable scenarios. 
--  **Nested grids**: Makers can configure the grid to show surface related records. When configured, users can expand a row to see a subgrid of related records. Multiple rows in the grid can be expanded simultaneously, an improvement over older grid experiences.  
--  **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of Lookup columns.   
--  **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping has been applied, this aggregate value will also be displayed for each group.
--  **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
+- **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are no page boundaries, users can select more rows at once (up to 1000 rows) to facilitate taking action against a set of records or perform bulk editing.
+- **Inline editing**: This singular grid control can be utilized for read-only or edit scenarios.
+- **Nested grids**: Makers can configure the grid to show surface related records. When configured, users can expand a row to see a subgrid of related records. Multiple rows in the grid can be expanded simultaneously. This is an improvement over older grid experiences.  
+- **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of lookup columns.
+- **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping has been applied, this aggregate value will also be displayed for each group.
+- **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
@@ -61,7 +61,7 @@ When you configure the Power Apps grid control for an entity, all views for that
     - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you will specify the **Entity** where the related records will come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the field (and relationship) to use to link the parent and child entities together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
-    -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual. <!-- More information: [Customizing the Power Apps grid control](tbd) -->
+    -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
 
 3. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
  
