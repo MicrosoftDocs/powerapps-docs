@@ -4,7 +4,7 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/19/2024
+ms.date: 03/22/2024
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -460,6 +460,8 @@ The rich text editor is enabled by default. Your system administrator can enable
 If your administrator has turned on the timeline highlights feature, you can quickly get caught up on a record's status. Copilot creates an AI-generated, three-bullet list that populates at the top of the timeline. The highlights include a record's main activities, such as details about who you or the previous agent interacted with, the reported issue, and the actions the previous agent took to resolve the issue. 
 
 You can copy the timeline highlights by selecting **Copy**.
+
+![Timeline highlights view.](media\view-timeline-highlights.png "Timeline highlights view")
 
 ## View a conversation transcript
 
