@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 12/14/2023
+ms.date: 03/22/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -573,6 +573,28 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
 1.	Enter the desired size limit for attachments, and then select **Save**. 131,072 KB is the maximum allowed value.
+
+## Configure timeline highlights
+
+You can enable Copilot in the timeline to help agents quickly access record details to help them get up to speed faster on their case records. Timeline highlights are comprised of a three-bullet summary about all of the activities on a record, including notes, emails, posts, tasks.
+
+There are two ways to enable Timeline highlights:
+
+-	By enabling the setting In Power Apps
+-	By enabling the setting at the form level
+
+### Enable timeline highlights in Power Apps
+
+1. Go to **Power Apps**, and select **Settings**. 
+1. Select **Upcoming**, and then turn on the **Enable Copilot in Timeline** setting. 
+1. Select **Save**.
+
+### Enable timeline highlights on the form entity
+
+1. In **Power Apps**, go to the activity for which you want to enable Timeline Highlights
+1. Select **Properties**, and then in **Record types to show**, select **Enable Timeline Highlights powered by Generative AI**.
+4. Select **Save and Publish**.
+
 
 ## Known issues
   
