@@ -1,6 +1,6 @@
 ---
 title: Responsible AI FAQ for Copilot in the timeline | MicrosoftDocs
-description: Learn about frequently asked questions for using Copilot in the timeline control within a model-driven app
+description: Learn about frequently asked questions for using Copilot in the timeline control within a model-driven app.
 author: lalexms
 ms.reviewer: matp
 ms.topic: conceptual
@@ -22,7 +22,7 @@ Copilot is a feature that uses AI to generate highlights based on timeline activ
 
 ## How does Copilot work? 
 
-Copilot uses advanced language models to generate content suggestions that refer to the activities in the timeline and generate highlights. Timeline highlights show details from activities such as notes, emails, tasks, appointments, phonecalls, and conversations. 
+Copilot uses advanced language models to generate content suggestions that refer to the activities in the timeline and generate highlights. Timeline highlights show details from activities such as notes, emails, tasks, appointments, phone calls, and conversations. 
 
 ## What can I use Copilot for? 
 
@@ -70,13 +70,9 @@ We tested and evaluated Copilot on various datasets and scenarios to ensure its 
 
 ## Are there any settings I should change for effective and responsible use of Copilot in the timeline? 
 
-- Copilot in the timeline doesn't provide a way to change its behavior. 
+- Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
 
-- Follow these suggestions to make the most of Copilot in the timeline: 
-
-  - Timeline highlights are generated based on the activities in timeline such as Notes, emails, tasks, phone calls, appointments and conversations. 
-
-  - Always review and edit Copilot's suggestions before sending them to your collaborators. 
+Always review and edit Copilot's suggestions before sending them to your collaborators. 
 
 ### See also 
 
