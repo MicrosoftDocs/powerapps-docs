@@ -40,4 +40,4 @@ ms.collection:
 - [Use form filling assistance in model-driven apps](../../user/form-filling-assistance.md)
 - [FAQs about form filling assistance](faq-from-filling-assistance.md)
 - [Use timeline highlights powered by generative AI](../../user/add-activities.md#use-timeline-highlights-powered-by-generative-ai)
-- [FAQs about using Copilot in timeline highlights](faq-timeline-hightlights-with-copilot.md)
+- [FAQs about using Copilot in timeline highlights](faq-timeline-highlights-with-copilot.md)
