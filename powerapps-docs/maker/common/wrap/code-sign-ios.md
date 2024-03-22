@@ -172,7 +172,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
 
-1. If signing with enterprise certificate, open the **Distribution-exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
+1. If signing with enterprise certificate, open the file **Distribution-exportOptions.plist** with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
   > [!NOTE]
   > Enterprise signing is not supported with Key Vault signing.
