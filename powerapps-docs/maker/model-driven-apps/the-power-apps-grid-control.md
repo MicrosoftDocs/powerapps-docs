@@ -1,6 +1,6 @@
 ---
 title: "Power Apps grid control | MicrosoftDocs"
-description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid"
+description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
 ms.custom: ""
 ms.date: 03/22/2024
 ms.reviewer: "matp"
@@ -17,20 +17,20 @@ search.audienceType:
 ---
 # Power Apps grid control
 
-The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, aggregation, and is very customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
+The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, aggregation, and is customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
-- **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are no page boundaries, users can select more rows at once (up to 1000 rows) to facilitate taking action against a set of records or perform bulk editing.
+- **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are no page boundaries, users can select more rows at once (up to 1,000 rows) to facilitate taking action against a set of records or perform bulk editing.
 - **Inline editing**: This singular grid control can be utilized for read-only or edit scenarios.
 - **Nested grids**: Makers can configure the grid to show surface related records. When configured, users can expand a row to see a subgrid of related records. Multiple rows in the grid can be expanded simultaneously. This is an improvement over older grid experiences.  
 - **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of lookup columns.
-- **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping has been applied, this aggregate value will also be displayed for each group.
+- **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping is applied, this aggregate value is also displayed for each group.
 - **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
 ## Add the Power Apps grid control to views for an entity
 
-When you configure the Power Apps grid control for an entity, all views for that entity will display using that grid.
+When you configure the Power Apps grid control for an entity, all views for that entity display using that grid.
 
 1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
 1.	Expand **Entities**. Browse to the table you want and select it. On the **Controls** tab, select **Add control**.
@@ -57,8 +57,8 @@ When you configure the Power Apps grid control for an entity, all views for that
     - The **Show row status icons** property controls whether users see status icons (invalid, save in progress, saving, etc.) at the beginning of a grid row during the editing experience. The default value is **Yes**.
     - The **Show data type icons** property determines whether column headers display an icon corresponding to the data type next to the column name. The default value is **No**.
     - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity, or **None** to suppress all hyperlinks in the grid.
-    - The **Reflow behavior** property determines whether the grid components renders always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
-    - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you will specify the **Entity** where the related records will come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
+    - The **Reflow behavior** property determines whether the grid components render always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
+    - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the field (and relationship) to use to link the parent and child entities together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
     -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
