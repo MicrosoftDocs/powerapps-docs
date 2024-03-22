@@ -1,6 +1,6 @@
 ---
 title: Power Fx and cards overview
-description: Learn about Power FX and how it's used to add business logic in cards for Microsoft Power Apps.
+description: Learn about Power Fx and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 3/22/2024
 ms.topic: overview
 author: sericks007
@@ -33,10 +33,10 @@ For more information on Power Fx formulas that work in cards, see [Formula refer
 
 Working with large data sets in cards can impact performance. Take heed of delegation warnings. Learn more about [delegation](/power-apps/maker/canvas-apps/delegation-overview).
 
-Today, cards supports delegating the following functions:
+Cards supports delegating the following functions:
 
 - LookUp
 
 ### Dataverse types
 
-Cards do not support Image, URL, File, or ManagedProperty column types yet.
+Cards don't support Image, URL, File, or ManagedProperty column types yet.
