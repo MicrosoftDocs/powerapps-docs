@@ -1,7 +1,7 @@
 ---
 title: FAQ about using AI responsibly in Power Apps
 description: Find FAQ about how to use copilot AI responsibly with Power Apps to build apps through conversation, generate app descriptions, edit apps, and more.
-ms.date: 12/21/2023
+ms.date: 03/22/2024
 ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
