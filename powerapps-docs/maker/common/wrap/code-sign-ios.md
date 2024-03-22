@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/06/2022
+ms.date: 03/22/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -192,7 +192,7 @@ To create a distribution certificate, create a new certificate signing request f
    :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
 1. When the script finishes, a **.ipa**  file  such as **com.single.wrap.ipa**.
-   - If the command **./SignAndGenerateIPA.ps1** fails then delete the unzipped folder and files as they might be corrupted. Unzip **iOS-Archive.zip** again before you try to sign again.
+   - If the command **./SignAndGenerateIPA.ps1** fails, then delete the unzipped folder and files as they might be corrupted. Unzip **iOS-Archive.zip** again before you try to sign again.
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
