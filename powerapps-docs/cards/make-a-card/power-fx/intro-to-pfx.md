@@ -22,12 +22,12 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the primary s
 - [Expression grammar](/power-platform/power-fx/expression-grammar)
 - [Operators](/power-platform/power-fx/operators)
 - [Variables](/power-platform/power-fx/variables)
-- [Formula reference](/power-platform/power-fx/formula)
+- [Formula reference](/power-platform/power-fx/formula-reference)
 
 For more information on Power Fx formulas that work in cards, see [Formula reference for Cards](/power-platform/power-fx/formula-reference-cards).
 
 > [!Important]
-> [Defaults](/power-platform/power-fx/reference/function-defaults) is not support. Instead use [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), for example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` use `Collect(account, {"Account Name": "Example Account"})`.
+> [Defaults](/power-platform/power-fx/reference/function-defaults) isn't supported. Instead use [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), for example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` use `Collect(account, {"Account Name": "Example Account"})`.
 
 ### Large tables (delegation)
 
