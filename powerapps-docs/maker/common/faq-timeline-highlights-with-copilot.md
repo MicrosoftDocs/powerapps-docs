@@ -14,7 +14,7 @@ search.audienceType:
 
 # Responsible AI FAQ for Copilot in the timeline
 
-Here are some common questions and answers about using Microsoft Copilot in the timeline. 
+Here are some common questions and answers about using Copilot in the timeline. 
 
 ## What is Copilot in the timeline? 
 
