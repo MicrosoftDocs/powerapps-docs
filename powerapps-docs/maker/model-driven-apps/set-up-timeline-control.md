@@ -579,7 +579,7 @@ Power platform administrators can restrict the file size of attachments users ca
 You can enable Copilot in the timeline to help agents quickly access record details to help them get up to speed faster on their case records. Timeline highlights are comprised of a three-bullet summary about all of the activities on a record, including notes, emails, posts, tasks.
 
 > [!IMPORTANT}
-> Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](/common/responsible-ai-overview).
+> Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md).
 
 There are two ways to enable Timeline highlights:
 
