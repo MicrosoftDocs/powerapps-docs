@@ -457,7 +457,7 @@ The rich text editor is enabled by default. Your system administrator can enable
 
 ## View AI-generated highlights
 
-If your administrator has turned on the timeline highlights feature, you can quickly get caught up on a record's status. Copilot creates an AI-generated, three-bullet list that populates at the top of the timeline. The highlights include a record's main activities, such as details about who you or the previous agent interacted with, the reported issue, and the actions the previous agent took to resolve the issue. 
+If your administrator has turned on the timeline highlights feature, you can quickly get caught up on a record's status. Copilot creates an AI-generated, bulleted list that populates at the top of the timeline. The highlights include a record's main activities, such as details about who you or the previous user interacted with, the reported issue, and actions taken to try to resolve the issue. 
 
 You can copy the timeline highlights by selecting **Copy**.
 
