@@ -4,7 +4,7 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/10/2023
+ms.date: 03/22/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
@@ -94,25 +94,25 @@ If your administrator has turned on quick find, then the search box shows **Quic
 
 ## Column header actions
 
-The column header dropdowns provide a variety of options to let you modify the data shown in the grid. 
+Dropdown column headers provide a variety of options to let you modify the data shown in the grid. 
 
 ### Sorting
 
-You can modify the order of records in the grid using the sorting actions in the column header dropdowns. By default, selecting to sort by a column will replace any existing sorting criteria on the grid. 
+You can modify the order of records in the grid using the sorting actions in the dropdown column headers. By default, selecting to sort by a column replaces any existing sorting criteria on the grid. 
 
->[!NOTE]
-> Multi-column sorting can be accomplished by holding the Shift key when you select a sort on a different column. This will add the sort condition to the existing sorting criteria on the grid instead of replacing the sorting criteria.  
+> [!NOTE]
+> Multi-column sorting can be accomplished by holding the **Shift** key when you select a sort on a different column. This adds the sort condition to the existing sorting criteria on the grid, instead of replacing the sorting criteria.  
 
 ### Filtering
   
 To focus on records that meet particular criteria, you can filter a view by one or more columns. The type of data in the column determines the available filter options.
 
->[!IMPORTANT]
->In Unified Interface, grids don't pre-populate column filters based on the current view definition.
+> [!IMPORTANT]
+> In Unified Interface, grids don't pre-populate column filters based on the current view definition.
 
 #### Filtering on a lookup column
 
-When you filter data on a lookup column, you can select from a list of values rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
+When you filter data on a lookup column, you can select from a list of values, rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
 
 If you start typing, the filter suggests matching results to help you complete the search. The results include all rows that aren't otherwise filtered out.
 
@@ -130,23 +130,22 @@ Use the activity type filter to show only the activities you're interested in, s
 
 ### Grouping
 
-When configured, the column header dropdowns will surface a **Group by** option. This allows you to group the data in the grid by values in the selected group. 
+When configured, the dropdown column headers surface a **Group by** option. This allows you to group the data in the grid by values in the selected group. 
 
--  Grouping is available for most kinds of columns. This notably does not include Lookup columns.
--  When grouping on date fields, you will need to choose the timeframe to group on. This includes day, week, month, quarter, and year.
--  You can only group by one column a time; selecting **Group by** on a different column will replace any existing grouping criteria.
--  You can remove the grouping by selecting **Ungroup** from the same column header dropdown to remove the grouping.    
+-  Grouping is available for most kinds of columns. This notably does not include lookup columns.
+-  When grouping on date fields, you need to choose a timeframe to on which to group. This includes day, week, month, quarter, and year.
+-  You can only group by one column at a time; selecting **Group by** on a different column replaces any existing grouping criteria.
+-  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
 
->[!NOTE]
-> These cannot be saved to a view.  
+> [!NOTE]
+> Grouping criteria isn't saved to a view.  
 
 ### Aggregation
 
-When configured, the column header dropdowns will surface a "Totals" option in numeric columns. This allows you to surface an aggregate calculation in the grid footer for the data in this column. You can choose between showing a sum, the maximum value, the minimum value, or the average value. If the data in the grid has been grouped, the aggregate will also be calculated and displayed for each group.  
+When configured, the dropdown column headers surface a **Totals** option in numeric columns. This allows you to surface an aggregate calculation in the grid footer for the data in this column. You can choose between showing a sum, the maximum value, the minimum value, or the average value. If the data in the grid has been grouped, the aggregate is calculated and displayed for each group.  
 
->[!NOTE]
-> These cannot be saved to a view.  
-
+> [!NOTE]
+> Aggretations aren't saved to a view.  
 
 ## Jump bar
 
