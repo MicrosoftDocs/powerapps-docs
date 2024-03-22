@@ -1831,7 +1831,7 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline 
       href: ../mobile/canvas-mobile-offline-working.md
-  - name: Set an app as a startup app (preview)
+  - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
