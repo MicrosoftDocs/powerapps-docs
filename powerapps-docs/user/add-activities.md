@@ -457,7 +457,7 @@ The rich text editor is enabled by default. Your system administrator can enable
 
 ## Use timeline highlights powered by generative AI
 
-If timeline highlights are ena bled on your app, Copilot creates an AI-generated, bulleted list that populates at the top of the timeline. You can use timeline highlights quickly get caught up on a record's status. 
+If timeline highlights are enabled on your app, Copilot creates an AI-generated, bulleted list that populates at the top of the timeline. You can use timeline highlights quickly get caught up on a record's status. 
 
 The highlights include a record's main activities, such as details about who you or the previous user interacted with, the reported issue, and actions taken to try to resolve the issue. 
 
