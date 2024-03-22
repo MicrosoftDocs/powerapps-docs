@@ -591,7 +591,7 @@ Copilot must be turned on in the [settings of the model-driven app](../canvas-ap
 
 There are two ways you can enable timeline highlights:
 
--	At the app level in [Power Apps[(https://make.powerapps.com/): Enables timeline highlights for all activities in Power Apps.
+-	At the app level in [Power Apps](https://make.powerapps.com/): Enables timeline highlights for all activities in Power Apps.
 -	For a specific form entity: Enables timeline highlights for the activities at the form level.
 
 **Enable timeline highlights in Power Apps**
