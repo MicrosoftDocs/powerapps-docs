@@ -80,4 +80,4 @@ We tested and evaluated Copilot on various datasets and scenarios to ensure its 
 
 ### See also 
 
-[Use Timeline highlights powered by generative AI]()
+[Use Timeline highlights powered by generative AI](../../user/add-activities.md#use-timeline-highlights-powered-by-generative-ai)
