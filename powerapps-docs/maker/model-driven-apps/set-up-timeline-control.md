@@ -576,27 +576,35 @@ Power platform administrators can restrict the file size of attachments users ca
 
 ## Configure timeline highlights
 
-You can enable Copilot in the timeline to help users quickly access record details to help them get up to speed faster on their records. Timeline highlights are comprised of a bulleted list of the activities on a record, including notes, emails, tasks, appointments, phone calls, and conversations.
+You can enable Copilot in the timeline to help users quickly access record details to help them get up to speed faster on their records.
+
+Timeline highlights are comprised of a bulleted list of the activities on a record, including notes, emails, tasks, appointments, phone calls, and conversations.
 
 > [!IMPORTANT]
 > Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](../common/faq-timeline-highlights-with-copilot.md).
 
-There are two ways to enable timeline highlights:
+### Prerequisites
 
--	By enabling the setting In Power Apps: Enables timeline highlights for all activities.
--	By enabling the setting for a specific form entity: Enables timeline highlights for the activities you choose.
+Copilot must be turned on in the [settings of the model-driven app](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled).
+
+### Enable timeline highlights 
+
+There are two ways you can enable timeline highlights:
+
+-	At the app level in [Power Apps[(https://make.powerapps.com/): Enables timeline highlights for all activities in Power Apps.
+-	For a specific form entity: Enables timeline highlights for the activities at the form level.
 
 **Enable timeline highlights in Power Apps**
 
 1. Go to [Power Apps](https://make.powerapps.com/environments/), and select **Settings**. 
-1. Select **Upcoming**, and then turn on the **Enable Copilot in Timeline** setting. 
-1. Select **Save and Publish**.
+1. Select **Upcoming**, and then turn on the **Enable Timeline highlights** setting. 
+1. Select **Save**.
 
 **Enable timeline highlights on the form entity**
 
-1. In [Power Apps](https://make.powerapps.com/environments/), go to the activity for which you want to enable timeline highlights
-1. Select **Properties**, and then in **Record types to show**, select **Enable Timeline Highlights powered by Generative AI**.
-4. Select **Save and Publish**.
+1. In [Power Apps](https://make.powerapps.com/environments/), go to the form (for example, a case, contact, or account form) for which you want to enable timeline highlights.
+1. Select **Enable Timeline Highlights powered by Generative AI**.
+1. Select **Save and Publish**.
 
 
 ## Known issues
