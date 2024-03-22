@@ -49,54 +49,77 @@
     - name: Query data using FetchXml
       items:
         - name: Overview
+          displayName: FetchXml
           href: fetchxml/overview.md
         - name: Retrieve data
+          displayName: FetchXml, retrieve
           href: fetchxml/retrieve-data.md
         - name: Select columns
+          displayName: FetchXml, Select columns
           href: fetchxml/select-columns.md
         - name: Join tables
+          displayName: FetchXml, Join tables
           href: fetchxml/join-tables.md
         - name: Order rows
+          displayName: FetchXml, Order rows
           href: fetchxml/order-rows.md
         - name: Filter rows
+          displayName: FetchXml, Filter rows
           href: fetchxml/filter-rows.md
         - name: Page results
+          displayName: FetchXml, Page results
           href: fetchxml/page-results.md
         - name: Aggregate data
+          displayName: FetchXml, Aggregate data
           href: fetchxml/aggregate-data.md
         - name: Count rows
+          displayName: FetchXml, Count rows
           href: fetchxml/count-rows.md
         - name: Optimize performance
+          displayName: FetchXml, Optimize performance
           href: fetchxml/optimize-performance.md
         - name: FetchXml reference
           items:
             - name: Overview
+              displayName: FetchXml reference
               href: fetchxml/reference/index.md
             - name: all-attributes
+              displayName: FetchXml, all-attributes element
               href: fetchxml/reference/all-attributes.md
             - name: attribute
+              displayName: FetchXml, attribute element
               href: fetchxml/reference/attribute.md
             - name: condition
               items:
                 - name: element
+                  displayName: FetchXml, condition element
                   href: fetchxml/reference/condition.md
                 - name: operators
+                  displayName: FetchXml, condition operators
                   href: fetchxml/reference/operators.md
             - name: entity
+              displayName: FetchXml, entity element
               href: fetchxml/reference/entity.md
             - name: fetch
+              displayName: FetchXml, fetch element
               href: fetchxml/reference/fetch.md
             - name: filter
+              displayName: FetchXml, filter element
               href: fetchxml/reference/filter.md
             - name: link-entity
+              displayName: FetchXml, link-entity element
               href: fetchxml/reference/link-entity.md
             - name: order
+              displayName: FetchXml, order element
               href: fetchxml/reference/order.md
             - name: value
+              displayName: FetchXml, value element
               href: fetchxml/reference/value.md
         - name: Sample code
+          displayName: FetchXml, Sample code
           href: fetchxml/sample.md
     - name: Bulk Operation messages
+      displayName: CreateMultiple, UpdateMultiple, UpsertMultiple
       href: bulk-operations.md
       items:
         - name: Use DeleteMultiple (preview)
