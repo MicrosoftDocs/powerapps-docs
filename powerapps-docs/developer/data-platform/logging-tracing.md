@@ -89,9 +89,9 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 
 ## Community tools
 
-### Plug-in trace viewer
+### Plugin Trace Viewer
 
-**Plug-in Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Community tools for Dataverse](community-tools.md) topic for community developed tools.
+**[Plugin Trace Viewer](https://jonasr.app/PTV)** is a tool that XrmToolBox community developed. Please see the [Community tools for Dataverse](community-tools.md) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
