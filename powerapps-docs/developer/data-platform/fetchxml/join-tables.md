@@ -378,7 +378,6 @@ This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#usi
          from='primarycontactid'
          to='contactid'
          link-type='matchfirstrowusingcrossapply'
-         alias='account'
          >
          <attribute name='accountid' />
          <attribute name='name' />
@@ -416,8 +415,8 @@ Using the previous query example with any other link-type, you can expect the pr
 
 - `fullname`
 - `contactid`
-- `account.accountid`
-- `account.name`
+- `account1.accountid`
+- `account1.name`
 
 But with the `matchfirstrowusingcrossapply` link type, the properties or keys have these names:
 
