@@ -2587,6 +2587,8 @@
     href: ./common/faq-draft-with-copilot.md
   - name: FAQ about form filling assistance  
     href: ./common/faq-from-filling-assistance.md
+  - name: FAQ about using Copilot in timeline highlights
+    href: ./common/faq-timeline-highlights-with-copilot.md
 - name: Resources
   items:
   - name: Blog
