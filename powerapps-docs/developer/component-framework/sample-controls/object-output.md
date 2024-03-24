@@ -1,8 +1,8 @@
 ---
 title: "Object Output Component Sample| Microsoft Docs"
 description: "Learn how you can use the object outout APIs."
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 06/07/2023
 ms.reviewer: jdaly
 ms.topic: reference

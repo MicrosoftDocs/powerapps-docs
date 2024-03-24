@@ -31,9 +31,9 @@ kbSearchControl.removeOnSelection(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to remove from the **OnSelection** event.| 
+|`myFunction` |Function |Yes|The function to remove from the **OnSelection** event.| 
 
-### Related topics
+### Related articles
 
 [addOnSelection](addOnSelection.md)
 

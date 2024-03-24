@@ -18,6 +18,32 @@
   href: activityparty.md
 - name: ActivityPointer
   href: activitypointer.md
+- name: adx_externalidentity
+  href: adx_externalidentity.md
+- name: adx_invitation
+  href: adx_invitation.md
+- name: adx_inviteredemption
+  href: adx_inviteredemption.md
+- name: adx_portalcomment
+  href: adx_portalcomment.md
+- name: adx_setting
+  href: adx_setting.md
+- name: adx_webformsession
+  href: adx_webformsession.md
+- name: AIPlugin
+  href: aiplugin.md
+- name: AIPluginExternalSchema
+  href: aipluginexternalschema.md
+- name: AIPluginExternalSchemaProperty
+  href: aipluginexternalschemaproperty.md
+- name: AIPluginInstance
+  href: aiplugininstance.md
+- name: AIPluginOperation
+  href: aipluginoperation.md
+- name: AIPluginOperationParameter
+  href: aipluginoperationparameter.md
+- name: AIPluginUserSetting
+  href: aipluginusersetting.md
 - name: Annotation
   href: annotation.md
 - name: AnnualFiscalCalendar
@@ -50,6 +76,8 @@
   href: attribute.md
 - name: AttributeImageConfig
   href: attributeimageconfig.md
+- name: AttributeMaskingRule
+  href: attributemaskingrule.md
 - name: Audit
   href: audit.md
 - name: backgroundoperation
@@ -86,6 +114,12 @@
   href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
+- name: componentversion
+  href: componentversion.md
+- name: componentversiondatasource
+  href: componentversiondatasource.md
+- name: componentversionnrddatasource
+  href: componentversionnrddatasource.md
 - name: Connection
   href: connection.md
 - name: ConnectionInstance
@@ -100,6 +134,10 @@
   href: contact.md
 - name: conversationtranscript
   href: conversationtranscript.md
+- name: CopilotExampleQuestion
+  href: copilotexamplequestion.md
+- name: credential
+  href: credential.md
 - name: CustomAPI
   href: customapi.md
 - name: CustomAPIRequestParameter
@@ -130,6 +168,8 @@
   href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
+- name: deploymentorchestration
+  href: deploymentorchestration.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
 - name: desktopflowmodule
@@ -144,6 +184,20 @@
   href: duplicaterule.md
 - name: DuplicateRuleCondition
   href: duplicaterulecondition.md
+- name: DVFileSearch
+  href: dvfilesearch.md
+- name: DVFileSearchAttribute
+  href: dvfilesearchattribute.md
+- name: DVFileSearchEntity
+  href: dvfilesearchentity.md
+- name: DVTableSearch
+  href: dvtablesearch.md
+- name: DVTableSearchAttribute
+  href: dvtablesearchattribute.md
+- name: DVTableSearchEntity
+  href: dvtablesearchentity.md
+- name: ElasticFileAttachment
+  href: elasticfileattachment.md
 - name: Email
   href: email.md
 - name: EmailServerProfile
@@ -166,6 +220,8 @@
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
   href: environmentvariablevalue.md
+- name: EventExpanderBreadcrumb
+  href: eventexpanderbreadcrumb.md
 - name: ExchangeSyncIdMapping
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
@@ -186,6 +242,10 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowcapacityassignment
+  href: flowcapacityassignment.md
+- name: flowevent
+  href: flowevent.md
 - name: flowmachine
   href: flowmachine.md
 - name: flowmachinegroup
@@ -196,6 +256,8 @@
   href: flowmachineimageversion.md
 - name: flowmachinenetwork
   href: flowmachinenetwork.md
+- name: flowrun
+  href: flowrun.md
 - name: flowsession
   href: flowsession.md
 - name: fxexpression
@@ -246,8 +308,14 @@
   href: mailboxtrackingfolder.md
 - name: MailMergeTemplate
   href: mailmergetemplate.md
+- name: mainfewshot
+  href: mainfewshot.md
+- name: makerfewshot
+  href: makerfewshot.md
 - name: ManagedIdentity
   href: managedidentity.md
+- name: MaskingRule
+  href: maskingrule.md
 - name: MetadataForArchival
   href: metadataforarchival.md
 - name: Metric
@@ -320,6 +388,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflow_datalakefolder
   href: msdyn_dataflow_datalakefolder.md
+- name: msdyn_DataflowConnectionReference
+  href: msdyn_dataflowconnectionreference.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_DataflowTemplate
@@ -330,6 +400,10 @@
   href: msdyn_dmsrequest.md
 - name: msdyn_dmsrequeststatus
   href: msdyn_dmsrequeststatus.md
+- name: msdyn_dmssyncrequest
+  href: msdyn_dmssyncrequest.md
+- name: msdyn_dmssyncstatus
+  href: msdyn_dmssyncstatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
@@ -374,12 +448,16 @@
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_mobileapp
   href: msdyn_mobileapp.md
+- name: msdyn_modulerundetail
+  href: msdyn_modulerundetail.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
 - name: msdyn_pmanalysishistory
   href: msdyn_pmanalysishistory.md
+- name: msdyn_pmbusinessruleautomationconfig
+  href: msdyn_pmbusinessruleautomationconfig.md
 - name: msdyn_pmcalendar
   href: msdyn_pmcalendar.md
 - name: msdyn_pmcalendarversion
@@ -408,14 +486,6 @@
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
-- name: msdyn_solutioncomponentcountdatasource
-  href: msdyn_solutioncomponentcountdatasource.md
-- name: msdyn_solutioncomponentcountsummary
-  href: msdyn_solutioncomponentcountsummary.md
-- name: msdyn_solutioncomponentdatasource
-  href: msdyn_solutioncomponentdatasource.md
-- name: msdyn_solutioncomponentsummary
-  href: msdyn_solutioncomponentsummary.md
 - name: msdyn_solutionhealthrule
   href: msdyn_solutionhealthrule.md
 - name: msdyn_solutionhealthruleargument
@@ -426,6 +496,8 @@
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
   href: msdyn_solutionhistorydatasource.md
+- name: msdyn_timelinepin
+  href: msdyn_timelinepin.md
 - name: msdyn_tour
   href: msdyn_tour.md
 - name: msdyn_virtualtablecolumncandidate
@@ -440,10 +512,72 @@
   href: mspcat_catalogsubmissionfiles.md
 - name: mspcat_PackageStore
   href: mspcat_packagestore.md
+- name: mspp_adplacement
+  href: mspp_adplacement.md
+- name: mspp_columnpermission
+  href: mspp_columnpermission.md
+- name: mspp_columnpermissionprofile
+  href: mspp_columnpermissionprofile.md
+- name: mspp_contentsnippet
+  href: mspp_contentsnippet.md
+- name: mspp_entityform
+  href: mspp_entityform.md
+- name: mspp_entityformmetadata
+  href: mspp_entityformmetadata.md
+- name: mspp_entitylist
+  href: mspp_entitylist.md
+- name: mspp_entitypermission
+  href: mspp_entitypermission.md
+- name: mspp_pagetemplate
+  href: mspp_pagetemplate.md
+- name: mspp_pollplacement
+  href: mspp_pollplacement.md
+- name: mspp_powerpagescoreentityds
+  href: mspp_powerpagescoreentityds.md
+- name: mspp_publishingstate
+  href: mspp_publishingstate.md
+- name: mspp_publishingstatetransitionrule
+  href: mspp_publishingstatetransitionrule.md
+- name: mspp_redirect
+  href: mspp_redirect.md
+- name: mspp_shortcut
+  href: mspp_shortcut.md
+- name: mspp_sitemarker
+  href: mspp_sitemarker.md
+- name: mspp_sitesetting
+  href: mspp_sitesetting.md
+- name: mspp_webfile
+  href: mspp_webfile.md
+- name: mspp_webform
+  href: mspp_webform.md
+- name: mspp_webformmetadata
+  href: mspp_webformmetadata.md
+- name: mspp_webformstep
+  href: mspp_webformstep.md
+- name: mspp_weblink
+  href: mspp_weblink.md
+- name: mspp_weblinkset
+  href: mspp_weblinkset.md
+- name: mspp_webpage
+  href: mspp_webpage.md
+- name: mspp_webpageaccesscontrolrule
+  href: mspp_webpageaccesscontrolrule.md
+- name: mspp_webrole
+  href: mspp_webrole.md
+- name: mspp_website
+  href: mspp_website.md
+- name: mspp_websiteaccess
+  href: mspp_websiteaccess.md
+- name: mspp_websitelanguage
+  href: mspp_websitelanguage.md
+- name: mspp_webtemplate
+  href: mspp_webtemplate.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
   href: newprocess.md
+- name: nlsqregistration
+  href: nlsqregistration.md
 - name: OfficeGraphDocument
   href: officegraphdocument.md
 - name: Organization
@@ -490,12 +624,24 @@
   href: postlike.md
 - name: powerbidataset
   href: powerbidataset.md
+- name: powerbidatasetapdx
+  href: powerbidatasetapdx.md
 - name: powerbimashupparameter
   href: powerbimashupparameter.md
 - name: powerbireport
   href: powerbireport.md
+- name: powerbireportapdx
+  href: powerbireportapdx.md
 - name: powerfxrule
   href: powerfxrule.md
+- name: powerpagecomponent
+  href: powerpagecomponent.md
+- name: powerpagesite
+  href: powerpagesite.md
+- name: powerpagesitelanguage
+  href: powerpagesitelanguage.md
+- name: powerpagesitepublished
+  href: powerpagesitepublished.md
 - name: PrincipalObjectAttributeAccess
   href: principalobjectattributeaccess.md
 - name: Privilege
@@ -530,6 +676,8 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: RecycleBinConfig
+  href: recyclebinconfig.md
 - name: Relationship
   href: relationship.md
 - name: RelationshipAttribute
@@ -592,6 +740,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspaceaccesstoken
+  href: sharedworkspaceaccesstoken.md
 - name: sharedworkspacepool
   href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
@@ -628,6 +778,8 @@
   href: stagedentity.md
 - name: StagedEntityAttribute
   href: stagedentityattribute.md
+- name: StagedMetadataAsyncOperation
+  href: stagedmetadataasyncoperation.md
 - name: StageSolutionUpload
   href: stagesolutionupload.md
 - name: Subject

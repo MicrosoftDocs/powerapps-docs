@@ -28,14 +28,10 @@ The execution context object provides the following methods.
 |[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
 |[setSharedVariable](executioncontext/setSharedVariable.md)|Sets the value of a variable to be used by a handler after the current handler completes.|
 
-### Related topics
+### Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
-[Save event arguments](save-event-arguments.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
+[Save event arguments](save-event-arguments.md)   
 [Understand Client API object model](../understand-clientapi-object-model.md) 
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

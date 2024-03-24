@@ -35,7 +35,7 @@ For existing records on the *many* side of a one-to-many or many-to-one relation
 
 For example, to associate a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to an <xref:Microsoft.Dynamics.CRM.account?text=account> using the `parentcustomerid_account` single-valued navigation property:
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
@@ -50,7 +50,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -64,7 +64,7 @@ As described in [Associate table rows on create](create-entity-web-api.md#associ
 
 If you want to disassociate, you can simply set the value to null.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
@@ -79,7 +79,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -89,7 +89,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83
 
 When disassociating in this manner, you don't need to include the `@odata.bind` annotation. You can simply use the name of the single-valued navigation property:
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
@@ -104,7 +104,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -120,7 +120,7 @@ There are other ways to achieve the same results described above with single-val
 
 You can use the following `PUT` request to set the value of the `parentcustomerid_account` single-valued navigation property:
 
-**Request**
+**Request:**
 
 ```http
 PUT [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)/parentcustomerid_account/$ref HTTP/1.1
@@ -134,7 +134,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -146,7 +146,7 @@ OData-Version: 4.0
 
 To remove the reference, you can also use this `DELETE` request:
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)/parentcustomerid_account/$ref HTTP/1.1
@@ -156,7 +156,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -171,7 +171,7 @@ With OData, both sides of a many-to-many relationship will have collection-value
 
 The following example shows how to add a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection which is part of a one-to-many relationship.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref HTTP/1.1
@@ -185,7 +185,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -194,7 +194,7 @@ OData-Version: 4.0
 
 The following example shows how to add a <xref:Microsoft.Dynamics.CRM.role?text=role> record to the <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser> `systemuserroles_association` collection which is a many-to-many relationship.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/systemusers(34dcbaf5-f718-ed11-b83e-00224837179f)/systemuserroles_association/$ref HTTP/1.1
@@ -208,7 +208,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -219,7 +219,7 @@ OData-Version: 4.0
 
 The following example shows how to remove a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection where the contact `contactid` value is `cf9eaaef-f718-ed11-b83e-00224837179f`.
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts(cf9eaaef-f718-ed11-b83e-00224837179f)/$ref HTTP/1.1
@@ -229,7 +229,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -238,7 +238,7 @@ OData-Version: 4.0
 
 The following also works:
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref?$id=[Organization URI]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
@@ -248,7 +248,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -268,7 +268,7 @@ The following example shows how to associate multiple existing [ActivityParty](.
 > [!NOTE]
 > Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType>.
 
-**Request**
+**Request:**
 
 ```HTTP
 PUT [Organization URI]/api/data/v9.0/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
@@ -293,7 +293,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```HTTP
 HTTP/1.1 204 No Content  

@@ -1,8 +1,8 @@
 ---
 title: property-dependency Element | Microsoft Docs
 description: A property dependency in the property-dependencies node. Defines dependency between two properties.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 11/30/2022
 ms.reviewer: jdaly
 ms.topic: reference

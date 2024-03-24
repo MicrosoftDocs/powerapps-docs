@@ -17,7 +17,10 @@ contributors:
 
 This sample shows how to write out all table definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message.
 
-The following sample creates a new file at `\Entities\bin\Debug\EntityInfo.xml`. You can open this file in Office Excel to see a tabular report. You may need this information to discover the entity type code for a custom table for use in reports. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpEntityMetadata).
+The following sample creates a new file at `\Entities\bin\Debug\EntityInfo.xml`. You can open this file in Office Excel to see a tabular report. You may need this information to discover the entity type code for a custom table for use in reports.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Dump table definitions to a file sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpEntityMetadata)
 
 ## How to run this sample
 

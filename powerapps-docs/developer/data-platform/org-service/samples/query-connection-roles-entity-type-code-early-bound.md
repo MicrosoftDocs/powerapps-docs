@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Query connection roles by entity type code (early bound)
 
-This sample shows how to use a query to find a connection role for an account table by specifying an entity type code. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryRoleByEntityType).
+This sample shows how to use a query to find a connection role for an account table by specifying an entity type code.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Query connection roles by entity type code (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryRoleByEntityType)
 
 ## How to run this sample
 

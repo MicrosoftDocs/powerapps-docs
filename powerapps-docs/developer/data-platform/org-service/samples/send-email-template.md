@@ -17,7 +17,10 @@ contributors:
 
 <!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email-template -->
 
-This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SendEmailUsingTemp).
+This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Send an email using a template sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SendEmailUsingTemp)
 
 ## How to run this sample
 

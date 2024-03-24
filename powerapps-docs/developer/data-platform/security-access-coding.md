@@ -114,7 +114,7 @@ var canAppendTo = rights.HasFlag(AccessRights.AppendToAccess);
 
 The following example shows how to use the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to retrieve the access rights that a user has for an account record. The [RetrievePrincipalAccessResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse) provides the details of the users rights using [AccessRights EnumType](xref:Microsoft.Dynamics.CRM.AccessRights).
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(e41ac31a-dcdf-ed11-a7c7-000d3a993550)'}
@@ -124,7 +124,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -180,7 +180,7 @@ static PrincipalAccess[] GetSharedPrincipalsAndAccess(
 
 The following example uses the [RetrieveSharedPrincipalsAndAccess Function](xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess) and the [RetrieveSharedPrincipalsAndAccessResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccessResponse) returned provides an array of [PrincipalAccess ComplexType](xref:Microsoft.Dynamics.CRM.PrincipalAccess) with details about the principals and the access they have because the record was shared with them.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RetrieveSharedPrincipalsAndAccess(Target=@p1)?@p1={'@odata.id':'accounts(86914942-34cb-ed11-b596-0022481d68cd)'}
@@ -190,7 +190,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -323,7 +323,7 @@ More information:
 
 This example tests whether a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the [RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse)`.RolePrivileges` collection contains [RolePrivilege ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilege) data, the user has the privilege.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers(00000000-0000-0000-0000-000000000001)/Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName(PrivilegeName='prvReadAuditSummary')
@@ -333,7 +333,7 @@ If-None-Match: null
 Prefer: odata.include-annotations="*"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -410,7 +410,7 @@ More information: [Retrieve with related rows](org-service/entity-operations-ret
 
 The following example returns the privileges associated with a role with a given `roleid`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/roles(<roleid>)/roleprivileges_association?$select=name&$orderby=name
@@ -420,7 +420,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

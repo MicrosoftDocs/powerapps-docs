@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -220,7 +220,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,mspcat_catalogsubmissionfiles,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,adx_invitation,adx_inviteredemption,adx_portalcomment,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,mspcat_catalogsubmissionfiles,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -909,6 +909,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
+- [adx_invitation_Annotations](#BKMK_adx_invitation_Annotations)
+- [adx_inviteredemption_Annotations](#BKMK_adx_inviteredemption_Annotations)
+- [adx_portalcomment_Annotations](#BKMK_adx_portalcomment_Annotations)
 - [mspcat_catalogsubmissionfiles_Annotations](#BKMK_mspcat_catalogsubmissionfiles_Annotations)
 
 
@@ -1044,9 +1047,27 @@ See the [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#B
 
 See the [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
 
+### <a name="BKMK_adx_invitation_Annotations"></a> adx_invitation_Annotations
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Annotations](adx_invitation.md#BKMK_adx_invitation_Annotations) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_Annotations"></a> adx_inviteredemption_Annotations
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_Annotations](adx_inviteredemption.md#BKMK_adx_inviteredemption_Annotations) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_Annotations"></a> adx_portalcomment_Annotations
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_Annotations](adx_portalcomment.md#BKMK_adx_portalcomment_Annotations) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_Annotations"></a> mspcat_catalogsubmissionfiles_Annotations
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: Catalog in Power Platform Packaging Solution
 
 See the [mspcat_catalogsubmissionfiles_Annotations](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_Annotations) one-to-many relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
 

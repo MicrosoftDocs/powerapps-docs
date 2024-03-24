@@ -14,8 +14,6 @@ contributors:
 ---
 # removeTabStateChange (Client API reference)
 
-
-
 [!INCLUDE[./includes/removeTabStateChange-description.md](./includes/removeTabStateChange-description.md)].
 
 ## Syntax
@@ -26,15 +24,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed from the [TabStateChange](../events/tabstatechange.md) event.|
+|`myFunction`|function reference|Yes|The function to be removed from the [TabStateChange](../events/tabstatechange.md) event.|
 
-### Related topics
+### Related articles
 
-[formContext.ui](../formContext-ui.md)
-
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

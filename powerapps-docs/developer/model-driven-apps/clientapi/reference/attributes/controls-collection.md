@@ -24,7 +24,7 @@ When a form displays a business process flow control in the header, additional c
 
 When performing actions on controls that are tied to a column, you should always consider that the control may be included on the page more than once and you should generally perform the same actions for each control for the column. You can do this by looping through the column controls collection and perform the actions on each control.
 
-### Related topics
+### Related articles
 
 [Columns (Client API reference)](../attributes.md)
 

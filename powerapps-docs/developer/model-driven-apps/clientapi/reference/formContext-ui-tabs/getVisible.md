@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.getVisible (Client API reference)
 
-
-
 [!INCLUDE[./includes/getVisible-description.md](./includes/getVisible-description.md)]
 
 ## Syntax
@@ -28,12 +26,8 @@ contributors:
 
 **Description**: true if the tab is visible; false otherwise.
 
-### Related topics
+### Related articles
 
 [setVisible](setVisible.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

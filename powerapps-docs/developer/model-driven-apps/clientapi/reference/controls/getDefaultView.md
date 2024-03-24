@@ -31,7 +31,7 @@ Lookup
 **Description**: ID of the default view. 
 
 
-### Related topics
+### Related articles
 
 [setDefaultView](setDefaultView.md)
 

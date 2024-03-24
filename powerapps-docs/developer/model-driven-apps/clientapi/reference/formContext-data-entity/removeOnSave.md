@@ -27,14 +27,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed for the **OnSave** event.
+|`myFunction`|function reference|Yes|The function to be removed for the **OnSave** event.
 
-### Related topics
+### Related articles
 
-[addOnSave](addOnSave.md)
-
+[addOnSave](addOnSave.md)   
 [Form OnSave event](../events/form-onsave.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -9,7 +9,7 @@ ms.date: 9/14/2020
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

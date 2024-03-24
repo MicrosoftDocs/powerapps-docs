@@ -175,6 +175,10 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** No.
 
+**Q:** The customize form can support folders in SharePoint lists when creating new items?
+
+**A:** No. Items is created in root of a target SharePoint lists.
+
 ### Manage your custom form
 
 **Q:** How can I easily share my form with others?
@@ -256,5 +260,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 - [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
 - [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
 - [Understand Power Platform environments](/power-platform/admin/environments-overview)
+- [SharePoint custom forms with Power Apps](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 

@@ -1,8 +1,8 @@
 ---
-title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
-description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps"
+title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps | MicrosoftDocs"
+description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
 ms.custom: ""
-ms.date: 06/21/2023
+ms.date: 03/13/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -38,7 +38,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 > [!NOTE]
 >
-> - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
+> - The storage account must be created in the same Microsoft Entra tenant as your Power Apps tenant.
 > - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
 > - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
 > - You must have **Reader** role access to the resource group with the storage account.  
@@ -59,17 +59,17 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
    ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
-You can follow the steps above to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
+You can follow the steps in this article to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
+> The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an out-of-the-box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
+> 
 > The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
-> Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
-More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
 ## Manage table data to the data lake
 
-After you have set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
+After you set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
 - On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
@@ -78,12 +78,12 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
 ## Monitor your Azure Synapse Link
 
-After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
+After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
    ![Azure Synapse Link monitoring](media/monitoring.png "Azure Synapse Link monitoring")
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- There are different stages the sync status circulates through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync is **Completed**, there's a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
 - The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
 - The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
@@ -99,7 +99,7 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 ## Relinking an Azure Synapse Link
 
-If you deleted the file system when unlinking, follow the steps above to relink the same data lake. If you did not delete the file system when unlinking, you must clear the data to relink:
+If you deleted the file system when unlinking, follow the steps above to relink the same data lake. If you didn't delete the file system when unlinking, you must clear the data to relink:
 
 1. Go to the Azure Data Lake.
 
@@ -118,11 +118,11 @@ The model.json file, along with its name and version, provides a list of tables 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
    ![Table data in the data lake.](media/entity-data-in-lake.png "Table data in the data lake")
    
-## Link a Synapse workspace to an existing Synapse Link profile with data lake only
+## Link a Synapse workspace to an existing Azure Synapse Link profile with data lake only
 
 1. In web browsers address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
 
-2. Select an existing profile from the Synapse Link homepage and click extended option
+2. Select an existing profile from the Azure Synapse Link area, and then select extended option.
 
 3. Select **Link to Azure Synapse Analytics Workspace** and allow a few minutes for everything to be linked.
 

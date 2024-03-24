@@ -1,7 +1,7 @@
 ---
 title: "View (SavedQuery)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the View (SavedQuery)  table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -76,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [QueryAppUsage](#BKMK_QueryAppUsage)
 - [QueryType](#BKMK_QueryType)
 - [ReturnedTypeCode](#BKMK_ReturnedTypeCode)
+- [RoleDisplayConditionsXml](#BKMK_RoleDisplayConditionsXml)
 - [SavedQueryId](#BKMK_SavedQueryId)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
@@ -358,6 +359,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|returnedtypecode|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_RoleDisplayConditionsXml"></a> RoleDisplayConditionsXml
+
+**Added by**: RoleBasedAccessControl Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the role display conditions for the SavedQuery.|
+|DisplayName|Role display conditions for the SavedQuery|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|roledisplayconditionsxml|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_SavedQueryId"></a> SavedQueryId

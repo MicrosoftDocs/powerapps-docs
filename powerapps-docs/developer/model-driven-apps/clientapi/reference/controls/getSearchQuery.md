@@ -35,7 +35,7 @@ var searchQuery = kbSearchControl.getSearchQuery();
 
 **Description**: The text of the search query.
 
-### Related topics
+### Related articles
 
 [setSearchQuery](setSearchQuery.md)
 

@@ -5,11 +5,11 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/07/2023
+ms.date: 01/17/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -19,6 +19,8 @@ searchScope:
   - D365-UI-*
   - Power Platform
   - Power Apps
+contributors:
+- adrianorth 
 ---
 # Track your progress with dashboards and charts
 
@@ -40,15 +42,14 @@ There are two types of dashboards, **System Dashboards** and **My Dashboards**.
 Legend: 
 1. **My Dashboards**: Personal dashboards that can only be seen by the user who creates them. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
 
-2. **System Dashboards**: Created by your administrator. By default, these dashboards are visible to all users. 
+2. **System Dashboards**: Created by your administrator. By default, these dashboards are visible to all users.
 
-
+> [!NOTE]
+> When a personal dashboard is shared, the owner of the personal dashboard needs to explicitly share any contained, personal charts or personal views because they have separate permissions. 
 
 ## Expand, refresh, and view rows
 
-
 ![Expand chart view.](media/chart_more_button.png "Expand chart view")
-
 
 Legend:
 

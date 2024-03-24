@@ -71,7 +71,7 @@ In this article, the sample app used for notifications is built from the default
 
 | Name | Type | Description |
 | --- | --- | --- |
-| recipients |String array, required |A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Azure Active Directory</li></ul> |
+| recipients |String array, required |A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Microsoft Entra ID</li></ul> |
 | message |String, required |The message body of the push notification. |
 | openApp |Boolean, optional |Whether to open the app when the user taps the push notification. |
 | params |Parameters, optional |Key-value parameters to pass with the notification. These can be further processed in the app to open a specific page and load a specific state. |
@@ -94,7 +94,7 @@ Send a notification that opens an app and passes along specific parameters.
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["email1@contoso.com", "email2@contoso.com"],
-		message: "message in the notif toast",
+		message: "message in the notification toast",
 		params: Table({key:"notificationKey", value:"The value for notificationKey"}),
 		openApp: true
  	}

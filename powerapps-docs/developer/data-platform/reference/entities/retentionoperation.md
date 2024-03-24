@@ -1,7 +1,7 @@
 ---
 title: "retentionoperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the retentionoperation table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
+Retention policy execution details.
 
 **Added by**: Retention Base Components Solution
 
@@ -27,7 +27,7 @@ search.audienceType:
 |-|-|-|
 |Assign|PATCH /retentionoperations(*retentionoperationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /retentionoperations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /retentionoperations(*retentionoperationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ search.audienceType:
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /retentionoperations(*retentionoperationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /retentionoperations(*retentionoperationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AsyncOperationId](#BKMK_AsyncOperationId)
 - [Criteria](#BKMK_Criteria)
 - [EndTime](#BKMK_EndTime)
+- [FailedCount](#BKMK_FailedCount)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LastMarkedVersionNumber](#BKMK_LastMarkedVersionNumber)
 - [Name](#BKMK_Name)
@@ -89,7 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Addintional details.|
 |DisplayName|AdditionalDetails|
 |Format|Text|
 |IsLocalizable|False|
@@ -105,7 +106,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only.|
 |DisplayName|AsyncOperationId|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -121,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Fetch XML format criteria used to select records for retention.|
 |DisplayName|Criteria|
 |Format|Text|
 |IsLocalizable|False|
@@ -139,7 +140,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description||
+|Description|Endtime of the retention operation.|
 |DisplayName|EndTime|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -147,6 +148,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|endtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_FailedCount"></a> FailedCount
+
+|Property|Value|
+|--------|-----|
+|Description|Total failed records.|
+|DisplayName|FailedCount|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|failedcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -170,7 +187,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Last marked version number of the retained records.|
 |DisplayName|LastMarkedVersionNumber|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -185,7 +202,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the retention operation.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -248,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Pagination criteria to process next page records.|
 |DisplayName|PagingCookie|
 |Format|Text|
 |IsLocalizable|False|
@@ -264,7 +281,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Identifier for retention config.|
 |DisplayName|RetentionConfigId|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -278,7 +295,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Total retained records.|
 |DisplayName|RetentionCount|
 |Format|None|
 |IsValidForForm|True|
@@ -294,8 +311,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|RetentionOperation|
+|Description|Unique identifier for execution instance.|
+|DisplayName|RetentionOperationId|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -308,7 +325,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Table name on which retention was executed.|
 |DisplayName|RootEntityLogicalName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -325,7 +342,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description||
+|Description|Start time of the retention operation.|
 |DisplayName|StartTime|
 |Format|DateAndTime|
 |IsValidForForm|True|

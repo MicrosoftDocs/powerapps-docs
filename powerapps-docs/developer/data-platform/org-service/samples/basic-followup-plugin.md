@@ -17,7 +17,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to write a simple plug-in that creates a follow-up activity. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin).
+This sample shows how to write a simple plug-in that creates a follow-up activity.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create a basic plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin)
 
 ## How to run this sample
 

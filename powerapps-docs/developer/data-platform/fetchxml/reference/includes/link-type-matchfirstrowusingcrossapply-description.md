@@ -1,0 +1,1 @@
+A variant of `inner` that can provide performance benefits. Use this type when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results aren't necessary. [Learn more about matchfirstrowusingcrossapply](../../join-tables.md#use-matchfirstrowusingcrossapply-link-type)

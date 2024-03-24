@@ -5,7 +5,7 @@ author: sericks
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/07/2023
+ms.date: 11/27/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -73,10 +73,10 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >   - The control does not have a class property.
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
->   - The column's metadata `ValidForUpdate` is False. 
 >   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
 >   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
->   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
+>   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed.
+>   - The column is of type `Owner` (example: `ownerid`).
 
 
 

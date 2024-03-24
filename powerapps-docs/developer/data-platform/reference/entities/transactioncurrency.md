@@ -1,7 +1,7 @@
 ---
 title: "Currency (TransactionCurrency)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Currency (TransactionCurrency)  table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -643,6 +643,8 @@ Listed by **SchemaName**.
 - [TransactionCurrency_recommendeddocument](#BKMK_TransactionCurrency_recommendeddocument)
 - [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
 - [chat_transactioncurrency_transactioncurrencyid](#BKMK_chat_transactioncurrency_transactioncurrencyid)
+- [adx_inviteredemption_transactioncurrency_transactioncurrencyid](#BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid)
+- [adx_portalcomment_transactioncurrency_transactioncurrencyid](#BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid)
 
 
 ### <a name="BKMK_TransactionCurrency_Goal"></a> TransactionCurrency_Goal
@@ -1515,6 +1517,40 @@ Same as the [chat_transactioncurrency_transactioncurrencyid](chat.md#BKMK_chat_t
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|chat_transactioncurrency_transactioncurrencyid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid"></a> adx_inviteredemption_transactioncurrency_transactioncurrencyid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_inviteredemption_transactioncurrency_transactioncurrencyid](adx_inviteredemption.md#BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|transactioncurrencyid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_inviteredemption_transactioncurrency_transactioncurrencyid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid"></a> adx_portalcomment_transactioncurrency_transactioncurrencyid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_portalcomment_transactioncurrency_transactioncurrencyid](adx_portalcomment.md#BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|transactioncurrencyid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_portalcomment_transactioncurrency_transactioncurrencyid|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

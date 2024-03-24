@@ -1,8 +1,8 @@
 ---
-title: Paging | Microsoft Docs
+title: Paging (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to work with paging.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 06/14/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -99,7 +99,7 @@ In case when value is not available `-1` is sent.
 > `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
 > Executing any of them will trigger `updateView` on the control with newly fetched results.
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)<br/>

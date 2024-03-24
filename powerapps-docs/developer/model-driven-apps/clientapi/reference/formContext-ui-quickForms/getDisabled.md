@@ -14,8 +14,6 @@ contributors:
 ---
 # quickViewControl.getDisabled (Client API reference)
 
-
-
 [!INCLUDE[./includes/getDisabled-description.md](./includes/getDisabled-description.md)]
 
 ## Syntax
@@ -28,7 +26,7 @@ contributors:
 
 **Description**: true if disabled; false otherwise. 
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
 

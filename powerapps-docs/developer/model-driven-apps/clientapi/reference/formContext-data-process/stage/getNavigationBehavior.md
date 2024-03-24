@@ -26,6 +26,7 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
     return true|false;
 }
 ```
+
 [!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Returns
@@ -58,7 +59,7 @@ function sampleFunction(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
 

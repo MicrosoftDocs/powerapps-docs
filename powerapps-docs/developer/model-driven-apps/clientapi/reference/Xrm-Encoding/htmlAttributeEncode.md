@@ -24,9 +24,9 @@ contributors:
 
 ## Parameters
 
-|Parameter Name        | Type           | Required  |Description  |
+|Parameter Name| Type| Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg        | String           | Required  |String to be encoded.  |
+|`arg`| String| Required  |String to be encoded.  |
 
 
 ## Return Value
@@ -35,7 +35,7 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
+## Related articles
 [htmEncode](htmlEncode.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

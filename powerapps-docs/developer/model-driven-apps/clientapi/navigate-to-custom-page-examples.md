@@ -281,9 +281,7 @@ Editable grid can be used to trigger [OnRecordSelect](reference/events/grid-onre
 
 ## Related articles
 
-[Model-driven app custom page overview](../../../maker/model-driven-apps/model-app-page-overview.md)
-
-[Add a custom page to your model-driven app](../../../maker/model-driven-apps/add-page-to-model-app.md)
-
+[Model-driven app custom page overview](../../../maker/model-driven-apps/model-app-page-overview.md)   
+[Add a custom page to your model-driven app](../../../maker/model-driven-apps/add-page-to-model-app.md)   
 [navigateTo (client API reference)](reference/xrm-navigation/navigateto.md)
 

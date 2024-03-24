@@ -1,63 +1,93 @@
 ---
-title: Manage cards
-description: This article will help you use security roles to manage cards and explains how to delete a record.
-ms.date: 11/17/2022
+title: Manage and create cards in solutions
+description: This article helps you manage cards in solutions.
+ms.date: 08/08/2023
 ms.topic: overview
-author: sericks007
-ms.author: sericks
-ms.reviewer: 
+author: cotaylor
+ms.author: cotaylor
+ms.reviewer: mkaur
 ms.custom: 
 ms.collection: 
 
 ---
 
-# Manage cards
+# Manage cards in solutions
 
-This article will help you use security roles to manage cards and explains how to delete a record.
+Create a card from within a solution if, for example, you want to deploy the card to a different environment. Solutions can contain not only cards but also customized tables, choices, and other components. You can quickly customize an environment in various ways by creating cards and other components from within a solution, exporting the solution, and then importing it into another environment. For more information, see [Solutions overview](../../maker/data-platform/solutions-overview.md).
 
-## Manage cards with security roles
 
-This section shows you how to manage cards using security roles.
+## Create a solution
 
-### Change who can create cards
+To package cards in a solution, you need to start by creating a solution. You can skip this step if you already have a solution in which you want to link your card to. For more information, see [Create solution](../../maker/data-platform/create-solution.md).
 
-Cards are stored as rows in Dataverse within the **Card** table. Administrators can use [security roles to control who can create, read, and update cards](/power-platform/admin/wp-security-cds#tablerecord-ownership).
 
-For example, if the user is only assigned to a security role that does not have permission to create rows in the **Card** table, then the user won't be able to create cards.
+## Create a card in a solution
 
-Note that a user will still be able to receive and use cards sent in Teams, regardless of the security role assigned to the user, as those cards are accessed by the Cards for Power Apps service.
+You can create a blank card from within a solution.
 
-### Disable cards for an environment
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. If necessary, switch to the environment that contains the solution in which you want to create a card.
+1. In the left navigation bar, select Solutions.
 
-The Cards for Power Apps service uses the security role called **Cards Role** to communicate with Dataverse. By removing permissions for the **Cards Role** in an environment to create, read, or update the **Card** table, no one will be able to use cards within that environment.
+    :::image type="content" source="../media/manage-cards/solution-tab.PNG" alt-text="Screenshot of solution tab.":::
 
-### Cards security roles
+1. In the list of solutions, select the solution in which you want to create a card.
+1. In the banner under the title bar, select New > Card.
 
-- **Cards Basic Role** can be used to grant a user access to view, create, and use cards in that environment.
+    :::image type="content" source="../media/manage-cards/solution-new-card.PNG" alt-text="Screenshot of menu to create new card.":::
 
-   Other security roles can be modified to view, create, and use cards by changing security role access to the **Card** table in Dataverse.
+1. Type the name and optionally the description of your card and select Create
 
-- **Cards Role** is used internally by the Cards for Power Apps service to communicate with Dataverse.
+    :::image type="content" source="../media/manage-cards/create-card-modal.PNG" alt-text="Screenshot of dialog to create new card.":::
 
-## Manage cards with DLP policies
+1. Create your card, save your changes, then select Back to return to your solution.
 
-The **Cards for Power Apps** connector is used to automatically send cards via Power Automate. [DLP policies](/power-platform/admin/wp-data-loss-prevention) enforce rules for which connectors can be used together with other connectors.
+    :::image type="content" source="../media/manage-cards/card-designer.PNG" alt-text="Screenshot of card designer.":::
 
-Administrators can use DLP policies to determine which connectors can be used in flows that send cards, for example if both the MSN Weather connector and the Cards for Power Apps connector are classified as **Business**, then makers can send daily status cards with the weather.
+1. Your new card appears in the list of components for that solution. If you save any changes to your card, they're reflected in the version that's in the solution.
+1. If your card has any dependencies, such as Dataverse tables, from the commands menu, select Advanced > Add required objects. You can repeat this step anytime you add more required objects to your card.
 
-## Delete a card
+    :::image type="content" source="../media/manage-cards/add-required-objects.PNG" alt-text="Screenshot of adding required objects of card.":::
 
-This section shows you how to delete a card.
+1. All required objects of your card appear in the list of components for that solution.
 
-### Delete a card as the owner
+> [!NOTE]
+> If you choose to manage the required objects of your card in separate solutions, you must ensure they're imported into your target environment prior to importing the solution containing your card.
 
-1. Sign in to Power Apps.
-1. Select **Cards** from the left pane.
-1. Select the card to be deleted.
-1. Select **Delete** in the command bar.
 
-   :::image type="content" source="../media/manage-cards/delete-a-card.PNG" alt-text="Screenshot of how to delete a card.":::
+## Add an existing card to a solution
 
-### Delete a card as the administrator
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. If necessary, switch to the environment that contains the solution in which you want to create a card.
+1. In the left navigation bar, select Solutions.
 
-If the owner of an app is unavailable, it is currently not possible for an administrator, such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin to delete a card. We're working on enabling this capability.
+    :::image type="content" source="../media/manage-cards/solution-tab.PNG" alt-text="Screenshot of solution tab.":::
+
+1. In the list of solutions, select the solution in which you want to add a card to.
+1. In the banner under the title bar, select Add existing > Card
+
+    :::image type="content" source="../media/manage-cards/add-existing-card.PNG" alt-text="Screenshot of menu to add existing card.":::
+
+1. Select the card you want to add to your solution and select Add
+
+    :::image type="content" source="../media/manage-cards/select-existing-card.PNG" alt-text="Screenshot of selecting existing card to add.":::
+
+1. Your existing card appears in the list of components for that solution along with any required tables of that card. If you save any changes to your card, they're reflected in the version that's in the solution. If you add more required tables, follow the steps in "Create a card in a solution" to add the new required objects of your card to your solution.
+
+## Add a Power Automate flow with the Cards for Power Apps connector to a solution
+
+A common way to send cards is by using a Power Automate flow. For more information, see [Send a card automatically with a flow](../send-a-card/send-card-with-flow.md).
+
+When creating a flow to send cards in a solution, it's important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To add any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, follow the instructions above for adding an existing card to add all the cards used in the flow. Any required tables will be automatically added.
+
+## Known Limitations
+
+### Dependencies for cards aren't displayed correctly in solution explorer
+
+When importing a solution containing a card that depends on tables not present in the same solution, the import fails if those tables aren't already present in the target environment. Similarly, removing a solution containing tables that a card depends on fails. The dependency viewer in these scenarios is not helpful at identifying which tables or cards is causing the operation to fail.
+
+Instead, to identify which cards depend on which tables when resolving dependency issues, start by opening the card designer. Next, navigate to Cards from the sidebar, select the card you're  interested in, and select Edit. Once the card designer opens, select Data from the sidebar to view the tables that card depends on.
+
+### Card dependencies for flows aren't represented in solution explorer
+
+When importing a solution containing a flow that depends on cards not present in the same solution, dependencies on cards will not be enforced. The solution maker must ensure that cards used in the flow are also present in the solution or the target environment to ensure the flow works correctly in the target environment.

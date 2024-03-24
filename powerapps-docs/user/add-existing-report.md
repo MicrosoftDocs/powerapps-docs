@@ -1,14 +1,14 @@
 ---
 title: Add a report from outside Power Apps| Microsoft Docs
-description: Add a report from outside Power Apps
-author: mduelae
+description: Add a report from outside Power Apps.
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/07/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -20,7 +20,7 @@ If you’ve created a custom report outside of the system, you can easily add it
 For information about how to create a custom report, see [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/get-started-writing-reports).
 
 1. From the left navigation pane, select the reports area. 
-2. On the command bar select **New**.
+2. On the command bar, select **New**.
   
    **Add a file created in another application**  
   

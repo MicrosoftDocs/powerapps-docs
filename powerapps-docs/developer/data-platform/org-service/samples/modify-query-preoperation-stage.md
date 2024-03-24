@@ -24,7 +24,8 @@ The approach described by this sample is different. Rather than filter tables af
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveMultipleAccountPreOperation).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Modify query in PreOperation stage sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveMultipleAccountPreOperation)
 
 ## How to run this sample
 

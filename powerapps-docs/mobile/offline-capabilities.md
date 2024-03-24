@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 07/26/2023
+ms.date: 12/21/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -10,8 +10,8 @@ ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 1
-ms.author: sericks
-author: sericks007
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer
@@ -90,11 +90,16 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 
 ## Limitations 
+- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records will fail. This number also includes hidden tables used for offline capabilities.
+- **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) are not supported in Mobile offline mode.
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
-- **Grids** - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
-
+- **Grids**
+    - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
+    - Primary image thumbnails aren't available for offline unless they were previously displayed online.
+    - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
+ 
 - **Views** aren't supported for the following tables in offline mode: 
 
      - Email
@@ -142,6 +147,10 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Appointments** - Appointments can be created or updated in Dataverse, but they're not sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
+- **Work order service tasks** - Work order service tasks created through *custom* code require msdyn_lineorder to be set to -1. An actual value will be automatically set after the next synchronization cycle.
+
+- **Quick find search** - When you search offline, the results might be different from online searches. Characters in your search terms must match exactly when searching offline, while online equivalent results might be found.
+
 ## Tips
 
 ### Mobile offline synchronization
@@ -156,7 +165,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
-- Mobile offline honors the mobile apps security model. It also supports the hierarchical security model. Field level security and attribute sharing aren't supported for offline mode.
+- Mobile offline honors the mobile apps security model and the hierarchical security model except the [field level security and field sharing](/power-platform/admin/field-level-security).
   
 
 ### Organization data filter 

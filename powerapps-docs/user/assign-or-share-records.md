@@ -1,15 +1,15 @@
 ---
 title: "Assign a row to someone else| MicrosoftDocs"
 description: How to reassign a row to someone else.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/10/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

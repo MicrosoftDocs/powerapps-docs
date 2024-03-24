@@ -1,0 +1,1 @@
+The logical name of the column in the parent element *to* match with the related table column specified in the `from` attribute.

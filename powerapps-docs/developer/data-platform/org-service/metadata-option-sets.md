@@ -255,7 +255,7 @@ if (retrieveAllOptionSetsResponse.OptionSetMetadata.Count() > 0)
 
 ## Delete a global choice
 
-The following code sample shows how to check whether a global choice is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (for the Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):
+The following code sample shows how to check whether a global choice is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (for the SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):
 
 ```csharp
 // Create the request to see which components have a dependency on the

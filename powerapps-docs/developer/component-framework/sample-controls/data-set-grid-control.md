@@ -2,8 +2,8 @@
 title: DataSet Grid component | Microsoft Docs
 description: This sample component shows how to change the user experience of interacting with the dataset.
 keywords:
-author: noazarur-microsoft
-ms.author: noazarur
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample

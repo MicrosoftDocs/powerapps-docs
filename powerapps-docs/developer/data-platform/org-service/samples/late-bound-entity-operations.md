@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Late-bound table operations
 
-This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound class. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/LateBoundEntityOperations).
+This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound class.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Late-bound table operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/LateBoundEntityOperations)
 
 ## How to run this sample
 

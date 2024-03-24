@@ -1,7 +1,7 @@
 ---
 title: "EnvironmentVariableDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Contains information about the settable variable: its type, default value, and e
 |-|-|-|
 |Assign|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /environmentvariabledefinitions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ Contains information about the settable variable: its type, default value, and e
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -1029,6 +1029,8 @@ Listed by **SchemaName**.
 - [environmentvariabledefinition_PrincipalObjectAttributeAccesses](#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
 - [environmentvariabledefinition_environmentvariablevalue](#BKMK_environmentvariabledefinition_environmentvariablevalue)
 - [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition)
+- [environmentvariabledefinition_credential_password](#BKMK_environmentvariabledefinition_credential_password)
+- [environmentvariabledefinition_credential_username](#BKMK_environmentvariabledefinition_credential_username)
 - [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
 
 
@@ -1196,6 +1198,40 @@ Same as the [envdefinition_envdefinition](environmentvariabledefinition.md#BKMK_
 |ReferencedEntityNavigationPropertyName|envdefinition_envdefinition|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_environmentvariabledefinition_credential_password"></a> environmentvariabledefinition_credential_password
+
+**Added by**: Power Automate Core Components Solution
+
+Same as the [environmentvariabledefinition_credential_password](credential.md#BKMK_environmentvariabledefinition_credential_password) many-to-one relationship for the [credential](credential.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|credential|
+|ReferencingAttribute|password|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_password|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_environmentvariabledefinition_credential_username"></a> environmentvariabledefinition_credential_username
+
+**Added by**: Power Automate Core Components Solution
+
+Same as the [environmentvariabledefinition_credential_username](credential.md#BKMK_environmentvariabledefinition_credential_username) many-to-one relationship for the [credential](credential.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|credential|
+|ReferencingAttribute|username|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_username|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_envvardefinition_powerbimashupparameter"></a> envvardefinition_powerbimashupparameter

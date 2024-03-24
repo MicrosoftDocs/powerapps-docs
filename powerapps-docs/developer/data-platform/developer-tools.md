@@ -25,7 +25,7 @@ The following describes available Dataverse SDK assemblies for .NET code develop
 
 Use these assemblies to interact with the Organization service and Discovery service.
 
-More information: [Use the Microsoft Dataverse Organization Service](org-service/overview.md)
+More information: [Use the Microsoft Dataverse SDK for .NET](org-service/overview.md)
 
 **NuGet Package**: [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/)
 
@@ -48,7 +48,7 @@ More information [Workflow extensions](workflow/workflow-extensions.md)
 
 ### Build windows client applications
 
-Use these assemblies to facilitate connecting to the Organization service and to build Microsoft Windows client applications.
+Use these assemblies to facilitate connecting with the SDK for .NET and to build Microsoft Windows client applications.
 
 More information [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
 

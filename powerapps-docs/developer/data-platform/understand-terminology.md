@@ -2,12 +2,11 @@
 title: "Developers: Understand terminology in Microsoft Dataverse | Microsoft Docs"
 description: "Developers: Understand terminology in Dataverse."
 suite: powerapps
-author: KumarVivek
-
+author: phecke
 ms.date: 03/04/2021
 ms.subservice: dataverse-developer
-ms.author: kvivek
-ms.reviewer: "pehecke"
+ms.author: pehecke
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 ---
@@ -29,9 +28,9 @@ The data structures that developers work with are exposed as entities, and the t
 |To...|Using...|Developers will...|
 |--|--|--|
 |Create a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST an instance of the [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata) to the `/EntityDefinitions` resource|
-|Create a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) and use the [CreateEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) to send this to the Organization service|
+|Create a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) and use the [CreateEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) when using the SDK for .NET.|
 |Create a row or record in a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST data defined as an a specific EntityType. You can find a list of these EntityTypes here: [Web API EntityType Reference](/dynamics365/customer-engagement/web-api/entitytypes)|
-|Create a row or record in a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [Entity Class](/dotnet/api/microsoft.xrm.sdk.entity) or a class that inherits from it (Account, Contact, etc.) and use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) to send this to the Organization service. A developer can find the information they need to use the Entity class in the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).|
+|Create a row or record in a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [Entity Class](/dotnet/api/microsoft.xrm.sdk.entity) or a class that inherits from it (Account, Contact, etc.) and use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) when using the SDK for .NET. A developer can find the information they need to use the Entity class in the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).|
 
 ## Terminology use depending on protocol or technology
 

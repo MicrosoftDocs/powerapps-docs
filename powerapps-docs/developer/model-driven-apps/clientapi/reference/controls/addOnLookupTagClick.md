@@ -29,16 +29,11 @@ Lookup
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to add to the **OnLookupTagClick** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function along with eventArgs that contain the tag value. More information: [OnLookupTagClick event](../events/onlookuptagclick.md).<br/><br/>You should use a reference to a named function rather than an anonymous function if you later want to remove the event handler.|
+|`myFunction`|Function reference|Yes|The function to add to the [OnLookupTagClick event](../events/onlookuptagclick.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function along with eventArgs that contain the tag value.<br/><br/>You should use a reference to a named function rather than an anonymous function if you later want to remove the event handler.|
 
-### Related topics
+### Related articles
  
-[removeOnLookupTagClick](removeOnLookupTagClick.md)
-
+[removeOnLookupTagClick](removeOnLookupTagClick.md)   
 [OnLookupTagClick event](../events/onlookuptagclick.md)
- 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -16,19 +16,19 @@ contributors:
 ---
 # Share a canvas app with guest users
 
-Canvas apps can be shared with guest users of an Azure Active Directory (Azure AD) tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
+Canvas apps can be shared with guest users of a Microsoft Entra tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
 
 Watch this video to learn how to share an app with guests:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
 
 ## Prerequisites
 
-- In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
 
   > [!NOTE]
-  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin. For more information about Azure AD B2B, go to [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b).
+  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin. For more information about Microsoft Entra B2B, go to [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b).
 
-- Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
+- Access to an account that can add guest users to an Microsoft Entra tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
 - To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
@@ -36,12 +36,17 @@ Watch this video to learn how to share an app with guests:
   - The home tenant of the guest user
 
 - To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
+  
+> [!NOTE]
+> Ensure that you perform the steps listed below on the **resource tenant**, and not on the **home tenant**.
+> - A **resource tenant** is where the app is expected to exist, and where the user is expected to create the app using Power Apps as a guest.
+> - A **home tenant** is where the user's account resides and authenticates against.
 
 ## Steps to grant guest access
 
-1. In Azure AD, select **New guest user**. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
+1. In Microsoft Entra ID, select **New guest user**. More information: [Quickstart: Add a new guest user in Microsoft Entra ID](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
 
-    ![Add a guest in Azure AD.](media/share-app/guest_access_doc_1.png "Add a guest in Azure AD")
+    ![Add a guest in Microsoft Entra ID.](media/share-app/guest_access_doc_1.png "Add a guest in Microsoft Entra ID")
 
 2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
 
@@ -62,7 +67,7 @@ Watch this video to learn how to share an app with guests:
 
     1. On the command bar, select **Share**.
 
-    1. Enter an email address for a guest user from an Azure AD tenant. More information: [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)
+    1. Enter an email address for a guest user from an Microsoft Entra tenant. More information: [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b)
 
        ![Share with guest.](media/share-app/guest_access_doc_2.png "Share with guest")
 
@@ -72,14 +77,15 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Considerations and limitations for guest access
 
-- Users accessing web experiences in different Azure Active Directory tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
+- Users accessing web experiences in different Microsoft Entra tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
 - Power Apps guest access uses Azure B2B.
-- Power Apps Mobile doesn't support authentication using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
+- Power Apps Mobile doesn't support authentication using [Microsoft Entra direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
 - Power Apps [included with Office](/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
   - In Azure national or sovereign clouds, they're recognized across tenants in guest scenarios. More information: [National clouds](/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
-  - Licenses are not recognized across tenants in difference Azure clouds. 
+  - Licenses are not recognized across tenants in difference Azure clouds.
+  - Not all connectors create connections in the resource tenant by default. 
 
 ## Frequently asked questions
 
@@ -94,7 +100,7 @@ The following table outlines a few core capability differences between Power Pag
 | Guest access in | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
 | Power Pages | Browser-only experience | Allows anonymous and authenticated access | Dataverse |
-| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any of approximately 150 out-of-the-box connectors and any custom connector  |
+| Canvas apps | Browser and mobile apps | Requires authentication via Microsoft Entra ID | Any of approximately 150 out-of-the-box connectors and any custom connector  |
 
 ### Can guests access customized forms in SharePoint?
 
@@ -134,139 +140,53 @@ For more information about pricing and the capabilities of various plans, go to 
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
+Any user who has used their mobile device to access a canvas app that was published in an Microsoft Entra tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
-The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Azure AD and Microsoft account users. You can  also create a deep link. For more information, see [Use deep links with Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile).
+The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Microsoft Entra and Microsoft account users. You can  also create a deep link. For more information, see [Use deep links with Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile).
 
-### Must a guest accept the Azure AD guest invitation before an app can be shared with them?
+### Must a guest accept the Microsoft Entra guest invitation before an app can be shared with them?
 
 No. If a guest opens an app that was shared with them before they accepted a guest invitation, the guest will be prompted to accept the invitation as part of the sign-in experience while opening the app.  
 
-### In which Azure AD tenant are connections created for a guest user?
+### In which Microsoft Entra tenant are connections created for a guest user?
 
-Connections for an app are always made in the context of the Azure AD tenant the app is associated with. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
+Connections for an app are always made in the context of the Microsoft Entra tenant the app is associated with. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
 
-### Can guests use Microsoft Graph via the Microsoft Security Graph connector or a custom connector by using Microsoft Graph APIs?
+### Can guests use Microsoft Graph with Power Apps?
 
-No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they're a guest.
+By default, Azure B2B users have limited permission to access information from Microsoft Graph. A user’s permission as recognized in Microsoft Graph determine what is returned to these users when using connectors such as Microsoft Security Graph, Office 365 Users, Office 365 Groups, and custom connectors using Microsoft Graph APIs. Learn more about Microsoft Graph permissions in [Default user permissions](/entra/fundamentals/users-default-permissions?context=graph%2Fcontext#restrict-guest-users-default-permissions) and [Working with users in Microsoft Graph](/graph/api/resources/users?#user-and-group-search-limitations-for-guest-users-in-organizations).  
 
 ### Which Intune policies apply to guests who are using my apps?
 
 Intune only applies the policies of a user's home tenant. For instance, if Lesa@Contoso.com shares an app with Wanda@Fabrikam.com, Intune continues to apply Fabrikam.com policies on Wanda's device, regardless of the apps Wanda runs.
 
-### Which connectors support guest access?
+### Which connectors create connections in the resource tenant by default?
 
-Connectors that don't use any type of Azure AD authentication will support guest access. The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
+Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
-| **Connector**                                     | **Supports guest access** [1]                                             |
+| **Connector**                                     | **Creates connection in resource tenant by default**                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
-| 10to8 Appointment Scheduling                      | No                                                                     |
-| Adobe Creative Cloud                              | No                                                                     |
-| Adobe Sign                                        | No                                                                     |
-| Asana                                             | No                                                                     |
-| AtBot Admin                                       | No                                                                     |
-| AtBot Logic                                       | No                                                                     |
-| Azure AD                                          | Yes                                                                    |
+| Microsoft Entra                                          | Yes                                                                    |
 | Azure Automation                                  | Yes                                                                    |
-| Azure Blob Storage                                | No                                                                     |
 | Azure Container Instance                          | Yes                                                                    |
 | Azure Data Factory                                | Yes                                                                    |
 | Azure Data Lake                                   | Yes                                                                    |
-| Azure DevOps                                      | No                                                                     |
-| Azure Event Grid                                  | No                                                                     |
 | Azure IoT Central                                 | Yes                                                                    |
-| Azure Key Vault                                   | No                                                                     |
 | Azure Kusto                                       | Yes                                                                    |
 | Azure Log Analytics                               | Yes                                                                    |
 | Azure Resource Manager                            | Yes                                                                    |
-| Basecamp 2                                        | No                                                                     |
-| Bitbucket                                         | No                                                                     |
-| Bitly                                             | No                                                                     |
-| bttn                                              | No                                                                     |
-| Buffer                                            | No                                                                     |
-| Business Central                                  | No                                                                     |
-| CandidateZip                                      | No                                                                     |
-| Capsule CRM                                       | No                                                                     |
-| Cloud PKI Management                              | No                                                                     |
-| Cognito Forms                                     | No                                                                     |
 | Microsoft Dataverse                               | Yes*                                                                     |
-| Microsoft Dataverse (Legacy)                      | No                                                                     |
-| D&B Optimizer                                     | No                                                                     |
-| Derdack SIGNL4                                    | No                                                                     |
-| Disqus                                            | No                                                                     |
-| Document Merge                                    | No                                                                     |
-| Dynamics 365                                      | No                                                                     |
 | Dynamics 365 AI for Sales                         | Yes                                                                    |
-| Dynamics 365 for Fin & Ops                        | No                                                                     |
-| Enadoc                                            | No                                                                     |
-| Eventbrite                                        | No                                                                     |
-| Excel Online (Business)                           | No                                                                     |
-| Excel Online (OneDrive)                           | No                                                                     |
-| Expiration Reminder                               | No                                                                     |
-| FreshBooks                                        | No                                                                     |
-| GoToMeeting                                       | No                                                                     |
-| GoToTraining                                      | No                                                                     |
-| GoToWebinar                                       | No                                                                     |
-| Harvest                                           | No                                                                     |
-| HTTP with Azure AD                                | No                                                                     |
-| Infusionsoft                                      | No                                                                     |
-| Inoreader                                         | No                                                                     |
-| Intercom                                          | No                                                                     |
-| JotForm                                           | No                                                                     |
-| kintone                                           | No                                                                     |
-| LinkedIn                                          | No                                                                     |
-| Marketing Content Hub                             | No                                                                     |
-| Medium                                            | No                                                                     |
-| Metatask                                          | No                                                                     |
-| Microsoft Forms                                   | No                                                                     |
-| Microsoft Forms Pro                               | No                                                                     |
-| Microsoft Graph Security                          | No                                                                     |
-| Microsoft Kaizala                                 | No                                                                     |
-| Microsoft School Data Sync                        | No                                                                     |
-| Microsoft StaffHub                                | No                                                                     |
 | Microsoft Teams                                   | Yes                                                                    |
-| Microsoft To-Do (Business)                        | No                                                                     |
-| Muhimbi PDF                                       | No                                                                     |
-| NetDocuments                                      | No                                                                     |
 | Office 365 Groups                                 | Yes                                                                    |
-| Office 365 Outlook                                | No                                                                     |
 | Office 365 Users                                  | Yes                                                                    |
-| Office 365 Video                                  | No                                                                     |
-| OneDrive                                          | No                                                                     |
-| OneDrive for Business                             | No                                                                     |
-| OneNote (Business)                                | No                                                                     |
 | Outlook Tasks                                     | Yes                                                                    |
-| Outlook&period;com                                       | No                                                                     |
-| Paylocity                                         | No                                                                     |
-| Planner                                           | No                                                                     |
-| Plumsail Forms                                    | No                                                                     |
-| Power Apps for Admins | No |
-| Power Apps for Makers | No |
-| Power Automate Management | No |
 | Power BI                                          | Yes                                                                    |
-| Power Platform for Admins                                          | No                                                                    |
-| Project Online                                    | No                                                                     |
-| ProjectWise Design Integration                    | No                                                                     |
-| Projectwise Share                                 | No                                                                     |
 | SharePoint                                        | Yes                                                                    |
-| SignNow                                           | No                                                                     |
-| Skype for Business Online                         | No                                                                     |
-| Soft1                                             | No                                                                     |
-| Stormboard                                        | No                                                                     |
-| Survey123                                         | No                                                                     |
-| SurveyMonkey                                      | No                                                                     |
-| Toodledo                                          | No                                                                     |
-| Typeform                                          | No                                                                     |
-| Vimeo                                             | No                                                                     |
-| Webex Teams                                       | No                                                                     |
-| Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
-| Word Online (Business)                            | No                                                                     |
 
 \* When using the Microsoft Dataverse as the data source, ensure that the guest user is licensed from the same tenant where you have Dataverse data located.
-
-[1] External users explicitly added directly to your tenant are not considered guest users. External users that you have extended an invitation to access your tenant (but not directly added) are considered guest users.
 
 
 ### See also

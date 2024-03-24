@@ -1,0 +1,1 @@
+You can't apply this operator on a column that is configured to use the `DateOnly` behavior. [Learn more about the behavior of date and time columns](../../../behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column)

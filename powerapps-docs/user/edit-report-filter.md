@@ -1,15 +1,15 @@
 ---
 title: Edit the default filter of a report| Microsoft Docs
 description: Edit the default filter of a report
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

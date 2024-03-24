@@ -45,7 +45,7 @@ To install a gateway, follow the steps in [Install an on-premises data gateway](
 For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
 
 > [!NOTE]
-> **Can use** and **Can use + share** does not apply to custom connectors.
+> **Can use** and **Can use + share** does not apply to custom connectors.  Only gateway **Admins** can create connections for custom connectors.
 
 ## View and manage gateway connections
 

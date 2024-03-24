@@ -41,7 +41,7 @@ There are three methods you can use to work with the `OnChange` event for a colu
 - [fireOnChange](../attributes/fireOnChange.md)
 - [removeOnChange](../attributes/removeOnChange.md)
 
-### Related topics
+### Related articles
 
 [Columns (Client API reference)](../attributes.md)
  

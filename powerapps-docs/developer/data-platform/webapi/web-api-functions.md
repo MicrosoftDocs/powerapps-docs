@@ -28,7 +28,7 @@ When an function is bound, it will have a reference to a specific item within th
 
 ## Composable functions
 
-Functions may have a `IsComposable="true"` attribute. This means that you can append some system query options such as `$filter` or `$select` to the URL to specify the results returned. This option is only available for specific system functions. You cannot create a function using [Custom API](../custom-api.md) that is composable.
+Functions may have a `IsComposable="true"` attribute. This means that you can append some system query options such as `$filter` or `$select` to the URL to specify the results returned. This option is only available for specific system functions. You cannot create a function using [custom API](../custom-api.md) that is composable.
 
 ## Parameters
 
@@ -91,7 +91,7 @@ A function bound to the `account` EntitySet with a single integer `Number` param
 
 ## Overloaded functions
 
-Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref:Microsoft.Dynamics.CRM.RetrieveUnpublished> and <xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple> functions are some examples. You cannot create an overloaded function using [Custom API](../custom-api.md).
+Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref:Microsoft.Dynamics.CRM.RetrieveUnpublished> and <xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple> functions are some examples. You cannot create an overloaded function using [custom API](../custom-api.md).
 
 More information: [OData 4.0 Function Overload Rules](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Function_Overload_Rules)
 

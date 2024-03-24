@@ -14,8 +14,6 @@ contributors:
 ---
 # getCurrentAppUrl (Client API reference)
 
-
-
 Returns the URL of the current business app in model-driven apps.
 
 > [!NOTE]
@@ -36,17 +34,12 @@ globalContext.getCurrentAppUrl();
 
 |Value |Client |
 |---|---|
-|https://[org].crm.dynamics.com/main.aspx?appid=[GUID]|model-driven apps (online)|
-|https://[server]/[org]/main.aspx?appid=[GUID]|model-driven apps (on-premises)|
+|`https://[org].crm.dynamics.com/main.aspx?appid=[GUID]`|model-driven apps (online)|
+|`https://[server]/[org]/main.aspx?appid=[GUID]`|model-driven apps (on-premises)|
 
-### Related topics
+### Related articles
 
-[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
-
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md) 
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

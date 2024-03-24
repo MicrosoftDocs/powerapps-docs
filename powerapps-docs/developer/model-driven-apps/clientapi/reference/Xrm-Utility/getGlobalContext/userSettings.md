@@ -145,36 +145,10 @@ Returns a promise which resolves with an object whose keys are the security role
 
 ### Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when the security role privileges information is retrieved. A dictionary will be passed to the success callback where the security role privilege GUIDs will be the keys and the values will be objects containing the following properties:</p>
-<ul>
-<li><b>id</b>: String. The security role privilege GUID.</li>
-<li><b>businessUnitId</b>: String. The GUID of the business unit of the security role privilege.</li>
-<li><b>privilegeName</b>: String. The security role privilege name.</li>
-<li><b>depth</b>: String. The security role privilege depth.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails. An object with the following properties will be passed:
-<ul>
-<li><b>errorCode</b>: Number. The error code.</li>
-<li><b>message</b>: String. An error message describing the issue.</li>
-</ul></td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`successCallback`|Function|No|A function to call when the security role privileges information is retrieved. A dictionary will be passed to the success callback where the security role privilege GUIDs will be the keys and the values will be objects containing the following properties:<br />`id`: String. The security role privilege GUID.<br />`businessUnitId`: String. The GUID of the business unit of the security role privilege.<br />`privilegeName`: String. The security role privilege name.<br />`depth`: String. The security role privilege depth.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br />`errorCode`: Number. The error code.<br />`message`: String. An error message describing the issue.|
 
 ### Return Value
 
@@ -296,12 +270,10 @@ Returns the difference in minutes between the local time and Coordinated Univers
 
 **Description**: Time zone offset in minutes.
 
-## Related topics
+## Related articles
 
-[Client context](client.md)
-
-[Organization settings](organizationSettings.md)
-
+[Client context](client.md)   
+[Organization settings](organizationSettings.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

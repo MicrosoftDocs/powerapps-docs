@@ -28,10 +28,8 @@ contributors:
 
 **Description**: true if the process is rendered; false otherwise.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

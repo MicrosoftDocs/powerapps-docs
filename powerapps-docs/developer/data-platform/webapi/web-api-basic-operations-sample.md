@@ -46,7 +46,7 @@ This section creates a single contact then performs a series of updates upon tha
   
 1. Create a new contact, named  Rafel Shillo.  
   
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/contacts HTTP/1.1
@@ -61,7 +61,7 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -69,7 +69,7 @@ This section creates a single contact then performs a series of updates upon tha
    OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
    ```
     
-   **Console output**
+   **Console output:**
     
    ```
    Contact URI: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
@@ -80,7 +80,7 @@ This section creates a single contact then performs a series of updates upon tha
   
 1. Update the contact with values for annual income ($80,000)  and job title (Junior Developer).  
     
-   **Request**
+   **Request:**
    
    ```http
    PATCH [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
@@ -96,7 +96,7 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -104,7 +104,7 @@ This section creates a single contact then performs a series of updates upon tha
    OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Contact 'Rafel Shillo' updated with jobtitle and annual income
@@ -119,7 +119,7 @@ This section creates a single contact then performs a series of updates upon tha
    - The metadata context, denoted by the  `@odata.context` key, provides a way to compare query results to determine if they came from the same query.  
    - A `_transactioncurrencyid_value` that indicates the local currency of the monetary transaction.  
    
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)?$select=fullname,annualincome,jobtitle,description HTTP/1.1
@@ -130,7 +130,7 @@ This section creates a single contact then performs a series of updates upon tha
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -154,7 +154,7 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```
    Contact 'Rafel Shillo' retrieved:
@@ -168,7 +168,7 @@ This section creates a single contact then performs a series of updates upon tha
   
 1. Update the contact instance by supplying new values to these same properties.  
   
-   **Request**
+   **Request:**
    
    ```http
    PATCH [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
@@ -185,7 +185,7 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
 
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -193,7 +193,7 @@ This section creates a single contact then performs a series of updates upon tha
    OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```
    Contact 'Rafel Shillo' updated:
@@ -207,7 +207,7 @@ This section creates a single contact then performs a series of updates upon tha
   
 1. Explicitly set a single property, the primary phone number. Note this is a `PUT` request and that the JSON key named `value` is used when performing operations on individual properties.  
   
-   **Request**
+   **Request:**
    
    ```http
    PUT [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)/telephone1 HTTP/1.1
@@ -221,14 +221,14 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Contact 'Rafel Shillo' phone number updated.
@@ -236,7 +236,7 @@ This section creates a single contact then performs a series of updates upon tha
   
 1. Retrieve that same single property, the primary phone number. Again note the use of the key named `value`.  
   
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)/telephone1 HTTP/1.1
@@ -246,7 +246,7 @@ This section creates a single contact then performs a series of updates upon tha
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -258,7 +258,7 @@ This section creates a single contact then performs a series of updates upon tha
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Contact's telephone # is: 555-0105.  
@@ -272,7 +272,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
   
 1. Create the Contoso, Ltd. account and set its primary contact attribute to the existing contact Rafel Shillo.  The `@odata.bind` annotation indicates that an association is being created, here binding the `primarycontactid` single-valued navigation property to an existing contact, Rafel Shillo.  
      
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -288,7 +288,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -296,7 +296,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada)
    ```  
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Account 'Contoso Ltd' created.
@@ -305,7 +305,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    
 1. Retrieve the primary contact for the account Contoso, Ltd., again using `$expand`  with the  `primarycontactid` single-valued navigation property to access the associated <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType> record.  
   
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada)?$select=name,&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
@@ -316,7 +316,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -344,7 +344,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```
    Account 'Contoso Ltd' has primary contact 'Rafel Shillo':
@@ -362,7 +362,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
   
 1. Create the account `Fourth Coffee` and its primary contact `Susie Curtis` and their three related tasks in one operation.  Note the use of the single-valued `primarycontactid` navigation property and the collection-valued navigation property `Contact_Tasks` to define these relationships, respectively.  Single-valued navigational properties take an object value, whereas collection-valued navigation properties take an array value.  
   
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -405,7 +405,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -413,7 +413,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Account 'Fourth Coffee  created.
@@ -421,7 +421,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
   
 1. Selectively retrieve the newly created Fourth Coffee account and its primary contact.  An expansion is performed on the single-valued navigation property `primarycontactid`.  
   
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)?$select=name&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
@@ -432,7 +432,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -460,7 +460,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```    
    Account 'Fourth Coffee' has primary contact 'Susie Curtis':
@@ -470,7 +470,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
   
 1. Selectively retrieve the tasks associated with the primary contact retrieved in the previous operation.  An expansion is performed on the collection-valued navigation property `Contact_Tasks`.  
   
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/contacts(2f28bcb4-bb27-ed11-9db1-002248274ada)?$select=fullname&$expand=Contact_Tasks($select=subject,description,scheduledstart,scheduledend) HTTP/1.1
@@ -481,7 +481,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -529,7 +529,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```    
    Contact 'Susie Curtis' has the following assigned tasks:
@@ -557,7 +557,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 1. Add Rafel Shillo as a contact to the account Fourth Coffee using the `contact_customer_accounts` collection-valued navigation property. Note the use of the special key `@odata.id` to specify the associated record.  
    
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts/$ref HTTP/1.1
@@ -571,7 +571,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -580,7 +580,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 1. Confirm the previous operation by retrieving the collection of contacts for the account Fourth Coffee. The response contains the array with a single element, the recently assigned contact Rafel Shillo.  
    
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts?$select=fullname,jobtitle HTTP/1.1
@@ -590,7 +590,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    ```
    
-   **Response** 
+   **Response:** 
    
    ```http
    HTTP/1.1 200 OK
@@ -609,7 +609,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    }
    ```
     
-   **Console output**  
+   **Console output:**  
     
    ```    
    Contact list for account 'Fourth Coffee':
@@ -618,7 +618,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    
 1. Remove the association that was just created between account Fourth Coffee and contact Rafel Shillo.  
    
-   **Request**
+   **Request:**
    
    ```http
    DELETE [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts(0928bcb4-bb27-ed11-9db1-002248274ada)/$ref HTTP/1.1
@@ -628,7 +628,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -637,7 +637,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    
 1. Create a security role named `Example Security Role`.  
    
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/roles HTTP/1.1
@@ -652,7 +652,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    }
    ```
 
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -662,7 +662,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 1. Associate the new security role to your systemuser record.
    
-   **Request**
+   **Request:**
    
    ```http
    POST [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/systemuserroles_association/$ref HTTP/1.1
@@ -676,14 +676,14 @@ This section demonstrates how to associate and disassociate existing table rows.
    }
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ``` 
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Security Role 'Example Security Role' associated with to your user account.
@@ -691,7 +691,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 1. Retrieve the Example Security Role using the `systemuserroles_association` many-to-many relationship: 
    
-   **Request**
+   **Request:**
    
    ```http
    GET [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/systemuserroles_association?$select=name&$filter=roleid%20eq%20e359feba-bb27-ed11-9db1-002248274ada HTTP/1.1
@@ -701,7 +701,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 200 OK
@@ -719,7 +719,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    }
    ``` 
     
-   **Console output**  
+   **Console output:**  
     
    ```  
    Retrieved role: Example Security Role
@@ -727,7 +727,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    
 1. Dissociate the security role from the from your user record.  Note again, that this has the same general syntax used to remove a one-to-many association.  
    
-   **Request**
+   **Request:**
    
    ```http
    DELETE [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/systemuserroles_association(e359feba-bb27-ed11-9db1-002248274ada)/$ref HTTP/1.1
@@ -737,7 +737,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -750,7 +750,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 1. Each element of the collection of row URLs is deleted.  The first is a contact record for Rafel Shillo.  
    
-   **Request**
+   **Request:**
    
    ```http
    DELETE [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
@@ -760,7 +760,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    ```
    
-   **Response**
+   **Response:**
    
    ```http
    HTTP/1.1 204 NoContent
@@ -769,7 +769,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    
 1. Subsequent iterations through the collection delete the remaining records.  
    
-   **Request** 
+   **Request:** 
      
    ```http    
    DELETE [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1

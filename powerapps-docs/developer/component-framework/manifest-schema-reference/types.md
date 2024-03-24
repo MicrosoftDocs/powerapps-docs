@@ -1,8 +1,8 @@
 ---
 title: Types  | Microsoft Docs
 description: Provides information on methods available for types element.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

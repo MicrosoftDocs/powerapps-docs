@@ -17,7 +17,10 @@ contributors:
 
 <!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-query-working-hours-multiple-users -->
 
-This sample shows how to retrieve the working hours of multiple users by using the [QueryMultipleSchedulesRequest](/dotnet/api/microsoft.crm.sdk.messages.querymultipleschedulesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23).
+This sample shows how to retrieve the working hours of multiple users by using the [QueryMultipleSchedulesRequest](/dotnet/api/microsoft.crm.sdk.messages.querymultipleschedulesrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Query the working hours of multiple users sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23)
 
 This sample requires additional users that are not present in your system. Create the required user manually **as is** shown below in **Microsoft 365** before you run the sample. Replace `yourorg` with the `OrgName` of your organization.
 

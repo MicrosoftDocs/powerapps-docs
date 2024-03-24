@@ -12,7 +12,10 @@ search.audienceType:
 
 # Sample: Retrieve email attachments for an email template
 
-This sample shows how to retrieve email attachments associated with an email template by using the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveEmailAttach).
+This sample shows how to retrieve email attachments associated with an email template by using the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve email attachments for an email template sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveEmailAttach)
 
 ## How to run this sample
 

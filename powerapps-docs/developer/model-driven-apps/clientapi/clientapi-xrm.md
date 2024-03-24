@@ -29,13 +29,13 @@ The following illustration displays the Xrm object model:
 
 Here is the information about each of the namespaces in the Xrm object:
 
-| Namespace                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Xrm.Device](reference/xrm-device.md)         | Provides methods to use native device capabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [Xrm.Encoding](reference/xrm-encoding.md)     | Provides methods to encode strings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| [Xrm.Panel](reference/xrm-panel.md)           | Provides a method to display a web page in the side pane of model-driven apps form.                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [Xrm.Utility](reference/xrm-utility.md)       | Provides a container for useful methods.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Namespace| Description|
+| ---| ---|
+| [Xrm.Device](reference/xrm-device.md)| Provides methods to use native device capabilities. |
+| [Xrm.Encoding](reference/xrm-encoding.md)     | Provides methods to encode strings.|
+| [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.|
+| [Xrm.Panel](reference/xrm-panel.md)           | Provides a method to display a web page in the side pane of model-driven apps form.|
+| [Xrm.Utility](reference/xrm-utility.md)       | Provides a container for useful methods.|
 | [Xrm.WebApi](reference/xrm-webapi.md)         | Provides methods to use Web API to create and manage records and execute Web API actions and functions.<br/><br/>[Xrm.WebApi.offline](reference/xrm-webapi/offline.md): Provides methods to create and manage records in the model-driven apps in mobile clients while working in _offline_ mode.<br/><br/>[Xrm.WebApi.online](reference/xrm-webapi/online.md): Provides methods to use Web API to create and manage records and execute Web API actions and functions when connected to the server. |
 
 ## Client API global context
@@ -47,7 +47,7 @@ Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContex
 
 To access the global context information in a standalone HTML Web resource, you should include a reference to **ClientGlobalContext.js.aspx** in the web resource, and then use the **GetGlobalContext** function. More information: [GetGlobalContext function and ClientGlobalContext.js.aspx](reference/GetGlobalContext-ClientGlobalContext.js.aspx.md)
 
-### Related topics
+### Related articles
 
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)

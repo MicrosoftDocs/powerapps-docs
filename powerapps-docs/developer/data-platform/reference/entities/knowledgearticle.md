@@ -1,7 +1,7 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1740,6 +1740,8 @@ Listed by **SchemaName**.
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 - [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
+- [knowledgearticle_adx_inviteredemptions](#BKMK_knowledgearticle_adx_inviteredemptions)
+- [knowledgearticle_adx_portalcomments](#BKMK_knowledgearticle_adx_portalcomments)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -2286,8 +2288,42 @@ Same as the [msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknow
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_favoriteknowledgearticle|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: Id of Knowledge Article<br />Order: 10000|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: Id of Knowledge Article<br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_knowledgearticle_adx_inviteredemptions"></a> knowledgearticle_adx_inviteredemptions
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_adx_inviteredemptions](adx_inviteredemption.md#BKMK_knowledgearticle_adx_inviteredemptions) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_adx_inviteredemptions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgearticle_adx_portalcomments"></a> knowledgearticle_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_adx_portalcomments](adx_portalcomment.md#BKMK_knowledgearticle_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -2375,7 +2411,7 @@ See the [TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_Trans
 
 ### <a name="BKMK_msdyn_knowledgearticle_integratedsearchprovider"></a> msdyn_knowledgearticle_integratedsearchprovider
 
-**Added by**: Knowledge Management Online Features Solution
+**Added by**: Knowledge Management Patch Solution
 
 See the [msdyn_knowledgearticle_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_msdyn_knowledgearticle_integratedsearchprovider) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
 <a name="manytomany"></a>

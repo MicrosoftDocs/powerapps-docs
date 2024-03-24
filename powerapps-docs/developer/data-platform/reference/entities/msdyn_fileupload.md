@@ -1,7 +1,7 @@
 ---
 title: "msdyn_FileUpload table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_FileUpload table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,7 @@ search.audienceType:
 |Assign|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_fileuploads<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_fileuploads(*msdyn_fileuploadid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ search.audienceType:
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -69,6 +69,7 @@ search.audienceType:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_DmsRequestId](#BKMK_msdyn_DmsRequestId)
 - [msdyn_FileName](#BKMK_msdyn_FileName)
 - [msdyn_FileUploadId](#BKMK_msdyn_FileUploadId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -97,6 +98,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_msdyn_DmsRequestId"></a> msdyn_DmsRequestId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Latest DMS Request ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_dmsrequestid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_msdyn_FileName"></a> msdyn_FileName
 
 |Property|Value|
@@ -108,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_filename|
-|MaxLength|100|
+|MaxLength|200|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -268,6 +282,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_ErrorLog](#BKMK_msdyn_ErrorLog)
+- [msdyn_ErrorLog_Name](#BKMK_msdyn_ErrorLog_Name)
 - [msdyn_FileContent](#BKMK_msdyn_FileContent)
 - [msdyn_FileContent_Name](#BKMK_msdyn_FileContent_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -514,6 +530,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_ErrorLog"></a> msdyn_ErrorLog
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|File Error Logs|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_errorlog|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_ErrorLog_Name"></a> msdyn_ErrorLog_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_errorlog_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 

@@ -1,15 +1,15 @@
 ---
 title: "How to create an email template  in model-driven apps | MicrosoftDocs"
 description: Learn how to create an email template.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/01/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

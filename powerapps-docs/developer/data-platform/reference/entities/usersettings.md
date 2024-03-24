@@ -1,7 +1,7 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -100,7 +100,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PagingLimit](#BKMK_PagingLimit)
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
+- [PreferredSolution](#BKMK_PreferredSolution)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
+- [ReleaseChannel](#BKMK_ReleaseChannel)
 - [ReportScriptErrors](#BKMK_ReportScriptErrors)
 - [ResourceBookingExchangeSyncVersion](#BKMK_ResourceBookingExchangeSyncVersion)
 - [SelectedGlobalFilterId](#BKMK_SelectedGlobalFilterId)
@@ -330,6 +332,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Unauthorized|Not authorized to execute auto install|
 |5|No Solution|D365 auto install solution is no available|
 |6|No Graph API|Graph API is not available for auto install|
+|7|Resource Disabled|Resource to call graph api is disabled by tenant|
 
 
 
@@ -1068,6 +1071,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_PreferredSolution"></a> PreferredSolution
+
+**Added by**: Solutions Framework Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Preferred Solution when create a component without under a solution in this organization|
+|DisplayName|Preferred Solution|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|preferredsolution|
+|RequiredLevel|None|
+|Targets|solution|
+|Type|Lookup|
+
+
 ### <a name="BKMK_PricingDecimalPrecision"></a> PricingDecimalPrecision
 
 |Property|Value|
@@ -1082,6 +1101,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_ReleaseChannel"></a> ReleaseChannel
+
+**Added by**: App Framework Infra Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Model app channel override|
+|DisplayName|Model app channel override|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|releasechannel|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ReleaseChannel Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Semi-annual channel override||
+|2|Monthly channel override||
+|3|Inner channel override||
+
 
 
 ### <a name="BKMK_ReportScriptErrors"></a> ReportScriptErrors
@@ -1887,6 +1931,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [preferredsolutionName](#BKMK_preferredsolutionName)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -2176,6 +2221,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_preferredsolutionName"></a> preferredsolutionName
+
+**Added by**: Solutions Framework Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|preferredsolutionname|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
 
 |Property|Value|
@@ -2218,6 +2281,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
 - [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [user_settings_preferred_solution](#BKMK_user_settings_preferred_solution)
 - [user_settings](#BKMK_user_settings)
 
 
@@ -2244,6 +2308,10 @@ See the [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
 See the [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_user_settings_preferred_solution"></a> user_settings_preferred_solution
+
+See the [user_settings_preferred_solution](solution.md#BKMK_user_settings_preferred_solution) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### <a name="BKMK_user_settings"></a> user_settings
 

@@ -12,6 +12,10 @@
       href: quick-start-console-app-csharp.md
     - name: 'Quick Start: Blazor Server sample (C#)'
       href: quick-start-blazor-server-app.md
+  - name: (PowerShell)
+    items:
+    - name: Get started using PowerShell
+      href: quick-start-ps.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
@@ -41,8 +45,6 @@
     items:
     - name: Query data
       href: query-data-web-api.md
-    - name: Use FetchXml with Web API
-      href: use-fetchxml-web-api.md
     - name: Retrieve and execute predefined queries
       href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row
@@ -87,23 +89,17 @@
     href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
-  - name: Web API Metadata Operations Sample
+  - name: Web API table schema operations sample
     href: web-api-metadata-operations-sample.md
-  - name: Web API Metadata Operations Sample (C#)
+  - name: Web API table schema operations sample (C#)
     href: samples/webapiservice-metadata-operations.md
-- name: Use Postman with Web API
-  items:
-  - name: Get started with Postman
-    href: use-postman-web-api.md
-  - name: Setup a Postman environment
-    href: setup-postman-environment.md
-  - name: Use Postman to perform operations
-    href: use-postman-perform-operations.md
+- name: Use Insomnia with Web API
+  href: insomnia.md
+- name: Use PowerShell and Visual Studio Code with Web API
+  href: use-ps-and-vscode-web-api.md
 - name: Client-side JavaScript using Web API in model-driven apps
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
   href: web-api-versions.md
-- name: Dataverse search, suggestions, and autocomplete
-  href: relevance-search.md
 - name: Samples
   href: samples/toc.yml

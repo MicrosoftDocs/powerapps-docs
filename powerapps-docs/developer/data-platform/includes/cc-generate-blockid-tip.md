@@ -5,4 +5,4 @@
 > string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
 > ```
 >
-> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
+> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` is Base64-encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.

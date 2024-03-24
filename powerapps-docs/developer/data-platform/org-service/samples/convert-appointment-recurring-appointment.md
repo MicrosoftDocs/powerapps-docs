@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Convert an appointment to a recurring appointment
 
-This sample shows how to convert an appointment to a recurring appointment series using the [AddRecurrenceRequest](/dotnet/api/microsoft.crm.sdk.messages.addrecurrencerequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConvertToRecurring).
+This sample shows how to convert an appointment to a recurring appointment series using the [AddRecurrenceRequest](/dotnet/api/microsoft.crm.sdk.messages.addrecurrencerequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Convert an appointment to a recurring appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConvertToRecurring)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

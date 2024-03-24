@@ -41,7 +41,7 @@ Timer
 |7 | Canceled|
 |8 | Paused|
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
 

@@ -80,15 +80,16 @@ Using the following methods to add and remove event handler for events that cann
 >The execution context is automatically passed as the first parameter to functions that are set using the code. More information: [Client API execution context](clientapi-execution-context.md) 
 
 ## Form event pipeline
+
 You can define up to 50 event handlers for each event. Each event handler is executed in the order that it is displayed in the **Event Handlers** section in the **Events** tab of the **Form Properties** dialog box.
 
 Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and [getSharedVariable](reference/executioncontext/getSharedVariable.md) methods to pass a common variable between event handlers (functions). Use the execution context [getDepth](reference/executioncontext/getDepth.md) method to know the sequence that an event handler is being executed in relative to other event handlers. 
 
-### Related topics
+### Related articles
 
-[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
-[Client API execution context](clientapi-execution-context.md)<br/>
-[Events (Client API reference)](reference/events.md)<br/>
+[Understand the Client API object model](understand-clientapi-object-model.md)   
+[Client API execution context](clientapi-execution-context.md)   
+[Events (Client API reference)](reference/events.md)   
 
 
 

@@ -14,8 +14,6 @@ contributors:
 ---
 # quickViewControl.getLabel (Client API reference)
 
-
-
 [!INCLUDE[./includes/getLabel-description.md](./includes/getLabel-description.md)]
 
 ## Syntax
@@ -28,14 +26,9 @@ contributors:
 
 **Description**: Label of the quick view control.
 
-### Related topics
+### Related articles
 
-[setLabel](setLabel.md)
-
+[setLabel](setLabel.md)   
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -42,7 +42,7 @@ Etags enable you to optimize record retrievals whenever you access the same reco
 
 The following example message pair returns data for an account entity with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn't changed since it was last retrieved when the Etag value was `W/"468026"`
 
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=accountcategorycode,accountnumber,creditonhold,createdon,numberofemployees,name,revenue   HTTP/1.1  
@@ -52,7 +52,7 @@ OData-Version: 4.0
 If-None-Match: W/"468026"  
 ```  
   
- **Response**
+ **Response:**
 
 ```http  
 HTTP/1.1 304 Not Modified  
@@ -92,7 +92,7 @@ An upsert ordinarily operates by creating an entity if it doesn't exist; otherwi
 
 If you are updating data and there is some possibility that the entity was deleted intentionally, you will not want to re-create the entity. To prevent this, add an `If-Match` header to the request with a value of `*`.  
   
- **Request**
+ **Request:**
 
 ```http  
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -111,7 +111,7 @@ If-Match: *
 }  
 ```  
   
- **Response**
+ **Response:**
 
  If the entity is found, you'll get a normal response with status `204 No Content`. When the entity is not found, you'll get the following response with status `404 Not Found`.  
   
@@ -134,7 +134,7 @@ Content-Type: application/json; odata.metadata=minimal
 
 If you're inserting data, there is some possibility that a record with the same `id` value already exists in the system and you may not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "*".  
   
- **Request**
+ **Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -153,7 +153,7 @@ If-None-Match: *
 }  
 ```  
   
- **Response**  
+ **Response:**  
  If the entity isn't found, you will get a normal response with status `204 No Content`. When the entity is found, you'll get the following response with status `412 Precondition Failed`.  
   
 ```http  
@@ -181,7 +181,7 @@ You can use optimistic concurrency to detect whether an entity has been modified
 
 The following delete request for an account with `accountid` of`00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value had matched, a `204 No Content` status is expected.  
   
- **Request**
+ **Request:**
 
 ```http  
 DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -191,7 +191,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
 ```json  
 HTTP/1.1 412 Precondition Failed  
@@ -211,7 +211,7 @@ OData-Version: 4.0
 
 The following update request for an account with `accountid` of `00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value had matched, a `204 No Content` status is expected.  
   
- **Request**
+ **Request:**
 
 ```http  
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -223,7 +223,7 @@ OData-Version: 4.0
 {"name":"Updated Account Name"}  
 ```  
   
- **Response**
+ **Response:**
 
 ```json  
 HTTP/1.1 412 Precondition Failed  

@@ -1,7 +1,7 @@
 ---
 title: "MobileOfflineProfileItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfileItem table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RelationshipData](#BKMK_RelationshipData)
+- [SelectedColumns](#BKMK_SelectedColumns)
 - [SelectedEntityTypeCode](#BKMK_SelectedEntityTypeCode)
 - [StageId](#BKMK_StageId)
 - [SyncIntervalInMinutes](#BKMK_SyncIntervalInMinutes)
@@ -391,6 +392,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|relationshipdata|
 |MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_SelectedColumns"></a> SelectedColumns
+
+**Added by**: MobileOfflineProfileItemExtensionSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Selected attributes of an entity to enable for offline sync|
+|DisplayName|SelectedColumns|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|selectedcolumns|
+|MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
 

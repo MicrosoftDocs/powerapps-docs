@@ -14,7 +14,7 @@ search.audienceType:
 
 User and team management is the area of Microsoft Dataverse where you can create and maintain user accounts and profiles.  
 
- A *user* is any person who works for a business unit who uses Dataverse. Each user has a user account. All users must be associated with only one business unit. This association controls which customer data the user will have access to. Included in the user's account is information such as the user's telephone numbers, email address, and a link to the user's manager. Each user has privileges and rights to manage their own personal settings. Each user corresponds to a user in the Azure Active Directory for that organization. When you create a user, you must assign the user to at least one security role. Even if the user is part of a team that has assigned roles, the user should be assigned to a role. For more information about access levels and roles, see [Security concepts for developers](security-concepts.md).  
+ A *user* is any person who works for a business unit who uses Dataverse. Each user has a user account. All users must be associated with only one business unit. This association controls which customer data the user will have access to. Included in the user's account is information such as the user's telephone numbers, email address, and a link to the user's manager. Each user has privileges and rights to manage their own personal settings. Each user corresponds to a user in the Microsoft Entra ID for that organization. When you create a user, you must assign the user to at least one security role. Even if the user is part of a team that has assigned roles, the user should be assigned to a role. For more information about access levels and roles, see [Security concepts for developers](security-concepts.md).  
 
  A *team* is a group of users. Teams let users across an organization collaborate and share information. For more information about teams, see [Use Teams to Collaborate and Share Information](use-access-teams-owner-teams-collaborate-share-information.md).  
 
@@ -50,13 +50,13 @@ User and team management is the area of Microsoft Dataverse where you can create
 
 To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
 
-### Delete a user (preview)
+### Delete a user
 
- In Dataverse, users can be disabled and deleted. You can delete a user from Power Platform (Dataverse) assuming you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. There is a sequence of tasks to follow. You cannot simply delete the row in a single call. You must first delete the user registered in Microsoft Azure Active Directory (AD) and then delete the user in Dataverse. The procedure to follow is outlined below.
+ In Dataverse, users can be disabled and deleted. You can delete a user from Power Platform (Dataverse) assuming you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. There is a sequence of tasks to follow. You cannot simply delete the row in a single call. You must first delete the user registered in Microsoft Entra ID and then delete the user in Dataverse. The procedure to follow is outlined below.
 
 Log into Microsoft Azure [portal](https://portal.azure.com), and then follow these steps:
 
-1. Select **Azure Active Directory**, and then under **Manage** select **Users**
+1. Select **Microsoft Entra ID**, and then under **Manage** select **Users**
 1. Delete the user - this is called a 'soft delete' as the user record remains until permanently deleted
 1. Permanently delete the user either manually or wait thirty days until Azure permanently deletes the user through automation
 
@@ -69,9 +69,9 @@ In Dataverse:
 1. Permanently delete the system user by an API call a second time
 
 > [!TIP]
-> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's AD record in Azure. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure.
+> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's Microsoft Entra ID record. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure.
 
-More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the Organization Service](org-service/entity-operations-update-delete.md)
+More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md)
 
 ## Community tools
 

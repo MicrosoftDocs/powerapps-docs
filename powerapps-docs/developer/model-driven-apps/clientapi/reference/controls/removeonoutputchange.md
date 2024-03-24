@@ -31,9 +31,9 @@ control.removeOnOutputChange(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to remove from the **OnOutputChange** event.| 
+|`myFunction` |Function |Yes|The function to remove from the **OnOutputChange** event.| 
 
-### Related topics
+### Related articles
 
 [addOnOutputChange](addonoutputchange.md)
 

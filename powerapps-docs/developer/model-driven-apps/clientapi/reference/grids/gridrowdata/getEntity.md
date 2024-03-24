@@ -14,8 +14,6 @@ contributors:
 ---
 # getEntity (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEntity-description.md](./includes/getEntity-description.md)]
 
 As this is deprecated, you should use **GridRowData.entity**.
@@ -35,7 +33,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridRowData` object, see [GridRowData](../gridrowdata.md). 
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

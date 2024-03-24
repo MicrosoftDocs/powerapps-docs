@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -38,7 +38,7 @@ You can also use the following Dataverse processes:
 
 - [Real-time workflows](overview-realtime-workflows.md)
 
-- [Actions](actions.md).
+- [Actions](actions.md)
 
 ## Power Automate
 Power Automate has several different flows you can use to create automated workflows within Dataverse or between Dataverse and another app or service that can be used to synchronize files, get notifications, collect data, and more. 

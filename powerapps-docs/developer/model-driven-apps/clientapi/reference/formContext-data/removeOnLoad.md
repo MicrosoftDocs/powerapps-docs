@@ -26,12 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed when the form data loads.|
+|`myFunction`|function reference|Yes|The function to be removed when the form data loads.|
 
-### Related topics
+### Related articles
 
-[addOnLoad](addOnLoad.md)
-
+[addOnLoad](addOnLoad.md)   
 [Form data OnLoad event](../events/form-data-onload.md)
 
 

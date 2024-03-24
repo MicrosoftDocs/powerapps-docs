@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to retrieve the roles for an organization by using the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRolesForOrganization).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve the roles for an organization sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRolesForOrganization)
 
 ## How to run this sample
 

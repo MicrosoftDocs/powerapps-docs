@@ -28,7 +28,7 @@ contributors:
 
 **Description**: See [Step methods](../../formContext-data-process.md#step-methods) for methods to access the property values of the step.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
 

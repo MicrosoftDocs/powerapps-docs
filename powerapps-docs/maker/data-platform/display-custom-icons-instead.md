@@ -32,6 +32,9 @@ This example displays custom icons in a view for the opportunity table, which is
 > ![All Opportunities view with Rating column displaying icons and text value.](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
   
 Custom icons in list views can display in Unified Interface, legacy web client, mobile app, and App for Outlook. 
+
+> [!NOTE]
+> Custom icons aren't available when the app is in mobile offline mode.
   
 ## Add custom graphics and JavaScript as web resources  
   

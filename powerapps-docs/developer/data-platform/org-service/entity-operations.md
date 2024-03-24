@@ -1,6 +1,6 @@
 ---
-title: "Entity class operations using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the Entity class used for data operations using the Microsoft Dataverse organization service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
@@ -13,11 +13,11 @@ contributors:
   - JimDaly
 ---
 
-# Entity class operations using the Organization service
+# Entity class operations using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with Microsoft Dataverse data using the organization service you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
+When you work with Microsoft Dataverse data using the SDK for .NET you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
 
 This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
 
@@ -201,7 +201,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 These topics will explain more about working with Dataverse entities (table rows).
 
-[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)<br />
+[Quick Start: SDK for .NET sample (C#)](quick-start-org-service-console-app.md)<br />
 [Query data](entity-operations-query-data.md)<br />
 [Create table rows](entity-operations-create.md)<br />
 [Retrieve a table row](entity-operations-retrieve.md)<br />
