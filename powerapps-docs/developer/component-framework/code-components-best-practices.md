@@ -3,7 +3,7 @@ title: "Best practices for code components | Microsoft Docs"
 description: "Learn best practices and get guidance on how to use code components created using Power Apps component framework."
 ms.author: hemantg
 author: HemantGaur
-ms.date: 05/27/2022
+ms.date: 03/25/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -57,9 +57,9 @@ In some circumstances, it's undesirable for updates to a UI control (such as key
 
 When developing code components for different hosts (model-driven apps, canvas apps, portals), always check the availability of the APIs you're using for support on those platforms. For example, `context.webAPI` is not available in canvas apps. For individual API availability, see [Power Apps component framework API reference](reference/index.md).
 
-#### Account for possibility of temporarily null property values in `updateView`
+#### Manage temporarily null property values passed to `updateView`
 
-It is possible for values of input properties to be null when the data isn't ready. Component code should account for this and always assume that data could be null and that a subsequent updateView cycle can include updated property values.
+Null values will be passed to the `updateView` method when data isn't ready. Your components should account for this and expect that the data could be null, and that a subsequent `updateView` cycle can include updated values. `updateView` is available for both [standard](reference/control/updateview.md) and [React](reference/react-control/updateview.md) components.
 
 ## Model-driven apps
 
