@@ -1,9 +1,9 @@
 ---
 title: "StandardControl.updateView (Power Apps component framework API reference) | MicrosoftDocs"
-description: This method is called when any value in the property bag has changed. 
+description: This method is called for a ReactControl when any value in the property bag changes. 
 ms.author: hemantg
 author: HemantGaur
-ms.date: 05/27/2022
+ms.date: 03/25/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -26,7 +26,7 @@ Model-driven apps, canvas apps, & portals.
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|context|`context`|yes|Contains values as setup by the customizer mapped to the name defined in the manifest, and in the utility functions|
+|context|`context`|yes|Contains values as configured by the customizer mapped to the name defined in the manifest, and in the utility functions|
 
 ## Example
 
