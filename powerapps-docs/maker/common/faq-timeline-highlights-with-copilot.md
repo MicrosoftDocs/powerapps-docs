@@ -48,7 +48,9 @@ To use Copilot in the timeline:
 
 ## How did you evaluate Copilot? 
 
-We tested and evaluated Copilot on various datasets and scenarios to ensure its quality and performance. We used the following metrics to measure Copilot's performance: 
+We tested and evaluated Copilot on various datasets and scenarios to ensure its quality and performance. 
+
+We used the following metrics to measure Copilot's performance: 
 
 - Accuracy: How well the generated highlights match the input and the context 
 
@@ -60,13 +62,13 @@ We tested and evaluated Copilot on various datasets and scenarios to ensure its 
 
 ## What are the limitations of Copilot in the timeline? 
 
-- Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
+Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
 
-- Language: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot. 
+- **Language**: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot. 
 
-- Suggestions: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
+- **Suggestions**: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
 
-- Ethics: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot. 
+- **Ethics**: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot. 
 
 ## Are there any settings I should change for effective and responsible use of Copilot in the timeline? 
 
