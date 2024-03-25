@@ -57,6 +57,10 @@ In some circumstances, it's undesirable for updates to a UI control (such as key
 
 When developing code components for different hosts (model-driven apps, canvas apps, portals), always check the availability of the APIs you're using for support on those platforms. For example, `context.webAPI` is not available in canvas apps. For individual API availability, see [Power Apps component framework API reference](reference/index.md).
 
+#### Account for possibility of temporarily null property values in `updateView`
+
+It is possible for values of input properties to be null when the data isn't ready. Component code should account for this and always assume that data could be null and that a subsequent updateView cycle can include updated property values.
+
 ## Model-driven apps
 
 This section contains best practices and guidance relating to code components within model-driven apps.
