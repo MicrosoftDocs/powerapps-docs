@@ -2,7 +2,7 @@
 title: "View dependencies for a component in Power Apps | MicrosoftDocs"
 description: "Understand how to view dependencies for a component in Power Apps and take action."
 ms.custom: ""
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.reviewer: ""
 ms.topic: "article"
 author: "swatimadhukargit"
