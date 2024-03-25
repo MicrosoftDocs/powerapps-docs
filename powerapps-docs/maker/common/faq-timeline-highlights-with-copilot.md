@@ -14,7 +14,7 @@ search.audienceType:
 
 # Responsible AI FAQ for Copilot in the timeline
 
-Here are some common questions and answers about using Copilot in the timeline. 
+These frequently asked questions (FAQ) describe the AI impact of the timeline highlights feature. 
 
 ## What is Copilot in the timeline? 
 
@@ -70,7 +70,7 @@ We tested and evaluated Copilot on various datasets and scenarios to ensure its 
 
 ## Are there any settings I should change for effective and responsible use of Copilot in the timeline? 
 
-- Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
+Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
 
 Always review and edit Copilot's suggestions before sending them to your collaborators. 
 
