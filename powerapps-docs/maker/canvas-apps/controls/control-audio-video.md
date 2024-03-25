@@ -1,19 +1,19 @@
 ---
 title: Audio and Video controls in Power Apps
 description: Learn about the details, properties and examples of the audio and video controls in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/31/2022
+ms.date: 03/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.
@@ -25,6 +25,14 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 
 > [!NOTE]
 > Closed captions may not be available from certain videos hosted on Azure Media Services.
+
+## Limitations
+
+The audio and video control has these limitations:
+
+- Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
+    - You can play videos in multiple **Video** controls at the same time on all platforms except iPhone devices.
+    - You can record audio with multiple **Microphone** controls at the same time on all platforms except the web player.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.

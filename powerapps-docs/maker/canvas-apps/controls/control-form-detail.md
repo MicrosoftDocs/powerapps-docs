@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
