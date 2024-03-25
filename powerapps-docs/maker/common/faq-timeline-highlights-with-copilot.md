@@ -5,7 +5,7 @@ author: lalexms
 ms.reviewer: matp
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/22/2024
+ms.date: 03/25/2024
 ms.subservice: mda-maker
 ms.author: laalexan
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 
 # Responsible AI FAQ for Copilot in the timeline
 
-Here are some common questions and answers about using Copilot in the timeline. 
+These frequently asked questions (FAQ) describe the AI impact in the timeline highlights feature. 
 
 ## What is Copilot in the timeline? 
 
@@ -48,29 +48,31 @@ To use Copilot in the timeline:
 
 ## How did you evaluate Copilot? 
 
-We tested and evaluated Copilot on various datasets and scenarios to ensure its quality and performance. We used the following metrics to measure Copilot's performance: 
+We tested and evaluated Copilot on various datasets and scenarios to ensure its quality and performance. 
 
-- Accuracy: How well the generated highlights match the input and the context 
+We used the following metrics to measure Copilot's performance: 
 
-- Relevance: How well the generated highlights address the customer's needs and expectations 
+- **Accuracy**: How well the generated highlights match the input and the context 
 
-- Diversity: How well the generated highlights offer different options and perspectives 
+- **Relevance**: How well the generated highlights address the customer's needs and expectations 
 
-- Readability: How easy the generated highlights are to read and understand 
+- **Diversity**: How well the generated highlights offer different options and perspectives 
+
+- **Readability**: How easy the generated highlights are to read and understand 
 
 ## What are the limitations of Copilot in the timeline? 
 
-- Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
+Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
 
-- Language: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot. 
+- **Language**: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot. 
 
-- Suggestions: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
+- **Suggestions**: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
 
-- Ethics: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot. 
+- **Ethics**: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot. 
 
 ## Are there any settings I should change for effective and responsible use of Copilot in the timeline? 
 
-- Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
+Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
 
 Always review and edit Copilot's suggestions before sending them to your collaborators. 
 
