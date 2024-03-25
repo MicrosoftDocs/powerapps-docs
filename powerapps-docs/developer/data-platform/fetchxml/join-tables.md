@@ -377,8 +377,7 @@ This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#usi
       <link-entity name='account'
          from='primarycontactid'
          to='contactid'
-         link-type='matchfirstrowusingcrossapply'
-         >
+         link-type='matchfirstrowusingcrossapply'>
          <attribute name='accountid' />
          <attribute name='name' />
       </link-entity>
