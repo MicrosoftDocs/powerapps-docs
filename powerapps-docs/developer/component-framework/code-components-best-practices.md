@@ -65,13 +65,13 @@ Null values are passed to the `updateView` method when data isn't ready. Your co
 
 This section contains best practices and guidance relating to code components within model-driven apps.
 
-#### Don't interact directly with `formContext`
+### Don't interact directly with `formContext`
 
 If you have experience working with client API, you might be used to interacting with `formContext` to access attributes, controls, and call API methods such as `save`, `refresh`, and `setNotification`. Code components are expected to work across various products like model-driven apps, canvas apps, and dashboards, therefore they can't have a dependency on `formContext`.
 
 A workaround is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the `formContext`. Support for the custom events will be added in the future, which will enable communicating changes outside of a control without adding a column configuration.
 
-#### Limit size and frequency of calls to the `WebApi`
+### Limit size and frequency of calls to the `WebApi`
 
 When using the `context.WebApi` methods, limit both the number of calls and the amount of data. Each time you call the `WebApi`, it counts towards the user's API entitlement and service protection limits. When performing CRUD operations on records, consider the size of the payload. In general, the larger the request payload, the slower your code component is.
 
