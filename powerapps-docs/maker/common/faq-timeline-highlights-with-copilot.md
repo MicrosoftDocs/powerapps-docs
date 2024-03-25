@@ -52,13 +52,13 @@ We tested and evaluated Copilot on various datasets and scenarios to ensure its 
 
 We used the following metrics to measure Copilot's performance: 
 
-- Accuracy: How well the generated highlights match the input and the context 
+- **Accuracy**: How well the generated highlights match the input and the context 
 
-- Relevance: How well the generated highlights address the customer's needs and expectations 
+- **Relevance**: How well the generated highlights address the customer's needs and expectations 
 
-- Diversity: How well the generated highlights offer different options and perspectives 
+- **Diversity**: How well the generated highlights offer different options and perspectives 
 
-- Readability: How easy the generated highlights are to read and understand 
+- **Readability**: How easy the generated highlights are to read and understand 
 
 ## What are the limitations of Copilot in the timeline? 
 
