@@ -44,6 +44,8 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
 
 Set the value of the field component to the raw value from the configured field.
 
+Values passed to this method may be null when data isn't ready. [Learn to manage temporarily null property values passed to `updateView`](../../code-components-best-practices.md#manage-temporarily-null-property-values-passed-to-updateview)
+
 
 ### Related articles
 
