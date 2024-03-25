@@ -14,7 +14,7 @@ search.audienceType:
 
 # Responsible AI FAQ for Copilot in the timeline
 
-These frequently asked questions (FAQ) describe the AI impact of the timeline highlights feature. 
+These frequently asked questions (FAQ) describe the AI impact in the timeline highlights feature. 
 
 ## What is Copilot in the timeline? 
 
