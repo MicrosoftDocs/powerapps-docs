@@ -118,7 +118,30 @@ To automate sharing of connections, use the [Edit Connection Role Assignment act
 - There is also no limit to the number of actions in each flow that can be associated with the connection reference.
 - Canvas apps don't recognize connection references on custom connectors. To work around this limitation, after a solution is imported to an environment the app must be edited to remove and then re-add the custom connector connection. Note, if this app is in a managed solution, proceeding to edit the app will create an unmanaged layer. More information: [Solution layers](solution-layers.md)
 
+## Known issues
+
+### Copy environment will break connection references for custom connectors
+
+Custom connectors currently use an environment-specific identifier to reference a custom connector. After a copy environment operation, a [new connection reference will need to be created to the new custom connector](/power-platform/admin/copy-environment#custom-connectors) and then any apps or flows using the old connection references will need to be fixed.
+
+### Custom connectors need to be imported in a separate solution from their connection references
+
+[Custom connectors](/connectors/custom-connectors/customconnectorssolutions) need to be imported in a [separate solution](/connectors/custom-connectors/customconnectorssolutions#known-limitations), before connection references or flows. [Export a solution](/power-automate/export-flow-solution) containing only the custom connector first.
+
 ## FAQ
+
+### How do I fix an "Invalid Connection" error?
+
+If the connection reference is showing as "invalid" (i.e. red exclamation point on flow details page), the issue is that the underlying connection that is in a bad state.  Please check and fixing the underlying connection by [updating the connection](/power-automate/add-manage-connections#update-a-connection), or potentially replacing the connection. 
+
+### What is the ConnectionAuthorizationFailed error? Why can't I turn on (activate) a flow?
+
+The "ConnectionAuthorizationFailed" error signals that the user trying to activate the flow does not have permissions to at least one of the connections the flow is using.
+To resolve the situation, either:
+- The users owning the connections needs to [share **all** the connections](/power-apps/maker/data-platform/create-connection-reference#share-connections-with-another-user-so-flows-can-be-enabled) with the user turning on (activating) the flow, or 
+- If one user owns all the connections in the flow, then that user can turn on (activate) the flow.
+
+Once the flow has been turned on by the owner of the connections, then the flow has permissions to use those connections. From that point on, any co-owner of the flow can turn the flow on.
 
 ### Can a flow be enabled by the owner of its connections and then ownership transferred to another user?
 
