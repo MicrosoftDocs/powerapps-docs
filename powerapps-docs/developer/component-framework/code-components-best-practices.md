@@ -29,35 +29,35 @@ This article outlines established best practices and guidance for professionals 
 
 This section contains best practices and guidance related to Power Apps component framework itself.
 
-#### Avoid deploying development builds to Dataverse
+### Avoid deploying development builds to Dataverse
 
 Code components can be built in [production or development mode](code-components-alm.md#building-pcfproj-code-component-projects). Avoid deploying development builds to Dataverse since they adversely affect the performance and can even get blocked from deployment due to their size. Even if you plan to deploy a release build later, it can be easy to forget to redeploy if you don't have an automated release pipeline. More information: [Debugging custom controls](debugging-custom-controls.md).
 
-#### Avoid using unsupported framework methods
+### Avoid using unsupported framework methods
 
 These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods might work but, because they're not supported, they might stop working in future versions. Use of control script that accesses host application HTML Document Object Model (DOM) isn't supported. Any parts of the host application DOM that are outside the code component boundary, are subject to change without notice. 
 
-#### Use `init` method to request network required resources
+### Use `init` method to request network required resources
 
 When the hosting context loads a code component, the [init](reference\control\init.md) method is first called. Use this method to request any network resources such as metadata instead of waiting for the `updateView` method. If the `updateView` method is called before the requests return, your code component must handle this state and provide a visual loading indicator.
 
-#### Clean up resources inside the `destroy` method
+### Clean up resources inside the `destroy` method
 
 The hosting context calls the [destroy](reference\control\destroy.md) method when a code component is removed from the browser DOM. Use the `destroy` method to close any `WebSockets` and remove  event handlers that are added outside of the container element. If you're using React, use `ReactDOM.unmountComponentAtNode` inside the `destroy` method. Cleaning up resources in this way prevents any performance issues caused by code components being loaded and unloaded within a given browser session.
 
-#### Avoid unnecessary calls to refresh on a dataset property
+### Avoid unnecessary calls to refresh on a dataset property
 
 If your code component is of type dataset, the bound dataset properties expose a [`refresh`](reference\dataset\refresh.md) method that causes the hosting context to reload the data. Calling this method unnecessarily impacts the performance of your code component.
 
-#### Minimize calls to `notifyOutputChanged`
+### Minimize calls to `notifyOutputChanged`
 
 In some circumstances, it's undesirable for updates to a UI control (such as keypresses or mouse move events) to each call `notifyOutputChanged`, as more calls to `notifyOutputChanged` would result in many more events propagating to the parent context than needed. Instead, consider using an event when a control loses focus, or when the user's touch or mouse event completes.
 
-#### Check API availability
+### Check API availability
 
 When developing code components for different hosts (model-driven apps, canvas apps, portals), always check the availability of the APIs you're using for support on those platforms. For example, `context.webAPI` isn't available in canvas apps. For individual API availability, see [Power Apps component framework API reference](reference/index.md).
 
-#### Manage temporarily null property values passed to `updateView`
+### Manage temporarily null property values passed to `updateView`
 
 Null values are passed to the `updateView` method when data isn't ready. Your components should account for this situation and expect that the data could be null, and that a subsequent `updateView` cycle can include updated values. `updateView` is available for both [standard](reference/control/updateview.md) and [React](reference/react-control/updateview.md) components.
 
@@ -234,7 +234,7 @@ When using React, it's important to follow React specific best practices regardi
 - For large React components, deconstruct your UI into smaller components to improve performance.
 - Avoid use of arrow functions and function binding inside the render function as these practices create a new callback closure with each render and cause the child component to always re-render when the parent component is rendered. Instead, use function binding in the constructor or use class field arrow functions. See [Handling Events - React](https://reactjs.org/docs/handling-events.html).
 
-#### Check accessibility
+### Check accessibility
 
 Ensure that code components are accessible so that keyboard only and screen-reader users can use them:
 
@@ -244,11 +244,11 @@ Ensure that code components are accessible so that keyboard only and screen-read
 
 More information: [Create accessible canvas apps in Power Apps](/powerapps/maker/canvas-apps/accessible-apps).
 
-#### Always use asynchronous network calls
+### Always use asynchronous network calls
 
 When making network calls, never use a synchronous blocking request since this causes the app to stop responding and result in slow performance. More information: [Interact with HTTP and HTTPS resources asynchronously](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously).
 
-#### Write code for multiple browsers
+### Write code for multiple browsers
 
 Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience.
 
@@ -256,7 +256,7 @@ Model-driven apps, canvas apps, and portals all support multiple browsers. Be su
 - [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)
 - [Browsers used by office](/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
 
-#### Code components should plan for supporting multiple clients and screen formats
+### Code components should plan for supporting multiple clients and screen formats
 
 Code components can be rendered in multiple clients (model-driven apps, canvas apps, portals) and screen formats (mobile, tablet, web). When used in model-driven apps, dataset code components can be placed on main form grids, related record grids, subgrids, or dashboards. When used in canvas apps, code components can be placed inside responsive containers that resize\ dynamically using the configuration provided by the app maker.
 
@@ -264,7 +264,7 @@ Code components can be rendered in multiple clients (model-driven apps, canvas a
 - Implementing [`setFullScreen`](reference\mode\setfullscreen.md) allows users to expand to use the entire available screen available where space is limited. More information: [Canvas app grid component](tutorial-create-canvas-dataset-component.md).
 - If the code component can't provide a meaningful experience in the given container size, it should disable functionality appropriately and provide feedback to the user.
 
-#### Always use scoped CSS rules
+### Always use scoped CSS rules
 
 When you implement styling to your code components using CSS, ensure that the CSS is scoped to your component using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it might break the existing styling of the form or screen where the code component is rendered. If using a third party CSS framework, use a namespaced version of that framework or otherwise wrap that framework in a namespace either by hand or using a CSS preprocessor.
 
@@ -274,7 +274,7 @@ For example, if your namespace is `SampleNamespace` and your code component name
 .SampleNamespace\.LinearInputComponent rule-name
 ```
 
-#### Avoid use of web storage objects
+### Avoid use of web storage objects
 
 Code components shouldn't use the HTML web storage objects, like `window.localStorage` and `window.sessionStorage`, to store data. Data stored locally on the user's browser or mobile client isn't secure and not guaranteed to be available reliably.
 
