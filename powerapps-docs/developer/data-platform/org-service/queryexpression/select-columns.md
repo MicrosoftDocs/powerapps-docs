@@ -279,6 +279,95 @@ With this method, the results of the query look like this:
 
 [Learn more about formatted values](../entity-operations-query-data.md#access-formatted-values)
 
+
+## Column aliases
+
+Column aliases are typically used for [aggregate operations](aggregate-data.md), but they also work for simple select operations, so we can introduce them here.
+
+Add [XrmAttributeExpression](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression) instances to the [ColumnSet.AttributeExpressions](/dotnet/api/microsoft.xrm.sdk.query.columnset.attributeexpressions) collection to specify a unique column name for the results returned. For each instance, set these properties: 
+
+- [XrmAttributeExpression.AttributeName](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.attributename): The logical name of the column
+- [XrmAttributeExpression.Alias](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias): The unique name for the column.
+- [XrmAttributeExpression.AggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.aggregatetype): When not aggregating data, use the [XrmAggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmaggregatetype)`.None` member. This is the default value, so you don't need to set it if you are not using aggregation.
+
+Each column returned must have a unique name. By default, the column names returned for the table of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
+
+When you use a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) to [join tables](join-tables.md), the default column names follow this naming convention: `{Linked table LogicalName}.{Column LogicalName}`.  This prevents any duplicate column names. You can override this by using a unique alias. You can also set the [EntityAlias](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) property for the `LinkEntity` representing the joined table.
+
+This `SimpleAliasOutput` method uses aliases rather than the logical names of the columns. Because of this, the results are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of complex types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
+
+This method uses the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables) .
+
+```csharp
+/// <summary>
+/// Output the entity attribute values with aliases
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+static void SimpleAliasOutputQE(IOrganizationService service)
+{
+    QueryExpression query = new("account")
+    {
+        TopCount = 3,
+        ColumnSet = new ColumnSet()
+        {
+            AttributeExpressions = {
+                 new XrmAttributeExpression{
+                    AttributeName = "accountclassificationcode",
+                    Alias = "code"
+                 },
+                 new XrmAttributeExpression{
+                    AttributeName = "createdby",
+                    Alias = "whocreated"
+                 },
+                 new XrmAttributeExpression{
+                    AttributeName = "createdon",
+                    Alias = "whencreated"
+                 },
+                 new XrmAttributeExpression{
+                    AttributeName = "name",
+                    Alias = "companyname"
+                 }
+            }
+        }
+    };
+
+    //Retrieve the data
+    EntityCollection entityCollection = service.RetrieveMultiple(query: query);
+
+    var table = new ConsoleTables.ConsoleTable("code", "whocreated", "whencreated", "companyname");
+
+    foreach (var entity in entityCollection.Entities)
+    {
+
+        var code = ((OptionSetValue)entity.GetAttributeValue<AliasedValue>("code").Value).Value;
+        var whocreated = ((EntityReference)entity.GetAttributeValue<AliasedValue>("whocreated").Value).Name;
+        var whencreated = entity.GetAttributeValue<AliasedValue>("whencreated").Value;
+        var companyname = entity.GetAttributeValue<AliasedValue>("companyname").Value;
+
+        table.AddRow(code, whocreated, whencreated, companyname);
+
+    }
+    table.Write();
+}
+```
+
+Output:
+
+```text
+ ----------------------------------------------------------------------------------
+ | code | whocreated           | whencreated           | companyname              |
+ ----------------------------------------------------------------------------------
+ | 1    | FirstName LastName   | 8/13/2023 10:30:08 PM | Fourth Coffee (sample)   |
+ ----------------------------------------------------------------------------------
+ | 1    | FirstName LastName   | 8/13/2023 10:30:10 PM | Litware, Inc. (sample)   |
+ ----------------------------------------------------------------------------------
+ | 1    | FirstName LastName   | 8/13/2023 10:30:10 PM | Adventure Works (sample) |
+ ----------------------------------------------------------------------------------
+```
+
+> [!NOTE]
+> The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and [AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName) if you need them.
+
 ## Next steps
 
 Learn how to join tables.
