@@ -2,7 +2,7 @@
 title: "View dependencies for a component in Power Apps | MicrosoftDocs"
 description: "Understand how to view dependencies for a component in Power Apps and take action."
 ms.custom: ""
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.reviewer: ""
 ms.topic: "article"
 author: "swatimadhukargit"
@@ -42,7 +42,10 @@ To choose an action, select the vertical ellipsis next to any component and then
 
 - **Open**: This action takes you to the particular component using the default solution. The open action helps you navigate to the component where you can inspect or edit it.
 - **Delete**: This action allows you to delete the component. Ensure to use this action only if the component is no longer required and can be deleted. This action is available only for unmanaged components.
-- **Remove dependency**: This action allows you to remove the dependency of the component on the solution component. The system attempts to edit the component to remove the dependency. In the event, when the system is unsuccessful in removing the dependency you might have to do a manual edit. This feature is currently available for certain components.
+- **Remove dependency**: This action allows you to remove the dependency of the component on the solution component. The system attempts to edit the component to remove the dependency. In the event, when the system is unsuccessful in removing the dependency you might have to do a manual edit. This feature is currently available for the following components:
+  - Entity's dependency on WebResource
+  - SystemForm's dependency on Attribute and Role
+  - AppModule's dependency on SavedQuery, SavedQueryVisualization, Entity, and SystemForm
 - **Open documentation**: This action allows you to open documentation where you can learn about the dependencies for that component type.
 
 You can also select a grouped solution and perform delete solution action:
