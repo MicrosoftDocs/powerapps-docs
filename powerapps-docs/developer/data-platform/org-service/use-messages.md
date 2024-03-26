@@ -2,7 +2,7 @@
 title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Understand how messages are used to invoke operations using the SDK for .NET."
 ms.collection: get-started
-ms.date: 10/18/2023
+ms.date: 03/26/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -143,14 +143,7 @@ public static Guid CreateRequestExample(IOrganizationService service)
 
 There are other messages that don't have classes in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
 
-Developers can generate Request and Response classes for the messages found in their environment using the following tools:
-
-|Tool|Description|
-|---------|---------|
-|Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
-|[Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.|
-
-More information: [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
+Developers can generate `*Request` and `*Response` classes for the messages found in their environment using the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build). Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate `*Request` and `*Response` classes. [Learn more about generating early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 ### Passing optional parameters with a request
 
