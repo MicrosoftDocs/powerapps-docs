@@ -18,15 +18,15 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can create [plug-ins](plug-ins.md) by using one of the following two methods:
+You can create [plug-ins](plug-ins.md) by using one of the following methods:
 
 - Power Platform development tools provide a modern way to create plug-ins. The tools being referred to here are *Power Platform Tools for Visual Studio* and *Power Platform CLI*. Both these Power Platform tools generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
-  - Use [Power Platform Tools for Visual Studio](tools/devtools-install.md) to quickly create and register (deploy) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
+  - Use [Power Platform Tools for Visual Studio](tools/devtools-install.md) to quickly create template plug-in code and register (deploy) a plug-in. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
 
   - Use [Power Platform CLI](/power-platform/developer/cli/introduction) to create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
-- Manually write code using your favorite editor or IDE. The rest of the plug-in documentation in this article and the other related articles is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
+- Manually write code using Visual Studio or your favorite editor. This article focuses on writing code using Dataverse APIs, however the concepts introduced also apply to plug-in development using our tools mentioned previously.
 
 ## IPlugin interface
 
@@ -49,7 +49,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 > [!IMPORTANT]
 > When deriving from `IPlugin`, the class should be written *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method.
 >
-> When using Power Platform tools for plug-in creation, the generated `PluginBase` class implements the `IPlugin` interface.
+> When using the Power Platform Tools extension or the Power Platform CLI for plug-in creation, the generated `PluginBase` class implements the `IPlugin` interface.
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
@@ -261,15 +261,12 @@ But you should never try to set the value using an early-bound type. Doing so ca
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
 ```
 
-## Next steps
-
-[Register a plug-in](register-plug-in.md)<br />
-[Debug Plug-ins](debug-plug-in.md)
-
 ### See also
 
-[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)  
 [Handle exceptions](handle-exceptions.md)  
+[Register a plug-in](register-plug-in.md)  
+[Debug Plug-ins](debug-plug-in.md)  
+[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)  
 [Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
