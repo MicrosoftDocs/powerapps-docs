@@ -184,11 +184,11 @@ The data contained by most column types is relatively simple and you can perform
 
 ### Lookup Columns
 
-When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](select-columns.md#formatted-values) returned is the corresponding primary name field.
+When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](../entity-operations-query-data.md#access-formatted-values) returned is the corresponding primary name field.
 
 ### Choice Columns
 
-Choice column values are also sorted using the [formatted values](select-columns.md#formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
+Choice column values are also sorted using the [formatted value](../entity-operations-query-data.md#access-formatted-values) rather than the values stored in the database. Data for these columns are stored as integers. The formatted value is a localized label based on the user's language.
 
 > [!NOTE]
 > Since choice sorting is based on the localized label of the users's language, expect different ordering for the results set if the user's language differs.
