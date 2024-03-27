@@ -17,7 +17,7 @@ contributors:
 > [!IMPORTANT]
 > We strongly discourage returning all columns in a table with your query. Returning all columns will make your applications run slower and may cause timeout errors. You should specify the minimum number of columns to retrieve with your data. If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, data for all columns is returned. If you set no columns, only the primary key value for the record is returned. This is [opposite of the behavior using FetchXml, where all columns are returned if you don't specify any](../../fetchxml/select-columns.md).
 
-Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the names for the columns to return with your query. Use the [AttributeMetadata.LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) value for each column. Logical Name values are always lower-case.
+Use the [ColumnSet class](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) to specify the names for the columns to return with your query. Use the [AttributeMetadata.LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) value for each column. Logical name values are always lower-case.
 
 You can specify the columns with the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())) when you initialize the `QueryExpression`:
 
@@ -65,115 +65,10 @@ This helps avoid runtime errors due to typing the wrong name. Learn more about:
 
 When you [Join tables using QueryExpression](join-tables.md), you use the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity). The [LinkEntity.Columns property](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns) property is a [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet), so you will define the columns to return for the joined tables in the same way.
 
-## Formatted values
-
-The typed data returned may not be suitable to display in your application. Formatted values are string values returned with the request that you can display in your application.
-
-Let's look at the results *without* using formatted values first.
-
-This `SimpleOutput` method only accesses values in the [Entity.Attributes collection](xref:Microsoft.Xrm.Sdk.Entity.Attributes).
-
-```csharp
-/// <summary>
-/// Output the entity attribute values
-/// </summary>
-/// <param name="service">The authenticated IOrganizationService instance</param>
-static void SimpleOutput(IOrganizationService service)
-{
-    QueryExpression query = new("account")
-    {
-        TopCount = 3,
-        ColumnSet = new ColumnSet("accountclassificationcode", "createdby", "createdon", "name")
-    };
-
-    //Retrieve the data
-    EntityCollection entityCollection = service.RetrieveMultiple(query: query);
-
-    var table = new ConsoleTables.ConsoleTable("classificationcode", "createdby", "createdon", "name");
-
-    foreach (var entity in entityCollection.Entities)
-    {
-        var accountclassificationcode = entity.GetAttributeValue<OptionSetValue>("accountclassificationcode").Value;
-        var createdby = entity.GetAttributeValue<EntityReference>("createdby").Name;
-        var createdon = entity.GetAttributeValue<DateTime>("createdon");
-        var name = entity.GetAttributeValue<string>("name");
-
-        table.AddRow(accountclassificationcode, createdby, createdon, name);
-
-    }
-    table.Write();
-}
-```
-
-**Output**:
-
-```text
- --------------------------------------------------------------------------------------
- | classificationcode | createdby           | createdon             | name            |
- --------------------------------------------------------------------------------------
- | 1                  | FirstName LastName  | 8/13/2023 10:30:08 PM | Fourth Coffee   |
- --------------------------------------------------------------------------------------
- | 2                  | FirstName LastName  | 8/13/2023 10:30:10 PM | Litware, Inc.   |
- --------------------------------------------------------------------------------------
- | 3                  | FirstName LastName  | 8/13/2023 10:30:10 PM | Adventure Works |
- --------------------------------------------------------------------------------------
-```
-
-These values may not be the user-friendly values you need to display in an application.
-
-- The `accountclassificationcode` choice column returns the integer value.
-- The reference to `createdby` must use the [EntityReference.Name property](xref:Microsoft.Xrm.Sdk.EntityReference.Name)
-
-To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse. This static `FormattedOutput` method shows how to access the formatted values. It uses the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/) to show the table in a console application.
-
-```csharp
-/// <summary>
-/// Output the formatted entity attribute values
-/// </summary>
-/// <param name="service">The authenticated IOrganizationService instance</param>
-static void FormattedOutput(IOrganizationService service)
-{
-    QueryExpression query = new("account")
-    {
-        TopCount = 3,
-        ColumnSet = new ColumnSet("accountclassificationcode", "createdby", "createdon", "name")
-    };
-
-    //Retrieve the data
-    EntityCollection entityCollection = service.RetrieveMultiple(query: query);
-
-    var table = new ConsoleTables.ConsoleTable("classificationcode", "createdby", "createdon", "name");
-
-    foreach (var entity in entityCollection.Entities)
-    {
-        var accountclassificationcode = entity.FormattedValues["accountclassificationcode"];
-        var createdby = entity.FormattedValues["createdby"];
-        var createdon = entity.FormattedValues["createdon"];
-        var name = entity.GetAttributeValue<string>("name");
-
-        table.AddRow(accountclassificationcode, createdby, createdon, name);
-
-    }
-    table.Write();
-}
-```
-
-With this method, the results of the query look like this:
-
-```text
- --------------------------------------------------------------------------------------------------
- | accountclassificationcode | createdby           | createdon          | name                    |
- --------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName  | 8/13/2023 10:30 PM | Fourth Coffee (sample)  |
- --------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName  | 8/13/2023 10:30 PM | Litware, Inc. (sample)  |
- --------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName  | 8/13/2023 10:30 PM | Adventure Works (sample)|
- --------------------------------------------------------------------------------------------------
-```
-
-[Learn more about formatted values](../entity-operations-query-data.md#access-formatted-values)
-
+<!-- 
+Removed the section on formatted values since it is already explained for SDK in  
+https://learn.microsoft.com/power-apps/developer/data-platform/org-service/entity-operations-query-data#access-formatted-values
+-->
 
 ## Column aliases
 
@@ -182,21 +77,24 @@ Column aliases are typically used for [aggregate operations](aggregate-data.md),
 Add [XrmAttributeExpression](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression) instances to the [ColumnSet.AttributeExpressions](/dotnet/api/microsoft.xrm.sdk.query.columnset.attributeexpressions) collection to specify a unique column name for the results returned. For each instance, set these properties: 
 
 - [XrmAttributeExpression.AttributeName](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.attributename): The logical name of the column
-- [XrmAttributeExpression.Alias](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias): The unique name for the column.
-- [XrmAttributeExpression.AggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.aggregatetype): When not aggregating data, use the [XrmAggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmaggregatetype)`.None` member. This is the default value, so you don't need to set it if you are not using aggregation.
+- [XrmAttributeExpression.Alias](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias): A unique name for the column to appear in the results.
+- [XrmAttributeExpression.AggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.aggregatetype): When not aggregating data, use the [XrmAggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmaggregatetype)`.None` member. This is the default value, so you don't need to set it if you are not using aggregation. [Learn more about aggregating data with QueryExpression](aggregate-data.md)
 
 Each column returned must have a unique name. By default, the column names returned for the table of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
 
-When you use a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) to [join tables](join-tables.md), can set the [EntityAlias](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) property for the `LinkEntity` representing the joined table. The column names in the [LinkEntity.Columns property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.columns) follow this naming convention: `{Linked table LogicalName}.{Column LogicalName}`.  This prevents any duplicate column names.
+When you use a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) to [join tables](join-tables.md), you can set the [EntityAlias](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) property for the `LinkEntity` representing the joined table. The column names in the [LinkEntity.Columns property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.columns) follow this naming convention: `{Linked table LogicalName or entity alias}.{Column LogicalName}`. This prevents any duplicate column names.
 
-However, when you specify a column alias using [XrmAttributeExpression.Alias property](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias), the `LinkEntity.EntityAlias` value is not prepended to the alias value. You must make sure that the alias value is unique.
+However, when you specify a column alias using [XrmAttributeExpression.Alias property](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias), the `LinkEntity.EntityAlias` or table logical name  value is not prepended to the alias value. You must make sure that the alias value is unique. If the value isn't unique, you can expect this error:
+
+> Name: `QueryBuilderDuplicateAlias`<br />
+> Code: `0x80041130`<br />
+> Number: `-2147217104`<br />
+> Message: `< alias value > is not a unique alias. It clashes with an autogenerated alias or user provided alias`
 
 
-This `SimpleAliasOutput` method uses aliases rather than the logical names of the columns. Because of this, the results are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of complex types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
+This `SimpleAliasOutput` example method uses aliases and logical names of the columns. Because of this, the results that use aliases are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
 
-This method uses the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
-
-In this example, aliases are specified only for the `accountclassificationcode`,`createdby`, and `createdon` columns. The `name` column doesn't use an alias.
+In this example, aliases are specified only for the `accountclassificationcode`,`createdby`, and `createdon` columns. The `name` column doesn't use an alias. This method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
 
 ```csharp
 /// <summary>
@@ -264,9 +162,11 @@ Output:
 > [!NOTE]
 > The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and [AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName) if you need them.
 
-## Formatted and aliased values
+## Aliased and formatted values example
 
-This article described how results returned may have either formatted or aliased values. The following static `OutputQueryExpression` example method demonstrates how to extract string values suitable for display in an application, in this case, a console application using the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
+This article described how results returned may be returned as aliased values. As explained in [Access formatted values](../entity-operations-query-data.md#access-formatted-values), formatted string values are also returned using the [Entity.FormattedValues collection](/dotnet/api/microsoft.xrm.sdk.entity.formattedvalues) to provide string values suitable for display in an application.
+
+The following static `OutputQueryExpression` example method demonstrates how to extract string values suitable for display in an application. This function uses the `QueryExpression.ColumnSet` data to know which columns are requested, and then processes the results to find the best way to display the record data in an app, in this case, a console application using the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
 
 ```csharp
 /// <summary>
@@ -274,7 +174,9 @@ This article described how results returned may have either formatted or aliased
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance to use.</param>
 /// <param name="query">The query to use</param>
-/// <exception cref="Exception">OutputQueryExpression requires all LinkEntity instances that contain columns specify an EntityAlias property.</exception>
+/// <exception cref="Exception">
+/// OutputQueryExpression requires all LinkEntity instances that contain columns specify an EntityAlias property.
+/// </exception>
 static void OutputQueryExpression(IOrganizationService service, QueryExpression query)
 {
     //Retrieve the data
@@ -294,7 +196,7 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
     // Write the table to the console
     table.Write();
 
-    static List<string> GetQueryExpressionColumns(QueryExpression query)
+    List<string> GetQueryExpressionColumns(QueryExpression query)
     {
         List<string> columns = new();
 
@@ -308,13 +210,13 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
         return columns;
     }
 
-    static List<string> GetLinkEntityColumns(LinkEntity linkEntity)
+    List<string> GetLinkEntityColumns(LinkEntity linkEntity)
     {
         if (string.IsNullOrWhiteSpace(linkEntity.EntityAlias))
         {
             if (linkEntity.Columns.Columns.Count != 0)
             {
-                string message = "OutputQueryExpression requires all ";
+                string message = "OutputQueryExpressionRequest requires all ";
                 message += "LinkEntity instances that contain columns ";
                 message += "specify an EntityAlias property.";
 
@@ -333,7 +235,7 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
         return columns;
     }
 
-    static List<string> GetColumns(ColumnSet columnset, string alias = null)
+    List<string> GetColumns(ColumnSet columnset, string alias = null)
     {
         List<string> columns = new();
 
@@ -350,14 +252,7 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
         return columns;
     }
 
-
-    /// <summary>
-    /// Returns the values of a row as strings
-    /// </summary>
-    /// <param name="columns">The names of the columns</param>
-    /// <param name="entity">The entity with the data</param>
-    /// <returns></returns>
-    static List<string> GetRowValues(List<string> columns, Entity entity)
+    List<string> GetRowValues(List<string> columns, Entity entity)
     {
         List<string> values = new();
         columns.ForEach(column =>
@@ -398,38 +293,45 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
 You can use this function to show the output of any `QueryExpression` query with the only requirement being that any [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) used to join tables specify an alias. For example the following query includes aliased and formatted values with a joined table:
 
 ```csharp
-QueryExpression query = new("account")
+static void OutputQueryExpressionExample(IOrganizationService service)
 {
-    TopCount = 3,
-    ColumnSet = new ColumnSet("name")
+    // Specify a query:
+    QueryExpression query = new("account")
     {
-        AttributeExpressions = {
-            new XrmAttributeExpression{
-                AttributeName = "accountclassificationcode",
-                Alias = "classificationcode"
-             }
-        }
-    },
-    LinkEntities = {
-        new LinkEntity()
+        TopCount = 3,
+        ColumnSet = new ColumnSet("name")
         {
-            LinkFromEntityName = "account",
-            LinkToEntityName = "contact",
-            LinkFromAttributeName = "primarycontactid",
-            LinkToAttributeName = "contactid",
-            JoinOperator = JoinOperator.Inner,
-            EntityAlias = "person",
-            Columns = new ColumnSet("fullname"){                                  
-                AttributeExpressions = {
+            AttributeExpressions = {
                 new XrmAttributeExpression{
-                    AttributeName = "accountrolecode",
-                    Alias = "role"
+                    AttributeName = "accountclassificationcode",
+                    Alias = "classificationcode"
+                 }
+            }
+        },
+        LinkEntities = {
+            new LinkEntity()
+            {
+                LinkFromEntityName = "account",
+                LinkToEntityName = "contact",
+                LinkFromAttributeName = "primarycontactid",
+                LinkToAttributeName = "contactid",
+                JoinOperator = JoinOperator.Inner,
+                EntityAlias = "person",
+                Columns = new ColumnSet("fullname"){
+                    AttributeExpressions = {
+                    new XrmAttributeExpression{
+                        AttributeName = "accountrolecode",
+                        Alias = "role"
+                        }
                     }
                 }
             }
         }
-    }
-};
+    };
+
+    // Use OutputQueryExpression
+    OutputQueryExpression(service, query);
+}
 ```
 
 The results of this query might look like this:
