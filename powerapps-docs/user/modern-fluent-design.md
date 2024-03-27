@@ -69,7 +69,7 @@ Field sections, which are containers for the fields on a form, have a more strea
 
 The following example shows a set of fields with the modern, refreshed look.
 
-:::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
+:::image type="content" source="media/ModernFields2024April.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
 
