@@ -1,7 +1,7 @@
 ---
 title: "Create a custom analyzer for Dataverse Search"
 description: "TODO when it is clear what this article is about" 
-ms.date: 02/10/2024
+ms.date: 03/28/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -16,25 +16,34 @@ contributors:
 ---
 # Create a custom analyzer for Dataverse Search
 
-Dataverse search uses many different built in capabilities that include both index and search analyzers to return the best data based on what the user asks for. It is used to help define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
+Dataverse search uses many different built-in capabilities that include both index and search analyzers to return the best data based on what the user asks for. These built-in capabilities to help define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
 
-Examples can include phrases that have special characters, use dashes or frequently used words like “of,” “or, etc. that are removed from the search term when the query is processed by the back-end data engine.
+Examples can include phrases that have special characters (like `(`,`)`,`<`,`>`,`#`,`$`,`@`, or`%`), use dashes, or frequently used words (like '`of`' and '`or`')  that the back-end data engine removes from the search term when the query is processed.
 
-Here are some examples where Dataverse search will not return an exact match because the data in the searched column is not easily understood, or because certain characters are automatically removed or ignored based on the out of box analyzer used by Dataverse Search service.
-
-TODO - Work with Jim on formatting a table:
+Here are some examples where Dataverse search won't return an exact match because the data in the searched column isn't easily understood, or because certain characters are automatically removed or ignored based on the default analyzer used by Dataverse Search service.
 
 
-To ensure Dataverse Search returns, the expected results will require additional instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term.  The data is specific to a column and a table, and it is important to make sure Dataverse search uses the best analyzer, which is often a default Azure Search analyzer or a custom analyzer if needed.
+|Examples|Desired|Actual|
+|---------|---------|---------|
+|`AB-84(q)(1)(c)` or `AB-84(1)(1)(-c)` |**TODO**: clearer example|**TODO**: clearer example|
+|`2.2.3.1`|**TODO**: clearer example|**TODO**: clearer example|
+|`PG-11.1`|**TODO**: clearer example|**TODO**: clearer example|
+|`"%mn" +"ABC-123"`|**TODO**: clearer example|**TODO**: clearer example|
+|`"Inspector of brakes"`|All results include the literal string `"Inspector of brakes"`|Returns results containing `Inspector of boilers`|
+
+> **TODO**: Do these examples need an example data set to be clearer?
+
+To ensure Dataverse Search returns expected results requires extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure Search analyzer or a custom analyzer if needed.
 
 ## About analyzers
 
-Dataverse search is built on top of the Microsoft analyzers (https://learn.microsoft.com/azure/search/index-add-language-analyzers#supported-language-analyzers) so if you are seeing results that you do not expect or would like to refine, please make sure you have a good understanding of Azure search analyzer. Please refer to Analyzers for linguistic and text processing - Azure AI Search | Microsoft Learn (https://learn.microsoft.com/en-us/azure/search/search-analyzers) for details and information on how Azure search analyzers work in a search engine.
+Dataverse search is built on top of the [Microsoft analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of Azure search analyzer. Refer to [Analyzers for linguistic and text processing](/azure/search/search-analyzers) for details and information on how Azure search analyzers work in a search engine.
 
-Default Analyzers:
-It might be possible for your search terms and phrases that the Azure default analyzers will work for you. You can learn more about the available search analyzers that are available to be used: Add custom analyzers to string fields - Azure Cognitive Search | Microsoft Learn (https://learn.microsoft.com/en-us/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the available language analyzers: Add language analyzers to string fields - Azure Cognitive Search | Microsoft Learn (https://learn.microsoft.com/en-us/azure/search/index-add-language-analyzers#supported-language-analyzers) will work for you.
+### Default Analyzers
 
-To use an out of the box Azure analyzer, set the name, attribute name and entityname to be used and set the settings to {"analyzer": "it.microsoft"}, this is for a search analyzer or { "analyzer": "it.microsoft"} for a language analyzer.
+For your search terms and phrases, the Azure default analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you.
+
+To use one of the existing Azure analyzers, set the **Name**, **attributename**, and **entityname** to be used and set the settings to `{"analyzer": "it.microsoft"}`, this is for a search analyzer or `{ "analyzer": "it.microsoft"}` for a language analyzer.
 
 In Dataverse Search, an analyzer is automatically invoked on all string fields marked as searchable.
 
@@ -42,64 +51,54 @@ By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard
 
 You can override the default on a field-by-field basis. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
-Question: Is it possible to demonstrate the steps to apply to Dataverse search using an 'available analyzer' without providing a 'custom analyzer'?
+> **TODO**: Question: Is it possible to demonstrate the steps to apply to Dataverse search using an 'available analyzer' without providing a 'custom analyzer'?
 
-TODO: If we have a scenario with a specific search analyzer project, we can add it to our [GitHub PowerApps-Samples repo](https://github.com/microsoft/PowerApps-Samples). Having this sample allows people to verify that the documented process works. Expect people will want to verify a 'happy path' solution works as an evaluation step before committing to engaging a developer to do this work.
+> **TODO**: If we have a scenario with a specific search analyzer project, we can add it to our [GitHub PowerApps-Samples repo](https://github.com/microsoft/PowerApps-Samples). Having this sample allows people to verify that the documented process works. Expect people will want to verify a 'happy path' solution works as an evaluation step before committing to engaging a developer to do this work.
 
 ## Create a custom analyzer
 
-When results are not coming back from Dataverse as you would expect, it is possible that you will need to build a custom search analyzer to be used when searching across your data in your application.  It is important to understand what an Azure custom analyzer is and how to build one that can be applied to your power platform environment and can be utilized by Dataverse search to return data as expected by your users.  Please refer to Add custom analyzers to string fields - Azure AI Search | Microsoft Learn (https://learn.microsoft.com/en-us/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it will help return the best results for your users. 
+When results aren't coming back from Dataverse as you would expect, you can build and configure a custom search analyzer. It's important to understand what an Azure custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can to return data as expected by your users. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
 
 ## Enable the custom analyzer for Dataverse Search
-After creating a custom search analyzer makers can enable it for Dataverse search by adding the definition of the analyzer in the configuration table and populate the attribute settings table with the field and analyzer name mappings.
 
-Open the searchatributessetting table at https://make.powerapps.com
-## NOTE! Make sure you are in the environment you want to apply the changes by clicking on Environment in the page's header and selecting your environment.
+After creating a custom search analyzer, you can enable it for Dataverse search by adding the definition of the analyzer in the configuration table and populate the attribute settings table with the field and analyzer name mappings.
 
-Select tables from the left navigation pane
+Open the [searchattributesettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com).
 
-Select the “All” tables
+> [!NOTE]
+> Make sure you are in the environment you want to apply the changes by clicking on Environment in the page's header and selecting your environment.
 
-In the top right search for searchattributesettings
-TODO: Get help from Jim to add the image
+1. Select tables from the left navigation pane.
+1. Select **All** tables.
+1. In the top right search for `searchattributesettings`.
 
-Open the table
-Make sure when the table opens the Name, attributename, entityname and settings columns are visible.You can easily add them by selecting “+ more” next to the name column.
+1. Open the table.
+1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible.You can easily add them by selecting "**+18 more**" next to the **Name** column.
+1. After selecting the columns click on save.
+1. This will close the dialog and the columns will be visible on the page.
+1. After saving the columns should be visible.
 
-After selecting the columns click on save.
+## What to add to the columns
 
-This will close the dialog and the columns will be visible on the page.
-TODO: Get help from Jim to add the image
-
-After saving the columns should be visible.
-
-## What to add to the columns:
-•	Enter a name, this would be the name of the row in the table. It can be anything that helps you identify the custom analyzer you have added.
-
-•	In the attribute name column, enter the column of the table you want the analyzer used for your search terms or phrases.
-
-•	In the entity name column, enter the name of the table where the column you entered in the attribute name exists.
-
-•	In the setting column, copy the entire. Json string that defines your custom analyzer.
-
-•	Tab to the next row, this will automatically save your record and update your environment.
-
-NOTE! This will automatically kick off an index for the table defined. This is needed for the search engine to use the columns defined by your custom
-
-TODO: Get help from Jim to add the image
-
-Sample value of settings attribute: 
-{ "analyzer": "name_analyzer"}
-{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}
-
-## Set the custom analyzer definition.
-You will need to update the searchcustomanlayzer table. To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
-
-TODO: Add the scripts given by engineering.
+The following table describes what to add to the columns:
 
 
+|Name  |What to add|
+|---------|---------|
+|**Name**|The name of the row in the table. It can be anything that helps you identify the custom analyzer you have added.|
+|**attributename**|The name of column of the table you want the analyzer used for your search terms or phrases.|
+|**entityname**     |The name of the table where the column you entered in the attribute name exists.|
+|**settings**|Copy the entire JSON string that defines your custom analyzer. The value might look something like this: `{ "analyzer": "name_analyzer"}{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
 
+> [!NOTE]
+> This will automatically kick off an index for the table defined. This is needed for the search engine to use the columns defined by your custom analyzer.
+
+## Set the custom analyzer definition
+
+You will need to update the  [searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
+
+> **TODO**: Add the scripts given by engineering.
 
 
 
