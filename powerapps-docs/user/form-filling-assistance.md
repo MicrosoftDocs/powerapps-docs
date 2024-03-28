@@ -26,7 +26,7 @@ Copilot assistance is available in English only for all model-driven apps on the
 
 To turn on form fill assistance, admins must complete the following steps in the Power Platform admin center.
 
-1. Sign in to the [Power Platform admin center] (https://admin.powerplatform.microsoft.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. In the navigation pane, select **Environments**, and then select an environment from the list.
 1. Select **Settings** in the command bar.
 1. Select **Product > Features**.
@@ -41,7 +41,7 @@ To turn on form fill assistance, admins must complete the following steps in the
 
 To turn off form fill assistance, admins can complete the following steps.
 
-1. Sign in to the [Power Platform admin center] (https://admin.powerplatform.microsoft.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. In the navigation pane, select **Environments**, and then select an environment from the list.
 1. Select **Settings** in the command bar.
 1. Select **Product > Features**.
