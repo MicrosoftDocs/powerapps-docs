@@ -22,7 +22,7 @@ With Copilot assistance for filling forms for model-driven apps, users receive s
 
 ## Turn on form fill assistance
 
-Copilot assistance is available in English only for all model-driven apps on the web with the [modern, refreshed look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. Currently supported field types are text, numeric, choice, and date. Fields with column security are not currently supported.
+Copilot assistance is available in English only for all model-driven apps on the web with the [modern, refreshed look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. Currently supported field types are text, numeric, choice, and date. Fields with column security aren't currently supported.
 
 To turn on form fill assistance, admins must complete the following steps in the Power Platform admin center.
 
@@ -55,7 +55,7 @@ Copilot assistance for filling forms generates suggestions for text, numeric, ch
 
 Suggestions are entirely optional, and aren't saved in the app until you accept them. 
 
-To accept a specific suggestion, hover of the field and then select **Accept** or select the field and press the enter key. 
+To accept a specific suggestion, hover of the field and then select **Accept** or select the field and press the **Enter** key. 
 
 :::image type="content" source="media/formfill_acceptone.png" alt-text="Accept a specific form fill suggestion":::
 
