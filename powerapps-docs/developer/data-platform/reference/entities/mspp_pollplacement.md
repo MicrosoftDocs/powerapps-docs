@@ -1,7 +1,7 @@
 ---
 title: "Poll Placement (mspp_pollplacement)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Poll Placement (mspp_pollplacement)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -347,9 +347,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [mspp_pollplacement_ActivityPointers](#BKMK_mspp_pollplacement_ActivityPointers)
+- [mspp_pollplacement_adx_portalcomments](#BKMK_mspp_pollplacement_adx_portalcomments)
 - [mspp_pollplacement_adx_inviteredemptions](#BKMK_mspp_pollplacement_adx_inviteredemptions)
 - [mspp_pollplacement_chats](#BKMK_mspp_pollplacement_chats)
-- [mspp_pollplacement_adx_portalcomments](#BKMK_mspp_pollplacement_adx_portalcomments)
 - [mspp_pollplacement_Appointments](#BKMK_mspp_pollplacement_Appointments)
 - [mspp_pollplacement_Emails](#BKMK_mspp_pollplacement_Emails)
 - [mspp_pollplacement_Faxes](#BKMK_mspp_pollplacement_Faxes)
@@ -375,6 +375,23 @@ Same as the [mspp_pollplacement_ActivityPointers](activitypointer.md#BKMK_mspp_p
 |ReferencedEntityNavigationPropertyName|mspp_pollplacement_ActivityPointers|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mspp_pollplacement_adx_portalcomments"></a> mspp_pollplacement_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [mspp_pollplacement_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_pollplacement_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mspp_pollplacement_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_mspp_pollplacement_adx_inviteredemptions"></a> mspp_pollplacement_adx_inviteredemptions
@@ -407,23 +424,6 @@ Same as the [mspp_pollplacement_chats](chat.md#BKMK_mspp_pollplacement_chats) ma
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_pollplacement_chats|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_pollplacement_adx_portalcomments"></a> mspp_pollplacement_adx_portalcomments
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_pollplacement_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_pollplacement_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_pollplacement_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

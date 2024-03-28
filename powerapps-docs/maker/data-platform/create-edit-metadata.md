@@ -27,7 +27,7 @@ Different clients people use to interact with the data in your environment depen
 You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](../../developer/data-platform/reference/about-entity-reference.md).
 
 > [!TIP]
-> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](/dynamics365/customer-engagement/developer/browse-your-metadata).
+> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse table definitions in your environment](../../developer/data-platform/browse-your-metadata.md).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
@@ -41,11 +41,11 @@ For most organizations it's to your advantage to use the standard tables and att
   
 If you install a solution, you can expect that the solution developer has leveraged the standard tables and attributes. Creating a new custom table that replaces a system table or attribute will mean that any solutions available may not work for your organization.  
   
-For these reasons, we recommend that you look for and use the provided standard tables, columns, and table relationships when they make sense for your organization. If they don’t make sense and can’t be edited to match your need, you should evaluate if creating a new table, column, or table relationships is required. 
+For these reasons, we recommend that you look for and use the provided standard tables, columns, and table relationships when they make sense for your organization. If they don't make sense and can't be edited to match your need, you should evaluate if creating a new table, column, or table relationships is required. 
 
 Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it's common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-a-table).
   
-You can’t delete standard tables, columns, or table relationships. They're considered part of the system solution and every organization is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This will remove the table from most parts of the application. If there's a system column that you don’t need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they don't appear in advanced find. 
+You can't delete standard tables, columns, or table relationships. They're considered part of the system solution and every organization is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This will remove the table from most parts of the application. If there's a system column that you don't need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they don't appear in advanced find. 
   
 <a name="BKMK_LimitationsOnMetadata"></a>   
 
@@ -57,7 +57,7 @@ Within each table there's an upper limit on the number of columns you can create
   
 Most people don't create enough custom columns to reach the limit, but if you find yourself planning to add hundreds of custom columns to a table, you should consider if this is the best design. Do all the columns you plan to add describe properties for a row for that table? Do you really expect that people using your organization will be able to manage a form that includes such a high number of columns? The number of columns you add to a form increase the amount of data that has to be transferred each time a row is edited and will affect the performance of the system. Take these factors into consideration when you're adding custom columns to a table.  
   
-Choice columns provide a set of options that will be displayed in a drop-down control on a form or in picklist control when using advanced find. Your environment can support thousands of options within an Option set, but you shouldn’t consider this as the upper limit. Usability studies have shown that people have trouble using a system where a drop-down control provides large numbers of options. Use choice  column to define categories for data. Don’t use choice  columns to select categories that actually represent separate items of data. For example, rather than maintain a choice  column that stores each of hundreds of possible manufacturers of a type of equipment, consider creating a table that stores references to each manufacturer and use a lookup column instead of a choice.  
+Choice columns provide a set of options that will be displayed in a drop-down control on a form or in picklist control when using advanced find. Your environment can support thousands of options within an Option set, but you shouldn't consider this as the upper limit. Usability studies have shown that people have trouble using a system where a drop-down control provides large numbers of options. Use choice  column to define categories for data. Don't use choice  columns to select categories that actually represent separate items of data. For example, rather than maintain a choice  column that stores each of hundreds of possible manufacturers of a type of equipment, consider creating a table that stores references to each manufacturer and use a lookup column instead of a choice.  
   
 ### Next steps
 

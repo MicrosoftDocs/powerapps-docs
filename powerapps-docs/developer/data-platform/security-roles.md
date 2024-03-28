@@ -66,7 +66,7 @@ http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootrolei
 ### See also
 
 *Web API Reference*  
-[roletemplate EntityType](/dynamics365/customer-engagement/web-api/roletemplate)
+[roletemplate EntityType](xref:Microsoft.Dynamics.CRM.roletemplate)
 
 *Table/Entity Reference*  
 [Security Role (Role)](reference/entities/role.md)

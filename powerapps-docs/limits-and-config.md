@@ -95,6 +95,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
+| \*.azure-apihub.net |https |Api Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You may [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
@@ -112,6 +113,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
+| *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>

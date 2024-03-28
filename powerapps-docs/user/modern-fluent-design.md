@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 02/07/2024
+ms.date: 03/26/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -65,11 +65,11 @@ The following example shows a form page with the modern, refreshed look.
 
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. For example, the recommended icons are removed for simplicity. Input and error message styling is also refreshed based on Fluent design.
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
 The following example shows a set of fields with the modern, refreshed look.
 
-:::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
+:::image type="content" source="media/ModernFields2024April.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
 
@@ -92,6 +92,10 @@ Switching themes or enabling dark mode isn't supported at this time.
 ### Honoring classic theming
 
 With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. See [change the color of the app header](#change-the-color-of-the-app-header) for more details.  Other theme customization options for the modern, refreshed look aren't available yet.  
+
+### Custom icons
+
+Only SVG icons are supported. If you use other formats such as PNG, the navigation won't display them and a default icon will appear instead.
 
 ## Frequently asked questions (FAQs)
 
@@ -140,7 +144,7 @@ Admins can disable the **New look** setting across all apps in an organization b
 1. Search for **New look**.
 1. Select **New look for model driven apps**.
 1. Select **Add** to add it to the solution.
-1. Select ****New look for model driven apps** from the solution explorer.
+1. Select **New look for model driven apps** from the solution explorer.
 1. Update **Setting Environment Value** to **No**.
 1. Select **Save**.
 1. Publish all customizations.

@@ -26,7 +26,7 @@ You have some options to define the data returned when you retrieve a row. You w
 
 
 > [!IMPORTANT]
-> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve all table columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
+> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](../best-practices/work-with-data/retrieve-specific-columns-entity-via-query-apis.md)
 
 If you need to return related rows you can include a query with your retrieve request to define which related rows to return.
 
