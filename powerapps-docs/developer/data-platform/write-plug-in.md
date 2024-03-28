@@ -130,10 +130,10 @@ IOrganizationService orgService = serviceFactory.CreateOrganizationService(conte
 
 Use the tracing service to write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
-To write to the Tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
-
 > [!IMPORTANT]
 > You must first enable trace logging in your environment before you are able to write to or view the logs. More information: [Tracing and logging](logging-tracing.md#enable-trace-logging)
+
+To write to the Tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
 ```csharp
 ITracingService tracingService =
