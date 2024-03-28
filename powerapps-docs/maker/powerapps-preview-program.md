@@ -6,8 +6,8 @@ ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
   - canvas
-ms.date: 09/03/2021
-ms.author: jimholtz
+ms.date: 03/04/2024
+ms.author: tapanm
 search.audienceType: 
   - admin
 ---
@@ -78,11 +78,6 @@ You can provide feedback on the [Power Apps forum][8] and/or contact [support][9
 2. **Using apps created in preview environments in production environments**
 
    Power Apps does not support opening apps saved in preview only versions of Power Apps in production environments. Most versions of Power Apps will eventually move from preview into production, but how and when this happens is influenced by many factors so it should not be relied on. We recommend you use production environments to create or edit any app intended for use in a production environment.
-
-3. **Database cannot be created in Preview region**
-
-   Currently, you cannot create a database with Microsoft Dataverse in an environment in Preview (United States) region - we're working on it.
-
 
 <!--Reference links in article-->
 [2]: https://make.powerapps.com

@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - KumarVivek
+  - mduelae
   - evlew
 ---
 

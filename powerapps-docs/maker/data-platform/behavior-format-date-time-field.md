@@ -173,11 +173,12 @@ The following date and time related query operators are invalid for the **Date o
 
 ### See also
 
-[Troubleshoot date and time issues in model-driven apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues)
-[Create and edit columns](create-edit-fields.md)
-[Define calculated columns to automate manual calculations](define-calculated-fields.md)
-[Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)
-[Managed properties](/power-platform/alm/managed-properties-alm)  
-[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
+[Troubleshoot date and time issues in model-driven apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues)   
+[Create and edit columns](create-edit-fields.md)   
+[Define calculated columns to automate manual calculations](define-calculated-fields.md)   
+[Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)   
+[Managed properties](/power-platform/alm/managed-properties-alm)   
+[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)   
+[Configure the behavior and format of the date and time column using code](../../developer/data-platform/behavior-format-date-time-attribute.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

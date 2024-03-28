@@ -1,11 +1,11 @@
 ---
 
-title: Configure files and images in offline canvas apps (preview)
+title: Configure files and images in offline canvas apps
 description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: article
-ms.date: 12/05/2023
+ms.date: 03/13/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -17,118 +17,106 @@ searchScope:
   - "Power Apps"
 ---
 
-# Configure files and images in offline canvas apps (preview)
-[This article is prerelease documentation and is subject to change.]
+# Configure files and images in offline canvas apps
 
-This article explains how to configure files and images in offline canvas apps.
+This article explains how to configure files and images in a Power Apps table for offline canvas apps.
 
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+## Prerequisites
 
-## Prerequisite: View column properties for a file or image 
+- Have an existing canvas with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
+
+### View column properties for a file or image
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left side panel, select **Tables**.
-   
+1. In the left navigation menu, select **Tables**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)] 
+
+1. Select the table that has the columns you want to view. 
+
+1. Under **Schema**, select **Columns**.
+  
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image. For more information about columns, see [Columns overview](../maker/data-platform/fields-overview.md).
 
-   > [!div class="mx-imgBorder"]
-   >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
 
-## Turn on support for file and image columns in Dataverse offline feature
-1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+## Download options
 
-1. Select your canvas app, and then select **Edit**.
+In an offline-enabled canvas app, there are two ways to download files and images:
 
-1. Select **Settings**.
+- **On view**: Downloaded when you view them—the default option.
+- **On sync**: Downloaded during offline sync when device is connected.
 
-1. Select **Upcoming features**, and then select the **Preview** tab.
+### Download files and images on view
 
-1. Turn on the **Enable support for file/image column in Dataverse offline** option.
+When files and images are configured to download **on view**, the content is downloaded on the device when the user opens a file or when an image is presented to the user. Files and images are downloaded when the device is connected to the network and can be used afterward without connectivity.
 
-In an offline-enabled canvas app, you can either allow the files and images to be downloaded **on view**, which is the default option or **on sync**. We recommend that you download files and images on sync if you don't expect to download a large number of files or images.
+This mode is enabled by default without any specific configuration.
 
-## Download files and images on view 
-When files and images are configured to be downloaded **on view**, the content is downloaded on the device when the user explicitely opens a file or when an image is presented to the user. Files and images are downloaded when the device is connected to the network and can be used afterward without connectivity.
+If you want to keep this default, then you don't need to proceed with this article.
 
-This mode is enabled by default without any specific configuration. 
+### Download files and images on sync
 
-## Download files and images on sync
-When files and images are configured to be downloaded **on sync**, files and images are downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified in the application when the download of the files and images is completed. 
+When files and images are configured to download **on sync**, they're downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified when the download of the files and images is completed. **On sync** is recommended if you don't need to download a large number of files or images.
 
-To configure automatic download of files and images on sync, create a mobile offline profile in the Power Platform admin center and edit it to include files and images. See [Create a mobile offline profile](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) to learn how to create a new mobile offline profile and select it from your app.
+The remainder of this article helps you configure on sync.
 
-### Add image columns to mobile offline 
+## Configure on sync
 
-It is required to add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile to make images available in offline mode.
+### Prerequisites - mobile offline profile
+
+To configure the automatic download of files and images on sync, you need to  [create a mobile offline profile](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) in the Power Platform admin center.
+
+### Enable offline access to images and files
+
+You can add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile by configuring the settings of your environment.
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-1. In the left side panel, select **Environments**.
- 
-1. Choose an environment and then select **Settings**.
- 
-1. Expand **Users + permissions** and then select **Mobile configuration**.
+1. Select **Environments** from the navigation menu.
+
+1. Choose an environment and then select **Settings** on the menu bar.
+
+1. Expand **Users + permissions**, then select **Mobile configuration**.
+
+   :::image type="content" source="media/files-images-offline-canvas-apps/mobile-configuration.png" alt-text="Screenshot that shows where the mobile configuration setting is located in your environment settings.":::
 
 1. Select a mobile offline profile to edit it.
 
 1. In the **Data available offline** section, select **Add table**.
+
+1. Proceed with adding [image columns](#add-image-columns-to-mobile-offline-with-image-descriptor) and [file columns](#add-file-columns-to-mobile-offline-with-fileattachment).
+
+#### Add image columns to mobile offline with Image Descriptor
+
+In your mobile configuration setting, you can add the **Image Descriptor** table to enable image downloads.
 
 1. Select **Image Descriptor** and then select **Next**.
 
+   :::image type="content" source="media/files-images-offline-canvas-apps/select-image-descriptor.png" alt-text="Screenshot that shows where to select the Image Descriptor table." lightbox="media/files-images-offline-canvas-apps/select-image-descriptor.png":::
+
 1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-1. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the screenshot below for the **DemoTable1** and **DemoTable3** tables).
+1. Expand **Relationships** and select **Column name: Display name** for each column where **Data type** is set to **Image**. In this example, we select the unnamed column names from the **DemoTable1** and **DemoTable3** tables.
 
-    > [!div class="mx-imgBorder"]
-    > ![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
+   :::image type="content" source="media/offline-file-images-2.png" alt-text="Screenshot that shows the Image Descriptor table settings.":::
   
 1. Select **Save**.
 
-1. In the **Data available offline** section, select **Add table**.
+#### Add file columns to mobile offline with FileAttachment
 
-1.  Select **FileAttachment** and then select **Next**. 
-
-1. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Add FileAttachment table.](media/mobile-offline-edit-image.png "Add FileAttachment table")
-
-1. Select **Save**.
-
-### Add file columns to mobile offline 
-
-It is required to add the **FileAttachment** tables to your mobile offline profile to make files available in offline mode.
-
-1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
-
-1. In the left side panel, select **Environments**.
- 
-1. Choose an environment and then select **Settings**.
- 
-1. Expand **Users + permissions**  and then select **Mobile configuration**.
-
-1. Select a mobile offline profile to edit it.
-
-1. In the **Data available offline** section, select **Add table**.
+In your mobile configuration setting, you can add a **FileAttachment** table to enable file downloads.
 
 1. Select **FileAttachment** and then select **Next**.
 
-   > [!div class="mx-imgBorder"]
-    >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
+   :::image type="content" source="media/offline-file-images-4.png" alt-text="Screenshot that shows how to add the FileAttachment table.":::
 
 1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-1. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the screenshot below for the **DemoTable3** table).
+1. Expand **Relationships** and select **Column name: My column name** for each column where **Data type** is set to **File**. In this example we add **Column name: MyFile** from the **DemoTable3** table.
 
-   > ![Note] Don't select **Column name: Regarding.**.
+   _Don't_ select **Column name: Regarding.**.
 
-    > [!div class="mx-imgBorder"]
-    >![Edit FileAttachment table.](media/offline-file-images-9.png "Edit FileAttachment table.")
-   
+   :::image type="content" source="media/offline-file-images-9.png" alt-text="Screenshot that shows how to edit the FileAttachment table.":::
 
- 1. Select **Save**. 
+1. Select **Save**.

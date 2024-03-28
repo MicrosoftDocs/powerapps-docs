@@ -107,6 +107,6 @@ while (true)
 [Building queries with QueryExpression](build-queries-with-queryexpression.md)<br />
 [Sample: Use QueryExpression with a paging cookie](samples/use-queryexpression-with-a-paging-cookie.md)<br />
 [Using the QueryExpression class](use-queryexpression-class.md)<br />
-[Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+[Page results using FetchXml](../fetchxml/page-results.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

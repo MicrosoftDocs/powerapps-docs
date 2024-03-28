@@ -1,7 +1,7 @@
 ---
 title: "Catalog Submission Files (mspcat_CatalogSubmissionFiles)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Catalog Submission Files (mspcat_CatalogSubmissionFiles)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -18,7 +18,7 @@ search.audienceType:
 
 Files associated with the package that will be used as part of the submission to the catalog system.
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: Catalog in Power Platform Packaging Solution
 
 
 ## Messages

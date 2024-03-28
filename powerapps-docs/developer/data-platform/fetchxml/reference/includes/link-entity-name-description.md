@@ -1,0 +1,1 @@
+The logical name of the related table.

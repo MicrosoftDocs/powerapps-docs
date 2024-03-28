@@ -385,6 +385,8 @@ This section describes guidelines and the known limitations with formula columns
   - `DateTime(TZI)` behavior columns can be compared or used in `DateDiff` functions with another `DateTime(TZI)/DateOnly` behavior column.
   - `DateOnly` behavior columns can be compared or used in DateDiff function with another `DateTime(TZI)/DateOnly` behavior column.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
+- Date time columns and date time functions `UTCNow()`, `Now()` cannot be passed as a pararmeter to string functions.
+  :::image type="content" source="media/formula-column-date-time-arg.png" alt-text="Formula column with unsupported date time parameter passed in formula":::
 
 ### Formula column usage in rollup fields
 
@@ -406,6 +408,8 @@ This section describes guidelines and the known limitations with formula columns
    Concatenate(Text(123,"#"),"ab")
    Text(123,"#") & "foo"
    ```
+- Locale-specific formatting tokens such as "." and "," are not supported in formula columns.
+  :::image type="content" source="media/formula-column-locale-specific-arg.png" alt-text="Unsupported locale-specific formatting token passed as parameter to Text function in formula":::
 
 ### Range validations on formula columns
 
@@ -423,6 +427,7 @@ This section describes guidelines and the known limitations with formula columns
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
   - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - Formula columns don't display values when the app is in mobile offline mode.
+- You can't trigger workflows or plug-ins on formula columns.
 - We don't recommend using calculated columns in formula columns and vice versa.
 - Duplicate detection rules aren't triggered on formula columns.
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.

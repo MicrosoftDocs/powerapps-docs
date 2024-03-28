@@ -1,7 +1,7 @@
 ---
 title: "Invite Redemption (adx_inviteredemption)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Invite Redemption (adx_inviteredemption)  table/entity."
-ms.date: 01/03/2024
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1887,6 +1887,7 @@ Same as the [adx_inviteredemption_Annotations](annotation.md#BKMK_adx_inviterede
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [interactionforemail_adx_inviteredemptions](#BKMK_interactionforemail_adx_inviteredemptions)
+- [adx_invitation_adx_inviteredemptions](#BKMK_adx_invitation_adx_inviteredemptions)
 - [knowledgebaserecord_adx_inviteredemptions](#BKMK_knowledgebaserecord_adx_inviteredemptions)
 - [account_adx_inviteredemptions](#BKMK_account_adx_inviteredemptions)
 - [adx_inviteredemption_systemuser_createdby](#BKMK_adx_inviteredemption_systemuser_createdby)
@@ -1897,7 +1898,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [adx_inviteredemption_sla_slaid](#BKMK_adx_inviteredemption_sla_slaid)
 - [adx_inviteredemption_businessunit_owningbusinessunit](#BKMK_adx_inviteredemption_businessunit_owningbusinessunit)
 - [knowledgearticle_adx_inviteredemptions](#BKMK_knowledgearticle_adx_inviteredemptions)
-- [adx_invitation_adx_inviteredemptions](#BKMK_adx_invitation_adx_inviteredemptions)
 - [adx_inviteredemption_systemuser_modifiedonbehalfby](#BKMK_adx_inviteredemption_systemuser_modifiedonbehalfby)
 - [adx_inviteredemption_systemuser_createdonbehalfby](#BKMK_adx_inviteredemption_systemuser_createdonbehalfby)
 - [adx_inviteredemption_systemuser_modifiedby](#BKMK_adx_inviteredemption_systemuser_modifiedby)
@@ -1917,6 +1917,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 **Added by**: System Solution Solution
 
 See the [interactionforemail_adx_inviteredemptions](interactionforemail.md#BKMK_interactionforemail_adx_inviteredemptions) one-to-many relationship for the [interactionforemail](interactionforemail.md) table/entity.
+
+### <a name="BKMK_adx_invitation_adx_inviteredemptions"></a> adx_invitation_adx_inviteredemptions
+
+See the [adx_invitation_adx_inviteredemptions](adx_invitation.md#BKMK_adx_invitation_adx_inviteredemptions) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
 
 ### <a name="BKMK_knowledgebaserecord_adx_inviteredemptions"></a> knowledgebaserecord_adx_inviteredemptions
 
@@ -1977,10 +1981,6 @@ See the [adx_inviteredemption_businessunit_owningbusinessunit](businessunit.md#B
 **Added by**: System Solution Solution
 
 See the [knowledgearticle_adx_inviteredemptions](knowledgearticle.md#BKMK_knowledgearticle_adx_inviteredemptions) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-### <a name="BKMK_adx_invitation_adx_inviteredemptions"></a> adx_invitation_adx_inviteredemptions
-
-See the [adx_invitation_adx_inviteredemptions](adx_invitation.md#BKMK_adx_invitation_adx_inviteredemptions) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
 
 ### <a name="BKMK_adx_inviteredemption_systemuser_modifiedonbehalfby"></a> adx_inviteredemption_systemuser_modifiedonbehalfby
 

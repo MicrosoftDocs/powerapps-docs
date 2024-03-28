@@ -63,7 +63,8 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
         ![Share with an individual user.](./media/share-app/individual-user.png "Share with an individual user")
 
     > [!NOTE]
-    > You can't share an app with a distribution group in your organization or with a group outside your organization.
+    > - You can't share an app with a distribution group in your organization or with a group outside your organization.
+    > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users
 
 1. If your app contains premium components, such as a map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
 
