@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 02/07/2024
+ms.date: 03/26/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -65,11 +65,11 @@ The following example shows a form page with the modern, refreshed look.
 
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. For example, the recommended icons are removed for simplicity. Input and error message styling is also refreshed based on Fluent design.
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
 The following example shows a set of fields with the modern, refreshed look.
 
-:::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
+:::image type="content" source="media/ModernFields2024April.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
 
