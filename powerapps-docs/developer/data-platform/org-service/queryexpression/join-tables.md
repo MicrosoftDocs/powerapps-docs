@@ -36,11 +36,11 @@ The following table provides details about the [LinkEntity properties](/dotnet/a
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName>|The logical name of the entity that you are linking to.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you are linking from. This is the name of the lookup column for the relationship.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you are linking to. This is the name of the primary key column for the table named in the <xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName> property |
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Set this to a value of one of the [JoinOperator enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator) members. The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `LeftOuter` TODO: Add short description<br />- `Natural`TODO: Add short description<br />These members considered [advanced JoinOperators](#use-advanced-joinoperators):<br />- `Exists`<br />- `In`<br />- `MatchFirstRowUsingCrossApply`<br />These members are used to [filter on values in related records](filter-rows.md#filter-on-values-in-related-records):<br />- `All`<br />- `Any`<br />- `NotAll`<br />- `NotAny`|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Set this to a value of one of the [JoinOperator enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator) members. The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `LeftOuter` Includes results from the parent row that don't have a matching value.<br />- `Natural` TODO: Add short description<br />These members considered [advanced JoinOperators](#use-advanced-joinoperators):<br />- `Exists`<br />- `In`<br />- `MatchFirstRowUsingCrossApply`<br />These members are used to [filter on values in related records](filter-rows.md#filter-on-values-in-related-records):<br />- `All`<br />- `Any`<br />- `NotAll`<br />- `NotAny`|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias>|The alias for the table.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>.[Learn to select columns using QueryExpression](select-columns.md)|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>. [Learn to select columns using QueryExpression](select-columns.md)|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkCriteria>|The complex condition and logical filter expressions that filter the results of the query. [Learn how to filter rows using QueryExpression](filter-rows.md)|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can included nested links. |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can included nested links. [Up to 15 total links can be included in a query](#limitations) |
 
 <!-- 
 TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator) article to explain each of the types like is done for FetchXML at https://learn.microsoft.com/en-us/power-apps/developer/data-platform/fetchxml/reference/link-entity#link-type-options 
@@ -48,7 +48,7 @@ TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Que
 
 ### LinkEntity example
 
-The following query returns up to 5 records from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
+The following query returns up to 5 records from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record. This represents a [many-to-one relationship](#many-to-one-relationships):
 
 ```csharp
 QueryExpression query = new("account")
@@ -131,6 +131,7 @@ This way you can more easily access the different parts of the query to make adj
 
 You can add up to 15 [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances to a query. Each `LinkEntity` adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 `LinkEntity` to the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) you will get this runtime error:
 
+> Name: `TooManyLinkEntitiesInQuery`
 > Code: `0x8004430D`  
 > Number: `-2147204339`  
 > Message: `Number of link entities in query exceeded maximum limit.`

@@ -37,9 +37,13 @@ query.ColumnSet.AddColumns("accountclassificationcode", "createdby", "createdon"
 ```
 
 > [!NOTE]
-> Some columns are not valid for read. The [AttributeMetadata.IsValidForRead](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForRead) indicates whether a columns is valid for read. If you include the names for these columns, no values are returned.
+> Some columns are not valid for read. The [AttributeMetadata.IsValidForRead property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForRead) indicates whether a column is valid for read. If you include the names for these columns, no values are returned.
 > 
 > The [ColumnSet.Columns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.Columns) is a [Microsoft.Xrm.Sdk.DataCollection&lt;string&gt;](xref:Microsoft.Xrm.Sdk.DataCollection%601) that extends [System.Collections.ObjectModel.Collection&lt;T&gt; class](xref:System.Collections.ObjectModel.Collection%601), so you can also use the methods of those base classes to interact with the strings in the collection.
+
+### Select columns for joined tables
+
+When you [Join tables using QueryExpression](join-tables.md), you use the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity). The [LinkEntity.Columns property](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns) property is a [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet), so you will define the columns to return for the joined tables in the same way.
 
 ## Early bound field classes
 
@@ -61,9 +65,7 @@ This helps avoid runtime errors due to typing the wrong name. Learn more about:
 - [Generating early-bound classes for the SDK for .NET](../generate-early-bound-classes.md) 
 - [Late-bound and early-bound programming using the SDK for .NET](../early-bound-programming.md)
 
-## Select columns for joined tables
 
-When you [Join tables using QueryExpression](join-tables.md), you use the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity). The [LinkEntity.Columns property](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns) property is a [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet), so you will define the columns to return for the joined tables in the same way.
 
 <!-- 
 Removed the section on formatted values since it is already explained for SDK in  
@@ -72,17 +74,20 @@ https://learn.microsoft.com/power-apps/developer/data-platform/org-service/entit
 
 ## Column aliases
 
-Column aliases are typically used for [aggregate operations](aggregate-data.md), but they also work for simple select operations, so we can introduce them here.
+Column aliases are typically used for [aggregate operations](aggregate-data.md), but they also work to retrieve rows, so we can introduce them here.
 
 Add [XrmAttributeExpression](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression) instances to the [ColumnSet.AttributeExpressions](/dotnet/api/microsoft.xrm.sdk.query.columnset.attributeexpressions) collection to specify a unique column name for the results returned. For each instance, set these properties: 
 
-- [XrmAttributeExpression.AttributeName](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.attributename): The logical name of the column
-- [XrmAttributeExpression.Alias](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias): A unique name for the column to appear in the results.
-- [XrmAttributeExpression.AggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.aggregatetype): When not aggregating data, use the [XrmAggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmaggregatetype)`.None` member. This is the default value, so you don't need to set it if you are not using aggregation. [Learn more about aggregating data with QueryExpression](aggregate-data.md)
+
+|Property|Description|
+|---------|---------|
+|[AttributeName](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.attributename)|The logical name of the column|
+|[Alias](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias)|A unique name for the column to appear in the results|
+|[AggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.aggregatetype)|When not aggregating data, use the [XrmAggregateType](/dotnet/api/microsoft.xrm.sdk.query.xrmaggregatetype)`.None` member. This is the default value, so you don't need to set it if you are not using aggregation. [Learn more about aggregating data with QueryExpression](aggregate-data.md)|
 
 Each column returned must have a unique name. By default, the column names returned for the table of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
 
-When you use a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) to [join tables](join-tables.md), you can set the [EntityAlias](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) property for the `LinkEntity` representing the joined table. The column names in the [LinkEntity.Columns property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.columns) follow this naming convention: `{Linked table LogicalName or entity alias}.{Column LogicalName}`. This prevents any duplicate column names.
+When you use a [LinkEntity](/dotnet/api/microsoft.xrm.sdk.query.linkentity) to [join tables](join-tables.md), you can set the [EntityAlias property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) for the `LinkEntity` representing the joined table. The column names in the [LinkEntity.Columns property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.columns) follow this naming convention: `{Linked table LogicalName or alias}.{Column LogicalName}`. This prevents any duplicate column names.
 
 However, when you specify a column alias using [XrmAttributeExpression.Alias property](/dotnet/api/microsoft.xrm.sdk.query.xrmattributeexpression.alias), the `LinkEntity.EntityAlias` or table logical name  value is not prepended to the alias value. You must make sure that the alias value is unique. If the value isn't unique, you can expect this error:
 
@@ -94,14 +99,14 @@ However, when you specify a column alias using [XrmAttributeExpression.Alias pro
 
 This `SimpleAliasOutput` example method uses aliases and logical names of the columns. Because of this, the results that use aliases are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
 
-In this example, aliases are specified only for the `accountclassificationcode`,`createdby`, and `createdon` columns. The `name` column doesn't use an alias. This method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
+In this example, aliases are specified only for the `accountclassificationcode`,`createdby`, and `createdon` columns. The `name` column doesn't use an alias. This method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables) to render the table.
 
 ```csharp
 /// <summary>
 /// Output the entity attribute values with aliases
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
-static void SimpleAliasOutputQE(IOrganizationService service)
+static void SimpleAliasOutput(IOrganizationService service)
 {
     QueryExpression query = new("account")
     {
@@ -166,7 +171,7 @@ Output:
 
 This article described how results returned may be returned as aliased values. As explained in [Access formatted values](../entity-operations-query-data.md#access-formatted-values), formatted string values are also returned using the [Entity.FormattedValues collection](/dotnet/api/microsoft.xrm.sdk.entity.formattedvalues) to provide string values suitable for display in an application.
 
-The following static `OutputQueryExpression` example method demonstrates how to extract string values suitable for display in an application. This function uses the `QueryExpression.ColumnSet` data to know which columns are requested, and then processes the results to find the best way to display the record data in an app, in this case, a console application using the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables).
+The following static `OutputQueryExpression` example method demonstrates how to extract string values for each row of data. This function uses the `QueryExpression.ColumnSet` data to know which columns are requested, and then processes the results to find the best way to display the record data in an app, in this case, a console application using the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables) to render a table.
 
 ```csharp
 /// <summary>

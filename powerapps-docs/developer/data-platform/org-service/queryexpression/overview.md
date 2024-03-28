@@ -14,7 +14,6 @@ contributors:
 ---
 # Query data using QueryExpression
 <!-- Does not replace entity-operations-query-data.md -->
-<!-- Replaces build-queries-with-queryexpression.md -->
 
 The [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), together with other classes in the [Microsoft.Xrm.Sdk.Query namespace](xref:Microsoft.Xrm.Sdk.Query), provides an object model to compose complex queries to retrieve records from Dataverse using the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A). [Compare options when querying data using the SDK for .NET](../entity-operations-query-data.md)
 
@@ -45,7 +44,7 @@ public static EntityCollection SimpleExample(IOrganizationService service) {
 When the query instance is initialized, you can:
 
 - Specify the table as the [QueryExpression.EntityName property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName) using the [QueryExpression(String) constructor](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.-ctor#microsoft-xrm-sdk-query-queryexpression-ctor(system-string)).
-- Specify the columns to return by setting the [QueryExpression.ColumnSet](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())). [Learn more about selecting columns](select-columns.md)
+- Specify the columns to return by setting the [QueryExpression.ColumnSet property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet) by instantiating a new [ColumnSet](xref:Microsoft.Xrm.Sdk.Query.ColumnSet) and passing one or more column [LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName) values to the [ColumnSet(String[]) constructor](/dotnet/api/microsoft.xrm.sdk.query.columnset.-ctor#microsoft-xrm-sdk-query-columnset-ctor(system-string())). [Learn more about selecting columns](select-columns.md)
 - Limit the number of records returned by setting the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount)
 
 ### Property assignment style
@@ -139,8 +138,7 @@ There are some things that you can do using FetchXml that `QueryExpression` does
 - Retrieve data using the Dataverse Web API. There are some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
 - [Aggregation limitations](aggregate-data.md#queryexpression-aggregation-limitations) lists the limitations for aggregations using `QueryExpresssion`.
 - [Cross table comparisons](../../fetchxml/filter-rows.md#cross-table-comparisons).
-   `QueryExpression` supports [Filter on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
-- [Set arbitrary aliases for columns](../../fetchxml/select-columns.md#column-aliases).
+   `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
 - [Override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
 - Use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query).
 
@@ -170,7 +168,7 @@ You also use `QueryExpression` as a parameter for Dataverse operations such as t
 |`Rollup`|[RollupRequest](xref:Microsoft.Crm.Sdk.Messages.RollupRequest)|[Rollup function](xref:Microsoft.Dynamics.CRM.Rollup)|
 
 > [!NOTE]
-> Web API Operations other than [BulkDelete](xref:Microsoft.Dynamics.CRM.BulkDelete), [SyncBulkOperation](xref:Microsoft.Dynamics.CRM.SyncBulkOperation), and [QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml) can use FetchXml via the [FetchExpression complex type](xref:Microsoft.Dynamics.CRM.FetchExpression). While the Web API contains the structures to compose queries using `QueryExpression`, such as the [QueryExpression](xref:Microsoft.Dynamics.CRM.QueryExpression),[ColumnSet](xref:Microsoft.Dynamics.CRM.ColumnSet), and [FilterExpression](xref:Microsoft.Dynamics.CRM.FilterExpression) complex types, there is currently no way to use these to retrieve data with `QueryExpression` using the Web API [as you can with FetchXml](../../fetchxml/retrieve-data.md). This means it isn't possible to test the results of the query you would send as a parameter using Web API.
+> Web API Operations other than [BulkDelete](xref:Microsoft.Dynamics.CRM.BulkDelete), [SyncBulkOperation](xref:Microsoft.Dynamics.CRM.SyncBulkOperation), and [QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml) can use FetchXml via the [FetchExpression complex type](xref:Microsoft.Dynamics.CRM.FetchExpression). While the Web API contains the structures to compose queries using `QueryExpression`, such as the [QueryExpression](xref:Microsoft.Dynamics.CRM.QueryExpression), [ColumnSet](xref:Microsoft.Dynamics.CRM.ColumnSet), and [FilterExpression](xref:Microsoft.Dynamics.CRM.FilterExpression) complex types, there is currently no way to use these to retrieve data with `QueryExpression` using the Web API [as you can with FetchXml](../../fetchxml/retrieve-data.md). This means it isn't possible to test the results of the query you would send as a parameter using Web API.
 
 
 ## Next steps
