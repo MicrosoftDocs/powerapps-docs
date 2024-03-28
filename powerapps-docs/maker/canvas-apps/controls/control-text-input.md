@@ -37,7 +37,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
+**Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control. Only works in **SingleLine** **Mode**.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
