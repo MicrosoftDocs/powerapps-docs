@@ -22,7 +22,7 @@ With Copilot assistance for filling forms for model-driven apps, users receive s
 
 ## Enable form fill assistance
 
-Copilot assistance is available in English only for model-driven apps on the web with the [New look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. Currently supported field types are text, number, date, and choice. Fields with column security enabled are not currently supported.
+Copilot assistance is available in English only for all model-driven apps on the web with the [New look](modern-fluent-design.md) enabled. Suggestions are generated for fields in main forms only. Currently supported field types are text, numeric, choice, and date. Fields with column security enabled are not currently supported.
 
 To enable form fill assistance, enable **AI form fill assistance** in Power Platform Admin Center:
 1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
@@ -31,7 +31,7 @@ To enable form fill assistance, enable **AI form fill assistance** in Power Plat
     > [!div class="mx-imgBorder"]
     > ![Select environment Settings.](media/Environment_settings.png)
 
-3. In Settings for the selected environmnet, select **Product > Features**.
+3. In Settings for the selected environment, select **Product > Features**.
 
     > [!div class="mx-imgBorder"]
     > ![Select copilot feature for the environment.](media/Environment_features.png)
@@ -45,17 +45,11 @@ This feature is rolling out gradually by default (the **Users as the feature bec
 
 ## Disable form fill assistance
 
-The way you disable form fill assistance depends on how you enabled it. Make one of the following changes:
-
-- Disable [Copilot setting](../maker/model-driven-apps/add-ai-copilot.md#enable-copilot-for-model-driven-apps-feature-for-your-environment) in Power Platform Admin Center. 
-- Disable [Early access](/power-platform/admin/opt-in-early-access-updates) for 2024 Release Wave 1.
-- Switch out of [Monthly release channel](../maker/model-driven-apps/channel-change.md).
-
-You need to contact Microsoft support to only disable form fill assistance without disabling any of the features listed above.
+To disable form fill assistance, go to Power Platform admin center > Settings > Features and set the value for **Allow AI to generate form field suggestions for model-driven apps** to **No one**.
 
 ## Use form fill assistance 
 
-Copilot assistance for filling forms generates suggestions for text, numeric, options, and date fields in main forms in model-driven apps. Suggestions are generated only for the tab that is open and are presented inline in the form. 
+Copilot assistance for filling forms generates suggestions for text, numeric, choice, and date fields in main forms in model-driven apps. Suggestions are generated only for the tab that is open and are presented inline in the form. 
 
 > [!div class="mx-imgBorder"] 
 > ![Form fill suggestions](media/formfill_suggestions.png "Form fill suggestions")
