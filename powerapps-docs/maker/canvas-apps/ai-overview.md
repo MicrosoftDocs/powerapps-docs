@@ -78,7 +78,7 @@ Follow these steps to enable or disable **Copilot** preview features for your en
 
 ## See also
 
-- [Transparency notes for Power Apps](../common/transparency-note.md)
+- [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 - [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
 - [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)
   
