@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 03/26/2024
+ms.date: 03/29/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -152,14 +152,14 @@ Admins can disable the **New look** setting across all apps in an organization b
     > [!NOTE]
     > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
 
-### Managing on by default general availability rollout
+### Managing the "on by default" general availability rollout
 
 The modern, refreshed look for model-driven apps is on by default in the following release channels:
  
 - Monthly channel in April 2024
 - Semi-annual channel as of 2024 Release Wave 1
  
-Once generally available, end users will see the New look setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+Once generally available, end users can see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For the semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 
