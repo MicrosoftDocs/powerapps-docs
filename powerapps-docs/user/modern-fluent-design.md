@@ -154,7 +154,12 @@ Admins can disable the **New look** setting across all apps in an organization b
 
 ### Managing on by default general availability rollout
 
-Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps is on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+The modern, refreshed look for model-driven apps is on by default in the following release channels:
+ 
+- Monthly channel in April 2024
+- Semi-annual channel as of 2024 Release Wave 1
+ 
+Once generally available, end users will see the New look setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 
