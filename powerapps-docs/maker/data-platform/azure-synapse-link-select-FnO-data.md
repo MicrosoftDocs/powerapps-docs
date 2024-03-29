@@ -107,7 +107,7 @@ You can enable both finance and operations tables and finance and operations ent
 9. Select **Save**. Tables selected are initialized and ready for reporting.
 
 
-![Adding finance and operations tables](media/synapse_link_delta.gif)
+![Adding finance and operations tables](media/synapse_link_delta_3_loops.gif)
 
 > [!NOTE]
 >
@@ -161,7 +161,7 @@ To create an Azure Synapse Link profile with incremental data:
 7. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
 8. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
 
-![Adding incremental data changes](media/Synapse_link_Incremental.gif)
+![Adding incremental data changes](media/Synapse_link_Incremental_3_loops.gif)
 
 > [!NOTE]
 >
