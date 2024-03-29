@@ -1,6 +1,6 @@
 ---
-title: Use solution checker to validate your solutions | Microsoft Docs
-description: Use the solution checker to validate your solution.
+title: Improve user experience with solution checker validation
+description: Use solution checker to analyze Dataverse customizations to enhance user experience. 
 author: Mattp123
 ms.component: cds
 ms.topic: article
@@ -10,54 +10,56 @@ ms.author: matp
 search.audienceType: 
   - maker
 ---
-# Use solution checker to validate your solutions
+# Improve user experience with solution checker validation
 
 To deliver on complex business requirements, makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
-The solution checker analyzes these solution components: 
-- Dataverse custom workflow activities 
+The solution checker analyzes these solution components:
+
+- Dataverse custom workflow activities
 - Dataverse web resources (HTML and JavaScript)
 - Dataverse configurations, such as SDK message steps
 - Power Automate flows (via [flow checker](/power-automate/error-checker))
 - Power Fx expressions (via [app checker](https://powerapps.microsoft.com/en-us/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/))
 
-Solution checker works with unmanaged solutions that can be exported from an environment. 
+Solution checker works with unmanaged solutions that can be exported from an environment.
 
 > [!NOTE]
-> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/get-started-powerapps-checker?view=pa-ps-latest&preserve-view=true) 
+>
+> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/get-started-powerapps-checker?view=pa-ps-latest&preserve-view=true)
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
-> - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment. 
+> - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment.
 
 ## Run the solution checker
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. In the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
+3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**.
 
    > [!div class="mx-imgBorder"]
    > ![Run solution checker command.](media/solution-checker-run.png "Run solution checker command")
 
-4.	The **Solution checker** command button has a loading indicator, and you'll notice a **Running…** state in the **Solution check** column of the **Solution** list. 
+4. The **Solution checker** command button has a loading indicator, and you'll notice a **Running…** state in the **Solution check** column of the **Solution** list.
 
     > [!div class="mx-imgBorder"]
     > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
-   
+
     Note the following:
-    - The solution checker can take a few minutes to complete the analysis. 
-    
+    - The solution checker can take a few minutes to complete the analysis.
+
     - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
-5.	[View the report](#review-the-solution-checker-report) when the check is completed.
+5. [View the report](#review-the-solution-checker-report) when the check is completed.
 
 ## Cancel a check
 
-After you submit a solutions check in your environment, the check can be canceled through the status pane on the upper right area of the **Solutions** page. 
+After you submit a solutions check in your environment, the check can be canceled through the status pane on the upper right area of the **Solutions** page.
 
-When you cancel a check, the solution check stops running and the solution check status returns to the previous state. 
+When you cancel a check, the solution check stops running and the solution check status returns to the previous state.
 
 ## Solution checker states
 
-When you install the solution checker in your environment, the **Solution check** column becomes available in the **Solutions** list. This column displays the solution analysis states for a solution. 
+When you install the solution checker in your environment, the **Solution check** column becomes available in the **Solutions** list. This column displays the solution analysis states for a solution.
 
 |State  |Description  |
 |---------|---------|
@@ -69,19 +71,18 @@ When you install the solution checker in your environment, the **Solution check*
 |Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis isn't permitted on these solutions.         |
 |Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis isn't available for these solutions.        |
 
-
 ## Review the solution checker report
 
-When a solution check is completed, you can view the analysis report in the portal, or you can download the report from your web browser. In the portal, you have options to sort results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
+When a solution check is completed, you can view the analysis report in the portal, or you can download the report from your web browser. In the portal, you have options to sort results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution.
 
 1. In the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
 3. Select an issue to view the details and guidance on how to resolve.
 
-    > [!div class="mx-imgBorder"] 
+    > [!div class="mx-imgBorder"]
     > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
-The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided.
 
 1. In the left pane, select **Solutions**. [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/left-navigation-pane.md)]
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download results**.  
@@ -104,7 +105,6 @@ Here's a summary of each column in the report.
 |Statement     | The code statement or configuration that resulted in the issue.        |  All       |
 |Comments     | Details about the issue that include high-level resolution steps.         |  All       |
 
-
 ## Run solution checker rules locally
 
 You can run solution checker rules in your development environment to detect issues much sooner as you create your solution resources.  This is currently supported for web resources (JavaScript and [TypeScript](https://typescript-eslint.io/)). For more details, go to the NPM package [@microsoft/eslint-plugin-power-apps](https://www.npmjs.com/package/@microsoft/eslint-plugin-power-apps).
@@ -121,6 +121,9 @@ The following table lists the component type, rule description, severity, and ca
 |Plug-in or workflow activity   | [meta-remove-inactive](../../developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations.md?client=PAChecker&error=meta-remove-inactive&source=featuredocs)    | Remove inactive configurations in Dataverse.    | Low | Maintainability |
 |Plug-in or workflow activity   | [meta-avoid-crm4-event](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=meta-avoid-crm4-event&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    | Medium | Upgrade readiness |
 |Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  | High  | Usage |
+|Plug-in or workflow activity  | [meta-license-sales-sdkmessages](/dynamics365/sales/license-checker-rules#meta-license-sales-sdkmessages)  |  Solution contains SDK messages and operations that require a valid Dynamics 365 license.   | Low | Licensing |
+|Model-driven app  | [meta-license-sales-customcontrols](/dynamics365/sales/license-checker-rules##meta-license-sales-customcontrols)  |  Solution contains custom controls that require a valid Dynamics 365 Sales license.   | Low | Licensing |
+|Model-driven app  | [meta-license-sales-entity-operations](/dynamics365/sales/license-checker-rules#meta-license-sales-entity-operations)  |  Solution contains entities with restricted SDK messages and operations that require a valid Dynamics 365 license.   | Low | Licensing |
 |Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   | Critical | Performance |
 |Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   | High  | Supportability |
 |Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | | High  | Supportability |
@@ -178,6 +181,4 @@ The following table lists the component type, rule description, severity, and ca
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />
 
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
