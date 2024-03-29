@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 12/16/2021
+ms.date: 03/28/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,8 +16,6 @@ search.audienceType:
 ---
 
 # Search for records by using Dataverse search
-
-
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
@@ -68,6 +66,8 @@ Search results are ranked based on relevance and grouped by tables. The list of 
 
 To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
+> [!NOTE]
+> Rows returned in the search grid can't be sorted.
 
 ![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
