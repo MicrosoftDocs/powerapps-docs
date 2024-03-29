@@ -21,7 +21,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - SQL Server
 - Microsoft SharePoint
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
-- Salesforce
+- Salesforce (Preview)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -126,7 +126,7 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
-# [Salesforce](#tab/salesforce)
+# [Salesforce (Preview)](#tab/salesforce)
 
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
