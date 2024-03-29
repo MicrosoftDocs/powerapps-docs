@@ -98,6 +98,11 @@ The following are limitations for each data source.
    - **Compliance Asset ID** is an internal column from SharePoint for tracking purposes. It can be ignored.
    - **ID** is the external primary key from SharePoint. It's read-only and can be ignored.
 
+# [Salesforce (preview)](#tab/salesforce)
+
+- For Salesforce Connector limitations, go to [Salesforce connector reference](/connectors/salesforce/).
+- Fields that are referencing other Salesforce objects are locked.
+
 ---
 
 ## Troubleshooting
