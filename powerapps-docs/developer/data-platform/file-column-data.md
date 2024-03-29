@@ -518,6 +518,75 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
+#### PowerShell example to upload file in a single request
+
+The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in a single request using Web API. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+
+```powershell
+<#
+.SYNOPSIS
+Sets a column value for a file in a specified table.
+
+.DESCRIPTION
+The Set-FileColumn function sets a column value for a file in a specified table. 
+It uses a single request and can work with files less than 128 MB.
+
+.PARAMETER setName
+The entity set name of the table where the file is stored.
+
+.PARAMETER id
+The unique identifier of record.
+
+.PARAMETER columnName
+The logical name of the file column to set the value for.
+
+.PARAMETER file
+The path to the file to upload.
+
+.EXAMPLE
+Set-FileColumn `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
+   
+Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+
+#>
+function Set-FileColumn {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $setName,
+      [Parameter(Mandatory)]
+      [System.Guid]
+      $id,
+      [Parameter(Mandatory)]
+      [string]
+      $columnName,
+      [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+      [System.IO.FileInfo]$file
+   )
+
+   $uri = '{0}{1}({2})/{3}' -f $baseURI, $setName, $id, $columnName
+
+   $patchHeaders = $baseHeaders.Clone()
+   $patchHeaders.Add('Content-Type', 'application/octet-stream')
+   $patchHeaders.Add('x-ms-file-name', $file.Name)
+
+   $body = [System.IO.File]::ReadAllBytes($file.FullName)
+
+   $FileUploadRequest = @{
+      Uri     = $uri
+      Method  = 'Patch'
+      Headers = $patchHeaders
+      Body    = $body
+   }
+
+   Invoke-RestMethod @FileUploadRequest
+}
+```
+
 ### Upload the file in chunks using Web API
 
 To upload your file in chunks using the Web API, use the following set of requests.
@@ -611,7 +680,7 @@ OData-Version: 4.0
 
 #### PowerShell example to upload file in chunks
 
-The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in chunks. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+The following PowerShell `Set-FileColumnInChunks` function demonstrates how to upload a file in chunks. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
 
 ```powershell
 <#
@@ -619,7 +688,7 @@ The following PowerShell `Set-FileColumn` function demonstrates how to upload a 
 Sets a column value for a file in a specified table.
 
 .DESCRIPTION
-The Set-FileColumn function sets a column value for a file in a specified table. 
+The Set-FileColumnInChunks function sets a column value for a file in a specified table. 
 It uses chunked file upload to efficiently upload large files.
 
 .PARAMETER setName
@@ -635,16 +704,16 @@ The logical name of the file column to set the value for.
 The path to the file to upload.
 
 .EXAMPLE
-Set-FileColumn `
-   -setName "accounts" `
-   -id "12345678-1234-1234-1234-1234567890AB" `
-   -columnName "new_filecolumn" `
-   -file "C:\Path\To\File.txt"
+Set-FileColumnInChunks `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
    
-Sets the value of the "new_filecolumn" column for the file with the specified ID in the account table to the contents of the File.txt file.
+Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
 
 #>
-function Set-FileColumn {
+function Set-FileColumnInChunks {
    param (
       [Parameter(Mandatory)]
       [string]
