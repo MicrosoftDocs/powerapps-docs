@@ -152,7 +152,7 @@ Admins can disable the **New look** setting across all apps in an organization b
     > [!NOTE]
     > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
 
-### Managing the "on by default" general availability rollout
+### Managing the on by default general availability rollout
 
 The modern, refreshed look for model-driven apps is on by default in the following release channels:
  
