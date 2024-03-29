@@ -21,6 +21,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - SQL Server
 - Microsoft SharePoint
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
+- Salesforce
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -29,6 +30,7 @@ To learn more about supported actions and limitations with the connector, go to:
 - [Connector reference for the SQL Server connector](/connectors/sql/)
 - [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
 - [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
+- [Connector reference for the Salesforce connector](/connectors/salesforce/)
 
 ## Overview
 
@@ -68,7 +70,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in Power Apps for SQL or SharePoint
+## Steps to create a virtual table in Power Apps for SQL, SharePoint or Salesforce
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -124,13 +126,21 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
+# [Salesforce](#tab/salesforce)
+
+> [!IMPORTANT]
+> These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
+
+- **Login URI**: Either Production (default) or Sandbox.
+- **Salesforce API version**: v41.0 (default) or newer version.
+
+After selecting **Create**, log in with your Salesforce credentials.
 
 ---
 
 3. Select **Create**.
 4. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
 5. Select your connection.
-
 
 ### Create and select a connection reference (optional)
 
