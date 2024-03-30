@@ -367,11 +367,246 @@ After creating a custom search analyzer, you must enable it for Dataverse search
 
 ## Set the custom analyzer definition
 
-You will need to update the  [searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
+You will need to update the [searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
 
-> **TODO**: Add the scripts given by engineering.
+The following example code includes logic to ensure that no more than one row exists in the `searchcustomanalyzers` table, and that any existing row isn't overwritten accidentally.
+
+### [SDK for .NET](#tab/sdk)
 
 
+```csharp
+/// <summary>
+/// Sets the custom analyzers for a Dataverse environment
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <param name="customAnalyzerFile">Information about the file containing custom analyzers </param>
+/// <param name="customAnalyzerName">The name for the custom analyzer record</param>
+/// <param name="overwriteExisting">Whether to update an existing custom analyzer if found.</param>
+/// <param name="isValidCustomAnalyzer">Whether the caller asserts that the custom analyzer file is valid.</param>
+/// <exception cref="Exception"></exception>
+static void SetSearchCustomAnalyzer(
+   IOrganizationService service,
+   FileInfo customAnalyzerFile,
+   string customAnalyzerName,
+   bool overwriteExisting,
+   bool isValidCustomAnalyzer)
+{
+
+   if (!isValidCustomAnalyzer)
+   {
+         string message = "Please make sure the names of the custom analyzers, char filters, tokenizers and token filters";
+         message += "defined in the file start with 'msdyn_search_' ";
+         message += "and make sure the file is in a valid json format ";
+         message += "by checking the file content in https://jsonviewer.stack.hu/. ";
+         message += "Please update the value of validCustomAnalyzer ";
+         message += "to true and execute SetSearchCustomAnalyzer again.";
+
+         throw new Exception(message);
+   }
+
+   try
+   {
+         // Check if there are any existing records
+         QueryExpression query = new("searchcustomanalyzer")
+         {
+            TopCount = 2,
+            ColumnSet = new("searchcustomanalyzerid")
+         };
+
+         EntityCollection entityCollection = service.RetrieveMultiple(query);
+
+         if (entityCollection.Entities.Count > 1)
+         {
+            throw new Exception("There should be exactly one record in the searchcustomanalyzer table.");
+         }
+         if (entityCollection.Entities.Count == 1)
+         {
+            //There is one record
+
+            Guid searchCustomAnalyzerRecordId = entityCollection.Entities[0].Id;
+
+            if (!overwriteExisting)
+            {
+               string message = "An existing record is found in searchcustomanalyzer.";
+               message += "Please make sure the existing custom analyzers are ";
+               message += "not changed or deleted in the uploaded file. ";
+               message += "You can add new custom analyzers to the file. ";
+               message += "Please update the value of overwriteExisting ";
+               message += "to true and execute the SetSearchCustomAnalyzer again.";
+
+               throw new Exception(message);
+            }
+
+            //Delete the existing record
+            service.Delete("searchcustomanalyzer", searchCustomAnalyzerRecordId);
+         }
+
+         Entity newRecord = new("searchcustomanalyzer")
+         {
+            Attributes = {
+               { "name", customAnalyzerName }
+            }
+         };
+
+         Guid newRecordId = service.Create(newRecord);
+         EntityReference newRecordReference = new("searchcustomanalyzer", newRecordId);
+
+         // Upload the file
+         UploadFile(
+            service,
+            newRecordReference,
+            "analyzers",
+            customAnalyzerFile,
+            "application/json");
+
+   }
+   catch (Exception)
+   {
+         throw;
+   }
+}
+```
+
+The following example shows how to use the static `SetSearchCustomAnalyzer` method to upload a custom analyzer file.
+
+```csharp
+SetSearchCustomAnalyzer(
+      service: service,
+      customAnalyzerFile: new FileInfo("C:\\CustomAnalyzers\\SampleCustomAnalyzers.json"),
+      customAnalyzerName: "Sample Custom Analyzer",
+      overwriteExisting: true,
+      isValidCustomAnalyzer: true
+      );
+```
+
+[Learn how to use the SDK for .NET](../org-service/quick-start-org-service-console-app.md)
+
+
+### [Web API](#tab/webapi)
+
+This PowerShell function depends on the following functions described in [Use PowerShell and Visual Studio Code with the Dataverse Web API](../webapi/use-ps-and-vscode-web-api.md)
+
+- `Connect`
+- `Get-Records`
+- `Remove-Record`
+- `New-Record`
+
+- [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
+
+This function also uses the `Set-FileColumn` function to upload the custom analyzer. [Learn more about this function and uploading files to Dataverse](../file-column-data.md#powershell-example-to-upload-file-in-a-single-request)
+
+```powershell
+<#
+.SYNOPSIS
+   Creates or replaces a custom search analyzer.
+
+.DESCRIPTION
+   The Set-SearchCustomAnalyzer function creates or replaces a custom search analyzer in 
+   the searchcustomanalyzers table.
+   - If there is an existing record in the table and the $overwriteExisting 
+   parameter is set to $false, an error will be thrown.
+   - If there is an existing record and $overwriteExisting is set to $true, 
+   the existing record will be removed before creating a new one.
+   - The function uploads the custom analyzer file specified by the $customAnalyzerFilePath parameter.
+
+.PARAMETER customAnalyzerFilePath
+   Specifies the path to the custom analyzer file to be uploaded.
+
+.PARAMETER overwriteExisting
+   Specifies whether to update an existing custom analyzer if found. 
+   If set to $true, the existing record will be removed before creating a new one.
+   If set to $false and an existing record is found, an error will be thrown.
+
+.EXAMPLE
+   Set-SearchCustomAnalyzer `
+   -customAnalyzerFilePath "C:\CustomAnalyzers\analyzer.json" `
+   -overwriteExisting $true
+
+   This example uploads the custom analyzer file located at "C:\CustomAnalyzers\analyzer.json" and 
+   updates the existing custom analyzer if found.
+#>
+function Set-SearchCustomAnalyzer {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $customAnalyzerFilePath,
+      [Parameter(Mandatory)]
+      [string]
+      $customAnalyzerName,
+      [Parameter(Mandatory)]
+      [bool]
+      $overwriteExisting,
+      [Parameter(Mandatory)]
+      [bool]
+      $validCustomAnalyzer
+   )
+
+   if (!$validCustomAnalyzer) {
+      $errorMessage = @()
+      $errorMessage += 'Please make sure the names of the custom analyzers, char filters, tokenizers and token filters'
+      $errorMessage += 'defined in the file start with ''msdyn_search_'''
+      $errorMessage += 'and make sure the file is in a valid json format'
+      $errorMessage += 'by checking the file content in https://jsonviewer.stack.hu/.'
+      $errorMessage += 'Please update the value of $validCustomAnalyzer'
+      $errorMessage += 'to $true and execute the PowerShell script again.'
+      throw $errorMessage -join ' '
+   }
+
+   $resp = Get-Records `
+      -setName 'searchcustomanalyzers' `
+      -query '?$select=searchcustomanalyzerid&$top=2&$count=true'
+
+   $searchCustomAnalyzerCount =  $resp.'@odata.count'
+   
+   if ($searchCustomAnalyzerCount -gt 1) 
+   { throw "You should not have more than one record in searchcustomanalyzer table." }
+   if ($searchCustomAnalyzerCount -eq 1) {
+      if (!$overwriteExisting) {
+         $errorMessage = @()
+         $errorMessage += 'An existing record was found in searchcustomanalyzer.'
+         $errorMessage += 'Please make sure the existing custom analyzers are'
+         $errorMessage += 'not changed or deleted in the uploaded file.'
+         $errorMessage += 'You can add new custom analyzers to the file.'
+         $errorMessage += 'Please update the value of $overwriteExisting'
+         $errorMessage += 'to $true and execute the PowerShell script again.'
+         throw ($errorMessage -join ' ')
+      }
+
+      $searchCustomAnalyzerRecordId = $resp.value[0].searchcustomanalyzerid
+
+      Remove-Record `
+         -setName 'searchcustomanalyzers' `
+         -id $searchCustomAnalyzerRecordId
+      
+      Write-Host 'Removed existing record in searchcustomanalyzer.'
+   }
+
+   # Create a new record to upload the custom analyzer file.
+
+   $customAnalyzerId = (New-Record `
+         -setName 'searchcustomanalyzers' `
+         -body @{
+         'name' = $customAnalyzerName
+      } )[1]
+   
+   # Upload the analyzer file to the new custom analyzer record.
+   try {
+      Set-FileColumn `
+         -setName 'searchcustomanalyzers' `
+         -id $customAnalyzerId `
+         -columnName 'analyzers' `
+         -file $customAnalyzerFilePath
+
+      Write-Host 'Custom analyzer file is uploaded.'
+   }
+   catch {
+      Write-Host ('Failed to upload Custom Analyzer: {0}' -f $_.Exception.Message) -ForegroundColor Red
+   }
+}
+```
+
+---
 
 ### Links to reference content
 
@@ -384,75 +619,6 @@ To refer to specific columns:
 - [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname)
 - [name](../reference/entities/searchattributesettings.md#BKMK_name)
 - [settings](../reference/entities/searchattributesettings.md#BKMK_settings)
-
-
-### Web API examples
-
-In my system there are no rows in this table.
-
-**Request**
-
-```http
-GET https://yourorg.crm.dynamics.com/api/data/v9.2/searchattributesettingses?$select=name,entityname,attributename,settings HTTP/1.1
-Prefer: odata.include-annotations="*"
-Accept: application/json
-Authorization: Bearer [REDACTED]
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-Preference-Applied: odata.include-annotations="*"
-
-{
-  "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#searchattributesettingses(name,entityname,attributename,settings)",
-  "@Microsoft.Dynamics.CRM.totalrecordcount": -1,
-  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
-  "@Microsoft.Dynamics.CRM.globalmetadataversion": "107932318",
-  "value": []
-}
-```
-
-
-[searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md)
-
-The Web API entity set name for this table is `searchcustomanalyzers`.
-
-In my system there are no rows in this table.
-Note: The [analyzers column](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers) is a File column, so we can refer to these docs about uploading it: [Upload Files](../file-column-data.md#upload-files) and downloading it [Download Files](../file-column-data.md#download-files)
-
-**Request**
-
-```http
-GET https://yourorg.crm.dynamics.com/api/data/v9.2/searchcustomanalyzers?$select=name,analyzers,analyzers_name,statecode,statuscode HTTP/1.1
-Prefer: odata.include-annotations="*"
-Accept: application/json
-Authorization: Bearer [REDACTED]
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-Preference-Applied: odata.include-annotations="*"
-
-{
-  "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#searchcustomanalyzers(name,analyzers,analyzers_name,statecode,statuscode)",
-  "@Microsoft.Dynamics.CRM.totalrecordcount": -1,
-  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
-  "@Microsoft.Dynamics.CRM.globalmetadataversion": "107932318",
-  "value": []
-}
-```
 
 
 <!-- The following stays at the bottom -->
