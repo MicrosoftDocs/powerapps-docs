@@ -124,6 +124,19 @@ When you apply a [filter](reference/filter.md) within a [link-entity](reference/
 
 When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you might want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you're using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 
+```xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter>
+      <condition entityname='a' attribute='fax' operator='null' />
+    </filter>
+    <link-entity name='account' from='accountid' to='parentcustomerid' link-type='outer' alias='a' />
+  </entity>
+</fetch>
+```
+Get Contacts without a parent Account; or parent Account without a Fax.
+
 ## Filter on column values in the same row
 
 You can create filters that compare columns on values in the same row using the `valueof` attribute. For example, if you want to find any contact records where the `firstname` column value matches the `lastname` column value, you can use this query:
