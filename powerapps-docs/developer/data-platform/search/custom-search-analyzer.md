@@ -366,6 +366,11 @@ function Set-SearchAttributeSettings {
 
 When you aren't getting the results from Dataverse search that you expect, and none of the built-in Azure AI Search analyzers do what you need, you can build and configure a custom search analyzer. It's important to understand what an Azure AI Search custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can to return data as expected by your users. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
 
+> [!NOTE]
+> For the custom analyzer to work with Dataverse, the names of the custom analyzers, char filters, tokenizers and token filters must start with `msdyn_search_`.
+
+> **TODO**: A minimum example custom analyzer JSON file here would be helpful.
+
 ## Enable the custom analyzer for Dataverse Search
 
 After creating a custom search analyzer, you must enable it for Dataverse search by adding the definition of the analyzer in the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) and populate the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) with the data to use the custom analyzer as described in [Set an analyzer for a column](#set-an-analyzer-for-a-column).
@@ -378,7 +383,12 @@ After creating a custom search analyzer, you must enable it for Dataverse search
 
 ## Set the custom analyzer definition
 
-You will need to update the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
+Setting the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) row requires two steps:
+
+1. Create the row and set the [Name column](../reference/entities/searchcustomanalyzer.md#BKMK_name).
+2. Upload the file with the analyzer into the [analyzers column](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers)
+
+If a row already exists, you can also just the .json file set in the `analyzers` column without creating a new row.
 
 The following example code includes logic to ensure that no more than one row exists in the `searchcustomanalyzer` table, and that any existing row isn't overwritten accidentally.
 
@@ -393,7 +403,9 @@ The following example code includes logic to ensure that no more than one row ex
 /// <param name="customAnalyzerFile">Information about the file containing custom analyzers </param>
 /// <param name="customAnalyzerName">The name for the custom analyzer record</param>
 /// <param name="overwriteExisting">Whether to update an existing custom analyzer if found.</param>
-/// <param name="isValidCustomAnalyzer">Whether the caller asserts that the custom analyzer file is valid.</param>
+/// <param name="isValidCustomAnalyzer">
+/// Whether the caller asserts that the custom analyzer file is valid.
+/// </param>
 /// <exception cref="Exception"></exception>
 static void SetSearchCustomAnalyzer(
    IOrganizationService service,
@@ -405,10 +417,10 @@ static void SetSearchCustomAnalyzer(
 
    if (!isValidCustomAnalyzer)
    {
-         string message = "Please make sure the names of the custom analyzers, char filters, tokenizers and token filters";
+         string message = "Please make sure the names of the custom analyzers, ";
+         message += "char filters, tokenizers and token filters";
          message += "defined in the file start with 'msdyn_search_' ";
-         message += "and make sure the file is in a valid json format ";
-         message += "by checking the file content in https://jsonviewer.stack.hu/. ";
+         message += "and make sure the file is in a valid json format.";
          message += "Please update the value of validCustomAnalyzer ";
          message += "to true and execute SetSearchCustomAnalyzer again.";
 
@@ -497,15 +509,12 @@ SetSearchCustomAnalyzer(
 
 This PowerShell function depends on the following functions described in [Use PowerShell and Visual Studio Code with the Dataverse Web API](../webapi/use-ps-and-vscode-web-api.md)
 
-- `Connect`
-- `Get-Records`
-- `Remove-Record`
-- `New-Record`
-
-- [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
-- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
-
-This function also uses the `Set-FileColumn` function to upload the custom analyzer. [Learn more about this function and uploading files to Dataverse](../file-column-data.md#powershell-example-to-upload-file-in-a-single-request)
+- `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions):
+   - `Get-Records`
+   - `Remove-Record`
+   - `New-Record`
+- `Set-FileColumn`: [Learn more about this function and uploading files to Dataverse](../file-column-data.md#powershell-example-to-upload-file-in-a-single-request)
 
 ```powershell
 <#
@@ -529,10 +538,15 @@ This function also uses the `Set-FileColumn` function to upload the custom analy
    If set to $true, the existing record will be removed before creating a new one.
    If set to $false and an existing record is found, an error will be thrown.
 
+.PARAMETER validCustomAnalyzer
+   Caller asserts that the custom analyzer meets the requirements for 
+   a custom analyzer in Dataverse.
+
 .EXAMPLE
    Set-SearchCustomAnalyzer `
    -customAnalyzerFilePath "C:\CustomAnalyzers\analyzer.json" `
    -overwriteExisting $true
+   -validCustomAnalyzer $true
 
    This example uploads the custom analyzer file located at "C:\CustomAnalyzers\analyzer.json" and 
    updates the existing custom analyzer if found.
@@ -555,10 +569,10 @@ function Set-SearchCustomAnalyzer {
 
    if (!$validCustomAnalyzer) {
       $errorMessage = @()
-      $errorMessage += 'Please make sure the names of the custom analyzers, char filters, tokenizers and token filters'
+      $errorMessage += 'Please make sure the names of the custom analyzers,'
+      $errorMessage += 'char filters, tokenizers and token filters'
       $errorMessage += 'defined in the file start with ''msdyn_search_'''
-      $errorMessage += 'and make sure the file is in a valid json format'
-      $errorMessage += 'by checking the file content in https://jsonviewer.stack.hu/.'
+      $errorMessage += 'and make sure the file is in a valid json format.'
       $errorMessage += 'Please update the value of $validCustomAnalyzer'
       $errorMessage += 'to $true and execute the PowerShell script again.'
       throw $errorMessage -join ' '
