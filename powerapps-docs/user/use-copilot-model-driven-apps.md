@@ -1,5 +1,5 @@
 ---
-title: Use Copilot in model-driven apps (preview)
+title: Use Copilot in model-driven apps 
 description: Learn how to use Copilot in model-driven apps.
 author: srihas
 ms.component: pa-user
@@ -14,14 +14,15 @@ search.audienceType:
   - enduser
 ---
 
-# Use Copilot in model-driven apps (preview)
-
-[This article is prerelease documentation and is subject to change.]
+# Use Copilot in model-driven apps 
 
 Copilot for model-driven apps in Power Apps is a next-generation AI assistant to help you get insights about the data in your apps through conversation in natural language. Copilot helps you boost your productivity through AI-powered insights and navigation assistance. 
 
 > [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> This feature is generally available in Dynamics 365 apps.
+>
+> This feature is a preview feature in Power Apps.
+> - Preview features aren’t meant for production use and may have restricted functionality. Preview features are available before an official release so that customers can get early access and provide feedback.
 > - An administrator must enable Copilot in your application for you to see it in your app. More information: [Add copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
 
 ## Copilot pane 
