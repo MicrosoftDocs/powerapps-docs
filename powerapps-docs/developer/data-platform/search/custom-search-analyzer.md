@@ -35,7 +35,7 @@ To ensure Dataverse Search returns expected results requires extra instructions 
 
 ## About analyzers
 
-Dataverse search is built on top of the [Azure AI Search analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers), so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of the Azure AI Search analyzers. Refer to [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) for details and information on how Azure AI Search analyzers work in a search engine.
+Dataverse search is built on top of the [Azure AI Search analyzers](/azure/search/search-analyzers), so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of the Azure AI Search analyzers. Refer to [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) for details and information on how Azure AI Search analyzers work in a search engine.
 
 ### Built-in analyzers
 
