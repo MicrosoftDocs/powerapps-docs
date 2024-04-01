@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/01/2024
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -30,14 +30,12 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 ## Prerequisites
 
 - A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1."
-
 - If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+
+   > [!NOTE]
+   > This won't be required in the April 2024 release. When no longer required, you can to link to a workspace within the same country or geo boundary even if you don't have a capacity within the same Azure region.
   
-> [!NOTE]
-> This restriction will be relaxed in April 2024 release. You will be able to link to a workspace within the same country or geo boundary even if you don;t have a capacity within the same Azure region
-> 
-  
-- Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
+- Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - You must have the System Administrator security role in the Dataverse environment. 
 - You must be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
@@ -204,7 +202,7 @@ If you experience an error message, here are suggestions to resolve the issue.
 
 | Error message                      | How to resolve                | 
 |:-----------------------------------|:------------------------------|
-| You need to get a Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> More information: [Prerequisites](#prerequisites)  | 
+| You must have Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> More information: [Prerequisites](#prerequisites)  | 
 | Creation of Fabric workspace failed. You can try again. If this issue persists contact [Microsoft customer support](/power-platform/admin/get-help-support) with the corelation ID. | You must be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as your Dataverse environment. <br> Currently, the system supports these premium capacity SKUs described in the [Prerequisites](#prerequisites). <br> Verify with your Power BI Tenant admin that you have permissions to create workspaces. You can find this setting in Power BI Admin portal under **Tenant settings > workspace settings > Create workspaces**. <br> If the issue isn't resolved, contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID |
 | Creation of Fabric lakehouse failed. You can try again. If this issue persists contact [Microsoft customer support](/power-platform/admin/get-help-support) with the corelation ID. | Verify with your Power BI Tenant admin that you have permissions to create OneLake shortcuts. You can find this setting in Power BI Admin portal under  **Admin Portal > Tenant Settings > Microsoft Fabric > Users can create Fabric items**. <br> More information: [Prerequisites](#prerequisites) <br> If the issue isn't resolved after several retries, you can contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID. |
 | We ran into an issue, Creaton of Fabric Lakehouse failed. | Verify with your Power BI tenant admin that you have permissions to create artifacts in Fabric. You can find this setting in Power BI admin portal under **Tenant settings > oneLake settings > Users can access data stored in OneLake with apps external to Fabric**. <br> More information: [Prerequisites](#prerequisites) <br> If the issue isn't resolved after several retries, you can contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID. |
