@@ -20,7 +20,7 @@ Dataverse search uses many different [Azure AI Search](/azure/search/search-what
 
 Examples include search strings that have special characters, or frequently used words (like '`of`' and '`or`')  that the back-end data engine removes from the search term when the query is processed.
 
-Here are some examples where Dataverse search won't return an exact match because the data in the searched column isn't easily understood, or because certain characters are automatically removed or ignored based on the default analyzer used by Dataverse Search service.
+Here are some examples where Dataverse search doesn't return an exact match because the data in the searched column isn't easily understood, or because certain characters are automatically removed or ignored based on the default analyzer used by Dataverse Search service.
 
 
 |Examples|Desired|Actual|
@@ -31,7 +31,7 @@ Here are some examples where Dataverse search won't return an exact match becaus
 |`"%mn" +"ABC-123"`|Exact match for: <br /> `TODO example`<br />`TODO example`|Unwanted matches: <br /> `TODO example`<br />`TODO example`|
 |`"Inspector of brakes"`|Exact match|Unwanted matches: `Inspector of boilers`|
 
-To ensure Dataverse Search returns expected results requires extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
+To ensure Dataverse Search returns expected results, you might need to provide extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
 
 ## About analyzers
 
@@ -43,7 +43,7 @@ By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard
 
 In Dataverse Search, an analyzer is automatically invoked on all string or memo [columns marked as searchable](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table). You can't apply analyzers for any other type of column.
 
-For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you. Generally, you use an language analyzer when you have a column that is used to store data in a language that is different from your Dataverse base language.
+For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you. Generally, you use a language analyzer when you have a column that is used to store data in a language that is different from your Dataverse base language.
 
 To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [**Name**](../reference/entities/searchattributesettings.md#BKMK_name), [**entityname**](../reference/entities/searchattributesettings.md#BKMK_entityname), and [**attributename**](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [**settings**](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
 
@@ -56,23 +56,23 @@ You can override the default on a for string columns. Alternative analyzers can 
 
 To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
 
-Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to set this, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
+Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
-Follow these steps to open the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com) and edit the view to enable editing the **Name**, **attributename**, **entityname** and **settings** columns.
+Follow these steps to open the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com) and edit the view to enable editing the **Name**, **attributename**, **entityname**, and **settings** columns.
 
 > [!NOTE]
 > Make sure you are in the environment you want to apply the changes by clicking on Environment in the page's header and selecting your environment.
 
 1. Select **Tables** from the left navigation pane.
 1. Select **All** tables.
-1. In the top right search for `searchattributesettings`.
+1. In the top right corner, search for `searchattributesettings`.
 1. Open the **SearchAttributeSettings** table.
 1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible. You can add them by selecting "**+18 more**" next to the **Name** column.
-1. After selecting the columns click on **Save**.
-1. This will close the dialog and the columns will be visible on the page.
-1. After saving the columns should be visible.
+1. After selecting the columns, select **Save**.
+
+This closes the dialog and the columns are visible on the page. After saving, the columns should be visible.
 
 For more information, see [Table columns and data](../../../maker/data-platform/create-edit-entities-portal.md#table-columns-and-data)
 
@@ -89,7 +89,7 @@ The following table describes what to add to each column:
 |Name  |What to add|
 |---------|---------|
 |**Name**|The name can be anything that helps you identify the custom analyzer you have added.|
-|**entityname**|The logical name of the table that has the column you are configuring.|
+|**entityname**|The logical name of the table that has the column you're configuring.|
 |**attributename**|The logical name of column of the table you want the analyzer used for your search terms or phrases.|
 |**settings**|The JSON string that identifies your custom analyzer. The value might look something like this: `{ "analyzer": "name_analyzer"}{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
