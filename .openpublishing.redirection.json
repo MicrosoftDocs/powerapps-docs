@@ -9064,6 +9064,11 @@
       "source_path": "powerapps-docs/maker/data-platform/table-settings-for-copilot.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/add-ai-copilot",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/overview.md",
+      "redirect_url": "/power-pages/introduction",
+      "redirect_document_id": "false"
     }
   ]
 }

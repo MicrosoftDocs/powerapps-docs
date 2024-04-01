@@ -1,7 +1,7 @@
 ---
 title: Filter rows using FetchXml
 description: Learn how to use FetchXml to filter rows when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 04/01/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -15,6 +15,7 @@ contributors:
  - dasussMS
  - apahwa-lab
  - DonaldlaGithub
+ - rappen
 ---
 # Filter rows using FetchXml
 
@@ -123,6 +124,26 @@ For example, you can use the [between operator](reference/operators.md#between) 
 When you apply a [filter](reference/filter.md) within a [link-entity](reference/link-entity.md), the filter will be applied with the join unless you configure the filter to occur *after* the join.
 
 When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you might want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you're using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
+
+For example, the following query returns contacts without a [parent account](../reference/entities/contact.md#BKMK_ParentCustomerId), or a parent account without a [fax](../reference/entities/account.md#BKMK_Fax).
+
+```xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter>
+      <condition entityname='a'
+        attribute='fax'
+        operator='null' />
+    </filter>
+    <link-entity name='account'
+      from='accountid'
+      to='parentcustomerid'
+      link-type='outer'
+      alias='a' />
+  </entity>
+</fetch>
+```
 
 ## Filter on column values in the same row
 
