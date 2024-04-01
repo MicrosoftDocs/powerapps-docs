@@ -23,23 +23,23 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > This feature is a preview feature in Power Apps.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - An administrator must enable Copilot in your application for you to see it in your app. More information: [Add copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
+> - An administrator must enable Copilot chat in your application for you to see it in your app. More information: [Add copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
 
 ## Copilot pane 
 
-When enabled, Copilot can be accessed through the Copilot icon near the top-right part of your screen or through the Copilot icon that is left of the command bar. The Copilot pane can be expanded or collapsed, as desired. When enabled, the pane is expanded by default.
+When enabled, Copilot chat can be accessed through the Copilot icon near the top-right part of your screen or through the Copilot icon that is left of the command bar. The Copilot pane can be expanded or collapsed, as desired. When enabled, the pane is expanded by default.
 
 :::image type="content" source="media/copilot-icons.png" alt-text="Copilot icons":::
 
 ## Use Copilot to ask questions 
 
-Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot can also help you navigate the model-driven app. For example, when a user enters **Navigate to challenges**, Copilot in the model-driven app automatically opens the relevant page in the app. 
+Copilot chat in model-driven apps can answer questions about the Microsoft Dataverse table data in the app. Copilot chat can also help you navigate the model-driven app. For example, when a user enters **Navigate to challenges**, Copilot in the model-driven app automatically opens the relevant page in the app. 
 
 :::image type="content" source="media/navigate-to-challenges.png" alt-text="Navigate to challenges entered as a prompt.":::
 
-## Copilot suggested questions 
+## Copilot chat suggested questions 
 
-Copilot can suggest questions for you to ask to help you get started. These questions (also called _prompts_) can be edited and personalized for your app and the type of insight you need from Copilot. 
+Copilot chat can suggest questions for you to ask to help you get started. These questions (also called _prompts_) can be edited and personalized for your app and the type of insight you need from Copilot. 
 
 You see more suggested prompts by selecting **View prompts** within the Copilot pane. Many of the suggested questions have placeholders that you need to replace with an appropriate text that completes the question. 
 
@@ -52,12 +52,12 @@ You can use the record picker to select the object of your question. Type “**/
 :::image type="content" source="media/record-picker.png" alt-text="Use the record picker to select the object of your question.":::
 
 > [!Note]
-> - Using record picker increases the chances of Copilot understanding the question, and thus responding with an accurate answer.
+> - Using record picker increases the chances of Copilot chat understanding the question, and thus responding with an accurate answer.
 > - Record picker needs [Dataverse Search to be enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the type-ahead search capability. 
 
 ## Provide feedback 
 
-To provide feedback to help improve Copilot, select the **Like** or **Dislike** icon included in each Copilot response. Feedback can be submitted for each Copilot response. 
+To provide feedback to help improve Copilot chat, select the **Like** or **Dislike** icon included in each Copilot response. Feedback can be submitted for each Copilot response. 
 
 ### Provide positive feedback 
 
