@@ -35,26 +35,28 @@ To ensure Dataverse Search returns expected results requires extra instructions 
 
 ## About analyzers
 
-Dataverse search is built on top of the [Azure AI Search analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of Azure AI Search analyzers. Refer to [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) for details and information on how Azure AI Search analyzers work in a search engine.
+Dataverse search is built on top of the [Azure AI Search analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers), so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of the Azure AI Search analyzers. Refer to [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) for details and information on how Azure AI Search analyzers work in a search engine.
 
 ### Built-in analyzers
 
-For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you.
-
-To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [searchattributesettings table](../reference/entities/searchattributesettings.md) set the [**Name**](../reference/entities/searchattributesettings.md#BKMK_name), [**entityname**](../reference/entities/searchattributesettings.md#BKMK_entityname), and [**attributename**](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [**settings**](../reference/entities/searchattributesettings.md#BKMK_settings) to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a field](#set-an-analyzer-for-a-field)
-
-In Dataverse Search, an analyzer is automatically invoked on all string or memo [columns marked as searchable](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issearchable). You can't apply analyzers for any other type of column.
-
 By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html) analyzer, which breaks text into elements following [Unicode Text Segmentation](https://unicode.org/reports/tr29/) rules. This default analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
+
+In Dataverse Search, an analyzer is automatically invoked on all string or memo [columns marked as searchable](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table). You can't apply analyzers for any other type of column.
+
+For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you. Generally, you use an language analyzer when you have a column that is used to store data in a language that is different from your Dataverse base language.
+
+To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [**Name**](../reference/entities/searchattributesettings.md#BKMK_name), [**entityname**](../reference/entities/searchattributesettings.md#BKMK_entityname), and [**attributename**](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [**settings**](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
+
+
 
 You can override the default on a for string columns. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
 
-## Set an analyzer for a field
+## Set an analyzer for a column
 
 To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
 
-Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row.
+Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to set this, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
@@ -81,7 +83,7 @@ The following table describes what to add to each column:
 > [!IMPORTANT]
 > The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
 >
-> To avoid anyone unintentionally creating a duplicate row, you can add an alternate key to the `searchattributesettings` table specifying the `entityname` and `attributename` columns in the key. [Learn to alternate keys using Power Apps](../../../maker/data-platform/define-alternate-keys-portal.md)
+> To avoid anyone unintentionally creating a duplicate row, you can add an alternate key to the `SearchAttributeSettings` table specifying the `entityname` and `attributename` columns in the key. [Learn to define alternate keys using Power Apps](../../../maker/data-platform/define-alternate-keys-portal.md)
 
 
 |Name  |What to add|
@@ -96,7 +98,7 @@ A new index of the table referenced by the `entityname` column starts when a new
 
 ### Edit SearchAttributeSettings table columns with code
 
-The following examples provide examples to update the **SearchAttributeSettings** table columns with code and avoid creating duplicate columns and avoid accidentally overwriting existing values.
+The following code shows how to update the **SearchAttributeSettings** table columns with code and avoid creating duplicate columns and avoid accidentally overwriting existing values.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -105,8 +107,12 @@ The following examples provide examples to update the **SearchAttributeSettings*
 /// Creates or replaces a SearchAttributeSettings record
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
-/// <param name="entityName">The name of the entity for which the search attribute settings record is created.</param>
-/// <param name="attributeName">The logical name of the column for which the search attribute settings record is created.</param>
+/// <param name="entityName">
+/// The name of the entity for which the search attribute settings record is created.
+/// </param>
+/// <param name="attributeName">
+/// The logical name of the column for which the search attribute settings record is created.
+/// </param>
 /// <param name="settings">The settings for the search attribute.</param>
 /// <param name="overwriteExisting">Verify that the intent is to replace any existing record</param>
 static void SetSearchAttributeSettings(
@@ -166,8 +172,9 @@ static void SetSearchAttributeSettings(
             if (!overwriteExisting)
             {
 
-               string message = "An existing record is found in searchattributesettings with entityname:";
-               message += $"{entityName}, attributename: {attributeName} settings: {settings}. ";
+               string message = "An existing record is found in searchattributesettings with";
+               message += $" entityname:{entityName}, attributename: {attributeName}";
+               message += $" and settings: {settings}.";
                message += "Please update the value of overwriteExisting to true and ";
                message += " use the SetSearchAttributeSettings method again.";
 
@@ -217,7 +224,7 @@ SetSearchAttributeSettings(
 This PowerShell function depends on the following functions described in [Use PowerShell and Visual Studio Code with the Dataverse Web API](../webapi/use-ps-and-vscode-web-api.md)
 
 - `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
-- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
+- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions):
    - `Get-Records`
    - `Remove-Record`
    - `New-Record`
@@ -228,7 +235,8 @@ This PowerShell function depends on the following functions described in [Use Po
 Sets the search attribute settings for a given entity and attribute.
 
 .DESCRIPTION
-The Set-SearchAttributeSettings function sets the search attribute settings for a specified entity and attribute. 
+The Set-SearchAttributeSettings function sets the search attribute settings for a specified entity 
+and attribute. 
 - It checks if an existing record is found in the searchattributesettings table. 
 - If an existing record is found and the $overwriteExisting parameter is set to $false, 
 it throws an error message. 
@@ -260,7 +268,8 @@ Set-SearchAttributeSettings `
    -overwriteExisting $true
 
 This example sets the search attribute settings for the 'jobtitle' column of the 'contact' table. 
-If an existing record is found, it removes the existing record and creates a new record with the updated settings.
+If an existing record is found, it removes the existing record and creates a new record with the 
+updated settings.
 
 #>
 function Set-SearchAttributeSettings {
@@ -355,18 +364,23 @@ function Set-SearchAttributeSettings {
 
 ## Create a custom analyzer
 
-When you aren't getting the results from Dataverse search that you expect, and none of the default Azure Search analyzers do what you need, you can build and configure a custom search analyzer. It's important to understand what an Azure custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can to return data as expected by your users. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
+When you aren't getting the results from Dataverse search that you expect, and none of the built-in Azure AI Search analyzers do what you need, you can build and configure a custom search analyzer. It's important to understand what an Azure AI Search custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can to return data as expected by your users. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
 
 ## Enable the custom analyzer for Dataverse Search
 
-After creating a custom search analyzer, you must enable it for Dataverse search by adding the definition of the analyzer in the [searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md) and populate the [searchattributesettings table](../reference/entities/searchattributesettings.md) with the data to use the custom analyzer as described in [Set an analyzer for a field](#set-an-analyzer-for-a-field).
+After creating a custom search analyzer, you must enable it for Dataverse search by adding the definition of the analyzer in the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) and populate the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) with the data to use the custom analyzer as described in [Set an analyzer for a column](#set-an-analyzer-for-a-column).
+
+> [!NOTE]
+> The [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) must contain no more than one row of data. By default it has no data. If more than one row is added, people using Dataverse search will get errors.
+>
+> You can't upload a custom analyzer using [Power Apps](https://make.powerapps.com), you need to use code to upload the file containing the custom analyzer.
 
 
 ## Set the custom analyzer definition
 
-You will need to update the [searchcustomanalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
+You will need to update the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md). To update the table you will need to add the name of the analyzer and the .json file with the definitions into the table.
 
-The following example code includes logic to ensure that no more than one row exists in the `searchcustomanalyzers` table, and that any existing row isn't overwritten accidentally.
+The following example code includes logic to ensure that no more than one row exists in the `searchcustomanalyzer` table, and that any existing row isn't overwritten accidentally.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -500,7 +514,7 @@ This function also uses the `Set-FileColumn` function to upload the custom analy
 
 .DESCRIPTION
    The Set-SearchCustomAnalyzer function creates or replaces a custom search analyzer in 
-   the searchcustomanalyzers table.
+   the searchcustomanalyzer table.
    - If there is an existing record in the table and the $overwriteExisting 
    parameter is set to $false, an error will be thrown.
    - If there is an existing record and $overwriteExisting is set to $true, 
@@ -605,17 +619,6 @@ function Set-SearchCustomAnalyzer {
 
 ---
 
-### Links to reference content
-
-[searchattributesettings table](../reference/entities/searchattributesettings.md)
-The Web API entity set name for this table is `searchattributesettingses`.
-
-To refer to specific columns:
-
-- [attributename](../reference/entities/searchattributesettings.md#BKMK_attributename)
-- [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname)
-- [name](../reference/entities/searchattributesettings.md#BKMK_name)
-- [settings](../reference/entities/searchattributesettings.md#BKMK_settings)
 
 
 <!-- The following stays at the bottom -->
