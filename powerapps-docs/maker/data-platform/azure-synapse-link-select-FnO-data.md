@@ -1,8 +1,8 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose finance and operations data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 03/12/2024
-ms.reviewer: johnmichalak
+ms.date: 04/01/2024
+ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
@@ -43,7 +43,13 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 ## Prerequisites
 
-- You must have a finance and operations sandbox (Tier-2) or higher environment. You can also use a Tier-1 environment (also known as a cloud-hosted environment) for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
+- You must have a finance and operations sandbox (Tier-2) or higher environment.
+- For validation purposes, you can also use a [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+- You can use a Tier-1 environment, also known as a cloud-hosted environment, for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
+
+   > [!NOTE]
+   > With availability of unified environments for validation, we remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
 - You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL Link profile. 
@@ -51,13 +57,13 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 | How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
-| **Access finance and operations tables via Synapse query** <br><br> Finance and Operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. |  [Azure Synapse Link - Delta lake](azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
-| **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | [Azure Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake  |
+| **Access finance and operations tables via Synapse query** <br><br> Finance and operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. | Go to [Add finance and operations tables in Azure Synapse Link](#add-finance-and-operations-tables-in-azure-synapse-link)  |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
+| **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | Go to [Access incremental data changes from finance and operations](#access-incremental-data-changes-from-finance-and-operations)  <br> Also go to [Azure Synapse Link - incremental update](/power-apps/maker/data-platform/azure-synapse-incremental-updates)) | Azure data lake  |
 | **Access finance and operations tables via Microsoft Fabric** <br><br>  No need to bring your own storage, Synapse workspace, or Spark pool because the system uses Dataverse storage and compute resources| [Link to Fabric](azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 
 ### Link your finance and operations environment with Microsoft Power Platform
 
-Verify with your finance and operations systems administrator whether your finance and operations environment is linked to Power platform.
+Verify with your finance and operations systems administrator whether your finance and operations environment is linked to Power Platform.
 
 To confirm that the finance and operations apps environment is linked with Microsoft Power Platform, review the **Environment** page in Lifecycle Services.
 
@@ -77,7 +83,7 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 > [!NOTE]
 > If you use a Tier-1 (cloud-hosted) environment, you must do a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 >
-> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they are missing. You can enable the flights, by running following SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an Entity.
+> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they are missing. You can enable the flights, by running these SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an entity.
 
 ```sql
 INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1)
@@ -100,6 +106,8 @@ You can enable both finance and operations tables and finance and operations ent
 8. Select **Advanced**, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured.
 9. Select **Save**. Tables selected are initialized and ready for reporting.
 
+![Adding finance and operations tables in Azure Synapse Link](media/synapse_link_delta_3_loops.gif)
+
 > [!NOTE]
 >
 > - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps.
@@ -113,17 +121,17 @@ You can enable both finance and operations tables and finance and operations ent
 
 ### Known limitations with finance and operations tables
 
-Currently, there are the following limitations with finance and operations tables and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/).
+Currently, there are limitations with finance and operations tables and Azure Synapse Link. We're working to address these limitations. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/).
 
 - You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
 - Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables can be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
-- Don't see your custom tables? You must enable change tracking in them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+- Don't see your custom tables? You must enable change tracking for them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables). If you're using a cloud hosted environment (CHE), you must perform a database sync operation to reflect the changes.
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
 - In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
-- When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) the system might not export data.
+- When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies), the system might not export data.
   > [!NOTE]
   > This issue is fixed in these updates:
   > - Version 10.0.37 (PU61) cumulative update 10.0.1725.175 or later
@@ -134,7 +142,7 @@ Currently, there are the following limitations with finance and operations table
   
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[#Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
-- **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features are not available in the China region.
+- **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
 ## Access incremental data changes from finance and operations
 
@@ -143,14 +151,16 @@ To load incremental data changes from finance and operations into your own downs
 To create an Azure Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select the environment you want.
-1. On the left navigation pane, select **Azure Synapse Link**.
-1. On the **Azure Synapse Link for Dataverse** page, select **+ New link** on the command bar.
-1. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
-1. Select **Next**. The option to choose tables appears.
-1. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
-1. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
-1. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
-1. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
+2. On the left navigation pane, select **Azure Synapse Link**.
+3. On the **Azure Synapse Link for Dataverse** page, select **+ New link** on the command bar.
+4. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
+4. Select **Next**. The option to choose tables appears.
+5. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
+6. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
+7. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
+8. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
+
+![Adding incremental data changes from finance and operations tables.](media/Synapse_link_Incremental_3_loops.gif)
 
 > [!NOTE]
 >
@@ -212,7 +222,7 @@ Currently, there are the following limitations with finance and operations entit
 - Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox is disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
 - If the chosen entity is unavailable because of the limitation above, you might be able to choose the tables that comprise the data from that entity.
 
-> [!NOTE]
-> For a list of ready-made finance and operations entities that pass validation rules, go to [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048). You must be a member of the preview Yammer group to access this list. To join, visit [Dynamics 365 and Power Platform Preview Programs External Network](https://aka.ms/SynapseLinkforDynamics).
->
-- In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you'll need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking and re-select the tables in Azure Synapse Link. 
+   > [!NOTE]
+   > For a list of ready-made finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.**
+
+- In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking and reselect the tables in Azure Synapse Link. 
