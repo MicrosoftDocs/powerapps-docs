@@ -47,8 +47,8 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - For validation purposes, you can also use a [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
 - You can use a Tier-1 environment, also known as a cloud-hosted environment, for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
 
-> [!NOTE]
-> With availability of unified environments for validation, we remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+   > [!NOTE]
+   > With availability of unified environments for validation, we remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
 
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
@@ -63,7 +63,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 ### Link your finance and operations environment with Microsoft Power Platform
 
-Verify with your finance and operations systems administrator whether your finance and operations environment is linked to Power platform.
+Verify with your finance and operations systems administrator whether your finance and operations environment is linked to Power Platform.
 
 To confirm that the finance and operations apps environment is linked with Microsoft Power Platform, review the **Environment** page in Lifecycle Services.
 
@@ -83,7 +83,7 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 > [!NOTE]
 > If you use a Tier-1 (cloud-hosted) environment, you must do a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 >
-> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they are missing. You can enable the flights, by running following SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an Entity.
+> In Tier 1 (cloud hosted) environments, enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they are missing. You can enable the flights, by running these SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an entity.
 
 ```sql
 INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1)
