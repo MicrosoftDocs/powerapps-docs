@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 03/28/2024
+ms.date: 04/01/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -16,7 +16,7 @@ contributors:
 ---
 # Custom column analyzers for Dataverse Search
 
-Dataverse search uses many different built-in capabilities that include both index and search analyzers to return the best data based on what the user asks for. These built-in capabilities to help define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
+Dataverse search uses many different [Azure AI Search](/azure/search/search-what-is-azure-search) capabilities that include both index and search analyzers to return the best data based on what the user asks for. These built-in capabilities to help define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
 
 Examples include search strings that have special characters, or frequently used words (like '`of`' and '`or`')  that the back-end data engine removes from the search term when the query is processed.
 
@@ -25,66 +25,68 @@ Here are some examples where Dataverse search won't return an exact match becaus
 
 |Examples|Desired|Actual|
 |---------|---------|---------|
-|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |**TODO**: clearer example|**TODO**: clearer example|
-|`2.2.3.1`|**TODO**: clearer example|**TODO**: clearer example|
-|`PG-11.1`|**TODO**: clearer example|**TODO**: clearer example|
-|`"%mn" +"ABC-123"`|**TODO**: clearer example|**TODO**: clearer example|
-|`"Inspector of brakes"`|All results include the literal string `"Inspector of brakes"`|Returns results containing `Inspector of boilers`|
+|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: **TODO**|
+|`2.2.3.1`|Exact match|Unwanted matches: **TODO**|
+|`PG-11.1`|Exact match|Unwanted matches:**TODO**:|
+|`"%mn" +"ABC-123"`|Exact match for: <br /> `TODO example`<br />`TODO example`|Unwanted matches: <br /> `TODO example`<br />`TODO example`|
+|`"Inspector of brakes"`|Exact match|Unwanted matches: `Inspector of boilers`|
 
-> **TODO**: Do these examples need an example data set to be clearer?
-
-To ensure Dataverse Search returns expected results requires extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure Search analyzer or a custom analyzer if needed.
+To ensure Dataverse Search returns expected results requires extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
 
 ## About analyzers
 
-Dataverse search is built on top of the [Microsoft analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of Azure search analyzer. Refer to [Analyzers for linguistic and text processing](/azure/search/search-analyzers) for details and information on how Azure search analyzers work in a search engine.
+Dataverse search is built on top of the [Azure AI Search analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) so if you're seeing results that you don't expect or would like to refine, make sure you have a good understanding of Azure AI Search analyzers. Refer to [Analyzers for text processing in Azure AI Search](/azure/search/search-analyzers) for details and information on how Azure AI Search analyzers work in a search engine.
 
-### Default Analyzers
+### Built-in analyzers
 
-For your search terms and phrases, the Azure default analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you.
+For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you.
 
-To use one of the existing Azure analyzers, set the **Name**, **attributename**, and **entityname** to be used and set the **settings** to a search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`.
+To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [searchattributesettings table](../reference/entities/searchattributesettings.md) set the [**Name**](../reference/entities/searchattributesettings.md#BKMK_name), [**entityname**](../reference/entities/searchattributesettings.md#BKMK_entityname), and [**attributename**](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [**settings**](../reference/entities/searchattributesettings.md#BKMK_settings) to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a field](#set-an-analyzer-for-a-field)
 
-In Dataverse Search, an analyzer is automatically invoked on all string or memo columns marked as searchable using the [AttributeMetadata.IsSearchable property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issearchable). You can't apply analyzers for any other type of column.
+In Dataverse Search, an analyzer is automatically invoked on all string or memo [columns marked as searchable](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issearchable). You can't apply analyzers for any other type of column.
 
-By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html), which breaks text into elements following  [Unicode Text Segmentation](https://unicode.org/reports/tr29/) rules. The standard analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
+By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html) analyzer, which breaks text into elements following [Unicode Text Segmentation](https://unicode.org/reports/tr29/) rules. This default analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
 
 You can override the default on a for string columns. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
 
 ## Set an analyzer for a field
 
-To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [searchattributesettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
+To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
 
-Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `searchattributesettings` table can apply this change, but they need to take extra care not to create a duplicate row. [Learn what makes a duplicate row ](#what-to-add-to-the-columns)
+Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row.
 
-Open the [searchattributesettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com).
+### Configure Power Apps to edit the SearchAttributeSettings table
+
+Follow these steps to open the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com) and edit the view to enable editing the **Name**, **attributename**, **entityname** and **settings** columns.
 
 > [!NOTE]
 > Make sure you are in the environment you want to apply the changes by clicking on Environment in the page's header and selecting your environment.
 
-1. Select tables from the left navigation pane.
+1. Select **Tables** from the left navigation pane.
 1. Select **All** tables.
 1. In the top right search for `searchattributesettings`.
-1. Open the table.
-1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible.You can easily add them by selecting "**+18 more**" next to the **Name** column.
+1. Open the **SearchAttributeSettings** table.
+1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible. You can add them by selecting "**+18 more**" next to the **Name** column.
 1. After selecting the columns click on **Save**.
 1. This will close the dialog and the columns will be visible on the page.
 1. After saving the columns should be visible.
 
-### What to add to the columns
+For more information, see [Table columns and data](../../../maker/data-platform/create-edit-entities-portal.md#table-columns-and-data)
 
-The following table describes what to add to the columns:
+### Edit SearchAttributeSettings table columns manually
+
+The following table describes what to add to each column:
 
 > [!IMPORTANT]
-> The combination of **attributename** and **entityname** values must be unique in the **searchattributesettings** table. You must make sure that you don't enter duplicate rows for with the same values for these columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
+> The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
 >
 > To avoid anyone unintentionally creating a duplicate row, you can add an alternate key to the `searchattributesettings` table specifying the `entityname` and `attributename` columns in the key. [Learn to alternate keys using Power Apps](../../../maker/data-platform/define-alternate-keys-portal.md)
 
 
 |Name  |What to add|
 |---------|---------|
-|**Name**|It can be anything that helps you identify the custom analyzer you have added.|
+|**Name**|The name can be anything that helps you identify the custom analyzer you have added.|
 |**entityname**|The logical name of the table that has the column you are configuring.|
 |**attributename**|The logical name of column of the table you want the analyzer used for your search terms or phrases.|
 |**settings**|The JSON string that identifies your custom analyzer. The value might look something like this: `{ "analyzer": "name_analyzer"}{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
@@ -92,11 +94,11 @@ The following table describes what to add to the columns:
 
 A new index of the table referenced by the `entityname` column starts when a new row is added or the `settings` column of an existing row is updated. The search engine needs this to use the analyzer for the column defined by the new setting.
 
-If you want to update this value using code, you can use the following examples.
+### Edit SearchAttributeSettings table columns with code
+
+The following examples provide examples to update the **SearchAttributeSettings** table columns with code and avoid creating duplicate columns and avoid accidentally overwriting existing values.
 
 #### [SDK for .NET](#tab/sdk)
-
-This static `SetSearchAttributeSettings` method includes logic to ensure that duplicate rows are not added to the `searchattributesettings` table, and that any existing row isn't overwritten accidentally.
 
 ```csharp
 /// <summary>
@@ -212,18 +214,13 @@ SetSearchAttributeSettings(
 
 #### [Web API](#tab/webapi)
 
-This `SetSearchAttributeSettings` PowerShell function includes logic to ensure that duplicate rows are not added to the `searchattributesettings` table, and that any existing row isn't overwritten accidentally.
-
 This PowerShell function depends on the following functions described in [Use PowerShell and Visual Studio Code with the Dataverse Web API](../webapi/use-ps-and-vscode-web-api.md)
 
-- `Connect`
-- `Get-Records`
-- `Remove-Record`
-- `New-Record`
-
-- [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
-- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions) 
-
+- `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+- [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
+   - `Get-Records`
+   - `Remove-Record`
+   - `New-Record`
 
 ```powershell
 <#
