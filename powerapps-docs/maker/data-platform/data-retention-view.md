@@ -70,7 +70,7 @@ You can explore the data with SQL endpoint and query Dataverse data with SQL and
 The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
 
 - Inactive application data: `WHERE msft_datastate=1`
-- Active (live) application data: `WHERE msft_datastate=0`
+- Active (live) application data: `WHERE msft_datastate=0 or msft_datastate=NULL'
 
 ## Known issues
 

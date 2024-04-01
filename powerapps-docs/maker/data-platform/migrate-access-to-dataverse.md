@@ -80,7 +80,7 @@ For more information, go to [How are Dataverse for Teams and Dataverse different
 
 Users integrating Access with Dataverse or Dataverse for Teams may find some differences in names for general features and functions. This section provides a guide to understand naming differences.
 
-Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Agents. The lists below encompass naming differences and similarities at the database layer only.
+Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Microsoft Copilot Studio. The lists below encompass naming differences and similarities at the database layer only.
 
 |Access  |Dataverse and Dataverse for Teams  |Comments  |
 |---------|---------|---------|
