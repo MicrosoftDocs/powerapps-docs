@@ -82,7 +82,7 @@ Within the [resources element](manifest-schema-reference/resources.md), find two
 <resources>
     <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="9.4.0" />
+   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
 
@@ -116,7 +116,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | ------ | ---------------- | ------- |
 | React  | react            | 16.8.6  |
 | Fluent | @fluentui/react  | 8.29.0  |
-| Fluent | @fluentui/react  | 9.4.0   |
+| Fluent | @fluentui/react  | 9.46.2  |
 
 
 > [!NOTE]
