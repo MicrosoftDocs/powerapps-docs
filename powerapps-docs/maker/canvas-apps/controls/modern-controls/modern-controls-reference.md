@@ -55,6 +55,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Slider](modern-control-slider.md)** - A control with which the user can specify a value by dragging a handle.
 
+**[Stream (preview)](new-stream-video-control.md)** - A control that lets you add Steam videos in your app.
+
 **[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
