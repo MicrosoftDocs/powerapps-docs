@@ -24,11 +24,11 @@ The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream
 ## How to Use the Microsoft Stream Control
 1. Add the Microsoft Stream control to your app’s screen.
 2. Go to the stream video which needs to be embedded. 
-3. Obtain the embed code from the Microsoft Stream video in SharePoint by selecting the “Embed Code” option and copying the iframe source link. 
+3. Obtain the embed code from the Microsoft Stream video in SharePoint by selecting the “Embed Code” option. 
 > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/embed-URL-image.png)
-4. Copy the stream Unique ID URL in the URL property of the control, ensuring it only contains the Unique ID to be valid.
-5. Set the URL property of the control to the copied embed URL with unique id only.
+4. Copy the stream URL from iframe src starting from https:// to the unique id of the control. Please ensure it only contains the Unique ID and no additional attributes.
+5. Set the URL property of the control to the copied embed URL.
 5. Customize the size of the embedded video player by setting the Width and Height properties of the control.
 
 > [!IMPORTANT]
