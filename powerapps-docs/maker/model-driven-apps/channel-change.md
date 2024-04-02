@@ -32,7 +32,7 @@ In addition, the release channel can be overridden with either of these options.
 - Browser session channel
 
 > [!NOTE]
-> - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
+> When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
 
 ## Changing the environment channel
 
@@ -54,7 +54,10 @@ The app channel can be used to override the release channel for a model-driven a
 |--|--|--|
 | Auto | 0 | App default value is **Semi-annual**, but will later change to **Monthly** in a future release wave. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
-| Semi-annual | 2 | App explicitly set to **Semi-Annual Channel**. |
+| Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
+
+> [!NOTE]
+>  App release value `2` is not support for production usage.
 
 ### Change app channel in app designer
 
