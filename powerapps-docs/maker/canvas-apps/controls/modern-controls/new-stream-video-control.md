@@ -22,7 +22,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-The Stream control in Power Apps lets you embed Microsoft  [Stream (on SharePoint)](/stream/streamnew/new-stream) videos directly in your canvas app. Adding a Stream video in your app makes a smooth integration of videos hosted on Microsoft Stream in your canvas app. It also improves the user experience.
+The Stream control in Power Apps lets you embed Microsoft [Stream (on SharePoint)](/stream/streamnew/new-stream) videos directly in your canvas app. Adding a Stream video in your app makes a smooth integration of videos hosted on Microsoft Stream in your canvas app. It also improves the user experience.
 
 ## Prerequisites
 
