@@ -1,6 +1,6 @@
 ---
-title: "Work with Microsoft Dataverse data in your Azure solution (Microsoft Dataverse) | Microsoft Docs"
-description: "Provides an overview of passing data from Dataverse to an Azure cloud hosted solution."
+title: Work with Microsoft Dataverse data in your Azure solution
+description: Discover how to use Microsoft Dataverse to pass data to an Azure cloud-hosted solution.
 ms.date: 08/28/2023
 author: swylezol
 ms.author: swylezol
@@ -27,13 +27,10 @@ You can also write a custom workflow activity that can post the execution contex
 > [!NOTE]
 > Any service endpoint registered for a synchronous step will send the execution context data to the Azure service immediately. If an error occurs after the request was sent, the data operation will rollback but the request sent the the Azure service cannot be recalled.
 
-
-  
 ### See also
 
 [Writing a Plug-in](write-plug-in.md)<br/>
 [Event execution pipeline](event-framework.md#event-execution-pipeline)<br/> 
 [ServiceEndPoint Entity](reference/entities/serviceendpoint.md)<br/>
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
