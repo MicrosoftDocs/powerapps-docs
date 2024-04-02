@@ -1,0 +1,61 @@
+---
+title: Stream control in Power Apps
+description: Learn about the details, properties, and examples of the new stream control in Power Apps.
+author: yogeshgupta698
+
+ms.topic: reference
+ms.component: canvas
+ms.date: 4/2/2024
+ms.subservice: canvas-maker
+ms.author: yogupt
+
+
+ms.reviewer: mkaur
+search.audienceType: 
+  - maker
+contributors:
+  - mduelae
+  - yogeshgupta698
+  
+---
+# Stream control (based on SharePoint) in Power Apps 
+The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream videos directly into Power Apps applications, providing a seamless integration of videos hosted on Microsoft Stream into your app. This control enhances the user experience by allowing video content to be a part of the app’s interface.
+
+## How to Use the Microsoft Stream Control
+1. Add the Microsoft Stream control to your app’s screen.
+2. Go to the stream video which needs to be embedded. 
+3. Obtain the embed code from the Microsoft Stream video in SharePoint by selecting the “Embed Code” option and copying the iframe source link. 
+> [!div class="mx-imgBorder"]
+   > ![List of modern controls](media/embed-URL-image.png)
+4. Copy the stream Unique ID URL in the URL property of the control, ensuring it only contains the Unique ID to be valid.
+5. Set the URL property of the control to the copied embed URL with unique id only.
+5. Customize the size of the embedded video player by setting the Width and Height properties of the control.
+
+> [!IMPORTANT]
+>  Embed URL should be copied only till unique id. Any additional parameters will render the URL invalid.
+
+## Properties
+
+**URL (Required)** - The URL of the Microsoft Stream video to be embedded. This URL should be the embed URL of the video. The URL should only have Unique ID. If URL detects more parameters, the control will detect as invalid URL.
+ 
+**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+**Width** - The distance between a control's left and right edges. 
+
+**Height** - The distance between a control's top and bottom edges. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
