@@ -518,7 +518,7 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
-            - name: Stream (based on SharePoint)
+            - name: Stream video (based on SharePoint)
               href: ./canvas-apps/controls/modern-controls/stream-control.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
