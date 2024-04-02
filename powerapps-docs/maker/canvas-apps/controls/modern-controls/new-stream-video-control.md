@@ -30,7 +30,7 @@ To add a Steam video in your canvas app, follow these steps to get the embed URL
 
 1. Open your [Stream (on SharePoint)](/stream/streamnew/new-stream) video.
 1. Select **Share** > **Embed code**.
-  :::image type="content" source="media/embed-URL-image.png" alt-text="Microsoft Stream embed URL":::
+:::image type="content" source="media/embed-URL-image.png" alt-text="Microsoft Stream embed URL":::
 
 1. Copy the URL starting from **https://** to the **UniqueId=** including the Unique ID numbers.
 :::image type="content" source="media/sample-embed-code.png" alt-text="embed URL example":::
