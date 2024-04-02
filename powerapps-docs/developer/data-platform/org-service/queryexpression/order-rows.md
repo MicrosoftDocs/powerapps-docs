@@ -136,6 +136,8 @@ In this case, the results are ordered using following attributes:
 
 To ensure the `LinkEntity` order is applied first, move the `OrderExpression` from the `LinkEntity.Orders` to the `QueryExpression.Orders` above the other `OrderExpression`, and use the [OrderExpression.EntityName](/dotnet/api/microsoft.xrm.sdk.query.orderexpression.entityname) to refer to the [LinkEntity.EntityAlias](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias) value.
 
+> **TODO** in the code below, the OrderExpression has properties for both `Alias` and `EntityName`. Our instructions are to set the `LinkEntity.EntityAlias` to the `EntityName` property. What is the `Alias` property used for? [OrderExpression.cs](https://dev.azure.com/dynamicscrm/OneCRM/_git/CDS?path=%2Fsrc%2FSDK%2FCore%2FQuery%2FOrderExpression.cs&_a=contents&version=GBv9.0_master) has no comments.
+
 
 ```csharp
 var query = new QueryExpression(entityName: "account")

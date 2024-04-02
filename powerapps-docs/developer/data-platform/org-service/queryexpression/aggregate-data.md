@@ -18,7 +18,7 @@ contributors:
 
 To return an aggregate value, you must:
 
-- Set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to `false`. You can do this using the [ColumnSet(Boolean) constructor](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.%23ctor(System.Boolean)).
+- Leave the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) set to `false`. Don't set it using the [ColumnSet(Boolean) constructor](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.%23ctor(System.Boolean)).
 - Add instances of the [XrmAttributeExpression class](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression) to the [ColumnSet.AttributeExpressions](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AttributeExpressions) collection
 - For each column that you want to return, set these properties:
 

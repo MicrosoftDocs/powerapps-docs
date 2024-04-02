@@ -112,7 +112,7 @@ EntityCollection results = response.EntityCollection;
 Use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) when you want to:
 
 - [Send an optional parameter with the request](../../optional-parameters.md)
-- Include the operation as part of a batch using the [ExecuteMultiple message](../execute-multiple-requests.md) or [ExecuteTransaction message](../use-executetransaction.md)
+- Include the operation as part of a batch using the [ExecuteMultipleRequest](../execute-multiple-requests.md) or [ExecuteTransactionRequest](../use-executetransaction.md) classes.
 
 
 ## Refine your query
@@ -137,13 +137,13 @@ There are some things that you can do using FetchXml that `QueryExpression` does
 
 - Retrieve data using the Dataverse Web API. There are some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
 - [Aggregation limitations](aggregate-data.md#queryexpression-aggregation-limitations) lists the limitations for aggregations using `QueryExpresssion`.
-- [Cross table comparisons](../../fetchxml/filter-rows.md#cross-table-comparisons).
+- [Perform cross table column comparisons](../../fetchxml/filter-rows.md#cross-table-column-comparisons).
    `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
-- [Override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
-- Use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query).
+- [You can't override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
+- You can't use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query) performance optimization.
 
 > [!IMPORTANT]
-> If you use the `FetchXmlToQueryExpression` message with either the SDK [FetchXmlToQueryExpressionRequest class](/dotnet/api/microsoft.crm.sdk.messages.fetchxmltoqueryexpressionrequest) or Web API [FetchXmlToQueryExpression function](/power-apps/developer/data-platform/webapi/reference/fetchxmltoqueryexpression), any differences not supported by `QueryExpression` are not applied and there will be no error.
+> If you use the `FetchXmlToQueryExpression` message with either the SDK [FetchXmlToQueryExpressionRequest class](/dotnet/api/microsoft.crm.sdk.messages.fetchxmltoqueryexpressionrequest) or Web API [FetchXmlToQueryExpression function](/power-apps/developer/data-platform/webapi/reference/fetchxmltoqueryexpression), any capabilities not supported by `QueryExpression` are not applied and there will be no error.
 
 ## Community tools
 

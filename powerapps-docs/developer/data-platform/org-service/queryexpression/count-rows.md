@@ -29,15 +29,15 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded>|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
 
-The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) value is useful when you need to calculate how many more paged requests you need to send to get all the results when (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000. 
+The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> value is useful when you need to calculate how many more paged requests you need to send to get all the results when <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> equals 5000.
 
-If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
+If your page size is less than the maximum and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
 
-When (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) is `true` and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000, you can't perform this calculation.
+When <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> is `true` and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> equals 5000, you can't perform this calculation.
 
 
 > [!TIP]
-> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
+> If you want to get a total count of records with no filter, use the [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
 
 
 ## Next steps

@@ -72,13 +72,13 @@ query.PageInfo.PageNumber++;
 
 With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
 
-Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using paging cookies.
+Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. For best performance in all cases, we recommend consistently using paging cookies.
 
 ## Paging cookies
 
 When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to be used on the following requests for the next pages.
 
-The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [QueryExpression.PageInfo.PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) property and increment the `QueryExpression.PageInfo.PageNumber` value for subsequent requests.
+The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible. A paging cookie should be used when returned by the previous page. You shouldn't modify the data in the paging cookie, just set the value to the [QueryExpression.PageInfo.PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) property and increment the `QueryExpression.PageInfo.PageNumber` value for subsequent requests.
 
 ### Queries that don't support paging cookies
 
@@ -86,7 +86,7 @@ Some queries do not support paging cookies. When paging cookies aren't supported
 
 When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that come with it.
 
-## Paging cookie examples
+## Paging cookie example
 
 The following `RetrieveAll` static method will return all records that match the [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression) query, sending multiple requests if the number of records exceeds the page size.
 

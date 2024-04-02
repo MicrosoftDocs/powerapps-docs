@@ -135,15 +135,41 @@ For example, you can use `ConditionOperator.Between` to evaluate a number to det
 new ConditionExpression(
     attributeName:"numberofemployees",
     conditionOperator: ConditionOperator.Between,
-    values: new object[] {6,20 })
+    values: new object[] {6,20})
 ```
 
 ## Filters on LinkEntity
 
-When you use the [LinkEntity.LinkCriteria property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkcriteria) to apply a filter, the filter will be applied with the join unless you configure the filter *after* the join.
+When you use the [LinkEntity.LinkCriteria property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkcriteria) to apply a filter, the filter will be applied with the join unless you configure the filter to be applied in the `QueryExpression.Criteria`. 
 
-When the [LinkEntity.JoinOperator property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.joinoperator) uses `JoinOperator.LeftOuter`, you might want the filter to be applied after the join by setting the [ConditionExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.entityname) value. If you're using the [LinkEntity.EntityAlias property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias), use that value to set the `ConditionExpression.EntityName` property. Otherwise, set the `ConditionExpression.EntityName` property to the [LinkEntity.LinkFromEntityName property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkfromentityname) value.
+When the [LinkEntity.JoinOperator property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.joinoperator) uses `JoinOperator.LeftOuter`, you might want the filter to be applied in the `QueryExpression.Criteria` by setting the [ConditionExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.entityname) value. If you're using the [LinkEntity.EntityAlias property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.entityalias), use that value to set the `ConditionExpression.EntityName` property. Otherwise, set the `ConditionExpression.EntityName` property to the [LinkEntity.LinkFromEntityName property](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkfromentityname) value. [Learn more about finding records not in a set using ](join-tables.md#find-records-not-in-a-set)
 
+For example, the following query returns contacts without a [parent account](../../reference/entities/contact.md#BKMK_ParentCustomerId), or a parent account without a [fax](../../reference/entities/account.md#BKMK_Fax).
+
+```csharp
+QueryExpression query = new("contact") { 
+     ColumnSet = new ColumnSet("fullname"),
+     Criteria = new FilterExpression(LogicalOperator.And) { 
+         Conditions = { 
+            new ConditionExpression(){ 
+                AttributeName = "fax",
+                EntityName = "a",
+                Operator = ConditionOperator.Null
+            }
+         }
+     },
+     LinkEntities = { 
+        new LinkEntity(
+            linkFromEntityName:"contact",
+            linkToEntityName:"account",
+            linkFromAttributeName:"parentcustomerid",
+            linkToAttributeName:"accountid",
+            joinOperator: JoinOperator.LeftOuter){
+           EntityAlias = "a"
+        }
+    }
+};
+```
 
 ## Filter on column values in the same row
 
@@ -208,10 +234,11 @@ The following examples demonstrate filtering on values of related records. These
 
 #### Or filter with `JoinOperator.Any`
 
-This query uses a `FilterExpression` with the `FilterOperator` property set to `LogicalOperator.Or` and a `AnyAllFilterLinkEntity` property set with a `LinkEntity` that has the `JoinOperator` property set to `JoinOperator.Any`. This query will return [contact](../../reference/entities/contact.md) records that:
+This query uses a `FilterExpression` with the `FilterOperator` property set to `LogicalOperator.Or` and a `AnyAllFilterLinkEntity` property set with a `LinkEntity` that has the `JoinOperator` property set to `JoinOperator.Any`. This query will return [contact](../../reference/entities/contact.md) records that are _either_:
 
-- _either_ are referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
-- _or_ have the [Contact.StateCode column](../../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
+- Referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of at least one [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso',
+- _or_
+- Have the [Contact.StateCode column](../../reference/entities/contact.md#BKMK_StateCode) set to 1 : **Inactive**:
 
 #### [QueryExpression](#tab/qe)
 
@@ -266,7 +293,7 @@ where "contact0".statecode = 1
 
 #### `JoinOperator.NotAny`
 
-This query uses `JoinOperator.NotAny` to return records from the [contact](../../reference/entities/contact.md) table that are **not** referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The _contact_ record might still be referenced by _account_ records with **other** _Name column_ values.
+This query uses `JoinOperator.NotAny` to return records from the [contact](../../reference/entities/contact.md) table that are **not** referenced by the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) of any [account](../../reference/entities/account.md) record that has its [Name column](../../reference/entities/account.md#BKMK_Name) equal to 'Contoso'. The contact record might still be referenced by account records with _other_ `name` column values.
 
 #### [QueryExpression](#tab/qe)
 

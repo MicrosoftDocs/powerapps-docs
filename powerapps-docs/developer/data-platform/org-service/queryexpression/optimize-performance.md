@@ -14,7 +14,7 @@ contributors:
 ---
 # Optimize performance using QueryExpression
 
-This article describes ways you can optimize performance when retrieving data using FetchXml.
+This article describes ways you can optimize performance when retrieving data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
 
 ## Query Hints
 
