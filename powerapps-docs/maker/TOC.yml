@@ -518,6 +518,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
+            - name: Stream (based on SharePoint)
+              href: ./canvas-apps/controls/modern-controls/stream-control.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Badge (preview)
@@ -636,7 +638,7 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
-            - name: Stream Video
+            - name: Stream Video (retired)
               href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
