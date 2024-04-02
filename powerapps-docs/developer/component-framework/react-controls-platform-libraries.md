@@ -88,7 +88,7 @@ Within the [resources element](manifest-schema-reference/resources.md), you'll f
 ```
 
 > [!NOTE]
-> Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
+> Do not change the version numbers for these `platform-library` elements. They are placeholders; higher versions of these libraries may be provided at runtime. See below for more information on valid platform library versions. 
 
 We recommend using platform libraries for Fluent 8 and 9. If you don't use Fluent, you should remove this element: `<platform-library name="Fluent" version="9.4.0" />`
 
@@ -119,7 +119,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | Fluent | @fluentui/react  | 8.29.0  |
 | Fluent | @fluentui/react  | 9.4.0   |
 
-Note that we may load a higher compatible version of a platform library at runtime, but that it may not be the latest version available.
+Note that we may load a higher compatible version of a platform library at runtime, but that it may not be the latest version available. Fluent 8 and Fluent 9 are supported in parallel as they constitute separate libraries of React components.
 
 ## FAQ
 
