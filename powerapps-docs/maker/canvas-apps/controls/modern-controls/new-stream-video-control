@@ -50,6 +50,8 @@ The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream
 ## Limitations
 1. Only browsers are supported in this version. Support for mobile app will be rolled out in few weeks.
 2. Some of the properties like auto start, auto play or start from, will be supprted in coming weeks.
+3. We do not recommend having more than 4 videos on a single canvas app screen as doing so will have performance implications.
+4. Videos in galleries will not be able to retain it's last played state.
 
 
 
