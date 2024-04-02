@@ -118,7 +118,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | Fluent | @fluentui/react  | 9.46.2  |
 
 > [!NOTE]
-> The application may load a higher compatible version of a platform library at runtime, but it may not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
+> The application might load a higher compatible version of a platform library at runtime, and the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
 
 ## FAQ
 
