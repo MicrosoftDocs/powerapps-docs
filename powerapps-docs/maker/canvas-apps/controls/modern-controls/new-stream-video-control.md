@@ -18,19 +18,22 @@ contributors:
   - yogeshgupta698
   
 ---
-# Stream control (based on SharePoint) in Power Apps 
-[This article is pre-release document and is subject to change.]
-The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream videos directly into Power Apps applications, providing a seamless integration of videos hosted on Microsoft Stream into your app. This control enhances the user experience by allowing video content to be a part of the app’s interface.
+# Stream control (based on SharePoint) in Power Apps (preview)
 
-## How to Use the Microsoft Stream Control
-1. Add the Microsoft Stream control to your app’s screen.
-2. Go to the stream video which needs to be embedded. 
-3. Obtain the embed code from the Microsoft Stream video in SharePoint by selecting the “Embed Code” option. 
+[This article is pre-release document and is subject to change.]
+
+The Stream control in Power Apps lets you embed Microsoft Stream videos directly into Power Apps applications. This results in a smooth integration of videos hosted on Microsoft Stream within your app. By enabling video content to be part of the app's interface, Stream control significantly improves the user experience.
+
+
+## Add the Microsoft Stream control 
+
+1. Go to the stream video which needs to be embedded. 
+1. Obtain the embed code from the Microsoft Stream video in SharePoint by selecting the “Embed Code” option. 
 > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/embed-URL-image.png)
-4. Copy the stream URL from iframe src starting from https:// to the unique id of the control. Please ensure it only contains the Unique ID and no additional attributes.
-5. Set the URL property of the control to the copied embed URL.
-5. Customize the size of the embedded video player by setting the Width and Height properties of the control.
+14. Copy the stream URL from iframe src starting from https:// to the unique id of the control. Please ensure it only contains the Unique ID and no additional attributes.
+1. Set the URL property of the control to the copied embed URL.
+1. Customize the size of the embedded video player by setting the Width and Height properties of the control.
 
 > [!IMPORTANT]
 >  Embed URL should be copied only till unique id. Any additional parameters will render the URL invalid.
