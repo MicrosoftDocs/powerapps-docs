@@ -19,6 +19,7 @@ contributors:
   
 ---
 # Stream control (based on SharePoint) in Power Apps 
+[This article is pre-release document and is subject to change.]
 The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream videos directly into Power Apps applications, providing a seamless integration of videos hosted on Microsoft Stream into your app. This control enhances the user experience by allowing video content to be a part of the app’s interface.
 
 ## How to Use the Microsoft Stream Control
@@ -46,7 +47,9 @@ The Microsoft Stream control in Power Apps enables embedding of Microsoft Stream
 
 **Height** - The distance between a control's top and bottom edges. 
 
-
+## Limitations
+1. Only browsers are supported in this version. Support for mobile app will be rolled out in few weeks.
+2. Some of the properties like auto start, auto play or start from, will be supprted in coming weeks.
 
 
 
