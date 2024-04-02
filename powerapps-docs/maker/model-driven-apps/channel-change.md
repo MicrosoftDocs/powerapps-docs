@@ -57,7 +57,7 @@ The app channel can be used to override the release channel for a model-driven a
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
 > [!NOTE]
->  App release value `2` is not support for production usage.
+>  App release value `2` is used for internal testing and receives updates faster than monthly channel so is not supported for production usage.
 
 ### Change app channel in app designer
 
