@@ -8957,7 +8957,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/portals/add-powerbi.md",
-      "redirect_url": "/power-pages/configure/design-build-overview",
+      "redirect_url": "/power-pages/getting-started/add-power-bi",
       "redirect_document_id": false
     },
     {
@@ -9003,6 +9003,11 @@
     {
       "source_path": "powerapps-docs/maker/data-platform/table-settings-for-copilot.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/add-ai-copilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/add-powerbi-report.md",
+      "redirect_url": "/power-pages/getting-started/add-power-bi",
       "redirect_document_id": false
     },
     {
