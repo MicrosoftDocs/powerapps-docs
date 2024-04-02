@@ -260,6 +260,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 - [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
 - [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
 - [Understand Power Platform environments](/power-platform/admin/environments-overview)
-- [SharePoint custom forms with Power Apps](https://go.microsoft.com/fwlink/?linkid=2263521)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 

@@ -65,6 +65,8 @@
       href: ../user/unified-interface.md
     - name: Form filling assistance
       href: ../user/form-filling-assistance.md
+    - name: Use Copilot chat in model-driven apps
+      href: ../user/use-copilot-model-driven-apps.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -508,6 +510,8 @@
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Combobox   
+              href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Progress bar 
@@ -530,6 +534,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Info button (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Number input (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-number-input.md
             - name: Radio group (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner (preview)
@@ -540,6 +546,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
             - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
+            - name: Toggle (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md 
           - name: Control reference
             items:
             - name: List of controls and properties
@@ -1823,7 +1831,7 @@
       href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline 
       href: ../mobile/canvas-mobile-offline-working.md
-  - name: Set an app as a startup app (preview)
+  - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
     items:
@@ -2231,6 +2239,8 @@
         href: ./data-platform/azure-synapse-link-select-FnO-data.md
       - name: Azure Synapse Link for Dataverse troubleshooting guide
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
+      - name: Receive Azure Synapse Link for Dataverse notifications
+        href: ./data-platform/azure-synapse-link-notifications.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2577,6 +2587,8 @@
     href: ./common/faq-draft-with-copilot.md
   - name: FAQ about form filling assistance  
     href: ./common/faq-from-filling-assistance.md
+  - name: FAQ about using Copilot in timeline highlights
+    href: ./common/faq-timeline-highlights-with-copilot.md
 - name: Resources
   items:
   - name: Blog

@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/01/2023
+ms.date: 03/28/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -53,7 +53,7 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 ## Why am I unable to view information for party list fields like To, From, and CC in full results?
 
-Party list fields are special fields that aren't searchable or viewable in the results page. 
+Party list fields are special fields. They're not supported in Dataverse search, nor are they included in the search results page.
 
 ## How come returns don't support HTLM formatting for memo data types?
 
