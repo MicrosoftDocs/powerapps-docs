@@ -429,7 +429,6 @@ The following example is a custom analyzer named `msdyn_search_remove_parenthesi
 }
 ```
 
-
 ## Enable the custom analyzer for Dataverse Search
 
 After creating a custom search analyzer, you must enable it for Dataverse search by adding the definition of the analyzer in the [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) and populate the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) with the data to use the custom analyzer as described in [Set an analyzer for a column](#set-an-analyzer-for-a-column).
