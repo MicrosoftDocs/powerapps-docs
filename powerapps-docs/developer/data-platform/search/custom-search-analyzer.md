@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 04/01/2024
+ms.date: 04/03/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -29,7 +29,7 @@ Here are some examples where Dataverse search doesn't return an exact match beca
 |`2.2.3.1`|Exact match|Unwanted matches: **TODO**|
 |`PG-11.1`|Exact match|Unwanted matches:**TODO**:|
 |`"%mn" +"ABC-123"`|Exact match for: <br /> `TODO example`<br />`TODO example`|Unwanted matches: <br /> `TODO example`<br />`TODO example`|
-|`"Inspector of brakes"`|Exact match|Unwanted matches: `Inspector of boilers`|
+|`"Inspector of brakes"`|Exact match|Unwanted match: `Inspector of boilers`|
 
 To ensure Dataverse Search returns expected results, you might need to provide extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
 
@@ -45,7 +45,7 @@ In Dataverse Search, an analyzer is automatically invoked on all string or memo 
 
 For your search terms and phrases, the Azure AI Search built-in analyzers might work for you. You can learn more about the available search analyzers that are available to be used: [Built-in analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers), or you can also see if the [available language analyzers](/azure/search/index-add-language-analyzers#supported-language-analyzers) work for you. Generally, you use a language analyzer when you have a column that is used to store data in a language that is different from your Dataverse base language.
 
-To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [**Name**](../reference/entities/searchattributesettings.md#BKMK_name), [**entityname**](../reference/entities/searchattributesettings.md#BKMK_entityname), and [**attributename**](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [**settings**](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
+To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [Name](../reference/entities/searchattributesettings.md#BKMK_name), [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname), and [attributename](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [settings](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
 
 
 
@@ -81,7 +81,7 @@ For more information, see [Table columns and data](../../../maker/data-platform/
 The following table describes what to add to each column:
 
 > [!IMPORTANT]
-> The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
+> The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these two columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
 >
 > To avoid anyone unintentionally creating a duplicate row, you can add an alternate key to the `SearchAttributeSettings` table specifying the `entityname` and `attributename` columns in the key. [Learn to define alternate keys using Power Apps](../../../maker/data-platform/define-alternate-keys-portal.md)
 
@@ -94,11 +94,11 @@ The following table describes what to add to each column:
 |**settings**|The JSON string that identifies your custom analyzer. The value might look something like this: `{ "analyzer": "name_analyzer"}{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
 
-A new index of the table referenced by the `entityname` column starts when a new row is added or the `settings` column of an existing row is updated. The search engine needs this to use the analyzer for the column defined by the new setting.
+A new index of the table referenced by the `entityname` column starts when a new row is added, or the `settings` column of an existing row is updated. The search engine needs this to use the analyzer for the column defined by the new setting.
 
 ### Edit SearchAttributeSettings table columns with code
 
-The following code shows how to update the **SearchAttributeSettings** table columns with code and avoid creating duplicate columns and avoid accidentally overwriting existing values.
+The following code shows how to update the **SearchAttributeSettings** table columns with code and avoid creating duplicate columns or accidentally overwriting existing values.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -225,11 +225,13 @@ This PowerShell function depends on the following functions described in [Use Po
 
 - `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
 - [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions):
-   - `Get-Records`
-   - `Remove-Record`
-   - `New-Record`
+  - `Get-Records`: [Learn to retrieve records using the Web API](../webapi/query-data-web-api.md)
+  - `Remove-Record`: [Learn to delete records using the Web API](../webapi/update-delete-entities-using-web-api.md#basic-delete)
+  - `New-Record`: [Learn to create records using the Web API](../webapi/create-entity-web-api.md)
 
 ```powershell
+. .\Core.ps1 # Contains the Connect function
+. .\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
 <#
 .SYNOPSIS
 Sets the search attribute settings for a given entity and attribute.
@@ -511,12 +513,15 @@ This PowerShell function depends on the following functions described in [Use Po
 
 - `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
 - [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions):
-   - `Get-Records`
-   - `Remove-Record`
-   - `New-Record`
+  - `Get-Records`
+  - `Remove-Record`
+  - `New-Record`
 - `Set-FileColumn`: [Learn more about this function and uploading files to Dataverse](../file-column-data.md#powershell-example-to-upload-file-in-a-single-request)
 
 ```powershell
+. .\Core.ps1 # Contains the Connect function
+. .\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
+. .\Set-FileColumn.ps1 # Contains the Set-FileColumn function
 <#
 .SYNOPSIS
    Creates or replaces a custom search analyzer.
@@ -533,6 +538,9 @@ This PowerShell function depends on the following functions described in [Use Po
 .PARAMETER customAnalyzerFilePath
    Specifies the path to the custom analyzer file to be uploaded.
 
+.PARAMETER customAnalyzerName
+   Specifies the name of the custom analyzer record to be created
+
 .PARAMETER overwriteExisting
    Specifies whether to update an existing custom analyzer if found. 
    If set to $true, the existing record will be removed before creating a new one.
@@ -543,12 +551,15 @@ This PowerShell function depends on the following functions described in [Use Po
    a custom analyzer in Dataverse.
 
 .EXAMPLE
+   Connect 'https://yourorg.crm.dynamics.com/'
+
    Set-SearchCustomAnalyzer `
-   -customAnalyzerFilePath "C:\CustomAnalyzers\analyzer.json" `
-   -overwriteExisting $true
+   -customAnalyzerFilePath 'C:\CustomAnalyzers\analyzer.json' `
+   -customAnalyzerName 'Example custom analyzer' `
+   -overwriteExisting $true `
    -validCustomAnalyzer $true
 
-   This example uploads the custom analyzer file located at "C:\CustomAnalyzers\analyzer.json" and 
+This example uploads the custom analyzer file located at "C:\CustomAnalyzers\analyzer.json" and 
    updates the existing custom analyzer if found.
 #>
 function Set-SearchCustomAnalyzer {
@@ -567,7 +578,7 @@ function Set-SearchCustomAnalyzer {
       $validCustomAnalyzer
    )
 
-   if (!$validCustomAnalyzer) {
+if (!$validCustomAnalyzer) {
       $errorMessage = @()
       $errorMessage += 'Please make sure the names of the custom analyzers,'
       $errorMessage += 'char filters, tokenizers and token filters'
@@ -578,11 +589,9 @@ function Set-SearchCustomAnalyzer {
       throw $errorMessage -join ' '
    }
 
-   $resp = Get-Records `
-      -setName 'searchcustomanalyzers' `
-      -query '?$select=searchcustomanalyzerid&$top=2&$count=true'
+$resp = Get-Records -setName 'searchcustomanalyzers' -query '?$select=searchcustomanalyzerid&$top=2&$count=true'
 
-   $searchCustomAnalyzerCount =  $resp.'@odata.count'
+$searchCustomAnalyzerCount =  $resp.'@odata.count'
    
    if ($searchCustomAnalyzerCount -gt 1) 
    { throw "You should not have more than one record in searchcustomanalyzer table." }
@@ -598,32 +607,24 @@ function Set-SearchCustomAnalyzer {
          throw ($errorMessage -join ' ')
       }
 
-      $searchCustomAnalyzerRecordId = $resp.value[0].searchcustomanalyzerid
+$searchCustomAnalyzerRecordId = $resp.value[0].searchcustomanalyzerid
 
-      Remove-Record `
-         -setName 'searchcustomanalyzers' `
-         -id $searchCustomAnalyzerRecordId
+Remove-Record -setName 'searchcustomanalyzers' -id $searchCustomAnalyzerRecordId
       
       Write-Host 'Removed existing record in searchcustomanalyzer.'
    }
 
-   # Create a new record to upload the custom analyzer file.
+# Create a new record to upload the custom analyzer file.
 
-   $customAnalyzerId = (New-Record `
-         -setName 'searchcustomanalyzers' `
-         -body @{
+$customAnalyzerId = (New-Record -setName 'searchcustomanalyzers' -body @{
          'name' = $customAnalyzerName
       } )[1]
    
    # Upload the analyzer file to the new custom analyzer record.
    try {
-      Set-FileColumn `
-         -setName 'searchcustomanalyzers' `
-         -id $customAnalyzerId `
-         -columnName 'analyzers' `
-         -file $customAnalyzerFilePath
+      Set-FileColumn -setName 'searchcustomanalyzers' -id $customAnalyzerId -columnName 'analyzers' -file $customAnalyzerFilePath
 
-      Write-Host 'Custom analyzer file is uploaded.'
+Write-Host 'Custom analyzer file is uploaded.'
    }
    catch {
       Write-Host ('Failed to upload Custom Analyzer: {0}' -f $_.Exception.Message) -ForegroundColor Red
@@ -632,10 +633,6 @@ function Set-SearchCustomAnalyzer {
 ```
 
 ---
-
-
-
-<!-- The following stays at the bottom -->
 
 ### See also
 
