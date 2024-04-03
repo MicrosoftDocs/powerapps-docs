@@ -25,10 +25,10 @@ Here are some examples where Dataverse search doesn't return an exact match beca
 
 |Examples|Desired|Actual|
 |---------|---------|---------|
-|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)` or `(c)` in a column resulting in multiple records that are not relevant.|
-|`2.2.3.1`|Exact match|Unwanted matches: Returns records with `2.2`, `2.3.1`, `.2`, etc resulting in multiple records that are not relevant.|
-|`PG-11.1`|Exact match|Unwanted matches:Returns records with `PG`, `-11`, `-11.1`, etc. resulting in multiple records that are not relevant.:|
-|`"%mn" +"ABC-123"`|Exact match for: <br /> record has `mnABC-123`|Unwanted matches: <br /> record with `mn`<br />has a record with `ABC-123` but does not include `mn`|
+|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)` or `(c)` in a column resulting in multiple records that aren't relevant.|
+|`2.2.3.1`|Exact match|Unwanted matches: Returns records with `2.2`, `2.3.1`, `.2` resulting in multiple records that aren't relevant.|
+|`PG-11.1`|Exact match|Unwanted matches: Returns records with `PG`, `-11`, `-11.1` resulting in multiple records that aren't relevant.|
+|`"%mn" +"ABC-123"`|Exact match for: <br /> record has `mnABC-123`|Unwanted matches: <br /> record with `mn`<br />has a record with `ABC-123` but doesn't include `mn`|
 |`"Inspector of brakes"`|Exact match|Unwanted match: `Inspector of boilers`|
 
 To ensure Dataverse Search returns expected results, you might need to provide extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
@@ -369,7 +369,7 @@ $createdRecordMessage = @()
 
 ## Create a custom analyzer
 
-When you aren't getting the results from Dataverse search that you expect, and none of the built-in Azure AI Search analyzers do what you need, you can build and configure a custom search analyzer. It's important to understand what an Azure AI Search custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can to return data as expected by your users. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
+When you aren't getting the results from Dataverse search that you expect, and none of the built-in Azure AI Search analyzers do what you need, you can build and configure a custom search analyzer. It's important to understand what an Azure AI Search custom analyzer is and how to build one that can be applied to your power platform environment so that Dataverse search can return data people expect. Refer to [Add custom analyzers to string fields](/azure/search/index-add-custom-analyzers) to learn more on what an Azure custom analyzer is and how it helps return the best results for your users.
 
 > [!NOTE]
 > For the custom analyzer to work with Dataverse, the names of the custom analyzers, char filters, tokenizers and token filters must start with `msdyn_search_`.
