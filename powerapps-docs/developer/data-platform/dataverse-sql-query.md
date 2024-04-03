@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/28/2024
+ms.date: 04/03/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
@@ -206,12 +206,12 @@ This error message means the port is blocked at the client.
 
 ### Port redirect from non-SSL to SSL
 
-TDS connection may also fail when using with third party application like ZScaler due to the port redirection from 1433/5558 to 443 ports. This is because the SSL inspection rule can block communication with reason being “redirection from non-SSL port to SSL port”. 
-The solution is to whitelist Dataverse TDS communication on web proxies using ip addresses.
+The TDS connection can fail when using third party applications due to the port redirection from the 1433/5558 to 443 ports. This failure happens because the SSL inspection rule can block communication with the reason being “redirection from non-SSL port to SSL port”. 
+The solution is to whitelist Dataverse TDS communication on web proxies using IP addresses.
 
 These are the official IP address values for accessing the service: [IP-Addreses-Required](/power-platform/admin/online-requirements#ip-addresses-required). 
 
-Whitelisting of hostnames is not enough when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address not over hostname.
+Whitelisting the hostnames is not sufficient when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address, not over hostname.
 
 ### See also
 
