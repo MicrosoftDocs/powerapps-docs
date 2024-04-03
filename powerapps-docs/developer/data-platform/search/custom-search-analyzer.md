@@ -276,32 +276,32 @@ updated settings.
 
 #>
 function Set-SearchAttributeSettings {
-   param (
-      [Parameter(Mandatory)]
-      [string]
-      $entityName,
-      [Parameter(Mandatory)]
-      [string]
-      $attributeName,
-      [Parameter(Mandatory)]
-      [string]
-      $settings,
-      [Parameter(Mandatory)]
-      [bool]
-      $overwriteExisting
-   )
+param (
+   [Parameter(Mandatory)]
+   [string]
+   $entityName,
+   [Parameter(Mandatory)]
+   [string]
+   $attributeName,
+   [Parameter(Mandatory)]
+   [string]
+   $settings,
+   [Parameter(Mandatory)]
+   [bool]
+   $overwriteExisting
+)
    
-   $searchAttributeSettingRecord = $null
+$searchAttributeSettingRecord = $null
 
 # Columns to return
-   $properties = @(
-      'searchattributesettingsid', 
-      'entityname', 
-      'attributename', 
-      'settings')
+$properties = @(
+   'searchattributesettingsid', 
+   'entityname', 
+   'attributename', 
+   'settings')
 
 $select = '?$select=' + ($properties -join ',')
-   $filter = "&`$filter=entityname eq '$entityName' and attributename eq '$attributeName'"
+$filter = "&`$filter=entityname eq '$entityName' and attributename eq '$attributeName'"
 
 $searchAttributeSettingRecords = (Get-Records `
    -setName 'searchattributesettingses' `
@@ -309,54 +309,54 @@ $searchAttributeSettingRecords = (Get-Records `
 
 if ($searchAttributeSettingRecords.Count -gt 1) {
 
-$invalidRecordException = @()
+      $invalidRecordException = @()
       $invalidRecordException += 'More than one record is found in searchattributesettings'
       $invalidRecordException += "with entityname $entityName and attributename $attributeName"
       throw $invalidRecordException -join ' '
    }
-   if ($searchAttributeSettingRecords.Count -eq 1) { 
+if ($searchAttributeSettingRecords.Count -eq 1) { 
       $searchAttributeSettingRecord = $searchAttributeSettingRecords[0] 
    }
  
-   if ($null -ne $searchAttributeSettingRecord) {
+if ($null -ne $searchAttributeSettingRecord) {
 
-$currentSettings = $searchAttributeSettingRecord.settings
+   $currentSettings = $searchAttributeSettingRecord.settings
 
-$recordId = $searchAttributeSettingRecord.searchattributesettingsid
+   $recordId = $searchAttributeSettingRecord.searchattributesettingsid
 
-if (!$overwriteExisting) {
-         $message = @()
-         $message += 'An existing record is found in searchattributesettings with entityname:'
-         $message += "$entityName, attributename: $attributeName, and settings: $settings."
-         $message += 'Please update the value of $overwriteExisting to $true and'
-         $message += 'execute the powershell script again.'
-         throw $message -join ' '
-      }
+   if (!$overwriteExisting) {
+      $message = @()
+      $message += 'An existing record is found in searchattributesettings with entityname:'
+      $message += "$entityName, attributename: $attributeName, and settings: $settings."
+      $message += 'Please update the value of $overwriteExisting to $true and'
+      $message += 'execute the powershell script again.'
+      throw $message -join ' '
+         }
 
-# Delete the record because we are going to create a new one
-      # Alternatively, you can update the existing record settings column value
+   # Delete the record because we are going to create a new one
+   # Alternatively, you can update the existing record settings column value
       Remove-Record `
          -setName 'searchattributesettingses' `
          -id $recordId
 
-$removedRecordMessage = @()
-      $removedRecordMessage += 'Removed existing record in searchattributesettings with entityname:'
-      $removedRecordMessage += "'$entityname', attributename: '$attributename', settings: '$currentSettings'."
-      Write-Host ($removedRecordMessage -join ' ')
+      $removedRecordMessage = @()
+         $removedRecordMessage += 'Removed existing record in searchattributesettings with entityname:'
+         $removedRecordMessage += "'$entityname', attributename: '$attributename', settings: '$currentSettings'."
+         Write-Host ($removedRecordMessage -join ' ')
    }
 
 # Properties for the new record.
-   $searchAttributeSettingsBody = @{
-      'entityname'    = $entityName
-      'attributename' = $attributeName
-      'settings'      = $settings
-   }
+$searchAttributeSettingsBody = @{
+   'entityname'    = $entityName
+   'attributename' = $attributeName
+   'settings'      = $settings
+}
     
-   # Create the new record
-   New-Record `
-      -setName 'searchattributesettingses' `
-      -body $searchAttributeSettingsBody `
-      | Out-Null # We don't need the record id
+# Create the new record
+New-Record `
+   -setName 'searchattributesettingses' `
+   -body $searchAttributeSettingsBody `
+   | Out-Null # We don't need the record id
 
 $createdRecordMessage = @()
    $createdRecordMessage += 'Created new record in searchattributesettings with entityname'
@@ -625,20 +625,20 @@ This example uploads the custom analyzer file located at "C:\CustomAnalyzers\ana
    updates the existing custom analyzer if found.
 #>
 function Set-SearchCustomAnalyzer {
-   param (
-      [Parameter(Mandatory)]
-      [string]
-      $customAnalyzerFilePath,
-      [Parameter(Mandatory)]
-      [string]
-      $customAnalyzerName,
-      [Parameter(Mandatory)]
-      [bool]
-      $overwriteExisting,
-      [Parameter(Mandatory)]
-      [bool]
-      $validCustomAnalyzer
-   )
+param (
+   [Parameter(Mandatory)]
+   [string]
+   $customAnalyzerFilePath,
+   [Parameter(Mandatory)]
+   [string]
+   $customAnalyzerName,
+   [Parameter(Mandatory)]
+   [bool]
+   $overwriteExisting,
+   [Parameter(Mandatory)]
+   [bool]
+   $validCustomAnalyzer
+)
 
 if (!$validCustomAnalyzer) {
       $errorMessage = @()
@@ -657,28 +657,29 @@ $resp = Get-Records `
 
 $searchCustomAnalyzerCount =  $resp.'@odata.count'
    
-   if ($searchCustomAnalyzerCount -gt 1) 
-   { throw "You should not have more than one record in searchcustomanalyzer table." }
-   if ($searchCustomAnalyzerCount -eq 1) {
-      if (!$overwriteExisting) {
-         $errorMessage = @()
-         $errorMessage += 'An existing record was found in searchcustomanalyzer.'
-         $errorMessage += 'Please make sure the existing custom analyzers are'
-         $errorMessage += 'not changed or deleted in the uploaded file.'
-         $errorMessage += 'You can add new custom analyzers to the file.'
-         $errorMessage += 'Please update the value of $overwriteExisting'
-         $errorMessage += 'to $true and execute the PowerShell script again.'
-         throw ($errorMessage -join ' ')
-      }
-
-      $searchCustomAnalyzerRecordId = $resp.value[0].searchcustomanalyzerid
-
-      Remove-Record `
-         -setName 'searchcustomanalyzers' `
-         -id $searchCustomAnalyzerRecordId
-            
-      Write-Host 'Removed existing record in searchcustomanalyzer.'
+if ($searchCustomAnalyzerCount -gt 1) { 
+   throw "You should not have more than one record in searchcustomanalyzer table." 
+}
+if ($searchCustomAnalyzerCount -eq 1) {
+   if (!$overwriteExisting) {
+      $errorMessage = @()
+      $errorMessage += 'An existing record was found in searchcustomanalyzer.'
+      $errorMessage += 'Please make sure the existing custom analyzers are'
+      $errorMessage += 'not changed or deleted in the uploaded file.'
+      $errorMessage += 'You can add new custom analyzers to the file.'
+      $errorMessage += 'Please update the value of $overwriteExisting'
+      $errorMessage += 'to $true and execute the PowerShell script again.'
+      throw ($errorMessage -join ' ')
    }
+
+   $searchCustomAnalyzerRecordId = $resp.value[0].searchcustomanalyzerid
+
+   Remove-Record `
+      -setName 'searchcustomanalyzers' `
+      -id $searchCustomAnalyzerRecordId
+         
+   Write-Host 'Removed existing record in searchcustomanalyzer.'
+}
 
 # Create a new record to upload the custom analyzer file.
 
@@ -686,7 +687,7 @@ $customAnalyzerId = (New-Record `
                      -setName 'searchcustomanalyzers' `
                      -body @{
                         'name' = $customAnalyzerName
-                     } )[1]
+                     })[1]
    
    # Upload the analyzer file to the new custom analyzer record.
    try {
