@@ -81,6 +81,10 @@ In order to connect the copilot component to a custom copilot created using Copi
 ## Step 2 - Customize copilot  
 **Copilot (preview)** control has a new property **Customuze copilot** which enables creating a new copilot using Microsoft copilot studio. You can also set this value to an existing Copilot studio copilot using advance properties tab.
 
+     > [!div class="mx-imgBorder"]
+     > > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
+
+
 
 
 
