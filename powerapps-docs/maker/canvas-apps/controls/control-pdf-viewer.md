@@ -1,18 +1,18 @@
 ---
 title: PDF viewer control (experimental) in Power Apps
 description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/17/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
