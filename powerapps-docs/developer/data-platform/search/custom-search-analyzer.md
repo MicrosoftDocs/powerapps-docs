@@ -125,77 +125,77 @@ static void SetSearchAttributeSettings(
 
    try
    {
-         #region Check whether record exists
+      #region Check whether record exists
 
-         Entity existingRecord = null;
+      Entity existingRecord = null;
 
-         QueryExpression query = new("searchattributesettings")
+      QueryExpression query = new("searchattributesettings")
+      {
+         ColumnSet = new ColumnSet(
+            "searchattributesettingsid",
+            "entityname",
+            "attributename",
+            "settings"),
+         Criteria = new FilterExpression(LogicalOperator.And)
          {
-            ColumnSet = new ColumnSet(
-               "searchattributesettingsid",
-               "entityname",
-               "attributename",
-               "settings"),
-            Criteria = new FilterExpression(LogicalOperator.And)
-            {
-               Conditions = {
-               new ConditionExpression("entityname", ConditionOperator.Equal, entityName),
-               new ConditionExpression("attributename", ConditionOperator.Equal, attributeName)
-               }
+            Conditions = {
+            new ConditionExpression("entityname", ConditionOperator.Equal, entityName),
+            new ConditionExpression("attributename", ConditionOperator.Equal, attributeName)
             }
-         };
+         }
+      };
 
-         // Retrieve any matching records
-         EntityCollection entityCollection = service.RetrieveMultiple(query);
+      // Retrieve any matching records
+      EntityCollection entityCollection = service.RetrieveMultiple(query);
 
-         if (entityCollection.Entities.Count > 1)
+      if (entityCollection.Entities.Count > 1)
+      {
+
+         string message = "More than one record is found in searchattributesettings ";
+         message += $"with entityname {entityName} and attributename {attributeName}.";
+
+         throw new Exception(message);
+      }
+
+      if (entityCollection.Entities.Count == 1)
+      {
+         existingRecord = entityCollection.Entities[0];
+      }
+
+      #endregion Check whether record exists
+
+      if (existingRecord != null)
+      {
+         string currentSettings = existingRecord.GetAttributeValue<string>("settings");
+         Guid recordId = existingRecord.Id;
+
+         if (!overwriteExisting)
          {
 
-            string message = "More than one record is found in searchattributesettings ";
-            message += $"with entityname {entityName} and attributename {attributeName}.";
+            string message = "An existing record is found in searchattributesettings with";
+            message += $" entityname:{entityName}, attributename: {attributeName}";
+            message += $" and settings: {settings}.";
+            message += "Please update the value of overwriteExisting to true and ";
+            message += " use the SetSearchAttributeSettings method again.";
 
             throw new Exception(message);
          }
 
-         if (entityCollection.Entities.Count == 1)
-         {
-            existingRecord = entityCollection.Entities[0];
+         // Removing the existing record before replacing it
+         service.Delete("searchattributesettings", recordId);
+      }
+
+      Entity newRecord = new("searchattributesettings")
+      {
+         Attributes = {
+            { "entityname", entityName },
+            { "attributename", attributeName },
+            { "settings", settings }
          }
+      };
 
-         #endregion Check whether record exists
-
-         if (existingRecord != null)
-         {
-            string currentSettings = existingRecord.GetAttributeValue<string>("settings");
-            Guid recordId = existingRecord.Id;
-
-            if (!overwriteExisting)
-            {
-
-               string message = "An existing record is found in searchattributesettings with";
-               message += $" entityname:{entityName}, attributename: {attributeName}";
-               message += $" and settings: {settings}.";
-               message += "Please update the value of overwriteExisting to true and ";
-               message += " use the SetSearchAttributeSettings method again.";
-
-               throw new Exception(message);
-            }
-
-            // Removing the existing record before replacing it
-            service.Delete("searchattributesettings", recordId);
-         }
-
-         Entity newRecord = new("searchattributesettings")
-         {
-            Attributes = {
-               { "entityname", entityName },
-               { "attributename", attributeName },
-               { "settings", settings }
-            }
-         };
-
-         // Create the new record with the desired settings
-         service.Create(newRecord);
+      // Create the new record with the desired settings
+      service.Create(newRecord);
 
    }
    catch (Exception)
@@ -480,70 +480,70 @@ static void SetSearchCustomAnalyzer(
 
    if (!isValidCustomAnalyzer)
    {
-         string message = "Please make sure the names of the custom analyzers, ";
-         message += "char filters, tokenizers and token filters";
-         message += "defined in the file start with 'msdyn_search_' ";
-         message += "and make sure the file is in a valid json format.";
-         message += "Please update the value of validCustomAnalyzer ";
-         message += "to true and execute SetSearchCustomAnalyzer again.";
+      string message = "Please make sure the names of the custom analyzers, ";
+      message += "char filters, tokenizers and token filters";
+      message += "defined in the file start with 'msdyn_search_' ";
+      message += "and make sure the file is in a valid json format.";
+      message += "Please update the value of validCustomAnalyzer ";
+      message += "to true and execute SetSearchCustomAnalyzer again.";
 
-         throw new Exception(message);
+      throw new Exception(message);
    }
 
    try
    {
-         // Check if there are any existing records
-         QueryExpression query = new("searchcustomanalyzer")
+      // Check if there are any existing records
+      QueryExpression query = new("searchcustomanalyzer")
+      {
+         TopCount = 2,
+         ColumnSet = new("searchcustomanalyzerid")
+      };
+
+      EntityCollection entityCollection = service.RetrieveMultiple(query);
+
+      if (entityCollection.Entities.Count > 1)
+      {
+         throw new Exception("There should be exactly one record in the searchcustomanalyzer table.");
+      }
+      if (entityCollection.Entities.Count == 1)
+      {
+         //There is one record
+
+         Guid searchCustomAnalyzerRecordId = entityCollection.Entities[0].Id;
+
+         if (!overwriteExisting)
          {
-            TopCount = 2,
-            ColumnSet = new("searchcustomanalyzerid")
-         };
+            string message = "An existing record is found in searchcustomanalyzer.";
+            message += "Please make sure the existing custom analyzers are ";
+            message += "not changed or deleted in the uploaded file. ";
+            message += "You can add new custom analyzers to the file. ";
+            message += "Please update the value of overwriteExisting ";
+            message += "to true and execute the SetSearchCustomAnalyzer again.";
 
-         EntityCollection entityCollection = service.RetrieveMultiple(query);
-
-         if (entityCollection.Entities.Count > 1)
-         {
-            throw new Exception("There should be exactly one record in the searchcustomanalyzer table.");
-         }
-         if (entityCollection.Entities.Count == 1)
-         {
-            //There is one record
-
-            Guid searchCustomAnalyzerRecordId = entityCollection.Entities[0].Id;
-
-            if (!overwriteExisting)
-            {
-               string message = "An existing record is found in searchcustomanalyzer.";
-               message += "Please make sure the existing custom analyzers are ";
-               message += "not changed or deleted in the uploaded file. ";
-               message += "You can add new custom analyzers to the file. ";
-               message += "Please update the value of overwriteExisting ";
-               message += "to true and execute the SetSearchCustomAnalyzer again.";
-
-               throw new Exception(message);
-            }
-
-            //Delete the existing record
-            service.Delete("searchcustomanalyzer", searchCustomAnalyzerRecordId);
+            throw new Exception(message);
          }
 
-         Entity newRecord = new("searchcustomanalyzer")
-         {
-            Attributes = {
-               { "name", customAnalyzerName }
-            }
-         };
+         //Delete the existing record
+         service.Delete("searchcustomanalyzer", searchCustomAnalyzerRecordId);
+      }
 
-         Guid newRecordId = service.Create(newRecord);
-         EntityReference newRecordReference = new("searchcustomanalyzer", newRecordId);
+      Entity newRecord = new("searchcustomanalyzer")
+      {
+         Attributes = {
+            { "name", customAnalyzerName }
+         }
+      };
 
-         // Upload the file using example static method
-         UploadFile(
-            service: service,
-            entityReference: newRecordReference,
-            fileAttributeName:"analyzers",
-            fileInfo: customAnalyzerFile,
-            fileMimeType: "application/json");
+      Guid newRecordId = service.Create(newRecord);
+      EntityReference newRecordReference = new("searchcustomanalyzer", newRecordId);
+
+      // Upload the file using example static method
+      UploadFile(
+         service: service,
+         entityReference: newRecordReference,
+         fileAttributeName:"analyzers",
+         fileInfo: customAnalyzerFile,
+         fileMimeType: "application/json");
 
    }
    catch (Exception)
