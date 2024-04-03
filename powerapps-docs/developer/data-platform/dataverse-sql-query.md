@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/28/2024
+ms.date: 04/03/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
@@ -117,7 +117,7 @@ Choice columns are flattened into two columns, which help usability. However, it
 
 It's important to use a top clause in your queries to prevent trying to return the whole table of data. For example, use `Select Top 1000 accountid,name From account Where revenue > 50000` limits the results to the first 1,000 accounts.
 
-### Do not use NOLOCK
+### Don't use NOLOCK
 
 When building queries, don't use the table hint NOLOCK. This hint prevents Dataverse from optimizing queries.
   
@@ -130,7 +130,7 @@ The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, the
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
-Querying data using SQL doesn't trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that would normally be performed by such a plug-in don't take effect for a SQL query.
+Querying data using SQL doesn't trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that are normally performed by such a plug-in don't take effect for a SQL query.
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
@@ -145,7 +145,7 @@ Let's take a look at some known error conditions and how to resolve them.
 
 ### Authentication
 
-Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Microsoft Entra ID – Universal" with multifactor authentication (MFA). However, "Microsoft Entra ID – Password" works if MFA isn't configured. If you try to use other forms of authentication, you'll see errors like the following.
+Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Microsoft Entra ID – Universal" with multifactor authentication (MFA). However, "Microsoft Entra ID – Password" works if MFA isn't configured. If you try to use other forms of authentication, you could see errors like the following.
 
 - Error returned when using **Microsoft Entra ID – Integrated** authentication.
 
@@ -167,7 +167,7 @@ Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)"
 
 ### Blocked ports
 
-A blocked port error may look something like the following.
+A blocked port error can look something like the following.
 
 ![Error message.](media/TDS-SQL-blocked-port-error.png)
 
@@ -180,7 +180,7 @@ The solution is to verify the TCP ports 1433 or 5558 from the client are unblock
 
 If the connection is successful a line "TcpTestSucceeded : True" is returned.
 
-In some cases, traffic may be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
+In some cases, traffic can be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
 
 3. Take the address returned from the above command as "RemoteAddress"
 4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
@@ -198,17 +198,26 @@ This command should return "TcpTestSucceeded : True"
     1. Select **OK**. A dialog box appears to confirm the installation. The telnet command should now be available.
 1. Run a telnet command in a Command window.<br/> `telnet <environmentname>.crm.dynamics.com 1433`
 
-If the connection is successful, you are placed in an active telnet session. If unsuccessful, you receive the error:
+If the connection is successful, you're placed in an active telnet session. If unsuccessful, you receive the error:
 
-"Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed."
+"Connecting to \<environmentname>.crm.dynamics.com… Couldn't open connection to the host, on port 1433: connect failed."
 
 This error message means the port is blocked at the client.
+
+### Port redirect from non-SSL to SSL
+
+The TDS connection can fail when using third party applications due to port redirection from the 1433/5558 to 443. This failure happens because the SSL inspection rule can block communication, where the reason for the block being 'redirection from non-SSL port to SSL port'.
+The solution is to allowlist Dataverse TDS communication on web proxies using IP addresses.
+
+For information on the official IP address values for accessing the service, see [IP-Addreses-Required](/power-platform/admin/online-requirements#ip-addresses-required).
+
+Allowlisting hostnames isn't sufficient when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address, not over hostname.
 
 ### See also
 
 [How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
 [Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
-[Query data using FetchXml](fetchxml/overview.md)   
+[Query data using FetchXml](fetchxml/overview.md)
 [Service Protection API Limits](api-limits.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
