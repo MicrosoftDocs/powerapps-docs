@@ -204,6 +204,15 @@ If the connection is successful, you are placed in an active telnet session. If 
 
 This error message means the port is blocked at the client.
 
+### Port redirect from non-SSL to SSL
+
+TDS connection may also fail when using with third party application like ZScaler due to the port redirection from 1433/5558 to 443 ports. This is because the SSL inspection rule can block communication with reason being “redirection from non-SSL port to SSL port”. 
+The solution is to whitelist Dataverse TDS communication on web proxies using ip addresses.
+
+These are the official IP address values for accessing the service: [IP-Addreses-Required](/power-platform/admin/online-requirements#ip-addresses-required). 
+
+Whitelisting of hostnames is not enough when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address not over hostname.
+
 ### See also
 
 [How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
