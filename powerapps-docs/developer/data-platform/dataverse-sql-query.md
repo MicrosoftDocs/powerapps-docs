@@ -206,12 +206,12 @@ This error message means the port is blocked at the client.
 
 ### Port redirect from non-SSL to SSL
 
-The TDS connection can fail when using third party applications due to the port redirection from the 1433/5558 to 443 ports. This failure happens because the SSL inspection rule can block communication with the reason being “redirection from non-SSL port to SSL port”. 
+The TDS connection can fail when using third party applications due to port redirection from the 1433/5558 to 443. This failure happens because the SSL inspection rule can block communication, where the reason for the block being “redirection from non-SSL port to SSL port”. 
 The solution is to whitelist Dataverse TDS communication on web proxies using IP addresses.
 
-These are the official IP address values for accessing the service: [IP-Addreses-Required](/power-platform/admin/online-requirements#ip-addresses-required). 
+For information on the official IP address values for accessing the service see [IP-Addreses-Required](/power-platform/admin/online-requirements#ip-addresses-required). 
 
-Whitelisting the hostnames is not sufficient when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address, not over hostname.
+Whitelisting hostnames is not sufficient when connecting to Dataverse TDS because port redirection between ports 1433/5558 to 433 is happening over IP address, not over hostname.
 
 ### See also
 
