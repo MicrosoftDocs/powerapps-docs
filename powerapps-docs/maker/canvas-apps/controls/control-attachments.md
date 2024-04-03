@@ -12,7 +12,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - yogeshgupta698
+  - yogupt
 ---
 
 # Attachments control in Power Apps
