@@ -540,6 +540,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Stream video (preview)
+              href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-table.md
             - name: Text (preview)
@@ -636,7 +638,7 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
-            - name: Stream Video
+            - name: Stream Video (retired)
               href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
