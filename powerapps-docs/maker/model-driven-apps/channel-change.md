@@ -71,6 +71,9 @@ A maker can use the app designer to explicitly set the release channel for an ap
 1. Use **App release channel** to change the app release value.
 1. Save and publish the app.
 
+  > [!div class="mx-imgBorder"]
+  > ![App designer settings app release channel](media/channel-change/app-designer-settings-app-release-channel.png "App designer settings app release channel")
+
 ### Change app channel in the solutions area
 
 A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
