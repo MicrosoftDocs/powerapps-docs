@@ -82,12 +82,11 @@ Within the [resources element](manifest-schema-reference/resources.md), find two
 <resources>
     <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="9.4.0" />
+   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
-
 > [!NOTE]
-> Do not change the version numbers for these `platform-library` elements. They are placeholders; higher versions of these libraries may be provided at runtime. For more information about valid platform library versions, see [Supported platform libraries list](#supported-platform-libraries-list).
+> For more information about valid platform library versions, see [Supported platform libraries list](#supported-platform-libraries-list).
 
 We recommend using platform libraries for Fluent 8 and 9. If you don't use Fluent, you should remove the `platform-library` element where the `name` attribute value is `Fluent`.
 
@@ -110,17 +109,16 @@ You can find two new controls added to the samples as part of this preview. Func
 
 ## Supported platform libraries list
 
-Platform libraries are made available both at the build and runtime to the controls that are using platform libraries capability. Currently, the following versions are provided by the platform and these can also be found in the control manifest.
+Platform libraries are made available both at the build and runtime to the controls that are using platform libraries capability. Currently, the following versions are provided by the platform and are the highest currently supported versions.
 
 | Name   | npm package name | Version |
 | ------ | ---------------- | ------- |
 | React  | react            | 16.8.6  |
 | Fluent | @fluentui/react  | 8.29.0  |
-| Fluent | @fluentui/react  | 9.4.0   |
-
+| Fluent | @fluentui/react  | 9.46.2  |
 
 > [!NOTE]
-> The application might load a higher compatible version of a platform library at runtime, and it may not be the latest version available. Fluent 8 and Fluent 9 are supported in parallel as they constitute separate libraries of React components.
+> The application might load a higher compatible version of a platform library at runtime, but the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
 
 ## FAQ
 
