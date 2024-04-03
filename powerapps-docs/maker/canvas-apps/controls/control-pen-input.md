@@ -1,25 +1,30 @@
 ---
 title: Pen input control in Power Apps
 description: Learn about the details, properties and examples of the Pen input control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/25/2016
+ms.date: 3/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Pen input control in Power Apps
 A control in which the user can draw, erase, and highlight areas of an image.
 
 ## Description
 The user can use this control like a whiteboard, drawing diagrams and writing words that can be converted to typed text.
+
+## Limitations
+The pen input  control has these limitations:
+
+- The pen control only has partial support for drawing using a mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
 
 ## Key properties
 **Image** – Output property that represents the image drawn by the end user.
