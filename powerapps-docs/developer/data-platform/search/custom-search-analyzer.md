@@ -371,7 +371,64 @@ When you aren't getting the results from Dataverse search that you expect, and n
 > [!NOTE]
 > For the custom analyzer to work with Dataverse, the names of the custom analyzers, char filters, tokenizers and token filters must start with `msdyn_search_`.
 
-> **TODO**: A minimum example custom analyzer JSON file here would be helpful.
+The following example is a custom analyzer named `msdyn_search_remove_parenthesis_analyzer` which [**TODO**: What exactly does it do?]
+
+```json
+{
+  "tokenizers": {
+    "$type": "System.Collections.Generic.List`1[[Microsoft.Azure.Search.Models.Tokenizer, Microsoft.Azure.Search.Service]], mscorlib",
+    "$values": [
+      {
+        "$type": "Microsoft.Azure.Search.Models.StandardTokenizerV2, Microsoft.Azure.Search.Service",
+        "name": "msdyn_search_remove_parenthesis_tokenizer"
+      }
+    ]
+  },
+  "tokenFilters": {
+    "$type": "System.Collections.Generic.List`1[[Microsoft.Azure.Search.Models.TokenFilter, Microsoft.Azure.Search.Service]], mscorlib",
+    "$values": []
+  },
+  "charFilters": {
+    "$type": "System.Collections.Generic.List`1[[Microsoft.Azure.Search.Models.CharFilter, Microsoft.Azure.Search.Service]], mscorlib",
+    "$values": [
+      {
+        "$type": "Microsoft.Azure.Search.Models.MappingCharFilter, Microsoft.Azure.Search.Service",
+        "mappings": {
+          "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+          "$values": [
+            "(=>",
+            ")=>"
+          ]
+        },
+        "name": "msdyn_search_remove_parenthesis_char"
+      }
+    ]
+  },
+  "analyzers": {
+    "$type": "System.Collections.Generic.List`1[[Microsoft.Azure.Search.Models.Analyzer, Microsoft.Azure.Search.Service]], mscorlib",
+    "$values": [
+      {
+        "$type": "Microsoft.Azure.Search.Models.CustomAnalyzer, Microsoft.Azure.Search.Service",
+        "tokenizer": "msdyn_search_remove_parenthesis_tokenizer",
+        "tokenFilters": {
+          "$type": "Microsoft.Azure.Search.Models.TokenFilterName[], Microsoft.Azure.Search.Service",
+          "$values": [
+            "lowercase"
+          ]
+        },
+        "charFilters": {
+          "$type": "Microsoft.Azure.Search.Models.CharFilterName[], Microsoft.Azure.Search.Service",
+          "$values": [
+            "msdyn_search_remove_parenthesis_char"
+          ]
+        },
+        "name": "msdyn_search_remove_parenthesis_analyzer"
+      }
+    ]
+  }
+}
+```
+
 
 ## Enable the custom analyzer for Dataverse Search
 
