@@ -374,7 +374,7 @@ When you aren't getting the results from Dataverse search that you expect, and n
 > [!NOTE]
 > For the custom analyzer to work with Dataverse, the names of the custom analyzers, char filters, tokenizers and token filters must start with `msdyn_search_`.
 
-The following example is a custom analyzer named `msdyn_search_remove_parenthesis_analyzer` which [**TODO**: What exactly does it do?]
+The following example is a custom analyzer named `msdyn_search_remove_parenthesis_analyzer` which removes the parentheses in the value of the column during indexing and performing search.
 
 ```json
 {
