@@ -78,6 +78,9 @@ A maker can use the app designer to explicitly set the release channel for an ap
 
 A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
 
+  > [!div class="mx-imgBorder"]
+  > ![Solution explorer app setting app channel edit](media/channel-change/solution-explorer-app-setting-app-channel-edit.png "Solution explorer app setting app channel edit")
+
 1. Open https://make.powerapps.com/
 1. Under **Solutions** open an existing solution with one or more model-driven apps:
 1. Add the existing app setting **Allow new app channel default** into the solution:
