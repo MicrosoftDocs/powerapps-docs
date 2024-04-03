@@ -25,10 +25,10 @@ Here are some examples where Dataverse search doesn't return an exact match beca
 
 |Examples|Desired|Actual|
 |---------|---------|---------|
-|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: **TODO**|
-|`2.2.3.1`|Exact match|Unwanted matches: **TODO**|
-|`PG-11.1`|Exact match|Unwanted matches:**TODO**:|
-|`"%mn" +"ABC-123"`|Exact match for: <br /> `TODO example`<br />`TODO example`|Unwanted matches: <br /> `TODO example`<br />`TODO example`|
+|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)` or `(c)` in a column resulting in multiple records that are not relevant.|
+|`2.2.3.1`|Exact match|Unwanted matches: Returns records with `2.2`, `2.3.1`, `.2`, etc resulting in multiple records that are not relevant.|
+|`PG-11.1`|Exact match|Unwanted matches:Returns records with `PG`, `-11`, `-11.1`, etc. resulting in multiple records that are not relevant.:|
+|`"%mn" +"ABC-123"`|Exact match for: <br /> record has `mnABC-123`|Unwanted matches: <br /> record with `mn`<br />has a record with `ABC-123` but does not include `mn`|
 |`"Inspector of brakes"`|Exact match|Unwanted match: `Inspector of boilers`|
 
 To ensure Dataverse Search returns expected results, you might need to provide extra instructions via analyzers to match keywords and phrases to the data expected to be returned in a search term. The data is specific to a column and a table, and it's important to make sure Dataverse search uses the best analyzer, which is often a default Azure AI Search analyzer or a custom analyzer if needed.
