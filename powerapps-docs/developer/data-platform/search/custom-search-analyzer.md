@@ -455,6 +455,8 @@ The following example code includes logic to ensure that no more than one row ex
 
 ### [SDK for .NET](#tab/sdk)
 
+This static `SetSearchCustomAnalyzer` method depends on an example `UploadFile` function you can find in [Use Dataverse messages to upload a file](../file-column-data.md#use-dataverse-messages-to-upload-a-file).
+
 
 ```csharp
 /// <summary>
@@ -535,13 +537,13 @@ static void SetSearchCustomAnalyzer(
          Guid newRecordId = service.Create(newRecord);
          EntityReference newRecordReference = new("searchcustomanalyzer", newRecordId);
 
-         // Upload the file
+         // Upload the file using example static method
          UploadFile(
-            service,
-            newRecordReference,
-            "analyzers",
-            customAnalyzerFile,
-            "application/json");
+            service: service,
+            entityReference: newRecordReference,
+            fileAttributeName:"analyzers",
+            fileInfo: customAnalyzerFile,
+            fileMimeType: "application/json");
 
    }
    catch (Exception)
@@ -563,7 +565,8 @@ SetSearchCustomAnalyzer(
       );
 ```
 
-[Learn how to use the SDK for .NET](../org-service/quick-start-org-service-console-app.md)
+[Learn how to use the SDK for .NET](../org-service/quick-start-org-service-console-app.md)   
+[Use file column data](../file-column-data.md)
 
 
 ### [Web API](#tab/webapi)
