@@ -1,19 +1,19 @@
 ---
 title: Text input control in Power Apps
 description: Learn about the details, properties and examples of the text input control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/22/2019
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Text input control in Power Apps
 A box in which the user can type text, numbers, and other data.
