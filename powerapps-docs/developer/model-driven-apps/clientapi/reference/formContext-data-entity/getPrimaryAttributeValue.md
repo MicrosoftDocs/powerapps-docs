@@ -34,8 +34,4 @@ contributors:
 
 Each table has one string column that is designated as the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryNameAttribute>. The value for this column is used when links to the record are displayed.
 
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

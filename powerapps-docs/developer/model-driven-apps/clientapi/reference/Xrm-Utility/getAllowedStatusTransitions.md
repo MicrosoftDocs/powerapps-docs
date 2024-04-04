@@ -26,21 +26,17 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the table.|
-|statusCode|Number|Yes|The status code to find out the allowed status transition values.|
-|successCallback|Function|No|The function to execute when the operation succeeds.|
-|errorCallback|Function|No|The function to execute when the operation fails.|
+|`entityName`|String|Yes|The logical name of the table.|
+|`statusCode`|Number|Yes|The status code to find out the allowed status transition values.|
+|`successCallback`|Function|No|The function to execute when the operation succeeds.|
+|`errorCallback`|Function|No|The function to execute when the operation fails.|
 
 ## Return value
 
 Returns an object with `.then()` function. The parameter to the delegate is an array of numbers representing the valid status transitions.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

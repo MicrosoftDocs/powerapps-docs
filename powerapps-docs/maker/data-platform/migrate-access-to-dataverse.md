@@ -80,7 +80,7 @@ For more information, go to [How are Dataverse for Teams and Dataverse different
 
 Users integrating Access with Dataverse or Dataverse for Teams may find some differences in names for general features and functions. This section provides a guide to understand naming differences.
 
-Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Agents. The lists below encompass naming differences and similarities at the database layer only.
+Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Microsoft Copilot Studio. The lists below encompass naming differences and similarities at the database layer only.
 
 |Access  |Dataverse and Dataverse for Teams  |Comments  |
 |---------|---------|---------|
@@ -106,7 +106,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 
 To enable application lifecycle management (ALM), Dataverse uses solutions to allow for the management, and distribution of content including apps, tables, and more. A solution is a package of components such as tables, relationships, or other items that can be distributed across multiple Dataverse environments through solution export and import.
 
-The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Access datavases in solutions are exported as an unmanaged solution. A solution must exist or be created in Dataverse prior to the migration to be used for the migration process. To learn more about solutions, go to: [Solution Concepts](/power-platform/alm/solution-concepts-alm)
+The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Access databases in solutions are exported as an unmanaged solution. A solution must exist or be created in Dataverse prior to the migration to be used for the migration process. To learn more about solutions, go to: [Solution Concepts](/power-platform/alm/solution-concepts-alm)
 
 ### See also
 

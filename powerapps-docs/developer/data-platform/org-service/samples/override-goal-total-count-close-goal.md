@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Override goal total count and close the goal
 
-This sample shows how to override the goal total count and close the goal. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OverrideGoalTotal).
+This sample shows how to override the goal total count and close the goal.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Override goal total count and close the goal sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OverrideGoalTotal)
 
 This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the `OrgName` of your organization.
 

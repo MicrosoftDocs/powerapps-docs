@@ -16,20 +16,23 @@ contributors:
   - gregli-msft
   - lanced-microsoft
 ---
-# Understand delegation in a canvas app
+# Query limitations: Delegation and query limits
 
-Power Apps includes a powerful set of functions for filtering, sorting, and shaping tables of data in a canvas app: **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, and **[AddColumns](functions/function-table-shaping.md)** functions to name just a few. With these functions, you can provide your users with focused access to the information they need. For those with a database background, using these functions is the equivalent of writing a database query.
+## Understanding delegation
+Power Apps works best with a back-end data source when a Power Fx query can be fully translated into an equivalent query that can be run on the data source. Power Apps sends a query the data source understands, the query is performed on the data source, and the query results are returned to Power Apps. For instance, the data source might do the work of filtering the data on the data source and only return the rows that meet the filter criteria. When this works correctly, we say that the query is **delegated** to the data source to do the work of the query.
 
-The key to building efficient apps is to minimize the amount of data that must be brought to your device. Perhaps you need only a handful of records from a sea of million, or a single aggregate value can represent thousands of records. Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more. Being focused can dramatically reduce the processing power, memory, and network bandwidth that your app needs, resulting in snappier response times for your users, even on phones connected via a cellular network. 
+However, Power Fx queries can't always be translated into equivalent queries on all data sources. For example, Dataverse supports more query features than Excel. Dataverse supports the 'in' (membership) query operator and Excel doesn't. We say the query is **non-delegable** if a query uses a feature that the data source doesn't support. In general, if any part of a query expression is non-delegable we don't delegate any part of the query.
 
-*Delegation* is where the expressiveness of Power Apps formulas meets the need to minimize data moving over the network. In short, Power Apps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.
+When a query is non-delegable, Power Apps only gets the first 500 records from the data source and then perform the actions in the query. This limit can be upped to 2,000 records [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to preserve good performance of Power Apps.** We found through experimentation that result sets greater than these sizes introduce performance issues for your app and Power Apps in general.
 
-Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a Power Apps formula can be delegated to every data source. The Power Apps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions. As a result, the Power Apps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
+However, this limitation can be a problem as the query may return incorrect results if the data on the data source exceeds 500/2000 records. For instance, consider the example where your data source has 10 Million records and your query needs to operate on the last part of the data. (For example, the family names that start with 'Z') However, your query has a non-delegable operator in it (for example, distinct.) In this case, you only get the first 500/2000 records and you have incorrect results.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.** It's the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that identify places where delegation isn't possible. If you're working with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated. 
+**Create your Power Fx queries by using the delegable tables for your data source.** You should only use query functions that can be delegated. It's the only way to keep your app performing well and to ensure users can access all the information they need. 
+
+Take heed of delegation warnings that identify places where delegation isn't possible. If you work with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated.
 
 > [!NOTE]
-> If the data in your data source exceeds 500 records and a function can't be delegated, Power Apps won't able to retrieve all of the data, and your app may have wrong results.Delegation warnings help you manage your app so that it has correct results.
+> Delegation warnings help you manage your app so that it has correct results. If the data in your data source exceeds 500 records and a function can't be delegated, Power Fx will mark the formula with a blue underline. 
 
 ## Delegable data sources
 Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
@@ -43,8 +46,6 @@ Imported Excel workbooks (using the **Add static data to your app** data source)
 
 ## Delegable functions
 The next step is to use only those formulas that can be delegated. Included here are the formula elements that could be delegated. However, every data source is different, and not all of them support all of these elements. Check for delegation warnings in your particular formula.
-
-These lists will change over time. We're working to support more functions and operators with delegation.
 
 ### Filter functions
 **[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)** and **[LookUp](functions/function-filter-lookup.md)** can be delegated.  
@@ -76,41 +77,50 @@ The previous list doesn't include these notable items:
 * Volatiles: **[Rand](functions/function-rand.md)**, ...
 * [Collections](working-with-variables.md)
 
+## Query limitations
+
+### Lookup levels
+Power Apps supports two lookup levels. This means that a Power Fx query expression can have - at most - two lookup functions in it. This limitation is to preserve performance. If a query expression includes a lookup, Power Apps first does a query to get the base table. Then, it does a second query that expands the first table with the lookup information. We support one more level beyond that as a maximum.  For offline, however, we only support one level of lookup expands.
+
+### Expression evaluation - property of entity must be on left side 'LHS' of equality operator
+It's important to place the property of an entity to be compared in an expression on the left hand side 'LHS' of an equation. To illustrate, in the example below the entity property **'Business unit ID'.Name** is a property value and it must be placed on the LHS of the expression to be evaluated. The following expression succeeds:
+
+```powerapps-dot
+Filter(
+        Budgets,
+        'Business unit ID'.Name = LookUp(
+            Users,
+            'Primary Email' = User().Email,
+            'Business Unit'
+        ).Name,
+        DataCardValue37.Selected.'Date Range String'='Date Range String'
+    )
+```
+However, this expression won't: 
+
+```powerapps-dot
+ Filter(
+        Budgets,
+        LookUp(
+            Users,
+            'Primary Email' = User().Email,
+            'Business Unit'
+        ).Name = 'Business unit ID'.Name,
+        'Date Range String'=DataCardValue37.Selected.'Date Range String'
+    )
+```
+
 ### Sorting functions
 **[Sort](functions/function-sort.md)** and **[SortByColumns](functions/function-sort.md)** can be delegated.
 
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can also be delegated. Only a limited number of data sources support these functions for delegation at this time. For more information see, [Delegation list](#delegable-data-sources).
-
-
-
-> [!NOTE]
-> If an expression is not delegated, it'll only work on the first 500 records (configurable up to 2000, see [Changing the limit](#changing-the-limit)) retrieved from the data source rather than delegating the processing of all data at the data source.
-
-Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
+Some aggregate functions can be delegated depending on support on the back-end.  **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can also be delegated. Only a limited number of data sources support these functions for delegation at this time. For more information, see, [Delegation list](#delegable-data-sources).
 
 **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** delegation support is in Experimental and off by default off.
 
-### Table shaping functions
-
-**[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, and **[ShowColumns](functions/function-table-shaping.md)** partially support delegation.  Formulas in their arguments can be delegated.  However, the output of these functions are subject to the non-delegation record limit.
-
-As in this example, makers often use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance:
-
-```powerapps-dot
-AddColumns( Products, 
-    "Supplier Name", 
-    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
-)
-```
-
-Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable. The result of the entire formula is limited to the first portion of the **Products** data source. Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
-
-If you use **AddColumns** in this manner, **LookUp** must make separate calls to the data source for each of those first records in **Products**, which causes a lot of network chatter. If **Suppliers** is small enough and doesn't change often, you could call the **Collect** function in [**OnStart**](functions/signals.md) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in the related records only when the user asks for them.  
- 
-## Non-delegable functions
+## non-delegable functions
 All other functions don't support delegation, including these notable functions:
 
 * **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
@@ -119,10 +129,10 @@ All other functions don't support delegation, including these notable functions:
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
-## Non-delegable limits
-Formulas that can't be delegated will be processed locally. This allows for the full breadth of the Power Apps formula language to be used. But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network. That can take time, giving the impression that your app is slow or possibly crashed.
+## non-delegable limits
+Formulas that can't be delegated will be processed locally. Local processing allows for the full breadth of the Power Apps formula language to be used. But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network. That can take time, giving the impression that your app is slow or possibly crashed.
 
-To avoid this, Power Apps imposes a limit on the amount of data that can be processed locally: 500 records by default.  We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
+To avoid this, Power Apps imposes a limit on the amount of data that can be processed locally: 500 records by default. We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
 
 Obviously care must be taken when using this facility because it can confuse users. For example, consider a **Filter** function with a selection formula that can't be delegated, over a data source that contains a million records. Because the filtering is done locally, only the first 500 records are scanned. If the desired record is record 501 or 500,001, it isn't considered or returned by **Filter**.
 
@@ -134,17 +144,17 @@ Aggregate functions can also cause confusion. Take **Average** over a column of 
 1. Select **Settings**.
 1. Under **General**, change the **Data row limit** setting from 1 to 2000.
 
-In some cases, you'll know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.
+In some cases, you know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.
 
-To ensure that your app can scale to large data sets, reduce this setting down to 1. Anything that can't be delegated returns a single record, which should be easy to detect when testing your app. This can help avoid surprises when trying to take a proof-of-concept app to production.
+To ensure that your app can scale to large data sets, reduce down this setting to 1. Anything that can't be delegated returns a single record, which should be easy to detect when testing your app. This can help avoid surprises when trying to take a proof-of-concept app to production.
 
 ## Delegation warnings
 To make it easier to know what is and isn't being delegated, Power Apps provides warning (yellow triangle) when you create a formula that contains something that can't be delegated.
 
-Delegation warnings appear only on formulas that operate on delegable data sources. If you don't see a warning and you believe your formula isn't being properly delegated, check the type of data source against the list of [delegable data sources](delegation-overview.md#delegable-data-sources) earlier in this topic.
+Delegation warnings appear only on formulas that operate on delegable data sources. If you don't see a warning and you believe your formula isn't being properly delegated, check the type of data source against the list of [delegable data sources](delegation-overview.md#delegable-data-sources) earlier in this article.
 
 ## Examples
-For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [topic about Dataverse](data-platform-create-app.md) to SQL Server.
+For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [article about Dataverse](data-platform-create-app.md) to SQL Server.
 
 ![Three-screen app.](./media/delegation-overview/products-afd.png)
 
@@ -160,7 +170,7 @@ The search results include **"Apples"** and **"Pineapple"** because the **Search
 
 ![Remove SortByColumns call.](./media/delegation-overview/products-apple-delegationwarning.png)
 
-The new results include **"Apples"** but not **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicate a warning. If you hover over the yellow triangle next to the gallery, this message appears:
+The new results include **"Apples"** but not **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicates a warning. If you hover over the yellow triangle next to the gallery, this message appears:
 
 ![Hover over delegation warning.](./media/delegation-overview/products-apple-yellowwarning.png)
 

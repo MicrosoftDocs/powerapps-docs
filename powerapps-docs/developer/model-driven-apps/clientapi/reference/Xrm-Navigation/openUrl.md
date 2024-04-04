@@ -26,14 +26,14 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|url|String|Yes|URL to open.|
-|openUrlOptions|Object|No|Options to open the URL.The object contains the following values:<br/>- **height**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **width**: (Optional) Number. Width of the window to display the resultant page in pixels.|
+|`url`|String|Yes|URL to open.|
+|`openUrlOptions`|Object|No|Options to open the URL.The object contains the following values:<br/>- **`height`**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **`width`**: (Optional) Number. Width of the window to display the resultant page in pixels.|
 
 ## Remarks
 
 This method is especially helpful for mobile clients to open a URL in a browser outside of shim.
 
- ### Related topics
+ ### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)
 

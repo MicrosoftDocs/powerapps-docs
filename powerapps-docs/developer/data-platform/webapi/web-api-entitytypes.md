@@ -64,7 +64,7 @@ This element defines an entity type that inherits from `crmbaseentity` but is al
 
 An expando entity type can be used as a parameter to an action, or as a response property from a function or action.
 
-More information: [Use open types with Custom APIs](../use-open-types.md)
+More information: [Use open types with custom APIs](../use-open-types.md)
 
 ### crmmodelbaseentity
 

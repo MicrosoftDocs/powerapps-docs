@@ -1,7 +1,7 @@
 ---
 title: "Teams chat (chat)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Teams chat (chat)  table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ For internal use only. Entity which stores association data of Dynamics 365 reco
 |-|-|-|
 |Assign|PATCH /chats(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /chats<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /chats(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ For internal use only. Entity which stores association data of Dynamics 365 reco
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /chats(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /chats(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -665,7 +665,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|SystemRequired|
-|Targets|account,contact,interactionforemail,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,interactionforemail,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1973,6 +1973,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [activity_pointer_chat](#BKMK_activity_pointer_chat)
 - [teams_chat_activity_linkrecord_systemUser](#BKMK_teams_chat_activity_linkrecord_systemUser)
 - [teams_chat_activity_unlinkrecord_systemUser](#BKMK_teams_chat_activity_unlinkrecord_systemUser)
+- [adx_invitation_chats](#BKMK_adx_invitation_chats)
+- [mspp_adplacement_chats](#BKMK_mspp_adplacement_chats)
+- [mspp_pollplacement_chats](#BKMK_mspp_pollplacement_chats)
+- [mspp_publishingstatetransitionrule_chats](#BKMK_mspp_publishingstatetransitionrule_chats)
+- [mspp_redirect_chats](#BKMK_mspp_redirect_chats)
+- [mspp_shortcut_chats](#BKMK_mspp_shortcut_chats)
+- [mspp_website_chats](#BKMK_mspp_website_chats)
 
 
 ### <a name="BKMK_interactionforemail_chats"></a> interactionforemail_chats
@@ -2088,6 +2095,48 @@ See the [teams_chat_activity_linkrecord_systemUser](systemuser.md#BKMK_teams_cha
 **Added by**: System Solution Solution
 
 See the [teams_chat_activity_unlinkrecord_systemUser](systemuser.md#BKMK_teams_chat_activity_unlinkrecord_systemUser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_adx_invitation_chats"></a> adx_invitation_chats
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_chats](adx_invitation.md#BKMK_adx_invitation_chats) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_chats"></a> mspp_adplacement_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_chats](mspp_adplacement.md#BKMK_mspp_adplacement_chats) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_chats"></a> mspp_pollplacement_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_chats](mspp_pollplacement.md#BKMK_mspp_pollplacement_chats) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_chats"></a> mspp_publishingstatetransitionrule_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_chats](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_chats) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_chats"></a> mspp_redirect_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_chats](mspp_redirect.md#BKMK_mspp_redirect_chats) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_chats"></a> mspp_shortcut_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_chats](mspp_shortcut.md#BKMK_mspp_shortcut_chats) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_chats"></a> mspp_website_chats
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_chats](mspp_website.md#BKMK_mspp_website_chats) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

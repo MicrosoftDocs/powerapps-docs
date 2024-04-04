@@ -1,15 +1,15 @@
 ---
 title: "Share records using Access Team| MicrosoftDocs"
 description: How to share records using Access Team
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/11/2018
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -32,7 +32,7 @@ Access Team grant access to rows via sharing rows. Access Team members have priv
   > [!div class="mx-imgBorder"]
   > ![Add user to Access Team.](media/AccessTeam2.png "Add user to Access Team")
 
- 4. In the search box type in the user name to find the user and then select **Add**.
+ 4. In the search box, type in the user name to find the user and then select **Add**.
   
   > [!div class="mx-imgBorder"]
   > ![Find user.](media/AccessTeam3.png "Find user")  
@@ -43,7 +43,7 @@ Access Team grant access to rows via sharing rows. Access Team members have priv
  You can easily remove a user’s access to a row just as easily as you added them.
  
 1.	Open the row that you want to remove the user from.
-2.	Under **Access Team Members** sub-grid, select **Remove user**.
+2.	Under **Access Team Members** subgrid, select **Remove user**.
 
   > [!div class="mx-imgBorder"]
   > ![Remove user from Access Team.](media/AccessTeam4.png "Remove user from Access Team")  

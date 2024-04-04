@@ -23,10 +23,10 @@ contributors:
 
 | Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|file |Object | Yes|An object describing the file to open. The object has the following values:<br/>- **fileContent**: String. Contents of the file.  <br/>- **fileName**: String. Name of the file.<br/>- **fileSize**: Number. Size of the file in KB.<br/>- **mimeType**: String. MIME type of the file.|
-|openFileOptions |Object | No|An object describing whether to open or save the file. The object has the following values:<br/>- **openMode**: Specify `1` to open; `2` to save. <br/>If you do not specify this parameter, by default `1` (open) is passed.<br/>This parameter is only supported on Unified Interface.|
+|`file` |Object | Yes|An object describing the file to open. The object has the following values:<br/>- **`fileContent`**: String. Contents of the file.  <br/>- **`fileName`**: String. Name of the file.<br/>- **`fileSize`**: Number. Size of the file in KB.<br/>- **`mimeType`**: String. MIME type of the file.|
+|`openFileOptions` |Object | No|An object describing whether to open or save the file. The object has the following values:<br/>- **`openMode`**: Specify `1` to open; `2` to save. <br/>If you do not specify this parameter, by default `1` (open) is passed.<br/>This parameter is only supported on Unified Interface.|
 
-### Related topics
+### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)
 

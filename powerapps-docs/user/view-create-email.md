@@ -1,15 +1,15 @@
 ---
 title: "Understand the email experience in model-driven apps | MicrosoftDocs"
 description: Understand the email experience
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

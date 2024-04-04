@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to serialize early-bound and late-bound entity instances into an XML format, and how to de-serialize from an XML format to an early-bound entity instances.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SerializeDeserializeEntity).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Serialize and deserialize entity instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SerializeDeserializeEntity)
 
 ## How to run this sample
 

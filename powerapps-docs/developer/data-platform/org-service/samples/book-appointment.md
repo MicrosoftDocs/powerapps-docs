@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Book an appointment
 
-This sample shows how to book or schedule an appointment by using the [BookRequest](/dotnet/api/microsoft.crm.sdk.messages.bookrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BookAppointment).
+This sample shows how to book or schedule an appointment by using the [BookRequest](/dotnet/api/microsoft.crm.sdk.messages.bookrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Book an appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BookAppointment)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

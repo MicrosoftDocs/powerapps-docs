@@ -146,6 +146,6 @@ By switching to use `createPane`, both limitations can be avoided by providing a
 
 ### Related articles
 
-[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)<br />
-[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)<br />
+[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)   
+[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)   
 [Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md)

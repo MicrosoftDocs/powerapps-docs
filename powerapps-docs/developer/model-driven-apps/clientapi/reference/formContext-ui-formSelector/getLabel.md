@@ -28,7 +28,7 @@ contributors:
 
 **Description**: Label of the form.
 
-### Related topics
+### Related articles
 
 [formContext.ui.formSelector](../formContext-ui-formSelector.md)
 

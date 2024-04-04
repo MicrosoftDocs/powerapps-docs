@@ -3,7 +3,7 @@ title: "getRequiredLevel (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getRequiredLevel method.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 03/12/2022
+ms.date: 02/14/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -32,11 +32,12 @@ All
 **Type**: String. 
 
 **Description**: Returns one of the following values:
-- none
-- required
-- recommended
+- `none`
+- `required`
+- `recommended`
 
-### Related topic
+### Related article
+
 [setRequiredLevel (Client API reference)](setRequiredLevel.md)
 
 

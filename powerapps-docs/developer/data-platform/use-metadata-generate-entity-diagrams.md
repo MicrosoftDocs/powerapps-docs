@@ -82,7 +82,7 @@ The name of the generated Visio file is account.vsd.
 
 **[ERD Visio Builder](https://www.xrmtoolbox.com/plugins/LinkeD365.ERDVisioBuilder/)** for XrmToolBox is a tool that generates Visio diagrams from the metadata in Microsoft Dynamics 365 and the Power Platform Dataverse.
 
-See the [Developer tools](developer-tools.md) article for community developed tools, [jonasr.app/uml](https://jonasr.app/uml?utm_source=msdocs) for more information about UML Diagram Generator, [journeyintocrm.com](https://www.journeyintocrm.com/archives/1806.html) for more information about Entity Relation Diagram Creator and [LinkeD365.blog](https://linked365.blog/2020/07/06/erd-visio-builder-xrmtoolbox-addon/) for more information on the ERD Visio Builder.
+See the [Developer tools](developer-tools.md) article for community developed tools, [jonasr.app/uml](https://jonasr.app/uml?utm_source=msdocs) for more information about UML Diagram Generator, and [LinkeD365.blog](https://linked365.blog/2020/07/06/erd-visio-builder-xrmtoolbox-addon/) for more information on the ERD Visio Builder.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and we do not extend support to the community tools.

@@ -4,7 +4,7 @@ description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
 author: NHelgren # GitHub ID
 ms.topic: article
-ms.date: 07/19/2023
+ms.date: 12/12/2023
 ms.subservice: dataverse-developer
 ms.author: nhelgren
 search.audienceType:
@@ -65,10 +65,10 @@ In the following table:
 |Collection| `CalendarRulesType`| No| Contains a collection of `CalendarRules` table records.<br />There are no columns that use this type. When generating a proxy, the code generation tool creates two simulated columns that aren't present in the definition. These columns represent a view of the calendar rules records associated in a one-to-many relationship to the table record. |
 |Collection| `PartyListType`| No| Contains a collection of `ActivityParty` table records.<br />More information: [ActivityParty table](reference/entities/activityparty.md)|
 |Date and Time| `DateTimeType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>| Yes<br />**Date and Time**| Contains a date and time value.<br />All date and time columns support values as early as 1/1/1753 12:00 AM.|
-|File| `FileType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>| Yes<br />**File**| Contains data to support retrieving binary data for a table record.<br />More information: [File columns](file-attributes.md)|
+|File| `FileType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>| Yes<br />**File**| Contains data to support retrieving binary data for a table record.<br />More information: [Work with file column definitions using code](file-attributes.md)|
 |Image| `ImageType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata>| Yes<br />**Image**| Contains data to support retrieving image data for a table record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property| `ManagedPropertyType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ManagedPropertyAttributeMetadata>| No| Contains data that describe whether the solution component stored in the table record can be customized when included in a managed solution.<br />More information: [Managed Properties](/power-platform/alm/managed-properties-alm)|
-|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| No | Contains a `BigInt` value. For internal use only.|
+|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| Yes | Contains a `BigInt` value.|
 |Quantity| `DecimalType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DecimalAttributeMetadata>| Yes<br />**Decimal Number**| Contains a `Decimal` value. The `Precision` property sets the level of precision. |
 |Quantity| `DoubleType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DoubleAttributeMetadata> | Yes<br />**Floating Point Number**  | Contains a `Double` value. The `Precision` property sets the level of precision.|
 |Quantity| `IntegerType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.IntegerAttributeMetadata>| Yes<br />**Whole Number**  | Contains an `Int` value|
@@ -188,13 +188,13 @@ Columns that display a set of options can reference a set of options defined by 
 
 ### Retrieve options data
 
-The organization service provides request classes you can use to retrieve the options used by a column.
+The SDK for .NET provides request classes you can use to retrieve the options used by a column.
 
-#### Use the organization service to retrieve options
+#### Use the SDK for .NET to retrieve options
 
 Each of the columns with options inherit from <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> include an [OptionSet Property](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet). This property contains the <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> that includes the options within the [Options property](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options).
 
-With the organization service you can use the following messages to retrieve information about choice:
+With the SDK for .NET you can use the following request classes to retrieve information about choice:
 
 | Request Class|Description |
 |-----|-----|

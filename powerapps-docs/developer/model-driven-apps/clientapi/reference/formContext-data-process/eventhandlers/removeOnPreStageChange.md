@@ -24,16 +24,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnPreStageChange](../../events/onprestagechange.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnPreStageChange](../../events/onprestagechange.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnPreStageChange](addOnPreStageChange.md)
- 
+[addOnPreStageChange](addOnPreStageChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

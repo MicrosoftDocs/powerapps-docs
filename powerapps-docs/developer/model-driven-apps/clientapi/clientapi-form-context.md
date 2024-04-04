@@ -70,9 +70,9 @@ Provides properties and methods to work with the data on a form, including table
 
 | Object   | Description|
 |----------|-------------------------------------------------------------------------------------------------------------------|
-|attributes|Collection of non-table data on the form. Items in this collection are of the same type as the column collection, but they are not columns of the form table. <br/>More information: [Collections](reference/collections.md)|
-|entity    |Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](reference/formContext-data-entity.md)|
-|process   |Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](reference/formContext-data-process.md)|
+|`attributes`|Collection of non-table data on the form. Items in this collection are of the same type as the column collection, but they are not columns of the form table. <br/>More information: [Collections](reference/collections.md)|
+|`entity`|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](reference/formContext-data-entity.md)|
+|`process`|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](reference/formContext-data-process.md)|
 
 It also provides an **attributes** collection for accessing non-table bound control. See the **Collections in the formContext object model** section later in this topic.
 
@@ -84,9 +84,9 @@ Provides methods to retrieve information about the user interface, in addition t
 
 | Object          | Description|
 |-----------------|----------------|
-|formSelector     |Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
-|navigation       |Does not contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
-|process          |Provides methods to interact with the business process flow control on a form.|
+|`formSelector`|Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
+|`navigation`|Does not contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
+|`process`|Provides methods to interact with the business process flow control on a form.|
 
 More information: [formContext.ui](reference/formContext-ui.md)
 
@@ -108,16 +108,13 @@ information about the methods available for collections in general, see [Collect
 
 
   
-### Related topics
+### Related articles
 
-[getFormContext method](reference/executioncontext/getFormContext.md)<br/>
-[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>
-[getAttribute method](reference/attributes.md)<br/>
-[getControl method](reference/controls/getcontrol.md)<br/>
+[getFormContext method](reference/executioncontext/getFormContext.md)   
+[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)   
+[getAttribute method](reference/attributes.md)   
+[getControl method](reference/controls/getcontrol.md)   
 [Execution context methods](reference/execution-context.md) 
-
- 
-
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -79,7 +79,7 @@ The following example creates global choice using the properties.
 
 The URI for the global choice is returned in the response. You can also refer to this global choice using the name: `GlobalOptionSetDefinitions(Name='sample_colors')`.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions
@@ -194,7 +194,7 @@ Content-Length: 2769
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -218,7 +218,7 @@ The following example creates a local column using the properties and adds it to
 
 The URI for the attribute is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -281,7 +281,7 @@ Content-Length: 1465
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -293,7 +293,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 The following example uses the [InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue) to add a new option with the value `727000005` and label **Echo** to the local choice column created by [Create a choice column](create-update-column-definitions-using-web-api.md#create-a-choice-column).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/InsertOptionValue
@@ -329,7 +329,7 @@ Content-Length: 612
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -345,7 +345,7 @@ OData-Version: 4.0
 
 To update individual options, you must use the [UpdateOptionValue Action](xref:Microsoft.Dynamics.CRM.UpdateOptionValue). The following example updates the `TrueOption` from the Boolean column example in [Create a boolean column](create-update-column-definitions-using-web-api.md#create-a-boolean-column) and changes the label so that it's `Up` rather than `True`. Because this is a 'local' option set, it uses `AttributeLogicalName` and `EntityLogicalName`. For a global option set, use the `OptionSetName` parameter instead.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
@@ -379,7 +379,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -394,7 +394,7 @@ To use this with a global option set, specify the `OptionSetName` parameter rath
 
 The `SolutionUniqueName` parameter applies the changes as part of the specified solution.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/OrderOption
@@ -420,7 +420,7 @@ Content-Length: 253
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -435,7 +435,7 @@ To use this with a global option set, specify the `OptionSetName` parameter rath
 
 The `SolutionUniqueName` parameter applies the changes as part of the specified solution.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DeleteOptionValue
@@ -453,7 +453,7 @@ Content-Length: 116
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -468,7 +468,7 @@ Use the `StateCode` parameter to specify which statecode option the status value
 
 The `NewOptionValue` property returned by the [InsertStatusValueResponse ComplexType](xref:Microsoft.Dynamics.CRM.InsertStatusValueResponse) contains the value assigned to the option.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/InsertStatusValue
@@ -504,7 +504,7 @@ Content-Length: 609
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

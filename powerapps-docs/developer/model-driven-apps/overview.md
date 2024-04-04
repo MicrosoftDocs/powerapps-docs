@@ -24,7 +24,7 @@ If you are new to the Dataverse applications, the topics in this section provide
 > [!div class="nextstepaction"]
 > [Get started](supported-customizations.md)
 
-### Related topics
+### Related articles
 
 [Understand model-driven apps components](../../maker/model-driven-apps/model-driven-app-components.md)<br/>
 [Create your first model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md)

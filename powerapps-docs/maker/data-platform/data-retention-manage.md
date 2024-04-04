@@ -1,23 +1,17 @@
 ---
 title: Manage data retention policies in Microsoft Dataverse
 description: This article explains how you can view and managed existing data retention policies in Microsoft Dataverse. 
-author: Mattp123
-ms.author: matp
+author: pnghub
+ms.author: gned
+ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 07/25/2023
+ms.date: 02/29/2024
 ms.custom: template-how-to 
 ---
-# Manage data retention policies (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Manage data retention policies
 
 Use the retention policies dashboard to view and manage retention policies. From the dashboard, view the policy run history, update policy details, deactivate, and delete a policy.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature.
 
 ## View and manage retention policies
 
@@ -37,12 +31,23 @@ Use the retention policies dashboard to view and manage retention policies. From
 |---------|---------|
 |Scheduled     |  The policy has been scheduled to run.       |
 |In progress - Retention     | The process of moving and changing the data state from active to non-active (retained) for the rows in the parent root table and all child tables.        |
-|Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
+|Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse long term retention.      |
 |In progress – Reconciliation     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
 |Pending Delete     |  Waiting to delete all retained rows.       |
 |In progress – Delete     |  Delete of retained rows from applications.       |
-|Succeeded     |  Retention process completed successfully.       |
+|Completed     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
+
+### View details on failed records
+
+Query the Dataverse table `Retentionfailuredetails` for error details.
+
+|Column name  |Description  |
+|---------|---------|
+|`Operationid`     |  The policy `runid` visible in the long term retention dashboard for a specific policy run.       |
+|`entitylogicalname`     | Name of the table containing the record.      |
+|`recordid`     | Unique identifier of every record in the table.    |
+|`message`     | Detailed error message.        |
 
 ### Bulk delete long term retained data
 
@@ -50,5 +55,5 @@ Dataverse bulk delete with the Dataverse SDK supports deletion of long term reta
 
 ## See also
 
-[View long term retained data (preview)](data-retention-view.md) <br />
+[View long term retained data](data-retention-view.md) <br />
 [Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)

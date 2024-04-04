@@ -44,7 +44,7 @@ You can retrieve a quick view control in the **quickForms** collection by using 
 |[setVisible](formcontext-ui-quickForms/setVisible.md)|[!INCLUDE[formcontext-ui-quickForms/includes/setVisible-description.md](formcontext-ui-quickForms/includes/setVisible-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [formContext.ui](formContext-ui.md)
 

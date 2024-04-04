@@ -16,13 +16,13 @@ search.audienceType:
 
 As data culture spreads across more and more organizations, and analytics becomes a vital part of decision making and the daily actions taken by employees, it has become critical to have reliable, up-to-date analytics readily available in your Power Apps.  
 
-As a step towards achieving this goal, it possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
+As a step towards achieving this goal, it's possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-In this article, you'll learn how to do the following tasks:
+In this article, you learn how to do the following tasks:
 
 * Add Power BI reports and dataset components to a solution.
 * Configure the behavior of Power BI mashup parameters upon import and export as part of the Power Apps solution.
@@ -35,8 +35,8 @@ In this article, you'll learn how to do the following tasks:
 
 ## General limitations and restrictions
 
-* The **Power BI Extensions (Preview)** system solution must be installed. In new environments it's installed by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. To install the extension, go to the [Power Platform admin center](https://aka.ms/powerbi_extension).
-* Only Power BI reports and datasets can be added to a solution. Only datasets created with the enhanced dataset model are supported. Any other artifact type is not supported (such as dashboard, dataflow, and paginated report).
+* The **Power BI Extensions (Preview)** system solution must be installed. In new environments, it's installed by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. To install the extension, go to the [Power Platform admin center](https://aka.ms/powerbi_extension).
+* Only Power BI reports and datasets can be added to a solution. Only datasets created with the enhanced dataset model are supported. Any other artifact type isn't supported (such as dashboard, dataflow, and paginated report).
 * Connection references to Power BI data sources aren't supported (for example, in composite models).
 * The Power BI dataset parameter types "Any" and "Binary" aren't supported in the Power BI integration with Power Apps solutions.
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
@@ -44,8 +44,8 @@ In this article, you'll learn how to do the following tasks:
 * Power Apps Application IDs aren't supported during public preview.
 * Information sharing between Power Platform environments and Power BI workspaces located in different geographies is supported if the relevant settings are **ON**. More information: [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
 * Environment life cycle operations aren't supported during preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).
-* Dataverse for Teams environments are not supported.
-* National clouds are not currently supported.  
+* Dataverse for Teams environments aren't supported.
+* National clouds aren't currently supported.  
 
 ## Create Power BI report and dataset components
 
@@ -122,7 +122,7 @@ In this section the options you have for configuring how a Power BI dataset para
 
         The environment variable option is significant because it makes it possible to require the installer to provide a value for a parameter during deployment. This is done by associating the parameter with an environment variable that has a blank value. 
 
-        When you configure a parameter with an environment variable in order to require the installer to provide a value upon deployment, make sure that the default value is blank. If there is a current value, remove it by right-clicking and choosing **Remove from solution**. 
+        When you configure a parameter with an environment variable in order to require the installer to provide a value upon deployment, make sure that the default value is blank. If there's a current value, remove it by right-clicking and choosing **Remove from solution**. 
 
         For more information about environment variables, go to [Environment variables overview](../data-platform/environmentvariables.md). 
 

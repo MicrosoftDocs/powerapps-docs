@@ -1,7 +1,7 @@
 ---
 title: "Feedback table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Feedback table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Container for feedback and ratings for knowledge articles.
+Feedback and rating.
 
 
 ## Messages
@@ -58,6 +58,11 @@ Container for feedback and ratings for knowledge articles.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [adx_approved](#BKMK_adx_approved)
+- [adx_authorurl](#BKMK_adx_authorurl)
+- [Adx_ContactEmail](#BKMK_Adx_ContactEmail)
+- [Adx_ContactUsername](#BKMK_Adx_ContactUsername)
+- [Adx_CreatedByContact](#BKMK_Adx_CreatedByContact)
 - [Comments](#BKMK_Comments)
 - [CreatedByContact](#BKMK_CreatedByContact)
 - [CreatedOnBehalfByContact](#BKMK_CreatedOnBehalfByContact)
@@ -78,6 +83,103 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StatusCode](#BKMK_StatusCode)
 - [Title](#BKMK_Title)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
+
+
+### <a name="BKMK_adx_approved"></a> adx_approved
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows whether the feedback is approved for display.|
+|DisplayName|Published To Web|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_approved|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### adx_approved Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_adx_authorurl"></a> adx_authorurl
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The URL of the author’s home page/blog.|
+|DisplayName|Author URL|
+|FormatName|Url|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_authorurl|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_ContactEmail"></a> Adx_ContactEmail
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Email of the contact who created the record.|
+|DisplayName|Email|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_contactemail|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_ContactUsername"></a> Adx_ContactUsername
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Username of the contact who created the record.|
+|DisplayName|Username|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_contactusername|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_CreatedByContact"></a> Adx_CreatedByContact
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Name of the contact who created the record.|
+|DisplayName|Created By Name (Contact)|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_createdbycontact|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Comments"></a> Comments

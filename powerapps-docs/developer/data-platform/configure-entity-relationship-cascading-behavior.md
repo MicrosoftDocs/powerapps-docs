@@ -5,7 +5,7 @@ suite: powerapps
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 06/13/2023
+ms.date: 09/05/2023
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -15,21 +15,21 @@ contributors:
 
 # Configure table relationship cascading behavior  
 
-You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
+You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and SDK for .NET support configuring cascading behavior.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Using Web API to configure cascading behavior
 
-When working with Web API, you can define a One-to-Many relationship using <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>. This definition includes the name of the intersect table to be created as well as how the relationship should be displayed in the application by using <xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType>, <xref:Microsoft.Dynamics.CRM.Label?text=Label ComplexType> and <xref:Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType>. 
+When working with Web API, you can define a One-to-Many relationship using [OneToManyRelationshipMetadata entity type](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata). This definition includes the name of the intersect table to be created as well as how the relationship should be displayed in the application by using [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration), [Label complex type](xref:Microsoft.Dynamics.CRM.Label) and [LocalizedLabel complex type](xref:Microsoft.Dynamics.CRM.LocalizedLabel). 
 
 More information: [Create a One-to-Many relationship using Web API](webapi/create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship).
 
-## Using Organization Service to configure cascading behavior
+## Using SDK for .NET to configure cascading behavior
 
-When you use <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRelationshipRequest>, you include an instance of a <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> class in the body of the request. In the <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration> property of that class you use the <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class.  
+When you use <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRelationshipRequest> classes, include an instance of a [OneToManyRelationshipMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata) class in the body of the request. In the <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration> property of that class you use the <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class.  
 
-The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType>) contains the properties representing actions that may be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the <xref:Microsoft.Dynamics.CRM.CascadeType?text=CascadeType EnumType>.  
+The [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) or [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration)) contains the properties representing actions that may be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the [CascadeType enum type](xref:Microsoft.Dynamics.CRM.CascadeType).  
 
 |Value|Application label|Description|  
 |-----------|-----------------------|-----------------|  
@@ -42,7 +42,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 **Active Records considered for Cascading action**
 
-Cascading actions on active records only include records that have a state code of "Active". The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. Any custom state or status code with values other than below won't be processed as an active record for cascading purposes.
+Cascading actions on active records only include records that have a state code of "Active". The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. Any custom state or status code with values other than those in the following table won't be processed as an active record for cascading purposes.
 
 | Table Name                       |    State Code 0       |    State Code 1       |    State Code 2       |    State Code 3       | 
 | :--------------------------------| :----------------:    | :----------------:    | :----------------:    | :-----------------:    |
@@ -73,7 +73,7 @@ Cascading actions on active records only include records that have a state code 
 
 
 
-The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?displayProperty=nameWithType>) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
+The SDK for .NET [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) or Web API [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
   
 |Action|Description|Valid options|  
 |------------|-----------------|-------------------|  
@@ -101,6 +101,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 The assign action allows the owner, the Owning Business Unit, or both owner and business unit updates to be cascaded down to all child records when the parent record is updated.
 
 #### Allowed record ownership across business units not enabled
+
 When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) isn't enabled, the Owning Business Unit column can't be explicitly updated when changing the record's owner. The following lists the cascading behaviors when the parent's record owner is updated.
 
 If you update the owner:
@@ -238,7 +239,7 @@ You can set **AlwaysMoveRecordToOwnerBusinessUnit** to false; the user owned rec
 
 ### About the reparent action
 
-The reparent action is similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for ReadAccess, WriteAccess, DeleteAccess, AssignAccess, ShareAccess, AppendAccess and AppendToAccess. It doesn't change for CreateAccess. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
+The reparent action is similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AssignAccess`, `ShareAccess`, `AppendAccess` and `AppendToAccess`. It doesn't change for `CreateAccess`. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
 
 <a name="BKMK_MergeAction"></a>
 
@@ -271,62 +272,12 @@ Some examples of the kind of notifications that your custom plug-in can provide 
 -   On failure, add an entry to a run-time log, and then send an email (or other communication) to the administrator indicating the date/time and nature of the failure
 - Display a message to the interactive user
 
-## Reset cascade inherited access
+## Inherited access repair
 
-If a parent table row's cascading access option is changed from **Cascade All** to **Cascade None**, it is important to ensure that child rows have the appropriate access permissions. This section describes how to programmatically revoke inherited access rights granted to child rows when a parent row is changed to **Cascade None**. The ability to revoke inherited access on child rows requires Administrator or System Customizer security role.
+After changing the cascading behavior of a table relationship for the **Reparent** or **Share** actions to **No Cascade**, the system will try to adjust user's inherited access rights to match the current table relationship cascading behavior. [Learn more about inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
 
-> [!NOTE]
-> When resetting inherited cascade access, custom processing through registered plug-ins or custom workkflow
-activities is currently not supported.
->
-> Resetting inherited access using FetchXML is more targeted and gives you more control over inherited access clean up as compared to [CreateAsyncJobToRevokeInheritedAccessRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateAsyncJobToRevokeInheritedAccessRequest).
+However, if this approach isn't successful, is possible for users to retain access to related records that should be removed. For steps to address  problem, see [Clean up inherited access](/troubleshoot/power-platform/power-apps/dataverse/cleanup-inherited-access).
 
-More information: [Inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
-
-Below are three example scenerios where inherited access is revoked using FetchXML queries.
-
-### Reset inherited access given to a certain user for a specific account
-
-```xml
-<fetch mapping="logical">
-    <entity name="principalobjectaccess">
-        <attribute name="principalobjectaccessid"/>
-        <filter type="and">
-            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
-            <condition attribute="objectid" operator="eq" value="B52B7A48-EAFB-ED11-884B-00224809B6C7" />
-        </filter>
-    </entity>
-</fetch>
-```
-
-### Reset inherited access given to all child rows for a specified object type
-
-```xml
-<fetch mapping="logical">
-    <entity name="principalobjectaccess">
-        <attribute name="principalobjectaccessid"/>
-        <filter type="and">
-            <condition attribute="objecttypecode" operator="eq" value="10042" />
-        </filter>
-    </entity>
-</fetch>
-
-```
-
-### Reset inherited access given to a specified user for all object types
-
-```xml
-<fetch mapping="logical">
-    <entity name="principalobjectaccess">
-        <attribute name="principalobjectaccessid"/>
-        <filter type="and">
-            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
-        </filter>
-    </entity>
-</fetch>
-```
-
-To learn how to execute a FetchXML query using either the Web API or Dataverse SDK for .NET see [Use FetchXML to construct a query](use-fetchxml-construct-query.md).
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Connection table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -224,7 +224,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|record1id|
 |RequiredLevel|None|
-|Targets|account,activitypointer,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
+|Targets|account,activitypointer,adx_invitation,adx_inviteredemption,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,mspp_publishingstatetransitionrule,mspp_shortcut,mspp_website,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
 |Type|Lookup|
 
 
@@ -265,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|record2id|
 |RequiredLevel|None|
-|Targets|account,activitypointer,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
+|Targets|account,activitypointer,adx_invitation,adx_inviteredemption,appointment,channelaccessprofilerule,contact,email,fax,goal,knowledgearticle,knowledgebaserecord,letter,mspp_publishingstatetransitionrule,mspp_shortcut,mspp_website,phonecall,position,processsession,recurringappointmentmaster,socialactivity,socialprofile,systemuser,task,team,territory|
 |Type|Lookup|
 
 
@@ -851,6 +851,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
+|10256|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10257|Invite Redemption|Holds information about the redemption of an invite.|
+|10276|Publishing State Transition Rule||
+|10278|Shortcut||
+|10290|Website|Web Portal|
 
 
 
@@ -923,6 +928,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9600|Goal|Target objective for a user or a team for a specified time period.|
 |9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
+|10256|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10257|Invite Redemption|Holds information about the redemption of an invite.|
+|10276|Publishing State Transition Rule||
+|10278|Shortcut||
+|10290|Website|Web Portal|
 
 
 
@@ -1128,6 +1138,16 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [recurringappointmentmaster_connections2](#BKMK_recurringappointmentmaster_connections2)
 - [territory_connections1](#BKMK_territory_connections1)
 - [territory_connections2](#BKMK_territory_connections2)
+- [adx_invitation_connections1](#BKMK_adx_invitation_connections1)
+- [adx_invitation_connections2](#BKMK_adx_invitation_connections2)
+- [adx_inviteredemption_connections1](#BKMK_adx_inviteredemption_connections1)
+- [adx_inviteredemption_connections2](#BKMK_adx_inviteredemption_connections2)
+- [mspp_publishingstatetransitionrule_connections1](#BKMK_mspp_publishingstatetransitionrule_connections1)
+- [mspp_publishingstatetransitionrule_connections2](#BKMK_mspp_publishingstatetransitionrule_connections2)
+- [mspp_shortcut_connections1](#BKMK_mspp_shortcut_connections1)
+- [mspp_shortcut_connections2](#BKMK_mspp_shortcut_connections2)
+- [mspp_website_connections1](#BKMK_mspp_website_connections1)
+- [mspp_website_connections2](#BKMK_mspp_website_connections2)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -1329,6 +1349,66 @@ See the [territory_connections1](territory.md#BKMK_territory_connections1) one-t
 **Added by**: Application Common Solution
 
 See the [territory_connections2](territory.md#BKMK_territory_connections2) one-to-many relationship for the [territory](territory.md) table/entity.
+
+### <a name="BKMK_adx_invitation_connections1"></a> adx_invitation_connections1
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_connections1](adx_invitation.md#BKMK_adx_invitation_connections1) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_invitation_connections2"></a> adx_invitation_connections2
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_connections2](adx_invitation.md#BKMK_adx_invitation_connections2) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_connections1"></a> adx_inviteredemption_connections1
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_connections1](adx_inviteredemption.md#BKMK_adx_inviteredemption_connections1) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_connections2"></a> adx_inviteredemption_connections2
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_connections2](adx_inviteredemption.md#BKMK_adx_inviteredemption_connections2) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_connections1"></a> mspp_publishingstatetransitionrule_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_connections1](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_connections1) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_connections2"></a> mspp_publishingstatetransitionrule_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_connections2](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_connections2) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_connections1"></a> mspp_shortcut_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_connections1](mspp_shortcut.md#BKMK_mspp_shortcut_connections1) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_connections2"></a> mspp_shortcut_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_connections2](mspp_shortcut.md#BKMK_mspp_shortcut_connections2) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_connections1"></a> mspp_website_connections1
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_connections1](mspp_website.md#BKMK_mspp_website_connections1) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+
+### <a name="BKMK_mspp_website_connections2"></a> mspp_website_connections2
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_connections2](mspp_website.md#BKMK_mspp_website_connections2) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "BulkDeleteFailure table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BulkDeleteFailure table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -239,7 +239,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,activitymimeattachment,activitypointer,annotation,annualfiscalcalendar,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,attributeimageconfig,attributemap,bot,botcomponent,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,businessunit,businessunitnewsarticle,calendar,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connectioninstance,connectionreference,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,desktopflowbinary,desktopflowmodule,displaystring,email,emailserverprofile,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entitymap,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,fixedmonthlyfiscalcalendar,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,holidaywrapper,import,importdata,importfile,importlog,importmap,indexattributes,internalcatalogassignment,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,managedidentity,metadataforarchival,mobileofflineprofileextension,monthlyfiscalcalendar,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organization,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,pdfsetting,phonecall,pluginpackage,post,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilege,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,quarterlyfiscalcalendar,queue,queueitem,reconciliationentityinfo,reconciliationinfo,recordfilter,recurringappointmentmaster,relationshipattribute,relationshiprole,relationshiprolemap,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,role,roleeditorlayout,routingrule,routingruleitem,savedquery,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,semiannualfiscalcalendar,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,sla,socialactivity,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemform,systemuser,systemuserauthorizationchangetracker,task,tdsmetadata,team,teammobileofflineprofilemembership,template,territory,theme,userform,usermapping,usermobileofflineprofilemembership,userquery,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
+|Targets|account,activityfileattachment,activitymimeattachment,activitypointer,adx_externalidentity,adx_invitation,adx_inviteredemption,adx_portalcomment,adx_setting,adx_webformsession,aiplugin,aipluginexternalschema,aipluginexternalschemaproperty,aiplugininstance,aipluginoperation,aipluginoperationparameter,aipluginusersetting,annotation,annualfiscalcalendar,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,attributeimageconfig,attributemap,attributemaskingrule,bot,botcomponent,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,businessunit,businessunitnewsarticle,calendar,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connectioninstance,connectionreference,connector,contact,conversationtranscript,copilotexamplequestion,credential,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,deleteditemreference,deploymentorchestration,desktopflowbinary,desktopflowmodule,displaystring,dvfilesearch,dvfilesearchattribute,dvfilesearchentity,dvtablesearch,dvtablesearchattribute,dvtablesearchentity,email,emailserverprofile,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entitymap,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,fixedmonthlyfiscalcalendar,flowcapacityassignment,flowevent,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,holidaywrapper,import,importdata,importfile,importlog,importmap,indexattributes,internalcatalogassignment,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mainfewshot,makerfewshot,managedidentity,maskingrule,metadataforarchival,mobileofflineprofileextension,monthlyfiscalcalendar,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowconnectionreference,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_dmssyncrequest,msdyn_dmssyncstatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_modulerundetail,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organization,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,pdfsetting,phonecall,pluginpackage,post,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,powerpagecomponent,powerpagesite,powerpagesitelanguage,powerpagesitepublished,privilege,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,quarterlyfiscalcalendar,queue,queueitem,reconciliationentityinfo,reconciliationentitystepinfo,reconciliationinfo,recordfilter,recurringappointmentmaster,recyclebinconfig,relationshipattribute,relationshiprole,relationshiprolemap,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,role,roleeditorlayout,routingrule,routingruleitem,savedquery,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,semiannualfiscalcalendar,serviceplan,serviceplancustomcontrol,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,sla,socialactivity,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagedmetadataasyncoperation,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemform,systemuser,systemuserauthorizationchangetracker,task,tdsmetadata,team,teammobileofflineprofilemembership,template,territory,theme,userform,usermapping,usermobileofflineprofilemembership,userquery,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
 |Type|Lookup|
 
 
@@ -341,11 +341,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [relationshipattribute_BulkDeleteFailures](#BKMK_relationshipattribute_BulkDeleteFailures)
 - [stagedentity_BulkDeleteFailures](#BKMK_stagedentity_BulkDeleteFailures)
 - [stagedentityattribute_BulkDeleteFailures](#BKMK_stagedentityattribute_BulkDeleteFailures)
+- [stagedmetadataasyncoperation_BulkDeleteFailures](#BKMK_stagedmetadataasyncoperation_BulkDeleteFailures)
+- [keyvaultreference_BulkDeleteFailures](#BKMK_keyvaultreference_BulkDeleteFailures)
+- [managedidentity_BulkDeleteFailures](#BKMK_managedidentity_BulkDeleteFailures)
 - [catalog_BulkDeleteFailures](#BKMK_catalog_BulkDeleteFailures)
 - [catalogassignment_BulkDeleteFailures](#BKMK_catalogassignment_BulkDeleteFailures)
 - [customapi_BulkDeleteFailures](#BKMK_customapi_BulkDeleteFailures)
 - [customapirequestparameter_BulkDeleteFailures](#BKMK_customapirequestparameter_BulkDeleteFailures)
 - [customapiresponseproperty_BulkDeleteFailures](#BKMK_customapiresponseproperty_BulkDeleteFailures)
+- [pluginpackage_BulkDeleteFailures](#BKMK_pluginpackage_BulkDeleteFailures)
 - [provisionlanguageforuser_BulkDeleteFailures](#BKMK_provisionlanguageforuser_BulkDeleteFailures)
 - [sharedobject_BulkDeleteFailures](#BKMK_sharedobject_BulkDeleteFailures)
 - [sharedworkspace_BulkDeleteFailures](#BKMK_sharedworkspace_BulkDeleteFailures)
@@ -378,7 +382,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [environmentvariabledefinition_BulkDeleteFailures](#BKMK_environmentvariabledefinition_BulkDeleteFailures)
 - [environmentvariablevalue_BulkDeleteFailures](#BKMK_environmentvariablevalue_BulkDeleteFailures)
 - [workflowbinary_BulkDeleteFailures](#BKMK_workflowbinary_BulkDeleteFailures)
+- [credential_BulkDeleteFailures](#BKMK_credential_BulkDeleteFailures)
 - [desktopflowmodule_BulkDeleteFailures](#BKMK_desktopflowmodule_BulkDeleteFailures)
+- [flowcapacityassignment_BulkDeleteFailures](#BKMK_flowcapacityassignment_BulkDeleteFailures)
+- [flowevent_BulkDeleteFailures](#BKMK_flowevent_BulkDeleteFailures)
 - [flowmachine_BulkDeleteFailures](#BKMK_flowmachine_BulkDeleteFailures)
 - [flowmachinegroup_BulkDeleteFailures](#BKMK_flowmachinegroup_BulkDeleteFailures)
 - [flowmachineimage_BulkDeleteFailures](#BKMK_flowmachineimage_BulkDeleteFailures)
@@ -391,6 +398,19 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [flowsession_BulkDeleteFailures](#BKMK_flowsession_BulkDeleteFailures)
 - [connectionreference_BulkDeleteFailures](#BKMK_connectionreference_BulkDeleteFailures)
 - [connectioninstance_BulkDeleteFailures](#BKMK_connectioninstance_BulkDeleteFailures)
+- [dvfilesearch_BulkDeleteFailures](#BKMK_dvfilesearch_BulkDeleteFailures)
+- [dvfilesearchattribute_BulkDeleteFailures](#BKMK_dvfilesearchattribute_BulkDeleteFailures)
+- [dvfilesearchentity_BulkDeleteFailures](#BKMK_dvfilesearchentity_BulkDeleteFailures)
+- [dvtablesearch_BulkDeleteFailures](#BKMK_dvtablesearch_BulkDeleteFailures)
+- [dvtablesearchattribute_BulkDeleteFailures](#BKMK_dvtablesearchattribute_BulkDeleteFailures)
+- [dvtablesearchentity_BulkDeleteFailures](#BKMK_dvtablesearchentity_BulkDeleteFailures)
+- [aiplugin_BulkDeleteFailures](#BKMK_aiplugin_BulkDeleteFailures)
+- [aipluginexternalschema_BulkDeleteFailures](#BKMK_aipluginexternalschema_BulkDeleteFailures)
+- [aipluginexternalschemaproperty_BulkDeleteFailures](#BKMK_aipluginexternalschemaproperty_BulkDeleteFailures)
+- [aiplugininstance_BulkDeleteFailures](#BKMK_aiplugininstance_BulkDeleteFailures)
+- [aipluginoperation_BulkDeleteFailures](#BKMK_aipluginoperation_BulkDeleteFailures)
+- [aipluginoperationparameter_BulkDeleteFailures](#BKMK_aipluginoperationparameter_BulkDeleteFailures)
+- [aipluginusersetting_BulkDeleteFailures](#BKMK_aipluginusersetting_BulkDeleteFailures)
 - [msdyn_helppage_BulkDeleteFailures](#BKMK_msdyn_helppage_BulkDeleteFailures)
 - [msdyn_tour_BulkDeleteFailures](#BKMK_msdyn_tour_BulkDeleteFailures)
 - [msdynce_botcontent_BulkDeleteFailures](#BKMK_msdynce_botcontent_BulkDeleteFailures)
@@ -402,10 +422,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [chat_BulkDeleteFailures](#BKMK_chat_BulkDeleteFailures)
 - [msdyn_serviceconfiguration_BulkDeleteFailures](#BKMK_msdyn_serviceconfiguration_BulkDeleteFailures)
 - [msdyn_slakpi_BulkDeleteFailures](#BKMK_msdyn_slakpi_BulkDeleteFailures)
+- [msdyn_integratedsearchprovider_BulkDeleteFailures](#BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures)
 - [msdyn_knowledgemanagementsetting_BulkDeleteFailures](#BKMK_msdyn_knowledgemanagementsetting_BulkDeleteFailures)
 - [msdyn_federatedarticle_BulkDeleteFailures](#BKMK_msdyn_federatedarticle_BulkDeleteFailures)
 - [msdyn_federatedarticleincident_BulkDeleteFailures](#BKMK_msdyn_federatedarticleincident_BulkDeleteFailures)
-- [msdyn_integratedsearchprovider_BulkDeleteFailures](#BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures)
 - [msdyn_kmfederatedsearchconfig_BulkDeleteFailures](#BKMK_msdyn_kmfederatedsearchconfig_BulkDeleteFailures)
 - [msdyn_knowledgearticleimage_BulkDeleteFailures](#BKMK_msdyn_knowledgearticleimage_BulkDeleteFailures)
 - [msdyn_knowledgeconfiguration_BulkDeleteFailures](#BKMK_msdyn_knowledgeconfiguration_BulkDeleteFailures)
@@ -418,11 +438,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgearticletemplate_BulkDeleteFailures](#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures)
 - [msdyn_knowledgepersonalfilter_BulkDeleteFailures](#BKMK_msdyn_knowledgepersonalfilter_BulkDeleteFailures)
 - [msdyn_knowledgesearchfilter_BulkDeleteFailures](#BKMK_msdyn_knowledgesearchfilter_BulkDeleteFailures)
-- [pluginpackage_BulkDeleteFailures](#BKMK_pluginpackage_BulkDeleteFailures)
 - [fxexpression_BulkDeleteFailures](#BKMK_fxexpression_BulkDeleteFailures)
 - [powerfxrule_BulkDeleteFailures](#BKMK_powerfxrule_BulkDeleteFailures)
-- [keyvaultreference_BulkDeleteFailures](#BKMK_keyvaultreference_BulkDeleteFailures)
-- [managedidentity_BulkDeleteFailures](#BKMK_managedidentity_BulkDeleteFailures)
 - [msgraphresourcetosubscription_BulkDeleteFailures](#BKMK_msgraphresourcetosubscription_BulkDeleteFailures)
 - [virtualentitymetadata_BulkDeleteFailures](#BKMK_virtualentitymetadata_BulkDeleteFailures)
 - [mobileofflineprofileextension_BulkDeleteFailures](#BKMK_mobileofflineprofileextension_BulkDeleteFailures)
@@ -439,12 +456,20 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [retentionoperation_BulkDeleteFailures](#BKMK_retentionoperation_BulkDeleteFailures)
 - [retentionoperationdetail_BulkDeleteFailures](#BKMK_retentionoperationdetail_BulkDeleteFailures)
 - [msdyn_appinsightsmetadata_BulkDeleteFailures](#BKMK_msdyn_appinsightsmetadata_BulkDeleteFailures)
+- [msdyn_dataflowconnectionreference_BulkDeleteFailures](#BKMK_msdyn_dataflowconnectionreference_BulkDeleteFailures)
+- [msdyn_schedule_BulkDeleteFailures](#BKMK_msdyn_schedule_BulkDeleteFailures)
 - [msdyn_dataflowtemplate_BulkDeleteFailures](#BKMK_msdyn_dataflowtemplate_BulkDeleteFailures)
+- [msdyn_dataflow_datalakefolder_BulkDeleteFailures](#BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures)
+- [msdyn_dmsrequest_BulkDeleteFailures](#BKMK_msdyn_dmsrequest_BulkDeleteFailures)
+- [msdyn_dmsrequeststatus_BulkDeleteFailures](#BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures)
+- [msdyn_modulerundetail_BulkDeleteFailures](#BKMK_msdyn_modulerundetail_BulkDeleteFailures)
 - [msdyn_workflowactionstatus_BulkDeleteFailures](#BKMK_msdyn_workflowactionstatus_BulkDeleteFailures)
 - [userrating_BulkDeleteFailures](#BKMK_userrating_BulkDeleteFailures)
 - [msdyn_mobileapp_BulkDeleteFailures](#BKMK_msdyn_mobileapp_BulkDeleteFailures)
 - [msdyn_insightsstorevirtualentity_BulkDeleteFailures](#BKMK_msdyn_insightsstorevirtualentity_BulkDeleteFailures)
 - [roleeditorlayout_BulkDeleteFailures](#BKMK_roleeditorlayout_BulkDeleteFailures)
+- [attributemaskingrule_BulkDeleteFailures](#BKMK_attributemaskingrule_BulkDeleteFailures)
+- [maskingrule_BulkDeleteFailures](#BKMK_maskingrule_BulkDeleteFailures)
 - [appaction_BulkDeleteFailures](#BKMK_appaction_BulkDeleteFailures)
 - [appactionmigration_BulkDeleteFailures](#BKMK_appactionmigration_BulkDeleteFailures)
 - [appactionrule_BulkDeleteFailures](#BKMK_appactionrule_BulkDeleteFailures)
@@ -452,7 +477,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_entitylinkchatconfiguration_BulkDeleteFailures](#BKMK_msdyn_entitylinkchatconfiguration_BulkDeleteFailures)
 - [msdyn_richtextfile_BulkDeleteFailures](#BKMK_msdyn_richtextfile_BulkDeleteFailures)
 - [msdyn_customcontrolextendedsettings_BulkDeleteFailures](#BKMK_msdyn_customcontrolextendedsettings_BulkDeleteFailures)
-- [searchrelationshipsettings_BulkDeleteFailures](#BKMK_searchrelationshipsettings_BulkDeleteFailures)
 - [msdyn_virtualtablecolumncandidate_BulkDeleteFailures](#BKMK_msdyn_virtualtablecolumncandidate_BulkDeleteFailures)
 - [msdyn_aiconfiguration_BulkDeleteFailures](#BKMK_msdyn_aiconfiguration_BulkDeleteFailures)
 - [msdyn_aievent_BulkDeleteFailures](#BKMK_msdyn_aievent_BulkDeleteFailures)
@@ -471,6 +495,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aibfile_BulkDeleteFailures](#BKMK_msdyn_aibfile_BulkDeleteFailures)
 - [msdyn_aibfileattacheddata_BulkDeleteFailures](#BKMK_msdyn_aibfileattacheddata_BulkDeleteFailures)
 - [msdyn_pmanalysishistory_BulkDeleteFailures](#BKMK_msdyn_pmanalysishistory_BulkDeleteFailures)
+- [msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures](#BKMK_msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures)
 - [msdyn_pmcalendar_BulkDeleteFailures](#BKMK_msdyn_pmcalendar_BulkDeleteFailures)
 - [msdyn_pmcalendarversion_BulkDeleteFailures](#BKMK_msdyn_pmcalendarversion_BulkDeleteFailures)
 - [msdyn_pminferredtask_BulkDeleteFailures](#BKMK_msdyn_pminferredtask_BulkDeleteFailures)
@@ -490,17 +515,33 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_solutionhealthruleargument_BulkDeleteFailures](#BKMK_msdyn_solutionhealthruleargument_BulkDeleteFailures)
 - [msdyn_solutionhealthruleset_BulkDeleteFailures](#BKMK_msdyn_solutionhealthruleset_BulkDeleteFailures)
 - [powerbidataset_BulkDeleteFailures](#BKMK_powerbidataset_BulkDeleteFailures)
+- [powerbidatasetapdx_BulkDeleteFailures](#BKMK_powerbidatasetapdx_BulkDeleteFailures)
 - [powerbimashupparameter_BulkDeleteFailures](#BKMK_powerbimashupparameter_BulkDeleteFailures)
 - [powerbireport_BulkDeleteFailures](#BKMK_powerbireport_BulkDeleteFailures)
+- [powerbireportapdx_BulkDeleteFailures](#BKMK_powerbireportapdx_BulkDeleteFailures)
 - [msdyn_fileupload_BulkDeleteFailures](#BKMK_msdyn_fileupload_BulkDeleteFailures)
-- [mspcat_catalogsubmissionfiles_BulkDeleteFailures](#BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures)
-- [mspcat_packagestore_BulkDeleteFailures](#BKMK_mspcat_packagestore_BulkDeleteFailures)
-- [msdyn_schedule_BulkDeleteFailures](#BKMK_msdyn_schedule_BulkDeleteFailures)
-- [msdyn_dataflow_datalakefolder_BulkDeleteFailures](#BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures)
-- [msdyn_dmsrequest_BulkDeleteFailures](#BKMK_msdyn_dmsrequest_BulkDeleteFailures)
-- [msdyn_dmsrequeststatus_BulkDeleteFailures](#BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures)
+- [mainfewshot_BulkDeleteFailures](#BKMK_mainfewshot_BulkDeleteFailures)
+- [makerfewshot_BulkDeleteFailures](#BKMK_makerfewshot_BulkDeleteFailures)
 - [searchattributesettings_BulkDeleteFailures](#BKMK_searchattributesettings_BulkDeleteFailures)
 - [searchcustomanalyzer_BulkDeleteFailures](#BKMK_searchcustomanalyzer_BulkDeleteFailures)
+- [searchrelationshipsettings_BulkDeleteFailures](#BKMK_searchrelationshipsettings_BulkDeleteFailures)
+- [copilotexamplequestion_BulkDeleteFailures](#BKMK_copilotexamplequestion_BulkDeleteFailures)
+- [powerpagecomponent_BulkDeleteFailures](#BKMK_powerpagecomponent_BulkDeleteFailures)
+- [powerpagesite_BulkDeleteFailures](#BKMK_powerpagesite_BulkDeleteFailures)
+- [powerpagesitelanguage_BulkDeleteFailures](#BKMK_powerpagesitelanguage_BulkDeleteFailures)
+- [powerpagesitepublished_BulkDeleteFailures](#BKMK_powerpagesitepublished_BulkDeleteFailures)
+- [adx_externalidentity_BulkDeleteFailures](#BKMK_adx_externalidentity_BulkDeleteFailures)
+- [adx_invitation_BulkDeleteFailures](#BKMK_adx_invitation_BulkDeleteFailures)
+- [adx_inviteredemption_BulkDeleteFailures](#BKMK_adx_inviteredemption_BulkDeleteFailures)
+- [adx_portalcomment_BulkDeleteFailures](#BKMK_adx_portalcomment_BulkDeleteFailures)
+- [adx_setting_BulkDeleteFailures](#BKMK_adx_setting_BulkDeleteFailures)
+- [adx_webformsession_BulkDeleteFailures](#BKMK_adx_webformsession_BulkDeleteFailures)
+- [mspcat_catalogsubmissionfiles_BulkDeleteFailures](#BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures)
+- [mspcat_packagestore_BulkDeleteFailures](#BKMK_mspcat_packagestore_BulkDeleteFailures)
+- [msdyn_dmssyncrequest_BulkDeleteFailures](#BKMK_msdyn_dmssyncrequest_BulkDeleteFailures)
+- [msdyn_dmssyncstatus_BulkDeleteFailures](#BKMK_msdyn_dmssyncstatus_BulkDeleteFailures)
+- [deploymentorchestration_BulkDeleteFailures](#BKMK_deploymentorchestration_BulkDeleteFailures)
+- [recyclebinconfig_BulkDeleteFailures](#BKMK_recyclebinconfig_BulkDeleteFailures)
 
 
 ### <a name="BKMK_theme_BulkDeleteFailures"></a> theme_BulkDeleteFailures
@@ -785,6 +826,24 @@ See the [stagedentity_BulkDeleteFailures](stagedentity.md#BKMK_stagedentity_Bulk
 
 See the [stagedentityattribute_BulkDeleteFailures](stagedentityattribute.md#BKMK_stagedentityattribute_BulkDeleteFailures) one-to-many relationship for the [stagedentityattribute](stagedentityattribute.md) table/entity.
 
+### <a name="BKMK_stagedmetadataasyncoperation_BulkDeleteFailures"></a> stagedmetadataasyncoperation_BulkDeleteFailures
+
+**Added by**: Metadata Extension Solution
+
+See the [stagedmetadataasyncoperation_BulkDeleteFailures](stagedmetadataasyncoperation.md#BKMK_stagedmetadataasyncoperation_BulkDeleteFailures) one-to-many relationship for the [stagedmetadataasyncoperation](stagedmetadataasyncoperation.md) table/entity.
+
+### <a name="BKMK_keyvaultreference_BulkDeleteFailures"></a> keyvaultreference_BulkDeleteFailures
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See the [keyvaultreference_BulkDeleteFailures](keyvaultreference.md#BKMK_keyvaultreference_BulkDeleteFailures) one-to-many relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
+
+### <a name="BKMK_managedidentity_BulkDeleteFailures"></a> managedidentity_BulkDeleteFailures
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See the [managedidentity_BulkDeleteFailures](managedidentity.md#BKMK_managedidentity_BulkDeleteFailures) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
+
 ### <a name="BKMK_catalog_BulkDeleteFailures"></a> catalog_BulkDeleteFailures
 
 **Added by**: CatalogFramework Solution
@@ -814,6 +873,12 @@ See the [customapirequestparameter_BulkDeleteFailures](customapirequestparameter
 **Added by**: Custom API Framework Solution
 
 See the [customapiresponseproperty_BulkDeleteFailures](customapiresponseproperty.md#BKMK_customapiresponseproperty_BulkDeleteFailures) one-to-many relationship for the [customapiresponseproperty](customapiresponseproperty.md) table/entity.
+
+### <a name="BKMK_pluginpackage_BulkDeleteFailures"></a> pluginpackage_BulkDeleteFailures
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+See the [pluginpackage_BulkDeleteFailures](pluginpackage.md#BKMK_pluginpackage_BulkDeleteFailures) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
 
 ### <a name="BKMK_provisionlanguageforuser_BulkDeleteFailures"></a> provisionlanguageforuser_BulkDeleteFailures
 
@@ -1003,73 +1068,91 @@ See the [environmentvariablevalue_BulkDeleteFailures](environmentvariablevalue.m
 
 ### <a name="BKMK_workflowbinary_BulkDeleteFailures"></a> workflowbinary_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions Workflow Binary package Solution
+**Added by**: Power Automate Workflow Binary Table Solution
 
 See the [workflowbinary_BulkDeleteFailures](workflowbinary.md#BKMK_workflowbinary_BulkDeleteFailures) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
+### <a name="BKMK_credential_BulkDeleteFailures"></a> credential_BulkDeleteFailures
+
+**Added by**: Power Automate Core Components Solution
+
+See the [credential_BulkDeleteFailures](credential.md#BKMK_credential_BulkDeleteFailures) one-to-many relationship for the [credential](credential.md) table/entity.
+
 ### <a name="BKMK_desktopflowmodule_BulkDeleteFailures"></a> desktopflowmodule_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [desktopflowmodule_BulkDeleteFailures](desktopflowmodule.md#BKMK_desktopflowmodule_BulkDeleteFailures) one-to-many relationship for the [desktopflowmodule](desktopflowmodule.md) table/entity.
 
+### <a name="BKMK_flowcapacityassignment_BulkDeleteFailures"></a> flowcapacityassignment_BulkDeleteFailures
+
+**Added by**: Power Automate Core Components Solution
+
+See the [flowcapacityassignment_BulkDeleteFailures](flowcapacityassignment.md#BKMK_flowcapacityassignment_BulkDeleteFailures) one-to-many relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+### <a name="BKMK_flowevent_BulkDeleteFailures"></a> flowevent_BulkDeleteFailures
+
+**Added by**: Power Automate Core Components Solution
+
+See the [flowevent_BulkDeleteFailures](flowevent.md#BKMK_flowevent_BulkDeleteFailures) one-to-many relationship for the [flowevent](flowevent.md) table/entity.
+
 ### <a name="BKMK_flowmachine_BulkDeleteFailures"></a> flowmachine_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowmachine_BulkDeleteFailures](flowmachine.md#BKMK_flowmachine_BulkDeleteFailures) one-to-many relationship for the [flowmachine](flowmachine.md) table/entity.
 
 ### <a name="BKMK_flowmachinegroup_BulkDeleteFailures"></a> flowmachinegroup_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowmachinegroup_BulkDeleteFailures](flowmachinegroup.md#BKMK_flowmachinegroup_BulkDeleteFailures) one-to-many relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
 
 ### <a name="BKMK_flowmachineimage_BulkDeleteFailures"></a> flowmachineimage_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowmachineimage_BulkDeleteFailures](flowmachineimage.md#BKMK_flowmachineimage_BulkDeleteFailures) one-to-many relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
 
 ### <a name="BKMK_flowmachineimageversion_BulkDeleteFailures"></a> flowmachineimageversion_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowmachineimageversion_BulkDeleteFailures](flowmachineimageversion.md#BKMK_flowmachineimageversion_BulkDeleteFailures) one-to-many relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
 
 ### <a name="BKMK_flowmachinenetwork_BulkDeleteFailures"></a> flowmachinenetwork_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowmachinenetwork_BulkDeleteFailures](flowmachinenetwork.md#BKMK_flowmachinenetwork_BulkDeleteFailures) one-to-many relationship for the [flowmachinenetwork](flowmachinenetwork.md) table/entity.
 
 ### <a name="BKMK_processstageparameter_BulkDeleteFailures"></a> processstageparameter_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [processstageparameter_BulkDeleteFailures](processstageparameter.md#BKMK_processstageparameter_BulkDeleteFailures) one-to-many relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
 ### <a name="BKMK_workqueue_BulkDeleteFailures"></a> workqueue_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [workqueue_BulkDeleteFailures](workqueue.md#BKMK_workqueue_BulkDeleteFailures) one-to-many relationship for the [workqueue](workqueue.md) table/entity.
 
 ### <a name="BKMK_workqueueitem_BulkDeleteFailures"></a> workqueueitem_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [workqueueitem_BulkDeleteFailures](workqueueitem.md#BKMK_workqueueitem_BulkDeleteFailures) one-to-many relationship for the [workqueueitem](workqueueitem.md) table/entity.
 
 ### <a name="BKMK_desktopflowbinary_BulkDeleteFailures"></a> desktopflowbinary_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [desktopflowbinary_BulkDeleteFailures](desktopflowbinary.md#BKMK_desktopflowbinary_BulkDeleteFailures) one-to-many relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
 
 ### <a name="BKMK_flowsession_BulkDeleteFailures"></a> flowsession_BulkDeleteFailures
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowsession_BulkDeleteFailures](flowsession.md#BKMK_flowsession_BulkDeleteFailures) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
 
@@ -1084,6 +1167,84 @@ See the [connectionreference_BulkDeleteFailures](connectionreference.md#BKMK_con
 **Added by**: Connection Instance Solution Solution
 
 See the [connectioninstance_BulkDeleteFailures](connectioninstance.md#BKMK_connectioninstance_BulkDeleteFailures) one-to-many relationship for the [connectioninstance](connectioninstance.md) table/entity.
+
+### <a name="BKMK_dvfilesearch_BulkDeleteFailures"></a> dvfilesearch_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearch_BulkDeleteFailures](dvfilesearch.md#BKMK_dvfilesearch_BulkDeleteFailures) one-to-many relationship for the [dvfilesearch](dvfilesearch.md) table/entity.
+
+### <a name="BKMK_dvfilesearchattribute_BulkDeleteFailures"></a> dvfilesearchattribute_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearchattribute_BulkDeleteFailures](dvfilesearchattribute.md#BKMK_dvfilesearchattribute_BulkDeleteFailures) one-to-many relationship for the [dvfilesearchattribute](dvfilesearchattribute.md) table/entity.
+
+### <a name="BKMK_dvfilesearchentity_BulkDeleteFailures"></a> dvfilesearchentity_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearchentity_BulkDeleteFailures](dvfilesearchentity.md#BKMK_dvfilesearchentity_BulkDeleteFailures) one-to-many relationship for the [dvfilesearchentity](dvfilesearchentity.md) table/entity.
+
+### <a name="BKMK_dvtablesearch_BulkDeleteFailures"></a> dvtablesearch_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearch_BulkDeleteFailures](dvtablesearch.md#BKMK_dvtablesearch_BulkDeleteFailures) one-to-many relationship for the [dvtablesearch](dvtablesearch.md) table/entity.
+
+### <a name="BKMK_dvtablesearchattribute_BulkDeleteFailures"></a> dvtablesearchattribute_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearchattribute_BulkDeleteFailures](dvtablesearchattribute.md#BKMK_dvtablesearchattribute_BulkDeleteFailures) one-to-many relationship for the [dvtablesearchattribute](dvtablesearchattribute.md) table/entity.
+
+### <a name="BKMK_dvtablesearchentity_BulkDeleteFailures"></a> dvtablesearchentity_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearchentity_BulkDeleteFailures](dvtablesearchentity.md#BKMK_dvtablesearchentity_BulkDeleteFailures) one-to-many relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
+
+### <a name="BKMK_aiplugin_BulkDeleteFailures"></a> aiplugin_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugin_BulkDeleteFailures](aiplugin.md#BKMK_aiplugin_BulkDeleteFailures) one-to-many relationship for the [aiplugin](aiplugin.md) table/entity.
+
+### <a name="BKMK_aipluginexternalschema_BulkDeleteFailures"></a> aipluginexternalschema_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginexternalschema_BulkDeleteFailures](aipluginexternalschema.md#BKMK_aipluginexternalschema_BulkDeleteFailures) one-to-many relationship for the [aipluginexternalschema](aipluginexternalschema.md) table/entity.
+
+### <a name="BKMK_aipluginexternalschemaproperty_BulkDeleteFailures"></a> aipluginexternalschemaproperty_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginexternalschemaproperty_BulkDeleteFailures](aipluginexternalschemaproperty.md#BKMK_aipluginexternalschemaproperty_BulkDeleteFailures) one-to-many relationship for the [aipluginexternalschemaproperty](aipluginexternalschemaproperty.md) table/entity.
+
+### <a name="BKMK_aiplugininstance_BulkDeleteFailures"></a> aiplugininstance_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugininstance_BulkDeleteFailures](aiplugininstance.md#BKMK_aiplugininstance_BulkDeleteFailures) one-to-many relationship for the [aiplugininstance](aiplugininstance.md) table/entity.
+
+### <a name="BKMK_aipluginoperation_BulkDeleteFailures"></a> aipluginoperation_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginoperation_BulkDeleteFailures](aipluginoperation.md#BKMK_aipluginoperation_BulkDeleteFailures) one-to-many relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+### <a name="BKMK_aipluginoperationparameter_BulkDeleteFailures"></a> aipluginoperationparameter_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginoperationparameter_BulkDeleteFailures](aipluginoperationparameter.md#BKMK_aipluginoperationparameter_BulkDeleteFailures) one-to-many relationship for the [aipluginoperationparameter](aipluginoperationparameter.md) table/entity.
+
+### <a name="BKMK_aipluginusersetting_BulkDeleteFailures"></a> aipluginusersetting_BulkDeleteFailures
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginusersetting_BulkDeleteFailures](aipluginusersetting.md#BKMK_aipluginusersetting_BulkDeleteFailures) one-to-many relationship for the [aipluginusersetting](aipluginusersetting.md) table/entity.
 
 ### <a name="BKMK_msdyn_helppage_BulkDeleteFailures"></a> msdyn_helppage_BulkDeleteFailures
 
@@ -1151,6 +1312,12 @@ See the [msdyn_serviceconfiguration_BulkDeleteFailures](msdyn_serviceconfigurati
 
 See the [msdyn_slakpi_BulkDeleteFailures](msdyn_slakpi.md#BKMK_msdyn_slakpi_BulkDeleteFailures) one-to-many relationship for the [msdyn_slakpi](msdyn_slakpi.md) table/entity.
 
+### <a name="BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures"></a> msdyn_integratedsearchprovider_BulkDeleteFailures
+
+**Added by**: Knowledge Management Patch Solution
+
+See the [msdyn_integratedsearchprovider_BulkDeleteFailures](msdyn_integratedsearchprovider.md#BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
+
 ### <a name="BKMK_msdyn_knowledgemanagementsetting_BulkDeleteFailures"></a> msdyn_knowledgemanagementsetting_BulkDeleteFailures
 
 **Added by**: Knowledge Management Patch Solution
@@ -1168,12 +1335,6 @@ See the [msdyn_federatedarticle_BulkDeleteFailures](msdyn_federatedarticle.md#BK
 **Added by**: Knowledge Management Online Features Solution
 
 See the [msdyn_federatedarticleincident_BulkDeleteFailures](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticleincident_BulkDeleteFailures) one-to-many relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
-
-### <a name="BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures"></a> msdyn_integratedsearchprovider_BulkDeleteFailures
-
-**Added by**: Knowledge Management Online Features Solution
-
-See the [msdyn_integratedsearchprovider_BulkDeleteFailures](msdyn_integratedsearchprovider.md#BKMK_msdyn_integratedsearchprovider_BulkDeleteFailures) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
 
 ### <a name="BKMK_msdyn_kmfederatedsearchconfig_BulkDeleteFailures"></a> msdyn_kmfederatedsearchconfig_BulkDeleteFailures
 
@@ -1247,12 +1408,6 @@ See the [msdyn_knowledgepersonalfilter_BulkDeleteFailures](msdyn_knowledgeperson
 
 See the [msdyn_knowledgesearchfilter_BulkDeleteFailures](msdyn_knowledgesearchfilter.md#BKMK_msdyn_knowledgesearchfilter_BulkDeleteFailures) one-to-many relationship for the [msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md) table/entity.
 
-### <a name="BKMK_pluginpackage_BulkDeleteFailures"></a> pluginpackage_BulkDeleteFailures
-
-**Added by**: Plugin Infrastructure Extension Solution
-
-See the [pluginpackage_BulkDeleteFailures](pluginpackage.md#BKMK_pluginpackage_BulkDeleteFailures) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
-
 ### <a name="BKMK_fxexpression_BulkDeleteFailures"></a> fxexpression_BulkDeleteFailures
 
 **Added by**: msft_PowerfxRuleSolution Solution
@@ -1264,18 +1419,6 @@ See the [fxexpression_BulkDeleteFailures](fxexpression.md#BKMK_fxexpression_Bulk
 **Added by**: msft_PowerfxRuleSolution Solution
 
 See the [powerfxrule_BulkDeleteFailures](powerfxrule.md#BKMK_powerfxrule_BulkDeleteFailures) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
-
-### <a name="BKMK_keyvaultreference_BulkDeleteFailures"></a> keyvaultreference_BulkDeleteFailures
-
-**Added by**: ManagedIdentityExtensions Solution
-
-See the [keyvaultreference_BulkDeleteFailures](keyvaultreference.md#BKMK_keyvaultreference_BulkDeleteFailures) one-to-many relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
-
-### <a name="BKMK_managedidentity_BulkDeleteFailures"></a> managedidentity_BulkDeleteFailures
-
-**Added by**: ManagedIdentityExtensions Solution
-
-See the [managedidentity_BulkDeleteFailures](managedidentity.md#BKMK_managedidentity_BulkDeleteFailures) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
 
 ### <a name="BKMK_msgraphresourcetosubscription_BulkDeleteFailures"></a> msgraphresourcetosubscription_BulkDeleteFailures
 
@@ -1369,19 +1512,55 @@ See the [retentionoperationdetail_BulkDeleteFailures](retentionoperationdetail.m
 
 ### <a name="BKMK_msdyn_appinsightsmetadata_BulkDeleteFailures"></a> msdyn_appinsightsmetadata_BulkDeleteFailures
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 See the [msdyn_appinsightsmetadata_BulkDeleteFailures](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_BulkDeleteFailures) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
 
+### <a name="BKMK_msdyn_dataflowconnectionreference_BulkDeleteFailures"></a> msdyn_dataflowconnectionreference_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflowconnectionreference_BulkDeleteFailures](msdyn_dataflowconnectionreference.md#BKMK_msdyn_dataflowconnectionreference_BulkDeleteFailures) one-to-many relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
+
+### <a name="BKMK_msdyn_schedule_BulkDeleteFailures"></a> msdyn_schedule_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_schedule_BulkDeleteFailures](msdyn_schedule.md#BKMK_msdyn_schedule_BulkDeleteFailures) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
+
 ### <a name="BKMK_msdyn_dataflowtemplate_BulkDeleteFailures"></a> msdyn_dataflowtemplate_BulkDeleteFailures
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 See the [msdyn_dataflowtemplate_BulkDeleteFailures](msdyn_dataflowtemplate.md#BKMK_msdyn_dataflowtemplate_BulkDeleteFailures) one-to-many relationship for the [msdyn_dataflowtemplate](msdyn_dataflowtemplate.md) table/entity.
 
+### <a name="BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures"></a> msdyn_dataflow_datalakefolder_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflow_datalakefolder_BulkDeleteFailures](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequest_BulkDeleteFailures"></a> msdyn_dmsrequest_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequest_BulkDeleteFailures](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures"></a> msdyn_dmsrequeststatus_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequeststatus_BulkDeleteFailures](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
+
+### <a name="BKMK_msdyn_modulerundetail_BulkDeleteFailures"></a> msdyn_modulerundetail_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_modulerundetail_BulkDeleteFailures](msdyn_modulerundetail.md#BKMK_msdyn_modulerundetail_BulkDeleteFailures) one-to-many relationship for the [msdyn_modulerundetail](msdyn_modulerundetail.md) table/entity.
+
 ### <a name="BKMK_msdyn_workflowactionstatus_BulkDeleteFailures"></a> msdyn_workflowactionstatus_BulkDeleteFailures
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 See the [msdyn_workflowactionstatus_BulkDeleteFailures](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_BulkDeleteFailures) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
 
@@ -1408,6 +1587,18 @@ See the [msdyn_insightsstorevirtualentity_BulkDeleteFailures](msdyn_insightsstor
 **Added by**: Role Editor Solution
 
 See the [roleeditorlayout_BulkDeleteFailures](roleeditorlayout.md#BKMK_roleeditorlayout_BulkDeleteFailures) one-to-many relationship for the [roleeditorlayout](roleeditorlayout.md) table/entity.
+
+### <a name="BKMK_attributemaskingrule_BulkDeleteFailures"></a> attributemaskingrule_BulkDeleteFailures
+
+**Added by**: Column Level Security Solution
+
+See the [attributemaskingrule_BulkDeleteFailures](attributemaskingrule.md#BKMK_attributemaskingrule_BulkDeleteFailures) one-to-many relationship for the [attributemaskingrule](attributemaskingrule.md) table/entity.
+
+### <a name="BKMK_maskingrule_BulkDeleteFailures"></a> maskingrule_BulkDeleteFailures
+
+**Added by**: Column Level Security Solution
+
+See the [maskingrule_BulkDeleteFailures](maskingrule.md#BKMK_maskingrule_BulkDeleteFailures) one-to-many relationship for the [maskingrule](maskingrule.md) table/entity.
 
 ### <a name="BKMK_appaction_BulkDeleteFailures"></a> appaction_BulkDeleteFailures
 
@@ -1450,12 +1641,6 @@ See the [msdyn_richtextfile_BulkDeleteFailures](msdyn_richtextfile.md#BKMK_msdyn
 **Added by**: User Experiences Extended Settings Solution
 
 See the [msdyn_customcontrolextendedsettings_BulkDeleteFailures](msdyn_customcontrolextendedsettings.md#BKMK_msdyn_customcontrolextendedsettings_BulkDeleteFailures) one-to-many relationship for the [msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md) table/entity.
-
-### <a name="BKMK_searchrelationshipsettings_BulkDeleteFailures"></a> searchrelationshipsettings_BulkDeleteFailures
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchrelationshipsettings_BulkDeleteFailures](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_BulkDeleteFailures) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
 
 ### <a name="BKMK_msdyn_virtualtablecolumncandidate_BulkDeleteFailures"></a> msdyn_virtualtablecolumncandidate_BulkDeleteFailures
 
@@ -1564,6 +1749,12 @@ See the [msdyn_aibfileattacheddata_BulkDeleteFailures](msdyn_aibfileattacheddata
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmanalysishistory_BulkDeleteFailures](msdyn_pmanalysishistory.md#BKMK_msdyn_pmanalysishistory_BulkDeleteFailures) one-to-many relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
+
+### <a name="BKMK_msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures"></a> msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_pmbusinessruleautomationconfig_BulkDeleteFailures) one-to-many relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmcalendar_BulkDeleteFailures"></a> msdyn_pmcalendar_BulkDeleteFailures
 
@@ -1679,6 +1870,12 @@ See the [msdyn_solutionhealthruleset_BulkDeleteFailures](msdyn_solutionhealthrul
 
 See the [powerbidataset_BulkDeleteFailures](powerbidataset.md#BKMK_powerbidataset_BulkDeleteFailures) one-to-many relationship for the [powerbidataset](powerbidataset.md) table/entity.
 
+### <a name="BKMK_powerbidatasetapdx_BulkDeleteFailures"></a> powerbidatasetapdx_BulkDeleteFailures
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidatasetapdx_BulkDeleteFailures](powerbidatasetapdx.md#BKMK_powerbidatasetapdx_BulkDeleteFailures) one-to-many relationship for the [powerbidatasetapdx](powerbidatasetapdx.md) table/entity.
+
 ### <a name="BKMK_powerbimashupparameter_BulkDeleteFailures"></a> powerbimashupparameter_BulkDeleteFailures
 
 **Added by**: Power BI Entities Solution
@@ -1691,47 +1888,29 @@ See the [powerbimashupparameter_BulkDeleteFailures](powerbimashupparameter.md#BK
 
 See the [powerbireport_BulkDeleteFailures](powerbireport.md#BKMK_powerbireport_BulkDeleteFailures) one-to-many relationship for the [powerbireport](powerbireport.md) table/entity.
 
+### <a name="BKMK_powerbireportapdx_BulkDeleteFailures"></a> powerbireportapdx_BulkDeleteFailures
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireportapdx_BulkDeleteFailures](powerbireportapdx.md#BKMK_powerbireportapdx_BulkDeleteFailures) one-to-many relationship for the [powerbireportapdx](powerbireportapdx.md) table/entity.
+
 ### <a name="BKMK_msdyn_fileupload_BulkDeleteFailures"></a> msdyn_fileupload_BulkDeleteFailures
 
 **Added by**: Smart Data Import Base Solution
 
 See the [msdyn_fileupload_BulkDeleteFailures](msdyn_fileupload.md#BKMK_msdyn_fileupload_BulkDeleteFailures) one-to-many relationship for the [msdyn_fileupload](msdyn_fileupload.md) table/entity.
 
-### <a name="BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures"></a> mspcat_catalogsubmissionfiles_BulkDeleteFailures
+### <a name="BKMK_mainfewshot_BulkDeleteFailures"></a> mainfewshot_BulkDeleteFailures
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: msdyn_RelevanceSearch Solution
 
-See the [mspcat_catalogsubmissionfiles_BulkDeleteFailures](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures) one-to-many relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
+See the [mainfewshot_BulkDeleteFailures](mainfewshot.md#BKMK_mainfewshot_BulkDeleteFailures) one-to-many relationship for the [mainfewshot](mainfewshot.md) table/entity.
 
-### <a name="BKMK_mspcat_packagestore_BulkDeleteFailures"></a> mspcat_packagestore_BulkDeleteFailures
+### <a name="BKMK_makerfewshot_BulkDeleteFailures"></a> makerfewshot_BulkDeleteFailures
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: msdyn_RelevanceSearch Solution
 
-See the [mspcat_packagestore_BulkDeleteFailures](mspcat_packagestore.md#BKMK_mspcat_packagestore_BulkDeleteFailures) one-to-many relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
-
-### <a name="BKMK_msdyn_schedule_BulkDeleteFailures"></a> msdyn_schedule_BulkDeleteFailures
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_schedule_BulkDeleteFailures](msdyn_schedule.md#BKMK_msdyn_schedule_BulkDeleteFailures) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures"></a> msdyn_dataflow_datalakefolder_BulkDeleteFailures
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dataflow_datalakefolder_BulkDeleteFailures](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_BulkDeleteFailures) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequest_BulkDeleteFailures"></a> msdyn_dmsrequest_BulkDeleteFailures
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequest_BulkDeleteFailures](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures"></a> msdyn_dmsrequeststatus_BulkDeleteFailures
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequeststatus_BulkDeleteFailures](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
+See the [makerfewshot_BulkDeleteFailures](makerfewshot.md#BKMK_makerfewshot_BulkDeleteFailures) one-to-many relationship for the [makerfewshot](makerfewshot.md) table/entity.
 
 ### <a name="BKMK_searchattributesettings_BulkDeleteFailures"></a> searchattributesettings_BulkDeleteFailures
 
@@ -1744,6 +1923,114 @@ See the [searchattributesettings_BulkDeleteFailures](searchattributesettings.md#
 **Added by**: msdyn_RelevanceSearch Solution
 
 See the [searchcustomanalyzer_BulkDeleteFailures](searchcustomanalyzer.md#BKMK_searchcustomanalyzer_BulkDeleteFailures) one-to-many relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+
+### <a name="BKMK_searchrelationshipsettings_BulkDeleteFailures"></a> searchrelationshipsettings_BulkDeleteFailures
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchrelationshipsettings_BulkDeleteFailures](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_BulkDeleteFailures) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
+
+### <a name="BKMK_copilotexamplequestion_BulkDeleteFailures"></a> copilotexamplequestion_BulkDeleteFailures
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [copilotexamplequestion_BulkDeleteFailures](copilotexamplequestion.md#BKMK_copilotexamplequestion_BulkDeleteFailures) one-to-many relationship for the [copilotexamplequestion](copilotexamplequestion.md) table/entity.
+
+### <a name="BKMK_powerpagecomponent_BulkDeleteFailures"></a> powerpagecomponent_BulkDeleteFailures
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagecomponent_BulkDeleteFailures](powerpagecomponent.md#BKMK_powerpagecomponent_BulkDeleteFailures) one-to-many relationship for the [powerpagecomponent](powerpagecomponent.md) table/entity.
+
+### <a name="BKMK_powerpagesite_BulkDeleteFailures"></a> powerpagesite_BulkDeleteFailures
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesite_BulkDeleteFailures](powerpagesite.md#BKMK_powerpagesite_BulkDeleteFailures) one-to-many relationship for the [powerpagesite](powerpagesite.md) table/entity.
+
+### <a name="BKMK_powerpagesitelanguage_BulkDeleteFailures"></a> powerpagesitelanguage_BulkDeleteFailures
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesitelanguage_BulkDeleteFailures](powerpagesitelanguage.md#BKMK_powerpagesitelanguage_BulkDeleteFailures) one-to-many relationship for the [powerpagesitelanguage](powerpagesitelanguage.md) table/entity.
+
+### <a name="BKMK_powerpagesitepublished_BulkDeleteFailures"></a> powerpagesitepublished_BulkDeleteFailures
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesitepublished_BulkDeleteFailures](powerpagesitepublished.md#BKMK_powerpagesitepublished_BulkDeleteFailures) one-to-many relationship for the [powerpagesitepublished](powerpagesitepublished.md) table/entity.
+
+### <a name="BKMK_adx_externalidentity_BulkDeleteFailures"></a> adx_externalidentity_BulkDeleteFailures
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_externalidentity_BulkDeleteFailures](adx_externalidentity.md#BKMK_adx_externalidentity_BulkDeleteFailures) one-to-many relationship for the [adx_externalidentity](adx_externalidentity.md) table/entity.
+
+### <a name="BKMK_adx_invitation_BulkDeleteFailures"></a> adx_invitation_BulkDeleteFailures
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_BulkDeleteFailures](adx_invitation.md#BKMK_adx_invitation_BulkDeleteFailures) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_BulkDeleteFailures"></a> adx_inviteredemption_BulkDeleteFailures
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_BulkDeleteFailures](adx_inviteredemption.md#BKMK_adx_inviteredemption_BulkDeleteFailures) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_BulkDeleteFailures"></a> adx_portalcomment_BulkDeleteFailures
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_BulkDeleteFailures](adx_portalcomment.md#BKMK_adx_portalcomment_BulkDeleteFailures) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+### <a name="BKMK_adx_setting_BulkDeleteFailures"></a> adx_setting_BulkDeleteFailures
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_setting_BulkDeleteFailures](adx_setting.md#BKMK_adx_setting_BulkDeleteFailures) one-to-many relationship for the [adx_setting](adx_setting.md) table/entity.
+
+### <a name="BKMK_adx_webformsession_BulkDeleteFailures"></a> adx_webformsession_BulkDeleteFailures
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_webformsession_BulkDeleteFailures](adx_webformsession.md#BKMK_adx_webformsession_BulkDeleteFailures) one-to-many relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
+
+### <a name="BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures"></a> mspcat_catalogsubmissionfiles_BulkDeleteFailures
+
+**Added by**: Catalog in Power Platform Packaging Solution
+
+See the [mspcat_catalogsubmissionfiles_BulkDeleteFailures](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_BulkDeleteFailures) one-to-many relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
+
+### <a name="BKMK_mspcat_packagestore_BulkDeleteFailures"></a> mspcat_packagestore_BulkDeleteFailures
+
+**Added by**: Catalog in Power Platform Packaging Solution
+
+See the [mspcat_packagestore_BulkDeleteFailures](mspcat_packagestore.md#BKMK_mspcat_packagestore_BulkDeleteFailures) one-to-many relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
+
+### <a name="BKMK_msdyn_dmssyncrequest_BulkDeleteFailures"></a> msdyn_dmssyncrequest_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmssyncrequest_BulkDeleteFailures](msdyn_dmssyncrequest.md#BKMK_msdyn_dmssyncrequest_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmssyncrequest](msdyn_dmssyncrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmssyncstatus_BulkDeleteFailures"></a> msdyn_dmssyncstatus_BulkDeleteFailures
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmssyncstatus_BulkDeleteFailures](msdyn_dmssyncstatus.md#BKMK_msdyn_dmssyncstatus_BulkDeleteFailures) one-to-many relationship for the [msdyn_dmssyncstatus](msdyn_dmssyncstatus.md) table/entity.
+
+### <a name="BKMK_deploymentorchestration_BulkDeleteFailures"></a> deploymentorchestration_BulkDeleteFailures
+
+**Added by**: msdyn_SolutionPackageMapping Solution
+
+See the [deploymentorchestration_BulkDeleteFailures](deploymentorchestration.md#BKMK_deploymentorchestration_BulkDeleteFailures) one-to-many relationship for the [deploymentorchestration](deploymentorchestration.md) table/entity.
+
+### <a name="BKMK_recyclebinconfig_BulkDeleteFailures"></a> recyclebinconfig_BulkDeleteFailures
+
+**Added by**: RecycleBin Base Components Solution
+
+See the [recyclebinconfig_BulkDeleteFailures](recyclebinconfig.md#BKMK_recyclebinconfig_BulkDeleteFailures) one-to-many relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
 
 ### See also
 

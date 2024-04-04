@@ -1,7 +1,7 @@
 ---
 title: "EmailServerProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
-ms.date: 06/06/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -104,6 +104,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ProcessEmailsReceivedAfter](#BKMK_ProcessEmailsReceivedAfter)
 - [SendEmailAlert](#BKMK_SendEmailAlert)
+- [ServerAuthority](#BKMK_ServerAuthority)
 - [ServerType](#BKMK_ServerType)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
@@ -122,8 +123,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|AAD ResourceId used for OAuth athentication scheme|
-|DisplayName|AAD ResourceId|
+|Description|Microsoft Entra resource ID used for OAuth athentication scheme|
+|DisplayName|Microsoft Entra resource ID|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -300,7 +301,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Without Credentials (Anonymous)||
 |5|Gmail OAuth||
 |6|Exchange Hybrid Modern Auth (HMA)||
-|7|Azure Active Directory OAuth||
+|7|OAuth with Microsoft Entra ID||
 
 
 
@@ -761,7 +762,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Without Credentials (Anonymous)||
 |5|Gmail OAuth||
 |6|Exchange Hybrid Modern Auth (HMA)||
-|7|Azure Active Directory OAuth||
+|7|OAuth with Microsoft Entra ID||
 
 
 
@@ -953,6 +954,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_ServerAuthority"></a> ServerAuthority
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Select the authority for the email server.|
+|DisplayName|Email server authority|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|serverauthority|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ServerAuthority Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public (+GCC) (https://login.microsoftonline.com)||
+|1|US Government (GCC High and DoD) (https://login.microsoftonline.us)||
+|2|China (21Vianet) (https://login.chinacloudapi.cn)||
+|3|Automatic (determined by Dynamics 365 cloud)||
 
 
 

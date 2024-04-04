@@ -3,9 +3,8 @@ title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
 ms.topic: overview
-ms.component: cds
 ms.collection: get-started
-ms.date: 06/15/2022
+ms.date: 09/08/2023
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
@@ -65,7 +64,7 @@ Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Custome
 
 ## Integrating data into Dataverse
 
-Building an app typically involves data from more than one source. Although this can sometimes be done at the application level, there are cases where integrating this data into a common store allows for an easier app-building experience and a single set of logic to maintain and operate over the data. Dataverse allows data to be integrated from multiple sources into a single store, which can then be used in Power Apps, Power Automate, Power BI, and Power Virtual Agents along with data that's already available from the Dynamics 365 applications.
+Building an app typically involves data from more than one source. Although this can sometimes be done at the application level, there are cases where integrating this data into a common store allows for an easier app-building experience and a single set of logic to maintain and operate over the data. Dataverse allows data to be integrated from multiple sources into a single store, which can then be used in Power Apps, Power Automate, Power BI, and Microsoft Copilot Studio along with data that's already available from the Dynamics 365 applications.
 
 * **Scheduled integration with other systems** &ndash; Data that's kept within another application can be regularly synchronized with Dataverse to allow you to take advantage of data from other applications in Power Apps.
 * **Transform and import data using Power Query** &ndash; Transforming data when importing into Dataverse can be done through Power Query&mdash;a tool commonly used across Excel and Power BI&mdash;from many online data sources.
@@ -104,9 +103,6 @@ To get started using Dataverse:
 - [Create a custom table](create-custom-entity.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
 - [Create a model-driven app](../model-driven-apps/build-first-model-driven-app.md) built on Dataverse.
 - [Use Power Query](/power-query/dataflows/add-data-power-query) to connect to an online or on-premises data source and import the data directly into Dataverse.
-
-## Privacy notice
-With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 
 ### See also
 [Dataverse for Teams](/power-apps/teams/overview-data-platform)

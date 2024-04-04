@@ -14,7 +14,10 @@ contributors:
 
 # Sample: Use CrmServiceClient to access the Global Discovery Service
 
-This sample code shows how to use the discovery service with the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method>. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DiscoveryService)
+This sample code shows how to use the discovery service with the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method>.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use CrmServiceClient to access the Global Discovery Service sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DiscoveryService)
 
 > [!NOTE]
 > This sample is limited to .NET Full Framework.

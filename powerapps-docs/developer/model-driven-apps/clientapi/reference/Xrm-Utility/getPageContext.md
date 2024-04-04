@@ -32,26 +32,26 @@ The method returns an object with the `input` property. The `input` property is 
 
 |Name |Type |Description|
 |--|--|--|
-|pageType|String|The current page type. The value returned is "entityrecord".|
-|entityName|String|Logical name of the table currently displayed.|
-|entityId|String|ID of the table record currently displayed in the form.|
-|createFromEntity|Lookup|The parent record that provides default values based on mapped column values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
-|formId|String|ID of the currently displayed form.|
+|`pageType`|String|The current page type. The value returned is `entityrecord`.|
+|`entityName`|String|Logical name of the table currently displayed.|
+|`entityId`|String|ID of the table record currently displayed in the form.|
+|`createFromEntity`|Lookup|The parent record that provides default values based on mapped column values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
+|`formId`|String|ID of the currently displayed form.|
 
 
 ### Entity list
 
 |Name |Type |Description|
 |--|--|--|
-|pageType|String|The current page type. The value returned is "entitylist".|
-|entityName|String|Logical name of the table currently displayed.|
-|viewId|String|ID of the view currently displayed.|
-|viewType|String|Type of the view currently displayed. Possible values are "savedquery" or "userquery".|
+|`pageType`|String|The current page type. The value returned is `entitylist`.|
+|`entityName`|String|Logical name of the table currently displayed.|
+|`viewId`|String|ID of the view currently displayed.|
+|`viewType`|String|Type of the view currently displayed. Possible values are `savedquery` or `userquery`.|
 
 > [!NOTE]
 > Only the `pageType` and `entityName` parameters will return values every time; all other parameters will return values only if specified by the logic that opened the page.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

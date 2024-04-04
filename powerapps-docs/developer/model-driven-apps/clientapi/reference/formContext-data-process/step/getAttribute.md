@@ -26,14 +26,11 @@ contributors:
 
 **Type**: String. 
 
-**Description**: Some steps don’t contain a column value.
+**Description**: Some steps don't contain a column value.
 
-### Related topics
+### Related articles
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

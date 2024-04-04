@@ -26,7 +26,7 @@ globalContext.getWebResourceUrl(webResourceName);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|webResourceName |String |Yes |Name of the web resource. |
+|`webResourceName` |String |Yes |Name of the web resource. |
 
 ## Return Value
 
@@ -52,11 +52,8 @@ This will return the web resource URL with the caching token:
 `/%7b637199221580014143%7d/webresources/sample_webResource1.js`
  
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

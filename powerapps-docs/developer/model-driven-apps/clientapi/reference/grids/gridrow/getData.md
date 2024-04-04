@@ -14,11 +14,9 @@ contributors:
 ---
 # gridRow.getData (Client API reference)
 
-
-
 [!INCLUDE[./includes/getData-description.md](./includes/getData-description.md)]
 
-As this is deprecated, you should use **GridRow.data**.
+Deprecated: Use **GridRow.data**.
 
 ## Grid types supported
 
@@ -35,7 +33,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridRow` object, see [GridRow](../gridrow.md). 
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

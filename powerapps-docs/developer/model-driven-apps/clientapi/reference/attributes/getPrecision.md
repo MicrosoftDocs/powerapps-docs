@@ -33,7 +33,7 @@ Money, decimal, double, and integer
 
 **Description**: The number of digits allowed to the right of the decimal point.
 
-### Related topics
+### Related articles
 
 [setPrecision](setPrecision.md)
 

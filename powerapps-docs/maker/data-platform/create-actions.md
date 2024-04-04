@@ -20,7 +20,7 @@ search.audienceType:
 Use custom process actions when you want to automate a series of commands in the system. Custom process actions expand the vocabulary available for developers to express business processes. An custom process action uses core verbs provided by the system, such as Create, Update, Delete, and Assign, to create more expressive verbs like Approve, Escalate, Route, or Schedule. If the definition of a business process changes, someone who isn’t a developer can edit the custom process action so the code doesn’t need to be changed.  
 
 > [!NOTE]
-> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use Custom API instead. More information: [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use custom API instead. More information: [Compare Custom Process Action and custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
   
 <a name="create"></a>
 

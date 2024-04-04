@@ -1,27 +1,24 @@
 ---
 title: Set a data retention policy for a table
 description: Explains how to set a data retention policy for a Microsoft Dataverse table. 
-author: Mattp123
-ms.author: matp
+author: pnghub
+ms.author: gned
+ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 07/25/2023
+ms.date: 02/29/2024
 ms.custom: template-how-to
 ---
-# Set a data retention policy for a table (preview)
+# Set a data retention policy for a table
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This article explains how to setup a data retention policy for a Microsoft Dataverse table.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature.
+This article explains how to set up a data retention policy for a Microsoft Dataverse table.
 
 ## Prerequisites
 
-The following prerequisites must be completed before you can set a table for long term data retention.
+Theses prerequisites must be completed before you can set a table for long term data retention:
+
+- [Enable a table for long term retention](#enable-a-table-for-long-term-retention)
+- [Determine Dataverse views for policy criteria](#determine-dataverse-views-for-policy-criteria)
 
 ### Enable a table for long term retention
 
@@ -50,9 +47,9 @@ When the data retention policy is run, rows from the parent table and all child 
 > [!IMPORTANT]
 > We recommend that you create a Dataverse view specific for identifying only the rows you want retained. Then, create and run an app that has the view to verify before using it as the criteria in your policy. For information about how to create a table view, go to [Create and edit public or system views](../model-driven-apps/create-or-edit-model-driven-app-view.md).
 
-### Setup a retention policy
+## Setup a retention policy
 
-Power Platform administrators setup retention policies.
+Power Platform administrators set up retention policies.
 
 > [!IMPORTANT]
 > - Once data is retained as long term (inactive) data, it can't be moved back to the active data store.
@@ -62,7 +59,7 @@ Power Platform administrators setup retention policies.
 > - To complete this task you must have the Power Platform administrator role.
 
 1. [Enable a table for long term retention](#enable-a-table-for-long-term-retention).
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane, select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. On the command bar, select **New retention policy**.
 1. Complete the following properties for the retention policy:
    - **Table**. Select the parent root table that will be used to set up a policy to retain historical cold data in long term storage.
@@ -78,7 +75,7 @@ Now you can view and manage the policy. More information: [Manage data retention
 > [!IMPORTANT]
 >
 > - The retention policy will not start for environments that have [administration mode](/power-platform/admin/admin-mode) enabled.
-> - The retention policy can't be set for the tables where bulk delete isn't supported. For example, Activity Pointer, Activity Party, and Attachment tables don't support bulk delete.
+> - All parent and associated child activities, emails, attachments are retained as a set when you set up a policy on a parent table. This is similar to bulk delete policies. For example, an explicit retention policy can't be set for Activity Pointer, Activity Party, and Attachment tables. Long term retention policies can't be set for those tables where bulk delete isn't supported.
 > - The parent table and all related rows from child tables, of the parent, will be marked and stored in Dataverse long term storage.
 > - Logic associated with an existing delete action of any table (parent and children) will always be executed during the policy run.
 > - A policy run will take from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse will always run the retention process in the background to avoid any impact on other platform services, such as apps and flows.
@@ -86,7 +83,7 @@ Now you can view and manage the policy. More information: [Manage data retention
 
 ## Known issue
 
-If a parent table has many child tables, and the size of the parent or child tables is large, you may encounter timeouts. For example, when the number of tables is large in a cascade relationship chain, such as twenty-five or more. To mitigate this, enable a few child tables separately first. Then go back and enable the parent table.
+If a parent table has many child tables, and the size of the parent or child tables is large, you might encounter timeouts. For example, when the number of tables is large in a cascade relationship chain, such as twenty-five or more. To mitigate this, enable a few child tables separately first. Then go back and enable the parent table.
 
 ## Next steps
 

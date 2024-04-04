@@ -1,17 +1,13 @@
 ---
 title: Collaborate using SharePoint | Microsoft Docs
 description: Learn how to collaborate using SharePoint within a model-driven app
-documentationcenter: ''
-author: mduelae
-editor: ''
-tags: ''
-
-ms.devlang: na
+author: sericks007
+ms.reviewer: sericks
 ms.topic: conceptual
 ms.component: model
 ms.date: 12/14/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 search.audienceType: 
   - maker
 ---
@@ -135,7 +131,7 @@ You can create new or edit existing SharePoint locations from your app in Datave
 - We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
-- No, it hasn’t gone away. Users can still access the documents associated with the row in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
+- No, it hasn't gone away. Users can still access the documents associated with the row in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
 
 *With the change, will subfolders in SharePoint still be created automatically?*
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint subfolder is created by the system. 

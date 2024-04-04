@@ -1,8 +1,8 @@
 ---
-title: clearFilter | Microsoft Docs
+title: clearFilter (Power Apps component framework API reference) | Microsoft Docs
 description: Clears the filter associated with the dataset.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -23,7 +23,7 @@ contributors:
 
 Model-driven and canvas apps
 
-### Related topics
+### Related articles
 
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -1,15 +1,15 @@
 ---
 title: "Export to an Excel static worksheet in model-driven Power Apps | MicrosoftDocs"
 description: How to export to an Excel static worksheet in a model-driven Power Apps
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

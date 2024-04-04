@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label for the item.|
+|`label`|String|Yes|The new label for the item.|
 
-### Related topics
+### Related articles
 
-[getLabel](getLabel.md)
-
+[getLabel](getLabel.md)   
 [formContext.ui.navigation](../formContext-ui-navigation.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

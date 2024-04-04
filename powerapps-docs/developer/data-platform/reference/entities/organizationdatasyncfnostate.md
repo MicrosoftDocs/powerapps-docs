@@ -1,15 +1,14 @@
 ---
-title: organizationdatasyncfnostate table/entity reference
-description: Learn how to use the Microsoft Dataverse organizationdatasyncfnostate table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-ms.service: powerapps
+title: "organizationdatasyncfnostate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the organizationdatasyncfnostate table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: phecke
-ms.author: pehecke
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # organizationdatasyncfnostate table/entity reference
@@ -21,19 +20,20 @@ Information regarding data synchronization state
 
 **Added by**: DataSyncState Solution
 
+
 ## Messages
 
-|Message|Web API operation|SDK class or method|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /organizationdatasyncfnostates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /organizationdatasyncfnostates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|SetState|PATCH /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -85,6 +85,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [usepagingcookiemax](#BKMK_usepagingcookiemax)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+
 ### <a name="BKMK_continuefromlastdeltasync"></a> continuefromlastdeltasync
 
 |Property|Value|
@@ -106,6 +107,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 1
 
+
+
 ### <a name="BKMK_currentfullsyncfetchxml"></a> currentfullsyncfetchxml
 
 |Property|Value|
@@ -120,6 +123,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
+
 
 ### <a name="BKMK_currentfullsyncstate"></a> currentfullsyncstate
 
@@ -145,6 +149,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|AcceptMerge||
 |6|Failed||
 
+
+
 ### <a name="BKMK_entityname"></a> entityname
 
 |Property|Value|
@@ -158,6 +164,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Targets|organizationdatasyncsubscriptionfnotable|
 |Type|Lookup|
+
 
 ### <a name="BKMK_fullsynconly"></a> fullsynconly
 
@@ -180,6 +187,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_fullsyncpagesdata"></a> fullsyncpagesdata
 
 |Property|Value|
@@ -194,6 +203,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
+
 
 ### <a name="BKMK_implicitlastdataversion"></a> implicitlastdataversion
 
@@ -210,11 +220,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -225,6 +236,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
 
 ### <a name="BKMK_lastdataversion"></a> lastdataversion
 
@@ -241,6 +253,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_lastmetadataversion"></a> lastmetadataversion
 
 |Property|Value|
@@ -256,6 +269,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_lockexpiretimestamp"></a> lockexpiretimestamp
 
 |Property|Value|
@@ -269,6 +283,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|lockexpiretimestamp|
 |RequiredLevel|None|
 |Type|DateTime|
+
 
 ### <a name="BKMK_lockowner"></a> lockowner
 
@@ -285,6 +300,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_minactiverowversion"></a> minactiverowversion
 
 |Property|Value|
@@ -300,11 +316,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity|
+|Description|The name of the custom entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -314,6 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_nullstatedate"></a> nullstatedate
 
@@ -329,18 +347,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_organizationdatasyncfnostateId"></a> organizationdatasyncfnostateId
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for entity instances|
+|Description|Unique identifier for entity instances|
 |DisplayName|OrganizationDataSyncFnoState|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|organizationdatasyncfnostateid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_organizationdatasyncsubscriptionid"></a> organizationdatasyncsubscriptionid
 
@@ -356,12 +376,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|organizationdatasyncsubscription|
 |Type|Lookup|
 
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -370,6 +391,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
 
 ### <a name="BKMK_pagenumber"></a> pagenumber
 
@@ -386,6 +408,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_paginationcookie"></a> paginationcookie
 
 |Property|Value|
@@ -400,6 +423,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|300000|
 |RequiredLevel|None|
 |Type|Memo|
+
 
 ### <a name="BKMK_pagingcookie"></a> pagingcookie
 
@@ -416,6 +440,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_partitionid"></a> partitionid
 
 |Property|Value|
@@ -431,6 +456,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|300|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -452,6 +478,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
+
+
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -471,11 +499,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -485,6 +515,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
 
 ### <a name="BKMK_usepagingcookiemax"></a> usepagingcookiemax
 
@@ -507,11 +538,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created|
+|Description|Time zone code that was in use when the record was created.|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -548,13 +581,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -562,6 +596,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -580,6 +615,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -597,12 +633,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -611,13 +648,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -625,6 +663,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -643,6 +682,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -660,6 +700,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_entitynameName"></a> entitynameName
 
 |Property|Value|
@@ -675,13 +716,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -689,6 +731,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -707,6 +750,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -724,12 +768,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -738,13 +783,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -752,6 +798,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -770,6 +817,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -787,6 +835,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_organizationdatasyncsubscriptionidName"></a> organizationdatasyncsubscriptionidName
 
 |Property|Value|
@@ -802,13 +851,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the organization|
+|Description|Unique identifier for the organization|
 |DisplayName|Organization Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -816,6 +866,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|organization|
 |Type|Lookup|
+
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
@@ -833,6 +884,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -852,7 +904,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-to-many relationships
+## One-To-Many Relationships
 
 Listed by **SchemaName**.
 
@@ -864,6 +916,7 @@ Listed by **SchemaName**.
 - [organizationdatasyncfnostate_ProcessSession](#BKMK_organizationdatasyncfnostate_ProcessSession)
 - [organizationdatasyncfnostate_BulkDeleteFailures](#BKMK_organizationdatasyncfnostate_BulkDeleteFailures)
 - [organizationdatasyncfnostate_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncfnostate_PrincipalObjectAttributeAccesses)
+
 
 ### <a name="BKMK_organizationdatasyncfnostate_SyncErrors"></a> organizationdatasyncfnostate_SyncErrors
 
@@ -881,6 +934,7 @@ Same as the [organizationdatasyncfnostate_SyncErrors](syncerror.md#BKMK_organiza
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_organizationdatasyncfnostate_DuplicateMatchingRecord"></a> organizationdatasyncfnostate_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -896,6 +950,7 @@ Same as the [organizationdatasyncfnostate_DuplicateMatchingRecord](duplicatereco
 |ReferencedEntityNavigationPropertyName|organizationdatasyncfnostate_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_organizationdatasyncfnostate_DuplicateBaseRecord"></a> organizationdatasyncfnostate_DuplicateBaseRecord
 
@@ -913,6 +968,7 @@ Same as the [organizationdatasyncfnostate_DuplicateBaseRecord](duplicaterecord.m
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_organizationdatasyncfnostate_AsyncOperations"></a> organizationdatasyncfnostate_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -928,6 +984,7 @@ Same as the [organizationdatasyncfnostate_AsyncOperations](asyncoperation.md#BKM
 |ReferencedEntityNavigationPropertyName|organizationdatasyncfnostate_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_organizationdatasyncfnostate_MailboxTrackingFolders"></a> organizationdatasyncfnostate_MailboxTrackingFolders
 
@@ -945,6 +1002,7 @@ Same as the [organizationdatasyncfnostate_MailboxTrackingFolders](mailboxtrackin
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_organizationdatasyncfnostate_ProcessSession"></a> organizationdatasyncfnostate_ProcessSession
 
 **Added by**: System Solution Solution
@@ -961,6 +1019,7 @@ Same as the [organizationdatasyncfnostate_ProcessSession](processsession.md#BKMK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_organizationdatasyncfnostate_BulkDeleteFailures"></a> organizationdatasyncfnostate_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -976,6 +1035,7 @@ Same as the [organizationdatasyncfnostate_BulkDeleteFailures](bulkdeletefailure.
 |ReferencedEntityNavigationPropertyName|organizationdatasyncfnostate_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_organizationdatasyncfnostate_PrincipalObjectAttributeAccesses"></a> organizationdatasyncfnostate_PrincipalObjectAttributeAccesses
 
@@ -995,9 +1055,9 @@ Same as the [organizationdatasyncfnostate_PrincipalObjectAttributeAccesses](prin
 
 <a name="manytoone"></a>
 
-## Many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_organizationdatasyncfnostate_createdby](#BKMK_lk_organizationdatasyncfnostate_createdby)
 - [lk_organizationdatasyncfnostate_createdonbehalfby](#BKMK_lk_organizationdatasyncfnostate_createdonbehalfby)
@@ -1006,6 +1066,7 @@ Each many-to-one relationship is defined by a corresponding one-to-many relation
 - [organization_organizationdatasyncfnostate](#BKMK_organization_organizationdatasyncfnostate)
 - [organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid)
 - [organizationdatasyncsubscriptionfnotable_organizationdatasyncfnostate_entityname](#BKMK_organizationdatasyncsubscriptionfnotable_organizationdatasyncfnostate_entityname)
+
 
 ### <a name="BKMK_lk_organizationdatasyncfnostate_createdby"></a> lk_organizationdatasyncfnostate_createdby
 
@@ -1052,5 +1113,5 @@ See the [organizationdatasyncsubscriptionfnotable_organizationdatasyncfnostate_e
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.organizationdatasyncfnostate?text=organizationdatasyncfnostate EntityType" />

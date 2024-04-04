@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 05/02/2023
 ms.subservice: end-user
 ms.author: sericks
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -153,10 +153,7 @@ The reference panel is a great way to get work done without moving away from the
 
 ![Reference panel.](media/reference-panel1.png "Reference panel")
 
- Watch this video to learn more about the reference panel:
-
-<div class="embeddedvideo"><iframe src="https://www.youtube.com/embed/ruAPEKY5vNc" frameborder="0" allowfullscreen=""></iframe></div>
-
+ Watch the [How to use the Reference panel in the Customer Service Hub](https://youtu.be/ruAPEKY5vNc) video to learn more about the reference panel.
 
 ## App message bar 
 

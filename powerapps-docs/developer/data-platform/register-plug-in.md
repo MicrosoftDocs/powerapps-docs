@@ -18,13 +18,11 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-After a plug-in is written and compiled, it must be registered with the event framework to execute when a specific entity type (table) and operation (message) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio.
+After a plug-in is written and compiled, it must be registered with the [event framework](event-framework.md) to execute when a specific entity (table row) and message (operation) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio.
 
-The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step, add an assembly to a solution, and perform other common operations using the Plug-in Registration tool.
+The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step, add an assembly to a solution, and perform other common plug-in related operations using the Plug-in Registration tool.
 
 The Visual Studio extension provides a more feature rich development environment and covers the entire coding, deployment, and debugging/profiling development process. For information about using the Power Platform Tools extension for Visual Studio, see the [quickstart](tools/devtools-create-plugin.md).
-
-More information: [Event framework](event-framework.md)
 
 ## About the Plug-in Registration tool
 
@@ -34,52 +32,33 @@ After you download the PRT, follow the [Connect using the Plug-in Registration t
 
 :::image type="content" source="media/dv_plugin_registration_tool.png" alt-text="The Plug-in Registration tool main window.":::
 
-## Register an assembly
+## Assembly registration
 
-Registering an assembly is the process of uploading the assembly to the Dataverse database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
+Registering an assembly includes uploading the assembly to the Dataverse database, which is handled by the tool. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 
 > [!NOTE]
 > You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. Dataverse is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
 
-When an assembly is uploaded, it's stored in the `PluginAssembly` table. Most of the properties are set using reflection of the imported table. The base64 encoded bytes of the assembly are stored in the `Content` column. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** value.
+When an assembly is uploaded, it's stored in the `PluginAssembly` table. Most of the properties are set using reflection of the imported assembly. The base64 encoded bytes of the assembly are stored in the `Content` column. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** value. All compiled classes within the assembly that implement the [IPlugin](xref:Microsoft.Xrm.Sdk.IPlugin) interface or derive from <xref:System.Activities.CodeActivity> are automatically registered.
 
 ### View registered assemblies
 
-You can view information about registered assemblies in the application solution explorer without using the PRT.
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+You can view information about registered plug-in assemblies in the Power Apps classic **Solution Explorer**, under **Solutions** in Power Apps left navigation pane, and in the PRT assembly view. To access **Solution Explorer** in Power Apps, choose **Solutions** and then choose **Switch to classic** in the toolbar. To access the default solution from Power Apps, choose **Solutions**, select "Default Solution" in the list, and then choose **Plug-in assemblies** within the left **Objects** pane.
 
 > [!NOTE]
-> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Services Default Solution**). To view the **Default Solution**, select **All solutions** under **Solutions** and then change the view to **All Solutions - Internal**.
->
+> Each assembly you register will be added to the **Default Solution** which should not be confused with the **Common Data Services Default Solution**.
 > For more information about solutions, see [Introduction to solutions](introduction-solutions.md)
 
-![All Solutions internal.](media/all-solutions-internal-view.png)
+### Add your assembly to a solution
 
-After selecting the name of the Default Solution in the internal solution list, you can find all the assemblies that are registered for this environment.
+As described in [View registered assemblies](#view-registered-assemblies), the assembly registration you created was added to the system **Default Solution**. You should add your assembly to an unmanaged solution so you can distribute it to other organizations. The PRT does not allow you to specify a solution when registering an assembly or steps.
 
-![View all registered assemblies.](media/view-plug-in-assemblies-default-solution.png)
-
-## Add your assembly to a solution
-
-As described in [View registered assemblies](#view-registered-assemblies), the assembly registration you created was added to the system **Default Solution**. You should add your assembly to an unmanaged solution so you can distribute it to other organizations.
-
-Within the unmanaged solution you're using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**. In the following figures, a custom solution named Common Data Service Default Solution is used.
-
-![Add Existing plug-in assembly.](media/add-existing-plug-in-assembly.png)
-
-Then add your assembly as a component to the solution.
-
-![Select plug-in assembly as a solution component.](media/select-plug-in-assembly-as-solution-component.png)
-
-When you select the plug-in assembly you added, you can view the plug-in classes it includes.
-
-![Plug-in assemblies and classes.](media/view-plug-in-classes-solution-explorer.png)
+To learn more about solutions and how to create one see [Solutions overview](../../maker/data-platform/solutions-overview.md) and [Create a solution](../../maker/data-platform/create-solution.md). Once you have a solution created, you can add your plug-in assembly to it in Power Apps by first choosing the solution in the solution list, and then choose **Add existing** > **More** > **Developer** > **Plug-in assembly**.
 
 > [!NOTE]
-> Any existing or subsequent step registrations are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-step-to-solution)
+> Any existing or subsequent step registrations (see next section) are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-step-to-solution)
 
-## Register plug-in step
+## Step registration
 
 When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> are made available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
@@ -89,10 +68,10 @@ When you register a step, there are several registration options available to yo
 
 |Field|Description|
 |--|--|
-|**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
+|**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the SDK for .NET](org-service/use-messages.md)|
 |**Primary Entity**|PRT auto-completes valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
-|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. |
+|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. Don't include the primary key of the entity in the filtering attributes. The primary key is always included in update operations, so doing this will negate all other filtered attributes. | 
 |**Event Handler**|This field value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Set user impersonation for a step](#set-user-impersonation-for-a-step) |
@@ -151,7 +130,7 @@ You can write your plug-in to accept string values in the constructor to use thi
 
 Within your plug-in, you may want to reference primary table property values that weren't included in an operation. For example, in an `Update` operation you might want to know what a value was before it was changed, but the execution context doesn't provide this information, it only includes the changed value.
 
-If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this isn't a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you're interested in as they existed before the operation that you can use to compare with the changed values.
+If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the IOrganizationService instance to retrieve the current value of the property, but this isn't a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you're interested in as they existed before the operation that you can use to compare with the changed values.
 
 > [!IMPORTANT]
 > The default behavior when creating an entity image is to select all columns. **Don't use this default behavior.** This will negatively impact performance. Only include those columns that are required by the logic of your plug-in.
@@ -206,13 +185,13 @@ Similarly, you should note that removing the assembly from the solution won't re
 
 ### Set user impersonation for a step
 
-With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to set or change a step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
+With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to set or change a plug-in step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
 
-To set the user in a plug-in step:
+To set the user context of a plug-in step:
 
 1. Expand the target plug-in assembly node in the assembly view until you see the desired (Step) registration node.
 1. Choose the step node, and then choose **Update** in either the context menu or the toolbar.
-1. Choose a different user from the drop-down list of available users next to the **Run in User's Context** label.
+1. Choose a user from the drop-down list of available users next to the **Run in User's Context** label.
 1. Choose **Update Step**.
 
 More information: [Impersonate a user](impersonate-a-user.md)
@@ -244,7 +223,7 @@ You can unregister or disable plug-ins and their components using the Plug-in Re
 
 ### Disable or enable a plug-in step
 
-With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to disable or enable plug-in steps. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
+With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to disable or enable a plug-in step. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
 
 > [!IMPORTANT]
 > Disabling a plug-in can negatively affect the functionality of your app, a solution, or the Dataverse system. Make sure you understand the implications before you proceed.

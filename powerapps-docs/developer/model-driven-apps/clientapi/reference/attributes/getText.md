@@ -36,13 +36,11 @@ choice, choices
 > [!NOTE]
 > When no option is selected, it will return null.
 
-### Related topics
-[getInitialValue (Client API reference)](getInitialValue.md)
+### Related articles
 
-[getOption (Client API reference)](getOption.md)
-
-[getOptions (Client API reference)](getOptions.md)
-
+[getInitialValue (Client API reference)](getInitialValue.md)   
+[getOption (Client API reference)](getOption.md)   
+[getOptions (Client API reference)](getOptions.md)   
 [getSelectedOption (Client API reference)](getSelectedOption.md) 
 
 

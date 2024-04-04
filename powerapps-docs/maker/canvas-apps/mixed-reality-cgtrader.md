@@ -56,7 +56,7 @@ A CGTrader connection is now listed on the **Connections** page.
 
 ## Add a CGTrader connection to your canvas app
 
-1. [Edit](./edit-app.md) or create a [canvas app](./add-data-connection.md#open-a-blank-app).
+1. [Edit](./edit-app.md) or create a [canvas app](./create-blank-app.md).
 
 1. In the navigation bar, select **Data** > **Add data**. Search for and select **CGTrader**.
 

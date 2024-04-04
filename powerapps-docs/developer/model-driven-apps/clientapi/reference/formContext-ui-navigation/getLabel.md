@@ -28,14 +28,9 @@ contributors:
 
 **Description**: Label of the item.
 
-### Related topics
+### Related articles
 
-[setLabel](setLabel.md)
-
+[setLabel](setLabel.md)   
 [formContext.ui.navigation](../formContext-ui-navigation.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

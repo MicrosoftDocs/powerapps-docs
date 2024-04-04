@@ -48,8 +48,8 @@ The web services exposed in Dataverse include capabilities to create, read, writ
 
 The data model is stored within Dataverse. 
 
-- The [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) defines this with the Organization service. 
-- The [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata) defines this for the Web API. 
+- The [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) defines this with the SDK for .NET. 
+- The [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata) defines this for the Web API. 
 
 The table definition includes the following information:
 

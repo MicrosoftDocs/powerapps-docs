@@ -33,7 +33,8 @@ All
 
 **Description**: The logical name of the column.
 
-### Related topics
+### Related articles
+
 [setSubmitMode (Client API reference)](setSubmitMode.md)
 
 

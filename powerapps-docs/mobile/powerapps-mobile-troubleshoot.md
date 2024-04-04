@@ -4,7 +4,7 @@ description: Troubleshooting and known issues for the Power Apps mobile app
 author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/01/2023
+ms.date: 10/25/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -18,18 +18,9 @@ contributors:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-> [!NOTE]
-> If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.
+## Resolve canvas apps performance issues
 
-## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
-
-A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
-
--   Android: 3.23031.18
--   iOS: 13.23031.18
--   Windows: 3.23024.21
-
-If you are unable to upgrade, contact your administrator.
+Learn about most common performance issues that can make canvas apps run slow and how to improve proformance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
 
 ## Diagnose mobile apps with Monitor
 
@@ -91,8 +82,6 @@ If the issue is still not fixed, then try these steps:
 4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
-
-If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## App list is empty
 
@@ -186,7 +175,7 @@ Access the **Active** users section in the admin center and verify you have a **
 ## Event 10001 messages appear in the Event Log when you run Dynamics 365 for mobile. 
  The following event may be recorded multiple times to the Event Log, when **Show Analytic and Debug Logs** is enabled, on the device where Dynamics 365 for mobile is running. Notice that, by default, **Show Analytic and Debug Logs** is disabled in [!INCLUDE[pn_Event_Viewer](../includes/pn-event-viewer.md)] and these messages won’t be recorded. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Enable Analytic and Debug Logs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749492(v=ws.11))  
   
-- Event Id: 10001  
+- Event ID: 10001  
   
 - Message: `SEC7131 : Security of a sandboxed iframe is potentially compromised by allowing script and same origin access.`  
   

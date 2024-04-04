@@ -1,5 +1,5 @@
 ---
-title: "Retrieve a table row using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/18/2023
 ms.reviewer: pehecke
@@ -13,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# Retrieve a table row using the Organization Service
+# Retrieve a table row using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -26,7 +26,7 @@ You have some options to define the data returned when you retrieve a row. You w
 
 
 > [!IMPORTANT]
-> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve all table columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
+> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](../best-practices/work-with-data/retrieve-specific-columns-entity-via-query-apis.md)
 
 If you need to return related rows you can include a query with your retrieve request to define which related rows to return.
 
@@ -41,7 +41,7 @@ Entity entity = svc.Retrieve("account", accountid, new ColumnSet("name"));
 Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 ```csharp
 RetrieveRequest request = new RetrieveRequest()
@@ -121,7 +121,7 @@ Tasks:
 Primary Contact Fullname: Scott Konersmann (sample)
 ```
 
-More information: [Query data using the Organization service](entity-operations-query-data.md)
+More information: [Query data using the SDK for .NET](entity-operations-query-data.md)
 
 
 ## Retrieve with an alternate key
@@ -175,9 +175,9 @@ The method to access formatted values on a retrieve operation is the same you wi
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
-title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/24/2023
+title: "Use file column data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about uploading, downloading, and deleting data in file columns."
+ms.date: 03/29/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -72,12 +72,12 @@ sample_filecolumn_name: 25mb.pdf
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)?$select=name,sample_filecolumn,sample_filecolumn_name HTTP/1.1
@@ -87,7 +87,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -175,14 +175,14 @@ fileattachmentid: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
 
 #### [Web API](#tab/webapi)
 
 The request below will return information about all the file columns that contain data related to the `account` record specified using `accountid`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(<accountid>)?$filter=sample_filecolumn ne null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
@@ -192,7 +192,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
@@ -225,7 +225,7 @@ More information: [Retrieve with related rows](org-service/entity-operations-ret
 
 ## Upload Files
 
-There at three different ways to upload files to a file column:
+There are three different ways to upload files to a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
@@ -352,7 +352,7 @@ static Guid UploadFile(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 [!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
@@ -361,7 +361,7 @@ More information:
 
 The following series of requests and responses show the interaction when using the Web API to set a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with the specified `accountid`.
 
-**Request**
+**Request:**
 
 The first request uses the [InitializeFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUpload).
 
@@ -384,7 +384,7 @@ Content-Length: 207
 }
 ```
 
-**Response**
+**Response:**
 
 The response is a [InitializeFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
 
@@ -409,7 +409,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 
 [!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/UploadBlock HTTP/1.1
@@ -427,7 +427,7 @@ Content-Length: 5593368
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -444,7 +444,7 @@ After all the parts of the file have been sent using multiple requests using the
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/CommitFileBlocksUpload HTTP/1.1
@@ -471,7 +471,7 @@ Content-Length: 1213
 }
 ```
 
-**Response**
+**Response:**
 
 The [CommitFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUploadResponse) returns the `FileSizeInBytes` and the `FileId` value you can use to delete the file using the [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
@@ -496,7 +496,7 @@ If the size of the file is less than 128 MB, you can upload the file in a single
 
 The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
@@ -511,11 +511,80 @@ Content-Length: 4191273
 < binary content removed for brevity>
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
+```
+
+#### PowerShell example to upload file in a single request
+
+The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in a single request using Web API. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+
+```powershell
+<#
+.SYNOPSIS
+Sets a column value for a file in a specified table.
+
+.DESCRIPTION
+The Set-FileColumn function sets a column value for a file in a specified table. 
+It uses a single request and can work with files less than 128 MB.
+
+.PARAMETER setName
+The entity set name of the table where the file is stored.
+
+.PARAMETER id
+The unique identifier of record.
+
+.PARAMETER columnName
+The logical name of the file column to set the value for.
+
+.PARAMETER file
+The path to the file to upload.
+
+.EXAMPLE
+Set-FileColumn `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
+   
+Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+
+#>
+function Set-FileColumn {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $setName,
+      [Parameter(Mandatory)]
+      [System.Guid]
+      $id,
+      [Parameter(Mandatory)]
+      [string]
+      $columnName,
+      [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+      [System.IO.FileInfo]$file
+   )
+
+   $uri = '{0}{1}({2})/{3}' -f $baseURI, $setName, $id, $columnName
+
+   $patchHeaders = $baseHeaders.Clone()
+   $patchHeaders.Add('Content-Type', 'application/octet-stream')
+   $patchHeaders.Add('x-ms-file-name', $file.Name)
+
+   $body = [System.IO.File]::ReadAllBytes($file.FullName)
+
+   $FileUploadRequest = @{
+      Uri     = $uri
+      Method  = 'Patch'
+      Headers = $patchHeaders
+      Body    = $body
+   }
+
+   Invoke-RestMethod @FileUploadRequest
+}
 ```
 
 ### Upload the file in chunks using Web API
@@ -524,7 +593,7 @@ To upload your file in chunks using the Web API, use the following set of reques
 
 The following example uploads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 The first request must include this header:`x-ms-transfer-mode: chunked`
 
@@ -543,7 +612,7 @@ Accept: application/json
 > [!NOTE]
 > The file name can also be included as a `x-ms-file-name` request header, but this will not support file names outside the ASCII character set. If the header is used, it will take precedence over the `x-ms-file-name` query parameter.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -564,7 +633,7 @@ The response includes the following headers.
 |[Accept-Ranges](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Ranges)|Indicates the server supports partial requests from the client for file downloads. The value `bytes` indicates that the range value in subsequent requests should be in bytes.|
 |[Access-Control-Expose-Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)|Indicates that the `x-ms-chunk-size` header value should be made available to scripts running in the browser, in response to a cross-origin request.|
 
-**Request**
+**Request:**
 
 Subsequent requests should use the value of the `Location` header returned by the first request so that the `sessiontoken` value is included.
 
@@ -593,7 +662,7 @@ Content-Length: 4194304
 
 For each request that contains partial content, the response will be [206 PartialContent](https://developer.mozilla.org/docs/Web/HTTP/Status/206).
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 206 PartialContent
@@ -602,12 +671,110 @@ OData-Version: 4.0
 
 For the final request that includes the last chunk of the file, the response will be [204 NoContent](https://developer.mozilla.org/docs/Web/HTTP/Status/204).
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+#### PowerShell example to upload file in chunks
+
+The following PowerShell `Set-FileColumnInChunks` function demonstrates how to upload a file in chunks. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+
+```powershell
+<#
+.SYNOPSIS
+Sets a column value for a file in a specified table.
+
+.DESCRIPTION
+The Set-FileColumnInChunks function sets a column value for a file in a specified table. 
+It uses chunked file upload to efficiently upload large files.
+
+.PARAMETER setName
+The name of the table where the file is stored.
+
+.PARAMETER id
+The unique identifier of record.
+
+.PARAMETER columnName
+The logical name of the file column to set the value for.
+
+.PARAMETER file
+The path to the file to upload.
+
+.EXAMPLE
+Set-FileColumnInChunks `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
+   
+Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+
+#>
+function Set-FileColumnInChunks {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $setName,
+      [Parameter(Mandatory)]
+      [System.Guid]
+      $id,
+      [Parameter(Mandatory)]
+      [string]
+      $columnName,
+      [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+      [System.IO.FileInfo]$file
+   )
+
+   $uri = '{0}{1}({2})' -f $baseURI, $setName, $id
+   $uri += '/{0}?x-ms-file-name={1}' -f $columnName, $file.Name
+
+   $chunkHeaders = $baseHeaders.Clone()
+   $chunkHeaders.Add('x-ms-transfer-mode', 'chunked')
+
+   $InitializeChunkedFileUploadRequest = @{
+      Uri     = $uri
+      Method  = 'Patch'
+      Headers = $chunkHeaders
+   }
+
+   Invoke-RestMethod @InitializeChunkedFileUploadRequest `
+      -ResponseHeadersVariable rhv
+
+   $locationUri = $rhv['Location'][0]
+   $chunkSize = [int]$rhv['x-ms-chunk-size'][0]
+
+   $bytes = [System.IO.File]::ReadAllBytes($file.FullName)
+
+   for ($offset = 0; $offset -lt $bytes.Length; $offset += $chunkSize) {
+         
+      $count = if (($offSet + $chunkSize) -gt $bytes.Length) 
+                  { $bytes.Length % $chunkSize } 
+               else { $chunkSize }
+      
+      $lastByte = $offset + ($count - 1)
+
+      $range = 'bytes {0}-{1}/{2}' -f $offset, $lastByte, $bytes.Length
+
+      $contentHeaders = $baseHeaders.Clone()
+      $contentHeaders.Add('Content-Range', $range)
+      $contentHeaders.Add('Content-Type', 'application/octet-stream')
+      $contentHeaders.Add('x-ms-file-name', $file.Name)
+
+      $UploadFileChunkRequest = @{
+         Uri     = $locationUri
+         Method  = 'Patch'
+         Headers = $contentHeaders
+         Body    = [byte[]]$bytes[$offSet..$lastByte]
+      }
+
+      Invoke-RestMethod @UploadFileChunkRequest
+   }
+}
+```
+
 
 ### Check maximum file size
 
@@ -676,7 +843,7 @@ More information:
 
 The following request returns the `MaxSizeInKB` value for a file column with the logical name `sample_filecolumn` in the `account` table.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='sample_filecolumn')/Microsoft.Dynamics.CRM.FileAttributeMetadata?$select=MaxSizeInKB HTTP/1.1
@@ -686,7 +853,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -709,7 +876,7 @@ More information:
 
 ## Download Files
 
-There at three different methods to download files from a file column:
+There are three different methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request using Web API
@@ -718,7 +885,7 @@ There at three different methods to download files from a file column:
 > [!NOTE]
 > These methods can also be used to download image columns, but there are some differences. More information: [Download images](image-column-data.md#download-images)
 > 
-> For on-premises environments or when an environment uses Customer Managed Keys, the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
+> For on-premises environments or when an environment uses the [Self-managed key (BYOK)](/power-platform/admin/manage-encryption-key), the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
 > 
 > Trying to download partial chunk when IsChunkingSupported is set to false will result in this error:<br />
 > 
@@ -809,14 +976,14 @@ private static byte[] DownloadFile(
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
 
 The following series of requests and responses show the interaction when using the Web API to download a PDF file named `25mb.pdf` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 This request uses the [InitializeFileBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownload).
 
@@ -838,7 +1005,7 @@ Content-Length: 180
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -865,7 +1032,7 @@ Based on the size of the file and the size of the block you'll download, send mo
 > [!NOTE]
 > The example below is for cases when `IsChunkingSupported` is set to true. If it is false, set `BlockLength` to full file size.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
@@ -885,7 +1052,7 @@ Content-Length: 921
 
 [!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -906,7 +1073,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn/$value HTTP/1.1
@@ -916,7 +1083,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 The response includes the following headers.
 
@@ -946,7 +1113,7 @@ To download your file in chunks using the Web API, use the following set of requ
 
 The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 Use the [Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Range) header to specify the number of bytes to return using this format:<br />
 `<unit>=<range-start>-<range-end>`<br />
@@ -965,7 +1132,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 The response includes the following headers:
 
@@ -992,7 +1159,7 @@ OData-Version: 4.0
 
 ## Delete Files
 
-There at two different ways to delete files to a file column:
+There are two different ways to delete files to a file column:
 
 - Use the Dataverse `DeleteFile` message available to both the SDK and Web API
 - Send a DELETE request using Web API to the file column of the record.
@@ -1034,7 +1201,7 @@ Content-Length: 56
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -1051,7 +1218,7 @@ With the Web API, you can delete a file by sending a `DELETE` request to the loc
 
 The following example deletes file data for a column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
@@ -1061,7 +1228,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -1075,7 +1242,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 [Files and images overview](files-images-overview.md)<br />
 [Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
-[File columns](file-attributes.md)<br />
+[Work with file column definitions using code](file-attributes.md)<br />
 [Sample: File Operations using Dataverse SDK for .NET](org-service/samples/file-operations.md)<br />
 [Sample: File Operations using Dataverse Web API](webapi/samples/file-operations.md)
 

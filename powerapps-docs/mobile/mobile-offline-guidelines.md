@@ -4,12 +4,14 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/12/2023
+ms.date: 12/21/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
 ms.reviewer: sericks
 ms.assetid: 
+contributors:
+- lancedMicrosoft 
 search.audienceType: 
   - enduser
 ---
@@ -34,6 +36,9 @@ In this phase, you'll add tables and apply filters to existing tables to make su
 
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
 
+> [!IMPORTANT]
+> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
+
 ### Phase 2: Test with users
 
 Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
@@ -54,7 +59,7 @@ Each user may have access to a different set of data. It's important to think ab
 
 As you develop your offline profile and test with real or representative data, keep these best practices in mind:
 
-- Limit the total records synced to no more than 200,000.
+- Limit the number of records to less than 200,000 for better performance. Exceeding 3,000,000 records is not supported by the offline sync.
 - Limit the number of tables to fewer than 100.
 - Limit the total data size to less than 1 GB. 
 - Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.

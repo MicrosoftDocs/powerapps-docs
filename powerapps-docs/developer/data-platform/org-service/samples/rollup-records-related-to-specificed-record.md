@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Rollup records related to a specific record
 
-This sample shows how to roll up opportunities by the parent account. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RollupSpecificRecords).
+This sample shows how to roll up opportunities by the parent account.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Rollup records related to a specific record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RollupSpecificRecords)
 
 ## How to run this sample
 

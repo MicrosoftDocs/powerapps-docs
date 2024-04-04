@@ -1,15 +1,14 @@
 ---
-title: fxexpression table/entity reference
-description: Learn how to use the Microsoft Dataverse fxexpression table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-author: phecke
-ms.author: pehecke
-ms.service: powerapps
+title: "fxexpression table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the fxexpression table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # fxexpression table/entity reference
@@ -17,15 +16,18 @@ ms.custom: bap-template
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+
+
 **Added by**: msft_PowerfxRuleSolution Solution
+
 
 ## Messages
 
-|Message|Web API operation|SDK class or method|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /fxexpressions(*fxexpressionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Assign|PATCH /fxexpressions(*fxexpressionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /fxexpressions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /fxexpressions(*fxexpressionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -35,9 +37,9 @@ ms.custom: bap-template
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /fxexpressions(*fxexpressionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|SetState|PATCH /fxexpressions(*fxexpressionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /fxexpressions(*fxexpressionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -81,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+
 ### <a name="BKMK_Category"></a> Category
 
 |Property|Value|
@@ -100,6 +103,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Workflow||
 |1|Business Rule||
 
+
+
 ### <a name="BKMK_CompiledExpression"></a> CompiledExpression
 
 |Property|Value|
@@ -115,12 +120,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_Dependencies"></a> Dependencies
 
 |Property|Value|
 |--------|-----|
-|Description|The dependencies for PowerFX expressions|
-|DisplayName|PowerFX Expression dependencies|
+|Description|The dependencies for powerfx expressions|
+|DisplayName|PowerFx Expression dependencies|
 |Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -130,11 +136,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_EntityLogicalName"></a> EntityLogicalName
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the primary entity on which the expression is defined|
+|Description|The name of the primary entity on which expression is defined.|
 |DisplayName|EntityLogicalName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -144,6 +151,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_Expression"></a> Expression
 
@@ -160,18 +168,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_fxexpressionId"></a> fxexpressionId
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for entity instances|
+|Description|Unique identifier for entity instances|
 |DisplayName|FxExpression|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|fxexpressionid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -179,7 +189,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -191,13 +201,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Is Customizable|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -205,11 +216,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+
 ### <a name="BKMK_MessageName"></a> MessageName
 
 |Property|Value|
 |--------|-----|
-|Description|The sdkMessage that triggers the expression execution|
+|Description|The sdkMessage on which will trigger expression execution.|
 |DisplayName|MessageName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -220,11 +232,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity|
+|Description|The name of the custom entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -235,12 +248,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -249,6 +263,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
@@ -265,6 +280,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|systemuser,team|
 |Type|Owner|
 
+
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
@@ -278,6 +294,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
 
 ### <a name="BKMK_Parameters"></a> Parameters
 
@@ -293,6 +310,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|200000|
 |RequiredLevel|None|
 |Type|Memo|
+
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -314,6 +332,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
+
+
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -333,11 +353,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -348,12 +370,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_UniqueName"></a> UniqueName
 
 |Property|Value|
 |--------|-----|
-|Description|The unique Name for the entity|
-|DisplayName|The unique Name|
+|Description|Unique Name for the entity.|
+|DisplayName|Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -364,11 +387,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created|
+|Description|Time zone code that was in use when the record was created.|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -413,19 +437,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Row id unique|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|componentidunique|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
@@ -433,7 +459,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Component State|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -450,13 +476,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
+
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -464,6 +492,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -482,6 +511,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -499,12 +529,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -513,13 +544,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -527,6 +559,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -545,6 +578,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -562,13 +596,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution|
+|Description|Indicates whether the solution component is part of a managed solution.|
 |DisplayName|Is Managed|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -585,13 +620,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -599,6 +636,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -617,6 +655,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -634,12 +673,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -648,13 +688,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -662,6 +703,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -680,6 +722,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -697,6 +740,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 **Added by**: Basic Solution Solution
@@ -704,7 +748,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Record Overwrite Time|
 |Format|DateAndTime|
 |IsValidForForm|False|
@@ -712,6 +756,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|overwritetime|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
+
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -730,6 +775,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 **Added by**: Active Solution Solution
@@ -747,13 +793,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the business unit that owns the record|
+|Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -761,6 +808,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
@@ -779,13 +827,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the team that owns the record|
+|Description|Unique identifier for the team that owns the record.|
 |DisplayName|Owning Team|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -794,13 +843,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|team|
 |Type|Lookup|
 
+
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the user that owns the record|
+|Description|Unique identifier for the user that owns the record.|
 |DisplayName|Owning User|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -809,19 +859,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|systemuser|
 |Type|Lookup|
 
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the associated solution|
+|Description|Unique identifier of the associated solution.|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
@@ -829,13 +881,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|False|
 |LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -855,7 +908,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-to-many relationships
+## One-To-Many Relationships
 
 Listed by **SchemaName**.
 
@@ -869,6 +922,7 @@ Listed by **SchemaName**.
 - [fxexpression_PrincipalObjectAttributeAccesses](#BKMK_fxexpression_PrincipalObjectAttributeAccesses)
 - [fxexpression_sdkmessageprocessingstep](#BKMK_fxexpression_sdkmessageprocessingstep)
 - [fxexpression_customapi](#BKMK_fxexpression_customapi)
+
 
 ### <a name="BKMK_fxexpression_SyncErrors"></a> fxexpression_SyncErrors
 
@@ -886,6 +940,7 @@ Same as the [fxexpression_SyncErrors](syncerror.md#BKMK_fxexpression_SyncErrors)
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_fxexpression_DuplicateMatchingRecord"></a> fxexpression_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -901,6 +956,7 @@ Same as the [fxexpression_DuplicateMatchingRecord](duplicaterecord.md#BKMK_fxexp
 |ReferencedEntityNavigationPropertyName|fxexpression_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_fxexpression_DuplicateBaseRecord"></a> fxexpression_DuplicateBaseRecord
 
@@ -918,6 +974,7 @@ Same as the [fxexpression_DuplicateBaseRecord](duplicaterecord.md#BKMK_fxexpress
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_fxexpression_AsyncOperations"></a> fxexpression_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -933,6 +990,7 @@ Same as the [fxexpression_AsyncOperations](asyncoperation.md#BKMK_fxexpression_A
 |ReferencedEntityNavigationPropertyName|fxexpression_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_fxexpression_MailboxTrackingFolders"></a> fxexpression_MailboxTrackingFolders
 
@@ -950,6 +1008,7 @@ Same as the [fxexpression_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_fxexpression_ProcessSession"></a> fxexpression_ProcessSession
 
 **Added by**: System Solution Solution
@@ -965,6 +1024,7 @@ Same as the [fxexpression_ProcessSession](processsession.md#BKMK_fxexpression_Pr
 |ReferencedEntityNavigationPropertyName|fxexpression_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_fxexpression_BulkDeleteFailures"></a> fxexpression_BulkDeleteFailures
 
@@ -982,6 +1042,7 @@ Same as the [fxexpression_BulkDeleteFailures](bulkdeletefailure.md#BKMK_fxexpres
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_fxexpression_PrincipalObjectAttributeAccesses"></a> fxexpression_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
@@ -998,6 +1059,7 @@ Same as the [fxexpression_PrincipalObjectAttributeAccesses](principalobjectattri
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_fxexpression_sdkmessageprocessingstep"></a> fxexpression_sdkmessageprocessingstep
 
 Same as the [fxexpression_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_fxexpression_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
@@ -1011,6 +1073,7 @@ Same as the [fxexpression_sdkmessageprocessingstep](sdkmessageprocessingstep.md#
 |ReferencedEntityNavigationPropertyName|fxexpression_sdkmessageprocessingstep|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_fxexpression_customapi"></a> fxexpression_customapi
 
@@ -1030,9 +1093,9 @@ Same as the [fxexpression_customapi](customapi.md#BKMK_fxexpression_customapi) m
 
 <a name="manytoone"></a>
 
-## Many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_fxexpression_createdby](#BKMK_lk_fxexpression_createdby)
 - [lk_fxexpression_createdonbehalfby](#BKMK_lk_fxexpression_createdonbehalfby)
@@ -1041,6 +1104,7 @@ Each many-to-one relationship is defined by a corresponding one-to-many relation
 - [user_fxexpression](#BKMK_user_fxexpression)
 - [team_fxexpression](#BKMK_team_fxexpression)
 - [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
+
 
 ### <a name="BKMK_lk_fxexpression_createdby"></a> lk_fxexpression_createdby
 
@@ -1087,5 +1151,5 @@ See the [business_unit_fxexpression](businessunit.md#BKMK_business_unit_fxexpres
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.fxexpression?text=fxexpression EntityType" />

@@ -1,8 +1,8 @@
 ---
-title: getPopupService | Microsoft Docs
+title: getPopupService (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the popup service which helps to create popups and manage popups easily.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 Type: [PopupService](../popupservice.md)
 
-### Related topics
+### Related articles
 
 [Factory](../factory.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

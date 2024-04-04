@@ -5,7 +5,7 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/04/2022
+ms.date: 03/06/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -24,13 +24,13 @@ This article covers aspects of Power Fx that are specific to commanding. Many ot
 
 ## OnSelect
 
-Defines the logic that will be executed when the button is selected within the app.
+Defines the logic that is executed when the button is selected within the app.
 
 ## Visible
 
 Defines logic for hiding or showing the button when running the app. 
 
-To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
+To define visibility logic, select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You can select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
 
 ## Selected property
 
@@ -43,7 +43,7 @@ To define visibility logic select the command. Then select **Visibility** on the
 
 - The **Selected** property is provided by the host of the command.
 - **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
-- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
+- If there's no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
 - Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
 - **Item** is always blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
 
@@ -129,7 +129,7 @@ Navigate( Gallery1.Selected )
 
 ### Navigate to the default form of the table in create mode
 
-To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This will open the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
+To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
 ```powerapps-dot
 Navigate( Defaults( Accounts ) )
@@ -146,7 +146,7 @@ EditButton.Visible =
    RecordInfo( Gallery1.Selected, RecordInfo.EditPermission )
 ```
 
-For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide an "Create" button using its **Visible** property:
+For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide a "Create" button using its **Visible** property:
 
 ```powerapps-dot
 CreateButton.Visible = 
@@ -164,7 +164,7 @@ Notify( Confirm( "Are you sure?",
 )
 ```
 
-Will display a notification **true** if the **Yes** button is pressed, and a notification **false** if the **No** button is pressed.
+Displays a notification **true** if the **Yes** button is pressed, and a notification **false** if the **No** button is pressed.
 
 
 ## Notify the user
@@ -205,6 +205,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Back()
 - Clear()
 - Collect()
+- Copy()
 - Disable()
 - Enable()
 - Exit()
@@ -269,6 +270,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - App
 - Compass
 - Connection
+- Dataverse file type columns
 - Environment
 - Host
 - Layout

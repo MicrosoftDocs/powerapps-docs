@@ -1,15 +1,15 @@
 ---
 title: "Use OneNote in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to use OneNote to take notes 
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduserS

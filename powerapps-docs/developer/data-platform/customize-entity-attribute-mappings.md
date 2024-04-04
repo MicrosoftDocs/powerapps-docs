@@ -41,7 +41,7 @@ The response received from InitializeFrom request consists of values of mapped c
 
 For more information see [Create a new record from another record](webapi/create-entity-web-api.md#bkmk_initializefrom).
 
-### Using Organization Service
+### Using SDK for .NET
 
  When creating new records in the context of an existing record where a mapping exists between the tables, you can use the 
  <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest> message to define a new record that contains the values specified in the mapping. You can then use the 
@@ -75,7 +75,7 @@ For more information see [Create a new record from another record](webapi/create
 
 ## Retrieve the table and column mappings
 
- An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Use FetchXML to query data](use-fetchxml-construct-query.md).
+ An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Query data using FetchXml](fetchxml/overview.md).
 
 ```xml
 

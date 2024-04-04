@@ -1,6 +1,6 @@
 ---
 title: "Table relationship definitions messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The article describes the messages that you can use to create, retrieve, update, and delete relationships using Web API and Organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The article describes the messages that you can use to create, retrieve, update, and delete relationships using Web API and SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
@@ -20,7 +20,7 @@ Table relationships define how tables are related to each other. This includes i
   
 The following table lists the messages that you can use to create, retrieve, update, and delete relationships.  
   
-|Web API|Organization Service|Description|  
+|Web API|SDK for .NET|Description|  
 |-------------|-------------|-----------------|  
 |`POST` request on `RelationshipDefinitions` table. <br/>More information: [Create a many-to-many relationship](webapi/create-update-entity-relationships-using-web-api.md#create-a-many-to-many-relationship) |<xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>|Creates a many-to-many relationship between two tables.|  
 |`POST` request on `RelationshipDefinitions` table. <br/>More information: [Create a one-to-many relationship](webapi/create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)|<xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>|Creates a one-to-many relationship between two tables.|  

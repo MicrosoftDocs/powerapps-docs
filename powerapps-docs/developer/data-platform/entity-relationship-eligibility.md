@@ -28,7 +28,7 @@ Before you create a relationship you should confirm whether the table is eligibl
 ### See also
 
 [Table relationship definitions](entity-relationship-metadata.md)   
-[Work with table definitions using the Organization service](org-service/work-with-metadata.md)   
+[Work with table definitions using the SDK for .NET](org-service/work-with-metadata.md)   
 [Create and retrieve table row relationships](org-service/metadata-relationshipmetadata.md)   
 [Table relationship messages](entity-relationship-metadata-messages.md)   
 [Configure table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)   

@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.getParent (Client API reference)
 
-
-
 [!INCLUDE[./includes/getParent-description.md](./includes/getParent-description.md)]
 
 ## Syntax
@@ -25,8 +23,5 @@ contributors:
 ## Return Value
 
 **Type**: [formContext.ui](../formContext-ui.md) object
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,15 +1,14 @@
 ---
-title: cardstateitem table/entity reference
-description: Learn how to use the Microsoft Dataverse cardstateitem table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-author: phecke
-ms.author: pehecke
-ms.service: powerapps
+title: "cardstateitem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the cardstateitem table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # cardstateitem table/entity reference
@@ -17,26 +16,30 @@ ms.custom: bap-template
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+
+
 **Added by**: Power Apps cards Solution
+
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /cardstateitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /cardstateitems(*cardstateitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Retrieve|GET /cardstateitems(*cardstateitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET /cardstateitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Update|PATCH /cardstateitems(*cardstateitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
@@ -72,6 +75,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Scope](#BKMK_Scope)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
+
 ### <a name="BKMK_Cache"></a> Cache
 
 |Property|Value|
@@ -87,12 +91,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_CardId"></a> CardId
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Card Id|
+|DisplayName|Card ID|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -103,12 +108,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CardInstanceId"></a> CardInstanceId
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Card Instance Id|
+|DisplayName|Card Instance ID|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -119,18 +125,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_cardstateitemId"></a> cardstateitemId
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for entity instances|
+|Description|Unique identifier for entity instances|
 |DisplayName|Card State Item Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|cardstateitemid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_Data"></a> Data
 
@@ -147,11 +155,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -163,11 +172,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity|
+|Description|The name of the custom entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -178,12 +188,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The data and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -193,11 +204,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_PartitionId"></a> PartitionId
 
 |Property|Value|
 |--------|-----|
-|Description|Logical partition id. A logical partition consists of a set of records with same partition id|
+|Description|Logical partition id. A logical partition consists of a set of records with same partition id.|
 |DisplayName|Partition Id|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -207,6 +219,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_Scope"></a> Scope
 
@@ -224,11 +237,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 
 |Property|Value|
 |--------|-----|
-|Description|Time to live in seconds|
+|Description|Time to live in seconds.|
 |DisplayName|Time to live|
 |Format|None|
 |IsValidForForm|True|
@@ -261,13 +275,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -275,6 +290,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -293,6 +309,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -310,12 +327,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The data and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -324,13 +342,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -338,6 +357,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -356,6 +376,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -373,13 +394,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -387,6 +409,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -405,6 +428,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -422,12 +446,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The data and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -436,13 +461,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -450,6 +476,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -468,6 +495,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -484,6 +512,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -503,14 +532,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="manytoone"></a>
 
-## many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_cardstateitem_createdby](#BKMK_lk_cardstateitem_createdby)
 - [lk_cardstateitem_createdonbehalfby](#BKMK_lk_cardstateitem_createdonbehalfby)
 - [lk_cardstateitem_modifiedby](#BKMK_lk_cardstateitem_modifiedby)
 - [lk_cardstateitem_modifiedonbehalfby](#BKMK_lk_cardstateitem_modifiedonbehalfby)
+
 
 ### <a name="BKMK_lk_cardstateitem_createdby"></a> lk_cardstateitem_createdby
 
@@ -539,5 +569,5 @@ See the [lk_cardstateitem_modifiedonbehalfby](systemuser.md#BKMK_lk_cardstateite
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.cardstateitem?text=cardstateitem EntityType" />

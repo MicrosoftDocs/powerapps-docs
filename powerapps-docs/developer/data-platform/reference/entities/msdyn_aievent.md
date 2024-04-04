@@ -1,15 +1,14 @@
 ---
-title: msdyn_AIEvent table/entity reference
-description: Learn how to use the Microsoft Dataverse msdyn_AIEvent table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-author: phecke
-ms.author: pehecke
-ms.service: powerapps
+title: "msdyn_AIEvent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the msdyn_AIEvent table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # msdyn_AIEvent table/entity reference
@@ -17,32 +16,35 @@ ms.custom: bap-template
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+
+
 **Added by**: AISolution Solution
+
 
 ## Messages
 
-|Message|Web API operation|SDK class or method|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /msdyn_aievents(*msdyn_aieventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|Assign|PATCH /msdyn_aievents(*msdyn_aieventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_aievents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_aievents(*msdyn_aieventid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Retrieve|GET /msdyn_aievents(*msdyn_aieventid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /msdyn_aievents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
-|SetState|PATCH /msdyn_aievents(*msdyn_aieventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|SetState|PATCH /msdyn_aievents(*msdyn_aieventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_aievents(*msdyn_aieventid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
@@ -90,11 +92,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -106,18 +109,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_msdyn_AIEventId"></a> msdyn_AIEventId
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for entity instances|
+|Description|Unique identifier for entity instances|
 |DisplayName|AI Event|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|msdyn_aieventid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_msdyn_AIModelId"></a> msdyn_AIModelId
 
@@ -131,6 +136,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|msdyn_aimodel|
 |Type|Lookup|
+
 
 ### <a name="BKMK_msdyn_ApprovalId"></a> msdyn_ApprovalId
 
@@ -147,6 +153,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_AutomationLink"></a> msdyn_AutomationLink
 
 |Property|Value|
@@ -162,6 +169,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_AutomationName"></a> msdyn_AutomationName
 
 |Property|Value|
@@ -176,6 +184,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_msdyn_ConsumptionSource"></a> msdyn_ConsumptionSource
 
@@ -197,6 +206,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|PowerApps||
 |2|API||
 
+
+
 ### <a name="BKMK_msdyn_CreditConsumed"></a> msdyn_CreditConsumed
 
 |Property|Value|
@@ -211,6 +222,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|0|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
+
 
 ### <a name="BKMK_msdyn_DataInfo"></a> msdyn_DataInfo
 
@@ -227,6 +239,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_DataType"></a> msdyn_DataType
 
 |Property|Value|
@@ -241,6 +254,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
@@ -257,6 +271,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_Output"></a> msdyn_Output
 
 |Property|Value|
@@ -271,6 +286,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_msdyn_PartnerSource"></a> msdyn_PartnerSource
 
@@ -287,6 +303,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_ProcessingDate"></a> msdyn_ProcessingDate
 
 |Property|Value|
@@ -300,6 +317,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_processingdate|
 |RequiredLevel|ApplicationRequired|
 |Type|DateTime|
+
 
 ### <a name="BKMK_msdyn_ProcessingStatus"></a> msdyn_ProcessingStatus
 
@@ -321,12 +339,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Failed||
 |2|Processing||
 
+
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -335,6 +355,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
@@ -351,6 +372,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|systemuser,team|
 |Type|Owner|
 
+
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
@@ -364,6 +386,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
 
 ### <a name="BKMK_QuickTest"></a> QuickTest
 
@@ -386,6 +409,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -406,6 +431,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
+
+
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -425,11 +452,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -440,11 +469,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created|
+|Description|Time zone code that was in use when the record was created.|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -484,13 +514,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -498,6 +529,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -516,6 +548,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -533,12 +566,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -547,13 +581,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -561,6 +596,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -579,6 +615,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -596,13 +633,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -610,6 +648,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -628,6 +667,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -645,12 +685,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -659,13 +700,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -673,6 +715,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -691,6 +734,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -708,6 +752,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_msdyn_AIModelIdName"></a> msdyn_AIModelIdName
 
 |Property|Value|
@@ -722,6 +767,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -740,6 +786,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 **Added by**: Active Solution Solution
@@ -757,13 +804,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the business unit that owns the record|
+|Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -771,6 +819,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
@@ -789,13 +838,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the team that owns the record|
+|Description|Unique identifier for the team that owns the record.|
 |DisplayName|Owning Team|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -804,13 +854,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|team|
 |Type|Lookup|
 
+
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the user that owns the record|
+|Description|Unique identifier for the user that owns the record.|
 |DisplayName|Owning User|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -818,6 +869,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -837,7 +889,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-to-many relationships
+## One-To-Many Relationships
 
 Listed by **SchemaName**.
 
@@ -849,6 +901,7 @@ Listed by **SchemaName**.
 - [msdyn_aievent_ProcessSession](#BKMK_msdyn_aievent_ProcessSession)
 - [msdyn_aievent_BulkDeleteFailures](#BKMK_msdyn_aievent_BulkDeleteFailures)
 - [msdyn_aievent_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aievent_PrincipalObjectAttributeAccesses)
+
 
 ### <a name="BKMK_msdyn_aievent_SyncErrors"></a> msdyn_aievent_SyncErrors
 
@@ -866,6 +919,7 @@ Same as the [msdyn_aievent_SyncErrors](syncerror.md#BKMK_msdyn_aievent_SyncError
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_msdyn_aievent_DuplicateMatchingRecord"></a> msdyn_aievent_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -881,6 +935,7 @@ Same as the [msdyn_aievent_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdy
 |ReferencedEntityNavigationPropertyName|msdyn_aievent_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_msdyn_aievent_DuplicateBaseRecord"></a> msdyn_aievent_DuplicateBaseRecord
 
@@ -898,6 +953,7 @@ Same as the [msdyn_aievent_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_ai
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_msdyn_aievent_AsyncOperations"></a> msdyn_aievent_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -913,6 +969,7 @@ Same as the [msdyn_aievent_AsyncOperations](asyncoperation.md#BKMK_msdyn_aievent
 |ReferencedEntityNavigationPropertyName|msdyn_aievent_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_msdyn_aievent_MailboxTrackingFolders"></a> msdyn_aievent_MailboxTrackingFolders
 
@@ -930,6 +987,7 @@ Same as the [msdyn_aievent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_msdyn_aievent_ProcessSession"></a> msdyn_aievent_ProcessSession
 
 **Added by**: System Solution Solution
@@ -946,6 +1004,7 @@ Same as the [msdyn_aievent_ProcessSession](processsession.md#BKMK_msdyn_aievent_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_msdyn_aievent_BulkDeleteFailures"></a> msdyn_aievent_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -961,6 +1020,7 @@ Same as the [msdyn_aievent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_a
 |ReferencedEntityNavigationPropertyName|msdyn_aievent_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_msdyn_aievent_PrincipalObjectAttributeAccesses"></a> msdyn_aievent_PrincipalObjectAttributeAccesses
 
@@ -980,9 +1040,9 @@ Same as the [msdyn_aievent_PrincipalObjectAttributeAccesses](principalobjectattr
 
 <a name="manytoone"></a>
 
-## Many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_aievent_createdby](#BKMK_lk_msdyn_aievent_createdby)
 - [lk_msdyn_aievent_createdonbehalfby](#BKMK_lk_msdyn_aievent_createdonbehalfby)
@@ -992,6 +1052,7 @@ Each many-to-one relationship is defined by a corresponding one-to-many relation
 - [team_msdyn_aievent](#BKMK_team_msdyn_aievent)
 - [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
 - [msdyn_aimodel_msdyn_aievent](#BKMK_msdyn_aimodel_msdyn_aievent)
+
 
 ### <a name="BKMK_lk_msdyn_aievent_createdby"></a> lk_msdyn_aievent_createdby
 
@@ -1042,5 +1103,5 @@ See the [msdyn_aimodel_msdyn_aievent](msdyn_aimodel.md#BKMK_msdyn_aimodel_msdyn_
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_aievent?text=msdyn_aievent EntityType" />

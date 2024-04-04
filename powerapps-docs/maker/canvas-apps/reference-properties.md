@@ -68,6 +68,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HTML text](controls/control-html-text.md)** – Convert HTML tags automatically.
 
+**[Horizontal container ](controls/control-horizontal-container.md)** – Determines the position of the child components so that you never have to set X, Y for a component inside the container.
+
 **[Icon](controls/control-shapes-icons.md)** – Add graphic appeal and visual interest.
 
 **[Image](controls/control-image.md)** – Show an image from, for example, a local file or a data source.
@@ -115,6 +117,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Toggle](controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
+
+**[Vertical container ](controls/control-vertical-container.md)** – Determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
 **[3D object](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
 

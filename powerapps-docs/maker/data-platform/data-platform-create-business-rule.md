@@ -4,20 +4,21 @@ description: Step-by-step instructions for how to create a business rule in Micr
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 04/05/2022
+ms.date: 12/04/2023
 ms.subservice: dataverse-maker
 ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
   - maker
 ---
-
 # Create a business rule for a table
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
 > Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+>
+> In a model-driven app, not all business rule actions are available for [editable grids](../model-driven-apps/the-power-apps-grid-control.md).  For [table based view pages](../model-driven-apps/create-remove-pages.md), recommendations can't be created. Editable [subgrids](../model-driven-apps/form-designer-add-configure-subgrid.md) don't support business rules. Business rules won't work with other types of dataset controls.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
@@ -33,7 +34,7 @@ By combining conditions and actions, you can do any of the following with busine
   
 ## Differences between canvas and model-driven apps
 
-Model driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
+Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
 
 * Show or hide columns  
 * Enable or disable columns  
@@ -158,23 +159,27 @@ This section describes common issues that may occur when you use business rules.
 
 ### Composite attributes not supported with Unified Interface apps
 
-Actions or conditions that use [Composite attributes](../../developer/model-driven-apps/clientapi/reference/composite-attributes.md) aren't supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
+Actions or conditions that use [Composite attributes](/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)) aren't supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
+
+### A large number of business rules on a single table impacts performance
+
+New or existing business rules on a table can cause performance degradation when the rules are activated. Power Platform today supports up to 150 business rules for a single table. Beyond 150 business rules, performance degradation can be experienced. This limit includes both client side (JavaScript) and server side (XAML generated as synchronous plugins) business rules. To avoid performance issues with Dataverse, we recommend that you don't create more than 150 business rules for a single table.
 
 ### Is your business rule not firing for a form?
 
-A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
-1.	Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
-2.	Open the form that you want and then on the form designer ribbon select **Business Rules**. 
-3.	In the form designer, open the business rule. 
-4.	In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
+A business rule may not execute because the field referenced in the business rule isn't included with the form. 
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
+1. Open the form that you want and then on the form designer ribbon select **Business Rules**. 
+1. In the form designer, open the business rule. 
+1. In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
 
-     > [!div class="mx-imgBorder"] 
-     > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
+   > [!div class="mx-imgBorder"] 
+   > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
 
- 5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
+1. Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
+   > [!div class="mx-imgBorder"] 
+   > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
 
 ## Frequently asked questions (FAQ)
 

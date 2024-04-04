@@ -1,8 +1,8 @@
 ---
 title: "Debug code components | MicrosoftDocs"
 description: "How to debug a code component using Fiddler and Native debugging"
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -241,7 +241,7 @@ To debug your code component using Fiddler:
    > [!div class="mx-imgBorder"] 
    > ![AutoResponder rule.](media/fiddler-rule-example.png "AutoResponder rule")
 
-   If you want a simpler **AutoResponder** rule approach, see [Streamline JavaScript web resource development using Fiddler AutoResponder](/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
+   If you want a simpler **AutoResponder** rule approach, see [Script web resource development using Fiddler AutoResponder](../model-driven-apps/streamline-javascript-development-fiddler-autoresponder.md).
 
 8. Enter the following for the path to respond with:
 

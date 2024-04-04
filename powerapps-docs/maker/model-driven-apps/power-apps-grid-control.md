@@ -50,7 +50,6 @@ When you configure the Power Apps read-only grid control for a table, *all* view
    - **Navigation types allowed**: Determines which lookup controls in the grid render as hyperlinks. The default value is All.
      - **All**: All table lookup columns render in the grid as a hyperlink.
      - **Primary only**: Suppresses hyperlinks on all lookup fields except the primary column for the selected table.
-     - **None**: Doesn't display hyperlinks, which allow table record navigation.
 
    :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control" lightbox="media/configure-power-apps-grid-control.png":::
 1. To save your changes, select **Save** on the command bar. When you're ready to make the changes available to app users, select **Publish** on the command bar.

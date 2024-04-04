@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Enable duplicate detection and retrieve duplicates
 
-This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/EnableDuplicateDetection).
+This sample shows how to enable duplicate detection and retrieve duplicate records.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Enable duplicate detection and retrieve duplicates sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/EnableDuplicateDetection)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

@@ -28,7 +28,7 @@ All
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
+|`bool`|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
 
 >[!NOTE]
 > If a control is set to false and is in a section that is hidden and if you set the control to true, the section will be visible.
@@ -36,7 +36,7 @@ All
 >[!NOTE]
 > If a control bound to a Business Required column is set to not be visible, the form will no longer require it to have a value before saving. See [Column requirement level](../../../../data-platform/entity-attribute-metadata.md#column-requirement-level) for more information.
 
-### Related topics
+### Related articles
 
 [getVisible](getVisible.md)
 

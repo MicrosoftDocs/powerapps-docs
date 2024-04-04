@@ -23,7 +23,7 @@ Returns the currently selected pane.
 
 Returns the [AppSidePane](../../xrm-app-appsidepane.md) object.
 
-### Related topics
+### Related articles
 
 [sidePanes](../../xrm-app-sidepanes.md)
 

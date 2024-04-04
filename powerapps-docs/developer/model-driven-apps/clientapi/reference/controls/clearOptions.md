@@ -26,13 +26,9 @@ Choice, Choices
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
-### Related topics
+### Related articles
 
-[addOption](addOption.md)
-
-[removeOption](removeOption.md) 
-
-
-
+[addOption](addOption.md)   
+[removeOption](removeOption.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

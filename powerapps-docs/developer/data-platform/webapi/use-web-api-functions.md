@@ -97,7 +97,7 @@ To invoke a bound function, append the full name of the function to the URL and 
   
 The following example uses the <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivileges> function, which is bound to the `systemuser` table.  
   
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(da455fec-68b7-ec11-9840-000d3a13d713)/Microsoft.Dynamics.CRM.RetrieveUserPrivileges HTTP/1.1
@@ -106,7 +106,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
  
 ```http 
 HTTP/1.1 200 OK  
@@ -161,7 +161,7 @@ This function corresponds to the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest>
   
 When you invoke an unbound function, use just the function name, as shown in the following example:
   
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/WhoAmI() HTTP/1.1  
@@ -170,7 +170,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  

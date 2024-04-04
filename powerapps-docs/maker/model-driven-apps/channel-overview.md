@@ -2,7 +2,7 @@
 title: "Release channel for your model-driven app | MicrosoftDocs" 
 description: "This article outlines how release channels enable features within a model-driven app."
 ms.custom: ""
-ms.date: 06/27/2023
+ms.date: 2/19/2024
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -16,7 +16,7 @@ search.audienceType:
 
 Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-Environment admins use the Power Platform admin center to select the channel for the environment. The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is the default for all existing orgs. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
+The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is currently the default for all existing apps and environments. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
 
 The following table provides a comparison of monthly channel and semi-annual channel.
 
@@ -27,13 +27,23 @@ The following table provides a comparison of monthly channel and semi-annual cha
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Microsoft Unified Interface versions](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
 
-The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in twelve smaller releases instead of two larger releases.
+The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
 Microsoft 365 products have seen a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
 
+## Configuring release channel
+
+Release channel can be configured on the environment, app, or user level. The release channel is primarily managed on the environment or app. The user level is an override, which can be used for gradual rollout or to revert specific users.
+
+Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
+
+To allow gradually switching the default from semi-annual channel to monthly channel, the default value will be renamed to **Auto** and there will be explicit choices for semi-annual and monthly. The **Auto** value starts as semi-annual, but switches to monthly with a future release wave. Admins and makers can explicitly select semi-annual if they have a need for the slower cadence.
+
+New apps will soon start defaulting to the explicit monthly value and will be followed with new environment default. More information: [Changing release channels](channel-change.md)
+
 ## Monthly release schedule
 
-Model-driven apps release updates every week, which are gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
+Model-driven apps release updates every week, which is gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
 
 1. First release environment (FRE)
 1. Canada, South America, India, France, South Africa, Germany, Switzerland, Norway, Korea, Singapore
@@ -41,18 +51,19 @@ Model-driven apps release updates every week, which are gradually rolled out to 
 1. Europe
 1. United States
 
-The monthly release is the first weekly release of each month. The release matches ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches the region group 2. Region group 2 is used because it's the first region group for production customer environments and region group 1 is used for customer early validation.
+The monthly release is the first weekly release of each month. The release typically matches ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches the region group 2. Region group 2 is used because it's the first region group for production customer environments and region group 1 is used for customer early validation.
 
 | Monthly release | Doc published | Feature release | Group 1 | Group 2 | Group 3 | Group 4 | Group 5 | 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| May 2023 | Apr 14 | 2305.1 | May 5 | May 12 | May 19 | May 26 | Jun 2 |
-| June 2023 |  May 19 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 |
-| July 2023 | Jun 16 | 2307.1 | Jul 7 | Jul 14 | Jul 21 | Jul 28 | Aug 4 |
-| August 2023 | Jul 21 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 |
-| September 2023 | Aug 18 | 2309.1 | Sep 8 | Sep 15 | Sep 22 | Sep 29 | Oct 6 |
+| Jan 2024 | Dec 22 | 2401.2 | Jan 12 | Jan 19 | Jan 26 | Feb 2  | Feb 9 
+| Feb 2024 | Jan 19 | 2402.1 | Feb 9 | Feb 16 | Feb 23 | Mar 1 | Mar 8
+| Mar 2024 | Feb 16 | 2403.1 | Mar 8 | Mar 15 | Mar 22 | Mar 29 | Apr 5 
+| Apr 2024 | Mar 22 | 2404.1 | Apr 5 | Apr 12 | Apr 19 | Apr 26 | May 3
+| May 2024 | Apr 19 | 2405.1 | May 10 | May 17 | May 24 | May 31 | Jun 7
 
 ## See also
 
 [Changing release channels](channel-change.md) <br />
 [User about dialog - channel](../../user/about-dialog.md) <br />
-[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior)
+[Power Platform admin center - Environment behavior settings](/power-platform/admin/settings-behavior) <br />
+[Power Platform admin center - User settings](/power-platform/admin/users-settings)

@@ -1,10 +1,10 @@
 ---
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
-author: sericks
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/02/2023
+ms.date: 03/28/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,7 +16,8 @@ contributors:
 - mspilde
 - manish1604
 - prdeka
-- AnikaMD 
+- AnikaMD
+- JimDaly
 ---
 
 # Frequently asked questions about Dataverse search
@@ -52,7 +53,7 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 ## Why am I unable to view information for party list fields like To, From, and CC in full results?
 
-Party list fields are special fields that aren't searchable or viewable in the results page. 
+Party list fields are special fields. They're not supported in Dataverse search, nor are they included in the search results page.
 
 ## How come returns don't support HTLM formatting for memo data types?
 
@@ -103,6 +104,10 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - MultiSelectPicklist
 - State
 - Status
+
+## How can I use the search API?
+
+[Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
 ### See also
 

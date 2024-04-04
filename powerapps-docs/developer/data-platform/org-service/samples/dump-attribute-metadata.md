@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Dump column definitions information to a file
 
-This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpAttributeInfo).
+This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Dump column definitions information to a file sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpAttributeInfo)
 
 The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttributeDesc.xml`. You can open this file in **Office Excel** to see a tabular report.
 

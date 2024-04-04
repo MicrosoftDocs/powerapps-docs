@@ -1,15 +1,14 @@
 ---
-title: MetadataForArchival table/entity reference
-description: Learn how to use the Microsoft Dataverse MetadataForArchival table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-ms.service: powerapps
+title: "MetadataForArchival table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the MetadataForArchival table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: phecke
-ms.author: pehecke
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # MetadataForArchival table/entity reference
@@ -17,23 +16,24 @@ ms.custom: bap-template
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds metadata values for entities for retention
+Holds  metadata values of tables for retention
 
 **Added by**: Retention Base Components Solution
 
+
 ## Messages
 
-|Message|Web API operation|SDK class or method|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /metadataforarchivals<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /metadataforarchivals(*metadataforarchivalid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /metadataforarchivals(*metadataforarchivalid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /metadataforarchivals<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /metadataforarchivals(*metadataforarchivalid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|SetState|PATCH /metadataforarchivals(*metadataforarchivalid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /metadataforarchivals(*metadataforarchivalid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -70,14 +70,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+
 ### <a name="BKMK_ExtensionOfRecordId"></a> ExtensionOfRecordId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The metadata for retention|
-|DisplayName|Metadata For Retention|
+|Description|Identifier of the table.|
+|DisplayName|Identifier of the table|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -86,13 +87,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|entity|
 |Type|Lookup|
 
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -104,12 +106,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_IsAvailableForArchival"></a> IsAvailableForArchival
 
 |Property|Value|
 |--------|-----|
-|Description|Is available for retention|
-|DisplayName|Is available for retention|
+|Description|Is available for retention.|
+|DisplayName|Is available for retention.|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|isavailableforarchival|
@@ -125,13 +128,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Is Customizable|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -139,12 +144,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+
 ### <a name="BKMK_IsReadyForArchival"></a> IsReadyForArchival
 
 |Property|Value|
 |--------|-----|
-|Description|Is ready for retention|
-|DisplayName|Is ready for retention|
+|Description|Is ready for retention.|
+|DisplayName|Is ready for retention.|
 |IsValidForCreate|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -161,24 +167,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_MetadataForArchivalId"></a> MetadataForArchivalId
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for entity instances|
+|Description|Unique identifier for entity instances|
 |DisplayName|MetadataForArchivalId|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|metadataforarchivalid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the  settings|
+|Description|Table name on which retention property is defined.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -189,12 +198,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -204,11 +214,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the MetadataForArchival table/entity|
+|Description|Status of the MetadataForArchival|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -224,11 +235,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
+
+
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the MetadataForArchival table/entity|
+|Description|Reason for the status of the MetadataForArchival|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -243,11 +256,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -258,11 +273,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created|
+|Description|Time zone code that was in use when the record was created.|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -304,19 +320,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Row id unique|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|componentidunique|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
@@ -324,7 +342,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Component State|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -341,13 +359,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
+
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -355,6 +375,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -373,6 +394,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -390,12 +412,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -404,13 +427,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -418,6 +442,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -436,6 +461,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -452,6 +478,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
 
 ### <a name="BKMK_ExtensionOfRecordIdName"></a> ExtensionOfRecordIdName
 
@@ -470,13 +497,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution|
+|Description|Indicates whether the solution component is part of a managed solution.|
 |DisplayName|Is Managed|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -493,13 +521,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
+
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -507,6 +537,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -525,6 +556,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -542,12 +574,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -556,13 +589,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -570,6 +604,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -588,6 +623,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -605,13 +641,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier for the organization|
+|Description|Unique identifier for the organization|
 |DisplayName|Organization Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -619,6 +656,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|organization|
 |Type|Lookup|
+
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
@@ -637,6 +675,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 **Added by**: Basic Solution Solution
@@ -644,7 +683,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Record Overwrite Time|
 |Format|DateAndTime|
 |IsValidForForm|False|
@@ -653,19 +692,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
 
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the associated solution|
+|Description|Unique identifier of the associated solution.|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
@@ -673,13 +714,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only|
+|Description|For internal use only.|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|False|
 |LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|The uniqueidentifier|
+|Type|Uniqueidentifier|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -699,7 +741,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-to-many relationships
+## One-To-Many Relationships
 
 Listed by **SchemaName**.
 
@@ -709,6 +751,7 @@ Listed by **SchemaName**.
 - [metadataforarchival_ProcessSession](#BKMK_metadataforarchival_ProcessSession)
 - [metadataforarchival_BulkDeleteFailures](#BKMK_metadataforarchival_BulkDeleteFailures)
 - [metadataforarchival_PrincipalObjectAttributeAccesses](#BKMK_metadataforarchival_PrincipalObjectAttributeAccesses)
+
 
 ### <a name="BKMK_metadataforarchival_SyncErrors"></a> metadataforarchival_SyncErrors
 
@@ -726,6 +769,7 @@ Same as the [metadataforarchival_SyncErrors](syncerror.md#BKMK_metadataforarchiv
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_metadataforarchival_AsyncOperations"></a> metadataforarchival_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -741,6 +785,7 @@ Same as the [metadataforarchival_AsyncOperations](asyncoperation.md#BKMK_metadat
 |ReferencedEntityNavigationPropertyName|metadataforarchival_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_metadataforarchival_MailboxTrackingFolders"></a> metadataforarchival_MailboxTrackingFolders
 
@@ -758,6 +803,7 @@ Same as the [metadataforarchival_MailboxTrackingFolders](mailboxtrackingfolder.m
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_metadataforarchival_ProcessSession"></a> metadataforarchival_ProcessSession
 
 **Added by**: System Solution Solution
@@ -774,6 +820,7 @@ Same as the [metadataforarchival_ProcessSession](processsession.md#BKMK_metadata
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
 ### <a name="BKMK_metadataforarchival_BulkDeleteFailures"></a> metadataforarchival_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -789,6 +836,7 @@ Same as the [metadataforarchival_BulkDeleteFailures](bulkdeletefailure.md#BKMK_m
 |ReferencedEntityNavigationPropertyName|metadataforarchival_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 
 ### <a name="BKMK_metadataforarchival_PrincipalObjectAttributeAccesses"></a> metadataforarchival_PrincipalObjectAttributeAccesses
 
@@ -808,9 +856,9 @@ Same as the [metadataforarchival_PrincipalObjectAttributeAccesses](principalobje
 
 <a name="manytoone"></a>
 
-## Many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_metadataforarchival_createdby](#BKMK_lk_metadataforarchival_createdby)
 - [lk_metadataforarchival_createdonbehalfby](#BKMK_lk_metadataforarchival_createdonbehalfby)
@@ -818,6 +866,7 @@ Each many-to-one relationship is defined by a corresponding one-to-many relation
 - [lk_metadataforarchival_modifiedonbehalfby](#BKMK_lk_metadataforarchival_modifiedonbehalfby)
 - [organization_metadataforarchival](#BKMK_organization_metadataforarchival)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
+
 
 ### <a name="BKMK_lk_metadataforarchival_createdby"></a> lk_metadataforarchival_createdby
 
@@ -858,5 +907,5 @@ See the [metadataforarchival_extensionofrecordid](entity.md#BKMK_metadataforarch
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.metadataforarchival?text=metadataforarchival EntityType" />

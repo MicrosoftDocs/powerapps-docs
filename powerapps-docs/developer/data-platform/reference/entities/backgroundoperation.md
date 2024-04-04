@@ -1,15 +1,14 @@
 ---
-title: backgroundoperation table/entity reference
-description: Learn how to use the Microsoft Dataverse backgroundoperation table/entity, including schema information and supported messages.
-ms.date: 08/07/2023
-ms.topic: conceptual
-author: phecke
-ms.author: pehecke
-ms.service: powerapps
+title: "backgroundoperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the backgroundoperation table/entity."
+ms.date: 02/22/2024
+ms.service: "powerapps"
+ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-ms.custom: bap-template
 ---
 
 # backgroundoperation table/entity reference
@@ -17,21 +16,25 @@ ms.custom: bap-template
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+
+
 **Added by**: msft_BackgroundJobs Solution
+
 
 ## Messages
 
-|Message|Web API operation|SDK class or method|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /backgroundoperations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /backgroundoperations(*backgroundoperationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET /backgroundoperations(*backgroundoperationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET /backgroundoperations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH /backgroundoperations(*backgroundoperationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -74,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StatusCode](#BKMK_StatusCode)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
+
 ### <a name="BKMK_backgroundoperationId"></a> backgroundoperationId
 
 |Property|Value|
@@ -87,11 +91,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
+
 ### <a name="BKMK_DisplayName"></a> DisplayName
 
 |Property|Value|
 |--------|-----|
-|Description|The display name of the background operation|
+|Description|The is display name of background operation.|
 |DisplayName|DisplayName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -103,12 +108,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_EndTime"></a> EndTime
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the background operation finished execution|
+|Description|The date time when background operation finished execution.|
 |DisplayName|End Time|
 |Format|DateAndTime|
 |IsValidForCreate|False|
@@ -118,11 +124,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ErrorCode"></a> ErrorCode
 
 |Property|Value|
 |--------|-----|
-|Description|The error code if the background operation fails|
+|Description|The error code of error for background operation in case of failure.|
 |DisplayName|Error Code|
 |Format|None|
 |IsValidForCreate|False|
@@ -134,11 +141,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_ErrorMessage"></a> ErrorMessage
 
 |Property|Value|
 |--------|-----|
-|Description|The error message associated with the error code if the background operation fails|
+|Description|The error message of error for background operation in case of failure.|
 |DisplayName|Error Message|
 |Format|Text|
 |IsLocalizable|False|
@@ -150,11 +158,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|The sequence number of the import that created this record|
+|Description|Sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -166,11 +175,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_InputParameters"></a> InputParameters
 
 |Property|Value|
 |--------|-----|
-|Description|The input parameters that were supplied to start the background operation|
+|Description|The input parameters that were supplied to start background operation.|
 |DisplayName|Input Parameters|
 |Format|Text|
 |IsLocalizable|False|
@@ -181,11 +191,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the background operation|
+|Description|The name of the background operation.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -197,11 +208,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
+
 ### <a name="BKMK_OutputParameters"></a> OutputParameters
 
 |Property|Value|
 |--------|-----|
-|Description|The response from the background operation|
+|Description|The response of background operation.|
 |DisplayName|Output Parameters|
 |Format|Text|
 |IsLocalizable|False|
@@ -213,12 +225,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was migrated|
+|Description|Date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -228,11 +241,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_PartitionId"></a> PartitionId
 
 |Property|Value|
 |--------|-----|
-|Description|Identifies the logical partition, which is a set of records with the same partition ID|
+|Description|Logical partition id. A logical partition consists of a set of records with same partition id.|
 |DisplayName|Partition Id|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -244,11 +258,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_Priority"></a> Priority
 
 |Property|Value|
 |--------|-----|
-|Description|The execution priority of the background operation|
+|Description|The priority of background operation execution.|
 |DisplayName|Priority|
 |Format|None|
 |IsValidForForm|True|
@@ -260,11 +275,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_RetryCount"></a> RetryCount
 
 |Property|Value|
 |--------|-----|
-|Description|The number of times the background operation was retried|
+|Description|The number of times background operation was retried.|
 |DisplayName|Retry Count|
 |Format|None|
 |IsValidForForm|True|
@@ -275,11 +291,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
 ### <a name="BKMK_RunAs"></a> RunAs
 
 |Property|Value|
 |--------|-----|
-|Description|The identity of the user account that executed the background operation|
+|Description|The identity of user which was used to execute background operation.|
 |DisplayName|Run As|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -291,12 +308,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_StartTime"></a> StartTime
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the background operation started execution|
+|Description|The date time when background operation started execution.|
 |DisplayName|Start Time|
 |Format|DateAndTime|
 |IsValidForCreate|False|
@@ -306,11 +324,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
 |--------|-----|
-|Description|The status of the background operation|
+|Description|The status of background operation.|
 |DisplayName|Status|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -326,11 +345,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|Locked|Locked|
 |3|Completed|Completed|
 
+
+
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
 |--------|-----|
-|Description|The status reason for the background operation|
+|Description|The status reason for background operation.|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -349,11 +370,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |31|Failed|Failed|
 |32|Canceled|Canceled|
 
+
+
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 
 |Property|Value|
 |--------|-----|
-|Description|Time to live in seconds|
+|Description|Time to live in seconds.|
 |DisplayName|Time to live|
 |Format|None|
 |IsValidForForm|True|
@@ -386,13 +409,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
 
+
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who created the record|
+|Description|Unique identifier of the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -400,6 +424,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -418,6 +443,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -435,12 +461,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was created|
+|Description|Date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -449,13 +476,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who created the record|
+|Description|Unique identifier of the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -463,6 +491,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -481,6 +510,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -498,13 +528,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the user who modified the record|
+|Description|Unique identifier of the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -512,6 +543,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -530,6 +562,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -547,12 +580,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|The date and time when the record was modified|
+|Description|Date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -561,13 +595,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
+
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The unique identifier of the delegate user who modified the record|
+|Description|Unique identifier of the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -575,6 +610,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -593,6 +629,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -609,6 +646,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -628,14 +666,15 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="manytoone"></a>
 
-## Many-to-one relationships
+## Many-To-One Relationships
 
-Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_backgroundoperation_createdby](#BKMK_lk_backgroundoperation_createdby)
 - [lk_backgroundoperation_createdonbehalfby](#BKMK_lk_backgroundoperation_createdonbehalfby)
 - [lk_backgroundoperation_modifiedby](#BKMK_lk_backgroundoperation_modifiedby)
 - [lk_backgroundoperation_modifiedonbehalfby](#BKMK_lk_backgroundoperation_modifiedonbehalfby)
+
 
 ### <a name="BKMK_lk_backgroundoperation_createdby"></a> lk_backgroundoperation_createdby
 
@@ -664,5 +703,5 @@ See the [lk_backgroundoperation_modifiedonbehalfby](systemuser.md#BKMK_lk_backgr
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.backgroundoperation?text=backgroundoperation EntityType" />

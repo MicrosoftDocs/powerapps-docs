@@ -20,7 +20,7 @@ Dataverse provides several different ways to save binary data representing files
 ||File|Image|Attachment & Note|
 |---------|---------|---------|---------|
 |**Attribute Type**|File|Image|String|
-|**Create new columns?**|Yes. See [File columns](file-attributes.md)|Yes, See [Image columns](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
+|**Create new columns?**|Yes. See [Work with file column definitions using code](file-attributes.md)|Yes, See [Work with image column definitions using code](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
 |**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 128 MB. See [File size limits](attachment-annotation-files.md#file-size-limits)|
 |**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
 |**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
@@ -72,7 +72,7 @@ More information: [Build queries with QueryExpression](org-service/build-queries
 
 Use this request to return only the `blockedattachments` value of the organization record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedattachments HTTP/1.1
@@ -82,7 +82,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -137,7 +137,7 @@ public static (string, string) RetrieveMimeTypes(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedmimetypes,allowedmimetypes HTTP/1.1
@@ -147,7 +147,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

@@ -14,8 +14,6 @@ contributors:
 ---
 # quickViewControl.getName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getName-description.md](./includes/getName-description.md)]
 
 ## Syntax
@@ -28,7 +26,7 @@ contributors:
 
 **Description**: The name of the quick view control. 
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
 

@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** or **false** to disable or enable the control.|
+|`bool`|Boolean|Yes|Specify **true** or **false** to disable or enable the control.|
 
-### Related topics
+### Related articles
 
-[getDisabled](getDisabled.md)
-
+[getDisabled](getDisabled.md)   
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

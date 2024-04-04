@@ -67,8 +67,8 @@ The following table summarizes the methods that allow you to create cloud flows 
 | Create a cloud flow from Dynamics 365 | Yes |
 | [Create a cloud flow from the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | Yes |
 | [Create a cloud flow from the Power Automate mobile app](/power-automate/mobile/mobile-create-flow) | Yes |
-| [Create a cloud flow from SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No, ETA August |
-| Create a cloud flow from Project Roadmap | No, ETA September |
+| [Create a cloud flow from SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | Yes |
+| Create a cloud flow from Project Roadmap | Yes |
 
 > [!IMPORTANT]
 > Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. You must first create a cloud flow in a solution using a supported method.
@@ -95,7 +95,7 @@ Once the feature is enabled, use solutions [export](../data-platform/export-solu
 
 Take the following considerations into account before you decide to create canvas apps and cloud flows in a solution by default.
 
-- Your Dataverse environment capacity consumption and related cost may increase.
+- Your Dataverse environment capacity consumption and related cost might increase.
 
 - Known solution limitations related to canvas apps still apply to canvas apps created in solutions by default.
 
@@ -109,15 +109,19 @@ Take the following considerations into account before you decide to create canva
 
 - Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there's no way to revert back.
 
+## Improvements
+
+The following scenarios were improved to support cloud flows and canvas apps defined in Dataverse:
+
+- The **Monitor** > **Cloud flow activity** page now supports solution cloud flows.
+- The [List My Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. 
+  
 ## Known issues
 
-- The **Monitor** > **Cloud flow activity** page doesn't support solution cloud flows.
-
 - [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing aren't updated for solution cloud flows.
-
-- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published). The identifier returned is the Logic Apps ID, and unpublished flows don't have one. This API will be updated later to return all solution cloud flows.
-
-- The [List Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. This will be updated later to return solution cloud flows when the [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) is updated.
+- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published). This API is updated to return all solution cloud flows.
+- Flows with delegated authentication to Roadmap can't be added into a solution and migrated to Dataverse.
+- You can't add flows with delegated authentication to SharePoint into a solution and migrate them into Dataverse directly. However, you can remove the delegated authentication to allow migration and then add it back after migration.
 
 ### See also
 

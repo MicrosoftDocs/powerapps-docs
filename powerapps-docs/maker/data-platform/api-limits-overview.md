@@ -5,6 +5,7 @@ ms.date: 01/30/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
+ms.topic: "conceptual"
 search.audienceType: 
   - developer
 contributors: 

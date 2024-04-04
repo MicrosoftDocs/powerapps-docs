@@ -40,7 +40,7 @@ To limit the properties returned when you retrieve data with a GET request, use 
 
 The following example retrieves `name` and `revenue` properties for the account entity with the primary key value equal to 00000000-0000-0000-0000-000000000001:
 
-**Request**
+**Request:**
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=name,revenue HTTP/1.1
 Accept: application/json
@@ -49,7 +49,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal
@@ -104,7 +104,7 @@ When you only need to retrieve the value of a single property, you can append th
 
 The following example returns only the value of the `name` property for an `account` entity:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1
@@ -112,7 +112,7 @@ Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
-**Response**
+**Response:**
 
  ```http
 HTTP/1.1 200 OK
@@ -129,7 +129,7 @@ OData-Version: 4.0
 
 To retrieve the raw value of a primitive property, rather than JSON, append `/$value` to the URL; for example:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/name/$value HTTP/1.1
@@ -137,7 +137,7 @@ Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
-**Response**
+**Response:**
 
  ```http
 HTTP/1.1 200 OK
@@ -157,7 +157,7 @@ You can access the values of navigation properties, or lookup fields, by appendi
 
 The following example returns the `fullname` of the primary `contact` of an `account` using the `primarycontactid` single-valued navigation property:
 
-**Request**
+**Request:**
 
  ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/primarycontactid?$select=fullname HTTP/1.1
@@ -165,7 +165,7 @@ Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -184,7 +184,7 @@ For collection-valued navigation properties, you can request to return only refe
 
 The following example will return references to tasks related to a specific account by adding `/$ref` to the request.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/AccountTasks/$ref HTTP/1.1
@@ -193,7 +193,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -212,7 +212,7 @@ OData-Version: 4.0
 
 The following example returns the number of tasks related to a specific account using the `Account_Tasks` collection-valued navigation property with `/$count` appended: 
 
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks/$count HTTP/1.1  
@@ -222,7 +222,7 @@ OData-Version: 4.0
   
 ```
 
-**Response**
+**Response:**
 
 ```http
 ï»¿2

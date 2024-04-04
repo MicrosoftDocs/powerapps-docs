@@ -342,7 +342,7 @@ The Sliverlight web resource has these additional methods:
 
 A form component control type has the same set of methods available as the [formContext](../clientapi-form-context.md) on a main form. See [Form component behavior > Client API](../../../../maker/model-driven-apps/form-component-control.md#client-api)
 
-### Related topics
+### Related articles
 
 [Columns](attributes.md)
 

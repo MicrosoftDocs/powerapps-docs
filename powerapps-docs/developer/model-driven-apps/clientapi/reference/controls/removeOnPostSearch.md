@@ -33,15 +33,11 @@ kbSearchControl.removeOnPostSearch(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to remove from the **PostSearch** event.| 
+|`myFunction` |Function |Yes|The function to remove from the **PostSearch** event.| 
 
-### Related topics
+### Related articles
 
-[PostSearch event](../events/postsearch.md)
-
+[PostSearch event](../events/postsearch.md)   
 [addOnPostSearch](addOnPostSearch.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
