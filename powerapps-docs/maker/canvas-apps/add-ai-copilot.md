@@ -91,7 +91,7 @@ Clicking on **create new copilot** on the **Edit in Copilot Studio** property fl
 
 
    > [!div class="mx-imgBorder"]
-	> > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
+	> > ![Turn on Copilot control.](media/copilot/EditInCopilotStudio.png)
 
 
 ## Provide feedback
