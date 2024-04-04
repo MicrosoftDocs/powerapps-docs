@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 04/03/2024
+ms.date: 04/04/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - wobushixinxin67
 ---
 # Custom column analyzers for Dataverse Search
 
