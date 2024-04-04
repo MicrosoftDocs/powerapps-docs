@@ -70,6 +70,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
    > ![Add the copilot control.](media/copilot/Copilot-Insert-menu.png)
 
 ## Connect to a custom copilot  
+You can customize the **Copilot (preview)** control and utilize [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started) to add capabilties like additional topics, plugin actions etc.
 ## Step 1 - Enable Edit in Copilot Studio 
 In order to connect the copilot component to a Copilot Studio copilot, a maker can enable **Edit in Copilot Studio** from the app settings in Power Apps Studio.
 1. On the command bar, select **Settings** > **Upcoming features**.
@@ -85,7 +86,7 @@ In order to connect the copilot component to a Copilot Studio copilot, a maker c
    > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
 
 ## Step 3 - Edit and customize in Copilot Studio
-Clicking on **create new copilot** on the **Edit in Copilot Studio** property flyout creates a new copilot which can then be edited in Copilot Studio. You can utilize [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started) to add new capabilties to **Copilot (preview)** control.
+Clicking on **create new copilot** on the **Edit in Copilot Studio** property flyout creates a new copilot which can then be edited in Copilot Studio.  More information: [Microsoft Copilot Studio quickstart](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started)
   
    >  [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/EditInCopilotStudio.png)
