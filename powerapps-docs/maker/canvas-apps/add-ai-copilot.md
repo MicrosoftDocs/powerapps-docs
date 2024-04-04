@@ -90,7 +90,7 @@ To connect the **Copilot (preview)** control to a Copilot Studio Copilot, you mu
 
 ### Edit and customize in Copilot Studio
 
-To create a new copilot that you can edit in Copilot Studio, select **Edit** next to the **Customize copilot** property and then select **Edit in Copilot Studio**. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
+To create a new copilot that you can edit in Copilot Studio, select **Edit** next to the **Customize copilot** property and then select **Edit in Copilot Studio**. For more information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
   
    > [!div class="mx-imgBorder"]
    > ![Edit and customize in Copilot Studio.](media/copilot/edit-in-copilot-studio.png)
