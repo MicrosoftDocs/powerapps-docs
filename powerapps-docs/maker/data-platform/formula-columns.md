@@ -426,6 +426,11 @@ This section describes guidelines and the known limitations with formula columns
 - Maximum formula expression length in formula columns is 1000 characters.
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
   - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
+- In model-driven apps, sorting is disabled on:
+  - A formula column that contains a column of a related table.
+  - A formula column that contains a logical column (for example, address column).
+  - A formula column that contains another calculated or formula column.
+  - A formula column that uses time-bound function `UTCNow()`.
 - Columns of type Whole Number with format Language, Duration, Time Zone are not supported in formula columns.
 - Columns of type String with format Email, Text Area, Ticker Symbol, URL are not supported in formula columns.
 - Formula columns don't display values when the app is in mobile offline mode.
