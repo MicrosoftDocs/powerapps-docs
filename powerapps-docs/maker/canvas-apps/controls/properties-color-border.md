@@ -1,19 +1,19 @@
 ---
 title: Color and border properties in Power Apps
 description: Reference information about the color and border properties in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 09/01/2021
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - gregli-msft
 ---
 # Color and border properties in Power Apps

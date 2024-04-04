@@ -1,18 +1,18 @@
 ---
 title: Rich text editor control in Power Apps
 description: Learn about the details, properties, and examples of the Rich text editor control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 07/19/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - tahoon-ms
 ---
 # Rich text editor control in Power Apps
