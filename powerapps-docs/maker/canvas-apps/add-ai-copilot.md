@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 3/13/2023
+ms.date: 4/4/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -90,7 +90,7 @@ To connect the **Copilot (preview)** control to a Copilot Studio Copilot, you mu
 
 #### Step 3 - Edit and customize in Copilot Studio
 
-To create a new copilot that you can edit in Copilot Studio, select **Edit** next to the **Customize copilot** property and then select **Edit in Copilot Studio** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
+To create a new copilot that you can edit in Copilot Studio, select **Edit** next to the **Customize copilot** property and then select **Edit in Copilot Studio**. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
   
    > [!div class="mx-imgBorder"]
    > ![Edit and customize in Copilot Studio.](media/copilot/edit-in-copilot-studio.png)
