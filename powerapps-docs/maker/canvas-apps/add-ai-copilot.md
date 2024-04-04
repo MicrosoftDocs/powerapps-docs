@@ -21,7 +21,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-The Copilot control is a next-generation AI assistant that can be integrated into canvas apps by makers. It enables end users to use a chat experience that is powered by AI. This feature allows app users to obtain insights about the data in their apps through natural language conversations. Makers can add the control to any canvas app and choose what data it can provide answers for.
+The Copilot control is a next-generation AI assistant that can be integrated in your canvas app. It enables end users to use a chat experience that is powered by AI. This feature allows app users to obtain insights about the data in their apps through natural language conversations. Makers can add the control to any canvas app and choose what data it can provide answers for.
 
 > [!IMPORTANT]
 > - To use this capability your environment must be in the US region.
