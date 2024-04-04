@@ -39,7 +39,7 @@ Dataverse search is built on top of the [Azure AI Search analyzers](/azure/searc
 
 ### Built-in analyzers
 
-By default, Dataverse Search uses the [Apache Lucene Standard analyzer (standard lucene)](https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html) analyzer, which breaks text into elements following [Unicode Text Segmentation](https://unicode.org/reports/tr29/) rules. This default analyzer converts all characters to their lower case form. Both indexed documents and search terms go through the analysis during indexing and query processing.
+By default, Dataverse Search uses the [Microsoft language analyzer](/azure/search/index-add-language-analyzers?branch=main#supported-language-analyzers) based on the Dataverse organization's base language. If there's no Microsoft analyzer, Dataverse search uses the Lucene Analyzer. Both indexed documents and search terms go through the analysis during indexing and query processing.
 
 In Dataverse Search, an analyzer is automatically invoked on all string or memo [columns marked as searchable](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table). You can't apply analyzers for any other type of column.
 
@@ -72,7 +72,7 @@ Follow these steps to open the [SearchAttributeSettings table](../reference/enti
 1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible. You can add them by selecting "**+18 more**" next to the **Name** column.
 1. After selecting the columns, select **Save**.
 
-This closes the dialog and the columns are visible on the page. After saving, the columns should be visible.
+This closes the dialog and the columns are visible on the page. After you save, the columns should be visible.
 
 For more information, see [Table columns and data](../../../maker/data-platform/create-edit-entities-portal.md#table-columns-and-data)
 
@@ -88,13 +88,15 @@ The following table describes what to add to each column:
 
 |Name  |What to add|
 |---------|---------|
-|**Name**|The name can be anything that helps you identify the custom analyzer you have added.|
+|**Name**|The name can be anything that helps you identify the custom analyzer you added.|
 |**entityname**|The logical name of the table that has the column you're configuring.|
 |**attributename**|The logical name of column of the table you want the analyzer used for your search terms or phrases.|
-|**settings**|The JSON string that identifies your custom analyzer. The value might look something like this: `{ "analyzer": "name_analyzer"}{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
+|**settings**|The JSON string that identifies your custom analyzer. You should set only the `analyzer`, or the `indexanalyzer` and `searchanalyzer`.  The values might look something like these: `{ "analyzer": "name_analyzer"}` or `{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
 
-A new index of the table referenced by the `entityname` column starts when a new row is added, or the `settings` column of an existing row is updated. The search engine needs this to use the analyzer for the column defined by the new setting.
+
+Changes made to the `SearchAttributeSettings` might take up to 15 minutes or more to appear in the search service. You can use the [Status message](statistics-status.md#status) to check the `EntityStatusInfo.lastdatasynctimestamp` value for the table to determine when the last sync completed.
+
 
 ### Edit SearchAttributeSettings table columns with code
 
@@ -440,6 +442,8 @@ After creating a custom search analyzer, you must enable it for Dataverse search
 > The [SearchCustomAnalyzer table](../reference/entities/searchcustomanalyzer.md) must contain no more than one row of data. By default it has no data. If more than one row is added, people using Dataverse search will get errors.
 >
 > You can't upload a custom analyzer using [Power Apps](https://make.powerapps.com), you need to use code to upload the file containing the custom analyzer.
+>
+> You can't remove or edit existing `tokenizers`, `tokenFilters`, `charFilters`, and `analyzers` after they have been uploaded to the `SearchCustomAnalyzer` table `analyzers` file column. Each items is added when it is created by uploading the file to the `analyzers` file column the first time. If you need to modify the item, you must redefine it with a different name, and upload the file again. If you redefine an item, we recommend you keep the original definition in the JSON file so you know that name is used already, and can't be used again.
 
 
 ## Set the custom analyzer definition
@@ -449,7 +453,7 @@ Setting the [SearchCustomAnalyzer table](../reference/entities/searchcustomanaly
 1. Create the row and set the [Name column](../reference/entities/searchcustomanalyzer.md#BKMK_name).
 2. Upload the file with the analyzer into the [analyzers column](../reference/entities/searchcustomanalyzer.md#BKMK_analyzers)
 
-If a row already exists, you can also just the .json file set in the `analyzers` column without creating a new row.
+If a row already exists, you can just update the .json file set in the `analyzers` column without creating a new row.
 
 The following example code includes logic to ensure that no more than one row exists in the `searchcustomanalyzer` table, and that any existing row isn't overwritten accidentally.
 
