@@ -39,7 +39,7 @@ Before end users can use the Copilot chat experience in a canvas app, an adminis
 > [!div class="mx-imgBorder"]
 > ![Set Copilot feature ON for the envrironment](media/copilot/Copilot_for_apps_users_ON.png)
 
-When the feature setting is turned on, a maker can go to the app settings in Power Apps Studio and turn on, **Copilot component**. Then you can add the Copilot control to your canvas app, that lets end users use the AI-powered chat experience.
+When the feature setting is turned on, a maker can go to the app settings in Power Apps Studio and turn on, **Copilot component**. Then add the Copilot control to a canvas app, to allow end users use the AI-powered chat experience.
 
 ## Step 2 - Enable Copilot component for a canvas app 
 
