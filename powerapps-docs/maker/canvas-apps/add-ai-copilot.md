@@ -75,20 +75,23 @@ In order to connect the copilot component to a Copilot Studio copilot, a maker c
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the **Preview** tab, set the toggle for **Edit in Copilot Studio** to **On**.
 
-     > [!div class="mx-imgBorder"]
+
+   > [!div class="mx-imgBorder"]
      > > ![Turn on Copilot control.](media/copilot/EditInCopilotStudioSetting.png)
 
 ## Step 2 - Create a new copilot  
 **Edit in Copilot Studio** property of the **Copilot (preview)** control can be used to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot using advance properties tab.
 
-     > [!div class="mx-imgBorder"]
+
+   > [!div class="mx-imgBorder"]
      > > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
 
 ## Step 3 - Edit and customize in Copilot Studio
 Clicking on **create new copilot** on the **Edit in Copilot Studio** property flyout creates a new copilot which can then be edited in Copilot Studio. You can utilize [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started) to add new capabilties to **Copilot (preview)** control.
 
+
    > [!div class="mx-imgBorder"]
-     > > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
+	> > ![Turn on Copilot control.](media/copilot/CustomizeCopilot.png)
 
 
 ## Provide feedback
