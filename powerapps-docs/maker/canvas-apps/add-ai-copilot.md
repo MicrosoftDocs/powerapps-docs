@@ -72,7 +72,7 @@ You can customize the **Copilot (preview)** control and use [Copilot Studio](/mi
 
 #### Step 1 - Turn on Edit in Copilot Studio 
 
-To connect the Copilot component to a Copilot Studio Copilot, you must enable the **Edit in Copilot Studio** feature from the app settings in Power Apps Studio.
+To connect the **Copilot (preview)** control to a Copilot Studio Copilot, you must enable the **Edit in Copilot Studio** feature from the app settings in Power Apps Studio.
 
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the **Preview** tab, set the toggle for **Edit in Copilot Studio** to **On**.
@@ -83,14 +83,14 @@ To connect the Copilot component to a Copilot Studio Copilot, you must enable th
 #### Step 2 - Create a new copilot  
 
 1. On the app authoring menu, select **Insert** > **Copilot (preview)**.
-2. On the properties pane, edit the **Edit in Copilot Studio** property to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot in the **Advanced** properties tab.
+2. On the properties pane, select **Edit** next to the **Customize copilot** property and then select **Create new copilot** to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot in the **Advanced** properties tab.
   
    > [!div class="mx-imgBorder"]
    > ![Create a new copilot.](media/copilot/customize-copilot.png)
 
 #### Step 3 - Edit and customize in Copilot Studio
 
-To create a new copilot that you can edit in Copilot Studio, edit the **Edit in Copilot Studio** property and then select **Create new copilot** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
+To create a new copilot that you can edit in Copilot Studio, select **Edit** next to the **Customize copilot** property and then select **Edit in Copilot Studio** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
   
    > [!div class="mx-imgBorder"]
    > ![Edit and customize in Copilot Studio.](media/copilot/edit-in-copilot-studio.png)
