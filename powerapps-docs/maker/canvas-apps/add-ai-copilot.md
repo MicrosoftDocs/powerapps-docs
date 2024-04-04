@@ -83,7 +83,7 @@ To connect the Copilot component to a Copilot Studio Copilot, you must enable th
 #### Step 2 - Create a new copilot  
 
 1. On the app authoring menu, select **Insert** > **Copilot (preview)**.
-2. On the properties pane, edit the **Edit in Copilot Studio** property to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot from the **Advanced** properties tab.
+2. On the properties pane, edit the **Edit in Copilot Studio** property to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot in the **Advanced** properties tab.
   
    > [!div class="mx-imgBorder"]
    > ![Create a new copilot.](media/copilot/customize-copilot.png)
