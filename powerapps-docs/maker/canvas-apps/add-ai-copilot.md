@@ -57,7 +57,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 ## Step 3 - Add Copilot control to your canvas app
 
-Add the **Copilot (preview)** control to your canvas app to let end users to gain insights about the data in their apps through the chat experience.
+Add the **Copilot (preview)** control to your canvas app to let end users gain insights about the data in their apps through the chat experience.
 
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
@@ -68,7 +68,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 ## Connect to a custom copilot  
 
-You can customize the **Copilot (preview)** control and use [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) to add capabilities such as additional topics, plugin actions, and other capabilities.
+You can customize the **Copilot (preview)** control and use [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) to add capabilities such as more topics, plugin actions, and other capabilities.
 
 ### Turn on Edit in Copilot Studio 
 
@@ -90,7 +90,7 @@ To connect the Copilot component to a Copilot Studio Copilot, you must enable th
 
 ### Edit and customize in Copilot Studio
 
-To create a new copilot that you can edit in Copilot Studio, edit the **Edit in Copilot Studio** property and then select **Create new copilot** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started)
+To create a new copilot that you can edit in Copilot Studio, edit the **Edit in Copilot Studio** property and then select **Create new copilot** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
   
    >  [!div class="mx-imgBorder"]
    > ![Edit and customize in Copilot Studio.](media/copilot/edit-in-copilot-studio.png)
