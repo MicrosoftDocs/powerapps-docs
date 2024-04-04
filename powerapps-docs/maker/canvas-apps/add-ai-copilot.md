@@ -76,7 +76,7 @@ To connect the Copilot component to a Copilot Studio Copilot, you must enable th
 
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the **Preview** tab, set the toggle for **Edit in Copilot Studio** to **On**.
-  
+
    > [!div class="mx-imgBorder"]
    > ![Turn on Edit in Copilot Studio.](media/copilot/edit-in-copilot-studio-setting.png)
 
@@ -92,7 +92,7 @@ To connect the Copilot component to a Copilot Studio Copilot, you must enable th
 
 To create a new copilot that you can edit in Copilot Studio, edit the **Edit in Copilot Studio** property and then select **Create new copilot** on the **Customize Copilot** pane. More information see, [Microsoft Copilot Studio quickstart](/microsoft-copilot-studio/fundamentals-get-started).
   
-   >  [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Edit and customize in Copilot Studio.](media/copilot/edit-in-copilot-studio.png)
 
 
