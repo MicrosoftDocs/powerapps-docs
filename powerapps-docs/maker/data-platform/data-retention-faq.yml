@@ -65,7 +65,7 @@ sections:
 
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
-       The feature is currently available in public cloud regions. The planned target date for GCC cloud is Q1 calendar year 2024.  
+       The feature is currently available in all public cloud regions and GCC. GCC High and DOD are not supported currently.  
 
    - question: Can data be moved from Dataverse long term store to my own data lake?
      answer: |
