@@ -1,7 +1,7 @@
 ---
 title: Attachments control in Power Apps
 description: Learn about the details, properties and examples of the attachments control in Power Apps.
-author: yogeshgupta698 
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.date: 06/01/2022
