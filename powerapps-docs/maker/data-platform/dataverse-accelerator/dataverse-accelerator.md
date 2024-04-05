@@ -28,6 +28,8 @@ Gaining access to more features ahead of the general release lets you proactivel
 
 ## Run the Dataverse Accelerator app
 
+The Dataverse Accelerator app is automatically installed in new environments.
+
 ### Prerequisites
 
 To use the Dataverse Accelerator app, ensure that you have the following prerequisites:
@@ -48,15 +50,9 @@ The app appears in two places:
 
    ![Power Apps Unified Client Applications View]()
 
-### Run the app
-
-1. Navigate to [make.powerapps.com](https://make.powerapps.com) and select an environment
-1. In the Apps page, search for the **Dataverse Accelerator app** (a model driven app)
-1. Select the app and click *play* in the command bar
-
 ## Manage the Dataverse Accelerator app
 
-The Dataverse Accelerator app is hosted on App Source as a [Dynamics 365 app](/power-platform/admin/manage-apps). It is automatically installed in every new environment, and can be managed through the existing App Source platform.
+The Dataverse Accelerator app is hosted on App Source as a [Dynamics 365 app](/power-platform/admin/manage-apps). It can be managed through the existing App Source platform framework.
 
 ### Prerequisites for managing the app
 
