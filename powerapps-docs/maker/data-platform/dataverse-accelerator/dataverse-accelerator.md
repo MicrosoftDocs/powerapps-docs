@@ -11,34 +11,77 @@ contributors:
 - dikamath
 ---
 
-# Use the Dataverse Accelerator (preview)
+# Dataverse Accelerator App (preview)
 
-The Dataverse Accelerator is a powerful toolkit designed to streamline and expedite the development process within Microsoft Dataverse. By leveraging pre-built components, templates, and best practices, developers can significantly reduce development time while maintaining high standards of quality and efficiency.
+[This topic is pre-release documentation and is subject to change.]
 
-> [!NOTE]
-> The Dataverse Accelerator user interface is built on the Power Platform [custom pages feature](../../model-driven-apps/model-app-page-overview.md). As part of these updates we're deploying into environments using system maintenance accounts. In some circumstances these accounts have had an unexpected side effect of presenting as a [break-glass account](/entra/identity/role-based-access-control/security-emergency-access). We're working to correct this behavior as quickly as possible. In the meantime the following apps might appear in the Power Platform admin center:
-> - Dataverse Accelerator app – &lt;model-driven app&gt;, created by a global admin account
-> - Dataverse Actions page - &lt;canvas app&gt; This is a Custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
-> - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
+The Dataverse Accelerator is a first party application designed to streamline the release of more features for Microsoft Dataverse and Power Platform. It offers a distinct advantage by providing early access to preview features, facilitating a deeper understanding and exploration of upcoming enhancements in the maker portal.
 
-## Prerequisites
+Gaining access to more features ahead of the general release lets you proactively evaluate features, offer feedback, and more time to prepare for integration. Stay ahead of the curve and leverag cutting-edge capabilities to enhance productivity, optimize Dataverse processes, and maintain a competitive edge in Power Platform.
 
-Before you begin using the Dataverse Accelerator, ensure that you have the following prerequisites:
+## Features
+
+| Feature | Description |
+| -- | -- |
+| [Low Code Plugins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers, defined in Power Fx. |
+| [Plugin monitoring](./plugin-monitoring.md) | A modern interface to surface the existing plugin trace log table in Dataverse environments, designed for developing and debugging Dataverse plugins and custom APIs.  |
+
+## Run the Dataverse Accelerator app
+
+### Prerequisites
+
+To use the Dataverse Accelerator app, ensure that you have the following prerequisites:
 
 - Access to a Microsoft Dataverse environment.
-- Basic familiarity with Power Platform and Dataverse concepts.
-- Appropriate permissions to install and configure solutions (e.g., system administrator or system customizer security role)
-- Access to the Dataverse accelerator app.
+- Privilege to install and configure solutions (e.g., system administrator or system customizer security role)
+- App-level access to the Dataverse accelerator model driven app (e.g., system customizer or direct access from a security role)
+
+### How the applications appears in your environment
+
+The app appears in two places:
+
+1. In [Power Apps](https://make.powerapps.com/), select **Apps**
+
+   ![Power Apps Maker App List]()
+
+1. In the **Unified Interface apps** view:
+
+   ![Power Apps Unified Client Applications View]()
+
+### Run the app
+
+1. Navigate to [make.powerapps.com](https://make.powerapps.com) and select an environment
+1. In the Apps page, search for the **Dataverse Accelerator app** (a model driven app)
+1. Select the app and click *play* in the command bar
 
 ## Manage the Dataverse Accelerator app
 
 The Dataverse Accelerator app is hosted on App Source as a [Dynamics 365 app](/power-platform/admin/manage-apps). It is automatically installed in every new environment, and can be managed through the existing App Source platform.
 
-### Install
+### Prerequisites for managing the app
+
+You must have the following security role assignment and your Dataverse environment must be above the minimum version.
+
+- Security role: You must have the System administrator security role on the environment.
+
+- A Dataverse environment with minimum Database (DB) version of `9.2.22122.00148`. You can check the Database version:  
+  - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) > Environment page > Version card.
+  - By using the [RetrieveVersion function](/power-apps/developer/data-platform/webapi/reference/retrieveversion) with your browser. Type `https://<your org>.<your region code>.dynamics.com/api/data/v9.2/RetrieveVersion` in your browser address bar and view the JSON returned.
+
+### Installation instructions
 
 The Dataverse Accelerator app is automatically installed in all Power Platform environments with a Microsoft Dataverse database enabled.
 
 If the Dataverse Accelerator is not already installed in an environment, follow the steps to [install an app in the environment view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) for the Dataverse Accelerator.
+
+#### Validating successful install of the Dataverse Accelerator application
+
+To verify that the Dataverse Accelerator application installed successfully:
+
+1. In the Power Platform Admin Center > Select Environments.
+1. Select the environment you chose to install the Dataverse Accelerator application.
+1. In the Resources card, select the Dynamics 365 apps link.
+1. You should find the Dataverse Accelerator app listed with a Status of Installed.
 
 ### Update
 
@@ -65,13 +108,6 @@ pac solution delete --solution-name msdyn_DataverseAcceleratorApp
 pac solution delete --solution-name DataverseAccelerator 
 pac solution delete --solution-name DataverseAccelerator_Anchor 
 ```
-
-## Features
-
-| Feature | Description |
-| -- | -- |
-| [Low Code Plugins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Description. |
-| [Plugin monitoring](#) | Description. |
 
 ## Troubleshooting
 
@@ -115,3 +151,11 @@ For issues with the Dataverse Accelerator solution installation or low-code plug
 
 - Problem Type: **Dataverse Web API and SDK**
 - Problem Subtype: **Accelerator kit for Dataverse**
+
+## Limitations and known issues
+
+> [!NOTE]
+> The Dataverse Accelerator user interface is built on the Power Platform [custom pages feature](../../model-driven-apps/model-app-page-overview.md). As part of these updates we're deploying into environments using system maintenance accounts. In some circumstances these accounts have had an unexpected side effect of presenting as a [break-glass account](/entra/identity/role-based-access-control/security-emergency-access). We're working to correct this behavior as quickly as possible. In the meantime the following apps might appear in the Power Platform admin center:
+> - Dataverse Accelerator app – &lt;model-driven app&gt;, created by a global admin account
+> - Dataverse Actions page - &lt;canvas app&gt; This is a Custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
+> - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plugin is built, created with the user name associated to the global admin account.

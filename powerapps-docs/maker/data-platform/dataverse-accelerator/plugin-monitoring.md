@@ -11,11 +11,11 @@ contributors:
 - dikamath
 ---
 
-# Dataverse plugins monitoring with enhanced trace log viewer (preview)
+# Monitoring for developing Dataverse plugins and Custom APIs (preview)
 
-Plugin monitoring introduces an enhanced Trace Log Viewer, providing a modern interface to surface existing plugin trace log table in a Dataverse environment. This feature is designed to streamline development and debugging processes for both low-code and pro-code solutions. Seamless integration with Dataverse Custom APIs, Dataverse low code plugins, and pro-code plugin run history empowers makers to efficiently monitor and troubleshoot plugin performance.
+Plugin monitoring introduces an enhanced Trace Log Viewer, providing a modern interface to surface the existing plugin trace log table in Dataverse environments. This feature is designed to streamline development and debugging processes for both low-code and pro-code plugins and Custom APIs. Seamless integration with Dataverse Custom APIs, Dataverse low code plugins, and pro-code plugin run history empowers makers to efficiently monitor and troubleshoot plugin performance.
 
-## Access requirements
+## Prerequisites
 
 - To access trace logs, users must have at least read privileges to the Plugin Trace Log privilege.
 - To enable trace logs, System administrator security role is required.
@@ -34,7 +34,7 @@ To install the Dataverse Accelerator and access the Plugin Monitoring feature, p
 
 Here are the steps to use the Plugin monitoring trace viewer:
 
-### Access the Plugin monitoring page
+### Run the Plugin monitoring page
 
 1. Log in to your Dataverse environment with appropriate credentials.
 1. Play the Dataverse Accelerator app
