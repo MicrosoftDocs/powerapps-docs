@@ -130,7 +130,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
-    |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
+    |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names should be in lower case)|
     |JavaScript files referenced within an HTML web resource| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser. |
     |HTML, JS, CSS, XML web resources embedded on a model-driven app form| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser.|
     |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes aren't webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
