@@ -1,8 +1,8 @@
 ---
-title: Query JSON columns in elastic tables (preview)
+title: Query JSON columns in elastic tables
 description: Learn how to query data stored in JSON columns with Dataverse elastic tables with code.
 ms.topic: article
-ms.date: 06/10/2023
+ms.date: 12/04/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -12,7 +12,7 @@ contributors:
  - sumantb-msft
  - JimDaly
 ---
-# Query JSON columns in elastic tables (preview)
+# Query JSON columns in elastic tables
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -73,11 +73,11 @@ OData-Version: 4.0
 {
     "contoso_deviceid" : "device-001",
     "contoso_sensortype", "Humidity",
-    "contoso_value", 40,
+    "contoso_value": 40,
     "contoso_energyconsumption": "{ \"power\": 0.55, \"powerUnit\":\"kWh\", \"voltage\": 2, \"voltageUnit\": \"kV\" }",
-    "contoso_timestamp", DateTime.UtcNow},
-    "partitionid", device-001
-    "ttlinseconds", 86400,  // 86400  seconds in a day
+    "contoso_timestamp": DateTime.UtcNow,
+    "partitionid": device-001
+    "ttlinseconds": 86400,  // 86400  seconds in a day
 }
 ```
 
@@ -213,12 +213,12 @@ OData-Version: 4.0
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Elastic table sample code (preview)](elastic-table-samples.md)<br/>
+> [Elastic table sample code](elastic-table-samples.md)<br/>
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)   
-[Create elastic tables using code (preview)](create-elastic-tables.md)   
-[Use elastic tables using code (preview)](use-elastic-tables.md)   
-[Bulk operation messages (preview)](bulk-operations.md)   
-[Elastic table sample code (preview)](elastic-table-samples.md)
+[Elastic tables for developers](elastic-tables.md)   
+[Create elastic tables using code](create-elastic-tables.md)   
+[Use elastic tables using code](use-elastic-tables.md)   
+[Bulk operation messages](bulk-operations.md)   
+[Elastic table sample code](elastic-table-samples.md)

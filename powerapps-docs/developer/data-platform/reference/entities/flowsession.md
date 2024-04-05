@@ -1,7 +1,7 @@
 ---
 title: "flowsession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -18,7 +18,7 @@ search.audienceType:
 
 Entity to store the information that is generated when a Power Automate Desktop flow runs.
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 
 ## Messages
@@ -79,10 +79,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [MachineGroupId](#BKMK_MachineGroupId)
 - [MachineId](#BKMK_MachineId)
+- [MachinePercentCpuUsage](#BKMK_MachinePercentCpuUsage)
+- [MachinePercentRamUsage](#BKMK_MachinePercentRamUsage)
+- [MachineRamUsage](#BKMK_MachineRamUsage)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ParentCloudFlowRunSequenceId](#BKMK_ParentCloudFlowRunSequenceId)
 - [ProcessVersion](#BKMK_ProcessVersion)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
@@ -97,6 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [TriggerType](#BKMK_TriggerType)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -318,6 +323,54 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_MachinePercentCpuUsage"></a> MachinePercentCpuUsage
+
+|Property|Value|
+|--------|-----|
+|Description|The percentage of CPU utilization by the machine|
+|DisplayName|Machine CPU usage percentage|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|machinepercentcpuusage|
+|MaxValue|100|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Double|
+
+
+### <a name="BKMK_MachinePercentRamUsage"></a> MachinePercentRamUsage
+
+|Property|Value|
+|--------|-----|
+|Description|The percentage of RAM utilization by the machine|
+|DisplayName|Machine RAM usage percentage|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|machinepercentramusage|
+|MaxValue|100|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Double|
+
+
+### <a name="BKMK_MachineRamUsage"></a> MachineRamUsage
+
+|Property|Value|
+|--------|-----|
+|Description|The machine RAM usage in Mo|
+|DisplayName|Machine RAM usage|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|machineramusage|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -379,6 +432,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_ParentCloudFlowRunSequenceId"></a> ParentCloudFlowRunSequenceId
+
+|Property|Value|
+|--------|-----|
+|Description|The sequence id of the parent cloud flow run, only used when the Desktop Flow was run by a cloud flow.|
+|DisplayName|Parent Cloud Flow Run Sequence Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentcloudflowrunsequenceid|
+|MaxLength|1000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ProcessVersion"></a> ProcessVersion
@@ -627,6 +696,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_TriggerType"></a> TriggerType
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates the type of trigger used to run the desktop flow.|
+|DisplayName|Trigger type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|triggertype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### TriggerType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|ApiFlow||
+|1|DesktopFlow||
+|2|Local||
+|3|RunDesktopFlowDataverseApi||
+
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode

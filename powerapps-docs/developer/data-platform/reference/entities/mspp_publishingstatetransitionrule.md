@@ -1,7 +1,7 @@
 ---
 title: "Publishing State Transition Rule (mspp_publishingstatetransitionrule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Publishing State Transition Rule (mspp_publishingstatetransitionrule)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -392,9 +392,6 @@ Listed by **SchemaName**.
 - [mspp_publishingstatetransitionrule_SocialActivities](#BKMK_mspp_publishingstatetransitionrule_SocialActivities)
 - [mspp_publishingstatetransitionrule_connections1](#BKMK_mspp_publishingstatetransitionrule_connections1)
 - [mspp_publishingstatetransitionrule_connections2](#BKMK_mspp_publishingstatetransitionrule_connections2)
-- [mspp_publishingstatetransitionrule_msfp_alerts](#BKMK_mspp_publishingstatetransitionrule_msfp_alerts)
-- [mspp_publishingstatetransitionrule_msfp_surveyinvites](#BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites)
-- [mspp_publishingstatetransitionrule_msfp_surveyresponses](#BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses)
 
 
 ### <a name="BKMK_mspp_publishingstatetransitionrule_ActivityPointers"></a> mspp_publishingstatetransitionrule_ActivityPointers
@@ -631,57 +628,6 @@ Same as the [mspp_publishingstatetransitionrule_connections2](connection.md#BKMK
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_connections2|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_alerts"></a> mspp_publishingstatetransitionrule_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_publishingstatetransitionrule_msfp_alerts](msfp_alert.md#BKMK_mspp_publishingstatetransitionrule_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites"></a> mspp_publishingstatetransitionrule_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_publishingstatetransitionrule_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses"></a> mspp_publishingstatetransitionrule_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_publishingstatetransitionrule_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_publishingstatetransitionrule_msfp_surveyresponses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -26,7 +26,7 @@ You can use wildcard characters with the following operators when you build quer
 `ends-with`<br/>
 `not-end-with`<br/>
 
-More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 
 # [QueryExpression](#tab/queryexpression)
@@ -114,7 +114,7 @@ Queries that use these anti-patterns introduce performance problems because the 
 
 ### See also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)   
+[Query data using FetchXml](fetchxml/overview.md)   
 [Use the ConditionExpression class](org-service/use-conditionexpression-class.md)   
 [Query data using the Web API](webapi/query-data-web-api.md)
 

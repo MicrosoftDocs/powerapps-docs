@@ -1,7 +1,7 @@
 ---
 title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -415,6 +415,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [VersionNumber](#BKMK_VersionNumber)
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -671,6 +672,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
+
+### <a name="BKMK_VersionNumber"></a> VersionNumber
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Version number of the callbackregistration.|
+|DisplayName|Version Number|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="manytoone"></a>
 

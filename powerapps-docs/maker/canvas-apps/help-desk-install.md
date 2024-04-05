@@ -68,7 +68,9 @@ You can also enable the capability to send emails or approval routing using [Pow
 [Canvas apps connectors for Power Apps](connections-list.md) <br>
 [Formula reference](formula-reference.md) <br>
 [Controls reference](reference-properties.md) <br>
-[Share a canvas app](share-app.md)
+[Share a canvas app](share-app.md) <br>
+[Enterprise templates for Power Platform](/power-platform/solution-templates/overview)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 

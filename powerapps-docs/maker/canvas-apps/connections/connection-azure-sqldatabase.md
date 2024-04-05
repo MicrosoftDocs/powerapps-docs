@@ -1,11 +1,11 @@
 ---
 title: Connect to SQL Server from Power Apps
-description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
+description: Learn how to connect to Azure SQL or an on-premises SQL Server database.
 author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/28/2021
+ms.date: 2/28/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -15,173 +15,123 @@ contributors:
   - mduelae
   - lancedmicrosoft
 ---
+
 # Connect to SQL Server from Power Apps
 
-Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
+You can connect to SQL Server in either Azure or an on-premises database.
 
-> [!NOTE] 
-> Newly created SQL data sources are no longer prefixed with "[dbo]" as they have been in previous versions of Power Apps. See the [common issues and resolutions](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) page for more information.
-
-## Prerequisites
-
-* [Sign up](../../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-* Gather the following information for a database that contains at least one table with a primary key:
-  
-  * the name of the database
-  * the name of the server on which the database is hosted
-  * a valid user name and password to connect to the database
-  * the type of authentication needed to connect to the database
-    
-    If you don't have this information, ask the administrator of the database that you want to use.
-* For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
+> [!NOTE]
+> Newly created SQL data sources are no longer prefixed with `[dbo]` like in previous versions of Power Apps.
+>
+> For more information, see [Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions).
 
 ## Generate an app automatically
 
-
-Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
-
+Depending on which Power Apps interface you're using, reference the [new look](../intro-maker-portal.md?tabs=home-new-look) or the [classic look](../intro-maker-portal.md?tabs=home-classic) to build an app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Depending on how you want to create your app, from the home screen, select one of the following options:
+1. From the **Home** page, select either the _single-page gallery_ or _three screen mobile_ option:
    - To create a single-page gallery app with a responsive layout, choose either:
-     - **Start with data** > **Connect to external data** > **From SQL**.
-     - **Start with a page design** > **Gallery connected to external table** > **From SQL**.
+     - **Start with data** > **Select external data** > **From SQL**.
+     - **Start with a page design** > **Gallery connected to external data** > **From SQL**.
    - To create a three screen mobile app, select **Start with an app template** > **From SQL**.
-1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
+1. Select your SQL connection and then select a table. To choose a different connection, select the **...** overflow menu to switch your connection or create a new SQL connection.
+
+   > [!NOTE]
+   > Only one connection is shown at a time.
 1. When you're done, select **Create app**.
 
+## Call stored procedures directly in Power Fx (preview)
 
+You can directly call SQL Server stored procedures from Power Fx by turning on the SQL Server stored procedure preview switch.
+> [!NOTE]
+> Output parameters aren't supported.
 
+1. Go to **Settings** > **Upcoming features** > **Preview**.
+1. Search for **stored procedures**.
+1. Set the toggle to **On** for **SQL Server stored procedures**.
+2. Save and reopen the app.
+
+:::image type="content" source="media/connection-azure-sqldatabase/previewflag-call-sp-direct.png" alt-text="Screenshot that shows the SQL Server stored procedures toggle set to On.":::
+
+When you add a SQL Server connection to your app, you can now add tables and views or stored procedures. This feature also works with secure implicit connections.
+
+:::image type="content" source="media/connection-azure-sqldatabase/tables-views-stored-proc-selector.png" alt-text="Screenshot that shows lists of tables, views, and stored procedures available to be added to your app.":::
+
+If you don't immediately see your stored procedure, it's faster to search for it.
+
+Once you select a stored procedure, a child node appears and you can designate the stored procedure as **Safe to use for galleries and tables**. If you check this option, you can assign your stored procedure as an **Items** property for galleries for tables to use in your app.
+
+Enable this option **only if**:
+
+1. There are **no side effects** to calling this procedure on demand, multiple times, whenever Power Apps refreshes the control. When used with an **Items** property of a gallery or table, Power Apps calls the stored procedure whenever the system determines a refresh is needed. You can't control when the stored procedure is called.
+2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons you should bring in less than 2,000 records.
+
+> [!IMPORTANT]
+> The schema of the return values of the stored procedure should be **static**. Meaning that it does not change from call to call. For example, if you call a stored procedure and it returns two tables then it should **always** return two tables. If the schema of the results are **dynamic** then you should not use it with Power Apps. For example if you call the stored procedure and it sometimes returns one table and sometimes returns two tables then it will not work correctly in Power Apps. Power Apps requires a static schema for this call.
+>
+
+### Example
+
+When you add a stored procedure, you might see more than one data source in your project.
+
+:::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text="Screenshot that shows SQL data sources.":::
+
+To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. Note also that when Power Apps brings the stored procedure in, it concatenates the full name. So, 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
+
+Remember to convert values appropriately as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using 'Value()'.
+
+![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
+
+### Working with a gallery
+You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by 'ResultSets'. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
+
+For example, your access of a stored procedure off of a data source named 'Paruntimedb' with a stored procedure named 'dbo.spo_show_all_library_books()' will look like the following.
+
+```powerapps-dot
+Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
+```
+This populates the gallery with records. However, stored procedures are an addition of **action** behaviors to the tabular model. Refresh() only works with tabular data sources and can't be used with stored procedures. Then you need to refresh the gallery when a record is created, updated, or deleted. When you use a Submit() on a form for a tabular data source it effectively calls Refresh() under the covers and updates the gallery.
+
+To get around this limitation, use a variable in the OnVisible property for the screen and set the stored procedure to the variable.
+
+```powerapps-dot
+Set(SP_Books, Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1);
+```
+
+And then set the 'Items' property of the gallery to the variable name.
+
+```powerapps-dot
+SP_Books
+```
+
+Then after you create, update, or delete a record with a call to the stored procedure, set the variable again. This updates the gallery.
+
+```powerapps-dot
+Paruntimedb.dbonewlibrarybook({   
+  book_name: DataCardValue3_2.Text, 
+  author: DataCardValue1_2.Text,
+    ...
+});
+Set(SP_Books, Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1);
+```
+
+## Known issues
+
+### SQL data sources no longer add a `[dbo]` prefix to the data source name
+
+The `[dbo]` prefix doesn't serve any practical purpose in Power Apps as data source names are automatically disambiguated. Existing data sources aren't affected by this change, but any newly added SQL data sources don't include the prefix.
+
+If you need to update a large number of formulas in one of your apps, the [Power Apps Source File Pack and Unpack Utility](https://powerapps.microsoft.com/blog/source-code-files-for-canvas-apps/) can be used to do a global search-and-replace.
+
+> [!NOTE]
+> Starting in version 3.21054, we'll automatically update broken legacy name references to the new data source name after reading the data source.
 
 ## Next steps
-* Learn how to [show data from a data source](../add-gallery.md).
-* Learn how to [view details and create or update records](../add-form.md).
-* See other types of [data sources](../connections-list.md) to which you can connect.  
-* [Understand tables and records](../working-with-tables.md) with tabular data sources.
 
-<!--NotAvailableYet
-## View the available functions ##
-This connection includes the following functions:
-
-| Function Name |  Description |
-| --- | --- |
-|[GetItems](connection-azure-sqldatabase.md#getitems) | Retrieves rows from a SQL table |
-|[PostItem](connection-azure-sqldatabase.md#postitem) | Inserts a new row into a SQL table |
-|[GetItem](connection-azure-sqldatabase.md#getitem) | Retrieves a single row from a SQL table |
-|[DeleteItem](connection-azure-sqldatabase.md#deleteitem) | Deletes a row from a SQL table |
-|[PatchItem](connection-azure-sqldatabase.md#patchitem) | Updates an existing row in a SQL table |
-|[GetTables](connection-azure-sqldatabase.md#gettables) | Retrieves tables from a SQL database |
-
-### GetItems
-Get rows: Retrieves rows from a SQL table
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Name of SQL table|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
-
-### PostItem
-Insert row: Inserts a new row into a SQL table
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Name of SQL table|
-|item| |yes|Row to insert into the specified table in SQL|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
-
-
-### GetItem
-Get row: Retrieves a single row from a SQL table
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Name of SQL table|
-|id|string|yes|Unique identifier of the row to retrieve|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | |
-
-
-### DeleteItem
-Delete row: Deletes a row from a SQL table
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Name of SQL table|
-|id|string|yes|Unique identifier of the row to delete|
-
-#### Output properties
-None.
-
-### PatchItem
-Update row: Updates an existing row in a SQL table
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Name of SQL table|
-|id|string|yes|Unique identifier of the row to update|
-|item| |yes|Row with updated values|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | &nbsp; |
-
-
-### GetTables
-Get tables: Retrieves tables from a SQL database
-
-#### Input properties
-None.
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | Can output the Name and DisplayName properties |
-
-### ExecuteProcedure
-Execute stored procedure: Executes a stored procedure in SQL
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|procedure|string|yes|Procedure name|
-|parameters| |yes|Input parameters|
-
-#### Output properties
-Result of the stored procedure execution.
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|OutputParameters|object|No | Output parameter values |
-|ReturnCode|integer|No | Return code of a procedure |
-|ResultSets|object|No | Result sets|
-
--->
-
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
+- [Understand tables and records](../working-with-tables.md) with tabular data sources.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

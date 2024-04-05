@@ -1,7 +1,7 @@
 ---
 title: "Ad Placement (mspp_adplacement)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Ad Placement (mspp_adplacement)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -358,9 +358,6 @@ Listed by **SchemaName**.
 - [mspp_adplacement_Tasks](#BKMK_mspp_adplacement_Tasks)
 - [mspp_adplacement_RecurringAppointmentMasters](#BKMK_mspp_adplacement_RecurringAppointmentMasters)
 - [mspp_adplacement_SocialActivities](#BKMK_mspp_adplacement_SocialActivities)
-- [mspp_adplacement_msfp_alerts](#BKMK_mspp_adplacement_msfp_alerts)
-- [mspp_adplacement_msfp_surveyinvites](#BKMK_mspp_adplacement_msfp_surveyinvites)
-- [mspp_adplacement_msfp_surveyresponses](#BKMK_mspp_adplacement_msfp_surveyresponses)
 
 
 ### <a name="BKMK_mspp_adplacement_ActivityPointers"></a> mspp_adplacement_ActivityPointers
@@ -563,57 +560,6 @@ Same as the [mspp_adplacement_SocialActivities](socialactivity.md#BKMK_mspp_adpl
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_adplacement_SocialActivities|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_adplacement_msfp_alerts"></a> mspp_adplacement_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_adplacement_msfp_alerts](msfp_alert.md#BKMK_mspp_adplacement_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_adplacement_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_adplacement_msfp_surveyinvites"></a> mspp_adplacement_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_adplacement_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_adplacement_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_adplacement_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_adplacement_msfp_surveyresponses"></a> mspp_adplacement_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_adplacement_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_adplacement_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_adplacement_msfp_surveyresponses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

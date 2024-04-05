@@ -1,7 +1,7 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -106,7 +106,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|activitypointer,adx_inviteredemption,adx_portalcomment,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,msfp_alert,msfp_surveyinvite,msfp_surveyresponse,phonecall,recurringappointmentmaster,socialactivity,task|
+|Targets|activitypointer,adx_inviteredemption,adx_portalcomment,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
 |Type|Lookup|
 
 
@@ -705,13 +705,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10099|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10115|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10246|Invite Redemption|Holds information about the redemption of an invite.|
-|10247|Portal Comment|An activity which is used to share information between the user and the customer on the portal.|
-|10409|Customer Voice alert||
-|10410|Customer Voice survey invite|Activity that tracks a survey invitation sent to a person.|
-|10411|Customer Voice survey response|Response to a survey.|
+|10120|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10136|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10257|Invite Redemption|Holds information about the redemption of an invite.|
+|10258|Portal Comment|An activity which is used to share information between the user and the customer on the portal.|
 
 
 
@@ -1009,9 +1006,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
 - [adx_inviteredemption_QueueItems](#BKMK_adx_inviteredemption_QueueItems)
 - [adx_portalcomment_QueueItems](#BKMK_adx_portalcomment_QueueItems)
-- [msfp_alert_QueueItems](#BKMK_msfp_alert_QueueItems)
-- [msfp_surveyinvite_QueueItems](#BKMK_msfp_surveyinvite_QueueItems)
-- [msfp_surveyresponse_QueueItems](#BKMK_msfp_surveyresponse_QueueItems)
 
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
@@ -1113,24 +1107,6 @@ See the [adx_inviteredemption_QueueItems](adx_inviteredemption.md#BKMK_adx_invit
 **Added by**: Active Solution Solution
 
 See the [adx_portalcomment_QueueItems](adx_portalcomment.md#BKMK_adx_portalcomment_QueueItems) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-### <a name="BKMK_msfp_alert_QueueItems"></a> msfp_alert_QueueItems
-
-**Added by**: Active Solution Solution
-
-See the [msfp_alert_QueueItems](msfp_alert.md#BKMK_msfp_alert_QueueItems) one-to-many relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-### <a name="BKMK_msfp_surveyinvite_QueueItems"></a> msfp_surveyinvite_QueueItems
-
-**Added by**: Active Solution Solution
-
-See the [msfp_surveyinvite_QueueItems](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_QueueItems) one-to-many relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-### <a name="BKMK_msfp_surveyresponse_QueueItems"></a> msfp_surveyresponse_QueueItems
-
-**Added by**: Active Solution Solution
-
-See the [msfp_surveyresponse_QueueItems](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_QueueItems) one-to-many relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
 
 ### See also
 

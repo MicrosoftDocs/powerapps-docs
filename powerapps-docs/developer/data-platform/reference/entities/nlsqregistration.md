@@ -1,7 +1,7 @@
 ---
 title: "NL2SQ Registration Information (nlsqregistration)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the NL2SQ Registration Information (nlsqregistration)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -40,7 +40,7 @@ Org registration status, AllowedEntity list, and registration error message.
 |Update|PATCH /nlsqregistrations(*nlsqregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -66,6 +66,7 @@ Org registration status, AllowedEntity list, and registration error message.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AllowedEntityList](#BKMK_AllowedEntityList)
+- [EntityList](#BKMK_EntityList)
 - [ErrorMessage](#BKMK_ErrorMessage)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Name](#BKMK_Name)
@@ -87,7 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The NL2SQ service allowed entity list to be fetched for this organization.|
+|Description|The NL2SQ service allowed entity list to be fetched for this organization. (Deprecated)|
 |DisplayName|AllowedEntityList|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -97,6 +98,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_EntityList"></a> EntityList
+
+|Property|Value|
+|--------|-----|
+|Description|The NL2SQ service allowed entity list to be fetched for this organization.|
+|DisplayName|EntityList|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entitylist|
+|MaxLength|50000|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorMessage"></a> ErrorMessage
@@ -657,7 +674,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Targets|businessunit|
 |Type|Lookup|
 

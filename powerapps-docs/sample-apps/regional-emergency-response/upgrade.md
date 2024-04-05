@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020
 ms.author: pankar
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 ---
 
 # Upgrade the Regional Government Emergency Response and Monitoring solution

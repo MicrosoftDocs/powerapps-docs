@@ -1,7 +1,7 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 10/18/2023
+ms.date: 11/17/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -37,7 +37,7 @@ Batch requests provide two capabilities that can be used together:
    > Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
 
-Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). People use batch requests because the URL for the request is included in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries using FetchXml can result in long URLs. More information: [Use FetchXML within a batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request).
+Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). People use batch requests because the URL for the request is included in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries using FetchXml can result in long URLs. More information: [Use FetchXML within a batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
 
 Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose. The raw request and response bodies are essentially a text document that must match specific requirements. To access the data in a response, you need to parse the text in the response or locate a helper library to access the data in the response. See [.NET helper methods](#net-helper-methods).
 
@@ -71,6 +71,8 @@ Content-Transfer-Encoding: binary
 
 > [!IMPORTANT]
 > Only payload items with a batch identifier matching the batch identifier sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifier, the batch request will succeed without executing any payload item.
+> 
+> You must include any other [HTTP headers](compose-http-requests-handle-errors.md#http-headers) for each item in the batch to control the behavior for that request. Headers applied to the `$batch` operation will not be applied to each item. For example, if you include a `GET` request and want to [request annotations](compose-http-requests-handle-errors.md#request-annotations), you must add the appropriate `Prefer: odata.include-annotations="*"` header to each item.
 
 The end of the batch request must contain a termination indicator like the following example:  
   

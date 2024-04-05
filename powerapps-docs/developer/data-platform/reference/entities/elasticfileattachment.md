@@ -1,7 +1,7 @@
 ---
 title: "ElasticFileAttachment table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ElasticFileAttachment table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,7 @@ Elastic File Attachment
 |Update|PATCH /elasticfileattachments(*elasticfileattachmentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -144,7 +144,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets||
+|Targets|componentversionnrddatasource|
 |Type|Lookup|
 
 
@@ -347,7 +347,41 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|BigInt|
 
+<a name="onetomany"></a>
 
+## One-To-Many Relationships
+
+Listed by **SchemaName**.
+
+
+### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
+
+**Added by**: Component Versioning Solution
+
+Same as the [ElasticFileAttachment_componentversionnrddatasource_Payload](componentversionnrddatasource.md#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload) many-to-one relationship for the [componentversionnrddatasource](componentversionnrddatasource.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|componentversionnrddatasource|
+|ReferencingAttribute|payload|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ElasticFileAttachment_componentversionnrddatasource_Payload|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+<a name="manytoone"></a>
+
+## Many-To-One Relationships
+
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+
+
+### <a name="BKMK_componentversionnrddatasource_ElasticFileAttachments"></a> componentversionnrddatasource_ElasticFileAttachments
+
+**Added by**: Component Versioning Solution
+
+See the [componentversionnrddatasource_ElasticFileAttachments](componentversionnrddatasource.md#BKMK_componentversionnrddatasource_ElasticFileAttachments) one-to-many relationship for the [componentversionnrddatasource](componentversionnrddatasource.md) table/entity.
 
 ### See also
 

@@ -35,6 +35,11 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
 ![Media pane.](./media/add-images-pictures-audio-video/media-pane.gif "Media pane")
 
+> [!NOTE]
+> When adding media files by URL,
+> - Use HTTPS to ensure compatibility with modern browsers.
+> - Ensure the URL is accessible anonymously without any authentication. Try to enter the URL in private browsing mode to verify that it's accessible without signing in.
+
 ### Add images, audio, or video using the media pane
 
 To use the **Media** pane to add, remove or use media files in your app:

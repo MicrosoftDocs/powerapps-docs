@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIModel table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIModel table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -947,9 +947,10 @@ Listed by **SchemaName**.
 - [msdyn_aimodel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aimodel_PrincipalObjectAttributeAccesses)
 - [msdyn_aimodel_msdyn_aiconfiguration](#BKMK_msdyn_aimodel_msdyn_aiconfiguration)
 - [msdyn_aimodel_msdyn_aievent](#BKMK_msdyn_aimodel_msdyn_aievent)
+- [msdyn_AIPluginOperation_AIModel](#BKMK_msdyn_AIPluginOperation_AIModel)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
-- [msdyn_AIBFeedbackLoop_msdyn_AIModel](#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel)
 - [msdyn_AIBDatasetsContainer_msdyn_AIModelI](#BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI)
+- [msdyn_AIBFeedbackLoop_msdyn_AIModel](#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel)
 
 
 ### <a name="BKMK_msdyn_aimodel_SyncErrors"></a> msdyn_aimodel_SyncErrors
@@ -1084,6 +1085,21 @@ Same as the [msdyn_aimodel_msdyn_aievent](msdyn_aievent.md#BKMK_msdyn_aimodel_ms
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_msdyn_AIPluginOperation_AIModel"></a> msdyn_AIPluginOperation_AIModel
+
+Same as the [msdyn_AIPluginOperation_AIModel](aipluginoperation.md#BKMK_msdyn_AIPluginOperation_AIModel) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|msdyn_aimodel|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_AIPluginOperation_AIModel|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
 **Added by**: System Solution Solution
@@ -1101,23 +1117,6 @@ Same as the [msdyn_aimodel_Annotations](annotation.md#BKMK_msdyn_aimodel_Annotat
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
-### <a name="BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel"></a> msdyn_AIBFeedbackLoop_msdyn_AIModel
-
-**Added by**: AISolutionFullAdditions Solution
-
-Same as the [msdyn_AIBFeedbackLoop_msdyn_AIModel](msdyn_aibfeedbackloop.md#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel) many-to-one relationship for the [msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aibfeedbackloop|
-|ReferencingAttribute|msdyn_aimodelid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_AIBFeedbackLoop_msdyn_AIModel|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI"></a> msdyn_AIBDatasetsContainer_msdyn_AIModelI
 
 **Added by**: AI Solution default templates Solution
@@ -1131,6 +1130,23 @@ Same as the [msdyn_AIBDatasetsContainer_msdyn_AIModelI](msdyn_aibdatasetscontain
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_AIBDatasetsContainer_msdyn_AIModelI|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel"></a> msdyn_AIBFeedbackLoop_msdyn_AIModel
+
+**Added by**: AISolutionFullAdditions Solution
+
+Same as the [msdyn_AIBFeedbackLoop_msdyn_AIModel](msdyn_aibfeedbackloop.md#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel) many-to-one relationship for the [msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfeedbackloop|
+|ReferencingAttribute|msdyn_aimodelid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_AIBFeedbackLoop_msdyn_AIModel|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

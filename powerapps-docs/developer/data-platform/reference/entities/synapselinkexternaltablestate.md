@@ -1,7 +1,7 @@
 ---
 title: "synapselinkexternaltablestate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkexternaltablestate table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -76,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SynapseWorkspaceName](#BKMK_SynapseWorkspaceName)
 - [TableState](#BKMK_TableState)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [TrinoState](#BKMK_TrinoState)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -409,6 +410,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_TrinoState"></a> TrinoState
+
+|Property|Value|
+|--------|-----|
+|Description|State of Trino registration for an entity|
+|DisplayName|Trino State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|trinostate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### TrinoState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Created|Not created|
+|1|Created|Created|
+|2|Failed|Failed|
+|3|Deleted|Deleted|
+|4|In Progress|In Progress|
+
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode

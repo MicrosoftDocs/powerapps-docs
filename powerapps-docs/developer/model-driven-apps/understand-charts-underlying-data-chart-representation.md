@@ -47,12 +47,12 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 
 ### The \<FetchCollection> element 
  
- The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the table columns, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Use FetchXML aggregation](../data-platform/use-fetchxml-aggregation.md).  
+ The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the table columns, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Aggregate data using FetchXml](../data-platform/fetchxml/aggregate-data.md).
   
- The FetchXML query enables you to filter your data. Also, filters are applied on charts through views. Therefore, if a filter condition is already specified in the FetchXML query in the `<FetchCollection>` element, and additionally a filter is applied through a view, the chart will display data that is returned after it applies all the filters. For more information about how to use the FetchXML query to filter data, see [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md).  
+ The FetchXML query enables you to filter your data. Also, filters are applied on charts through views. Therefore, if a filter condition is already specified in the FetchXML query in the `<FetchCollection>` element, and additionally a filter is applied through a view, the chart will display data that is returned after it applies all the filters. For more information about how to use the FetchXML query to filter data, see [Query data using FetchXml](../data-platform/fetchxml/overview.md).  
   
 > [!NOTE]
->  Although the data description XML string is validated again the visualization data description schema, the FetchXML query inside the `<FetchCollection>` element is not. The FetchXML query is validated against the FetchXML schema. For more information, see [FetchXML schema](../data-platform/fetchxml-schema.md).  
+>  Although the data description XML string is validated again the visualization data description schema, the FetchXML query inside the `<FetchCollection>` element is not. The FetchXML query is validated against the FetchXML schema. For more information, see [FetchXml reference](../data-platform/fetchxml/reference/index.md).  
   
  If the chart is a comparison chart, the `<FetchCollection>` element will contain two groups by* clauses.  
   
@@ -215,7 +215,7 @@ The root class for the charts.
 
 |Property Name|Description|
 |-------------|------------|
-|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
+|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color palette is specified, chart picks the color from the color palette. <br/> - If none is specified, it picks up the default color palette.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 
@@ -330,8 +330,7 @@ Unified Interface supports the following color formats in chart presentation xml
 [Visualizations (Charts)](view-data-with-visualizations-charts.md)   
 [Actions on visualizations (Charts)](actions-visualizations-charts.md)   
 [Create a chart](create-visualization-chart.md)   
-[Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md)   
-[FetchXML schema](../data-platform/fetchxml-schema.md)
+[Query data using FetchXml](../data-platform/fetchxml/overview.md)   
 [Visualization data description schema](visualization-data-description-schema.md)   
 [Sample charts](sample-charts.md)   
 [Chart class (Microsoft Chart Controls)](/dotnet/api/system.web.ui.datavisualization.charting.chart)

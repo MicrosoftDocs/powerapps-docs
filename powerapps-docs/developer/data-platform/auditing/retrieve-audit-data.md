@@ -382,8 +382,8 @@ Guid systemuserid)
 
 Learn more about:
 
-- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+- [Query data using FetchXml](../fetchxml/overview.md)
+- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 
 ---
 
@@ -416,7 +416,7 @@ These messages provide more details that depend on the type of action. The detai
 >
 > - The Web API types listed earlier that inherit from [AuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetail) don't return the `AuditRecord` navigation property value they should inherit from `AuditDetail`. The SDK for .NET classes returns this data.
 >
-> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellips;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
+> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellip;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
 
 ### RetrieveAuditDetails message
 

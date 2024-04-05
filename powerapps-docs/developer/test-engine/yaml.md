@@ -1,13 +1,15 @@
 ---
 title: "Power Apps Test Engine YAML format (preview)"
 description: Describes the YAML format for test following the same guidelines as Power Fx.
-author: jt000
-ms.author: jasontre
-ms.date: 08/11/2023
+author: pvillads
+ms.author: pvillads
+ms.date: 02/23/2024
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - JimDaly
+ - jt000
+ - FrankDahl
 ---
 
 # Power Apps Test Engine YAML format (preview)
@@ -22,11 +24,11 @@ View the [PowerApps-TestEngine/samples](https://github.com/microsoft/PowerApps-T
 
 | Property | Description |
 |---|---|
-| [test](#test) | Defines one test suite, the test cases in the test suite and configuration specific to the test suite |
+| [testSuite](#testsuite) | Defines one test suite, the test cases in the test suite and configuration specific to the test suite |
 | [testSettings](#testsettings) | Defines settings for the test suite that are reused across multiple test cases |
 | [environmentVariables](#environment-variables)| Defines variables that could potentially change as the app is ported across different environments |
 
-## test
+## testSuite
 
 Used to define one test.
 
@@ -63,9 +65,9 @@ For Sharepoint/Dataverse/Connector apps, `requestURL` and `method` can be the sa
 
 | Property | Required | Description |
 |---|---|---|
-| `testCaseName` | Yes | The name of the test case, it's used in reporting success and failure |
+| `testCaseName` | Yes | The name of the test case that is used in reporting success and failure |
 | `testCaseDescription` | No | Additional information describes what the test case does |
-| `testSteps` | Yes | A set of Power FX functions describing the steps needed to perform the test case |
+| `testSteps` | Yes | A set of Power Fx functions describing the steps needed to perform the test case |
 
 #### test TestSteps
 

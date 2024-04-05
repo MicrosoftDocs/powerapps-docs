@@ -1,18 +1,18 @@
 ---
 title: Attachments control in Power Apps
 description: Learn about the details, properties and examples of the attachments control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogupt
 ---
 
 # Attachments control in Power Apps
@@ -26,7 +26,7 @@ An **Attachments** control lets you open, add, and delete files from a list or a
 
 The attachment control has these limitations:
 
-1. The attachment control only supports lists and Dataverse tables as the data sources.
+1. The attachment control only supports lists and Dataverse tables as the data sources. Expressions that transform these data sources into Tables, for example, with the **ForAll** function, are not supported.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 

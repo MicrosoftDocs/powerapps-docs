@@ -22,8 +22,8 @@ In this article, you'll learn how to export and import canvas apps.
 You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. When exporting and importing canvas app packages, consider the scenario that best fits the available options. For example, you can save a canvas app locally by using the *Save As* option when you select the location as *This computer*. The saved file will have the file name extension *.msapp*. This file doesn't include any additional components such as flows created with Power Automate and used by the saved app. Although you can use this method to create a copy of an existing app, you can use the recommended export and import feature that includes [additional resources](#resources-included-in-the-package) with the package. Export and import packages have the file format *.zip*.
 
 > [!IMPORTANT]
-> - For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](/power-platform/alm/overview-alm)
 > - Canvas app packages can't be used with [Dataverse solution packages](../data-platform/solutions-overview.md) because of the package incompatibility.
+> - Canvas apps that have Dataverse dependencies, such as flows, connection references, etc. are not supported for canvas app packages. For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](/power-platform/alm/overview-alm)
 > - An App Insights instrumentation key may be present in imported canvas apps. Inspect the instrumentation key after importing an app to ensure it corresponds to the desired App Insights resource.
 
 ## Resources included in the package

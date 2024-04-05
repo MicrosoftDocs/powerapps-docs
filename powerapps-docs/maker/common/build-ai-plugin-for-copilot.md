@@ -11,6 +11,8 @@ manager: tapanm
 ms.custom: bap-template
 search.audienceType: 
   - maker, admin
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # Building AI plugins for discovery by Copilot (preview)
@@ -33,7 +35,7 @@ This is a new step that lets you define the metadata for your AI plugin that is 
     1. **AI plugin operation**: A list of operations supported by your plugin. For example, **GetOpportunities**, **CreateOpportunity/**.
     1. **AI plugin instance**: Controls the state of your plugin, which is **Enable** or **Disable**.
 
-Let’s get started and define our first AI plugin. In this example, we're going to define an AI plugin of type custom API. 
+Let's get started and define our first AI plugin. In this example, we're going to define an AI plugin of type custom API. 
 
 > [!Note]
 > A basic understanding and knowledge of application lifecycle management (ALM) in Dataverse is required to follow this example. See [Solution concepts](/power-platform/alm/solution-concepts-alm) in Power Platform ALM to learn more.
@@ -45,7 +47,7 @@ Let’s get started and define our first AI plugin. In this example, we're going
 
 You can create a custom API using the Power Apps. More information: [Create a custom API in Power Apps](../../developer/data-platform/create-custom-api-maker-portal.md)
 
-The plugin infrastructure currently supports only custom APIs with ‘IsFunction=False’ and ‘IsPrivate=False’. Hence, ensure that your custom API isn't a function or private API. At this point, you can test your custom API using a Postman client.
+The plugin infrastructure currently supports only custom APIs with 'IsFunction=False' and 'IsPrivate=False'. Hence, ensure that your custom API isn't a function or private API. At this point, you can test your custom API using an API client like Postman or [Insomnia](../../developer/data-platform/webapi/insomnia.md)
 
 ### Step 2 – Define AI plugin
 
@@ -67,7 +69,7 @@ Enter the following fields in this form:
 - **Name**: Provide a name for your operation
 - **OperationID**: this needs to be a value with a prefix like shown below
 - **Custom API**: This will be a look up to the custom API you created in Step 1.
-- **Description**: This field is currently used by BizChat for plugin matching, so don’t leave it blank
+- **Description**: This field is currently used by BizChat for plugin matching, so don't leave it blank
 
 Select **Save and close**. If you have additional operations, you can add those following the same steps.
 

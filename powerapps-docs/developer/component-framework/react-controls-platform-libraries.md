@@ -4,7 +4,7 @@ description: "You can achieve significant performance gains using React and plat
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 02/20/2022
+ms.date: 04/02/2024
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -12,8 +12,7 @@ ms.custom:
 ms.topic: article
 ms.subservice: pcf
 contributors:
-  - HemantGaur
-  - noazarur-microsoft
+  - miglisic
   - JimDaly
 ---
 
@@ -27,7 +26,7 @@ By reusing the existing platform React and Fluent libraries, you can expect the 
 
 - Reduced control bundle size
 - Optimized solution packaging
-- Faster runtime transfer, scripting and control rendering
+- Faster runtime transfer, scripting, and control rendering
 
 With the benefits available by reusing these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
 
@@ -77,24 +76,23 @@ The [control element](manifest-schema-reference/control.md) `control-type` attri
 > [!NOTE]
 > Changing this value does not convert a component from one type to another.
 
-Within the [resources element](manifest-schema-reference/resources.md), you'll find two new [platform-library element](manifest-schema-reference/platform-library.md) child elements like the following:
+Within the [resources element](manifest-schema-reference/resources.md), find two new [platform-library element](manifest-schema-reference/platform-library.md) child elements like the following example:
 
 ```xml
 <resources>
     <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="8.29.0" />
+   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
-
 > [!NOTE]
-> Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
+> For more information about valid platform library versions, see [Supported platform libraries list](#supported-platform-libraries-list).
 
-We recommend using Fluent platform libraries. If you don't use Fluent, you should remove this element: `<platform-library name="Fluent" version="8.29.0" />`
+We recommend using platform libraries for Fluent 8 and 9. If you don't use Fluent, you should remove the `platform-library` element where the `name` attribute value is `Fluent`.
 
 ### Index.ts
 
-The [ReactControl.init](reference/react-control/init.md) method for control initialization doesn't have `div` parameters because these controls don't render the DOM directly. Instead [ReactControl.updateView](reference/react-control/updateview.md) returns a ReactElement that has the details of the actual control in React format.
+The [ReactControl.init](reference/react-control/init.md) method for control initialization doesn't have `div` parameters because React controls don't render the DOM directly. Instead [ReactControl.updateView](reference/react-control/updateview.md) returns a ReactElement that has the details of the actual control in React format.
 
 ### bundle.js
 
@@ -111,12 +109,16 @@ You can find two new controls added to the samples as part of this preview. Func
 
 ## Supported platform libraries list
 
-Platform libraries are made available both at the build and runtime to the controls that are using platform libraries capability. Currently, the following versions are provided by the platform and these can also be found in the control manifest.
+Platform libraries are made available both at the build and runtime to the controls that are using platform libraries capability. Currently, the following versions are provided by the platform and are the highest currently supported versions.
 
 | Name   | npm package name | Version |
 | ------ | ---------------- | ------- |
 | React  | react            | 16.8.6  |
 | Fluent | @fluentui/react  | 8.29.0  |
+| Fluent | @fluentui/react  | 9.46.2  |
+
+> [!NOTE]
+> The application might load a higher compatible version of a platform library at runtime, but the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
 
 ## FAQ
 
@@ -124,9 +126,9 @@ Platform libraries are made available both at the build and runtime to the contr
 
 A: No. You must create a new control using the new template and then update the manifest and index.ts methods. For reference, compare the standard and react samples described above.
 
-### Q: Can I use React controls & platform libraries with portals?
+### Q: Can I use React controls & platform libraries with Power Pages?
 
-A: No. React controls & platform libraries are currently only available for canvas and model-driven apps.
+A: No. React controls & platform libraries are currently only supported for canvas and model-driven apps. In Power Pages, React controls don't update based on changes in other fields.
 
 ## Related articles
 

@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1125,6 +1125,7 @@ Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [catalogassignment_customapi](#BKMK_catalogassignment_customapi)
+- [customapi_serviceplanmapping](#BKMK_customapi_serviceplanmapping)
 - [AIPluginOperation_CustomAPI_CustomAPI](#BKMK_AIPluginOperation_CustomAPI_CustomAPI)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 
@@ -1276,6 +1277,23 @@ Same as the [catalogassignment_customapi](catalogassignment.md#BKMK_catalogassig
 |ReferencedEntityNavigationPropertyName|CatalogAssignments|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_customapi_serviceplanmapping"></a> customapi_serviceplanmapping
+
+**Added by**: License Enforcement Solution
+
+Same as the [customapi_serviceplanmapping](serviceplanmapping.md#BKMK_customapi_serviceplanmapping) many-to-one relationship for the [serviceplanmapping](serviceplanmapping.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplanmapping|
+|ReferencingAttribute|customapi|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|customapi_serviceplanmapping|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_AIPluginOperation_CustomAPI_CustomAPI"></a> AIPluginOperation_CustomAPI_CustomAPI

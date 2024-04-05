@@ -8,11 +8,12 @@ ms.topic: article
 author: Mattp123 
 ms.author: mijosh
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 
 # FAQ for Copilot in model-driven apps
 
-This transparency note describes the AI impact of Power Apps model-driven apps Copilot feature.
+This FAQ describes the AI impact of Power Apps model-driven apps Copilot feature.
 
 ## What is Copilot in model-driven apps?
 

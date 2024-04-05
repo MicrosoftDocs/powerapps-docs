@@ -1,7 +1,7 @@
 ---
 title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1414,9 +1414,6 @@ Listed by **SchemaName**.
 - [activity_pointer_chat](#BKMK_activity_pointer_chat)
 - [activity_pointer_adx_inviteredemption](#BKMK_activity_pointer_adx_inviteredemption)
 - [activity_pointer_adx_portalcomment](#BKMK_activity_pointer_adx_portalcomment)
-- [activity_pointer_msfp_alert](#BKMK_activity_pointer_msfp_alert)
-- [activity_pointer_msfp_surveyinvite](#BKMK_activity_pointer_msfp_surveyinvite)
-- [activity_pointer_msfp_surveyresponse](#BKMK_activity_pointer_msfp_surveyresponse)
 
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
@@ -1721,57 +1718,6 @@ Same as the [activity_pointer_adx_portalcomment](adx_portalcomment.md#BKMK_activ
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|activity_pointer_adx_portalcomment|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_activity_pointer_msfp_alert"></a> activity_pointer_msfp_alert
-
-**Added by**: Active Solution Solution
-
-Same as the [activity_pointer_msfp_alert](msfp_alert.md#BKMK_activity_pointer_msfp_alert) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|activityid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_alert|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_activity_pointer_msfp_surveyinvite"></a> activity_pointer_msfp_surveyinvite
-
-**Added by**: Active Solution Solution
-
-Same as the [activity_pointer_msfp_surveyinvite](msfp_surveyinvite.md#BKMK_activity_pointer_msfp_surveyinvite) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|activityid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_surveyinvite|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_activity_pointer_msfp_surveyresponse"></a> activity_pointer_msfp_surveyresponse
-
-**Added by**: Active Solution Solution
-
-Same as the [activity_pointer_msfp_surveyresponse](msfp_surveyresponse.md#BKMK_activity_pointer_msfp_surveyresponse) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|activityid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_surveyresponse|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

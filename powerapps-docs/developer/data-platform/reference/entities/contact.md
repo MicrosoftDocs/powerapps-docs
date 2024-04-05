@@ -1,7 +1,7 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Contact table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -4900,9 +4900,6 @@ Listed by **SchemaName**.
 - [adx_invitation_invitercontact](#BKMK_adx_invitation_invitercontact)
 - [adx_invitation_redeemedContact](#BKMK_adx_invitation_redeemedContact)
 - [adx_webformsession_contact](#BKMK_adx_webformsession_contact)
-- [contact_msfp_alerts](#BKMK_contact_msfp_alerts)
-- [contact_msfp_surveyinvites](#BKMK_contact_msfp_surveyinvites)
-- [contact_msfp_surveyresponses](#BKMK_contact_msfp_surveyresponses)
 
 
 ### <a name="BKMK_contact_principalobjectattributeaccess"></a> contact_principalobjectattributeaccess
@@ -5564,57 +5561,6 @@ Same as the [adx_webformsession_contact](adx_webformsession.md#BKMK_adx_webforms
 |ReferencedEntityNavigationPropertyName|adx_webformsession_contact|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: Cascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_contact_msfp_alerts"></a> contact_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [contact_msfp_alerts](msfp_alert.md#BKMK_contact_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|contact_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_contact_msfp_surveyinvites"></a> contact_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [contact_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_contact_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|contact_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_contact_msfp_surveyresponses"></a> contact_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [contact_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_contact_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|contact_msfp_surveyresponses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 

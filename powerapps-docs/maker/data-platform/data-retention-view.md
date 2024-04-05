@@ -6,24 +6,22 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 11/16/2023
+ms.date: 03/12/2024
 ms.custom: template-how-to 
 ---
-# View long term retained data (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# View long term retained data
 
 You can view retained data from an advanced find query or by creating a Power Automate flow. 
 
 To view retained data in an environment requires the system administrator security role or other security role membership that includes organization scope read privileges to the table.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 ## Grant privileges to view retained data
 
-Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role.
+
+:::image type="content" source="media/data-retention-grant-privileges.png" alt-text="Privileges for viewing retained data" lightbox="media/data-retention-grant-privileges.png":::
+
+For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
 ## View retained data using edit filters from a model-driven app
 
@@ -45,6 +43,11 @@ More information: [Advanced find in model-driven apps](../../user/advanced-find.
 
 Create a Power Automate cloud flow to create an Excel file of the retained data from a FetchXML query and send as an email attachment. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
+> [!NOTE]
+> If the retained data includes attachments from the annotation table, the returned value is a base64 representation of the file. Large files might cause the cloud flow action to [time-out](/power-automate/limits-and-config#timeout) or to exceed its output [message size limit](/power-automate/limits-and-config#message-size).
+>
+> To workaround this behavior, use the Web API to perform the export action [ExportRetainedData](/power-apps/developer/data-platform/webapi/reference/exportretaineddata?view=dataverse-latest&preserve-view=true) using Azure Functions or other custom development options.
+
 ## Limitations for retrieval of retained data
 
 These restrictions are enforced by Dataverse for each environment:
@@ -52,20 +55,13 @@ These restrictions are enforced by Dataverse for each environment:
 - Up to five users can query and retrieve retained data at the same time.
 - Up to 100 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
-- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric (preview)](#view-retained-data-with-microsoft-fabric-preview)
+- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric](#view-retained-data-with-microsoft-fabric)
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
-## View retained data with Microsoft Fabric (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## View retained data with Microsoft Fabric 
 
 You can view the active (live) and inactive (long term retained) application data in Dataverse using Microsoft Fabric.
 To do this, link your Dataverse environment to Fabric. More information: [Link your Dataverse environment to Microsoft Fabric and unlock deep insights](azure-synapse-link-view-in-fabric.md).
-
-> [!IMPORTANT]
-> Linking your Dataverse environment to Microsoft Fabric is a preview feature.
->
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The [limitations applied to retrieval of retained data](#limitations-for-retrieval-of-retained-data) don't apply to this mode of access.
 
@@ -74,7 +70,7 @@ You can explore the data with SQL endpoint and query Dataverse data with SQL and
 The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
 
 - Inactive application data: `WHERE msft_datastate=1`
-- Active (live) application data: `WHERE msft_datastate=0`
+- Active (live) application data: `WHERE msft_datastate=0 or msft_datastate=NULL'
 
 ## Known issues
 

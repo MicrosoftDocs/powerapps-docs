@@ -1,7 +1,7 @@
 ---
 title: "msdyn_FileUpload table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_FileUpload table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -69,6 +69,7 @@ search.audienceType:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_DmsRequestId](#BKMK_msdyn_DmsRequestId)
 - [msdyn_FileName](#BKMK_msdyn_FileName)
 - [msdyn_FileUploadId](#BKMK_msdyn_FileUploadId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -95,6 +96,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_DmsRequestId"></a> msdyn_DmsRequestId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Latest DMS Request ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_dmsrequestid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_msdyn_FileName"></a> msdyn_FileName
@@ -268,6 +282,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_ErrorLog](#BKMK_msdyn_ErrorLog)
+- [msdyn_ErrorLog_Name](#BKMK_msdyn_ErrorLog_Name)
 - [msdyn_FileContent](#BKMK_msdyn_FileContent)
 - [msdyn_FileContent_Name](#BKMK_msdyn_FileContent_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -514,6 +530,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_ErrorLog"></a> msdyn_ErrorLog
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|File Error Logs|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_errorlog|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_ErrorLog_Name"></a> msdyn_ErrorLog_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_errorlog_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 

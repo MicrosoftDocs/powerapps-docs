@@ -76,6 +76,8 @@
   href: attribute.md
 - name: AttributeImageConfig
   href: attributeimageconfig.md
+- name: AttributeMaskingRule
+  href: attributemaskingrule.md
 - name: Audit
   href: audit.md
 - name: backgroundoperation
@@ -112,6 +114,12 @@
   href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
+- name: componentversion
+  href: componentversion.md
+- name: componentversiondatasource
+  href: componentversiondatasource.md
+- name: componentversionnrddatasource
+  href: componentversionnrddatasource.md
 - name: Connection
   href: connection.md
 - name: ConnectionInstance
@@ -126,6 +134,10 @@
   href: contact.md
 - name: conversationtranscript
   href: conversationtranscript.md
+- name: CopilotExampleQuestion
+  href: copilotexamplequestion.md
+- name: credential
+  href: credential.md
 - name: CustomAPI
   href: customapi.md
 - name: CustomAPIRequestParameter
@@ -156,6 +168,8 @@
   href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
+- name: deploymentorchestration
+  href: deploymentorchestration.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
 - name: desktopflowmodule
@@ -206,6 +220,8 @@
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
   href: environmentvariablevalue.md
+- name: EventExpanderBreadcrumb
+  href: eventexpanderbreadcrumb.md
 - name: ExchangeSyncIdMapping
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
@@ -226,6 +242,8 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowcapacityassignment
+  href: flowcapacityassignment.md
 - name: flowevent
   href: flowevent.md
 - name: flowmachine
@@ -238,6 +256,8 @@
   href: flowmachineimageversion.md
 - name: flowmachinenetwork
   href: flowmachinenetwork.md
+- name: flowrun
+  href: flowrun.md
 - name: flowsession
   href: flowsession.md
 - name: fxexpression
@@ -294,6 +314,8 @@
   href: makerfewshot.md
 - name: ManagedIdentity
   href: managedidentity.md
+- name: MaskingRule
+  href: maskingrule.md
 - name: MetadataForArchival
   href: metadataforarchival.md
 - name: Metric
@@ -366,6 +388,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflow_datalakefolder
   href: msdyn_dataflow_datalakefolder.md
+- name: msdyn_DataflowConnectionReference
+  href: msdyn_dataflowconnectionreference.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_DataflowTemplate
@@ -376,6 +400,10 @@
   href: msdyn_dmsrequest.md
 - name: msdyn_dmsrequeststatus
   href: msdyn_dmsrequeststatus.md
+- name: msdyn_dmssyncrequest
+  href: msdyn_dmssyncrequest.md
+- name: msdyn_dmssyncstatus
+  href: msdyn_dmssyncstatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
@@ -420,6 +448,8 @@
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_mobileapp
   href: msdyn_mobileapp.md
+- name: msdyn_modulerundetail
+  href: msdyn_modulerundetail.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
@@ -456,14 +486,6 @@
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
-- name: msdyn_solutioncomponentcountdatasource
-  href: msdyn_solutioncomponentcountdatasource.md
-- name: msdyn_solutioncomponentcountsummary
-  href: msdyn_solutioncomponentcountsummary.md
-- name: msdyn_solutioncomponentdatasource
-  href: msdyn_solutioncomponentdatasource.md
-- name: msdyn_solutioncomponentsummary
-  href: msdyn_solutioncomponentsummary.md
 - name: msdyn_solutionhealthrule
   href: msdyn_solutionhealthrule.md
 - name: msdyn_solutionhealthruleargument
@@ -484,34 +506,6 @@
   href: msdyn_workflowactionstatus.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
-- name: msfp_alert
-  href: msfp_alert.md
-- name: msfp_alertrule
-  href: msfp_alertrule.md
-- name: msfp_emailtemplate
-  href: msfp_emailtemplate.md
-- name: msfp_fileresponse
-  href: msfp_fileresponse.md
-- name: msfp_localizedemailtemplate
-  href: msfp_localizedemailtemplate.md
-- name: msfp_project
-  href: msfp_project.md
-- name: msfp_question
-  href: msfp_question.md
-- name: msfp_questionresponse
-  href: msfp_questionresponse.md
-- name: msfp_satisfactionmetric
-  href: msfp_satisfactionmetric.md
-- name: msfp_survey
-  href: msfp_survey.md
-- name: msfp_surveyinvite
-  href: msfp_surveyinvite.md
-- name: msfp_surveyreminder
-  href: msfp_surveyreminder.md
-- name: msfp_surveyresponse
-  href: msfp_surveyresponse.md
-- name: msfp_unsubscribedrecipient
-  href: msfp_unsubscribedrecipient.md
 - name: MsGraphResourceToSubscription
   href: msgraphresourcetosubscription.md
 - name: mspcat_CatalogSubmissionFiles
@@ -682,6 +676,8 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: RecycleBinConfig
+  href: recyclebinconfig.md
 - name: Relationship
   href: relationship.md
 - name: RelationshipAttribute
@@ -744,6 +740,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspaceaccesstoken
+  href: sharedworkspaceaccesstoken.md
 - name: sharedworkspacepool
   href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
@@ -808,6 +806,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -836,6 +836,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

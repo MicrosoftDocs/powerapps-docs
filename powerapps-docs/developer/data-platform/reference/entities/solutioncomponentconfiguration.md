@@ -1,7 +1,7 @@
 ---
 title: "solutioncomponentconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentconfiguration table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -26,12 +26,14 @@ search.audienceType:
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /solutioncomponentconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /solutioncomponentconfigurations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -56,6 +58,7 @@ search.audienceType:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AllowExportKeyWithoutPrefix](#BKMK_AllowExportKeyWithoutPrefix)
+- [DependencyRemovalEnabledForComponents](#BKMK_DependencyRemovalEnabledForComponents)
 - [EntityId](#BKMK_EntityId)
 - [FileFormat](#BKMK_FileFormat)
 - [FileScope](#BKMK_FileScope)
@@ -64,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [isdisplayable](#BKMK_isdisplayable)
 - [IsOneToOneChildComponent](#BKMK_IsOneToOneChildComponent)
 - [IsSoftDeleteEnabled](#BKMK_IsSoftDeleteEnabled)
+- [IsVersioningEnabled](#BKMK_IsVersioningEnabled)
 - [KeepActiveCustomizationAfterConversion](#BKMK_KeepActiveCustomizationAfterConversion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -91,6 +95,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
+
+
+### <a name="BKMK_DependencyRemovalEnabledForComponents"></a> DependencyRemovalEnabledForComponents
+
+|Property|Value|
+|--------|-----|
+|Description|Comma separated list of required components supported for automatic dependency removal|
+|DisplayName|Automatic Dependency Removal Enabled For Components|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dependencyremovalenabledforcomponents|
+|MaxLength|1024|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
 
 ### <a name="BKMK_EntityId"></a> EntityId
@@ -242,6 +262,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### IsSoftDeleteEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsVersioningEnabled"></a> IsVersioningEnabled
+
+**Added by**: Component Versioning Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Boolean that indicates if the component should be versioned.|
+|DisplayName|Is Versioning Enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|isversioningenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsVersioningEnabled Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|

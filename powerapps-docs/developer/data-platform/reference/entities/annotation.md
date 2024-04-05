@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -220,7 +220,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,adx_invitation,adx_inviteredemption,adx_portalcomment,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msfp_alert,msfp_question,msfp_surveyinvite,msfp_surveyresponse,mspcat_catalogsubmissionfiles,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,adx_invitation,adx_inviteredemption,adx_portalcomment,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,mspcat_catalogsubmissionfiles,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -913,10 +913,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [adx_inviteredemption_Annotations](#BKMK_adx_inviteredemption_Annotations)
 - [adx_portalcomment_Annotations](#BKMK_adx_portalcomment_Annotations)
 - [mspcat_catalogsubmissionfiles_Annotations](#BKMK_mspcat_catalogsubmissionfiles_Annotations)
-- [msfp_alert_Annotations](#BKMK_msfp_alert_Annotations)
-- [msfp_question_Annotations](#BKMK_msfp_question_Annotations)
-- [msfp_surveyinvite_Annotations](#BKMK_msfp_surveyinvite_Annotations)
-- [msfp_surveyresponse_Annotations](#BKMK_msfp_surveyresponse_Annotations)
 
 
 ### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
@@ -1071,33 +1067,9 @@ See the [adx_portalcomment_Annotations](adx_portalcomment.md#BKMK_adx_portalcomm
 
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_Annotations"></a> mspcat_catalogsubmissionfiles_Annotations
 
-**Added by**: Power Platform Catalog Client Packaging Solution
+**Added by**: Catalog in Power Platform Packaging Solution
 
 See the [mspcat_catalogsubmissionfiles_Annotations](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_Annotations) one-to-many relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
-
-### <a name="BKMK_msfp_alert_Annotations"></a> msfp_alert_Annotations
-
-**Added by**: Active Solution Solution
-
-See the [msfp_alert_Annotations](msfp_alert.md#BKMK_msfp_alert_Annotations) one-to-many relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-### <a name="BKMK_msfp_question_Annotations"></a> msfp_question_Annotations
-
-**Added by**: Dynamics 365 Customer Voice Solution
-
-See the [msfp_question_Annotations](msfp_question.md#BKMK_msfp_question_Annotations) one-to-many relationship for the [msfp_question](msfp_question.md) table/entity.
-
-### <a name="BKMK_msfp_surveyinvite_Annotations"></a> msfp_surveyinvite_Annotations
-
-**Added by**: Active Solution Solution
-
-See the [msfp_surveyinvite_Annotations](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Annotations) one-to-many relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-### <a name="BKMK_msfp_surveyresponse_Annotations"></a> msfp_surveyresponse_Annotations
-
-**Added by**: Active Solution Solution
-
-See the [msfp_surveyresponse_Annotations](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Annotations) one-to-many relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
 
 ### See also
 

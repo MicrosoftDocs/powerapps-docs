@@ -1,7 +1,7 @@
 ---
 title: "ConnectionInstance table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ConnectionInstance table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ConnectionStatus](#BKMK_ConnectionStatus)
 - [ConnectorId](#BKMK_ConnectorId)
 - [ConnectorInternalId](#BKMK_ConnectorInternalId)
+- [CredentialId](#BKMK_CredentialId)
 - [IconUri](#BKMK_IconUri)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -305,6 +306,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_CredentialId"></a> CredentialId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the Credential used in the Connection Instance.|
+|DisplayName|Credential identifier|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|credentialid|
+|RequiredLevel|None|
+|Targets|credential|
+|Type|Lookup|
+
+
 ### <a name="BKMK_IconUri"></a> IconUri
 
 |Property|Value|
@@ -509,6 +524,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [CredentialIdName](#BKMK_CredentialIdName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -717,6 +733,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_CredentialIdName"></a> CredentialIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|credentialidname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -1195,6 +1227,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_connectioninstance](#BKMK_business_unit_connectioninstance)
 - [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
 - [connectionreference_connectioninstance](#BKMK_connectionreference_connectioninstance)
+- [connectioninstance_CredentialId_credential](#BKMK_connectioninstance_CredentialId_credential)
 
 
 ### <a name="BKMK_lk_connectioninstance_createdby"></a> lk_connectioninstance_createdby
@@ -1250,6 +1283,12 @@ See the [lk_connectioninstance_connectorid](connector.md#BKMK_lk_connectioninsta
 **Added by**: Power Platform Connection References Solution
 
 See the [connectionreference_connectioninstance](connectionreference.md#BKMK_connectionreference_connectioninstance) one-to-many relationship for the [connectionreference](connectionreference.md) table/entity.
+
+### <a name="BKMK_connectioninstance_CredentialId_credential"></a> connectioninstance_CredentialId_credential
+
+**Added by**: Power Automate Core Components Solution
+
+See the [connectioninstance_CredentialId_credential](credential.md#BKMK_connectioninstance_CredentialId_credential) one-to-many relationship for the [credential](credential.md) table/entity.
 
 ### See also
 

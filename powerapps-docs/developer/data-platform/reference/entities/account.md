@@ -1,7 +1,7 @@
 ---
 title: "Account table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Account table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -3401,9 +3401,6 @@ Listed by **SchemaName**.
 - [account_adx_inviteredemptions](#BKMK_account_adx_inviteredemptions)
 - [account_adx_portalcomments](#BKMK_account_adx_portalcomments)
 - [adx_invitation_assigntoaccount](#BKMK_adx_invitation_assigntoaccount)
-- [account_msfp_alerts](#BKMK_account_msfp_alerts)
-- [account_msfp_surveyinvites](#BKMK_account_msfp_surveyinvites)
-- [account_msfp_surveyresponses](#BKMK_account_msfp_surveyresponses)
 
 
 ### <a name="BKMK_account_principalobjectattributeaccess"></a> account_principalobjectattributeaccess
@@ -4016,57 +4013,6 @@ Same as the [adx_invitation_assigntoaccount](adx_invitation.md#BKMK_adx_invitati
 |ReferencedEntityNavigationPropertyName|adx_invitation_assigntoaccount|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: Cascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_account_msfp_alerts"></a> account_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [account_msfp_alerts](msfp_alert.md#BKMK_account_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|account_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_account_msfp_surveyinvites"></a> account_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [account_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_account_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|account_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_account_msfp_surveyresponses"></a> account_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [account_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_account_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|account_msfp_surveyresponses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 

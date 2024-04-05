@@ -1,7 +1,7 @@
 ---
 title: "Redirect (mspp_redirect)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Redirect (mspp_redirect)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -446,9 +446,6 @@ Listed by **SchemaName**.
 - [mspp_redirect_Tasks](#BKMK_mspp_redirect_Tasks)
 - [mspp_redirect_RecurringAppointmentMasters](#BKMK_mspp_redirect_RecurringAppointmentMasters)
 - [mspp_redirect_SocialActivities](#BKMK_mspp_redirect_SocialActivities)
-- [mspp_redirect_msfp_alerts](#BKMK_mspp_redirect_msfp_alerts)
-- [mspp_redirect_msfp_surveyinvites](#BKMK_mspp_redirect_msfp_surveyinvites)
-- [mspp_redirect_msfp_surveyresponses](#BKMK_mspp_redirect_msfp_surveyresponses)
 
 
 ### <a name="BKMK_mspp_redirect_ActivityPointers"></a> mspp_redirect_ActivityPointers
@@ -651,57 +648,6 @@ Same as the [mspp_redirect_SocialActivities](socialactivity.md#BKMK_mspp_redirec
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_redirect_SocialActivities|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_redirect_msfp_alerts"></a> mspp_redirect_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_redirect_msfp_alerts](msfp_alert.md#BKMK_mspp_redirect_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_redirect_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_redirect_msfp_surveyinvites"></a> mspp_redirect_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_redirect_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_redirect_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_redirect_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_redirect_msfp_surveyresponses"></a> mspp_redirect_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_redirect_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_redirect_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_redirect_msfp_surveyresponses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

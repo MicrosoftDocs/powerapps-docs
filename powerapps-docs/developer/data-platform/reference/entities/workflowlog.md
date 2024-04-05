@@ -1,7 +1,7 @@
 ---
 title: "Process Log (WorkflowLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Process Log (WorkflowLog)  table/entity."
-ms.date: 10/27/2023
+ms.date: 02/22/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -185,7 +185,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ErrorText"></a> ErrorText
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -219,7 +219,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IterationCount"></a> IterationCount
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -326,7 +326,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_RepetitionCount"></a> RepetitionCount
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -344,7 +344,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_RepetitionId"></a> RepetitionId
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -638,7 +638,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Inputs"></a> Inputs
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -653,7 +653,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Inputs_Name"></a> Inputs_Name
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -778,7 +778,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Outputs"></a> Outputs
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -793,7 +793,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Outputs_Name"></a> Outputs_Name
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
