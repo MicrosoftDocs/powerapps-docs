@@ -1,7 +1,7 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 01/20/2024
+ms.date: 04/07/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -83,7 +83,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 1. Copy and paste the following script into the `test.ps1` file:
 
    ```powershell
-   . C:\scripts\Core.ps1
+   . $PSScriptRoot\Core.ps1
 
    Connect 'https://yourorg.crm.dynamics.com/' # change this
    # Invoke WhoAmI Function
@@ -91,7 +91,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
    | ConvertTo-Json
    ```
 
-   `. C:\scripts\Core.ps1` at the top of the file shows using dot sourcing to direct the script to load the contents of that file. Set the path to a different folder if you didn't use `C:\scripts`.
+   `. $PSScriptRoot\Core.ps1` at the top of the file shows using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) to direct the script to load the contents of that file.
 
    Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
@@ -136,8 +136,8 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
 1. Edit the `test.ps1` file, change the content to look like the following script:
 
    ```powershell
-   . C:\scripts\Core.ps1
-   . C:\scripts\CommonFunctions.ps1
+   . $PSScriptRoot\Core.ps1
+   . $PSScriptRoot\CommonFunctions.ps1
 
    Connect 'https://yourorg.crm.dynamics.com/' # change this
    # Invoke WhoAmI Function
@@ -198,7 +198,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Headers = $postHeaders
          Body    = ConvertTo-Json $body
       }
-      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh
+      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh | Out-Null
       $url = $rh['OData-EntityId']
       $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
       return [System.Guid]::New($selectedString.Matches.Value.ToString())
@@ -288,8 +288,9 @@ Let's put functions to perform common table operations a file named `TableOperat
 1. Copy the following code and paste it into the `test.ps1` file.
 
    ```powershell
-   . C:\scripts\Core.ps1
-   . C:\scripts\TableOperations.ps1
+   . $PSScriptRoot\Core.ps1
+   . $PSScriptRoot\CommonFunctions.ps1
+   . $PSScriptRoot\TableOperations.ps1
 
    Connect 'https://yourorg.crm.dynamics.com/' # change this
 
@@ -350,7 +351,6 @@ Let's put functions to perform common table operations a file named `TableOperat
 
    Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
-1. Change the dot source folder references (`. C:\scripts\`) to match the folders you're using.
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look something like this:
@@ -432,8 +432,9 @@ Let's add helper function that can help detect the source of the errors and extr
 1. Edit the `test.ps1` file to use the following script that uses an invalid `setName` parameter value. `account` should be `accounts`. [This is a common error](/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors#resource-not-found-for-the-segment)
 
    ```powershell
-   . C:\scripts\Core.ps1
-   . C:\scripts\TableOperations.ps1
+   . $PSScriptRoot\Core.ps1
+   . $PSScriptRoot\CommonFunctions.ps1
+   . $PSScriptRoot\TableOperations.ps1
 
    Connect 'https://yourorg.crm.dynamics.com/' # change this
 
@@ -503,7 +504,9 @@ You might never encounter a service protection limit error while you're learning
 
 If you add the `MaximumRetryCount` parameter to every Dataverse call using `Invoke-RestMethod`, PowerShell retries a broad range of errors. Retrying every error makes your scripts slow, especially when developing and testing. You would need to wait 10 to 15 seconds each time an error occurs, depending on how many retries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that manages retries for specific errors.
 
-The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether to return the response header or not. It tries to use the `Invoke-RestMethod` using the `request` object. If the `returnHeader` flag is true, it returns the response header. If the REST method fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If not, it adds one with a value of 3. It then retries the REST method using the request object and the retry-after value from the response header. If the flag is true, it returns the response header. If the REST method fails with any other error, it rethrows the exception.
+The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether to return the response header or not. When `$returnHeader` is true, it sends the request using the the `Invoke-RestMethod` command with the [ResponseHeadersVariable](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-responseheadersvariable) parameter to capture the headers returned, and uses [Out-Null](/powershell/module/microsoft.powershell.core/out-null) so the output that represents the empty response body isn't returned with the the function. Otherwise, the function sends the request using `Invoke-RestMethod` using the `request` object and returns the response body.
+
+If the `Invoke-RestMethod` fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If not, it adds one with a value of 3. It then retries the `Invoke-RestMethod` using the request object and the `Retry-After` response header value. If the `returnHeader`  flag is true, it returns the response header. If the `Invoke-RestMethod` fails with any other error, it rethrows the exception.
 
 ```powershell
 function Invoke-ResilientRestMethod {
@@ -514,10 +517,11 @@ function Invoke-ResilientRestMethod {
       $returnHeader
    )
    try {
-      Invoke-RestMethod @request -ResponseHeadersVariable rhv
       if ($returnHeader) {
+         Invoke-RestMethod @request -ResponseHeadersVariable rhv | Out-Null
          return $rhv
       }
+      Invoke-RestMethod @request
    }
    catch [Microsoft.PowerShell.Commands.HttpResponseException] {
       $statuscode = $_.Exception.Response.StatusCode
@@ -530,10 +534,11 @@ function Invoke-ResilientRestMethod {
             # the cmdlet uses that value for the retry interval, even if RetryIntervalSec is specified
          }
          # Will attempt retry up to 3 times
-         Invoke-RestMethod @request -ResponseHeadersVariable rhv
          if ($returnHeader) {
+            Invoke-RestMethod @request -ResponseHeadersVariable rhv | Out-Null
             return $rhv
          }
+         Invoke-RestMethod @request
       }
       else {
          throw $_
@@ -567,8 +572,12 @@ function New-Record {
       Body    = ConvertTo-Json $body
 
    }
+   # Before: 
+   # Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh | Out-Null
+
+   # After:
    $rh = Invoke-ResilientRestMethod -request $CreateRequest -returnHeader $true
-   $url = $rh[1]['OData-EntityId']
+   $url = $rh['OData-EntityId']
    $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
    return [System.Guid]::New($selectedString.Matches.Value.ToString())
 }
@@ -598,11 +607,15 @@ function Get-Record {
       Method  = 'Get'
       Headers = $getHeaders
    }
+   # Before:
+   # Invoke-RestMethod @RetrieveRequest
+
+   # After: 
    Invoke-ResilientRestMethod $RetrieveRequest
 }
 ```
 
-The only difference is that you pass the hashtable to the method instead of using splatting. Otherwise you'll get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
+The only difference is that you pass the hashtable (`$RetrieveRequest`) to the method instead of using splatting (`@RetrieveRequest`). Otherwise you'll get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
 
 ## Debug using Fiddler
 
@@ -682,22 +695,22 @@ $debug = $true
 $proxyUrl = 'http://127.0.0.1:8888'
 ```
 
-Then, within your centralized function you can set the `-Proxy` parameter only when debugging with Fiddler.
+Then, within your centralized function you can set the `-Proxy` parameter using splatting with the `$request` hash table only when debugging with Fiddler.
 
 ```powershell
-if($debug)
-{
-   Invoke-RestMethod @request -ResponseHeadersVariable rhv -Proxy $proxyUrl
-   if ($returnHeader) {
-      return $rhv
+function Invoke-ResilientRestMethod {
+   param (
+      [Parameter(Mandatory)] 
+      $request,
+      [bool]
+      $returnHeader
+   )
+
+   if ($debug) {
+      $request.Add('Proxy', $proxyUrl)
    }
-}
-else {
-   Invoke-RestMethod @request -ResponseHeadersVariable rhv
-   if ($returnHeader) {
-      return $rhv
-   }
-}
+
+   ...
 ```
 
 [Learn about capturing web traffic with Fiddler](https://docs.telerik.com/fiddler/observe-traffic/tasks/capturewebtraffic)
