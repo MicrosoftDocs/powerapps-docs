@@ -32,7 +32,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/webapi/use-fetchxml-web-api.md",
-      "redirect_url": "fetchxml/retrieve-data",
+      "redirect_url": "../fetchxml/retrieve-data",
       "redirect_document_id": "false"
     },
     {
