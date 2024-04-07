@@ -550,7 +550,8 @@ Set-FileColumn `
    -columnName 'new_filecolumn' `
    -file 'C:\Path\To\File.txt'
    
-Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+Sets the value of the 'new_filecolumn' column for the file with the specified ID 
+in the account table to the contents of the File.txt file.
 
 #>
 function Set-FileColumn {
