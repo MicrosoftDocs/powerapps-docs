@@ -233,8 +233,8 @@ This PowerShell function depends on the following functions described in [Use Po
   - `New-Record`: [Learn to create records using the Web API](../webapi/create-entity-web-api.md)
 
 ```powershell
-. .\Core.ps1 # Contains the Connect function
-. .\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
+. $PSScriptRoot\Core.ps1 # Contains the Connect function
+. $PSScriptRoot\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
 
 <#
 .SYNOPSIS
@@ -586,9 +586,9 @@ This PowerShell function depends on the following functions described in [Use Po
 - `Set-FileColumn`: [Learn more about this function and uploading files to Dataverse](../file-column-data.md#powershell-example-to-upload-file-in-a-single-request)
 
 ```powershell
-. .\Core.ps1 # Contains the Connect function
-. .\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
-. .\Set-FileColumn.ps1 # Contains the Set-FileColumn function
+. $PSScriptRoot\Core.ps1 # Contains the Connect function
+. $PSScriptRoot\TableOperations.ps1 # Contains the Get-Records, New-Record, and Remove-Record functions
+. $PSScriptRoot\Set-FileColumn.ps1 # Contains the Set-FileColumn function
 <#
 .SYNOPSIS
    Creates or replaces a custom search analyzer.
