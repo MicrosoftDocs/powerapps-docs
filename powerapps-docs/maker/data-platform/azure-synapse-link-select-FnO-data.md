@@ -199,6 +199,8 @@ print ''
 print 'Finished'
 ```
 
+4. Perform an IISReset operation from the command line to restart the application server.  
+
 ## Add finance and operations tables in Azure Synapse Link
 
 You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
