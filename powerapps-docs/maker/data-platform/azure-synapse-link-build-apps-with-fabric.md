@@ -55,7 +55,8 @@ Follow these steps to create a virtual table using Fabric data.
 5. Choose a **Microsoft Fabric Lakehouse** from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose.
 6. On the **Data** page, select a table from the list of tables shown from the lakehouse. Select **Configure table and column names that will be used in Dataverse** if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
 7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you're shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
-8. Review the information shown, and then select **Finish**.
+8. Verify that the field chosen for **primary key field** is a unique field. You may need to verify the default field selected by the system as the primary key.
+9. Review the information shown, and then select **Finish**.
 
 A new Dataverse virtual table is created with data from Fabric.
 
