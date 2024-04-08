@@ -11,48 +11,52 @@ contributors:
 - dikamath
 ---
 
-# Monitoring for developing Dataverse plugins and Custom APIs (preview)
+# Monitor and troubleshoot Dataverse plugins (preview)
 
-Plugin monitoring introduces an enhanced Trace Log Viewer, providing a modern interface to surface the existing plugin trace log table in Dataverse environments. This feature is designed to streamline development and debugging processes for both low-code and pro-code plugins and Custom APIs. Seamless integration with Dataverse Custom APIs, Dataverse low code plugins, and pro-code plugin run history empowers makers to efficiently monitor and troubleshoot plugin performance.
+Use tracing to troubleshoot low code and pro code plugins. Tracing helps makers by recording run-time information as an aid in diagnosing the cause of failures, or for general validation of certain states during development.
+
+The plugin monitoring module of the [Dataverse Accelerator](dataverse-accelerator.md) is an enhanced view of the existing [tracing and logging](/power-apps/developer/data-platform/logging-tracing) capibilities available in Dataverse for plugins and Custom APIs. The interface help improve the troubleshooting and debugging processes during development phase by colocating relevent details in a modern treatment.
+
+All system plugins (low code and pro code) and Custom API tracing and logging events are surfaced, which are stored in this table for 24.
+
+![Plugin monitoring interface](./media/plugin-monitoring.svg)
 
 ## Prerequisites
 
-- To access trace logs, users must have at least read privileges to the Plugin Trace Log privilege.
-- To enable trace logs, System administrator security role is required.
+You must have the following security role assignment and access to the Dataverse Accelerator app:
+
+- Security role: Both **System customizer** and **System administrator** security roles have the necessary privileges to enable logs and use the app by default.
+
+- Alternatively, you can create custom roles with specific access to each capibility by configuring the following:
+  - To *read* logs, organization-level read privilege to the [Trace](/power-apps/developer/data-platform/reference/entities/tracelog) table is required.  
+  - To *enable* logging in the environment, organization-level write privilege in the [Organization table's](/power-apps/developer/data-platform/reference/entities/organization#BKMK_PluginTraceLogSetting) `PluginTraceLogSetting` is required.
 
 ## Key features
 
 - **Centralized log viewer:** Access and view trace logs from Dataverse Custom APIs, low code plugins, and pro-code plugin executions in an environment from one central location.
 - **Filtering capabilities:** Conveniently filter log history to quickly find logs relevant to debugging needs.
-- **Seamless integration:** Integrated seamlessly with Dataverse Accelerator, ensuring availability in all environments.
 
 ## Installation
 
-To install the Dataverse Accelerator and access the Plugin Monitoring feature, please refer to the [Dataverse Accelerator documentation](./dataverse-accelerator.md), which provides step-by-step installation instructions.
+Accessing the Plugin Monitoring feature requires installation of the Dataverse Accelerator. Refer to the [Dataverse Accelerator documentation](./dataverse-accelerator.md) for installation instructions.
 
-## Usage instructions
+## Get started
 
-Here are the steps to use the Plugin monitoring trace viewer:
-
-### Run the Plugin monitoring page
-
-1. Log in to your Dataverse environment with appropriate credentials.
-1. Play the Dataverse Accelerator app
+1. [Run the Dataverse Accelerator app](dataverse-accelerator.md#get-started)
 1. Navigate to the **Plugin monitoring** feature, either using the left navigation or the feature card.
 
 ### Enable log capturing (for administrators)
 
-If log capturing is not enabled in your environment, system administrators or users with appropriate security roles privilege can enable it.
+If log capturing is not enabled in your environment, the landing page will display an 'off' state with two options to enable logging: All or Exceptions. Choose the appropriate option based on your needs, see the [main documentation](/power-apps/developer/data-platform/logging-tracing#enable-trace-logging) for more information. You can change these settings later on if needed.
 
-1. The landing page will display an error state with two options:
-    1. Enable all logs
-    1. Exception logs only
+![Enable logging](./media/logging-off.svg)
 
-Access the settings and locate the option to enable log capturing for plugins.
+> [!TIP]
+> Tracing and logging are ideal for debugging during plugin development. For plugin workflows in production, use [Azure App Insights for monitoring](/power-apps/developer/data-platform/application-insights-ilogger).
 
 ### View logs
 
-Upon enabling logs, you'll start to see a list of existing plugin trace logs.
+When logs are enabled, plugin events will start to show in the list.
 
 Logs may be categorized based on the type of plugin (Custom APIs, low code plugins, or pro-code plugins) and execution history.
 
