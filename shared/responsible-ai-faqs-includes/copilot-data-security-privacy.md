@@ -102,7 +102,27 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 ### Copilot in Dynamics 365 apps and Power Platform
 
 | Product or capability | Feature | Managed Environments required? | How to turn off |
+|-------------------------|-------------------------|-------------------------|-------------------------|
 | Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
+| Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
+| Power Apps | Use natural language to edit an app using the Copilot panel - Power Apps | Microsoft Learn | No | [Manage feature settings - Power Platform | Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/settings-features) |
+| Power Apps | [Copilot assistance for form filling in model-driven apps - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/user/form-filling-assistance) | No | PPAC Setting -&gt; Features -&gt; AI form fill assistance |
+| Power Apps | [Draft well-written, input text with Copilot (preview) - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/user/well-written-input-text-copilot) | No, premium user license | Per app: Toggle in Maker Portal App Settings pane or via Powershell</br>Per environment: Admins only via Powershell</br>Step-by-step instructions here:</br>[Draft well-written, input text with Copilot (preview) - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/user/well-written-input-text-copilot) |
+| AI Builder | Scenarios in preview | No | [Scenarios in preview - AI Builder | Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/previewability-scenarios) |
+| Dynamics 365 Customer Insights (Data) | [Have a dialog with data using Copilot in Customer Insights](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/dialog-with-data) (aka Discovery) | No | CI-Data has its own flag for all its Copilot features by AOAI, described [Give consent to use Copilot in Customer Insights - Data](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/copilot-global-consent) |
+| Dynamics 365 Customer Insights (Data) | [Data prep report overview (preview)](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-prep-overview) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Data) | <a href="https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/system">View system configuration<br /></br></a> | No | ^ ditto |
+| Dynamics 365 Customer Insights (Data) | [Get answers to questions about capabilities from Copilot (preview)](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/help-pane-copilot) (aka docs Q&amp;A) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Data) | [Create segments with Copilot for Customer Insights - Data (preview)](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/segments-copilot) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Journeys) | [Copilot helps you learn and do more (review)](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/copilot-overview#how-the-general-customer-insights---journeys-copilot-helps-you-learn-and-do-more) (aka docs Q&amp;A) | No | Whether this Copilot is available in your environment is controlled by Power Platform administrator settings. [Learn how to add Copilot for model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot)<br /></br>(from its [responsible AI FAQ](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/faqs-copilot-general))</br>This capability is "app copilot in CI-J", that's why it's enabled in PPAC. |
+| Dynamics 365 Customer Insights (Journeys) | <a href="https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/real-time-marketing-natural-language-segments">Target the right customers using query assist<br /></br></a> | No | CI-Journey has its own flags for Copilot features: [Give consent to use Copilot in Customer Insights - Journeys](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
+| Dynamics 365 Customer Insights (Journeys) | [Create journeys using AI assistance](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/real-time-marketing-use-copilot-create-journey) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Journeys) | [Use AI to kickstart email creation](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/content-ideas) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Journeys) | [Use images in your content](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/upload-images-files#use-images-in-your-content) | No | ^ ditto |
+| Dynamics 365 Customer Insights (Journeys) | [Refresh and perfect your message](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/content-rewrite) | No | ^ ditto |
+| [Style your emails with AI-assisted themes](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/email-theme) | [Style your emails with AI-assisted themes](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/email-theme) | No | ^ ditto |
+
+
 
 ### Regional and language availability
 
