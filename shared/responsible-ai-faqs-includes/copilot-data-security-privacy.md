@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 03/21/2024
+ms.date: 04/08/2024
 ms.topic: include
 ---
 
@@ -101,13 +101,8 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 
 ### Copilot in Dynamics 365 apps and Power Platform
 
-- [Enable copilots and generative AI features in Power Platform](/power-platform/admin/geographical-availability-copilot)
-- [Enable Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features#region-availability-and-data-movement)
-- [Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-- [Copilot for Sales architecture](/microsoft-sales-copilot/architecture)
-- [Microsoft Copilot Studio overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
-- [AI Copilot overview in Power Apps](/power-apps/maker/canvas-apps/ai-overview)
-- [Get started with Copilot in cloud flows – Power Automate](/power-automate/get-started-with-copilot)
+| Product or capability | Feature | Managed Environments required? | How to turn off |
+| Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 
 ### Regional and language availability
 
