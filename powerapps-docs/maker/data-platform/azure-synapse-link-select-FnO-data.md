@@ -97,7 +97,7 @@ INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableCreateRecIdIndex
 
 3. You need to run the following script to perform initial indexing operations in your environment. You will see error "FnO-812" when adding these tables to Synapse Link in case you miss this step in a CHE environment. This process is auto enabled Sandbox or other higher environments. 
 
-sql
+```sql
 SET NOCOUNT ON;
 print 'Put system in Maintainance mode'
 print ''
