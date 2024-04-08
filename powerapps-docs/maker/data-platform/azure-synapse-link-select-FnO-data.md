@@ -95,22 +95,20 @@ INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionCha
 INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableCreateRecIdIndexForDataSynchronization', 1)
 ```
 
-3. You need to run the following script to perform initial indexing operations in your environment.
+3. You need to run the following script to perform initial indexing operations in your environment. You will see error "FnO-812" when adding these tables to Synapse Link in case you miss this step in a CHE environment. This process is auto enabled Sandbox or other higher environments. 
 
-```sql
+sql
 SET NOCOUNT ON;
 print 'Put system in Maintainance mode'
 print ''
 UPDATE SQLSYSTEMVARIABLES SET VALUE = 1 WHERE PARM = 'CONFIGURATIONMODE'
 SET NOCOUNT OFF;
 
-
 DECLARE @SchemaName NVARCHAR(MAX) = 'dbo';
 DECLARE @TableId INT;
 DECLARE @TableName NVARCHAR(250);
 DECLARE @SQLStmt NVARCHAR(MAX);
 DECLARE @SlNo INT = 0;
-
 
 DECLARE Table_cursor CURSOR LOCAL FOR
 SELECT T.ID, T.Name
@@ -251,6 +249,8 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[#Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
+- Special fields such as TimeZoneID (TZID), Binary fields in Finance and Operations tables are not enabled in SynapseL ink
+- Staging and Temporary table types in Finance and Operations are not allowed in Synapse Link.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
 ## Access incremental data changes from finance and operations
