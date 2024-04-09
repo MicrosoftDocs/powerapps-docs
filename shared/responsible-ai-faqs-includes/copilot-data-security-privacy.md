@@ -120,7 +120,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Dynamics 365 Customer Insights - Journeys | [Use AI to kickstart email creation](/dynamics365/customer-insights/journeys/content-ideas) | No | ^ ditto |
 | Dynamics 365 Customer Insights - Journeys | [Use images in your content](/dynamics365/customer-insights/journeys/upload-images-files#use-images-in-your-content) | No | ^ ditto |
 | Dynamics 365 Customer Insights - Journeys | [Refresh and perfect your message](/dynamics365/customer-insights/journeys/content-rewrite) | No | ^ ditto |
-| [Style your emails with AI-assisted themes](/dynamics365/customer-insights/journeys/email-theme) | [Style your emails with AI-assisted themes](/dynamics365/customer-insights/journeys/email-theme) | No | ^ ditto |
+| Dynamics 365 Customer Insights - Journeys | [Style your emails with AI-assisted themes](/dynamics365/customer-insights/journeys/email-theme) | No | ^ ditto |
 
 
 
