@@ -30,11 +30,12 @@ Leverage AI to improve the experience of creating and editing formulas in the Fo
 - Copilot enabled on the environment and tenant
 
 ## Explain This Formula
-Select a control and property that you want to understand more about what the formula is doing.  Select the new Copilot button in the Formula Bar, and choose "Explain This Formula".  An explanation window will appear to let you know that the Copilot is working on the explanation, and then display the explanation once it is available.
+Select a control and property that you want to understand more about what the formula is doing.  Select the new Copilot button in the Formula Bar, and choose "Explain This Formula".  An explanation window will appear to let you know that the Copilot is working on the explanation, and then display the explanation once it is available.  Explanations can be copied and insertted as code comments or shared with other people that are collaborating on an application.
 
 ### Known Limitations
 - 1,000 character formula limit for explanations
 - AI is only aware of default properties
+- Not available for User Defined Functions
 - Not available in Canada
 
 ## Formula from Comments (Preview)
@@ -45,6 +46,7 @@ Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilo
 - AI is only aware of default properties in the app
 - Retrieving Copilot formula recommendations may prevent other actions from occuring in the Canvas Studio until after the recommendation is generated
 - Does not include existing formulas for that property in the recommendation
+- Not available for User Defined Functions
 - Not available in Canada
 
 ### Disabling Formula from Comments
