@@ -48,7 +48,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - You can use a Tier-1 environment, also known as a cloud-hosted environment, for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
 
    > [!NOTE]
-   > With availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+   > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
 
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
@@ -82,20 +82,20 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 
 After row version change tracking is enabled, a system event that's triggered in your environment might cause reinitialization of tables in export to data lake. If you have downstream consumption pipelines, you might have to reinitialize the pipelines. More information: [Some tables have been "initialized" without user action](/dynamics365/fin-ops-core/dev-itpro/data-entities/finance-data-azure-data-lake#some-tables-have-been-initialized-without-user-action).
 
-### Additional steps to configure a Cloud Hosted environment (CHE) 
+### Additional steps to configure a cloud hosted environment
 
-With availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, you must perfomr the following additional configuration steps:
+With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, you must perform the following additional configuration steps:
 
-1. do a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
+1. Complete a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 
-2. You need to enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they are missing. You can enable the flights, by running these SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an entity.
+1. You need to enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they're missing. You can enable the flights by running these SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an entity.
 
 ```sql
 INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1)
 INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableCreateRecIdIndexForDataSynchronization', 1)
 ```
 
-3. You need to run the following script to perform initial indexing operations in your environment. You will see error "FnO-812" when adding these tables to Synapse Link in case you miss this step in a CHE environment. This process is auto enabled Sandbox or other higher environments. 
+3. You need to run the following script to perform initial indexing operations in your environment. If you don't run the script in the CHE environment, you see error "FnO-812" when adding these tables to Azure Synapse Link. This process is auto enabled with sandbox or other higher environments.
 
 ```sql
 SET NOCOUNT ON;
@@ -249,10 +249,10 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   >
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
   
-- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Also see (Known limitations for Finance and Operations Data Entities)[#Known limitations with finance and operations entities] for details on re-enabling entities after a database restore operation.
+- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Go to [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables) for details on re-enabling entities after a database restore operation.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
-- Special fields such as TimeZoneID (TZID), Binary fields in Finance and Operations tables are not enabled in SynapseL ink
-- Staging and Temporary table types in Finance and Operations are not allowed in Synapse Link.
+- Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
+- Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
 ## Access incremental data changes from finance and operations
@@ -331,9 +331,9 @@ To enable change tracking, follow these steps.
 Currently, there are the following limitations with finance and operations entities and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
 - Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox is disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
-- If the chosen entity is unavailable because of the limitation above, you might be able to choose the tables that comprise the data from that entity.
+- If the chosen entity is unavailable because of the change tracking limitation, you might be able to choose the tables that comprise the data from that entity.
 
    > [!NOTE]
    > For a list of ready-made finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.**
 
-- In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking and reselect the tables in Azure Synapse Link. 
+- In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking, and reselect the tables in Azure Synapse Link. 
