@@ -101,7 +101,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 
 ### Copilot in Dynamics 365 apps and Power Platform
 
-| Product or capability | Feature | Managed Environments required? | How to turn off |
+| Product | Feature | Managed Environments required? | How to turn the feature off |
 |-------------------------|-------------------------|-------------------------|-------------------------|
 | Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
