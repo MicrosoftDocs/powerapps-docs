@@ -55,9 +55,9 @@ When trying to quickly input text into multiline text boxes or rich text editors
 You can turn off text assistance for an app or an environment using a PowerShell cmdlet. 
 
 > [!NOTE]
-> When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
-> If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
-> The PowerShell cmdlets may take up to two hours to take effect.
+> - When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+> - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
+> - The PowerShell cmdlets may take up to two hours to take effect.
 
 ### Turn off text assistance for an app
 
