@@ -8999,6 +8999,16 @@
       "source_path": "powerapps-docs/maker/data-platform/table-settings-for-copilot.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/add-ai-copilot",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "power-apps/maker/portals/progressive-web-apps.md",
+      "redirect_url": "/power-pages/configure/build-progressive-web-apps",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-apps/maker/portals/progressive-web-apps.md",
+      "redirect_url": "/power-apps/maker/portals/build-progressive-web-apps",
+      "redirect_document_id": "false"
     }
   ]
 }
