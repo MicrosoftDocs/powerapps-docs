@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preview)
 description: Learn how to use Copilot to quickly generate well-written text that can be used in text boxes in apps made with Power Apps.
-ms.date: 02/20/2024
+ms.date: 04/10/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -25,7 +25,7 @@ You can use Copilot to quickly generate well-written text to use as input text i
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly jot down ideas in a text box without worrying about format and grammar. Copilot corrects errors in grammar and eloquently refines your ideas. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
-> - To use this feature, your environment must be in a region with GPU capacity, or your tenant must have enabled the data movement across regions setting.  Learn more about this [here](https://learn.microsoft.com/en-us/microsoft-sales-copilot/copilot-data-movement).
+> - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have selected the **Move data across regions** checkbox.  Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
@@ -52,12 +52,12 @@ When trying to quickly input text into multiline text boxes or rich text editors
   
 ## Turn off text assistance in web player
 
-You can turn off text assistance for an app or an environment using PowerShell cmdlet. 
+You can turn off text assistance for an app or an environment using a PowerShell cmdlet. 
 
 > [!NOTE]
 > When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
-> If an admin has disabled this feature at the environment level, it will be disabled for all apps in that environment.
-> Please note that the PowerShell cmdlets may take up to 2 hours to take effect.
+> If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
+> The PowerShell cmdlets may take up to two hours to take effect.
 
 ### Turn off text assistance for an app
 
