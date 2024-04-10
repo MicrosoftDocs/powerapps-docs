@@ -55,6 +55,9 @@ sections:
      answer: |
         A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
 
+   - question: Where can I view the capacity savings?
+     answer: |
+        The [Power Platform capacity reports](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-overview#storage-capacity-reports) displays the total capacity consumed. The reduction in database capacity consumed, after running a Dataverse long term retention policy, depends on the number of rows and column data types involved in the retention process. For production environments, the reports could take a few days to a week to reflect the fully reduced savings. For non production environments, the reports could take up to 2 weeks to reflect the savings.
    - question: What is expected for the performance when accessing retained nonactive data from Dataverse?
      answer: |
         Retained data reads are significantly slower than live data reads. Notice that long term data retention isn't a feature for transactional operations, but should be used for rarely accessed data required for compliance.
@@ -81,7 +84,7 @@ sections:
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
-        No. This isn't supported. 
+         You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention will not delete any retained data already in your own data lake. Dataverse API's are available to [delete retained data](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-manage#bulk-delete-long-term-retained-data) from Dataverse long term retention 
 
    - question: Do retention policy runs consume API requests?
      answer: |
