@@ -79,7 +79,7 @@ With Dataverse long term retention, data is never moved out of Dataverse. The re
 
 - Database capacity details reported:
   - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
-- Notice that the policy run takes 72 to 96 hours to complete and there's an additional 24 hours afterward for the database capacity reports to appear.
+- Notice that the policy run takes 72 to 96 hours to complete and there's an additional 24 hours afterward for the database capacity reports to appear. 
 - When available, the reports display two entries for a table that has been enabled for long term retention:
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
@@ -93,7 +93,7 @@ Log capacity reports aren't currently available.
 
 ### Viewing the capacity reports
 
-Imagine a nonproduction scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
+Imagine a nonproduction scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process. The reports could take a few days to a week to reflect the fully reduced savings in production environments. For non production environments, the reports could take up to 2 weeks to reflect the savings.
 
 :::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data" lightbox="media/data-retention-storage-capacity-report.png":::
 
