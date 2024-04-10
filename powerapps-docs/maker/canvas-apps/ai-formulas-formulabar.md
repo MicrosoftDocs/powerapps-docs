@@ -44,6 +44,7 @@ Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilo
 
 ### Known Limitations
 - AI is only aware of default properties in the app
+- Only works with general Power Fx functions, not Power Apps specific functions like (e.g. Navigate())
 - Retrieving Copilot formula recommendations may prevent other actions from occuring in the Canvas Studio until after the recommendation is generated
 - Does not include existing formulas for that property in the recommendation
 - Not available for User Defined Functions
