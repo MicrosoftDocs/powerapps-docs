@@ -4,7 +4,7 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/22/2024
+ms.date: 04/09/2024
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -366,6 +366,10 @@ When you attach a file to your note, the **Edit note** screen displays, and atta
 > You can only add one file attachment per note.
 
 ![Edit note screen.](media\edit-note-timeline.png "Edit note screen")
+
+### Quickly save notes
+
+The Quick save feature allows you to save your notes faster by selecting **Ctrl**+**S** on your keyboard at any point when you're typing a note. When you use Quick save, you don't have to navigate to **Save** or **Save and Close** on the command bar. A **Save successful** confirmation is displayed to let you know your notes have saved on the timeline.
 
 ## Work with posts
 
