@@ -9006,6 +9006,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/portals/progressive-web-apps.md",
+      "redirect_url": "/power-pages/configure/build-progressive-web-apps",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/build-progressive-web-apps.md",
+      "redirect_url": "/power-pages/configure/build-progressive-web-apps",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/admin/add-powerbi-report.md",
       "redirect_url": "/power-pages/getting-started/add-power-bi",
       "redirect_document_id": false
