@@ -1861,12 +1861,6 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing sites
           href: ./portals/manage-existing-portals.md
-    - name: Sites as Progressive Web Apps
-      items:
-        - name: Overview
-          href: ./portals/progressive-web-apps.md
-        - name: Build Progressive Web Apps
-          href: ./portals/build-progressive-web-apps.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create custom Portal Management app
