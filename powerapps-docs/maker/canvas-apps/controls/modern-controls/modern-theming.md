@@ -34,6 +34,20 @@ To use modern themes, you need to enable it. More information, see [Enable moder
 > [!NOTE]
 > When modern controls and themes is enabled, you won't be able to select classic themes from the command bar. To use classic themes, you'll need to turn off modern controls and themes.  
 
+## Create a theme
+
+While there are several out-of-the-box themes available to style your app, you can also create your own theme to customize the app's visual appearance to your liking. 
+
+1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
+2. On the **Themes** pane, select **Add a theme**.
+3. In the **Create a theme** dialog, enter the following information
+    -  **Theme name**: The theme name you provide must be unique.
+    -  **Font**: Choose the default font you want your controls to utilize when this theme is applied.
+    -  **Seed color**: Select the color you want to base your theme on, or manually enter the Hex or RGB representation of the color. The system will then generate a 16-slot palette that is optimized for accessibility.
+4. Select **Create**.
+
+Your new theme will then be created and applied to your app. 
+
 ## Apply modern theme 
 
 1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
@@ -42,7 +56,28 @@ To use modern themes, you need to enable it. More information, see [Enable moder
 When a modern theme is selected, the style of the theme is automatically applied to all the modern controls in your app. This action sets the **App.Theme** property.  
 
 > [!NOTE]
-> Modern themes don't make any automatic changes to classic controls; however, these controls can be manually styled to align to the theme through Power Fx. 
+> Modern themes don't make any automatic changes to classic controls; however, these controls can be manually styled to align to the theme through Power Fx.
+
+## Edit a theme
+If you need to change one or more parameters of your custom theme, you can accomplish this by editing the theme. 
+
+1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
+2. On the **Themes** pane, find the tile corresponding to the theme you want to edit and select **Options** > **Edit**.
+3. On the **Edit theme** pane, adjust the theme as desired.
+
+> [!NOTE]
+> Out-of-the-box themes cannot be edited. 
+
+## Delete a theme
+If you decide you no longer need a custom theme in your app, you can simply delete the theme from your app. 
+
+1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
+2. On the **Themes** pane, find the tile corresponding to the theme you want to edit and select **Options** > **Delete**.
+3. This will trigger a confirmation message. Select **Delete theme** to proceed with removing the theme.
+4. [Optional] If you have any Power Fx formulas that reference this theme in your app, you will need to manually correct these.
+
+> [!NOTE]
+> Out-of-the-box themes cannot be deleted.  
 
 ## Use themes with Power Fx
 
