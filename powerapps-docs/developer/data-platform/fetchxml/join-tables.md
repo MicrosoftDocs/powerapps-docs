@@ -1,7 +1,7 @@
 ---
 title: Join tables using FetchXml
 description: Learn how to use FetchXml to join tables when you retrieve data from Microsoft Dataverse.
-ms.date: 03/08/2024
+ms.date: 03/22/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -366,8 +366,6 @@ These link types might also allow Dataverse to only find the first matching link
 
 ### Use `matchfirstrowusingcrossapply` link type
 
-
-
 This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
 
 #### [FetchXml](#tab/fetchxml)
@@ -407,6 +405,24 @@ cross apply (
 ---
 
 The `matchfirstrowusingcrossapply` link type is equivalent to the `inner` type except it only returns the parent row at most once. The parent row is returned only if there are matching rows in the linked entity but, unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity. Use this when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results aren't necessary.
+
+#### Related table property/attribute names are inconsistent
+
+When using the `matchfirstrowusingcrossapply` link type, the names of the properties returned using Web API, or the SDK [Entity.Attributes collection](/dotnet/api/microsoft.xrm.sdk.entity.attributes) `Keys` values for the related table columns are different than other types of joins. Usually, these will follow the `<tablealias>.<logicalname>` format. However, for the `matchfirstrowusingcrossapply` link type, the [SchemaName](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.schemaname) values are used without the table alias prefix.
+
+Using the previous query example with any other link-type, you can expect the properties or keys to have these names:
+
+- `fullname`
+- `contactid`
+- `account1.accountid`
+- `account1.name`
+
+But with the `matchfirstrowusingcrossapply` link type, the properties or keys have these names:
+
+- `fullname`
+- `contactid`
+- `AccountId`
+- `Name`
 
 
 ## Next steps

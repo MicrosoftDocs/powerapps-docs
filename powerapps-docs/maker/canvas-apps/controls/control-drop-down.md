@@ -1,18 +1,18 @@
 ---
 title: Drop down control in Power Apps
 description: Learn about the details, properties and examples of the drop down control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/06/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 
 # Drop down control in Power Apps
@@ -30,7 +30,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **Selected** – The data record that represents the selected item.
 
-**AllowEmptySelection** – Whether the control shows an empty selection if no item has been selected. App users can also clear their choices by selecting the blank item.
+**AllowEmptySelection** – Whether the control can have no selected items. When false, there will always be a selected item, which will initially be the **Default** or the first item.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.

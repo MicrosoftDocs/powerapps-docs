@@ -1,19 +1,19 @@
 ---
 title: Edit form and Display form controls in Power Apps
 description: Learn about the details, properties and examples of the Edit form and Display form controls in Power Apps.
-author: aneesmsft
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 07/06/2017
+ms.date: 03/26/2024
 ms.subservice: canvas-maker
-ms.author: aneesa
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
@@ -25,6 +25,14 @@ If you add a **Display form** control, the user can display all fields of a reco
 ![Example form and form view controls.](./media/control-form-detail/form-detail-intro.png)
 
 If you add a **[Gallery](control-gallery.md)** control, you can configure it to show a table in a data source and then configure a form to show whichever record the user selects in the gallery. You can also add one or more **[Button](control-button.md)** controls that the user can select to save edits, cancel edits, and create a record. By using controls together, you can [create a complete solution](../working-with-forms.md).
+
+
+## Limitations
+
+The form control has these limitations:
+
+- You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and performance of the app. 
+
 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
