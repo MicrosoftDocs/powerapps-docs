@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 04/04/2024
+  ms.date: 04/11/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -57,7 +57,7 @@ sections:
 
    - question: Where can I view the capacity savings?
      answer: |
-        The [Power Platform capacity reports](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-overview#storage-capacity-reports) displays the total capacity consumed. The reduction in database capacity consumed, after running a Dataverse long term retention policy, depends on the number of rows and column data types involved in the retention process. For production environments, the reports could take a few days to a week to reflect the fully reduced savings. For non production environments, the reports could take up to 2 weeks to reflect the savings.
+        The [Power Platform capacity reports](data-retention-overview.md#storage-capacity-reports) displays the total capacity consumed. The reduction in database capacity consumed, after running a Dataverse long term retention policy, depends on the number of rows and column data types involved in the retention process. For production environments, the reports could take a few days to a week to reflect the fully reduced savings. For nonproduction environments, the reports could take up to two weeks to reflect the savings.
    - question: What is expected for the performance when accessing retained nonactive data from Dataverse?
      answer: |
         Retained data reads are significantly slower than live data reads. Notice that long term data retention isn't a feature for transactional operations, but should be used for rarely accessed data required for compliance.
