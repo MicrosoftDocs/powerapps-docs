@@ -16,6 +16,9 @@ contributors:
 
 Gets a control on the form. 
 
+> [!NOTE]
+> **getControl** only works on controls in the form body and header. It's not supported for controls elsewhere on the page, even if they refer to the same column. Unsupported scenarios include controls inside [business process flows](../../../../../user/work-with-business-processes.md) or inside other controls like [subgrids](../../../../../maker/model-driven-apps/form-designer-add-configure-subgrid.md).
+
 ## Syntax
 
 `formContext.getControl(arg);`
