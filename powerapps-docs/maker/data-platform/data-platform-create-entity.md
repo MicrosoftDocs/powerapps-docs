@@ -31,8 +31,9 @@ To create a table, you must have either a System Administrator or System Customi
 
    Before you create a table, check out the [table reference](../../developer/data-platform/reference/about-entity-reference.md) for a description of available standard tables. These tables cover typical scenarios. If one of these tables meets your requirements as is or after minor changes, you can save time by starting with that table.
 
-4. In the **New table** panel, enter the following information columns. Required columns are designated with an asterisk (*) next to the column label. 
+1. In the **New table** panel, enter the information for all required columns and the optional columns that you want. Required columns are designated with an asterisk (*) next to the column label. More information: [Dataverse table options](#dataverse-table-options).
 
+## Dataverse table options
 
 |Option  |Name  |Description  |Can be edited after table creating  |
 |---------|---------|---------|---------|
@@ -64,7 +65,7 @@ To create a table, you must have either a System Administrator or System Customi
 |Advanced     | **Can be taken offline**    |  Records for this table can be taken offline for mobile users. More information: [Mobile offline overview](/power-apps/mobile/mobile-offline-overview)  |  Yes       |
 |Advanced     | **Can be added to queue**   | Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. Once enabled this setting can't be disabled.         |   No      |
 
-5. Select **Create**.
+
 
 On the table details page, observe that the table is now being provisioned in the background. Once provisioning is completed, your table will be saved and available for use in apps. Columns, relationships, and keys can be added to your table at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the table after provisioning is completed.
 
