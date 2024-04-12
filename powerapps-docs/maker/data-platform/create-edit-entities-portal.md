@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 02/28/2024
+ms.date: 04/11/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -64,9 +64,7 @@ Create a table with the help of AI Copilot.
 
 ### Set advanced properties
 
-Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
-
-From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
+From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel. You start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -101,9 +99,11 @@ Select **Advanced options** to display additional properties that are optional f
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
 | **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected.  |
+| **Enable long term retention**  | Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. More information: [Long term data retention overview](data-retention-overview.md)  |
 |**Creating a new activity**  | Associate activities to records for this table.  |
 | **Doing a mail merge**  | App users can use this table with mail merge.   |
-|**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint.  |
+| **Setting up OneNote integration**  | When you turn on OneNote integration, you have the benefits of using OneNote to take or review customer notes from within your records. Requires SharePoint document management to be set up. More information: [Set up OneNote integration](/power-platform/admin/set-up-onenote-integration-in-dynamics-365)   |
+|**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint. More information: [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint) |
 | **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled.  |
 | **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one is created when you enable sending email.  |
 | **Have an access team**| Create team templates for this table.  |
