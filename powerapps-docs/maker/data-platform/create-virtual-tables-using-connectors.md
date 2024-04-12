@@ -1,16 +1,17 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 06/08/2023
+ms.date: 04/12/2024
 ms.reviewer: matp
 ms.topic: article
-author: NHelgren # GitHub ID
+author: NHelgren
 ms.author: nhelgren
 search.audienceType: 
   - maker
 contributors: 
   - JimDaly
-  - phecke 
+  - phecke
+  - psimolin
 ---
 # Create virtual tables using the virtual connector provider
 
@@ -21,7 +22,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - SQL Server
 - Microsoft SharePoint
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
-- Salesforce (Preview)
+- Salesforce (preview)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -70,7 +71,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in Power Apps for SQL, SharePoint or Salesforce
+## Create a virtual table in Power Apps for SQL, SharePoint or Salesforce
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -79,8 +80,8 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 1. [Create and select the connection reference (optional)](#create-and-select-a-connection-reference-optional)
 1. Choose your connection details and select your data <a href="#SQL-or-SharePoint">SQL or SharePoint</a>.
 1. [Configure your data](#configure-your-data)
-2. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
-3. [Complete the setup](#complete-the-setup)
+1. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
+1. [Complete the setup](#complete-the-setup)
 
 ### Choose to create a table using an external data source
 
@@ -88,7 +89,7 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
-1. On the command bar, select **New** > **Table** > **Table from external data**.
+1. On the command bar, select **New** > **Table** > **Create a virtual table**.
 
 ### Create the virtual table
 
@@ -101,7 +102,7 @@ Watch a short video showing how to create a virtual table with the virtual conne
    - If you want to use an existing connection, select the connection you want, and then select **Next**.
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
    - If you have no connections and wish to create a new connection, select **+Add Connection**.
-   :::image type="content" source="media/ve-select-datasource.png" alt-text="Select an existing datasource or create one":::
+
 1. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
 
 <a name="SQL-or-SharePoint"></a>
@@ -126,15 +127,31 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
-# [Salesforce (Preview)](#tab/salesforce)
+# [Microsoft Fabric (preview)](#tab/fabric)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!IMPORTANT]
-> These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Login URI**: Either Production (default) or Sandbox.
-- **Salesforce API version**: v41.0 (default) or newer version.
+- Select a Microsoft Fabric workspace from the available list of workspaces. All workspace where you have access are available in the list.
+- Choose a Microsoft Fabric Lakehouse from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose. 
+- Follow the instructions on your screen. More information: [Build apps and automations, drive action with insights from Microsoft Fabric (preview)](azure-synapse-link-build-apps-with-fabric.md)
 
-After selecting **Create**, log in with your Salesforce credentials.
+# [Salesforce (preview)](#tab/salesforce)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - The credentials you supply are the credentials used for all authentication for the virtual table. Use credentials with the correct level of permissions with SQL Server.
+
+- **Login URI**: Either **Production** (default) or **Sandbox**.
+- **Salesforce API version**: **v41.0** (default) or newer version.
 
 ---
 
