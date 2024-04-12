@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 11/07/2023
+ms.date: 04/03/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -32,7 +32,7 @@ In addition, the release channel can be overridden with either of these options.
 - Browser session channel
 
 > [!NOTE]
-> - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
+> When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
 
 ## Changing the environment channel
 
@@ -54,7 +54,10 @@ The app channel can be used to override the release channel for a model-driven a
 |--|--|--|
 | Auto | 0 | App default value is **Semi-annual**, but will later change to **Monthly** in a future release wave. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
-| Semi-annual | 2 | App explicitly set to **Semi-Annual Channel**. |
+| Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
+
+> [!NOTE]
+>  App release value `2` is used for internal testing and receives updates faster than monthly channel so is not supported for production usage.
 
 ### Change app channel in app designer
 
@@ -65,12 +68,18 @@ A maker can use the app designer to explicitly set the release channel for an ap
 1. Open the app in the app designer.
 1. Open **Settings** dialog.
 1. Under the General tab, expand **Advanced settings**.
-1. Use **App release channel** to change the app release value.
+1. Use **App release channel** to change the app release value. More information: [Changing the app channel](#changing-the-app-channel)
+   > [!div class="mx-imgBorder"]
+   > ![App designer settings app release channel](media/channel-change/app-designer-settings-app-release-channel.png "App designer settings app release channel")
+
 1. Save and publish the app.
 
 ### Change app channel in the solutions area
 
 A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
+
+  > [!div class="mx-imgBorder"]
+  > ![Solution explorer app setting app channel edit](media/channel-change/solution-explorer-app-setting-app-channel-edit.png "Solution explorer app setting app channel edit")
 
 1. Open https://make.powerapps.com/
 1. Under **Solutions** open an existing solution with one or more model-driven apps:
@@ -81,7 +90,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Select **Add**.
 1. To change the app channel for multiple apps:
    1. Edit the setting **App channel**.
-   1. Find the app(s) under the section **Setting app values**.
+   1. Find the apps under the section **Setting app values**.
    1. Select **New app value** and then enter the integer for the channel.
    1. Select **Save**.
 1. To change the app channel for all apps in the environment:
@@ -89,7 +98,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
    1. Select **Save**.
-1. After changing an app setting for specific app(s), the app(s) must be republished for the change to take effect.
+1. After changing an app setting for specific apps, the apps must be republished for the change to take effect.
 
 ### Set the default for new apps to monthly channel
 
@@ -158,7 +167,7 @@ To validate against a specific monthly release, the following steps can be used:
 
 1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
-1. Find the monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+1. Find the monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases).
 
 1. A specific release can be set with the URL parameter ```&channelrelease=`` with the next release short name like *2308*.
 
