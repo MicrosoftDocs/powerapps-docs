@@ -71,7 +71,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Create a virtual table in Power Apps for SQL, SharePoint or Salesforce
+## Create a virtual table in Power Apps for SQL, SharePoint, Fabric or Salesforce
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -197,7 +197,7 @@ When you create a virtual table, by default you can choose to change the suggest
    - **Display name**: The name that will be used to identify your virtual table.
    - **Plural name**: The plural of the virtual table name, used in appropriate situations where you refer to one or more record from the table, such as *Customer* is the table for multiple records refereed to as *Customers*.
    - **Schema name**: The logical name Dataverse uses for the virtual table, which includes the solution publisher prefix.
-   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields may be selected. A primary key is a required field but will be chosen by Dataverse.
+   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields can be selected. A primary key is a required field but will be chosen by Dataverse.
  
 1. In the **External column** area, choose if you would like to rename any of your external columns from the data source. The following fields are provided:
    - **Schema name** (read-only). This is the schema name of the column in the data source. This property is read only.
@@ -354,7 +354,7 @@ With the connection reference and the virtual table data source setup, an **Enti
    > [!Note] 
    > After the save completes, the form will "reset" with all fields shown as blank, this is normal.
 
-1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
+1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It might take a few moments for the creation to complete.
 
    :::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
 

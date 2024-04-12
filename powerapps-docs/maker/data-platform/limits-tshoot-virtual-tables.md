@@ -5,8 +5,10 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 09/27/2023
+ms.date: 04/12/2024
 ms.custom: template-how-to
+contributors: 
+  - psimolin
 ---
 # Known limitations and troubleshooting with virtual tables
 
@@ -100,7 +102,7 @@ The following are limitations for each data source.
 
 # [Salesforce (preview)](#tab/salesforce)
 
-- For Salesforce Connector limitations, go to [Salesforce connector reference](/connectors/salesforce/).
+- For Salesforce connector limitations, go to [Salesforce connector reference](/connectors/salesforce/).
 - Fields that are referencing other Salesforce objects are locked.
 
 ---
