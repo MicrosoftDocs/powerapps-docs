@@ -148,7 +148,6 @@ Watch a short video showing how to create a virtual table with the virtual conne
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The credentials you supply are the credentials used for all authentication for the virtual table. Use credentials with the correct level of permissions with SQL Server.
 
 Select Add connection:
 
