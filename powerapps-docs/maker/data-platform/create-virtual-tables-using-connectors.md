@@ -89,7 +89,7 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
-1. On the command bar, select **New** > **Table** > **Create a virtual table**.
+1. On the command bar, select **New** > **Table** > **Table from external data**.
 
 ### Create the virtual table
 
@@ -150,8 +150,10 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - The credentials you supply are the credentials used for all authentication for the virtual table. Use credentials with the correct level of permissions with SQL Server.
 
-- **Login URI**: Either **Production** (default) or **Sandbox**.
-- **Salesforce API version**: **v41.0** (default) or newer version.
+Select Add connection:
+
+- **Login URI**: Select either **Production** (default) or **Sandbox**.
+- **Salesforce API version**: Select **v41.0** (default) or a later version.
 
 ---
 
