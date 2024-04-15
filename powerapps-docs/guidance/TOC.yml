@@ -2,6 +2,10 @@
   items: 
   - name: Power Apps guidance documentation
     href: index.yml
+  - name: Power Apps coding standards
+    items:
+    - name: Naming conventions
+      href: coding-standards/naming-conventions.md
   - name: Power Apps patterns
     items:
     - name: Patterns overview
