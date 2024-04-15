@@ -55,4 +55,4 @@ This setting can be disabled from the Upcoming Features screen in Canvas Studio 
 
 ## Responsible AI
 
-Review the Microsoft Documenation on (Responsible AI use for Power Apps)[../common/responsible-ai-overview.md] to understand the choices a user has when working with AI.  Additionally, review the (Power Fx Copilot FAQ)[../common/pfx-copilot-faq.md] for questions regarding this functionality specifically.
+Review the Microsoft Documenation on [Responsible AI use for Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI.  Additionally, review the [Power Fx Copilot FAQ](../common/pfx-copilot-faq.md) for questions regarding this functionality specifically.
