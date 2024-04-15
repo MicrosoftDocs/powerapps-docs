@@ -1,11 +1,11 @@
 ---
-title: Use Copilot in the email rich text editor (preview)
+title: Use Copilot in the email rich text editor
 description: Learn how to use Copilot in the rich text editor to make your customer emails clearer, shorter, and more compelling.
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
 ms.topic: how-to
-ms.date: 08/25/2023
+ms.date: 04/16/2024
 ms.subservice: mda-maker
 ms.collection: bap-ai-copilot
 tags:
@@ -18,26 +18,37 @@ ms.custom:
   - ai-seo-date:10/02/2023
 ---
 
-# Use Copilot in the email rich text editor (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Copilot in the email rich text editor 
 
 When you draft customer emails in the rich text editor in a model-driven app, Copilot can offer suggestions to make them clearer, more concise, and more compelling.
 
 > [!IMPORTANT]
-> This is a preview feature. [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
 > By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
 
-The Copilot for email feature must be turned on in the [settings of the model-driven app](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled).
+The [generative AI feature in emails](/power-platform/admin/settings-features#turn-on-generative-AI-in-emails) must be turned on in the [canvas app feature settings](/power-platform/admin/settings-features).
 
-## Refine email content with Copilot
+## Draft and refine an email in the rich text editor
 
-1. Compose an email in a rich text editor that has Copilot.
+1. Select the **Copilot** icon in the rich text editor toolbar and then select **Draft with Copilot**.  
+1. In the **Draft with Copilot** dialog box, select an option as required.
+1. Enter the prompt text in the text box and select **Generate**.  
+1. Select the following options as required for the generated content:  
+
+    | Option | Description |
+    |--------|-------------|
+    | Keep it | Retains the current text and adds to the email. |
+    | Start over| Removes the current suggestion and takes you back to select an email generation option. |
+    | Discard | Removes the content suggestion and takes you back to email composer. |
+    | Adjust | Refines the text and tone of suggested content. <br>- To adjust the length of the content, select **Short**, **Medium**, or **Long**.<br>- To adjust the tone of the content, select **Friendly**, **Professional**, or **Formal**.<br> Select **Update** and the content is updated according to your refinements. |
+    | Translate | Translates the content into the selected language.  |
+
+## Adjust existing email content with Copilot
+
 1. Select the text that you want to refine.
-1. Select **Adjust with Copilot** in the editor toolbar.
+1. Select the **Copilot** icon in the rich text editor toolbar and then select **Adjust with Copilot**.  
 1. Refine the length and tone of the selected text:
 
     - Length: Select **Short**, **Medium**, or **Long** to condense or expand on your text.

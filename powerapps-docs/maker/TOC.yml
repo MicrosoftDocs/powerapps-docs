@@ -1572,9 +1572,9 @@
             href: ./model-driven-apps/add-calendar-control.md
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
-          - name: Add the Copilot control to the rich text editor (preview)
+          - name: Add the Copilot control to the rich text editor
             href: ./model-driven-apps/copilot-control.md  
-          - name: Use Copilot in the email rich text editor (preview) 
+          - name: Use Copilot in the email rich text editor
             href: ./model-driven-apps/use-copilot-email-assist.md
           - name: Add the news control to a table
             href: ./model-driven-apps/stay-current-with-news-control.md
