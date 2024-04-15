@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 03/13/2024
+  ms.date: 04/15/2024
   ms.author: sabinn
   ms.reviewer: 
   contributors: JasonHQX
@@ -18,16 +18,16 @@ sections:
      answer: |
         Data files shouldn't be modified by a customer and no customer files should be placed in the data folders.
         > [!NOTE]
-        > To drop stale and stagnant data in the data lake without breaking the Azure Synapse Link, you should consider using the feature [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
+        > To drop stale and stagnant data in the data lake without breaking the Azure Synapse Link, consider using the feature [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
    - question: How can I access my table relationships?
      answer: |
-        To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a pre-existing link.
+        To access many-to-many relationships, the relationship is available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a pre-existing link.
         > [!NOTE]
         > All relationships data is in Append-only mode by default when written in CSV format.
    - question: How can I get estimated costs before adding Azure Synapse Link?
      answer: |
         Azure Synapse Link is a free feature with Dataverse. Utilizing Azure Synapse Link for Dataverse doesn't incur additional charges under Dataverse. However, consider potential costs for the Azure service:
-        - Data storage in ADLS Gen2: [Azure Storage Data Lake Gen2 Pricing | Microsoft Azure](https://azure.microsoft.com/pricing/details/storage/data-lake/)
+        - Data storage in Azure Data Lake Storage Gen2: [Azure Storage Data Lake Gen2 Pricing | Microsoft Azure](https://azure.microsoft.com/pricing/details/storage/data-lake/)
         - Data consumption cost (such as Synapse Workspace): [Pricing - Azure Synapse Analytics | Microsoft Azure](https://azure.microsoft.com/pricing/details/synapse-analytics/)
         For comprehensive Microsoft Cost Management information, go to: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](/azure/cost-management-billing/understand/plan-manage-costs)
    - question: What happens when I add a column?
@@ -42,17 +42,17 @@ sections:
    - question: What happens when I delete a row?
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
-        - In-place update with CSV format: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
-        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
-        - Export to Delta lake format: Synapse Link will perform a soft delete on data during the next delta synchronization cycle, followed by a hard delete after 30 days.
+        - In-place update with CSV format: This is the default mode. When you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
+        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as `isDeleted=True`` to the file in the corresponding data partition in Azure Data Lake.
+        - Export to Delta lake format: Azure Synapse Link performs a soft delete on data during the next delta synchronization cycle, followed by a hard delete after 30 days.
    - question: Why am I not seeing a column header in the exported file?
      answer: |
         Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)   
    - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
      answer: |
-        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and MaxLength to 100. What you see in Model.json is `DBLength`` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
+        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength`` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
         > [!NOTE]
-        > Memo fields are defined as varchar(max) with a default maximum length of 9999
+        > Memo fields are defined as `varchar(max)`` with a default maximum length of 9999.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
@@ -64,7 +64,7 @@ sections:
         | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | datetime                           | 2021-06-25T16:21:12Z               |
         
         > [!NOTE]
-        > **CreatedOn** data type changed from datetime to datetimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and readd the table.
+        > **CreatedOn** data type changed from `datetime` to `datetimeOffset` on 07/29/2022. To edit the data type format for a table created before the change, drop and readd the table.
         > 
         > You can choose different column behaviors for a Date and Time column in Dataverse, which updates the data type format. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
    - question: Why am I seeing 1.csv or 1_001.csv file names instead of regular date time partitioned file names for some Dataverse tables?
@@ -85,9 +85,9 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
-   - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
+   - question: Why am I seeing differences in `Sinkmodifiedon` and `Modifiedon` columns?   
      answer: |
-         It's expected. Modifiedon is the datetime that record being changed in Dataverse; Sinkmodifiedon is the date and time that record is modified in the data lake.  
+         It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled won't be supported in addition to following system tables:
