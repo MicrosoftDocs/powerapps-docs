@@ -32,6 +32,9 @@ Leverage AI to improve the experience of creating and editing formulas in the Fo
 ## Explain This Formula
 Select a control and property that you want to understand more about what the formula is doing.  Select the new Copilot button in the Formula Bar, and choose "Explain This Formula".  An explanation window will appear to let you know that the Copilot is working on the explanation, and then display the explanation once it is available.  Explanations can be copied and insertted as code comments or shared with other people that are collaborating on an application.
 
+![Explain This Formula Dropdown](/media/copilot/ufb-explain-copilot.png)
+![Formula Explanation](/media/copilot/ufb-explanation-copilot.png)
+
 ### Known Limitations
 - 1,000 character formula limit for explanations
 - AI is only aware of default properties
@@ -41,6 +44,9 @@ Select a control and property that you want to understand more about what the fo
 ## Formula from Comments (Preview)
 
 Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilot will generate a recommended formula to use for that situation.  To select the recommendation, press "Tab", or begin typing through the recommendation.  The recommendation will remain until you click elsewhere or type a character that does not align with the recommendation.  Comments used to generate Power Fx formulas can remain in the Formula Bar to serve as ongoing documentation just like traditional code comments.
+
+![Typed Comment](/media/copilot/ufb-comment-copilot.png)
+![Typed Comment with Recommended Formula](/media/copilot/ufb-commentfx-copilot.png)
 
 ### Tips and Hints
 - If after pausing to get a formula recommendation, no recommendation appears, the Copilot was not able to generate anything based on the comment provided.  Rephrase or modify the comment and try again.
