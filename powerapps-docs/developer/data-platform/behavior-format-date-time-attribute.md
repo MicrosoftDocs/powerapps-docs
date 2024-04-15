@@ -4,9 +4,9 @@ description: "The DateTimeAttributeMetadata class is used to define and manage c
 ms.date: 10/19/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
