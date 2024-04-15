@@ -9024,6 +9024,11 @@
       "source_path": "powerapps-docs/maker/portals/overview.md",
       "redirect_url": "/power-pages/introduction",
       "redirect_document_id": "false"
-    }
+    },
+   {
+      "source_path": "powerapps-docs/maker/data-platform/data-platform-create-entity.md",
+      "redirect_url": "powerapps-docs/maker/data-platform/create-edit-entities-portal",
+      "redirect_document_id": "false"
+   }
   ]
 }
