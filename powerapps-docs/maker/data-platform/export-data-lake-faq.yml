@@ -43,16 +43,16 @@ sections:
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
         - In-place update with CSV format: This is the default mode. When you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
-        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as `isDeleted=True`` to the file in the corresponding data partition in Azure Data Lake.
+        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as `isDeleted=True` to the file in the corresponding data partition in Azure Data Lake.
         - Export to Delta lake format: Azure Synapse Link performs a soft delete on data during the next delta synchronization cycle, followed by a hard delete after 30 days.
    - question: Why am I not seeing a column header in the exported file?
      answer: |
         Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)   
    - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
      answer: |
-        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength`` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
+        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
         > [!NOTE]
-        > Memo fields are defined as `varchar(max)`` with a default maximum length of 9999.
+        > Memo fields are defined as `varchar(max)` with a default maximum length of 9999.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
@@ -81,11 +81,11 @@ sections:
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
    - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
      answer: |
-        In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
+        In append only mode, you should identify the latest version of record with the same ID using `VersionNumber` and `SinkModifiedOn` then apply `isDeleted=0` on the latest version.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
-         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
-   - question: Why am I seeing differences in `Sinkmodifiedon` and `Modifiedon` columns?   
+         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
+   - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
      answer: |
          It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
    - question: Which Dataverse tables aren't supported for export?
@@ -110,7 +110,7 @@ sections:
      answer: |
         - Dataverse data is stored in the connected storage container. You need the "Storage Blob Data Contributor" role in the linked storage account to perform read and query operations through Synapse Workspace.
         - If you choose to export data with Delta Lake format, your CSV file is cleaned up after the Delta Lake conversion. You need to query data with **non_partitioned** tables through Synapse Workspace.
-   - question: Why do I see the error message - can't bulk load because the file is incomplete or couldn't be read (**CSV file only**)?
+   - question: Why do I see the error message - can't bulk load because the file is incomplete or couldn't be read (CSV file only)?
      answer: |
         Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you read data from it. So, for tables with continuous changes, change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Troubleshoot serverless SQL pool](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#cant-bulk-load-because-the-file-couldnt-be-opened)
    - question: How can I use Azure Synapse Link to archive critical data?
