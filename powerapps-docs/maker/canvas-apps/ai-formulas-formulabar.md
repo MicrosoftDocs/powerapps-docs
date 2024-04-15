@@ -52,3 +52,7 @@ Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilo
 
 ### Disabling Formula from Comments
 This setting can be disabled from the Upcoming Features screen in Canvas Studio settings by toggling the flag for "Copilot comment-generated formulas".  This ability to disable will be removed when the feature becomes Generally Available
+
+## Responsible AI
+
+Review the Microsoft Documenation on (Responsible AI use for Power Apps)[../common/responsible-ai-overview.md] to understand the choices a user has when working with AI.  Additionally, review the (Power Fx Copilot FAQ)[../common/pfx-copilot-faq.md] for questions regarding this functionality specifically.
