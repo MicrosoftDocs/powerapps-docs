@@ -42,6 +42,10 @@ Select a control and property that you want to understand more about what the fo
 
 Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilot will generate a recommended formula to use for that situation.  To select the recommendation, press "Tab", or begin typing through the recommendation.  The recommendation will remain until you click elsewhere or type a character that does not align with the recommendation.  Comments used to generate Power Fx formulas can remain in the Formula Bar to serve as ongoing documentation just like traditional code comments.
 
+### Tips and Hints
+- If after pausing to get a formula recommendation, no recommendation appears, the Copilot was not able to generate anything based on the comment provided.  Rephrase or modify the comment and try again.
+- For specific references, somtimes it is helpful to put quotations around the element you are trying to include in your formula, e.g. "Button1.text"
+
 ### Known Limitations
 - AI is only aware of default properties in the app
 - Only works with general Power Fx functions, not Power Apps specific functions like (e.g. Navigate())
