@@ -1,0 +1,490 @@
+﻿---
+title: Code optimization
+description: Code optimization
+ms.date: 04-15-2024
+ms.topic: conceptual
+ms.service: powerapps
+author: robstand
+ms.author: rstand
+manager: 
+---
+
+# Code Optimization
+
+Canvas Apps have emerged as a transformative force, allowing organizations to break free from conventional constraints and build tailor-made solutions. However, as these apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within Canvas Apps necessitate a nuanced approach to code optimization.
+
+As Canvas Apps become more intricate, developers encounter challenges related to data retrieval, formula complexity, and rendering speeds. The need to strike a balance between robust functionality and responsive user interfaces underscores the importance of adopting a systematic approach to code optimization.
+
+## Power Fx formulas Optimization
+
+### With Function
+
+The With function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. More details: <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-with>
+
+![A screenshot of a computer Description automatically generated](media/image13.png)
+
+### Concurrent function
+
+The Concurrent function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the ; (semi-colon) operator, which evaluates each formula sequentially. With the Concurrent function, the app will evaluate all formulas within a property concurrently even after using the ; operator. This concurrency will help users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. More details: <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-concurrent>
+
+![A white background with blue and white text Description automatically generated](media/image14.png)
+
+### Coalesce Function
+
+The Coalesce function evaluates its arguments in order and returns the first value that isn't blank or an empty string. Use this function to replace a blank value or empty string with a different value but leave non-blank and non-empty string values unchanged. If all the arguments are blank or empty strings then the function returns blank, making Coalesce a good way to convert empty strings to blank values.
+
+If( Not IsBlank( value1 ), value1, Not IsBlank( value2 ), value2 )
+
+Requires value 1 and value 2 to be evaluated twice. This function can be reduced to:
+
+Coalesce( value1, value2 )
+
+### IsMatch Funtion
+
+The IsMatch function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a regular expression. More Details - <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-ismatch>
+
+For e.g. Matches a United States Social Security Number
+
+![](media/image15.png)
+
+Explanation of the regular expression:
+
+\\d: Matches any digit (0-9).
+
+{3}: Specifies that the preceding digit pattern (\\d) should occur exactly three times.
+
+-: Matches the hyphen character.
+
+{2}: Specifies that the preceding digit pattern (\\d) should occur exactly two times.
+
+{4}: Specifies that the preceding digit pattern (\\d) should occur exactly four times.
+
+More examples of IsMatch:
+
+IsMatch( *TextInput1*.Text, "Hello World" )
+
+IsMatch( *TextInput1\_2*.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]{8,10})" )
+
+## Optimize App OnStart 
+
+The **OnStart** property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the **OnStart** property is essential for creating responsive and efficient Canvas apps.
+
+The App OnStart function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands. .
+
+A recommended approach is to streamline the App OnStart function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps \| Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
+
+Main problem with OnStart property is that it's **Imperative.** It is an ordered list of work that needs to be done before the first screen is shown.  Because it is so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
+
+### Start Screen
+
+If App.OnStart contains a Navigate function call, even if it is in an If function and rarely called, we must complete execution of the App.OnStart before we show the first screen of the app. App.StartScreen is the new declarative way to indicate which screen should be shown first, that doesn't block optimizations.
+
+Setting Start Screen property will show the first screen before App.OnStart is complete. App StartScreen declares which screen object to show first without requiring any preprocessing.
+
+Instead of writing code like:
+
+App.OnStart = Collect( OrdersCache, Orders );
+
+If( Param( "AdminMode" ) = "1", Navigate( AdminScreen ), Navigate( HomeScreen ) )
+
+Change the code to
+
+App.OnStart = Collect( OrdersCache, Orders );
+
+App.StartScreen = If( Param( "AdminMode" ) = "1", AdminScreen, HomeScreen )
+
+Refer : <https://powerapps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details
+
+### Named Formulas
+
+Named Formulas are static or constants that can be defined on App.Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and there value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
+
+Named formulas can also address is declaring app themes. In many cases where enterprise apps are build, we want the app to have common themes to give consistent look and user experience. To create a theme, there are 10s and 100s of variables that need to be declared on App OnStart. This increased code length and initialization time of the app.
+
+**Note –** Additionally, Modern Controls also help significantly with theming and help reduce customer written logic to handle theming. Modern controls are currently in preview.
+
+Example: Following code on App.OnStart can be moved to App.Formulas, thus reducing the startup time on global variable declarations.
+
+Set( BoardDark, RGBA(181,136,99, 1) );
+
+Set( BoardSelect, RGBA(34,177,76,1) );
+
+Set( BoardRowWidth, 10 );                      // expected 8 plus two guard characters for regular expressions
+
+Set( BoardMetadata, 8 \* BoardRowWidth + 1 );   // which player is next, have pieces moved for castling rules, etc
+
+Set( BoardBlank, "----------------------------------------------------------------\_00000000000000" );
+
+Set( BoardClassic, "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000" );
+
+Can easily be moved to App.Formulas as follows:
+
+BoardSize = 70;
+
+BoardLight = RGBA(240,217,181, 1);
+
+BoardDark = RGBA(181,136,99, 1);
+
+BoardSelect = RGBA(34,177,76,1);
+
+BoardRowWidth = 10;                      // expected 8 plus two guard characters for regular expressions
+
+BoardMetadata = 8 \* BoardRowWidth + 1;   // which player is next, have pieces moved for castling rules, etc
+
+BoardBlank = "----------------------------------------------------------------\_00000000000000";
+
+BoardClassic = "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000";
+
+Another example can be setting Lookups. Here is a change is required in a Lookup formula to get the user information from Office 365, instead of dataverse, There is only 1 place the change is required without changing the code everywhere.
+
+UserEmail = User().Email;
+
+UserInfo = LookUp( Users, 'Primary Email' = User().Email );
+
+UserTitle = UserInfo.Title;
+
+UserPhone = Switch( UserInfo.'Preferred Phone',
+
+'Preferred Phone (Users)'.'Mobile Phone', UserInfo.'Mobile Phone',
+
+UserInfo.'Main Phone' );
+
+Another example can be to optimize countRows
+
+varListItems = CountRows(SampleList)
+
+With Set Function, variable varListItems will have to be initialized with the initial count of rows in sample list and set again after the list items were added or removed.
+With Named formulas, as the data changes, the varListitems variables get updated automatically.
+
+Another example
+
+![A computer code on a white background Description automatically generated](media/image16.png)
+
+These formulas embody the essence of calculation. They articulate the process for determining UserEmail, UserInfo, UserTitle, and UserPhone based on other values, akin to how the equation F = m \* a in Physics computes force. This logic is encapsulated, enabling widespread utilization throughout the app, and can be modified in a singular location. The adaptability extends to switching from the Dataverse Users table to the Office 365 connector without necessitating alterations to formulas scattered across the app.
+
+Named Formulas in the **App.Formulas** property provide a more flexible and declarative approach for managing values and calculations throughout the app, offering advantages in terms of timing independence, automatic updates, maintainability, and immutable definitions compared to relying solely on **App.OnStart.**
+
+| Aspect                | Named Formulas (App.Formulas)                                     | App.OnStart                                                              |
+|-----------------------|-------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Timing Independence   | Formulas are available instantly, can be calculated in any order. | Variables may introduce timing dependencies, impacting availability.     |
+| Automatic Updates     | Formulas automatically update when dependencies change.           | Variables are set once during startup; manual updates may be needed.     |
+| Maintainability       | Centralized formulas in one location improve maintainability.     | Scattered variables may require finding and updating in multiple places. |
+| Immutable Definitions | Formula definitions in App.Formulas are immutable.                | Variable values may be susceptible to accidental changes.                |
+
+### User Defined Functions
+
+User Defined Functions is an experimental functionality as of now January 2024 in Power Apps Authoring studio which enables users to create their own custom function.
+
+To use this feature, under experimental settings -&gt;New analysis engine and User-defined function (UDFs)
+
+Define formula under App.Formulas as follows:
+
+FunctionName(Parameter1:DataType1, Parameter2:DataType2):OutputDataType = Formula
+
+-   FunctionName – used to invoke the function
+
+-   Parameter – the name of the input. One or more inputs are allowed
+
+-   DataType – argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
+
+-   OutputDataType – output of the function will be in this data type
+
+-   Formula – the result of this formula is the output of the function
+
+![A screenshot of a computer Description automatically generated](media/image17.png)
+
+Use IfError to implement error handling within the defined function.
+
+Call the defined function from text/label control
+
+calcAreaOfCircle(Int(*TextInput1*.Text))
+
+**Current Limitations**
+
+This is an experimental feature and subject to change.
+
+Data Type such as records and filters are not yet supported.
+
+## Optimize Variables and Collections
+
+### Optimize Variables
+
+Variables are used to define and set local and global values to be used everywhere in the apps. While they are convenient too many of them can cause the app to be less optimized.
+
+Setting a variables for each attribute of an object.
+
+ 
+
+![A screenshot of a computer program Description automatically generated](media/image18.png)
+
+ 
+
+Instead use this:
+
+![](media/image19.png)![](media/image20.png)
+
+Second, Use Context variables and global variables wisely. If a variable's scope expands beyond a single screen, then consider using global variables else context variables.
+
+Third, too many unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally, too many unused variables can make lead to overall complexity of the app's logic. While the impact of unused variables might not be severe, it's a good practice to maintain a clean and well-organized PowerApp to ensure optimal performance and ease of development.
+
+### Optimize Collections
+
+Collections are temporary data storage structures that can be used to store and manipulate data within a PowerApps app. However, there is a fine line on when collections can lead to performance overhead.
+
+Therefore, Limit your use of collections. Try to use them only when they're absolutely necessary. Use ClearCollect instead of Clear;Collect.
+
+![](media/image21.png)
+
+To count the records in a local collection, use CountIf instead of Count(Filter()).
+
+2 main things to consider while working with collections –
+
+**Limiting the size and number of collections -**Since collections are local to the app, they are stores in the mobile device memory. The more data the collections hold or more the number of collections, the poorer the performance . Use ShowColumns function to get only the specific columns. Add Filter function to get only the relevant data.
+
+Example following function returns the entire dataset
+
+ClearCollect(colDemoAccount, Accounts);
+
+Compared to the below code which is going to return only specific records and columns
+
+ClearCollect(colAcc,
+
+              ShowColumns(
+
+                Filter(Accounts, !IsBlank('Address 1: City')),
+
+                "name","address1\_city"))
+
+Here is the returned dataset
+
+![A screenshot of a phone Description automatically generated](media/image22.png)
+
+**Data Source Refresh Frequency -** If you are adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users you will need to refresh the collection to get the new or changed records. More refresh calls means more interaction with the server.
+
+### Cache Data in Collections and Variables
+
+A collection, essentially a table variable, is distinct in that it stores rows and columns of data rather than a single data item. Their utility lies in two main purposes: firstly, for aggregating data before transmitting it to the data source, and secondly, for caching information, eliminating the need for frequent queries to the data source. As collections align with the tabular structure of both the data source and Power Apps, they offer an efficient means of interacting with data, even in offline scenarios.
+
+![A screen shot of a computer Description automatically generated](media/image23.png)
+
+### Remove unused variables and media
+
+While unused media and variables may not create a drastic impact on App performance, its important to cleanup your app from any unused media or variables.
+
+-   Unused media files contribute to overall increase in app size. This can lead to slower app load times.
+
+-   Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
+
+-   Use App checker to review unused media and variables.
+
+## Optimize Screens and Controls
+
+### Avoid cross referencing controls
+
+Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen. To address this issue, use variables, collections and navigation context to share state across screens instead.
+
+Power Apps App checker within authoring studio, shows controls that are cross referenced. Review App checker regularly to address this issue.
+
+Here is an example of Cross-referenced controls. In the image below Gallery 1 controls is cross referenced in Screen 2, Label 2 control.
+
+![A screenshot of a computer Description automatically generated](media/image24.png)
+
+### Enable Delay Output for text controls
+
+Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).
+
+For example , for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control.
+
+-   With DelayOutput set to false, which is default, the Gallery will be filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you are using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+
+-   With DelayOutput set to true, there is a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field. 
+
+## Delegation and server side processing (Low code plugins)
+
+### Delegation
+
+Delegation in PowerApps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within PowerApps itself. By leveraging delegation in PowerApps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
+
+**Note: Not all functions are delegable. Please refer to the following article to get more information on delegation : [Understanding Delegation](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/delegation-overview)**
+
+Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation will help keep data up to date.
+
+### Reduce API calls to data source
+
+Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas App. Refer to the code below:
+
+In this example, I have 2 tables – Drivers and Trucks. Developer writes the code to create a collection of drivers and truck details and for each truck, they were calling drivers who own the trucks.
+
+ClearCollect(vartruckdata,AddColumns('Truck Details',
+
+"CITY",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],City),
+
+"FIRSTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver First Name'),
+
+"LASTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver Last Name'),
+
+"STATE",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],State)));
+
+Performing such join operations from within canvas app can generate numerous calls to data source leading to very slow loading times.
+
+In the real time scenario, we were able to reduce loading times from 5 min to under 10 seconds by just correcting the data at the data source level.
+
+### Server Side processing
+
+Different data source such as SQL , Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+
+Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
+
+Following article describes how you can use [Low Code plugins in Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
+
+## Enable Delay/Lazy Loading
+
+The 'Delayed load' feature enhances performance by setting up an app to load screens only when they are required. By default, this feature is activated, and if disabled, the app would load all screens and data controls upon startup. Enabling this setting allows for a notable improvement in the app's initial loading time, especially for apps containing numerous screens. Additionally, the overall performance of the app is enhanced, as it avoids pre-loading screens that a user may not open within a session when the setting is active.
+
+![A screenshot of a computer Description automatically generated](media/image25.png)
+
+## Optimize Query Data Patterns
+
+### Use Explicit column selection
+
+The Explicit Column Selection (ECS) feature is enabled by default for all new apps. If it isn't enabled for your app, you should enable it. ECS automatically reduces the number of columns retrieved to only the ones that are used in the application. If ECS isn't enabled, you might be retrieving more data than you need, which can affect performance. Occasionally, when an app pulls data in through collections, the original lineage or source of a column can be lost. We don't know if it's being used and we drop it using ECS. You can usually force ECS to work for a missing column by using the PowerFx expression **ShowColumns** after a collection reference or by using it in a control.
+
+### Avoid calling Power Automate to populate a collection
+
+A common practice is to use Power Automate to fetch and populate collections in Power Apps. While this approach is valid, there are situations where it might not be the most efficient choice. Calling Power Automate comes with an overhead of network latency and adds a 0.6-second performance cost to instantiate the Power Automate flow.
+
+Overuse of Power Automate flows can also lead to execution limits and throttling. Therefore always evaluate the trade-offs between network latency and performance cost.
+
+### Eliminate N+1 Problem
+
+The N+1 problem is a common issue in database queries where, instead of fetching all the required data in a single query, multiple additional queries are made to retrieve related data. This can lead to performance issues, as each additional query incurs overhead.
+
+A simple call like this to load a collection can generate N+1 calls to data source
+
+ClearCollect(
+
+MyCollection,
+
+OrdersList,
+
+{
+
+LookUp(
+
+CustomersList,
+
+CustomerID = OrdersList\[@CustomerID\]
+
+)
+
+})
+
+In the context of PowerApps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when additional queries are made for each item displayed in the gallery, leading to a performance bottleneck.
+
+To address the N+1 problem in galleries within PowerApps, you can use the "AddColumns" function along with the "LookUp" or "Filter" functions to fetch related data in a single query rather than making separate queries for each item.
+
+ClearCollect(
+
+GalleryData,
+
+AddColumns(
+
+YourDataSource,
+
+"RelatedData",
+
+LookUp(
+
+RelatedDataSource,
+
+RelatedField = YourDataSource\[@RelatedField\]
+
+)
+
+)
+
+)
+
+For data source like Dataverse, N+1 problem can be avoided as Dataverse automatically fetches the required data in related tables.
+
+ThisItem.Account.'Account Name'
+
+### Limiting the package size
+
+Although PowerApps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint will be especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
+
+-   Evaluate the media that are embedded in your app. If something isn't used, delete it.
+
+-   Embedded images might be too big. Instead of PNG files, see whether you can use SVG images. However, be careful about using text in SVG images, because the font that's used will have to be installed on the client. A great workaround when you need to show text is to superimpose a text label over an image.
+
+-   Evaluate whether the resolution is appropriate for the form factor. The resolution for a mobile app doesn't need to be as high as the resolution for a desktop app. Experiment to get the right balance of image quality and size.
+
+-   If you have unused screens, delete them. Be careful not to delete any hidden screens that only app makers or administrators use.
+
+-   Evaluate whether you're trying to fit too many workflows into one app. For example, do you have both admin screens and client screens in the same app? If so, consider breaking them into individual apps. This approach will also make it easier for multiple people to work on the apps at the same time, and it will limit the "blast radius" (amount of testing) when app changes require a full test pass.
+
+## Optimize ForAll
+
+The **ForAll** function in PowerApps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can very quickly make your app less performant.
+
+ForAll function is singular sequential function instead of concurrent function. Therefore it will look at only one record at a time, get the result, then continue to the next until it has gone through all records in its scope.
+
+**Avoid Nesting ForAll at all cost -** This can lead to exponential iterations and significantly impact performance.
+
+![Formula that shows a Distinct function nested inside 2 ForAll functions](media/image26.jpeg)
+
+### Batch updates to Database
+
+ForAll + Patch can be one approach to Batch update the database. However, be careful in using the order of For All and Patch.
+
+Following function:
+
+Patch(SampleFoodSalesData,
+
+ForAll(colSampleFoodSales,
+
+
+
+{
+
+demoName:"fromCanvas2"
+
+}
+
+)
+
+);
+
+Has 10 times better performance than
+
+ForAll(colSampleFoodSales,
+
+Patch(SampleFoodSalesData,
+
+{
+
+demoName:"test"
+
+}
+
+)
+
+);
+
+Another approach can be to have all the updates in a collection and Patch the data source in one single call
+
+Patch(
+
+SampleFoodSalesData,
+
+ShowColumns(
+
+colSampleFoodSales,
+
+"demoName"
+
+)
+
+);
+
+
