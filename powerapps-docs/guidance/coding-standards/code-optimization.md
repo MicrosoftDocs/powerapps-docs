@@ -203,15 +203,15 @@ calcAreaOfCircle(Int(*TextInput1*.Text))
 
 This is an experimental feature and subject to change.
 
-Data Type such as records and filters are not yet supported.
+Data Type such as records and filters aren't yet supported.
 
 ## Optimize Variables and Collections
 
 ### Optimize Variables
 
-Variables are used to define and set local and global values to be used everywhere in the apps. While they are convenient too many of them can cause the app to be less optimized.
+Variables are used to define and set local and global values to be used everywhere in the apps. While they're convenient too many of them can cause the app to be less optimized.
 
-Setting a variables for each attribute of an object.
+Setting a variable for each attribute of an object.
 
 ![A screenshot of a computer program Description automatically generated](media/image18.png)
 
@@ -221,27 +221,27 @@ Instead use this:
 
 Second, Use Context variables and global variables wisely. If a variable's scope expands beyond a single screen, then consider using global variables else context variables.
 
-Third, too many unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally, too many unused variables can make lead to overall complexity of the app's logic. While the impact of unused variables might not be severe, it's a good practice to maintain a clean and well-organized PowerApp to ensure optimal performance and ease of development.
+Third, too many unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they aren't actively used. Additionally, too many unused variables can make lead to overall complexity of the app's logic. While the impact of unused variables might not be severe, it's a good practice to maintain a clean and well-organized PowerApp to ensure optimal performance and ease of development.
 
 ### Optimize Collections
 
-Collections are temporary data storage structures that can be used to store and manipulate data within a PowerApps app. However, there is a fine line on when collections can lead to performance overhead.
+Collections are temporary data storage structures that can be used to store and manipulate data within a PowerApps app. However, there's a fine line on when collections can lead to performance overhead.
 
-Therefore, Limit your use of collections. Try to use them only when they're absolutely necessary. Use ClearCollect instead of Clear;Collect.
+Therefore, Limit your use of collections. Try to use them only when they're necessary. Use ClearCollect instead of Clear;Collect.
 
 ![](media/image21.png)
 
 To count the records in a local collection, use CountIf instead of Count(Filter()).
 
-2 main things to consider while working with collections –
+Two main things to consider while working with collections –
 
-**Limiting the size and number of collections -**Since collections are local to the app, they are stores in the mobile device memory. The more data the collections hold or more the number of collections, the poorer the performance . Use ShowColumns function to get only the specific columns. Add Filter function to get only the relevant data.
+**Limiting the size and number of collections -**Since collections are local to the app, they're stores in the mobile device memory. The more data the collections hold or more the number of collections, the poorer the performance. Use ShowColumns function to get only the specific columns. Add Filter function to get only the relevant data.
 
-Example following function returns the entire dataset
+Example following function returns the entire dataset.
 
 ClearCollect(colDemoAccount, Accounts);
 
-Compared to the below code which is going to return only specific records and columns
+Compared to the below code that is going to return only specific records and columns
 
 ClearCollect(colAcc,
 
@@ -251,11 +251,11 @@ ClearCollect(colAcc,
 
                 "name","address1\_city"))
 
-Here is the returned dataset
+Here's the returned dataset.
 
 ![A screenshot of a phone Description automatically generated](media/image22.png)
 
-**Data Source Refresh Frequency -** If you are adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users you will need to refresh the collection to get the new or changed records. More refresh calls means more interaction with the server.
+**Data Source Refresh Frequency -** If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you'll need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
 
 ### Cache Data in Collections and Variables
 
@@ -265,11 +265,11 @@ A collection, essentially a table variable, is distinct in that it stores rows a
 
 ### Remove unused variables and media
 
-While unused media and variables may not create a drastic impact on App performance, its important to cleanup your app from any unused media or variables.
+While unused media and variables may not create a drastic impact on App performance, it's important to clean up your app from any unused media or variables.
 
 - Unused media files contribute to overall increase in app size. This can lead to slower app load times.
 
-- Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
+- Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they aren't actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
 
 - Use App checker to review unused media and variables.
 
@@ -277,41 +277,41 @@ While unused media and variables may not create a drastic impact on App performa
 
 ### Avoid cross referencing controls
 
-Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen. To address this issue, use variables, collections and navigation context to share state across screens instead.
+Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen. To address this issue, use variables, collections, and navigation context to share state across screens instead.
 
 Power Apps App checker within authoring studio, shows controls that are cross referenced. Review App checker regularly to address this issue.
 
-Here is an example of Cross-referenced controls. In the image below Gallery 1 controls is cross referenced in Screen 2, Label 2 control.
+Here's an example of Cross-referenced controls. In the image below Gallery 1 controls is cross referenced in Screen 2, Label 2 control.
 
 ![A screenshot of a computer Description automatically generated](media/image24.png)
 
 ### Enable Delay Output for text controls
 
-Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).
+Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (that is, for filtering when input is used in other formulas).
 
-For example , for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control.
+For example, for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control.
 
-- With DelayOutput set to false, which is default, the Gallery will be filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you are using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+- With DelayOutput set to false, which is default, the Gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you're using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
 
-- With DelayOutput set to true, there is a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field.
+- With DelayOutput set to true, there's a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field.
 
 ## Delegation and server side processing (Low code plugins)
 
 ### Delegation
 
-Delegation in PowerApps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within PowerApps itself. By leveraging delegation in PowerApps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
+Delegation in PowerApps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within PowerApps itself. By using delegation in PowerApps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
 
 **Note: Not all functions are delegable. Please refer to the following article to get more information on delegation : [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview)**
 
-Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation will help keep data up to date.
+Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation helps keep data up to date.
 
 ### Reduce API calls to data source
 
 Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas App. Refer to the code below:
 
-In this example, I have 2 tables – Drivers and Trucks. Developer writes the code to create a collection of drivers and truck details and for each truck, they were calling drivers who own the trucks.
+In this example, I have two tables – Drivers and Trucks. Developer writes the code to create a collection of drivers and truck details and for each truck, they were calling drivers who own the trucks.
 
-ClearCollect(vartruckdata,AddColumns('Truck Details',
+ClearCollect(vartruckdata, AddColumns('Truck Details',
 
 "CITY",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],City),
 
@@ -327,15 +327,15 @@ In the real time scenario, we were able to reduce loading times from 5 min to un
 
 ### Server Side processing
 
-Different data source such as SQL , Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+Different data source such as SQL , Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
-Following article describes how you can use [Low Code plugins in Dataverse](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
+Following article describes how you can use [Low Code plugins in Dataverse.](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
 
 ## Enable Delay/Lazy Loading
 
-The 'Delayed load' feature enhances performance by setting up an app to load screens only when they are required. By default, this feature is activated, and if disabled, the app would load all screens and data controls upon startup. Enabling this setting allows for a notable improvement in the app's initial loading time, especially for apps containing numerous screens. Additionally, the overall performance of the app is enhanced, as it avoids pre-loading screens that a user may not open within a session when the setting is active.
+The 'Delayed load' feature enhances performance by setting up an app to load screens only when they're required. By default, this feature is activated, and if disabled, the app would load all screens and data controls upon startup. Enabling this setting allows for a notable improvement in the app's initial loading time, especially for apps containing numerous screens. Additionally, the overall performance of the app is enhanced, as it avoids preloading screens that a user may not open within a session when the setting is active.
 
 ![A screenshot of a computer Description automatically generated](media/image25.png)
 
@@ -355,7 +355,7 @@ Overuse of Power Automate flows can also lead to execution limits and throttling
 
 The N+1 problem is a common issue in database queries where, instead of fetching all the required data in a single query, multiple additional queries are made to retrieve related data. This can lead to performance issues, as each additional query incurs overhead.
 
-A simple call like this to load a collection can generate N+1 calls to data source
+A simple call like this to load a collection can generate N+1 calls to data source.
 
 ClearCollect(
 
@@ -407,23 +407,23 @@ ThisItem.Account.'Account Name'
 
 ### Limiting the package size
 
-Although PowerApps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint will be especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
+Although PowerApps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint is especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
 
 - Evaluate the media that are embedded in your app. If something isn't used, delete it.
 
-- Embedded images might be too big. Instead of PNG files, see whether you can use SVG images. However, be careful about using text in SVG images, because the font that's used will have to be installed on the client. A great workaround when you need to show text is to superimpose a text label over an image.
+- Embedded images might be too large. Instead of PNG files, see whether you can use SVG images. However, be careful about using text in SVG images, because the font that's used will have to be installed on the client. A great workaround when you need to show text is to superimpose a text label over an image.
 
 - Evaluate whether the resolution is appropriate for the form factor. The resolution for a mobile app doesn't need to be as high as the resolution for a desktop app. Experiment to get the right balance of image quality and size.
 
 - If you have unused screens, delete them. Be careful not to delete any hidden screens that only app makers or administrators use.
 
-- Evaluate whether you're trying to fit too many workflows into one app. For example, do you have both admin screens and client screens in the same app? If so, consider breaking them into individual apps. This approach will also make it easier for multiple people to work on the apps at the same time, and it will limit the "blast radius" (amount of testing) when app changes require a full test pass.
+- Evaluate whether you're trying to fit too many workflows into one app. For example, do you have both admin screens and client screens in the same app? If so, consider breaking them into individual apps. This approach will also make it easier for multiple people to work on the apps at the same time, and it limits the "blast radius" (amount of testing) when app changes require a full test pass.
 
 ## Optimize ForAll
 
-The **ForAll** function in PowerApps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can very quickly make your app less performant.
+The **ForAll** function in PowerApps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can quickly make your app less performant.
 
-ForAll function is singular sequential function instead of concurrent function. Therefore it will look at only one record at a time, get the result, then continue to the next until it has gone through all records in its scope.
+ForAll function is singular sequential function instead of concurrent function. Therefore it looks at only one record at a time, get the result, then continue to the next until it has gone through all records in its scope.
 
 **Avoid Nesting ForAll at all cost -** This can lead to exponential iterations and significantly impact performance.
 
@@ -465,7 +465,7 @@ demoName:"test"
 
 );
 
-Another approach can be to have all the updates in a collection and Patch the data source in one single call
+Another approach can be to have all the updates in a collection and Patch the data source in one single call.
 
 Patch(
 
