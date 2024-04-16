@@ -2,8 +2,8 @@
 title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Microsoft Docs"
 description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
 ms.date: 04/01/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
 ms.topic: conceptual
 ms.collection: get-started
