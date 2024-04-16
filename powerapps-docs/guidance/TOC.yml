@@ -4,7 +4,9 @@
     href: index.yml
   - name: Power Apps coding standards
     items:
-    - name: Coding standards
+    - name: Overview
+      href: coding-standards/code-readability.md
+    - name: Coding readability
       href: coding-standards/code-readability.md
     - name: App design guidelines
       href: coding-standards/app-design-guidelines.md

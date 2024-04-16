@@ -9,7 +9,7 @@ ms.author: rstand
 manager: 
 ---
 
-# App Design Guidelines
+# App design guidelines
 
 ## Modern controls
 
@@ -19,9 +19,9 @@ Furthermore, the inherent design of these controls, keeping theming in mind, all
 
 Disclaimer: Please be aware that, as of this writing, while a subset of the modern controls in Canvas Power Apps has been made generally available (GA), the broader feature set remains in preview. Users and developers are encouraged to explore and provide feedback on these preview controls. However, it is important to keep in mind that their features and functionalities may be refined based on user feedback and testing before they reach general availability.
 
-## Forms Design and Guidelines
+## Forms design and guidelines
 
-**Organize Your Form:**
+**Organize your form:**
 
 - Divide your form into logical sections and group related fields together.
 
@@ -31,13 +31,13 @@ Disclaimer: Please be aware that, as of this writing, while a subset of the mode
 
 - Implement validation rules to ensure data accuracy. For mandatory fields, clearly indicate that they are required. Validate email addresses, phone numbers, and other formats as needed.
 
-**Reuse Forms:**
+**Reuse forms:**
 
 Use a single form for creating new records, editing existing records, and displaying records in view-only mode.
 
 Reusing the same form reduces development and maintenance time while ensuring consistency.
 
-**Form Modes**: Set the form mode dynamically based on user actions. For example:
+**Form modes**: Set the form mode dynamically based on user actions. For example:
 
 - When creating a new record, set the form to "New" mode.
 
@@ -45,7 +45,7 @@ Reusing the same form reduces development and maintenance time while ensuring co
 
 - When displaying a record, set the form to "View" mode.
 
-**Control Placement:**
+**Control placement:**
 
 Place different controls (such as gallery, display form, and edit form) on separate screens to make them distinguishable.
 
