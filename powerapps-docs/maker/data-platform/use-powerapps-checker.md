@@ -1,5 +1,5 @@
 ---
-title: Improve user experience with solution checker validation
+title: Improve component performance, stability, and reliability with solution checker
 description: Use solution checker to analyze Dataverse customizations to enhance user experience. 
 author: Mattp123
 ms.component: cds
@@ -10,7 +10,7 @@ ms.author: matp
 search.audienceType: 
   - maker
 ---
-# Improve user experience with solution checker validation
+# Improve component performance, stability and reliability with solution checker
 
 To deliver on complex business requirements, makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
