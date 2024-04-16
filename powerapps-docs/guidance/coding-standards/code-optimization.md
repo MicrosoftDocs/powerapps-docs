@@ -15,154 +15,151 @@ Canvas Apps have emerged as a transformative force, allowing organizations to br
 
 As Canvas Apps become more intricate, developers encounter challenges related to data retrieval, formula complexity, and rendering speeds. The need to strike a balance between robust functionality and responsive user interfaces underscores the importance of adopting a systematic approach to code optimization.
 
-## Power Fx formulas Optimization
+## Power Fx formulas optimization
 
-### With Function
+### With function
 
-The With function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. More details: </power-platform/power-fx/reference/function-with>
+The `With` function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. [Learn more](/power-platform/power-fx/reference/function-with) about the `With` function.
 
-![A screenshot of a computer Description automatically generated](media/image13.png)
+![A screenshot of a Power Fx formula that uses the With function](media/image13.png)
 
 ### Concurrent function
 
-The Concurrent function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the; (semi-colon) operator, which evaluates each formula sequentially. With the Concurrent function, the app will evaluate all formulas within a property concurrently even after using the; operator. This concurrency helps users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. More details: </power-platform/power-fx/reference/function-concurrent>
+The `Concurrent` function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the `;` (semi-colon) operator, which evaluates each formula sequentially. With the `Concurrent` function, the app will evaluate all formulas within a property concurrently even after using the `;` operator. This concurrency helps users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. [Learn more](/power-platform/power-fx/reference/function-concurrent) about the `Concurrent` function
 
-![A white background with blue and white text Description automatically generated](media/image14.png)
+![A screenshot of a Power Fx formula that uses the Concurrent function](media/image14.png)
 
 ### Coalesce Function
 
-The Coalesce function evaluates its arguments in order and returns the first value that isn't blank or an empty string. Use this function to replace a blank value or empty string with a different value but leave nonblank and nonempty string values unchanged. If all the arguments are blank or empty strings, then the function returns blank, making Coalesce a good way to convert empty strings to blank values.
+The `Coalesce` function evaluates its arguments in order and returns the first value that isn't blank or an empty string. Use this function to replace a blank value or empty string with a different value but leave nonblank and nonempty string values unchanged. If all the arguments are blank or empty strings, then the function returns blank, making Coalesce a good way to convert empty strings to blank values.
 
-If(Not IsBlank(value1 ), value1, Not IsBlank(value2 ), value2)
+For example:
+
+```powerappsfl
+If(Not IsBlank(value1), value1, Not IsBlank(value2), value2)
+```
 
 Requires value 1 and value 2 to be evaluated twice. This function can be reduced to:
 
+```powerappsfl
 Coalesce(value1, value2)
+```
 
-### IsMatch Function
+### IsMatch function
 
-The IsMatch function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a regular expression. More Details - </power-platform/power-fx/reference/function-ismatch>
+The `IsMatch` function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a regular expression. [Learn more](/power-platform/power-fx/reference/function-ismatch) about the `IsMatch` function.
 
-For for example, Matches a United States Social Security Number
+For example, this formula matches a United States Social Security Number:
 
-![](media/image15.png)
+```powerappsfl
+IsMatch(TextInput1.Text, "\d{3}-\d{2}-\d{4}")
+```
 
 Explanation of the regular expression:
 
-\\d: Matches any digit (0-9).
+`\\d` Matches any digit (0-9).
 
-{3}: Specifies that the preceding digit pattern (\\d) should occur exactly three times.
+`{3}` Specifies that the preceding digit pattern (\\d) should occur exactly three times.
 
--: Matches the hyphen character.
+`-` Matches the hyphen character.
 
-{2}: Specifies that the preceding digit pattern (\\d) should occur exactly two times.
+`{2}` Specifies that the preceding digit pattern (\\d) should occur exactly two times.
 
-{4}: Specifies that the preceding digit pattern (\\d) should occur exactly four times.
+`{4}` Specifies that the preceding digit pattern (\\d) should occur exactly four times.
 
-More examples of IsMatch:
+More examples of `IsMatch`:
 
+```powerappsfl
 IsMatch(TextInput1.Text, "Hello World")
-
 IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]{8,10})")
+```
 
-## Optimize App OnStart
+## Optimize app OnStart
 
-The **OnStart** property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the **OnStart** property is essential for creating responsive and efficient Canvas apps.
+The `OnStart` property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the `OnStart` property is essential for creating responsive and efficient Canvas apps.
 
-The App OnStart function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands.
+The `App OnStart` function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands.
 
-A recommended approach is to streamline the App OnStart function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps \| Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
+A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
-Main problem with OnStart property is that it's **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown.  Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
+>![NOTE] One potential issue with the `OnStart` property is that it's **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown.  Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
 
-### Start Screen
+### Start screen
 
-If App.OnStart contains a Navigate function call, even if it is in an If function and rarely called, we must complete execution of the App.OnStart before we show the first screen of the app. App.StartScreen is the new declarative way to indicate which screen should be shown first, that doesn't block optimizations.
+If `App.OnStart` contains a Navigate function call, even if it is in an If function and rarely called, we must complete execution of the App.OnStart before we show the first screen of the app. App.StartScreen is the new declarative way to indicate which screen should be shown first, that doesn't block optimizations.
 
 Setting Start Screen property shows the first screen before App.OnStart is complete. App StartScreen declares which screen object to show first without requiring any preprocessing.
 
 Instead of writing code like:
 
+```powerappsfl
 App.OnStart = Collect(OrdersCache, Orders);
-
-If(Param("AdminMode") = "1", Navigate(AdminScreen ), Navigate(HomeScreen ))
+If(Param("AdminMode") = "1", Navigate(AdminScreen), Navigate(HomeScreen))
+```
 
 Change the code to
 
+```powerappsfl
 App.OnStart = Collect(OrdersCache, Orders);
-
 App.StartScreen = If(Param("AdminMode") = "1", AdminScreen, HomeScreen)
+```
 
 Refer: <https://powerapps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details
 
-### Named Formulas
+### Named formulas
 
-Named Formulas are static or constants that can be defined on App. Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and there value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
+Named formulas are static or constants that can be defined on App.Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and there value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
 
 Named formulas can also address is declaring app themes. In many cases where enterprise apps are build, we want the app to have common themes to give consistent look and user experience. To create a theme, there are 10s and 100s of variables that need to be declared on App OnStart. This increased code length and initialization time of the app.
 
-**Note –** Additionally, Modern Controls also help significantly with theming and help reduce customer written logic to handle theming. Modern controls are currently in preview.
+Additionally, Modern Controls also help significantly with theming and help reduce customer written logic to handle theming. Modern controls are currently in preview.
 
-Example: Following code on App.OnStart can be moved to App.Formulas, thus reducing the startup time on global variable declarations.
+For example, the following code on `App.OnStart` can be moved to `App.Formulas`, thus reducing the startup time on global variable declarations.
 
+```powerappsfl
 Set(BoardDark, RGBA(181,136,99, 1));
-
 Set(BoardSelect, RGBA(34,177,76,1));
-
 Set(BoardRowWidth, 10);                      // expected 8 plus two guard characters for regular expressions.
-
 Set(BoardMetadata, 8 \* BoardRowWidth + 1);   // which player is next, have pieces moved for castling rules, etc.
-
 Set(BoardBlank, "----------------------------------------------------------------\_00000000000000");
-
 Set(BoardClassic, "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000");
+```
 
-Can easily be moved to App.Formulas as follows:
+The code can easily be moved to App.Formulas as follows:
 
+```powerappsfl
 BoardSize = 70;
-
 BoardLight = RGBA(240,217,181, 1);
-
 BoardDark = RGBA(181,136,99, 1);
-
 BoardSelect = RGBA(34,177,76,1);
-
 BoardRowWidth = 10;                      // expected 8 plus two guard characters for regular expressions
-
 BoardMetadata = 8 \* BoardRowWidth + 1;   // which player is next, have pieces moved for castling rules, etc.
-
 BoardBlank = "----------------------------------------------------------------\_00000000000000";
-
 BoardClassic = "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000";
+```
 
-Another example can be setting Lookups. Here's a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse, There's only one place the change is required without changing the code everywhere.
+Another example can be setting `Lookups`. Here a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
 
+```powerappsfl
 UserEmail = User().Email;
-
 UserInfo = LookUp(Users, 'Primary Email' = User().Email);
-
 UserTitle = UserInfo.Title;
+UserPhone = Switch(UserInfo.'Preferred Phone', 'Preferred Phone (Users)'.'Mobile Phone', UserInfo.'Mobile Phone',
+UserInfo.'Main Phone');
+```
 
-UserPhone = Switch(UserInfo.'Preferred Phone',
+Another approach is to optimize `countRows`.
 
-'Preferred Phone (Users)'.'Mobile Phone', UserInfo.'Mobile Phone',
-
-UserInfo.'Main Phone' );
-
-Another example can be to optimize countRows.
-
+```powerappsfl
 varListItems = CountRows(SampleList)
+```
 
-With Set Function, variable varListItems will have to be initialized with the initial count of rows in sample list and set again after the list items were added or removed.
+With `Set` Function, variable `varListItems` will have to be initialized with the initial count of rows in sample list and set again after the list items were added or removed.
 With Named formulas, as the data changes, the varListitems variables get updated automatically.
 
-Another example
+These formulas embody the essence of calculation. They articulate the process for determining `UserEmail`, `UserInfo`, `UserTitle`, and `UserPhone` based on other values. This logic is encapsulated, enabling widespread utilization throughout the app, and can be modified in a singular location. The adaptability extends to switching from the Dataverse Users table to the Office 365 connector without necessitating alterations to formulas scattered across the app.
 
-![A computer code on a white background Description automatically generated](media/image16.png)
-
-These formulas embody the essence of calculation. They articulate the process for determining UserEmail, UserInfo, UserTitle, and UserPhone based on other values, akin to how the equation F = m \* a in Physics computes force. This logic is encapsulated, enabling widespread utilization throughout the app, and can be modified in a singular location. The adaptability extends to switching from the Dataverse Users table to the Office 365 connector without necessitating alterations to formulas scattered across the app.
-
-Named Formulas in the **App.Formulas** property provide a more flexible and declarative approach for managing values and calculations throughout the app, offering advantages in terms of timing independence, automatic updates, maintainability, and immutable definitions compared to relying solely on **App.OnStart.**
+Named Formulas in the `App.Formulas` property provide a more flexible and declarative approach for managing values and calculations throughout the app, offering advantages in terms of timing independence, automatic updates, maintainability, and immutable definitions compared to relying solely on `App.OnStart`.
 
 | Aspect                | Named Formulas (App.Formulas)                                     | App.OnStart                                                              |
 |-----------------------|-------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -171,7 +168,7 @@ Named Formulas in the **App.Formulas** property provide a more flexible and decl
 | Maintainability       | Centralized formulas in one location improve maintainability.     | Scattered variables may require finding and updating in multiple places. |
 | Immutable Definitions | Formula definitions in App.Formulas are immutable.                | Variable values may be susceptible to accidental changes.                |
 
-### User Defined Functions
+### User defined functions
 
 User Defined Functions is an experimental functionality as of now January 2024 in Power Apps Authoring studio, which enables users to create their own custom function.
 
