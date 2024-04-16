@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 04/09/2024
 ms.subservice: canvas-maker
-ms.author: warrenbryant-msft
+ms.author: warrenbryant
 search.audienceType: 
   - maker
 ms.collection: 
