@@ -41,7 +41,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 Use the Copilot in the formula bar to understand what a formula is doing.
 
-1. Select a control and property.
+1. Select a control and its corresponding property.
 1. Select the **Copilot functionality menu** in the formula bar > **Explain This Formula**.
 :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Explain this formula":::
 
