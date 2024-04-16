@@ -1,12 +1,12 @@
 ﻿---
 title: App design guidelines
 description: App design guidelines
-ms.date: 04-15-2024
+ms.date: 04/26/2024
 ms.topic: conceptual
 ms.service: powerapps
 author: robstand
 ms.author: rstand
-manager: 
+ 
 ---
 
 # App design guidelines
