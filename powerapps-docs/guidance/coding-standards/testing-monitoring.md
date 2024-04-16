@@ -9,10 +9,10 @@ ms.author: rstand
 manager: 
 ---
 
-# Testing and Monitoring 
+# Monitoring and testing
 
 PowerApps Authoring provides various capabilities to validate the app for any warnings or errors, check monitor log for runtime performance and log app session details and traces to Application Insights for deeper analysis.  
-These tools are really powerful and should be utilized to help build a strong, robust and a high performant app.
+These tools are really powerful and should be utilized to help build a strong, robust and a high performance app.
 
 ## Monitor
 
