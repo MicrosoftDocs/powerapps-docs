@@ -60,7 +60,7 @@ The following table shows the abbreviations for common controls.
 | Charts                                | chr              |
 | CheckBox                              | chk              |
 | Collection                            | col              |
-| Combo box                             | Cmb              |
+| Combo box                             | cmb              |
 | Component                             | cmp              |
 | Container                             | con              |
 | Dates                                 | dte              |
@@ -102,7 +102,7 @@ Here are some bad examples:
 - `zipcode`
 - `Next`
 
-When you consistently name your controls, your app will be much cleaner in the navigation view,and your code will be much cleaner too.
+When you consistently name your controls, your app is cleaner in the navigation view, and your code is cleaner too.
 
 ![Screenshot of the navigation view showing control names following the pattern](media/image2.jpeg)
 
@@ -113,13 +113,13 @@ When you add a data source to your application, the name can't be changed in the
 Here are some examples:
 
 - **Name inherited from the source connector:** The Office 365 Users connector is namedOffice365Users in your code.
-- **Data entities derived from the connection:** A Microsoft SharePoint list that's named **Employees** is returned from the SharePoint connector. Therefore, the name of the data source in your code is Employees. The same Power Apps app can also use ***the same SharePoint connector*** to access a SharePoint list that's named Contractors. In this case, the name of the data source in the code is Contractors.
+- **Data entities derived from the connection:** A Microsoft SharePoint list named `Employees` is returned from the SharePoint connector. Therefore, the name of the data source in your code is Employees. The same Power Apps app can also use ***the same SharePoint connector*** to access a SharePoint list named `Contractors`. In this case, the name of the data source in the code is `Contractors`.
 
 For more information about connectors and connections, see [Overview of canvas app connectors for Power Apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
 
 #### Standard action connectors
 
-In Standard action connectors that expose functions, such as LinkedIn, you'll see that the data source name and its operations use Pascal casing. For example, the LinkedIn data source is named LinkedIn and has an operation named `ListCompanies`.
+In Standard action connectors that expose functions, such as LinkedIn, the data source name and its operations use Pascal casing. For example, the LinkedIn data source is named LinkedIn and has an operation named `ListCompanies`.
 
 ```typescript
 ClearCollect(
@@ -130,7 +130,7 @@ ClearCollect(
 
 #### Custom connectors
 
-Custom connectors used to connect to custom application programming interfaces (APIs) such as third-party services or line-of-business APIs that your company has created. They can be created by any maker in your environment. We recommend Pascal casing for the data source name and its operations. Just be aware that the custom connector name and the way that it appears in PowerApps can differ.
+Custom connectors used to connect to custom application programming interfaces (APIs) such as  services or line-of-business APIs that your company has created. They can be created by any maker in your environment. We recommend Pascal casing for the data source name and its operations. Just be aware that the custom connector name and the way that it appears in PowerApps can differ.
 
 Consider this example of a custom connector named `MS Auction Item Bid API`.
 
@@ -140,7 +140,7 @@ But when you create a connection from this connector and add it to your PowerApp
 
 ![Screenshot of a connector showing that the name is AuctionItemBidAPI](media/image5.jpeg)
 
-To discover the reason, you can look inside the OpenAPI file. There, you'll see a title attribute that contains the text Auction Item Bid API.
+To discover the reason, you can look inside the OpenAPI file for a title attribute that contains the text `Auction Item Bid API`.
 
 ```json
 "info": {
@@ -159,7 +159,7 @@ Power Apps removes all the spaces from this attribute value and uses it as the n
 
 PowerApps uses DataTables in Microsoft Excel to connect to data in Excel worksheets. Keep these points in mind when you create Excel documents as data sources:
 
-- Give your DataTables descriptive names. You'll see the name in the Power Apps app when you write the code to connect to it.
+- Give your DataTables descriptive names. The name is in the Power Apps app when you write the code to connect to it.
 - Use one DataTable per worksheet.
 - Give the same name to the DataTable and worksheet.
 - Use descriptive column names in the DataTables.
@@ -169,7 +169,7 @@ PowerApps uses DataTables in Microsoft Excel to connect to data in Excel workshe
 
 ### Variable names
 
-Naming conventions for variables in Canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your Canvas app can make it easier for you and other collaborators to understand, use and manage the variables.
+Naming conventions for variables in Canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your Canvas app can make it easier for you and other collaborators to understand, use, and manage the variables.
 
 - Use camel case, where the first letter of each word is capitalized except for the first word.
 - Choose meaningful and descriptive names that clearly describe the purpose or content of the variable. Avoid overly generic names like temp or var1. Instead, use descriptive names like userEmail or totalAmount.
@@ -193,7 +193,7 @@ Avoid this situation by following these conventions:
 
 - Prefix context variables with `loc`.
 - Prefix global variables with `gbl`.
-- The name after the prefix should indicate the intent/purpose of the variable. Multiple words can be used and don't have to be separated by any special characters (for example, spaces or underscores), provided that the first letter of each word is capitalized.
+- The name after the prefix should indicate the intent/purpose of the variable. Multiple words can be used and don't have to be separated by any special characters, such as spaces or underscores, if the first letter of each word is capitalized.
 - Use Camel casing. Begin your variable names with a prefix in lowercase letters, and then capitalize the first letter of each word in the name.
 
 These examples follow standards and conventions:
@@ -204,7 +204,7 @@ These examples follow standards and conventions:
 
 - **Scope variable:** `scpRadius`
 
-These examples do not follow the standards and are harder to understand:
+These examples don't follow the standards and are harder to understand:
 
 - `dSub`
 - `rstFlds`
@@ -215,13 +215,13 @@ These examples do not follow the standards and are harder to understand:
 
 Avoid short and cryptic variable names such as EID. `Use EmployeeId` instead.
 
-When there are many variables in an app, you can just type the prefix in the formula bar to see a list of the available variables. If you follow these guidelines to name your variables, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
+When there are many variables in an app, you can just type the prefix in the formula bar to see a list of the available variables. If you follow these guidelines to name your variables, you are able to find them easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
 
 ### Collection names
 
 - Be descriptive of the collection's contents. Think about what the collection contains and/or how it's used, and then name it accordingly.
 - Collections should be prefixed with `col`.
-- The name after the prefix should indicate the intent or purpose of the collection. Multiple words can be used and don't have to be separated by spaces or underscores, provided that the first letter of each word is capitalized.
+- The name after the prefix should indicate the intent or purpose of the collection. Multiple words can be used and don't have to be separated by spaces or underscores, if the first letter of each word is capitalized.
 - Use Camel casing. Begin your collection names with a lowercase col prefix, and then capitalize the first letter of each word in the name.
 
 These examples follow the collection name conventions:
@@ -229,7 +229,7 @@ These examples follow the collection name conventions:
 - `colMenuItems`
 - `colThriveApps`
 
-These examples do not follow the colleciton name conventions:
+These examples don't follow the collection name conventions:
 
 - `orderscoll`
 - `tempCollection`
@@ -269,7 +269,7 @@ Text enclosed within `/*` and `*/` is recognized as a block comment. Unlike line
 
 Block comments are useful for multiline explanations, such as documenting a code module header. They also facilitate temporarily disabling multiple lines of code during testing or debugging.
 
-For optimal code organization, it is advisable to add comments after utilizing the Format Text feature. This is particularly beneficial if your comments precede a code block.
+For optimal code organization, it's advisable to add comments after utilizing the Format Text feature. This is beneficial if your comments precede a code block.
 
 ```typescript
 /*
@@ -292,14 +292,14 @@ Patch(
 The Format Text feature follows these rules for existing comments:
 
 1. If a property begins with a block comment, the next line of code will be appended to it.
-1. If a property begins with a line comment, the next line of code won't be appended to it. Otherwise, the code will be commented out.
+1. If a property begins with a line comment, the next line of code won't be appended to it. Otherwise, the code is commented out.
 1. Line and block comments elsewhere in the property will be appended to the previous line of code.
 
-Don't worry about adding too many comments or comments that are too long. All comments will be stripped out when PowerApps creates the client app package. Therefore, they won't affect the package size or slow down the app download or loading times.
+Don't worry about adding too many comments or comments that are too long. All comments are stripped out when PowerApps creates the client app package. Therefore, they won't affect the package size or slow down the app download or loading times.
 
 ### Modern app designer with comments
 
-In Power Apps, it is considered the best practice for makers to effectively utilize commenting features within both Canvas Studio and Modern App Designer.
+In Power Apps, it's considered the best practice for makers to effectively utilize commenting features within both Canvas Studio and Modern App Designer.
 
 For optimal engagement in the Canvas Studio, makers are advised to add comments using the following methods:
 
@@ -307,13 +307,13 @@ For optimal engagement in the Canvas Studio, makers are advised to add comments 
 2. Right-click a component in the canvas area.
 3. Select the "Comments" button located on the command bar in the top right-hand corner of the screen.
 
-When mentioning colleagues in comments, it is recommended to use the "@" symbol followed by their name. This prompts a notification email for the tagged colleague, ensuring swift access to the comment. In cases where a tagged user lacks access to the app, the maker is prompted to share the app with them.
+When mentioning colleagues in comments, it's recommended to use the "@" symbol followed by their name. This prompts a notification email for the tagged colleague, ensuring swift access to the comment. In cases where a tagged user lacks access to the app, the maker is prompted to share the app with them.
 
 ![A screenshot of an expenses app showing a person @ mentioned in the comment](media/image9.png)
 
 ### Indentation and formatting
 
-In Power Apps, indentation and formatting are crucial for maintaining a clear and organized structure in your app. Following best practices will improve the readability of your formulas and controls.
+In Power Apps, indentation and formatting are crucial for maintaining a clear and organized structure in your app. Following best practices improve the readability of your formulas and controls.
 
 #### Formula bar
 
