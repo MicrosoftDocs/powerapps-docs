@@ -3,12 +3,13 @@ title: platform-library Element | Microsoft Docs
 description: "Platform library resources used in the component."
 ms.author: hemantg
 author: HemantGaur
-ms.date: 05/27/2022
+ms.date: 04/02/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - miglisic
 ---
 
 # platform-library element
@@ -39,13 +40,13 @@ Model-driven and canvas apps
 <resources>
    <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="8.29.0" />
+   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
 
-### Related topics
+### Related articles
 
-[React controls & platform libraries (Preview) ](../react-controls-platform-libraries.md)<br />
+[React controls & platform libraries (Preview)](../react-controls-platform-libraries.md)<br />
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

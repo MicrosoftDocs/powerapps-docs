@@ -1,18 +1,18 @@
 ---
 title: Barcode scanner control (retired) in Power Apps
 description: Learn about the details, properties and examples of the Barcode scanner control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/18/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mduelae
 search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Barcode scanner control (retired) in Power Apps
 
