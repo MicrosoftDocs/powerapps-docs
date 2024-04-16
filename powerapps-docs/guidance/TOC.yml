@@ -12,8 +12,6 @@
       href: coding-standards/responsive-design-guidelines.md
     - name: Code optimization
       href: coding-standards/code-optimization.md
-    - name: Error handling
-      href: coding-standards/error-handling.md
     - name: Testing and monitoring
       href: coding-standards/testing-monitoring.md
   - name: Power Apps patterns
