@@ -30,7 +30,7 @@ Use AI to improve the experience of creating and editing formulas in the Formula
 - Copilot enabled on the environment and tenant
 
 ## Explain This Formula
-Select a control and property that you want to understand more about what the formula is doing. Select the new Copilot button in the Formula Bar, and choose "Explain This Formula." An explanation window apears to let you know that the Copilot is working on the explanation, and then display the explanation once it's available. Explanations can be copied and inserted as code comments or shared with other people that are collaborating on an application.
+Select a control and property that you want to understand more about what the formula is doing. Select the new Copilot button in the Formula Bar, and choose "Explain This Formula." An explanation window appears to let you know that the Copilot is working on the explanation, and then display the explanation once it's available. Explanations can be copied and inserted as code comments or shared with other people that are collaborating on an application.
 
 ![Explain This Formula Dropdown](media/copilot/ufb-explain-copilot.png)
 ![Formula Explanation](media/copilot/ufb-explanation-copilot.png)
@@ -38,12 +38,12 @@ Select a control and property that you want to understand more about what the fo
 ### Known Limitations
 - 1,000 character formula limit for explanations
 - AI is only aware of default properties
-- User Defined Functions are not supported
-- Canada region is not available
+- User Defined Functions aren't supported
+- Canada region isn't available
 
 ## Formula from Comments (Preview)
 
-Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilot will generate a recommended formula to use for that situation. To select the recommendation, press "Tab," or begin typing through the recommendation. The recommendation will remain until you click elsewhere or type a character that doesn't align with the recommendation. Comments used to generate Power Fx formulas can remain in the Formula Bar to serve as ongoing documentation just like traditional code comments.
+Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilot generates a recommended formula to use for that situation. To select the recommendation, press "Tab," or begin typing through the recommendation. The recommendation remains until you click elsewhere or type a character that doesn't align with the recommendation. Comments used to generate Power Fx formulas can remain in the Formula Bar to serve as ongoing documentation just like traditional code comments.
 
 ![Typed Comment](media/copilot/ufb-comment-copilot.png)
 ![Typed Comment with Recommended Formula](media/copilot/ufb-commentfx-copilot.png)
@@ -54,8 +54,8 @@ Begin typing a code comment using // or /* in the Formula Bar, pause, and Copilo
 
 ### Known Limitations
 - AI is only aware of default properties in the app
-- Only works with general Power Fx functions, and not Power Apps specific functions (for exampe, Navigate())
-- Other actions may be prevent from occurring in the Canvas Studio while retrieving Copilot formula recommendations 
+- Only works with general Power Fx functions, and not Power Apps specific functions (for example, Navigate())
+- Other actions may be prevented from occurring in the Canvas Studio while retrieving Copilot formula recommendations 
 - Existing formulas for that property aren't included in the recommendation
 - User Defined Functions aren't supported
 - Canada region isn't available
