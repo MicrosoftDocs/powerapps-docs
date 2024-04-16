@@ -1,8 +1,8 @@
----
+<img width="676" alt="image" src="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/52931214/adf30f51-49ca-4cb7-97a8-74d42a496d1a">---
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 03/22/2024
+ms.date: 04/16/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -453,9 +453,16 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which allows you to test these features and then adopt them across your environments.
   
-The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that are directly related to the notes in timeline, select **None**.
+The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show those records only that are directly related to the notes in timeline, select **None**.
 
 More information on rollup types is available at [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
+
+#### Allow users to quickly save notes on timeline
+
+You can enable **Quick save**, which allows users to save their notes using **Ctrl**+**S** while typing a note on the timeline. Quick save helps improve user efficiency by not requiring users to navigate to **Save** or **Save and close** on the command bar. When users save a note using **Ctrl**+**S**, a **Save successful** confirmation message appears in the note on the timeline.
+
+To enable **Quick save**, in [Power Apps](https://make.powerapps.com), go to the timeline settings, and then select the **Enable Quick save** checkbox.
+
   
 ### Posts on timeline
 
