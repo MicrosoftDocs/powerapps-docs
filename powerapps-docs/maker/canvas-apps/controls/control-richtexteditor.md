@@ -8,7 +8,7 @@ ms.reviewer: mkaur
 ms.date: 07/19/2022
 ms.subservice: canvas-maker
 ms.author: yogupt
-search.audienceType: 
+search.audienceType:
   - maker
 contributors:
   - mduelae
@@ -21,7 +21,7 @@ Allows end users to format text inside a WYSIWYG editing area.  Output format is
 ## Description
 The **Rich text editor** control provides the app user a WYSIWYG editing area for formatting text.  Control's input and output format is HTML.
 
-Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.  
+Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.
 
 Control's intended use is to format text and doesn't guarantee to preserve the integrity of the input HTML.  All script, style, object, and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
 
@@ -79,10 +79,11 @@ To use the control inside a form, select the **Edit multi-line tex** card, and c
 You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
 
 Pasting images in the rich text editor has the following limitations:
-- Cross-Origin Resource Sharing (CORS) 
+- Cross-Origin Resource Sharing (CORS)
 - Authentication
 - Image format support in browser
 - Type of image (inline vs URL)
+- Inserting image with expectation that it will be stored with binded data source. (Potential workaround is to add additional logic that would upload images from RTE to the data source, parse back response and paste it to the original field.)
 - How programs represent images differently when they are copied.
 
 > [!NOTE]
