@@ -33,21 +33,21 @@ What's less obvious is that screen names are read aloud by screen readers, which
 
 Here are some good examples:
 
--   Home\_Screen or Home Screen
+- Home\_Screen or Home Screen
 
--   Search\_Screen or Search Screen
+- Search\_Screen or Search Screen
 
 ![Image that shows a list of screens similiar to the examples above](media/image1.jpeg)
 
 Here are some bad examples:
 
--   Home
+- Home
 
--   LoaderScreen
+- LoaderScreen
 
--   EmpProfDetails
+- EmpProfDetails
 
--   Thrive Help
+- Thrive Help
 
 ### Controls Names
 
@@ -55,7 +55,7 @@ All control names on the canvas should use camel case. They should begin with a 
 
 Here's a good example: lblUserName.
 
-The following table shows the abbreviations for common controls. Detailed list of controls and their properties are listed here: [Controls reference document](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/reference-properties)
+The following table shows the abbreviations for common controls. Detailed list of controls and their properties are listed here: [Controls reference document](/power-apps/maker/canvas-apps/reference-properties)
 
 | **Control name**                      | **Abbreviation** |
 |---------------------------------------|------------------|
@@ -104,9 +104,9 @@ The following table shows the abbreviations for common controls. Detailed list o
 
 Here are some bad examples:
 
--   zipcode
+- zipcode
 
--   Next
+- Next
 
 As the following image shows, if you consistently name your controls, your app will be much cleaner in the navigation view, and your code will be much cleaner too.
 
@@ -156,15 +156,15 @@ Power Apps removes all the spaces from this attribute value and uses it as the n
 
 PowerApps uses DataTables in Microsoft Excel to connect to data in Excel worksheets. Keep these points in mind when you create Excel documents as data sources:
 
--   Give your DataTables descriptive names. You'll see the name in the Power Apps app when you write the code to connect to it.
+- Give your DataTables descriptive names. You'll see the name in the Power Apps app when you write the code to connect to it.
 
--   Use one DataTable per worksheet.
+- Use one DataTable per worksheet.
 
--   Give the same name to the DataTable and worksheet.
+- Give the same name to the DataTable and worksheet.
 
--   Use descriptive column names in the DataTables.
+- Use descriptive column names in the DataTables.
 
--   Use Pascal casing. Each word of the DataTable name should begin with a capital letter (for example, EmployeeLeaveRequests).
+- Use Pascal casing. Each word of the DataTable name should begin with a capital letter (for example, EmployeeLeaveRequests).
 
 ### Untyped and dynamic objects
 
@@ -184,15 +184,15 @@ Choose names that clearly describe the purpose or content of the variable. Avoid
 
 Consider using prefixes or suffixes to indicate the type of variable. For instance:
 
--   *strUserName* for a text/string variable
+- *strUserName* for a text/string variable
 
--   *numTotalAmount* for a numeric variable
+- *numTotalAmount* for a numeric variable
 
--   *boolIsEnabled* for a boolean variable
+- *boolIsEnabled* for a boolean variable
 
--   *locVarName* for local variables/context variables
+- *locVarName* for local variables/context variables
 
--   *gblVarLoginUser* for global variables
+- *gblVarLoginUser* for global variables
 
 <!-- -->
 
@@ -208,11 +208,11 @@ Avoid using reserved words or names that might conflict with Power Apps function
 
 Consider using prefixes that provide context about the variable's usage or scope. For example:
 
--   *frm* for form variables
+- *frm* for form variables
 
--   *col* for collections
+- *col* for collections
 
--   *var* for general-purpose variables
+- *var* for general-purpose variables
 
 <!-- -->
 
@@ -222,13 +222,13 @@ Keep names alphanumeric and avoid special characters or spaces. Stick to letters
 
 ***Be smart!*** PowerApps lets context variables and global variables share the same names. This can cause confusion because your formulas use context variables by default unless the [<u>disambiguation operator</u>](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) is used. Avoid this situation by following these conventions:
 
--   Prefix context variables with loc.
+- Prefix context variables with loc.
 
--   Prefix global variables with gbl.
+- Prefix global variables with gbl.
 
--   The name after the prefix should indicate the intent/purpose of the variable. Multiple words can be used and don't have to be separated by any special characters (for example, spaces or underscores), provided that the first letter of each word is capitalized.
+- The name after the prefix should indicate the intent/purpose of the variable. Multiple words can be used and don't have to be separated by any special characters (for example, spaces or underscores), provided that the first letter of each word is capitalized.
 
--   Use Camel casing. Begin your variable names with a prefix in lowercase letters, and then capitalize the first letter of each word in the name (that is, lowerUppperUpper).
+- Use Camel casing. Begin your variable names with a prefix in lowercase letters, and then capitalize the first letter of each word in the name (that is, lowerUppperUpper).
 
 Here are some good examples:
 
@@ -240,17 +240,17 @@ Here are some good examples:
 
 Here are some bad examples:
 
--   dSub
+- dSub
 
--   rstFlds
+- rstFlds
 
--   hideNxtBtn
+- hideNxtBtn
 
--   ttlOppCt
+- ttlOppCt
 
--   cFV
+- cFV
 
--   cQId
+- cQId
 
 Avoid short and cryptic variable names such as EID. Use EmployeeId instead.
 
@@ -258,30 +258,29 @@ Avoid short and cryptic variable names such as EID. Use EmployeeId instead.
 
 ### Collection Names
 
--   Be descriptive of the collection's contents. Think about what the collection contains and/or how it's used, and then name it accordingly.
+- Be descriptive of the collection's contents. Think about what the collection contains and/or how it's used, and then name it accordingly.
 
--   Collections should be prefixed with col.
+- Collections should be prefixed with col.
 
--   The name after the prefix should indicate the intent or purpose of the collection. Multiple words can be used and don't have to be separated by spaces or underscores, provided that the first letter of each word is capitalized.
+- The name after the prefix should indicate the intent or purpose of the collection. Multiple words can be used and don't have to be separated by spaces or underscores, provided that the first letter of each word is capitalized.
 
--   Use Camel casing. Begin your collection names with a lowercase col prefix, and then capitalize the first letter of each word in the name (that is, colUpperUpper).
+- Use Camel casing. Begin your collection names with a lowercase col prefix, and then capitalize the first letter of each word in the name (that is, colUpperUpper).
 
 Here are some good examples:
 
--   colMenuItems
+- colMenuItems
 
--   colThriveApps
+- colThriveApps
 
 Here are some bad examples:
 
--   orderscoll
+- orderscoll
 
--   tempCollection
+- tempCollection
 
 **Note:** When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
 
 ### Named Formula naming standards
-
 
 ## Comments and Documentation
 
@@ -309,11 +308,11 @@ For optimal code organization, it is advisable to add comments after utilizing t
 
 The Format Text feature follows these rules for existing comments:
 
-1.  If a property begins with a block comment, the next line of code will be appended to it.
+1. If a property begins with a block comment, the next line of code will be appended to it.
 
-2.  If a property begins with a line comment, the next line of code won't be appended to it. Otherwise, the code will be commented out.
+2. If a property begins with a line comment, the next line of code won't be appended to it. Otherwise, the code will be commented out.
 
-3.  Line and block comments elsewhere in the property will be appended to the previous line of code.
+3. Line and block comments elsewhere in the property will be appended to the previous line of code.
 
 Don't worry about adding too many comments or comments that are too long. All comments will be stripped out when PowerApps creates the client app package. Therefore, they won't affect the package size or slow down the app download or loading times.
 
@@ -323,11 +322,11 @@ In Power Apps, it is considered the best practice for makers to effectively util
 
 For optimal engagement in the Canvas Studio, makers are advised to add comments using the following methods:
 
-1.  right-clicking on the ellipsis ("...") of any item in the Tree View,
+1. right-clicking on the ellipsis ("...") of any item in the Tree View,
 
-2.  right-clicking on a component in the canvas area, or
+2. right-clicking on a component in the canvas area, or
 
-3.  selecting the "Comments" button located on the command bar in the top right-hand corner of the screen.
+3. selecting the "Comments" button located on the command bar in the top right-hand corner of the screen.
 
 When mentioning colleagues in comments, it is recommended to use the "@" symbol followed by their name. This prompts a notification email for the tagged colleague, ensuring swift access to the comment. In cases where a tagged user lacks access to the app, the maker is prompted to share the app with them.
 
@@ -341,11 +340,11 @@ Here are some tips:
 
 #### Formula Bar
 
-##### Indentation:
+##### Indentation
 
 Although PowerApps doesn't enforce strict indentation, you can use spaces to visually separate different sections of your formulas. Press the space bar multiple times to create an indentation effect.
 
-##### Line Breaks:
+##### Line Breaks
 
 You can break long formulas into multiple lines to enhance readability. Press Enter to create a line break within the formula bar.
 
@@ -354,4 +353,3 @@ You can break long formulas into multiple lines to enhance readability. Press En
 The "Format Text" command in the formula bar is designed to apply indentation, spacing, and line breaks to your Power Apps code. Utilize the "Format Text" command to establish a uniform coding style across your entire canvas app, ensuring a more efficient and error-resistant development process.
 
 ![](media/image10.png)
-

@@ -19,13 +19,13 @@ As Canvas Apps become more intricate, developers encounter challenges related to
 
 ### With Function
 
-The With function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. More details: <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-with>
+The With function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. More details: </power-platform/power-fx/reference/function-with>
 
 ![A screenshot of a computer Description automatically generated](media/image13.png)
 
 ### Concurrent function
 
-The Concurrent function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the ; (semi-colon) operator, which evaluates each formula sequentially. With the Concurrent function, the app will evaluate all formulas within a property concurrently even after using the ; operator. This concurrency will help users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. More details: <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-concurrent>
+The Concurrent function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the ; (semi-colon) operator, which evaluates each formula sequentially. With the Concurrent function, the app will evaluate all formulas within a property concurrently even after using the ; operator. This concurrency will help users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. More details: </power-platform/power-fx/reference/function-concurrent>
 
 ![A white background with blue and white text Description automatically generated](media/image14.png)
 
@@ -41,7 +41,7 @@ Coalesce( value1, value2 )
 
 ### IsMatch Funtion
 
-The IsMatch function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a regular expression. More Details - <https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-ismatch>
+The IsMatch function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a regular expression. More Details - </power-platform/power-fx/reference/function-ismatch>
 
 For e.g. Matches a United States Social Security Number
 
@@ -65,13 +65,13 @@ IsMatch( *TextInput1*.Text, "Hello World" )
 
 IsMatch( *TextInput1\_2*.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]{8,10})" )
 
-## Optimize App OnStart 
+## Optimize App OnStart
 
 The **OnStart** property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the **OnStart** property is essential for creating responsive and efficient Canvas apps.
 
 The App OnStart function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands. .
 
-A recommended approach is to streamline the App OnStart function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps \| Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
+A recommended approach is to streamline the App OnStart function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps \| Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
 Main problem with OnStart property is that it's **Imperative.** It is an ordered list of work that needs to be done before the first screen is shown.  Because it is so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
 
@@ -181,15 +181,15 @@ Define formula under App.Formulas as follows:
 
 FunctionName(Parameter1:DataType1, Parameter2:DataType2):OutputDataType = Formula
 
--   FunctionName – used to invoke the function
+- FunctionName – used to invoke the function
 
--   Parameter – the name of the input. One or more inputs are allowed
+- Parameter – the name of the input. One or more inputs are allowed
 
--   DataType – argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
+- DataType – argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
 
--   OutputDataType – output of the function will be in this data type
+- OutputDataType – output of the function will be in this data type
 
--   Formula – the result of this formula is the output of the function
+- Formula – the result of this formula is the output of the function
 
 ![A screenshot of a computer Description automatically generated](media/image17.png)
 
@@ -213,11 +213,7 @@ Variables are used to define and set local and global values to be used everywhe
 
 Setting a variables for each attribute of an object.
 
- 
-
 ![A screenshot of a computer program Description automatically generated](media/image18.png)
-
- 
 
 Instead use this:
 
@@ -271,11 +267,11 @@ A collection, essentially a table variable, is distinct in that it stores rows a
 
 While unused media and variables may not create a drastic impact on App performance, its important to cleanup your app from any unused media or variables.
 
--   Unused media files contribute to overall increase in app size. This can lead to slower app load times.
+- Unused media files contribute to overall increase in app size. This can lead to slower app load times.
 
--   Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
+- Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they are not actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
 
--   Use App checker to review unused media and variables.
+- Use App checker to review unused media and variables.
 
 ## Optimize Screens and Controls
 
@@ -295,9 +291,9 @@ Delay output setting When set to true, user input is registered after half a sec
 
 For example , for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control.
 
--   With DelayOutput set to false, which is default, the Gallery will be filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you are using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+- With DelayOutput set to false, which is default, the Gallery will be filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you are using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
 
--   With DelayOutput set to true, there is a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field. 
+- With DelayOutput set to true, there is a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field.
 
 ## Delegation and server side processing (Low code plugins)
 
@@ -305,7 +301,7 @@ For example , for a Gallery whose Items are Filtered depending on what is inputt
 
 Delegation in PowerApps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within PowerApps itself. By leveraging delegation in PowerApps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
 
-**Note: Not all functions are delegable. Please refer to the following article to get more information on delegation : [Understanding Delegation](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/delegation-overview)**
+**Note: Not all functions are delegable. Please refer to the following article to get more information on delegation : [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview)**
 
 Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation will help keep data up to date.
 
@@ -335,7 +331,7 @@ Different data source such as SQL , Dataverse enables you to delegate data proce
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
-Following article describes how you can use [Low Code plugins in Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
+Following article describes how you can use [Low Code plugins in Dataverse](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
 
 ## Enable Delay/Lazy Loading
 
@@ -413,15 +409,15 @@ ThisItem.Account.'Account Name'
 
 Although PowerApps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint will be especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
 
--   Evaluate the media that are embedded in your app. If something isn't used, delete it.
+- Evaluate the media that are embedded in your app. If something isn't used, delete it.
 
--   Embedded images might be too big. Instead of PNG files, see whether you can use SVG images. However, be careful about using text in SVG images, because the font that's used will have to be installed on the client. A great workaround when you need to show text is to superimpose a text label over an image.
+- Embedded images might be too big. Instead of PNG files, see whether you can use SVG images. However, be careful about using text in SVG images, because the font that's used will have to be installed on the client. A great workaround when you need to show text is to superimpose a text label over an image.
 
--   Evaluate whether the resolution is appropriate for the form factor. The resolution for a mobile app doesn't need to be as high as the resolution for a desktop app. Experiment to get the right balance of image quality and size.
+- Evaluate whether the resolution is appropriate for the form factor. The resolution for a mobile app doesn't need to be as high as the resolution for a desktop app. Experiment to get the right balance of image quality and size.
 
--   If you have unused screens, delete them. Be careful not to delete any hidden screens that only app makers or administrators use.
+- If you have unused screens, delete them. Be careful not to delete any hidden screens that only app makers or administrators use.
 
--   Evaluate whether you're trying to fit too many workflows into one app. For example, do you have both admin screens and client screens in the same app? If so, consider breaking them into individual apps. This approach will also make it easier for multiple people to work on the apps at the same time, and it will limit the "blast radius" (amount of testing) when app changes require a full test pass.
+- Evaluate whether you're trying to fit too many workflows into one app. For example, do you have both admin screens and client screens in the same app? If so, consider breaking them into individual apps. This approach will also make it easier for multiple people to work on the apps at the same time, and it will limit the "blast radius" (amount of testing) when app changes require a full test pass.
 
 ## Optimize ForAll
 
@@ -442,8 +438,6 @@ Following function:
 Patch(SampleFoodSalesData,
 
 ForAll(colSampleFoodSales,
-
-
 
 {
 
@@ -486,5 +480,3 @@ colSampleFoodSales,
 )
 
 );
-
-

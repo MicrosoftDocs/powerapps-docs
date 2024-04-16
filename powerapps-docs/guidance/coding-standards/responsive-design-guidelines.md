@@ -26,5 +26,3 @@ In the section on responsive design guidelines for Canvas apps in Power Apps, we
 6. **Plan for Various Devices**: Effective responsive design involves anticipating how the app will look and function on different devices. This includes decisions about resizing elements or hiding them entirely on smaller screens to optimize space and maintain usability.
 
 7. **Practical Implementation**: Transforming a non-responsive Canvas app into a responsive one requires a systematic approach. This involves adjusting settings for responsiveness and carefully configuring container properties to ensure elements within the app adapt to different screen sizes.
-
-

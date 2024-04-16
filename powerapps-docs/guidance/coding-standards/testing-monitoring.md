@@ -24,13 +24,13 @@ The tool can be used from PowerApps studio or to monitor published apps during r
 
 The monitor tool can return some important information like
 
--   Nature of the Operation such as Select, Load Screen, Navigate, GetRows etc.
+- Nature of the Operation such as Select, Load Screen, Navigate, GetRows etc.
 
--   Result and Result Info – Whether the call is Success, Failure or Warning, Result info includes information such as Number of rows returned, any runtime errors like 404 or 429 etc.
+- Result and Result Info – Whether the call is Success, Failure or Warning, Result info includes information such as Number of rows returned, any runtime errors like 404 or 429 etc.
 
--   Duration- Amount of time taken to complete a given request
+- Duration- Amount of time taken to complete a given request
 
--   Data source and Control information
+- Data source and Control information
 
 ![A screenshot of a computer Description automatically generated](media/image32.png)
 
@@ -50,7 +50,7 @@ The introduction of the App checker represents a more streamlined method for ide
 
 The Accessibility Checker functions in a manner similar to the formula errors checker, scrutinizing your app for potential accessibility issues and presenting them in a comprehensive list. Presently, the Accessibility Checker offers guidance on enabling keyboard and screen reader support within apps, although it does not currently identify color contrast issues.
 
-Upon select an item from the Accessibility Checker list, it opens the relevant property for addressing the identified issue. Clicking the right chevron reveals detailed information along with a link to additional resources providing insights into creating accessible apps. For more in-depth information on the Accessibility Checker and general principles of accessibility, refer [here](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/accessibility-checker).
+Upon select an item from the Accessibility Checker list, it opens the relevant property for addressing the identified issue. Clicking the right chevron reveals detailed information along with a link to additional resources providing insights into creating accessible apps. For more in-depth information on the Accessibility Checker and general principles of accessibility, refer [here](/power-apps/maker/canvas-apps/accessibility-checker).
 
 ![A screenshot of a computer Description automatically generated](media/image36.png)
 
@@ -58,21 +58,21 @@ Upon select an item from the Accessibility Checker list, it opens the relevant p
 
 Azure Application Insights can be used to log telemetry data from Canvas apps in PowerApps. This integration allows you to monitor and gain insights into the performance and usage of your Canvas apps.
 
-To setup Azure App Insights resource follow the given [steps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/application-insights#create-an-application-insights-resource). App Insights can help you track following details from canvas apps
+To setup Azure App Insights resource follow the given [steps](/power-apps/maker/canvas-apps/application-insights#create-an-application-insights-resource). App Insights can help you track following details from canvas apps
 
--   Where the app is accessed from
+- Where the app is accessed from
 
--   Which devices are used
+- Which devices are used
 
--   The browsers types used, OS and browser versions details of the users
+- The browsers types used, OS and browser versions details of the users
 
--   Number of users who viewed the app
+- Number of users who viewed the app
 
--   Region and location of the users
+- Region and location of the users
 
--   Number of sessions by the users for the app
+- Number of sessions by the users for the app
 
--   Number of events logged from the app
+- Number of events logged from the app
 
 To see **usage metrics within App Insights,**
 
@@ -82,7 +82,7 @@ To see **usage metrics within App Insights,**
 
 You can further review the custom traces and unhandled errors within the App Insights as well. To this, use **Trace** function. Trace function can be used to log custom telemetry from Canvas Apps to Azure Application Insights. Consider using this when you want to have feedback around User experience.
 
-Formula details - [Trace function - Power Platform \| Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-trace)
+Formula details - [Trace function - Power Platform | Microsoft Learn](/power-platform/power-fx/reference/function-trace)
 
 ```typescript
 Trace(
@@ -111,6 +111,7 @@ Notify("Thanks for you feedback!");
 Once the traces are logged, you can view them by going to logs and review the traces table. Search with Message keyword to begin with.
 
 **Example**
+
 
 traces \| extend customdims = parse\_json(customDimensions) \| where message == "App Feedback" \| project timestamp , message , AppName = customdims.\['ms-appName'\] , AppId = customdims.\['ms-appId'\] , FeedbackFrom = customdims.UserEmail , Screen = customdims.Screen , FeedbackValue = customdims.FeedbackValue \| order by timestamp desc
 

@@ -23,13 +23,13 @@ Disclaimer: Please be aware that, as of this writing, while a subset of the mode
 
 **Organize Your Form:**
 
--   Divide your form into logical sections and group related fields together.
+- Divide your form into logical sections and group related fields together.
 
--   Aim to keep your form on a single screen. If it's lengthy, consider dividing it into multiple screens, steps, or tabs.
+- Aim to keep your form on a single screen. If it's lengthy, consider dividing it into multiple screens, steps, or tabs.
 
--   Use clear and simple language for field labels, avoiding unfamiliar terms or jargon.
+- Use clear and simple language for field labels, avoiding unfamiliar terms or jargon.
 
--   Implement validation rules to ensure data accuracy. For mandatory fields, clearly indicate that they are required. Validate email addresses, phone numbers, and other formats as needed.
+- Implement validation rules to ensure data accuracy. For mandatory fields, clearly indicate that they are required. Validate email addresses, phone numbers, and other formats as needed.
 
 **Reuse Forms:**
 
@@ -39,11 +39,11 @@ Reusing the same form reduces development and maintenance time while ensuring co
 
 **Form Modes**: Set the form mode dynamically based on user actions. For example:
 
--   When creating a new record, set the form to "New" mode.
+- When creating a new record, set the form to "New" mode.
 
--   When editing an existing record, set the form to "Edit" mode.
+- When editing an existing record, set the form to "Edit" mode.
 
--   When displaying a record, set the form to "View" mode.
+- When displaying a record, set the form to "View" mode.
 
 **Control Placement:**
 
@@ -61,13 +61,13 @@ Canvas App Container control can hold a set of controls and has its own properti
 
 **Container vs Grouping controls**
 
--   When editing an app, you can select controls and group them using Ctrl + G or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
+- When editing an app, you can select controls and group them using Ctrl + G or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
 
 In contrast, containers are actual controls with their own properties like **Width** and **BorderColor**. Containers affect app layout and help screen reader users understand the structure of the app.
 
 While you can add any controls in a group, you should only add logically related controls in a container.
 
--   Organizing elements in Power Apps using groups allows users to apply shared properties to multiple elements. However, making individual property changes within a group may necessitate manual adjustments. Furthermore, groups do not have a presence in the logical structure of an app for accessibility reasons, as screen readers are unable to recognize them. Additionally, the inability to nest groups makes it challenging to create more intricate layouts.
+- Organizing elements in Power Apps using groups allows users to apply shared properties to multiple elements. However, making individual property changes within a group may necessitate manual adjustments. Furthermore, groups do not have a presence in the logical structure of an app for accessibility reasons, as screen readers are unable to recognize them. Additionally, the inability to nest groups makes it challenging to create more intricate layouts.
 
 In contrast, containers provide a more adaptable and efficient solution. Containers function as empty spaces where users can insert and organize controls in relation to the top-left corner of the container. Makers have the flexibility to nest containers, allowing for the creation of more complex layouts and providing freedom in design.
 
@@ -115,38 +115,36 @@ Here's an example of how you can achieve this: Assuming you have a collection Em
 
 Gallery1.Items = EmployeeNamesAndDepartments
 
-For more details on Gallery best practices, see [here](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/gallery-best-practice).
+For more details on Gallery best practices, see [here](/power-apps/maker/canvas-apps/gallery-best-practice).
 
 ## Building reusable components
 
 ### When to create Custom code components using Power Apps Component Framework (PCF)
 
-Power Platform allows the creation of reusable components through Power Apps Component Framework (PCF). More details [here](https://learn.microsoft.com/en-us/power-apps/developer/component-framework/overview).
+Power Platform allows the creation of reusable components through Power Apps Component Framework (PCF). More details [here](/power-apps/developer/component-framework/overview).
 
 Here are scenarios in which you might consider creating PCF components in Power Apps:
 
-#### Complex UI Elements:
+#### Complex UI Elements
 
 When you need to create complex user interface elements or controls that are not readily available in the standard Power Apps controls.
 
-#### Custom Controls for Specific Requirements:
+#### Custom Controls for Specific Requirements
 
 When your app has specific requirements that are not met by the out-of-the-box controls, and you need to create custom controls tailored to your needs.
 
-#### Consistent User Experience Across Apps:
+#### Consistent User Experience Across Apps
 
 When you want to maintain a consistent user experience across multiple Power Apps or environments by encapsulating specific functionalities within a PCF component.
 
-#### Reusability Across Apps:
+#### Reusability Across Apps
 
 When you anticipate the need to reuse a specific piece of functionality or user interface element in multiple apps, creating a PCF component allows you to build once and reuse.
 
-#### Implementing Advanced Logic:
+#### Implementing Advanced Logic
 
 When you need to implement advanced business logic or calculations that are beyond the capabilities of standard formulas or functions in Power Apps.
 
-#### Improved User Experience:
+#### Improved User Experience
 
 When you aim to enhance the overall user experience by creating visually appealing and interactive components that are not achievable with the default controls.
-
-
