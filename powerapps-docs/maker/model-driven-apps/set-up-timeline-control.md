@@ -1,4 +1,4 @@
-<img width="676" alt="image" src="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/52931214/adf30f51-49ca-4cb7-97a8-74d42a496d1a">---
+---
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
