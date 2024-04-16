@@ -4,9 +4,9 @@ description: Learn how to work with file data in the Attachments and Notes table
 ms.date: 02/02/2023
 ms.reviewer: jdaly
 ms.topic: conceptual
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 contributors:
