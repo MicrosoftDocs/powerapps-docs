@@ -5,7 +5,7 @@
   - name: Coding standards and gudelines
     items:
     - name: Overview
-      href: coding-standards/code-readability.md
+      href: coding-standards/overview.md
     - name: App design
       href: coding-standards/app-design-guidelines.md
     - name: Responsive design
