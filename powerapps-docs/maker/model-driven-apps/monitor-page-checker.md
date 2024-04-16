@@ -1,6 +1,6 @@
 ---
-title: "Use Monitor to troubleshoot custom page behavior in a model-driven app"
-description: "Monitor can help you debug and diagnose problems with custom pages"
+title: Use Monitor tool to troubleshoot page behavior in model-driven apps
+description: Monitor can help you debug and diagnose problems with custom pages. Discover how to troubleshoot page behavior in model-driven apps using the Monitor tool 
 ms.custom: ""
 ms.date: 07/22/2021
 ms.reviewer: "matp"
@@ -15,9 +15,9 @@ tags:
 search.audienceType: 
   - maker
 ---
-# Use Monitor to troubleshoot custom page behavior in a model-driven app
+# Use Monitor tool to troubleshoot page behavior in model-driven apps
 
-Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
+Monitor can help you debug and diagnose problems, which help you build faster, more reliable model-driven apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
 
   > [!IMPORTANT]
   > Monitor must be run on the model-driven app and not directly on a custom page.
@@ -26,7 +26,7 @@ When you filter on model-driven app custom page-related events in Monitor, you c
 
 :::image type="content" source="media/add-component-to-model-app/monitor-app-with-custom-page.png" alt-text="Monitoring a model-driven app that has a custom page using the canvas app gallery control":::
 
-### See also
+## See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 

@@ -2,8 +2,8 @@
 title: Create and retrieve table relationships
 description: Shows code samples to create and retrieve table relationships.
 ms.date: 08/12/2023
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType:

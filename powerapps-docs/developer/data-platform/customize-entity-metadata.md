@@ -4,9 +4,9 @@ description: "By defining or changing the table definitions, you can control the
 ms.date: 09/04/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
