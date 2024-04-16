@@ -1,5 +1,5 @@
 ---
-title:  Streamline App development with low-code plug-ins in Microsoft Dataverse
+title:  Streamline app development with low-code plug-ins in Microsoft Dataverse
 description: Guide to crafting low-code plug-ins in Microsoft Dataverse
 author: Mattp123
 ms.author: matp
