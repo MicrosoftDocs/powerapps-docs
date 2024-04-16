@@ -127,7 +127,9 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls on a single form isn't supported.
 
-- The form that you use with a form component must be included in your app. If it isn't, or if the current user doesn't have access to the form, it will fall back to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
+- The form that you use with a form component must be [included in your app](add-edit-app-components.md#add-a-component). If it isn't, or if the current user doesn't have access to the form, it will fall back to the top-most main form that is included in the app and available to the user (based on form order).
+
+- All components used by the form in a form component must be [included in your app](add-edit-app-components.md#add-a-component). These components include related tables, views, and business process flows. If they aren't, they won't be available in the form or there might be unexpected behavior.
 
 - Form component controls have certain limitations when rendered in multi-session apps. If the client API is used to modify the form component control, or if data is entered on the form, the changes might not be persisted when switching multi-session tabs.
 
