@@ -4,9 +4,9 @@ description: "Learn about common elements and characteristics that formula, calc
 ms.date: 09/15/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 search.audienceType: 
   - developer
 contributors:
