@@ -4,7 +4,7 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 04/09/2024
+ms.date: 04/16/2024
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -369,7 +369,11 @@ When you attach a file to your note, the **Edit note** screen displays, and atta
 
 ### Quickly save notes
 
-The Quick save feature allows you to save your notes faster by selecting **Ctrl**+**S** on your keyboard at any point when you're typing a note. When you use Quick save, you don't have to navigate to **Save** or **Save and Close** on the command bar. A **Save successful** confirmation is displayed to let you know your notes have saved on the timeline.
+The Quick save feature allows you to save your notes faster by selecting **Ctrl**+**S** on your keyboard at any point when you're typing a note. When you use Quick save, you don't have to navigate to **Save** or **Save and Close** on the command bar. 
+
+When you use **Ctrl**+**S**, a **Save successful** confirmation message is displayed in the note to let you know your note has saved on the timeline.
+
+![Save successful message.](media\save-successful-timeline-note.png "Save successful message")
 
 ## Work with posts
 
