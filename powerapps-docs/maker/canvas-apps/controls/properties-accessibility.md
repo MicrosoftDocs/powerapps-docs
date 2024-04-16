@@ -1,18 +1,18 @@
 ---
 title: Accessibility properties for Power Apps
 description: Reference information about properties related to accessibility in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 09/06/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - chmoncay
+  - yogeshgupta698
   - tahoon-ms
   - mduelae
 ---

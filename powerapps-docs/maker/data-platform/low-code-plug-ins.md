@@ -299,3 +299,5 @@ More information: [Create custom connectors in solutions: Known limitations](/co
 ## See also
 
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
+
+[Use a prebuilt prompt in a Dataverse low-code plug-in in Power Apps](/ai-builder/prebuilt-prompts-in-dataverse-plug-in-powerapps)
