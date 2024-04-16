@@ -5,8 +5,8 @@ ms.date: 06/07/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: NHelgren # GitHub ID
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
