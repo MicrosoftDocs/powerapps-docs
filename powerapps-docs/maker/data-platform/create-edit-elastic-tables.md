@@ -130,10 +130,10 @@ Column data types currently not available with elastic tables:
 
 You create an elastic table just like any other new table in Dataverse.
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and select Tables on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **New table** > **New table** on the command bar.
-1. On the right properties pane, expand **Advanced options**.
-1. Select **Elastic** as the table **Type**.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New table** > **Set advanced properties** on the command bar.
+1. On the right properties pane, enter a **Display name** and a **Plural name**.
+1. Expand **Advanced options**, and then select **Elastic** as the table **Type**.
    :::image type="content" source="media/elastic-table-type.png" alt-text="Select Elastic as the table Type":::
 1. Select the properties you want, and then select **Save**.
   
