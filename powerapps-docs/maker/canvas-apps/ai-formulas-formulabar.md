@@ -22,10 +22,6 @@ contributors:
 
  Use AI to create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to help explain Power Fx formulas in natural language, or create Power Fx formulas from natural language.
 
-
-> [!IMPORTANT]
-> AI generated content may be inaccurate and should be checked for accuracy.
-
 ## Prerequisites
 - To use this feature, Power Fx formula bar must be turned on.
     1. Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
@@ -35,7 +31,8 @@ contributors:
 - Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
 - Your browser and Power Apps language settings must be set to **English (United States)**.
 To use this feature, Power Fx formula bar must be turned on in app settings.
-
+> [!NOTE]
+> AI generated content may be inaccurate and should be checked for accuracy.
 
 ## Explain a formula
 
