@@ -83,7 +83,7 @@ Pasting images in the rich text editor has the following limitations:
 - Authentication
 - Image format support in browser
 - Type of image (inline vs URL)
-- Inserting image with expectation that it will be stored with binded data source. (Potential workaround is to add additional logic that would upload images from RTE to the data source, parse back response and paste it to the original field.)
+- Inserting image with expectation that it will be stored with binded data source. Potential workaround is to add additional logic that would upload images from rich text editor to the data source, parse back response and paste it to the original field.
 - How programs represent images differently when they are copied.
 
 > [!NOTE]
