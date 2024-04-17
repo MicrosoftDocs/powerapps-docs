@@ -1,5 +1,5 @@
 ---
-title: Add copilot for app users in model-driven apps | MicrosoftDocs
+title: Add copilot for app users in model-driven apps in Power Apps | MicrosoftDocs
 description: Learn how copilot in a model-driven app can assist app users.
 author: Mattp123
 ms.service: powerapps
@@ -16,7 +16,7 @@ contributors:
   - makolomi
 ms.collection: bap-ai-copilot
 ---
-# Add copilot for app users in model-driven apps 
+# Add copilot for app users in model-driven apps
 
 Copilot for model-driven apps in Power Apps is a next-generation AI assistant for app users to get insights about the data in their apps through conversation in natural language. Copilot helps app users boost their productivity through AI-powered insights and intuitive app navigation.
 
