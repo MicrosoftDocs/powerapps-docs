@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/09/2024
+ms.date: 04/17/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -58,7 +58,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 Add a comment in the formula bar and Copilot will suggest a suitable formula. You can accept the suggestion or typing through it. The comments can remain in the formula bar as documentation, similar to regular code comments.
 
-1. With our canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
+1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
 :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Typed comment":::
 
     Wait few seconds for Copilot to generate a formula recommendation.
