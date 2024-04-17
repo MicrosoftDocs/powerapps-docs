@@ -1,7 +1,7 @@
 ---
 title: Mobile offline for canvas apps
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 03/13/2024
+ms.date: 04/17/2024
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
@@ -23,7 +23,7 @@ contributors:
 If users of your Dataverse-based canvas app have spotty or no Internet access, you can easily provide [offline-first](#mobile-offline-first) access with simple switches and a canvas control. Basic offline-first apps are easy to make. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference), and Power Apps offline features handle everything else.
 
 > [!IMPORTANT]
-> - The offline-first feature works for standalone canvas apps only. It doesn't work for embedded [canvas apps](power-apps/maker/model-driven-apps/embed-canvas-app-in-form.md) or [custom pages](power-apps/maker/model-driven-apps/model-app-page-overview.md)
+> The offline-first feature works for standalone, canvas apps only. It doesn't work for [embedded canvas apps](power-apps/maker/model-driven-apps/embed-canvas-app-in-form.md) or [custom pages](power-apps/maker/model-driven-apps/model-app-page-overview.md)
 
 > [!IMPORTANT]
 > - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
