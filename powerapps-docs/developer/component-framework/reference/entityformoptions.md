@@ -3,7 +3,7 @@ title: EntityFormOptions (Power Apps component framework API reference)| Microso
 description: Learn how to use different methods and properties available for EntityFormOptions in Power Apps component framework.
 ms.author: hemantg
 author: HemantGaur
-ms.date: 05/27/2022
+ms.date: 04/17/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
