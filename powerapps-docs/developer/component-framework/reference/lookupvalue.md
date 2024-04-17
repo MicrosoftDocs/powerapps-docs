@@ -22,28 +22,21 @@ Model-driven apps
 
 ### id
 
-TODO Add description
+The record ID.
 
-**Type**: `number`
+**Type**: `string`
 
 ### name
 
-TODO Add description
+The name of the record the lookup selection references.
 
-**Type**: `number`
+**Type**: `string`
 
 ### entityType
 
-TODO Add description
+The entity logical name of the record the lookup selection references.
 
-**Type**: `number`
-
-
-## Example
-
-```TypeScript
-TODO
-```
+**Type**: `string`
 
 ### Related articles
 
