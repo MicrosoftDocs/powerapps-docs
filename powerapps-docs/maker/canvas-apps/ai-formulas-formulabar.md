@@ -27,7 +27,7 @@ contributors:
 > AI generated content may be inaccurate and should be checked for accuracy.
 
 ## Prerequisites
-- To use this feature, Power Fx formula bar must be turned on in app settings.
+- To use this feature, Power Fx formula bar must be turned on.
     1. Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
     1. On the command bar, select **Settings** > **Upcoming features**.
     1. From the **Preview** tab, set the toggle for **Power Fx formula bar** to **On**.
