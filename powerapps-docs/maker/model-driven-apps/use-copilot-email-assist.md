@@ -34,15 +34,15 @@ The [generative AI feature in emails](/power-platform/admin/settings-features#ai
 
 1. Select the **Copilot** icon in the rich text editor toolbar and then select **Draft with Copilot**.  
 1. In the **Draft with Copilot** dialog box, select a prompt as required.  
-1. To refine or updated the generated content, select the following options as required:  
+1. To refine or update the generated content, select the following options as required:  
 
     | Option | Description |
     |--------|-------------|
     | Keep it | Retains the current text and adds it to the email. |
-    | Start over| Removes the current suggestion and takes you back to select an email generation option. |
+    | Start over| Removes the current suggestion and takes you back to the email prompt. |
     | Discard | Removes the content suggestion and takes you back to email editor. |
     | Adjust | Refines the text and tone of suggested content. <br>- To adjust the length of the content, select **Short**, **Medium**, or **Long**.<br>- To adjust the tone of the content, select **Friendly**, **Professional**, or **Formal**.<br> Select **Update** and the content is updated according to your refinements. |
-    | Translate | Translates the content into the selected language.  |
+    | Translate | Translates the content into the selected language. The languages listed here are those supported by your environment. To go back to the language that the content was originally generated, select **Show original**.  |
 
 ## Adjust existing email content with Copilot
 
