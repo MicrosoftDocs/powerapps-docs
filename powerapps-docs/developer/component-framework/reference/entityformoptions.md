@@ -24,7 +24,7 @@ Model-driven apps
 
 Designates a record that will provide default values based on mapped column value. The lookup object has following properties: table type, id and name.
 
-**Type**: [Entityreference](entityreference.md)
+**Type**: [LookupValue](lookupvalue.md)
 
 ### entityId
 
