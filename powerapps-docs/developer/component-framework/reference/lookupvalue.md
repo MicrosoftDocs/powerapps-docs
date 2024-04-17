@@ -3,18 +3,19 @@ title: LookupValue (Power Apps component framework API reference) | Microsoft Do
 description: Learn how to use different properties available for LookupValue in Power Apps component framework.
 ms.author: rarattay
 author: rarattay
-ms.date: 05/27/2022
+ms.date: 04/17/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - pjramirez-ms
 ---
 # LookupValue
 
 [!INCLUDE [lookupvalue-description](includes/lookupvalue-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven apps
 
@@ -40,7 +41,8 @@ The entity logical name of the record the lookup selection references.
 
 ### Related articles
 
-[Power Apps component framework API reference](../reference/index.md)<br/>
+[EntityFormOptions](entityformoptions.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
