@@ -14,7 +14,7 @@ contributors:
  - phecke
 ---
 
-# Page large datasets with QueryExpression
+# Page large result sets with QueryExpression
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
