@@ -16,15 +16,14 @@ contributors:
   - makolomi
 ms.collection: bap-ai-copilot
 ---
-# Add copilot for app users in model-driven apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add copilot for app users in model-driven apps 
 
 Copilot for model-driven apps in Power Apps is a next-generation AI assistant for app users to get insights about the data in their apps through conversation in natural language. Copilot helps app users boost their productivity through AI-powered insights and intuitive app navigation.
 
 > [!IMPORTANT]
+> This feature is generally available in Dynamics 365 apps.
 >
-> - This is a preview feature.
+> This feature is a preview feature in Power Apps.
 > - To use this capability, your environment must be in the US region and have its language set to en-US.
 > - You must allow data movement across regions for Generative AI features as a prerequisite for running copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. More information: [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.

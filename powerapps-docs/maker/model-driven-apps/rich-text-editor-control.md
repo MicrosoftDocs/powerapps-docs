@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 08/25/2023
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.author: "craigm"
 author: Mattp123
@@ -78,11 +78,13 @@ We have to add a slight qualification here. Not *all* properties are replaced by
 1. Copy and paste the following code snippet in the file:
 
     ```json
+    {
     "defaultSupportedProps": {
       "propertyName": "value",
       "propertyName": "value",
       "propertyName": "value"
     },
+    }
     ```
 
     Note that the last *propertyName:value* pair doesn't end with a comma.
@@ -107,9 +109,7 @@ The editable global configuration file `RTEGlobalConfiguration.json` is the seco
 
 If your business needs require you to customize the control everywhere, specify the values you need in the `RTEGlobalConfiguration.json` file. Use the read-only file as an example to make sure you enter property-value pairs in the right format.
 
-## Use Copilot to refine text in the editor (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Use Copilot to refine text in the editor
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
 

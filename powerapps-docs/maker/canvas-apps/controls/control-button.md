@@ -1,19 +1,19 @@
 ---
 title: Button control in Power Apps
 description: Learn about the details, properties and examples of the button control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.date: 01/28/2021
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Button control in Power Apps
 A control that the user can click or tap to interact with the app.
