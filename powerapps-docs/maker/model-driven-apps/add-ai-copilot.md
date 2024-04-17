@@ -35,7 +35,7 @@ When enabled, copilot can be accessed through the copilot icon in the right navi
 
 :::image type="content" source="media/model-driven-app-copilot.png" alt-text="Copilot right pane in a model-driven app" lightbox="media/model-driven-app-copilot.png":::
 
-Copilot in model-driven apps can answer questions about the Microsoft Dataverse table data in the environment. Copilot can also help you navigate the model-driven app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*, the copilot in the model-driven app automatically opens the relevant app screens.
+Copilot chat in model-driven apps can answer questions about the Microsoft Dataverse table data in the environment. Copilot can also help you navigate the model-driven app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*, the copilot in the model-driven app automatically opens the relevant app screens. For more information about how to use copilot chat in a model-driven app, go to [Use Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).
 
 ## Enable copilot for model-driven apps feature for your environment
 
