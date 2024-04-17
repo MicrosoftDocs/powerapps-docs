@@ -1,6 +1,6 @@
 ---
 title: LookupValue (Power Apps component framework API reference) | Microsoft Docs
-description: TODO.
+description: Learn how to use different properties available for LookupValue in Power Apps component framework.
 ms.author: rarattay
 author: rarattay
 ms.date: 05/27/2022
