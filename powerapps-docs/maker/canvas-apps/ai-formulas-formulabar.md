@@ -45,9 +45,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 1. On the formula bar, select the **Copilot functionality menu** > **Explain This Formula**.
 :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Explain this formula":::
 
-When Copilot provides an explanation of the formula, you can copy and insert it as a code comment or share it with other makers who are working on the same app.
-
-
+    When Copilot provides an explanation of the formula, you can copy and insert it as a code comment or share it with other makers who are working on the same app.
 :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Formula explanation":::
 
 
@@ -71,9 +69,9 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 1. Use the **Tab key** on the keyboard to select and use the recommended formula. You can also type through the recommendation.
 :::image type="content" source="media/copilot/ufb-commentfx-copilot.png" alt-text="Typed comment with recommended formula":::
 
-The suggested formula remains until you select elsewhere or type a character that doesn't align with the recommendation. You can keep comments used for generating Power Fx formulas in the formula bar as documentation, similar to traditional code comments.
-
-> [!NOTE]
+    The suggested formula remains until you select elsewhere or type a character that doesn't align with the recommendation. You can keep comments used for generating Power Fx formulas in the formula bar as documentation, similar to traditional code comments.
+    
+    > [!NOTE]
 > - If Copilot doesn't provide a suggestion, it couldn't generate a formula based on your comment. Try rephrasing or modifying the comment.
 > - We recommend, enclosing the element you want to incorporate in your formula within quotes such as **"Button1.text"**.
 
@@ -93,7 +91,7 @@ The suggested formula remains until you select elsewhere or type a character tha
 
 - Go to **Settings** > **Upcoming features**. Set the toggle to **Off** for **Copilot comment-generated formulas**.
 
-> [!NOTE]
+    > [!NOTE]
 > You won't be able to disable **Copilot comment generated formulas** when it's generally available.
 
 ## Responsible AI
