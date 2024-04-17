@@ -1,7 +1,7 @@
 ---
 title: Work with Microsoft Dataverse data in your Azure solution
 description: Discover how to use Microsoft Dataverse to pass data to an Azure cloud-hosted solution.
-ms.date: 08/28/2023
+ms.date: 04/16/2024
 author: swylezol
 ms.author: swylezol
 ms.reviewer: pehecke
