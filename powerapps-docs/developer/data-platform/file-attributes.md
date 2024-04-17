@@ -4,9 +4,9 @@ description: "Learn about how to create, retrieve, update and delete file column
 ms.date: 01/17/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

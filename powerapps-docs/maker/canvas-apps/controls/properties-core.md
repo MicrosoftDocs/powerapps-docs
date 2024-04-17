@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - gregli-msft
 ---
 # Core properties in Power Apps

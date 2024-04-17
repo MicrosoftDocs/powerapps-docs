@@ -88,6 +88,8 @@ The enhanced email template editor is displayed if the enhanced email template e
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
 - **Editor** tab: Use this tab to design and customize your email template. See: [Design and customize the email template](cs-template-options.md).
+  > [!NOTE]
+  > Across all the model-driven apps, the email template editor supports upto 1048576 characters.
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 
