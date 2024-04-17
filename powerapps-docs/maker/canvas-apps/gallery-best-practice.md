@@ -110,6 +110,10 @@ If(false, Set(GalleryData, [{A: "abc", B: 123}]), Set(GalleryData, []))
 
 This lets the system know the schema of the `GalleryData` table. Then, you can use `GalleryData` as the **Items** property of the **Gallery**. Change it to the actual data source when needed.
 
+## Don't assume AllItems contains all items of its dataset
+The [**AllItems** property](controls/control-gallery.md#additional-properties) are the items that are loaded into view in a gallery. It's not all items in **Items**. **AllItems** can change when the user scrolls the gallery to load more items. Typically, this property is used to get values of child controls when the user is interacting with them. Hence, **AllItems** is guaranteed to have loaded that item and it's safe to refer to it. Don't refer to an item in **AllItems** if you're not sure whether the user has seen it.
+
+Similarly, [**AllItemsCount**](controls/control-gallery.md#additional-properties) is the number of items that are loaded into view in the gallery. It's not the total number of records in **Items**. To get the total records in **Items**, use `CountRows(<expression used for Items property>)`.
 
 ## Next steps
 [Isolate issues in canvas apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues)

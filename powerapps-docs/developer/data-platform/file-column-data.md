@@ -4,9 +4,9 @@ description: "Learn about uploading, downloading, and deleting data in file colu
 ms.date: 03/29/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -520,7 +520,14 @@ OData-Version: 4.0
 
 #### PowerShell example to upload file in a single request
 
-The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in a single request using Web API. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in a single request using Web API.
+
+Learn more about using PowerShell and Visual Studio Code with the Dataverse Web API:
+
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
+
+This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
 
 ```powershell
 <#
@@ -550,7 +557,8 @@ Set-FileColumn `
    -columnName 'new_filecolumn' `
    -file 'C:\Path\To\File.txt'
    
-Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+Sets the value of the 'new_filecolumn' column for the file with the specified ID 
+in the account table to the contents of the File.txt file.
 
 #>
 function Set-FileColumn {

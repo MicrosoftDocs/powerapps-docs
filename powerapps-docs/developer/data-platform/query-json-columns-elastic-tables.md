@@ -73,11 +73,11 @@ OData-Version: 4.0
 {
     "contoso_deviceid" : "device-001",
     "contoso_sensortype", "Humidity",
-    "contoso_value", 40,
+    "contoso_value": 40,
     "contoso_energyconsumption": "{ \"power\": 0.55, \"powerUnit\":\"kWh\", \"voltage\": 2, \"voltageUnit\": \"kV\" }",
-    "contoso_timestamp", DateTime.UtcNow},
-    "partitionid", device-001
-    "ttlinseconds", 86400,  // 86400  seconds in a day
+    "contoso_timestamp": DateTime.UtcNow,
+    "partitionid": device-001
+    "ttlinseconds": 86400,  // 86400  seconds in a day
 }
 ```
 

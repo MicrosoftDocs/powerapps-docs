@@ -1,6 +1,6 @@
 ---
-title: Use Dataverse low-code plug-ins
-description: Overview and how to create Microsoft Dataverse low-code plug-ins  
+title:  Streamline app development with low-code plug-ins in Microsoft Dataverse
+description: Guide to crafting low-code plug-ins in Microsoft Dataverse
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.custom: template-how-to
 contributors:
 - denise-msft
 ---
-# Use Dataverse low-code plug-ins (preview)
+# Use low-code plug-ins in Dataverse (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -299,3 +299,5 @@ More information: [Create custom connectors in solutions: Known limitations](/co
 ## See also
 
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
+
+[Use a prebuilt prompt in a Dataverse low-code plug-in in Power Apps](/ai-builder/prebuilt-prompts-in-dataverse-plug-in-powerapps)

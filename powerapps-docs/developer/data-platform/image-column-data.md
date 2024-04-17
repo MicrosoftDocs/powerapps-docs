@@ -4,9 +4,9 @@ description: "Learn about uploading, downloading, and deleting data in image col
 ms.date: 02/04/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

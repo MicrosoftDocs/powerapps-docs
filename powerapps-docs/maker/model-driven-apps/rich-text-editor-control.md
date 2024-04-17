@@ -78,11 +78,13 @@ We have to add a slight qualification here. Not *all* properties are replaced by
 1. Copy and paste the following code snippet in the file:
 
     ```json
+    {
     "defaultSupportedProps": {
       "propertyName": "value",
       "propertyName": "value",
       "propertyName": "value"
     },
+    }
     ```
 
     Note that the last *propertyName:value* pair doesn't end with a comma.
