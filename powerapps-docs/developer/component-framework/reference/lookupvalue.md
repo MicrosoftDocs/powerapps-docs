@@ -41,7 +41,7 @@ The entity logical name of the record the lookup selection references.
 
 ### Related articles
 
-[EntityFormOptions](entityformoptions.md)   
+[EntityFormOptions.createFromEntity property](entityformoptions.md#createfromentity)   
 [Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
