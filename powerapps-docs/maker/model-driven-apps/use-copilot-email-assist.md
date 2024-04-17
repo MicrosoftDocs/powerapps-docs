@@ -5,7 +5,7 @@ author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
 ms.topic: how-to
-ms.date: 04/16/2024
+ms.date: 04/17/2024
 ms.subservice: mda-maker
 ms.collection: bap-ai-copilot
 tags:
@@ -79,18 +79,18 @@ For example, Marina wants to send an email to a customer about a new product. Ma
 
 - After Copilot's assistance:
 
-```text
-Dear Mr. Samir,
+    ```text
+    Dear Mr. Samir,
 
-I am Marina, a Sales Executive at Contoso Inc. Kevin recommended that I 
-contact you. I noticed that your website does not have a CRM application. 
-I would like to discuss the possibility of a partnership. When would you 
-have time to talk about this? If you would like to learn more about our 
-product, please refer to this link: www.contoso.com.
+    I am Marina, a Sales Executive at Contoso Inc. Kevin recommended that I 
+    contact you. I noticed that your website does not have a CRM application. 
+    I would like to discuss the possibility of a partnership. When would you 
+    have time to talk about this? If you would like to learn more about our 
+    product, please refer to this link: www.contoso.com.
 
-Sincerely,
-Marina
-```
+    Sincerely,
+    Marina
+    ```
 
 ### See also
 

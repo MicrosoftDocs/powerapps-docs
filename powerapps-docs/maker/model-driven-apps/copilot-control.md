@@ -5,7 +5,7 @@ author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
 ms.topic: how-to
-ms.date: 04/16/2024
+ms.date: 04/17/2024
 ms.subservice: mda-maker
 tags:
 ms.collection: bap-ai-copilot
@@ -51,4 +51,4 @@ To add the Copilot control to the rich text editor toolbar in a form, you need t
 
 ### See also
 
-[Use Copilot in the email rich text editor (preview)](../model-driven-apps/use-copilot-email-assist.md)
+[Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
