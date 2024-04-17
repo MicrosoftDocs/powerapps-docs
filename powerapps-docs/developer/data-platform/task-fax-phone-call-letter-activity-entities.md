@@ -12,7 +12,7 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
-## Activity tables for tasks, faxes, phone calls, and letters
+# Activity tables for tasks, faxes, phone calls, and letters
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
