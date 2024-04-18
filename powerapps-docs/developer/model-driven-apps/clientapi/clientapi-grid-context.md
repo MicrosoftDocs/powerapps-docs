@@ -35,7 +35,10 @@ function doSomething(executionContext) {
    // Perform operations on the subgrid
 }
 ```
+> [!NOTE]
+> When using gridContext, calls to getControl() are not supported.
 
+> 
 ## Related articles
 
 [Client API form context](clientapi-form-context.md)   
