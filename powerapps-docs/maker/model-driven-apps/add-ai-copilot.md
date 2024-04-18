@@ -49,9 +49,6 @@ Power Platform administrators enable the copilot feature in model-driven apps fo
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
 2. In the navigation pane, go to **Environments** and select the environment where you want to enable copilot for app users in model-driven apps in. Select **Settings** for this environment on the command bar.
-
-   > [!div class="mx-imgBorder"]
-   > ![Select environment Settings.](media/Environment_settings.png)
  
 3. In **Settings** for the selected environment, select **Product** > **Features**.
 
@@ -71,9 +68,6 @@ Power Platform administrators enable the copilot feature in model-driven apps fo
 ## Disable copilot for a model-driven app
 
 Makers can disable copilot for a specific model-driven app. In app designer, open the model-driven app for **Edit**, and then select **Settings** on the command bar. Select **Upcoming** on the **Settings** screen, and then set **Copilot Control** to **Off**. **Save** and **Publish** the model-driven app for the changes to take effect.
-
-> [!div class="mx-imgBorder"]
-> ![Set copilot control OFF in your model app](media/Turnoff_Copilot_model_apps.png)
 
 ## Provide feedback in copilot
 
