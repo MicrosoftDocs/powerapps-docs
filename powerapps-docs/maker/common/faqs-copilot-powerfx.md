@@ -1,7 +1,7 @@
 ---
 title: FAQs about using Copilot with Power Fx
 description: FAQ that discusses Copilot and Power Fx
-ms.date: 3/25/2024
+ms.date: 4/18/2024
 ms.custom:
   - transparency-note
 ms.topic: article
@@ -22,14 +22,14 @@ Power Apps Studio has several features to help makers understand and write Power
  
 ## What are the system's capabilities?
 
-- Write a comment in the formula bar that describes a formula to receive a suggested Power Fx expression
-- Receive an explanation for the current formula displayed in the formula bar
-- From a supported control's inline action bar, open Copilot to describe a formula and receive a suggested formula and suggested property to apply it to
+- Write a comment in the formula bar that describes a formula to receive a suggested Power Fx expression.
+- Receive an explanation for the current formula displayed in the formula bar.
+- From a supported control's inline action bar, open Copilot to describe a formula and receive a suggested formula and suggested property to apply it to.
 
 ## What is the system's intended use?
 
-- Generate a single Power Fx expression from an English description
-- Generate an English description of the formula shown in the formula bar
+- Generate a single Power Fx expression from an English description.
+- Generate an English description of the formula shown in the formula bar.
 
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
