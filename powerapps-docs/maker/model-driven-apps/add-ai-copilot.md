@@ -68,9 +68,9 @@ Power Platform administrators enable the copilot feature in model-driven apps fo
 
 4. **Save** your changes.
 
-## Disable copilot for a model driven app
+## Disable copilot for a model-driven app
 
-Makers can disable copilot for their model-driven app. In app designer, open your model-driven app for **Edit**, and then select **Settings** on the command bar. Select **Upcoming** on the **Settings** screen, and then set **Copilot Control** to **Off**. **Save** and **Publish** the model-driven app for the changes to take effect.
+Makers can disable copilot for a specific model-driven app. In app designer, open the model-driven app for **Edit**, and then select **Settings** on the command bar. Select **Upcoming** on the **Settings** screen, and then set **Copilot Control** to **Off**. **Save** and **Publish** the model-driven app for the changes to take effect.
 
 > [!div class="mx-imgBorder"]
 > ![Set copilot control OFF in your model app](media/Turnoff_Copilot_model_apps.png)
