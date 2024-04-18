@@ -34,6 +34,7 @@ To use this feature, Power Fx formula bar must be turned on in app settings.
 > [!NOTE]
 > AI generated content may be inaccurate and should be checked for accuracy.
 
+
 ## Explain a formula
 
 Use Copilot in the formula bar to understand what a formula is doing.
@@ -57,6 +58,11 @@ Use Copilot in the formula bar to understand what a formula is doing.
 [This section is prerelease documentation and is subject to change.]
 
 Add a comment in the formula bar and Copilot will suggest a suitable formula. You can accept the suggestion or typing through it. The comments can remain in the formula bar as documentation, similar to regular code comments.
+
+
+> [!IMPORTANT]
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. For more information, see [Power Apps preview program](../powerapps-preview-program.md).
+> - This capability is in the process of rolling out, and may not be available in your region yet.
 
 1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
 :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Typed comment":::
