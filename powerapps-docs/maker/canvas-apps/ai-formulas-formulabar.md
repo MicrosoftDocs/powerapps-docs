@@ -68,7 +68,7 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
     The suggested formula remains until you select elsewhere or type a character that doesn't align with the recommendation. You can keep comments used for generating Power Fx formulas in the formula bar as documentation, similar to traditional code comments.
     
-    > [!NOTE]
+> [!NOTE]
 > - If Copilot doesn't provide a suggestion, it couldn't generate a formula based on your comment. Try rephrasing or modifying the comment.
 > - We recommend, enclosing the element you want to incorporate in your formula within quotes such as **"Button1.text"**.
 
@@ -88,7 +88,7 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 - Go to **Settings** > **Upcoming features**. Set the toggle to **Off** for **Copilot comment-generated formulas**.
 
-    > [!NOTE]
+> [!NOTE]
 > You won't be able to disable **Copilot comment generated formulas** when it's generally available.
 
 ## Responsible AI
