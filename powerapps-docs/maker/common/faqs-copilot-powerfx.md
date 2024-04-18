@@ -28,17 +28,17 @@ Power Apps Studio has several features to help makers understand and write Power
 
 ## What is the system's intended use?
 
-- Generate a single Power Fx expression from English an description
+- Generate a single Power Fx expression from an English description
 - Generate an English description of the formula shown in the formula bar
 
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
-We qualitatively test the model's Power Fx formula generation and descriptions against an internally-built set of Power Fx formulas and descriptions. Additionally, we're monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
+We qualitatively test the model's Power Fx formula generation and descriptions against an internally built set of Power Fx formulas and descriptions. Additionally, we're monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
 Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of Power Fx with Copilot? How can users minimize the impact of Power Fx Copilot limitations when using the system?
 
-- Named Formulas and User Defined Functions cannot be generated with Copilot at this time.
+- Named Formulas and User Defined Functions can't be generated with Copilot at this time.
 - Variables have to be in use (declared) already for Copilot to use them, it will not introduce new variables.
 - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
 - For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
@@ -52,7 +52,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 
 Here are some tips to help you get the most out of this feature:
 
-- Use simple language to explain the formula you are looking for, such as "if myvariable is true, return green" or "filter mylist on IDs that are larger than 5".
+- Use simple language to explain the formula you're looking for, such as "if myvariable is true, return green" or "filter mylist on IDs that are larger than 5".
 - If the results you get aren't what you expected, try being more precise with exact names of variables, controls and field names, or try rephrasing the question.
 - If you still can't get the desired results, send us your feedback.
 
