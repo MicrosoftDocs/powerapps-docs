@@ -58,23 +58,15 @@ Power Platform administrators enable the copilot feature in model-driven apps fo
    > [!div class="mx-imgBorder"]
    > ![Select copilot feature for the environment.](media/Environment_features.png)
 
-4. In the **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to **On**, and then **Save** your changes.
-   
+4. In the **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to the setting that's appropriate for your environment.
+
+   - **Default**. Copilot chat is *disabled for a Power Apps licensed environment and enabled for a Dynamics 365 licensed environment*.
+   - **On**. Copilot chat is enabled for the environment regardless of the environment licensing type.
+   - **Off**. Copilot chat is disabled for the environment regardless of environment licensing type.
    > [!div class="mx-imgBorder"]
-   > ![Set copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
+   > ![Set copilot feature Default for the environment](media/copilot_for_apps_users_on.png)
 
-## Set your environment to receive monthly updates for model-driven apps
-
-Makers must set their environment to receive monthly model-driven apps updates as a prerequisite for having copilot for end users in model-driven apps.
-
-1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
-2. In the navigation pane, go to **Environments** and select the environment where you want to enable copilot for app users in model-driven apps. Select **Settings** on the command bar.
-3. Select **Product** > **Behavior**.  Set **Release channel** for model-driven apps to **Monthly channel**, and then **Save** your changes.
-   
-  > [!div class="mx-imgBorder"]
-  > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
-
-More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
+4. **Save** your changes.
 
 ## Disable copilot for a model driven app
 
