@@ -94,6 +94,8 @@ App.OnStart=Set(RecordItem,
         LookUp(<entity>, <entityIdField> = GUID(Param("recordId"))))
     )
 ```
+> [!IMPORTANT]
+> Note: the recordId parameter must be a GUID because it updates the URL and an app start from the URL will validate the recordId is a GUID. 
 
 ### Open as a centered dialog
 
