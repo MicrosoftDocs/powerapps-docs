@@ -28,7 +28,7 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 
 ## Copilot pane
 
-After Copilot chat is enabled, you can access it through the Copilot icon near the upper right of the page or through the Copilot icon that is left of the command bar. You can expand or collapse the Copilot pane as you want. By default, the pane is expanded after Copilot chat is enabled.
+After Copilot chat is enabled, you can access it through the Copilot icon near the upper right of the page or through the Copilot icon that is right of the command bar. You can expand or collapse the Copilot pane as you want. By default, the pane is expanded after Copilot chat is enabled.
 
 :::image type="content" source="media/copilot-icons.png" alt-text="Screenshot that shows the Copilot icons on a page.":::
 
