@@ -26,7 +26,7 @@ With Copilot assistance for filling forms for model-driven apps, users receive s
 > - This feature is a preview feature in Power Apps.
 >   - Preview features aren’t meant for production use and may have restricted functionality.
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
-> - Due to demand, this feature may be unavailable intermittently.
+> - Due to high demand, this feature may be unavailable intermittently. If the feature is unavailable, please try again later.
 
 ## Turn on form fill assistance
 
