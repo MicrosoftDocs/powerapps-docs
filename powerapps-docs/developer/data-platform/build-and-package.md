@@ -56,11 +56,6 @@ The NuGet package file is stored in the [`PluginPackage`](reference/entities/plu
 
 When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface are registered in the [`PluginAssembly`](reference/entities/pluginassembly.md) table and associated with the plug-in package. As you develop and maintain your project, you continue to update the `PluginPackage` table row and changes to the related plug-in assemblies are managed on the server.
 
-> [!NOTE]
-> Plug-in packages containing assemblies with a large number (hundreds to thousands) of classes that implement `IPlugin` will take a relatively long time to import into Dataverse.
-
-With respect to the previous note, we have seen import times of fifteen (15) minutes for a thousand plug-in types. This duration applies regardless if you are importing a solution using an API call or through the Web UI, or registering the package with the Plug-in Registration tool.
-
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
 > [!IMPORTANT]
@@ -84,6 +79,12 @@ The following limitations apply when you use plug-in dependent assemblies:
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *custom workflow activities*, aren't supported.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
+
+### Performance consideration when importing or registering a plug-in package
+
+Plug-in packages containing assemblies with a large number (hundreds to thousands) of classes that implement `IPlugin` will take a relatively long time to import into Dataverse.
+
+We have seen import times of fifteen (15) minutes for a thousand plug-in types. This duration applies regardless if you are importing a solution using an API call or through the Web UI, or registering the package with the Plug-in Registration tool.
 
 ## Create a plug-in package
 
