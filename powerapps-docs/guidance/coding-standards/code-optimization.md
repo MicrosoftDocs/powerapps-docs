@@ -3,7 +3,7 @@ title: Code optimization
 description: Code optimization
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.service: powerapps
+ms.service: Power Apps
 author: robstand
 ms.author: rstand
  
@@ -35,13 +35,13 @@ The `Coalesce` function evaluates its arguments in order and returns the first v
 
 For example:
 
-```powerappsfl
+```Power Appsfl
 If(Not IsBlank(value1), value1, Not IsBlank(value2), value2)
 ```
 
 Requires value 1 and value 2 to be evaluated twice. This function can be reduced to:
 
-```powerappsfl
+```Power Appsfl
 Coalesce(value1, value2)
 ```
 
@@ -51,7 +51,7 @@ The `IsMatch` function tests whether a text string matches a pattern that can co
 
 For example, this formula matches a United States Social Security Number:
 
-```powerappsfl
+```Power Appsfl
 IsMatch(TextInput1.Text, "\d{3}-\d{2}-\d{4}")
 ```
 
@@ -69,7 +69,7 @@ Explanation of the regular expression:
 
 More examples of `IsMatch`:
 
-```powerappsfl
+```Power Appsfl
 IsMatch(TextInput1.Text, "Hello World")
 IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]{8,10})")
 ```
@@ -92,19 +92,19 @@ Setting Start Screen property shows the first screen before App.OnStart is compl
 
 Instead of writing code like:
 
-```powerappsfl
+```Power Appsfl
 App.OnStart = Collect(OrdersCache, Orders);
 If(Param("AdminMode") = "1", Navigate(AdminScreen), Navigate(HomeScreen))
 ```
 
 Change the code to
 
-```powerappsfl
+```Power Appsfl
 App.OnStart = Collect(OrdersCache, Orders);
 App.StartScreen = If(Param("AdminMode") = "1", AdminScreen, HomeScreen)
 ```
 
-Refer: <https://powerapps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details
+Refer: <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details
 
 ### Named formulas
 
@@ -116,7 +116,7 @@ Additionally, Modern Controls also help significantly with theming and help redu
 
 For example, the following code on `App.OnStart` can be moved to `App.Formulas`, thus reducing the startup time on global variable declarations.
 
-```powerappsfl
+```Power Appsfl
 Set(BoardDark, RGBA(181,136,99, 1));
 Set(BoardSelect, RGBA(34,177,76,1));
 Set(BoardRowWidth, 10);                      // expected 8 plus two guard characters for regular expressions.
@@ -127,7 +127,7 @@ Set(BoardClassic, "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_ppp
 
 The code can easily be moved to App.Formulas as follows:
 
-```powerappsfl
+```Power Appsfl
 BoardSize = 70;
 BoardLight = RGBA(240,217,181, 1);
 BoardDark = RGBA(181,136,99, 1);
@@ -140,7 +140,7 @@ BoardClassic = "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppp
 
 Another example can be setting `Lookups`. Here a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
 
-```powerappsfl
+```Power Appsfl
 UserEmail = User().Email;
 UserInfo = LookUp(Users, 'Primary Email' = User().Email);
 UserTitle = UserInfo.Title;
@@ -150,7 +150,7 @@ UserInfo.'Main Phone');
 
 Another approach is to optimize `countRows`.
 
-```powerappsfl
+```Power Appsfl
 varListItems = CountRows(SampleList)
 ```
 
@@ -170,107 +170,131 @@ Named Formulas in the `App.Formulas` property provide a more flexible and declar
 
 ### User defined functions
 
-User Defined Functions is an experimental functionality as of now January 2024 in Power Apps Authoring studio, which enables users to create their own custom function.
+User Defined Functions is an experimental functionality in Power Apps Studio that enables users to create their own custom function.
 
-To use this feature, under experimental settings -&gt;New analysis engine and User-defined function (UDFs)
+To use this feature, under experimental settings, click New analysis engine and User-defined function (UDFs)
 
-Define formula under App.Formulas as follows:
+Define a formula under `App.Formulas` as follows:
 
-FunctionName(Parameter1:DataType1, Parameter2:DataType2):OutputDataType = Formula
+`FunctionName(Parameter1:DataType1, Parameter2:DataType2):OutputDataType = Formula`
 
-- FunctionName – used to invoke the function
+The code works as so:
 
-- Parameter – the name of the input. One or more inputs are allowed
+- `FunctionName` is used to invoke the function
 
-- DataType – argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
+- `Parameter` is the name of the input. One or more inputs are allowed
 
-- OutputDataType – output of the function will be in this data type
+- `DataType` is an argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
 
-- Formula – the result of this formula is the output of the function
+- `OutputDataType` is the data type the output of the function will be in
 
-![A screenshot of a computer Description automatically generated](media/image17.png)
+- `Formula` is the output of the function
 
-Use IfError to implement error handling within the defined function.
+![A screenshot of the Power Fx window with a user-defined function in the fx box](media/image17.png)
+
+Use `IfError` to implement error handling within the defined function.
 
 Call the defined function from text/label control.
 
-calcAreaOfCircle(Int(*TextInput1*.Text))
+`calcAreaOfCircle(Int(*TextInput1*.Text))`
 
-**Current Limitations**
+>![NOTE] This is an experimental feature and subject to change. Some data types, such as records and filters, aren't yet supported.
 
-This is an experimental feature and subject to change.
-
-Data Type such as records and filters aren't yet supported.
-
-## Optimize Variables and Collections
-
-### Optimize Variables
+## Optimize variables
 
 Variables are used to define and set local and global values to be used everywhere in the apps. While they're convenient too many of them can cause the app to be less optimized.
 
-Setting a variable for each attribute of an object.
+The following example demonstrates setting a variable for each attribute of an object, which requires using `Set` for every property.
 
-![A screenshot of a computer program Description automatically generated](media/image18.png)
+```typescript
+Set(varEmpName, Office365Users.MyProfile().DisplayName);
+Set(varEmpCity, Office365Users.MyProfile().City);
+Set(varEmpPhone, Office365Users.MyProfile().BusinessPhones);
+```
 
-Instead use this:
+A more optimized approach is to use the property when you need it:
 
-![](media/image19.png)![](media/image20.png)
+```typescript
+Set(varEmployee, Office365Users.MyProfile());
+"Welcome " & varEmployee.DisplayName;
+```
 
-Second, Use Context variables and global variables wisely. If a variable's scope expands beyond a single screen, then consider using global variables else context variables.
+Use context variables and global variables wisely. If a variable's scope expands beyond a single screen, then consider using global variables instead of context variables.
 
-Third, too many unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they aren't actively used. Additionally, too many unused variables can make lead to overall complexity of the app's logic. While the impact of unused variables might not be severe, it's a good practice to maintain a clean and well-organized PowerApp to ensure optimal performance and ease of development.
+Too many unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they aren't actively used. Too many unused variables can also lead to overall complexity of the app's logic. While the impact of unused variables might not be severe, it's a good practice to maintain a clean and well-organized Power App to ensure optimal performance and ease of development.
 
-### Optimize Collections
+## Optimize collections
 
-Collections are temporary data storage structures that can be used to store and manipulate data within a PowerApps app. However, there's a fine line on when collections can lead to performance overhead.
+Collections are temporary data storage structures that can be used to store and manipulate data within a Power Apps app. However, there's a fine line on when collections can lead to performance overhead. Therefore, limit your use of collections. Try to use them only when they're necessary.
 
-Therefore, Limit your use of collections. Try to use them only when they're necessary. Use ClearCollect instead of Clear;Collect.
+```typescript
+// Use this pattern
+ClearCollect(colErrors, {Text: gblErrorText, Code: gblErrorCode});
 
-![](media/image21.png)
+// Do not use this pattern
+Clear(colErrors);
+Collect(colErrors, {Text: gblErrorText, Code: gblErrorCode});
+```
 
-To count the records in a local collection, use CountIf instead of Count(Filter()).
+To count the records in a local collection, use `CountIf` instead of `Count(Filter())`.
 
-Two main things to consider while working with collections –
+Consider this guidance when working with collections:
 
-**Limiting the size and number of collections -**Since collections are local to the app, they're stores in the mobile device memory. The more data the collections hold or more the number of collections, the poorer the performance. Use ShowColumns function to get only the specific columns. Add Filter function to get only the relevant data.
+**Limit the size and number of collections**. Since collections are local to the app, they're stored in the mobile device memory. The more data the collections hold or more the number of collections, the poorer the performance. Use `ShowColumns` function to get only the specific columns. Add `Filter` function to get only the relevant data.
 
-Example following function returns the entire dataset.
+The following example function returns the entire dataset.
 
+```typescript
 ClearCollect(colDemoAccount, Accounts);
+```
 
-Compared to the below code that is going to return only specific records and columns
+Compare to the below code that is going to return only specific records and columns:
 
+```typescript
 ClearCollect(colAcc,
-
               ShowColumns(
-
                 Filter(Accounts, !IsBlank('Address 1: City')),
-
                 "name","address1\_city"))
+```
 
-Here's the returned dataset.
+The example code returns this dataset:
 
-![A screenshot of a phone Description automatically generated](media/image22.png)
+![A screenshot of a dataset with a table named colAcc and two columns with data, address1_city and name](media/image22.png)
 
-**Data Source Refresh Frequency -** If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you'll need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
+**Set a data source refresh frequency**. If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you'll need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
 
-### Cache Data in Collections and Variables
+### Cache data in collections and variables
 
 A collection, essentially a table variable, is distinct in that it stores rows and columns of data rather than a single data item. Their utility lies in two main purposes: firstly, for aggregating data before transmitting it to the data source, and secondly, for caching information, eliminating the need for frequent queries to the data source. As collections align with the tabular structure of both the data source and Power Apps, they offer an efficient means of interacting with data, even in offline scenarios.
 
-![A screen shot of a computer Description automatically generated](media/image23.png)
+```typescript
+// Clear the contents of EmployeeCollection, it already contains data
+ClearCollect(
+    colEmployee,
+    {
+        Id: "1",
+        Name: "John",
+        Department: "IT"
+    },
+    {
+        Id: "2",
+        Name: "Nestor",
+        Department: "IT"
+    }
+)
+```
 
 ### Remove unused variables and media
 
-While unused media and variables may not create a drastic impact on App performance, it's important to clean up your app from any unused media or variables.
+While unused media and variables may not create a drastic impact on app performance, it's important to clean up your app from any unused media or variables.
 
 - Unused media files contribute to overall increase in app size. This can lead to slower app load times.
 
 - Unused variables contribute to increased memory usage and slightly slower app initialization. This is because resources are allocated for these variables even though they aren't actively used. Additionally too many unused variables can make lead to overall complexity of the app's logic.
 
-- Use App checker to review unused media and variables.
+- Use App Checker to review unused media and variables.
 
-## Optimize Screens and Controls
+## Optimize screens and controls
 
 ### Avoid cross referencing controls
 
@@ -280,25 +304,25 @@ Power Apps App checker within authoring studio, shows controls that are cross re
 
 Here's an example of Cross-referenced controls. In the image below Gallery 1 controls is cross referenced in Screen 2, Label 2 control.
 
-![A screenshot of a computer Description automatically generated](media/image24.png)
+![A screenshot of Power Apps Studio showing a cross-referenced control](media/image24.png)
 
-### Enable Delay Output for text controls
+### Enable DelayOutput for text controls
 
-Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (that is, for filtering when input is used in other formulas).
+Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text, like filtering when input is used in other formulas.
 
-For example, for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control.
+For example, for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control:
 
-- With DelayOutput set to false, which is default, the Gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you're using the TextInput for a search string (See [Search](https://powerapps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+- With DelayOutput set to false, which is default, the Gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you're using the TextInput for a search string (See [Search](https://Power Apps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
 
 - With DelayOutput set to true, there's a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field.
 
-## Delegation and server side processing (Low code plugins)
+## Delegation and server side processing
 
 ### Delegation
 
-Delegation in PowerApps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within PowerApps itself. By using delegation in PowerApps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
+Delegation in Power Apps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within Power Apps itself. By using delegation in Power Apps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
 
-**Note: Not all functions are delegable. Please refer to the following article to get more information on delegation : [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview)**
+> ![NOTE] Not all functions are delegable. Please refer to [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview) to learn more about delegation.
 
 Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation helps keep data up to date.
 
@@ -308,39 +332,37 @@ Sometimes, it may be convenient to just follow coding practices such as creating
 
 In this example, I have two tables – Drivers and Trucks. Developer writes the code to create a collection of drivers and truck details and for each truck, they were calling drivers who own the trucks.
 
+```typescript
 ClearCollect(vartruckdata, AddColumns('Truck Details',
-
-"CITY",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],City),
-
-"FIRSTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver First Name'),
-
-"LASTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver Last Name'),
-
-"STATE",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],State)));
+    "CITY",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],City),
+        "FIRSTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver First Name'),
+    "LASTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver Last Name'),
+        "STATE",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],State)));
+```
 
 Performing such join operations from within canvas app can generate numerous calls to data source leading to very slow loading times.
 
 In the real time scenario, we were able to reduce loading times from 5 min to under 10 seconds by just correcting the data at the data source level.
 
-### Server Side processing
+### Server side processing
 
-Different data source such as SQL , Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+Different data source such as SQL, Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
-Following article describes how you can use [Low Code plugins in Dataverse.](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant)
+Learn more about [plugins in Dataverse](/power-apps/maker/data-platform/low-code-plug-ins).
 
-## Enable Delay/Lazy Loading
+## Enable delay/lazy loading
 
 The 'Delayed load' feature enhances performance by setting up an app to load screens only when they're required. By default, this feature is activated, and if disabled, the app would load all screens and data controls upon startup. Enabling this setting allows for a notable improvement in the app's initial loading time, especially for apps containing numerous screens. Additionally, the overall performance of the app is enhanced, as it avoids preloading screens that a user may not open within a session when the setting is active.
 
-![A screenshot of a computer Description automatically generated](media/image25.png)
+![A screenshot of the Settings window with Delayed Load turned on](media/image25.png)
 
-## Optimize Query Data Patterns
+## Optimize query data patterns
 
-### Use Explicit column selection
+### Use explicit column selection
 
-The Explicit Column Selection (ECS) feature is enabled by default for all new apps. If it isn't enabled for your app, you should enable it. ECS automatically reduces the number of columns retrieved to only the ones that are used in the application. If ECS isn't enabled, you might be retrieving more data than you need, which can affect performance. Occasionally, when an app pulls data in through collections, the original lineage or source of a column can be lost. We don't know if it's being used and we drop it using ECS. You can usually force ECS to work for a missing column by using the PowerFx expression **ShowColumns** after a collection reference or by using it in a control.
+The Explicit Column Selection (ECS) feature is enabled by default for all new apps. If it isn't enabled for your app, you should enable it. ECS automatically reduces the number of columns retrieved to only the ones that are used in the application. If ECS isn't enabled, you might be retrieving more data than you need, which can affect performance. Occasionally, when an app pulls data in through collections, the original lineage or source of a column can be lost. We don't know if it's being used and we drop it using ECS. You can usually force ECS to work for a missing column by using the PowerFx expression `ShowColumns` after a collection reference or by using it in a control.
 
 ### Avoid calling Power Automate to populate a collection
 
@@ -348,63 +370,39 @@ A common practice is to use Power Automate to fetch and populate collections in 
 
 Overuse of Power Automate flows can also lead to execution limits and throttling. Therefore always evaluate the trade-offs between network latency and performance cost.
 
-### Eliminate N+1 Problem
+### Eliminate N+1 problem
 
 The N+1 problem is a common issue in database queries where, instead of fetching all the required data in a single query, multiple additional queries are made to retrieve related data. This can lead to performance issues, as each additional query incurs overhead.
 
 A simple call like this to load a collection can generate N+1 calls to data source.
 
-ClearCollect(
-
-MyCollection,
-
-OrdersList,
-
-{
-
-LookUp(
-
-CustomersList,
-
-CustomerID = OrdersList\[@CustomerID\]
-
+```typescript
+ClearCollect(MyCollection, OrdersList,
+    {
+        LookUp(CustomersList,CustomerID = OrdersList\[@CustomerID\])
+    }
 )
+```
 
-})
+In the context of Power Apps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when additional queries are made for each item displayed in the gallery, leading to a performance bottleneck.
 
-In the context of PowerApps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when additional queries are made for each item displayed in the gallery, leading to a performance bottleneck.
+To address the N+1 problem in galleries within Power Apps, you can use the "AddColumns" function along with the "LookUp" or "Filter" functions to fetch related data in a single query rather than making separate queries for each item.
 
-To address the N+1 problem in galleries within PowerApps, you can use the "AddColumns" function along with the "LookUp" or "Filter" functions to fetch related data in a single query rather than making separate queries for each item.
-
-ClearCollect(
-
-GalleryData,
-
-AddColumns(
-
-YourDataSource,
-
-"RelatedData",
-
-LookUp(
-
-RelatedDataSource,
-
-RelatedField = YourDataSource\[@RelatedField\]
-
+```typescript
+ClearCollect(GalleryData, AddColumns(
+    YourDataSource, "RelatedData", LookUp(
+        RelatedDataSource, RelatedField = YourDataSource\[@RelatedField\])
+    )
 )
-
-)
-
-)
+```
 
 For data source like Dataverse, N+1 problem can be avoided as Dataverse automatically fetches the required data in related tables.
 
-ThisItem.Account.'Account Name'
+`ThisItem.Account.'Account Name'`
 
 ### Limiting the package size
 
-Although PowerApps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint is especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
+Although Power Apps does a lot to optimize app loading, you can take steps to reduce the footprint of your apps. A reduced footprint is especially important for users of older devices, or users in locales where there's higher latency or reduced bandwidth.
 
 - Evaluate the media that are embedded in your app. If something isn't used, delete it.
 
@@ -418,13 +416,15 @@ Although PowerApps does a lot to optimize app loading, you can take steps to red
 
 ## Optimize ForAll
 
-The **ForAll** function in PowerApps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can quickly make your app less performant.
+The `ForAll` function in Power Apps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can quickly make your app less performant.
 
 ForAll function is singular sequential function instead of concurrent function. Therefore it looks at only one record at a time, get the result, then continue to the next until it has gone through all records in its scope.
 
-**Avoid Nesting ForAll at all cost -** This can lead to exponential iterations and significantly impact performance.
+**Avoid Nesting ForAll at all cost.** This can lead to exponential iterations and significantly impact performance.
 
-![Formula that shows a Distinct function nested inside 2 ForAll functions](media/image26.jpeg)
+```typescript
+ClearCollect(FollowUpMeetingAttendees.ForAll(ForAll(Distinct(AttendeesList.EmailAddress.Address).Lookup(Attendees))))
+```
 
 ### Batch updates to Database
 
@@ -432,48 +432,26 @@ ForAll + Patch can be one approach to Batch update the database. However, be car
 
 Following function:
 
-Patch(SampleFoodSalesData,
-
-ForAll(colSampleFoodSales,
-
-{
-
-demoName:"fromCanvas2"
-
-}
-
-)
-
+```typescript
+Patch(SampleFoodSalesData, ForAll(colSampleFoodSales,
+    {
+        demoName:"fromCanvas2"
+    })
 );
+```
 
-Has 10 times better performance than
+Has 10 times better performance than:
 
-ForAll(colSampleFoodSales,
-
-Patch(SampleFoodSalesData,
-
-{
-
-demoName:"test"
-
-}
-
-)
-
+```typescript
+ForAll(colSampleFoodSales, Patch(SampleFoodSalesData,
+    {
+        demoName:"test"
+    })
 );
+```
 
 Another approach can be to have all the updates in a collection and Patch the data source in one single call.
 
-Patch(
-
-SampleFoodSalesData,
-
-ShowColumns(
-
-colSampleFoodSales,
-
-"demoName"
-
-)
-
-);
+```typescript
+Patch(SampleFoodSalesData,ShowColumns(colSampleFoodSales,"demoName"));
+```
