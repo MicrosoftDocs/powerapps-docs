@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 04/12/2024
+ms.date: 04/19/2024
 ms.topic: include
 ---
 
@@ -124,7 +124,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 
 ### Regional and language availability
 
-[Copilot international availability](https://dynamics.microsoft.com/availability-reports/copilotreport/)
+[Copilot international availability](https://aka.ms/bapcopilot-intl-report-external)
 
 ### Data movement across geographies
 
