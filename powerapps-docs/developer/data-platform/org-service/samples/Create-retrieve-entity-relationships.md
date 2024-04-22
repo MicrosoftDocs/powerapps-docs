@@ -2,8 +2,8 @@
 title: "Sample: Create and retrieve table relationships"
 description: This sample shows how to create and retrieve table relationships.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
