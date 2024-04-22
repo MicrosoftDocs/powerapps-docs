@@ -115,7 +115,7 @@ Here are some examples:
 - **Name inherited from the source connector:** The Office 365 Users connector is namedOffice365Users in your code.
 - **Data entities derived from the connection:** A Microsoft SharePoint list named `Employees` is returned from the SharePoint connector. Therefore, the name of the data source in your code is Employees. The same Power Apps app can also use ***the same SharePoint connector*** to access a SharePoint list named `Contractors`. In this case, the name of the data source in the code is `Contractors`.
 
-For more information about connectors and connections, see [Overview of canvas app connectors for Power Apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
+For more information about connectors and connections, see [Overview of canvas app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
 
 #### Standard action connectors
 
