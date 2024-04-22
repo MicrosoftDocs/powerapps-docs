@@ -2,8 +2,8 @@
 title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 01/11/2023
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

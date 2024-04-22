@@ -39,17 +39,9 @@ How you check and change the authoring version of your current Power Apps Studio
 
     :::image type="content" source="media/studio-versions/authoring-version-edit.png" alt-text="Check authoring version, and choose Edit to change.":::
 
-## Check Power Apps Studio version when an app isn't open
-
-1. Go to create.powerapps.com.
-
-1. Select **Account** from the left pane, and review your existing Power Apps Studio version for the current session.
-
-    :::image type="content" source="media/studio-versions/create-power-apps.png" alt-text="Check version using create.powerapps.com.":::
-
 ## Change Power Apps Studio version
 
-1. If you're instructed to change the version of your current Power Apps Studio session, select [Edit](#check-power-apps-studio-version-when-an-app-is-open) or [Change authoring version](#check-power-apps-studio-version-when-an-app-isnt-open), depending on whether you already have an app open in Power Apps Studio, or not.
+1. If you're instructed to change the version of your current Power Apps Studio session, follow the steps to [see the current version](#check-power-apps-studio-version-when-an-app-is-open).
 
 1. From the list of available authoring versions, choose the version you want, and then select **Reload + apply version**.
 
