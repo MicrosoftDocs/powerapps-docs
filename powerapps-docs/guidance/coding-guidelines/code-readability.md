@@ -236,7 +236,8 @@ These examples don't follow the collection name conventions:
 - `orderscoll`
 - `tempCollection`
 
-> [!TIP] When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
+> [!TIP]
+> When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
 
 ## Comments and documentation
 
