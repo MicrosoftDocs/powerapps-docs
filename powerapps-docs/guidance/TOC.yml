@@ -2,20 +2,20 @@
   items: 
   - name: Power Apps guidance documentation
     href: index.yml
-  - name: Coding standards and gudelines
+  - name: Coding guidelines
     items:
     - name: Overview
-      href: coding-standards/overview.md
+      href: coding-guidelines/overview.md
     - name: App design
-      href: coding-standards/app-design-guidelines.md
+      href: coding-guidelines/app-design-guidelines.md
     - name: Responsive design
-      href: coding-standards/responsive-design-guidelines.md
+      href: coding-guidelines/responsive-design-guidelines.md
     - name: Code readability
-      href: coding-standards/code-readability.md
+      href: coding-guidelines/code-readability.md
     - name: Code optimization
-      href: coding-standards/code-optimization.md
+      href: coding-guidelines/code-optimization.md
     - name: Monitoring and testing
-      href: coding-standards/testing-monitoring.md
+      href: coding-guidelines/monitoring-testing.md
   - name: Power Apps patterns
     items:
     - name: Patterns overview
