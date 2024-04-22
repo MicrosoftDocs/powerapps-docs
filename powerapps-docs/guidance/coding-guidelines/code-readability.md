@@ -35,7 +35,7 @@ Here are some good examples:
 - `Home_Screen` or `Home Screen`
 - `Search_Screen` or `Search Screen`
 
-![Screenshot that shows a list of screen names that follow the described pattern](media/image1.jpeg)
+![Screenshot that shows a list of screen names that follow the described pattern](media/image1.png)
 
 These example screen names are less understandable:
 
@@ -104,7 +104,7 @@ Here are some bad examples:
 
 When you consistently name your controls, your app is cleaner in the navigation view, and your code is cleaner too.
 
-![Screenshot of the navigation view showing control names following the pattern](media/image2.jpeg)
+![Screenshot of the navigation view showing control names following the pattern](media/image2.png)
 
 ### Data source names
 
@@ -134,11 +134,11 @@ Custom connectors used to connect to custom application programming interfaces (
 
 Consider this example of a custom connector named `MS Auction Item Bid API`.
 
-![Screenshot of a connector named MS Auction Item Bid API](media/image4.jpeg)
+![Screenshot of a connector named MS Auction Item Bid API](media/image4.png)
 
 But when you create a connection from this connector and add it to your PowerApps app as a data source, it appears as `AuctionItemBidAPI`.
 
-![Screenshot of a connector showing that the name is AuctionItemBidAPI](media/image5.jpeg)
+![Screenshot of a connector showing that the name is AuctionItemBidAPI](media/image5.png)
 
 To discover the reason, you can look inside the OpenAPI file for a title attribute that contains the text `Auction Item Bid API`.
 
