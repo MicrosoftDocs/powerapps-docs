@@ -2,7 +2,7 @@
 title: App design guidelines
 description: App design guidelines
 ms.date: 04/26/2024
-ms.topic: conceptual
+ms.topic: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rstand
@@ -17,7 +17,9 @@ Modern controls in canvas apps represent a significant advancement in the develo
 
 The inherent design of these controls, keeping theming in mind, allows for a unified and consistent look and feel across applications, significantly reducing the effort required in customizing and branding apps. The ability to automatically update the styles of all controls based on the set theme simplifies the design process and ensures that applications remain visually coherent throughout. This aligns perfectly with the needs of modern businesses seeking to maintain brand consistency while offering high-quality digital experiences. The modern controls also emphasize accessibility and performance, ensuring that applications are usable by a wide range of audiences, including those with disabilities, thereby aligning with inclusive design principles. As such, the modern controls in Canvas Power Apps aren't just a set of UI components but a transformative toolset that empowers developers to build more efficient, maintainable, accessible, and cohesive applications that meet the evolving needs of businesses and users alike.
 
-> [!IMPORTANT] While a subset of the modern controls in canvas apps has been made generally available (GA), the broader feature set remains in preview. You are encouraged to explore and provide feedback on these preview controls. However, it's important to keep in mind that their features and functionalities may be refined based on feedback and testing before they reach general availability.
+>[!IMPORTANT] While a subset of the modern controls in canvas apps has been made generally available (GA),
+> the broader feature set remains in preview. You are encouraged to explore and provide feedback on these preview controls. 
+> However, it's important to keep in mind that their features and functionalities may be refined based on feedback and testing before they reach general availability.
 
 ## Forms design and guidelines
 

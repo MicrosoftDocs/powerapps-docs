@@ -2,7 +2,7 @@
 title: Responsive design
 description: Responsive design
 ms.date: 04/26/2024
-ms.topic: conceptual
+ms.topic: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rstand

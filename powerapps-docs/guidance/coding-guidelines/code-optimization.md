@@ -2,8 +2,8 @@
 title: Code optimization
 description: Code optimization
 ms.date: 04/26/2024
-ms.topic: conceptual
-ms.service: Power Apps
+ms.topic: guidance
+ms.service: powerapps
 author: robstand
 ms.author: rstand
  
@@ -82,7 +82,7 @@ The `App OnStart` function plays a crucial role in initializing the app globally
 
 A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
-> [!NOTE] One potential issue with the `OnStart` property is that it's **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown.  Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
+>[!NOTE] One potential issue with the `OnStart` property is that it's **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown.  Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
 
 ### Start screen
 
@@ -198,7 +198,7 @@ Call the defined function from text/label control.
 
 `calcAreaOfCircle(Int(*TextInput1*.Text))`
 
-> [!NOTE] This is an experimental feature and subject to change. Some data types, such as records and filters, aren't yet supported.
+>[!NOTE] This is an experimental feature and subject to change. Some data types, such as records and filters, aren't yet supported.
 
 ## Optimize variables
 
