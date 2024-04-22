@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building and packaging plug-in code for Microsoft Dataverse, including assembly constraints and dependent assembly limitations.
-ms.date: 04/18/2024
+ms.date: 04/22/2024
 ms.topic: conceptual
 author: divkamath
 ms.author: dikamath
