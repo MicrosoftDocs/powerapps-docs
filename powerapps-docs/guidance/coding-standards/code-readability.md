@@ -95,7 +95,7 @@ The following table shows the abbreviations for common controls.
 
 Detailed list of controls and their properties are described in [Controls reference](/power-apps/maker/canvas-apps/reference-properties).
 
->![NOTE] Control names must be unique across an application. If a control is reused on multiple screens, the short screen name should have a suffix. For example, `galBottomNavMenuHS`, where "HS" stands for "Home Screen." This approach makes it easier to reference the control in formulas across screens.
+> [!NOTE] Control names must be unique across an application. If a control is reused on multiple screens, the short screen name should have a suffix. For example, `galBottomNavMenuHS`, where "HS" stands for "Home Screen." This approach makes it easier to reference the control in formulas across screens.
 
 Here are some bad examples:
 
@@ -151,9 +151,9 @@ To discover the reason, you can look inside the OpenAPI file for a title attribu
 
 Power Apps removes all the spaces from this attribute value and uses it as the name of your data source.
 
->![TIP] We recommend that you change the value of this attribute to a Pascal-cased name such as `AuctionItemBidAPI` and use it as the name of your custom connection. In that way, there will be no confusion. Change this value before you import the OpenAPI file to create the custom connector.
+> [!TIP] We recommend that you change the value of this attribute to a Pascal-cased name such as `AuctionItemBidAPI` and use it as the name of your custom connection. In that way, there will be no confusion. Change this value before you import the OpenAPI file to create the custom connector.
 
->![NOTE] If you use the **Create from a blank** option instead of importing an existing OpenAPI file, PowerApps will prompt you for the custom connector name. This name will be used both as the name of the custom connector and as the value of the title attribute inside the OpenAPI file. Be sure to use a Pascal-cased name such as `AuctionItemBidAPI` to keep things consistent and simple.
+> [!NOTE] If you use the **Create from a blank** option instead of importing an existing OpenAPI file, PowerApps will prompt you for the custom connector name. This name will be used both as the name of the custom connector and as the value of the title attribute inside the OpenAPI file. Be sure to use a Pascal-cased name such as `AuctionItemBidAPI` to keep things consistent and simple.
 
 #### Excel DataTables
 
@@ -234,7 +234,7 @@ These examples don't follow the collection name conventions:
 - `orderscoll`
 - `tempCollection`
 
->![TIP] When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
+> [!TIP] When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
 
 ## Comments and documentation
 
