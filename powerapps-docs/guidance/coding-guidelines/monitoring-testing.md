@@ -3,7 +3,7 @@ title: Testing and monitoring
 description: Testing and monitoring
 ms.date: 04/26/2024
 ms.topic: guidance
-ms.service: Power Apps
+ms.service: powerapps
 author: robstand
 ms.author: rstand
  
