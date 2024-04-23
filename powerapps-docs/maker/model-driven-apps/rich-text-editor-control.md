@@ -27,8 +27,8 @@ You can customize the editor's appearance, features, and behavior. The control's
 
 Currently, the rich text editor is available as two different experiences:
 
-- Classic text editor - default experience
-- Modern text editor - new experience you can enable
+- Modern text editor: New experience you can enable
+- Classic text editor: Default experience
 
 ## Modern text editor enhancements
 
