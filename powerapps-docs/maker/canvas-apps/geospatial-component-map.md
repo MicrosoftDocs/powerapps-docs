@@ -84,6 +84,9 @@ The map control has six different types of properties:
 1. [Shape properties](#shape-properties)
 1. [Output properties](#output-properties)
 
+ >[!NOTE]
+ > The maximum number of shapes that can be drawn in a map control is limited to 500.
+
 ### Styling properties
 
 | Property | Description | Type | Tab |
