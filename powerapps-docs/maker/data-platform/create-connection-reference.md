@@ -154,6 +154,11 @@ Permissions granted to apps and flows using a connection can be seen in the deta
 
 If the flow is edited to add new actions that use additional connection references with new connections, then the owner of those new connections either needs to initially turn on the flow themselves or share the connections with the owner who turns on the flow. More information: [Share app resources](/power-apps/maker/canvas-apps/share-app-resources#connections)
 
+### Can ownership of a connection reference be transferred to another user?
+
+Ownership of a connection reference cannot be transferred to another user in the modern solution explorer. 
+However, the [legacy solution explorer](/power-apps/maker/model-driven-apps/advanced-navigation#solution-explorer) can be used to change permissions of a connection reference including sharing.
+
 ## See also
 
 [Connectors](/connectors/connectors)
