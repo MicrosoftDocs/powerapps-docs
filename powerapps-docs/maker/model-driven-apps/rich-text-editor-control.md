@@ -21,7 +21,7 @@ ms.custom:
 
 The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-You can customize the editor's appearance, features, and behavior. The control's default configuration is shown in the following screenshot.
+You can customize the editor's appearance, features, and behavior. The control's modern experience is shown in the following screenshot.
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
 
@@ -58,7 +58,9 @@ The classic rich text editor experience is enabled by default. Complete the foll
 If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
 
 
-## Add the rich text editor control classic experience to a text column
+## Add the rich text editor control to a text column
+
+The following configuration is available in the classic rich text editor experience.
 
 When you format a text column as rich text, the default rich text editor control is added automatically.
 
@@ -73,6 +75,8 @@ When you format a text column as rich text, the default rich text editor control
 1. Save the column, and then add it to a form.
 
 ## Add the rich text editor control to a text column in a form
+
+The following configuration is available in the classic rich text editor experience.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation pane, select **Solutions**.
