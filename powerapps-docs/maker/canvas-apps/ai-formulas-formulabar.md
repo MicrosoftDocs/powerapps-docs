@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/17/2024
+ms.date: 04/23/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -99,4 +99,4 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 ## Responsible AI
 
-Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/faqs-copilot-power.md) for questions regarding this functionality specifically.
+Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/faqs-copilot-powerfx.md) for questions regarding this functionality specifically.
