@@ -1,13 +1,11 @@
 ---
-title: "Scalable Customization Design: Auto-numbering example (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 1/15/2019
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "rogergilchrist" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+title: "Scalable Customization Design: Auto-numbering example (Microsoft Dataverse) | Microsoft Docs" 
+description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization."
+ms.date: 04/23/2024
+ms.reviewer: pehecke
+ms.topic: article
+author: rogergilchrist
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
@@ -40,11 +38,11 @@ The following sections describe different approaches that can be taken within Da
 ## Approach 1: Out of a transaction
 
 The simplest approach is to realize that any use of a commonly required resource would introduce the potential for blocking. Since this has an impact on scalability you may decide you want to avoid a platform transaction when generating an auto number.
-Let’s consider the scenario for auto numbering generation outside of the pipeline transaction in a pre-validation plug-in.
+Let's consider the scenario for auto numbering generation outside of the pipeline transaction in a pre-validation plug-in.
 
 ![Approach 1: Out of a transaction.](media/autonumber-approach-1.png)
 
-When you run this in isolation it works fine. It doesn’t, however, actually protect against concurrency errors. As the following diagram shows, if two requests in parallel both request the latest number and then both increment and update the value, you’ll end up with duplicate numbers. Because there is no locking held against the retrieved number, it is possible for a race condition to occur and both threads to end up with the same value. 
+When you run this in isolation it works fine. It doesn't, however, actually protect against concurrency errors. As the following diagram shows, if two requests in parallel both request the latest number and then both increment and update the value, you'll end up with duplicate numbers. Because there is no locking held against the retrieved number, it is possible for a race condition to occur and both threads to end up with the same value. 
 
 ![race condition.](media/autonumber-approach-1-a.png)
 
@@ -60,7 +58,7 @@ In the same circumstances of overlapping requests trying to generate numbers at 
 
 ![shared read lock prevents access.](media/autonumber-approach-2-a.png)
 
-Depending on how the queries are being generated, the exact behavior can vary, but relying on those conditions and not being certain of the outcome where the uniqueness is essential isn’t ideal. Even if this does not generate a failure, the shared read ability could allow a duplicate number to be generated if the isolation modes aren’t correct. As the following diagram shows, both records end up with the same auto number value of 8.
+Depending on how the queries are being generated, the exact behavior can vary, but relying on those conditions and not being certain of the outcome where the uniqueness is essential isn't ideal. Even if this does not generate a failure, the shared read ability could allow a duplicate number to be generated if the isolation modes aren't correct. As the following diagram shows, both records end up with the same auto number value of 8.
 
 ![both records end up with the same auto number value.](media/autonumber-approach-2-b.png)
 
@@ -78,7 +76,7 @@ It does have the implication that this will serialize not only the auto numberin
  
 In fact, where the other actions within the transaction are quick, this is the most consistent and efficient approach for implementing auto numbering in customizations. 
 
-If however, you also introduce other synchronous plug-ins or workflows that each take extended amounts of time to complete, serialization can become a real scalability challenge, as the auto numbering process not only blocks itself but blocks waiting for the other activities to complete. 
+If however, you also introduce other synchronous plug-ins or workflows that each take extended amounts of time to complete, serialization can become a real scalability challenge, as the auto numbering process not only blocks itself but blocks waiting for the other activities to complete.
 
 ![auto numbering process not only blocks itself but blocks waiting for the other activities to complete.](media/autonumber-approach-3-a.png)
 
