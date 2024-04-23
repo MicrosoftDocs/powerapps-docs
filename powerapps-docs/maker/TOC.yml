@@ -684,6 +684,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Create Power Fx formulas with Copilot
+          href: ./canvas-apps/ai-formulas-formulabar.md  
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -2575,6 +2577,8 @@
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
 - name: Resources
   items:
   - name: Blog
