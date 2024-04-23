@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/17/2024
+ms.date: 04/2e/2024
 ms.topic: how-to
 ms.author: "craigm"
 author: Mattp123
@@ -25,7 +25,40 @@ You can customize the editor's appearance, features, and behavior. The control's
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
 
-## Add the rich text editor control to a text column
+Currently, the rich text editor is available as two different experiences:
+
+- Classic text editor - default experience
+- Modern text editor - new experience you can enable
+
+## Modern text editor enhancements
+
+The Modern designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+
+> [!Note]
+> Certain functionalities that are available in the classic experience of the rich text editor aren't yet available in the modern experience. Such functionalities include:
+> - Configuration options, as described in this article for the classic experience
+> - Mentions
+
+## Enable the modern rich text editor experience
+
+The classic rich text editor experience is enabled by default. Complete the following steps to configure the modern rich text editor experience.
+
+1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
+1. On the command bar, select **Settings**. The settings page is displayed.
+1. In the left pane, in **Settings**, select **Features**. The features page is displayed.
+1. Set the toggle to yes for any or all of the following options, depending on your needs:
+   - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you may have previously made on the rich text editor's classic (default) email experience.
+   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
+   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you may have previously mad on the rich text editor's classic (default) notes authoring experience.
+1. Select **Save**.
+1. In the App Designer, select **Publish**.
+
+### Revert from the modern rich text editor experience to the classic experience
+
+If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
+
+
+## Add the rich text editor control classic experience to a text column
 
 When you format a text column as rich text, the default rich text editor control is added automatically.
 
@@ -56,6 +89,8 @@ When you format a text column as rich text, the default rich text editor control
 1. Select **Save and publish** to apply your changes to the form.
 
 ## Customize the rich text editor control
+
+The following customizations are available in the classic rich text editor experience.
 
 Power Apps allows you to change the properties of the rich text editor control to customize its appearance, features, and behavior. To [customize a specific instance of the control](#customize-a-specific-instance-of-the-rich-text-editor), specify properties and their values in an individual JSON-formatted configuration file. To [customize the control's global configuration](#customize-the-rich-text-editor-globally), change the properties in the default configuration file.
 
@@ -253,7 +288,7 @@ The following table describes more properties you can use to customize the rich 
 
 ## Example configurations
 
-The following sample configurations create specific customizations of the rich text editor. You can use them as-is or as a jumping-off point to [customize a specific instance of the rich text editor](#customize-a-specific-instance-of-the-rich-text-editor) or globally.
+The following sample configurations create specific customizations of the rich text editor in the classic experience. You can use them as-is or as a jumping-off point to [customize a specific instance of the rich text editor](#customize-a-specific-instance-of-the-rich-text-editor) or globally.
 
 ### Set the default font to 11-point Calibri
 
