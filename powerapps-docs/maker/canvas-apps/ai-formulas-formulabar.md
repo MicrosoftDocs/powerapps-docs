@@ -99,4 +99,4 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 ## Responsible AI
 
-Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/pfx-copilot-faq.md) for questions regarding this functionality specifically.
+Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/faqs-copilot-power.md) for questions regarding this functionality specifically.
