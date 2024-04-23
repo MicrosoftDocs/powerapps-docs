@@ -5,7 +5,7 @@ ms.date: 04/26/2024
 ms.topic: guidance
 ms.service: powerapps
 author: robstand
-ms.author: rstand
+ms.author: rachaudh
  
 ---
 
@@ -53,7 +53,7 @@ As the canvas app grows bigger in size to address more business scenarios, the n
 
 When editing an app, you can select controls and group them using `Ctrl + G` or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
 
-In contrast, containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users understand the structure of the app.
+In contrast, containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users underachaudh the structure of the app.
 
 While you can add any controls in a group, you should only add logically related controls in a container.
 

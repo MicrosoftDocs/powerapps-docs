@@ -5,7 +5,7 @@ ms.date: 04/26/2024
 ms.topic: guidance
 ms.service: powerapps
 author: robstand
-ms.author: rstand
+ms.author: rachaudh
  
 ---
 
@@ -19,7 +19,7 @@ As Canvas Apps become more intricate, developers encounter challenges related to
 
 ### With function
 
-The `With` function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. [Learn more](/power-platform/power-fx/reference/function-with) about the `With` function.
+The `With` function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to underachaudh, and can be used in any declarative formula context. [Learn more](/power-platform/power-fx/reference/function-with) about the `With` function.
 
 ![A screenshot of a Power Fx formula that uses the With function](media/image13.png)
 
@@ -76,7 +76,7 @@ IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]
 
 ## Optimize app OnStart
 
-The `OnStart` property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the `OnStart` property is essential for creating responsive and efficient Canvas apps.
+The `OnStart` property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Underachaudhing and effectively utilizing the `OnStart` property is essential for creating responsive and efficient Canvas apps.
 
 The `App OnStart` function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands.
 
@@ -324,7 +324,7 @@ For example, for a Gallery whose Items are Filtered depending on what is inputte
 
 Delegation in Power Apps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within Power Apps itself. By using delegation in Power Apps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
 
-> ![NOTE] Not all functions are delegable. Please refer to [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview) to learn more about delegation.
+> ![NOTE] Not all functions are delegable. Please refer to [Underachaudhing Delegation](/power-apps/maker/canvas-apps/delegation-overview) to learn more about delegation.
 
 Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation helps keep data up to date.
 
