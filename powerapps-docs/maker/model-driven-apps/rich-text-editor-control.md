@@ -21,7 +21,7 @@ ms.custom:
 
 The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-You can customize the editor's appearance, features, and behavior. The control's modern experience is shown in the following screenshot.
+You can customize the editor's appearance, features, and behavior. The control's modern text experience is shown in the following screenshot.
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
 
@@ -32,21 +32,21 @@ Currently, the rich text editor is available as two different experiences:
 
 ## Modern text editor enhancements
 
-The Modern designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
 
 > [!Note]
-> Certain functionalities that are available in the classic experience of the rich text editor aren't yet available in the modern experience. Such functionalities include:
+> Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
 
 ## Enable the modern rich text editor experience
 
-The classic rich text editor experience is enabled by default. Complete the following steps to configure the modern rich text editor experience.
+The classic rich text editor experience is enabled by default. Complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
 1. On the command bar, select **Settings**. The settings page is displayed.
 1. In the left pane, in **Settings**, select **Features**. The features page is displayed.
-1. Set the toggle to yes for any or all of the following options, depending on your needs:
+1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
    - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
    - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
    - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously mad on the rich text editor's classic (default) notes authoring experience.
