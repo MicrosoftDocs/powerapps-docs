@@ -107,12 +107,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/paging-behaviors-and-ordering.md",
-      "redirect_url": "fetchxml/order-rows#ordering-and-paging",
+      "redirect_url": "../fetchxml/order-rows#ordering-and-paging",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-fetchxml.md",
-      "redirect_url": "fetchxml/page-results",
+      "redirect_url": "../fetchxml/page-results",
       "redirect_document_id": "false"
     },
     {
