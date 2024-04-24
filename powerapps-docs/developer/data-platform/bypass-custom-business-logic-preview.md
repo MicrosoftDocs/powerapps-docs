@@ -1,4 +1,9 @@
----
+# Contacting Help + support
+For issues with the Bypass Business logic, such as errors received, use the Help + support experience and include the following information:
+Problem Type- Dataverse Web API and SDK
+Get Help + Support in Power Platform - Power Platform
+[Use the Help + support experience to contact a Microsoft support representative to get resolution for your issue.---](https://learn.microsoft.com/en-us/power-platform/admin/get-help-support)
+
 title: "New capabilities to bypass Custom Business Logic (preview) | Microsoft Docs" 
 description: "Introducing new ways to make data changes which bypass custom business logic." 
 ms.date: 04/24/2024
