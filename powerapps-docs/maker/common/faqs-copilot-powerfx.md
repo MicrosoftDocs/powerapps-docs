@@ -34,14 +34,14 @@ Power Apps Studio has several features to help makers understand and write Power
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
 We qualitatively test the model's Power Fx formula generation and descriptions against an internally built set of Power Fx formulas and descriptions. Additionally, we're monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
-Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=521839).
 
 ## What are the limitations of Power Fx with Copilot? How can users minimize the impact of Power Fx Copilot limitations when using the system?
 
 - Named Formulas and User Defined Functions can't be generated with Copilot at this time.
 - Variables have to be in use (declared) already for Copilot to use them, it will not introduce new variables.
 - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
+- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=217314). 
 - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
 - This capability is in process of rolling out, and might not be available in your region yet. 
 - This capability can be subject to usage limits or capacity throttling. 
