@@ -22,7 +22,7 @@ There are times when you want to be able to perform data operations without havi
 
 Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
 
-The existing [BypassCustomPluginExecution optional parameter](bypass-custom-business-logic#bypass-synchronous-logic) is limited because you can only bypass *synchronous* business logic. These new options provide more flexibility. The `BypassCustomPluginExecution` optional parameter will remain supported. When these new capabilities become GA, they will be our recommended method.
+The existing [`BypassCustomPluginExecution` optional parameter](bypass-custom-business-logic.md#bypass-synchronous-logic) is limited because you can only bypass *synchronous* business logic. These new options provide more flexibility. The `BypassCustomPluginExecution` optional parameter will remain supported. When these new capabilities become GA, they will be our recommended method.
 
 > [!NOTE]
 > Power Automate flows are not bypassed using these optional parameters.[Learn how to bypass Power Automate flows](bypass-custom-business-logic.md#bypass-power-automate-flows)
