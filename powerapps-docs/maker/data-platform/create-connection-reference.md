@@ -2,7 +2,7 @@
 title: Use a connection reference in a solution with Microsoft Dataverse
 description: Learn how to create a connection reference.
 ms.custom: ""
-ms.date: 03/29/2024
+ms.date: 04/23/2024
 ms.reviewer: angieandrews
 ms.topic: conceptual
 author: ChrisGarty
@@ -108,8 +108,6 @@ Sharing connections can be accomplished with the following steps.
 
 To automate sharing of connections, use the [Edit Connection Role Assignment action](/connectors/powerappsforappmakers/#edit-connection-role-assignment) on the Power Apps for Makers connector. 
 
-<!-- This article can't be found -- You can find an automated connection sharing example in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview). -->
-
 :::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Screenshot of a connection sharing example.":::
 
 ## Limits
@@ -156,8 +154,9 @@ If the flow is edited to add new actions that use additional connection referenc
 
 ### Can ownership of a connection reference be transferred to another user?
 
-Ownership of a connection reference cannot be transferred to another user in the modern solution explorer. 
-However, the [legacy solution explorer](/power-apps/maker/model-driven-apps/advanced-navigation#solution-explorer) can be used to change permissions of a connection reference including sharing.
+Ownership of a connection reference can't be transferred to another user from the Solutions area in Power Apps (make.powerapps.com).
+
+However, the [classic solution explorer](/power-apps/maker/model-driven-apps/advanced-navigation#solution-explorer) can be used to change privileges of a connection reference including sharing.
 
 ## See also
 
