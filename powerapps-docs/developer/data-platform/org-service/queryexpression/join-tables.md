@@ -28,19 +28,19 @@ Use the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpress
 
 ## LinkEntity properties
 
-The following table provides details about the [LinkEntity properties](/dotnet/api/microsoft.xrm.sdk.query.linkentity#properties)
+The following table provides details about the [LinkEntity properties](/dotnet/api/microsoft.xrm.sdk.query.linkentity#properties):
 
 |Property|Description|
 |---------|---------|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you are linking from.<br /> For a `LinkEntity` that isn't nested, this is the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is nested in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), this is the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName). |
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName>|The logical name of the entity that you are linking to.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you are linking from. This is the name of the lookup column for the relationship.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you are linking to. This is the name of the primary key column for the table named in the <xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName> property |
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Set this to a value of one of the [JoinOperator enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator) members. The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `LeftOuter` Includes results from the parent row that don't have a matching value.<br />- `Natural` **TODO**: Add short description. I understand there is some small difference between this and `Inner`.<br />These members considered [advanced JoinOperators](#use-advanced-joinoperators):<br />- `Exists`<br />- `In`<br />- `MatchFirstRowUsingCrossApply`<br />These members are used to [filter on values in related records](filter-rows.md#filter-on-values-in-related-records):<br />- `All`<br />- `Any`<br />- `NotAll`<br />- `NotAny`|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you're linking from.<br /> For a `LinkEntity` that isn't nested, use the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is nested in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), use the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName). |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName>|The logical name of the entity that you're linking to.|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you're linking from. Use the name of the lookup column for the relationship.|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you're linking to. Use the name of the primary key column for the table named in the <xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName> property |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Use a value of one of the [JoinOperator enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator) members. The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `LeftOuter` Includes results from the parent row that don't have a matching value.<br />- `Natural` Only one value of the two joined columns is returned if an equal-join operation is performed and the two values are identical.<br />These members considered [advanced JoinOperators](#use-advanced-joinoperators):<br />- `Exists`<br />- `In`<br />- `MatchFirstRowUsingCrossApply`<br />These members are used to [filter on values in related records](filter-rows.md#filter-on-values-in-related-records):<br />- `All`<br />- `Any`<br />- `NotAll`<br />- `NotAny`|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias>|The alias for the table.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>. [Learn to select columns using QueryExpression](select-columns.md)|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these columns to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>. [Learn to select columns using QueryExpression](select-columns.md)|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkCriteria>|The complex condition and logical filter expressions that filter the results of the query. [Learn how to filter rows using QueryExpression](filter-rows.md)|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can included nested links. [Up to 15 total links can be included in a query](#limitations) |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can include nested links. [Up to 15 total links can be included in a query](#limitations) |
 
 <!-- 
 TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator) article to explain each of the types like is done for FetchXML at https://learn.microsoft.com/en-us/power-apps/developer/data-platform/fetchxml/reference/link-entity#link-type-options 
@@ -48,7 +48,7 @@ TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Que
 
 ### LinkEntity example
 
-The following query returns up to 5 records from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record. This represents a [many-to-one relationship](#many-to-one-relationships):
+The following query returns up to five records from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record. This represents a [many-to-one relationship](#many-to-one-relationships):
 
 ```csharp
 QueryExpression query = new("account")
@@ -129,7 +129,7 @@ This way you can more easily access the different parts of the query to make adj
 
 ## Limitations
 
-You can add up to 15 [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances to a query. Each `LinkEntity` adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 `LinkEntity` to the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities) you will get this runtime error:
+You can add up to 15 [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances to a query. Each `LinkEntity` adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 `LinkEntity` instances to the [QueryExpression.LinkEntities](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities), you get this runtime error:
 
 > Name: `TooManyLinkEntitiesInQuery`
 > Code: `0x8004430D`  
@@ -152,7 +152,7 @@ The [previous example](#linkentity-example) is a many-to-one relationship where 
 
 ### Retrieve relationship information
 
-You can use other tools and APIs to look up relationship data for the appropriate `linkToEntityName`, `linkToAttributeName`, `LinkFromEntityName` and `linkFromAttributeName` values to use. For more information see:
+You can use other tools and APIs to look up relationship data for the appropriate `linkToEntityName`, `linkToAttributeName`, `LinkFromEntityName`, and `linkFromAttributeName` values to use. For more information, see:
 
 - [Browse table definitions in your environment](../../browse-your-metadata.md)
 - [Query schema definitions](../../query-schema-definitions.md)
@@ -195,7 +195,7 @@ For a one-to-many relationship, use these relationship values:
 
 |Property|Relationship Value|Comment|
 |---------|---------|---------|
-|`LinkFromEntityName`|`ReferencedEntity`|The referenced table. The *one* in many-to-one. `contact` in the one-to-many example. There is no parameter for this property in the [AddLink methods](#addlink-methods) because it can be derived from the `QueryExpression.EntityName` or `LinkEntity.linkToEntityName` properties. |
+|`LinkFromEntityName`|`ReferencedEntity`|The referenced table. The *one* in many-to-one. `contact` in the one-to-many example. There's no parameter for this property in the [AddLink methods](#addlink-methods) because it can be derived from the `QueryExpression.EntityName` or `LinkEntity.linkToEntityName` properties. |
 |`linkToEntityName`|`ReferencingEntity`|The table with a lookup column referencing the other table. The *many* in many-to-one. `account` in the one-to-many example.|
 |`linkFromAttributeName`|`ReferencedAttribute`|The primary key of the referenced table. `contactid` in the one-to-many example.|
 |`linkToAttributeName`|`ReferencingAttribute`|The name of the lookup column. `primarycontactid` in the one-to-many example.|
@@ -220,7 +220,7 @@ The results include the same records and data as the [previous example](#linkent
 
 ## Many-to-many relationships
 
-Many-to-many relationships depend on an *intersect table*.  An intersect table typically has just four columns, but only two of them are important. The two important columns match the primary key columns of the participating tables.
+Many-to-many relationships depend on an *intersect table*. An intersect table typically has just four columns, but only two of them are important. The two important columns match the primary key columns of the participating tables.
 
 For example, the `TeamMembership` intersect table supports the [teammembership_association many-to-many relationship](../../reference/entities/team.md#BKMK_teammembership_association) between [SystemUser](../../reference/entities/systemuser.md) and [Team](../../reference/entities/team.md) tables. It allows users to join multiple teams, and teams to have multiple users. `TeamMembership` has these columns: `systemuserid`, `teamid`.
 
@@ -266,7 +266,7 @@ The results should look something like:
 
 ## No relationship
 
-It is possible to specify `linkFromAttributeName` and `linkToAttributeName` properties using columns that are not part of a defined relationship.
+It's possible to specify `linkFromAttributeName` and `linkToAttributeName` properties using columns that aren't part of a defined relationship.
 
 For example, this query finds pairs of records where the [Name column](../../reference/entities/account.md#BKMK_Name) of an [account](../../reference/entities/account.md) record matches the [FullName column](../../reference/entities/contact.md#BKMK_FullName) of a [contact](../../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
 
@@ -285,16 +285,16 @@ linkedContact.Columns = new ColumnSet("fullname");
 ```
 
 > [!NOTE]
-> It is important that the columns specified in the `linkFromAttributeName` and `linkToAttributeName` properties are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that may have performance impact and may fail for some column values.
+> It is important that the columns specified in the `linkFromAttributeName` and `linkToAttributeName` properties are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that might have performance impact and might fail for some column values.
 
-The following [column types](../../../../maker/data-platform/types-of-fields.md) cannot be used in `linkFromAttributeName` and `linkToAttributeName` properties:
+The following [column types](../../../../maker/data-platform/types-of-fields.md) can't be used in `linkFromAttributeName` and `linkToAttributeName` properties:
 
 - **File**
 - **Image**
 - **MultiSelect Field**
 - [**PartyList**](../../../../maker/data-platform/types-of-fields.md#different-types-of-lookups)
 
-Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` properties but may result in poor performance:
+Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` properties but might result in poor performance:
 
 - Columns of the **Multiple Lines of Text** type
 - Columns of the **Single Line of Text** type with a maximum length larger than 850
@@ -305,7 +305,7 @@ Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` pr
 
 ## Find records not in a set
 
-You can use [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
+You can use [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) to create a query to return records that aren't in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The nonmatching rows in the second input are returned as null values.
 
 You can perform a left outer join in `QueryExpression` by using the [ConditionExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.entityname). The `EntityName` property is valid in conditions, filters, and nested filters. [Learn more about filters on LinkEntity](filter-rows.md#filters-on-linkentity)
 
@@ -334,21 +334,21 @@ linkedContact.Columns.AddColumn("fullname");
 
 ## Use advanced JoinOperators
 
-The following [JoinOperator members](/dotnet/api/microsoft.xrm.sdk.query.joinoperator) do not directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. These types provides more advanced capabilities you can use to improve query performance and define more complex queries.
+The following [JoinOperator members](/dotnet/api/microsoft.xrm.sdk.query.joinoperator) don't directly correspond to T-SQL [JOIN operator](/sql/relational-databases/performance/joins) types and use [subqueries](/sql/relational-databases/performance/subqueries) instead. These types provides more advanced capabilities you can use to improve query performance and define more complex queries.
 
 |Name|Description|
 |---------|---------|
-|`Exists`|**TODO**: Which description to use?:<br />`LinkEntity` is generated as a [correlated subquery](/sql/relational-databases/performance/subqueries#correlated). The outer entity uses [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) operator on the correlated subquery.<br />**OR**<br />A variant of `Inner` that can provide performance benefits. Uses an [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) condition in the `where` clause. Use this when multiple copies of the parent row are not necessary in the results. [Learn more about `Exists` and `In`.](#use-joinoperatorexists-or-joinoperatorin)|
-|`In`|A variant of `Inner` that can provide performance benefits. Uses an [IN](/sql/t-sql/language-elements/in-transact-sql) condition in the where clause. Use this when multiple copies of the parent row are not necessary in the results. [Learn more about `Exists` and `In`.](#use-joinoperatorexists-or-joinoperatorin)|
-|`MatchFirstRowUsingCrossApply`|**TODO**: Which description to use?:<br />Link-entity is generated as [correlated subquery](/sql/relational-databases/performance/subqueries#correlated). The outer entity uses the "cross apply" operator on the correlated subquery. Pick the top 1 row.<br />**OR**<br />A variant of `Inner` that can provide performance benefits. Use this type when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results aren't necessary. [Learn more about using `MatchFirstRowUsingCrossApply`](#use-joinoperatormatchfirstrowusingcrossapply)|
+|`Exists`|A variant of `Inner` that can provide performance benefits. Uses an [EXISTS](/sql/t-sql/language-elements/exists-transact-sql) condition in the `where` clause. Use `Exists` when multiple copies of the parent row aren't necessary in the results. [Learn more about `Exists` and `In`.](#use-joinoperatorexists-or-joinoperatorin)|
+|`In`|A variant of `Inner` that can provide performance benefits. Uses an [IN](/sql/t-sql/language-elements/in-transact-sql) condition in the where clause. Use `In` when multiple copies of the parent row aren't necessary in the results. [Learn more about `Exists` and `In`.](#use-joinoperatorexists-or-joinoperatorin)|
+|`MatchFirstRowUsingCrossApply`|A variant of `Inner` that can provide performance benefits. Use this type when only a single example of a matching row from the linked entity is sufficient and multiple copies of the parent row in the results aren't necessary. [Learn more about using `MatchFirstRowUsingCrossApply`](#use-joinoperatormatchfirstrowusingcrossapply)|
 
 ### Use `JoinOperator.Exists` or `JoinOperator.In`
 
-`Exists` and `In` are variants of `Inner` that use different conditions ([EXISTS](/sql/t-sql/language-elements/exists-transact-sql) and [IN](/sql/t-sql/language-elements/in-transact-sql) respectively) in the `where` clause so that multiple copies of the parent row aren't returned in the results. Neither of these return the column values of the related entity rows.
+`Exists` and `In` are variants of `Inner` that use different conditions ([EXISTS](/sql/t-sql/language-elements/exists-transact-sql) and [IN](/sql/t-sql/language-elements/in-transact-sql) respectively) in the `where` clause so that multiple copies of the parent row aren't returned in the results. Both `Exists` and `In` don't return the column values of the related entity rows.
 
-Using `JoinOperator.Exists` or `JoinOperator.In` can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent. Using `JoinOperator.Exists` or `JoinOperator.In` can can improve performance of the query compared to `JoinOperator.Inner` because it doesn't require returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row.
+Using `JoinOperator.Exists` or `JoinOperator.In` can reduce the size of intermediate or final query results, especially when many matching linked rows exist for the same parent rows, or when multiple link entities are used with the same parent. Using `JoinOperator.Exists` or `JoinOperator.In` can improve performance of the query compared to `JoinOperator.Inner` because it doesn't require returning a Cartesian product containing all possible permutations of rows from different linked entities for each parent row.
 
-These `JoinOperator` members may also allow Dataverse to only find the first matching linked entity row for each parent row which is more efficient than finding all matching rows in the linked entity with `JoinOperator.Inner`.
+These `JoinOperator` members might also allow Dataverse to only find the first matching linked entity row for each parent row that is more efficient than finding all matching rows in the linked entity with `JoinOperator.Inner`.
 
 #### `JoinOperator.Exists` example
 
@@ -468,7 +468,7 @@ cross apply (
 
 ---
 
-This is equivalent to `JoinOperator.LeftOuter` except it only returns the parent row at most once. Unlike `JoinOperator.In` and `JoinOperator.Exists`, it returns column values from one of the matching rows in the related table when matching rows exist, but the parent row is returned even if there are no matching rows in the related table. Use this when only a single example of a matching row from the related table is sufficient and multiple copies of the parent row in the results are not necessary.
+This is equivalent to `JoinOperator.LeftOuter` except it only returns the parent row at most once. Unlike `JoinOperator.In` and `JoinOperator.Exists`, it returns column values from one of the matching rows in the related table when matching rows exist, but the parent row is returned even if there are no matching rows in the related table. Use this when only a single example of a matching row from the related table is sufficient and multiple copies of the parent row in the results aren't necessary.
 
 <!-- TODO: What is the Natural JoinOperator? -->
 
