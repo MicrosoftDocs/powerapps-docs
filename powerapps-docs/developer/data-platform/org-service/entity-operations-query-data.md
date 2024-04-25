@@ -43,20 +43,27 @@ When you use the [late bound style](early-bound-programming.md#late-bound), if y
 
 To avoid this problem when using the late-bound style, you can use two strategies:
 
-1. For an column that could be null, use the [Entity.Contains(System.String)]xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)) method to check whether the column value is null before attempting to access it with an indexer. For example:
+1. For an column that could be null, use the [Entity.Contains(System.String)](xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)) method to check whether the column value is null before attempting to access it with an indexer. For example:
 
     `Money revenue = (entity.Contains("revenue")? entity["revenue"] : null);`
 
 1. Use [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) method to access the value. For example:
 
-    `Money revenue = entity.GetAttributeValue<Money>();`
+   `Money revenue = entity.GetAttributeValue<Money>();`
 
-  > [!NOTE]
-  > If the type specified with [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
+   > [!NOTE]
+   > If the type specified with [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
 
 ## Each request can return up to 5000 records
 
-To ensure best performance, each query request can return a maximum of 5000 rows. To return larger result sets you must request additional pages.
+Applications that display data for someone to work with will typically limit the number of records displayed to a number that a human can interact with, and then provide the option to view the next page. Model-driven apps depend on a [personal option](../../../user/set-personal-options.md) that allows people to choose a value from 25 to 250. This information is stored in the [UserSettings.PagingLimit](../reference/entities/usersettings.md#BKMK_PagingLimit) column.
+
+Applications that pull data from Dataverse for other scenarios don't need to specify a page size. The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+
+Paging works best when you use the paging cookie data that Dataverse returns with the [EntityCollection.PagingCookie](/dotnet/api/microsoft.xrm.sdk.entitycollection.pagingcookie) property, but it isn't required and some requests will not return a paging cookie value. Learn more:
+
+- [Page results using FetchXml](../fetchxml/page-results.md)
+- [Page results using QueryExpression](queryexpression/page-results.md)
 
 ## Formatted values are returned for some columns
 
