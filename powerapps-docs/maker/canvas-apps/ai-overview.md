@@ -41,16 +41,12 @@ To learn how to use the new AI features in Power Apps, see:
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 
 ## Prerequisites for the AI features in Power Apps
+1. To use AI features in Power Apps, you need to ensure that Copilot features are turned on by your administrator. And Copilot is available in your region. Please refer to this document about Copilot availability per region. https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot
 
-- Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
+2. Some Copilot features are already GA, so they're not subject to the admin toggle as GAed features are enabled by default. Refer to the following section to see how to enable and disable Copilot features.
 
-- AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
+3. Different AI features might have slightly different prequisites, please refer to the feature specific documentation to see detailed requirements. 
 
-    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Product** &gt; **Features**.
-
-    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
 ## Enable or disable Copilot (preview) in Power Apps
 
