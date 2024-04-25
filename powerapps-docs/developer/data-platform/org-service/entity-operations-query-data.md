@@ -1,7 +1,7 @@
 ---
 title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK for .NET assemblies."
-ms.date: 03/22/2024
+ms.date: 04/25/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -15,33 +15,27 @@ contributors:
 
 # Query data using the SDK for .NET
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 The SDK for .NET provides several methods to query data. Each provides different advantages.
 
 |Method|Advantages|
 |--|--|
-|[FetchExpression](#use-fetchxml-with-fetchexpression)|Use the proprietary FetchXML query language to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. FetchXml provides capabilities that other options don't.|
-|[QueryExpression](#use-queryexpression)|Use a strongly typed object model to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. Supports [most the features](queryexpression/overview.md#limitations) in FetchXML.|
-|[QueryByAttribute](#use-querybyattribute)|A simpler object model for common queries to return rows that match all the criteria in your query. Supports paging, but not groups and aggregated data sets. Can only return data from a single table.|
-|[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider> to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br /> This article focuses on the styles of queries available via the SDK assembly classes. More information: [Build queries with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
+|[FetchExpression class](/dotnet/api/microsoft.xrm.sdk.query.fetchexpression)|Use the proprietary FetchXML query language to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. FetchXml provides capabilities that other options don't.<br />[Learn how to query data using FetchXml](../fetchxml/overview.md) |
+|[QueryExpression class](/dotnet/api/microsoft.xrm.sdk.query.queryexpression)|Use a strongly typed object model to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. Supports [most the features](queryexpression/overview.md#limitations) in FetchXML.<br />[Learn how to query data using QueryExpression](queryexpression/overview.md)|
+|[QueryByAttribute class](/dotnet/api/microsoft.xrm.sdk.query.querybyattribute)|A simpler object model for common queries to return rows that match all the criteria in your query. Supports paging, but not groups and aggregated data sets. Can only return data from a single table.<br />[Learn how to query data using the QueryByAttribute class](use-querybyattribute-class.md)|
+|[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use [OrganizationServiceContext.QueryProvider](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider) to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br />This article focuses on SDK classes to retrieve data.[Learn how to query data with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
+
+## How to send requests
 
 <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> derive from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase> abstract class. There are two ways to get the results of a query defined using these classes:
 
-- You can pass an instance of any of these classes as the `query` parameter to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method.
-- You can set the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
-
-> [!NOTE]
-> The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method is generally preferred. There are no special capabilities that require the use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class.
+- You can pass an instance of any of these classes as the `query` parameter to [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) method.
+- You can set the [RetrieveMultipleRequest.Query](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) property of the class and use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method. Generally, people use the [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) method, but you might use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) to use [optional parameters](../optional-parameters.md) or to send the request as part of a batch using the [ExecuteMultipleRequest](../execute-multiple-requests.md) or [ExecuteTransactionRequest](../use-executetransaction.md) classes.
 
 Both of these methods return an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query in the <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> collection and properties to manage more queries to receive paged results.
 
-> [!NOTE]
-> To ensure best performance, each query request can return a maximum of 5000 rows. To return larger result sets you must request additional pages.
->
-> All filter conditions for string values are case insensitive.  
+When you retrieve data using these classes there are some concepts you must understand. The rest of this article explains common concepts when retrieving data using the SDK for .NET classes.
 
-### Null table column values aren't returned
+## Null column values are not returned
 
 When a table column (entity attribute) contains a null value, or if the attribute wasn't included in the FetchXml attributes or the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection won't include the attribute. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. When you use the early bound style, the generated `Entity` class properties manage this and return a null value.
 
@@ -60,112 +54,11 @@ To avoid this problem when using the late-bound style, you can use two strategie
   > [!NOTE]
   > If the type specified with <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
 
-## Use FetchXML with FetchExpression
+## Each request can return up to 5000 records
 
-FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Query data using FetchXml](../fetchxml/overview.md)
+To ensure best performance, each query request can return a maximum of 5000 rows. To return larger result sets you must request additional pages.
 
-The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
-
-```csharp
-string fetchXml = @"
-<fetch top='50' >
-  <entity name='account' >
-    <attribute name='name' />
-    <filter>
-      <condition 
-        attribute='address1_city' 
-        operator='eq' 
-        value='Redmond' />
-    </filter>
-    <order attribute='name' />
-  </entity>
-</fetch>";
-
-var query = new FetchExpression(fetchXml);
-
-EntityCollection results = svc.RetrieveMultiple(query);
-
-results.Entities.ToList().ForEach(x => {
-  Console.WriteLine(x.Attributes["name"]);
-});
-```
-
-> [!IMPORTANT]
-> When retrieving table rows you should only request the column values you need by setting the specific attributes using `attribute` elements rather than using the `all-attributes` element to return all attributes.
-
-More information:
-
-- [Query data using FetchXml](../fetchxml/overview.md)
-- [About quick find queries](../quick-find.md)
-- [Page results using FetchXml](../fetchxml/page-results.md)
-- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
-- [Sample: Use aggregation in FetchXML](samples/use-aggregation-fetchxml.md)
-- [Sample: Use FetchXML with a paging cookie](samples/use-fetchxml-paging-cookie.md)
-
-## Use QueryExpression
-
-The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class provides a strongly typed set of objects that is optimized for run-time manipulation of queries.
-
-The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
-
-```csharp
-var query = new QueryExpression("account")
-{
-  ColumnSet = new ColumnSet("name"),
-  Criteria = new FilterExpression(LogicalOperator.And),
-  TopCount = 50
-};
-query.Criteria.AddCondition("address1_city", ConditionOperator.Equal, "Redmond");
-query.AddOrder("name", OrderType.Ascending);
-
-EntityCollection results = svc.RetrieveMultiple(query);
-
-results.Entities.ToList().ForEach(x =>
-{
-  Console.WriteLine(x.Attributes["name"]);
-});
-```
-
-> [!IMPORTANT]
-> When retrieving rows you should only request the column values you need by setting the specific attributes using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code.
-
-
-More information:
-- [Query data using QueryExpression](queryexpression/overview.md)
-- [Page results using QueryExpression](queryexpression/page-results.md)
-- [Filter rows using QueryExpression](queryexpression/filter-rows.md)
-- [Select columns using QueryExpression](queryexpression/select-columns.md)
-- [Sample: Retrieve multiple with the QueryExpression class](samples/retrieve-multiple-queryexpression-class.md)
-- [Sample: Use QueryExpression with a paging cookie](samples/use-queryexpression-with-a-paging-cookie.md)
-
-## Use QueryByAttribute
-
-The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class provides a strongly typed set of objects that is optimized for simple, common queries of table rows. Unlike FetchXML and `QueryExpression`,  `QueryByAttribute` can only return data from a single table. It doesn't enable retrieving data from related table rows or complex query criteria.
-
-The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
-
-```csharp
-var query = new QueryByAttribute("account")
-{
-  TopCount = 50,
-  ColumnSet = new ColumnSet("name")
-};
-query.AddAttributeValue("address1_city", "Redmond");
-query.AddOrder("name", OrderType.Ascending);
-
-EntityCollection results = svc.RetrieveMultiple(query);
-
-results.Entities.ToList().ForEach(x =>
-{
-  Console.WriteLine(x.Attributes["name"]);
-});
-```
-
-More information:
-- [Use the QueryByAttribute class](use-querybyattribute-class.md)
-- [Sample: Retrieve multiple with the QueryByAttribute class](samples/retrieve-multiple-querybyattribute-class.md)
-
-## Access formatted values
+## Formatted values are returned for some columns
 
 Regardless of the method you use to query tables, the data will be returned as <xref:Microsoft.Xrm.Sdk.EntityCollection>.<xref:Microsoft.Xrm.Sdk.EntityCollection.Entities>. You can access the table column (attribute) data values using the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection. But these values may be of type other than string which you would need to manipulate to get string values you can display in your application.
 
@@ -233,6 +126,9 @@ name:Contoso Pharmaceuticals (sample)
   status: Active
 ```
 
+## Columns that use an an alias return an AliasedValue
+
+TODO
 
 ## Convert queries between FetchXml and QueryExpression
 
@@ -250,6 +146,10 @@ Dataverse has a limit of 500 total conditions allowed in a query. Any joins incl
 If this occurs a user must either: 
 
 - Reduce the number of conditions in their query. 
-- Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
+- Use the `In` clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
+
+## All filter conditions for string values are case insensitive
+
+TODO
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

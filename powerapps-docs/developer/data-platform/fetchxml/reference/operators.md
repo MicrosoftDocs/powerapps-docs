@@ -255,6 +255,8 @@ Use the following operators in [conditions](condition.md) using owner values.
 
 Use the following operators in [conditions](condition.md) using string values.
 
+All filter conditions for string values are case insensitive.
+
 You can use wildcard characters for the following operators: [like](#like), [not-like](#not-like), [begins-with](#begins-with), [not-begin-with](#not-begin-with), [ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md)
 
 |Operator|Description|
