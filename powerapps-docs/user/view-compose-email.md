@@ -89,7 +89,7 @@ If your administrator has added the **Email Recipient control** component to an 
    > You can't resolve an unresolved email address for a read-only email.
 
 
-:::image type="content" source="../media/recepient-handling-mini.png" alt-text="Screenshot of runtime experience.":::
+ :::image type="content" source="../media/recepient-handling.png" alt-text="Screenshot of runtime experience.":::
 
 ### Access email
 When accessing email, there are a couple of options you can use. 
