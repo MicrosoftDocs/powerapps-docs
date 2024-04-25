@@ -20,7 +20,7 @@ contributors:
 
 [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-There are two new ways for client developers to bypass custom business logic. Please try these new [optional parameters](optional-parameters.md) and let us know your thoughts. For issues with the these preview features, such as errors received, use the [Help + support experience](/power-platform/admin/get-help-support) and include the following information: Problem Type- Dataverse Web API and SDK.
+There are two new ways for client developers to bypass custom business logic. Please try these new [optional parameters](optional-parameters.md) and let us know your thoughts. For issues with these preview features, such as errors received, use the [Help + support experience](/power-platform/admin/get-help-support) and include the following information: Problem Type- Dataverse Web API and SDK.
 
 ## When to bypass custom business logic
 
@@ -35,7 +35,7 @@ Without a way to tell Dataverse not to invoke the business logic, you need to lo
 
 ## New optional parameters
 
-The two new [optional parameters](optional-parameters.md) you can use to bypass custom business logic are introduced in the table below.
+The two new [optional parameters](optional-parameters.md) you can use to bypass custom business logic are introduced in the following table.
 
 |Optional parameter|Description|
 |---|---|
@@ -63,7 +63,7 @@ The following table describes when to use the parameter values with `BypassBusin
 |Parameter|Description |
 |---------|---------|
 |`CustomSync` |Bypass only synchronous custom logic.<br />The compute time necessary for synchronous logic accrues to the total time required to perform each data operation. Use this option to reduce the amount of time required to complete operations in bulk.|
-|`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this can impact performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
+|`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can impact performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
 |`CustomSync,CustomAsync`|Bypass both synchronous and asynchronous custom logic, excluding Power Automate Flows.|
 
 ### Requirements to use the BypassBusinessLogicExecution optional parameter
@@ -116,7 +116,7 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 ## BypassBusinessLogicExecutionStepIds
 
-Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the stepId passed does not run in the given request, it will be ignored.
+Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the step ID passed doesn't run in the given request, it's ignored.
 
 ### How do I use the BypassBusinessLogicExecutionStepIds option?
 
@@ -158,8 +158,8 @@ MSCRM.BypassBusinessLogicExecutionStepIds: "45e0c603-0d0b-466e-a286-d7fc1cda8361
   "name":"Sample Account"
 }
 ```
----
 
+---
 
 ### Identify the steps you want to bypass
 
@@ -239,7 +239,7 @@ Use a query like the following to retrieve the set plug-in step registrations fo
 
 `Create` is the name of the message. Replace these values with the table and message you need.
 
-Use this FetchXml query to return `step.sdkmessageprocessingstepid` values you can use with the `BypassBusinessLogicExecutionStepIds` optional parameter
+Use this FetchXml query to return `step.sdkmessageprocessingstepid` values you can use with the `BypassBusinessLogicExecutionStepIds` optional parameter.
 
 ```xml
 <fetch>
