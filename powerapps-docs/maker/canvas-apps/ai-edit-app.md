@@ -26,14 +26,12 @@ Build and continue editing your app with the help of Copilot powered by AI. Tell
 The Copilot panel is available when you edit a canvas app in Power Apps Studio. You can edit your app by telling Copilot what kind of changes you want to make such as add a screen, configure navigation, styling a single control, or bulk editing.
 
 > [!div class="mx-imgBorder"]
-> ![Copilot panel.](media/artificial-intelligence/copilot-pane.png)
+> ![Copilot panel.](media/artificial-intelligence/copilot-pane-04252024.png)
 
 > [!IMPORTANT]
-> - To use this capability you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and is only available in United States region.
 > - This capability may be subject to usage limits or capacity throttling.
 
 
@@ -59,6 +57,7 @@ AI Copilot supports the following commands:
     > - This feature supports English and its variants.
 
 ## Sample commands you can try
+You can directly click on the 3 cards when you first time open Copilot pane. We have prepared some working prompts there for you to try out and understand what Copilot can do, how it works. You can also directly try some commands in the table below.
 | Scenario      | Commands |
 | ----------- | ----------- |
 |Add a new screen using template	      |Adding a new email screen|
@@ -68,10 +67,12 @@ AI Copilot supports the following commands:
 |             |change selected button to have width 100|
 |             |add a new icon|
 |             |add a new text label|
+|             |add a submit button and a cancel button for the form|
 |Bulk editing	|Change all buttons to gray|
 |             |Change all labels in the selected container to be red|
 |Working with containers	|Add a button to the selected container|
 |Templatized formulas|	when clicking on Button1, show screen 2|
+|Modern theming|Change my app to deep forest green|
 
 ## Use Copilot to edit your app
 
@@ -80,7 +81,7 @@ AI Copilot supports the following commands:
 1. In the **Copilot** panel, chat with Copilot and describe the changes you want to make such as  **Add a  new screen**.
 
    > [!div class="mx-imgBorder"]
-   > ![Add a screen.](media/artificial-intelligence/copilot-pane-add-screen.png)
+   > ![Add a screen.](media/artificial-intelligence/copilot-pane-add-screen-04252024.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
