@@ -16,7 +16,7 @@ contributors:
 ---
 # New capabilities to bypass Custom Business Logic (preview)
 
-There are two new ways for client developers to bypass custom business logic. Please try these new [optional parameters](optional-parameters.md) and let us know your thoughts. For issues with the these preview features, such as errors received, use the [Help + support experience](power-platform/admin/get-help-support) and include the following information: Problem Type- Dataverse Web API and SDK.
+There are two new ways for client developers to bypass custom business logic. Please try these new [optional parameters](optional-parameters.md) and let us know your thoughts. For issues with the these preview features, such as errors received, use the [Help + support experience](/power-platform/admin/get-help-support) and include the following information: Problem Type- Dataverse Web API and SDK.
 
 There are times when you want to be able to perform data operations without having custom business logic applied. These scenarios typically involve bulk data operations where large numbers of records are being created, updated, or deleted.
 
