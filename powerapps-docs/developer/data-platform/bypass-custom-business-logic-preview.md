@@ -118,6 +118,49 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter.
 
+### How do I use the BypassBusinessLogicExecutionStepIds option?
+
+You can use this option with either the SDK for .NET or the Web API.
+
+#### [SDK for .NET](#tab/sdk)
+
+The following example sets the optional `BypassBusinessLogicExecutionStepIds` parameter when creating a new account record using the [CreateRequest class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest).
+
+```csharp
+static void DemonstrateBypassBusinessLogicExecutionStepIds(IOrganizationService service)
+{
+   Entity account = new("account");
+   account["name"] = "Sample Account";
+
+   CreateRequest request = new()
+   {
+         Target = account
+   };
+   request.Parameters.Add("BypassBusinessLogicExecutionStepIds", "45e0c603-0d0b-466e-a286-d7fc1cda8361,d5370603-e4b9-4b92-b765-5966492a4fd7");
+   service.Execute(request);
+}
+```
+
+
+#### [Web API](#tab/webapi)
+
+The following Web API request creates a new account record using the `MSCRM.BypassBusinessLogicExecutionStepIds` request header:
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+MSCRM.BypassBusinessLogicExecutionStepIds: "45e0c603-0d0b-466e-a286-d7fc1cda8361, d5370603-e4b9-4b92-b765-5966492a4fd7"
+{
+  "name":"Sample Account"
+}
+```
+---
+
+
 ### Identify the steps you want to bypass
 
 There are a couple of ways to locate the GUID values of the plug-in step registration.
