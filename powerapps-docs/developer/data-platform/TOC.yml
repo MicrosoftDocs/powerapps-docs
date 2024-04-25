@@ -208,8 +208,10 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       href: bypass-custom-business-logic.md
-    - name: Bypass Custom Business logic (preview)
-      href: bypass-custom-business-logic-preview.md
+      items:
+      - name: New options (preview)
+        href: bypass-custom-business-logic-preview.md
+        displayName: Bypass Business logic (preview)
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
