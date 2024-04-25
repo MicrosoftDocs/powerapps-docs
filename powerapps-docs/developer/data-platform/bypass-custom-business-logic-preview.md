@@ -1,5 +1,5 @@
 ---
-title: "New capabilities to bypass Custom Business Logic (preview) | Microsoft Docs" 
+title: "New capabilities to bypass custom business logic (preview) | Microsoft Docs" 
 description: "Introducing new ways to make data changes which bypass custom business logic." 
 ms.date: 04/24/2024
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# New capabilities to bypass Custom Business Logic (preview)
+# New capabilities to bypass custom business logic (preview)
 
 [!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
