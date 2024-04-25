@@ -29,7 +29,7 @@ The SDK for .NET provides several methods to query data. Each provides different
 <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> derive from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase> abstract class. There are two ways to get the results of a query defined using these classes:
 
 - You can pass an instance of any of these classes as the `query` parameter to [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) method.
-- You can set the [RetrieveMultipleRequest.Query](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) property of the class and use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method. Generally, people use the [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) method, but you might use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) to use [optional parameters](../optional-parameters.md) or to send the request as part of a batch using the [ExecuteMultipleRequest](../execute-multiple-requests.md) or [ExecuteTransactionRequest](../use-executetransaction.md) classes.
+- You can set the [RetrieveMultipleRequest.Query](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) property of the class and use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method. Generally, people use the [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) method, but you might use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) to use [optional parameters](../optional-parameters.md) or to send the request as part of a batch using the [ExecuteMultipleRequest](execute-multiple-requests.md) or [ExecuteTransactionRequest](use-executetransaction.md) classes.
 
 Both of these methods return an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query in the <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> collection and properties to manage more queries to receive paged results.
 
@@ -37,22 +37,22 @@ When you retrieve data using these classes there are some concepts you must unde
 
 ## Null column values are not returned
 
-When a table column (entity attribute) contains a null value, or if the attribute wasn't included in the FetchXml attributes or the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection won't include the attribute. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. When you use the early bound style, the generated `Entity` class properties manage this and return a null value.
+When a table column contains a null value, or if the column wasn't requested, the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. When you use the [early bound style](early-bound-programming.md#early-bound), the properties of the generated classes that inherit from [Entity class](xref:Microsoft.Xrm.Sdk.Entity) manage this and return a null value.
 
-When you use the late bound style, if you try to access the value using an indexer on the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> or <xref:Microsoft.Xrm.Sdk.Entity.FormattedValues> collections you'll get an <xref:System.Collections.Generic.KeyNotFoundException> with the message `The given key was not present in the dictionary`.
+When you use the [late bound style](early-bound-programming.md#late-bound), if you try to access the value using an indexer on the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) or [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collections, you'll get an <xref:System.Collections.Generic.KeyNotFoundException> with the message `The given key was not present in the dictionary`.
 
 To avoid this problem when using the late-bound style, you can use two strategies:
 
-1. For an attribute that could be null, use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether the attribute is null before attempting to access it with an indexer. For example:
+1. For an column that could be null, use the [Entity.Contains(System.String)]xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)) method to check whether the column value is null before attempting to access it with an indexer. For example:
 
     `Money revenue = (entity.Contains("revenue")? entity["revenue"] : null);`
 
-1. Use <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> to access the value. For example:
+1. Use [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) method to access the value. For example:
 
     `Money revenue = entity.GetAttributeValue<Money>();`
 
   > [!NOTE]
-  > If the type specified with <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
+  > If the type specified with [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
 
 ## Each request can return up to 5000 records
 
@@ -60,9 +60,9 @@ To ensure best performance, each query request can return a maximum of 5000 rows
 
 ## Formatted values are returned for some columns
 
-Regardless of the method you use to query tables, the data will be returned as <xref:Microsoft.Xrm.Sdk.EntityCollection>.<xref:Microsoft.Xrm.Sdk.EntityCollection.Entities>. You can access the table column (attribute) data values using the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection. But these values may be of type other than string which you would need to manipulate to get string values you can display in your application.
+Regardless of the method you use to query tables, the data will be returned as [EntityCollection.Entities](xref:Microsoft.Xrm.Sdk.EntityCollection.Entities). You can access the table column (attribute) data values using the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection. But these values may be of type other than string which you would need to manipulate to get string values you can display in your application.
 
-You can access string values that use the environments settings for formatting by using the values in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.FormattedValues> collection.
+You can access string values that use the environments settings for formatting by using the values in the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collection.
 
 The following sample shows how to access the formatted string values for the following account attributes:
 

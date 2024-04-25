@@ -357,7 +357,7 @@ static List<string> GetRowValues(List<string> columns, JsonObject record)
 
 Learn more about formatted values:
 
-- [SDK for .NET Query data: Access formatted values](../org-service/entity-operations-query-data.md#access-formatted-values)
+- [SDK for .NET Query data:Formatted values](../org-service/entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 - [Web API Query data: Formatted values](../webapi/query-data-web-api.md#formatted-values)
 
 
