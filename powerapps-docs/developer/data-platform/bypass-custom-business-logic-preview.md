@@ -116,7 +116,7 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 ## BypassBusinessLogicExecutionStepIds
 
-Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter.
+Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the stepId passed does not run in the given request, it will be ignored.
 
 ### Identify the steps you want to bypass
 
