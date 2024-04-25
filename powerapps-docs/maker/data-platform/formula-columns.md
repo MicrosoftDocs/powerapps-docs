@@ -359,6 +359,8 @@ You can use the following scalar functions in a formula column:
 
 \* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
+\* **StartOfWeek** argument is not supported for the **WeekNum** and **Weekday** functions in formula columns.
+
 ### Function example
 
 |Description  |Example  |
