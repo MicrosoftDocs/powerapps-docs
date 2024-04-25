@@ -103,12 +103,6 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 
 | Product | Feature | Managed Environments required? | How to turn the feature off |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-| Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
-| Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
-| Power Apps | [Use natural language to edit an app using the Copilot panel](/power-apps/maker/canvas-apps/ai-edit-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
-| Power Apps | [Copilot assistance for form filling in model-driven apps](/power-apps/user/form-filling-assistance) | No | [Manage feature settings](/power-platform/admin/settings-features)  |
-| Power Apps | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) | No, premium user license | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) |
-| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
 | AI Builder | [Scenarios in preview](/ai-builder/previewability-scenarios) | No | [Scenarios in preview](/ai-builder/previewability-scenarios) |
 | Dynamics 365 Customer Insights (Data) | [Have a dialog with data using Copilot in Customer Insights](/dynamics365/customer-insights/data/dialog-with-data)  | No | Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent) |
 | Dynamics 365 Customer Insights - Data | [Data prep report overview (preview)](/dynamics365/customer-insights/data/data-prep-overview) | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent)  |
@@ -122,6 +116,13 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Dynamics 365 Customer Insights - Journeys | [Use images in your content](/dynamics365/customer-insights/journeys/upload-images-files#use-images-in-your-content) | No |Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
 | Dynamics 365 Customer Insights - Journeys | [Refresh and perfect your message](/dynamics365/customer-insights/journeys/content-rewrite) | No | Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys)|
 | Dynamics 365 Customer Insights - Journeys | [Style your emails with AI-assisted themes](/dynamics365/customer-insights/journeys/email-theme) | No | Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
+| Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
+| Power Apps | [Copilot assistance for form filling in model-driven apps](/power-apps/user/form-filling-assistance) | No | [Manage feature settings](/power-platform/admin/settings-features)  |
+| Power Apps | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) | No, premium user license | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) |
+| Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
+| Power Apps | [Use natural language to edit an app using the Copilot panel](/power-apps/maker/canvas-apps/ai-edit-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
+| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
+
 
 ### Regional and language availability
 
