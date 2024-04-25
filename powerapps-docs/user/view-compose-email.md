@@ -84,12 +84,12 @@ If your administrator has added the **Email Recipient control** component to an 
  - Drag and drop recipients across **To**, **CC**, and **BCC** fields.
  - View the recipient's email address along with their names.
  - View the recipients' presence status and out-of-office messages.
- - Resolve an unresolved email address faster. In the email editor, if there's an [unresolved email address](unresolved-email-recipient.md), the application displays a banner message and the **Review** button. Select the button to view and map an unresolved email address to an existing record. 
+ - Resolve an unresolved email address faster. In the email editor, if there's an [unresolved email address](unresolved-email-recipient.md), the application displays a banner message and the **Review** option to map the email. Select the button to view and map an unresolved email address to an existing record. 
    >[!Note]
    > You can't resolve an unresolved email address for a read-only email.
 
 
- :::image type="content" source="../media/recepient-handling.png" alt-text="Screenshot of runtime experience.":::
+   :::image type="content" source="media/recepient-handling.png" alt-text="Screenshot of runtime experience.":::
 
 ### Access email
 When accessing email, there are a couple of options you can use. 
