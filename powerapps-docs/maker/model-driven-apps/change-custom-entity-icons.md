@@ -23,7 +23,7 @@ search.audienceType:
 ---
 # Change model-driven app custom table icons
 
-When a custom table is created, it is automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It is not possible to modify the icons assigned to system tables.
+When a custom table is created, it's automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It is not possible to modify the icons assigned to system tables.
 
 In the example here, the accounts table has an icon already assigned to it as it is a system table, however the other tables have the default icon.
 
@@ -33,8 +33,8 @@ Icons can be used for the following purposes with model-driven apps.
 
 |Icon Type  |Description  |
 |---------|---------|
-|**Table icon**|A .svg, .gif, .png, or .jpg format image, 16x16 pixels in size. This article describes how to edit the table icon. |
-|**Icon for table forms**|A .svg, .gif, .png, or .jpg format image, 32x32 pixels in size. More information: [ Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) |
+|**Table icon**|An .svg, .gif, .png, or .jpg format image, 16x16 pixels in size. This article describes how to edit the table icon. |
+|**Icon for table forms**|An .svg, .gif, .png, or .jpg format image, 32x32 pixels in size. More information: [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) |
 |**App icon**|Must be a scalable vector graphic (.svg) icon. More information: [Manage model-driven app settings in the app designer](app-properties.md) |
 
 > [!NOTE]
@@ -73,30 +73,27 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 ## Review changes to your model-driven app icons
 
-Once the updates have taken effect the changes can be reviewed by playing the app.  In this case, the *Courses* table has been updated and the icon has changed.  
+Once the updates have taken effect the changes can be reviewed by playing the app. In this case, the *Courses* table has been updated and the icon has changed. 
 
 :::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
 
 ### Set the icons for a custom table (classic)
 
-1. From Power Apps , select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-2. Open the unmanaged solution with the tables where icons need to be set.
-3. Select **Switch to classic** from within the solution command bar (you may need to select **...** first). This opens the solution in the classic solution explorer.
-
-4. Once in the classic solution explorer, expand **Entities** (tables).
-
-5. Select the custom table, which requires an updated icon.
+1. From Power Apps, select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged solution with the tables where icons need to be set.
+1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). This opens the solution in the classic solution explorer.
+1. Once in the classic solution explorer, expand **Entities** (tables).
+1. Select the custom table, which requires an updated icon.
 
 #### Set table icons
 
-1. On the command bar, select **Update Icons**.  
-  
-2. In the **Select New Icons** dialog, on the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button.](media/lookup-button-4.gif).
-3. Select or create the appropriate web resource, and then select **OK**.
-4. In the **Unified Interface** tab, do the same for the **New Icon** column.
-5. Select **OK** to close the **Select New Icons** dialog.
-6. On the command bar, on the **File** menu, select **Save**.  
-7. When your changes are complete, publish them. Select **Publish** in the command bar while the table is selected in solution explorer.
+1. On the command bar, select **Update Icons**.
+1. In the **Select New Icons** dialog, on the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button.](media/lookup-button-4.gif).
+1. Select or create the appropriate web resource, and then select **OK**.
+1. In the **Unified Interface** tab, do the same for the **New Icon** column.
+1. Select **OK** to close the **Select New Icons** dialog.
+1. On the command bar, on the **File** menu, select **Save**.
+1. When your changes are complete, publish them. Select **Publish** in the command bar while the table is selected in solution explorer.
 
 ## Community tools
 
@@ -112,6 +109,5 @@ See the [Developer tools for Microsoft Dataverse](../../developer/data-platform/
 
 [Create a custom table](../data-platform/data-platform-create-entity.md)<br />
 [Edit a table](../data-platform/edit-entities.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
