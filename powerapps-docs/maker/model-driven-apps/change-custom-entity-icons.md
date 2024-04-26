@@ -1,6 +1,6 @@
 ---
 title: "Change model-driven app custom table icons in Power Apps | MicrosoftDocs"
-description: "Learn how to change the icon for a custom table"
+description: "Learn how to change the icon for a custom table."
 ms.custom: ""
 ms.date: 07/20/2022
 ms.reviewer: ""
@@ -51,7 +51,7 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 ## Set the icons for a custom table from the table definition
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Select **Solutions** on the left navigation pane, and open the solution you want or create a new one. Then open the custom table from the solution. To use the default solution, select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
@@ -60,11 +60,11 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 1. Under **Choose table image**, select from the following options:
    - Select the dropdown to choose an existing web resource.
    - Select **New image web resource** to create a web resource to add the icon. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md) 
-   :::image type="content" source="media/select-table-icon.png" alt-text="Select the table icon you want or create a new one":::
+   :::image type="content" source="media/select-table-icon.png" alt-text="Select the table icon you want or create a new one.":::
 
 1. Select **Save**.
 
-## Set the icon for a custom table in app designer
+## Set the icon for a in app designer
 
 1. On the app designer left pane, select the table.
 1. In the right table properties pane, under **Icon**, select **Use web resource** > **Select icon**.
