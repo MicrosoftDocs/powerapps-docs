@@ -1,5 +1,5 @@
 ---
-title:  Create low-code plug-ins to use with Microsoft Copilot
+title:  Create Dataverse low-code plug-ins to use with Microsoft Copilot
 description: Learn how to create low-code plug-ins to use with Microsoft Copilot Generative AI actions.
 author: mikefactorial
 ms.author: dikamath
@@ -11,9 +11,9 @@ ms.custom: template-how-to
 ---
 # Create low-code plug-ins to use with Microsoft Copilot
 
-Copilot actions are a way to extend the capabilities of your Copilot bots. With Copilot Generative AI actions, you create custom actions that can be triggered by your Copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a low-code plug-in that can be used as to create an action in Microsoft Copilot Studio.
+Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot Generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a low-code plug-in that can be used to create an action in Microsoft Copilot Studio.
 
-## Prerequisites
+## Prerequisites to use the plug-in with Microsoft Copilot
 
 Before you begin, make sure you have the following prerequisites:
 
@@ -22,7 +22,7 @@ Before you begin, make sure you have the following prerequisites:
 
 ## Basic low-code plugin example
 
-In this example you create a low-code instant plug-in that adds two numbers and returns the sum of those numbers. You then create a Copilot action that calls this low-code plug-in to perform the addition. The Copilot you create works for numbers as well as arbitrary text queries that contains numbers and fractions spelled out.
+In this example you create a low-code instant plug-in that adds two numbers and returns the sum of those numbers. You then create a Copilot action that calls this low-code plug-in to perform the addition. The copilot you create works for numbers and arbitrary text queries that contain numbers and fractions spelled out.
 
 To create your basic low-code instant plug-in, follow these steps:
 
@@ -45,11 +45,14 @@ To create your basic low-code instant plug-in, follow these steps:
 
 7. Create a copilot to call and then test your low-code plug-in as a Generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 
-If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds, such as *If I have 3 apples and my friend gives me 4 more, how many apples do I have in total?* or *If I have 1/2 pound of cheese and I order another 1/4 pound, how much cheese do I have total?*
+If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds. Some examples:
+
+- *If I have 3 apples and my friend gives me 4 more, how many apples do I have in total?*
+- *If I have 1/2 pounds of cheese and I order another 1/4 pounds, how much cheese do I have total?*
 
 :::image type="content" source="media/low-code-plugin-copilot-action3.png" alt-text="Results of adding two numbers from copilot" lightbox="media/low-code-plugin-copilot-action3.png":::
 
-## More complex low-code plugin example
+## Send notification low-code plugin example
 
 In this example you create a low-code instant plug-in that wraps an existing API for use with a copilot. The action sends a notification to a user when the user prompts it to do so. The copilot determines the required parameters from the plain language query from the user and sends a notification using a Dataverse low-code plugin-in to a model-driven app in Power Apps.
 
@@ -86,4 +89,4 @@ To create your low-code instant plug-in, follow these steps:
 
 ## See also
 
-[Use low-code plug-ins in Dataverse (preview)](low-code-plug-ins.md)
+[Use low-code plug-ins in Dataverse](low-code-plug-ins.md)
