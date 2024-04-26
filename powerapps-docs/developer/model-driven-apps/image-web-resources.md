@@ -40,7 +40,18 @@ With image web resources you can add images where you need them. Common uses inc
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of SVG over other image web resources is scale, smaller in size, and if the fill color is removed the model-driven app can control the icon color to avoid contrast issues.  When defining the SVG or before uploading it into the web resource please remove any "fill color" attributes. We recommend using SVG over other image types like PNG and JPG. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
+## Working with Scalable Vector Graphics (SVG)
+
+Vector Format (SVG) web resources can be used for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. We recommend using SVG over other image types like PNG and JPG. There are many advantages in using SVG over other image web resources: better accessibility, smaller file size and can scale with their container.
+
+### Better accessibility
+When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues.
+
+## Smaller file size
+Typically SVGs are smaller in size than raster type images such as jpg or png.
+
+## Scale with their container
+A single SVG can be used rather than multiple sizes of images. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.  Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
 
 > [!NOTE]
 > Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as JavaScript web resources because SVG files allow JScript embedding.
@@ -53,7 +64,7 @@ Like all web resources, image web resources use the security context. Only licen
   
 <a name="BKMK_ReferenceFromWebPageWebResource"></a>   
 ## Reference an image web resource from a webpage web resource  
- All web resources can use relative URLs to reference each other. In the following example, for the webpage (HTML) web resource new_/content/contentpage.htm to reference the image web resource new_/Images/image1.png, add the following HTML code to new_/content/contentpage.htm:  
+All web resources can use relative URLs to reference each other. In the following example, for the webpage (HTML) web resource new_/content/contentpage.htm to reference the image web resource new_/Images/image1.png, add the following HTML code to new_/content/contentpage.htm:  
   
 ```html  
 <img src="../Images/image1.png" />  
