@@ -15,8 +15,8 @@ search.app:
 contributors:
   - JimDaly
 ---
-#TODO: This needs to specify SQL Read performance. These tips do not apply to dataverse search
 # Optimize Queries For Read Performance
+<!-- #TODO: This needs to specify SQL Read performance. These tips do not apply to dataverse search -->
 
 Building optimized queries for Dataverse is vital to ensuring a fast, responsive, and reliable experience for your users. This article will describe several things to avoid and to keep in mind when designing queries. 
 
@@ -57,7 +57,7 @@ Example fetchxml which uses a leading wild card:
 	</entity>
 </fetch>
 ```
-For more information about wild card usage see https://learn.microsoft.com/en-us/power-apps/developer/data-platform/wildcard-characters?view=dataverse-latest&tabs=fetchxml 
+For more information about wild card usage see: [Use wildcard characters in conditions for string values](/powerapps-docs/developer/data-platform/wildcard-characters) 
 
 ## Avoid using calculated columns in filter conditions
 
@@ -72,9 +72,9 @@ If this pattern is detected in timing out queries we will throw a unique error c
 Message: The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.
 ```
 
-Dataverse will heavily throttle queries with filters on calculated columns which have been identified as a risk to the health of the org to help prevent outages. Please see the Query Throttling page for more info about how throttling will impact these queries. [Query throttling (Microsoft Dataverse)](/powerapps-docs/developer/data-platform/query-throttling.md) 
+Dataverse will heavily throttle queries with filters on calculated columns which have been identified as a risk to the health of the org to help prevent outages. Please see the Query Throttling page for more info about how throttling will impact these queries. [Query throttling (Microsoft Dataverse)](/powerapps-docs/developer/data-platform/query-throttling) 
 
-For more information about calculated columns see [Formula, calculated, and rollup columns using code](/powerapps-docs/developer/data-platform/calculated-rollup-attributes.md) 
+For more information about calculated columns see [Formula, calculated, and rollup columns using code](powerapps-docs/developer/data-platform/calculated-rollup-attributes) 
 
 
 ## Avoid ordering by Optionsets
