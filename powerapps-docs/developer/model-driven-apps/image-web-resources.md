@@ -21,8 +21,8 @@ There are 5 types of image web resources:
 * PNG Format
 * JPG Format
 * GIF Format
-* ICO Format
-* Vector Format (SVG)
+* ICO (Windows icon format) Format
+* SVG (Scalable Vector Graphics) format
 
 > [!NOTE]
 > Vector Format (SVG) web resources were added with the model-driven apps.
@@ -31,10 +31,10 @@ There are 5 types of image web resources:
 <a name="BKMK_Capabilities"></a>   
 
 ## Capabilities of image web resources  
-With image web resources you can add images where you need them. Common uses include the following:  
+With image web resources, you can add images where you need them. Common uses include:  
   
-- Custom table icons  
-- Icons for custom ribbon controls and `SiteMap` subareas  
+- Custom table icons.
+- Icons for custom ribbon controls and `SiteMap` subareas.
 - Decorative graphics for forms and webpage web resources.  
 - Background images that are used by CSS web resources.  
 
@@ -48,10 +48,20 @@ Vector Format (SVG) web resources can be used for any icon presented in the appl
 When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues.
 
 ### Smaller file size
-Typically SVGs are smaller in size than raster type images such as jpg or png.
+Typically SVG files are smaller in size than raster type images such as jpg or png.
 
 ### Scale with their container
-A single SVG can be used rather than multiple sizes of images. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.  Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
+A single SVG can be used rather than multiple sizes of images. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.  
+
+### Best practices
+Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
+
+Where possible, remove any hard coded fill colors and don't use embedded style sheets and classes within the SVG. Use the style attribute to assign the color instead.
+
+Example:
+```html
+<path style="fill:#231F20;" d="M16,0c-0,0-0-0.0-0-0.0v-0c0-0,0-0.0,0-0.0s0,0.0,0,0.0v0C00,0.0,00,0,00,0z"/>
+```
 
 > [!NOTE]
 > Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as JavaScript web resources because SVG files allow JScript embedding.
@@ -59,8 +69,7 @@ A single SVG can be used rather than multiple sizes of images. You can define on
 <a name="BKMK_Limitations"></a>   
 
 ## Limitations of image web resources  
-Like all web resources, image web resources use the security context. Only licensed users who have the necessary privileges can access them.  
- 
+Like all web resources, image web resources use the security context. Only licensed users who have the necessary privileges can access them.
   
 <a name="BKMK_ReferenceFromWebPageWebResource"></a>   
 ## Reference an image web resource from a webpage web resource  
