@@ -46,7 +46,9 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 
 ### Better accessibility
 
-When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues.
+Model-driven apps can control the icon color to avoid contrast issues when SVG's don't contain hex values for colors. 
+
+<!-- When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues. -->
 
 ### Smaller file size
 
