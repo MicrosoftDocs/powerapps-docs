@@ -1,12 +1,12 @@
 ---
 title:  Create low-code plug-ins to use with Microsoft Copilot
-description: 
+description: Learn how to create low-code plug-ins to use with Microsoft Copilot Generative AI actions.
 author: mikefactorial
-ms.author: mikefactorial
+ms.author: dikamath
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/22/2024
+ms.date: 04/26/2024
 ms.custom: template-how-to
 ---
 # Create low-code plug-ins to use with Microsoft Copilot
@@ -22,7 +22,7 @@ Before you begin, make sure you have the following prerequisites:
 
 ## Basic low-code plugin example
 
-In this example, you create a low-code instant plug-in that adds two numbers and returns the sum of those numbers. You then create a Copilot action that calls this low-code plug-in to perform the addition. The Copilot you create works for numbers as well as arbitrary text queries that contains numbers and fractions spelled out.
+In this example you create a low-code instant plug-in that adds two numbers and returns the sum of those numbers. You then create a Copilot action that calls this low-code plug-in to perform the addition. The Copilot you create works for numbers as well as arbitrary text queries that contains numbers and fractions spelled out.
 
 To create your basic low-code instant plug-in, follow these steps:
 
@@ -40,18 +40,18 @@ To create your basic low-code instant plug-in, follow these steps:
     ```
     {Result: Number1 + Number2}
     ```
-      :::image type="content" source="media/low-code-plugin-copilot-action1.png" alt-text="Create instant low-code plugin that adds to numbers":::
+      :::image type="content" source="media/low-code-plugin-copilot-action1.png" alt-text="Create instant low-code plugin that adds to numbers" lightbox="media/low-code-plugin-copilot-action1.png":::
 6. Select **Save** to save your plug-in.
 
 7. Create a copilot to call and then test your low-code plug-in as a Generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 
 If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds, such as *If I have 3 apples and my friend gives me 4 more, how many apples do I have in total?* or *If I have 1/2 pound of cheese and I order another 1/4 pound, how much cheese do I have total?*
 
-:::image type="content" source="media/low-code-plugin-copilot-action3.png" alt-text="Results of adding two numbers from copilot":::
+:::image type="content" source="media/low-code-plugin-copilot-action3.png" alt-text="Results of adding two numbers from copilot" lightbox="media/low-code-plugin-copilot-action3.png":::
 
 ## More complex low-code plugin example
 
-In this example, you create a low-code instant plug-in that wraps an existing API for use with a copilot. The action sends a notification to a user when the user prompts it to do so. The copilot determines the required parameters from the plain language query from the user and sends a notification using a Dataverse low-code plugin-in to a model-driven app in Power Apps.
+In this example you create a low-code instant plug-in that wraps an existing API for use with a copilot. The action sends a notification to a user when the user prompts it to do so. The copilot determines the required parameters from the plain language query from the user and sends a notification using a Dataverse low-code plugin-in to a model-driven app in Power Apps.
 
 To create your low-code instant plug-in, follow these steps:
 
@@ -66,23 +66,23 @@ To create your low-code instant plug-in, follow these steps:
         - **Parameter Name**: Url, Type: String
     - Add the following output parameter:
         - **Parameter Name**: Result, Type: String
-5. In the **Expression** section, enter the following code. Notice that we're wrapping the existing XSendAppNotification API with our plugin to give us the ability to find users by name which helps when we call it from Copilot who can only provide us with information the user knows about the person and not more esoteric IDs of records that the underlying API is expecting:
+5. In the **Expression** section, enter the following code. Notice that we're wrapping the existing `XSendAppNotification` API with the plugin to give the ability to find users by name. This behavior helps when called from copilot, which can only provide information the user knows about the person and not more esoteric IDs of records that the underlying API is expecting:
 
-    ```
+   ```powerappsfl
    XSendAppNotification(Title,
-    First(Filter(Users, UserName in 'Full Name')), 
-    Body,
-    [XCreateUrlAction("Click Here", Url)]
+   First(Filter(Users, UserName in 'Full Name')), 
+   Body,
+   [XCreateUrlAction("Click Here", Url)]
    );
    {Result: "Success"}
-    ```
+   ```
 
-   :::image type="content" source="media/low-code-plugin-copilot-action2.png" alt-text="Create a low-code plugin to send notification":::
+   :::image type="content" source="media/low-code-plugin-copilot-action2.png" alt-text="Create a low-code plugin to send notification" lightbox="media/low-code-plugin-copilot-action2.png":::
 1. Select **Save** to save your plug-in.
 1. Create a copilot to call and then test your low-code plug-in as a Generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 
 <!-- Need revised result detail-->
-:::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot":::
+:::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot" lightbox="media/low-code-plugin-copilot-action4.png":::
 
 ## See also
 
