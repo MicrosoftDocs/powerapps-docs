@@ -47,10 +47,10 @@ Vector Format (SVG) web resources can be used for any icon presented in the appl
 ### Better accessibility
 When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues.
 
-## Smaller file size
+### Smaller file size
 Typically SVGs are smaller in size than raster type images such as jpg or png.
 
-## Scale with their container
+### Scale with their container
 A single SVG can be used rather than multiple sizes of images. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.  Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
 
 > [!NOTE]
