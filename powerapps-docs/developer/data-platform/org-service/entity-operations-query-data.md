@@ -22,7 +22,7 @@ The SDK for .NET provides several methods to query data. Each provides different
 |[FetchExpression class](/dotnet/api/microsoft.xrm.sdk.query.fetchexpression)|Use the proprietary FetchXML query language to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. FetchXml provides capabilities that other options don't.<br />[Learn how to query data using FetchXml](../fetchxml/overview.md) |
 |[QueryExpression class](/dotnet/api/microsoft.xrm.sdk.query.queryexpression)|Use a strongly typed object model to create complex queries that can return paged data sets or grouped and aggregated data. You can create joins to include data from related records. Supports [most the features](queryexpression/overview.md#limitations) in FetchXML.<br />[Learn how to query data using QueryExpression](queryexpression/overview.md)|
 |[QueryByAttribute class](/dotnet/api/microsoft.xrm.sdk.query.querybyattribute)|A simpler object model for common queries to return rows that match all the criteria in your query. Supports paging, but not groups and aggregated data sets. Can only return data from a single table.<br />[Learn how to query data using the QueryByAttribute class](use-querybyattribute-class.md)|
-|[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use [OrganizationServiceContext.QueryProvider](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider) to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br />This article focuses on SDK classes to retrieve data.[Learn how to query data with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
+|[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use [OrganizationServiceContext.QueryProvider](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider) to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to `QueryExpression`.<br />This article focuses on SDK classes to retrieve data. [Learn how to query data with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
 
 ## How to send requests
 
@@ -37,7 +37,15 @@ When you retrieve data using these classes there are some concepts you must unde
 
 ## Null column values are not returned
 
-When a table column contains a null value, or if the column wasn't requested, the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. When you use the [early bound style](early-bound-programming.md#early-bound), the properties of the generated classes that inherit from [Entity class](xref:Microsoft.Xrm.Sdk.Entity) manage this and return a null value.
+When a table column contains a null value, or if the column wasn't requested, the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null.
+
+Columns that are not valid for read will return null values. The definition of these columns have the [AttributeMetadata.IsValidForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforread) property set to `false`.
+
+## Early bound classes manage null values
+
+When you use the [early bound style](early-bound-programming.md#early-bound), the properties of the generated classes that inherit from [Entity class](xref:Microsoft.Xrm.Sdk.Entity) manage this and return a null value. [Learn about generating early bound classes](generate-early-bound-classes.md)
+
+## How to mitigate null values using late bound classes
 
 When you use the [late bound style](early-bound-programming.md#late-bound), if you try to access the value using an indexer on the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) or [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collections, you'll get an <xref:System.Collections.Generic.KeyNotFoundException> with the message `The given key was not present in the dictionary`.
 
