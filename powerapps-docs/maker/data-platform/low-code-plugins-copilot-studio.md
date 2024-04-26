@@ -1,6 +1,6 @@
 ---
 title:  Create Dataverse low-code plug-ins to use with Microsoft Copilot
-description: Learn how to create low-code plug-ins to use with Microsoft Copilot Generative AI actions.
+description: Learn how to create low-code plug-ins to use with Microsoft Copilot generative AI actions.
 author: mikefactorial
 ms.author: dikamath
 ms.reviewer: matp
@@ -11,7 +11,7 @@ ms.custom: template-how-to
 ---
 # Create low-code plug-ins to use with Microsoft Copilot
 
-Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot Generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a low-code plug-in that can be used to create an action in Microsoft Copilot Studio.
+Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a low-code plug-in that can be used to create an action in Microsoft Copilot Studio.
 
 ## Prerequisites to use the plug-in with Microsoft Copilot
 
