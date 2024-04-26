@@ -48,6 +48,10 @@ These examples use the same request objects as demonstrated in [Create a table r
 
 Creates a sample account record.
 
+
+> [!NOTE]
+> Creating records with images are not supported for offline mode.
+
 ```JavaScript
 // define the data to create new account
 var data =
