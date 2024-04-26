@@ -1,7 +1,7 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic." 
-ms.date: 03/17/2023
+ms.date: 04/24/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -28,6 +28,9 @@ As a developer of a client application, you can pass special [optional parameter
 |**Power Automate Flows**|When large numbers of system jobs created to support flows cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the flows while performing bulk operations.|
 
 ## Bypass Synchronous Logic
+
+> [!NOTE]
+> New ways to bypass business logic are in preview. [Learn about new capabilities to bypass Custom Business Logic (preview)](bypass-custom-business-logic-preview.md)
 
 Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
 
