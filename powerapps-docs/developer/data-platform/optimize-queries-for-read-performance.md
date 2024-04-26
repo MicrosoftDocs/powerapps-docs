@@ -57,7 +57,7 @@ Example fetchxml which uses a leading wild card:
 	</entity>
 </fetch>
 ```
-For more information about wild card usage see: [Use wildcard characters in conditions for string values](/powerapps-docs/developer/data-platform/wildcard-characters) 
+For more information about wild card usage see: [Use wildcard characters in conditions for string values](../data-platform/wildcard-characters.md) 
 
 ## Avoid using calculated columns in filter conditions
 
@@ -72,9 +72,9 @@ If this pattern is detected in timing out queries we will throw a unique error c
 Message: The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.
 ```
 
-Dataverse will heavily throttle queries with filters on calculated columns which have been identified as a risk to the health of the org to help prevent outages. Please see the Query Throttling page for more info about how throttling will impact these queries. [Query throttling (Microsoft Dataverse)](/powerapps-docs/developer/data-platform/query-throttling) 
+Dataverse will heavily throttle queries with filters on calculated columns which have been identified as a risk to the health of the org to help prevent outages. Please see the Query Throttling page for more info about how throttling will impact these queries. [Query throttling (Microsoft Dataverse)](../data-platform/query-throttling.md) 
 
-For more information about calculated columns see [Formula, calculated, and rollup columns using code](powerapps-docs/developer/data-platform/calculated-rollup-attributes) 
+For more information about calculated columns see [Formula, calculated, and rollup columns using code](../data-platform/calculated-rollup-attributes.md) 
 
 
 ## Avoid ordering by Optionsets
@@ -96,7 +96,7 @@ Example query ordering on the statecode optionset:
 
 ## Avoid ordering by link-entity attributes
 
-Ordering by link-entity attributes can lead to sub-optimal query performance due to the added complexity. Ordering by Link-Entiies should only be done when needed to as described here: [Order rows using FetchXml](/powerapps-docs/developer/data-platform/fetchxml/order-rows.md) MicrosoftDocs/powerapps-docs-pr/powerapps-docs/developer/data-platform/fetchxml/order-rows.md
+Ordering by link-entity attributes can lead to sub-optimal query performance due to the added complexity. Ordering by Link-Entiies should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
 
 ``` xml
 <fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
