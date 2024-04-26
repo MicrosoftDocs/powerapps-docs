@@ -44,6 +44,8 @@ Icons can be used for the following purposes with model-driven apps.
 > - Setting the icon in the app designer overrides the table definition icon setting. When the table icon in app designer is set to the default icon, the icon specified in the table definition is displayed in the app.
 >
 > - When a scalable vector graphic (.svg) image is used as the app icon or icon for table forms, it must have the default size set. Since SVG is an XML document, the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) values can be edited with a text editor to define the default size for the image.
+>
+> - Where possible remove any hard coded fill color attributes to avoid contrast issues.
 
 Each type of icon is stored as a web resource. Create a web resource first and then set the icons to use them. Alternatively, you can add the icon by creating a new web resource when you define the table properties.
 
