@@ -14,7 +14,7 @@ contributors:
 ms.custom: bap-template
 ---
 # Use wildcard characters in conditions for string values
-
+<!-- dasuss TODO: Improve this Docs to be clearer -->
 You can use wildcard characters with the following operators when you build queries that include conditions on string values:
 
 # [FetchXml](#tab/fetchxml)
