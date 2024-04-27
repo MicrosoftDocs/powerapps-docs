@@ -85,7 +85,10 @@ After you share an app for guest access, guests can discover and access apps sha
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
   - In Azure national or sovereign clouds, they're recognized across tenants in guest scenarios. More information: [National clouds](/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
   - Licenses are not recognized across tenants in difference Azure clouds.
-  - Not all connectors create connections in the resource tenant by default. 
+  - Not all connectors create connections in the resource tenant by default.
+  - Users signed in to an app using Azure B2B will not see identity details in the 'my account' icon accessible from the header at the top of the app. This experience is shown in the following screenshot.
+    
+![Power Apps Azure B2B user profile known issue](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/11514622/a51c75bc-c1de-4c2b-a688-91eca9ee5704)
 
 ## Frequently asked questions
 
