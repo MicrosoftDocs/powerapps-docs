@@ -81,9 +81,9 @@ When the updates take effect, they can be reviewed by playing the app. In this c
 
 1. From Power Apps, select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the unmanaged solution that contains the tables where icons need to be set.
-1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). The solution will open in the classic solution explorer.
+1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). The classic solution explorer will open the solution.
 1. In the classic solution explorer, expand **Entities** (tables).
-1. Select the custom table which requires an updated icon.
+1. Select the custom table that requires an updated icon.
 
 #### Set table icons
 
