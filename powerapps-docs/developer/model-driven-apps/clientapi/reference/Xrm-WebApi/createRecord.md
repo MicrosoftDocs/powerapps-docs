@@ -75,7 +75,7 @@ Xrm.WebApi.createRecord("account", data).then(
 ```
 
 > [!NOTE]
-> Creating records with primary images are not supported for offline mode. Only primary images can be set with create in online mode. [Learn more about Primary images]( /power-apps/developer/data-platform/image-column-data?tabs=webapi#primary-images)
+> Creating records with a primary image is not supported for offline mode. Primary images can only be set with create in online mode. Other image columns cannot be set with create. [Learn more about Primary images](../../../../data-platform/image-column-data.md#primary-images)
 
 ### Create related table records along with the primary record
 
