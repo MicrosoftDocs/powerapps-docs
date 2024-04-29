@@ -79,7 +79,7 @@ Paging works best when you use the paging cookie data that Dataverse returns wit
 
 For each [Entity](xref:Microsoft.Xrm.Sdk.Entity) in the [EntityCollection.Entities](xref:Microsoft.Xrm.Sdk.EntityCollection.Entities), access the table column (attribute) data values using the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection.
 
-You can display and edit simple data types like numbers and strings in applications directly. For certain complex data types, Dataverse provides read-only, formatted string values you can display in applications. The format of these string values depend on settings that can be set by an administrator and overridden by each user.
+You can display and edit simple data types like numbers and strings in applications directly. For certain data types, Dataverse provides read-only, formatted string values you can display in applications. The format of some of these string values depend on settings that can be set by an administrator and overridden by each user.
 
 - An administrator can [customize default regional options](/power-platform/admin/customize-regional-options-admins) that apply for all new users. These settings are stored in the [Organization table](../reference/entities/organization.md).
 - Each user may [override these settings for their personal preferences](../../../user/set-personal-options.md). These settings are stored in the [UserSettings table](../reference/entities/usersettings.md).
@@ -173,7 +173,22 @@ name:Contoso Pharmaceuticals (sample)
 
 ## Columns that use an an alias return an AliasedValue
 
-TODO
+When you retrieve aggregated values, you need to specify an name for the column that contains the aggregated value. You can also specify a different column names for 'regular' queries, although this is less common.
+
+When you specify an alias, the value returned is wrapped in an [AliasedValue](/dotnet/api/microsoft.xrm.sdk.aliasedvalue). The `AliasedValue` class has three properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`EntityLogicalName`|`String`|The logical name of the table that has the column that the data came from.|
+|`AttributeLogicalName`|`String`|The logical name of the column that the data came from.|
+|`Value`|`Object`|The aggregated value or the value of the column row using an alias.|
+
+When you use a column alias, you need to cast the `Value` property to access the value returned.
+
+Learn more about column aliases:
+
+- [FetchXMl Column aliases](../fetchxml/select-columns.md#column-aliases)
+- [QueryExpression Column aliases](../fetchxml/select-columns.md#column-aliases)
 
 ## Convert queries between FetchXml and QueryExpression
 
@@ -195,6 +210,25 @@ If this occurs a user must either:
 
 ## All filter conditions for string values are case insensitive
 
-TODO
+When comparing string values, don't worry about the case. The following `QueryExpression` query will return account records with the name `Contoso, Ltd` and `CONTOSO, LTD`.
+
+```csharp
+QueryExpression query = new("account")
+{
+   ColumnSet = new ColumnSet("name"),
+   Criteria = new FilterExpression(LogicalOperator.And) { 
+      Conditions = {
+         { 
+               new ConditionExpression(
+                  attributeName: "name", 
+                  conditionOperator: ConditionOperator.Equal, 
+                  value: "CONTOSO, LTD") 
+         }
+      }
+   },
+   TopCount = 3
+};
+```
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

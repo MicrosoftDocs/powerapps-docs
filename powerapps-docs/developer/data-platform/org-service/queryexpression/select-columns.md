@@ -1,7 +1,7 @@
 ---
 title: Select columns using QueryExpression
 description: Learn how to use QueryExpression to select columns when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 04/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -65,12 +65,6 @@ This helps avoid runtime errors due to typing the wrong name. Learn more about:
 - [Generating early-bound classes for the SDK for .NET](../generate-early-bound-classes.md) 
 - [Late-bound and early-bound programming using the SDK for .NET](../early-bound-programming.md)
 
-
-
-<!-- 
-Removed the section on formatted values since it is already explained for SDK in  
-https://learn.microsoft.com/power-apps/developer/data-platform/org-service/entity-operations-query-data#formatted-values-are-returned-for-some-columns
--->
 
 ## Column aliases
 
@@ -169,7 +163,7 @@ The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties
 
 ## Aliased and formatted values example
 
-This article described how results returned may be returned as aliased values. As explained in [Access formatted values](../entity-operations-query-data.md#formatted-values-are-returned-for-some-columns), formatted string values are also returned using the [Entity.FormattedValues collection](/dotnet/api/microsoft.xrm.sdk.entity.formattedvalues) to provide string values suitable for display in an application.
+[Columns that use an an alias return an AliasedValue](../entity-operations-query-data.md#columns-that-use-an-an-alias-return-an-aliasedvalue). As explained in [Access formatted values](../entity-operations-query-data.md#formatted-values-are-returned-for-some-columns), formatted string values are also returned using the [Entity.FormattedValues collection](/dotnet/api/microsoft.xrm.sdk.entity.formattedvalues) to provide string values suitable for display in an application.
 
 The following static `OutputQueryExpression` example method demonstrates how to extract string values for each row of data. This function uses the `QueryExpression.ColumnSet` data to know which columns are requested, and then processes the results to find the best way to display the record data in an app, in this case, a console application using the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables) to render a table.
 
