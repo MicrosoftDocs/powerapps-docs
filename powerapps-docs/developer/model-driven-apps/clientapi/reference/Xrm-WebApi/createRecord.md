@@ -48,6 +48,9 @@ These examples use the same request objects as demonstrated in [Create a table r
 
 Creates a sample account record.
 
+> [!NOTE]
+> Creating records with primary images are not supported for offline mode. Only primary images can be set with create in online mode. [Learn more about Primary images]( /power-apps/developer/data-platform/image-column-data?view=dataverse-latest&tabs=webapi#primary-images)
+
 ```JavaScript
 // define the data to create new account
 var data =
