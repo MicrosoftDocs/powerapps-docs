@@ -3,7 +3,7 @@ title: "createRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the createRecord method.
 author: lancedMicrosoft
 ms.author: lanced
-ms.date: 08/22/2022
+ms.date: 04/29/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -49,7 +49,7 @@ These examples use the same request objects as demonstrated in [Create a table r
 Creates a sample account record.
 
 > [!NOTE]
-> Creating records with primary images are not supported for offline mode. Only primary images can be set with create in online mode. [Learn more about Primary images]( /power-apps/developer/data-platform/image-column-data?view=dataverse-latest&tabs=webapi#primary-images)
+> Creating records with primary images are not supported for offline mode. Only primary images can be set with create in online mode. [Learn more about Primary images]( /power-apps/developer/data-platform/image-column-data?tabs=webapi#primary-images)
 
 ```JavaScript
 // define the data to create new account
