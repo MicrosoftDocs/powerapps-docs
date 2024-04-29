@@ -29,11 +29,11 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 
 ## Prerequisites
 
-- A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1."
-- If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+- A Power BI premium license or Fabric capacity within the same Azure geo as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1."
+- If you don’t have Power BI premium license or Fabric capacity within the same Geo region, you buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 
    > [!NOTE]
-   > This won't be a prerequisite in the update expected in all regions by April 30, 2024. When no longer required, you can link to a workspace within the same country or geo boundary even if you don't have a capacity within the same Azure region.
+   > As of April 30, 2024 you are no longer required to have a Fabric capacity within the same Azure region. Now, you can link to a workspace within the same country or geo boundary even if you don't have a capacity within the same Azure region.
   
 - Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - You must have the System Administrator security role in the Dataverse environment. 
