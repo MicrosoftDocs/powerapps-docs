@@ -73,16 +73,16 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 ## Review changes to your model-driven app icons
 
-When the updates take effect, they can be reviewed by playing the app. In this case, the *Courses* table and it's icon are updated. 
+When the updates take effect, they can be reviewed by playing the app. In this case, the *Courses* table and its icon are updated. 
 
 :::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
 
 ### Set the icons for a custom table (classic)
 
 1. From Power Apps, select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Open the unmanaged solution with the tables where icons need to be set.
+1. Select the unmanaged solution that contains the tables where icons need to be set.
 1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). The solution will open in the classic solution explorer.
-1. In the classic solution explorer expand **Entities** (tables).
+1. In the classic solution explorer, expand **Entities** (tables).
 1. Select the custom table which requires an updated icon.
 
 #### Set table icons
