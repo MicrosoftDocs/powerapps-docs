@@ -48,8 +48,6 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 
 Model-driven apps can control the icon color to avoid contrast issues when SVG's don't contain hex values for colors. 
 
-<!-- When fill color hex values are removed and the [currentColor](https://developer.mozilla.org/docs/Web/CSS/color_value#currentcolor_keyword) the model-driven app can control the icon color to avoid contrast issues. -->
-
 ### Smaller file size
 
 SVG files are typically smaller than raster type images, such as jpg or png.
@@ -62,7 +60,7 @@ You can reuse a single SVG rather than provide multiple sizes of images. Use SVG
 
 Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height), and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
 
-Where possible, remove any hard coded fill colors and don't use embedded style sheets and classes within the SVG. Use the style attribute to assign the color instead. For example:
+Where possible, remove any hard coded fill colors and don't use embedded style sheets and classes within the SVG. Embedded stylesheets could leak styles if other SVGs are referencing that same class. Use the style attribute to assign values instead. For example:
 
 ```html
 <path style="fill:#231F20;" d="M16,0c-0,0-0-0.0-0-0.0v-0c0-0,0-0.0,0-0.0s0,0.0,0,0.0v0C00,0.0,00,0,00,0z"/>
