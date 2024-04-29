@@ -64,7 +64,7 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 1. Select **Save**.
 
-## Set the icon for a in app designer
+## Set the icon for a table in app designer
 
 1. On the app designer left pane, select the table.
 1. In the right table properties pane, under **Icon**, select **Use web resource** > **Select icon**.
