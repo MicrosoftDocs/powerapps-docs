@@ -30,6 +30,7 @@ To learn how to use the new AI features in Power Apps, see:
 - [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
+- [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
 
 > [!IMPORTANT]
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
