@@ -23,9 +23,9 @@ search.audienceType:
 ---
 # Change model-driven app custom table icons
 
-When a custom table is created, it's automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It is not possible to modify the icons assigned to system tables.
+When a custom table is created, a default icon is automatically assigned. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It's not possible to modify the icons assigned to system tables.
 
-In the example here, the accounts table has an icon already assigned to it as it is a system table, however the other tables have the default icon.
+In the example here, the accounts table has an icon already assigned to it as it's a system table, however the other tables have the default icon.
 
 :::image type="content" source="media/icons-start.png" alt-text="Model-driven apps without icons set":::
   
@@ -73,7 +73,7 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 ## Review changes to your model-driven app icons
 
-Once the updates have taken effect the changes can be reviewed by playing the app. In this case, the *Courses* table has been updated and the icon has changed. 
+When the updates take effect, they can be reviewed by playing the app. In this case, the *Courses* table and it's icon are updated. 
 
 :::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
 
@@ -81,9 +81,9 @@ Once the updates have taken effect the changes can be reviewed by playing the ap
 
 1. From Power Apps, select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the unmanaged solution with the tables where icons need to be set.
-1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). This opens the solution in the classic solution explorer.
-1. Once in the classic solution explorer, expand **Entities** (tables).
-1. Select the custom table, which requires an updated icon.
+1. Select **Switch to classic** from within the solution command bar (you might need to select **...** first). The solution will open in the classic solution explorer.
+1. In the classic solution explorer expand **Entities** (tables).
+1. Select the custom table which requires an updated icon.
 
 #### Set table icons
 
@@ -97,7 +97,7 @@ Once the updates have taken effect the changes can be reviewed by playing the ap
 
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. This allows a designer to **update** the icons associated with a table in addition to introducing **new icons**.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. A can designer use the tool to **update** icons associated with a table in addition to introducing **new icons**.
 
 See the [Developer tools for Microsoft Dataverse](../../developer/data-platform/developer-tools.md) article for community developed tools.
 
