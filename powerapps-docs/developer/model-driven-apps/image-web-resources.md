@@ -42,7 +42,7 @@ With image web resources, you can add images where you need them. Common uses in
 
 ## Working with Scalable Vector Graphics (SVG)
 
-Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG), an XML-based vector image format. We recommend using SVG over other image types like PNG and JPG. Vector Format (SVG) web resources are better than other image web resource types because they have better accessibility, smaller file size, and can scale with their container.
+Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG), an XML-based vector image format. We recommend using SVG over other image types like PNG and JPG because they have better accessibility, smaller in file size, and can scale with their container.
 
 ### Better accessibility
 
@@ -60,7 +60,7 @@ You can reuse a single SVG rather than provide multiple sizes of images. Use SVG
 
 Ensure that a default size is set through the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width), [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height), and [viewBox](https://developer.mozilla.org/docs/Web/SVG/Attribute/viewBox) attributes.
 
-Where possible, remove any hard coded fill colors and don't use embedded style sheets and classes within the SVG. Embedded stylesheets could leak styles if other SVGs are referencing that same class. Use the style attribute to assign values instead. For example:
+Where possible, remove any hard coded fill colors and don't use embedded style sheets and classes within the SVG. Embedded stylesheets could leak styles if other SVG files are referencing that same class. Use the style attribute to assign values instead. For example:
 
 ```html
 <path style="fill:#231F20;" d="M16,0c-0,0-0-0.0-0-0.0v-0c0-0,0-0.0,0-0.0s0,0.0,0,0.0v0C00,0.0,00,0,00,0z"/>
@@ -71,7 +71,7 @@ Where possible, remove any hard coded fill colors and don't use embedded style s
 
 ## Limitations of image web resources
 
-Like all web resources, image web resources use the security context. Only licensed users who have the necessary privileges can access them.
+Image web resources use the security context like all web resources. Only licensed users who have the necessary privileges can access them.
 
 ## Reference an image web resource from a webpage web resource
 
