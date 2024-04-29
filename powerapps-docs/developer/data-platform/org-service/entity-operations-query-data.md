@@ -77,29 +77,30 @@ Paging works best when you use the paging cookie data that Dataverse returns wit
 
 ## Formatted values are returned for some columns
 
-For each [Entity](xref:Microsoft.Xrm.Sdk.Entity) in the [EntityCollection.Entities](xref:Microsoft.Xrm.Sdk.EntityCollection.Entities), access the table column (attribute) data values using the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection. 
+For each [Entity](xref:Microsoft.Xrm.Sdk.Entity) in the [EntityCollection.Entities](xref:Microsoft.Xrm.Sdk.EntityCollection.Entities), access the table column (attribute) data values using the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection.
 
-You can display and edit simple data types like numbers and strings in applications directly. For certain complex data types, Dataverse provides read-only, formatted string values you can display in applications. The format of these string values may depend on environment settings, such as the currency configured for a field that stores a value of money.
+You can display and edit simple data types like numbers and strings in applications directly. For certain complex data types, Dataverse provides read-only, formatted string values you can display in applications. The format of these string values depend on settings that can be set by an administrator and overridden by each user.
+
+- An administrator can [customize default regional options](/power-platform/admin/customize-regional-options-admins) that apply for all new users. These settings are stored in the [Organization table](../reference/entities/organization.md).
+- Each user may [override these settings for their personal preferences](../../../user/set-personal-options.md). These settings are stored in the [UserSettings table](../reference/entities/usersettings.md).
 
 Use the [Entity.FormattedValues](xref:Microsoft.Xrm.Sdk.Entity.FormattedValues) collection to access formatted values for these types of columns:
 
 
-|Type |AttributeMetadata type|Description|
+|Type |Data type returned|Formatted value description|
 |---------|---------|---------|
-|**Yes/No**|[BooleanAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|Returns a boolean value. The formatted valued contains the localized label for the corresponding [BooleanOptionSetMetadata.FalseOption](/dotnet/api/microsoft.xrm.sdk.metadata.booleanoptionsetmetadata.falseoption) or [BooleanOptionSetMetadata.TrueOption ](/dotnet/api/microsoft.xrm.sdk.metadata.booleanoptionsetmetadata.trueoption) properties. |
-|**Customer**<br />**Lookup**<br />**Owner**|[LookupAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|These columns return <xref:Microsoft.Xrm.Sdk.EntityReference> values. The formatted value contains the [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) value.|
-|**Date and Time**|[DateTimeAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|Returns a UTC [System.DateTime](/dotnet/api/system.datetime) value. The formatted value depends on the behavior and format configurations for the column. [Learn more about behavior and format of the date and time column](../../../maker/data-platform/behavior-format-date-time-field.md)|
-|**Entity Name**|[EntityNameAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|Returns the logical name of a table or `none`. When the value isn't `none`, the formatted value is the localized [DisplayName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.displayname) value for the table.|
-|**Currency**|[MoneyAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)||
-|**Choices**|[MultiSelectPicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)||
-|**Choice**|[PicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)||
-|**Status**|[StateAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)||
-|**Status Reason**|[StatusAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)||
+|**Yes/No**<br />[BooleanAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[Boolean ](/dotnet/api/system.boolean)|The localized label for the corresponding [BooleanOptionSetMetadata.FalseOption](/dotnet/api/microsoft.xrm.sdk.metadata.booleanoptionsetmetadata.falseoption) or [BooleanOptionSetMetadata.TrueOption ](/dotnet/api/microsoft.xrm.sdk.metadata.booleanoptionsetmetadata.trueoption) properties. |
+|**Customer**, **Lookup**, and **Owner**<br />[LookupAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference)|The [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) value, which is the value of the primary name column for the record.|
+|**Date and Time**<br />[DateTimeAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[DateTime ](/dotnet/api/system.datetime)|Depends on [the behavior and format configurations for the column](../../../maker/data-platform/behavior-format-date-time-field.md), organization settings, and personal options set by the user, such as the time zone they are in.|
+|**Entity Name**<br />[EntityNameAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[String ](/dotnet/api/system.string)|When the value isn't `none`, the formatted value is the localized [DisplayName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.displayname) value for the table.|
+|**Currency**<br />[MoneyAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[Money ](/dotnet/api/microsoft.xrm.sdk.money)|Depends on the currency selected for the column as well as organization and user preferences.|
+|**Choices**<br />[MultiSelectPicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[OptionSetValueCollection](/dotnet/api/microsoft.xrm.sdk.optionsetvaluecollection)|When a single option is selected, the localized label for the selected option. When multiple options are selected, a string with the localized labels for each selected option, separated by `; `. For example: `Appetizer; Entree; Dessert`|
+|**Choice**<br />[PicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)<br />**Status**<br />[StateAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)<br />**Status&nbsp;Reason**<br />[StatusAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|[OptionSetValue ](/dotnet/api/microsoft.xrm.sdk.optionsetvalue)|The localized label for the selected option.|
 
 
-The following sample shows how to access the formatted string values for the following account attributes:
+The following sample shows how to access the formatted string values for the following account columns:
 
-|Attribute logical name|Type|
+|Logical name|Type|
 |--|--|
 |`primarycontactid`|<xref:Microsoft.Xrm.Sdk.EntityReference>|
 |`createdon`|<xref:System.DateTime>|
@@ -107,48 +108,59 @@ The following sample shows how to access the formatted string values for the fol
 |`statecode`|<xref:Microsoft.Xrm.Sdk.OptionSetValue>|
 
 ```csharp
-var query = new QueryByAttribute("account")
+static void FormattedValuesExample(IOrganizationService service)
 {
-TopCount = 50,
-ColumnSet = new ColumnSet("name", "primarycontactid", "createdon", "revenue", "statecode")
-};
-query.AddAttributeValue("address1_city", "Redmond");
-query.AddOrder("name", OrderType.Ascending);
+    List<string> columns = new() {
+        "name",
+        "primarycontactid",
+        "createdon",
+        "revenue",
+        "statecode"
+    };
 
-EntityCollection results = svc.RetrieveMultiple(query);
+    QueryExpression query = new("account")
+    {
+        ColumnSet = new ColumnSet(columns.ToArray()),
+        TopCount = 3
+    };
 
-results.Entities.ToList().ForEach(x =>
-{
-Console.WriteLine(@"
-name:{0}
-primary contact: {1}
-created on: {2}
-revenue: {3}
-status: {4}",
-  x.Attributes["name"],
-  (x.Contains("primarycontactid")? x.FormattedValues["primarycontactid"]:string.Empty),
-  x.FormattedValues["createdon"],
-  (x.Contains("revenue") ? x.FormattedValues["revenue"] : string.Empty),
-  x.FormattedValues["statecode"]
-  );
-});
+    EntityCollection accounts = service.RetrieveMultiple(query);
+
+    accounts.Entities.ToList().ForEach(x =>
+    {
+        string name = (string)x.Attributes["name"];
+        string primarycontactid = x.Contains("primarycontactid") ? 
+           x.FormattedValues["primarycontactid"] : 
+           string.Empty;
+        string createdon = x.FormattedValues["createdon"];
+        string revenue = x.Contains("revenue") ? 
+           x.FormattedValues["revenue"] : 
+           string.Empty;
+        string statecode = x.FormattedValues["statecode"];
+
+        Console.WriteLine(@$"
+name:{name}
+    primary contact: {primarycontactid}
+    created on: {createdon}
+    revenue: {revenue}
+    status: {statecode}"
+            );
+    });
+}
 ```
-
-> [!NOTE]
-> Table columns (attributes) which contain null values are not returned in the query `Attributes` or `FormattedValues` collections. If a column may contain a null value you should check using the <xref:Microsoft.Xrm.Sdk.Entity.Contains*> method before attempting to access the value.
 
 The formatted results would display like these:
 
 ```
 name:A Datum (sample)
   primary contact: Rene Valdes (sample)
-  created on: 2/28/2018 11:04 AM
+  created on: 2/28/2020 11:04 AM
   revenue: $10,000.000
   status: Active
 
 name:City Power & Light (sample)
   primary contact: Scott Konersmann (sample)
-  created on: 2/28/2018 11:04 AM
+  created on: 2/28/2024 11:04 AM
   revenue: $100,000.000
   status: Active
 
@@ -174,11 +186,11 @@ More information: [Sample: Convert queries between Fetch and QueryExpression](sa
 
 ## Query Condition Limits
 
-Dataverse has a limit of 500 total conditions allowed in a query. Any joins included in the query are counted as part of this limit. If a query (and its joins) exceeds 500 conditions, the user will receive the following error when the query is executed:  "Number of conditions in query exceeded maximum limit." 
+Dataverse has a limit of 500 total conditions allowed in a query. Any joins included in the query are counted as part of this limit. If a query (and its joins) exceeds 500 conditions, the user will receive the following error when the query is executed: `Number of conditions in query exceeded maximum limit.`.
 
-If this occurs a user must either: 
+If this occurs a user must either:
 
-- Reduce the number of conditions in their query. 
+- Reduce the number of conditions in their query.
 - Use the `In` clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
 
 ## All filter conditions for string values are case insensitive
