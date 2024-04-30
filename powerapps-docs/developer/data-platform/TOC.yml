@@ -123,6 +123,9 @@
     - name: Bulk Operation messages
       displayName: CreateMultiple, UpdateMultiple, UpsertMultiple
       href: bulk-operations.md
+    - name: Restore deleted records
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
       items:
         - name: Use DeleteMultiple (preview)
           href: deletemultiple.md
