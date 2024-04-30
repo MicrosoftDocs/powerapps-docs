@@ -2,8 +2,8 @@
 title: Restore deleted records (preview)
 description: Learn how to use configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
 ms.date: 04/30/2024
-author: divkamath
-ms.author: dikamath
+author: adkuppa
+ms.author: adkuppa
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -11,6 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
+ - 
 ms.custom: bap-template
 ---
 # Restore deleted records (preview)
@@ -528,24 +529,22 @@ You can link to other articles in the same repo with relative paths: [Quickstart
 
 ### Links to sections
 
-You can add links to headings of other sections of the same document:[First section](#first-section)
+You can add links to headings of other sections of the same document: [Detect which tables have a recycle bin enabled](#detect-which-tables-have-a-recycle-bin-enabled)
 
-You can link to headings of other sections of a different document: [Quickstart: Host Power Fx in your application : First section](get-started.md#first-section).
+You can link to headings of other sections of a different document: [DeleteMultiple Availability](deletemultiple.md#availability)
 
-You can link to a section of another document on Microsoft Learn: [Dataverse developer guide: Understand when to write code](/power-apps/developer/data-platform/overview#understand-when-to-write-code).
+You can link to a section of another document on Microsoft Learn: [Power Platform CLI](/power-platform/developer/cli/introduction)
 
 > [!NOTE]
 > If you change the heading (or someone else changes the heading), the link will break. You (or they) will get a build warning when that happens.
 
 ### Other Microsoft Learn articles
 
-You can link to other articles in different repos by removing `https://learn.microsoft.com/en-us` from the URL. For example: [Microsoft Dataverse Developer Guide](/power-apps/developer/data-platform/overview).
+You can link to other articles in different repos by removing `https://learn.microsoft.com/en-us` from the URL. For example: [Microsoft Power Platform developer documentation](/power-platform/developer/).
 
 ### Links to reference articles
 
 If you want to link to a reference topic for a property, use this pattern: <xref:System.String.Length>, or [String.Length Property](xref:System.String.Length), or [String.IndexOf Method](xref:System.String.IndexOf%2A). After you have added one link, subsequent mentions can just use back ticks: `IndexOf` method.
-
-Test of link to Power Fx SDK reference: [BasicServiceProvider Class](xref:Microsoft.PowerFx.BasicServiceProvider).
 
 The [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) provides a tool to make adding these easier when you are using a local clone of the repo.
 
