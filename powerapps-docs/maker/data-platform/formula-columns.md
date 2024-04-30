@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 04/25/2024
+ms.date: 04/30/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -395,6 +395,7 @@ This section describes guidelines and the known limitations with formula columns
 - A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
+- A formula column which is dependent on time bound functions `UTCNow()` and `UTCToday()` cannot be used in rollup field.
 
 ### Power Fx text function recommendations
 
