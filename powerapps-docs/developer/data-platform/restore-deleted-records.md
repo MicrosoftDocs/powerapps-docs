@@ -481,42 +481,6 @@ When you include multiple lines of code, use this:
 
 If you use a word in a sentence to refer to a specific term that shouldn't be localized, surround it with backtick characters: `IObservable`.
 
-### Add content from sample repo
-
-Embedding files from the [power-fx-host-samples repo](https://github.com/microsoft/power-fx-host-samples)
-
-Embedding this file [power-fx-host-samples/Samples/Dataverse101/Program.cs](https://github.com/microsoft/power-fx-host-samples/blob/main/Samples/Dataverse101/Program.cs)
-
-:::code language="csharp" source="~/../power-fx-host-samples/Samples/Dataverse101/Program.cs":::
-
-#### Add parts of a file
-
-> [!IMPORTANT]
-> This works best when the code has commented name that can be referenced instead of line numbers. Line numbers are brittle. I've used line numbers in the following examples because the code samples don't have the necessary *named snippets*. I hope you will add named snippets to the sample code and use those instead. See [Named snippets](https://review.learn.microsoft.com/en-us/help/platform/code-in-docs?branch=main#named-snippet)
-
-**Named snippet example**:
-
-The following code in the sample repo would create a snippet named `InitializeClient` that could be used to reference a section of the file.
-
-```csharp
-//<InitializeClient>
-            var svcClient = new ServiceClient(connectionString) { UseWebApi = false };
-            var dataverse = SingleOrgPolicy.New(svcClient);
-            var symbolValues = dataverse.SymbolValues;
-//</InitializeClient>
-```
-
-Then, this markdown should work:
-
-```md
-:::code language="csharp" source="~/../power-fx-host-samples/Samples/Dataverse101/Program.cs" id="InitializeClient":::
-```
-
-**Line number example**:
-
-Refer only to line numbers 20-24 and line 27 in [power-fx-host-samples/Samples/Dataverse101/Program.cs](https://github.com/microsoft/power-fx-host-samples/blob/main/Samples/Dataverse101/Program.cs)
-
-:::code language="csharp" source="~/../power-fx-host-samples/Samples/Dataverse101/Program.cs" range="20-24,27":::
 
 
 ## Links
