@@ -105,7 +105,7 @@ OData-Version: 4.0
 
 ## Enable a recycle bin for a table
 
- **TODO: Explain how to do this **
+ **TODO: Explain how to do this**
 
  **TODO: Provide code snippets for both SDK and Web API**
 
@@ -176,7 +176,7 @@ OData-Version: 4.0
 
 ## Retrieve deleted records that can be restored
 
- **TODO: Explain how to do this **
+ **TODO: Explain how to do this**
 
  **TODO: Provide code snippets for both SDK and Web API**
 
@@ -247,7 +247,7 @@ OData-Version: 4.0
 
 ## Restore a deleted record
 
- **TODO: Explain how to do this **
+ **TODO: Explain how to do this**
 
  ### [SDK for .NET](#tab/sdk)
 
@@ -318,7 +318,7 @@ OData-Version: 4.0
 
 ## Manage restoring records deleted by cascade operations
 
- **TODO: Explain the scenarios **
+ **TODO: Explain the scenarios**
   - Why this is necessary?
   - When to do this?
   - What to do
@@ -469,7 +469,7 @@ Please use markdown tables. HTML tables will render, but are not preferred. Try 
 
 Put all your images in the media folder at the same level as the file.
 
-:::image type="content" source="media/placeholder.png" alt-text="This is the accessibility required alt text to describe the image":::
+:::image type="content" source="media/dev-resources-menu.png" alt-text="A screenshot of the developer resources menu in Power Apps.":::
 
 ## Code
 
