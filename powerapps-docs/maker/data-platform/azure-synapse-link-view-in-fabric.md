@@ -36,7 +36,7 @@ Watch this video to learn about accessing Dataverse data in Fabric:
    > As of April 30, 2024, you're no longer required to have a Fabric capacity within the same Azure region. Now, you can link to a workspace, which is assigned to a capacity within the same country or geographic boundary.
   
 - Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
-- You must have the System Administrator security role in the Dataverse environment. 
+- You must have the system administrator security role in the Dataverse environment.
 - You must be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
