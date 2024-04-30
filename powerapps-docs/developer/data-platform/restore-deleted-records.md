@@ -11,7 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
- - 
+ - TakeN0
 ms.custom: bap-template
 ---
 # Restore deleted records (preview)
@@ -489,7 +489,7 @@ There are several types of links you can use:
 
 ### Local links
 
-You can link to other articles in the same repo with relative paths: [Quickstart: Host Power Fx in your application](get-started.md), or [Data types](../data-types.md), or [Introduction to Microsoft Power Platform for developers](../../developer/get-started.md).
+You can link to other articles in the same repo with relative paths: [Search for Dataverse records](search/overview.md) , or [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), or [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md).
 
 ### Links to sections
 
