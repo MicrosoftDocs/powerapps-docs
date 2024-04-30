@@ -17,13 +17,18 @@ ms.contributors:
 - devangpandya
 ---
 
-# Optimize for devices controls (preview)
+# Optimize for devices (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
-For a screen to be optimized for devices, it must use controls that are supported natively. You can filter the control **Insert** pane to only show device-optimized controls. 
+**Optimize for devices** enables screens to render with platform-specific controls on Android and iOS devices. It increases the rendering quality and performance and allows people to use Android and iOS gestures.
 
-:::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized.":::
+You can enable this capability in the App **settings** > **Upcoming features** > **Preview** > **Optimize for devices**
+Once enabled, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
+
+Screens made solely with device optimized controls will automatically render natively on Android and iOS devices. An App can have screens which are optimized while some others are not. This only depends on the controls chosen by the maker.
+
+:::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized."::: <!---need to update without the experiemental flag--->
 
 > [!Important]
 > - This is a preview feature.
@@ -32,6 +37,27 @@ For a screen to be optimized for devices, it must use controls that are supporte
 ## Device-optimized controls
 
 The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
+
+### [Controls](../maker/canvas-apps/reference-properties.md)
+
+- Add picture
+- Attachment
+- Barcode reader
+- Button
+- Camera
+- Check box
+- Circle
+- Components
+- Container (horizontal and vertical included)
+- Form
+- Gallery (vertical, horizontal, flexible height)
+- Icon (all icons supported)
+- Image
+- Radio
+- Rectangle
+- Text input
+- Text label
+- Timer
 
 ### [Modern controls](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
 
@@ -53,26 +79,6 @@ Makers must complete the following steps to turn on modern controls and themes f
 1. In the **Settings** window, select **General**.
 1. Turn on the **Modern controls and themes** option.
 
-### [Controls](../maker/canvas-apps/reference-properties.md)
-
-- Add picture
-- Attachment
-- Barcode reader
-- Button
-- Camera
-- Check box
-- Circle
-- Components
-- Container (horizontal and vertical included)
-- Gallery (vertical, horizontal, flexible height)
-- Icon (all icons supported)
-- Image
-- Radio
-- Rectangle
-- Text input
-- Text label
-- Timer
-
 ## Unsupported controls
 
 If a screen is set for optimization for devices, but has an unsupported control, you see an error message in a box.
@@ -87,9 +93,7 @@ Some properties must be configured so they're optimized for devices. For example
 
 Note the following limitations with the 'optimize for devices' feature.
 
-- Only the **Segoe UI** font is supported. If a control is using another font, it displays the Segoe UI font instead. Due to the differences in fonts, the control can take up more or less space than expected. We recommend that you use the Segoe UI font for device-optimized screens.
 - The **Image** control, when showing an SVG, only supports the fit and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
-- In the **modern Text** control, the **Semi-bold** and **Medium** font weights aren't supported on Android devices. It displays a regular font weight instead.
 - In the **modern Text input** control, the **Value** property, when set to a Power Fx variable, isn't displayed at first navigation. Instead, it shows the placeholder value until the user navigates away and back to the screen with the **modern Text input** control.
 - In the **modern Text input** control, the **OnChange** property is called twice when the control is exited, and then blurred.
 - In the **modern Text input** control, the **Validate state** property doesn't display a red border around the control.
@@ -103,4 +107,3 @@ Note the following limitations with the 'optimize for devices' feature.
 - Multiple **Barcode reader** controls on a single screen aren't supported.
 - Multiple **Camera** controls on a single screen aren't supported.
 - In the **Camera** control, the **Display mode** property of the parent control isn't supported. For example, if the camera control is part of a form that is set to view mode, the camera might still be in edit mode.
-- On **Screen**, the **Background image** property isn't supported.
