@@ -178,7 +178,7 @@ You should be aware of certain conditions and restrictions when working with rol
 - A workflow wait condition can't use a rollup column.  
 - A rollup over the rollup column isn't supported.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.
-- A rollup column doesn't update automatically if it uses a formula field that's dependent on time bound functions `Now()` and `IsUTCToday()`. The online recalculation option (a manual refresh on the form) or **Recalculate** button must be used to calculate the latest rollup column value.
+- A rollup column doesn't update automatically if it uses a formula column that's dependent on time bound functions `Now()` and `IsUTCToday()`. The online recalculation option (a manual refresh on the form) or **Recalculate** button must be used to calculate the latest rollup column value.
 - The rollup can only apply filters to the source table or related tables, simple columns or noncomplex calculated columns.  
 - A rollup can be done only over related tables with the 1:N relationship. A rollup can't be done over the N:N relationships.  
 - A rollup can't be done over the 1:N relationship for the Activity table or the Activity Party table.  
