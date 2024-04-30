@@ -43,7 +43,7 @@ To create your basic low-code instant plug-in, follow these steps:
       :::image type="content" source="media/low-code-plugin-copilot-action1.png" alt-text="Create instant low-code plugin that adds to numbers" lightbox="media/low-code-plugin-copilot-action1.png":::
 6. Select **Save** to save your plug-in.
 
-7. Create a copilot to call and then test your low-code plug-in as a Generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
+7. Create a copilot to call and then test your low-code plug-in as a generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 
 If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds. Some examples:
 
@@ -81,8 +81,8 @@ To create your low-code instant plug-in, follow these steps:
    ```
 
    :::image type="content" source="media/low-code-plugin-copilot-action2.png" alt-text="Create a low-code plugin to send notification" lightbox="media/low-code-plugin-copilot-action2.png":::
-1. Select **Save** to save your plug-in.
-1. Create a copilot to call and then test your low-code plug-in as a Generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
+6. Select **Save** to save your plug-in.
+7. Create a copilot to call and then test your low-code plug-in as a generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 
 <!-- Need revised result detail-->
 :::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot" lightbox="media/low-code-plugin-copilot-action4.png":::
