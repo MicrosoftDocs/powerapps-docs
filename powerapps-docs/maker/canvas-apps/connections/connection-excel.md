@@ -25,7 +25,7 @@ Ensure that the Excel data you want to use in Power Apps is [formatted as a tabl
 
 ## Step 2 - Store your Excel file in a cloud location
 
-Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, OneDrive, and OneDrive for Business. There are two versions of the Excel connector. The newer version of the connector can access more cloud locations.
+Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, OneDrive, and OneDrive for Business. There are two versions of the Excel connector. The newer version *[Excel Online (Business)](/connectors/excelonlinebusiness/)* of the connector can access more cloud locations.
 
 ## Step 3 - Add Excel as a data source for your Power App
 
@@ -39,6 +39,8 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 1. Enter the file location and select the table.
 1. When you're done, select **Create app**.
 
+## Use the Excel Online (Business) Connector
+Historically Power Apps has promoted the use of the OneDrive connector as a way to connect and get data from Excel. The OneDrive connector provides access to files on OneDrive and to Excel. Authors should use the recommended and updated connector for Excel : *[Excel Online (Business)](/connectors/excelonlinebusiness/)* connector. Among other features, this connector better allows for multi-user access. 
 
 ## Other connectors
 
