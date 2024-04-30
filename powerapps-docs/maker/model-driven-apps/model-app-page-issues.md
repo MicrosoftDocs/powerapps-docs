@@ -67,6 +67,11 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When there are multiple custom pages in an app, the consent dialog asks for data permissions for all of the connectors in all the custom pages even if they haven't yet been opened.
 
+## Connections
+* The connection infrastructure is shared across all custom pages.  Connections are shared among all custom pages as if they were all part of the same canvas app. For example, if an model driven app has two custom pages and one connects to SQL Server and the other does not.  Then, if the app opens the custom page that does not require SQL access, the consent dialog will appear require permission for SQL access even though the page being opened is does not require SQL access.
+* Connection detection (via the *Connected.connected* property) is not supported for custom pages in model driven apps. 
+
+
 ## See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
