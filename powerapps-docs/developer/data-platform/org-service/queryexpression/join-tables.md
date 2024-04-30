@@ -32,19 +32,18 @@ The following table provides details about the [LinkEntity properties](/dotnet/a
 
 |Property|Description|
 |---------|---------|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you're linking from.<br /> For a `LinkEntity` that isn't nested, use the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is nested in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), use the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName). |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromEntityName>|The logical name of the entity that you're linking from.<br /> For a `LinkEntity` that isn't nested, use the same value as the [QueryExpression.EntityName property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.entityname).<br /> For a `LinkEntity` that is nested in a [LinkEntity.LinkEntities collection](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities), use the value of the [LinkEntity.LinkToEntityName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName) from the parent link entity. |
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName>|The logical name of the entity that you're linking to.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you're linking from. Use the name of the lookup column for the relationship.|
-|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you're linking to. Use the name of the primary key column for the table named in the <xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToEntityName> property |
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName>|The logical name of the attribute of the entity that you're linking from.|
+|<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName>|The logical name of the attribute of the entity that you're linking to. |
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator>|The join operator. Use a value of one of the [JoinOperator enum](xref:Microsoft.Xrm.Sdk.Query.JoinOperator) members. The default value is `Inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `LeftOuter` Includes results from the parent row that don't have a matching value.<br />- `Natural` Only one value of the two joined columns is returned if an equal-join operation is performed and the two values are identical.<br />These members considered [advanced JoinOperators](#use-advanced-joinoperators):<br />- `Exists`<br />- `In`<br />- `MatchFirstRowUsingCrossApply`<br />These members are used to [filter on values in related records](filter-rows.md#filter-on-values-in-related-records):<br />- `All`<br />- `Any`<br />- `NotAll`<br />- `NotAny`|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias>|The alias for the table.|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.Columns>|The columns to include for the table. Add these columns to the joined table using a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>. [Learn to select columns using QueryExpression](select-columns.md)|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkCriteria>|The complex condition and logical filter expressions that filter the results of the query. [Learn how to filter rows using QueryExpression](filter-rows.md)|
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can include nested links. [Up to 15 total links can be included in a query](#limitations) |
 
-<!-- 
-TODO: Add detailed remarks in the [JoinOperator Enum](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.JoinOperator) article to explain each of the types like is done for FetchXML at https://learn.microsoft.com/en-us/power-apps/developer/data-platform/fetchxml/reference/link-entity#link-type-options 
--->
+> [!NOTE]
+> The meaning of the [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties are the opposite of the corresponding `from` and `to` attributes in FetchXml.[Learn more about using `from` and `to` attributes with FetchXml](../../fetchxml/reference/link-entity.md#using-from-and-to-attributes)
 
 ### LinkEntity example
 
@@ -144,24 +143,29 @@ The [previous example](#linkentity-example) is a many-to-one relationship where 
 |Property|Value|Comment|
 |---------|---------|---------|
 |`SchemaName`|`account_primary_contact`|Unique Name of the relationship. |
-|`ReferencedEntity`|`contact`|The referenced table. The *one* in many-to-one. `linkToEntityName` in the previous example.|
-|`ReferencedAttribute`|`contactid`|The primary key of the referenced table. `linkToAttributeName` in the previous example.|
+|`ReferencedEntity`|`contact`|The referenced table. The *one* in many-to-one. `LinkToEntityName` in the previous example.|
+|`ReferencedAttribute`|`contactid`|The primary key of the referenced table. `LinkToAttributeName` in the previous example.|
 |`ReferencingEntity`|`account`|The table with a lookup column referencing the other table. The *many* in many-to-one. `LinkFromEntityName` in the previous example.|
-|`ReferencingAttribute`|`primarycontactid`|The name of the lookup column. `linkFromAttributeName` in the previous example.|
-|`RelationshipType`|`OneToManyRelationship`|A one-to-many relationship when viewed from the *referenced* (one) table.<br />A many-to-one relationship when viewed from the *referencing* (many) table|
+|`ReferencingAttribute`|`primarycontactid`|The name of the lookup column. `LinkFromAttributeName` in the previous example.|
+|`RelationshipType`|`OneToManyRelationship`|A one-to-many relationship when viewed from the *referenced* (one) `contact` table.<br />A many-to-one relationship when viewed from the *referencing* (many) `account` table|
 
 ### Retrieve relationship information
 
-You can use other tools and APIs to look up relationship data for the appropriate `linkToEntityName`, `linkToAttributeName`, `LinkFromEntityName`, and `linkFromAttributeName` values to use. For more information, see:
+You can use other tools and APIs to look up relationship data for the appropriate `LinkToEntityName`, `LinkToAttributeName`, `LinkFromEntityName`, and `LinkFromAttributeName` values to use. For more information, see:
 
 - [Browse table definitions in your environment](../../browse-your-metadata.md)
 - [Query schema definitions](../../query-schema-definitions.md)
 
-<!-- 
+### Many-to-one relationship example
 
-TODO Add an example query to retrieve this relationship information, or make sure it is in the articles linked 
-Maybe have it generate code for the relationship??
--->
+The following table shows the relationship values to use for a many-to-one relationship:
+
+|Property|Relationship Value|Comment|
+|---------|---------|---------|
+|`LinkFromEntityName`|`ReferencingEntity`|The referenced table. The *many* in many-to-one. `account` in the many-to-one example. There's no parameter for this property in the [AddLink methods](#addlink-methods) because it can be derived from the `QueryExpression.EntityName` or `LinkEntity.LinkToEntityName` properties. |
+|`LinkToEntityName`|`ReferencedEntity`|The table with a primary key the other table references. The *one* in many-to-one. `contact` in the many-to-one example.|
+|`LinkFromAttributeName`|`ReferencingAttribute`|The name of the lookup column. `primarycontactid` in the many-to-one example.|
+|`LinkToAttributeName`|`ReferencedAttribute`| The primary key of the referenced table. `contactid` in the many-to-one example.|
 
 
 ## One-to-many relationships
@@ -195,10 +199,10 @@ For a one-to-many relationship, use these relationship values:
 
 |Property|Relationship Value|Comment|
 |---------|---------|---------|
-|`LinkFromEntityName`|`ReferencedEntity`|The referenced table. The *one* in many-to-one. `contact` in the one-to-many example. There's no parameter for this property in the [AddLink methods](#addlink-methods) because it can be derived from the `QueryExpression.EntityName` or `LinkEntity.linkToEntityName` properties. |
-|`linkToEntityName`|`ReferencingEntity`|The table with a lookup column referencing the other table. The *many* in many-to-one. `account` in the one-to-many example.|
-|`linkFromAttributeName`|`ReferencedAttribute`|The primary key of the referenced table. `contactid` in the one-to-many example.|
-|`linkToAttributeName`|`ReferencingAttribute`|The name of the lookup column. `primarycontactid` in the one-to-many example.|
+|`LinkFromEntityName`|`ReferencedEntity`|The referenced table. The *one* in many-to-one. `contact` in the one-to-many example. There's no parameter for this property in the [AddLink methods](#addlink-methods) because it can be derived from the `QueryExpression.EntityName` or `LinkEntity.LinkToEntityName` properties. |
+|`LinkToEntityName`|`ReferencingEntity`|The table with a lookup column referencing the other table. The *many* in many-to-one. `account` in the one-to-many example.|
+|`LinkFromAttributeName`|`ReferencedAttribute`|The primary key of the referenced table. `contactid` in the one-to-many example.|
+|`LinkToAttributeName`|`ReferencingAttribute`|The name of the lookup column. `primarycontactid` in the one-to-many example.|
 
 The results include the same records and data as the [previous example](#linkentity-example) using the many-to-one relationship, except now the *'parent entity'* is now `contact` instead of `account`.
 
@@ -266,7 +270,7 @@ The results should look something like:
 
 ## No relationship
 
-It's possible to specify `linkFromAttributeName` and `linkToAttributeName` properties using columns that aren't part of a defined relationship.
+It's possible to specify `LinkFromAttributeName` and `LinkToAttributeName` properties using columns that aren't part of a defined relationship.
 
 For example, this query finds pairs of records where the [Name column](../../reference/entities/account.md#BKMK_Name) of an [account](../../reference/entities/account.md) record matches the [FullName column](../../reference/entities/contact.md#BKMK_FullName) of a [contact](../../reference/entities/contact.md) record regardless of whether they reference each other in any of the lookup columns.
 
@@ -285,16 +289,16 @@ linkedContact.Columns = new ColumnSet("fullname");
 ```
 
 > [!NOTE]
-> It is important that the columns specified in the `linkFromAttributeName` and `linkToAttributeName` properties are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that might have performance impact and might fail for some column values.
+> It is important that the columns specified in the `LinkFromAttributeName` and `LinkToAttributeName` properties are the same type even if they are not involved in a relationship. Using columns of different types will require a type conversion that might have performance impact and might fail for some column values.
 
-The following [column types](../../../../maker/data-platform/types-of-fields.md) can't be used in `linkFromAttributeName` and `linkToAttributeName` properties:
+The following [column types](../../../../maker/data-platform/types-of-fields.md) can't be used in `LinkFromAttributeName` and `LinkToAttributeName` properties:
 
 - **File**
 - **Image**
 - **MultiSelect Field**
 - [**PartyList**](../../../../maker/data-platform/types-of-fields.md#different-types-of-lookups)
 
-Some columns can be used in `linkFromAttributeName` and `linkToAttributeName` properties but might result in poor performance:
+Some columns can be used in `LinkFromAttributeName` and `LinkToAttributeName` properties but might result in poor performance:
 
 - Columns of the **Multiple Lines of Text** type
 - Columns of the **Single Line of Text** type with a maximum length larger than 850
