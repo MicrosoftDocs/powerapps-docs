@@ -34,9 +34,12 @@ There's no need to rebuild apps as makers can use all the familiar app building 
 
 ## Enable screens to be device-optimized
 
-Select **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**. 
+1. Select **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**.
+2. Only use supported controls on the screen.
 
 After this feature is turned on, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter. Learn more about [which controls are supported natively today](./optimize-for-devices-controls.md)
+
+Screens made solely with device-optimized controls automatically render natively on Android and iOS devices. An app can have screens which are optimized, while some others aren't. This only depends on the controls chosen by the maker to create that screen.
 
 ## How screens are optimized for devices
 
