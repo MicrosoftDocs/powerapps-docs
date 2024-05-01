@@ -193,13 +193,13 @@ static List<string> GetTablesEligibleForRecycleBin(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-This `GetTablesEligibleForRecycleBin` PowerShell function returns tables that are eligible to have recycle bin enabled.
+This `Get-TablesEligibleForRecycleBin` PowerShell function returns tables that are eligible to have recycle bin enabled.
 It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` PowerShell function, and depends on that function. 
 
 This function also depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 
 ```powershell
-function GetTablesEligibleForRecycleBin {
+function Get-TablesEligibleForRecycleBin {
 
    $tablesEnabledForRecycleBin = Get-RecycleBinEnabledTableNames
 
