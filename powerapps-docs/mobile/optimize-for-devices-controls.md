@@ -28,7 +28,7 @@ For a screen to be optimized for devices, it must use controls that are supporte
 
 ## Device-optimized controls
 
-The following controls are optimized for iOS and Android devices. All other controls are currently unsupported. A screen that has one or more unsupported control will automatically render in a web view instead of native UI. [Learn more](../mobile/optimize-for-devices-overview.md).
+The following controls are optimized for iOS and Android devices. All other controls are currently unsupported. A screen that has one or more unsupported controls automatically renders in a web view instead of native UI. Learn more: [Optimize for devices overview](optimize-for-devices-overview.md).
 
 ### [Controls](../maker/canvas-apps/reference-properties.md)
 
