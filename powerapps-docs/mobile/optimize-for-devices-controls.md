@@ -92,7 +92,7 @@ Some properties must be configured so they're optimized for devices. For example
 
 Note the following limitations with the 'optimize for devices' feature.
 
-- The **Image** control, when showing an SVG, only supports the fit, fill and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
+- The **Image** control, when showing an SVG, only supports the fit, fill, and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
 - In the **modern Text input** control, the **Value** property, when set to a Power Fx variable, isn't displayed at first navigation. Instead, it shows the placeholder value until the user navigates away and back to the screen with the **modern Text input** control.
 - In the **modern Text input** control, the **OnChange** property is called each time the user interacts with the control instead of when navigating away from the control.
 - In the **modern Text input** control, the **Validate state** property doesn't display a red border around the control.
