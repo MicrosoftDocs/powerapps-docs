@@ -203,40 +203,37 @@ function GetTablesEligibleForRecycleBin {
 
    $tablesEnabledForRecycleBin = Get-RecycleBinEnabledTableNames
 
-   $metadataQuery = 
-   @"
-   {
-   "Properties": {
-      "AllProperties": false,
-      "PropertyNames": ["LogicalName"]
-   },
-   "Criteria": {
-      "FilterOperator": "And",
-      "Conditions": [
-         {
-            "ConditionOperator": "NotIn",
-            "PropertyName": "LogicalName",
-            "Value": {
-               "Type": "System.String[]",
-               "Value": "['$($tablesEnabledForRecycleBin -join ''',''')']"
-            }
-         },
-         {
-         "ConditionOperator": "Equals",
-         "PropertyName": "IsPrivate",
-         "Value": {
-            "Type": "System.Boolean",
-            "Value": "false"
+   $metadataQuery = [ordered]@{
+      Properties = [ordered]@{
+         AllProperties = $false.ToString()
+         PropertyNames = @('LogicalName')
+      }
+      Criteria   = [ordered]@{
+         FilterOperator = 'And'
+         Conditions     = @(
+            [ordered]@{
+               ConditionOperator = 'NotIn'
+               PropertyName      = 'LogicalName'
+               Value             = [ordered]@{
+                  Type  = 'System.String[]'
+                  Value = "['$($tablesEnabledForRecycleBin -join ''',''')']"
                }
             }
-         ]
+            [ordered]@{
+               ConditionOperator = 'Equals'
+               PropertyName      = 'IsPrivate'
+               Value             = [ordered]@{
+                  Type  = 'System.Boolean'
+                  Value = $false.ToString()
+               }
+            }
+         )
       }
    }
-"@
    
-   
+   $metadataQueryJSON = $metadataQuery | ConvertTo-Json -Depth 10
    $requestQuery = 'api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1='
-   $requestQuery += [System.Web.HttpUtility]::UrlEncode($metadataQuery)
+   $requestQuery += [System.Web.HttpUtility]::UrlEncode($metadataQueryJSON)
    $request = @{
       Method  = 'GET'
       Uri     = ($environmentUrl + $requestQuery)
