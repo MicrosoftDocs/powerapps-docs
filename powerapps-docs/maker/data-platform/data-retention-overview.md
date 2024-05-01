@@ -6,7 +6,7 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 04/11/2024
+ms.date: 05/01/2024
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
