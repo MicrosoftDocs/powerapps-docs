@@ -14,8 +14,7 @@ ms.custom: template-overview
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
-> While there is no minimum licensing requirement, you must meet the following requirement to use all long term data retention features:
-> - The Power Platform environment must be a [Managed Environment](/power-platform/admin/managed-environment-overview). This also applies to Dynamics 365 customers who will be required to upgrade to a Managed Environment if the environment isn't already a Managed Environment.
+> The Power Platform environment where the retention policy resides must be a [Managed Environment](/power-platform/admin/managed-environment-overview). This also applies to Dynamics 365 customers who will be required to upgrade to a Managed Environment if the environment isn't already a Managed Environment.
 >
 > Customers who don't meet this requirement can continue to create data retention policies, but the policies are disabled.
 
