@@ -16,7 +16,7 @@ ms.custom: bap-template
 ---
 # Restore deleted records (preview)
 
-Add your introduction here. Quickly establish the value proposition and why people should read more.
+**TODO:Add your introduction here. Quickly establish the value proposition and why people should read more.**
 
 In markdown, new paragraphs are separated by a new line.
 
@@ -25,6 +25,7 @@ Sometimes people delete records that they shouldn't. Administrators can configur
 Developers can use Dataverse APIs to restore records using the `Restore` message. This message can only be used on tables that are configured to enable the recycle bin. This article will explain how to:
 
 - Detect which tables have a recycle bin enabled
+- Detect which tables do not have recycle bin enabled
 - Enable a recycle bin for a table
 - Retrieve deleted records that can be restored
 - Restore a deleted record
@@ -32,76 +33,231 @@ Developers can use Dataverse APIs to restore records using the `Restore` message
 
 ## Detect which tables have a recycle bin enabled
 
- **TODO: Explain how to do this**
-
- **TODO: Provide code snippets for both SDK and Web API**
+Tables that are enabled for recycle bin will have a row in the [Recycle Bin Configuration (RecycleBinConfig)  table](reference/entities/recyclebinconfig.md) where the `statecode` is active. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+The following static `GetRecycleBinEnabledTables` method returns the `LogicalName` values for tables enabled for recycle bin.
 
 ```csharp
-static void ExampleMethod(IOrganizationService service){
+/// <summary>
+/// Gets a list of LogicalNames for the tables enabled for RecycleBin
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <returns></returns>
+static List<string> GetRecycleBinEnabledTables(IOrganizationService service)
+{
+    QueryExpression query = new("recyclebinconfig")
+    {
+        ColumnSet = new ColumnSet("recyclebinconfigid"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+                  {
+               new ConditionExpression(
+               attributeName: "statecode",
+               conditionOperator: ConditionOperator.Equal,
+               value: 0)
+                  }
+             }
+        }
+    };
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+    LinkEntity entityLink = query.AddLink(
+        linkToEntityName: "entity",
+        linkFromAttributeName: "extensionofrecordid",
+        linkToAttributeName: "entityid");
+    entityLink.Columns = new ColumnSet("logicalname");
+    entityLink.EntityAlias = "entity";
+
+    EntityCollection queryResults = service.RetrieveMultiple(query);
+
+    List<string> tableNames = new();
+
+    foreach (Entity recyclebinConfig in queryResults.Entities)
+    {
+        string logicalName = (string)recyclebinConfig
+               .GetAttributeValue<AliasedValue>("entity.logicalname")
+               .Value;
+
+        tableNames.Add(logicalName);
+    }
+
+    tableNames.Sort();
+    return tableNames;
 }
 ```
+
+- [Learn how to use the SDK for .NET](org-service/overview.md)
+- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+The following `Get-RecycleBinEnabledTableNames` PowerShell function returns the `LogicalName` values for tables enabled for recycle bin.
 
-**Request**
+> [!NOTE]
+> This function depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 
-```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.CreateMultiple
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 396
+```powershell
+function Get-RecycleBinEnabledTableNames {
 
-{
-    "Targets": [
-        {
-            "sample_name": "sample record 0000001",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000002",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000003",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        }
-    ]
+   $query = 'api/data/v9.2/recyclebinconfigs?'
+   $query += '$select=recyclebinconfigid&'
+   $query += '$expand=extensionofrecordid($select=logicalname)&'
+   $query += '$filter=statecode eq 0'
+
+   $activeRecyclebinconfigsNames = (Invoke-RestMethod `
+         -Uri ($environmentUrl + $query) `
+         -Method Get `
+         -Headers $baseHeaders).value
+
+   $tableNames = @()
+   $activeRecyclebinconfigsNames 
+   | Sort-Object -Property { $_.extensionofrecordid.logicalname }
+   | ForEach-Object {
+      $tableNames += $_.extensionofrecordid.logicalname
+   }
+
+   return $tableNames
 }
 ```
 
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
-    "Ids": [
-        "8f4c3f92-312b-ee11-bdf4-000d3a993550",
-        "904c3f92-312b-ee11-bdf4-000d3a993550",
-        "914c3f92-312b-ee11-bdf4-000d3a993550"
-    ]
-}
-```
+- [Learn to use the Dataverse Web API](webapi/overview.md)
+- [Learn to use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
 
 ---
 
+## Detect which tables do not have recycle bin enabled
 
+To know which tables can be enabled for recycle bin, you need to exclude all tables already enabled.
+
+ ### [SDK for .NET](#tab/sdk)
+
+This static `GetTablesEligibleForRecycleBin` method returns tables that are eligible to have recycle bin enabled.
+It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` method, and depends on that method. 
+
+```csharp
+/// <summary>
+/// Returns the logical names of tables not yet enabled for RecycleBin
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <returns>List of table logical names</returns>
+static List<string> GetTablesEligibleForRecycleBin(IOrganizationService service)
+{
+
+    List<string> tablesEnabledForRecycleBin = GetRecycleBinEnabledTables(service);
+
+    EntityQueryExpression query = new()
+    {
+        Properties = new MetadataPropertiesExpression("LogicalName"),
+        Criteria = new MetadataFilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+                 {
+                     new MetadataConditionExpression(
+                         propertyName:"LogicalName",
+                         conditionOperator: MetadataConditionOperator.NotIn,
+                         value: tablesEnabledForRecycleBin.ToArray() )
+                 },
+                                        {
+                     new MetadataConditionExpression(
+                         propertyName:"IsPrivate",
+                         conditionOperator: MetadataConditionOperator.Equals,
+                         value: false )
+                 }
+
+             }
+        }
+    };
+
+    RetrieveMetadataChangesRequest request = new() { Query = query };
+    var response = (RetrieveMetadataChangesResponse)service.Execute(request);
+
+    List<string> tableNames = new();
+
+    foreach (EntityMetadata entity in response.EntityMetadata)
+    {
+        tableNames.Add(entity.LogicalName);
+    }
+
+    tableNames.Sort();
+    return tableNames;
+}
+
+- [Learn how to use the SDK for .NET](org-service/overview.md)
+- [Learn to query table definitions](query-schema-definitions.md)
+
+```
+
+
+
+### [Web API](#tab/webapi)
+
+This `GetTablesEligibleForRecycleBin` PowerShell function returns tables that are eligible to have recycle bin enabled.
+It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` PowerShell function, and depends on that function. 
+
+This function also depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+
+```powershell
+function GetTablesEligibleForRecycleBin {
+
+   $tablesEnabledForRecycleBin = Get-RecycleBinEnabledTableNames
+
+   $metadataQuery = 
+   @"
+   {
+   "Properties": {
+      "AllProperties": false,
+      "PropertyNames": ["LogicalName"]
+   },
+   "Criteria": {
+      "FilterOperator": "And",
+      "Conditions": [
+         {
+            "ConditionOperator": "NotIn",
+            "PropertyName": "LogicalName",
+            "Value": {
+               "Type": "System.String[]",
+               "Value": "['$($tablesEnabledForRecycleBin -join ''',''')']"
+            }
+         },
+         {
+         "ConditionOperator": "Equals",
+         "PropertyName": "IsPrivate",
+         "Value": {
+            "Type": "System.Boolean",
+            "Value": "false"
+               }
+            }
+         ]
+      }
+   }
+"@
+   
+   
+   $requestQuery = 'api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1='
+   $requestQuery += [System.Web.HttpUtility]::UrlEncode($metadataQuery)
+   $request = @{
+      Method  = 'GET'
+      Uri     = ($environmentUrl + $requestQuery)
+      Headers = $baseHeaders
+   }
+   
+   $response = Invoke-RestMethod @request
+   $tableNames = $response.EntityMetadata | 
+   Sort-Object -Property LogicalName | 
+   Select-Object -ExpandProperty LogicalName
+   
+   return $tableNames
+}
+```
+
+- [Learn to use the Dataverse Web API](webapi/overview.md)
+- [Learn to query table definitions](query-schema-definitions.md)
+- [Learn to use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
+
+---
 
 ## Enable a recycle bin for a table
 
