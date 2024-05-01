@@ -19,23 +19,16 @@ ms.contributors:
 
 # Optimize for devices (preview)
 
-[This article is prerelease documentation and is subject to change.]
-
-The **Optimize for devices** feature allows screens to render with platform-specific controls on Android and iOS devices. It increases the rendering quality and performance and allows people to use Android and iOS gestures.
-
-You can turn on this feature in the app by selecting **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**. After this feature is turned on, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
-
-Screens made solely with device-optimized controls automatically render natively on Android and iOS devices. An app can have screens which are optimized, while some others aren't. This only depends on the controls chosen by the maker to create that screen.
-
+For a screen to be optimized for devices, it must use controls that are supported natively. You can filter the control Insert pane to only show device-optimized controls.
 :::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized.":::
 
 > [!Important]
-> - This is a preview feature.
+> - This is a preview feature. Documentation is subject to change.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Device-optimized controls
 
-The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
+The following controls are optimized for iOS and Android devices. All other controls are currently unsupported. A screen that has one or more unsupported control will automatically render in a web view instead of native UI. [Learn more](../mobile/optimize-for-devices-overview.md).
 
 ### [Controls](../maker/canvas-apps/reference-properties.md)
 
@@ -67,22 +60,11 @@ The following controls are available for screens that are optimized for devices.
 - Text input
 - Toggle
 
-#### Turn on modern controls
-
-Makers must complete the following steps to turn on modern controls and themes for an app.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Apps**.
-1. Select an app.
-1. Select **Settings** in the command bar.
-1. In the **Settings** window, select **General**.
-1. Turn on the **Modern controls and themes** option.
+[Learn how](.../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) to turn on modern controls.
 
 ## Unsupported controls
 
-If a screen is set for optimization for devices, but has an unsupported control, you see an error message in a box.
-
-:::image type="content" source="media/optimized-for-devices-control-error.png" alt-text="The error that shows when an unsupported control is on a screen set to optimize for devices.":::
+If a screen has an unsupported control, the screen will automatically revert to render with a web view.
 
 ## Device-optimized properties
 
