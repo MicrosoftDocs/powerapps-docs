@@ -466,15 +466,50 @@ OData-Version: 4.0
 
 ---
 
- **TODO: Provide code snippets for both SDK and Web API**
+### Errors that may occur when restoring records
 
-## Manage restoring records deleted by cascade operations
+> Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
+> Code: `0x80049959`<br />
+> Number: `-2147182247`<br />
+> Message: `Entity with id '<GuidValue>' and logical name '<EntityLogicalName>' does not exist. We cannot restore the reference '<ReferredAPrimaryKeyName>' that must be restored as part of this Restore call. ValueToBeRestored: <GuidValue>, ReferencedEntityName: <ReferencedEntityName>, AttributeName: <ReferredAttributeName>`
+
+> Name: `DuplicateExceptionRestoreRecycleBin`<br />
+> Code: `0x80044a02`<br />
+> Number: `-2147182279`<br />
+> Message: `Please delete the existing conflicting record '<EntityPlatformName>' with primary key '<PrimaryKeyName>' and primary key value '<PrimaryKeyValue>' before attempting restore.`
+
+> Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
+> Code: `0x80049929`<br />
+> Number: `-2147182295`<br />
+> Message: `Duplicate entity key preventing restore of record '<EntityPlatformName>' with primary key '<PrimaryKeyName>' and primary key value '<PrimaryKeyValue>'. See inner exception for entity key details.`
+
+
+> Name: `PicklistValueOutOfRangeRecycleBin`<br />
+> Code: `0x80049949`<br />
+> Number: `-2147182263`<br />
+> Message: `Picklist value not valid, please add the invalid value back to the picklist before restoring record`
+
+
+#### Primary Key Violation on Delete
+
+If the record with same primary key was already deleted before, copy to Recycle Bin is ignored for the record. To enforce all deleted items are stored in Recycle Bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
+
+After enabling this, you may receive the following error:
+
+> Name: `DuplicateExceptionRestoreRecycleBin`<br />
+> Code: `0x80049939 `<br />
+> Number: `-2147182279`<br />
+> Message: `A record that has the attribute values Deleted Object already exists on Delete.`
+
+
+## Manage restoring records deleted by custom business logic
 
  **TODO: Explain the scenarios**
-  - Why this is necessary?
-  - When to do this?
-  - What to do
-  - Where to do this (i.e. is a plug-in the only way to do this?)
+
+- Why this is necessary?
+- When to do this?
+- What to do
+- Where to do this (i.e. is a plug-in the only way to do this?)
 
 
 ### Plug-in code example
@@ -591,6 +626,331 @@ OData-Version: 4.0
 ### Scenario 3 TBD
 
  **TODO: If you have multiple scenarios, please create new sections for them.**
+
+
+## Tables not currently supported for Recycle Bin
+
+:::row:::
+   :::column:::
+      `aaduser`<br />
+      `aicopilot`<br />
+      `aipluginconversationstarter`<br />
+      `aipluginexternalschema`<br />
+      `aiplugininstance`<br />
+      `aipluginoperationparameter`<br />
+      `aiplugintitle`<br />
+      `appaction`<br />
+      `appactionrule`<br />
+      `appconfiginstance`<br />
+      `applicationuser`<br />
+      `appmodulecomponent`<br />
+      `appointment`<br />
+      `attribute`<br />
+      `attributemaskingrule`<br />
+      `bot`<br />
+      `botcomponentcollection`<br />
+      `bulkdeleteoperation`<br />
+      `calendar`<br />
+      `canvasapp`<br />
+      `cardstateitem`<br />
+      `catalogassignment`<br />
+      `complexcontrol`<br />
+      `componentversiondatasource`<br />
+      `connectioninstance`<br />
+      `connectionrole`<br />
+      `copilotexamplequestion`<br />
+      `copilotsynonyms`<br />
+      `customapi`<br />
+      `customapiresponseproperty`<br />
+      `customcontroldefaultconfig`<br />
+      `datalakefolder`<br />
+      `datalakeworkspace`<br />
+      `dataprocessingconfiguration`<br />
+      `desktopflowbinary`<br />
+      `displaystring`<br />
+      `duplicaterulecondition`<br />
+      `dvfilesearchattribute`<br />
+      `dvtablesearch`<br />
+      `dvtablesearchentity`<br />
+      `entity`<br />
+      `entitydataprovider`<br />
+      `entityindex`<br />
+      `entityrecordfilter`<br />
+      `environmentvariabledefinition`<br />
+      `eventexpanderbreadcrumb`<br />
+      `expiredprocess`<br />
+      `fabricaiskill`<br />
+      `fieldpermission`<br />
+      `fixedmonthlyfiscalcalendar`<br />
+      `flowlog`<br />
+      `flowmachinegroup`<br />
+      `flowmachineimageversion`<br />
+      `flowrun`<br />
+      `goal`<br />
+      `importentitymapping`<br />
+      `importjob`<br />
+      `importmap`<br />
+      `interactionforemail`<br />
+      `kbarticletemplate`<br />
+      `lookupmapping`<br />
+      `mainfewshot`<br />
+      `managedproperty`<br />
+      `metadataforarchival`<br />
+      `mobileofflineprofileitem`<br />
+      `mobileofflineprofileitemfilter`<br />
+      `msdyn_aiconfiguration`<br />
+      `msdyn_aitemplate`<br />
+      `msdyn_componentlayer`<br />
+      `msdyn_connectordatasource`<br />
+      `msdyn_dataflow_datalakefolder`<br />
+      `msdyn_dataflowtemplate`<br />
+      `msdyn_dmsrequest`<br />
+      `msdyn_entitylinkchatconfiguration`<br />
+      `msdyn_insightsstorevirtualentity`<br />
+      `msdyn_knowledgemanagementsetting`<br />
+      `msdyn_mobileapp`<br />
+      `msdyn_nonrelationalds`<br />
+      `msdyn_pmanalysishistory`<br />
+      `msdyn_pmcalendar`<br />
+      `msdyn_pminferredtask`<br />
+      `msdyn_pmprocesstemplate`<br />
+      `msdyn_pmprocessversion`<br />
+      `msdyn_pmtemplate`<br />
+      `msdyn_salesforcestructuredobject`<br />
+      `msdyn_schedule`<br />
+      `msdyn_solutioncomponentcountdatasource`<br />
+      `msdyn_solutioncomponentdatasource`<br />
+      `msdyn_solutionhistory`<br />
+      `msdyn_timelinepin`<br />
+      `msdyn_workflowactionstatus`<br />
+      `mspp_columnpermission`<br />
+      `mspp_contentsnippet`<br />
+      `mspp_entityformmetadata`<br />
+      `mspp_entitypermission`<br />
+      `mspp_pollplacement`<br />
+      `mspp_publishingstate`<br />
+      `mspp_redirect`<br />
+      `mspp_sitemarker`<br />
+      `mspp_webfile`<br />
+      `mspp_webformmetadata`<br />
+      `mspp_weblink`<br />
+      `mspp_webpage`<br />
+      `mspp_webrole`<br />
+      `mspp_websiteaccess`<br />
+      `mspp_webtemplate`<br />
+      `newprocess`<br />
+      `optionset`<br />
+      `picklistmapping`<br />
+      `pluginpackage`<br />
+      `plugintype`<br />
+      `powerbidataset`<br />
+      `powerbireport`<br />
+      `powerpagecomponent`<br />
+      `powerpagesitelanguage`<br />
+      `principalentitybusinessunitmap`<br />
+      `privilegesremovalsetting`<br />
+      `processtrigger`<br />
+      `publisheraddress`<br />
+      `queue`<br />
+      `recordfilter`<br />
+      `recyclebinconfig`<br />
+      `relationshipattribute`<br />
+      `reportcategory`<br />
+      `retentionconfig`<br />
+      `role`<br />
+      `roletemplate`<br />
+      `savedquery`<br />
+      `sdkmessage`<br />
+      `sdkmessageprocessingstep`<br />
+      `searchresultscache`<br />
+      `semiannualfiscalcalendar`<br />
+      `serviceplan`<br />
+      `sharedlinksetting`<br />
+      `sharedworkspacenr`<br />
+      `similarityrule`<br />
+      `sla`<br />
+      `solution`<br />
+      `solutioncomponentattributeconfiguration`<br />
+      `solutioncomponentconfiguration`<br />
+      `solutionhistorydata`<br />
+      `subscriptionsyncentryoffline`<br />
+      `synapselinkprofile`<br />
+      `synapselinkschedule`<br />
+      `systemform`<br />
+      `systemuserauthorizationchangetracker`<br />
+      `teamtemplate`<br />
+      `textanalyticsentitymapping`<br />
+      `transformationmapping`<br />
+      `translationprocess`<br />
+      `usermobileofflineprofilemembership`<br />
+      `userqueryvisualization`<br />
+      `webresource`<br />
+      `workflow`<br />
+      `workflowlog`<br />
+      `workqueueitem`<br />
+   :::column-end:::
+   :::column:::
+      `activityfileattachment`<br />
+      `aiplugin`<br />
+      `aipluginconversationstartermapping`<br />
+      `aipluginexternalschemaproperty`<br />
+      `aipluginoperation`<br />
+      `aipluginoperationresponsetemplate`<br />
+      `annualfiscalcalendar`<br />
+      `appactionmigration`<br />
+      `appconfig`<br />
+      `application`<br />
+      `appmodule`<br />
+      `appnotification`<br />
+      `asyncoperation`<br />
+      `attributeimageconfig`<br />
+      `backgroundoperation`<br />
+      `botcomponent`<br />
+      `bulkdeletefailure`<br />
+      `businessunit`<br />
+      `callbackregistration`<br />
+      `card`<br />
+      `catalog`<br />
+      `columnmapping`<br />
+      `componentversion`<br />
+      `componentversionnrddatasource`<br />
+      `connectionreference`<br />
+      `connector`<br />
+      `copilotglossaryterm`<br />
+      `credential`<br />
+      `customapirequestparameter`<br />
+      `customcontrol`<br />
+      `customcontrolresource`<br />
+      `datalakefolderpermission`<br />
+      `datalakeworkspacepermission`<br />
+      `dependency`<br />
+      `desktopflowmodule`<br />
+      `duplicaterule`<br />
+      `dvfilesearch`<br />
+      `dvfilesearchentity`<br />
+      `dvtablesearchattribute`<br />
+      `elasticfileattachment`<br />
+      `entityanalyticsconfig`<br />
+      `entityimageconfig`<br />
+      `entitykey`<br />
+      `entityrelationship`<br />
+      `environmentvariablevalue`<br />
+      `exchangesyncidmapping`<br />
+      `exportedexcel`<br />
+      `featurecontrolsetting`<br />
+      `fieldsecurityprofile`<br />
+      `flowcredentialapplication`<br />
+      `flowmachine`<br />
+      `flowmachineimage`<br />
+      `flowmachinenetwork`<br />
+      `fxexpression`<br />
+      `import`<br />
+      `importfile`<br />
+      `importlog`<br />
+      `indexattributes`<br />
+      `invaliddependency`<br />
+      `keyvaultreference`<br />
+      `mailmergetemplate`<br />
+      `managedidentity`<br />
+      `maskingrule`<br />
+      `mobileofflineprofile`<br />
+      `mobileofflineprofileitemassociation`<br />
+      `monthlyfiscalcalendar`<br />
+      `msdyn_aimodel`<br />
+      `msdyn_appinsightsmetadata`<br />
+      `msdyn_componentlayerdatasource`<br />
+      `msdyn_dataflow`<br />
+      `msdyn_dataflowconnectionreference`<br />
+      `msdyn_datalakeds`<br />
+      `msdyn_dmsrequeststatus`<br />
+      `msdyn_helppage`<br />
+      `msdyn_knowledgeassetconfiguration`<br />
+      `msdyn_knowledgesearchfilter`<br />
+      `msdyn_modulerundetail`<br />
+      `msdyn_odatav4ds`<br />
+      `msdyn_pmbusinessruleautomationconfig`<br />
+      `msdyn_pmcalendarversion`<br />
+      `msdyn_pmprocessextendedmetadataversion`<br />
+      `msdyn_pmprocessusersettings`<br />
+      `msdyn_pmrecording`<br />
+      `msdyn_pmview`<br />
+      `msdyn_salesforcestructuredqnaconfig`<br />
+      `msdyn_slakpi`<br />
+      `msdyn_solutioncomponentcountsummary`<br />
+      `msdyn_solutioncomponentsummary`<br />
+      `msdyn_solutionhistorydatasource`<br />
+      `msdyn_tour`<br />
+      `mspp_adplacement`<br />
+      `mspp_columnpermissionprofile`<br />
+      `mspp_entityform`<br />
+      `mspp_entitylist`<br />
+      `mspp_pagetemplate`<br />
+      `mspp_powerpagescoreentityds`<br />
+      `mspp_publishingstatetransitionrule`<br />
+      `mspp_shortcut`<br />
+      `mspp_sitesetting`<br />
+      `mspp_webform`<br />
+      `mspp_webformstep`<br />
+      `mspp_weblinkset`<br />
+      `mspp_webpageaccesscontrolrule`<br />
+      `mspp_website`<br />
+      `mspp_websitelanguage`<br />
+      `navigationsetting`<br />
+      `nlsqregistration`<br />
+      `ownermapping`<br />
+      `pluginassembly`<br />
+      `plugintracelog`<br />
+      `position`<br />
+      `powerbimashupparameter`<br />
+      `powerfxrule`<br />
+      `powerpagesite`<br />
+      `powerpageslog`<br />
+      `privilege`<br />
+      `processstage`<br />
+      `publisher`<br />
+      `quarterlyfiscalcalendar`<br />
+      `recentlyused`<br />
+      `recurringappointmentmaster`<br />
+      `relationship`<br />
+      `report`<br />
+      `retaineddataexcel`<br />
+      `ribbonmetadatatoprocess`<br />
+      `roleeditorlayout`<br />
+      `runtimedependency`<br />
+      `savedqueryvisualization`<br />
+      `sdkmessagefilter`<br />
+      `sdkmessageprocessingstepimage`<br />
+      `searchtelemetry`<br />
+      `serviceendpoint`<br />
+      `serviceplanmapping`<br />
+      `sharedworkspaceaccesstoken`<br />
+      `sharepointsite`<br />
+      `sitemap`<br />
+      `slaitem`<br />
+      `solutioncomponent`<br />
+      `solutioncomponentbatchconfiguration`<br />
+      `solutioncomponentrelationshipconfiguration`<br />
+      `subscriptionstatisticsoffline`<br />
+      `synapsedatabase`<br />
+      `synapselinkprofileentity`<br />
+      `syncerror`<br />
+      `systemuser`<br />
+      `teammobileofflineprofilemembership`<br />
+      `template`<br />
+      `tracelog`<br />
+      `transformationparametermapping`<br />
+      `userform`<br />
+      `userquery`<br />
+      `virtualentitymetadata`<br />
+      `webwizard`<br />
+      `workflowbinary`<br />
+      `workqueue`<br />
+   :::column-end:::
+:::row-end:::
+
+
+
+
 
 ## Markdown examples to delete when we are done
 
