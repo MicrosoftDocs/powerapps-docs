@@ -27,7 +27,7 @@ You can turn on this feature in the app by selecting **Settings** > **Upcoming f
 
 Screens made solely with device-optimized controls automatically render natively on Android and iOS devices. An app can have screens which are optimized, while some others aren't. This only depends on the controls chosen by the maker to create that screen.
 
-:::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized."::: <!---need to update without the experiemental flag--->
+:::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized.":::
 
 > [!Important]
 > - This is a preview feature.
