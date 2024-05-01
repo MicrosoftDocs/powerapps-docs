@@ -60,21 +60,21 @@ The following controls are optimized for iOS and Android devices. All other cont
 - Text input
 - Toggle
 
-[Learn how](.../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) to turn on modern controls.
+Learn more: [Overview of modern controls and themes in canvas apps](../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md)
 
 ## Unsupported controls
 
-If a screen has an unsupported control, the screen will automatically revert to render with a web view.
+If a screen has an unsupported control, the screen automatically reverts to render with a web view.
 
 ## Device-optimized properties
 
-Some properties must be configured so they're optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to allow barcode scanning.
+Some properties must be configured so they're optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating that the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to allow barcode scanning.
 
 ## Known limitations
 
 Note the following limitations with the 'optimize for devices' feature.
 
-- The **Image** control, when showing an SVG, only supports the fit, fill, and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
+- The **Image** control, when showing an SVG file, only supports the fit, fill, and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
 - In the **modern Text input** control, the **Value** property, when set to a Power Fx variable, isn't displayed at first navigation. Instead, it shows the placeholder value until the user navigates away and back to the screen with the **modern Text input** control.
 - In the **modern Text input** control, the **OnChange** property is called each time the user interacts with the control, instead of when navigating away from the control.
 - In the **modern Text input** control, the **Validate state** property doesn't display a red border around the control.
