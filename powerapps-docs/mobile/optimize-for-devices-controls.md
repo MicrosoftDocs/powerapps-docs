@@ -23,7 +23,7 @@ ms.contributors:
 
 The **Optimize for devices** feature allows screens to render with platform-specific controls on Android and iOS devices. It increases the rendering quality and performance and allows people to use Android and iOS gestures.
 
-You can enable this feature in the app by selecting **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**. After this feature is turned on, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
+You can turn on this feature in the app by selecting **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**. After this feature is turned on, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
 
 Screens made solely with device-optimized controls automatically render natively on Android and iOS devices. An app can have screens which are optimized, while some others aren't. This only depends on the controls chosen by the maker to create that screen.
 
@@ -86,7 +86,7 @@ If a screen is set for optimization for devices, but has an unsupported control,
 
 ## Device-optimized properties
 
-Some properties must be configured so they're optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
+Some properties must be configured so they're optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to allow barcode scanning.
 
 ## Known limitations
 
