@@ -33,16 +33,22 @@ You can also select a column heading from the table view, and then select **Filt
 
 There are several ways to create a new table:
 
-- [Create new tables](#create-new-tables)
+- [Create new tables (preview)](#create-new-tables-preview)
 - [Set advanced properties](#set-advanced-properties)
 - [Create with external data](#create-with-external-data)
 - [Create a virtual table](#create-a-virtual-table)
 
-### Create new tables
+### Create new tables (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Using the table visual designer experience that lets you make tables, configure relationships, and view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 1. Command bar:
 
