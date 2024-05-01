@@ -26,7 +26,7 @@ ms.contributors:
 You can enable this capability in the App **settings** > **Upcoming features** > **Preview** > **Optimize for devices**
 Once enabled, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
 
-Screens made solely with device optimized controls will automatically render natively on Android and iOS devices. An App can have screens which are optimized while some others are not. This only depends on the controls chosen by the maker.
+Screens made solely with device optimized controls will automatically render natively on Android and iOS devices. An App can have screens which are optimized while some others are not. This only depends on the controls chosen by the maker to create that screen.
 
 :::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized."::: <!---need to update without the experiemental flag--->
 
@@ -93,16 +93,15 @@ Some properties must be configured so they're optimized for devices. For example
 
 Note the following limitations with the 'optimize for devices' feature.
 
-- The **Image** control, when showing an SVG, only supports the fit and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
+- The **Image** control, when showing an SVG, only supports the fit, fill and stretch image position options. Its default behavior is to fit, if another option is selected. All other image types work as expected for all image positions.
 - In the **modern Text input** control, the **Value** property, when set to a Power Fx variable, isn't displayed at first navigation. Instead, it shows the placeholder value until the user navigates away and back to the screen with the **modern Text input** control.
-- In the **modern Text input** control, the **OnChange** property is called twice when the control is exited, and then blurred.
+- In the **modern Text input** control, the **OnChange** property is called each time the user interacts with the control instead of when navigating away from the control.
 - In the **modern Text input** control, the **Validate state** property doesn't display a red border around the control.
 - In the **Image** control, the **Image rotation** property isn't supported. The image isn't rotated.
 - In the **Dropdown** and **Radio** control, the **Items** property doesn't support references to other controls. Items aren't shown if they're complex values, like references.
 - In the **modern Date picker** control, tapping on the control opens a modal with a calendar instead of allowing users to type into the control directly.
 - In the **modern Date picker** control, the **Base palette color** and modern theme aren't applied on Android devices. Instead, it displays as the device's theme color.
 - In the **Button**, **Image**, **Label**, and **Icon** controls, the **SetFocus** Power Fx function doesn't support keyboard focus, only accessibility focus (for example, screen reader).
-- In **Horizontal and vertical containers**, the **Drop shadow** property isn't supported. Instead, containers display without drop shadow.
 - In **Horizontal and vertical containers**, the **Scroll** option only works for a single direction, depending on the **Wrap** property. If **Wrap** is off, the container is scrollable in the primary direction, otherwise it's scrollable in the secondary direction.
 - Multiple **Barcode reader** controls on a single screen aren't supported.
 - Multiple **Camera** controls on a single screen aren't supported.
