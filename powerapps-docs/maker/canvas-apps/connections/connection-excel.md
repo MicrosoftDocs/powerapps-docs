@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/27/2022
+ms.date: 04/30/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -40,7 +40,7 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 1. When you're done, select **Create app**.
 
 ## Use the Excel Online (Business) Connector
-Historically Power Apps has promoted the use of the OneDrive connector as a way to connect and get data from Excel. The OneDrive connector provides access to files on OneDrive and to Excel. Authors should use the recommended and updated connector for Excel : *[Excel Online (Business)](/connectors/excelonlinebusiness/)* connector. Among other features, this connector better allows for multi-user access. 
+With Power Apps you should use the OneDrive connector to connect and get data from Excel. The OneDrive connector provides access to files on OneDrive and to Excel. Authors should use the recommended and updated connector for Excel: *[Excel Online (Business)](/connectors/excelonlinebusiness/)* connector. The Excel Online connector also has improved functionality that allows multiple users to access it.
 
 ## Other connectors
 
