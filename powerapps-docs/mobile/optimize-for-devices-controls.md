@@ -1,18 +1,18 @@
 ---
-title: Optimize for devices controls (preview)
+title: Optimize for devices (preview)
 description: Learn which controls and properties are supported for device-optimized screens.
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: sericks
-ms.date: 03/14/2024
+ms.date: 05/01/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - sericks
-  - anuitz
+- gachasta 
+- sericks
 ms.contributors:
 - devangpandya
 ---
@@ -21,12 +21,11 @@ ms.contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-**Optimize for devices** enables screens to render with platform-specific controls on Android and iOS devices. It increases the rendering quality and performance and allows people to use Android and iOS gestures.
+The **Optimize for devices** feature allows screens to render with platform-specific controls on Android and iOS devices. It increases the rendering quality and performance and allows people to use Android and iOS gestures.
 
-You can enable this capability in the App **settings** > **Upcoming features** > **Preview** > **Optimize for devices**
-Once enabled, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
+You can enable this feature in the app by selecting **Settings** > **Upcoming features** > **Preview** > **Optimize for devices**. After this feature is turned on, you can find which controls are supported in the **Insert** pane by selecting the **Device optimized (preview)** filter.
 
-Screens made solely with device optimized controls will automatically render natively on Android and iOS devices. An App can have screens which are optimized while some others are not. This only depends on the controls chosen by the maker to create that screen.
+Screens made solely with device-optimized controls automatically render natively on Android and iOS devices. An app can have screens which are optimized, while some others aren't. This only depends on the controls chosen by the maker to create that screen.
 
 :::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized."::: <!---need to update without the experiemental flag--->
 
