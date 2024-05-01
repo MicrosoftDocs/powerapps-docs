@@ -185,11 +185,10 @@ static List<string> GetTablesEligibleForRecycleBin(IOrganizationService service)
     return tableNames;
 }
 
-- [Learn how to use the SDK for .NET](org-service/overview.md)
-- [Learn to query table definitions](query-schema-definitions.md)
-
 ```
 
+- [Learn how to use the SDK for .NET](org-service/overview.md)
+- [Learn to query table definitions](query-schema-definitions.md)
 
 
 ### [Web API](#tab/webapi)
