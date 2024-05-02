@@ -53,15 +53,21 @@ Go to Copilot Studio, and open the environment that has the plug-in.
 1. Configure the action with the following details:
    - Add a model description that lets the copilot know when to call this action. Use plain English to describe the conditions under which this action should be called. For example, you can enter "Adds numbers and return the sum of those numbers given 2 floating point values."
    - Use these **Inputs**:
-      - <!-- Start here-->
-
+      - Change **How will the copilot fill this input for the Organization** parameter to **Set as a value**.
+      - Select your current environment (the environment in which you created your low-code plug-in) as the value for the **Organization** parameter.
+      - Change **How will the copilot fill this input for the Action Name** parameter to **Set as a value**.
+      - Select the low-code plug-in you created as the value for the **Action Name** parameter. If you're unsure what the name of your plug-in is you can find it in the Dataverse Accelerator App by selecting it from the list and selecting **Copy code snippet** and then pasting the code into a text editor.
+   - Additional **Inputs**:
+       - Add and the following input parameters. Adding additional inputs doesn't currently show details in Copilot Studio. You can verify that the inputs were added correctly by selecting **Open the code edit and reviewing the code**, which should show the additional inputs under the inputs section in the action YAML:
+          - **Parameter Name**: *Number1*
+          - **Parameter Name**: *Number2*
 
 ### Test your copilot action
 
 Follow these steps in the **Test copilot** pane.
 
-1. Select the sparkle icon at the top of the chat window to start tracing mode. This will allow you to confirm that your action is being called and will verify the inputs and outputs of your action.
-1. Enter the following text in the chat window "Send a notification to my user to check out this url https://copilotstudio.microsoft.com" and select **Send**.
+1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action.
+1. Enter the text in the chat window *Add 5.2 and 10.3* and select **Send**.
 
 If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds. Some examples:
 
@@ -114,7 +120,7 @@ Go to Copilot Studio, and open the environment that has the plug-in.
       -  Change **How will the copilot fill this input for the Organization** parameter to **Set as a value**.
       - Select your current environment from the dropdown list (the environment in which you created your low-code plug-in) as the value for the **Organization** parameter. You need to put your cursor in the textbox in order for the list of available environments to show.
       - Change **How will the copilot fill this input for the Action Name** parameter to **Set as a value**.
-      - Select the low-code plug-in you created earlier from the dropdown list as the value for the **Action Name** parameter. You need to put your cursor in the textbox in order for the list of available APIs to show. The value to enter here is the schema name of the low-code plugin, such as `org_SendInAppNotificationToUser`. If you're unsure what the name of your plug-in is you can find it in the Dataverse Accelerator App by selecting it from the list and selecting **Copy code snippet** and then pasting the code into a text editor.
+      - Select the low-code plug-in you created as the value for the **Action Name** parameter. You need to put your cursor in the textbox in order for the list of available APIs to show. The value to enter here is the schema name of the low-code plugin, such as `org_SendInAppNotificationToUser`. If you're unsure what the schema name of your plug-in is you can find it in the Dataverse Accelerator App by selecting it from the list and selecting **Copy code snippet** and then pasting the code into a text editor.
    - Additional **Inputs**:
        - Select **Add** and the add following input parameters. Notice that adding additional inputs doesn't currently show details in Copilot Studio. This is a known issue. You can verify that the inputs were added correctly by selecting **Open the code edit and reviewing the code**, which should show the additional inputs under the inputs section in the action YAML:
           - **Parameter Name**: *UserName*
@@ -126,8 +132,8 @@ Go to Copilot Studio, and open the environment that has the plug-in.
 
 Follow these steps in the **Test copilot** pane.
 
-1. Select the sparkle icon at the top of the chat window to start tracing mode. This will allow you to confirm that your action is being called and will verify the inputs and outputs of your action.
-1. Enter the following text in the chat window "Send a notification to my user to check out this url https://copilotstudio.microsoft.com" and select **Send**.
+1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action.
+1. Enter the text in the chat window *Send a notification to my user to check out this url https://copilotstudio.microsoft.com* and select **Send**.
 
 <!-- Need revised result detail-->
 :::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot" lightbox="media/low-code-plugin-copilot-action4.png":::
