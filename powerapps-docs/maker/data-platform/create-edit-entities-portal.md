@@ -42,7 +42,7 @@ There are several ways to create a new table:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Using the table visual designer experience that lets you make tables, configure relationships, and view a diagram of your data.
+Use the table visual designer experience where you create and edit tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
