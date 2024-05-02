@@ -28,6 +28,8 @@ GridControl or the gridContext is the instance of grid or subgrid on a form agai
 |[addOnLoad](gridcontrol/addOnLoad.md)|[!INCLUDE[gridcontrol/includes/addOnLoad-description.md](gridcontrol/includes/addOnLoad-description.md)]|Read-only grid|
 |[getEntityName](gridcontrol/getEntityName.md)|[!INCLUDE[gridcontrol/includes/getEntityName-description.md](gridcontrol/includes/getEntityName-description.md)]|Read-only and editable grids|
 |[getFetchXml](gridcontrol/getFetchXml.md)|[!INCLUDE[gridcontrol/includes/getFetchXml-description.md](gridcontrol/includes/getFetchXml-description.md)]|Read-only and editable grids|
+|[getFilterXml]|Gets the FilterXml currently applied to the grid control.|Read-only and editable grids|
+|[setFilterXml]|Sets the FilterXml to the current grid control.|Read-only and editable grids|
 |[getGrid](gridcontrol/getGrid.md)|[!INCLUDE[gridcontrol/includes/getGrid-description.md](gridcontrol/includes/getGrid-description.md)]|Read-only and editable grids|
 |[getGridType](gridcontrol/getGridType.md)|[!INCLUDE[gridcontrol/includes/getGridType-description.md](gridcontrol/includes/getGridType-description.md)]|Read-only and editable grids|
 |[getRelationship](gridcontrol/getRelationship.md)|[!INCLUDE[gridcontrol/includes/getRelationship-description.md](gridcontrol/includes/getRelationship-description.md)]|Read-only and editable grids|
