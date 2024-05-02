@@ -90,8 +90,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 
 ## Limitations 
-- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records will fail. This number also includes hidden tables used for offline capabilities.
-- **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) are not supported in Mobile offline mode.
+- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
+- **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
@@ -173,7 +173,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 > [!IMPORTANT]
 > Organization data filters are no longer used. Changes to filters should be edited within the mobile profile itself.
 
-It is recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you're using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
+It's recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you're using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
 
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
@@ -195,9 +195,9 @@ Ensure that you have configured at least one of the Profile rules for each table
   
 |Customization |Recommendation|  
 |-------------|---------|  
-|All Records|	If you're selecting this filter, you cannot define any other filter rule.|
-|Download Related Data only|If you're selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|All Records|	If you're selecting this filter, you can't define any other filter rule.|
+|Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 
