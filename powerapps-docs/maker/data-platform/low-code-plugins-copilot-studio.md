@@ -1,5 +1,5 @@
 ---
-title:  Create Dataverse low-code plug-ins to use with Microsoft Copilot (preview)
+title:  Create Dataverse low-code plug-ins to use with a copilot (preview)
 description: Learn how to create low-code plug-ins to use with Microsoft Copilot generative AI actions.
 author: mikefactorial
 ms.author: dikamath
@@ -10,7 +10,7 @@ ms.date: 04/26/2024
 ms.custom: template-how-to
 ms.collection: bap-ai-copilot
 ---
-# Create low-code plug-ins to use with Microsoft Copilot (preview)
+# Create low-code plug-ins to use with a copilot (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
