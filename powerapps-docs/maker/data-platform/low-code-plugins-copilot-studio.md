@@ -123,7 +123,7 @@ Go to Copilot Studio, and open the environment that has the plug-in.
       - Change **How will the copilot fill this input for the Action Name** parameter to **Set as a value**.
       - Select the low-code plug-in you created as the value for the **Action Name** parameter. You need to put your cursor in the textbox in order for the list of available APIs to show. The value to enter here is the schema name of the low-code plugin, such as `org_SendInAppNotificationToUser`. If you're unsure what the schema name of your plug-in is you can find it in the Dataverse Accelerator App by selecting it from the list and selecting **Copy code snippet** and then pasting the code into a text editor.
    - Additional **Inputs**:
-       - Select **Add** and the add following input parameters. Notice that adding additional inputs doesn't currently show details in Copilot Studio. This is a known issue. You can verify that the inputs were added correctly by selecting **Open the code edit and reviewing the code**, which should show the additional inputs under the inputs section in the action YAML:
+       - Select **Add** and add following input parameters. Notice that adding additional inputs doesn't currently show details in Copilot Studio. This is a known issue. You can verify that the inputs were added correctly by selecting **Open the code edit and reviewing the code**, which should show the additional inputs under the inputs section in the action YAML:
           - **Parameter Name**: *UserName*
           - **Parameter Name**: *Title*
           - **Parameter Name**: *Body*
