@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 04/26/2024
 ms.custom: template-how-to
+ms.collection: bap-ai-copilot
 ---
 # Create low-code plug-ins to use with Microsoft Copilot
 
