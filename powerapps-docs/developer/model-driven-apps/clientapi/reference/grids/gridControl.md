@@ -23,6 +23,8 @@ GridControl or the gridContext is the instance of grid or subgrid on a form agai
 |[addOnLoad](gridcontrol/addOnLoad.md)|[!INCLUDE[gridcontrol/includes/addOnLoad-description.md](gridcontrol/includes/addOnLoad-description.md)]|Read-only grid|
 |[getEntityName](gridcontrol/getEntityName.md)|[!INCLUDE[gridcontrol/includes/getEntityName-description.md](gridcontrol/includes/getEntityName-description.md)]|Read-only and editable grids|
 |[getFetchXml](gridcontrol/getFetchXml.md)|[!INCLUDE[gridcontrol/includes/getFetchXml-description.md](gridcontrol/includes/getFetchXml-description.md)]|Read-only and editable grids|
+|[getFilterXml](gridcontrol/getFilterXml.md)|[!INCLUDE[gridcontrol/includes/getFilterXml-description.md](gridcontrol/includes/getFilterXml-description.md)]|Read-only and editable grids|
+|[setFilterXml](gridcontrol/setFilterXml.md)|[!INCLUDE[gridcontrol/includes/setFilterXml-description.md](gridcontrol/includes/setFilterXml-description.md)]|Read-only and editable grids|
 |[getGrid](gridcontrol/getGrid.md)|[!INCLUDE[gridcontrol/includes/getGrid-description.md](gridcontrol/includes/getGrid-description.md)]|Read-only and editable grids|
 |[getGridType](gridcontrol/getGridType.md)|[!INCLUDE[gridcontrol/includes/getGridType-description.md](gridcontrol/includes/getGridType-description.md)]|Read-only and editable grids|
 |[getRelationship](gridcontrol/getRelationship.md)|[!INCLUDE[gridcontrol/includes/getRelationship-description.md](gridcontrol/includes/getRelationship-description.md)]|Read-only and editable grids|
@@ -47,6 +49,7 @@ Along with the methods mentioned above, subgrid also have the following methods:
 |[setDisabled](../controls/setDisabled.md)|Sets whether the control is disabled.|Read-only and editable grids|
 |[setFocus](../controls/setFocus.md)|Sets the focus on the control.|Read-only and editable grids|
 |[setVisible](../controls/setVisible.md)|Sets a value that indicates whether the control is visible.|Read-only and editable grids|
+
 
 ### Related articles
 
