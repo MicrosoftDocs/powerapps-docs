@@ -62,9 +62,13 @@ static List<string> GetRecycleBinEnabledTables(IOrganizationService service)
             Conditions = {
                   {
                new ConditionExpression(
-               attributeName: "statecode",
-               conditionOperator: ConditionOperator.Equal,
-               value: 0)
+                 attributeName: "statecode",
+                 conditionOperator: ConditionOperator.Equal,
+                 value: 0),
+               new ConditionExpression(
+                 attributeName: "isreadyforrecyclebin",
+                 conditionOperator: ConditionOperator.Equal,
+                 value: true)
                   }
              }
         }
@@ -112,7 +116,7 @@ function Get-RecycleBinEnabledTableNames {
    $query = 'api/data/v9.2/recyclebinconfigs?'
    $query += '$select=recyclebinconfigid&'
    $query += '$expand=extensionofrecordid($select=logicalname)&'
-   $query += '$filter=statecode eq 0'
+   $query += '$filter=statecode eq 0 and isreadyforrecyclebin eq true'
 
    $activeRecyclebinconfigsNames = (Invoke-RestMethod `
          -Uri ($environmentUrl + $query) `
