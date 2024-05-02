@@ -848,36 +848,44 @@ After enabling this, you may receive the following error:
 
 ## Tables not currently supported for Recycle Bin
 
-**TODO: This list currently excludes intersect tables. Add them back**
-
 :::row:::
    :::column:::
       `aaduser`<br />
       `aicopilot`<br />
-      `aipluginconversationstarter`<br />
-      `aipluginexternalschema`<br />
-      `aiplugininstance`<br />
-      `aipluginoperationparameter`<br />
-      `aiplugintitle`<br />
-      `appaction`<br />
+      `aiplugin`<br />
+      `aipluginconversationstartermapping`<br />
+      `aipluginexternalschemaproperty`<br />
+      `aipluginoperation`<br />
+      `aipluginoperationresponsetemplate`<br />
+      `annualfiscalcalendar`<br />
+      `appaction_appactionrule_classicrules`<br />
       `appactionrule`<br />
-      `appconfiginstance`<br />
+      `appconfig`<br />
+      `application`<br />
       `applicationuser`<br />
+      `applicationuserrole`<br />
       `appmodulecomponent`<br />
-      `appointment`<br />
-      `attribute`<br />
-      `attributemaskingrule`<br />
-      `bot`<br />
-      `botcomponentcollection`<br />
-      `bulkdeleteoperation`<br />
-      `calendar`<br />
-      `canvasapp`<br />
+      `appnotification`<br />
+      `asyncoperation`<br />
+      `attributeimageconfig`<br />
+      `backgroundoperation`<br />
+      `bot_botcomponent`<br />
+      `bot_environmentvariabledefinition`<br />
+      `botcomponent_aipluginoperation`<br />
+      `botcomponent_connectionreference`<br />
+      `botcomponent_environmentvariabledefinition`<br />
+      `botcomponent_workflow`<br />
+      `bulkdeletefailure`<br />
+      `businessunit`<br />
+      `callbackregistration`<br />
+      `card`<br />
       `cardstateitem`<br />
       `catalogassignment`<br />
-      `complexcontrol`<br />
-      `componentversiondatasource`<br />
-      `connectioninstance`<br />
-      `connectionrole`<br />
+      `columnmapping`<br />
+      `componentversion`<br />
+      `componentversionnrddatasource`<br />
+      `connectionreference`<br />
+      `connectionroleassociation`<br />
       `copilotexamplequestion`<br />
       `copilotsynonyms`<br />
       `customapi`<br />
@@ -966,75 +974,91 @@ After enabling this, you may receive the following error:
       `powerbidataset`<br />
       `powerbireport`<br />
       `powerpagecomponent`<br />
-      `powerpagesitelanguage`<br />
-      `principalentitybusinessunitmap`<br />
+      `powerpagesite`<br />
+      `powerpageslog`<br />
+      `principalentitymap`<br />
       `privilegesremovalsetting`<br />
       `processtrigger`<br />
       `publisheraddress`<br />
       `queue`<br />
-      `recordfilter`<br />
-      `recyclebinconfig`<br />
-      `relationshipattribute`<br />
-      `reportcategory`<br />
-      `retentionconfig`<br />
-      `role`<br />
+      `recentlyused`<br />
+      `recurringappointmentmaster`<br />
+      `relationship`<br />
+      `report`<br />
+      `retaineddataexcel`<br />
+      `ribbonmetadatatoprocess`<br />
+      `roleeditorlayout`<br />
       `roletemplate`<br />
-      `savedquery`<br />
-      `sdkmessage`<br />
-      `sdkmessageprocessingstep`<br />
-      `searchresultscache`<br />
-      `semiannualfiscalcalendar`<br />
-      `serviceplan`<br />
-      `sharedlinksetting`<br />
-      `sharedworkspacenr`<br />
-      `similarityrule`<br />
-      `sla`<br />
-      `solution`<br />
-      `solutioncomponentattributeconfiguration`<br />
-      `solutioncomponentconfiguration`<br />
-      `solutionhistorydata`<br />
-      `subscriptionsyncentryoffline`<br />
-      `synapselinkprofile`<br />
-      `synapselinkschedule`<br />
-      `systemform`<br />
-      `systemuserauthorizationchangetracker`<br />
-      `teamtemplate`<br />
-      `textanalyticsentitymapping`<br />
-      `transformationmapping`<br />
-      `translationprocess`<br />
-      `usermobileofflineprofilemembership`<br />
-      `userqueryvisualization`<br />
-      `webresource`<br />
-      `workflow`<br />
+      `runtimedependency`<br />
+      `savedqueryvisualization`<br />
+      `sdkmessagefilter`<br />
+      `sdkmessageprocessingstepimage`<br />
+      `searchtelemetry`<br />
+      `serviceendpoint`<br />
+      `serviceplanappmodules`<br />
+      `serviceplanmapping`<br />
+      `sharedworkspaceaccesstoken`<br />
+      `sharepointsite`<br />
+      `sitemap`<br />
+      `slaitem`<br />
+      `solutioncomponent`<br />
+      `solutioncomponentbatchconfiguration`<br />
+      `solutioncomponentrelationshipconfiguration`<br />
+      `subscriptionstatisticsoffline`<br />
+      `synapsedatabase`<br />
+      `synapselinkprofileentity`<br />
+      `syncerror`<br />
+      `systemuser`<br />
+      `systemuserprofiles`<br />
+      `teammobileofflineprofilemembership`<br />
+      `teamroles`<br />
+      `template`<br />
+      `tracelog`<br />
+      `transformationparametermapping`<br />
+      `userform`<br />
+      `userquery`<br />
+      `virtualentitymetadata`<br />
+      `webwizard`<br />
+      `workflowbinary`<br />
       `workflowlog`<br />
       `workqueueitem`<br />
    :::column-end:::
    :::column:::
       `activityfileattachment`<br />
-      `aiplugin`<br />
-      `aipluginconversationstartermapping`<br />
-      `aipluginexternalschemaproperty`<br />
-      `aipluginoperation`<br />
-      `aipluginoperationresponsetemplate`<br />
-      `annualfiscalcalendar`<br />
+      `aicopilot_aiplugin`<br />
+      `aipluginconversationstarter`<br />
+      `aipluginexternalschema`<br />
+      `aiplugininstance`<br />
+      `aipluginoperationparameter`<br />
+      `aiplugintitle`<br />
+      `appaction`<br />
       `appactionmigration`<br />
-      `appconfig`<br />
-      `application`<br />
+      `appactionrule_webresource_scripts`<br />
+      `appconfiginstance`<br />
+      `applicationroles`<br />
+      `applicationuserprofile`<br />
       `appmodule`<br />
-      `appnotification`<br />
-      `asyncoperation`<br />
-      `attributeimageconfig`<br />
-      `backgroundoperation`<br />
+      `appmoduleroles`<br />
+      `appointment`<br />
+      `attribute`<br />
+      `attributemaskingrule`<br />
+      `bot`<br />
+      `bot_botcomponentcollection`<br />
       `botcomponent`<br />
-      `bulkdeletefailure`<br />
-      `businessunit`<br />
-      `callbackregistration`<br />
-      `card`<br />
+      `botcomponent_botcomponent`<br />
+      `botcomponent_dvtablesearch`<br />
+      `botcomponent_msdyn_aimodel`<br />
+      `botcomponentcollection`<br />
+      `bulkdeleteoperation`<br />
+      `calendar`<br />
+      `canvasapp`<br />
+      `cardentityconnections`<br />
       `catalog`<br />
-      `columnmapping`<br />
-      `componentversion`<br />
-      `componentversionnrddatasource`<br />
-      `connectionreference`<br />
+      `channelaccessprofileentityaccesslevel`<br />
+      `complexcontrol`<br />
+      `componentversiondatasource`<br />
+      `connectioninstance`<br />
+      `connectionrole`<br />
       `connector`<br />
       `copilotglossaryterm`<br />
       `credential`<br />
@@ -1123,50 +1147,57 @@ After enabling this, you may receive the following error:
       `position`<br />
       `powerbimashupparameter`<br />
       `powerfxrule`<br />
-      `powerpagesite`<br />
-      `powerpageslog`<br />
+      `powerpagecomponent_powerpagecomponent`<br />
+      `powerpagesitelanguage`<br />
+      `principalentitybusinessunitmap`<br />
       `privilege`<br />
       `processstage`<br />
       `publisher`<br />
       `quarterlyfiscalcalendar`<br />
-      `recentlyused`<br />
-      `recurringappointmentmaster`<br />
-      `relationship`<br />
-      `report`<br />
-      `retaineddataexcel`<br />
-      `ribbonmetadatatoprocess`<br />
-      `roleeditorlayout`<br />
-      `runtimedependency`<br />
-      `savedqueryvisualization`<br />
-      `sdkmessagefilter`<br />
-      `sdkmessageprocessingstepimage`<br />
-      `searchtelemetry`<br />
-      `serviceendpoint`<br />
-      `serviceplanmapping`<br />
-      `sharedworkspaceaccesstoken`<br />
-      `sharepointsite`<br />
-      `sitemap`<br />
-      `slaitem`<br />
-      `solutioncomponent`<br />
-      `solutioncomponentbatchconfiguration`<br />
-      `solutioncomponentrelationshipconfiguration`<br />
-      `subscriptionstatisticsoffline`<br />
-      `synapsedatabase`<br />
-      `synapselinkprofileentity`<br />
-      `syncerror`<br />
-      `systemuser`<br />
-      `teammobileofflineprofilemembership`<br />
-      `template`<br />
-      `tracelog`<br />
-      `transformationparametermapping`<br />
-      `userform`<br />
-      `userquery`<br />
-      `virtualentitymetadata`<br />
-      `webwizard`<br />
-      `workflowbinary`<br />
+      `queuemembership`<br />
+      `recordfilter`<br />
+      `recyclebinconfig`<br />
+      `relationshipattribute`<br />
+      `reportcategory`<br />
+      `retentionconfig`<br />
+      `role`<br />
+      `roleprivileges`<br />
+      `roletemplateprivileges`<br />
+      `savedquery`<br />
+      `sdkmessage`<br />
+      `sdkmessageprocessingstep`<br />
+      `searchresultscache`<br />
+      `semiannualfiscalcalendar`<br />
+      `serviceplan`<br />
+      `serviceplancustomcontrol`<br />
+      `sharedlinksetting`<br />
+      `sharedworkspacenr`<br />
+      `similarityrule`<br />
+      `sla`<br />
+      `solution`<br />
+      `solutioncomponentattributeconfiguration`<br />
+      `solutioncomponentconfiguration`<br />
+      `solutionhistorydata`<br />
+      `subscriptionsyncentryoffline`<br />
+      `synapselinkprofile`<br />
+      `synapselinkschedule`<br />
+      `systemform`<br />
+      `systemuserauthorizationchangetracker`<br />
+      `systemuserroles`<br />
+      `teamprofiles`<br />
+      `teamtemplate`<br />
+      `textanalyticsentitymapping`<br />
+      `transformationmapping`<br />
+      `translationprocess`<br />
+      `usermobileofflineprofilemembership`<br />
+      `userqueryvisualization`<br />
+      `webresource`<br />
+      `workflow`<br />
+      `workflowcardconnections`<br />
       `workqueue`<br />
    :::column-end:::
 :::row-end:::
+
 
 
 
