@@ -1,6 +1,6 @@
 ---
-title: Optimize Queries For Read Performance 
-description: Best practices when building queries to retrieve records from Dataverse.
+title: Optimize queries for read performance
+description: Best practices when composing queries to retrieve records from Dataverse.
 author: dasuss
 ms.topic: article
 ms.date: 03/28/2024
@@ -15,98 +15,133 @@ search.app:
 contributors:
   - JimDaly
 ---
-# Optimize Queries For Read Performance
+# Optimize queries for read performance
 <!-- #TODO: This needs to specify SQL Read performance. These tips do not apply to dataverse search -->
 
-Building optimized queries for Dataverse is vital to ensuring a fast, responsive, and reliable experience for your users. This article will describe several things to avoid and to keep in mind when designing queries. 
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This article describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here may not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
 
 ## Minimize the number of selected columns
 
-Queries which specify "all-attributes" or explicitly adds many columns in the select list may hit performance issues due to the size of the dataset. 
+Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset.
 
-Queries with many logical attributes (for example, lookups) can also cause queries to be slow because each logical attribute needs to be retrieved from a seperate entity which can make a simple query much more complex and slow. 
+This is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
-We recommend customers to design their queries to select the bare minimum of columns needed.
+<!-- 
+
+David: Most lookups are not logical attributes. Lookups include several supporting attributes that are logical, but the API doesn't return data for many of these. I'm talking about the fields that end with *Name. 
+
+Common Lookups that are also logical are OwningTeam or OwningUser, because they are special.
+
+That's why I re-wrote the content below.
+
+   Queries with many logical attributes (for example, lookups) can also cause queries to be slow because each logical attribute needs to be retrieved from a seperate entity which can make a simple query much more complex and slow. 
+
+   We recommend customers to design their queries to select the bare minimum of columns needed.
+
+-->
 
 ## Avoid leading wild cards in filter conditions
 
-Queries which use conditions with leading wild cards (either explicit , or implicit like with "ends-with") can lead to bad performance. This is because Dataverse can't take advantage of indexes when a query uses leading wild card which leads to table scans. This can happen even if there are other non-leading wild card queries which limit the result set. 
+Queries which use conditions with leading wild cards (either explicitly, or implicitly like with "ends-with") can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other non-leading wild card queries which limit the result set. 
 
-When queries using leading wild cards timeout, a unique error code will be thrown
+This is an example of a query that uses a leading wild card:
 
-<!-- Can this link to the current failure text in https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/web-service-error-codes -->
-<!-- Also we should update the throttle page to link back to here for the different rules -->
-```
-0x80048644
--2147187132	Name: DataEngineLeadingWildcardQueryThrottling
-Message: This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952
-```
-Dataverse will heavily throttle leading wild card queries which have been identified as a risk to the health of the org to help prevent outages. 
-
-We recommend customers to either use Dataverse search to use leading wild card queries, or look into why leading wild cards are needed and re-architect their model to help users avoid needed leading wild cards.
-
-Example fetchxml which uses a leading wild card: 
-``` xml 
-<fetch version='1.0' output-format='xml-platform' mapping='logical'>
-	<entity name='account'>
-		<attribute name='accountid' />
-		<attribute name='accountnumber' />
-		<filter type='and'>
-			<condition attribute='accountnumber' operator='like' value='%234' />
-		</filter>
-	</entity>
+```xml
+<fetch>
+   <entity name='account'>
+      <attribute name='accountid' />
+      <attribute name='accountnumber' />
+      <filter type='and'>
+         <condition attribute='accountnumber' operator='like' value='%234' />
+      </filter>
+   </entity>
 </fetch>
 ```
-For more information about wild card usage see: [Use wildcard characters in conditions for string values](../data-platform/wildcard-characters.md) 
-
-## Avoid using calculated columns in filter conditions
-
-The result of calculcated columns are calculated on the retrieve/retrivemulitple of an entity. These results can't be pre-calcauated which means that filters on these columns will need to calculate and check the value for each possible entity it can return. These filters can lead to non-performant queries which can't be tuned or improved by the platform.
-
-If this pattern is detected in timing out queries we will throw a unique error code to help identify which workflows are using non-performant query patterns. An example error thrown:
-
-<!-- This error text should be updated like Wild Card to link to the throttle page -->
-```
-0x80048574
--2147187340	Name: ComputedColumnCauseTimeout
-Message: The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.
-```
-
-Dataverse will heavily throttle queries with filters on calculated columns which have been identified as a risk to the health of the org to help prevent outages. Please see the Query Throttling page for more info about how throttling will impact these queries. [Query throttling (Microsoft Dataverse)](../data-platform/query-throttling.md) 
-
-For more information about calculated columns see [Formula, calculated, and rollup columns using code](../data-platform/calculated-rollup-attributes.md) 
 
 
-## Avoid ordering by Optionsets
+When queries using leading wild cards timeout, the following error is returned:
 
-When filtering on an optionset (for example statecode), Dataverse will try to filter on the localized label of the optionset to give a more intuitive ordering experience. This leads to Dataverse needing to join and calculate the localized label for each row then order it to provide such an experience. This can lead to a non-performant query.
+<!-- 
 
-Dataverse recommends customers to avoid ordering on Optionsets if possible.
+Can this link to the current failure text in https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/web-service-error-codes 
 
-Example query ordering on the statecode optionset: 
+jdaly: No. You can't link to an item within a table.
+-->
+<!-- 
+
+Also we should update the throttle page to link back to here for the different rules 
+
+-->
+
+> Name: `DataEngineLeadingWildcardQueryThrottling`<br />
+> Code: `0x80048644`<br />
+> Number: `-2147187132`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
+
+Dataverse heavily throttles leading wild card queries which have been identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+
+If you find yourself using leading wild card queries, look into these options:
+
+- Use [Dataverse search](search/overview.md) instead.
+- Change your data model to help people avoid needing leading wild cards.
+
+[Learn more about using wildcard characters in conditions for string values](../data-platform/wildcard-characters.md) 
+
+## Avoid using formula or calculated columns in filter conditions
+
+[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse cannot improve the performance of these queries using SQL.
+
+When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
+
+> Name: `ComputedColumnCauseTimeout`<br />
+> Code: `0x80048574`<br />
+> Number: `-2147187340`<br />
+> Message: `The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.`
+
+To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](query-throttling.md)
+
+
+## Avoid ordering by choice columns
+
+When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should be aware that ordering on choice columns requires additional compute resources to join and sort the rows by the localized label value. This additional work makes the query slower. If possible, try to avoid ordering results by choice column values.
+
+
+<!-- 
+
+jdaly: I don't think this example adds much here.
+
+Do you want to mention the fetch element useraworderby attribute?
+That might make for a good example
+
+Example query ordering on the statecode choice column: 
+
 ``` xml
-			string fetchxml = @"
-<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>
-	<entity name='account'>
-		<attribute name='accountnumber' />
-		<order attribute='statecode' />
-	</entity>
-</fetch>
+<fetch distinct='true'>
+   <entity name='account'>
+      <attribute name='accountnumber' />
+      <order attribute='statecode' />
+   </entity>
+</fetch> 
 ```
+-->
 
-## Avoid ordering by link-entity attributes
+## Avoid ordering by columns in related tables
 
 Ordering by link-entity attributes can lead to sub-optimal query performance due to the added complexity. Ordering by Link-Entiies should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
 
 ``` xml
-<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
-	<entity name='account'>
-		<attribute name='accountnumber' />
-    <link-entity name='account' from='accountid' to='parentaccountid' link-type='outer' alias='oaccount'>
-        <attribute name='createdby' />
-        <order attribute='name' />
-    </link-entity>
-	</entity>
+<fetch>
+   <entity name='account'>
+      <attribute name='accountnumber' />
+      <link-entity name='account'
+         from='accountid'
+         to='parentaccountid'
+         link-type='outer'
+         alias='oaccount'>
+         <attribute name='createdby' />
+         <order attribute='name' />
+      </link-entity>
+   </entity>
 </fetch>
 ```
 
@@ -119,13 +154,13 @@ Example fetchxml which searches on a large text column:
 
 ``` xml 
 <fetch version='1.0' output-format='xml-platform' mapping='logical'>
-	<entity name='account'>
-		<attribute name='accountid' />
-		<attribute name='accountnumber' />
-		<filter type='and'>
-			<condition attribute='Description' operator='like' value='Sold%' />
-		</filter>
-	</entity>
+   <entity name='account'>
+      <attribute name='accountid' />
+      <attribute name='accountnumber' />
+      <filter type='and'>
+         <condition attribute='Description' operator='like' value='Sold%' />
+      </filter>
+   </entity>
 </fetch>
 ```
 
