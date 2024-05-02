@@ -9034,6 +9034,11 @@
       "source_path": "powerapps-docs/user/copilot-chat-in-webplayer.md",
       "redirect_url": "/power-platform/responsible-ai-overview",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/use-@mentions.md",
+      "redirect_url": "collaboration",
+      "redirect_document_id": "false"
     }
   ]
 }
