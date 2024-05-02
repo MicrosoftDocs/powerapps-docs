@@ -29,7 +29,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 These tables and corresponding commands are available in offline mode.
   > [!NOTE]
-  > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. See [A button on the command bar is hidden](//troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden.md) for more inforamtion.
+  > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. See [A button on the command bar is hidden](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden) for more inforamtion.
 
 |Table |Commands|  
 |-------------|---------|  
