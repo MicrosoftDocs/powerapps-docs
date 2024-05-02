@@ -144,7 +144,8 @@ Follow these steps in the **Test copilot** pane in Copilot Studio.
 1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action. More information: [Testing you copilot using generative actions](/microsoft-copilot-studio/advanced-generative-actions#testing-your-copilot-using-generative-actions)
 1. Enter the text in the chat window *Send a notification to my user to check out this url https://copilotstudio.microsoft.com*, and then select **Send**.
 
-<!-- Need revised result detail-->
+If everything is configured correctly, you see that a notification has been sent in the **Test copilot** pane. You can try some other prompts to test the action further and you could change the plugin to be smarter about how it searches for users given a name to see how the action responds. For example, you could add a step to search for the user by email address if the name doesn't return a result.
+
 :::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot" lightbox="media/low-code-plugin-copilot-action4.png":::
 
 ## See also
