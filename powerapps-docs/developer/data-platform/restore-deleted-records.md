@@ -28,7 +28,7 @@ This article will describe how you can do the following:
 
 - Detect which tables are enabled for recycle bin
 - Detect which tables do not have recycle bin enabled
-- Retrieve the time period configuration for the recycle bin
+- Retrieve the automatic cleanup time period configuration for the recycle bin
 - Disable recycle bin for a table
 - Retrieve deleted records that can be restored
 - Restore a deleted record
@@ -262,7 +262,7 @@ function Get-TablesEligibleForRecycleBin {
 
 ---
 
-## Retrieve the time period configuration for the recycle bin
+## Retrieve the automatic cleanup time period configuration for the recycle bin
 
  **TODO: Explain how to do this**
 
