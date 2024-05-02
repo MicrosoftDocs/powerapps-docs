@@ -335,7 +335,7 @@ OData-Version: 4.0
 
 ## Disable recycle bin for a table
 
-Replace the `<EntityId>` in the operations below to disable recycle bin for a table. The `<EntityId>` value is the [EntityMetadata.MetadataId](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.MetadataId) for the table.
+Replace the `<EntityId>` in the operations below to disable recycle bin for a table. The `<EntityId>` value is the [EntityMetadata.MetadataId](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId) for the table.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -1215,7 +1215,7 @@ You can link to other articles in the same repo with relative paths: [Search for
 
 ### Links to sections
 
-You can add links to headings of other sections of the same document: [Detect which tables have a recycle bin enabled](#detect-which-tables-have-a-recycle-bin-enabled)
+You can add links to headings of other sections of the same document: [Detect which tables do not have recycle bin enabled](#detect-which-tables-do-not-have-recycle-bin-enabled)
 
 You can link to headings of other sections of a different document: [DeleteMultiple Availability](deletemultiple.md#availability)
 
