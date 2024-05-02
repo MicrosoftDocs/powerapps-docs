@@ -11,7 +11,7 @@ ms.custom: template-how-to
 ---
 # Create low-code plug-ins to use with Microsoft Copilot
 
-Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a low-code plug-in that can be used to create an action in Microsoft Copilot Studio.
+Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a basic low-code plug-in that adds two integers together and a more complex plug-in that can be used to send a notification either of which can be used to create an action in Microsoft Copilot Studio.
 
 ## Prerequisites to use the plug-in with Microsoft Copilot
 
@@ -31,10 +31,10 @@ To create your basic low-code instant plug-in, follow these steps:
 3. Enter a descriptive display name for your plug-in. For example *Sum numbers*, and then select **Create**.
 4. In the **Parameters** section:
     - Add the following input parameters:
-        - **Parameter Name**: Number1, Type: Float
-        - **Parameter Name**: Number2, Type: Float
+        - **Parameter Name**: *Number1*, **Type**: **Float**
+        - **Parameter Name**: *Number2*, **Type**: **Float**
     - Add the following output parameter:
-        - **Parameter Name**: Result, Type: Float
+        - **Parameter Name**: *Result, Type*: **Float**
 5. In the **Expression** section, enter the following code:
 
     ```
@@ -48,10 +48,10 @@ To create your basic low-code instant plug-in, follow these steps:
 Go to Copilot Studio, and open the environment that has the plug-in.
 
 1. Create a copilot. More information: [Create and configure copilot plugins](/microsoft-copilot-studio/copilot-plugins-overview)
-1. Enable generative actions. More information: [Enable generative actions](/microsoft-copilot-studio/advanced-generative-actions#enable-generative-actions) to call and then test your low-code plug-in as a generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
+1. Enable generative actions on the copilot. More information: [Enable generative actions](/microsoft-copilot-studio/advanced-generative-actions#enable-generative-actions)
 1. Add a generative AI action. When you add the action, search for 'Perform an unbound action in selected environment' and select the action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 1. Configure the action with the following details:
-   - Add a model description that lets the copilot know when to call this action. Use plain English to describe the conditions under which this action should be called. For example, you can enter "Adds numbers and return the sum of those numbers given 2 floating point values."
+   - Add a model description that lets the copilot know when to call this action. Use plain English to describe the conditions under which this action should be called. For example, you can enter "Adds numbers and return the sum of those numbers given 2 floating point values." More information: [Authoring descriptions](/microsoft-copilot-studio/advanced-generative-actions#authoring-descriptions)
    - Use these **Inputs**:
       - Change **How will the copilot fill this input for the Organization** parameter to **Set as a value**.
       - Select your current environment (the environment in which you created your low-code plug-in) as the value for the **Organization** parameter.
@@ -61,12 +61,13 @@ Go to Copilot Studio, and open the environment that has the plug-in.
        - Add and the following input parameters. Adding additional inputs doesn't currently show details in Copilot Studio. You can verify that the inputs were added correctly by selecting **Open the code edit and reviewing the code**, which should show the additional inputs under the inputs section in the action YAML:
           - **Parameter Name**: *Number1*
           - **Parameter Name**: *Number2*
+1. Save and publish the copilot.
 
 ### Test your copilot action
 
-Follow these steps in the **Test copilot** pane.
+Follow these steps in the **Test copilot** pane in Copilot Studio.
 
-1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action.
+1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action. More information: [Testing you copilot using generative actions](/microsoft-copilot-studio/advanced-generative-actions#testing-your-copilot-using-generative-actions)
 1. Enter the text in the chat window *Add 5.2 and 10.3* and select **Send**.
 
 If everything is configured correctly, you see the expected result of 15.5 output in the chat window and the trace pane shows the inputs and outputs of your action. The trace pane looks similar to the following example. You can try some other prompts to test the action further and change the language to see how the action responds. Some examples:
@@ -87,12 +88,12 @@ To create your low-code instant plug-in, follow these steps:
 3. Enter a descriptive display name for your plug-in. For example, *Send in-app notification to user* and select **Create**.
 4. In the **Parameters** section:
     - Add the following input parameters:
-        - **Parameter Name**: UserName, Type: String
-        - **Parameter Name**: Title, Type: String
-        - **Parameter Name**: Body, Type: String
-        - **Parameter Name**: Url, Type: String
+        - **Parameter Name**: *UserName, Type*: **String**
+        - **Parameter Name**: *Title, Type*: **String**
+        - **Parameter Name**: *Body, Type*: **String**
+        - **Parameter Name**: *Url, Type*: **String**
     - Add the following output parameter:
-        - **Parameter Name**: Result, Type: String
+        - **Parameter Name**: *Result, Type*: **String**
 5. In the **Expression** section, enter the following code. Notice that we're wrapping the existing `XSendAppNotification` API with the plugin to give the ability to find users by name. This behavior helps when called from copilot, which can only provide information the user knows about the person and not more esoteric IDs of records that the underlying API is expecting:
 
    ```powerappsfl
@@ -112,10 +113,10 @@ To create your low-code instant plug-in, follow these steps:
 Go to Copilot Studio, and open the environment that has the plug-in.
 
 1. Create a copilot. More information: [Create and configure copilot plugins](/microsoft-copilot-studio/copilot-plugins-overview)
-1. Enable generative actions. More information: [Enable generative actions](/microsoft-copilot-studio/advanced-generative-actions#enable-generative-actions) to call and then test your low-code plug-in as a generative AI action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
+1. Enable generative actions on the copilot. More information: [Enable generative actions](/microsoft-copilot-studio/advanced-generative-actions#enable-generative-actions)
 1. Add a generative AI action. When you add the action, search for 'Perform an unbound action in selected environment' and select the action. More information: [Use Generative Actions in Microsoft Copilot Studio](/microsoft-copilot-studio/advanced-generative-actions)
 1. Configure the action with the following details:
-   - Add a model description that lets the copilot know when to call this action. Use plain English to describe the conditions under which this action should be called. For example, you can enter "Calls a Dataverse API to send a notification to a user in Dataverse to remind or alert them to something important with a title, body and optionally a link for more details."
+   - Add a model description that lets the copilot know when to call this action. Use plain English to describe the conditions under which this action should be called. For example, you can enter "Calls a Dataverse API to send a notification to a user in Dataverse to remind or alert them to something important with a title, body and optionally a link for more details." More information: [Authoring descriptions](/microsoft-copilot-studio/advanced-generative-actions#authoring-descriptions)
    - Use these **Inputs**:
       -  Change **How will the copilot fill this input for the Organization** parameter to **Set as a value**.
       - Select your current environment from the dropdown list (the environment in which you created your low-code plug-in) as the value for the **Organization** parameter. You need to put your cursor in the textbox in order for the list of available environments to show.
@@ -127,13 +128,14 @@ Go to Copilot Studio, and open the environment that has the plug-in.
           - **Parameter Name**: *Title*
           - **Parameter Name**: *Body*
           - **Parameter Name**: *Url*
+1. Save and publish the copilot.
 
 ### Test your send notification copilot action
 
-Follow these steps in the **Test copilot** pane.
+Follow these steps in the **Test copilot** pane in Copilot Studio.
 
-1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action.
-1. Enter the text in the chat window *Send a notification to my user to check out this url https://copilotstudio.microsoft.com* and select **Send**.
+1. Select the sparkle icon at the top of the chat window to start tracing mode. This allows you to confirm that your action is being called and verifies the inputs and outputs of your action. More information: [Testing you copilot using generative actions](/microsoft-copilot-studio/advanced-generative-actions#testing-your-copilot-using-generative-actions)
+1. Enter the text in the chat window *Send a notification to my user to check out this url https://copilotstudio.microsoft.com*, and then select **Send**.
 
 <!-- Need revised result detail-->
 :::image type="content" source="media/low-code-plugin-copilot-action4.png" alt-text="Results of notifcation sent from copilot" lightbox="media/low-code-plugin-copilot-action4.png":::
