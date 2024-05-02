@@ -16,24 +16,31 @@ ms.custom: bap-template
 ---
 # Restore deleted records (preview)
 
-**TODO:Add your introduction here. Quickly establish the value proposition and why people should read more.**
+[!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
-In markdown, new paragraphs are separated by a new line.
+Sometimes people delete records that they shouldn't. Administrators can enable a recycle bin for tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records?branch=matp-3988791)
 
-Sometimes people delete records that they shouldn't. Administrators can configure a recycle bin for tables so that records deleted for that table can be restored within a specified period of time. **TODO: Add link to Admin guide article describing how administrators can do this.**
+**TODO: Remove `?branch=matp-3988791` from the links**
 
-Developers can use Dataverse APIs to restore records using the `Restore` message. This message can only be used on tables that are configured to enable the recycle bin. This article will explain how to:
+[When the recycle bin is enabled](/power-platform/admin/restore-deleted-table-records?branch=matp-3988791#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
 
-- Detect which tables have a recycle bin enabled
+This article will describe how you can do the following:
+
+- Detect which tables are enabled for recycle bin
 - Detect which tables do not have recycle bin enabled
-- Enable a recycle bin for a table
+- Retrieve the time period configuration for the recycle bin
+- Disable recycle bin for a table
 - Retrieve deleted records that can be restored
 - Restore a deleted record
 - Manage restoring records deleted by cascade operations
 
-## Detect which tables have a recycle bin enabled
+## Detect which tables are enabled for recycle bin
 
-Tables that are enabled for recycle bin will have a row in the [Recycle Bin Configuration (RecycleBinConfig)  table](reference/entities/recyclebinconfig.md) where the `statecode` is active. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig)  table](reference/entities/recyclebinconfig.md) will have no rows.
+
+In time, we expect that all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of OOTB tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin). 
+
+Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -255,7 +262,7 @@ function Get-TablesEligibleForRecycleBin {
 
 ---
 
-## Enable a recycle bin for a table
+## Retrieve the time period configuration for the recycle bin
 
  **TODO: Explain how to do this**
 
@@ -326,13 +333,11 @@ OData-Version: 4.0
 
 ---
 
-## Retrieve deleted records that can be restored
+## Disable recycle bin for a table
 
- **TODO: Explain how to do this**
+Replace the `<EntityId>` in the operations below to disable recycle bin for a table. The `<EntityId>` value is the [EntityMetadata.MetadataId](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.MetadataId) for the table.
 
- **TODO: Provide code snippets for both SDK and Web API**
-
- ### [SDK for .NET](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
 
 Content for SDK...
 
@@ -348,35 +353,78 @@ static void ExampleMethod(IOrganizationService service){
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+
 
 **Request**
 
 ```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.CreateMultiple
+PATCH [Organization Uri][Organization URI]/api/data/v9.2/recyclebinconfigs(_extensionofrecordid_value=<EntityId>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
+{"statecode":1,"statuscode":2}
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 396
 
-{
-    "Targets": [
-        {
-            "sample_name": "sample record 0000001",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000002",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000003",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        }
-    ]
+```
+
+> [!NOTE]
+> This is a `PATCH` operation without a body
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+```
+
+---
+
+## Retrieve deleted records that can be restored
+
+ **TODO: Explain how to do this**
+
+ To retrieve deleted records that can be restored, select the datasource of the query to 'TBD'.
+
+ **TODO: Provide code snippets for both SDK and Web API**
+
+ ### [SDK for .NET](#tab/sdk)
+
+When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
+
+When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to 'TBD' when you retrieve records.
+
+```csharp
+static EntityCollection GetDeletedAccounts(IOrganizationService service){
+
+   // Add your code to demonstrate how to do something here
+   // We want a static method where all input parameters
+   // are visible
 }
+```
+
+When you retrieve data using QueryExpression, set the [QueryExpression.DataSource](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to 'TBD' when you retrieve records.
+
+```csharp
+static EntityCollection GetDeletedAccounts(IOrganizationService service){
+
+   // Add your code to demonstrate how to do something here
+   // We want a static method where all input parameters
+   // are visible
+}
+```
+
+
+### [Web API](#tab/webapi)
+
+With Web API, you can retrieve records using FetchXml or OData syntax.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/accounts?$select=name
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
 **Response**
@@ -386,11 +434,9 @@ HTTP/1.1 200 OK
 OData-Version: 4.0
 
 {
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
-    "Ids": [
-        "8f4c3f92-312b-ee11-bdf4-000d3a993550",
-        "904c3f92-312b-ee11-bdf4-000d3a993550",
-        "914c3f92-312b-ee11-bdf4-000d3a993550"
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.account",
+    "value": [
+        { "name": "Contoso", "accountid": <guid>}
     ]
 }
 ```
@@ -404,6 +450,170 @@ OData-Version: 4.0
  ### [SDK for .NET](#tab/sdk)
 
 Content for SDK...
+
+This is the class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder) for the Restore Message:
+
+```csharp
+   [System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/crm/2011/Contracts")]
+   [Microsoft.Xrm.Sdk.Client.RequestProxyAttribute("Restore")]
+   public partial class RestoreRequest<T> : Microsoft.Xrm.Sdk.OrganizationRequest
+      where T : Microsoft.Xrm.Sdk.Entity, new ()
+   {
+      
+      public bool MaintainLegacyAppServerBehavior
+      {
+         get
+         {
+            if (this.Parameters.Contains("MaintainLegacyAppServerBehavior"))
+            {
+               return ((bool)(this.Parameters["MaintainLegacyAppServerBehavior"]));
+            }
+            else
+            {
+               return default(bool);
+            }
+         }
+         set
+         {
+            this.Parameters["MaintainLegacyAppServerBehavior"] = value;
+         }
+      }
+      
+      public bool CalculateMatchCodeSynchronously
+      {
+         get
+         {
+            if (this.Parameters.Contains("CalculateMatchCodeSynchronously"))
+            {
+               return ((bool)(this.Parameters["CalculateMatchCodeSynchronously"]));
+            }
+            else
+            {
+               return default(bool);
+            }
+         }
+         set
+         {
+            this.Parameters["CalculateMatchCodeSynchronously"] = value;
+         }
+      }
+      
+      public RestoreRequest() : 
+            this(new T())
+      {
+      }
+      
+      public RestoreRequest(T target)
+      {
+         this.Target = target;
+         this.RequestName = "Restore";
+      }
+      
+      public T Target
+      {
+         get
+         {
+            if (this.Parameters.Contains("Target"))
+            {
+               return ((T)(this.Parameters["Target"]));
+            }
+            else
+            {
+               return default(T);
+            }
+         }
+         set
+         {
+            this.Parameters["Target"] = value;
+         }
+      }
+      
+      public bool SuppressDuplicateDetection
+      {
+         get
+         {
+            if (this.Parameters.Contains("SuppressDuplicateDetection"))
+            {
+               return ((bool)(this.Parameters["SuppressDuplicateDetection"]));
+            }
+            else
+            {
+               return default(bool);
+            }
+         }
+         set
+         {
+            this.Parameters["SuppressDuplicateDetection"] = value;
+         }
+      }
+      
+      public bool ReturnRowVersion
+      {
+         get
+         {
+            if (this.Parameters.Contains("ReturnRowVersion"))
+            {
+               return ((bool)(this.Parameters["ReturnRowVersion"]));
+            }
+            else
+            {
+               return default(bool);
+            }
+         }
+         set
+         {
+            this.Parameters["ReturnRowVersion"] = value;
+         }
+      }
+      
+      public string SolutionUniqueName
+      {
+         get
+         {
+            if (this.Parameters.Contains("SolutionUniqueName"))
+            {
+               return ((string)(this.Parameters["SolutionUniqueName"]));
+            }
+            else
+            {
+               return default(string);
+            }
+         }
+         set
+         {
+            this.Parameters["SolutionUniqueName"] = value;
+         }
+      }
+   }
+   
+   [System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/crm/2011/Contracts")]
+   [Microsoft.Xrm.Sdk.Client.ResponseProxyAttribute("Restore")]
+   public partial class RestoreResponse : Microsoft.Xrm.Sdk.OrganizationResponse
+   {
+      
+      public RestoreResponse()
+      {
+      }
+      
+      public System.Guid id
+      {
+         get
+         {
+            if (this.Results.Contains("id"))
+            {
+               return ((System.Guid)(this.Results["id"]));
+            }
+            else
+            {
+               return default(System.Guid);
+            }
+         }
+      }
+   }
+}
+```
+
+I was expecting that it would simply require an EntityReference...
 
 ```csharp
 static void ExampleMethod(IOrganizationService service){
