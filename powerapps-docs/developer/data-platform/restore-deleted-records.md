@@ -372,7 +372,8 @@ Accept: application/json
 ```
 
 > [!NOTE]
-> This is a `PATCH` operation without a body
+> This is a `PATCH` operation without a body??
+> TODO: Add body
 
 **Response**
 
@@ -455,7 +456,10 @@ OData-Version: 4.0
 
 Content for SDK...
 
+
 This is the class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder) for the Restore Message:
+
+**TODO: We don't want to include this class in the docs, we want to show how to use it. It has an unusual signature. We should also show how to use OrganizationRequest/OrganizationResponse without this generated class**
 
 ```csharp
    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/crm/2011/Contracts")]
@@ -843,6 +847,8 @@ After enabling this, you may receive the following error:
 
 
 ## Tables not currently supported for Recycle Bin
+
+**TODO: This list currently excludes intersect tables. Add them back**
 
 :::row:::
    :::column:::
