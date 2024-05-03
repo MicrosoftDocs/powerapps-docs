@@ -9054,6 +9054,10 @@
       "source_path": "powerapps-docs/maker/portals/provision-portal-add-on.md",
       "redirect_url": "/power-pages/admin/provision-add-on",
       "redirect_document_id": "false"
+    },
+      "source_path": "powerapps-docs/user/use-@mentions.md",
+      "redirect_url": "collaboration",
+      "redirect_document_id": "false"
     }
   ]
 }
