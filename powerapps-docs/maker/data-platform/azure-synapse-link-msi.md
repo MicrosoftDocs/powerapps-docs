@@ -22,7 +22,9 @@ With managed identities, access to your storage account is restricted to request
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
 - You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
+  - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
+  - 
 - Go to this [compressed folder file on GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
@@ -222,6 +224,9 @@ If you receive 403 errors during the link creation:
 - You can identify the linked enterprise policy and `policyArmId` by running the PowerShell script `./GetIdentityEnterprisePolicyforEnvironment.ps1` with the Azure **Subscription ID** and **Resource group** name.
 - You can unlink the enterprise policy by running the PowerShell script `./RevertIdentity.ps1` with the Dataverse environment ID and `policyArmId`.
 - You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1 with policyArmId**.
+
+## Known limitation
+1. only one enterprise policy can connect to the Dataverse environment simultaneously. If you need to create multiple synapse link with MSI enabled, please make sure all linked Azure resouces are under the same resource group. 
 
 ## See also
 
