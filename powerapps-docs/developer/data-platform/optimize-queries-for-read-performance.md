@@ -131,90 +131,21 @@ Example query ordering on the statecode choice column:
 
 Ordering by columns on related tables makes the query slower because of the added complexity.
 
-**David**: What is the special trick included in the FetchXml docs? Is it to [Process `link-entity` orders first](fetchxml/order-rows.md#process-link-entity-orders-first)?
-
-That example is:
-
-```xml
-<fetch>
-  <entity name='account'>
-    <attribute name='name' />
-    <attribute name='accountnumber' />
-    <attribute name='createdon' />
-    <link-entity name='account'
-      from='accountid'
-      to='parentaccountid'
-      link-type='inner'
-      alias='parentaccount'>
-      <attribute name='name'
-        alias='parentaccount' />
-        <!-- The link-entity parentaccount name -->
-      <order attribute='name' />
-    </link-entity>
-    <!-- The entity account name -->
-    <order attribute='name' />
-  </entity>
-</fetch>
-```
-
-
 Ordering by related tables should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
-
-<!-- This looks like a conventional order within a link-entity to me. Is there something special about it? -->
-
-``` xml
-<fetch>
-   <entity name='account'>
-      <attribute name='accountnumber' />
-      <link-entity name='account'
-         from='accountid'
-         to='parentaccountid'
-         link-type='outer'
-         alias='oaccount'>
-         <attribute name='createdby' />
-         <order attribute='name' />
-      </link-entity>
-   </entity>
-</fetch>
-```
 
 
 ## Avoid using like conditions on large text columns
 
-<!-- 
 
-Dataverse has two types of text columns:
+Dataverse has two types of columns that can store large strings of text:
 
-- StringAttributeMetadata where the MaxSupportedLength is 4000 characters
-- MemoAttributeMetadata where the MaxSupportedLength is 1,048,576 characters
+- [StringAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.stringattributemetadata) can store up to 4000 characters.
+- [MemoAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.memoattributemetadata) can store a much higher number.
 
-Description is usually a MemoAttributeMetadata with a MaxLength set to 2000.
+The limit for both of these columns is specified using the `MaxLength` property.
 
-But either of these could be configured with a MaxLength of 10. Are they different?
+You can use `like` conditions on string columns that have a `MaxLength` configured for less than 850 characters.
 
-How do you define 'large'? 
-Is there a specified length that makes a difference?
- -->
+All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 
-Columns like with a length greater than TBD are defined in Dataverse as large text fields. These fields are too large to effectively index, which leads to bad performance when included in a filter condition.
-
-Dataverse search is a better choice to query data in these kinds of fields.
-
-<!-- 
-I don't think we need an example here.
-
-Example fetchxml which searches on a large text column: 
-
-``` xml 
-<fetch>
-   <entity name='account'>
-      <attribute name='accountid' />
-      <attribute name='accountnumber' />
-      <filter type='and'>
-         <condition attribute='description'
-            operator='like'
-            value='Sold%' />
-      </filter>
-   </entity>
-</fetch>
-``` -->
+Dataverse search is a better choice to query data in these kinds of columns.
