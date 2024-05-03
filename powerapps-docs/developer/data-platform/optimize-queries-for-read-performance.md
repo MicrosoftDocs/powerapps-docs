@@ -18,13 +18,13 @@ contributors:
 # Optimize queries for read performance
 <!-- #TODO: This needs to specify SQL Read performance. These tips do not apply to dataverse search -->
 
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This article describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here may not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This article describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
 
 ## Minimize the number of selected columns
 
 Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset.
 
-This is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
+This practice is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
 <!-- 
 
@@ -42,9 +42,9 @@ That's why I re-wrote the content below.
 
 ## Avoid leading wild cards in filter conditions
 
-Queries which use conditions with leading wild cards (either explicitly, or implicitly like with "ends-with") can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other non-leading wild card queries which limit the result set. 
+Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other nonleading wild card queries that limit the result set.
 
-This is an example of a query that uses a leading wild card:
+The following example is a FetchXml query that uses a leading wild card:
 
 ```xml
 <fetch>
@@ -52,7 +52,9 @@ This is an example of a query that uses a leading wild card:
       <attribute name='accountid' />
       <attribute name='accountnumber' />
       <filter type='and'>
-         <condition attribute='accountnumber' operator='like' value='%234' />
+         <condition attribute='accountnumber'
+            operator='like'
+            value='%234' />
       </filter>
    </entity>
 </fetch>
@@ -78,7 +80,7 @@ Also we should update the throttle page to link back to here for the different r
 > Number: `-2147187132`<br />
 > Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
 
-Dataverse heavily throttles leading wild card queries which have been identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -89,7 +91,7 @@ If you find yourself using leading wild card queries, look into these options:
 
 ## Avoid using formula or calculated columns in filter conditions
 
-[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse cannot improve the performance of these queries using SQL.
+[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
 
@@ -103,7 +105,7 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 ## Avoid ordering by choice columns
 
-When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should be aware that ordering on choice columns requires additional compute resources to join and sort the rows by the localized label value. This additional work makes the query slower. If possible, try to avoid ordering results by choice column values.
+When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
 
 <!-- 
@@ -127,7 +129,38 @@ Example query ordering on the statecode choice column:
 
 ## Avoid ordering by columns in related tables
 
-Ordering by link-entity attributes can lead to sub-optimal query performance due to the added complexity. Ordering by Link-Entiies should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
+Ordering by columns on related tables makes the query slower because of the added complexity.
+
+**David**: What is the special trick included in the FetchXml docs? Is it to [Process `link-entity` orders first](fetchxml/order-rows.md#process-link-entity-orders-first)?
+
+That example is:
+
+```xml
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountnumber' />
+    <attribute name='createdon' />
+    <link-entity name='account'
+      from='accountid'
+      to='parentaccountid'
+      link-type='inner'
+      alias='parentaccount'>
+      <attribute name='name'
+        alias='parentaccount' />
+        <!-- The link-entity parentaccount name -->
+      <order attribute='name' />
+    </link-entity>
+    <!-- The entity account name -->
+    <order attribute='name' />
+  </entity>
+</fetch>
+```
+
+
+Ordering by related tables should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
+
+<!-- This looks like a conventional order within a link-entity to me. Is there something special about it? -->
 
 ``` xml
 <fetch>
@@ -146,22 +179,42 @@ Ordering by link-entity attributes can lead to sub-optimal query performance due
 ```
 
 
-## Avoid using like conditions on Large text columns
+## Avoid using like conditions on large text columns
 
-Columns like "Description" are defined in Dataverse as large text fields. These fields are too large to effectively index which leads to bad performance when fitlered on via query filter conditions.
+<!-- 
+
+Dataverse has two types of text columns:
+
+- StringAttributeMetadata where the MaxSupportedLength is 4000 characters
+- MemoAttributeMetadata where the MaxSupportedLength is 1,048,576 characters
+
+Description is usually a MemoAttributeMetadata with a MaxLength set to 2000.
+
+But either of these could be configured with a MaxLength of 10. Are they different?
+
+How do you define 'large'? 
+Is there a specified length that makes a difference?
+ -->
+
+Columns like with a length greater than TBD are defined in Dataverse as large text fields. These fields are too large to effectively index, which leads to bad performance when included in a filter condition.
+
+Dataverse search is a better choice to query data in these kinds of fields.
+
+<!-- 
+I don't think we need an example here.
 
 Example fetchxml which searches on a large text column: 
 
 ``` xml 
-<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+<fetch>
    <entity name='account'>
       <attribute name='accountid' />
       <attribute name='accountnumber' />
       <filter type='and'>
-         <condition attribute='Description' operator='like' value='Sold%' />
+         <condition attribute='description'
+            operator='like'
+            value='Sold%' />
       </filter>
    </entity>
 </fetch>
-```
-
-Dataverse advises to use Dataverse search to handle these kinds of searches if needed.
+``` -->
