@@ -27,9 +27,9 @@ The Chabot control is also available in [custom pages for model-driven apps](../
 
 You can use an AI bot or AI-based copilot authoring:
 
-- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Quickstart: Create and deploy a Copilot Studio copilot](/microsoft-copilot-studio/fundamentals-get-started)
+- AI chatbots allow you to develop a comprehensive tree of responses to assist your users.. More information: [Quickstart: Create and deploy a Copilot Studio copilot](/microsoft-copilot-studio/fundamentals-get-started)
 
-- With AI-based copilot authoring can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website, which you set. The "fallback" website can include internal documents or publicly available websites. For more information, see [AI-based copilot authoring overview](/microsoft-copilot-studio/nlu-gpt-overview)
+- With AI-based copilot authoring can have a higher ability to respond to the user by using a number of prompts or generating a response based on the provided "fallback" website, that you set. The "fallback" website can include internal documents or publicly available websites. For more information, see [AI-based copilot authoring overview](/microsoft-copilot-studio/nlu-gpt-overview)
 
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
@@ -75,7 +75,7 @@ The following are the main properties for Chatbot control:
 
 - **Schema name**: This property refers to the Microsoft Copilot Studio bot that you connect to. The property automatically populates once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
 
-- **Visible**: Choose if you want the bot be visible or not.
+- **Visible**: Choose if you want the bot to be visible or not.
   
 - **Position** and **Size**: Determines how your bot looks on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
 
@@ -89,7 +89,7 @@ The following are the main properties for Chatbot control:
 
 1. Chatbot control isn't supported on the Power Apps mobile app.
 2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mooncake.
-3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in non-default locations of your tenant.
+3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in nondefault locations of your tenant.
 
 ## See also
 
