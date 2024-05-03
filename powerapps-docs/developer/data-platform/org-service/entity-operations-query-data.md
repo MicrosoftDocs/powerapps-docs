@@ -1,7 +1,7 @@
 ---
 title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK for .NET assemblies."
-ms.date: 04/25/2024
+ms.date: 05/03/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -193,6 +193,9 @@ Learn more about column aliases:
 ## Convert queries between FetchXml and QueryExpression
 
 You can convert <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries to FetchXml and FetchXml queries to QueryExpression using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> classes.
+
+> [!NOTE]
+> There are some FetchXml capabilities that QueryExpression doesn't have. When converting a FetchXml query to QueryExpression, these differences are lost. [Learn more about limitations for QueryExpression](queryexpression/overview.md#limitations)
 
 The [SavedQuery](../reference/entities/savedquery.md) table stores system views for a table (entity type) and the [UserQuery](../reference/entities/userquery.md) table stores saved user queries. Other tables may also store a query as a FetchXml string. These methods enable converting a FetchXml string to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so it can be manipulated using the object model and then converted back to FetchXml so it can be saved as a string.
 
