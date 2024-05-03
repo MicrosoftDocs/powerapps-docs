@@ -53,8 +53,6 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
-  - name: Use Copilot chat in canvas apps (preview)
-    href: ../user/copilot-chat-in-webplayer.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -65,7 +63,7 @@
       href: ../user/unified-interface.md
     - name: Form filling assistance
       href: ../user/form-filling-assistance.md
-    - name: Use Copilot in model-driven apps (preview)
+    - name: Use Copilot chat in model-driven apps
       href: ../user/use-copilot-model-driven-apps.md
     - name: Navigation and basics
       items:
@@ -540,6 +538,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Stream video (preview)
+              href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-table.md
             - name: Text (preview)
@@ -636,7 +636,7 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
-            - name: Stream Video
+            - name: Stream Video (retired)
               href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
@@ -684,6 +684,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Create Power Fx formulas with Copilot
+          href: ./canvas-apps/ai-formulas-formulabar.md  
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -1564,9 +1566,9 @@
             href: ./model-driven-apps/add-calendar-control.md
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
-          - name: Add the Copilot control to the rich text editor (preview)
+          - name: Add the Copilot control to the rich text editor
             href: ./model-driven-apps/copilot-control.md  
-          - name: Use Copilot in the email rich text editor (preview) 
+          - name: Use Copilot in the email rich text editor
             href: ./model-driven-apps/use-copilot-email-assist.md
           - name: Add the news control to a table
             href: ./model-driven-apps/stay-current-with-news-control.md
@@ -1859,26 +1861,12 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing sites
           href: ./portals/manage-existing-portals.md
-    - name: Sites as Progressive Web Apps
-      items:
-        - name: Overview
-          href: ./portals/progressive-web-apps.md
-        - name: Build Progressive Web Apps
-          href: ./portals/build-progressive-web-apps.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Update domain name
-      href: ./portals/admin/update-portal-domain.md
     - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
-    - name: Integrate Power BI
-      items:
-        - name: Add Power BI as a component to a webpage
-          href: ./portals/add-powerbi.md
-        - name: Add Power BI using powerbi liquid tag
-          href: ./portals/admin/add-powerbi-report.md
 - name: Dataverse
   items:
   - name: Dataverse
@@ -2589,6 +2577,8 @@
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
 - name: Resources
   items:
   - name: Blog

@@ -297,6 +297,8 @@ items:
           href: reference/linking/getlinkedentities.md
       - name: LinkEntityExposedExpression
         href: reference/ilinkentityexposedexpression.md
+      - name: LookupValue
+        href: reference/lookupvalue.md
       - name: Metadata
         href: reference/metadata.md
       - name: Mode

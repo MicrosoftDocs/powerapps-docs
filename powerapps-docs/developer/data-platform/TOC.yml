@@ -46,6 +46,8 @@
           href: ./search/statistics-status.md
         - name: Legacy search
           href: ./search/legacy.md
+        - name: Custom Analyzers
+          href: ./search/custom-search-analyzer.md
     - name: Query data using FetchXml
       items:
         - name: Overview
@@ -208,6 +210,10 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       href: bypass-custom-business-logic.md
+      items:
+      - name: New options (preview)
+        href: bypass-custom-business-logic-preview.md
+        displayName: Bypass Business logic (preview)
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
@@ -350,7 +356,7 @@
           href: custom-activities.md
         - name: Email activity tables
           href: email-activity-entities.md
-        - name: Task, fax, phone call, and letter activity tables
+        - name: Activity tables for tasks, faxes, phone calls, and letters
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
@@ -379,7 +385,7 @@
       href: apply-slas-entities.md
     - name: Transaction Currency (currency) table
       href: transaction-currency-currency-entity.md
-    - name: Category table
+    - name: Structure Dataverse data with nested categories
       href: use-category-entity.md
     - name: Catalog & CatalogAssignment
       href: catalog-catalogassignment.md
