@@ -27,7 +27,7 @@ The Chabot control is also available in [custom pages for model-driven apps](../
 
 You can use an AI bot or AI boosted conversations bot:
 
-- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Microsoft Copilot Studio quickstart](/power-virtual-agents/quickstart-preview)
+- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Quickstart: Create and deploy a Copilot Studio copilot](/microsoft-copilot-studio/fundamentals-get-started)
 
 - With AI boosted conversations Microsoft Copilot Studio bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website, which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
