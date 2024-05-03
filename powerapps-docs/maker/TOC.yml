@@ -2041,6 +2041,8 @@
           href: ./data-platform/lowcode-plug-ins-examples.md
         - name: Low-code plug-ins Power Fx
           href: ./data-platform/low-code-plug-ins-powerfx.md
+        - name: Create low-code plug-ins to use with a copilot (preview)
+          href: ./data-platform/low-code-plugins-copilot-studio.md
       - name: Work with actions
         items:
         - name: Use actions
