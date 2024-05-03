@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 10/17/2022
+ms.date: 5/2/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -31,7 +31,7 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 
 ## Prerequisites
 
-- Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- Prerequisites for Copilot features in  Power Apps: [Copilot in Power Apps overview (preview)](ai-overview.md)
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 - This feature is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
@@ -84,7 +84,7 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 ### See also
 
-[AI Copilot overview (preview)](ai-overview.md)
+[Copilot in Power Apps overview (preview)](ai-overview.md)
 
 [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 

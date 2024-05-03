@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 3/13/2023
+ms.date: 5/2/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -48,7 +48,7 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 ## Prerequisites 
 
-Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+Follow the prerequisites for AI features: [Copilot in Power Apps overview (preview)](ai-overview.md)
 - To add the Chatbot control, you need to create and publish a bot on the [Microsoft Copilot Studio web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal). You can create any bot such as an AI bot or a new generative AI enriched Microsoft Copilot Studio bot.
 - You can see all your Microsoft Copilot Studio bots (published and unpublished) in the list of Chatbot control when you pick the bot to connect to. However, you can only add a published bot to the control. Unpublished bots are grayed out.
 
@@ -93,7 +93,7 @@ The following are the main properties for Chatbot control:
 
 ## See also
 
-[AI Copilot overview (preview)](ai-overview.md)
+[Copilot in Power Apps overview (preview)](ai-overview.md)
 
 [Microsoft Copilot Studio preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 

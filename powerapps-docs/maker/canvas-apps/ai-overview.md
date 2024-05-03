@@ -1,11 +1,11 @@
 ---
-title: AI Copilot overview
-description: AI Copilot overview in Power Apps.
+title: Copilot in Power Apps overview
+description: Copilot in Power Apps overview.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 02/07/2024
+ms.date: 05/3/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -17,13 +17,13 @@ contributors:
   - mduelae
 ---
 
-# AI Copilot overview
+# Copilot in Power Apps overview
 
 [This article is prerelease documentation and is subject to change.]
 
-Bringing the power of AI Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps will have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
+Bringing the power of Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
 
-To learn how to use the new AI features in Power Apps, see:
+To learn how to use the new Copilot features in Power Apps, see:
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
@@ -40,19 +40,21 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability may be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 
-## Prerequisites for the AI features in Power Apps
-1. To use AI features in Power Apps, you need to ensure that Copilot features are turned on by your administrator. And Copilot is available in your region. Please refer to this document about Copilot availability per region. https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot
+## Prerequisites for the Copilot features in Power Apps
 
-2. Some Copilot features are already GA, so they're not subject to the admin toggle as GAed features are enabled by default. Refer to the following section to see how to enable and disable Copilot features.
+- To use Copilot in Power Apps, your administrator must turn on Copilot features.
 
-3. Different AI features might have slightly different prequisites, please refer to the feature specific documentation to see detailed requirements. 
+- For Copilot availability in your region, see  [Release Planner Availability Reports](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
+- Some Copilot features are already General Availabilible (GA), so they're turned on by default. For information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
+
+- Each Copilot feature might have different requirements. Refer to the specific documentation for each feature for detailed information.
 
 ## Enable or disable Copilot (preview) in Power Apps
 
-[Generally available](/power-platform/admin/general-availability-deployment) Copilot features are enabled by default and cannot be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
+[Generally available](/power-platform/admin/general-availability-deployment) Copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
-Copilot features in preview are also enabled by default, but can be disabled by an administrator.
+Copilot features in preview are also enabled by default, but your administrator can disable them.
 
 Follow these steps to disable **Copilot** (preview) in Power Apps for your tenant.
 
@@ -66,7 +68,7 @@ Follow these steps to disable **Copilot** (preview) in Power Apps for your tenan
 Follow these steps to enable or disable **Copilot** preview features for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. In the left-side navigation pane **Environment**.
+2. In the left-side navigation pane, select **Environments**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Select one of the following options:
    - To turn it on, set the toggle to **On** for **Copilot**.

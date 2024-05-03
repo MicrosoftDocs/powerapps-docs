@@ -1,6 +1,6 @@
 ---
 title: Use natural language to edit an app using the Copilot panel
-description: Edit your app through conversation with AI Copilot in Power Apps Studio.
+description: Edit your app through conversation with Copilot in Power Apps Studio.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 6/5/2022
+ms.date: 5/3/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -37,11 +37,11 @@ The Copilot panel is available when you edit a canvas app in Power Apps Studio. 
 
 ## Prerequisites
 
-Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+Prerequisites for Copilot in Power Appsfeatures: [Copilot in Power Apps overview (preview)](ai-overview.md)
 
 ## What's supported
 
-AI Copilot supports the following commands:
+Copilot in Power Apps supports the following commands:
 
 - [Use a screen template](add-screen-context-variables.md) to add a new screen.
 - Modify the properties of various controls. Supported controls: 
@@ -52,26 +52,29 @@ AI Copilot supports the following commands:
     - Button
     - Text label
     - Text input
+
     > [!NOTE]
-    > - [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
+    > - [Modern controls](controls/modern-controls/overview-modern-controls.md) aren't supported.
     > - This feature supports English and its variants.
 
 ## Sample commands you can try
-You can directly click on the 3 cards when you first time open Copilot pane. We have prepared some working prompts there for you to try out and understand what Copilot can do, how it works. You can also directly try some commands in the table below.
+
+When you open the Copilot pane, you can select any of the three cards to explore preset prompts that demonstrate Copilot's capabilities. You can also try the commands listed in the table.
+
 | Scenario      | Commands |
 | ----------- | ----------- |
 |Add a new screen using template	      |Adding a new email screen|
 |             |Adding a new screen|
 |             |Add a new screen with header body and footer|
 |Add/edit/style a control	|Add a new button|
-|             |change selected button to have width 100|
-|             |add a new icon|
-|             |add a new text label|
-|             |add a submit button and a cancel button for the form|
+|             |Change selected button to have width 100|
+|             |Add a new icon|
+|             |Add a new text label|
+|             |Add a submit button and a cancel button for the form|
 |Bulk editing	|Change all buttons to gray|
 |             |Change all labels in the selected container to be red|
 |Working with containers	|Add a button to the selected container|
-|Templatized formulas|	when clicking on Button1, show screen 2|
+|Templatized formulas|	When clicking on Button1, show screen 2|
 |Modern theming|Change my app to deep forest green|
 
 ## Use Copilot to edit your app
