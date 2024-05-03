@@ -9036,6 +9036,26 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/maker/portals/control-portal-creation.md",
+      "redirect_url": "/power-pages/admin/control-site-creation",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-additional-portals.md",
+      "redirect_url": "/power-pages/admin/create-additional-sites",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/manage-existing-portals.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/provision-portal-add-on.md",
+      "redirect_url": "/power-pages/admin/provision-add-on",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/user/use-@mentions.md",
       "redirect_url": "collaboration",
       "redirect_document_id": "false"
