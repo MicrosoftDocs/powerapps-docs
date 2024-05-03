@@ -56,19 +56,20 @@ Use the table visual designer experience where you create and edit tables, confi
    - **New table**. Create a new table using any of the methods described in this article.
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
+      (NOTE: many-to-many relationships are not supported)
    - **Delete**. Deletes the table and all associated table rows.
-1. Table visual designer canvas. On the table visual designer canvas you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
-1. Table visual designer canvas actions.
+2. Table visual designer canvas. On the table visual designer canvas you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
+3. Table visual designer canvas actions.
    - **+**. Zoom in to increase the size of the table objects on the canvas.
    - **-**. Zoom out to decrease the size of the table objects on the canvas.
    - **Fit view**. Resize to fit within the available space in the browser tab.
    - **Show map** or **Hide map**. When show, displays a compact representation of the tables on the canvas.
-1. Table actions menu:
+4. Table actions menu:
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Row ownership**. Select the ownership type as either user or team or organization. 
    - **Properties**. Edit the table display name, plural name, description, and schema name.
    - **Delete**. Delete the table and all associated rows.
-1. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
+5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
 
 > [!TIP]
 > Can't find the tables you created on the canvas? Select **Fit view** on the table visual designer canvas actions menu.
@@ -82,17 +83,18 @@ Create a table with the visual table designer by using any of the following meth
 
 #### Start with Copilot
 
-Open the table designer to display the Copilot pane that can help you create a table.
+Describe your data in natural language and Copilot will generate tables along with relationships for you.
 
 > [!NOTE]
 > To use this feature, note the following requirements:
 >
 > - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
-> - This feature is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+> - This feature is available in English. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Choose an option to create tables** page, select **Start with Copilot**.
-1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
-1. When you're finished, select **Create**.
+2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
+3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
+4. When you're finished, select **Save and exit**.
 
 ### Set advanced properties
 
