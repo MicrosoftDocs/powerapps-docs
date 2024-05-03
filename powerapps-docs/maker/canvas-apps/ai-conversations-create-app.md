@@ -19,11 +19,11 @@ contributors:
 
 # Build apps through conversation
 
-Create Power Apps with the help of AI. Describe the app that you want to build, and AI will design it for you.
+Create Power Apps with the help of Copilot. Describe the app that you want to build, and AI will design it for you.
 
 With the **Copilot** feature in Power Apps, you get in-app guidance using natural language processing to help you build your app.
 
-The AI assistant is available from the Power Apps home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
+Copilot is available from the Power Apps home screen. You can tell Copilot what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
 > [!div class="mx-imgBorder"]
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
@@ -33,6 +33,7 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 
 - Prerequisites for Copilot features in  Power Apps: [Copilot in Power Apps overview (preview)](ai-overview.md)
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
+- To see if this feature is availabiliable in your region, see [Product availability report](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - This feature is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 
