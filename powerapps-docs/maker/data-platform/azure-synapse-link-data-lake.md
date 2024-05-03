@@ -34,21 +34,21 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.
 
 > [!NOTE]
 >
 > - The storage account must be created in the same Microsoft Entra tenant as your Power Apps tenant.
-> - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
-> - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
+> - To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access from selected IP addresses, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable public network access for Azure resources for both initial setup and delta sync.)
 > - You must have **Reader** role access to the resource group with the storage account.  
 > - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
+> - The creation of Synapse Link profiles under a single DV environment is limited to a maximum of 10.
 
 ## Connect Dataverse to Azure Data Lake Storage Gen2
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]. (If **Azure Synapse Link** is not visible in the side panel pane, select **…More** and choose **Discover all**. You will find **Azure Synapse Link** within data managment card.)
 1. On the command bar, select **+ New link to data lake**.
 1. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
