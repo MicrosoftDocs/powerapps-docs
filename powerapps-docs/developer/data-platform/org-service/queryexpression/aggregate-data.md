@@ -348,6 +348,11 @@ This section describes capabilities that are available using aggregation with Fe
 You can't get a distinct number of values using [CountColumn](xref:Microsoft.Xrm.Sdk.Query.XrmAggregateType.CountColumn) with QueryExpression. [Learn about distinct column values using FetchXml](../../fetchxml/aggregate-data.md#distinct-column-values)
 
 
+### Time zone when grouping by date
+
+Grouping by parts of a date always uses UTC time and there is no way to specify that the user's time zone should be used instead [available in FetchXml](../../fetchxml/aggregate-data.md#grouping-by-parts-of-a-date)
+
+
 ### Row aggregate
 
 When a table has a [hierarchical relationship defined](../../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate)
