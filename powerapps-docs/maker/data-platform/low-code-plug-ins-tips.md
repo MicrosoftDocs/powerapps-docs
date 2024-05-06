@@ -31,12 +31,12 @@ set a column value on the current record to assign a value, such as *123*, use `
 
 This operation, when executed in a preoperation context, updates the table within the ongoing transaction. The updated value is immediately accessible during the plugin’s execution and is committed to the database upon successful completion of the plug-in.
 
+> [!NOTE]
+> The `Set` function is a known issue with low-code plug-ins and, until resolved, use `Patch` instead.
+
 ### Immediate value retrieval example
 
 `Patch(MyTable, ThisRecord, { Field : 123 }).Field // Returns the immediate value, which is 123.`
-
-> [!NOTE]
-> The `SET` function is currently being addressed and this workaround is temporary.
 
 ## Use caution when using post-operation patching
 
@@ -51,14 +51,14 @@ Here are a couple of examples of operations that can avoid this issue:
 
 ## Handle the two-minute timeout
 
-For long range operations that continue for two minutes or longer, you can receive this error:  
+For operations that continue for two minutes or longer, you can receive this error:  
 
 `Execution failed for PowerPlexPlugin: System.ServiceModel.FaultException1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: Operation not allowed as plugin execution exceeded maximum allowed time (Fault Detail is equal to Exception details: limit your callbacks .. Create, Update)`
 
 When working with Dataverse low-code plugins, it’s important to manage the two-minute timeout effectively:
 
-- Limit your number of `Patch` and `Collect` operations inside your plug-ins, especially if you have other plug-ins already registered against that table, it could affect the performance of your plug-ins.
-- Monitor performance. Keep an eye on the performance of your plug-ins and consider using tracing and logging capabilities with Dataverse to track execution times and failures. By following these guidelines, you can ensure that your low-code plug-ins run smoothly within the Dataverse environment without interruption caused by the two-minute timeout. More information: [Tracing and logging](/power-apps/developer/data-platform/logging-tracing)
+- Limit your number of `Patch` and `Collect` operations inside your plug-ins, especially if you have other plug-ins already registered against that table, which can affect the performance of your plug-ins.
+- Monitor performance. Keep an eye on the performance of your plug-ins and consider using tracing and logging capabilities within Dataverse to track execution times and failures. By following these guidelines, you can ensure that your low-code plug-ins run smoothly within the Dataverse environment without interruption caused by the two-minute timeout. More information: [Tracing and logging](/power-apps/developer/data-platform/logging-tracing)
 
 ## Failed response received from APIM
 
