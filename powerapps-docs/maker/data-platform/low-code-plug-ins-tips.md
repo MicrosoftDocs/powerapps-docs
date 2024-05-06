@@ -42,7 +42,7 @@ This operation, when executed in a preoperation context, updates the table withi
 
 Your low-code plug-in execution might encounter this error when using `Patch` in a post-operation: `Execution failed for PowerPlexPlugin: System.ServiceModel.FaultException 1[Microsoft.Xrm.Sdk.OrganizationServiceFault] This low-code plugin's execution was cancelled because the plugin logic caused an infinite loop. Correct the plugin logic and try again.`
 
-Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. Post-operation execution occurs after the database transaction concluded. Therefore, a `Patch` operation initiates a new transaction. If an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this might result in a recursive update cycle.
+Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. Post-operation execution occurs after the database transaction concluded. Therefore, a `Patch` operation initiates a new transaction. If an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this operation might result in a recursive update cycle.
 
 Here are a couple of examples of operations that can avoid this issue:
 
@@ -62,7 +62,7 @@ When working with Dataverse low-code plugins, it’s important to manage the two
 
 ## Failed response received from APIM
 
-If you receive this error message, just edit the plug-in, and then resave . Saving initializes the APIM authentication and your plug-in begins executing successfully. <!-- Contacted PM to find out what APIM is.-->
+If you receive this error message, which can be returned from Azure API Management (APIM), just edit the plug-in, and then resave. Saving initializes the APIM authentication and your plug-in begins executing successfully.
 
 `Execution failed for PowerPlexPlugin: Failed response received from APIM; StatusCode: NotFound; ResponseContent: { "statusCode": 404, "message": "Resource not found" } Method: POST; RequestUri: https://canada-001.azure-apim.net/invoke; StatusCode: NotFound; ResponseContent: { "statusCode": 404, "message": "Resource not found" }; HeadersString: Headers - 'Access-Control-Allow-Methods': 'System.String[]'; 'Access-Control-Allow-Origin': 'System.String[]'; 'Access-Control-Max-Age': 'System.String[]'; 'Access-Control-Expose-Headers': 'System.String[]'; 'Date': 'System.String[]';  Access to APIM expires..edit and save the plugin`
 
