@@ -5,10 +5,8 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/22/2024
+ms.date: 05/06/2024
 ms.custom: template-how-to
-contributors:
-- denise-msft
 ---
 # Microsoft Dataverse low-code plug-ins tips and known issues (preview)
 
