@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 04/11/2024
+  ms.date: 05/06/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -66,9 +66,9 @@ sections:
      answer: |
         Yes. You can create a solution and add the policy from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
 
-    - question: Is Dataverse aduit table supported for long term retention? 
+   - question: Is the audit table supported for long term retention? 
      answer: | 
-       No, audit table is not currently supported for long term retention. 
+       No, the audit table isn't currently supported for long term retention. 
    
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
