@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 12/13/2023
+ms.date: 05/06/2024
 ms.custom: template-how-to 
 ---
 # Use managed identities for Azure with your Azure data lake storage
@@ -226,7 +226,8 @@ If you receive 403 errors during the link creation:
 - You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1 with policyArmId**.
 
 ## Known limitation
-1. only one enterprise policy can connect to the Dataverse environment simultaneously. If you need to create multiple synapse link with MSI enabled, please make sure all linked Azure resouces are under the same resource group. 
+
+Only one enterprise policy can connect to the Dataverse environment simultaneously. If you need to create multiple Azure Synapse Link links with managed identity enabled, make sure all linked Azure resources are under the same resource group.
 
 ## See also
 
