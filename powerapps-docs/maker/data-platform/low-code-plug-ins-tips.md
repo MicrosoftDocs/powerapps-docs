@@ -22,27 +22,11 @@ This article describes tips and known issues when working with low-code plug-ins
 
 If you face runtime plugin issues, re-edit the low-code plug-in. Then the intellisense issues on your formula expression are displayed in the low-code plug-in editor. Follow the guidelines to correct the issue that are also displayed, and then resave the plug-in.  
 
-## Use Patch instead of Set  
-
-To ensure optimal performance of a low-code plug-in within Dataverse, when you
-set a column value on the current record to assign a value, such as *123*, use `Patch` instead of `Set` such as with this syntax:
-
-`Patch(MyTable, ThisRecord, { Field : 123 })`
-
-This operation, when executed in a preoperation context, updates the table within the ongoing transaction. The updated value is immediately accessible during the plugin’s execution and is committed to the database upon successful completion of the plug-in.
-
-> [!NOTE]
-> The `Set` function is a known issue with low-code plug-ins and, until resolved, use `Patch` instead.
-
-### Immediate value retrieval example
-
-`Patch(MyTable, ThisRecord, { Field : 123 }).Field // Returns the immediate value, which is 123.`
-
 ## Use caution when using post-operation patching
 
 Your low-code plug-in execution might encounter this error when using `Patch` in a post-operation: `Execution failed for PowerPlexPlugin: System.ServiceModel.FaultException 1[Microsoft.Xrm.Sdk.OrganizationServiceFault] This low-code plugin's execution was cancelled because the plugin logic caused an infinite loop. Correct the plugin logic and try again.`
 
-Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. Post-operation execution occurs after the database transaction concluded. Therefore, a `Patch` operation initiates a new transaction. If an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this operation might result in a recursive update cycle.
+Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. Therefore, a `Patch` operation initiates a new transaction. If an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this operation might result in a recursive update cycle.
 
 Here are a couple of examples of operations that can avoid this issue:
 
@@ -62,7 +46,7 @@ When working with Dataverse low-code plugins, it’s important to manage the two
 
 ## Failed response received from APIM
 
-If you receive this error message, which can be returned from Azure API Management (APIM), just edit the plug-in, and then resave. Saving initializes the APIM authentication and your plug-in begins executing successfully.
+If you receive this error message, which can be returned from API management (APIM), just edit the plug-in, and then resave. Saving initializes the APIM authentication and your plug-in begins executing successfully.
 
 `Execution failed for PowerPlexPlugin: Failed response received from APIM; StatusCode: NotFound; ResponseContent: { "statusCode": 404, "message": "Resource not found" } Method: POST; RequestUri: https://canada-001.azure-apim.net/invoke; StatusCode: NotFound; ResponseContent: { "statusCode": 404, "message": "Resource not found" }; HeadersString: Headers - 'Access-Control-Allow-Methods': 'System.String[]'; 'Access-Control-Allow-Origin': 'System.String[]'; 'Access-Control-Max-Age': 'System.String[]'; 'Access-Control-Expose-Headers': 'System.String[]'; 'Date': 'System.String[]';  Access to APIM expires..edit and save the plugin`
 
