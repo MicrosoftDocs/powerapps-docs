@@ -26,7 +26,7 @@ If you face runtime plugin issues, re-edit the low-code plug-in. Then the intell
 
 Your low-code plug-in execution might encounter this error when using `Patch` in a post-operation: `Execution failed for PowerPlexPlugin: System.ServiceModel.FaultException 1[Microsoft.Xrm.Sdk.OrganizationServiceFault] This low-code plugin's execution was cancelled because the plugin logic caused an infinite loop. Correct the plugin logic and try again.`
 
-Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. Therefore, a `Patch` operation initiates a new transaction. If an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this operation might result in a recursive update cycle.
+Using `Patch` in a post-operation scenario must be done with caution to avoid infinite loops. A `Patch` operation initiates a new transaction. For example, if an update trigger for `MyTable` invokes `Patch(MyTable, ThisRecord, ...)`, this operation might result in a recursive update cycle.
 
 Here are a couple of examples of operations that can avoid this issue:
 
