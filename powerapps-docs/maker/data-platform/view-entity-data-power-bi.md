@@ -33,6 +33,9 @@ table row data using a Power Apps app.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
 
+> [!NOTE]
+> To be able to download the file, the user needs to have the privilege **prvReadmsdyn_analysiscomponent** in at least one of the associated security roles.
+
 1. Open the .pbids file to access it in Power BI Desktop.
 
 1. The pbids file is loaded in Power BI Desktop. In the dialog box, select **Organizational account**, select **Sign in**, and then in the browser window that appears select or enter your credentials.
