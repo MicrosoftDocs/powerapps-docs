@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 04/15/2024
+  ms.date: 05/06/2024
   ms.author: sabinn
   ms.reviewer: 
   contributors: JasonHQX
@@ -32,13 +32,13 @@ sections:
         For comprehensive Microsoft Cost Management information, go to: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](/azure/cost-management-billing/understand/plan-manage-costs)
    - question: What happens when I add a column?
      answer: |
-        When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed prior to the addition of the column won't show the new column, new or updated rows will show the newly added column.
+        When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed before the addition of the column are't shown in the new column, new or updated rows show the newly added column.
    - question: What happens when I delete a column?
      answer: |
         When you delete a column from a table in the source, the column isn't dropped from the destination. Instead, the rows are no longer updated and are marked as null while preserving the previous rows.
    - question: What happens if I change the data type of a column?
      answer: |
-        Changing the data type of a column is a breaking change and you'll need to unlink and relink.
+        Changing the data type of a column is a breaking change and you need to unlink and relink.
    - question: What happens when I delete a row?
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
@@ -90,7 +90,7 @@ sections:
          It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
    - question: Which Dataverse tables aren't supported for export?
      answer: |
-        Any table that doesn't have change tracking enabled won't be supported in addition to following system tables:
+        Any table that doesn't have change tracking enabled isn't supported in addition to following system tables:
         - Attachment
         - Calendar
         - Calendarrule
@@ -100,12 +100,15 @@ sections:
    - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
      answer: |
         The Delta Lake conversion job is triggered when there was a data change in the configured time interval. There's no option to stop or pause the Apache Spark pool. However, you can modify the time interval after the link creation under Manage tables > Advanced Time interval.
+   - question: Does Azure Synapse Link support lookup columns?
+     answer: |  
+        Lookup columns are made up of an ID and a value. Lookup values only change on the root table. To better reflect the value of a lookup column, we recommend joining with the original root table to get the latest value.
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        Calculated columns are only supported when the lookup field is located within the same table. Data updates occur only when change tracking is triggered: Lookup values will change on the root tables only when the root table records are changed. To better reflect the value of a lookup field, it's recommended to join with the original table to get the latest value.
+        In Dataverse, calculated columns keep only the formula information and the real value depends on the base table column. So calculated columns are only supported when all columns are located within the same exported table.    
    - question: Which Dataverse tables use append only mode by default?
      answer: |
-        All tables that don't have a createdOn field will be synced using append only mode by default. This includes relationship tables as well as the ActivityParty table.
+        All tables that don't have a createdOn field is synced using append only mode by default. This includes relationship tables and the ActivityParty table.
    - question: Why do I see the error message - Content of directory on path can't be listed?
      answer: |
         - Dataverse data is stored in the connected storage container. You need the "Storage Blob Data Contributor" role in the linked storage account to perform read and query operations through Synapse Workspace.
@@ -116,7 +119,9 @@ sections:
    - question: How can I use Azure Synapse Link to archive critical data?
      answer: |
         Azure Synapse Link for Dataverse is designed for analytics purposes. We recommend customers use long-term-retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)
-
+   - question: Why don't I see any data changes in the data lake when records have been deleted in Dataverse?
+     answer: |
+        For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
 additionalContent: |
 
   ## See also
