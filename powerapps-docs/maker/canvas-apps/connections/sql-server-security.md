@@ -49,7 +49,8 @@ The following four connection authentication types can be used with SQL Server f
 
 All new applications automatically use the new secure implicit connections. However, with apps that use the older 'implicit connections', both the app and its connections are deployed to end users, it means that **end users can author new applications based on those connections**. 
 
-However, when an author uses [**secure implicit connections**](../connections-list#shared-connections--secure-implicit-connections) no connection is shared.  No end user receives the connection object. So there's no risk of an end-user author reusing a connection to create a new app. Further, the Power App app works instead with a proxy connection that knows about the app and only communicates with that specific app. The actions the proxy connection allows (create, read, update, delete) and tables it allows access to are limited to those in the app when it's published. 
+
+When an author uses s[**secure implicit connections**](../connections-list#shared-connections--secure-implicit-connections), it means that no connection is shared and no end user receives the connection object. This eliminates the risk of an end-user author reusing a connection to create a new app. Instead, the app works with a proxy connection that is aware of the app and only communicates with that specific app. The proxy connection allows limited actions (create, read, update, delete) and access to specific tables in the app that are defined when the app is published. Therefore, only authorized actions and access are granted to the end user.
 
 The older style simple implicit connection actually distributes a connection object to the end user. For example, if you create an app that filters out the data you don’t want users to see. But, the filtered out data is present in the database. But you're relying on the filter you configured to ensure the end users won’t see certain data.
 
