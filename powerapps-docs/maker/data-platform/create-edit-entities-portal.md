@@ -56,9 +56,9 @@ Use the table visual designer experience where you create and edit tables, confi
    - **New table**. Create a new table using any of the methods described in this article.
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
-      (NOTE: many-to-many relationships are not supported)
+      (NOTE: many-to-many relationships aren't supported)
    - **Delete**. Deletes the table and all associated table rows.
-2. Table visual designer canvas. On the table visual designer canvas you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
+2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
 3. Table visual designer canvas actions.
    - **+**. Zoom in to increase the size of the table objects on the canvas.
    - **-**. Zoom out to decrease the size of the table objects on the canvas.
@@ -83,7 +83,7 @@ Create a table with the visual table designer by using any of the following meth
 
 #### Start with Copilot
 
-Describe your data in natural language and Copilot will generate tables along with relationships for you.
+Describe your data in natural language and Copilot generates tables along with relationships for you.
 
 > [!NOTE]
 > To use this feature, note the following requirements:
