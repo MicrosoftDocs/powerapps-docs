@@ -20,7 +20,7 @@ contributors:
 
 # Use field suggestions by Copilot
 
-Field suggestion by Copilot is a feature designed for app makers. It helps selecting the most suitable fields to display in your app when linking a data source to a control. Instead of using the default fields selected by Power Apps, you can view up to 10 suggestions from Copilot. The field suggestions are based on the data schema and your app's context. You can review the suggestions and adjust as you need, saving you time and improving the quality of your app. 
+Use field suggestion by Copilot to link a data source to a control and help you choose the best fields to display in your canvas app. Instead of using the default fields that Power Apps selects, makers can view up to 10 suggestions from Copilot. The field suggestions are based on the data schema and the context of the app. An app maker can review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ Supported data sources:
 - Structured query language (SQL)
 - SharePoint list
 
-When you select a data source for a control, Copilot analyzes the data schema and recommends up to 10 fields that are most relevant and meaningful for your app. If you have more than 10 required fields, Copilot merges the AI suggestions together with the required fields so you don't get an error when your submit a form. You can view these suggestions in the **Fields** pane and preview how it looks in your app. You can adjust the orders, remove fields, and add more fields from the data source. When you're done, you can apply the changes and see the results in your app.
+When you select a data source for a control, Copilot analyzes the data schema and recommends up to 10 fields that are relevant and meaningful for your app. If you have more than 10 required fields, Copilot merges the AI suggestions together with the required fields so you don't get an error when you submit a form. You can view the suggestions in the **Fields** pane and preview how it looks in your app. You can also adjust the orders, remove fields, and add more fields from the data source. When you're done, apply the changes and view the results in your app.
 
 
 ## See also
