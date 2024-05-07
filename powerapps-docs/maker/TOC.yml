@@ -1851,16 +1851,6 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Create and manage sites
-      items:
-        - name: Create a site using the older add-on
-          href: ./portals/provision-portal-add-on.md
-        - name: Create additional sites in an environment
-          href: ./portals/create-additional-portals.md
-        - name: Control site creation in a tenant
-          href: ./portals/control-portal-creation.md
-        - name: Manage existing sites
-          href: ./portals/manage-existing-portals.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create custom Portal Management app
@@ -2051,6 +2041,10 @@
           href: ./data-platform/lowcode-plug-ins-examples.md
         - name: Low-code plug-ins Power Fx
           href: ./data-platform/low-code-plug-ins-powerfx.md
+        - name: Create low-code plug-ins to use with a copilot
+          href: ./data-platform/low-code-plugins-copilot-studio.md
+        - name: Low-code plug-ins tips and known issues
+          href: ./data-platform/low-code-plug-ins-tips.md
       - name: Work with actions
         items:
         - name: Use actions
