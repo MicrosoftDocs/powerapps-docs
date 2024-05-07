@@ -33,7 +33,8 @@ The authentication method used for such connections can be **explicit** or **imp
 
 - An **explicitly shared connection** means that the end user of the application must authenticate to SQL Server with their own explicit credentials. Usually this authentication happens behind the scenes as part of Microsoft Entra or Windows authentication handshake. The user doesn’t even notice when the authentication takes place.
 - An **implicitly shared connection** means that the user implicitly uses the credentials of the account that the app maker used to connect and authenticate to the data source during while creating the app. The end user’s credentials are **not** used to authenticate. Each time the end user runs the app, they're using the credentials the author created the app with.
-- A **secure implicitly shared connection** means that the user implicitly uses the credentials of the account that the app maker used to connect and authenticate to the data source during while creating the app. The end user’s credentials are **not** used to authenticate. Each time the end user runs the app, they're using the credentials the author created the app with. However, no end user has no direct access to the connection and actions and tables are limited to those in the app. 
+- A **secure implicitly shared connection** refers to a scenario where the end user of the app implicitly uses the credentials of the account that the app maker used to connect and authenticate to the data source while creating the app. This means that the end user's own credentials are not used to authenticate. Instead, when the user runs the app, they are using the credentials that the author of the app created it with. It is important to note that the end user is not provided with direct access to the connection, and the app only allows access to a limited set of actions and tables.
+
 
 The following four connection authentication types can be used with SQL Server for Power Apps:
 
