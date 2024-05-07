@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/23/2024
+ms.date: 5/2/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -20,7 +20,7 @@ contributors:
 
 # Create Power Fx formulas with Copilot
 
- Use AI to create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to help explain Power Fx formulas in natural language, or create Power Fx formulas from natural language.
+ Use Copilot in Power Apps to create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to help explain Power Fx formulas in natural language, or create Power Fx formulas from natural language.
 
 ## Prerequisites
 - To use this feature, Power Fx formula bar must be turned on.
@@ -49,7 +49,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 ### Known Limitations
 - There's a 1,0000 character limit for formula explanations.
-- AI is only aware of default properties.
+- Copilot in Power Apps is only aware of default properties.
 - User defined functions aren't supported.
 - This feature isn't available in the Canada region.
 
@@ -80,7 +80,7 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 
 ### Known Limitations
-- AI Copilot only recognizes the default properties within the app.
+- Copilot in Power Apps only recognizes the default properties within the app.
 - Code comments only work with general Power Fx functions, and not Power Apps specific functions such as **Navigate()**.
 - The advanced panel doesn't trigger suggestions.
 - While Copilot is generating formula suggestions, other activities in the Power Apps Studio might be temporarily unavailable.
