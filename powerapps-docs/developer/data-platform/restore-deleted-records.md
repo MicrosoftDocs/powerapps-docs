@@ -1,6 +1,6 @@
 ---
-title: Restore deleted records (preview)
-description: Learn how to use configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
+title: Restore deleted records with code(preview)
+description: Learn how to configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
 ms.date: 04/30/2024
 author: adkuppa
 ms.author: adkuppa
@@ -14,15 +14,13 @@ contributors:
  - TakeN0
 ms.custom: bap-template
 ---
-# Restore deleted records (preview)
+# Restore deleted records with code(preview)
 
 [!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
-Sometimes people delete records that they shouldn't. Administrators can enable a recycle bin for tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records?branch=matp-3988791)
+Sometimes people delete records that they shouldn't. Administrators can enable a recycle bin for tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records)
 
-**TODO: Remove `?branch=matp-3988791` from the links**
-
-[When the recycle bin is enabled](/power-platform/admin/restore-deleted-table-records?branch=matp-3988791#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
+[When the recycle bin is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
 
 This article will describe how you can do the following:
 
@@ -36,11 +34,11 @@ This article will describe how you can do the following:
 
 ## Detect which tables are enabled for recycle bin
 
-Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig)  table](reference/entities/recyclebinconfig.md) will have no rows.
+Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) will have no rows.
 
-In time, we expect that all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of OOTB tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin). 
+In time, we expect that all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin). Even after the preview, you can [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table). In this case, you need to have a query to detect whether a table is enabled or not.
 
-Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -146,7 +144,7 @@ To know which tables can be enabled for recycle bin, you need to exclude all tab
  ### [SDK for .NET](#tab/sdk)
 
 This static `GetTablesEligibleForRecycleBin` method returns tables that are eligible to have recycle bin enabled.
-It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` method, and depends on that method. 
+It returns the all the public tables not returned by the `GetRecycleBinEnabledTables` method mentioned in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin), and depends on that method.
 
 ```csharp
 /// <summary>
@@ -205,7 +203,8 @@ static List<string> GetTablesEligibleForRecycleBin(IOrganizationService service)
 ### [Web API](#tab/webapi)
 
 This `Get-TablesEligibleForRecycleBin` PowerShell function returns tables that are eligible to have recycle bin enabled.
-It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` PowerShell function, and depends on that function. 
+
+It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` PowerShell function mentioned in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin), and depends on that function.
 
 This function also depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 
@@ -266,74 +265,107 @@ function Get-TablesEligibleForRecycleBin {
 
 ---
 
-## Retrieve the automatic cleanup time period configuration for the recycle bin
+## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
- **TODO: Explain how to do this**
+The value to determine how long deleted records will be available to be restored is set in the `RecycleBinConfig` `cleanupintervaldays` column where the `name` is `organization`. Every other row in the `RecycleBinConfig` table has a `cleanupintervaldays` column value of -1. This indicates it will use the same values set for the `organization` table.
 
- **TODO: Provide code snippets for both SDK and Web API**
+To specify a different value for another table, set the `cleanupintervaldays` column value where the `name` matches the logical name of the table.
 
  ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+You can use this static `SetCleanupIntervalInDays` method to set the `cleanupintervaldays` column value for a specific table.
 
 ```csharp
-static void ExampleMethod(IOrganizationService service){
+/// <summary>
+/// Updates the CleanupIntervalInDays value for a specified table
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <param name="tableLogicalName">The logical name of the table</param>
+/// <param name="cleanupIntervalInDays">The new CleanupIntervalInDays value</param>
+static void SetCleanupIntervalInDays(
+    IOrganizationService service,
+    string tableLogicalName,
+    int cleanupIntervalInDays)
+{
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+    QueryExpression query = new("recyclebinconfig")
+    {
+        ColumnSet = new ColumnSet("recyclebinconfigid"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+              {
+                  new ConditionExpression(
+                      attributeName: "name",
+                      conditionOperator: ConditionOperator.Equal,
+                      value: tableLogicalName)
+              }
+          }
+        }
+    };
+
+    EntityCollection records = service.RetrieveMultiple(query);
+
+    if (records.Entities.Count.Equals(1))
+    {
+        Guid id = records.Entities[0].Id;
+
+        Entity record = new(entityName: "recyclebinconfig", id: id)
+        {
+            Attributes = {
+                { "cleanupintervalindays", cleanupIntervalInDays }
+            }
+        };
+
+        service.Update(record);
+
+    }
+    else
+    {
+        throw new Exception($"Recycle bin configuration for table '{tableLogicalName}' not found.");
+    }
 }
 ```
 
+[Use the SDK for .NET](org-service/overview.md)
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+This `Set-CleanupIntervalInDays` PowerShell function retrieves the `recyclebinconfig` row that has the name value that matches the `$tableLogicalName` parameter. Then it updates the `cleanupintervalindays` column  property of the record to the value of the `$cleanupIntervalInDays` parameter.
 
-**Request**
+This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions).
 
-```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.CreateMultiple
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 396
-
-{
-    "Targets": [
-        {
-            "sample_name": "sample record 0000001",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000002",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000003",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        }
-    ]
+```powershell
+function Set-CleanupIntervalInDays{
+      param(
+         [Parameter(Mandatory)]
+         [string]$tableLogicalName,
+         [Parameter(Mandatory)]
+         [int]$cleanupIntervalInDays
+      )
+      $records = (Get-Records `
+         -setName 'recyclebinconfigs' `
+         -query "?`$filter=name eq '$($tableLogicalName)'").value
+   
+      if ($records.Count -eq 1) {
+         $recyclebinconfigId = $records[0].recyclebinconfigid
+   
+         Update-Record `
+               -setName 'recyclebinconfigs' `
+               -id $recyclebinconfigId `
+               -body @{
+               'cleanupintervalindays' = $cleanupIntervalInDays
+         }
+      }
+      else {
+         Write-Host "Recycle bin configuration for table $tableLogicalName not found."
+      }
 }
 ```
 
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
-    "Ids": [
-        "8f4c3f92-312b-ee11-bdf4-000d3a993550",
-        "904c3f92-312b-ee11-bdf4-000d3a993550",
-        "914c3f92-312b-ee11-bdf4-000d3a993550"
-    ]
-}
-```
+- [Use the Microsoft Dataverse Web API](webapi/overview.md)
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
 
 ---
 
