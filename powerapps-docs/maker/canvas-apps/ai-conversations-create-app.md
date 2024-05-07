@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 10/17/2022
+ms.date: 5/2/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -83,7 +83,7 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 ### See also
 
-[AI Copilot overview (preview)](ai-overview.md)
+[Copilot in Power Apps overview (preview)](ai-overview.md)
 
 [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 

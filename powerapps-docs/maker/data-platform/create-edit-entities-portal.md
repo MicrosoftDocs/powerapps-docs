@@ -2,7 +2,11 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
+<<<<<<< HEAD
 ms.date: 05/01/2024
+=======
+ms.date: 5/2/2024
+>>>>>>> origin/main
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
