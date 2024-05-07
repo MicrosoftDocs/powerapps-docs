@@ -30,12 +30,7 @@ Watch this video to learn how to share an app with guests:
 
 - Access to an account that can add guest users to an Microsoft Entra tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
-- To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
-
-  - The tenant hosting the app being shared
-  - The home tenant of the guest user
-
-- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
+- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
   
 > [!NOTE]
 > Ensure that you perform the steps listed below on the **resource tenant**, and not on the **home tenant**.

@@ -1,6 +1,6 @@
 ---
-title: "Task, fax, phone call, and letter activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about tables that enable you to manage core activities that are performed in a relationship management solution" # 115-145 characters including spaces. This abstract displays in the search result.
+title: Activity tables for tasks, faxes, phone calls, and letters in Microsoft Dataverse # Intent and product brand in a unique string of 43-59 chars including spaces
+description: Explore using specialized tables to store business activities in your relationship management solution. # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -12,12 +12,12 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
-# Task, fax, phone call, and letter activity tables
+# Activity tables for tasks, faxes, phone calls, and letters
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 These tables enable you to manage core activities that are performed in a relationship management solution.  
- 
+
 - [Fax table](reference/entities/fax.md)  
   
 - [Letter table](reference/entities/letter.md)  
@@ -27,7 +27,7 @@ These tables enable you to manage core activities that are performed in a relati
 - [Task table](reference/entities/task.md)  
   
 ### See also  
- [Activity tables](activity-entities.md) 
 
+ [Activity tables](activity-entities.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

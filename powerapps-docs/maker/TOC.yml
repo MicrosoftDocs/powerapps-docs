@@ -53,8 +53,6 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
-  - name: Use Copilot chat in canvas apps (preview)
-    href: ../user/copilot-chat-in-webplayer.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -686,6 +684,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Create Power Fx formulas with Copilot
+          href: ./canvas-apps/ai-formulas-formulabar.md  
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -1566,9 +1566,9 @@
             href: ./model-driven-apps/add-calendar-control.md
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
-          - name: Add the Copilot control to the rich text editor (preview)
+          - name: Add the Copilot control to the rich text editor
             href: ./model-driven-apps/copilot-control.md  
-          - name: Use Copilot in the email rich text editor (preview) 
+          - name: Use Copilot in the email rich text editor
             href: ./model-driven-apps/use-copilot-email-assist.md
           - name: Add the news control to a table
             href: ./model-driven-apps/stay-current-with-news-control.md
@@ -1851,16 +1851,6 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Create and manage sites
-      items:
-        - name: Create a site using the older add-on
-          href: ./portals/provision-portal-add-on.md
-        - name: Create additional sites in an environment
-          href: ./portals/create-additional-portals.md
-        - name: Control site creation in a tenant
-          href: ./portals/control-portal-creation.md
-        - name: Manage existing sites
-          href: ./portals/manage-existing-portals.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create custom Portal Management app
@@ -2051,6 +2041,10 @@
           href: ./data-platform/lowcode-plug-ins-examples.md
         - name: Low-code plug-ins Power Fx
           href: ./data-platform/low-code-plug-ins-powerfx.md
+        - name: Create low-code plug-ins to use with a copilot
+          href: ./data-platform/low-code-plugins-copilot-studio.md
+        - name: Low-code plug-ins tips and known issues
+          href: ./data-platform/low-code-plug-ins-tips.md
       - name: Work with actions
         items:
         - name: Use actions
@@ -2577,6 +2571,8 @@
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
 - name: Resources
   items:
   - name: Blog
