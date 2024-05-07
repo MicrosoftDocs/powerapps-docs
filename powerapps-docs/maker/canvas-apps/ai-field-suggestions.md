@@ -1,6 +1,6 @@
 ---
-title: How to use field suggestion by Copilot in Power Apps Studio
-description: Use field suggestion by Copilot in Power Apps Studio.
+title: How to use field suggestions by Copilot in Power Apps Studio
+description: Use field suggestions by Copilot in Power Apps Studio.
 author: norliu
 ms.topic: conceptual
 ms.custom: canvas
@@ -18,9 +18,9 @@ contributors:
   - norliu
 ---
 
-# Field suggestion by Copilot
+# Use field suggestions by Copilot
 
-Field suggestion by Copilot is a feature designed for app makers. It assists in selecting the most suitable fields to display in your app when linking a data source to a control. Instead of using the default fields chosen by Power Apps, you can view up to 10 suggestion from Copilot. The field suggestions are based on the data schema and your app's context. You can review the suggestions and adjust as you need, saving you time and improving the quality of your app. 
+Field suggestion by Copilot is a feature designed for app makers. It assists in selecting the most suitable fields to display in your app when linking a data source to a control. Instead of using the default fields chosen by Power Apps, you can view up to 10 suggestions from Copilot. The field suggestions are based on the data schema and your app's context. You can review the suggestions and adjust as you need, saving you time and improving the quality of your app. 
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Field suggestion by Copilot is a feature designed for app makers. It assists in 
 
 ## Use field suggestions
 
-Field suggestion by Copilot works when you bind a data source to one of the following controls: 
+Field suggestions by Copilot works when you bind a data source to one of the following controls: 
 
 - Gallery
 - Form (modern)
@@ -46,3 +46,6 @@ Supported data sources:
 - SharePoint list
 
 When you select a data source for a control, Copilot will analyze the data schema and recommend up to 10 fields that are most relevant and meaningful for your app. If you have more than 10 required fields, Copilot will merge the AI suggestions together with required fields, so you won’t get an error for submitting a form. You can see the suggestions in the fields pane and preview how they will look in your app. You can adjust their orders, remove fields and also add more fields from the data source if you need to. When you are happy with the selection, you can apply the changes and see the results in your app.
+
+## See also
+- [FAQs for field suggestions by Copilot](../common/faq-field-suggestions.md)

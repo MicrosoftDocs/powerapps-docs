@@ -6,7 +6,7 @@ ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
   - ai-gen-desc
-  - ai-seo-date:10/26/2023
+  - ai-seo-date:5/7/2024
   - bap-template
 ms.topic: overview
 author: mduelae
@@ -43,3 +43,5 @@ ms.collection:
 - [FAQs about using Copilot in timeline highlights](faq-timeline-highlights-with-copilot.md)
 - [Create Power Fx formulas with Copilot](../canvas-apps/ai-formulas-formulabar.md)
 - [FAQs about using Copilot with Power Fx](./faqs-copilot-powerfx.md)
+- [Use field suggestions by Copilot](../canvas-apps/ai-field-suggestions.md)
+- [FAQs for field suggestions by Copilot](faq-field-suggestions.md)
