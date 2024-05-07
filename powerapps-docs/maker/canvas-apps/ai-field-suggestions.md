@@ -20,7 +20,7 @@ contributors:
 
 # Use field suggestions by Copilot
 
-Use field suggestion by Copilot to link a data source to a control and help you choose the best fields to display in your canvas app. Instead of using the default fields that Power Apps selects, makers can view up to 10 suggestions from Copilot. The field suggestions are based on the data schema and the context of the app. An app maker can review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
+Use field suggestion by Copilot to select the best fields to display in your canvas app when you link a data source to a control. Instead of using the default fields that Power Apps selects, makers can view up to 10 suggestions from Copilot. The field suggestions are based on the data schema and the context of the app. An app maker can review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
 
 ## Prerequisites
 
