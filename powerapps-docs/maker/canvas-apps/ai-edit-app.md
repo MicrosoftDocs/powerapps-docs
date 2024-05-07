@@ -37,7 +37,7 @@ The Copilot panel is available when you edit a canvas app in Power Apps Studio. 
 
 ## Prerequisites
 
-Prerequisites for Copilot in Power Appsfeatures: [Copilot in Power Apps overview (preview)](ai-overview.md)
+Prerequisites for Copilot in Power Apps features: [Copilot in Power Apps overview (preview)](ai-overview.md)
 
 ## What's supported
 
