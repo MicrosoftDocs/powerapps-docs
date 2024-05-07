@@ -2,11 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-<<<<<<< HEAD
 ms.date: 05/01/2024
-=======
-ms.date: 5/2/2024
->>>>>>> origin/main
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -51,6 +47,7 @@ Use the table visual designer experience where you create and edit tables, confi
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
