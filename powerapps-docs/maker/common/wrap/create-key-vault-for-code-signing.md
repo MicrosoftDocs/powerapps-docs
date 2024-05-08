@@ -60,7 +60,10 @@ In this article, you will learn how to use an existing Azure Key Vault or create
    
 4. Add access policies for the Key Vault. Ensure that **Wrap Key Vault Access App** has Get and List for secret and certificate permissions.
   
-5. Choose one of the following options based on your device:
+  > [!div class="mx-imgBorder"] 
+  > ![Access Policies required: Get, List for secret and certificates permissions.](media/how-to-v2/AzureKV-access-policy.png "Access Policies required: Get, List for secret and certificates permissions")
+  
+6. Choose one of the following options based on your device:
    
      - **Android**
 
@@ -88,7 +91,7 @@ In this article, you will learn how to use an existing Azure Key Vault or create
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s).
+7. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s).
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
