@@ -156,7 +156,11 @@ To save the mapping settings for next time, enter a name in the **Name your data
 
 After you initiate an import, you can monitor the status of the import job and view results in the import log. 
 
-In the last step of the import wizard, select **Track Progress** to view the progress of the import job. If you missed this step, append the following to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`. For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d**, then the URL to view the import log is **https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
+In the last step of the import wizard, select **Track Progress** to view the progress of the import job. 
+
+If you missed this step, append the following to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`. 
+
+For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d**, then the URL to view the import log is **https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
 
 
 ### View the status of an import, and correct errors
