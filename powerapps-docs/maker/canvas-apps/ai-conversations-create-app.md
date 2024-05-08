@@ -56,7 +56,7 @@ Based on what you described, AI generates tables and relationships for your app.
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/data-workspace-copilot.png)
 
-1. **Edit**: Edit or keep creating more tables in the main canvas area. [See more](../data-platform/create-edit-entities-portal.md)
+1. **Edit**: Edit or keep creating more tables in the main canvas area. For more information, see [Create and edit tables](../data-platform/create-edit-entities-portal.md).
 
 2. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, or create more tables.
 
