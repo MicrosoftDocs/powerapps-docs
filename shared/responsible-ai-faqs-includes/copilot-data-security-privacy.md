@@ -122,7 +122,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Apps | [Use natural language to edit an app using the Copilot panel](/power-apps/maker/canvas-apps/ai-edit-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
-
+| Power Automate | Copilot in cloud flows on the Home page and in the designer (See [Get started with Copilot in cloud flows](/power-automate/get-started-with-copilot) for details) | No | Contact support to run a PowerShell script. |
 
 ### Regional and language availability
 
