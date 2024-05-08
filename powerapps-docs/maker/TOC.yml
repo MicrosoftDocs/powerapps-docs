@@ -245,6 +245,8 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
+  - name: Copilot in Power Apps overview
+    href: ./canvas-apps/ai-overview.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -286,10 +288,8 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI Copilot 
+    - name: Create an app using Copilot
       items:
-      - name: Overview
-        href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
       - name: Continue editing your app with Copilot (preview)
@@ -2041,8 +2041,10 @@
           href: ./data-platform/lowcode-plug-ins-examples.md
         - name: Low-code plug-ins Power Fx
           href: ./data-platform/low-code-plug-ins-powerfx.md
-        - name: Create low-code plug-ins to use with a copilot (preview)
+        - name: Create low-code plug-ins to use with a copilot
           href: ./data-platform/low-code-plugins-copilot-studio.md
+        - name: Low-code plug-ins tips and known issues
+          href: ./data-platform/low-code-plug-ins-tips.md
       - name: Work with actions
         items:
         - name: Use actions
