@@ -267,6 +267,9 @@ function Get-TablesEligibleForRecycleBin {
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
+**TODO: The examples here are speculative. What I expect people will try if we don't explain how to do it correctly. 
+I expect that they should use the alternate keys? Let's modify these examples to do that.**
+
 The value to determine how long deleted records will be available to be restored is set in the `RecycleBinConfig` `cleanupintervaldays` column where the `name` is `organization`. Every other row in the `RecycleBinConfig` table has a `cleanupintervaldays` column value of -1. This indicates it will use the same values set for the `organization` table.
 
 To specify a different value for another table, set the `cleanupintervaldays` column value where the `name` matches the logical name of the table.
@@ -371,47 +374,155 @@ function Set-CleanupIntervalInDays{
 
 ## Disable recycle bin for a table
 
-Replace the `<EntityId>` in the operations below to disable recycle bin for a table. The `<EntityId>` value is the [EntityMetadata.MetadataId](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId) for the table.
+To update the recycle bin configuration row safely, you should access the record using the alternate key named **Entity key for ExtensionOfRecordId** that has the `SchemaName` `EntitySettingkey`. This alternate key includes the following columns:
+
+|LogicalName|Type|Description|
+|---------|---------|---------|
+|`componentstate`|Choice (OptionSet)|The state of the configuration. This may be: <br /> 0 : **Published**<br />1: **Unpublished**<br />2: **Deleted**<br />3: **Deleted Unpublished**|
+|`extensionofrecordid`|Lookup (EntityReference)|Lookup to a virtual table containing selected metadata for the table|
+|`overwritetime`|Date and Time (DateTime)|Indicates when the row was overwritten.|
+
+[Learn more about using an alternate key to reference a record](use-alternate-key-reference-record.md)
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+Use this static `DisableRecycleBinForTable` method to disable the recycle bin for a specific table.
 
 ```csharp
-static void ExampleMethod(IOrganizationService service){
+/// <summary>
+/// Disable the Recyclebin for a specified table
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <param name="tableLogicalName">The logical name of the table</param>
+static void DisableRecycleBinForTable(
+    IOrganizationService service,
+    string tableLogicalName)
+{
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+    // Retrieve the table to get the Id.
+    RetrieveEntityRequest retrieveEntityRequest = new()
+    {
+        EntityFilters = EntityFilters.Entity,
+        LogicalName = tableLogicalName
+    };
+
+    Guid tableId;
+
+    try
+    {
+        var retrieveEntityResponse = (RetrieveEntityResponse)service.Execute(retrieveEntityRequest);
+        tableId = (Guid)retrieveEntityResponse.EntityMetadata.MetadataId;
+
+    }
+    catch (Exception ex)
+    {
+        throw ex;
+    }
+
+    // Compose the alternate keys to access the row.
+    KeyAttributeCollection keys = new() {
+        { "componentstate",new OptionSetValue(0) },
+        { "extensionofrecordid", new EntityReference("entity",tableId)},
+        { "overwritetime", new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc)}
+    };
+
+    Entity record = new(
+        entityName: "recyclebinconfig",
+        keyAttributes: keys)
+    {
+        Attributes = {
+            { "statecode",  new OptionSetValue(1) },
+            { "statuscode",  new OptionSetValue(2) }
+        }
+    };
+
+    UpsertRequest request = new()
+    {
+        Target = record
+    };
+
+    service.Execute(request);
 }
 ```
+
+[Use the SDK for .NET](org-service/overview.md)
 
 
 ### [Web API](#tab/webapi)
 
 
+Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table.
+
+
+```powershell
+function Disable-RecycleBinForTable {
+   param(
+      [Parameter(Mandatory)]
+      [string]$tableLogicalName
+   )
+
+   $queryUri = "EntityDefinitions(LogicalName='$tableLogicalName')"
+   $queryUri += "?`$select=MetadataId"
+
+   $tableId = Invoke-RestMethod `
+      -Method Get `
+      -Uri ($baseURI + $queryUri) `
+      -Headers $baseHeaders | Select-Object -ExpandProperty MetadataId
+
+   # Compose the alternate key for the recycle bin configuration record
+   $keyAttributes = @("_extensionofrecordid_value=$tableId")
+   $keyAttributes += 'componentstate=0'
+   $keyAttributes += 'overwritetime=1900-01-01T00:00:00Z'
+   $keys = $keyAttributes -join ','
+
+   $patchHeaders = $baseHeaders.Clone();
+   $patchHeaders.Add('Content-Type', 'application/json')
+   $patchHeaders.Add('If-None-Match', $null)
+
+   $upsertRequest = @{
+      Uri = ($baseURI + "recyclebinconfigs($keys)")
+      Method = 'Patch'
+      Headers = $patchHeaders
+      Body = ConvertTo-Json @{
+         'statecode' = 1
+         'statuscode' = 2
+      }
+   }
+
+   Invoke-RestMethod @upsertRequest | Out-Null
+}
+```
+
+The `Disable-RecycleBinForTable` PowerShell function retrieves the `MetadataId` for the table, which is also the primary eky value for the [Entity](../component-framework/reference/entity.md) table. 
+
+The second part of the function sends an upsert operation that looks like this:
+
 
 **Request**
 
 ```http
-PATCH [Organization Uri][Organization URI]/api/data/v9.2/recyclebinconfigs(_extensionofrecordid_value=<EntityId>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
-{"statecode":1,"statuscode":2}
+PATCH [Organization Uri][Organization URI]/api/data/v9.2/recyclebinconfigs(_extensionofrecordid_value=<MetadataId>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 
-```
+{
+"statecode":1,
+"statuscode":2
+}
 
-> [!NOTE]
-> This is a `PATCH` operation without a body??
-> TODO: Add body
+```
 
 **Response**
 
 ```http
 HTTP/1.1 204 No Content
 ```
+
+- [Use the Microsoft Dataverse Web API](webapi/overview.md)
+- [Upsert a table row](webapi/update-delete-entities-using-web-api.md#upsert-a-table-row)
+
 
 ---
 
