@@ -267,16 +267,13 @@ function Get-TablesEligibleForRecycleBin {
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
-**TODO: The examples here are speculative. What I expect people will try if we don't explain how to do it correctly. 
-I expect that they should use the alternate keys? Let's modify these examples to do that.**
+The value to determine how long deleted records will be available to be restored is set in the `RecycleBinConfig` `cleanupintervalindays` column where the `name` is `organization`. Every other row in the `RecycleBinConfig` table has a `cleanupintervalindays` column value of -1. This indicates it will use the same values set for the `organization` table.
 
-The value to determine how long deleted records will be available to be restored is set in the `RecycleBinConfig` `cleanupintervaldays` column where the `name` is `organization`. Every other row in the `RecycleBinConfig` table has a `cleanupintervaldays` column value of -1. This indicates it will use the same values set for the `organization` table.
-
-To specify a different value for another table, set the `cleanupintervaldays` column value where the `name` matches the logical name of the table.
+To specify a different value for another table, set the `cleanupintervalindays` column value where the `name` matches the logical name of the table. While this column allows values up to 2,147,483,647, we recommend not setting it higher than 30.
 
  ### [SDK for .NET](#tab/sdk)
 
-You can use this static `SetCleanupIntervalInDays` method to set the `cleanupintervaldays` column value for a specific table.
+You can use this static `SetCleanupIntervalInDays` method to set the `cleanupintervalindays` column value for a specific table.
 
 ```csharp
 /// <summary>
@@ -374,15 +371,7 @@ function Set-CleanupIntervalInDays{
 
 ## Disable recycle bin for a table
 
-To update the recycle bin configuration row safely, you should access the record using the alternate key named **Entity key for ExtensionOfRecordId** that has the `SchemaName` `EntitySettingkey`. This alternate key includes the following columns:
-
-|LogicalName|Type|Description|
-|---------|---------|---------|
-|`componentstate`|Choice (OptionSet)|The state of the configuration. This may be: <br /> 0 : **Published**<br />1: **Unpublished**<br />2: **Deleted**<br />3: **Deleted Unpublished**|
-|`extensionofrecordid`|Lookup (EntityReference)|Lookup to a virtual table containing selected metadata for the table|
-|`overwritetime`|Date and Time (DateTime)|Indicates when the row was overwritten.|
-
-[Learn more about using an alternate key to reference a record](use-alternate-key-reference-record.md)
+To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values, 2 and 1 respectively.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -390,7 +379,7 @@ Use this static `DisableRecycleBinForTable` method to disable the recycle bin fo
 
 ```csharp
 /// <summary>
-/// Disable the Recyclebin for a specified table
+/// Disable the Recycle bin for a specified table
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
 /// <param name="tableLogicalName">The logical name of the table</param>
@@ -399,49 +388,35 @@ static void DisableRecycleBinForTable(
     string tableLogicalName)
 {
 
-    // Retrieve the table to get the Id.
-    RetrieveEntityRequest retrieveEntityRequest = new()
+    QueryExpression query = new("recyclebinconfig")
     {
-        EntityFilters = EntityFilters.Entity,
-        LogicalName = tableLogicalName
+        ColumnSet = new ColumnSet("recyclebinconfigid")
     };
+    LinkEntity entityLink = query.AddLink("entity", "extensionofrecordid", "entityid");
+    entityLink.LinkCriteria.AddCondition("name", ConditionOperator.Equal, tableLogicalName);
 
-    Guid tableId;
+    EntityCollection recyclebinconfigs = service.RetrieveMultiple(query);
 
-    try
+    if (recyclebinconfigs.Entities.Count.Equals(1))
     {
-        var retrieveEntityResponse = (RetrieveEntityResponse)service.Execute(retrieveEntityRequest);
-        tableId = (Guid)retrieveEntityResponse.EntityMetadata.MetadataId;
 
+        var id = recyclebinconfigs.Entities[0].GetAttributeValue<Guid>("recyclebinconfigid");
+
+        Entity recyclebinconfig = new("recyclebinconfig", id)
+        {
+            Attributes = {
+                { "statecode", new OptionSetValue(1) },
+                { "statuscode", new OptionSetValue(2) }
+            }
+        };
+
+        service.Update(recyclebinconfig);
     }
-    catch (Exception ex)
+    else
     {
-        throw ex;
+        string message = $"Recycle bin configuration for table '{tableLogicalName}' not found.";
+        throw new Exception(message);
     }
-
-    // Compose the alternate keys to access the row.
-    KeyAttributeCollection keys = new() {
-        { "componentstate",new OptionSetValue(0) },
-        { "extensionofrecordid", new EntityReference("entity",tableId)},
-        { "overwritetime", new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc)}
-    };
-
-    Entity record = new(
-        entityName: "recyclebinconfig",
-        keyAttributes: keys)
-    {
-        Attributes = {
-            { "statecode",  new OptionSetValue(1) },
-            { "statuscode",  new OptionSetValue(2) }
-        }
-    };
-
-    UpsertRequest request = new()
-    {
-        Target = record
-    };
-
-    service.Execute(request);
 }
 ```
 
@@ -461,35 +436,28 @@ function Disable-RecycleBinForTable {
       [string]$tableLogicalName
    )
 
-   $queryUri = "EntityDefinitions(LogicalName='$tableLogicalName')"
-   $queryUri += "?`$select=MetadataId"
+   $query = "?`$filter=extensionofrecordid/name eq '"
+   $query += $tableLogicalName
+   $query += "'&`$select=recyclebinconfigid"
 
-   $tableId = Invoke-RestMethod `
-      -Method Get `
-      -Uri ($baseURI + $queryUri) `
-      -Headers $baseHeaders | Select-Object -ExpandProperty MetadataId
+   $recyclebinconfigs = (Get-Records `
+      -setName 'recyclebinconfigs' `
+      -query $query).value
 
-   # Compose the alternate key for the recycle bin configuration record
-   $keyAttributes = @("_extensionofrecordid_value=$tableId")
-   $keyAttributes += 'componentstate=0'
-   $keyAttributes += 'overwritetime=1900-01-01T00:00:00Z'
-   $keys = $keyAttributes -join ','
+   if ($recyclebinconfigs.Count -eq 1) {
+      $recyclebinconfigId = $recyclebinconfigs[0].recyclebinconfigid
 
-   $patchHeaders = $baseHeaders.Clone();
-   $patchHeaders.Add('Content-Type', 'application/json')
-   $patchHeaders.Add('If-None-Match', $null)
-
-   $upsertRequest = @{
-      Uri = ($baseURI + "recyclebinconfigs($keys)")
-      Method = 'Patch'
-      Headers = $patchHeaders
-      Body = ConvertTo-Json @{
-         'statecode' = 1
+      Update-Record `
+         -setName 'recyclebinconfigs' `
+         -id $recyclebinconfigId `
+         -body @{
+         'statecode'  = 1
          'statuscode' = 2
-      }
+      } | Out-Null
    }
-
-   Invoke-RestMethod @upsertRequest | Out-Null
+   else {
+      Write-Host "Recycle bin configuration for table '$tableLogicalName' not found."
+   }
 }
 ```
 
