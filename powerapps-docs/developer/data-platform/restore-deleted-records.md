@@ -426,7 +426,7 @@ static void DisableRecycleBinForTable(
 ### [Web API](#tab/webapi)
 
 
-Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table.
+Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table.  This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
 
 
 ```powershell
@@ -451,9 +451,9 @@ function Disable-RecycleBinForTable {
          -setName 'recyclebinconfigs' `
          -id $recyclebinconfigId `
          -body @{
-         'statecode'  = 1
-         'statuscode' = 2
-      } | Out-Null
+                  'statecode'  = 1
+                  'statuscode' = 2
+               } | Out-Null
    }
    else {
       Write-Host "Recycle bin configuration for table '$tableLogicalName' not found."
@@ -461,101 +461,90 @@ function Disable-RecycleBinForTable {
 }
 ```
 
-The `Disable-RecycleBinForTable` PowerShell function retrieves the `MetadataId` for the table, which is also the primary eky value for the [Entity](../component-framework/reference/entity.md) table. 
-
-The second part of the function sends an upsert operation that looks like this:
-
-
-**Request**
-
-```http
-PATCH [Organization Uri][Organization URI]/api/data/v9.2/recyclebinconfigs(_extensionofrecordid_value=<MetadataId>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-"statecode":1,
-"statuscode":2
-}
-
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 No Content
-```
-
 - [Use the Microsoft Dataverse Web API](webapi/overview.md)
-- [Upsert a table row](webapi/update-delete-entities-using-web-api.md#upsert-a-table-row)
-
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
+- [Update a table row](webapi/update-delete-entities-using-web-api.md#basic-update)
 
 ---
 
 ## Retrieve deleted records that can be restored
 
- **TODO: Explain how to do this**
-
- To retrieve deleted records that can be restored, select the datasource of the query to 'TBD'.
-
- **TODO: Provide code snippets for both SDK and Web API**
+To retrieve deleted records that can be restored, select the datasource of the query to '`bin`'.
+The examples below return the top 3 deleted account records.
 
  ### [SDK for .NET](#tab/sdk)
 
-When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
+When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).  
 
-When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to 'TBD' when you retrieve records.
+When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to '`bin`' when you retrieve records.
 
 ```csharp
-static EntityCollection GetDeletedAccounts(IOrganizationService service){
+static EntityCollection GetDeletedAccountRecordsFetchXml(IOrganizationService service) {
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+   string queryString = @"<fetch top='3' datasource='bin'>
+                     <entity name='account'>
+                        <attribute name='name' />
+                     </entity>
+                     </fetch>";
+   
+   FetchExpression query = new(queryString);
+
+   return service.RetrieveMultiple(query);
 }
 ```
 
-When you retrieve data using QueryExpression, set the [QueryExpression.DataSource](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to 'TBD' when you retrieve records.
+When you retrieve data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) property to '`bin`' when you retrieve records.
 
 ```csharp
-static EntityCollection GetDeletedAccounts(IOrganizationService service){
+static EntityCollection GetDeletedAccountRecordsQueryExpression(IOrganizationService service) {
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+   QueryExpression query = new("account") { 
+         ColumnSet = new ColumnSet("name"),
+         DataSource = "bin",
+         TopCount = 3
+   };
+
+   return service.RetrieveMultiple(query);
 }
 ```
+
+- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
+- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 
 
 ### [Web API](#tab/webapi)
 
 With Web API, you can retrieve records using FetchXml or OData syntax.
 
-**Request**
+> [!NOTE]
+> Currently, you can only retrieve deleted records using FetchXml.
 
-```http
-GET [Organization Uri]/api/data/v9.2/accounts?$select=name
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+```powershell
+function Get-DeletedAccountRecords{
 
-**Response**
+   $query = @()
+   $query += "<fetch top='3' datasource='bin'>"
+   $query += "<entity name='account'>"
+   $query += "<attribute name='name' />"
+   $query += "</entity>"
+   $query += "</fetch>"
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   $uri = $baseURI
+   $uri += 'accounts'
+   $uri += '?fetchXml=' + [uri]::EscapeUriString($query -join '')
 
-{
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.account",
-    "value": [
-        { "name": "Contoso", "accountid": <guid>}
-    ]
+   $RetrieveMultipleRequest = @{
+      Uri     = $uri
+      Method  = 'Get'
+      Headers = $baseHeaders
+   }
+   Invoke-RestMethod @RetrieveMultipleRequest
+
 }
 ```
+
+- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
 
 ---
 
