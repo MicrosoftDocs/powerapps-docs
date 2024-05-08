@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 12/21/2023
+ms.date: 05/02/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -29,7 +29,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 These tables and corresponding commands are available in offline mode.
   > [!NOTE]
-  > All unsupported commands are hidden in offline.
+  > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
 |Table |Commands|  
 |-------------|---------|  
@@ -90,8 +90,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 
 ## Limitations 
-- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records will fail. This number also includes hidden tables used for offline capabilities.
-- **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) are not supported in Mobile offline mode.
+- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
+- **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
@@ -130,7 +130,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
-    |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
+    |Web resource used on form handlers, form scripts, and ribbon commands|Supported (File names should be in lower case.)|Supported (File names should be in lower case.)|
     |JavaScript files referenced within an HTML web resource| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser. |
     |HTML, JS, CSS, XML web resources embedded on a model-driven app form| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser.|
     |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes aren't webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
@@ -173,7 +173,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 > [!IMPORTANT]
 > Organization data filters are no longer used. Changes to filters should be edited within the mobile profile itself.
 
-It is recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you're using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
+It's recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you're using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
 
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
@@ -195,9 +195,9 @@ Ensure that you have configured at least one of the Profile rules for each table
   
 |Customization |Recommendation|  
 |-------------|---------|  
-|All Records|	If you're selecting this filter, you cannot define any other filter rule.|
-|Download Related Data only|If you're selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|All Records|	If you're selecting this filter, you can't define any other filter rule.|
+|Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 

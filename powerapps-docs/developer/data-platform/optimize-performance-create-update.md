@@ -50,7 +50,7 @@ As a developer of a client application performing the bulk operation, you can ap
 
 ## Bulk operation APIs
 
-Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`. For elastic tables only, you can use `DeleteMultiple`. [UpsertRequest](xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest) is currently in preview with the SDK for .NET only.
+Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`, and `UpsertMultiple`. For elastic tables only, you can use `DeleteMultiple`.
 
 While these APIs provide the highest throughput, they have the following limitations for standard tables:
 

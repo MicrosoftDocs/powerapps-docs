@@ -66,6 +66,7 @@ contributors:
 | Shortcut | Action |
 |--|--|
 | Tab | Select the next control |
+| Shift + F11 | Sets focus to the inline action bar |
 | Ctrl+Click or Shift+Click | Select multiple objects at once |
 | Right arrow | Nudge the selected control to the right |
 | Left arrow | Nudge the selected control to the left |

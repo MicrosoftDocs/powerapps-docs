@@ -41,3 +41,5 @@ ms.collection:
 - [FAQs about form filling assistance](faq-from-filling-assistance.md)
 - [Use timeline highlights powered by generative AI](../../user/add-activities.md#use-timeline-highlights-powered-by-generative-ai)
 - [FAQs about using Copilot in timeline highlights](faq-timeline-highlights-with-copilot.md)
+- [Create Power Fx formulas with Copilot](../canvas-apps/ai-formulas-formulabar.md)
+- [FAQs about using Copilot with Power Fx](./faqs-copilot-powerfx.md)
