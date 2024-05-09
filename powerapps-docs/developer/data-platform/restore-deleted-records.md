@@ -34,7 +34,7 @@ This article will describe how you can do the following:
 
 ## Retrieve deleted records that can be restored
 
-To retrieve deleted records that can be restored, select the datasource of the query to '`bin`'.
+To retrieve deleted records that can be restored, set the datasource of the query to '`bin`'.
 The examples below return the top 3 deleted account records.
 
  ### [SDK for .NET](#tab/sdk)
@@ -115,7 +115,7 @@ function Get-DeletedAccountRecords{
 
 ## Restore a deleted record
 
-Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them during the `Restore` operation.
+Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them by setting values during the `Restore` operation.
 
 > [!NOTE]
 > At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
@@ -125,12 +125,71 @@ How you restore a deleted record depends on whether you are using the SDK for .N
 
  ### [SDK for .NET](#tab/sdk)
 
+How you restore a record using the SDK for .NET depends on whether you are generating early bound types using [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder), or if you are using the late bound stye.
+
+[Learn about late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
+
+
+#### Early bound example
+
+The static `RestoreAccountRecordEarlyBound` method uses the `RestoreRequest<T>` and `Account` classes generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder).
+
+```csharp
+/// <summary>
+/// Restores an account record
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <param name="accountId">The ID of the deleted account record.</param>
+/// <param name="originalName">The original name value for the account record.</param>
+/// <returns>The ID of the restored account</returns>
+static Guid RestoreAccountRecordEarlyBound(
+    IOrganizationService service, 
+    Guid accountId,
+    string originalName)
+{
+    Account accountToRestore = new()
+    {
+        Id = accountId,
+        // Appending '(Restored)' to the original name
+        // to demonstrate overwriting a value.
+        Name = originalName + " (Restored)"
+    };
+
+    RestoreRequest<Account> request = new()
+    {
+        Target = accountToRestore
+    };
+
+    var response = (RestoreResponse)service.Execute(request);
+    return response.id;
+}
+```
+
+#### Late bound example
+
 The static `RestoreAccountRecordLateBound` method uses the [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class to invoke the `Restore` message, setting the `Target` parameter.
 
 ```csharp
-static void RestoreAccountRecordLateBound(IOrganizationService service, Guid accountId)
+/// <summary>
+/// Restores an account record
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+/// <param name="accountId">The ID of the deleted account record.</param>
+/// <param name="originalName">The original name value for the account record.</param>
+/// <returns>The ID of the restored account</returns>
+static Guid RestoreAccountRecordLateBound(
+   IOrganizationService service,
+   Guid accountId,
+   string originalName)
 {
-   Entity accountToRestore = new("account", accountId);
+   Entity accountToRestore = new("account", accountId)
+   {
+         Attributes = {
+            // Appending '(Restored)' to the original name
+            // to demonstrate overwriting a value.
+            {"name", originalName + " (Restored)"}
+         }
+   };
 
    OrganizationRequest request = new("Restore")
    {
@@ -139,27 +198,9 @@ static void RestoreAccountRecordLateBound(IOrganizationService service, Guid acc
          }
    };
 
-   service.Execute(request);
+   OrganizationResponse response = service.Execute(request);
 
-}
-```
-
-The static `RestoreAccountRecordEarlyBound` method uses the `RestoreRequest<T>` class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder).
-
-```csharp
-static void RestoreAccountRecordEarlyBound(IOrganizationService service, Guid accountId)
-{
-   Account accountToRestore = new()
-   {
-         Id = accountId
-   };
-
-   RestoreRequest<Account> request = new()
-   {
-         Target = accountToRestore
-   };
-
-   service.Execute(request);
+   return (Guid)response.Results["id"];
 }
 ```
 
@@ -167,21 +208,23 @@ static void RestoreAccountRecordEarlyBound(IOrganizationService service, Guid ac
 
 ### [Web API](#tab/webapi)
 
-This `Restore-AccountRecord` PowerShell function shows how to restore a record using Web API using the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore). This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
+Use the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore) to restore deleted records. This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
+
+This `Restore-AnyRecord` PowerShell function shows how any type record can be restored by referencing it using the full URL to the record and the `@odata.id` annotation.  Pass a relative URL like `contacts(0ad63f65-990d-ef11-9f89-6045bdece8bb)` to the `relativeUri` parameter of this function. However, with this approach you can't overwrite any values for the record.
 
 ```powershell
-function Restore-AccountRecord {
+function Restore-AnyRecord{
    param(
       [Parameter(Mandatory)]
-      [string]$recordId
+      [uri]$relativeUri
    )
-   
+
    $uri = $baseURI
    $uri += 'Restore'
    
    $body = @{
       'Target' = @{
-         '@odata.id' = $baseURI + 'accounts(' + $recordId + ')'
+         '@odata.id' = $baseURI + $relativeUri
       }
    }
 
@@ -194,36 +237,54 @@ function Restore-AccountRecord {
       Headers = $postHeaders
       Body    = (ConvertTo-Json $body) 
    }
-   Invoke-RestMethod @RestoreRequest
+  
+  $id = Invoke-RestMethod @RestoreRequest | Select-Object -ExpandProperty id
+
+  return $id
 }
 ```
 
-**Request**
 
-```http
-POST [Organization URI]/api/data/v9.2/Restore HTTP/1.1
-Accept: application/json
-Authorization: Bearer  [REDACTED]
-OData-Version: 4.0
-OData-MaxVersion: 4.0
-Content-Type: application/json
+This `Restore-AccountRecord` PowerShell function shows how to restore an account record and overwrite a value. There are three requirements:
 
-{
-  "Target": {
-    "@odata.id": "[Organization URI]/api/data/v9.2/accounts(0ad63f65-990d-ef11-9f89-6045bdece8bb)"
-  }
-}
-```
+- [Specify the table type parameter](webapi/use-web-api-actions.md#specify-the-table-type-parameter) using the `@odata.type` with the fully qualified name of the entity type. This tells OData what type of record it is.
+- Include the primary key value, in this case `accountid` to specify the record.
+- Specify any properties you want to overwrite, in this case the `name` property.
 
-**Response**
 
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
+```powershell
+function Restore-AccountRecord {
+   param(
+      [Parameter(Mandatory)]
+      [guid]$recordId,
+      [Parameter(Mandatory)]
+      [string]$originalName
+   )
+   
+   $uri = $baseURI
+   $uri += 'Restore'
+   
+   $body = @{
+      'Target' = @{
+         '@odata.type' = 'Microsoft.Dynamics.CRM.account'
+         'name'       = ($originalName + ' (Restored)')
+         'accountid'  = $recordId.Guid
+      }
+   }
 
-{
-   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RestoreResponse","id":"0ad63f65-990d-ef11-9f89-6045bdece8bb"
+   $postHeaders = $baseHeaders.Clone()
+   $postHeaders.Add('Content-Type', 'application/json')
+
+   $RestoreRequest = @{
+      Uri     = $uri
+      Method  = 'Post'
+      Headers = $postHeaders
+      Body    = (ConvertTo-Json $body) 
+   }
+  
+  $id = Invoke-RestMethod @RestoreRequest | Select-Object -ExpandProperty id
+
+  return $id
 }
 ```
 
@@ -231,21 +292,28 @@ OData-Version: 4.0
 
 ### Errors that may occur when restoring records
 
+**TODO: How to avoid this error?**
+
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
 > Number: `-2147182247`<br />
 > Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
+
+**TODO: How to avoid this error?**
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
 > Number: `-2147182279`<br />
 > Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
 
+**TODO: How to avoid this error?**
+
 > Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
 > Code: `0x80049929`<br />
 > Number: `-2147182295`<br />
 > Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
 
+**TODO: How to avoid this error?**
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
 > Code: `0x80049949`<br />
@@ -704,7 +772,12 @@ function Disable-RecycleBinForTable {
 
 ---
 
+## Disable Recycle bin for the environment
 
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) where the `name` value is `"organization"`. This will trigger deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
+
+> [!IMPORTANT]
+> Don't try to delete individual records. It is important that Dataverse manage this.
 
 
 ## Manage restoring records deleted by custom business logic
