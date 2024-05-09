@@ -22,16 +22,6 @@ Sometimes people delete records that they shouldn't. Administrators can enable a
 
 [When the recycle bin is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
 
-This article will describe how you can do the following:
-
-- Retrieve deleted records that can be restored
-- Restore a deleted record
-- Detect which tables are enabled for recycle bin
-- Detect which tables do not have recycle bin enabled
-- Retrieve the automatic cleanup time period configuration for the recycle bin
-- Disable recycle bin for a table
-- Manage restoring records deleted by custom business logic
-
 ## Retrieve deleted records that can be restored
 
 To retrieve deleted records that can be restored, set the datasource of the query to '`bin`'.
@@ -84,6 +74,10 @@ With Web API, you can retrieve records using FetchXml or OData syntax.
 > [!NOTE]
 > Currently, you can only retrieve deleted records using FetchXml.
 
+This `Get-DeletedAccountRecords` PowerShell function returns up to three deleted account records.
+
+This Web API example and others in this article depend on the `$environmentUrl` and `$baseHeaders` variables as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md).
+
 ```powershell
 function Get-DeletedAccountRecords{
 
@@ -94,7 +88,7 @@ function Get-DeletedAccountRecords{
    $query += "</entity>"
    $query += "</fetch>"
 
-   $uri = $baseURI
+   $uri = $environmentUrl
    $uri += 'accounts'
    $uri += '?fetchXml=' + [uri]::EscapeUriString($query -join '')
 
@@ -210,6 +204,8 @@ static Guid RestoreAccountRecordLateBound(
 
 Use the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore) to restore deleted records. This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
 
+#### Restore any type of record without overwriting column values
+
 This `Restore-AnyRecord` PowerShell function shows how any type record can be restored by referencing it using the full URL to the record and the `@odata.id` annotation.  Pass a relative URL like `contacts(0ad63f65-990d-ef11-9f89-6045bdece8bb)` to the `relativeUri` parameter of this function. However, with this approach you can't overwrite any values for the record.
 
 ```powershell
@@ -219,12 +215,12 @@ function Restore-AnyRecord{
       [uri]$relativeUri
    )
 
-   $uri = $baseURI
+   $uri = $environmentUrl + 'api/data/v9.2/'
    $uri += 'Restore'
    
    $body = @{
       'Target' = @{
-         '@odata.id' = $baseURI + $relativeUri
+         '@odata.id' = $environmentUrl + 'api/data/v9.2/' + $relativeUri
       }
    }
 
@@ -244,6 +240,7 @@ function Restore-AnyRecord{
 }
 ```
 
+#### Restore a record and overwrite column values
 
 This `Restore-AccountRecord` PowerShell function shows how to restore an account record and overwrite a value. There are three requirements:
 
@@ -261,7 +258,7 @@ function Restore-AccountRecord {
       [string]$originalName
    )
    
-   $uri = $baseURI
+   $uri = $environmentUrl
    $uri += 'Restore'
    
    $body = @{
@@ -292,28 +289,38 @@ function Restore-AccountRecord {
 
 ### Errors that may occur when restoring records
 
-**TODO: How to avoid this error?**
+The following errors may occur when restoring records.
+
+#### RefCannotBeRestoredRecycleBinNotFound
+
+**TODO: Explain how to avoid this error**
 
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
 > Number: `-2147182247`<br />
 > Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
 
-**TODO: How to avoid this error?**
+#### DuplicateExceptionRestoreRecycleBin
+
+**TODO: Explain how to avoid this error**
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
 > Number: `-2147182279`<br />
 > Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
 
-**TODO: How to avoid this error?**
+#### DuplicateExceptionEntityKeyRestoreRecycleBin
+
+**TODO: Explain how to avoid this error**
 
 > Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
 > Code: `0x80049929`<br />
 > Number: `-2147182295`<br />
 > Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
 
-**TODO: How to avoid this error?**
+#### PicklistValueOutOfRangeRecycleBin
+
+**TODO: Explain how to avoid this error**
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
 > Code: `0x80049949`<br />
@@ -336,236 +343,69 @@ After enabling this, you may receive the following error:
 
 Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) will have no rows.
 
-In time, we expect that all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin). Even after the preview, you can [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table). In this case, you need to have a query to detect whether a table is enabled or not.
+In time, we expect that eventually all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
 
-Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table). If the recycle bin isn't enabled for a table, you will not [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored), but you can also query Dataverse to find out whether the recycle bin is enabled for a table or not.
 
-### [SDK for .NET](#tab/sdk)
+Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
-The following static `GetRecycleBinEnabledTables` method returns the `LogicalName` values for tables enabled for recycle bin.
+Use the following FetchXml query to detect which tables have recycle bin enabled:
 
-```csharp
-/// <summary>
-/// Gets a list of LogicalNames for the tables enabled for RecycleBin
-/// </summary>
-/// <param name="service">The authenticated IOrganizationService instance</param>
-/// <returns></returns>
-static List<string> GetRecycleBinEnabledTables(IOrganizationService service)
-{
-    QueryExpression query = new("recyclebinconfig")
-    {
-        ColumnSet = new ColumnSet("recyclebinconfigid"),
-        Criteria = new FilterExpression(LogicalOperator.And)
-        {
-            Conditions = {
-                  {
-               new ConditionExpression(
-                 attributeName: "statecode",
-                 conditionOperator: ConditionOperator.Equal,
-                 value: 0),
-               new ConditionExpression(
-                 attributeName: "isreadyforrecyclebin",
-                 conditionOperator: ConditionOperator.Equal,
-                 value: true)
-                  }
-             }
-        }
-    };
-
-    LinkEntity entityLink = query.AddLink(
-        linkToEntityName: "entity",
-        linkFromAttributeName: "extensionofrecordid",
-        linkToAttributeName: "entityid");
-    entityLink.Columns = new ColumnSet("logicalname");
-    entityLink.EntityAlias = "entity";
-
-    EntityCollection queryResults = service.RetrieveMultiple(query);
-
-    List<string> tableNames = new();
-
-    foreach (Entity recyclebinConfig in queryResults.Entities)
-    {
-        string logicalName = (string)recyclebinConfig
-               .GetAttributeValue<AliasedValue>("entity.logicalname")
-               .Value;
-
-        tableNames.Add(logicalName);
-    }
-
-    tableNames.Sort();
-    return tableNames;
-}
+```xml
+<fetch>
+  <entity name='recyclebinconfig'>
+    <filter type='and'>
+      <condition attribute='statecode'
+        operator='eq'
+        value='0' />
+      <condition attribute='isreadyforrecyclebin'
+        operator='eq'
+        value='1' />
+    </filter>
+    <link-entity name='entity'
+      from='entityid'
+      to='extensionofrecordid'
+      link-type='inner'
+      alias='entity'>
+      <attribute name='logicalname' />
+      <order attribute='logicalname' />
+    </link-entity>
+  </entity>
+</fetch>
 ```
 
-- [Learn how to use the SDK for .NET](org-service/overview.md)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
-
-
-### [Web API](#tab/webapi)
-
-The following `Get-RecycleBinEnabledTableNames` PowerShell function returns the `LogicalName` values for tables enabled for recycle bin.
-
-> [!NOTE]
-> This function depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
-
-```powershell
-function Get-RecycleBinEnabledTableNames {
-
-   $query = 'api/data/v9.2/recyclebinconfigs?'
-   $query += '$select=recyclebinconfigid&'
-   $query += '$expand=extensionofrecordid($select=logicalname)&'
-   $query += '$filter=statecode eq 0 and isreadyforrecyclebin eq true'
-
-   $activeRecyclebinconfigsNames = (Invoke-RestMethod `
-         -Uri ($environmentUrl + $query) `
-         -Method Get `
-         -Headers $baseHeaders).value
-
-   $tableNames = @()
-   $activeRecyclebinconfigsNames 
-   | Sort-Object -Property { $_.extensionofrecordid.logicalname }
-   | ForEach-Object {
-      $tableNames += $_.extensionofrecordid.logicalname
-   }
-
-   return $tableNames
-}
-```
-
-- [Learn to use the Dataverse Web API](webapi/overview.md)
-- [Learn to use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
-
----
 
 ## Detect which tables do not have recycle bin enabled
 
-To know which tables can be enabled for recycle bin, you need to exclude all tables already enabled.
+To know which tables are not enabled for recycle bin, use the following FetchXml query:
 
-**TODO: I think there is an easier way to do this by filtering on the entity table instead of using RetrieveMetadataChanges.**
-
- ### [SDK for .NET](#tab/sdk)
-
-This static `GetTablesEligibleForRecycleBin` method returns tables that are eligible to have recycle bin enabled.
-It returns the all the public tables not returned by the `GetRecycleBinEnabledTables` method mentioned in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin), and depends on that method.
-
-```csharp
-/// <summary>
-/// Returns the logical names of tables not yet enabled for RecycleBin
-/// </summary>
-/// <param name="service">The authenticated IOrganizationService instance</param>
-/// <returns>List of table logical names</returns>
-static List<string> GetTablesEligibleForRecycleBin(IOrganizationService service)
-{
-
-    List<string> tablesEnabledForRecycleBin = GetRecycleBinEnabledTables(service);
-
-    EntityQueryExpression query = new()
-    {
-        Properties = new MetadataPropertiesExpression("LogicalName"),
-        Criteria = new MetadataFilterExpression(LogicalOperator.And)
-        {
-            Conditions = {
-                 {
-                     new MetadataConditionExpression(
-                         propertyName:"LogicalName",
-                         conditionOperator: MetadataConditionOperator.NotIn,
-                         value: tablesEnabledForRecycleBin.ToArray() )
-                 },
-                                        {
-                     new MetadataConditionExpression(
-                         propertyName:"IsPrivate",
-                         conditionOperator: MetadataConditionOperator.Equals,
-                         value: false )
-                 }
-
-             }
-        }
-    };
-
-    RetrieveMetadataChangesRequest request = new() { Query = query };
-    var response = (RetrieveMetadataChangesResponse)service.Execute(request);
-
-    List<string> tableNames = new();
-
-    foreach (EntityMetadata entity in response.EntityMetadata)
-    {
-        tableNames.Add(entity.LogicalName);
-    }
-
-    tableNames.Sort();
-    return tableNames;
-}
-
+```xml
+<fetch>
+  <entity name='entity'>
+    <attribute name='logicalname' />
+    <filter type='or'>
+      <condition entityname='recyclebin'
+        attribute='extensionofrecordid'
+        operator='null' />
+      <condition entityname='recyclebin'
+        attribute='statecode'
+        operator='ne'
+        value='0' />
+      <condition entityname='recyclebin'
+        attribute='isreadyforrecyclebin'
+        operator='ne'
+        value='1' />
+    </filter>
+    <order attribute='logicalname' />
+    <link-entity name='recyclebinconfig'
+      from='extensionofrecordid'
+      to='entityid'
+      link-type='outer'
+      alias='recyclebin' />
+  </entity>
+</fetch>
 ```
 
-- [Learn how to use the SDK for .NET](org-service/overview.md)
-- [Learn to query table definitions](query-schema-definitions.md)
-
-
-### [Web API](#tab/webapi)
-
-This `Get-TablesEligibleForRecycleBin` PowerShell function returns tables that are eligible to have recycle bin enabled.
-
-It returns the all the public tables not returned by the `Get-RecycleBinEnabledTableNames` PowerShell function mentioned in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin), and depends on that function.
-
-This function also depends on the `$environmentUrl` and `$baseHeaders` set as described in [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
-
-```powershell
-function Get-TablesEligibleForRecycleBin {
-
-   $tablesEnabledForRecycleBin = Get-RecycleBinEnabledTableNames
-
-   $metadataQuery = [ordered]@{
-      Properties = [ordered]@{
-         AllProperties = $false.ToString()
-         PropertyNames = @('LogicalName')
-      }
-      Criteria   = [ordered]@{
-         FilterOperator = 'And'
-         Conditions     = @(
-            [ordered]@{
-               ConditionOperator = 'NotIn'
-               PropertyName      = 'LogicalName'
-               Value             = [ordered]@{
-                  Type  = 'System.String[]'
-                  Value = "['$($tablesEnabledForRecycleBin -join ''',''')']"
-               }
-            }
-            [ordered]@{
-               ConditionOperator = 'Equals'
-               PropertyName      = 'IsPrivate'
-               Value             = [ordered]@{
-                  Type  = 'System.Boolean'
-                  Value = $false.ToString()
-               }
-            }
-         )
-      }
-   }
-   
-   $metadataQueryJSON = $metadataQuery | ConvertTo-Json -Depth 10
-   $requestQuery = 'api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1='
-   $requestQuery += [System.Web.HttpUtility]::UrlEncode($metadataQueryJSON)
-   $request = @{
-      Method  = 'GET'
-      Uri     = ($environmentUrl + $requestQuery)
-      Headers = $baseHeaders
-   }
-   
-   $response = Invoke-RestMethod @request
-   $tableNames = $response.EntityMetadata | 
-   Sort-Object -Property LogicalName | 
-   Select-Object -ExpandProperty LogicalName
-   
-   return $tableNames
-}
-```
-
-- [Learn to use the Dataverse Web API](webapi/overview.md)
-- [Learn to query table definitions](query-schema-definitions.md)
-- [Learn to use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
-
----
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
@@ -772,9 +612,9 @@ function Disable-RecycleBinForTable {
 
 ---
 
-## Disable Recycle bin for the environment
+## Disable recycle bin for the environment
 
-Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) where the `name` value is `"organization"`. This will trigger deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This will trigger deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete individual records. It is important that Dataverse manage this.
