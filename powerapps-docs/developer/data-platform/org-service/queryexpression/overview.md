@@ -1,7 +1,7 @@
 ---
 title: Use QueryExpression to query data
 description: Learn to compose a query using QueryExpression, an object model that is used in Microsoft Dataverse to compose queries to retrieve data.
-ms.date: 02/29/2024
+ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -13,7 +13,6 @@ contributors:
  - JimDaly
 ---
 # Query data using QueryExpression
-<!-- Does not replace entity-operations-query-data.md -->
 
 The [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression), together with other classes in the [Microsoft.Xrm.Sdk.Query namespace](xref:Microsoft.Xrm.Sdk.Query), provides an object model to compose complex queries to retrieve records from Dataverse using the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A). [Compare options when querying data using the SDK for .NET](../entity-operations-query-data.md)
 
@@ -136,7 +135,13 @@ After you select the table to start your query with, refine the query to get the
 There are some things that you can do using FetchXml that `QueryExpression` doesn't support.
 
 - Retrieve data using the Dataverse Web API. There are some [Web API operations that enable `QueryExpression` parameters](#use-queryexpression-as-a-message-parameter), but you cannot compose a query using `QueryExpression` to retrieve data using the Web API.
-- [Aggregation limitations](aggregate-data.md#queryexpression-aggregation-limitations) lists the limitations for aggregations using `QueryExpresssion`.
+- [Aggregation limitations](aggregate-data.md#queryexpression-aggregation-limitations) lists the following limitations for aggregations using `QueryExpression`:
+
+   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
+   - [Time zone when grouping by date](aggregate-data.md#time-zone-when-grouping-by-date)
+   - [Row aggregate](aggregate-data.md#row-aggregate)
+   - [Per query limit](aggregate-data.md#per-query-limit)
+
 - [Perform cross table column comparisons](../../fetchxml/filter-rows.md#cross-table-column-comparisons).
    `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
 - [You can't override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)

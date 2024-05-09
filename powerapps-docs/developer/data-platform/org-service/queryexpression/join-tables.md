@@ -1,7 +1,7 @@
 ---
 title: Join tables using QueryExpression
 description: Learn how to use QueryExpression to join tables when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub

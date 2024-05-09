@@ -1,7 +1,7 @@
 ---
 title: Aggregate data using QueryExpression
 description: Learn how to use QueryExpression to retrieve aggregated data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -364,21 +364,7 @@ When a table has a [hierarchical relationship defined](../../../../maker/data-pl
 There is no way to specify a configurable aggregate limit. [Learn about per query limits using FetchXml](../../fetchxml/aggregate-data.md#per-query-limit)
 
 
-## Limitations
-
-<!-- TODO 
-   This is the same information in the data-platform/fetchxml/aggregate-data.md article.
-   Create an include to re-use parts of this content
- -->
-
-Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query returns more than 50,000 records, you get the following error:
-
-> Number: `-2147164125`  
-> Code: `8004E023`  
-> Message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
-> Client error message: The maximum record limit is exceeded. Reduce the number of records.
-
-To avoid this error, add appropriate filters to your query to make sure it doesn't evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.
+[!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
 
 ## Next steps
 
