@@ -125,6 +125,7 @@ When you include your retention policies in a solution, their definitions become
 > [!NOTE]
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
 > - Only retention policies created in Power Platform environments can be solution-aware.
+> - When long term retention, is being enabled through a solution import process, the related child tables aren't automatically enabled.
 
 You create a solution before you add a retention policy to it. Exporting and importing solutions containing retention policies is the same as with other solution components.
 
