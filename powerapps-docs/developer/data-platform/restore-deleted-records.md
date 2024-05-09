@@ -24,13 +24,245 @@ Sometimes people delete records that they shouldn't. Administrators can enable a
 
 This article will describe how you can do the following:
 
+- Retrieve deleted records that can be restored
+- Restore a deleted record
 - Detect which tables are enabled for recycle bin
 - Detect which tables do not have recycle bin enabled
 - Retrieve the automatic cleanup time period configuration for the recycle bin
 - Disable recycle bin for a table
-- Retrieve deleted records that can be restored
-- Restore a deleted record
-- Manage restoring records deleted by cascade operations
+- Manage restoring records deleted by custom business logic
+
+## Retrieve deleted records that can be restored
+
+To retrieve deleted records that can be restored, select the datasource of the query to '`bin`'.
+The examples below return the top 3 deleted account records.
+
+ ### [SDK for .NET](#tab/sdk)
+
+When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).  
+
+When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to '`bin`' when you retrieve records.
+
+```csharp
+static EntityCollection GetDeletedAccountRecordsFetchXml(IOrganizationService service) {
+
+   string queryString = @"<fetch top='3' datasource='bin'>
+                     <entity name='account'>
+                        <attribute name='name' />
+                     </entity>
+                     </fetch>";
+   
+   FetchExpression query = new(queryString);
+
+   return service.RetrieveMultiple(query);
+}
+```
+
+When you retrieve data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) property to '`bin`' when you retrieve records.
+
+```csharp
+static EntityCollection GetDeletedAccountRecordsQueryExpression(IOrganizationService service) {
+
+   QueryExpression query = new("account") { 
+         ColumnSet = new ColumnSet("name"),
+         DataSource = "bin",
+         TopCount = 3
+   };
+
+   return service.RetrieveMultiple(query);
+}
+```
+
+- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
+- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
+
+### [Web API](#tab/webapi)
+
+With Web API, you can retrieve records using FetchXml or OData syntax.
+
+> [!NOTE]
+> Currently, you can only retrieve deleted records using FetchXml.
+
+```powershell
+function Get-DeletedAccountRecords{
+
+   $query = @()
+   $query += "<fetch top='3' datasource='bin'>"
+   $query += "<entity name='account'>"
+   $query += "<attribute name='name' />"
+   $query += "</entity>"
+   $query += "</fetch>"
+
+   $uri = $baseURI
+   $uri += 'accounts'
+   $uri += '?fetchXml=' + [uri]::EscapeUriString($query -join '')
+
+   $RetrieveMultipleRequest = @{
+      Uri     = $uri
+      Method  = 'Get'
+      Headers = $baseHeaders
+   }
+   Invoke-RestMethod @RetrieveMultipleRequest
+
+}
+```
+
+- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
+
+---
+
+## Restore a deleted record
+
+Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them during the `Restore` operation.
+
+> [!NOTE]
+> At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
+
+
+How you restore a deleted record depends on whether you are using the SDK for .NET or Web API.
+
+ ### [SDK for .NET](#tab/sdk)
+
+The static `RestoreAccountRecordLateBound` method uses the [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class to invoke the `Restore` message, setting the `Target` parameter.
+
+```csharp
+static void RestoreAccountRecordLateBound(IOrganizationService service, Guid accountId)
+{
+   Entity accountToRestore = new("account", accountId);
+
+   OrganizationRequest request = new("Restore")
+   {
+         Parameters = {
+            { "Target", accountToRestore }
+         }
+   };
+
+   service.Execute(request);
+
+}
+```
+
+The static `RestoreAccountRecordEarlyBound` method uses the `RestoreRequest<T>` class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder).
+
+```csharp
+static void RestoreAccountRecordEarlyBound(IOrganizationService service, Guid accountId)
+{
+   Account accountToRestore = new()
+   {
+         Id = accountId
+   };
+
+   RestoreRequest<Account> request = new()
+   {
+         Target = accountToRestore
+   };
+
+   service.Execute(request);
+}
+```
+
+[Use messages with the SDK for .NET](org-service/use-messages.md)
+
+### [Web API](#tab/webapi)
+
+This `Restore-AccountRecord` PowerShell function shows how to restore a record using Web API using the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore). This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
+
+```powershell
+function Restore-AccountRecord {
+   param(
+      [Parameter(Mandatory)]
+      [string]$recordId
+   )
+   
+   $uri = $baseURI
+   $uri += 'Restore'
+   
+   $body = @{
+      'Target' = @{
+         '@odata.id' = $baseURI + 'accounts(' + $recordId + ')'
+      }
+   }
+
+   $postHeaders = $baseHeaders.Clone()
+   $postHeaders.Add('Content-Type', 'application/json')
+
+   $RestoreRequest = @{
+      Uri     = $uri
+      Method  = 'Post'
+      Headers = $postHeaders
+      Body    = (ConvertTo-Json $body) 
+   }
+   Invoke-RestMethod @RestoreRequest
+}
+```
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/Restore HTTP/1.1
+Accept: application/json
+Authorization: Bearer  [REDACTED]
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+
+{
+  "Target": {
+    "@odata.id": "[Organization URI]/api/data/v9.2/accounts(0ad63f65-990d-ef11-9f89-6045bdece8bb)"
+  }
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RestoreResponse","id":"0ad63f65-990d-ef11-9f89-6045bdece8bb"
+}
+```
+
+---
+
+### Errors that may occur when restoring records
+
+> Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
+> Code: `0x80049959`<br />
+> Number: `-2147182247`<br />
+> Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
+
+> Name: `DuplicateExceptionRestoreRecycleBin`<br />
+> Code: `0x80044a02`<br />
+> Number: `-2147182279`<br />
+> Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
+
+> Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
+> Code: `0x80049929`<br />
+> Number: `-2147182295`<br />
+> Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
+
+
+> Name: `PicklistValueOutOfRangeRecycleBin`<br />
+> Code: `0x80049949`<br />
+> Number: `-2147182263`<br />
+> Message: `Picklist value not valid, please add the invalid value back to the picklist before restoring record`
+
+
+#### Primary Key Violation on Delete
+
+If the record with same primary key was already deleted before, copy to Recycle Bin is ignored for the record. To enforce all deleted items are stored in Recycle Bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
+
+After enabling this, you may receive the following error:
+
+> Name: `DuplicateExceptionRestoreRecycleBin`<br />
+> Code: `0x80049939 `<br />
+> Number: `-2147182279`<br />
+> Message: `A record that has the attribute values Deleted Object already exists on Delete.`
 
 ## Detect which tables are enabled for recycle bin
 
@@ -472,237 +704,7 @@ function Disable-RecycleBinForTable {
 
 ---
 
-## Retrieve deleted records that can be restored
 
-To retrieve deleted records that can be restored, select the datasource of the query to '`bin`'.
-The examples below return the top 3 deleted account records.
-
- ### [SDK for .NET](#tab/sdk)
-
-When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).  
-
-When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to '`bin`' when you retrieve records.
-
-```csharp
-static EntityCollection GetDeletedAccountRecordsFetchXml(IOrganizationService service) {
-
-   string queryString = @"<fetch top='3' datasource='bin'>
-                     <entity name='account'>
-                        <attribute name='name' />
-                     </entity>
-                     </fetch>";
-   
-   FetchExpression query = new(queryString);
-
-   return service.RetrieveMultiple(query);
-}
-```
-
-When you retrieve data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) property to '`bin`' when you retrieve records.
-
-```csharp
-static EntityCollection GetDeletedAccountRecordsQueryExpression(IOrganizationService service) {
-
-   QueryExpression query = new("account") { 
-         ColumnSet = new ColumnSet("name"),
-         DataSource = "bin",
-         TopCount = 3
-   };
-
-   return service.RetrieveMultiple(query);
-}
-```
-
-- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
-
-
-### [Web API](#tab/webapi)
-
-With Web API, you can retrieve records using FetchXml or OData syntax.
-
-> [!NOTE]
-> Currently, you can only retrieve deleted records using FetchXml.
-
-```powershell
-function Get-DeletedAccountRecords{
-
-   $query = @()
-   $query += "<fetch top='3' datasource='bin'>"
-   $query += "<entity name='account'>"
-   $query += "<attribute name='name' />"
-   $query += "</entity>"
-   $query += "</fetch>"
-
-   $uri = $baseURI
-   $uri += 'accounts'
-   $uri += '?fetchXml=' + [uri]::EscapeUriString($query -join '')
-
-   $RetrieveMultipleRequest = @{
-      Uri     = $uri
-      Method  = 'Get'
-      Headers = $baseHeaders
-   }
-   Invoke-RestMethod @RetrieveMultipleRequest
-
-}
-```
-
-- [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
-- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
-
----
-
-## Restore a deleted record
-
-Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them during the `Restore` operation.
-
-> [!NOTE]
-> At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
-
-
-How you restore a deleted record depends on whether you are using the SDK for .NET or Web API.
-
- ### [SDK for .NET](#tab/sdk)
-
-The static `RestoreAccountRecordLateBound` method uses the [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class to invoke the `Restore` message, setting the `Target` parameter.
-
-```csharp
-static void RestoreAccountRecordLateBound(IOrganizationService service, Guid accountId)
-{
-   Entity accountToRestore = new("account", accountId);
-
-   OrganizationRequest request = new("Restore")
-   {
-         Parameters = {
-            { "Target", accountToRestore }
-         }
-   };
-
-   service.Execute(request);
-
-}
-```
-
-The static `RestoreAccountRecordEarlyBound` method uses the `RestoreRequest<T>` class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder).
-
-```csharp
-static void RestoreAccountRecordEarlyBound(IOrganizationService service, Guid accountId)
-{
-   Account accountToRestore = new()
-   {
-         Id = accountId
-   };
-
-   RestoreRequest<Account> request = new()
-   {
-         Target = accountToRestore
-   };
-
-   service.Execute(request);
-}
-```
-
-[Use messages with the SDK for .NET](org-service/use-messages.md)
-
-### [Web API](#tab/webapi)
-
-This `Restore-AccountRecord` PowerShell function shows how to restore a record using Web API using the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore). This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
-
-```powershell
-function Restore-AccountRecord {
-   param(
-      [Parameter(Mandatory)]
-      [string]$recordId
-   )
-   
-   $uri = $baseURI
-   $uri += 'Restore'
-   
-   $body = @{
-      'Target' = @{
-         '@odata.id' = $baseURI + 'accounts(' + $recordId + ')'
-      }
-   }
-
-   $postHeaders = $baseHeaders.Clone()
-   $postHeaders.Add('Content-Type', 'application/json')
-
-   $RestoreRequest = @{
-      Uri     = $uri
-      Method  = 'Post'
-      Headers = $postHeaders
-      Body    = (ConvertTo-Json $body) 
-   }
-   Invoke-RestMethod @RestoreRequest
-}
-```
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.2/Restore HTTP/1.1
-Accept: application/json
-Authorization: Bearer  [REDACTED]
-OData-Version: 4.0
-OData-MaxVersion: 4.0
-Content-Type: application/json
-
-{
-  "Target": {
-    "@odata.id": "[Organization URI]/api/data/v9.2/accounts(0ad63f65-990d-ef11-9f89-6045bdece8bb)"
-  }
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-
-{
-   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RestoreResponse","id":"0ad63f65-990d-ef11-9f89-6045bdece8bb"
-}
-```
-
----
-
-### Errors that may occur when restoring records
-
-> Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
-> Code: `0x80049959`<br />
-> Number: `-2147182247`<br />
-> Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
-
-> Name: `DuplicateExceptionRestoreRecycleBin`<br />
-> Code: `0x80044a02`<br />
-> Number: `-2147182279`<br />
-> Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
-
-> Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
-> Code: `0x80049929`<br />
-> Number: `-2147182295`<br />
-> Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
-
-
-> Name: `PicklistValueOutOfRangeRecycleBin`<br />
-> Code: `0x80049949`<br />
-> Number: `-2147182263`<br />
-> Message: `Picklist value not valid, please add the invalid value back to the picklist before restoring record`
-
-
-#### Primary Key Violation on Delete
-
-If the record with same primary key was already deleted before, copy to Recycle Bin is ignored for the record. To enforce all deleted items are stored in Recycle Bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
-
-After enabling this, you may receive the following error:
-
-> Name: `DuplicateExceptionRestoreRecycleBin`<br />
-> Code: `0x80049939 `<br />
-> Number: `-2147182279`<br />
-> Message: `A record that has the attribute values Deleted Object already exists on Delete.`
 
 
 ## Manage restoring records deleted by custom business logic
