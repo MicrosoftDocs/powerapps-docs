@@ -550,219 +550,100 @@ function Get-DeletedAccountRecords{
 
 ## Restore a deleted record
 
- **TODO: Explain how to do this**
+Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them during the `Restore` operation.
+
+
+How you restore a deleted record depends on whether you are using the SDK for .NET or Web API.
 
  ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
-
-
-This is the class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder) for the Restore Message:
-
-**TODO: We don't want to include this class in the docs, we want to show how to use it. It has an unusual signature. We should also show how to use OrganizationRequest/OrganizationResponse without this generated class**
+The static `RestoreAccountRecordLateBound` method uses the [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class to invoke the `Restore` message, setting the `Target` parameter.
 
 ```csharp
-   [System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/crm/2011/Contracts")]
-   [Microsoft.Xrm.Sdk.Client.RequestProxyAttribute("Restore")]
-   public partial class RestoreRequest<T> : Microsoft.Xrm.Sdk.OrganizationRequest
-      where T : Microsoft.Xrm.Sdk.Entity, new ()
+static void RestoreAccountRecordLateBound(IOrganizationService service, Guid accountId)
+{
+   Entity accountToRestore = new("account", accountId);
+
+   OrganizationRequest request = new("Restore")
    {
-      
-      public bool MaintainLegacyAppServerBehavior
-      {
-         get
-         {
-            if (this.Parameters.Contains("MaintainLegacyAppServerBehavior"))
-            {
-               return ((bool)(this.Parameters["MaintainLegacyAppServerBehavior"]));
-            }
-            else
-            {
-               return default(bool);
-            }
+         Parameters = {
+            { "Target", accountToRestore }
          }
-         set
-         {
-            this.Parameters["MaintainLegacyAppServerBehavior"] = value;
-         }
-      }
-      
-      public bool CalculateMatchCodeSynchronously
-      {
-         get
-         {
-            if (this.Parameters.Contains("CalculateMatchCodeSynchronously"))
-            {
-               return ((bool)(this.Parameters["CalculateMatchCodeSynchronously"]));
-            }
-            else
-            {
-               return default(bool);
-            }
-         }
-         set
-         {
-            this.Parameters["CalculateMatchCodeSynchronously"] = value;
-         }
-      }
-      
-      public RestoreRequest() : 
-            this(new T())
-      {
-      }
-      
-      public RestoreRequest(T target)
-      {
-         this.Target = target;
-         this.RequestName = "Restore";
-      }
-      
-      public T Target
-      {
-         get
-         {
-            if (this.Parameters.Contains("Target"))
-            {
-               return ((T)(this.Parameters["Target"]));
-            }
-            else
-            {
-               return default(T);
-            }
-         }
-         set
-         {
-            this.Parameters["Target"] = value;
-         }
-      }
-      
-      public bool SuppressDuplicateDetection
-      {
-         get
-         {
-            if (this.Parameters.Contains("SuppressDuplicateDetection"))
-            {
-               return ((bool)(this.Parameters["SuppressDuplicateDetection"]));
-            }
-            else
-            {
-               return default(bool);
-            }
-         }
-         set
-         {
-            this.Parameters["SuppressDuplicateDetection"] = value;
-         }
-      }
-      
-      public bool ReturnRowVersion
-      {
-         get
-         {
-            if (this.Parameters.Contains("ReturnRowVersion"))
-            {
-               return ((bool)(this.Parameters["ReturnRowVersion"]));
-            }
-            else
-            {
-               return default(bool);
-            }
-         }
-         set
-         {
-            this.Parameters["ReturnRowVersion"] = value;
-         }
-      }
-      
-      public string SolutionUniqueName
-      {
-         get
-         {
-            if (this.Parameters.Contains("SolutionUniqueName"))
-            {
-               return ((string)(this.Parameters["SolutionUniqueName"]));
-            }
-            else
-            {
-               return default(string);
-            }
-         }
-         set
-         {
-            this.Parameters["SolutionUniqueName"] = value;
-         }
-      }
-   }
-   
-   [System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/crm/2011/Contracts")]
-   [Microsoft.Xrm.Sdk.Client.ResponseProxyAttribute("Restore")]
-   public partial class RestoreResponse : Microsoft.Xrm.Sdk.OrganizationResponse
-   {
-      
-      public RestoreResponse()
-      {
-      }
-      
-      public System.Guid id
-      {
-         get
-         {
-            if (this.Results.Contains("id"))
-            {
-               return ((System.Guid)(this.Results["id"]));
-            }
-            else
-            {
-               return default(System.Guid);
-            }
-         }
-      }
-   }
+   };
+
+   service.Execute(request);
+
 }
 ```
 
-I was expecting that it would simply require an EntityReference...
+The static `RestoreAccountRecordEarlyBound` method uses the `RestoreRequest<T>` class generated using the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder).
 
 ```csharp
-static void ExampleMethod(IOrganizationService service){
+static void RestoreAccountRecordEarlyBound(IOrganizationService service, Guid accountId)
+{
+   Account accountToRestore = new()
+   {
+         Id = accountId
+   };
 
-   // Add your code to demonstrate how to do something here
-   // We want a static method where all input parameters
-   // are visible
+   RestoreRequest<Account> request = new()
+   {
+         Target = accountToRestore
+   };
+
+   service.Execute(request);
 }
 ```
 
+[Use messages with the SDK for .NET](org-service/use-messages.md)
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+This `Restore-AccountRecord` PowerShell function shows how to restore a record using Web API using the [Restore action](/power-apps/developer/data-platform/webapi/reference/restore). This operation returns a [RestoreResponse complex type](/power-apps/developer/data-platform/webapi/reference/restoreresponse) that has an `id` property set to the ID of the restored record.
+
+```powershell
+function Restore-AccountRecord {
+   param(
+      [Parameter(Mandatory)]
+      [string]$recordId
+   )
+   
+   $uri = $baseURI
+   $uri += 'Restore'
+   
+   $body = @{
+      'Target' = @{
+         '@odata.id' = $baseURI + 'accounts(' + $recordId + ')'
+      }
+   }
+
+   $postHeaders = $baseHeaders.Clone()
+   $postHeaders.Add('Content-Type', 'application/json')
+
+   $RestoreRequest = @{
+      Uri     = $uri
+      Method  = 'Post'
+      Headers = $postHeaders
+      Body    = (ConvertTo-Json $body) 
+   }
+   Invoke-RestMethod @RestoreRequest
+}
+```
 
 **Request**
 
 ```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.CreateMultiple
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
+POST [Organization URI]/api/data/v9.2/Restore HTTP/1.1
 Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 396
+Authorization: Bearer  [REDACTED]
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
 
 {
-    "Targets": [
-        {
-            "sample_name": "sample record 0000001",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000002",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        },
-        {
-            "sample_name": "sample record 0000003",
-            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-        }
-    ]
+  "Target": {
+    "@odata.id": "[Organization URI]/api/data/v9.2/accounts(0ad63f65-990d-ef11-9f89-6045bdece8bb)"
+  }
 }
 ```
 
@@ -770,15 +651,11 @@ Content-Length: 396
 
 ```http
 HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
-    "Ids": [
-        "8f4c3f92-312b-ee11-bdf4-000d3a993550",
-        "904c3f92-312b-ee11-bdf4-000d3a993550",
-        "914c3f92-312b-ee11-bdf4-000d3a993550"
-    ]
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RestoreResponse","id":"0ad63f65-990d-ef11-9f89-6045bdece8bb"
 }
 ```
 
