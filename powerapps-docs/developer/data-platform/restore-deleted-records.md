@@ -1,7 +1,7 @@
 ---
-title: Restore deleted records with code(preview)
+title: Restore deleted records with code (preview)
 description: Learn how to configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
-ms.date: 04/30/2024
+ms.date: 05/10/2024
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ contributors:
  - TakeN0
 ms.custom: bap-template
 ---
-# Restore deleted records with code(preview)
+# Restore deleted records with code (preview)
 
 [!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
@@ -140,6 +140,8 @@ function Get-RecycleBinEnabledTableNames {
 ## Detect which tables do not have recycle bin enabled
 
 To know which tables can be enabled for recycle bin, you need to exclude all tables already enabled.
+
+**TODO: I think there is an easier way to do this by filtering on the entity table instead of using RetrieveMetadataChanges.**
 
  ### [SDK for .NET](#tab/sdk)
 
@@ -267,13 +269,13 @@ function Get-TablesEligibleForRecycleBin {
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
-The value to determine how long deleted records will be available to be restored is set in the `RecycleBinConfig` `cleanupintervalindays` column where the `name` is `organization`. Every other row in the `RecycleBinConfig` table has a `cleanupintervalindays` column value of -1. This indicates it will use the same values set for the `organization` table.
+The value to determine how long deleted records will be available to be restored is set in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of -1. This indicates it will use the same values set for the `organization` table.
 
-To specify a different value for another table, set the `cleanupintervalindays` column value where the `name` matches the logical name of the table. While this column allows values up to 2,147,483,647, we recommend not setting it higher than 30.
+To specify a different value for another table, set the `CleanupIntervalInDays` column value where the `Name` matches the logical name of the table. While this column allows values up to 2,147,483,647, we recommend not setting it higher than 30.
 
  ### [SDK for .NET](#tab/sdk)
 
-You can use this static `SetCleanupIntervalInDays` method to set the `cleanupintervalindays` column value for a specific table.
+You can use this static `SetCleanupIntervalInDays` method to set the `CleanupIntervalInDays` column value for a specific table.
 
 ```csharp
 /// <summary>
@@ -371,7 +373,10 @@ function Set-CleanupIntervalInDays{
 
 ## Disable recycle bin for a table
 
-To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values, 2 and 1 respectively.
+To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: 2 and 1 respectively.
+
+> [!NOTE]
+> The queries below compare the `LogicalName` value against the [Entity.Name](reference/entities/entity.md#BKMK_Name) column value, which stores the table `SchemaName`. `LogicalName` is the lower-case version of the `SchemaName`. String value comparisons are case insensitive, so it does't matter which format of name you use.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -552,6 +557,9 @@ function Get-DeletedAccountRecords{
 
 Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them during the `Restore` operation.
 
+> [!NOTE]
+> At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
+
 
 How you restore a deleted record depends on whether you are using the SDK for .NET or Web API.
 
@@ -666,17 +674,17 @@ OData-Version: 4.0
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
 > Number: `-2147182247`<br />
-> Message: `Entity with id '<GuidValue>' and logical name '<EntityLogicalName>' does not exist. We cannot restore the reference '<ReferredAPrimaryKeyName>' that must be restored as part of this Restore call. ValueToBeRestored: <GuidValue>, ReferencedEntityName: <ReferencedEntityName>, AttributeName: <ReferredAttributeName>`
+> Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
 > Number: `-2147182279`<br />
-> Message: `Please delete the existing conflicting record '<EntityPlatformName>' with primary key '<PrimaryKeyName>' and primary key value '<PrimaryKeyValue>' before attempting restore.`
+> Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
 
 > Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
 > Code: `0x80049929`<br />
 > Number: `-2147182295`<br />
-> Message: `Duplicate entity key preventing restore of record '<EntityPlatformName>' with primary key '<PrimaryKeyName>' and primary key value '<PrimaryKeyValue>'. See inner exception for entity key details.`
+> Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
 
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
