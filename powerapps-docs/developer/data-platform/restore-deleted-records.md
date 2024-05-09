@@ -1008,7 +1008,7 @@ The following tables are the result of the query found in [Detect which tables d
 
 
 
-## Markdown examples to delete when we are done
+## REMOVE BEFORE PUBLISHING: Markdown examples to delete when we are done
 
 Each `##` section has a navigation link at the top of the page. Introduce key capabilities with a section. You may want to use this when you link between articles.
 
