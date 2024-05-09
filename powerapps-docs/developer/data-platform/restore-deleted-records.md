@@ -629,7 +629,7 @@ Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md)
 
 ## Manage restoring records deleted by custom business logic
 
-Dataverse provides a mechanism to manage desired actions for related records when a row is deleted. This is part of the definition of the relationship. When a related record is deleted, there are three possible behaviors that you can configure:
+Dataverse provides a mechanism to manage desired actions for related records when a row is deleted. This is part of the definition of the relationship. When a related record is deleted, there are four possible behaviors that you can configure:
 
 |Delete Behavior|Description|
 |---------|---------|
@@ -646,7 +646,12 @@ If you have a relationship configured to use the **Remove Link** behavior, the r
 
 If you have a relationship configured to use the **Cascade None** behavior, you may have custom logic that applies some custom behavior. For example, you may wish to respond to this differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
-If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed)
+If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
+
+
+### TODO Plug-in example?
+
+The relationships between Account or Contact and activityparty ([account_activity_parties](reference/entities/account.md#BKMK_account_activity_parties) and [contact_activity_parties](reference/entities/contact.md#BKMK_contact_activity_parties) ) are configured with `NoCascade` for Delete by default.  Seems like these may be common candidates for people having custom plug-in logic.
 
 
 ## Tables not currently supported for Recycle Bin
