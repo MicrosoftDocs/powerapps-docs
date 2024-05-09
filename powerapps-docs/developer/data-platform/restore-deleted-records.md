@@ -25,7 +25,7 @@ Sometimes people delete records that they shouldn't. Administrators can enable a
 ## Retrieve deleted records that can be restored
 
 To retrieve deleted records that can be restored, set the datasource of the query to '`bin`'.
-The examples below return the top 3 deleted account records.
+The examples below return up to 3 deleted account records.
 
  ### [SDK for .NET](#tab/sdk)
 
@@ -109,7 +109,7 @@ function Get-DeletedAccountRecords{
 
 ## Restore a deleted record
 
-Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record. It is a full record so you can set column values while you restore the record. All the original column values are restored unless you override them by setting values during the `Restore` operation.
+Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record, it's a full record so you can set column values while you restore the record. All the original column values are restored unless you override them by setting values during the `Restore` operation.
 
 > [!NOTE]
 > At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
@@ -264,6 +264,8 @@ function Restore-AccountRecord {
    $body = @{
       'Target' = @{
          '@odata.type' = 'Microsoft.Dynamics.CRM.account'
+         # Appending '(Restored)' to the original name
+         # to demonstrate overwriting a value.
          'name'       = ($originalName + ' (Restored)')
          'accountid'  = $recordId.Guid
       }
@@ -345,9 +347,9 @@ Before the recycle bin feature is enabled, the [Recycle Bin Configuration (Recyc
 
 In time, we expect that eventually all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
 
-You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table). If the recycle bin isn't enabled for a table, you will not [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored), but you can also query Dataverse to find out whether the recycle bin is enabled for a table or not.
+You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table) and [disable recycle bin for the environment](#disable-recycle-bin-for-the-environment). If the recycle bin isn't enabled for a table, you will not [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored), but you can also query Dataverse to find out whether the recycle bin is enabled for a table or not.
 
-Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
 Use the following FetchXml query to detect which tables have recycle bin enabled:
 
@@ -377,7 +379,7 @@ Use the following FetchXml query to detect which tables have recycle bin enabled
 
 ## Detect which tables do not have recycle bin enabled
 
-To know which tables are not enabled for recycle bin, use the following FetchXml query:
+To know which tables are not enabled for recycle bin, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin).
 
 ```xml
 <fetch>
@@ -633,106 +635,7 @@ Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md)
 ### Plug-in code example
 
 ```csharp
- public class IsSystemAdmin : IPlugin
-{
-   public void Execute(IServiceProvider serviceProvider)
-   {
-      // Obtain the tracing service
-      ITracingService tracingService =
-      (ITracingService)serviceProvider.GetService(typeof(ITracingService));
-
-      // Obtain the execution context from the service provider.  
-      IPluginExecutionContext context = (IPluginExecutionContext)
-            serviceProvider.GetService(typeof(IPluginExecutionContext));
-
-      if (context.InputParameters.Contains("Target") &&
-            context.InputParameters["Target"] is EntityReference)
-      {
-
-            // Obtain the organization service reference which you will need for  
-            // web service calls.  
-            IOrganizationServiceFactory serviceFactory =
-               (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-            IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-
-            try
-            {
-               //Get the userid 
-               Guid userid = ((EntityReference)context.InputParameters["Target"]).Id;
-
-               string systemUserRolesFetchXml = $@"<fetch mapping='logical' >
-                  <entity name='systemuserroles'>
-                  <attribute name='roleid'/>
-                  <filter type='and'>
-                     <condition attribute='systemuserid' operator='eq' value='{{0}}' /> 
-                  </filter>
-                  <link-entity name='role' alias='role' to='roleid' link-type='inner'>
-                     <filter type='and'>
-                        <condition alias='role' attribute='roletemplateid' operator='eq' value='627090FF-40A3-4053-8790-584EDC5BE201' /> </filter>
-                  </link-entity>
-                  </entity>
-               </fetch>";
-
-               FetchExpression systemuserrolesQuery = new FetchExpression(string.Format(systemUserRolesFetchXml, userid));
-
-               EntityCollection systemuserrolesResults = service.RetrieveMultiple(systemuserrolesQuery);
-
-               if (systemuserrolesResults.Entities.Count > 0)
-               {
-                  context.OutputParameters["HasRole"] = true;
-               }
-               else
-               {
-                  tracingService.Trace("System Administrator Role not found in systemuserroles");
-
-                  //The user may have the role due to an indirect association from team membership.
-
-                  string teamMemberShipFetchXml = $@"<fetch mapping='logical' >
-                     <entity name='teamroles'>
-                        <attribute name='roleid'/>
-                        <link-entity name='teammembership' to='teamid' from='teamid' link-type='inner'>
-                        <filter type='and'>
-                           <condition attribute='systemuserid' operator='eq' value='{{0}}' />
-                        </filter>
-                        </link-entity>
-                        <link-entity name='role' alias='role' to='roleid' from='roleid' link-type='inner'>
-                        <filter type='and'>
-                           <condition alias='role' attribute='roletemplateid' operator='eq' value='627090FF-40A3-4053-8790-584EDC5BE201' />
-                        </filter>
-                        </link-entity>
-                     </entity>
-                  </fetch>";
-
-                  FetchExpression teammembershipQuery = new FetchExpression(string.Format(systemUserRolesFetchXml, userid));
-
-                  EntityCollection teammembershipResults = service.RetrieveMultiple(systemuserrolesQuery);
-                  if (systemuserrolesResults.Entities.Count > 0)
-                  {
-                        context.OutputParameters["HasRole"] = true;
-                  }
-                  else
-                  {
-                        tracingService.Trace("System Administrator Role not found in teamroles");
-                        context.OutputParameters["HasRole"] = false;
-                  }
-
-               }
-
-            }
-            catch (FaultException<OrganizationServiceFault> ex)
-            {
-               throw new InvalidPluginExecutionException("An error occurred in IsSystemAdmin.", ex);
-            }
-
-            catch (Exception ex)
-            {
-               tracingService.Trace("IsSystemAdmin: {0}", ex.ToString());
-               throw;
-            }
-
-      }
-   }
-}
+ // TODO plug-in code sample
 ```
 
 
