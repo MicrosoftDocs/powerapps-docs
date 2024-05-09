@@ -295,7 +295,7 @@ The following errors may occur when restoring records.
 
 #### RefCannotBeRestoredRecycleBinNotFound
 
-**TODO: Explain how to avoid this error**
+**TODO: Explain how to avoid this error and change the section heading**
 
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
@@ -304,7 +304,7 @@ The following errors may occur when restoring records.
 
 #### DuplicateExceptionRestoreRecycleBin
 
-**TODO: Explain how to avoid this error**
+**TODO: Explain how to avoid this error and change the section heading**
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
@@ -313,7 +313,7 @@ The following errors may occur when restoring records.
 
 #### DuplicateExceptionEntityKeyRestoreRecycleBin
 
-**TODO: Explain how to avoid this error**
+**TODO: Explain how to avoid this error and change the section heading**
 
 > Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
 > Code: `0x80049929`<br />
@@ -322,7 +322,7 @@ The following errors may occur when restoring records.
 
 #### PicklistValueOutOfRangeRecycleBin
 
-**TODO: Explain how to avoid this error**
+**TODO: Explain how to avoid this error and change the section heading**
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
 > Code: `0x80049949`<br />
@@ -376,6 +376,7 @@ Use the following FetchXml query to detect which tables have recycle bin enabled
 </fetch>
 ```
 
+[Learn to query data using FetchXml](fetchxml/overview.md)
 
 ## Detect which tables do not have recycle bin enabled
 
@@ -407,6 +408,10 @@ To know which tables are not enabled for recycle bin, use the following FetchXml
   </entity>
 </fetch>
 ```
+
+[Learn to query data using FetchXml](fetchxml/overview.md)
+
+The results of this query as of May, 2024 when this preview feature began are in [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin)
 
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
@@ -624,32 +629,29 @@ Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md)
 
 ## Manage restoring records deleted by custom business logic
 
- **TODO: Explain the scenarios**
+Dataverse provides a mechanism to manage desired actions for related records when a row is deleted. This is part of the definition of the relationship. When a related record is deleted, there are three possible behaviors that you can configure:
 
-- Why this is necessary?
-- When to do this?
-- What to do
-- Where to do this (i.e. is a plug-in the only way to do this?)
+|Delete Behavior|Description|
+|---------|---------|
+|**Cascade All**|The related records are deleted.|
+|**Remove Link**|The lookup columns to the deleted record are set to null.|
+|**Cascade None**|No changes will be applied to related records.|
+|**Restrict**|Dataverse prevents deleting the record to maintain data integrity. The record can't be deleted unless there are no records related for this relationship.|
 
+[Learn more about relationship behaviors](../../maker/data-platform/create-edit-entity-relationships.md#behaviors)
 
-### Plug-in code example
+If you have a relationship configured to use the **Cascade All** behavior, all the related records that are deleted will be restored when the deleted record is restored. There is nothing to do because Dataverse manages this.
 
-```csharp
- // TODO plug-in code sample
-```
+If you have a relationship configured to use the **Remove Link** behavior, the related records lookup column values are set back to refer to the restored record.
 
+If you have a relationship configured to use the **Cascade None** behavior, you may have custom logic that applies some custom behavior. For example, you may wish to respond to this differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
-### Scenario 1 TBD
-
- **TODO: If you have multiple scenarios, please create new sections for them.**
-
-
-### Scenario 3 TBD
-
- **TODO: If you have multiple scenarios, please create new sections for them.**
+If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed)
 
 
 ## Tables not currently supported for Recycle Bin
+
+The following tables are the result of the query found in [Detect which tables do not have recycle bin enabled](#detect-which-tables-do-not-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started.
 
 :::row:::
    :::column:::
@@ -1085,7 +1087,6 @@ Different ways to link to a class name:
 
 <!-- I prefer this  -->
 - [RecalcEngine class](xref:Microsoft.PowerFx.RecalcEngine)
-<!-- But these also work -->
 - <xref:Microsoft.PowerFx.RecalcEngine>
 - <xref:Microsoft.PowerFx.RecalcEngine?displayProperty=nameWithType>
 - <xref:Microsoft.PowerFx.RecalcEngine?displayProperty=fullName>
