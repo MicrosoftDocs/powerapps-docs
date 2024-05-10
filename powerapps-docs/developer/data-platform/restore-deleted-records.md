@@ -623,13 +623,13 @@ function Disable-RecycleBinForTable {
 
 ## Disable recycle bin for the environment
 
-# Note: The preferred way to disable an environment is using Power Platform Admin Center, Features Tab. The below method may change in the future.
+> [!NOTE]
+> The preferred way to disable recycle bin for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here may change before the feature becomes generally available.
 
 Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete individual records. It is important that Dataverse manage this.
-
 
 ## Manage restoring records deleted by custom business logic
 
@@ -646,19 +646,13 @@ Dataverse provides a mechanism to manage desired actions for related records whe
 
 There's nothing to do when the relationship is configured for **Cascade All**, **Remove Link**, and **Restrict** because Dataverse manages these behaviors.
 
-If you have a relationship configured to use the **Cascade Remove Link** behavior, but this relationship is supposed to delete the related record, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
+If you have a relationship configured to use the **Remove Link** behavior, but this relationship is supposed to delete the related record, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
-If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed). 
+If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
 
 > [!IMPORTANT]
-> Restore Plugins should be careful on context, that the main record will not be available for Reference in Pre-Operation stage. If related records need to be created, please use Post-Operation plugin.
-> The Input and Output parameters of Restore operation are similar to Create operation, so Create plugins that were creating records in external environments (E.g. Power BI etc) can be registered on Restore easily with minor changes.
-
-
-### TODO Plug-in example?
-
-The relationships between Account or Contact and activityparty ([account_activity_parties](reference/entities/account.md#BKMK_account_activity_parties) and [contact_activity_parties](reference/entities/contact.md#BKMK_contact_activity_parties) ) are configured with `NoCascade` for Delete by default.  Seems like these might be common candidates for people having custom plug-in logic.
-
+> Be careful about the context when you register plug-in steps for the `Restore` message. The record being restored will not be available in the `PreOperation` stage. If related records need to be created, use the `PostOperation` stage. [Learn more about plug-in stages](event-framework.md#event-execution-pipeline).
+> The [InputParameters](understand-the-data-context.md#inputparameters) and [OutputParameters](understand-the-data-context.md#outputparameters) of the `Restore` message are similar to `Create` message, so plug-ins written to be registered for the `Create` message can be re-used for the `Restore` message with fewer changes.
 
 ## Tables not currently supported for Recycle Bin
 
