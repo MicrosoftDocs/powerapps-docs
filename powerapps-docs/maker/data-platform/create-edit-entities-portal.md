@@ -60,14 +60,14 @@ Use the table visual designer experience where you create and edit tables, confi
       (NOTE: many-to-many relationships aren't supported)
    - **Delete**. Deletes the table and all associated table rows.
 2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
-3. Table visual designer canvas actions.
+3. Table visual designer canvas actions:
    - **+**. Zoom in to increase the size of the table objects on the canvas.
    - **-**. Zoom out to decrease the size of the table objects on the canvas.
    - **Fit view**. Resize to fit within the available space in the browser tab.
-   - **Show map** or **Hide map**. When show, displays a compact representation of the tables on the canvas.
+   - **Show map** or **Hide map**. When **Show map** is selected, displays a compact representation of the tables on the canvas.
 4. Table actions menu:
    - **Hide data** or **View data**. Closes or displays the table row editor.
-   - **Row ownership**. Select the ownership type as either user or team or organization. 
+   - **Row ownership**. Select the ownership type as either user or team, or organization. 
    - **Properties**. Edit the table display name, plural name, description, and schema name.
    - **Delete**. Delete the table and all associated rows.
 5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
