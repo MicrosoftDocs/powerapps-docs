@@ -298,14 +298,14 @@ The following are issues you can avoid when restoring records:
 
 - [Restore related records before restoring primary record](#restore-related-records-before-restoring-primary-record)
 - [Don't specify primary key values when creating records](#dont-specify-primary-key-values-when-creating-records)
-- [Records with matching alternate key values will block restore](#records-with-matching-alternate-key-values-will-block-restore)
-- [Records using removed Choice options can't restored](#records-using-removed-choice-options-cant-restored)
+- [Records with matching alternate key values block restore](#records-with-matching-alternate-key-values-block-restore)
+- [Records using removed Choice options aren't restored](#records-using-removed-choice-options-arent-restored)
 - [Primary Key Violation on Delete](#primary-key-violation-on-delete)
 
 
 #### Restore related records before restoring primary record
 
-If some related records whose reference were removed as part of Cascade relationship, no longer exist, the restore operation will fail. To avoid this, always restore the related records not deleted as part of current record, before trying to restore the primary record.
+If some related records whose reference were removed as part of cascade relationship no longer exist, the restore operation fails. To avoid this problem, always restore the related records not deleted as part of current record before trying to restore the primary record.
 
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
@@ -315,14 +315,14 @@ If some related records whose reference were removed as part of Cascade relation
 
 #### Don't specify primary key values when creating records
 
-It is generally a good practice to always let Dataverse set the primary key when creating a record. If you create a new record that has the same primary key value as a deleted record, the deleted record can't be restored. If you do, you must delete the new record before you can restore the deleted one.
+It's generally a good practice to always let Dataverse set the primary key when creating a record. If you create a new record that has the same primary key value as a deleted record, the deleted record can't be restored. If you do, you must delete the new record before you can restore the deleted one.
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
 > Number: `-2147182279`<br />
 > Message: `Please delete the existing conflicting record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>' before attempting restore.`
 
-#### Records with matching alternate key values will block restore
+#### Records with matching alternate key values block restore
 
 If you create a record that has the same alternate key column values as a deleted record, you can't restore it. If you do, you must delete the new record before you can restore the deleted one.
 
@@ -331,7 +331,7 @@ If you create a record that has the same alternate key column values as a delete
 > Number: `-2147182295`<br />
 > Message: `Duplicate entity key preventing restore of record '<Entity Platform Name>' with primary key '<Primary Key Name>' and primary key value '<Primary Key Value>'. See inner exception for entity key details.`
 
-#### Records using removed Choice options can't restored
+#### Records using removed Choice options aren't restored
 
 If you delete an optionset option, and that option was used in a deleted record, you can't restore it because the option is now invalid. Before deleting an option set option, check that no records use that option, including deleted records.
 
@@ -656,16 +656,16 @@ Dataverse provides a mechanism to manage desired actions for related records whe
 |---------|---------|
 |**Cascade All**|The related records are deleted.|
 |**Remove Link**|The lookup columns to the deleted record are set to null.|
-|**Cascade None**|No changes will be applied to related records. (Internal Only) |
+|**Cascade None**|No changes are applied to related records. (Internal Only) |
 |**Restrict**|Dataverse prevents deleting the record to maintain data integrity. The record can't be deleted unless there are no records related for this relationship.|
 
 [Learn more about relationship behaviors](../../maker/data-platform/create-edit-entity-relationships.md#behaviors)
 
 There's nothing to do when the relationship is configured for **Cascade All**, **Remove Link**, and **Restrict** because Dataverse manages these behaviors.
 
-If you have a relationship configured to use the **Remove Link** behavior, but this relationship is supposed to delete the related record, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
+If you have a relationship configured to use the **Remove Link** behavior, but this relationship is supposed to delete the related record, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that weren't updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
-If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
+If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'undo' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
 
 > [!IMPORTANT]
 > Be careful about the context when you register plug-in steps for the `Restore` message. The record being restored will not be available in the `PreOperation` stage. If related records need to be created, use the `PostOperation` stage. [Learn more about plug-in stages](event-framework.md#event-execution-pipeline).
@@ -674,7 +674,7 @@ If you have this kind of custom business logic, then Dataverse doesn't know abou
 
 ## Tables not currently supported for Recycle Bin
 
-The following tables are the result of the query found in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started. [Private tables](entities.md#private-tables) are not included in this list.
+The following tables are the result of the query found in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started. [Private tables](entities.md#private-tables) aren't included in this list.
 
 :::row:::
    :::column:::
