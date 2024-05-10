@@ -81,7 +81,7 @@ When enabled by your system administrator, the email option displays in the top 
 
 If your administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form, users can perform the following actions:
 
- - Drag and drop recipients across **To**, **CC**, and **BCC** fields.
+ - Drag and drop recipient names across **To**, **CC**, and **BCC** fields.
  - View the recipient's email address along with their names.
  - View the recipients' presence status and out-of-office messages.
  - Resolve an unresolved email address faster. In the email editor, if there's an [unresolved email address](unresolved-email-recipient.md), the application displays a banner message and the **Review** option to map the email. Select the button to view and map an unresolved email address to an existing record. 
