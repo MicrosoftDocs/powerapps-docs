@@ -25,6 +25,10 @@ You can create email templates by using one of the following options:
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
+## Prerequisites
+
+Make sure you have the necessary permissions to the related entities when you create an email template based on an entity. For example, if you are creating an email template based on a case, you must have the necessary permissions to access the Account entity.
+ 
 ## Start with a blank template
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
