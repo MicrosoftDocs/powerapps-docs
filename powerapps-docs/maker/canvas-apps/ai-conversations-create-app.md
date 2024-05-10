@@ -53,11 +53,10 @@ To help you get started, let's build an app to track housekeeping tasks for a ho
 
 Based on what you described, AI generates tables and relationships for your app. You can take the following actions:
 
-// TODO for Travis: update screenshot below once we have the code complete version UX
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/data-workspace-copilot.png)
 
-1. **Edit**: // TODO for Travis: link to data workspace full doc for more actions on editing and creating more tables
+1. **Edit**: Edit or keep creating more tables in Power Apps Studio. For more information, see [Create and edit tables](../data-platform/create-edit-entities-portal.md).
 
 2. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, or create more tables.
 
