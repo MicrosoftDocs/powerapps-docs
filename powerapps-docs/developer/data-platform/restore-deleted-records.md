@@ -534,7 +534,7 @@ function Set-CleanupIntervalInDays{
 To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
 > [!NOTE]
-> The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#-entityid) column value, which stores the table [EntityMetadata.MetadataId ](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid).
+> The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#BKMK_EntityId) column value, which stores the table [EntityMetadata.MetadataId ](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid).
 
 ### [SDK for .NET](#tab/sdk)
 
