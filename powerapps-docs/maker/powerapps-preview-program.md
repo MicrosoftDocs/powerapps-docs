@@ -44,8 +44,7 @@ You can create, manage, and share apps using [Power Apps][2] (make.powerapps.com
 
 For Power Platform, all the apps, flows, and related resources are stored in an environment. Early access to all preview functionalities are available with an environment created when you select a region that supports the option to **Get new features early**. A subset of the regions currently have this capability and the environment must be created in one of those regions.
 
-> [!div class="mx-imgBorder"] 
-> ![Preview environment.](media/env3-preview.png "Preview environment") 
+:::image type="content" source="media/get-new-features-early.png" alt-text="preview program":::
 
 All the apps and other resources created in this environment are on the vNext version of the platform (SAAS).
 
