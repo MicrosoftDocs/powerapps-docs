@@ -46,7 +46,7 @@ For Power Platform, all the apps, flows, and related resources are stored in an 
 
 :::image type="content" source="media/get-new-features-early.png" alt-text="preview program":::
 
-You can identify preview environments in the environment list by the designation in the Release cycle column;  Early release cycle indicates preview environments
+You can identify preview environments in the environment list by the designation in the Release cycle column. Early release cycle indicates preview environments
 
 :::image type="content" source="media/blur-release-cycle.png" alt-text="release cycle":::
 
