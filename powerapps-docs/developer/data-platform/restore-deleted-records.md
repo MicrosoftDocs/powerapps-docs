@@ -431,11 +431,11 @@ You can use this static `SetCleanupIntervalInDays` method to set the `CleanupInt
 /// Updates the CleanupIntervalInDays value for a specified table
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
-/// <param name="tableLogicalName">The logical name of the table</param>
+/// <param name="entityId">The entityId of the table</param>
 /// <param name="cleanupIntervalInDays">The new CleanupIntervalInDays value</param>
 static void SetCleanupIntervalInDays(
     IOrganizationService service,
-    string tableLogicalName,
+    Guid entityId,
     int cleanupIntervalInDays)
 {
 
@@ -447,9 +447,9 @@ static void SetCleanupIntervalInDays(
             Conditions = {
               {
                   new ConditionExpression(
-                      attributeName: "name",
+                      attributeName: "extensionofrecordid",
                       conditionOperator: ConditionOperator.Equal,
-                      value: tableLogicalName)
+                      value: entityId)
               }
           }
         }
@@ -482,7 +482,7 @@ static void SetCleanupIntervalInDays(
 
 ### [Web API](#tab/webapi)
 
-This `Set-CleanupIntervalInDays` PowerShell function retrieves the `recyclebinconfig` row that has the name value that matches the `$tableLogicalName` parameter. Then it updates the `cleanupintervalindays` column  property of the record to the value of the `$cleanupIntervalInDays` parameter.
+This `Set-CleanupIntervalInDays` PowerShell function retrieves the `recyclebinconfig` row that has the entityId that matches the `$tableEntityId` parameter. Then it updates the `cleanupintervalindays` column  property of the record to the value of the `$cleanupIntervalInDays` parameter.
 
 This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions).
 
@@ -490,13 +490,13 @@ This function depends on the `Get-Records` and `Update-Record` functions describ
 function Set-CleanupIntervalInDays{
       param(
          [Parameter(Mandatory)]
-         [string]$tableLogicalName,
+         [string]$tableEntityId,
          [Parameter(Mandatory)]
          [int]$cleanupIntervalInDays
       )
       $records = (Get-Records `
          -setName 'recyclebinconfigs' `
-         -query "?`$filter=name eq '$($tableLogicalName)'").value
+         -query "?`$filter=_extensionofrecordid_value eq '$($tableEntityId)'").value
    
       if ($records.Count -eq 1) {
          $recyclebinconfigId = $records[0].recyclebinconfigid
@@ -509,7 +509,7 @@ function Set-CleanupIntervalInDays{
          }
       }
       else {
-         Write-Host "Recycle bin configuration for table $tableLogicalName not found."
+         Write-Host "Recycle bin configuration for table $tableEntityId not found."
       }
 }
 ```
@@ -525,7 +525,7 @@ function Set-CleanupIntervalInDays{
 To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
 > [!NOTE]
-> The following queries compare the `LogicalName` value against the [Entity.Name](reference/entities/entity.md#BKMK_Name) column value, which stores the table `SchemaName`. `LogicalName` is the lower-case version of the `SchemaName`. String value comparisons are case insensitive, so it does't matter which format of name you use.
+> The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#-entityid) column value, which stores the table `EntityId`.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -536,10 +536,10 @@ Use this static `DisableRecycleBinForTable` method to disable the recycle bin fo
 /// Disable the Recycle bin for a specified table
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
-/// <param name="tableLogicalName">The logical name of the table</param>
+/// <param name="tableEntityId">The entityId of the table</param>
 static void DisableRecycleBinForTable(
     IOrganizationService service,
-    string tableLogicalName)
+    Guid tableEntityId)
 {
 
     QueryExpression query = new("recyclebinconfig")
@@ -547,7 +547,7 @@ static void DisableRecycleBinForTable(
         ColumnSet = new ColumnSet("recyclebinconfigid")
     };
     LinkEntity entityLink = query.AddLink("entity", "extensionofrecordid", "entityid");
-    entityLink.LinkCriteria.AddCondition("name", ConditionOperator.Equal, tableLogicalName);
+    entityLink.LinkCriteria.AddCondition("extensionofrecordid", ConditionOperator.Equal, tableEntityId);
 
     EntityCollection recyclebinconfigs = service.RetrieveMultiple(query);
 
@@ -568,7 +568,7 @@ static void DisableRecycleBinForTable(
     }
     else
     {
-        string message = $"Recycle bin configuration for table '{tableLogicalName}' not found.";
+        string message = $"Recycle bin configuration for table '{extensionofrecordid}' not found.";
         throw new Exception(message);
     }
 }
