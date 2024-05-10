@@ -94,7 +94,7 @@ Describe your data in natural language and Copilot generates tables along with r
 
 1. From the **Choose an option to create tables** page, select **Start with Copilot**.
 2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
-3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app#create-new-tables-preview)
+3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#review-the-table)
 4. When you're finished, select **Save and exit**.
 
 ### Set advanced properties
