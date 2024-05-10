@@ -499,13 +499,13 @@ This function depends on the `Get-Records` and `Update-Record` functions describ
 function Set-CleanupIntervalInDays{
       param(
          [Parameter(Mandatory)]
-         [string]$tableEntityId,
+         [guid]$tableEntityId,
          [Parameter(Mandatory)]
          [int]$cleanupIntervalInDays
       )
       $records = (Get-Records `
          -setName 'recyclebinconfigs' `
-         -query "?`$filter=_extensionofrecordid_value eq '$($tableEntityId)'").value
+         -query "?`$filter=_extensionofrecordid_value eq $($tableEntityId)").value
    
       if ($records.Count -eq 1) {
          $recyclebinconfigId = $records[0].recyclebinconfigid
@@ -646,7 +646,7 @@ function Disable-RecycleBinForTable {
 Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
 
 > [!IMPORTANT]
-> Don't try to delete individual records. It is important that Dataverse manage this.
+> Don't try to delete other individual records. It is important that Dataverse manage this.
 
 ## Manage restoring records deleted by custom business logic
 
@@ -1025,3 +1025,7 @@ The following tables are the result of the query found in [Detect which tables d
       `workqueue`<br />
    :::column-end:::
 :::row-end:::
+
+### See also
+
+[Restore deleted Microsoft Dataverse table records (preview)](/power-platform/admin/restore-deleted-table-records)
