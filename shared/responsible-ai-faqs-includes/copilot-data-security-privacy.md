@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 04/25/2024
+ms.date: 05/10/2024
 ms.topic: include
 ---
 
@@ -121,7 +121,8 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Power Apps | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) | No, premium user license | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) |
 | Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Apps | [Use natural language to edit an app using the Copilot panel](/power-apps/maker/canvas-apps/ai-edit-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
-| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
+| Power Automate | Copilot in cloud flows on the Home page and in the designer (See [Get started with Copilot in cloud flows](/power-automate/get-started-with-copilot) for details.) | No | Contact support to run a PowerShell script. |
+| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details.) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
 
 
 ### Regional and language availability
