@@ -297,7 +297,6 @@ The following errors might occur when restoring records.
 
 If some related records whose reference were removed as part of Cascade relationship, no longer exist, the restore operation will fail. To avoid this, always restore the related records not deleted as part of current record, before trying to restore the primary record.
 
-After enabling this setting, you might receive the following error:
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
 > Number: `-2147182247`<br />
@@ -324,7 +323,7 @@ Donot create records with similar Alternate Keys that were already deleted, this
 
 #### PicklistValueOutOfRangeRecycleBin
 
-Do not delete Picklist or Option Set values directly, instead rename them with (deprecated) tag, because it will prevent the records deleted at the time to be restored. (with in configured duration, default is 30 days).
+Do not delete Picklist or Option Set values directly, instead rename them with (deprecated) tag, because it will prevent the records deleted at the time to be restored.
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
 > Code: `0x80049949`<br />
@@ -420,7 +419,7 @@ The results of this query as of May 2024 when this preview feature began are in 
 
 The value to determine how long deleted records are available to be restored is set in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of `-1`. This value indicates it uses the same values set for the `organization` table.
 
-To specify a different value for another table, set the `CleanupIntervalInDays` column value where the `Name` matches the logical name of the table. While this column allows values up to 2,147,483,647, we recommend not setting it higher than 30.
+To specify a different value for another table, set the `CleanupIntervalInDays` column value where the `Name` matches the logical name of the table. This column allows values up to 30, we recommend not setting it unless different from organization default value.
 
  ### [SDK for .NET](#tab/sdk)
 
