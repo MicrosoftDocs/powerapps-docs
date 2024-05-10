@@ -39,10 +39,10 @@ You can create, manage, and share apps using [Power Apps][2] (make.powerapps.com
 
 ## How to get early access to the upcoming updates?
 
-**Note**: **Preview (United States)** has been replaced with Early release cycle option. Following instructions below you can create preview (Early release cycle) environments in United States region as well as other regions that maybe closer to you location
+> [!Note]
+> **Preview (United States)** has been replaced with the **Early release cycle** option. Following the instructions below, you can create preview (Early release cycle) environments in the United States region and other regions that may be closer to your location
 
-For Power Platform, all the apps, flows, and related resources are stored in an environment. Early access to all preview functionalities are available with an environment created when you select a region that supports the option to "Get new features early". note that a subset of the regions currently have this capability, the environment needs to be created in those regions.
-image below:
+For Power Platform, all the apps, flows, and related resources are stored in an environment. Early access to all preview functionalities are available with an environment created when you select a region that supports the option to **Get new features early**. A subset of the regions currently have this capability and the environment must be created in one of those regions.
 
 > [!div class="mx-imgBorder"] 
 > ![Preview environment.](media/env3-preview.png "Preview environment") 
