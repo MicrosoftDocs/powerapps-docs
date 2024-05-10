@@ -73,7 +73,9 @@ static EntityCollection GetDeletedAccountRecordsQueryExpression(IOrganizationSer
 With Web API, you can retrieve records using FetchXml or OData syntax.
 
 > [!NOTE]
-> Currently, you can only retrieve deleted records using FetchXml.
+> Currently, with Web API you can only retrieve *deleted* records using FetchXml.
+
+When you retrieve data using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to '`bin`' when you retrieve records.
 
 This `Get-DeletedAccountRecords` PowerShell function returns up to three deleted account records.
 
@@ -290,9 +292,16 @@ function Restore-AccountRecord {
 
 ---
 
-### Errors that might occur when restoring records
+### Best practices when restoring records
 
-The following errors might occur when restoring records.
+The following are issues you can avoid when restoring records:
+
+- [Restore related records before restoring primary record](#restore-related-records-before-restoring-primary-record)
+- [Don't specify primary key values when creating records](#dont-specify-primary-key-values-when-creating-records)
+- [Records with matching alternate key values will block restore](#records-with-matching-alternate-key-values-will-block-restore)
+- [Records using removed Choice options can't restored](#records-using-removed-choice-options-cant-restored)
+- [Primary Key Violation on Delete](#primary-key-violation-on-delete)
+
 
 #### Restore related records before restoring primary record
 
@@ -334,7 +343,7 @@ If you delete an optionset option, and that option was used in a deleted record,
 
 #### Primary Key Violation on Delete
 
-If the record with same primary key was already deleted before, copy to Recycle Bin is ignored for the record. To enforce all deleted items are stored in Recycle Bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
+If the record with same primary key was already deleted before, copy to recycle bin is ignored for the record. To enforce all deleted items are stored in recycle bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
 
 After enabling this setting, you might receive the following error:
 
@@ -525,7 +534,7 @@ function Set-CleanupIntervalInDays{
 To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
 > [!NOTE]
-> The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#-entityid) column value, which stores the table `EntityId`.
+> The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#-entityid) column value, which stores the table [EntityMetadata.MetadataId ](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid).
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -546,8 +555,16 @@ static void DisableRecycleBinForTable(
     {
         ColumnSet = new ColumnSet("recyclebinconfigid")
     };
-    LinkEntity entityLink = query.AddLink("entity", "extensionofrecordid", "entityid");
-    entityLink.LinkCriteria.AddCondition("extensionofrecordid", ConditionOperator.Equal, tableEntityId);
+
+    LinkEntity entityLink = query.AddLink(
+      "entity", 
+      "extensionofrecordid", 
+      "entityid");
+
+    entityLink.LinkCriteria.AddCondition(
+      "extensionofrecordid", 
+      ConditionOperator.Equal, 
+      tableEntityId);
 
     EntityCollection recyclebinconfigs = service.RetrieveMultiple(query);
 
@@ -587,16 +604,16 @@ Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle
 function Disable-RecycleBinForTable {
    param(
       [Parameter(Mandatory)]
-      [string]$tableLogicalName
+      [guid]$tableId
    )
 
-   $query = "?`$filter=extensionofrecordid/name eq '"
-   $query += $tableLogicalName
-   $query += "'&`$select=recyclebinconfigid"
+   $query = "?`$filter=_extensionofrecordid_value eq "
+   $query += $tableId
+   $query += "&`$select=recyclebinconfigid"
 
    $recyclebinconfigs = (Get-Records `
-      -setName 'recyclebinconfigs' `
-      -query $query).value
+         -setName 'recyclebinconfigs' `
+         -query $query).value
 
    if ($recyclebinconfigs.Count -eq 1) {
       $recyclebinconfigId = $recyclebinconfigs[0].recyclebinconfigid
@@ -605,12 +622,12 @@ function Disable-RecycleBinForTable {
          -setName 'recyclebinconfigs' `
          -id $recyclebinconfigId `
          -body @{
-                  'statecode'  = 1
-                  'statuscode' = 2
-               } | Out-Null
+         'statecode'  = 1
+         'statuscode' = 2
+      } | Out-Null
    }
    else {
-      Write-Host "Recycle bin configuration for table '$tableLogicalName' not found."
+      Write-Host "Recycle bin configuration for table $tableId not found."
    }
 }
 ```
@@ -652,11 +669,12 @@ If you have this kind of custom business logic, then Dataverse doesn't know abou
 
 > [!IMPORTANT]
 > Be careful about the context when you register plug-in steps for the `Restore` message. The record being restored will not be available in the `PreOperation` stage. If related records need to be created, use the `PostOperation` stage. [Learn more about plug-in stages](event-framework.md#event-execution-pipeline).
+>
 > The [InputParameters](understand-the-data-context.md#inputparameters) and [OutputParameters](understand-the-data-context.md#outputparameters) of the `Restore` message are similar to `Create` message, so plug-ins written to be registered for the `Create` message can be re-used for the `Restore` message with fewer changes.
 
 ## Tables not currently supported for Recycle Bin
 
-The following tables are the result of the query found in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started.
+The following tables are the result of the query found in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started. [Private tables](entities.md#private-tables) are not included in this list.
 
 :::row:::
    :::column:::
