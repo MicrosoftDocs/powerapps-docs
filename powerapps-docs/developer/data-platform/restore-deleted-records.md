@@ -623,6 +623,8 @@ function Disable-RecycleBinForTable {
 
 ## Disable recycle bin for the environment
 
+# Note: The preferred way to disable an environment is using Power Platform Admin Center, Features Tab. The below method may change in the future.
+
 Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
 
 > [!IMPORTANT]
@@ -637,16 +639,20 @@ Dataverse provides a mechanism to manage desired actions for related records whe
 |---------|---------|
 |**Cascade All**|The related records are deleted.|
 |**Remove Link**|The lookup columns to the deleted record are set to null.|
-|**Cascade None**|No changes will be applied to related records.|
+|**Cascade None**|No changes will be applied to related records. (Internal Only) |
 |**Restrict**|Dataverse prevents deleting the record to maintain data integrity. The record can't be deleted unless there are no records related for this relationship.|
 
 [Learn more about relationship behaviors](../../maker/data-platform/create-edit-entity-relationships.md#behaviors)
 
 There's nothing to do when the relationship is configured for **Cascade All**, **Remove Link**, and **Restrict** because Dataverse manages these behaviors.
 
-If you have a relationship configured to use the **Cascade None** behavior, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
+If you have a relationship configured to use the **Cascade Remove Link** behavior, but this relationship is supposed to delete the related record, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
-If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
+If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed). 
+
+> [!IMPORTANT]
+> Restore Plugins should be careful on context, that the main record will not be available for Reference in Pre-Operation stage. If related records need to be created, please use Post-Operation plugin.
+> The Input and Output parameters of Restore operation are similar to Create operation, so Create plugins that were creating records in external environments (E.g. Power BI etc) can be registered on Restore easily with minor changes.
 
 
 ### TODO Plug-in example?
