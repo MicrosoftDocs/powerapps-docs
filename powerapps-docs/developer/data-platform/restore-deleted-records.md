@@ -25,7 +25,7 @@ Sometimes people delete records that they shouldn't. Administrators can enable a
 ## Retrieve deleted records that can be restored
 
 To retrieve deleted records that can be restored, set the datasource of the query to '`bin`'.
-The examples below return up to 3 deleted account records.
+The following examples return up to three deleted account records.
 
  ### [SDK for .NET](#tab/sdk)
 
@@ -109,17 +109,17 @@ function Get-DeletedAccountRecords{
 
 ## Restore a deleted record
 
-Use the `Restore` message to restore a deleted record. The `Target` parameter is not a reference to a deleted record, it's a full record so you can set column values while you restore the record. All the original column values are restored unless you override them by setting values during the `Restore` operation.
+Use the `Restore` message to restore a deleted record. The `Target` parameter isn't a reference to a deleted record, it's a full record so you can set column values while you restore the record. All the original column values are restored unless you override them by setting values during the `Restore` operation.
 
 > [!NOTE]
 > At this time you can only restore records using the primary key value. You can't use an alternate key to restore a record.
 
 
-How you restore a deleted record depends on whether you are using the SDK for .NET or Web API.
+How you restore a deleted record depends on whether you're using the SDK for .NET or Web API.
 
  ### [SDK for .NET](#tab/sdk)
 
-How you restore a record using the SDK for .NET depends on whether you are generating early bound types using [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder), or if you are using the late bound stye.
+How you restore a record using the SDK for .NET depends on whether you're generating early bound types using [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder), or if you're using the late bound style.
 
 [Learn about late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
 
@@ -206,7 +206,7 @@ Use the [Restore action](/power-apps/developer/data-platform/webapi/reference/re
 
 #### Restore any type of record without overwriting column values
 
-This `Restore-AnyRecord` PowerShell function shows how any type record can be restored by referencing it using the full URL to the record and the `@odata.id` annotation.  Pass a relative URL like `contacts(0ad63f65-990d-ef11-9f89-6045bdece8bb)` to the `relativeUri` parameter of this function. However, with this approach you can't overwrite any values for the record.
+This `Restore-AnyRecord` PowerShell function shows how any type record can be restored by referencing it using the full URL to the record and the `@odata.id` annotation. Pass a relative URL like `contacts(0ad63f65-990d-ef11-9f89-6045bdece8bb)` to the `relativeUri` parameter of this function. However, with this approach you can't overwrite any values for the record.
 
 ```powershell
 function Restore-AnyRecord{
@@ -244,8 +244,8 @@ function Restore-AnyRecord{
 
 This `Restore-AccountRecord` PowerShell function shows how to restore an account record and overwrite a value. There are three requirements:
 
-- [Specify the table type parameter](webapi/use-web-api-actions.md#specify-the-table-type-parameter) using the `@odata.type` with the fully qualified name of the entity type. This tells OData what type of record it is.
-- Include the primary key value, in this case `accountid` to specify the record.
+- [Specify the table type parameter](webapi/use-web-api-actions.md#specify-the-table-type-parameter) using the `@odata.type` with the fully qualified name of the entity type. This annotation tells OData what type of record it is.
+- To specify the record, include the primary key value, in this case `accountid` .
 - Specify any properties you want to overwrite, in this case the `name` property.
 
 
@@ -289,9 +289,9 @@ function Restore-AccountRecord {
 
 ---
 
-### Errors that may occur when restoring records
+### Errors that might occur when restoring records
 
-The following errors may occur when restoring records.
+The following errors might occur when restoring records.
 
 #### RefCannotBeRestoredRecycleBinNotFound
 
@@ -334,7 +334,7 @@ The following errors may occur when restoring records.
 
 If the record with same primary key was already deleted before, copy to Recycle Bin is ignored for the record. To enforce all deleted items are stored in Recycle Bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
 
-After enabling this, you may receive the following error:
+After enabling this setting, you might receive the following error:
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80049939 `<br />
@@ -343,13 +343,13 @@ After enabling this, you may receive the following error:
 
 ## Detect which tables are enabled for recycle bin
 
-Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) will have no rows.
+Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-In time, we expect that eventually all tables will be available to use the recycle bin feature. During this preview, some tables do not. For a list of tables that do not support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
+In time, we expect that eventually all tables will be available to use the recycle bin feature. During this preview, some tables don't. For a list of tables that don't support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
 
-You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table) and [disable recycle bin for the environment](#disable-recycle-bin-for-the-environment). If the recycle bin isn't enabled for a table, you will not [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored), but you can also query Dataverse to find out whether the recycle bin is enabled for a table or not.
+You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table) and [disable recycle bin for the environment](#disable-recycle-bin-for-the-environment). If the recycle bin isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the recycle bin is enabled for a table or not.
 
-Tables that are enabled for recycle bin will have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Tables that are enabled for recycle bin have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
 Use the following FetchXml query to detect which tables have recycle bin enabled:
 
@@ -378,9 +378,9 @@ Use the following FetchXml query to detect which tables have recycle bin enabled
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-## Detect which tables do not have recycle bin enabled
+## Detect which tables don't have recycle bin enabled
 
-To know which tables are not enabled for recycle bin, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin).
+To know which tables aren't enabled for recycle bin, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin).
 
 ```xml
 <fetch>
@@ -411,12 +411,12 @@ To know which tables are not enabled for recycle bin, use the following FetchXml
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-The results of this query as of May, 2024 when this preview feature began are in [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin)
+The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin)
 
 
 ## Retrieve and set the automatic cleanup time period configuration for the recycle bin
 
-The value to determine how long deleted records will be available to be restored is set in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of -1. This indicates it will use the same values set for the `organization` table.
+The value to determine how long deleted records are available to be restored is set in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of `-1`. This value indicates it uses the same values set for the `organization` table.
 
 To specify a different value for another table, set the `CleanupIntervalInDays` column value where the `Name` matches the logical name of the table. While this column allows values up to 2,147,483,647, we recommend not setting it higher than 30.
 
@@ -520,10 +520,10 @@ function Set-CleanupIntervalInDays{
 
 ## Disable recycle bin for a table
 
-To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: 2 and 1 respectively.
+To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
 > [!NOTE]
-> The queries below compare the `LogicalName` value against the [Entity.Name](reference/entities/entity.md#BKMK_Name) column value, which stores the table `SchemaName`. `LogicalName` is the lower-case version of the `SchemaName`. String value comparisons are case insensitive, so it does't matter which format of name you use.
+> The following queries compare the `LogicalName` value against the [Entity.Name](reference/entities/entity.md#BKMK_Name) column value, which stores the table `SchemaName`. `LogicalName` is the lower-case version of the `SchemaName`. String value comparisons are case insensitive, so it does't matter which format of name you use.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -578,7 +578,7 @@ static void DisableRecycleBinForTable(
 ### [Web API](#tab/webapi)
 
 
-Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table.  This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
+Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table. This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
 
 
 ```powershell
@@ -621,7 +621,7 @@ function Disable-RecycleBinForTable {
 
 ## Disable recycle bin for the environment
 
-Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This will trigger deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete individual records. It is important that Dataverse manage this.
@@ -629,7 +629,7 @@ Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md)
 
 ## Manage restoring records deleted by custom business logic
 
-Dataverse provides a mechanism to manage desired actions for related records when a row is deleted. This is part of the definition of the relationship. When a related record is deleted, there are four possible behaviors that you can configure:
+Dataverse provides a mechanism to manage desired actions for related records when a row is deleted. This configuration data is part of the definition of the relationship. When a related record is deleted, there are four possible behaviors that you can configure:
 
 |Delete Behavior|Description|
 |---------|---------|
@@ -640,23 +640,21 @@ Dataverse provides a mechanism to manage desired actions for related records whe
 
 [Learn more about relationship behaviors](../../maker/data-platform/create-edit-entity-relationships.md#behaviors)
 
-If you have a relationship configured to use the **Cascade All** behavior, all the related records that are deleted will be restored when the deleted record is restored. There is nothing to do because Dataverse manages this.
+There's nothing to do when the relationship is configured for **Cascade All**, **Remove Link**, and **Restrict** because Dataverse manages these behaviors.
 
-If you have a relationship configured to use the **Remove Link** behavior, the related records lookup column values are set back to refer to the restored record.
-
-If you have a relationship configured to use the **Cascade None** behavior, you may have custom logic that applies some custom behavior. For example, you may wish to respond to this differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
+If you have a relationship configured to use the **Cascade None** behavior, you might have custom logic that applies some custom behavior. For example, you might wish to respond to this behavior differently and implement your own *'Cascade some'* behavior based on rules you define. For example, you might delete inactive records or records that haven't been updated in a certain period of time. This logic is usually implemented using a plug-in, but it could also be done using Power Automate with the [Microsoft Dataverse connector: When a row is added, modified or deleted trigger](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted).
 
 If you have this kind of custom business logic, then Dataverse doesn't know about it and can't automatically 'un-do' your logic. However, you can register another plug-in on the `Restore` message to reverse whatever custom logic you have. Or you could use Power Automate and the [Microsoft Dataverse connector: When an action is performed trigger](/connectors/commondataserviceforapps/#when-an-action-is-performed).
 
 
 ### TODO Plug-in example?
 
-The relationships between Account or Contact and activityparty ([account_activity_parties](reference/entities/account.md#BKMK_account_activity_parties) and [contact_activity_parties](reference/entities/contact.md#BKMK_contact_activity_parties) ) are configured with `NoCascade` for Delete by default.  Seems like these may be common candidates for people having custom plug-in logic.
+The relationships between Account or Contact and activityparty ([account_activity_parties](reference/entities/account.md#BKMK_account_activity_parties) and [contact_activity_parties](reference/entities/contact.md#BKMK_contact_activity_parties) ) are configured with `NoCascade` for Delete by default.  Seems like these might be common candidates for people having custom plug-in logic.
 
 
 ## Tables not currently supported for Recycle Bin
 
-The following tables are the result of the query found in [Detect which tables do not have recycle bin enabled](#detect-which-tables-do-not-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started.
+The following tables are the result of the query found in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) in May of 2024 when the preview of this feature started.
 
 :::row:::
    :::column:::
