@@ -43,7 +43,7 @@ The following table provides details about the [LinkEntity properties](/dotnet/a
 |<xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkEntities>|The collection of links between entities that can include nested links. [Up to 15 total links can be included in a query](#limitations) |
 
 > [!NOTE]
-> The meaning of the [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties are the opposite of the corresponding `from` and `to` attributes in FetchXml.[Learn more about using `from` and `to` attributes with FetchXml](../../fetchxml/reference/link-entity.md#using-from-and-to-attributes)
+> The meaning of the [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties are the opposite of the corresponding `from` and `to` attributes in FetchXml. [Learn more about using `from` and `to` attributes with FetchXml](../../fetchxml/reference/link-entity.md#using-from-and-to-attributes)
 
 ### LinkEntity example
 
@@ -473,8 +473,6 @@ cross apply (
 ---
 
 This is equivalent to `JoinOperator.LeftOuter` except it only returns the parent row at most once. Unlike `JoinOperator.In` and `JoinOperator.Exists`, it returns column values from one of the matching rows in the related table when matching rows exist, but the parent row is returned even if there are no matching rows in the related table. Use this when only a single example of a matching row from the related table is sufficient and multiple copies of the parent row in the results aren't necessary.
-
-<!-- TODO: What is the Natural JoinOperator? -->
 
 ## Next steps
 

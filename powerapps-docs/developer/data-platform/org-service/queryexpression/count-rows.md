@@ -29,7 +29,7 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded>|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
 
-The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> value is useful when you need to calculate how many more paged requests you need to send to get all the results when <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> equals 5000.
+The <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> value is useful when you need to calculate how many more paged requests you need to send to get all the results when <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> equals 5000.
 
 If your page size is less than the maximum and <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
 

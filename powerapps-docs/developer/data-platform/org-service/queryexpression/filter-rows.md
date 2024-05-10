@@ -14,13 +14,6 @@ contributors:
 ---
 # Filter rows using QueryExpression
 
-<!-- 
-Related: Seems you can filter on 'child column' values, those columns which have the naming convention:
-<lookupname>name and have AttributeOf = lookupname
-There is a 'emitVirtualAttributes' parameter for pac modelbuilder
-https://github.com/microsoft/powerplatform-vscode/issues/509
- -->
-
 To set conditions on the rows of data to return, set the [QueryExpression.Criteria](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.criteria) or [LinkEntity.LinkCriteria](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkcriteria) properties to an instance of the [FilterExpression class](/dotnet/api/microsoft.xrm.sdk.query.filterexpression).
 
 To set the conditions, add one or more [ConditionExpression class](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression) instances to the [FilterExpression.Conditions property](/dotnet/api/microsoft.xrm.sdk.query.filterexpression.conditions).
