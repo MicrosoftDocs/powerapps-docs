@@ -295,16 +295,18 @@ The following errors might occur when restoring records.
 
 #### RefCannotBeRestoredRecycleBinNotFound
 
-**TODO: Explain how to avoid this error and change the section heading**
+If some related records whose reference were removed as part of Cascade relationship, no longer exist, the restore operation will fail. To avoid this, always restore the related records not deleted as part of current record, before trying to restore the primary record.
 
+After enabling this setting, you might receive the following error:
 > Name: `RefCannotBeRestoredRecycleBinNotFound`<br />
 > Code: `0x80049959`<br />
 > Number: `-2147182247`<br />
 > Message: `Entity with id '<Guid Value>' and logical name '<Entity.LogicalName>' does not exist. We cannot restore the reference '<Referred Primary Key Name>' that must be restored as part of this Restore call. ValueToBeRestored: <Guid Value>, ReferencedEntityName: <Referenced Entity Name>, AttributeName: <Referred Attribute Name>`
 
+
 #### DuplicateExceptionRestoreRecycleBin
 
-**TODO: Explain how to avoid this error and change the section heading**
+Donot create records with specific primary keys, otherwise, if the previous record was in deleted state, the new record will prevent the deleted record to be restored.
 
 > Name: `DuplicateExceptionRestoreRecycleBin`<br />
 > Code: `0x80044a02`<br />
@@ -313,7 +315,7 @@ The following errors might occur when restoring records.
 
 #### DuplicateExceptionEntityKeyRestoreRecycleBin
 
-**TODO: Explain how to avoid this error and change the section heading**
+Donot create records with similar Alternate Keys that were already deleted, this will prevent previous record was in deleted state to be restored. The new record will need to be deleted before previous record is restored.
 
 > Name: `DuplicateExceptionEntityKeyRestoreRecycleBin`<br />
 > Code: `0x80049929`<br />
@@ -322,7 +324,7 @@ The following errors might occur when restoring records.
 
 #### PicklistValueOutOfRangeRecycleBin
 
-**TODO: Explain how to avoid this error and change the section heading**
+Do not delete Picklist or Option Set values directly, instead rename them with (deprecated) tag, because it will prevent the records deleted at the time to be restored. (with in configured duration, default is 30 days).
 
 > Name: `PicklistValueOutOfRangeRecycleBin`<br />
 > Code: `0x80049949`<br />
