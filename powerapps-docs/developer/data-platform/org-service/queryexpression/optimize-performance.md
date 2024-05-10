@@ -25,8 +25,10 @@ Microsoft SQL Server supports many query hints to optimize queries. [QueryExpres
 supports query hints and can pass these query options to SQL Server using the [QueryExpression.QueryHints property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.queryhints).
 
 <!-- 
-TODO Move the contents of this table to the SDK QueryExpression.QueryHints property page
+TODO Make this table generic and link to it from this page.
+Add link to this page from QueryHints page.
 [!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)] 
+
 -->
 
 
