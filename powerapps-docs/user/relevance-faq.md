@@ -30,7 +30,7 @@ Your administrator defines the scope of content that's searched. An administrato
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. You will also need to make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you will need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
 
 ## Can I configure quick actions to show or hide certain commands?
