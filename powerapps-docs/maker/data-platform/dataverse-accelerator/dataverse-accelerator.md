@@ -39,7 +39,7 @@ Our interface adheres to the same UX and accessibility standards as any first-pa
 
 Play the Dataverse Accelerator app in any environment where it's installed.
 
-The app is automatically available in all new Microsoft Dataverse environments, but you can also [manually install it](./dataverse-accelerator.md#installation-instructions) in existing Dataverse environments.
+The app is automatically available in all new Microsoft Dataverse environments, but you can also [manually install it](#install-the-dataverse-accelerator) in existing Dataverse environments.
 
 ### Prerequisites to run the Dataverse Accelerator
 

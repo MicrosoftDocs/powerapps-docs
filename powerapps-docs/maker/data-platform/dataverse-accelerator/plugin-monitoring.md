@@ -52,11 +52,11 @@ This feature is available in the Dataverse Accelerator app. Refer to the [Datave
 
 If log capturing is not enabled in your environment, the landing page will display an 'off' state with two options to enable logging: All or Exceptions. Choose the appropriate option based on your needs, see the [main documentation](/power-apps/developer/data-platform/logging-tracing#enable-trace-logging) for more information.
 
-![Enable logging](./media/logging-off.svg)
+![Enable logging screen with buttons to enable all logs or enable exceptions only](./media/logging-off.svg)
 
 You can change these settings later in the Settings screen if needed, which can be accessed in the command bar of the main screens.
 
-![Enable logging](./media/log-settings.svg)
+![Log settings screen provides controls to update log settings](./media/log-settings.svg)
 
 > [!TIP]
 > Tracing and logging are ideal for debugging during plugin development. For plugin workflows in production, use [Azure App Insights for monitoring](/power-apps/developer/data-platform/application-insights-ilogger).
@@ -65,7 +65,8 @@ You can change these settings later in the Settings screen if needed, which can 
 
 When logs are enabled, plugin events will start to show in the main list displayed in the screen.
 
-Logs are categorized based on the type of plugin (Custom APIs, low code plugins, or pro-code plugins) and execution status.
+> [!TIP]
+> If there are no logs showing, you can [create and run a new low code plugin](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant#create-an-instant-low-code-plug-in) to start showing logs.
 
 ### Filter logs
 
@@ -88,7 +89,7 @@ Click the **Filter** button in the top right side of the command bar to open the
 
 ### Read log details
 
-Click on a specific log entry to view detailed information about the plugin execution. Log details include timestamp, plugin name, execution status, output parameters, error messages, and more. Message details are expanded if data exists in the respective message blocks.
+Click on a specific log entry to view detailed information about the plugin execution. Log details include timestamp, plugin name, execution status, output parameters, error messages, and more. Message block and exception block fields are displayed below the basic details in the pane, and are expanded if data exists in the respective columns.
 
 ## Best practices
 
