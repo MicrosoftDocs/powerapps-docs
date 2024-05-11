@@ -47,6 +47,8 @@ This feature is available in the Dataverse Accelerator app. Refer to the [Datave
 
 1. [Run the Dataverse Accelerator app](dataverse-accelerator.md#get-started)
 1. Navigate to the **Plugin monitoring** feature (via left navigation or the feature card on the landing screen).
+ 
+![Navigate to plugin monitoring page](./media/plugin-monitor-nav.svg)
 
 ### Enable log capturing
 
