@@ -24,12 +24,7 @@ This article describes ways you can optimize performance when retrieving data us
 Microsoft SQL Server supports many query hints to optimize queries. [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression)
 supports query hints and can pass these query options to SQL Server using the [QueryExpression.QueryHints property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.queryhints).
 
-<!-- 
-TODO Make this table generic and link to it from this page.
-Add link to this page from QueryHints page.
-[!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)] 
-
--->
+[!INCLUDE [cc-query-options](../../includes/cc-query-options.md)]
 
 
 ## No lock
