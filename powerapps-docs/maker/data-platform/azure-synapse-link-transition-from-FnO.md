@@ -116,15 +116,126 @@ Synapse Link provides an easy upgrade path for customers looking to extend their
 
 1.	Synapse Link enables easy configuration of Azure storage and Synapse services within the Power platform maker portal. Several limitations of Export to Data lake are removed
     a.	A uniform experience enables choosing data from all Dynamics 365 including FnO as well as Dynamics 365 CE apps. You can maintain a single service to export data from all Dynamics and PowerApps.
-    b.	Table limitations present with Export to Data lake go away, you can choose upto 1000 tables for each Synapse Link profile within a single storage account. You can create multiple profiles (ie. export pipelines) each with up to 1000 tables if desired.
+  	b. Table limitations present with Export to Data lake go away, you can choose upto 1000 tables for each Synapse Link profile within a single storage account. You can create multiple profiles (ie. export pipelines) each with up to 1000 tables if desired.
     c.	Synapse Link provides built-in support for using firewall restricted storage accounts to export data.
     d.	No need to configure Azure resources, Synapse Link provisions and configures Azure resources on your behalf
     e.	Synapse Link exports data in the same format as Export to Data lake or BYOD enabling you to retain existing pipelines
   	
-2. Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Synapse Link exports data in Delata/ parquet which removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. 
-3. You can continue to use your existing data pipelines for combining, reshaping and aggregating additional data from other systems. 
-4. You can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
+3. Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Synapse Link exports data in Delata/ parquet which removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. 
+4. You can continue to use your existing data pipelines for combining, reshaping and aggregating additional data from other systems. 
+5. You can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
 
 These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
+|
+
+**Category / Line item**
+
+ |
+
+Before cost - **Export to data lake**
+
+ |
+
+After cost -- **Synapse Link**
+
+ |
+|
+
+**Set-up & configuration**
+
+ |
+
+Need to use multiple tools
+
+- Pay for multiple software licenses/ subscriptions
+
+- System configuration efforts
+
+- effort to build/ validate data pipelines
+
+- continued governance, management, and monitoring
+
+- training of users
+
+ |
+
+Simpler configuration experience in Power platform.
+
+No ETL pipelines needed for Dataverse data
+
+ |
+|
+
+**Data Staging (1, 2)**
+
+ |
+
+Cost incurred for Azure services
+
+- Azure storage cost including cost of IO
+
+- Synapse Analytics (SQL serverless query)
+
+- Data Factory jobs to copy data
+
+- Staging data stores (ex. SQL DB)
+
+ |
+
+Synapse Link requires you to provide a spark pool to convert data to parquet format.
+
+Depending on the frequency of data sync, as well as the volume of data changes spark pool costs may vary.
+
+Ex. small/ medium data changes (per month)
+
+- $600~2k for Hrly refresh
+
+- $1,200~4,100 for 15min refresh
+
+Ex. for Medium/ large data changes (per month)
+
+- $1,200~$2,500 for Hrly refresh
+
+- @2,500~$8,300 for 15min refresh
+
+ |
+|
+
+**Operating Costs - Data Prep (3)**
+
+ |
+
+- Azure storage staging area
+
+- Data pipelines
+
+- Data ingestion into SQL or Dwh
+
+- Development/ maintenance Data
+
+ |
+
+Same costs as before -- however, you may not need to aggregate Dataverse data due to parquet conversion.
+
+ |
+|
+
+**Operating Costs -- Reporting (4)**
+
+- Power BI datasets
+
+- Reporting
+
+ |
+
+Synapse analytics (SQL Query)
+
+Power BI capacity
+
+ |
+
+As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly.
+
+ |
 
