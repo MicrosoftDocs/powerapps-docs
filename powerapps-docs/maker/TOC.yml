@@ -2204,9 +2204,9 @@
   - name: Get experimental features early
     items:
     - name: Use the Dataverse accelerator
-      href: ./data-platform/dataverse-accelerator.md
+      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
-      href: ./data-platform/plugin-monitoring.md
+      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
   - name: For admins
     items:
     - name: Security in Dataverse
