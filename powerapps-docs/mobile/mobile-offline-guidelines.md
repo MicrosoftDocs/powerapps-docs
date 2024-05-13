@@ -1,5 +1,5 @@
 ---
-title: Offline profile guidelines
+title: Optimize the offline profile
 description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
@@ -16,7 +16,7 @@ search.audienceType:
   - enduser
 ---
 
-# Offline profile guidelines
+# Optimize the offline profile
 
 There's a lot to keep in mind when you create or update an offline profile for model-driven apps. An offline profile should include all the data that app users need to complete tasks in the field. If it includes too much data, however, app users might get stuck waiting for their data to download. They may even run out of space on their device. You'll need to consider the devices and data plans your app users have to make sure they have a great experience.
 
