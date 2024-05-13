@@ -57,17 +57,17 @@ If you are a Dynamics 365 customer using Data Export service (DES) or classic Sy
 | No copy, no ETL direct integration with Microsoft Fabric.	 | Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
 | Data stays in Dataverse - users get secure access in Microsoft Fabric. | 	Data stays in your own storage. You manage access to users.|
 | All tables chosen by default.	| System administrators can choose required tables. |
-|Consumes additional Dataverse storage.	| Consumes your own storage as well as other compute and integration tools.| 
+| Consumes additional Dataverse storage.	| Consumes your own storage as well as other compute and integration tools.| 
 
 ## Which option should I use?
-If your organization is already using Fabric or planning to transition, we recommend using Fabric Link feature. You can continue to use Synapse Link service if your immediate focus is to upgrade from your current services.
+If your organization is already using Fabric or planning to transition in the coming months, we recommend using Fabric Link feature. You can continue to use Synapse Link service if your immediate focus is to upgrade from your current services.
 
 ### Simplification with Fabric Link
 If you are already consuming data using Power BI, using Data warehouse, or using Data flows and Notebooks to transform data, Link to Fabric feature provides immediate value. You can simplify your data integration architecture by removing the need to have your own storage account or Synapse services for Dataverse data. Instead of paying for Azure resources like storage and compute, you will pay for the increase in Dataverse storage. Compute charges such as near real-time data updates and management overhead is also factored into Dataverse storage. Fabric Link option is like having a near real time read-only replica of your data optimized for insights.
 
 ![data integration solution smplified with Fabric Link](media/Fabric/After-transition-fabric.png)
 
-You can query this replica using T-SQL, Spark/ python as well as all the workloads in Fabric. You can also access this data using any tool that can consume T-SQL as well as ADLS storage.
+You can query this replica using T-SQL, Spark/ python as well as other workloads in Fabric. You can also access this data using any tool that can consume T-SQL or can consume data from ADLS storage.
 
 As a Dynamics or PowerApps customer, you get a Dataverse storage quota based on the number of licenses you purchased. Fabric Link feature uses this database quota. You can buy more storage add-ons if the data volume exceeds your quota.
 
@@ -82,7 +82,7 @@ By upgrading to Synapse Link and enabling delta parquet conversion, you can elim
 ![data integration solution after upgrade to Synapse Link](media/Fabric/After-transition-synapse-link.png)
 
 ## Understanding benefits – cost reductions 
-Simplicity achieved with Fabric Link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on actual customer experiences. 
+Simplicity achieved with Fabric Link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on preview  customer experiences. 
 
 ### Example 1: Transition from “BYOD” and “Export to Data lake” to Fabric Link 
 Consider the case where you transition to Fabric Link from Export to Data lake. 
