@@ -115,14 +115,15 @@ As indicated in the before and after diagrams below, customer retired Export to 
 Synapse Link provides an easy upgrade path for customers looking to extend their existing investments with minimal changes. As we discuss below, innovations in Dataverse enable easy transition from FnO services like Export to Data lake and BYOD.
 
 1.	Synapse Link enables easy configuration of Azure storage and Synapse services within the Power platform maker portal. Several limitations of Export to Data lake are removed
-a.	A uniform experience enables choosing data from all Dynamics 365 including FnO as well as Dynamics 365 CE apps. You can maintain a single service to export data from all Dynamics and PowerApps.
-b.	Table limitations present with Export to Data lake go away, you can choose upto 1000 tables for each Synapse Link profile within a single storage account. You can create multiple profiles (ie. export pipelines) each with up to 1000 tables if desired.
-c.	Synapse Link provides built-in support for using firewall restricted storage accounts to export data.
-d.	No need to configure Azure resources, Synapse Link provisions and configures Azure resources on your behalf
-e.	Synapse Link exports data in the same format as Export to Data lake or BYOD enabling you to retain existing pipelines
-2.	Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Synapse Link exports data in Delata/ parquet which removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. 
-3.	You can continue to use your existing data pipelines for combining, reshaping and aggregating additional data from other systems. 
-4.	You can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
+    a.	A uniform experience enables choosing data from all Dynamics 365 including FnO as well as Dynamics 365 CE apps. You can maintain a single service to export data from all Dynamics and PowerApps.
+    b.	Table limitations present with Export to Data lake go away, you can choose upto 1000 tables for each Synapse Link profile within a single storage account. You can create multiple profiles (ie. export pipelines) each with up to 1000 tables if desired.
+    c.	Synapse Link provides built-in support for using firewall restricted storage accounts to export data.
+    d.	No need to configure Azure resources, Synapse Link provisions and configures Azure resources on your behalf
+    e.	Synapse Link exports data in the same format as Export to Data lake or BYOD enabling you to retain existing pipelines
+  	
+2. Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Synapse Link exports data in Delata/ parquet which removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. 
+3. You can continue to use your existing data pipelines for combining, reshaping and aggregating additional data from other systems. 
+4. You can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
 
 These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
