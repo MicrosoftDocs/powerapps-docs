@@ -1836,11 +1836,11 @@
     - name: Optimize how offline works on mobile devices
       items:
       - name: Best practices to enable an app for offline
-        href: ../mobile/NewFile.md
+        href: ../mobile/best-practices-offline.md
       - name: Optimize the offline profile
         href: ../mobile/mobile-offline-guidelines.md  
       - name: Resolve sync conflicts with the server
-        href: ../mobile/NewFile.md
+        href: ../mobile/resolve-sync-conflicts.md
   - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
