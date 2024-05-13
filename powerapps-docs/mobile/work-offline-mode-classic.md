@@ -1,5 +1,5 @@
 ---
-title: Work offline on your mobile device (classic mode)
+title: Work with model-driven apps offline (classic mode)
 description: Learn how to work on your mobile device in offline mode
 ms.custom: 
 ms.date: 10/27/2023
@@ -18,7 +18,7 @@ search.audienceType:
   - enduser
 ---
 
-# Work offline on your mobile device (classic mode)
+# Work with model-driven apps offline (classic mode)
 
 You can work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete, so you always stay productive. After you're back online, changes made are synchronized with your apps in the Microsoft Dataverse environment.
 
