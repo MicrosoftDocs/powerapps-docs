@@ -1,5 +1,5 @@
 ---
-title: Set up mobile offline  | Microsoft Docs
+title: Set up mobile offline for model-driven apps
 description: Set up and configure mobile offline for model-driven apps made with Power Apps.
 author: trdehove
 ms.component: pa-user
@@ -14,7 +14,7 @@ search.audienceType:
   - maker
 ---
 
-# Set up mobile offline
+# Set up mobile offline for model-driven apps
 
 Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
 
