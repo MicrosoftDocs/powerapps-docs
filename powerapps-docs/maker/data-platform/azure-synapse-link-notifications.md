@@ -9,6 +9,10 @@ ms.topic: how-to
 ms.date: 03/20/2024
 ms.custom: template-how-to 
 ---
+
+<!-- Text in the Description column in line 76 read as if it was missing something. I attempted to fix it, but please review. --> 
+
+
 # Receive Azure Synapse Link for Dataverse notifications in Power Apps
 
 The state of your Azure Synapse Link for Dataverse is stored in a Microsoft Dataverse table with real-time updates. You can customize a notification using Power Automate flows or Power BI to stay on top of the state of your Azure Synapse Link for Dataverse activity instead of manually checking the Azure Synapse Link for Dataverse profile page in Power Apps (make.powerapps.com).
@@ -69,7 +73,7 @@ The remaining four tables provide additional details for Azure Synapse Link setu
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
 |Azure Synapse database  | This table captures linked Azure Data Lake storage and Synapse workspace and setup metadata information (one record per Azure Synapse Link profile).        | [synapsedatabase](/power-apps/developer/data-platform/reference/entities/synapsedatabase)       |
-|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one record per Azure Synapse Link profile) and a soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
+|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one record per Azure Synapse Link profile). A soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
 |Azure Synapse Link profile entity |  This table captures entity metadata within the connected Azure Synapse Link profile (one record per synced table).       | [synapselinkprofileentity](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentity)       |
 |Azure Synapse Link schedule | This table captures Azure Synapse Link profile information for incremental folder update or delta lake conversion time interval (one record per Azure Synapse Link profile).        | [RecurrenceInterval](/power-apps/developer/data-platform/reference/entities/synapselinkschedule#BKMK_RecurrenceInterval)   |
 
