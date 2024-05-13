@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 7/7/2023
+ms.date: 5/9/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -58,7 +58,10 @@ In this article, you will learn how to use an existing Azure Key Vault or create
 
 3. Create or access existing Key Vault. Make sure this Key Vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
-4. Add access policies for the Key Vault.
+4. Add access policies for the Key Vault. For **Secret permissions** and **Certificate permissions** make sure that **Get** and **List** permissions are selected.
+  
+    > [!div class="mx-imgBorder"] 
+    > ![Access Policies required: Get, List for secret and certificates permissions.](media/how-to-v2/AzureKV-Access-Policy.png "Access Policies required: Get, List for secret and certificates permissions")
   
 5. Choose one of the following options based on your device:
    

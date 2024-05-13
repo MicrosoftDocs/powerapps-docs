@@ -1,8 +1,8 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
-description: "Understand how to create and edit tables using Power Apps portal"
+description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 02/28/2024
+ms.date: 5/2/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -36,7 +36,7 @@ There are several ways to create a new table:
 - [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file](#upload-an-excel-file)
+- [Create with external data](#create-with-external-data)
 - [Create a virtual table](#create-a-virtual-table)
 
 ### Add columns and data
@@ -50,7 +50,7 @@ More information: [Table designer](#table-designer)
 
 ### Describe the new table
 
-Create a table with the help of AI Copilot.
+Create a table with the help of Copilot in Power Apps.
 
 > [!NOTE]
 > To use this feature, note the following requirements:
@@ -64,9 +64,7 @@ Create a table with the help of AI Copilot.
 
 ### Set advanced properties
 
-Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
-
-From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
+From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel. You start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -74,8 +72,8 @@ Enter data for the following properties.
 
 |Property |Description|
 |--|--|
-|**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
-|**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
+|**Display name**|This is the singular name for the table that is shown in the app. This can be changed later.|
+|**Plural display name**|This is the plural name for the table that is shown in the app. This can be changed later.|
 |**Description**|Provide a meaningful description of the purpose of the table.|
 
 Select **Enable Attachments** to append notes and files to records for this table.
@@ -100,10 +98,12 @@ Select **Advanced options** to display additional properties that are optional f
 |**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
-| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form will be used when the custom table icon is selected.  |
+| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected.  |
+| **Enable long term retention**  | Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. More information: [Long term data retention overview](data-retention-overview.md)  |
 |**Creating a new activity**  | Associate activities to records for this table.  |
 | **Doing a mail merge**  | App users can use this table with mail merge.   |
-|**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint.  |
+| **Setting up OneNote integration**  | When you turn on OneNote integration, you have the benefits of using OneNote to take or review customer notes from within your records. Requires SharePoint document management to be set up. More information: [Set up OneNote integration](/power-platform/admin/set-up-onenote-integration-in-dynamics-365)   |
+|**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint. More information: [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint) |
 | **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled.  |
 | **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one is created when you enable sending email.  |
 | **Have an access team**| Create team templates for this table.  |
@@ -114,19 +114,59 @@ Select **Advanced options** to display additional properties that are optional f
 
 Select **Save** to continue, this closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Upload an Excel file
+### Create with external data
 
-Use an Excel file to populate a table with your data, which uses copilot to assist with the table generation.
+Use an Excel file/CSV file or SharePoint list to populate a table with your data, which uses copilot to assist with the table generation.
 
 > [!NOTE]
 > [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
 
-1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
-1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
-1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
-1. When you're finished, select **Create**.
+1. From the **Tables** area, on the command bar select **New table** > **Create with external data**, and then select either **File (Excel, .CSV)** or **SharePoint list**.
+   # [File (Excel, .CSV)](#tab/excel)
 
-For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+   1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
+   1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
+   1. When you're finished, select **Create**.
+
+   For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+
+   # [SharePoint list (preview)](#tab/sharepoint)
+
+   > [!IMPORTANT]
+   > - This is a preview feature.
+   > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+   > - For SharePoint columns not supported, go to [SharePoint columns not used in Dataverse table generation](#sharepoint-columns-not-used-in-dataverse-table-generation).
+
+   1. If you agree to the terms, select **Continue**.
+   1. Select the SharePoint site you want from the following options:
+
+      - **Enter the SharePoint URL** for the SharePoint site that has the list you want, such as `https://microsoft.sharepoint.com/teams/ContosoSite`, and then select **Connect**.
+      - Select the SharePoint site with the list you want under **Recent sites**.
+      - Alternatively, you can create a new connection to a SharePoint site by selecting **...** > **Add a new connection** on the left pane.
+
+   1. Under **Select a list**, select the list you want, and then select **Next**.
+   1. The table preview appears. Select from the following options:
+
+      - Select **Edit table properties** if you want to change the table name and description that are generated for you.
+      - Select **Row ownership** if you want to change the table row ownership to either user\group or organization owned. More information: [Table ownership](types-of-entities.md#table-ownership)
+   1. Select **Create** to create the table.
+
+   For more information about how AI is used with this feature, go to [FAQ for SharePoint list to table and app](../common/faqs-sharepoint-list-to-table-app.md).
+---
+
+#### SharePoint columns not used in Dataverse table generation
+
+The following columns aren’t included when generating a Dataverse table from a SharePoint list because the respective data types aren’t supported with Dataverse:
+
+- Image
+- Task outcome
+- External data
+- Managed metadata
+- Attachment (single)
+- Multiple attachments / images
+- SharePoint list system columns
+- Symbol at column level (currency, prefix, postfix) in numbers
+- Unique values
 
 ### Create a virtual table
 

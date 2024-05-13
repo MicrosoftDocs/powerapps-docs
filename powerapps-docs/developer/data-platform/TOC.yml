@@ -36,71 +36,99 @@
     - name: Search for records
       href: ./search/overview.md
       items:
-      - name: Query
-        href: ./search/query.md
-      - name: Suggest
-        href: ./search/suggest.md
-      - name: Autocomplete
-        href: ./search/autocomplete.md
-      - name: Statistics and Status
-        href: ./search/statistics-status.md
-      - name: Legacy search
-        href: ./search/legacy.md
+        - name: Query
+          href: ./search/query.md
+        - name: Suggest
+          href: ./search/suggest.md
+        - name: Autocomplete
+          href: ./search/autocomplete.md
+        - name: Statistics and Status
+          href: ./search/statistics-status.md
+        - name: Legacy search
+          href: ./search/legacy.md
+        - name: Custom Analyzers
+          href: ./search/custom-search-analyzer.md
     - name: Query data using FetchXml
       items:
         - name: Overview
+          displayName: FetchXml
           href: fetchxml/overview.md
         - name: Retrieve data
+          displayName: FetchXml, retrieve
           href: fetchxml/retrieve-data.md
         - name: Select columns
+          displayName: FetchXml, Select columns
           href: fetchxml/select-columns.md
         - name: Join tables
+          displayName: FetchXml, Join tables
           href: fetchxml/join-tables.md
         - name: Order rows
+          displayName: FetchXml, Order rows
           href: fetchxml/order-rows.md
         - name: Filter rows
+          displayName: FetchXml, Filter rows
           href: fetchxml/filter-rows.md
         - name: Page results
+          displayName: FetchXml, Page results
           href: fetchxml/page-results.md
         - name: Aggregate data
+          displayName: FetchXml, Aggregate data
           href: fetchxml/aggregate-data.md
         - name: Count rows
+          displayName: FetchXml, Count rows
           href: fetchxml/count-rows.md
         - name: Optimize performance
+          displayName: FetchXml, Optimize performance
           href: fetchxml/optimize-performance.md
         - name: FetchXml reference
           items:
-          - name: Overview
-            href: fetchxml/reference/index.md
-          - name: all-attributes
-            href: fetchxml/reference/all-attributes.md
-          - name: attribute
-            href: fetchxml/reference/attribute.md
-          - name: condition
-            items:
-            - name: element
-              href: fetchxml/reference/condition.md
-            - name: operators
-              href: fetchxml/reference/operators.md
-          - name: entity
-            href: fetchxml/reference/entity.md
-          - name: fetch
-            href: fetchxml/reference/fetch.md
-          - name: filter
-            href: fetchxml/reference/filter.md
-          - name: link-entity
-            href: fetchxml/reference/link-entity.md
-          - name: order
-            href: fetchxml/reference/order.md  
-          - name: value
-            href: fetchxml/reference/value.md
+            - name: Overview
+              displayName: FetchXml reference
+              href: fetchxml/reference/index.md
+            - name: all-attributes
+              displayName: FetchXml, all-attributes element
+              href: fetchxml/reference/all-attributes.md
+            - name: attribute
+              displayName: FetchXml, attribute element
+              href: fetchxml/reference/attribute.md
+            - name: condition
+              items:
+                - name: element
+                  displayName: FetchXml, condition element
+                  href: fetchxml/reference/condition.md
+                - name: operators
+                  displayName: FetchXml, condition operators
+                  href: fetchxml/reference/operators.md
+            - name: entity
+              displayName: FetchXml, entity element
+              href: fetchxml/reference/entity.md
+            - name: fetch
+              displayName: FetchXml, fetch element
+              href: fetchxml/reference/fetch.md
+            - name: filter
+              displayName: FetchXml, filter element
+              href: fetchxml/reference/filter.md
+            - name: link-entity
+              displayName: FetchXml, link-entity element
+              href: fetchxml/reference/link-entity.md
+            - name: order
+              displayName: FetchXml, order element
+              href: fetchxml/reference/order.md
+            - name: value
+              displayName: FetchXml, value element
+              href: fetchxml/reference/value.md
         - name: Sample code
+          displayName: FetchXml, Sample code
           href: fetchxml/sample.md
     - name: Bulk Operation messages
+      displayName: CreateMultiple, UpdateMultiple, UpsertMultiple
       href: bulk-operations.md
       items:
         - name: Use DeleteMultiple (preview)
           href: deletemultiple.md
+    - name: Restore deleted records (preview)
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -183,6 +211,10 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       href: bypass-custom-business-logic.md
+      items:
+      - name: New options (preview)
+        href: bypass-custom-business-logic-preview.md
+        displayName: Bypass Business logic (preview)
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
@@ -226,11 +258,7 @@
           href: access-web-services.md
         - name: Write plug-ins for CreateMultiple and UpdateMultiple
           href: write-plugin-multiple-operation.md
-        - name: Quickstarts
-          items:
-            - name: Create a plug-in using Power Platform Tools
-              href: tools/devtools-create-plugin.md
-        - name: Tutorials
+        - name: How-to
           items:
             - name: Write and register a plug-in
               href: tutorial-write-plug-in.md
@@ -329,7 +357,7 @@
           href: custom-activities.md
         - name: Email activity tables
           href: email-activity-entities.md
-        - name: Task, fax, phone call, and letter activity tables
+        - name: Activity tables for tasks, faxes, phone calls, and letters
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
@@ -358,7 +386,7 @@
       href: apply-slas-entities.md
     - name: Transaction Currency (currency) table
       href: transaction-currency-currency-entity.md
-    - name: Category table
+    - name: Structure Dataverse data with nested categories
       href: use-category-entity.md
     - name: Catalog & CatalogAssignment
       href: catalog-catalogassignment.md
@@ -530,7 +558,7 @@
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: FetchXml reference
-      href: fetchxml/reference/index.md            
+      href: fetchxml/reference/index.md
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector
     - name: Workflow
