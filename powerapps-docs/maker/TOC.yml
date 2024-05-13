@@ -1814,7 +1814,7 @@
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
       - name: Mobile offline limitations for canvas apps
-        href: ../mobile/offline-capabilities.md
+        href: ../mobile/limitations-canvas-apps.md
     - name: Mobile offline for model-driven apps
       items:
       - name: Mobile offline for model-driven apps overview
@@ -1835,8 +1835,12 @@
         href: ../mobile/offline-capabilities.md
     - name: Optimize how offline works on mobile devices
       items:
-      - name: Offline profile guidelines
+      - name: Best practices to enable an app for offline
+        href: ../mobile/NewFile.md
+      - name: Optimize the offline profile
         href: ../mobile/mobile-offline-guidelines.md  
+      - name: Resolve sync conflicts with the server
+        href: ../mobile/NewFile.md
   - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
