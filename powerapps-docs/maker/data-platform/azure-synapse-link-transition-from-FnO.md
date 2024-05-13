@@ -37,20 +37,20 @@ These options are complementary and we provide a detailed comparison below.
 
 If you are a Finance and Operations customer, currently using BYOD or Export to Data lake features, by upgrading to Synapse Link or Fabric Link, you can benefit from:
 
-Simplified data integration architecture resulting in reduced operational costs 
-•	Easy to configure and maintain via Power Apps maker portal - Built-in integration with Synapse and Microsoft Fabric
-•	Synapse Link and Fabric Link are fully managed services - requires minimal ongoing management overhead
-•	New services offer the same data shapes as previous services – your existing downstream integration pipelines can remain as is.
-•	Minimal impact to operational workloads, you don’t need manage workloads and schedule data exports 
+Simplified data integration architecture resulting in reduced operational costs
+- Easy to configure and maintain via Power Apps maker portal - Built-in integration with Synapse and Microsoft Fabric
+- Synapse Link and Fabric Link are fully managed services - requires minimal ongoing management overhead
+- New services offer the same data shapes as previous services – your existing downstream integration pipelines can remain as is.
+- Minimal impact to operational workloads, you don’t need manage workloads and schedule data exports 
 
 Secure, end-to-end data integration pipelines 
 -	With Fabric link, your data doesn’t leave Dataverse governance boundary while authorized Fabric users can securely access data that resides within Dataverse
 -	Synapse Link service enables you to restrict access to your storage accounts with firewalls while enabling Dataverse to export data with Managed Service Identities (MSI) a security feature built into Microsoft Entra. 
 
 If you are a Dynamics 365 customer using Data Export service (DES) or classic Synapse Link with data exports in CSV format, you can benefit from efficient reporting enabled with the industry standard Delta/ Parquet data format.
-•	Built-in Delta/ parquet conversion option reduces the need to build your own pipelines for analytics and operational reporting
-•	Delta parquet format enables faster, more responsive queries & reports and scales to larger datasets of any size.
-•	Data in lake is compressed to 1/3 ~ 1/8 the original size - resulting in smaller files that reduce data query and carrying costs
+- Built-in Delta/ parquet conversion option reduces the need to build your own pipelines for analytics and operational reporting
+- Delta parquet format enables faster, more responsive queries & reports and scales to larger datasets of any size.
+- Data in lake is compressed to 1/3 ~ 1/8 the original size - resulting in smaller files that reduce data query and carrying costs
 
 | link to Fabric  |  Azure Synapse Link |
 |-------------------------------|------------------------------------|
@@ -90,6 +90,7 @@ Consider the case where you transition to Fabric Link from Export to Data lake.
 ![Before and After solutions with Link to Fabric](media/Fabric/before-after-fabric-link.png)
  
 As indicated in the before and after diagrams above, customer retired Export to Data lake service (1) as well as staging data stores (2) with Fabric Link. For operational insights, (4), they were able to consume data in OneLake directly in Power BI. Some of the insights require data merge, transformation and aggregation -(3). Instead of using disparate Azure services, they standardized on same tools built into Microsoft Fabric. 
+
 As we discuss below, innovations in Dataverse and Microsoft Fabric enable simplifications and cost reductions. 
 1.	Dataverse comes with a built-in OneLake store. Operational data from Dynamics 365 and PowerApps are replicated to built-in lake store near real-time (to avoid impact to operational workloads) and linked securely to Fabric via shortcuts. There is no need to bring Azure storage and secure data that’s exported out. Your data doesn’t leave Dataverse governance boundary and authorized users in Fabric can work with data using all Fabric workloads. 
 2.	Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Dataverse built-in OneLake data is maintained in Dela/ parquet format – the same open format that is native to Microsoft Fabric. Delta/ parquet format, along with optimizations in Fabric removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. You can create Power BI DirectLake reports directly over data in OneLake without any additional data stages. 
@@ -100,10 +101,10 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 
 | Cost savings/ Line item  |  Before cost - Export to data lake | After cost - Fabric Link |
 |-------------------------------|------------------------------------|------------------------------------------|
-| Set-up & configuration | 	Need to use multiple tools <br> - Pay for multiple software licenses/ subscriptions <br> - System configuration efforts <br>- effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users |	Simpler configuration experience in Power platform. <br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use – in some cases, you are billed by the second. <br> No ETL pipelines needed for Dataverse data |
-| Data Staging (1, 2) | Cost incurred for Azure services <br> -	Azure storage cost including cost of IO <br> -	Synapse Analytics (SQL serverless query) <br> -	Data Factory jobs to copy data <br> -	Staging data stores (ex. SQL DB)	| Cost increase in Dataverse DB storage <br><br> Ex. if you sync 500GB of data from D365, Dataverse storage may increase by around 100GB (assuming 5-8x data compression) |
-| Operating Costs - Data Prep (3) | - Azure storage staging area <br> - Data pipelines <br>- Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Spend shifts to Fabric where you pay for consumption with a shared capacity. |
-| Operating Costs – Reporting (4) <br> - Power BI datasets <br> - Reporting |	Synapse analytics (SQL Query) <br> Power BI capacity and storage for import mode reports	| As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly. <br> New features like DirectLake reporting reduces consumption of Power BI storage consumption.| 
+| **Set-up & configuration** | 	Need to use multiple tools <br> - Pay for multiple software licenses/ subscriptions <br> - System configuration efforts <br>- effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users |	Simpler configuration experience in Power platform. <br><br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use – in some cases, you are billed by the second. <br><br> No ETL pipelines needed for Dataverse data |
+| **Data Staging (1, 2)** | Cost incurred for Azure services <br> -	Azure storage cost including cost of IO <br> -	Synapse Analytics (SQL serverless query) <br> -	Data Factory jobs to copy data <br> -	Staging data stores (ex. SQL DB)	| Cost increase in Dataverse DB storage <br><br> Ex. if you sync 500GB of data from D365, Dataverse storage may increase by around 100GB (assuming 5-8x data compression) |
+| **Operating Costs - Data Prep (3)** | - Azure storage staging area <br> - Data pipelines <br>- Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Spend shifts to Fabric where you pay for consumption with a shared capacity. |
+| **Operating Costs – Reporting (4)** <br> - Power BI datasets <br> - Reporting |	Synapse analytics (SQL Query) <br> Power BI capacity and storage for import mode reports	| As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly. <br><br> New features like DirectLake reporting reduces consumption of Power BI storage consumption.| 
 
  > [!NOTE]
  > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression may vary depending on volume and composition of data.
@@ -133,10 +134,10 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 
 | **Cost savings / Line item** | Before cost - **Export to data lake** | After cost -- **Synapse Link** | 
 |--------------------------|---------------------------------------|--------------------------------|
-| Set-up & configuration   | Need to use multiple tools <br> -  Pay for multiple software licenses/ subscriptions <br>- System configuration efforts <br> - effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users | Simpler configuration experience in Power platform. <br> No ETL pipelines needed for Dataverse data | 
-| Data Staging (1, 2) | Cost incurred for Azure services <br> - Azure storage cost including cost of IO <br> - Synapse Analytics (SQL serverless query) <br> - Data Factory jobs to copy data <br> - Staging data stores (ex. SQL DB) | Synapse Link requires you to provide a spark pool to convert data to parquet format. <br> Depending on the frequency of data sync, as well as the volume of data changes spark pool costs may vary. <br><br> Ex. small/ medium data changes (per month) <br> - $600 to 2k for Hourly refresh <br> - $1,200 to 4,100 for 15min refresh <br><br>  Ex. for Medium/ large data changes (per month) <br> - $1,200 to $2,500 for Hourly refresh <br> - $2,500 to $8,300 for 15min refresh |
-| Operating Costs - Data Prep (3) | - Azure storage staging area <br> - Data pipelines <br> - Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Same costs as before -- however, you may not need to aggregate Dataverse data due to parquet conversion. | 
-| Operating Costs -- Reporting (4) <br> - Power BI datasets <br> - Reporting | Synapse analytics (SQL Query) <br> Power BI capacity | As your data is compressed, (ex. 1/3 to 1/6 original size) your reporting and query costs reduce accordingly. |
+| **Set-up & configuration**   | Need to use multiple tools <br> -  Pay for multiple software licenses/ subscriptions <br>- System configuration efforts <br> - effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users | Simpler configuration experience in Power platform. <br> No ETL pipelines needed for Dataverse data | 
+| **Data Staging (1, 2)** | Cost incurred for Azure services <br> - Azure storage cost including cost of IO <br> - Synapse Analytics (SQL serverless query) <br> - Data Factory jobs to copy data <br> - Staging data stores (ex. SQL DB) | Synapse Link requires you to provide a spark pool to convert data to parquet format. <br><br> Depending on the frequency of data sync, as well as the volume of data changes spark pool costs may vary. <br><br> Ex. small/ medium data changes (per month) <br> - $600 to 2k for Hourly refresh <br> - $1,200 to 4,100 for 15min refresh <br><br>  Ex. for Medium/ large data changes (per month) <br> - $1,200 to $2,500 for Hourly refresh <br> - $2,500 to $8,300 for 15min refresh |
+| **Operating Costs - Data Prep (3)** | - Azure storage staging area <br> - Data pipelines <br> - Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Same costs as before -- however, you may not need to aggregate Dataverse data due to parquet conversion. | 
+| **Operating Costs -- Reporting (4)** <br> - Power BI datasets <br> - Reporting | Synapse analytics (SQL Query) <br> Power BI capacity | As your data is compressed, (ex. 1/3 to 1/6 original size) your reporting and query costs reduce accordingly. |
 
  > [!NOTE]
  > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression may vary depending on volume and composition of data.
