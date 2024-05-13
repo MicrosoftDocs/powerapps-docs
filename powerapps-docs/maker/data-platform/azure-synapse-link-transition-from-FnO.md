@@ -98,4 +98,11 @@ As we discuss below, innovations in Dataverse and Microsoft Fabric enable simpli
 
 These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
+| Cost savings/ Line item  |  Before cost - Export to data lake | After cost - Fabric Link |
+|-------------------------------|------------------------------------|------------------------------------------|
+| Set-up & configuration | 	Need to use multiple tools <br> - Pay for multiple software licenses/ subscriptions <br> - System configuration efforts <br>- effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users |	Simpler configuration experience in Power platform. <br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use – in some cases, you are billed by the second. <br> No ETL pipelines needed for Dataverse data |
+| Data Staging (1, 2) | Cost incurred for Azure services <br> -	Azure storage cost including cost of IO <br> -	Synapse Analytics (SQL serverless query) <br> -	Data Factory jobs to copy data <br> -	Staging data stores (ex. SQL DB)	| Cost increase in Dataverse DB storage <br><br> Ex. if you sync 500GB of data from D365, Dataverse storage may increase by ~100GB (5~8x data compression) |
+| Operating Costs - Data Prep (3) | - Azure storage staging area <br> - Data pipelines <br>- Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Spend shifts to Fabric where you pay for consumption with a shared capacity. |
+| Operating Costs – Reporting (4) <br> - Power BI datasets <br> - Reporting |	Synapse analytics (SQL Query) <br> Power BI capacity and storage for import mode reports	| As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly. <br> New features like DirectLake reporting reduces consumption of Power BI storage consumption.| 
+
 
