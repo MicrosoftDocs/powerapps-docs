@@ -1,6 +1,6 @@
 ---
-title: Get preview feature and tooling early with Dataverse accelerator | Microsoft Docs
-description:  The Dataverse accelerator rapidly delivers experimental and innovative Dataverse development capabilities to empower Power Platform makers.
+title: Get preview features and tools early with Dataverse accelerator | Microsoft Docs
+description:  The Dataverse accelerator aoo rapidly delivers experimental and innovative Dataverse development capabilities to empower Power Platform makers.
 author: denise-msft
 ms.author: demora
 ms.reviewer: matp
@@ -12,7 +12,7 @@ contributors:
 - dikamath
 ---
 
-# Get preview feature and tooling early with the Dataverse accelerator app (preview)
+# Get preview features early with the Dataverse accelerator (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
