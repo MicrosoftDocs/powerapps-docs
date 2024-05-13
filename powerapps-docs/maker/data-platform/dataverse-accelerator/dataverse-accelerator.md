@@ -11,7 +11,6 @@ ms.custom: template-how-to
 contributors:
 - dikamath
 ---
-
 # Get preview features early with the Dataverse accelerator (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -34,7 +33,7 @@ The Dataverse accelerator interface adheres to the same UX and accessibility sta
 | Feature | Description |
 | -- | -- |
 | [Low-code plug-ins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
-| [Plug-in monitoring](./plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
+| [Plug-in monitoring](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
 
 ## Get started
 
