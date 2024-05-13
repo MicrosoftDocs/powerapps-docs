@@ -42,7 +42,7 @@ Play the Dataverse accelerator app in any environment where it's installed.
 
 The app is automatically available in all new Microsoft Dataverse environments. If your environment doesn't already have it, you can  [install the Dataverse accelerator](#install-the-dataverse-accelerator).
 
-### Prerequisites to run the Dataverse Accelerator
+### Prerequisites to run the Dataverse accelerator
 
 You must have the following privileges in your Dataverse environment:
 
@@ -69,7 +69,7 @@ The Dataverse accelerator is automatically installed as a Microsoft package in a
 
 You must have the following security role assignment and your Dataverse environment must be the same or later than the minimum version:
 
-- Security role: You must have the system administrator security role on the environment.
+- Security role: You must have the system administrator security role in the environment.
 
 - A Dataverse environment with minimum database (DB) version of `9.2.22122.00148`. Check the database version:  
   - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments**, and then select the environment you want. Select **Detailed view**, and under **Version** the version is displayed.

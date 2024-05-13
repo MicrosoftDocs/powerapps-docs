@@ -5,22 +5,29 @@ author: denise-msft
 ms.author: demora
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/03/2024
+ms.date: 05/13/2024
 ms.custom: template-how-to
 contributors:
 - dikamath
 ---
 
-# Monitor and troubleshoot Dataverse plugin runs (preview)
+# Monitor and troubleshoot Dataverse plug-in runs (preview)
 
-Use tracing to troubleshoot low code and pro code plugins. Tracing helps makers by recording run-time information as an aid in diagnosing the cause of failures, or for general validation of certain states during development.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The plugin monitoring module of the [Dataverse Accelerator](dataverse-accelerator.md) is an enhanced view of the existing [tracing and logging](/power-apps/developer/data-platform/logging-tracing) capibilities available in Dataverse for plugins. The interface helps improve the troubleshooting and debugging processes during development phase by colocating relevent details in a modern treatment.
+Use tracing to troubleshoot low-code and pro code plug-ins. Tracing helps makers by recording run-time information as an aid in diagnosing the cause of failures, or for general validation of certain states during development.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+
+The plug-in monitoring module of the [Dataverse accelerator](dataverse-accelerator.md) is an enhanced view of the existing [tracing and logging](/power-apps/developer/data-platform/logging-tracing) capabilities available in Microsoft Dataverse for plug-ins. The interface helps improve the troubleshooting and debugging processes during development phase by collocating relevant details in a modern treatment.
 
 All events surfaced in the app are read from the [Trace](/power-apps/developer/data-platform/reference/entities/tracelog) table for 24 hours by the following workflow types:
-- Plugins
+
+- Plug-ins
 - Custom APIs
-- Instant and automated low code plugins
+- Instant and automated low-code plug-ins
 
 ![Plugin monitoring interface](./media/plugin-monitoring.svg)
 
