@@ -1821,20 +1821,18 @@
         href: ../mobile/mobile-offline-overview.md
       - name: Set up mobile offline for model-driven apps
         href: ../mobile/setup-mobile-offline.md 
-      - name: Configure mobile offline profiles for images and files
+      - name: Configure files and images in offline model-driven apps
         href: ../mobile/offline-file-images.md
-      - name: Offline profile guidelines
-        href: ../mobile/mobile-offline-guidelines.md  
-      - name: Work offline with model-driven apps (offline-first mode)
+      - name: Work with model-driven apps offline (offline-first mode)
         href: ../mobile/work-in-offline-mode.md 
-      - name: Work offline with model-driven apps (classic mode)
+      - name: Work with model-driven apps offline (classic mode)
         href: ../mobile/work-offline-mode-classic.md 
-      - name: Mobile offline capabilities and limitations
-        href: ../mobile/offline-capabilities.md
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
+      - name: Mobile offline limitations for model-driven apps
+        href: ../mobile/offline-capabilities.md
     - name: Optimize how offline works on mobile devices
       items:
       - name: Offline profile guidelines
