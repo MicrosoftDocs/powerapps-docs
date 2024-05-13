@@ -36,7 +36,7 @@ All events surfaced in the app are read from the [Trace](/power-apps/developer/d
 
 You must have the following security role assignment and access to the Dataverse accelerator app:
 
-- Security role: Both System customizer and System administrator security roles have the necessary privileges to enable logs and use the app by default.
+- Security role: Both system customizer and system administrator security roles have the necessary privileges to enable logs and use the app by default.
 
 - Alternatively, you can create custom roles with specific access to each capability by configuring the following privileges:
   - To *read* logs, organization-level read privilege to the [Trace](/power-apps/developer/data-platform/reference/entities/tracelog) table is required.  

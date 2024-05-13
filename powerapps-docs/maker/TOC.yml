@@ -2201,7 +2201,7 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
-  - name: Get experimental features early
+  - name: Get experimental features early (preview)
     items:
     - name: Use the Dataverse accelerator
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md

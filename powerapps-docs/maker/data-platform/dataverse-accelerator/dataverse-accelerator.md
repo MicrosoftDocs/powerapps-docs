@@ -160,4 +160,4 @@ For issues with the Dataverse accelerator solution installation or with features
 > - Dataverse Actions page - &lt;canvas app&gt; This is a custom page on which the low-code plug-in is built, created with the user name associated to the global admin account.
 > - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plug-in is built, created with the user name associated to the global admin account.
 
-- The Dataverse accelerator isn't available in GCC or GCC High environments.
+The Dataverse accelerator isn't available in GCC or GCC High environments.
