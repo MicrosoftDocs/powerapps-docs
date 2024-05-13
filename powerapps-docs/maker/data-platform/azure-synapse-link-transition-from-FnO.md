@@ -105,6 +105,10 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 | Operating Costs - Data Prep (3) | - Azure storage staging area <br> - Data pipelines <br>- Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Spend shifts to Fabric where you pay for consumption with a shared capacity. |
 | Operating Costs – Reporting (4) <br> - Power BI datasets <br> - Reporting |	Synapse analytics (SQL Query) <br> Power BI capacity and storage for import mode reports	| As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly. <br> New features like DirectLake reporting reduces consumption of Power BI storage consumption.| 
 
+ > [!NOTE]
+ > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression may vary depending on volume and composition of data.
+>  
+
 ### Example 2: upgrade to Synapse Link
 Upgrading to Synapse Link is an option to consider if you are not currently using Fabric – or not planning to transition in the coming months. 
 
@@ -133,4 +137,66 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 | Data Staging (1, 2) | Cost incurred for Azure services <br> - Azure storage cost including cost of IO <br> - Synapse Analytics (SQL serverless query) <br> - Data Factory jobs to copy data <br> - Staging data stores (ex. SQL DB) | Synapse Link requires you to provide a spark pool to convert data to parquet format. <br> Depending on the frequency of data sync, as well as the volume of data changes spark pool costs may vary. <br><br> Ex. small/ medium data changes (per month) <br> - $600 to 2k for Hourly refresh <br> - $1,200 to 4,100 for 15min refresh <br><br>  Ex. for Medium/ large data changes (per month) <br> - $1,200 to $2,500 for Hourly refresh <br> - $2,500 to $8,300 for 15min refresh |
 | Operating Costs - Data Prep (3) | - Azure storage staging area <br> - Data pipelines <br> - Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Same costs as before -- however, you may not need to aggregate Dataverse data due to parquet conversion. | 
 | Operating Costs -- Reporting (4) <br> - Power BI datasets <br> - Reporting | Synapse analytics (SQL Query) <br> Power BI capacity | As your data is compressed, (ex. 1/3 to 1/6 original size) your reporting and query costs reduce accordingly. |
+
+ > [!NOTE]
+ > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression may vary depending on volume and composition of data.
+>  
+
+### Example 3: incrementally ingesting data to a data warehouse
+If you are currently consuming incremental data from Export to Data lake feature to populate a downstream data pipeline, you can continue to use the same pipeline. As shown below, Synapse Link service can export incremental data changes in the same format as Change feeds in Export to Data lake. 
+
+<before and after incremental>
+ 
+Synapse Link service provides several enhancements over Export to Data lake for incremental data changes.
+-	Initial data load is included within change folders. This makes it easy for the same pipeline to consume both the initial load as well as incremental updates. 
+-	Change data is not deleted in case of a re-initialization of a table.
+-	System creates a time-stamped folder structure and metadata that helps you read the changes in chronological order. Change data once written, is never updated. This approach is better suited to process changes using big data ingestion tools like Azure data factory. 
+-	You can configure how often you want the change feeds updated in folders with Synapse Link (as low as 5mins)
+
+Before and after cost changes are minimal in this case.
+
+## Understanding benefits – more real-time reporting 
+Microsoft Fabric not only simplifies your data integration architecture, but also reduces the need to copy or replicate data. The underlying data format in Fabric, the industry standard Delta parquet format, can be directly consumed by Power BI, Data flows, notebooks and other workloads eliminating the need for caching and staging areas. 
+
+If you upgrade to Synapse Link and continue to export data, your data is saved in Delta/ parquet format which may reduce the steps in your own data pipelines for operational reporting.
+
+Consider the time taken to refresh an operational report such as Inventory analysis or month-end Financial analysis. These reports may require data aggregation of millions of rows of data from multiple tables in Dynamics 365 Finance. Using export to data lake service, CSV data is exported within 10mins. This data may need to be imported into a Power BI report to provide better response times. Power BI refresh can be performed up to 24 times/ day (ie. every 30mins) and depending on how the report is designed, refresh may take several minutes to complete refresh. Using this approach, users can see data within 60mins of an update.
+
+<<before data staleness >> 
+
+Operational reports that source data using Fabric Link can leverage Direct Lake mode or DirectQuery mode in Fabric which leverages the in-memory index built into Delta/parquet files. In these modes, you don’t need to schedule refresh of Power BI reports as the report always shows latest Dataverse data updated in Fabric.
+
+<<after data staleness>>
+ 
+Fabric Link service updates data in Dataverse OneLake within the hour as of this point in time. Dataverse triggers data update jobs every 15mins and depending on the volume of data changes, you may see updated parquet files within 30~60mins. We are working on reducing this frequency in the coming months to enable more real-time reporting.
+
+If you are consuming incremental data feeds from Dynamics 365 with export to data lake service for near-real time data integration scenarios (ie. example 3), upgrade to Synapse link will enable you to run the same data pipelines. 
+
+## Known issues and workarounds  
+Currently, there are several limitations that are being addressed by the product team. You can use a suggested workaround until we address these limitations. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview Viva Engage group.
+
+|**Known issue** |**Workaround** |**Fix and roadmap** |
+| :- | :- | :- |
+|<p>**When adding a large number of tables at once, the system makes an initial copy of data.**</p><p></p><p>**We have seen rare cases (especially in smaller environments and Tier 2 sandboxes) where operational workloads may slow down and Initialize time may become much longer** </p><p></p>|<p></p><p>We are addressing this issue which typically impacts smaller environments.</p><p></p><p>Add 5 tables at a time in case your environment is a Tier-2 Sandbox – once the initialization completes, you can add more.</p><p></p>|<p>Apr release resolves some of these issues</p><p></p><p>We are redacting varBinary fields and varBinary attachments from tables added to Synapse Link and Fabric Link. These fields will be ignored.</p><p></p><p>- PU 63 cumulative update 7.0.7198.95</p><p>- PU 62 cumulative update 7.0.7120.155</p><p></p><p>Fabric Link feature scales initialization workloads up and down as resources permit at roughly 2 concurrent tables per AOS. </p><p></p><p>Ex. if you have 5 AOS servers in your environment, system concurrently initializes up to 10 tables.</p><p></p><p></p>|
+|<p>**When adding a large number of tables at once, the system makes an initial copy of data. In some cases, especially with very large tables, initialization may take longer.** </p><p></p><p>**In some cases initialization appears to be stuck for several days.**</p><p></p><p></p>||<p>Apr release introduces 2 features to reduce this issue.</p><p></p><p>Faster initialization of large tables (>200m rows) </p><p>- PU 63 cumulative update 7.0.7198.91</p><p>- PU 62 cumulative update 7.0.7120.152</p><p></p><p>We have enabled indexes to enable faster data sync. In case there’s an ongoing transaction in the operational database, index creation needs to wait for completion of the transaction. This wait will delay initialization process. </p><p></p><p>System detects such index delays and informs the user to take action if the delays are excessive (ex. > 24hrs).</p><p></p>|
+|<p>**In case your Dataverse environment is located in an Azure region different than the one where your Fabric capacity is located, you can’t use the Link to Fabric feature** </p><p></p>|This issue is addressed in Apr release|<p>In Apr release, you can Link to a Fabric capacity located within the same Geo boundary (ex. USA) </p><p></p><p>NOTE: you may incur networking charges in Fabric. See: </p><p></p>|
+|<p>**In case your Dataverse environment is located in an Azure region different than the one where your Data lake or Synapse workspace is located, you can’t use the Synapse Link feature** </p><p></p>|<p>You need to create a data lake and synapse resources in the same region as Dataverse</p><p></p><p></p>|<p>In Apr release, you can link to Storage account located within the same geo boundary.</p><p></p><p>NOTE: you may incur networking charges in Azure resources like Data lakes. See: </p><p></p>|
+|<p>**AOS authorization is a way to secure sensitive data fields in FnO against data exfiltration scenarios.**</p><p></p><p>**If the table selected contains data columns that are secured via AOS Authorization, those columns are ignored and the exported data doesn't contain the column.** </p><p></p><p>**Ex *CustTable*, column *TaxLicenseNum* has the metadata property AOS Authorization set to Yes. This column is ignored**</p><p></p>||<p>Apr release addresses this issue</p><p></p><p>With FnO latest quality update (10.0.38, 10.0.39), AOS authorization fields will be added </p><p>- Incremental updates will include this column </p><p>- Modified records will show these columns and value </p><p>- Full refresh will include these fields and all values</p><p></p>|
+||||
+|<p>**If the table selected contains data columns that are of Array type, those columns are ignored and the exported data doesn't contain the column.** </p><p></p><p>**For example, in a custom table named *WHSInventTable*, columns FilterCode and FilterGroup are of type array. These columns aren't exported with Azure Synapse Link**</p>|There is no workaround to this issue. We are working on enabling these fields.|ETA – May update|
+|**In case of finance and operations app tables that exhibit [valid time stamp behavior](https://learn.microsoft.com/en-us/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the ExchangeRate table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link.** |<p>We are working on enabling this pattern so that you can extract all records.</p><p></p><p>As a workaround, until this issue is fixed, you can use an Entity such as **ExchangeRateBIEntity**.</p><p></p>|ETA – May update |
+|**Export more than 1000 tables** |<p>We are enabling you to select more than 1000 tables in Fabric Link and in a Synapse Link profile</p><p></p><p>If you are using Synapse Link, you can workaround by creating 2 or more profiles that contain less than 1000 tables</p><p> </p>|ETA – May update|
+||||
+|<p>[**Table inheritance and derived tables](https://learn.microsoft.com/en-us/dynamicsax-2012/developer/table-inheritance-overview) **are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included.** </p><p></p>|<p>You need to select the base table in addition to the derived table if you need access to these fields.</p><p></p><p><https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables> </p><p>You can use the FastTrack solution provided via GitHub[^1] - this solution creates view(s) which include fields from base tables</p><p></p><p></p>|ETA – Jun update|
+||||
+|**Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link**|We are working on this feature |ETA – Jun/ July|
+|<p>**Synapse Link or Fabric Link enables Entities where “change tracking” property is enabled.** </p><p></p><p>**Currently, change tracking can't be enabled for all finance and operations entities. The Track changes checkbox is unavailable for entities created in finance and operations in the past for data migration.** </p><p></p><p>**In some entities, enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the Track changes checkbox is disabled for some entities.** </p><p></p><p>**For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.**</p><p></p><p></p>|<p>If the chosen entity is unavailable because of the change tracking limitation, you can choose the tables that comprise the data from that entity.</p><p></p><p><https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration/EntityUtil> </p><p>You can use EntityUitl[^2] solution provided by the FastTrack team to create Entity shapes using tables</p><p></p>|ETA – Jun/ July|
+||||
+|**In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed.** |To re-enable entities, you need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking, and reselect the tables in Azure Synapse Link|ETA: Aug/ Sept|
+|<p>**Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse.** </p><p></p>|You must add finance and operations tables into the profile after a database restore operation. Go to [Known limitations with finance and operations tables](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#known-limitations-with-finance-and-operations-tables) for details on re-enabling entities after a database restore operation.|ETA: Aug / Sept |
+||||
+
+
+[^1]: 
+[^2]: 
 
