@@ -1,6 +1,6 @@
 ---
 
-title: Work offline on your mobile device (offline-first mode)
+title: Work with model-driven apps offline (offline-first mode)
 description: Learn how to work offline on your mobile device.
 author: trdehove
 ms.component: pa-user
@@ -15,7 +15,7 @@ search.audienceType:
   - enduser
 ---
 
-# Work offline on your mobile device (offline-first mode)
+# Work with model-driven apps offline (offline-first mode)
 
 For a model-driven app to be available in offline mode, app and user data must be downloaded on your device. This process is called *initial offline sync*.
 
