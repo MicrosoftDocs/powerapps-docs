@@ -1,5 +1,5 @@
 ---
-title: Configure mobile offline profiles for files and images| Microsoft Docs
+title: Configure files and images in offline model-driven apps
 description: Configure mobile offline profiles for files and images.
 author: trdehove
 ms.component: pa-user
@@ -16,7 +16,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Configure mobile offline profiles for files and images
+# Configure files and images in offline model-driven apps
 
 To work with file and image columns in offline mode, you need to add them to your mobile offline profile.
 
