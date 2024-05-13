@@ -1835,6 +1835,10 @@
         href: ../mobile/offline-sync-icon.md
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
+    - name: Optimize how offline works on mobile devices
+      items:
+      - name: Offline profile guidelines
+        href: ../mobile/mobile-offline-guidelines.md  
   - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
