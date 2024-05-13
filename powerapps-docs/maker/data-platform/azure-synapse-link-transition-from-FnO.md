@@ -60,5 +60,42 @@ If you are a Dynamics 365 customer using Data Export service (DES) or classic Sy
 | All tables chosen by default.	| System administrators can choose required tables. |
 |Consumes additional Dataverse storage.	| Consumes your own storage as well as other compute and integration tools.| 
 
+## Which option should I use?
+If your organization is already using Fabric or planning to transition, we recommend using Fabric Link feature. You can continue to use Synapse Link service if your immediate focus is to upgrade from your current services.
+
+### Simplification with Fabric Link
+If you are already consuming data using Power BI, using Data warehouse, or using Data flows and Notebooks to transform data, Link to Fabric feature provides immediate value. You can simplify your data integration architecture by removing the need to have your own storage account or Synapse services for Dataverse data. Instead of paying for Azure resources like storage and compute, you will pay for the increase in Dataverse storage. Compute charges such as near real-time data updates and management overhead is also factored into Dataverse storage. Fabric Link option is like having a near real time read-only replica of your data optimized for insights.
+
+You can query this replica using T-SQL, Spark/ python as well as all the workloads in Fabric. You can also access this data using any tool that can consume T-SQL as well as ADLS storage.
+
+As a Dynamics or PowerApps customer, you get a Dataverse storage quota based on the number of licenses you purchased. Fabric Link feature uses this database quota. You can buy more storage add-ons if the data volume exceeds your quota.
+
+You can continue to retain Azure PaaS services like Databricks and SQL DBs in your own subscription. Recently announced Fabric features like data mirroring and shortcuts may help you further simplify your data integration.
+
+Refer to examples on cost reductions achieved with the simplicity derived from Fabric integration feature below. 
+<< After - Fabric Link picture>> 
+
+
+### Upgrading to Synapse Link
+By upgrading to Synapse Link and enabling delta parquet conversion, you can eliminate Dataverse data prep pipelines in your solution. Synapse Link service will export the same data shapes into your storage account in a more performant Delta/ parquet format. You can continue to use existing tools and Azure services like storage and Synapse query with minimal disruptions to your production environments.
+
+<<< After - Synapse Link picture>>
+
+## Understanding benefits – cost reductions 
+Simplicity achieved with Fabric Link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on actual customer experiences. 
+
+### Example 1: Transition from “BYOD” and “Export to Data lake” to Fabric Link 
+Consider the case where you transition to Fabric Link from Export to Data lake. 
+
+<< Before - after Fabric Link >>
+ 
+As indicated in the before and after diagrams above, customer retired Export to Data lake service (1) as well as staging data stores (2) with Fabric Link. For operational insights, (4), they were able to consume data in OneLake directly in Power BI. Some of the insights require data merge, transformation and aggregation -(3). Instead of using disparate Azure services, they standardized on same tools built into Microsoft Fabric. 
+As we discuss below, innovations in Dataverse and Microsoft Fabric enable simplifications and cost reductions. 
+1.	Dataverse comes with a built-in OneLake store. Operational data from Dynamics 365 and PowerApps are replicated to built-in lake store near real-time (to avoid impact to operational workloads) and linked securely to Fabric via shortcuts. There is no need to bring Azure storage and secure data that’s exported out. Your data doesn’t leave Dataverse governance boundary and authorized users in Fabric can work with data using all Fabric workloads. 
+2.	Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Dataverse built-in OneLake data is maintained in Dela/ parquet format – the same open format that is native to Microsoft Fabric. Delta/ parquet format, along with optimizations in Fabric removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. You can create Power BI DirectLake reports directly over data in OneLake without any additional data stages. 
+3.	While operational insights can be performed using the data already available in OneLake, you may have additional data from other systems. This data may need to be combined, reshaped and aggregated with Dataverse data. Microsoft Fabric provides an integrated environment which provides best of breed tools like Data flows, Data factory, Spark. As opposed to configuring and provisioning tools standalone, you can simply consume the tools of choice. Integrated billing, source control and security enables simpler management and governance.
+4.	While you can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
+
+These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
 
