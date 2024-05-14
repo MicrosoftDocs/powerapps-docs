@@ -17,7 +17,7 @@ contributors:
 ---
 # Custom column analyzers for Dataverse Search
 
-Dataverse search uses many different [Azure AI Search](/azure/search/search-what-is-azure-search) capabilities that include both index and search analyzers to return the best data based on what the user asks for. These built-in capabilities to help define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
+Dataverse search uses many different [Azure AI Search](/azure/search/search-what-is-azure-search) capabilities that include both index and search analyzers to return the best data based on what the user asks for. These built-in capabilities help to define how an index maps certain phrases or words to the best match to data in a column and a row in a table.
 
 Examples include search strings that have special characters, or frequently used words (like '`of`' and '`or`')  that the back-end data engine removes from the search term when the query is processed.
 
