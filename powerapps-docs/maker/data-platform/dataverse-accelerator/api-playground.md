@@ -16,9 +16,13 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The API playground is a pre-authenticated software testing tool that helps developers to quickly and conveniently interact with the [Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview). This web application allows developers to test and experiment with different API endpoints without the need for extensive setup or authentication processes. It also conveniently presents certain available actions, examples, and links to documentation for faster learning.
+The API playground is a pre-authenticated software testing tool that helps makers quickly and conveniently interact with the [Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview). 
 
 ![API playground home screen](./media/api-playground/api-play-landing.svg)
+
+This web application allows developers to test and experiment with different API endpoints without the need for extensive setup or authentication processes. It also conveniently presents certain available actions, examples, and links to documentation for faster learning.
+
+Use this tool to explore what's possible in the RESTful API, test user-defined workflows, and more.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -44,28 +48,24 @@ To get started with the API playground, simply run or install the Dataverse Acce
 
 ### Make web API requests
 
-There are three request types presented:
+Choose the desired request type to open the request screen. The input options are determined based on the request type. There are three request types presented:
 
 | Type | Description |
 |-|-|
-| Custom API | This includes any Microsoft Dataverse Web API first party actions and functions, or any public user-defined Custom APIs registered in the working environment. |
-| Instant low code plugin | Instant low code plugins are classified as any user-defined plugin that is registered as a Custom API in the environment with a related FxExpression. |
-| OData request | This type provides an interface with more paramaters than the other types, which allows for more granular control to create and send requests. |
-
-Choose the desired request type to open the request screen. The input options will vary based on the request type.
+| Custom API | This includes any Microsoft Dataverse Web API first party [actions](/power-apps/developer/data-platform/webapi/use-web-api-actions), [functions](/power-apps/developer/data-platform/webapi/use-web-api-functions), or any public [user-defined Custom APIs](/power-apps/developer/data-platform/custom-api) registered in the working environment. |
+| Instant low code plugin | [Instant low code plugins](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant) are classified as any user-defined workflows registered as a Custom API in the environment with a related FxExpression. |
+| OData request | Provides an interface with more paramaters than the other types, allowing more granular control to create and send [OData requests](/power-apps/developer/data-platform/webapi/perform-operations-web-api). |
 
 ### Request a Custom API or instant low code plugin
 
-These request types are designed to simplify calling plugins available in the working environment. 
+These request types are designed to simplify calling plugins available in the working environment.
 
-![API playground custom API request screen](./media/api-playground/api-play-customapi.svg)
-
-1. Select a choice from the main dropdown, which presents the available plugins in the current environment.
+1. Select an option from the main dropdown, which presents the available plugins in the current environment.
    ![Custom APIs are listed in the dropdown](./media/api-playground/api-play-list-customapi.svg)
 
-1. If parameters are available, they are displayed in the "Query parameters" table that appears.
+1. If parameters are available, they are displayed in the *Query parameters* table that appears.
 
-1. Click Send
+1. Click **Send**
 
 Observe the [response](#view-the-response) in the lower section of the screen.
 
@@ -78,25 +78,25 @@ Observe the [response](#view-the-response) in the lower section of the screen.
 
 OData requests allow more control over the request parameters.
 
-1. Select the HTTP request method
+1. Select the *HTTP request method* in the first dropdown.
 
-1. Type in the endpoint Url (request endpoint excluding "[OrgUrl]/api/v9.2/")
+1. Type in the *endpoint Url*. Only include the request Url after `[OrgUrl]/api/data/v9.2/`
 
-1. Add parameters using one of the two methods:
+1. Add *query parameters* using one of the two methods:
 
     1. In the Url
-        1. After the question mark (?) character in the Url, type in the query parameter key.
+        1. After the question mark (`?`) character in the Url, type in the query parameter key.
         ![Key typed into Url after question mark](./media/api-playground/api-play-key.svg)
-        1. Type an equals (=) character after the key
-        1. Type in a value for that key.
+        1. Type an equals (`=`) character after the key
+        1. Type in the value
         ![Value typed into Url after the equals sign](./media/api-playground/api-play-value.svg)
 
         The keys and values will automatically populate the parameter table in the interface.
 
     1. Manually add query parameters by clicking the **+ Add param** button. This will add an empty parameter row to the table that you can type values into. The Url will be updated dynamically as values are entered.
 
-1. Optionally provide a Body (if using all request methods except GET)
-1. Click Send
+1. Optionally provide a Body (if using all request methods except GET) by selecting the Body tab, then entering the body value in the editor control.
+1. Click **Send**
 1. Observe the [response](#view-the-response) in the lower section.
 
 ### View the response
@@ -145,11 +145,11 @@ Use folders to manage saved requests into groups.
 
 You must have access to the Dataverse accelerator app to use the tool.
 
-### Does this tool only connect to the Dataverse Web API, or are other services available?
+### Does the API playground tool only connect to the Dataverse Web API?
 
-Yes, the API playground tool only connects to the Dataverse Web API.
+Yes, the API playground tool only connects to the Dataverse Web API. No other services are available to connect to in this interface.
 
-### How does the tool authenticate?
+### How does the API playground tool authenticate to the Dataverse Web API?
 
 The tool uses the auth token of the logged in user via the Power Platform framework, which is required for playing any application in Power Apps.
 
