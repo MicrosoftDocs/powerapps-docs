@@ -16,11 +16,11 @@ contributors:
 ---
 # Power Apps preview program
 
-Microsoft Power Apps updates the platform and its capabilities every few days or weeks. The Power Apps preview program is a way to get early access to features and updates prior to availability in other regions (where customer production apps are deployed).
+Microsoft Power Apps updates the platform and its capabilities every few days or weeks. The Power Apps preview program is a way to get early access to features and updates before they become available in other regions (where customer production apps are deployed).
 
 With the Power Apps preview program, you can:
-- **Try out, learn, and dogfood upcoming features**: Many features are rolled out first in the preview for a few days to get feedback. By participating in the preview program, you can learn about new features sooner and provide feedback. Also, you will be ready to quickly take advantage of new features as soon as they reach regions where their production apps are created.
-- **Enable business continuity by ensuring current apps will continue to work** with the upcoming updates (vNext) of Power Apps.
+- **Try out, learn, and dogfood upcoming features**: Many features are rolled out first in the preview for a few days to get feedback. By participating in the preview program, you can learn about new features sooner and provide feedback. Also, you can quickly take advantage of new features as soon as they reach regions where their production apps are created.
+- **Enable business continuity by ensuring current apps continue to work** with the upcoming updates (vNext) of Power Apps.
 
 ## What in Power Apps is available for preview?
 
@@ -44,7 +44,7 @@ You can create, manage, and share apps using [Power Apps][2] (make.powerapps.com
 > [!Note]
 > **Preview (United States)** has been replaced with the **Early release cycle** option. Following the instructions below, you can create preview, or _early release cycle_ environments in the United States region and other regions that may be closer to your location.
 
-For Power Platform, all the apps, flows, and related resources are stored in an environment. Early access to all preview features are available when an admin creates an environment that supports the **Get new features early** option. A subset of the regions currently have this capability and the environment must be created in one of those regions.  For more information, see [Early release cycle environments](/power-platform/admin/early-release).
+For Power Platform, all the apps, flows, and related resources are stored in an environment. Early access to all preview features is available when an admin creates an environment that supports the **Get new features early** option. A subset of the regions currently have this capability and the environment must be created in one of those regions.  For more information, see [Early release cycle environments](/power-platform/admin/early-release).
 
 All the apps and other resources created in this environment are on the vNext version of the platform.
 
@@ -56,11 +56,11 @@ You can get aware of the new features, which are available for preview at [Whatâ
 
 1. **Validate your production apps with the upcoming Power Apps updates (vNext)**
 
-   You might like to verify your production apps, to be working fine with the next upcoming updates on Power Apps. You can [copy](/powerapps/maker/data-platform/export-solutions) the apps from a production environment to an environment in First Release and play the apps to test out the scenarios. Note, all the other necessary resources like CustomAPI, Power Automate, etc., will also need to be moved along with it. This should just create another copy of these apps and required resources. You can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
+   You might like to verify your production apps, to be working fine with the next upcoming updates on Power Apps. You can [copy](/powerapps/maker/data-platform/export-solutions) the apps from a production environment to an environment in First Release and play the apps to test out the scenarios. Note, all the other necessary resources like CustomAPI, Power Automate, etc., need to be moved along with it. This should just create another copy of these apps and required resources. You can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
    
 2. **Trying out the new features available in preview**
 
-   We will be launching many new features initially in the **Preview (United States)** region. You can try out the new features prior to their being available in rest of the regions (which might impact your production environment).
+   We launch many new features initially in the **Preview (United States)** region. You can try out the new features before they become available in the rest of the regions (which might impact your production environment).
 
 ## How to provide feedback to the product team?
 
@@ -79,7 +79,7 @@ You can provide feedback on the [Power Apps forum][8] and/or contact [support][9
 
 2. **Using apps created in preview environments in production environments**
 
-   Power Apps does not support opening apps saved in preview only versions of Power Apps in production environments. Most versions of Power Apps will eventually move from preview into production, but how and when this happens is influenced by many factors so it should not be relied on. We recommend you use production environments to create or edit any app intended for use in a production environment.
+   Power Apps doesn't support opening apps saved in preview only versions of Power Apps in production environments. Most versions of Power Apps eventually move from preview into production, but how and when this happens is influenced by many factors so it shouldn't be relied on. We recommend you use production environments to create or edit any app intended for use in a production environment.
 
 <!--Reference links in article-->
 [2]: https://make.powerapps.com
