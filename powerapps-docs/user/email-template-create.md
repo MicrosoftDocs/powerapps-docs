@@ -27,7 +27,7 @@ You can create email templates by using one of the following options:
 
 ## Prerequisites
 
-Make sure you have the necessary permissions to the related entities when you create an email template based on an entity. For example, if you are creating an email template based on a case, you must have the necessary permissions to access the Account entity.
+When you need to create an email template based on a table, make sure that you have the necessary permissions on the related tables, such as the Account table.
  
 ## Start with a blank template
 
