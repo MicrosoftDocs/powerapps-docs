@@ -49,3 +49,36 @@ With the offline-first experience, it's important to understand the key benefits
 | **Offline-first** | **Classic offline** |
 |-------------------------|-------------------------|
 | <ul><li>Your data is always the same, regardless of your network connection.</li><li>There's no toggle for users to switch from offline to online mode. A user never forgets to sync their changes back to the server because the app does it automatically.</li></ul>| <ul><li>Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not have the same experience.</li><li>Users have to remember to disable the **Work in offline mode** toggle before they can sync changes with the server.</li><li>To save your changes in offline mode, you need to set the **Work in offline mode** toggle to **On**. Otherwise, when you're working on a row and suddenly lose your internet connection, your changes are lost.</li><li>The rows you see in offline mode are listed from the local database. This means that the rows you see in offline mode vs. online mode can be different.</li></ul> |
+
+## Supported  capabilities 
+
+- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+
+- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
+
+    - The business process flow is used in an app that you can run on Power Apps mobile.
+    - The Power Apps mobile app is enabled for offline use.
+    - The business process flow has a single table.
+    - The business process flow table is added in the [offline profile](setup-mobile-offline-classic.md#step-1-enable-tables-for-mobile-offline-synchronization).
+      > [!NOTE]
+      > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
+    
+    There are three commands that are available for a business process flows, when you run an app in offline mode on the Power Apps mobile app.
+    
+    - Next stage
+    - Previous stage
+    - Set Active stage
+
+For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
+
+- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
+
+- **Supported view** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
+
+- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
+
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
+  > [!NOTE]
+  > The **Date** field isn't available for mobile offline search.
+  
+- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
