@@ -19,6 +19,7 @@ contributors:
 Use tracing to troubleshoot low-code and pro code plug-ins. Tracing helps makers by recording run-time information as an aid in diagnosing the cause of failures, or for general validation of certain states during development.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
@@ -86,8 +87,6 @@ Utilize the filtering capabilities to quickly find logs relevant to the plug-ins
 Select **Filter** on the top right side of the command bar to open the filter pane. You can also quickly filter by keywords using the search bar.
 
 ![Filter logs](./media/plugin-monitor-filtering.svg)
-
-**Filter options**
 
 | Filter | Description |
 | - |-|

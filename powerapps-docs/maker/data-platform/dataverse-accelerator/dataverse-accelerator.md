@@ -17,7 +17,7 @@ contributors:
 
 The Microsoft Dataverse accelerator is an application that provides access to select experimental preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
 
-![Dataverse Accelerator landing page](./media/home.svg)
+![Dataverse accelerator landing page with low-code plug-in and plug-in monitoring preview features](./media/home.svg)
 
 While experimental preview features shouldn't be used in production instances, the accelerator offers the opportunity to proactively evaluate, share feedback, and prepare for integration. Using features available with the Dataverse accelerator helps you leverage cutting-edge capabilities to enhance productivity, optimize Dataverse processes, and maintain a competitive edge in Power Platform.
 
@@ -115,7 +115,7 @@ Members of the system customizer security role have access to the app and underl
 
 **What are the key benefits of using Dataverse accelerator?**
 
-Dataverse accelerator offers several experimental preview features that are designed to enhance or accelerate development in certain areas of Dataverse capabilities. Although in preview, accessing these [features](#features) earlier in development can help users stay competitive and know about features coming in the native platform.
+Dataverse accelerator offers experimental and preview features that are designed to enhance or accelerate development in certain areas of Dataverse capabilities. Although in preview, accessing these [features](#features) earlier in development can help you stay competitive and know about features coming in the native platform.
 
 **Is Dataverse accelerator compatible with my existing Dataverse environment?**
 
