@@ -17,7 +17,8 @@ search.audienceType:
 # Code view for canvas apps (preview)
 
 You can now view the underlying code to understand app functionality. 
-All the controls of your screen will have a code representation. The format used is a subset of YAML, an update from the YAML formula grammar[https://learn.microsoft.com/en-us/power-platform/power-fx/yaml-formula-grammar].
+All the controls of your screen will have a code representation. 
+The format used is a subset of YAML, an update from the [YAML formula grammar](https://learn.microsoft.com/en-us/power-platform/power-fx/yaml-formula-grammar).
 
 Because now we represent the canvas app in a code format, you can:
 
