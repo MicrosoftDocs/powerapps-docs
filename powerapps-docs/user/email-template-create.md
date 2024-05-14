@@ -27,7 +27,7 @@ You can create email templates by using one of the following options:
 
 ## Prerequisites
 
-When you need to create an email template based on a table, make sure that you have the necessary permissions on the related tables, such as the Account table.
+When you need to create an email template based on a table, make sure that you have the necessary permissions on the related tables, such as the Account table for the email template based on a case.
  
 ## Start with a blank template
 
