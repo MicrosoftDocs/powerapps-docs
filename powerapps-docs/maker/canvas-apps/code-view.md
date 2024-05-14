@@ -64,7 +64,7 @@ Follow these steps to view, copy, and paste the code for a control:
 * You can’t edit the code in the code view.
 * You can only copy controls that are on a screen. Copying a screen isn't supported.
 
-This article provides an overview of working with formulas. For more detailed information functions, operators, and other building blocks, see [Formula reference](formula-reference.md).
+This article provides an overview of working with formulas. For more detailed information about functions, operators, and other building blocks, see [Formula reference](formula-reference.md).
 
 ### See also
 
