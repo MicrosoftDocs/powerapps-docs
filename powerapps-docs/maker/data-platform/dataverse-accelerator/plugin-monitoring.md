@@ -31,7 +31,7 @@ All events surfaced in the app are read from the [Trace](/power-apps/developer/d
 - Custom APIs
 - Instant and automated low-code plug-ins
 
-![Plug-in monitoring interface](./media/plugin-monitoring.svg)
+:::image type="content" source="media/plugin-monitoring.svg" alt-text="Plug-in monitoring interface" lightbox="media/plugin-monitoring.svg":::
 
 ## Prerequisites
 
@@ -86,7 +86,7 @@ Utilize the filtering capabilities to quickly find logs relevant to the plug-ins
 
 Select **Filter** on the top right side of the command bar to open the filter pane. You can also quickly filter by keywords using the search bar.
 
-![Filter logs](./media/plugin-monitor-filtering.svg)
+:::image type="content" source="media/plugin-monitor-filtering.svg" alt-text="Filter logs" lightbox="media/plugin-monitor-filtering.svg":::
 
 | Filter | Description |
 | - |-|
