@@ -680,6 +680,8 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+        - name: Code view for canvas apps (preview)
+          href: ./canvas-apps/code-view.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
