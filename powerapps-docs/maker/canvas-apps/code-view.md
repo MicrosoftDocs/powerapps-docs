@@ -60,7 +60,7 @@ Follow these steps to view, copy, and paste the code for a control:
 
 ## Know limitations
 
-* You can't copy and paste when there’s no code view for the **App Object**.
+* You can't copy and paste and there’s no code view for the **App Object**.
 * You can’t edit the code in the code view.
 * You can only copy controls that are on a screen. Copying a screen isn't supported.
 
@@ -68,7 +68,7 @@ This article provides an overview of working with formulas. For more detailed in
 
 ### See also
 
-[YAML format](formula-bar-find-replace.md)
+[YAML format](/power-platform/power-fx/yaml-formula-grammar)
 [Formula bar](formula-bar-find-replace.md)
 [Use Find and Replace capability in the formula bar](formula-bar-find-replace.md)
 
