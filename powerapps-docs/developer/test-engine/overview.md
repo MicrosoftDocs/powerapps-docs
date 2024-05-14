@@ -159,7 +159,8 @@ If you move an app that is _not_ part of a solution to a new environment, you'll
 
 ### See also
 
-[Power Apps Test Engine YAML format (preview)](yaml.md)   
-[Power Apps Test Engine Power Fx functions (preview)](powerfx.md)   
+[Power Apps Test Engine release notes](https://github.com/microsoft/PowerApps-TestEngine/releases)
+[Power Apps Test Engine YAML format (preview)](yaml.md)
+[Power Apps Test Engine Power Fx functions (preview)](powerfx.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
