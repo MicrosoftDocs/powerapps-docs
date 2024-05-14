@@ -1,6 +1,6 @@
 ---
 title: Get preview features and tools early with Dataverse accelerator | Microsoft Docs
-description:  The Dataverse accelerator aoo rapidly delivers experimental and innovative Dataverse development capabilities to empower Power Platform makers.
+description:  The Dataverse accelerator aoo rapidly delivers preview and innovative Dataverse development capabilities to empower Power Platform makers.
 author: denise-msft
 ms.author: demora
 ms.reviewer: matp
@@ -15,11 +15,11 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Microsoft Dataverse accelerator is an application that provides access to select experimental preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
+The Microsoft Dataverse accelerator is an application that provides access to select preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
 
 ![Dataverse accelerator landing page with low-code plug-in and plug-in monitoring preview features](./media/home.svg)
 
-While experimental preview features shouldn't be used in production instances, the accelerator offers the opportunity to proactively evaluate, share feedback, and prepare for integration. Using features available with the Dataverse accelerator helps you leverage cutting-edge capabilities to enhance productivity, optimize Dataverse processes, and maintain a competitive edge in Power Platform.
+While preview features shouldn't be used in production instances, the accelerator offers the opportunity to proactively evaluate, share feedback, and prepare for integration. Using features available with the Dataverse accelerator helps you leverage cutting-edge capabilities to enhance productivity, optimize Dataverse processes, and maintain a competitive edge in Power Platform.
 
 > [!IMPORTANT]
 >
