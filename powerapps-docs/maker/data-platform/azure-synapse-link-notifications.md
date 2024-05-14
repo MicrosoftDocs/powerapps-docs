@@ -9,10 +9,6 @@ ms.topic: how-to
 ms.date: 03/20/2024
 ms.custom: template-how-to 
 ---
-
-<!-- Text in the Description column in line 76 read as if it was missing something. I attempted to fix it, but please review. --> 
-
-
 # Receive Azure Synapse Link for Dataverse notifications in Power Apps
 
 The state of your Azure Synapse Link for Dataverse is stored in a Microsoft Dataverse table with real-time updates. You can customize a notification using Power Automate flows or Power BI to stay on top of the state of your Azure Synapse Link for Dataverse activity instead of manually checking the Azure Synapse Link for Dataverse profile page in Power Apps (make.powerapps.com).
