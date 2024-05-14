@@ -23,8 +23,8 @@ Use code view to see your app's underlying code to better understand the app's f
 With code view you can:
 
 - See a code representation of each control on your screen.
-- Copy a control as code that you can share outside of Power Apps Studio.
-- Paste a control as code, allowing you to create new controls based on the code.
+- Copy a control as code and share outside of Power Apps Studio.
+- Copy an paste a control as code and create new control based on the copied code.
 
 > [!IMPORTANT]
 > - Format is subjected to change. We don’t guarantee compatibility with the final version.
@@ -40,18 +40,18 @@ The formula bar is **ON** by default for new apps. For existing apps, follow the
 
 ## View, copy, and paste code
 
-The **View code** feature displays the code for the selected control and all underlying controls. You can also use the shortcut **Ctrl + F** to find a specific string in the code.
+The **View code** feature shows the code for the selected control and all underlying controls. You can also use the shortcut **Ctrl + F** to find a specific string in the code.
 
 Follow these steps to view, copy, and paste the code for a control:
 
 1. Open your app for [editing](edit-app.md) in Power Apps Studio.
-1. **Right-click** on the screen or on the control in the **Tree view** and then select, **View code (preview)**. 
+1. **Right-click** on the control in the **Tree view** or on the screen or and then select, **View code (preview)**. 
 
     :::image type="content" source="media/code-view/view-code.png" alt-text="View code for a control":::
 
 1. Select **Copy code** and then paste the copied code into any window outside of your browser.
 
-1. To generate a new control from the copied code, right-click on the control where you want to create a new item and the select, **Paste code (preview)**. 
+1. To generate a new control from the copied code, right-click on the control where you want to create a new control and the select, **Paste code (preview)**. 
 
     :::image type="content" source="media/code-view/paste-code.png" alt-text="Paste code ":::
 
