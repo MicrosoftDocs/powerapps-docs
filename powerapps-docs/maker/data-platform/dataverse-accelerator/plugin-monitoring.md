@@ -52,9 +52,9 @@ You must have the following security role assignment and access to the Dataverse
 
 This feature is available in the Dataverse accelerator app. Go to the [Dataverse accelerator article](./dataverse-accelerator.md) for installation instructions.
 
-## Get started
+## Try the plug-in monitoring feature
 
-1. [Run the Dataverse Accelerator app](dataverse-accelerator.md#get-started).
+1. [Play the Dataverse accelerator](dataverse-accelerator.md#play-the-dataverse-accelerator).
 
 1. Go to the **Plugin monitoring** feature (on the left navigation pane or the feature card on the landing screen).
  

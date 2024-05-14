@@ -57,7 +57,7 @@ You must have the following privileges in your Dataverse environment:
 
 | Feature | Description |
 | -- | -- |
-| [Low-code plug-ins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
+| [Low-code plug-ins](/powerapps-docs/maker/data-platform/low-code-plug-ins) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
 | [Plug-in monitoring](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
 
 ## Manage the Dataverse accelerator app
@@ -115,7 +115,7 @@ Members of the system customizer security role have access to the app and underl
 
 **What are the key benefits of using Dataverse accelerator?**
 
-Dataverse accelerator offers experimental and preview features that are designed to enhance or accelerate development in certain areas of Dataverse capabilities. Although in preview, accessing these [features](#features) earlier in development can help you stay competitive and know about features coming in the native platform.
+Dataverse accelerator offers experimental and preview features that are designed to enhance or accelerate development in certain areas of Dataverse capabilities. Although in preview, accessing these [features](#features-available-with-the-dataverse-accelerator) earlier in development can help you stay competitive and know about features coming in the native platform.
 
 **Is Dataverse accelerator compatible with my existing Dataverse environment?**
 
