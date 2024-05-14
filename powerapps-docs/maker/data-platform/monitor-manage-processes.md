@@ -1,6 +1,6 @@
 ---
 title: "Monitor and manage real-time workflow processes with Power Apps | MicrosoftDocs"
-description: "Learn how to manage real-time workflow processes with Power Apps"
+description: "Learn how to manage real-time workflow processes with Power Apps."
 ms.custom: ""
 ms.date: 05/14/2024
 ms.reviewer: "matp"
@@ -26,11 +26,11 @@ To monitor and manage processes, you must locate the process, evaluate the statu
   
 <a name="BKMK_MonitorSyncWorkflows"></a>   
 ## Monitoring real-time workflows and actions  
-Real-time workflows and actions do not use System Job rows because they occur immediately. Any errors that occur will be displayed to the user in the application with the heading **Business Process Error**.  
+Real-time workflows and actions don't use System Job rows because are displayed to the user in the application with the heading **Business Process Error**.  
   
-There is no log for successful operations. You can enable logging for errors by checking the **Keep Logs for workflow jobs that encountered errors** option in the **Workflow Log Retention** area at the bottom of the **Administration** tab for the process.  
+There's no log for successful operations. You can enable logging for errors by checking the **Keep Logs for workflow jobs that encountered errors** option in the **Workflow Log Retention** area at the bottom of the **Administration** tab for the process.  
   
-To view the log of errors for a specific process, open the real-time workflow or action definition and go to the **Process Session** tab. This will only show any errors logged for this process.  
+To view the log of errors for a specific process, open the real-time workflow or action definition and go to the **Process Session** tab. This log only shows errors logged for this process.  
   
 If you want a view of all the errors for any process, go to **Advanced Find** and create a view showing errors on the process session table.  
   
@@ -68,11 +68,11 @@ If your organization uses background workflows or business process flows that ru
    
 7. Select **Next**.
 
-8. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the Immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
+8. Set the frequency that your bulk delete job runs. In this example, a recurring job is set to run on May 14, 2024, and every 30 days thereafter.
 
    ![Bulk row deletion options.](media/custom-bulk-record-delete-options.png)
    > [!NOTE]
-   >    Performing an immediate synchronous bulk delete of the rows by selecting the **Immediately** option is deprecated and no longer available for use.
+   > Performing an immediate synchronous bulk delete of the rows by selecting the **Immediately** option is deprecated and no longer available for use.
 
 9. Select **Next**, and then select **Submit**.
 
