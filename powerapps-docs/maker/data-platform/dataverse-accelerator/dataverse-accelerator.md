@@ -28,18 +28,23 @@ While experimental preview features shouldn't be used in production instances, t
 
 The Dataverse accelerator interface adheres to the same UX and accessibility standards as any Microsoft Power Platform experience. Furthermore, it serves as a demonstration of our platform's powerful low-code capability to ship enterprise-grade applications.
 
-## Features
-
-| Feature | Description |
-| -- | -- |
-| [Low-code plug-ins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
-| [Plug-in monitoring](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
-
-## Get started
+## Play the Dataverse accelerator
 
 Play the Dataverse accelerator app in any environment where it's installed.
 
 The app is automatically available in all new Microsoft Dataverse environments. If your environment doesn't already have it, you can  [install the Dataverse accelerator](#install-the-dataverse-accelerator).
+
+The app appears in two places:
+
+1. In [Power Apps](https://make.powerapps.com/), select **Apps**
+
+   :::image type="content" source="media/apps.svg" alt-text="Power Apps app list" lightbox="media/apps.svg":::
+
+1. In the **Unified Interface apps** view:
+
+   ![Power Apps Unified Client Applications View](./media/uci.svg)
+
+When you play the Dataverse accelerator, features are displayed in the accelerator that you can try out.
 
 ### Prerequisites to run the Dataverse accelerator
 
@@ -48,17 +53,12 @@ You must have the following privileges in your Dataverse environment:
 - Security role: System customizer.
 - App-level access to the Dataverse accelerator model driven app, such as system customizer or direct access from a security role.
 
-### How the app appears in your environment
+### Features available with the Dataverse accelerator
 
-The app appears in two places:
-
-1. In [Power Apps](https://make.powerapps.com/), select **Apps**
-
-   ![Power Apps Maker App List](./media/apps.svg)
-
-1. In the **Unified Interface apps** view:
-
-   ![Power Apps Unified Client Applications View](./media/uci.svg)
+| Feature | Description |
+| -- | -- |
+| [Low-code plug-ins](/powerapps-docs/maker/data-platform/low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
+| [Plug-in monitoring](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
 
 ## Manage the Dataverse accelerator app
 
@@ -85,7 +85,8 @@ If the Dataverse accelerator is already installed and you want to install the la
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Environments**.
 1. Open the [environment-level view of apps](/power-platform/admin/manage-apps#environment-level-view-of-apps)
 1. Locate the **Dataverse Accelerator** app.
-1. If there's an update available, select **Update available** next to the app.
+1. When there's an update available, select **Update available** next to the app.
+1. Follow the instructions on your screen to apply the update.
 
 ### Uninstall the Dataverse accelerator
 
