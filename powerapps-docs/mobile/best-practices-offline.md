@@ -17,6 +17,38 @@ searchScope:
 ---
 
 # Best practices to use an app for offline
+In this section, you will find recommendation on how to create the best experience for the users of apps enabled for offline. When an app is enabled for offline, the first thing that the app needs to do is to download all the required assets to work without network connection: the app resources and the data. This setup happens only once during the first usage of the app. The fastest is the set up, the best. This first run experience heavily depends on how much data is downloaded which is directly related to the offline profile configuration but also to the amount of data the user has access to. 
+
+## Plan your offline profile rollout
+
+Develop and roll out your offline profile in three phases:
+
+:::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
+
+### Phase 1: Develop and iterate
+
+After you've [set up an offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
+
+In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
+
+***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
+
+> [!IMPORTANT]
+> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
+
+### Phase 2: Test with users
+
+Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
+
+:::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
+
+***Outcome:*** You confirm that the offline profile scales to real use cases.
+
+### Phase 3: Roll it out
+
+Deploy the app to the rest of your organization.
+
+***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline.
 
 ## Tips
 
