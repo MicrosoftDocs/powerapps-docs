@@ -1,5 +1,5 @@
 ---
-title: Filter, sort, and search galleries with Copilot Smart Grid (preview)
+title: Filter, sort, and search galleries with Copilot (preview)
 description: Learn how to use Copilot to quickly sort, filter, and search canvas app galleries using natural language.
 ms.date: 05/15/2024
 ms.topic: article
@@ -13,7 +13,7 @@ search.audienceType:
 ---
 
 
-# Filter, sort, and search galleries with Copilot Smart Grid (preview)
+# Filter, sort, and search galleries with Copilot (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
