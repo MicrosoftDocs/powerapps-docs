@@ -27,7 +27,7 @@ Develop and roll out your offline profile in three phases:
 
 ### Phase 1: Develop and iterate
 
-After you've [set up an offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
+After you've [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) or [Set up mobile offline for model-driven apps](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
 
 In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
 
