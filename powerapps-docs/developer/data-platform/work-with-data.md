@@ -19,33 +19,45 @@ Use Dataverse tables to model and manage business data. You can use [existing ta
 
 Dataverse also has APIs known as *messages*. Each message has a name like `Create`, `Delete`, or `WhoAmI`. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server.  If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can [create your own messages](custom-actions.md).
 
-Dataverse provides two ways to work with data: Web API & SDK for .NET. Choose the one that best matches the requirements, your skills, and your preferences.
+### Change data
 
-<!--![Flow diagram to choose web service.](media/whentousewebapi.png)-->
+Dataverse provides two ways to apply changes to data: Web API & SDK for .NET. Choose the one that best matches the requirements, your skills, and your preferences.
+
 :::image type="content" source="media/whentousewebapi.svg" alt-text="Flow diagram to choose programming style":::
 
-## Web API
+### Web API
 
 The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0.
 
 More information: [Use the Dataverse Web API](webapi/overview.md)
 
-## SDK for .NET
+### SDK for .NET
 
-Use classes provided in the Dataverse SDK for .NET assemblies for custom apps, or for extending Dataverse operations using custom plug-ins and workflow activities. The Dataverse SDK for .NET supports build targets for both .NET Framework and .NET 6+. However, plug-in and custom workflow activities must be coded using .NET Framework.
+If you are working with .NET, we recommend using our [SDK for .NET](org-service/overview.md).
 
-More information: [Use the Dataverse SDK for .NET](org-service/overview.md)
+- Use the [ServiceClient class](/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient) in the [DataverseServiceClient NuGet package](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) if you have a client application.
+- Use the [Microsoft.CrmSdk.CoreAssemblies NuGet package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) when you are writing a plug-in or custom workflow activity.
 
-> [!NOTE]
-> Use the Xrm.Tooling assemblies if you want to use the SDK for .NET using our PowerShell module or are creating a Windows client application and you want to use our custom login control. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+The Dataverse SDK for .NET supports build targets for both .NET Framework and .NET 6+. However, plug-in and custom workflow activities must use .NET Framework.
 
-## Search
+If you are using our [PowerShell module](https://www.powershellgallery.com/packages/Microsoft.Xrm.Tooling.CrmConnector.PowerShell/) or using our [custom log-in control](xrm-tooling/use-xrm-tooling-common-login-control-client-applications.md) with a Windows client application, use the [the Xrm.Tooling](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+
+## Search Dataverse data
 
 Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
 
 Search has a native endpoint and there are Dataverse messages that you can use from the Web API or Organization service.
 
 More information: [Search for Dataverse records](search/overview.md)
+
+## Query data with SQL
+
+The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses the Dataverse Tabular Data Stream (TDS) endpoint to retrieve data using [Dataverse SQL](how-dataverse-sql-differs-from-transact-sql.md), a subset of Transact-SQL.
+
+[Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio-preview) is a preview feature.
+
+[Learn to use SQL to query data](dataverse-sql-query.md)
+
 
 ## Limitations
 
