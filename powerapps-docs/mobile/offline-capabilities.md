@@ -56,7 +56,7 @@ These tables and corresponding commands are available in offline mode
 |User |Read only	|
 
 
-## Feature imitations 
+## Feature limitations 
 - **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
 - **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
