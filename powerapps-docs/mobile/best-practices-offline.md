@@ -17,7 +17,7 @@ searchScope:
 ---
 
 # Best practices to use an app for offline
-In this section, you will find recommendation on how to create the best experience for the users of apps enabled for offline. When an app is enabled for offline, the first thing that the app needs to do is to download all the required assets to work without network connection: the app resources and the data. This setup happens only once during the first usage of the app. The fastest is the set up, the best. This first run experience heavily depends on how much data is downloaded which is directly related to the offline profile configuration but also to the amount of data the user has access to. 
+In this section, you will find recommendation on how to create the best experience for the users of apps enabled for offline. When an app is enabled for offline, the first thing that the app needs to do is to download all the required assets to work without network connection: the app resources and the data. This setup happens only once during the first usage of the app. The fastest is the set up, the best. This first run experience heavily depends on how much data is downloaded which is directly related to the offline profile configuration but also to the amount of data the user has access to in the environement the app belongs to. 
 
 ## Plan your offline profile rollout
 
@@ -50,9 +50,26 @@ Deploy the app to the rest of your organization.
 
 ***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline.
 
-## Tips
+## Don't miss the data your users need
 
-### Mobile offline synchronization
+Test whether your users have all the data they need. Compare the data available when the app is online and when it's offline. With the device in airplane mode, make sure the views and forms show the same data as in a web browser online. If there are differences, either adjust the filters in your views or adjust the filters in your offline profile.
+
+### Add related tables if your app needs them
+
+- **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. For more information, go to [Supported capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported-capabilities).
+
+- **Files and images:** If your offline profile contains files and images, you'll need to add tables for them. For more information, go to [Configure files and images in offline model-driven apps](offline-file-images.md) or [Configure files and images in offline canvas apps](files-images-offline-canvas-apps.md) . Use custom filters to limit download of critical files.
+
+- **Timeline:** To make notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the Notes table to limit download times.
+
+    > [!IMPORTANT]
+    > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.
+
+### Diagnose mobile offline apps with Monitor
+
+Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](/power-apps/maker/monitor-canvasapps) to better diagnose and troubleshoot issues faster.
+
+## Tips on mobile offline synchronization
   
 - Mobile offline synchronization with mobile devices occurs periodically. A synchronization cycle could last for several minutes, depending on Azure network latency, the volume of data that’s set for synchronization, and mobile network speed. Users can still use the mobile apps during synchronization.  
   
@@ -65,3 +82,11 @@ Deploy the app to the rest of your organization.
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
 - Mobile offline honors the mobile apps security model and the hierarchical security model except the [field level security and field sharing](/power-platform/admin/field-level-security).
+
+### See also
+
+- [Configure canvas apps for offline](canvas-mobile-offline-overview.md)
+- [Configure model-driven apps for offline](mobile-offline-overview.md)
+- [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
+- [Five tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)
+
