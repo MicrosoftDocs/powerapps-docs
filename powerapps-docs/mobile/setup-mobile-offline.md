@@ -110,6 +110,15 @@ The default offline profile is a starting point to help you quickly build an off
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limiting the amount of data that downloads on users' devices.
 
+Ensure that you configure at least one of the Profile rules for each table to download its data. 
+
+  |Customization |Recommendation|  
+  |-------------|---------|  
+  |All Records|	If you're selecting this filter, you can't define any other filter rule.|
+  |Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
+  |Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
+  |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
+
 Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 1. Select **Add table**.
@@ -119,11 +128,12 @@ Keep in mind, that you can have 15 related tables in a custom filter. You can al
 1. Choose a table, and then define the filters.
 
 1. Set the following filters:
+   
+    1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
 
-   1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
    1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship ensures that related rows following that relationship are downloaded and made available offline.
-   1. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
-   1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
+  1. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
+  1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
 
        You can only have up to 15 related tables in a profile. If you exceed the limit, you get an error and won't be able to publish the offline profile.
 
