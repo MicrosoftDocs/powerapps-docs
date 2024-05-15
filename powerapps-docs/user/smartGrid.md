@@ -35,10 +35,9 @@ When trying to quickly find the gallery items you need, you might worry about sp
 ## Use this feature
 
 1. Select an item in the gallery. 
-2. The option to **Sort, Filter, and Search with Copilot** should appear. Select that option. 
+2. The option to **Sort, filter, and search with Copilot** should appear. Select that option. 
 3. Write your desired sort, filter, or search query into the text box or select one of the suggested queries.  
      > [!Note] 
-
      > You must enter the text in English. This feature only supports the English language at this time. 
 4. Select the **Send** icon. 
 5. Copilot updates the gallery for you. Review the filters applied. The following options are available: 
@@ -75,4 +74,8 @@ Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -
    
 ## Known issue
 
-- There is not a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
+- This feature can't be turned off on a per-tenant basis.  It can only be turned off by following these procedures:
+  - [Turn off gallery filtering in web player](#turn-off-gallery-filtering-in-web-player)
+  - [Turn off gallery filtering for an app](#turn-off-gallery-filtering-for-an-app)
+  - [Turn off gallery filtering for an environment](#turn-off-gallery-filtering-for-an-environment)
+
