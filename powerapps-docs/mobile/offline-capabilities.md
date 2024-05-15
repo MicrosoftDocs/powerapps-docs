@@ -25,9 +25,9 @@ ms.contributors:
 
 # Mobile offline limitations for model-driven apps
 
-Before you set up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](mobile-offline-guidelines.md).
+Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Offline best practices](best-practices-offline.md) and the [Offline profile guidelines](mobile-offline-guidelines.md).
 
-These tables and corresponding commands are available in offline mode.
+These tables and corresponding commands are available in offline mode
   > [!NOTE]
   > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
@@ -56,7 +56,7 @@ These tables and corresponding commands are available in offline mode.
 |User |Read only	|
 
 
-## Limitations 
+## Feature imitations 
 - **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
 - **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
@@ -122,6 +122,15 @@ These tables and corresponding commands are available in offline mode.
   
 - **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
+
+### Profile filters limitations
+
+|Profile details |Limitation|  
+|-------------|---------|  
+|Relationship defined for each table|Maximum of 15 relationships. And maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
+
+
 ### Organization data filter 
 
 > [!IMPORTANT]
@@ -131,29 +140,6 @@ It's recommended that you have at least one rule defined for all mobile offline-
 
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
-
-
-### Profile filters 
-
-**Profile limitations**
-
-|Profile details |Limitation|  
-|-------------|---------|  
-|Relationship defined for each table|Maximum of 15 relationships. And maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
-|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
-
-
-### Profile filter rules recommendation 
-
-Ensure that you have configured at least one of the Profile rules for each table to download its data. 
-  
-|Customization |Recommendation|  
-|-------------|---------|  
-|All Records|	If you're selecting this filter, you can't define any other filter rule.|
-|Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
-|Custom Data Filter |<=3 filters can be defined in the custom data filter. |
-
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
