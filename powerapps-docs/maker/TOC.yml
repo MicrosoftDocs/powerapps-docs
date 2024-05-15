@@ -294,6 +294,8 @@
         href: ./canvas-apps/ai-conversations-create-app.md
       - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
+      - name: Use field suggestions by Copilot
+        href: ./canvas-apps/ai-field-suggestions.md  
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -2579,6 +2581,8 @@
     href: ./common/faq-timeline-highlights-with-copilot.md
   - name: FAQ about using Copilot with Power Fx
     href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about field suggestions by Copilot
+    href: ./common/faq-field-suggestions.md  
 - name: Resources
   items:
   - name: Blog
