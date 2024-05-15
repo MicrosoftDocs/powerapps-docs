@@ -55,39 +55,6 @@ These tables and corresponding commands are available in offline mode.
 |Team |Read only	|
 |User |Read only	|
 
-## Supported  capabilities 
-
-- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
-
-- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
-
-    - The business process flow is used in an app that you can run on Power Apps mobile.
-    - The Power Apps mobile app is enabled for offline use.
-    - The business process flow has a single table.
-    - The business process flow table is added in the [offline profile](setup-mobile-offline-classic.md#step-1-enable-tables-for-mobile-offline-synchronization).
-      > [!NOTE]
-      > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
-    
-    There are three commands that are available for a business process flows, when you run an app in offline mode on the Power Apps mobile app.
-    
-    - Next stage
-    - Previous stage
-    - Set Active stage
-
-For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
-
-- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
-
-- **Supported view** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
-
-- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
-
-- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
-  > [!NOTE]
-  > The **Date** field isn't available for mobile offline search.
-  
-- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
-
 
 ## Limitations 
 - **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
@@ -99,7 +66,9 @@ For more information, see [Run business process flows offline](/power-automate/b
     - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
     - Primary image thumbnails aren't available for offline unless they were previously displayed online.
     - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
- 
+
+ - **Supported type of views** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
+   
 - **Views** aren't supported for the following tables in offline mode: 
 
      - Email
@@ -150,6 +119,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 - **Work order service tasks** - Work order service tasks created through *custom* code require msdyn_lineorder to be set to -1. An actual value will be automatically set after the next synchronization cycle.
 
 - **Quick find search** - When you search offline, the results might be different from online searches. Characters in your search terms must match exactly when searching offline, while online equivalent results might be found.
+  
+- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
 ## Tips
 
