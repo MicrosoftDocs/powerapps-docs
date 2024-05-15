@@ -185,4 +185,33 @@ You can enable users to control the automatic sync intervals or the connection t
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
 
+## Supported  capabilities 
+
+- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+
+- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
+
+    - The business process flow is used in an app that you can run on Power Apps mobile.
+    - The Power Apps mobile app is enabled for offline use.
+    - The business process flow has a single table.
+    - The business process flow table is added in the [offline profile](setup-mobile-offline-classic.md#step-1-enable-tables-for-mobile-offline-synchronization).
+      > [!NOTE]
+      > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
+    
+    There are three commands that are available for a business process flows, when you run an app in offline mode on the Power Apps mobile app.
+    
+    - Next stage
+    - Previous stage
+    - Set Active stage
+
+For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
+
+- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
+
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
+  > [!NOTE]
+  > The **Date** field isn't available for mobile offline search.
+  
+- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
+
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
