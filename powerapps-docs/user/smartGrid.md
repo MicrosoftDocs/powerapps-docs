@@ -10,11 +10,10 @@ ms.author: jordanchodak
 ms.reviewer: sericks
 search.audienceType: 
   - enduser
-
 ---
 
 
-# Filter, Sort, and Search galleries with Copilot Smart Grid (preview)
+# Filter, sort, and search galleries with Copilot Smart Grid (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
