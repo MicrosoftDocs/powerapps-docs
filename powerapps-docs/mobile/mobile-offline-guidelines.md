@@ -22,37 +22,6 @@ There's a lot to keep in mind when you create or update an offline profile for m
 
 The following guidelines will help you create an offline profile that meets the exact needs of your organization.
 
-## Plan your offline profile rollout
-
-Develop and roll out your offline profile in three phases:
-
-:::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
-
-### Phase 1: Develop and iterate
-
-After you've [set up an offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
-
-In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
-
-***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
-
-> [!IMPORTANT]
-> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
-
-### Phase 2: Test with users
-
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
-
-:::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
-
-***Outcome:*** You confirm that the offline profile scales to real use cases.
-
-### Phase 3: Roll it out
-
-Deploy the app to the rest of your organization.
-
-***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline.
-
 ## Don't make your users download too much data
 
 Each user may have access to a different set of data. It's important to think about and test how much data different groups of users will see. For example, a group sales manager might have access to many more sales opportunities than a local sales manager.
@@ -149,21 +118,6 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
     :::image type="content" source="media/mobile-offline-guidelines/filters6.png" alt-text="Screenshot that shows multiple filters with nested relationships.":::
 
 - Avoid using many OR conditions.
-
-## Don't miss the data your users need
-
-Test whether your users have all the data they need. Compare the data available when the app is online and when it's offline. With the device in airplane mode, make sure the views and forms show the same data as in a web browser online. If there are differences, either adjust the filters in your views or adjust the filters in your offline profile.
-
-### Add related tables if your app needs them
-
-- **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. For more information, go to [Supported capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported-capabilities).
-
-- **Files and images:** If your offline profile contains files and images, you'll need to add tables for them. For more information, go to [Configure mobile offline profiles for files and images](offline-file-images.md). Use custom filters to limit download of critical files.
-
-- **Timeline:** To make notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the Notes table to limit download times.
-
-    > [!IMPORTANT]
-    > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.
 
 ### See also
 
