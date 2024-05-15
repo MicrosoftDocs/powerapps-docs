@@ -38,7 +38,7 @@ In this phase, you'll add tables and apply filters to existing tables to make su
 
 ### Phase 2: Test with users
 
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
+Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Device Status page for each user (see how to [enable the Device status page in canvas apps](canvas-mobile-offline-setup.md#create-an-offline-canvas-app)). How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
@@ -65,7 +65,7 @@ Test whether your users have all the data they need. Compare the data available 
     > [!IMPORTANT]
     > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.
 
-### Diagnose mobile offline apps with Monitor
+## Diagnose mobile offline apps with Monitor
 
 Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](/power-apps/maker/monitor-canvasapps) to better diagnose and troubleshoot issues faster.
 
