@@ -1,92 +1,209 @@
 ---
-title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 11/10/2023
-ms.reviewer: pehecke
+title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs"
+description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer."
+ms.date: 05/15/2024
+ms.reviewer: jdaly
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: mkannapiran
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: kamanick
 search.audienceType: 
   - developer
 ---
 # Customer tables (account, contact, customeraddress)
 
-The *account* and *contact* tables in Microsoft Dataverse are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A *customer address* table is used to store address and shipping information for a customer.  
+The [account](reference/entities/account.md) and [contact](reference/entities/contact.md) tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. The [customer address](reference/entities/customeraddress.md) table stores address and shipping information for a customer.  
   
 ## Account table
  
 The account table is one of the tables in Dataverse to which most other tables are attached or parented. In Dataverse, an account represents a company with which the business unit has a relationship. Information that is included in an account is all relevant contact information, company information, category, relationship type, and address information. Other information that applies includes the following items:  
   
-- An account can be a parent to most table types, including another account.  
+- An account can be a parent to most table types, including another account.
+- An account can be a standalone table.
+- An account can have only one account as its parent.
+- Accounts can have multiple child accounts and child contacts.
   
-- An account can be a standalone table.  
-  
-- An account can have only one account as its parent.  
-  
-- Accounts can have multiple child accounts and child contacts.  
-  
-Account management is one of the important concepts of business-to-business customer relationship management (Dynamics 365) because an organization wants to see all the activities they have with another company All these activities come together at the account level.  
+Account management is one of the important concepts of business-to-business customer relationship management (Dynamics 365) because an organization wants to see all the activities they have with another company. All these activities come together at the account level.
 
-More information: [Account table](reference/entities/account.md).
+[View the Account table reference](reference/entities/account.md).
   
 ## Contact table
 
-In Dataverse, a contact represents a person, usually an individual, with whom a business unit has a relationship, such as a customer, a supplier, or a colleague. The contact table is one of the tables that most other tables are linked to. A contact can be a stand-alone table. Included in this table are professional, personal, and family information, and multiple addresses. More information: [Contact table](reference/entities/contact.md).
+In Dataverse, a contact represents a person, usually an individual, with whom a business unit has a relationship, such as a customer, a supplier, or a colleague. The contact table is one of the tables that most other tables are linked to. A contact can be a stand-alone table. Included in this table are professional, personal, and family information, and multiple addresses.
+
+[View the Contact table reference](reference/entities/contact.md).
   
 Both accounts and contacts are part of managing customers and are related to one another in the following ways:  
   
-- A contact can be a parent to every other table except accounts and contacts.  
-  
+- A contact can be a parent to every other table except accounts and contacts.
 - A contact can have only one account as its parent.  
+- A contact can be marked as the primary contact person for an account setting the [Account.PrimaryContactId](reference/entities/account.md#BKMK_PrimaryContactId) column.
   
-- A contact can be marked as the primary contact person for an account by using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method.  
+The contact table stores all information about a person such as an email address, street address, telephone numbers, and other related information, such as the birthday or anniversary date. Depending on the type of customers a business unit has, it needs either only contacts, or contacts and accounts, to give a full view of its customers.
   
-The contact table stores all information about a person such as an email address, street address, telephone numbers, and other related information, such as the birthday or anniversary date. Depending on the type of customers a business unit has, it needs either only contacts, or contacts and accounts, to give a full view of its customers.  
-  
-The basic operations that you can perform on a contact include Create, Read, Update, and Delete.  
-  
-Linking tables such as activities and notes to the contact table lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
+Linking tables such as activities and notes to the `contact` table lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
 
 ## CustomerAddress table
 
-This table contains address and shipping information. It is used to store additional addresses for an account or contact. The platform creates Customer Address rows by default upon creation of an account or contact, irrespective of whether the current address values are blank or not.
+This table contains additional address and shipping information for customer records (account and contact). By default, Dataverse creates two `customeraddress` records in this table when a new customer record is created, even when there is no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation)
 
->[!NOTE]
->The Customer Address table is updated at the platform level when a change is made to the Account or Contact tables. Because of this, no separate SDK call will be made to update or create the Customer Address table. Any code that is triggering on address updates or creates should be pointing to the Contact or Account tables.
-  
+### Address data embedded with customer records
+
+You can retrieve or modify the data for these two embedded `customeraddress` records with the customer record. Both `account` and `contact` tables have columns `address1_addressid` and `address2_addressid` which store `customeraddressid` values, and there are other customer columns each prefixed with either `address1*` or `address2*` that contain the corresponding address information from the `customeraddress` table.
+
+The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK_AddressNumber) column tells you which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer, but you can set an existing `addressnumber` value to null, and then change the values if you want to swap the relative position of the records for the customer records. Other than controlling the respective address position in the customer record (either `1` or `2`), the `addressnumber` column value isn't used for any other purpose and is usually null.
+
+Dataverse will only update these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add additional `customeraddress` records associated with the `account` or `contact` record that are not embedded with the account and contact records via the `address1*` or `address2*` columns.
+
+All customer address records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [addressnumber](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
+
+### Deletion of embedded customer address rows isn't allowed
+
+By default, if you attempt to delete one of the two `customeraddress` records that are referenced in the `address1_addressid` or `address2_addressid` for an customer record, you will get the following error:
+
+> Name: `CannotDeleteDueToAssociation`<br />
+> Code: `0x80040227`<br />
+> Number: `-2147220953`<br />
+> Message: `Customer Address can not be deleted because it is associated with another object. Address Id = 4f33c2e4-d5a3-4b03-b050-21984c0e4c15, AddressNumber=2, ParentId=4b757ff7-9c85-ee11-8179-000d3a9933c9, ObjectTypeCode=1`
+
+[Learn how you can change this behavior](#delete-address-data-in-dataverse)
+
+
+### Disable Empty Record Creation
+
+Because each row in the `customeraddress` table counts against the Dataverse capacity you pay for, you may want to minimize this cost.
+
+You can tell Dataverse not to create empty `customeraddress` table rows for each customer record by changing a the **Disable empty address record creation** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). [Learn more about this setting](/power-platform/admin/settings-features#disable-empty-address-record-creation)
+
+> [!NOTE]
+> Before changing this behavior, you should consider whether you have existing customizations that depend on default behavior.
+
+While this setting is on, no new empty `customeraddress` table rows will be created when new customer records are created. Records are only created only if the incoming payload contains address data. If this setting is switched off, the default behavior resumes. Turning this setting on doesn't delete any existing `customeraddress` table rows. Switching this setting back on will not re-create records that would have been created while it was switched off.
+
+#### Detect whether Disable empty address record creation is enabled
+
+These example functions show how to detect whether the **Disable empty address record creation** setting is enabled in the environment with code.
+
+##### [SDK for .NET](#tab/sdk)
+
+```csharp
+TODO
+```
+
+
+##### [Web API](#tab/webapi)
+
+This `Test-IsEmptyAddressRecordCreationDisabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depend on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+
+```powershell
+function Test-IsEmptyAddressRecordCreationDisabled {
+
+   $orgId = Get-WhoAmI | Select-Object -ExpandProperty OrganizationId
+
+   $orgdborgsettings = Get-Record `
+      -setName 'organizations' `
+      -id $orgId `
+      -query "?`$select=orgdborgsettings" 
+   | Select-Object `
+      -ExpandProperty orgdborgsettings
+
+   $xml = [xml]$orgdborgsettings
+
+   $element = $xml.SelectSingleNode("//CreateOnlyNonEmptyAddressRecordsForEligibleEntities")
+
+   if ($null -eq $element) {
+      return $false
+   }
+   else {
+      $value = $element.InnerText
+      if ($value -eq 'true') {
+         return $true
+      }
+      else {
+         return $false
+      }
+   }
+}
+```
+
+---
+
+
+### Delete Address Data in Dataverse
+
+By default, you can't delete embedded `customeraddress` table rows that are referenced by the `address1_addressid` and `address2_addressid` columns in customer tables. See [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed)
+
+You can change this with the **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). [Learn more about this setting](/power-platform/admin/settings-features#enable-deletion-of-address-records)
+
+#### Detect whether Enable Deletion of Address Records is enabled
+
+These example functions show how to detect whether the **Enable Deletion of Address Records** setting is enabled in the environment with code.
+
+##### [SDK for .NET](#tab/sdk)
+
+```csharp
+TODO
+```
+
+
+##### [Web API](#tab/webapi)
+
+This `Test-IsDeleteAddressRecordsEnabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depend on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+
+```powershell
+function Test-IsDeleteAddressRecordsEnabled {
+
+   $orgId = Get-WhoAmI | Select-Object -ExpandProperty OrganizationId
+
+   $orgdborgsettings = Get-Record `
+      -setName 'organizations' `
+      -id $orgId `
+      -query "?`$select=orgdborgsettings" 
+   | Select-Object `
+      -ExpandProperty orgdborgsettings
+
+   $xml = [xml]$orgdborgsettings
+
+   $element = $xml.SelectSingleNode("//EnableDeleteAddressRecords")
+
+   if ($null -eq $element) {
+      return $false
+   }
+   else {
+      $value = $element.InnerText
+      if ($value -eq 'true') {
+         return $true
+      }
+      else {
+         return $false
+      }
+   }
+}
+```
+
+---
+
+
+### Bulk delete of empty customer address records
+
+After you have enabled the **Disable empty address record creation** and **Enable deletion of address records** settings, you can use the following example functions to asynchronously delete empty customeraddress records using the `BulkDelete` message.
+
+
+##### [SDK for .NET](#tab/sdk)
+
+```csharp
+TODO
+```
+
+
+##### [Web API](#tab/webapi)
+
+```powershell
+TODO
+```
+
+---
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
-## Disable Empty Record Creation
-
-Users can disable empty record creation.
-
-**Configuration required to disable empty record creation**
-Navigate to Power Platform Admin Center (PPAC) and click on **Environments** option on the left side panel.
-Choose the radio button corresponding to the environment that needs "Disable empty record creation" feature enabled. 
-Click on **Settings** on the top of the page and on the next page, navigate to **Product** and **Features** settings page.
-Scroll down the **Features** setting page to enable **Disable Empty Address Record Creation** 
-click Save on the bottom of the page to save the changes.
-
-**How does this feature work**
-The Power Platform Environment where the **Disable Empty Address Record Creation** is enabled, an address record will not be created if incoming payload does not contain data in address info. This feature ensures that an address record will be created only if the incoming payload contains address data.
-**Note**: Enabling this feature does not remove existing empty address records. 
-
-The **Disable Empty Address Record Creation** setting is applicable only for Account, Contact and Lead tables in Dataverse. Any other table that is associated with an address will not be impacted by this setting. For example if a table named Warehouse or Location has address associated with it and the incoming payload has empty address data, an empty address data record will be created for Warehouse.
-
-The user can add or remove the **Disable Empty Address Record Creation** setting anytime. However the changes to setting will not have any impact on its previous setting. For example If **Disable Empty Address Record Creation** was enabled earlier and the user turned it off later, the system will NOT backfill any missing empty address table records. And Microsoft does not support to manually backfill those empty address records.
-
-## Delete Address Data in Dataverse ##
-
-**Enable Deletion of Address Records** is a feature that allows an user to delete address data in Dataverse if this flag is enabled in Product Features setting page. The default functionality in Dataverse will not allow users to delete address records in Dataverse. Address record deletion capability is applicable only for Account, Contact and Lead tables in Dataverse.
-
-Enabling "Deletion of Address Records" feature in Dataverse allows address records to be deleted through the user experience in Power Platform or through bulk delete operation or through SDK. 
-
-**Configuration required to Enable Deletion of address records**
-Navigate to Power Platform Admin Center (PPAC) and click on **Environments** option on the left side panel.
-Choose the radio button corresponding to the environment that needs "Disable empty record creation" feature enabled. 
-Click on **Settings** on the top of the page and on the next page, navigate to **Product** and **Features** settings page.
-Scroll down the **Features** setting page to enable **Enable Deletion of Address Records** 
-click Save on the bottom of the page to save the changes.
 
