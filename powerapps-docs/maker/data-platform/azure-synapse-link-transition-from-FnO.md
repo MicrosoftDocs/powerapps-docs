@@ -25,7 +25,7 @@ Based on preview customer surveys, we also compiled a high level cost and benefi
 
 If you are a customer using legacy services BYOD, data export service, or Export to Data lake, you might have a data integration architecture similar to the one shown here. The highlighted box <!-- Where's the highlighted box in the below diagram? --> indicates the data pipelines your organization might have built to leverage the data exported from Dynamics 365 and Dataverse. You can use a selection of tools from Microsoft, as well as others, to copy and integrate Dynamics data with your own data. You can also transform and aggregate data by copying into multiple stores – shown in the data prep box of the diagram. You can use Power BI or another tool to visualize data and create actionable insights. You might have pipelines built to export data to an on-premises system and other clouds.
 
-![Data integration solution with Export to Data Lake](media/Fabric/before-transition.png)
+:::image type="content" source="media/Fabric/before-transition.png" alt-text="Data integration solution with Export to Data Lake" lightbox="media/Fabric/before-transition.png":::
 
 ## After transition
 
@@ -69,7 +69,7 @@ If your organization is already using Fabric or planning to transition in the co
 
 If you are already consuming data using Power BI, using a data warehouse, or using dataflows and notebooks to transform data, the link to Fabric feature provides immediate value. You can simplify your data integration architecture by removing the need to have your own storage account or Synapse services for Dataverse data. Instead of paying for Azure resources like storage and compute, you pay for the increase in Dataverse storage. Compute charges such as near real-time data updates and management overhead is also factored into Dataverse storage. Fabric link option is like having a near real time read-only replica of your data optimized for insights.
 
-![data integration solution smplified with Fabric Link](media/Fabric/After-transition-fabric.png)
+:::image type="content" source="media/Fabric/After-transition-fabric.png" alt-text="Data integration solution smplified with Fabric link" lightbox="media/Fabric/After-transition-fabric.png":::
 
 Query this replica using T-SQL, Spark, Python as well as other workloads in Fabric. You can also access this data using any tool that can consume T-SQL or can consume data from Azure Data Lake Storage.
 
@@ -78,7 +78,6 @@ As a Dynamics or Power Apps customer, you get a Dataverse storage quota based on
 You can continue to retain Azure platform as a service (PaaS) services, like Databricks and SQL Database, in your own subscription. Recently announced Fabric features like data mirroring and shortcuts can help you further simplify your data integration.
 
 Examples of cost reductions achieved with the simplicity derived from Fabric integration feature are described here.
-
 
 ### Upgrading to Synapse Link
 
@@ -94,7 +93,7 @@ Simplicity achieved with Fabric link and Synapse Link yields reductions in end-t
 
 Consider the case where you transition to Fabric link from Export to Data Lake.
 
-![Before and After solutions with Link to Fabric](media/Fabric/before-after-fabric-link.png)
+:::image type="content" source="media/Fabric/before-after-fabric-link.png" alt-text="Before and after solutions with link to Fabric" lightbox="media/Fabric/before-after-fabric-link.png":::
 
 As indicated in the before and after diagrams above, customer retired Export to Data Lake service (1) as well as staging data stores (2) with Fabric link. For operational insights, (4), they consumed data in OneLake directly in Power BI. Some of the insights require data merge, transformation and aggregation (3). Instead of using disparate Azure services, they standardized on the same tools built into Fabric.
 
@@ -123,7 +122,7 @@ Upgrading to Synapse Link is an option to consider if you are not currently usin
 
 As indicated in the before and after diagrams below, customer retired Export to Data lake service (1) as well as staging data stores (2) with Synapse Link. Data stores used for data staging such as intermediate Azure SQL DBs are retired as Dataverse data is saved in Delta parquet format – a more performant and compressed data format. Downstream pipelines used for data merge, transformation and aggregation, (3), as well as (4) presentation tools such as Power BI remain unchanged.  
 
-![Before and After upgrade to Synapse Link](media/Fabric/before-after-synapse-link.png)
+:::image type="content" source="media/Fabric/before-after-synapse-link.png" alt-text="Before and after upgrade to Synapse Link" lightbox="media/Fabric/before-after-synapse-link.png":::
 
 Synapse Link provides an easy upgrade path for customers looking to extend their existing investments with minimal changes. As we discuss below, innovations in Dataverse enable easy transition from FnO services like Export to Data lake and BYOD.
 
@@ -152,10 +151,11 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 >  
 
 ### Example 3: incrementally ingesting data to a data warehouse
+
 If you are currently consuming incremental data from Export to Data lake feature to populate a downstream data pipeline, you can continue to use the same pipeline. As shown below, Synapse Link service can export incremental data changes in the same format as Change feeds in Export to Data lake. 
 
-![Before and After upgrade to Synapse Link](media/Fabric/before-after-incremental.png)
- 
+:::image type="content" source="media/Fabric/before-after-incremental.png" alt-text="Before and after incremental data export to Synapse Link" lightbox="media/Fabric/before-after-incremental.png":::
+
 Synapse Link service provides several enhancements over Export to Data lake for incremental data changes.
 -	Initial data load is included within change folders. This makes it easy for the same pipeline to consume both the initial load as well as incremental updates. 
 -	Change data is not deleted in case of a re-initialization of a table.
@@ -171,11 +171,11 @@ If you upgrade to Synapse Link and continue to export data, your data is saved i
 
 Consider the time taken to refresh an operational report such as Inventory analysis or month-end Financial analysis. These reports may require data aggregation of millions of rows of data from multiple tables in Dynamics 365 Finance. Using export to data lake service, CSV data is exported within 10mins. This data may need to be imported into a Power BI report to provide better response times. Power BI refresh can be performed up to 24 times/ day (ie. every 30mins) and depending on how the report is designed, refresh may take several minutes to complete refresh. Using this approach, users can see data within 60mins of an update.
 
-![data staleness with export to data lake](media/Fabric/before-data-staleness.png)
+![Data staleness with Export to Data Lake](media/Fabric/before-data-staleness.png)
 
 Operational reports that source data using Fabric Link can leverage Direct Lake mode or DirectQuery mode in Fabric which leverages the in-memory index built into Delta/parquet files. In these modes, you don’t need to schedule refresh of Power BI reports as the report always shows latest Dataverse data updated in Fabric.
 
-![data staleness after Fabric Link](media/Fabric/after-data-staleness.png)
+![Data staleness after Fabric link](media/Fabric/after-data-staleness.png)
 
 Fabric Link service updates data in Dataverse OneLake within the hour as of this point in time. Dataverse triggers data update jobs every 15mins and depending on the volume of data changes, you may see updated parquet files within 30~60mins. We are working on reducing this frequency in the coming months to enable more real-time reporting.
 
