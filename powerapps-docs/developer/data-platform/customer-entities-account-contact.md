@@ -47,19 +47,21 @@ Linking tables such as activities and notes to the `contact` table lets user see
 
 This table contains additional address and shipping information for customer records (account and contact). By default, Dataverse creates two `customeraddress` records in this table when a new customer record is created, even when there is no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation)
 
+All `customeraddress` records related to account and contact records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
+
 ### Address data embedded with customer records
 
 You can retrieve or modify the data for these two embedded `customeraddress` records with the customer record. Both `account` and `contact` tables have columns `address1_addressid` and `address2_addressid` which store `customeraddressid` values, and there are other customer columns each prefixed with either `address1*` or `address2*` that contain the corresponding address information from the `customeraddress` table.
 
-The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK_AddressNumber) column tells you which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer, but you can set an existing `addressnumber` value to null, and then change the values if you want to swap the relative position of the records for the customer records. Other than controlling the respective address position in the customer record (either `1` or `2`), the `addressnumber` column value isn't used for any other purpose and is usually null.
+The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK_AddressNumber) column tells you which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer, but you can set an existing `addressnumber` value to null, and then change the value of another record if you want to swap the relative position of the records for the customer records. Other than controlling the respective address position in the customer record (either `1` or `2`), the `addressnumber` column value isn't used for any other purpose and is usually null.
 
-Dataverse will only update these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add additional `customeraddress` records associated with the `account` or `contact` record that are not embedded with the account and contact records via the `address1*` or `address2*` columns.
+Dataverse will only update these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add additional `customeraddress` records associated with the `account` or `contact` record that are not embedded with the account and contact records.
 
-All customer address records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
+
 
 #### Deletion of embedded customer address rows isn't allowed
 
-By default, if you attempt to delete one of the two embedded `customeraddress` records that are referenced in the `address1_addressid` or `address2_addressid` for an customer record, you will get the following error:
+By default, if you attempt to delete one of the two embedded `customeraddress` records that are referenced in the `address1_addressid` or `address2_addressid` for an customer record, you will get an error like the following:
 
 > Name: `CannotDeleteDueToAssociation`<br />
 > Code: `0x80040227`<br />
@@ -200,7 +202,7 @@ function Test-IsDeleteAddressRecordsEnabled {
 
 ### Bulk delete of empty customer address records
 
-After you have enabled the **Disable empty address record creation** and **Enable deletion of address records** settings, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
+After you have disabled empty address record creation and enabled deletion of address records, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
 
 
 ##### [SDK for .NET](#tab/sdk)
