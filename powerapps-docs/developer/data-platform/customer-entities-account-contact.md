@@ -13,7 +13,7 @@ search.audienceType:
 
 # Customer tables (account, contact, customeraddress)
 
-The [account](reference/entities/account.md) and [contact](reference/entities/contact.md) tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. The [customer address](reference/entities/customeraddress.md) table stores address and shipping information for a customer.
+The [account](reference/entities/account.md) and [contact](reference/entities/contact.md) tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. The [customeraddress](reference/entities/customeraddress.md) table stores address and shipping information for a customer.
 
 ## Account table
 
@@ -36,15 +36,15 @@ Both accounts and contacts are part of managing customers and are related to one
 - A contact can have only one account as its parent.
 - A contact can be marked as the primary contact person for an account setting the [Account.PrimaryContactId](reference/entities/account.md#BKMK_PrimaryContactId) column.
 
-The contact table stores all information about a person such as an email address, street address, telephone numbers, and other related information, such as the birthday or anniversary date. Depending on the type of customers a business unit has, it needs either only contacts, or contacts and accounts, to give a full view of its customers.
+The contact table stores information about a person such as an email address, street address, and telephone numbers. It also includes other related information, such as the person's birthday or anniversary date. Depending on the type of customers a business unit has, it needs either only contacts, or contacts and accounts, to give a full view of its customers.
 
-Linking tables such as activities and notes to the `contact` table lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
+Linking tables such as activities and notes to the `contact` table lets user see all the communication the user had with a customer, any actions the user took on behalf of the customer, and all information the user needs about the customer.
 
 ## CustomerAddress table
 
-This table contains additional address and shipping information for customer records (account and contact). By default, Dataverse creates at least two `customeraddress` records in this table when a new customer record is created, even when there is no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation)
+This table contains more address and shipping information for customer records (account and contact). By default, Dataverse creates at least two `customeraddress` records in this table when a new customer record is created, even when there's no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation)
 
-All `customeraddress` records related to account and contact records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
+All `customeraddress` records related to account and contact records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column tells you the type of customer record the address is related to.
 
 ### Address data embedded with customer records
 
@@ -57,11 +57,11 @@ These columns store `customeraddressid` values, and there are other customer col
 
 The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK_AddressNumber) column tells you which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer. You can set an existing `addressnumber` value to null, and then change the value of another record if you want to swap the relative position of the records for the customer records. Other than controlling the respective address position in the customer record (either `1`, `2`, or `3`), the `addressnumber` column value isn't used for any other purpose and is usually null.
 
-Dataverse will only update these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add additional `customeraddress` records associated with the `account` or `contact` record that are not embedded with the account and contact records.
+Dataverse only updates these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add more `customeraddress` records associated with the `account` or `contact` record that aren't embedded with the account and contact records.
 
 #### Deletion of embedded customer address rows isn't allowed
 
-By default, if you attempt to delete one of the embedded `customeraddress` records that are referenced in the `address1_addressid`, `address2_addressid`, or `address3_addressid` for an customer record, you will get an error like the following:
+By default, if you attempt to delete one of the embedded `customeraddress` records that are referenced in the `address1_addressid`, `address2_addressid`, or `address3_addressid` for a customer record, you get an error like the following:
 
 > Name: `CannotDeleteDueToAssociation`<br />
 > Code: `0x80040227`<br />
@@ -72,13 +72,13 @@ By default, if you attempt to delete one of the embedded `customeraddress` recor
 
 ### Disable Empty Record Creation
 
-Because each row in the `customeraddress` table counts against the Dataverse capacity you pay for, you may want to minimize this cost.
+Because each row in the `customeraddress` table counts against the Dataverse capacity you pay for, you might want to minimize this cost.
 
-You can tell Dataverse not to create empty `customeraddress` table rows for each customer record by changing a the **Disable empty address record creation** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Before changing this behavior, you should consider whether you have existing customizations that depend on default behavior. [Learn more about this setting](/power-platform/admin/settings-features#disable-empty-address-record-creation)
+You can tell Dataverse not to create empty `customeraddress` table rows for each customer record by changing the **Disable empty address record creation** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Before changing this behavior, you should consider whether you have existing customizations that depend on default behavior. [Learn more about this setting](/power-platform/admin/settings-features#disable-empty-address-record-creation)
 
-While this setting is on, no new empty `customeraddress` table rows will be created when new customer records are created. Records are only created if the incoming payload contains address data. Normally, the payload only includes columns that have data. If there is no data for the columns, they aren't included in the payload and the values are null when the record is saved. However, if the payload contains address columns with values set to null, the address is created with null values. If you continue to see empty records being created, check how they are created and whether that client application is sending column data with null values.
+While this setting is on, no new empty `customeraddress` table rows are created when new customer records are created. Records are only created if the incoming payload contains address data. Normally, the payload only includes columns that have data. If there's no data for the columns, the columns aren't included in the payload and the values are null when the record is saved. However, if the payload contains address columns with values set to null, the address is created with null values. If you continue to see empty records being created, check how they're created and whether that client application is sending column data with null values.
 
-If the **Disable empty address record creation**  setting is switched off, the default behavior resumes. Turning this setting on doesn't delete any existing `customeraddress` table rows. Switching this setting back on after it was switched off will not re-create records that would have been created.
+If the **Disable empty address record creation**  setting is switched off, the default behavior resumes. Turning on this setting doesn't delete any existing `customeraddress` table rows. Switching this setting back on after it was switched off doesn't re-create records that weren't created.
 
 #### Detect whether empty address record creation is disabled
 
@@ -86,7 +86,7 @@ These example functions show how to detect whether the **Disable empty address r
 
 ##### [SDK for .NET](#tab/sdk)
 
-This static `IsEmptyAddressRecordCreationDisabled` method uses the [WhoAmIRequest class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and the [IOrganizationService.Retrieve method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve) to check a value in the [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings)
+This static `IsEmptyAddressRecordCreationDisabled` method uses the [WhoAmIRequest class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and the [IOrganizationService.Retrieve method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve) to check a value in the [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings).
 
 ```csharp
 static bool IsEmptyAddressRecordCreationDisabled(IOrganizationService service)
@@ -148,9 +148,9 @@ function Test-IsEmptyAddressRecordCreationDisabled {
 
 ### Delete embedded address records
 
-By default, you can't delete embedded `customeraddress` table rows that are referenced by the `address1_addressid`, `address2_addressid`, or `address3_addressid` columns in customer tables. See [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed)
+By default, you can't delete embedded `customeraddress` table rows referenced by the `address1_addressid`, `address2_addressid`, or `address3_addressid` columns in customer tables. See [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed)
 
-You can change this with the **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). [Learn more about this setting](/power-platform/admin/settings-features#enable-deletion-of-address-records)
+The **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) changes this behavior. [Learn more about this setting](/power-platform/admin/settings-features#enable-deletion-of-address-records)
 
 #### Detect whether deletion of address records is enabled
 
@@ -216,9 +216,9 @@ function Test-IsDeleteAddressRecordsEnabled {
 
 ### Bulk delete of empty customer address records
 
-After you have disabled empty address record creation and enabled deletion of address records, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
+After you disable empty address record creation and enable deletion of address records, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
 
-These functions are based on the [Address (CustomerAddress) Writable columns/attributes](reference/entities/customeraddress.md#writable-columnsattributes) and do not include any custom columns that may be in your environment. You may want to alter these queries if you need to include your custom columns.
+These functions are based on the [Address (CustomerAddress) Writable columns/attributes](reference/entities/customeraddress.md#writable-columnsattributes) and don't include any custom columns that might be in your environment. You might want to alter these queries if you need to include your custom columns.
 
 ##### [SDK for .NET](#tab/sdk)
 
