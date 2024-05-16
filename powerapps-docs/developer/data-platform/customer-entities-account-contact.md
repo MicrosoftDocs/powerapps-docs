@@ -55,18 +55,18 @@ The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK
 
 Dataverse will only update these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add additional `customeraddress` records associated with the `account` or `contact` record that are not embedded with the account and contact records via the `address1*` or `address2*` columns.
 
-All customer address records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [addressnumber](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
+All customer address records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column will tell you the type of customer record the address is related to.
 
-### Deletion of embedded customer address rows isn't allowed
+#### Deletion of embedded customer address rows isn't allowed
 
-By default, if you attempt to delete one of the two `customeraddress` records that are referenced in the `address1_addressid` or `address2_addressid` for an customer record, you will get the following error:
+By default, if you attempt to delete one of the two embedded `customeraddress` records that are referenced in the `address1_addressid` or `address2_addressid` for an customer record, you will get the following error:
 
 > Name: `CannotDeleteDueToAssociation`<br />
 > Code: `0x80040227`<br />
 > Number: `-2147220953`<br />
 > Message: `Customer Address can not be deleted because it is associated with another object. Address Id = 4f33c2e4-d5a3-4b03-b050-21984c0e4c15, AddressNumber=2, ParentId=4b757ff7-9c85-ee11-8179-000d3a9933c9, ObjectTypeCode=1`
 
-[Learn how you can change this behavior](#delete-address-data-in-dataverse)
+[Learn how you can change this behavior](#delete-embedded-address-records)
 
 
 ### Disable Empty Record Creation
@@ -78,11 +78,11 @@ You can tell Dataverse not to create empty `customeraddress` table rows for each
 > [!NOTE]
 > Before changing this behavior, you should consider whether you have existing customizations that depend on default behavior.
 
-While this setting is on, no new empty `customeraddress` table rows will be created when new customer records are created. Records are only created only if the incoming payload contains address data. If this setting is switched off, the default behavior resumes. Turning this setting on doesn't delete any existing `customeraddress` table rows. Switching this setting back on will not re-create records that would have been created while it was switched off.
+While this setting is on, no new empty `customeraddress` table rows will be created when new customer records are created. Records are only created only if the incoming payload contains address data. If this setting is switched off, the default behavior resumes. Turning this setting on doesn't delete any existing `customeraddress` table rows. Switching this setting back on after it was switched off will not re-create records that would have been created.
 
 #### Detect whether Disable empty address record creation is enabled
 
-These example functions show how to detect whether the **Disable empty address record creation** setting is enabled in the environment with code.
+These example functions show how to detect whether the **Disable empty address record creation** setting is enabled in the environment.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -90,6 +90,10 @@ These example functions show how to detect whether the **Disable empty address r
 TODO
 ```
 
+- [Use the SDK for .NET](org-service/overview.md)
+- [WhoAmIRequest Class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest)
+- [Retrieve a table row using the SDK for .NET](org-service/entity-operations-retrieve.md)
+- [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings)
 
 ##### [Web API](#tab/webapi)
 
@@ -126,10 +130,15 @@ function Test-IsEmptyAddressRecordCreationDisabled {
 }
 ```
 
+- [Use the Microsoft Dataverse Web API](webapi/overview.md)
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
+- [Organization entitytype](xref:Microsoft.Dynamics.CRM.Organization)
+
 ---
 
 
-### Delete Address Data in Dataverse
+### Delete embedded address records
 
 By default, you can't delete embedded `customeraddress` table rows that are referenced by the `address1_addressid` and `address2_addressid` columns in customer tables. See [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed)
 
@@ -181,12 +190,17 @@ function Test-IsDeleteAddressRecordsEnabled {
 }
 ```
 
+- [Use the Microsoft Dataverse Web API](webapi/overview.md)
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
+- [Organization entitytype](xref:Microsoft.Dynamics.CRM.Organization)
+
 ---
 
 
 ### Bulk delete of empty customer address records
 
-After you have enabled the **Disable empty address record creation** and **Enable deletion of address records** settings, you can use the following example functions to asynchronously delete empty customeraddress records using the `BulkDelete` message.
+After you have enabled the **Disable empty address record creation** and **Enable deletion of address records** settings, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
 
 
 ##### [SDK for .NET](#tab/sdk)
@@ -195,12 +209,22 @@ After you have enabled the **Disable empty address record creation** and **Enabl
 TODO
 ```
 
+- [Use the SDK for .NET](org-service/overview.md)
+- [BulkDeleteRequest class](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest)
+- [Delete data in bulk](delete-data-bulk.md)
+
+
 
 ##### [Web API](#tab/webapi)
 
 ```powershell
 TODO
 ```
+
+- [Use the Microsoft Dataverse Web API](webapi/overview.md)
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete)
+- [Delete data in bulk](delete-data-bulk.md)
 
 ---
 
