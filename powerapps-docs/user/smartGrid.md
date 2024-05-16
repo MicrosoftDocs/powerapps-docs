@@ -22,13 +22,14 @@ You can use Copilot to quickly sort, filter, and search the items in canvas app 
 When trying to quickly find the gallery items you need, you might worry about spending time scrolling without success. With the assistance of Copilot, you can quickly use natural language to sort, filter, and search the gallery to find the items you need.
 
 > [!IMPORTANT]
+> - This feature is not yet available and is expected to begin rollout as on-by-default in early June.  However, if you turn the feature off before the release, the feature should be turned off when it rolls out to you.
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected.  Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> -  This feature is currently only available for galleries that use SharePoint as their sole data source.  More data sources will be added to have this capability in the future. 
+> - This feature is designed for galleries that use SharePoint as their sole data source. More data sources will be added to have this capability in the future.
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
 ## Use this feature
