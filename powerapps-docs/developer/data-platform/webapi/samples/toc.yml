@@ -49,6 +49,8 @@ items:
     href: ../web-api-samples-powershell.md
   - name: Basic Operations
     href: basic-operations-powershell.md
+  - name: Metadata Operations
+    href: metadata-operations-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
