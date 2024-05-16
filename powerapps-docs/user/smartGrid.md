@@ -28,7 +28,6 @@ When trying to quickly find the gallery items you need, you might worry about sp
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out, and may not be available in your region yet. 
 > -  This feature is currently only available for galleries that use SharePoint as their sole data source.  More data sources will be added to have this capability in the future. 
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
@@ -50,9 +49,10 @@ When trying to quickly find the gallery items you need, you might worry about sp
 You can turn off gallery filtering for an app or an environment using a PowerShell cmdlet.  
 
 > [!NOTE]
-> - When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+> - When using PowerShell cmdlets, you must use the latest Power Apps admin PowerShell module version. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 > - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
 > - The PowerShell cmdlets may take up to two hours to take effect.
+> - This feature is not yet available and is expected to begin rollout as on-by-default in early June.  However, if you turn it off before release, the feature should be disabled when it rolls out to you.
 
 ### Turn off gallery filtering for an app
 
