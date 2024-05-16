@@ -80,7 +80,7 @@ You can tell Dataverse not to create empty `customeraddress` table rows for each
 
 While this setting is on, no new empty `customeraddress` table rows will be created when new customer records are created. Records are only created only if the incoming payload contains address data. If this setting is switched off, the default behavior resumes. Turning this setting on doesn't delete any existing `customeraddress` table rows. Switching this setting back on after it was switched off will not re-create records that would have been created.
 
-#### Detect whether Disable empty address record creation is enabled
+#### Detect whether empty address record creation is disabled
 
 These example functions show how to detect whether the **Disable empty address record creation** setting is enabled in the environment.
 
@@ -144,7 +144,7 @@ By default, you can't delete embedded `customeraddress` table rows that are refe
 
 You can change this with the **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). [Learn more about this setting](/power-platform/admin/settings-features#enable-deletion-of-address-records)
 
-#### Detect whether Enable Deletion of Address Records is enabled
+#### Detect whether deletion of address records is enabled
 
 These example functions show how to detect whether the **Enable Deletion of Address Records** setting is enabled in the environment with code.
 
