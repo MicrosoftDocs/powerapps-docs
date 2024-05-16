@@ -1,6 +1,6 @@
 ---
-title: Transition from export to data lake and BYOD to Fabric link and Azure Synapse Link for Dataverse
-description: Learn how to transition from export to data lake and BYOD in finance and operations to link to Fabric and Azure Synapse Link for Microsoft Dataverse.
+title: Transition from legacy data generation services to Fabric link and Azure Synapse Link for Dataverse
+description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
 ms.date: 05/16/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 ms.custom: bap-template
 ---
-# Transitioning from export to data lake and BYOD
+# Transition from legacy data generation services
 
 Data export service, [bring your own database (BYOD)](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), and [Export to Data Lake](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we improved these services over the years with updates, as part of unification of Dynamics 365 with the power platform, we re-architected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps (make.powerapps.com). Transitioning to Microsoft Fabric link or upgrading to Azure Synapse Link, the re-architected services provide you with an easy ramp to benefit from AI and Copilot investments in Microsoft Dataverse and Fabric.
 
@@ -107,9 +107,9 @@ Innovations in Dataverse and Fabric enable simplifications and cost reductions:
 <!-- start here -->
 These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
-| Cost savings/ Line item  |  Before cost - Export to data lake | After cost - Fabric Link |
+| Cost savings line item  |  Before cost - export to data lake | After cost - Fabric link |
 |-------------------------------|------------------------------------|------------------------------------------|
-| **Set-up & configuration** | 	Need to use multiple tools <br> - Pay for multiple software licenses/ subscriptions <br> - System configuration efforts <br>- effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users |	Simpler configuration experience in Power platform. <br><br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use – in some cases, you are billed by the second. <br><br> No ETL pipelines needed for Dataverse data |
+| **Set-up and configuration** | 	Need to use multiple tools <br> - Pay for multiple software licenses/ subscriptions <br> - System configuration efforts <br>- effort to build/ validate data pipelines <br> - continued governance, management, and monitoring <br> - training of users |	Simpler configuration experience in Power platform. <br><br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use – in some cases, you are billed by the second. <br><br> No ETL pipelines needed for Dataverse data |
 | **Data Staging (1, 2)** | Cost incurred for Azure services <br> -	Azure storage cost including cost of IO <br> -	Synapse Analytics (SQL serverless query) <br> -	Data Factory jobs to copy data <br> -	Staging data stores (ex. SQL DB)	| Cost increase in Dataverse DB storage <br><br> Ex. if you sync 500GB of data from D365, Dataverse storage may increase by around 100GB (assuming 5-8x data compression) |
 | **Operating Costs - Data Prep (3)** | - Azure storage staging area <br> - Data pipelines <br>- Data ingestion into SQL or Dwh <br> - Development/ maintenance Data | Spend shifts to Fabric where you pay for consumption with a shared capacity. |
 | **Operating Costs – Reporting (4)** <br> - Power BI datasets <br> - Reporting |	Synapse analytics (SQL Query) <br> Power BI capacity and storage for import mode reports	| As your data is compressed, (ex. 1/3 ~ 1/6 original size) your reporting and query costs reduce accordingly. <br><br> New features like DirectLake reporting reduces consumption of Power BI storage consumption.| 
