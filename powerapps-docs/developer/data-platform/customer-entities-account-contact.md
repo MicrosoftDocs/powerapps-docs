@@ -133,7 +133,7 @@ function Test-IsEmptyAddressRecordCreationDisabled {
 - [Use the Microsoft Dataverse Web API](webapi/overview.md)
 - [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 - [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
-- [Organization entitytype](xref:Microsoft.Dynamics.CRM.Organization)
+- [Organization entitytype](xref:Microsoft.Dynamics.CRM.organization)
 
 ---
 
@@ -193,7 +193,7 @@ function Test-IsDeleteAddressRecordsEnabled {
 - [Use the Microsoft Dataverse Web API](webapi/overview.md)
 - [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 - [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
-- [Organization entitytype](xref:Microsoft.Dynamics.CRM.Organization)
+- [Organization entitytype](xref:Microsoft.Dynamics.CRM.organization)
 
 ---
 
