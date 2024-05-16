@@ -15,7 +15,7 @@ ms.custom: bap-template
 ---
 # Transition from legacy data generation services
 
-Data export service, [bring your own database (BYOD)](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), and [Export to Data Lake](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we improved these services over the years with updates, as part of unification of Dynamics 365 with the power platform, we re-architected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps (make.powerapps.com). Transitioning to Microsoft Fabric link or upgrading to Azure Synapse Link, the re-architected services provide you with an easy ramp to benefit from AI and Copilot investments in Microsoft Dataverse and Fabric.
+Data export service, [bring your own database (BYOD)](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), and [Export to Data Lake](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we improved these services over the years with updates as part of unification of Dynamics 365 with the power platform, we re-architected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps (make.powerapps.com). Transitioning to Microsoft Fabric link or upgrading to Azure Synapse Link, the re-architected services provide you with an easy ramp to benefit from AI and Copilot investments in Microsoft Dataverse and Fabric.
 
 If you are a customer using any of the previous generation services, this article provides guidance on upgrading to the new experiences, benefiting from innovations, as well as reducing end-to-end expenses and effort.
 
@@ -83,13 +83,13 @@ Examples of cost reductions achieved with the simplicity derived from Fabric int
 
 By upgrading to Synapse Link and enabling Delta or Parquet conversion, you can eliminate Dataverse data prep pipelines in your solution. Synapse Link service exports the same data shapes into your storage account in a more performant Delta or Parquet format. You can continue to use existing tools and Azure services like storage and Azure Synapse Analytics query with minimal disruptions to your production environments.
 
-![data integration solution after upgrade to Synapse Link](media/Fabric/After-transition-synapse-link.png)
+:::image type="content" source="media/Fabric/After-transition-synapse-link.png" alt-text="Data integration solution after upgrade to Synapse Link" lightbox="media/Fabric/After-transition-synapse-link.png":::
 
 ## Understanding benefits and cost reductions
 
 Simplicity achieved with Fabric link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on preview customer experiences.
 
-### Example 1: Transition from BYOD and Export to Data Lake to Fabric link
+### Example 1: Transition from BYOD or Export to Data Lake to Fabric link
 
 Consider the case where you transition to Fabric link from Export to Data Lake.
 
@@ -109,14 +109,14 @@ These innovations yield end-to-end cost savings in addition to the benefits disc
 | Cost savings line item  |  Before cost - export to data lake | After cost - Fabric link |
 |-------------------------------|------------------------------------|------------------------------------------|
 | Set-up and configuration | 	Need to use multiple tools. <br> - Pay for multiple software licenses and subscriptions. <br> - System configuration efforts. <br>- Effort to build and validate data pipelines. <br> - Continued governance, management, and monitoring. <br> - Training of users. |	Simpler configuration experience in Power Platform. <br><br> Purchase Fabric capacity and pay for use for all services. You only pay for what you use. In some cases, you are billed by the second. <br><br> No ETL pipelines needed for Dataverse data. |
-| Data staging (1, 2) | Cost incurred for Azure services. <br> -	Azure storage cost including cost of IO. <br> -	Synapse Analytics (SQL serverless query). <br> -	Data Factory jobs to copy data. <br> -	Staging data stores, such as Azure SQL Database.	| Cost increase in Dataverse storage <br><br> For example, if you sync 500 GB of data from Dynamics 365, Dataverse storage could increase by around 100 GB (assuming five to eight times data compression). |
+| Data staging (1, 2) | Cost incurred for Azure services. <br> -	Azure storage cost including cost of IO. <br> -	Synapse Analytics (SQL serverless query). <br> -	Azure Data Factory jobs to copy data. <br> -	Staging data stores, such as Azure SQL Database.	| Cost increase in Dataverse storage <br><br> For example, if you sync 500 GB of data from Dynamics 365, Dataverse storage could increase by around 100 GB (assuming five to eight times data compression). |
 | Operating Costs - data prep (3) | - Azure storage staging area. <br> - Data pipelines. <br>- Data ingestion into Azure SQL or data warehouse. <br> - Development of maintenance data. | Spending shifts to Fabric where you pay for consumption with a shared capacity. |
 | Operating costs – reporting (4) <br> - Power BI datasets. <br> - Reporting. |	Synapse analytics (SQL query). <br> Power BI capacity and storage for import mode reports.	| As your data is compressed, (for example 1/3 to 1/6 original size) your reporting and query costs reduce accordingly. <br><br> New features like Direct Lake reporting reduces consumption of Power BI storage consumption.|
 
  > [!NOTE]
  > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression can vary depending on volume and composition of data.
 
-### Example 2: upgrade to Synapse Link
+### Example 2: Upgrade to Synapse Link
 
 Upgrading to Synapse Link is an option to consider if you're not currently using Fabric – or not planning to transition in the coming months.
 
@@ -140,17 +140,17 @@ Synapse Link provides an easy upgrade path for customers looking to extend their
 
 These innovations yield end-to-end cost savings in addition to the benefits discussed earlier. The tables here outline the line items of costs along with a comparison of before and after solutions. Use the table as a guideline to estimate expected cost savings.
 
-| Cost savings line item | Before cost - Export to Data lake | After cost - Synapse Link |
+| Cost savings line item | Before cost - Export to Data Lake | After cost - Synapse Link |
 |--------------------------|---------------------------------------|--------------------------------|
 | Set-up and configuration   | Must use multiple tools. <br> -  Pay for multiple software licenses and subscriptions. <br>- System configuration efforts. <br> - Effort to build and validate data pipelines. <br> - Continued governance, management, and monitoring. <br> - Training of users. | Simpler configuration experience in Power Platform. <br> No ETL pipelines needed for Dataverse data. | 
-| Data Staging (1, 2) | Cost incurred for Azure services. <br> - Azure storage cost including cost of IO. <br> - Synapse Analytics (SQL serverless query). <br> - Azure Data Factory jobs to copy data. <br> - Staging data stores, such as Azure SQL Database. | Synapse Link requires you to provide a Spark pool to convert data to Parquet format. <br><br> Depending on the frequency of data sync, as well as the volume of data changes, Spark pool costs can vary. <br><br> Small to medium data changes (per month): <br> - $600 to $2,000 for hourly refresh. <br> - $1,200 to $4,100 for 15 minute refresh. <br><br>  Medium to large data changes (per month): <br> - $1,200 to $2,500 for hourly refresh. <br> - $2,500 to $8,300 for 15 minute refresh. |
+| Data staging (1, 2) | Cost incurred for Azure services. <br> - Azure storage cost including cost of IO. <br> - Synapse Analytics (SQL serverless query). <br> - Azure Data Factory jobs to copy data. <br> - Staging data stores, such as Azure SQL Database. | Synapse Link requires you to provide a Spark pool to convert data to Parquet format. <br><br> Depending on the frequency of data sync, as well as the volume of data changes, Spark pool costs can vary. <br><br> Small to medium data changes (per month): <br> - $600 to $2,000 for hourly refresh. <br> - $1,200 to $4,100 for 15 minute refresh. <br><br>  Medium to large data changes (per month): <br> - $1,200 to $2,500 for hourly refresh. <br> - $2,500 to $8,300 for 15 minute refresh. |
 | Operating costs - data prep (3) | - Azure storage staging area. <br> - Data pipelines. <br> - Data ingestion into Azure SQL Database or data warehouse. <br> - Development and maintenance data. | Same costs as indicated above, however, you might not need to aggregate Dataverse data due to Parquet conversion. |
-| Operating costs - reporting (4) <br> - Power BI datasets. <br> - Reporting. | Synapse Analytics (SQL query). <br> Power BI capacity. | As your data is compressed, for example 1/3 to 1/6 original size, your reporting and query costs reduce accordingly. |
+| Operating costs - reporting (4): <br> - Power BI datasets. <br> - Reporting. | Synapse Analytics (SQL query). <br> Power BI capacity. | As your data is compressed, for example 1/3 to 1/6 original size, your reporting and query costs reduce accordingly. |
 
  > [!IMPORTANT]
  > These estimates are provided to enable estimating the spend after transition. While these estimates are based on experience from preview customers, actual costs incurred in your environment as well as data compression can vary depending on volume and composition of data.
 
-### Example 3: incrementally ingesting data to a data warehouse
+### Example 3: Incrementally ingesting data to a data warehouse
 
 If you are currently consuming incremental data from Export to Data Lake feature to populate a downstream data pipeline, you can continue to use the same pipeline. As shown here, Synapse Link service can export incremental data changes in the same format as changes feed into Export to Data Lake.
 
