@@ -1,7 +1,7 @@
 ---
-title: transition from Export to Data lake and BYOD to Fabric Link and Synapse Link for Dataverse
-description: Learn how to transition from Export to Data lake and BYOD in finance and operations to Link to Fabric and Azure Synapse Link for Dataverse 
-ms.date: 05/11/2024
+title: Transition from export to data lake and BYOD to Fabric link and Azure Synapse Link for Dataverse
+description: Learn how to transition from export to data lake and BYOD in finance and operations to link to Fabric and Azure Synapse Link for Microsoft Dataverse.
+ms.date: 05/16/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -13,75 +13,81 @@ search.audienceType:
   - maker
 ms.custom: bap-template
 ---
-# Transitioning from Export to Data Lake and BYOD
+# Transitioning from export to data lake and BYOD
 
-Data export service (DES), [BYOD](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), [Export to Data lake](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we have improved these services over the years with updates, as part of unification of Dynamics 365 with the power platform, we have rearchitected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps maker portal. Transitioning to Fabric Link or upgrading to Synapse Link, the rearchitected services, provide you with an easy ramp to benefit from AI and Copilot investments in Dataverse and Microsoft Fabric.
+Data export service, [bring your own database (BYOD)](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), and [Export to Data Lake](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we improved these services over the years with updates, as part of unification of Dynamics 365 with the power platform, we re-architected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps (make.powerapps.com). Transitioning to Microsoft Fabric link or upgrading to Azure Synapse Link, the re-architected services provide you with an easy ramp to benefit from AI and Copilot investments in Microsoft Dataverse and Fabric.
 
-If you are a customer using any of the previous generation services, this document provides guidance on upgrading to new experiences, benefiting from innovations as well as reducing end-to-end expenses and effort.
+If you are a customer using any of the previous generation services, this article provides guidance on upgrading to the new experiences, benefiting from innovations, as well as reducing end-to-end expenses and effort.
 
-Based on preview customer surveys, we have also compiled a high level cost and benefits estimate to enable you to help with the transition. You will also see links to more information and videos as well as links to join forums and weekly office hour sessions to engage with product team, Microsoft specialists as well as fellow users as we continue to enhance these services with community participation.
+Based on preview customer surveys, we also compiled a high level cost and benefits estimate to help you with the transition. Links to more information and videos, links to join forums and weekly office hour sessions to engage with the product team, Microsoft specialists, and fellow users are also provided here. We strive to enhance these services with community participation.
 
 ## Before transition 
 
-If you are a customer using legacy services BYOD, DES or Export to Data lake, you may have a data integration architecture similar to the one shown below. The highlighted box indicates the data pipelines your organization may have built to leverage the data exported from Dynamics 365 and Dataverse. You may use a selection of tools from Microsoft as well as others to copy and integrate Dynamics data with your own data. You may also transform and aggregate data by copying into multiple stores – shown under the Data-prep box. You may use Power BI or another tool to visualize data and create actionable insights. You may also have pipelines built to export data to an on-premise system and/or other clouds.
+If you are a customer using legacy services BYOD, data export service, or Export to Data lake, you might have a data integration architecture similar to the one shown here. The highlighted box <!-- Where's the highlighted box in the below diagram? --> indicates the data pipelines your organization might have built to leverage the data exported from Dynamics 365 and Dataverse. You can use a selection of tools from Microsoft, as well as others, to copy and integrate Dynamics data with your own data. You can also transform and aggregate data by copying into multiple stores – shown in the data prep box of the diagram. You can use Power BI or another tool to visualize data and create actionable insights. You might have pipelines built to export data to an on-premises system and other clouds.
 
-![data integration solution with Export to Data lake](media/Fabric/before-transition.png)
+![Data integration solution with Export to Data Lake](media/Fabric/before-transition.png)
 
 ## After transition
 
-There are 2 data integration patterns enabled in Power Apps maker portal. 
--	Synapse Link enables continuous export of data similar to BYOD, Export to Data lake or DES services. This option is enabled for IT admins and data integration specialists.
--	Link to Fabric feature provides a no-copy, no-ETL, fully managed software as a service (SaaS) integration.
+There are two data integration patterns enabled in Power Apps:
 
-These options are complementary and we provide a detailed comparison below. 
+-	Azure Synapse Link enables continuous export of data similar to BYOD, Export to Data Lake, or data export service. This option is enabled for IT admins and data integration specialists.
+- Link to Fabric feature provides a no-copy, no-ETL, fully managed software as a service (SaaS) integration.
 
-If you are a Finance and Operations customer, currently using BYOD or Export to Data lake features, by upgrading to Synapse Link or Fabric Link, you can benefit from:
+These options are complementary. Here's a detailed comparison of the data integration services.
 
-Simplified data integration architecture resulting in reduced operational costs
-- Easy to configure and maintain via Power Apps maker portal - Built-in integration with Synapse and Microsoft Fabric
-- Synapse Link and Fabric Link are fully managed services - requires minimal ongoing management overhead
-- New services offer the same data shapes as previous services – your existing downstream integration pipelines can remain as is.
-- Minimal impact to operational workloads, you don’t need manage workloads and schedule data exports 
+If you're a finance and operations apps customer currently using BYOD or Export to Data Lake features, by upgrading to Azure Synapse Link or Fabric link, you can benefit from a simplified data integration architecture resulting in reduced operational costs:
 
-Secure, end-to-end data integration pipelines 
--	With Fabric link, your data doesn’t leave Dataverse governance boundary while authorized Fabric users can securely access data that resides within Dataverse
--	Synapse Link service enables you to restrict access to your storage accounts with firewalls while enabling Dataverse to export data with Managed Service Identities (MSI) a security feature built into Microsoft Entra. 
+- Easy to configure and maintain via Power Apps (make.powerapps.com). Built-in integration with Azure Synapse and Fabric.
+- Synapse Link and Fabric link are fully managed services. Each requires minimal ongoing management overhead.
+- New services offer the same data shapes as previous services. Your existing downstream integration pipelines can remain as-is.
+- Minimal impact to operational workloads, you don’t need manage workloads and schedule data exports.
 
-If you are a Dynamics 365 customer using Data Export service (DES) or classic Synapse Link with data exports in CSV format, you can benefit from efficient reporting enabled with the industry standard Delta/ Parquet data format.
-- Built-in Delta/ parquet conversion option reduces the need to build your own pipelines for analytics and operational reporting
-- Delta parquet format enables faster, more responsive queries & reports and scales to larger datasets of any size.
-- Data in lake is compressed to 1/3 ~ 1/8 the original size - resulting in smaller files that reduce data query and carrying costs
+Secure, end-to-end data integration pipelines:
 
-| link to Fabric  |  Azure Synapse Link |
+-	With Fabric link, your data doesn’t leave the Dataverse governance boundary while authorized Fabric users can securely access data that resides within Dataverse.
+-	Synapse Link service enables you to restrict access to your storage accounts with firewalls while enabling Dataverse to export data with managed identities for Azure, a security feature built into Microsoft Entra.
+
+If you are a Dynamics 365 customer engagement customer using data export service or classic Synapse Link with data exports in CSV format, you can benefit from efficient reporting enabled with the industry standard Delta or Parquet data format:
+
+- Built-in Delta Lake or Parquet conversion option reduces the need to build your own pipelines for analytics and operational reporting.
+- Delta Lake or Parquet format enables faster, more responsive queries & reports and scales to larger datasets of any size.
+- Data in lake is compressed to 1/3 to 1/8 the original size, resulting in smaller files that reduce data query and carrying costs.
+
+| Link to Fabric  |  Azure Synapse Link |
 |-------------------------------|------------------------------------|
-| No copy, no ETL direct integration with Microsoft Fabric.	 | Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
-| Data stays in Dataverse - users get secure access in Microsoft Fabric. | 	Data stays in your own storage. You manage access to users.|
-| All tables chosen by default.	| System administrators can choose required tables. |
-| Consumes additional Dataverse storage.	| Consumes your own storage as well as other compute and integration tools.| 
+| No copy, no ETL direct integration with Fabric. | Export data to your own storage account and integrate with Azure Synapse, Fabric, and other tools. |
+| Data stays in Dataverse. Users get secure access in Microsoft Fabric. | Data stays in your own storage. You manage access to users.|
+| All tables chosen by default.| System administrators can choose required tables. |
+| Consumes additional Dataverse storage.| Consumes your own storage and other compute and integration tools.|
 
 ## Which option should I use?
-If your organization is already using Fabric or planning to transition in the coming months, we recommend using Fabric Link feature. You can continue to use Synapse Link service if your immediate focus is to upgrade from your current services.
 
-### Simplification with Fabric Link
-If you are already consuming data using Power BI, using Data warehouse, or using Data flows and Notebooks to transform data, Link to Fabric feature provides immediate value. You can simplify your data integration architecture by removing the need to have your own storage account or Synapse services for Dataverse data. Instead of paying for Azure resources like storage and compute, you will pay for the increase in Dataverse storage. Compute charges such as near real-time data updates and management overhead is also factored into Dataverse storage. Fabric Link option is like having a near real time read-only replica of your data optimized for insights.
+If your organization is already using Fabric or planning to transition in the coming months, we recommend using the Fabric link feature. You can continue to use the Synapse Link service if your immediate focus is to upgrade from your current services.
+
+### Simplification with Fabric link
+
+If you are already consuming data using Power BI, using a data warehouse, or using dataflows and notebooks to transform data, the link to Fabric feature provides immediate value. You can simplify your data integration architecture by removing the need to have your own storage account or Synapse services for Dataverse data. Instead of paying for Azure resources like storage and compute, you pay for the increase in Dataverse storage. Compute charges such as near real-time data updates and management overhead is also factored into Dataverse storage. Fabric link option is like having a near real time read-only replica of your data optimized for insights.
 
 ![data integration solution smplified with Fabric Link](media/Fabric/After-transition-fabric.png)
 
-You can query this replica using T-SQL, Spark/ python as well as other workloads in Fabric. You can also access this data using any tool that can consume T-SQL or can consume data from ADLS storage.
+Query this replica using T-SQL, Spark, Python as well as other workloads in Fabric. You can also access this data using any tool that can consume T-SQL or can consume data from Azure Data Lake Storage.
 
-As a Dynamics or PowerApps customer, you get a Dataverse storage quota based on the number of licenses you purchased. Fabric Link feature uses this database quota. You can buy more storage add-ons if the data volume exceeds your quota.
+As a Dynamics or Power Apps customer, you get a Dataverse storage quota based on the number of licenses you purchased. The Fabric link feature uses this database quota. You can buy more storage add-ons if the data volume exceeds your quota.
 
-You can continue to retain Azure PaaS services like Databricks and SQL DBs in your own subscription. Recently announced Fabric features like data mirroring and shortcuts may help you further simplify your data integration.
+You can continue to retain Azure platform as a service (PaaS) services, like Databricks and SQL Database, in your own subscription. Recently announced Fabric features like data mirroring and shortcuts can help you further simplify your data integration.
 
-Refer to examples on cost reductions achieved with the simplicity derived from Fabric integration feature below. 
+Examples of cost reductions achieved with the simplicity derived from Fabric integration feature are described here.
 
 
 ### Upgrading to Synapse Link
-By upgrading to Synapse Link and enabling delta parquet conversion, you can eliminate Dataverse data prep pipelines in your solution. Synapse Link service will export the same data shapes into your storage account in a more performant Delta/ parquet format. You can continue to use existing tools and Azure services like storage and Synapse query with minimal disruptions to your production environments.
+
+By upgrading to Synapse Link and enabling Delta or Parquet conversion, you can eliminate Dataverse data prep pipelines in your solution. Synapse Link service exports the same data shapes into your storage account in a more performant Delta or Parquet format. You can continue to use existing tools and Azure services like storage and Azure Synapse Analytics query with minimal disruptions to your production environments.
 
 ![data integration solution after upgrade to Synapse Link](media/Fabric/After-transition-synapse-link.png)
 
-## Understanding benefits – cost reductions 
+## Understanding benefits – cost reductions
+
 Simplicity achieved with Fabric Link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on preview  customer experiences. 
 
 ### Example 1: Transition from “BYOD” and “Export to Data lake” to Fabric Link 
