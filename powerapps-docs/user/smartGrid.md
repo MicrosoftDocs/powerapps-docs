@@ -1,7 +1,7 @@
 ---
 title: Filter, sort, and search galleries with Copilot (preview)
 description: Learn how to use Copilot to quickly sort, filter, and search canvas app galleries using natural language.
-ms.date: 05/15/2024
+ms.date: 05/16/2024
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -49,10 +49,10 @@ When trying to quickly find the gallery items you need, you might worry about sp
 You can turn off gallery filtering for an app or an environment using a PowerShell cmdlet.  
 
 > [!NOTE]
-> - When using PowerShell cmdlets, you must use the latest Power Apps admin PowerShell module version. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+> - When using PowerShell cmdlets, you must use the latest Power Apps admin PowerShell module version. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin)
 > - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
 > - The PowerShell cmdlets may take up to two hours to take effect.
-> - This feature is not yet available and is expected to begin rollout as on-by-default in early June.  However, if you turn it off before release, the feature should be disabled when it rolls out to you.
+> - This feature is not yet available and is expected to begin rollout as on-by-default in early June.  However, if you turn the feature off before the release, the feature should be turned off when it rolls out to you.
 
 ### Turn off gallery filtering for an app
 
