@@ -1,6 +1,6 @@
 ---
-title: "Fields overview in Power Apps (contains video) | MicrosoftDocs"
-description: "Learn about columns in Power Apps portal"
+title: Short video tutorial on creating new data columns | MicrosoftDocs
+description: Learn to add new columns with our short video for enhanced data capture in your apps
 
 ms.date: 08/13/2021
 ms.reviewer: ""
@@ -20,9 +20,7 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Columns overview
-
-
+# Short video tutorial on creating new data columns
 
 Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app.
 
@@ -31,6 +29,5 @@ Watch this short video that shows you how to quickly create a column.
 
 ## See also
 [Types of columns](types-of-fields.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

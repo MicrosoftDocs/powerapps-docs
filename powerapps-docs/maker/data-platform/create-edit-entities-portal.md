@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 04/11/2024
+ms.date: 5/2/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -50,7 +50,7 @@ More information: [Table designer](#table-designer)
 
 ### Describe the new table
 
-Create a table with the help of AI Copilot.
+Create a table with the help of Copilot in Power Apps.
 
 > [!NOTE]
 > To use this feature, note the following requirements:
