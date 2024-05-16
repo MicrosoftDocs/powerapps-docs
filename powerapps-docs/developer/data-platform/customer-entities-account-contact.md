@@ -70,7 +70,7 @@ By default, if you attempt to delete one of the embedded `customeraddress` recor
 
 [Learn how you can change this behavior](#delete-embedded-address-records)
 
-### Disable Empty Record Creation
+### Disable empty record creation
 
 Because each row in the `customeraddress` table counts against the Dataverse capacity you pay for, you might want to minimize this cost.
 
