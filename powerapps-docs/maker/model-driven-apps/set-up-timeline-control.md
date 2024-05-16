@@ -601,7 +601,7 @@ You can enable timeline highlights at the app level or form level, depending on 
 1. Go to [Power Apps](https://make.powerapps.com/environments/).
 1. Select **Apps** and then select the app for which you want to enable the feature. For example, Sales Hub app. 
 1. Select **Settings** on the command bar and select **Upcoming**.
-1. Turn on the **Enable Timeline highlights** feature.
+1. Turn on the **Enable Timeline Highlights** feature.
 1. Save and publish the changes.
 
 **Enable timeline highlights at the form level**
