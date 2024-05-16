@@ -86,23 +86,25 @@ By upgrading to Synapse Link and enabling Delta or Parquet conversion, you can e
 
 ![data integration solution after upgrade to Synapse Link](media/Fabric/After-transition-synapse-link.png)
 
-## Understanding benefits – cost reductions
+## Understanding benefits and cost reductions
 
-Simplicity achieved with Fabric Link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on preview  customer experiences. 
+Simplicity achieved with Fabric link and Synapse Link yields reductions in end-to-end costs. Consider the following examples that are based on preview customer experiences.
 
-### Example 1: Transition from “BYOD” and “Export to Data lake” to Fabric Link 
-Consider the case where you transition to Fabric Link from Export to Data lake. 
+### Example 1: Transition from BYOD and Export to Data Lake to Fabric link
+
+Consider the case where you transition to Fabric link from Export to Data Lake.
 
 ![Before and After solutions with Link to Fabric](media/Fabric/before-after-fabric-link.png)
- 
-As indicated in the before and after diagrams above, customer retired Export to Data lake service (1) as well as staging data stores (2) with Fabric Link. For operational insights, (4), they were able to consume data in OneLake directly in Power BI. Some of the insights require data merge, transformation and aggregation -(3). Instead of using disparate Azure services, they standardized on same tools built into Microsoft Fabric. 
 
-As we discuss below, innovations in Dataverse and Microsoft Fabric enable simplifications and cost reductions. 
-1.	Dataverse comes with a built-in OneLake store. Operational data from Dynamics 365 and PowerApps are replicated to built-in lake store near real-time (to avoid impact to operational workloads) and linked securely to Fabric via shortcuts. There is no need to bring Azure storage and secure data that’s exported out. Your data doesn’t leave Dataverse governance boundary and authorized users in Fabric can work with data using all Fabric workloads. 
-2.	Export to Data lake (as well as DES) exports data in CSV format. CSV files are not suited for direct consumption due to poor query performance as well as occasional read/write contention issues. “Before solution” uses Azure Data Factory to periodically ingest and convert raw data into a SQL Azure DB or an Azure data warehouse. This layer is not needed in the “after solution” since Dataverse built-in OneLake data is maintained in Dela/ parquet format – the same open format that is native to Microsoft Fabric. Delta/ parquet format, along with optimizations in Fabric removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. You can create Power BI DirectLake reports directly over data in OneLake without any additional data stages. 
-3.	While operational insights can be performed using the data already available in OneLake, you may have additional data from other systems. This data may need to be combined, reshaped and aggregated with Dataverse data. Microsoft Fabric provides an integrated environment which provides best of breed tools like Data flows, Data factory, Spark. As opposed to configuring and provisioning tools standalone, you can simply consume the tools of choice. Integrated billing, source control and security enables simpler management and governance.
-4.	While you can continue to use Power BI service for reporting purposes, Fabric introduces DirectLake mode reporting which leverages the in-memory indexes built into delta/ parquet format thereby removing the need to use Power BI import mode reports. 
+As indicated in the before and after diagrams above, customer retired Export to Data Lake service (1) as well as staging data stores (2) with Fabric link. For operational insights, (4), they consumed data in OneLake directly in Power BI. Some of the insights require data merge, transformation and aggregation (3). Instead of using disparate Azure services, they standardized on the same tools built into Fabric.
 
+Innovations in Dataverse and Fabric enable simplifications and cost reductions:
+
+- Dataverse comes with a built-in OneLake store. Operational data from Dynamics 365 and Power Apps are replicated to built-in lake store near real-time (to avoid impact to operational workloads) and linked securely to Fabric via shortcuts. There's no need to bring Azure storage and secure data that’s exported out. Your data doesn’t leave the Dataverse governance boundary and authorized users in Fabric can work with data using all Fabric workloads.
+- Export to Data Lake and data export service exports data in CSV format. CSV files aren't suitable for direct consumption due to poor query performance as well as occasional read/write contention issues. The [before transition](#before-transition) guidance <!-- Do you mean "before transition" instead of "before solution" here? --> uses Azure Data Factory to periodically ingest and convert raw data into an Azure SQL Database or an Azure data warehouse. This layer isn't needed in the [after transition](#after-transition) guidance <!-- Do you mean "after transition" instead of "after solution" here? -->  since Dataverse built-in OneLake data is maintained in Delta or Parquet format – the same open format that is native to Microsoft Fabric. Delta or Parquet format, along with optimizations in Fabric removes the need to maintain additional data stores for caching and improving query performance while eliminating read/ write contention. You can create Power BI reports using Direct Lake over data in OneLake without any additional data stages.
+-	While operational insights can be performed using the data already available in OneLake, you might have additional data from other systems. This data might need to be combined, reshaped, and aggregated with Dataverse data. Fabric provides an integrated environment, which provides best of breed tools like dataflows, Azure Data Factory, and Apache Spark. Use these tools as opposed to configuring and provisioning tools standalone, where you adopt the tools of your choice. Integrated billing, source control, and security enables simpler management and governance.
+- While you can continue to use Power BI service for reporting purposes, Fabric introduces Direct Lake mode reporting, which leverages the in-memory indexes built into Delta or Parquet format thereby removing the need to use Power BI import mode reports.
+<!-- start here -->
 These innovations yield end-to-end cost savings in addition to the benefits discussed above. Following tables outlines the Line items of costs along with a comparison of before and after solutions. You can use the table below as a guideline to estimate expected cost savings.
 
 | Cost savings/ Line item  |  Before cost - Export to data lake | After cost - Fabric Link |
