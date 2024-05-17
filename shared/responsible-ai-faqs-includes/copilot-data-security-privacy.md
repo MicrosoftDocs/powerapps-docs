@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 05/10/2024
+ms.date: 05/17/2024
 ms.topic: include
 ---
 
@@ -67,6 +67,14 @@ We also offer guidance in the user experience to reinforce the responsible use o
 
 For more information, see the Responsible AI FAQ for your product on Microsoft Learn.
 
+## How does Copilot block harmful content?
+
+Azure OpenAI Service includes a content filtering system that works alongside core models. The content filtering models for the Hate & Fairness, Sexual, Violence, and Self-harm categories have been specifically trained and tested in various languages. This system works by running both the input prompt and the response through classification models that are designed to identify and block the output of harmful content.
+
+Hate and fairness-related harms refer to any content that uses pejorative or discriminatory language based on attributes like race, ethnicity, nationality, gender identity and expression, sexual orientation, religion, immigration status, ability status, personal appearance, and body size. Fairness is concerned with making sure that AI systems treat all groups of people equitably without contributing to existing societal inequities. Sexual content involves discussions about human reproductive organs, romantic relationships, acts portrayed in erotic or affectionate terms, pregnancy, physical sexual acts, including those portrayed as an assault or a forced act of sexual violence, prostitution, pornography, and abuse. Violence describes language related to physical actions that are intended to harm or kill, including actions, weapons, and related entities. Self-harm language refers to deliberate actions that are intended to injure or kill oneself.
+
+[Learn more about Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython#harm-categories).
+
 ## Does Copilot block prompt injections (jailbreak attacks)? 
 
 [Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts that are designed to provoke the generative AI model into behaving in ways it was trained not to or breaking the rules it's been told to follow. Services across Dynamics 365 and Power Platform are required to protect against prompt injections. [Learn more about jailbreak attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
@@ -82,14 +90,6 @@ In the context of AI, especially AI that deals with language models like the one
 Foundation models like GPT-4 are enhanced by Retrieval Augmented Generation (RAG) techniques. These techniques allow the models to use more information than they were trained on to understand a user's scenario. RAG works by first identifying data that is relevant for the scenario, similar to how a search engine identifies web pages that are relevant for the user's search terms. It uses multiple approaches to identify what content is relevant to the user prompt and should be used to ground the response. Approaches include searching against different types of indexes, such as inverted indexes using information retrieval techniques like term matching, or vector indexes using vector distance comparisons for semantic similarity. After it identifies the relevant documents, RAG passes the data to the model along with the current conversation, giving the model more context to better understand the information it already has and generate a response that's grounded in the real world. Finally, RAG checks the response to make sure that it's supported by the source content it provided to the model. Copilot generative AI features incorporate RAG in multiple ways. One example is chat with data using, where a chatbot is grounded with the customer's own data sources.
 
 Another method for enhancing foundational models is known as *fine-tuning*. A large dataset of query-response pairs is shown to a foundational model to augment its original training with new samples that are targeted to a specific scenario. The model can then be deployed as a separate model—one that's fine-tuned for that scenario. While grounding is about making the AI's knowledge relevant to the real world, fine-tuning is about making the AI's knowledge more specific to a particular task or domain. Microsoft uses fine-tuning in multiple ways. For example, we use Power Automate flow creation from natural language descriptions provided by the user.
-
-## How does Copilot block harmful content?
-
-Azure OpenAI Service includes a content filtering system that works alongside core models. The content filtering models for the Hate & Fairness, Sexual, Violence, and Self-harm categories have been specifically trained and tested in various languages. This system works by running both the input prompt and the response through classification models that are designed to identify and block the output of harmful content.
-
-Hate and fairness-related harms refer to any content that uses pejorative or discriminatory language based on attributes like race, ethnicity, nationality, gender identity and expression, sexual orientation, religion, immigration status, ability status, personal appearance, and body size. Fairness is concerned with making sure that AI systems treat all groups of people equitably without contributing to existing societal inequities. Sexual content involves discussions about human reproductive organs, romantic relationships, acts portrayed in erotic or affectionate terms, pregnancy, physical sexual acts, including those portrayed as an assault or a forced act of sexual violence, prostitution, pornography, and abuse. Violence describes language related to physical actions that are intended to harm or kill, including actions, weapons, and related entities. Self-harm language refers to deliberate actions that are intended to injure or kill oneself.
-
-[Learn more about Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython#harm-categories).
 
 ## Does Copilot meet requirements for regulatory compliance? 
 
