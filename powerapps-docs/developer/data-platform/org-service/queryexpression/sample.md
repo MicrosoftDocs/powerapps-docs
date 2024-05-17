@@ -16,7 +16,7 @@ contributors:
 ---
 # QueryExpression sample code
 
-To try using QueryExpression with C#, you can use the `OutputQueryExpression` static method in this article by adapting the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)
+To try using QueryExpression with C#, you can use the `OutputQueryExpression` static method in this article by adapting the [Quickstart: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md)
 
 > [!NOTE]
 > See [Paging Cookie example](page-results.md#paging-cookie-example) for sample code to retrieve data in pages.
@@ -25,7 +25,7 @@ You can use the following `OutputFetchRequest` static method to test FetchXml qu
 
 The `OutputQueryExpression` method demonstrates how to use the [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) and the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) to return an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing the requested data.
 
-The `OutputQueryExpression` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element [attribute elements](reference/attribute.md) are included, which is a best practice.
+The `OutputQueryExpression` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all all [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that contain columns specify an [EntityAlias](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias). 
 
 ```csharp
 /// <summary>
@@ -165,7 +165,7 @@ static void OutputQueryExpression(IOrganizationService service, QueryExpression 
 
 ### Update SDK for .NET quick start sample
 
-You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md) sample to test queries with the following steps:
+You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md) sample to test queries with the following steps:
 
 1. Install the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0)
 1. Add the following using statements at the top of the `program.cs` file
