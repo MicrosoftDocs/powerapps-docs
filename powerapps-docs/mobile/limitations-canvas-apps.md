@@ -20,6 +20,8 @@ searchScope:
 
 ## Limitations and known issues
 
+- a **canvas app not in a solution** cannot be enabled for offline
+
 - The offline-first feature **works for standalone canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md) or [custom pages](../maker/model-driven-apps/model-app-page-overview.md).
 
 - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
@@ -48,4 +50,4 @@ searchScope:
 
 - Items in a gallery may appear in a **different order** in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
 
-
+- Data can only be synced regularly when Power Apps is running in the foreground of your device, with the screen unlocked. (See [sync-data-offline-background](sync-data-offline-background.md)
