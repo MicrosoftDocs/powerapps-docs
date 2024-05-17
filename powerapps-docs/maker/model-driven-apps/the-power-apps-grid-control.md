@@ -106,10 +106,13 @@ To work around this, you can display a custom card by configuring the table to u
 - The grid doesn't currently support legacy theme customizations.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
+- Columns lookup filters, when using 'Equals' or 'Does not equal', only show lookup options avilable with the current set of applied filters.
+  - **Example:** if the Contact entity has users 'Person A', 'Person B', and 'Person C' but Account data only has rows referencing 'Person B' and 'Person C' then the column filter lookup for the Contact column would only shown the options for 'Pereson B' and 'Person C'. This is a change in behavior from previous grids.
 
-### Known issue
+### Known issues
 
-If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If an user has read-only privileges to the main list and then navigates through a form to a sub-grid representing an entity to which they have write privileges, the sub-grid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
 
 ### See also
 
