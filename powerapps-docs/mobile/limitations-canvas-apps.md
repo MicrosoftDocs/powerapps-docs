@@ -18,6 +18,8 @@ searchScope:
 
 # Mobile offline limitations for canvas apps
 
+Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Best practices to use an app for offline](best-practices-offline.md) and how to [Optimize the offline profile](mobile-offline-guidelines).
+
 ## Limitations and known issues
 
 - a **canvas app not in a solution** cannot be enabled for offline
