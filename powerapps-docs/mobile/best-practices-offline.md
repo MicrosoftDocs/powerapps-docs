@@ -19,9 +19,26 @@ searchScope:
 # Best practices to use an app for offline
 In this section, you will find recommendation on how to create the best experience for the users of apps enabled for offline. When an app is enabled for offline, the first thing that the app needs to do is to download all the required assets to work without network connection: the app resources and the data. This setup happens only once during the first usage of the app. The fastest is the set up, the best. This first run experience heavily depends on how much data is downloaded which is directly related to the offline profile configuration but also to the amount of data the user has access to in the environement the app belongs to. 
 
-## Plan your offline profile rollout
+## How to create the best offline user experience in canvas apps?
 
-Develop and roll out your offline profile in three phases:
+Use the following recommendations to create a faster user experience for specific scenarios. 
+
+ |Scenario                      |  Approach that is not recommended                     |  Recommended approach               |
+ |-------------------------------|----------------------------|--------------------------------|
+ | Show related tables information in a gallery. | Use a look-up to fetch the data. | Use a view containing the column of the related table.|
+ | Create a filterable gallery with a lot of records.  | Load the records from Dataverse and store them in a collection. Set the items of the gallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse-filtered data. |
+ | Update multiple records. | Loop the records and patch them individually. | Bulk patch a collection containing all the modifications. |
+
+### Diagnose mobile offline canvas apps with Monitor
+
+Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](/power-apps/maker/monitor-canvasapps) to better diagnose and troubleshoot issues faster.
+
+## Plan your offline app rollout
+
+> [!IMPORTANT]
+>If you are using an **auto-generated offline profile** (canvas apps only), and if the first synchronization is taking too much time, you should probably create a manual offline profile and follow the best practices below. 
+
+Develop and roll out your offline app in three phases:
 
 :::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
 
@@ -34,11 +51,11 @@ In this phase, you'll add tables and apply filters to existing tables to make su
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
 
 > [!IMPORTANT]
-> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
+> The metadata for the model-driven app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
 
 ### Phase 2: Test with users
 
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Device Status page for each user (see how to [enable the Device status page in canvas apps](canvas-mobile-offline-setup.md#create-an-offline-canvas-app)). How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
+Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Device Status page (available out-of-the-box in model-driven apps) for each user (see how to [enable the Device status page in canvas apps](canvas-mobile-offline-setup.md#create-an-offline-canvas-app)). How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
@@ -60,14 +77,10 @@ Test whether your users have all the data they need. Compare the data available 
 
 - **Files and images:** If your offline profile contains files and images, you'll need to add tables for them. For more information, go to [Configure files and images in offline model-driven apps](offline-file-images.md) or [Configure files and images in offline canvas apps](files-images-offline-canvas-apps.md) . Use custom filters to limit download of critical files.
 
-- **Timeline:** To make notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the Notes table to limit download times.
+- **Timeline:** To make notes on the timeline control (model-driven app only) available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the Notes table to limit download times.
 
     > [!IMPORTANT]
     > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.
-
-## Diagnose mobile offline apps with Monitor
-
-Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](/power-apps/maker/monitor-canvasapps) to better diagnose and troubleshoot issues faster.
 
 ## Tips on mobile offline synchronization
   
