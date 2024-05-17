@@ -120,7 +120,7 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
 - Avoid using many OR conditions.
 
 ### See also
-
+- [Best practices to use an app for offline](best-practices-offline.md)
 - [Configure model-driven apps for offline (preview)](mobile-offline-overview.md)
 - [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
 - [Five tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)
