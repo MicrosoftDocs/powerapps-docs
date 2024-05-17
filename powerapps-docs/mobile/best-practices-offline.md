@@ -100,6 +100,7 @@ Test whether your users have all the data they need. Compare the data available 
 
 ### See also
 
+- [Optimize the offline profile](mobile-offline-guidelines.md)
 - [Configure canvas apps for offline](canvas-mobile-offline-overview.md)
 - [Configure model-driven apps for offline](mobile-offline-overview.md)
 - [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
