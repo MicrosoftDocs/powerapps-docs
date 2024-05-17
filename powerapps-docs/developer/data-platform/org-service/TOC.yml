@@ -53,6 +53,9 @@
       - name: Optimize performance
         displayName: Optimize performance using QueryExpression
         href: queryexpression/optimize-performance.md
+      - name: Sample code
+        displayName: QueryExpression, Sample code
+        href: queryexpression/sample.md
     - name: Use the QueryByAttribute class
       href: use-querybyattribute-class.md
   - name: Create table rows
