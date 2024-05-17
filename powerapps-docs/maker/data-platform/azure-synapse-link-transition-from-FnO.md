@@ -185,15 +185,31 @@ If you are consuming incremental data feeds from Dynamics 365 with Export to Dat
 
 ## Known issues and workarounds
 
-Currently, there are several limitations that are being addressed by the product team. Until we fix these limitations, use the suggested workaround. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview Viva Engage group. <!-- Is there a link for this? -->
+Currently, there are several limitations that are being addressed by the product team. Until we fix these limitations, use the suggested workaround. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://akamms.SynapseLinkforDynamics) <!-- Is there a link for this? -->
 
 |Known issue |Workaround |
 | :- | :- |
 |When adding a large number of tables at once, the system makes an initial copy of data. <br> We have seen rare cases (especially in smaller environments and Tier 2 sandboxes) where operational workloads may slow down and Initialize time may become much longer | This may impact smaller environments with fewer AOS servers (compute resources). </p><p>In Synapse Link, Add 5 tables at a time in case your environment is a Tier-2 Sandbox – once the initialization completes, you can add more. <br><br> Fabric Link feature scales initialization workloads up and down as available compute resources at roughly 2 concurrent tables per AOS. <br>Ex. if you have 5 AOS servers in your environment, system concurrently initializes up to 10 tables.</p><p> <br<<br> Update your finance and operations environment to <br> - PU 63 cumulative update 7.0.7198.95 <br> -PU 62 cumulative update 7.0.7120.155 <br> This update redacts varBinary fields and varBinary attachments from tables added to Synapse Link and Fabric Link which reduces impact to operational workloads |
 | When adding tables, the system makes an initial copy of data. In some cases, especially with very large tables, initialization may take longer or appear to be stuck for several days | Update finance and operation environment to <br><br> - PU 63 cumulative update 7.0.7198.91 <br><br> -PU 62 cumulative update 7.0.7120.152
-This update enables faster initialization of large tables (>200m rows) 
+This update enables faster initialization of large tables (>200m rows) <br><br> We have enabled indexes to enable faster data sync. In case there’s an ongoing transaction in the operational database, index creation needs to wait for completion of the transaction. The prolonged wait, sometimes due to dormant transactions, may delay initialization process. In such cases system administrator can detect and to force index creation |
+| In case your Dataverse environment is located in an Azure region different than the one where your Fabric capacity is located, you can’t use the Link to Fabric feature | As of 30-Apr, you can Link to a Fabric capacity located within the same Geo boundary (ex. USA) <br><br> NOTE: you may incur networking charges in Fabric due to data transfer between Azure regions |
+| In case your Dataverse environment is located in an Azure region different than the one where your Data lake or Synapse workspace is located, you can’t use the Synapse Link feature | As of 30-Apr, you can link to a Storage account located within the same geo boundary (ex. USA). <br><br> NOTE: you may incur networking charges in Azure resources like Data lakes if they are not located within the same Azure region. |
+| AOS authorization is a way to secure sensitive data fields in FnO against data exfiltration scenarios. <br> If the table selected contains data columns that are secured via AOS Authorization, those columns are ignored and the exported data doesn't contain the column. <br><br> Ex CustTable, column TaxLicenseNum has the metadata property AOS Authorization set to Yes. This column is ignored | Update your finance and operations environment to following versions or above <br> - PU 63:7.0.7198.105 <br> - PU 62:7.0.7120.159 <br><br>AOS authorization fields will be added to tables. <br>-	Incremental updates will include this column <br> -	Modified records will show these columns and value <br> -	Full refresh will include these fields and all values |
+| If the table selected contains data columns that are of Array type, those columns are ignored and the exported data doesn't contain the column. <br><br>For example, in a custom table named WHSInventTable, columns FilterCode and FilterGroup are of type array. These columns aren't exported with Azure Synapse Link | There is no workaround to this issue. This feature will be enables in a future update. <br><br> Join [Viva engage group](https://aka.msSynapsELinkforDynamics) to stay in touch and onboard preview features when available |
+| In case of finance and operations app tables that exhibit [valid time stamp behavior](https://learn.microsoft.com/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. <br><br> For example, the ExchangeRate table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. |
+| As a workaround, until this issue is fixed, you can use an Entity such as **ExchangeRateBIEntity**. <br>This feature will be enables in a future update. Join [Viva engage group](https://aka.msSynapsELinkforDynamics) to stay in touch and onboard preview features |
+|[Table inheritance and derived tables](https://learn.microsoft.com/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. | You need to select the base table in addition to the derived table if you need access to these fields. <br> You can use [this FastTrack solution provided via GitHub](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables). this solution creates view(s) which include fields from base tables |
+| Export more than 1000 tables via Synapse Link or add more than 1000 tables to Fabric Link |  If you are using Synapse Link, you can workaround by creating 2 or more profiles that contain less than 1000 tables <br><br> We are enabling you to select more than 1000 tables in Fabric Link and in a Synapse Link profile in a future update.| 
 
-We have enabled indexes to enable faster data sync. In case there’s an ongoing transaction in the operational database, index creation needs to wait for completion of the transaction. This wait (sometimes due to dormant transactions) may delay initialization process. In such cases system administrator can detect and to force index creation
+
+
+
+
+
+
+
+
+
 
 
 
