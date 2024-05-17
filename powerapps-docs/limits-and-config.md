@@ -159,7 +159,7 @@ Power Apps does not support running with a proxy enabled. This can cause unpredi
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](/power-platform/power-fx/data-types#text-hyperlink-image-and-media).
 
-For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](maker/data-platform/types-of-fields.md).
+For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](/maker/data-platform/types-of-fields.md).
 
 ## Power Apps per app plan
 
