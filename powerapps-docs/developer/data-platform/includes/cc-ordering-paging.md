@@ -1,13 +1,13 @@
 <!-- 
 This content must remain generic. It is used for FetchXml and QueryExpression.
-It could also be used in the Web API content 
+It is also used in the Web API content 
 -->
 
 ## Ordering and paging
 
 How a page is ordered makes a big difference when paging data. If the information about how the results are ordered is ambiguous, Dataverse can't consistently or efficiently return paged data.
 
-Specify an order for your query. With [FetchXml](../fetchxml/overview.md), if you don't add any order elements to your query, Dataverse adds an order based on the primary key of the table. However [QueryExpression](../org-service/queryexpression/overview.md) does not, and when your query specifies `distinct` results, no primary key values are returned, so Dataverse can't add this default order. You must specify a paging order. Without any order specified, `distinct` query results might be returned in random order.
+Specify an order for your query. With [FetchXml](../fetchxml/overview.md), if you don't add any order elements to your query, Dataverse adds an order based on the primary key of the table. However [QueryExpression](../org-service/queryexpression/overview.md) does not, and when your query specifies `distinct` results, no primary key values are returned, so Dataverse can't add this default order. You must specify a paging order. Without any order specified, `distinct` query results might be returned in random order. OData doesn't provide any option to return distinct results, but you should still apply an order when retrieving paged results.
 
 Paging is dynamic. Each request is evaluated independently as they're received. A paging cookie tells Dataverse the previous page. With this paging cookie data, Dataverse can start with the next record after the last one on the preceding page.
 
