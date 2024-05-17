@@ -19,7 +19,7 @@ search.audienceType:
 
 # Sync data offline in the background
 
-For a model-driven app to be available in offline mode, the app and data must be downloaded, or synced to your device. 
+For a app to be available in offline mode, the app and data must be downloaded, or synced to your device. 
 
 Data can only be synced regularly when Power Apps or Field Service are running in the foreground of your device, with the screen unlocked. However, an ongoing sync can continue when the app is in the background or the screen is locked. Syncing data in this way depends on operating system capabilities which are different for iOS, Android, and Windows. 
 
