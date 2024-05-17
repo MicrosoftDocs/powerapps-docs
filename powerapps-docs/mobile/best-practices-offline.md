@@ -17,7 +17,9 @@ searchScope:
 ---
 
 # Best practices to use an app for offline
-In this section, you will find recommendation on how to create the best experience for the users of apps enabled for offline. When an app is enabled for offline, the first thing that the app needs to do is to download all the required assets to work without network connection: the app resources and the data. This setup happens only once during the first usage of the app. The fastest is the set up, the best. This first run experience heavily depends on how much data is downloaded which is directly related to the offline profile configuration but also to the amount of data the user has access to in the environement the app belongs to. 
+In this section, you will find recommendations on how to create the best experience for the users of apps enabled for offline. 
+- If you enable a canvas app for offline, you also need to optimize how the app is fetching the data from the data source (see [How to create the best offline user experience in canvas apps?](/best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps?)). 
+- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup that occurs during the app’s first use. The speed of this initial run is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless initial experience, it’s advisable to  plan the your [offline profile rollout](/best-practices-offline.md#plan-your-offline-app-rollout).    
 
 ## How to create the best offline user experience in canvas apps?
 
@@ -46,9 +48,9 @@ Develop and roll out your offline app in three phases:
 
 After you've [set up mobile offline for canvas apps](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) or [set up mobile offline for model-driven apps](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
 
-In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
+In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app following the guidelines to [optimize the offline profile](mobile-offline-guideline.md)
 
-***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
+***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable. 
 
 > [!IMPORTANT]
 > The metadata for the model-driven app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
@@ -59,13 +61,13 @@ Ask a few users to test the app with real data. Make sure the offline profile sc
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
-***Outcome:*** You confirm that the offline profile scales to real use cases.
+***Outcome:*** You confirm that the offline profile scales to real use cases. If it is not the case, you need to [optimize the offline profile](mobile-offline-guideline.md)
 
 ### Phase 3: Roll it out
 
 Deploy the app to the rest of your organization.
 
-***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline.
+***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline. 
 
 ## Don't miss the data your users need
 
