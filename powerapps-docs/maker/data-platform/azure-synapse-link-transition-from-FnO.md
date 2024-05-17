@@ -187,7 +187,7 @@ If you are consuming incremental data feeds from Dynamics 365 with Export to Dat
 
 Currently, there are several limitations that are being addressed by the product team. Until we fix these limitations, use the suggested workaround. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://akamms.SynapseLinkforDynamics) <!-- Is there a link for this? -->
 
-<!-- Ire-created the table into a 2 column format. we do need to mention the fix and the workaround, included fixed issues since customers may not be aware .-->
+<!-- Ire-created the table into a 2 column format. we do need to mention the fix and the workaround, included fixed issues since customers may not be aware. Also, I have kept some upcoming fixes - ie. transition guide should tell customers that these are being addressed in the sam eplace - otherwise they won;t even try -->
 
 |Known issue |Fixes and Workarounds |
 | :- | :- |
