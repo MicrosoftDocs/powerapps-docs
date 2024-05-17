@@ -53,3 +53,12 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 - Items in a gallery may appear in a **different order** in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
 
 - Data can only be synced regularly when Power Apps is running in the foreground of your device, with the screen unlocked. (See [sync-data-offline-background](sync-data-offline-background.md)
+
+## Profile filters limitations
+
+|Profile details |Limitation|  
+|-------------|---------|  
+|Relationship defined for each table|Maximum of 15 relationships. And maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
+
+
