@@ -14,13 +14,13 @@ contributors:
 ---
 # Count rows using QueryExpression
 
-Use the boolean [QueryExpression.PageInfo.ReturnTotalRecordCount](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.returntotalrecordcount) to specify that the result include a count of all the records that meet the filter criteria, up to 5000. Use this when retrieving paged results to estimate the total number of pages to display.
+Use the boolean [QueryExpression.PageInfo.ReturnTotalRecordCount property](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.returntotalrecordcount) to specify that the result include a count of all the records that meet the filter criteria, up to 5000. Use this when retrieving paged results to estimate the total number of pages to display.
 
 You can't use the [QueryExpression.TopCount property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.topcount) together with `ReturnTotalRecordCount`..
 
 ## Example
 
-When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft.Xrm.Sdk.EntityCollection> returned from the [RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)  method includes values for the following properties:
+When the [ReturnTotalRecordCount property](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.returntotalrecordcount) value is `true`, the <xref:Microsoft.Xrm.Sdk.EntityCollection> returned from the [RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)  method includes values for the following properties:
 
 
 |Property|Description|
