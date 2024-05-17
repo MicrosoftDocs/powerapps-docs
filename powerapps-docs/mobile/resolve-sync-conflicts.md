@@ -50,6 +50,7 @@ you can create an [automated cloud flow](/power-automate/get-started-logic-flow)
 
 
 ## Sync conflict
+When there is a mismatch of data between client and server, conflict errors occur. By default, changes that are made by a user in offline mode are automatically synced to the server when the user is back online. 
 
 ### How sync conflicts are resolved ? 
 When a user makes changes to data in an offline app, updates to each column are pushed back to Dataverse as soon as the network is available. The last update to each column is stored in Dataverse, so this sync doesn't fail due to conflicting changes.
@@ -57,4 +58,12 @@ When a user makes changes to data in an offline app, updates to each column are 
 Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ### conflict resolution settings
+It is possible to change the default behavior for all offline apps belonging to an environement (don't recommended).
 
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. Select the environement
+3. Select **Settings** in the command bar
+4. Select **Product** and then **Features**
+5. in the **Advanced mobile offline settings for model-driven apps**, turn On **Enable conflict detection for mobile offline synchronization** 
+
+When enabled, the server wins over the client and the conflict errors must be resolved manually
