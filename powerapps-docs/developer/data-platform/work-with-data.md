@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 05/14/2024
+ms.date: 05/17/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID Temp owner
@@ -21,17 +21,9 @@ Dataverse also has APIs known as *messages*. Each message has a name like `Creat
 
 ## Retrieve, add, and modify data
 
-Dataverse provides two ways to retrieve, add, and modify data: Web API & SDK for .NET. Choose the one that best matches the requirements, your skills, and preferences.
+Dataverse provides two ways to retrieve, add, and modify data: SDK for .NET & Web API &. Choose the one that best matches the requirements, your skills, and preferences.
 
 :::image type="content" source="media/whentousewebapi.svg" alt-text="Flow diagram to choose programming style":::
-
-### Web API
-
-The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0.
-
-- [Learn to use the Dataverse Web API](webapi/overview.md)
-- [Quick Start: Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
-- [Quick Start: Web API sample (C#)](webapi/quick-start-console-app-csharp.md)
 
 ### SDK for .NET
 
@@ -46,6 +38,15 @@ If you are using our [PowerShell module](https://www.powershellgallery.com/packa
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [Quickstart: Execute an SDK for .NET request (C#)](org-service/quick-start-org-service-console-app.md)
+
+### Web API
+
+The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0, including .NET.
+
+- [Learn to use the Dataverse Web API](webapi/overview.md)
+- [Quick Start: Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [Quick Start: Web API sample (C#)](webapi/quick-start-console-app-csharp.md)
+
 
 ## Search Dataverse data
 
