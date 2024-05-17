@@ -19,9 +19,9 @@ Use Dataverse tables to model and manage business data. You can use [existing ta
 
 Dataverse also has APIs known as *messages*. Each message has a name like `Create`, `Delete`, or `WhoAmI`. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server.  If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can [create your own messages](custom-actions.md).
 
-### Change data
+## Retrieve, add, and modify data
 
-Dataverse provides two ways to apply changes to data: Web API & SDK for .NET. Choose the one that best matches the requirements, your skills, and your preferences.
+Dataverse provides two ways to retrieve, add, and modify data: Web API & SDK for .NET. Choose the one that best matches the requirements, your skills, and preferences.
 
 :::image type="content" source="media/whentousewebapi.svg" alt-text="Flow diagram to choose programming style":::
 
@@ -29,7 +29,9 @@ Dataverse provides two ways to apply changes to data: Web API & SDK for .NET. Ch
 
 The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0.
 
-More information: [Use the Dataverse Web API](webapi/overview.md)
+- [Learn to use the Dataverse Web API](webapi/overview.md)
+- [Quick Start: Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [Quick Start: Web API sample (C#)](webapi/quick-start-console-app-csharp.md)
 
 ### SDK for .NET
 
@@ -42,13 +44,16 @@ The Dataverse SDK for .NET supports build targets for both .NET Framework and .N
 
 If you are using our [PowerShell module](https://www.powershellgallery.com/packages/Microsoft.Xrm.Tooling.CrmConnector.PowerShell/) or using our [custom log-in control](xrm-tooling/use-xrm-tooling-common-login-control-client-applications.md) with a Windows client application, use the [the Xrm.Tooling](xrm-tooling/build-windows-client-applications-xrm-tools.md)
 
+- [Use the SDK for .NET](org-service/overview.md)
+- [Quickstart: Execute an SDK for .NET request (C#)](org-service/quick-start-org-service-console-app.md)
+
 ## Search Dataverse data
 
 Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
 
 Search has a native endpoint and there are Dataverse messages that you can use from the Web API or Organization service.
 
-More information: [Search for Dataverse records](search/overview.md)
+[Learn to search for Dataverse records](search/overview.md)
 
 ## Query data with SQL
 
