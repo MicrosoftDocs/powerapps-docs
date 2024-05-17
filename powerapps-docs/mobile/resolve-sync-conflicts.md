@@ -20,7 +20,8 @@ searchScope:
 
 ## The Sync Error table
 When there is a synchronization error, the system will automatically create a row in the **Sync Error** Dataverse table. This table contains the following columns:
-|Column name | Description | Example value|
+
+|Column name | Description | Example |
 |-------------------------------|----------------------------|--------------------------------|
 |**Error Time**| Time when the error was created | 5/17/2024 7:16 AM |
 |**Error Message**| Description of the error | Entity Account With Id = <RowId> Does Not Exist|
@@ -32,6 +33,7 @@ When there is a synchronization error, the system will automatically create a ro
 |**Request Data**|Json containing the query | {"lastname":"Contoso2","syncerror__regardingentityid":<syncerrorId>,"entitylogicalname":"account"}|
 |**Error Code**| Code of the error| -2147015424 |
   
+
 ## Recommendation on how to use the Sync Error table
 
 ### Sync error in the Device Status page
