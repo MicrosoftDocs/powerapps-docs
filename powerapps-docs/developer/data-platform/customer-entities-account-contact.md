@@ -1,7 +1,7 @@
 ---
-title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs"
+title: "Customer tables (account, contact, and customeraddress) (Microsoft Dataverse) | Microsoft Docs"
 description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer."
-ms.date: 05/15/2024
+ms.date: 05/17/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mkannapiran
@@ -9,9 +9,12 @@ ms.subservice: dataverse-developer
 ms.author: kamanick
 search.audienceType:
   - developer
+contributors:
+ -JimDaly
+ -somyabagai07
 ---
 
-# Customer tables (account, contact, customeraddress)
+# Customer tables (account, contact, and customeraddress)
 
 The [account](reference/entities/account.md) and [contact](reference/entities/contact.md) tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. The [customeraddress](reference/entities/customeraddress.md) table stores address and shipping information for a customer.
 
