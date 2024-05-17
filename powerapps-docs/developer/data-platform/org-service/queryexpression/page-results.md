@@ -39,8 +39,8 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
    :::column span="":::
       **Paging cookies**
 
-      - Uses the [QueryExpression.PageInfo](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.pageinfo) [Count](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.count), [PageNumber](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagenumber), and [PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) properties.
-      - Set the `PagingCookie` property value to the value returned with previous page
+      - Uses the [QueryExpression.PageInfo](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.pageinfo), [Count](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.count), [PageNumber](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagenumber), and [PagingCookie](/dotnet/api/microsoft.xrm.sdk.query.paginginfo.pagingcookie) properties.
+      - `PagingCookie` is null for the first request. For subsequent requests, set the `PagingCookie` property value to the value returned with previous page
       - Recommended for all data set sizes
       - [Some queries do not allow for paging cookies](#queries-that-dont-support-paging-cookies)
       - [Learn more about using paging cookies](#paging-cookies)

@@ -16,7 +16,7 @@ contributors:
 
 To set conditions on the rows of data to return, set the [QueryExpression.Criteria](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.criteria) or [LinkEntity.LinkCriteria](/dotnet/api/microsoft.xrm.sdk.query.linkentity.linkcriteria) properties to an instance of the [FilterExpression class](/dotnet/api/microsoft.xrm.sdk.query.filterexpression).
 
-To set the conditions, add one or more [ConditionExpression class](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression) instances to the [FilterExpression.Conditions property](/dotnet/api/microsoft.xrm.sdk.query.filterexpression.conditions).
+To set the conditions, add one or more [ConditionExpression class](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression) instances to the [FilterExpression.Conditions collection](/dotnet/api/microsoft.xrm.sdk.query.filterexpression.conditions).
 
 The [FilterExpression.FilterOperator property](/dotnet/api/microsoft.xrm.sdk.query.filterexpression.filteroperator) uses the [LogicalOperator enum](/dotnet/api/microsoft.xrm.sdk.query.logicaloperator) value to specify whether *all* (`And`) or *any* (`Or`) of the conditions must be met. The default is `And`.
 
