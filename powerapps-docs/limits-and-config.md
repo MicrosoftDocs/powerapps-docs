@@ -114,7 +114,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 | *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
-| dc.services.visualstudio.com | https | [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in Canvas Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/application-insights) |
+| dc.services.visualstudio.com | https | [Application Insights](/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in canvas apps](maker/canvas-apps/application-insights) |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
@@ -159,7 +159,7 @@ Power Apps does not support running with a proxy enabled. This can cause unpredi
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](/power-platform/power-fx/data-types#text-hyperlink-image-and-media).
 
-For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](maker/data-platform/types-of-fields.md).
+For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](../maker/data-platform/types-of-fields.md).
 
 ## Power Apps per app plan
 
