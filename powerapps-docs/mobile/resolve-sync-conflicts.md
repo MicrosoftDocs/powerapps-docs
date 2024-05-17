@@ -18,9 +18,8 @@ searchScope:
 
 # Resolve sync conflicts with the server
 
+## The Sync Error table
 When there is a synchronization error, the system will automatically create a row in the **Sync Error** Dataverse table. This table contains the following columns:
-
-
 |Column name | Description | Example value|
 |-------------------------------|----------------------------|--------------------------------|
 |**Error Time**| Time when the error was created | 5/17/2024 7:16 AM |
@@ -33,3 +32,15 @@ When there is a synchronization error, the system will automatically create a ro
 |**Request Data**|Json containing the query | {"lastname":"Contoso2","syncerror__regardingentityid":<syncerrorId>,"entitylogicalname":"account"}|
 |**Error Code**| Code of the error| -2147015424 |
   
+## Recommendation on how to use the Sync Error table
+
+### Sync error in the Device Status page
+
+### Use Flow to take actions on sync errors
+
+## Conflict Resolution
+
+### How does the conflict resolution work? 
+
+### conflict resolution settings
+
