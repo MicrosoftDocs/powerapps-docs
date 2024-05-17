@@ -187,6 +187,19 @@ If you are consuming incremental data feeds from Dynamics 365 with Export to Dat
 
 Currently, there are several limitations that are being addressed by the product team. Until we fix these limitations, use the suggested workaround. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview Viva Engage group. <!-- Is there a link for this? -->
 
+|Known issue |Workaround |
+| :- | :- |
+|When adding a large number of tables at once, the system makes an initial copy of data. <br> We have seen rare cases (especially in smaller environments and Tier 2 sandboxes) where operational workloads may slow down and Initialize time may become much longer | This may impact smaller environments with fewer AOS (compute) servers. </p><p></p><p>In Synapse Link, Add 5 tables at a time in case your environment is a Tier-2 Sandbox – once the initialization completes, you can add more. <br>Fabric Link feature scales initialization workloads up and down as resources permit at roughly 2 concurrent tables per AOS. Ex. if you have 5 AOS servers in your environment, system concurrently initializes up to 10 tables.</p><p></p>
+</p><p></p><p> Update your finance and operations environment to 
+•	PU 63 cumulative update 7.0.7198.95
+•	PU 62 cumulative update 7.0.7120.155
+This update redacts varBinary fields and varBinary attachments from tables added to Synapse Link and Fabric Link which reduces impact to operational workloads</p><p></p><p> |
+
+
+
+
+
+-----------------------------
 <!-- The table has issues and HTML isn't supported in Learn markdown. Using occasional line break br tags is ok in tables to force a line break. Suggest removing all HTML paragraph tags and the extra columns so you only have two columns. So the two columns are the known issue and workaround columns. We do not publish future plans such as bug fixes in the Learn content so the fix and roadmap column should be removed. If table doesn't work for you consider using markdown columns https://review.learn.microsoft.com/en-us/help/platform/markdown-reference?branch=main#columns.-->
 |Known issue |Workaround |
 | :- | :- |
