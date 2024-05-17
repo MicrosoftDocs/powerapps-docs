@@ -21,7 +21,7 @@ Dataverse also has APIs known as *messages*. Each message has a name like `Creat
 
 ## Retrieve, add, and modify data
 
-Dataverse provides two ways to retrieve, add, and modify data: SDK for .NET & Web API &. Choose the one that best matches the requirements, your skills, and preferences.
+Dataverse provides two ways to retrieve, add, and modify data: SDK for .NET & Web API. Choose the one that best matches the requirements, your skills, and preferences.
 
 :::image type="content" source="media/whentousewebapi.svg" alt-text="Flow diagram to choose programming style":::
 
