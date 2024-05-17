@@ -208,9 +208,7 @@ Make sure that the associated offline profile is in the solution and then you ca
 
 # See also
 
-[Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
-
-[Best practices to enable an app for offline](best-practices-offline.md)
-
-[Optimize the offline profile](mobile-offline-guidelines.md)
+- [Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
+- [Best practices to enable an app for offline](best-practices-offline.md)
+- [Optimize the offline profile](mobile-offline-guidelines.md)
 
