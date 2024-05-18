@@ -96,6 +96,9 @@ As explained in [Query data using the SDK for .NET](../entity-operations-query-d
 EntityCollection results = service.RetrieveMultiple(query);
 ```
 
+> [!TIP]
+> Try using the [QueryExpression sample code](sample.md) to use this method.
+
 You can also use the  [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) set the query to the [RetrieveMultipleRequest.Query property](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query) to sent the request using the [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 ```csharp
@@ -183,4 +186,7 @@ Learn how to select columns.
 > [!div class="nextstepaction"]
 > [Select columns](select-columns.md)
 
+Try some queries.
 
+> [!div class="nextstepaction"]
+> [QueryExpression sample code](sample.md)

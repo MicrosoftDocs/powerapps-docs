@@ -16,12 +16,12 @@ contributors:
 ---
 # QueryExpression sample code
 
-To try using QueryExpression with C#, you can use the `OutputQueryExpression` static method in this article by adapting the [Quickstart: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md)
+To try using QueryExpression with C#, you can use the `OutputQueryExpression` static method in this article by adapting the [Quickstart: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md).
 
 > [!NOTE]
 > See [Paging Cookie example](page-results.md#paging-cookie-example) for sample code to retrieve data in pages.
 
-You can use the following `OutputFetchRequest` static method to test FetchXml queries in a console application.
+You can use the following `OutputQueryExpression` static method to test QueryExpression queries in a console application.
 
 The `OutputQueryExpression` method demonstrates how to use the [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) and the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) to return an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing the requested data.
 
