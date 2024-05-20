@@ -1,3 +1,4 @@
+Performance insights feature has been deprecated
 ---
 title: "Overview of performance insights in Power Apps | MicrosoftDocs"
 description: Understand performance insights. 
