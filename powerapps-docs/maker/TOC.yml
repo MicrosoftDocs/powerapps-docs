@@ -53,6 +53,8 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
+  - name: Filter, sort, and search galleries with Copilot (preview)
+    href: ../user/smartGrid.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
