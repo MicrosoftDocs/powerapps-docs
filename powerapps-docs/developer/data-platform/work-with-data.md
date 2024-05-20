@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 05/17/2024
+ms.date: 05/20/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID Temp owner
@@ -15,9 +15,19 @@ contributors:
 ---
 # Work with data using code in Microsoft Dataverse
 
+There are several different ways to access Dataverse data using code.
+
+- Use the Dataverse [SDK for .NET](#sdk-for-net) or [Web API](#web-api) to retrieve, add, and modify data.
+- Use [Dataverse search](#search-dataverse-data) search Dataverse data.
+- Use the Dataverse Tabular Data Stream (TDS) endpoint to [query data with SQL](#query-data-with-sql).
+
+This article introduces the options you have to work with Dataverse data using code.
+
+<!-- 
 Use Dataverse tables to model and manage business data. You can use [existing tables](reference/about-entity-reference.md) and customize them, or [create your own custom tables](../../maker/data-platform/create-edit-entities-portal.md) to store data.
 
-Dataverse also has APIs known as *messages*. Each message has a name like `Create`, `Delete`, or `WhoAmI`. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server.  If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can [create your own messages](custom-actions.md).
+Dataverse also has APIs known as *messages*. Each message has a name like `Create`, `Delete`, or `WhoAmI`. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server.  If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can [create your own messages](custom-actions.md). 
+-->
 
 ## Retrieve, add, and modify data
 
@@ -52,7 +62,7 @@ The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any p
 
 Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
 
-Search has a native endpoint and there are Dataverse messages that you can use from the Web API or Organization service.
+Search has a native endpoint and there are Dataverse messages that you can use from the Web API or SDK for .NET.
 
 [Learn to search for Dataverse records](search/overview.md)
 
