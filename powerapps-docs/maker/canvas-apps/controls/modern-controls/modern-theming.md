@@ -44,6 +44,7 @@ There's several out-of-the-box themes available to style your app. You can also 
     -  **Theme name**: The theme name must be unique.
     -  **Font**: Choose the default font that the controls in the app use will use when the theme is applied.
     -  **Seed color**: Select the color you want to base your theme on, or manually enter the Hex or RGB representation of the color. The system generates a 16-slot palette that is optimized for accessibility.
+    -  **Hue/Vibrancy**: Adjust the generation palette, especially the lighter colors, with the **Hue** and **Vibrancy** sliders. The **Hue** impacts the color shade, and **vibrancy** impacts the muteness or brightness of the palette.  
 4. Optionally, look at the static preview of your new theme. You can interact with the sample controls to see how your theme is applied to the rest state and various interaction states.    
 5. Select **Create**.
 
