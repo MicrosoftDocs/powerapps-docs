@@ -2,7 +2,7 @@
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
 ms.custom: ""
-ms.date: 03/22/2024
+ms.date: 05/20/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -107,7 +107,7 @@ To work around this, you can display a custom card by configuring the table to u
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
 - Columns lookup filters, when using the 'Equals' or 'Does not equal' operator, only show lookup options available within the current set of applied filters.
-  - **Example:** If the Contact entity has users 'Person A', 'Person B', and 'Person C' but Account data only has rows referencing 'Person B' and 'Person C' then the column filter lookup for the Contact column in the Account grid would only shown the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
+  - For example, if the contact table has users 'Person A', 'Person B', and 'Person C' but account table data only has rows referencing 'Person B' and 'Person C', then the column filter lookup for the contact column in the account grid only shows the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
 
 ### Known issues
 
