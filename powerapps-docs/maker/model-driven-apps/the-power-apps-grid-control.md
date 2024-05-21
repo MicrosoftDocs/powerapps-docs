@@ -106,8 +106,8 @@ To work around this, you can display a custom card by configuring the table to u
 - The grid doesn't currently support legacy theme customizations.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
-- Columns lookup filters, when using 'Equals' or 'Does not equal', only show lookup options avilable with the current set of applied filters.
-  - **Example:** if the Contact entity has users 'Person A', 'Person B', and 'Person C' but Account data only has rows referencing 'Person B' and 'Person C' then the column filter lookup for the Contact column would only shown the options for 'Pereson B' and 'Person C'. This is a change in behavior from previous grids.
+- Columns lookup filters, when using the 'Equals' or 'Does not equal' operator, only show lookup options available within the current set of applied filters.
+  - **Example:** If the Contact entity has users 'Person A', 'Person B', and 'Person C' but Account data only has rows referencing 'Person B' and 'Person C' then the column filter lookup for the Contact column in the Account grid would only shown the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
 
 ### Known issues
 
