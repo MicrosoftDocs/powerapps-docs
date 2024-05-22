@@ -520,6 +520,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Avatar (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md  
             - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
