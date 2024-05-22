@@ -1,7 +1,7 @@
 ---
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
-ms.date: 01/19/2023
+ms.date: 05/22/2024
 ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -218,10 +218,10 @@ You should be aware of certain conditions and limitations when working with calc
 - You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you wouldn't be able to use the calculated columns feature without creating a new column.  
 - Duplicate detection rules aren't triggered on calculated columns.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.
--  When a currency calculated field depends on a related entity's currency field, we perform calculations using corresponding base currency field values. This is because exchange rate values and currency values can vary between different entity records. For example, consider a calculated field - `Account Revenue` on the `Opportunity` entity, and consider `Account Revenue` has dependency on `Annual Revenue` currency field on the `Account` entity, then 'Account Revenue` is calculated as -
+-  When a currency calculated column depends on a related table's currency column, the system performs calculations using corresponding base currency column values. This is because exchange rate values and currency values can vary between different table records. For example, consider a calculated column - `Account Revenue` on the `Opportunity` table, and consider `Account Revenue` has a dependency on the `Annual Revenue` currency column on the `Account` table, then `Account Revenue` is calculated as described here:
 
-    `'Account Revenue' = ['Annual Revenue (Base)' * 'Exchange Rate on Opportunity entity record']` or
-    `'Account Revenue' = [('Annual Revenue' / 'Exchange Rate on Account entity record') * 'Exchange Rate on Opportunity entity record']`
+    `'Account Revenue' = ['Annual Revenue (Base)' * 'Exchange Rate on Opportunity table record']` or
+    `'Account Revenue' = [('Annual Revenue' / 'Exchange Rate on Account table record') * 'Exchange Rate on Opportunity table record']`
   
 ### See also
  
