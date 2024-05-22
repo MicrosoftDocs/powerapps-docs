@@ -2583,6 +2583,8 @@
     href: ./common/faq-timeline-highlights-with-copilot.md
   - name: FAQ about using Copilot with Power Fx
     href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
 - name: Resources
   items:
   - name: Blog
