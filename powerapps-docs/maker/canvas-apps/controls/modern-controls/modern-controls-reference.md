@@ -25,7 +25,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 ## Modern controls
 
-**[Avatar (preview)](modern-controls-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
+**[Avatar (preview)](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
 **[Badge (preview)](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
