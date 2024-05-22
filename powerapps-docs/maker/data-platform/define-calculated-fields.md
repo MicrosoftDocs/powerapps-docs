@@ -218,8 +218,7 @@ You should be aware of certain conditions and limitations when working with calc
 - You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you wouldn't be able to use the calculated columns feature without creating a new column.  
 - Duplicate detection rules aren't triggered on calculated columns.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.
-- A rollup can't reference a calculated field that uses another calculated field, even if all the fields of the other calculated field are on the current entity.
--  When a currency calculated field depends on a currency field from a related entity, we perform calculations using corresponding base currency field values. This is because exchange rate values and currency values can vary between different entity records. For example, consider a calculated field - `Account Revenue` on the `Opportunity` entity, if it has dependency on `Annual Revenue` currency field on the `Account` entity, the 'Account Revenue' is calculated as -
+-  When a currency calculated field depends on a related entity's currency field, we perform calculations using corresponding base currency field values. This is because exchange rate values and currency values can vary between different entity records. For example, consider a calculated field - `Account Revenue` on the `Opportunity` entity, if it has dependency on `Annual Revenue` currency field on the `Account` entity, the 'Account Revenue' is calculated as -
 
     `'Account Revenue' = ['Annual Revenue (Base)' * 'Exchange Rate on Opportunity entity record']` or
     `'Account Revenue' = [('Annual Revenue' / 'Exchange Rate on Account entity record') * 'Exchange Rate on Opportunity entity record']`
