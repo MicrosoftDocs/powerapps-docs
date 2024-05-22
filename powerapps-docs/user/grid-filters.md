@@ -4,13 +4,15 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/22/2024
+ms.date: 05/22/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributor:
+- fikaradz 
 ---
 # Explore data on a grid page
 
