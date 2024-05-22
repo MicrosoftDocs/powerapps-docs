@@ -110,6 +110,9 @@ To focus on records that meet particular criteria, you can filter a view by one 
 > [!IMPORTANT]
 > In Unified Interface, grids don't pre-populate column filters based on the current view definition.
 
+> [!NOTE]
+> Filtering is not supported on virtual entities.  
+
 #### Filtering on a lookup column
 
 When you filter data on a lookup column, you can select from a list of values, rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
