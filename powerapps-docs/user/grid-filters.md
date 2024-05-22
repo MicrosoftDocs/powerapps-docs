@@ -11,7 +11,7 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-contributor:
+contributors:
 - fikaradz 
 ---
 # Explore data on a grid page
