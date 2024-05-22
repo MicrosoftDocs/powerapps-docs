@@ -13,7 +13,7 @@ ms.custom: template-how-to
 
 The state of your Azure Synapse Link for Dataverse is stored in a Microsoft Dataverse table with real-time updates. You can customize a notification using Power Automate flows or Power BI to stay on top of the state of your Azure Synapse Link for Dataverse activity instead of manually checking the Azure Synapse Link for Dataverse profile page in Power Apps (make.powerapps.com).
 
-The Azure Synapse Link for Dataverse profile and its synchronization status are stored in six system generated read-only tables within Dataverse. These tables are designed to refresh and update in real-time, ensuring that the information contained within them remains accurate and up to date at all times.
+The Azure Synapse Link for Dataverse profile and its synchronization status are stored in six system-generated read-only tables within Dataverse. These tables are designed to refresh and update in real time, ensuring that the information contained within them remains accurate and up to date at all times.
 
 ## How notification works with Azure Synapse Link for Dataverse
 
@@ -23,13 +23,13 @@ To customize a notification, monitor the data changes in a Dataverse table relat
 
 We recommend users have the appropriate Power Platform licensing to use Power Automate to customize the trigger function. Use the Dataverse connector, which triggers a flow when a row is added, modified, or deleted in the selected Dataverse table. More information: [Trigger flows when a row is added, modified, or deleted - Power Automate](/power-automate/dataverse/create-update-delete-trigger)
 
-There are several options available for using Power Automate to send notifications. Here are several examples.
+Several options are available for using Power Automate to send notifications. Here are some examples.
 
 |Action  |Connector reference  |
 |---------|---------|
 |Send a Teams instant message   | [Microsoft Teams](/connectors/teams/#post-message-in-a-chat-or-channel)        |
 |Send a text message to mobile device     |  [Azure Communication Services SMS](/connectors/serwersms/#send-sms-message)    |
-|Send an Email to one or more recipients   |  [Mail](/connectors/sendmail/#send-an-email-notification-(v3)) <br /> [Office 365 Outlook](/connectors/office365/)        |
+|Send an email to one or more recipients   |  [Mail](/connectors/sendmail/#send-an-email-notification-(v3)) <br /> [Office 365 Outlook](/connectors/office365/)        |
 |Send a notification to Power Apps or Power BI     |  [Power Apps Notification](/connectors/powerappsnotification/) <br />[Power BI](/connectors/powerbi/#add-rows-to-a-dataset)       |
 
 ## Dataverse tables and columns used to track state
@@ -45,7 +45,7 @@ Here are some useful columns for monitoring the health of your Azure Synapse Lin
 
 - `EntityName` and `SynapseWorkspaceName` can be used as the primary identification of the selected table. Synapse workspace name is the same as Azure Synapse Link profile name shown in Power Apps.
 - `LastSynchronizedOn` returns the date and time when the latest round of the Delta Lake conversion was successfully completed for each table.
-- `RecordCount` returns the total number of records in the Delta Lake profile, minus soft delete records for each table.
+- `RecordCount` returns the total number of records in the Delta Lake profile, minus soft-delete records for each table.
 - `TableState` is marked as **created** if the link to the data lake and Delta Lake conversion is active and error-free.
 
 A soft-delete in the Azure Synapse Link external table state table is performed: `LastSyncState` and `TableState` are marked as deleted for removed tables.
@@ -68,8 +68,8 @@ The remaining four tables provide additional details for Azure Synapse Link setu
 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
-|Azure Synapse database  | This table captures linked Azure Data Lake storage and Synapse workspace and setup metadata information. (One record per Azure Synapse Link profile.)        | [synapsedatabase](/power-apps/developer/data-platform/reference/entities/synapsedatabase)       |
-|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one record per Azure Synapse Link profile) a soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
+|Azure Synapse database  | This table captures linked Azure Data Lake storage and Synapse workspace and setup metadata information (one record per Azure Synapse Link profile).        | [synapsedatabase](/power-apps/developer/data-platform/reference/entities/synapsedatabase)       |
+|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one record per Azure Synapse Link profile). A soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
 |Azure Synapse Link profile entity |  This table captures entity metadata within the connected Azure Synapse Link profile (one record per synced table).       | [synapselinkprofileentity](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentity)       |
 |Azure Synapse Link schedule | This table captures Azure Synapse Link profile information for incremental folder update or delta lake conversion time interval (one record per Azure Synapse Link profile).        | [RecurrenceInterval](/power-apps/developer/data-platform/reference/entities/synapselinkschedule#BKMK_RecurrenceInterval)   |
 

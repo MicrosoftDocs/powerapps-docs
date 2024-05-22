@@ -4,13 +4,15 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/22/2024
+ms.date: 05/22/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- fikaradz 
 ---
 # Explore data on a grid page
 
@@ -109,6 +111,9 @@ To focus on records that meet particular criteria, you can filter a view by one 
 
 > [!IMPORTANT]
 > In Unified Interface, grids don't pre-populate column filters based on the current view definition.
+
+> [!NOTE]
+> Filtering is not supported on virtual entities.  
 
 #### Filtering on a lookup column
 
