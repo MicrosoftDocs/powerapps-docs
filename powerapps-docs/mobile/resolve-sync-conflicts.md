@@ -58,7 +58,7 @@ When a user makes changes to data in an offline app, updates to each column are 
 Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ### conflict resolution settings
-It is possible to change the default behavior for all offline apps belonging to an environement (don't recommended).
+It is possible to change the default behavior for all offline apps belonging to an environement (not recommended).
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select the environement
