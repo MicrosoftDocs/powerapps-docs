@@ -17,17 +17,19 @@ contributors:
   - jasongre
      
 ---
-# Avatar modern control in Power Apps
+# Avatar modern control in Power Apps (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 A control that shows a graphic representation of a user, team, or entity.  
 
 ## Description
 
-Use the avatar control to visually represent a user, team, or entity. This control supports both image and and initials formats and allows a small badge to be included to help convey status. The key properties for this control are **Name** and **Image**.  
+Use the avatar control to visually represent a user, team, or entity. This control supports both image and initials formats and allows a small badge to be included to help convey status. The key properties for this control are **Name** and **Image**.  
 
 ## General
 
-**Name** - The name of the person or entity. This is used to determine the initials displayed when there is no image and is also used for accessibility. 
+**Name** - The name of the person or entity. Name is used to determine the initials displayed when there's no image and is also used for accessibility. 
 
 **Image** – The visual representation for the person or entity.
 
@@ -49,12 +51,15 @@ Use the avatar control to visually represent a user, team, or entity. This contr
 
 **Shape** - Whether the avatar appears with a circular or square shape. 
 
-**Appearance** – An avatar can have portions of itself styled for greater emphasis or to be subtle. Below are the options available:
-* Brand: Uses the modern theme to style the avatar. The Color palette property can be used to override this color scheme. 
-* Neutral: Uses a grayscale for the initials background to provide a subtle appearance.
-* Colorful: Users a color from a pre-defined set of colors, based on a hash of the provided Name. 
+**Appearance** – An avatar can have portions of itself styled for greater emphasis or to be subtle. 
 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by selected Fluent theme.
+The following options are available:
+
+- **Brand**: Uses the modern theme to style the avatar. The Color palette property can be used to override this color scheme. 
+- **Neutral**: Uses a grayscale for the initials background to provide a subtle appearance.
+- **Colorful**: Users a color from a predefined set of colors, based on a hash of the provided Name. 
+
+**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by the selected Fluent theme.
 
 **Font** - The name of the family of fonts in which text appears.
 
