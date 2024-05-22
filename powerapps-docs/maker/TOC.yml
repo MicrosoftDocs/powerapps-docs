@@ -53,6 +53,8 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
+  - name: Filter, sort, and search galleries with Copilot (preview)
+    href: ../user/smartGrid.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -520,6 +522,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Avatar (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md  
             - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
@@ -2231,6 +2235,8 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
+      - name: Transtion from legacy data generation services
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
