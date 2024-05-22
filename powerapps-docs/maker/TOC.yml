@@ -2589,6 +2589,8 @@
     href: ./common/faqs-copilot-powerfx.md
   - name: FAQ about field suggestions by Copilot
     href: ./common/faq-field-suggestions.md  
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
 - name: Resources
   items:
   - name: Blog
