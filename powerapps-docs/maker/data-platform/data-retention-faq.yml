@@ -31,7 +31,7 @@ sections:
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
 
-   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+   - question: Will Dataverse schema changes be handled by Dataverse long term retention - What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
      answer: |
         The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
 
