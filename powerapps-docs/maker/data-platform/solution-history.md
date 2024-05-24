@@ -48,6 +48,9 @@ Select a solution operation to display the **Information page**. Each solution h
  > [!div class="mx-imgBorder"] 
  > ![Solution history details.](media/solution-history-details.png "Solution history details")
 
+> [!NOTE]
+> Recent changes in the platform have optimized the single step upgrade process to no longer use a temporary _Upgrade solution.  As a result you will no longer notice an uninstall operation for single stage upgrades in the solution history.
+
 ### View solution operation error details
 
 Below the **Details** area is the **More details** area that has additional information about the solution and, when a solution operation has a failure, the information includes:
