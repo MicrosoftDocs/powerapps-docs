@@ -109,8 +109,10 @@ If you want to disable the ability for users to submit feedback about copilot in
 ### Known limitations 
 
 1. The **Copilot for app users** allows only data read operations from Dataverse for the queries entered into Copilot.
-2. Create, update or other generic actions like enable/disable copilot, create a memo etc. are not supported. 
-1. [Summarization](https://learn.microsoft.com/dynamics365/sales/copilot-overview#record-summarization) skill is curenrly available on [Dynamics 365 Sales copilot](https://learn.microsoft.com/dynamics365/sales/copilot-overview) but not on the **Copilot for app user**.
+1. Create, update or other generic actions like enable/disable copilot, create a memo etc. are not supported. 
+1. “Currently, the [Summarization](https://learn.microsoft.com/dynamics365/sales/copilot-overview#record-summarization) skill is available in[Dynamics 365 Sales copilot](https://learn.microsoft.com/dynamics365/sales/copilot-overview) but not in the **Copilot for app user**.
+
+
    
 ## See also
 
