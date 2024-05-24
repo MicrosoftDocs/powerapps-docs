@@ -1,31 +1,9 @@
----
-title: Optimize queries for read performance
-description: Best practices when composing queries to retrieve records from Dataverse.
-author: dasuss
-ms.topic: article
-ms.date: 03/28/2024
-ms.subservice: dataverse-developer
-ms.author: dasuss
-ms.reviewer: jdaly
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
-contributors:
-  - JimDaly
----
-# This is changed to an include
+## Patterns to avoid
 
-Don't edit this. The content was moved to cc-query-antipatterns.md.
-
-Keeping this only because Dimitry left some comments here.
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This sections describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
 
 
-
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This article describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
-
-## Minimize the number of selected columns
+### Minimize the number of selected columns
 
 Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset.
 
@@ -45,7 +23,7 @@ That's why I re-wrote the content below.
 
 -->
 
-## Avoid leading wild cards in filter conditions
+### Avoid leading wild cards in filter conditions
 
 Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other nonleading wild card queries that limit the result set.
 
@@ -85,18 +63,18 @@ Also we should update the throttle page to link back to here for the different r
 > Number: `-2147187132`<br />
 > Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
 
-Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](../query-throttling.md)
 
 If you find yourself using leading wild card queries, look into these options:
 
-- Use [Dataverse search](search/overview.md) instead.
+- Use [Dataverse search](../search/overview.md) instead.
 - Change your data model to help people avoid needing leading wild cards.
 
-[Learn more about using wildcard characters in conditions for string values](../data-platform/wildcard-characters.md) 
+[Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md)
 
-## Avoid using formula or calculated columns in filter conditions
+### Avoid using formula or calculated columns in filter conditions
 
-[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
+[Formula and calculated column](../calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
 
@@ -105,10 +83,10 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187340`<br />
 > Message: `The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.`
 
-To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](query-throttling.md)
+To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](../query-throttling.md)
 
 
-## Avoid ordering by choice columns
+### Avoid ordering by choice columns
 
 When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
@@ -132,14 +110,17 @@ Example query ordering on the statecode choice column:
 ```
 -->
 
-## Avoid ordering by columns in related tables
+### Avoid ordering by columns in related tables
 
 Ordering by columns on related tables makes the query slower because of the added complexity.
 
-Ordering by related tables should only be done when needed to as described here: [Order rows using FetchXml](../data-platform/fetchxml/order-rows.md) 
+Ordering by related tables should only be done when needed to as described here:
+
+- [Order rows using FetchXml](../fetchxml/order-rows.md)
+- [Order rows using QueryExpression](../org-service/queryexpression/order-rows.md)
 
 
-## Avoid using like conditions on large text columns
+### Avoid using like conditions on large text columns
 
 
 Dataverse has two types of columns that can store large strings of text:

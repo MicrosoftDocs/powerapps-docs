@@ -120,8 +120,6 @@
         - name: Sample code
           displayName: FetchXml, Sample code
           href: fetchxml/sample.md
-    - name: Optimize Queries
-      href: optimize-queries-for-read-performance.md
     - name: Query using wildcard characters
       href: wildcard-characters.md
     - name: Query throttling
