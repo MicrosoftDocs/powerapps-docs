@@ -1,6 +1,6 @@
 ## Patterns to avoid
 
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This sections describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This sections describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](../elastic-tables.md) or when using [Dataverse Search](../search/overview.md).
 
 
 ### Minimize the number of selected columns
