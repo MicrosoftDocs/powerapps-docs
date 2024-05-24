@@ -259,8 +259,9 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   >
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
   
-- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation. Go to [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables) for details on re-enabling entities after a database restore operation.
-- Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
+- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation.
+- When Finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be re-initialized. Before re-initilizing Finance and operations tables, you must also restore the Datavase database. After restoring dataverse database, You must add finance and operations tables into the profile.
+- Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link. 
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
 - Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
