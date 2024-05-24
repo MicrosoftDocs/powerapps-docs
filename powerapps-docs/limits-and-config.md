@@ -115,6 +115,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 | *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
 | dc.services.visualstudio.com | https | [Application Insights](/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in canvas app](maker/canvas-apps/application-insights.md) |
+| *.ocv.microsoft.com | https | Allows users to provide Copilot feedback data in Power Apps |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
