@@ -238,9 +238,10 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
    > [!NOTE]
-   > Update your finance and operations environment to these versions or later:
+   > Update your finance and operations environment to these versions or later to enable AOS authorized fields:
    > - PU 63:7.0.7198.105
    > - PU 62:7.0.7120.159
+   > 
    > With this update, AOS authorization fields are added to tables.
    >   - Incremental updates include this column.
    >   - Modified records show these columns and value.
