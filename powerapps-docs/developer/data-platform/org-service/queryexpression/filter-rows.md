@@ -191,7 +191,7 @@ QueryExpression query = new("contact")
 
 There are limitations on these kinds of filters:
 
-- [ConditionExpression.Operator](/dotnet/api/microsoft.xrm.sdk.query.conditionexpression.operator) can only use these [ConditionOperator enum](/dotnet/api/microsoft.xrm.sdk.query.conditionoperator) members:
+- You can only use these [ConditionOperator enum](/dotnet/api/microsoft.xrm.sdk.query.conditionoperator) operators:
 
   |Operator |Description|
   |---------|---------|
