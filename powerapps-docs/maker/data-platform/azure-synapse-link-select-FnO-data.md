@@ -39,7 +39,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 >
 > You might need to apply additional updates for recent fixes. More information: [Known limitations with finance and operations tables]
 > 
-> If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Synapse Link go to [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
+> If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Synapse Link see [transition guide](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno) as well as [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
 
 ## Prerequisites
 
@@ -219,7 +219,7 @@ You can enable both finance and operations tables and finance and operations ent
 
 > [!NOTE]
 >
-> - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps.
+> - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't see them in the Tables area in Power Apps maker portal.
 > - You don't have to define finance and operations apps tables as virtual tables, and you don't have to enable change tracking for each table.
 >
 > To include finance and operations tables in Synapse Link, you must enable the [Delta lake feature](/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and operations table selection isn't visible if your Synapse Link profile isn't configured for Delta lake.
@@ -237,6 +237,15 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - Don't see your custom tables? You must enable change tracking for them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables). If you're using a cloud hosted environment (CHE), you must perform a database sync operation to reflect the changes.
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
+   > [!NOTE]
+   > Update your finance and operations environment to these versions or later:
+   > - PU 63:7.0.7198.105
+   > - PU 62:7.0.7120.159
+   > With this update, AOS authorization fields are added to tables.
+   >   - Incremental updates include this column.
+   >   - Modified records show these columns and value.
+   >    - Full refresh includes these fields and all values.
+   >      
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
 - In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
@@ -296,9 +305,9 @@ You can enable both finance and operations entities and finance and operations a
 The process of enabling finance and operations entities has the following steps. Each step is explained in the following subsections.
 
 1. [Enable finance and operations virtual entities in the Power Apps maker portal](#enable-finance-and-operations-virtual-tables-in-power-apps). This step lets you use finance and operations entities in Power Apps (make.powerapps.com) to build apps. You can also use them with Azure Synapse Link.
-2. [Enable change tracking for finance and operations entities](#enable-change-tracking-for-finance-and-operations-entities). You must complete this step to enable Azure Synapse Link to use finance and operations entities.
+2. [Enable row version change tracking for Entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You must complete this step to enable Azure Synapse Link to use finance and operations entities.
 
-After you complete both steps, you can select finance and operations entities in Azure Synapse Link. To create Azure Synapse Link for Dataverse in Delta lake format, follow the steps in [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+After you complete both steps, you can select finance and operations entities in Azure Synapse Link under **Dataverse tables**. To create Azure Synapse Link for Dataverse in Delta lake format, follow the steps in [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
 
 > [!NOTE]
 > Finance and operations entities start with the prefix **mserp\_**.
@@ -330,10 +339,13 @@ To enable change tracking, follow these steps.
 
 Currently, there are the following limitations with finance and operations entities and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
-- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox is disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
-- If the chosen entity is unavailable because of the change tracking limitation, you might be able to choose the tables that comprise the data from that entity.
+- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox is disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. 
 
    > [!NOTE]
-   > For a list of ready-made finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.**
+   > For a list of ready-made finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.** This reports shows Entities that pass and fail validation rules.
+   >
+   > For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
+   > If the chosen entity is unavailable because of the change tracking limitation, you might be able to choose the tables that comprise the data from that entity. You can use [EntityUtil solution provided by the FastTrack team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration/EntityUtil) to create entity shapes using tables.
+   > 
 
 - In case of a database restore operation in Dataverse, finance and operations entities enabled in Azure Synapse Link are removed. To re-enable entities, you need to re-enable corresponding virtual tables for all selected entities, re-enable change tracking, and reselect the tables in Azure Synapse Link. 
