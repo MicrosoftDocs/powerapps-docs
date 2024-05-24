@@ -321,7 +321,7 @@ You must enable finance and operations entities as **virtual tables** in Dataver
 To enable finance and operations entities, follow the steps in [Enable Microsoft Dataverse virtual entities](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-virtual-entities).
 
 > [!TIP]
-> To validate Azure Synapse Link features, you can use a few of the sample entities from the following list. They appear under Dataverse tables section in SynapseLink. 
+> To validate Azure Synapse Link features, you can use a few of the sample entities from the following list. They appear under **Dataverse tables** section in SynapseLink. 
 >
 > - **MainAccountBiEntity** – This entity contains a list of ledger accounts.
 > - **ExchangeRateBiEntity** – This entity contains exchange rates in the system.
