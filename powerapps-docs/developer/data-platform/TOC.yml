@@ -142,6 +142,9 @@
       items:
         - name: Use DeleteMultiple (preview)
           href: deletemultiple.md
+    - name: Restore deleted records (preview)
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
     - name: Create your own messages
       href: custom-actions.md
       items:
