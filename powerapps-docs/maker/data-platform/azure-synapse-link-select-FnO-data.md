@@ -313,14 +313,14 @@ After you complete both steps, you can select finance and operations entities in
 > [!NOTE]
 > Finance and operations entities start with the prefix **mserp\_**.
 
-### Enable finance and operations virtual tables in Power Apps
+### Enable finance and operations virtual entities in Power Apps
 
-You must enable finance and operations entities as **virtual tables** in Dataverse. Makers then use the chosen finance and operations entities to build apps, and the entities can also be used with Azure Synapse Link.
+You must enable finance and operations entities as **virtual tables** in Dataverse. Makers can then use the chosen finance and operations entities to build apps, and the entities can also be used with Azure Synapse Link.
 
-To enable finance and operations entities as virtual tables, follow the steps in [Enable Microsoft Dataverse virtual entities](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-virtual-entities).
+To enable finance and operations entities, follow the steps in [Enable Microsoft Dataverse virtual entities](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-virtual-entities).
 
 > [!TIP]
-> To validate Azure Synapse Link features, you can use a few of the sample entities from the following list:
+> To validate Azure Synapse Link features, you can use a few of the sample entities from the following list. They appear under Dataverse tables section in SynapseLink. 
 >
 > - **MainAccountBiEntity** – This entity contains a list of ledger accounts.
 > - **ExchangeRateBiEntity** – This entity contains exchange rates in the system.
@@ -328,7 +328,7 @@ To enable finance and operations entities as virtual tables, follow the steps in
 
 ### Enable change tracking for finance and operations entities
 
-When you enable finance and operations entities as virtual entities in Dataverse, they appear in the maker portal. Finance and operations entities start with the prefix **mserp\_**.
+When you enable change tracking for finance and operations entities, they appear under Dataverse tables in Synapse Link. Finance and operations entities start with the prefix **mserp\_**.
 
 To enable change tracking, follow these steps.
 
@@ -338,14 +338,15 @@ To enable change tracking, follow these steps.
 
 ### Known limitations with finance and operations entities
 
-Currently, there are the following limitations with finance and operations entities and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
+Currently, there are several limitations with finance and operations entities and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
-- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox is disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. 
+- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox may be  disabled for some tables backed by virtual entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. 
 
    > [!NOTE]
-   > For a list of ready-made finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.** This reports shows Entities that pass and fail validation rules.
+   > For a list of finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.** This reports shows Entities that pass and fail validation rules.
    >
    > For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
+   > 
    > If the chosen entity is unavailable because of the change tracking limitation, you might be able to choose the tables that comprise the data from that entity. You can use [EntityUtil solution provided by the FastTrack team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration/EntityUtil) to create entity shapes using tables.
    > 
 
