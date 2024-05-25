@@ -321,7 +321,7 @@ static void ShowNumberContactsDeletedByUserQE(
 
 Learn more about:
 
-- [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.

@@ -79,7 +79,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch> 
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
 Details about the authentication values set are in the [AuthValue](reference/entities/serviceendpoint.md#BKMK_AuthValue) property and can't be retrieved.
 
@@ -136,7 +136,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch>
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
 #### Synchronous mode
 
