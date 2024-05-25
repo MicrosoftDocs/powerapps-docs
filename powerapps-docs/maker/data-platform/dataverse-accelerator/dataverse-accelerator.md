@@ -58,7 +58,8 @@ You must have the following privileges in your Dataverse environment:
 | Feature | Description |
 | -- | -- |
 | [Low-code plug-ins](../low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
-| [Plug-in monitoring](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
+| [Plug-in monitor](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
+| [API playground](api-playground.md) | a pre-authenticated software testing tool that helps makers quickly and conveniently interact with the [Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview). |
 
 ## Manage the Dataverse accelerator app
 
