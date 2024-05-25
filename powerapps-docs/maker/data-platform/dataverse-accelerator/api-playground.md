@@ -42,9 +42,11 @@ You must have [access to Dataverse](/power-apps/maker/data-platform/data-platfor
 
 To get started with the API playground, [run](dataverse-accelerator.md#play-the-dataverse-accelerator) the Dataverse accelerator and navigate to the API playground page.
 
+![Run the API playground by clicking the feature card](media/api-play-run.svg)
+
 ### Make requests to the Dataverse Web API
 
-On the landing screen, choose the request type to open the request editor by clicking the 'Create' button on any of the top cards. 
+On the landing screen, choose the request type to open the request editor by clicking the 'Create' button on any of the top cards.
 
 Three request types are presented:
 
