@@ -28,7 +28,7 @@ The initial offline sync happens automatically when you open the app. A message 
 
 ## Offline delta sync
 
-After the initial offline sync, the data that's stored locally is kept in sync with data on the app server whenever your device has a network connection. These periodic updates are known as "delta" syncs. "Delta" is shorthand for data that's changed. Power Apps syncs every five minutes when you're online.
+After the initial offline sync, the data that's stored locally is kept in sync with data on the app server whenever your device has a network connection. These periodic updates are known as "delta" syncs. "Delta" is shorthand for minimum data that's changed between 2 syncs on the device. Power Apps syncs every five minutes when you're online. 
 
 ## Sync status icons
 
