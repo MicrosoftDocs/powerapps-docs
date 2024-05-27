@@ -140,6 +140,10 @@ You need to publish your new offline profile before you can select it in your ca
 
 1. Select **Save**.
 
+> [!IMPORTANT]
+> It is useless to add Users in the Offline profile in the **Users with offline access**. This capability is only applicable to model-driven apps  restricted to selected users. 
+
+
 ### Create an offline profile (without admin rights)
 
 If your Power Apps account doesn't have admin rights, you can still create a mobile offline profile. Coming soon, you'll be able to create an offline profile directly in Power Apps Studio. Until then, use this workaround.
