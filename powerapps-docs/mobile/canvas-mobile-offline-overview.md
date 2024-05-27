@@ -41,16 +41,16 @@ There are some key benefits of using the built-in offline functionality for canv
 |Power Apps Studio support	|Custom	| Built-in|
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
 |Supported Power Fx functions |	All |	Partial (See [Mobile offline limitations for canvas apps](limitations-canvas-apps.md#limitations-and-known-issues).)|
-|App checker rules|	None	|Flag common configuration problems|
+|App checker rules|	None	|Common configuration problems are flagged|
 |Offline or connectivity user experience	| Not provided/custom only	|Automatic|
-|Sync user experience or status	|Not provided/custom only |	Automatic|
-|Image and file support|	Yes, but may run into performance and memory limits	|Not supported|
-|Optimized delta sync|	No|	Yes|
-|Conflict resolution	|Manual	|Automatic|
+|[Sync user experience or status](canvas-mobile-offline-working.md#sync-status-icons)	|Not provided/custom only |	Automatic|
+|[Image and file support](files-images-offline-canvas-apps.md)|	Yes, but may run into performance and memory limits	|Not supported|
+|[Optimized delta sync](canvas-mobile-offline-working.md)|	No|	Yes|
+|[Conflict resolution](/resolve-sync-conflicts.md#sync-conflict)	|Manual	|Automatic|
 |Local data store	|Files	|Transactional database|
 |Automatically handles schema changes	|No	|Yes|
 |Fast app launch with large datasets	|No	|Yes|
-|Data size limit|	Device dependent, 30-70 MB in most cases	|Device dependent, up to the storage capacity of the device|
+|Data size limit|	Device dependent, 30-70 MB in most cases	|Device dependent, 3 million rows|
 
 ### See also
 
