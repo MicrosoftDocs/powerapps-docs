@@ -56,12 +56,23 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
 - **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
 - **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
-- **Publish all customizations**: Publish all active customizations in your environment. 
+- **Publish all customizations**: Publish all active customizations in your environment.
+- **Set preferred solution**: Set your [preferred solution](preferred-solution) where all solution objects will be created in.
 - **Switch to classic**: Open the classic solution explorer. 
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+- **Solution checker**: Run or review results of solution checker for this solution.
+- **Show dependencies**: View solution dependencies for solutions that would block uninstall of this solution.
+- **Apply Upgrade**: Apply a pending upgrade that has been initiated for a managed solution.
 
-    > [!div class="mx-imgBorder"]
-    > ![Solutions area.](media/solutions-area-tasks.png)
+Tasks available with no solution selected:
+ > [!div class="mx-imgBorder"]
+ > ![Solutions area.](media/solutions-area-tasks.png)
+
+Tasks available with a solution selected:
+ > [!div class="mx-imgBorder"]
+ > ![Solutions area.](media/solutions-area-tasks-selected.png)
+
+
 
 From the **Solutions** area, select a solution to view all of its components. 
  
