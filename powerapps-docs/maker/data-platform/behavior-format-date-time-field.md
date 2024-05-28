@@ -56,6 +56,9 @@ Use **Date only** behavior when information about the time of the day and the ti
 
 **Time zone independent** behavior with **Date only** format is practically the same as **Date only** behavior. Use the former if you aren't sure whether you need the time portion in the future.
 
+> [!WARNING]
+> Avoid **Date only** format with **User local** behavior. Users in different time zones may see a different date, which is not intended in most scenarios. When they set a date in a model-driven app, the time portion will automatically be set to midnight of their time zone. This may cause the date to appear a day earlier or later for other users.
+
 ## Examples
 
 ### Display values
