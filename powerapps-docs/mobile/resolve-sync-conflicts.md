@@ -20,7 +20,7 @@ searchScope:
 
 
 ## The Sync Error table
-In the event of a synchronization error, the system will automatically generate a new entry in the **Sync Error** table within Dataverse. This table is structured with the following columns:
+In the event of a synchronization error, the system automatically generates a new entry in the **Sync Error** table within Dataverse. This table is structured with the following columns:
 
 |Column name | Description | Example |
 |-------------------------------|----------------------------|--------------------------------|
@@ -44,7 +44,7 @@ If you run the model-driven app, you can see the sync errors by each user. If yo
 Sync errors natively show up in the **Device status** page. The **Device status** page is available [out-of-the-box in model-driven apps](offline-sync-icon.md), but must be [configured in canvas apps](canvas-mobile-offline-setup.md#create-an-offline-canvas-app). 
 
 ### Use Flow to take actions on sync errors
-You can create an [automated cloud flow](/power-automate/get-started-logic-flow) in Power Automate using the Dataverse trigger **when a row is added, modified or deleted**. The flow can automatically [send an email](/power-automate/email-customization) or [send a notification](power-apps-mobile-notification.md) on the device.
+You can create an [automated cloud flow](/power-automate/get-started-logic-flow) in Power Automate using the Dataverse trigger **when a row is added, modified, or deleted**. The flow can automatically [send an email](/power-automate/email-customization) or [send a notification](power-apps-mobile-notification.md) on the device.
 
 > [!Note]
 > To retrieve the user’s email address within the flow, add the Dataverse action **Get a row by ID** using the **Owner** column of the **Sync Error** row.  
@@ -59,7 +59,7 @@ When a user makes changes to data in an offline app, updates to each column are 
 Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ### Conflict resolution settings
-It is possible to change the default behavior for all offline apps belonging to an environement. This is not recommended.
+It is possible to change the default behavior for all offline apps belonging to an environment. This is not recommended.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select the environement
