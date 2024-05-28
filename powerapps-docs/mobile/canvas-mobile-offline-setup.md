@@ -210,7 +210,7 @@ When you export a solution with an offline canvas app, you also need export the 
 
 Make sure that the associated offline profile is in the solution and then you can export it.  
 
-# See also
+## See also
 
 - [Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
 - [Best practices to enable an app for offline](best-practices-offline.md)
