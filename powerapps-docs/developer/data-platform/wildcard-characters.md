@@ -38,7 +38,7 @@ More information: [Query data using FetchXml](fetchxml/overview.md)
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`EndsWith`<br/>
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`DoesNotEndWith`<br/>
 
-More information: [Use the ConditionExpression class](org-service/use-conditionexpression-class.md)
+More information: [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)
 
 # [Web API](#tab/webapi)
 
@@ -115,7 +115,7 @@ Queries that use these anti-patterns introduce performance problems because the 
 ### See also
 
 [Query data using FetchXml](fetchxml/overview.md)   
-[Use the ConditionExpression class](org-service/use-conditionexpression-class.md)   
+[Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)   
 [Query data using the Web API](webapi/query-data-web-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
