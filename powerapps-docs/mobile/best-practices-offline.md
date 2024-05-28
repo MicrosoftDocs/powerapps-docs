@@ -48,7 +48,7 @@ Develop and roll out your offline app in three phases:
 
 After you've [set up mobile offline for canvas apps](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) or [set up mobile offline for model-driven apps](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
 
-In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app following the guidelines to [optimize the offline profile](mobile-offline-guideline.md)
+In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app following the guidelines to [Optimize the offline profile](mobile-offline-guidelines.md)
 
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable. 
 
@@ -61,7 +61,7 @@ Ask a few users to test the app with real data. Make sure the offline profile sc
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
-***Outcome:*** You confirm that the offline profile scales to real use cases. If it is not the case, you need to [optimize the offline profile](mobile-offline-guideline.md)
+***Outcome:*** You confirm that the offline profile scales to real use cases. If it is not the case, you need to [optimize the offline profile](mobile-offline-guidelines.md)
 
 ### Phase 3: Roll it out
 
