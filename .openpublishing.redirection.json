@@ -1,6 +1,66 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/build-queries-with-queryexpression.md",
+      "redirect_url": "queryexpression/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-queryexpression-class.md",
+      "redirect_url": "queryexpression/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md",
+      "redirect_url": "queryexpression/filter-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-filterexpression-class.md",
+      "redirect_url": "queryexpression/filter-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-the-columnset-class.md",
+      "redirect_url": "queryexpression/select-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-queryexpression.md",
+      "redirect_url": "queryexpression/page-results",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-left-outer-join-queryexpression-query-records-not-in.md",
+      "redirect_url": "queryexpression/join-tables#find-records-not-in-a-set",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md#column-comparison",
+      "redirect_url": "queryexpression/filter-rows#filter-on-column-values-in-the-same-row",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md#record-count",
+      "redirect_url": "queryexpression/count-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-filterexpression-class.md#about-the-isquickfindfilter-property",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-queryexpression-class.md#use-sql-hints-in-a-query",
+      "redirect_url": "queryexpression/optimize-performance#query-hints",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/build-queries-with-queryexpression.md#configuration-for-quick-find",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/tools/devtools-create-plugin.md",
       "redirect_url": "/power-platform/developer/howto/vs-create-plugin",
       "redirect_document_id": "false"

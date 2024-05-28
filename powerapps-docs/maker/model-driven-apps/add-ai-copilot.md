@@ -106,6 +106,14 @@ If you want to disable the ability for users to submit feedback about copilot in
 1. Set the column to **No**, and then **Save** the table.
    :::image type="content" source="media/disable-mda-copilot-feedback2.png" alt-text="Set the Find the Allow users to provide feedback for App Copilot column to No":::
 
+### Known limitations 
+
+1. **Copilot for app users** allows users to retrieve information from Dataverse through read-only operations. This means that users can only view data that matches their queries and cannot make any changes to the data.
+1. Create, update, or other generic actions such as enable or disable copilot and create a memo aren’t supported
+1. [Summarization](/dynamics365/sales/copilot-overview#record-summarization) skill feature is available in [Dynamics 365 Sales copilot](/dynamics365/sales/copilot-overview) and not in **Copilot for app user**.
+
+
+   
 ## See also
 
 [FAQ for copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
