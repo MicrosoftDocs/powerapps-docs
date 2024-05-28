@@ -68,7 +68,18 @@ From the **Solutions** area, select a solution to view all of its components.
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components.](media/solution-all-items-list.PNG "Demo solution with all components")   
  
- You can browse through all the components in a solution by scrolling through the items. If there are more than 100 items in the list you can select **Load the next 100 items** to see more.
+ You can browse through all the objects in a solution by scrolling through the items. If there are more than 100 items in the list you can select **Load the next 100 items** to see more.
+ Columns can be sorted and filtered by clicking on the column header.
+ 
+ Column headers include:
+ - **Managed**: The solution object is from a managed solution.  You can inspect the solutions using Advanced | See Solution Layers menu option.
+ - **Customizable**: The component is available to be customized.
+ - **Customized**: This indicates that the object is an unmanaged object, or a managed object with an unmanaged customization layer.  You can use this column to quickly locate the unmanaged changes you have for components in the solution.
+ - **Owner**: if the solution object supports user/team ownership, the current owner will be displayed.
+ - **Status**: if the solution object supports state management (on/off, enabled/disabled, active/inactive), the status will be displayed.
+ 
+> [!TIP]
+> You can quickly locate all solution objects that are unmanaged or have unmanaged customizations by selecting the default solution and filtering on the Custimized column.
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components.](media/load-more.PNG "Load more components")  
