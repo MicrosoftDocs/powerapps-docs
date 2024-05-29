@@ -296,6 +296,8 @@
         href: ./canvas-apps/ai-conversations-create-app.md
       - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
+      - name: Use field suggestions by Copilot
+        href: ./canvas-apps/ai-field-suggestions.md  
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -520,6 +522,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Avatar (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md  
             - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
@@ -682,6 +686,8 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+        - name: Understand app functionality through code view (preview) 
+          href: ./canvas-apps/code-view.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -2231,6 +2237,8 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
+      - name: Transtion from legacy data generation services
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2581,6 +2589,10 @@
     href: ./common/faq-timeline-highlights-with-copilot.md
   - name: FAQ about using Copilot with Power Fx
     href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about field suggestions by Copilot
+    href: ./common/faq-field-suggestions.md  
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
 - name: Resources
   items:
   - name: Blog

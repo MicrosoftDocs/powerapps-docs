@@ -27,7 +27,7 @@ If you select many lookup and computed columns, and you're experiencing performa
 Using the `latematerialize` attribute might not always provide a performance benefit. It might make simple queries run more slowly. It's most beneficial when your query:
 
 - Has many joins
-- Contains many columns lookup columns or computed columns
+- Contains many lookup or computed columns
 
 ## Query Hints
 
@@ -37,7 +37,7 @@ Using the `latematerialize` attribute might not always provide a performance ben
 Microsoft SQL Server supports many query hints to optimize queries. FetchXML
 supports query hints and can pass these query options to SQL Server using the [fetch element](reference/fetch.md) [options](reference/fetch.md#options) attribute.
 
-[!INCLUDE [fetch-options-table](reference/includes/fetch-options-table.md)]
+[!INCLUDE [cc-query-options](../includes/cc-query-options.md)]
 
 
 ## No lock

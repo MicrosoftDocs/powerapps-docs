@@ -17,7 +17,7 @@ contributors:
 ---
 # Share a canvas app with your organization
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Microsoft Entra ID. If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Microsoft Entra ID.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -53,10 +53,6 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
     ![Share an app.](./media/share-app/share-app.png "Share an app")
 
 1. Specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
-
-    - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to "Org apps".
-
-        ![Share with everyone.](./media/share-app/everyone.png "Share with everyone")
 
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semicolons. If several people have the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
 

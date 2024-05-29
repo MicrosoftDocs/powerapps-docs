@@ -1,7 +1,7 @@
 ---
-title: FAQs about Form Filling Assistance
-description: These FAQs provide information about the AI technology used in the Form Filling Assistance feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 2/09/2024
+title: FAQ about form filling assistance
+description: This FAQ provides information about the AI technology used in the form filling assistance feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+ms.date: 05/22/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -12,9 +12,9 @@ ms.collection:
     - bap-ai-copilot 
 ---
 
-# FAQs about form filling assistance
+# FAQ about form filling assistance
 
-These frequently asked questions (FAQs) describe the AI impact of Form Filling Assistance in model-driven apps.
+These frequently asked questions (FAQ) describe the AI impact of Form Filling Assistance in model-driven apps.
 
 ## What is form filling assistance?  
 
