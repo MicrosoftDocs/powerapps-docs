@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 04/03/2024
+ms.date: 05/29/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -110,7 +110,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
 
 As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
 
-To override this behavior, change the app setting to **No** in the environment or apply to multiple environments by including in a solution that is loaded into the environments.
+To override this behavior, change the app setting to **No** in the environment or apply to multiple environments by including in a solution that is imported into the environments.
 
 ### Prevent new app default to monthly channel
 
