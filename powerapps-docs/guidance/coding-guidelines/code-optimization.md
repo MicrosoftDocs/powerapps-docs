@@ -1,7 +1,7 @@
 ﻿---
 title: Code optimization
 description: Code optimization
-ms.date: 04/26/2024
+ms.date: 05/28/2024
 ms.topic: guidance
 ms.service: powerapps
 author: robstand
@@ -111,7 +111,7 @@ Refer to <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-decl
 
 ### Named formulas
 
-Named formulas are static or constants that can be defined on App.Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and there value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
+Named formulas are static or constants that can be defined on App.Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and their value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
 
 Named formulas can also address is declaring app themes. In many cases where enterprise apps are build, we want the app to have common themes to give consistent look and user experience. To create a theme, there are 10s and 100s of variables that need to be declared on App OnStart. This increased code length and initialization time of the app.
 
@@ -141,7 +141,7 @@ BoardBlank = "----------------------------------------------------------------\_
 BoardClassic = "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000";
 ```
 
-Another example is inn setting `Lookups`. Here a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
+Another example is inn setting `Lookups`. Here, a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
 
 ```powerappsfl
 UserEmail = User().Email;
@@ -174,7 +174,7 @@ Named Formulas in the `App.Formulas` property provide a more flexible and declar
 
 User Defined Functions is an experimental functionality in Power Apps Authoring Studio that enables users to create their own custom function.
 
-To use this feature, under experimental settings, click New analysis engine and User-defined function (UDFs)
+To use this feature, under experimental settings, select New analysis engine and User-defined function (UDFs)
 
 Define a formula under `App.Formulas` as follows:
 
@@ -266,7 +266,7 @@ The example code returns this dataset:
 
 ![A screenshot of a dataset with a table named colAcc and two columns with data, address1_city and name](media/image21.png)
 
-**Set a data source refresh frequency**. If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you'll need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
+**Set a data source refresh frequency**. If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
 
 ### Cache data in collections and variables
 
@@ -311,7 +311,7 @@ Here's an example of Cross-referenced controls. In the image below Gallery 1 con
 
 ![A screenshot of Power Apps Studio showing a cross-referenced control](media/image23.png)
 
-If you reference a control from the first screen in the app in the second screen, there will be no performance hit as the first screen will have already been loaded and this may actually be a good thing as the app declarative instead of using variables.
+If you reference a control from the first screen in the app in the second screen, there will be no performance hit as the first screen has already been loaded and this may actually be a good thing as the app declarative instead of using variables.
 
 If you reference controls that have yet to be loaded, such as the first screen referencing a control named `Label 3` from screen 3, will require the screen to be loaded in memory.
 
@@ -339,7 +339,7 @@ Delegation has several advantages such as Query optimization and adds supports f
 
 Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas App. Refer to the code below:
 
-In this example, there are two tables, Drivers and Trucks. The developer writes the code to create a collection of drivers and truck details and for each truck, they are calling drivers who own the trucks.
+In this example, there are two tables, Drivers and Trucks. The developer writes the code to create a collection of drivers and truck details and for each truck, they're calling drivers who own the trucks.
 
 ```powerappsfl
 // Bad code
@@ -383,11 +383,11 @@ Set(
 )
 ```
 
-In the real time scenario, it is possible to reduce loading times from 5 minutes to under 10 seconds by just correcting the data at the data source level.
+In the real time scenario, it's possible to reduce loading times from 5 minutes to under 10 seconds by just correcting the data at the data source level.
 
 ### Server side processing
 
-Different data sources such as SQL and Dataverse enable you to delegate data processing such as Filter and Lookups to the data source. In SQL Server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+Different data sources such as SQL and Dataverse enable you to delegate data processing such as Filter and Lookups to the data source. In SQL Server, users can create views, which have content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
@@ -407,7 +407,7 @@ Overuse of Power Automate flows can also lead to execution limits and throttling
 
 ### Eliminate N+1 problem
 
-The N+1 problem is a common issue in database queries where, instead of fetching all the required data in a single query, multiple additional queries are made to retrieve related data. This can lead to performance issues, as each additional query incurs overhead.
+The N+1 problem is a common issue in database queries where, instead of fetching all the required data in a single query, multiple extra queries are made to retrieve related data. This can lead to performance issues, as each extra query incurs overhead.
 
 A simple call like this to load a collection can generate N+1 calls to data source.
 
@@ -419,7 +419,7 @@ ClearCollect(MyCollection, OrdersList,
 )
 ```
 
-In the context of Power Apps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when additional queries are made for each item displayed in the gallery, leading to a performance bottleneck.
+In the context of Power Apps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when more queries are made for each item displayed in the gallery, leading to a performance bottleneck.
 
 Use View objects in SQL Server to avoid N+1 query problem, or change the user interface to avoid triggering the N+1 scenario.
 
@@ -427,7 +427,7 @@ Dataverse automatically fetches the required data of related tables and you can 
 
 `ThisItem.Account.'Account Name'`
 
-If `RelatedDataSourc`e` size is small (<500 records), you can cache it in a collection and leverage the collection to drive the Lookup (N+1) query scenario.
+If `RelatedDataSourc`e` size is small (<500 records), you can cache it in a collection and use the collection to drive the Lookup (N+1) query scenario.
 
 ### Limiting the package size
 
@@ -447,7 +447,7 @@ Although Power Apps does a lot to optimize app loading, you can take steps to re
 
 The `ForAll` function in Power Apps is used to iterate through a table of records and apply a formula or set of formulas to each record. While the function itself is versatile, improper use of ForAll function can quickly make your app less performant.
 
-ForAll function is singular sequential function instead of concurrent function. Therefore it looks at only one record at a time, get the result, then continue to the next until it has gone through all records in its scope.
+ForAll function is singular sequential function instead of concurrent function. Therefore it looks at only one record at a time, gets the result, then continues to the next until it has gone through all records in its scope.
 
 **Avoid Nesting ForAll at all cost.** This can lead to exponential iterations and significantly impact performance.
 

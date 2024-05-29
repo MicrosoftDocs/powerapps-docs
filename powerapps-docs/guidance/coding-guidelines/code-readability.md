@@ -1,7 +1,7 @@
 ﻿---
 title: Code readability
 description: Code readability
-ms.date: 04/26/2024
+ms.date: 05/28/2024
 ms.topic: guidance
 ms.service: powerapps
 author: robstand

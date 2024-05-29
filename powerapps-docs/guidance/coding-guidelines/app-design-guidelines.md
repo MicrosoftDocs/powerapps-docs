@@ -13,9 +13,9 @@ ms.author: rachaudh
 
 ## Modern controls
 
-Modern controls in canvas apps represent a significant advancement in the development and design of user interfaces within the Microsoft ecosystem. Rooted in Microsoft's Fluent Design System, these controls are designed to deliver a fast, performance-oriented, and accessible user experience, all while ensuring seamless integration with theming capabilities. The introduction of these controls, including tab lists, progress bars, info buttons, spinners, and more, underscores a strategic shift towards creating more intuitive, responsive, and visually appealing applications. By using these modern controls, developers can easily implement sophisticated UI elements that are both aesthetically pleasing and functionally rich, enhancing the overall user engagement and satisfaction.
+Modern controls in canvas apps represent a significant advancement in the development and design of user interfaces within the Microsoft ecosystem. Based in Microsoft's Fluent Design System, these controls are designed to deliver a fast, performance-oriented, and accessible user experience, all while ensuring seamless integration with theming capabilities. The introduction of these controls, including tab lists, progress bars, info buttons, spinners, and more, underscores a strategic shift towards creating more intuitive, responsive, and visually appealing applications. By using these modern controls, developers can easily implement sophisticated UI elements that are both aesthetically pleasing and functionally rich, enhancing the overall user engagement and satisfaction.
 
-The inherent design of these controls, keeping theming in mind, allows for a unified and consistent look and feel across applications, significantly reducing the effort required in customizing and branding apps. The ability to automatically update the styles of all controls based on the set theme simplifies the design process and ensures that applications remain visually coherent throughout. This aligns perfectly with the needs of modern businesses seeking to maintain brand consistency while offering high-quality digital experiences. The modern controls also emphasize accessibility and performance, ensuring that applications are usable by a wide range of audiences, including those with disabilities, thereby aligning with inclusive design principles. As such, the modern controls in Canvas Power Apps aren't just a set of UI components but a transformative toolset that empowers developers to build more efficient, maintainable, accessible, and cohesive applications that meet the evolving needs of businesses and users alike.
+The inherent design of these controls, keeping theming in mind, allows for a unified and consistent look and feel across applications, significantly reducing the effort required in customizing and branding apps. The ability to automatically update the styles of all controls based on the set theme simplifies the design process and ensures that applications remain visually coherent throughout. This aligns perfectly with the needs of modern businesses seeking to maintain brand consistency while offering high-quality digital experiences. The modern controls also emphasize accessibility and performance, ensuring that applications are usable by a wide range of audiences, including those with disabilities, aligning with inclusive design principles. As such, the modern controls in Canvas Power Apps aren't just a set of UI components but a transformative toolset that empowers developers to build more efficient, maintainable, accessible, and cohesive applications that meet the evolving needs of businesses and users alike.
 
 > [!IMPORTANT]
 > While a subset of the modern controls in canvas apps has been made generally available (GA), the broader feature set remains in preview. You are encouraged to explore and provide feedback on these preview controls. However, it's important to keep in mind that their features and functionalities may be refined based on feedback and testing before they reach general availability.
@@ -61,7 +61,7 @@ Organizing elements in Power Apps using groups allows users to apply shared prop
 
 ## Gallery design and guidelines
 
-### Avoid changing gallery gtems from within
+### Avoid changing gallery items from within
 
 Avoid modifying the `Items` property of a gallery within child controls' events like `OnChange` or `OnSelect`. This can lead to unexpected behavior, especially when dealing with certain controls that trigger events when their values change.
 
@@ -87,7 +87,7 @@ Whenever possible, avoid nesting galleries. Instead, try to design your data str
 
 Fixed-height galleries may result in limited content visibility, especially when dealing with dynamic data.
 
-Use flexible height galleries by setting the Height property to Parent.Height or a dynamic value based on your data. This ensures that the gallery adjusts its height to accommodate varying amounts of data.
+Use flexible height galleries by setting the `Height` property to `Parent.Height` or a dynamic value based on your data. This ensures that the gallery adjusts its height to accommodate varying amounts of data.
 
 ![Screenshot of Power Apps Studio with Blank flexible height gallery highlighted](media/image11.png)
 
