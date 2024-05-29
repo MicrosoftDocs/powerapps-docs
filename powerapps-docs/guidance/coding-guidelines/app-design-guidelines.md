@@ -146,3 +146,8 @@ When you need to implement advanced business logic or calculations that are beyo
 #### Improved user experience
 
 When you aim to enhance the overall user experience by creating visually appealing and interactive components that aren't achievable with the default controls.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Responsive design guidelines](responsive-design-guidelines.md)

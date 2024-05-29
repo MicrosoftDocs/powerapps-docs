@@ -334,6 +334,7 @@ The "Format Text" command in the formula bar is designed to apply indentation, s
 
 ![Screenshot of Power Apps studio with the Format text command highlighted](media/image10.png)
 
-## Next steps
+## Next step
 
-Read about [App design guidelines](app-design-guidelines.md)
+> [!div class="nextstepaction"]
+> [Code optimization](code-optimization.md)

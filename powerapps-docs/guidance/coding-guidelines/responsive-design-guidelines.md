@@ -44,3 +44,8 @@ Transforming a nonresponsive Canvas app into a responsive one requires a systema
 ## Resources
 
 - [Power Platform Well-Architected guidance for Layout](/power-platform/well-architected/experience-optimization/layout)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Code readability](code-readability.md)

@@ -478,3 +478,8 @@ ForAll(colSampleFoodSales, Patch(SampleFoodSalesData,
     })
 );
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Error handling guidelines](error-handling.md)
