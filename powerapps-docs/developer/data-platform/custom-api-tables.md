@@ -81,7 +81,7 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
 
 # [QueryExpression](#tab/queryexpression)
 
-More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 ```csharp
 string conn = $@"
