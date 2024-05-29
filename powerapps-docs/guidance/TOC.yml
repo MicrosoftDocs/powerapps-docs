@@ -14,6 +14,8 @@
       href: coding-guidelines/code-readability.md
     - name: Code optimization
       href: coding-guidelines/code-optimization.md
+    - name: Error handling
+      href: coding-guidelines/error-handling.md
     - name: Monitoring and testing
       href: coding-guidelines/monitoring-testing.md
   - name: Power Apps patterns
