@@ -16,18 +16,19 @@ searchScope:
   - "Power Apps"
 ---
 
-# Best practices to enable an app for offline
-In this section, you will find recommendations on how to create the best experience for the users of apps enabled for offline. 
-- If you enable a canvas app for offline, you also need to optimize how the app is fetching the data from the data source (see [How to create the best offline user experience in canvas apps?](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps). 
-- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup that occurs during the app’s first use. The speed of this initial run is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless initial experience, it’s advisable to  plan the your [offline profile rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
+# Best practices for for developing an app for offline use
+This article provides recommendations for how to create the best experience for users of apps configured for offline use. 
 
-## How to create the best offline user experience in canvas apps?
+- If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps). 
+- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time, setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to  plan the your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
 
-Use the following recommendations to create a faster user experience for specific scenarios. 
+## How to create the best offline user experience in canvas apps
 
- |Scenario                      |  Approach that is not recommended                     |  Recommended approach               |
+Use the following recommendations to create a fast user experience for specific scenarios. 
+
+ |Scenario                      |  Approach that's not recommended                     |  Recommended approach               |
  |-------------------------------|----------------------------|--------------------------------|
- | Show related tables information in a gallery. | Use a look-up to fetch the data. | Use a view containing the column of the related table.|
+ | Show related tables information in a gallery. | Use a look-up to fetch the data. | Use a view containing the columns of the related table.|
  | Create a filterable gallery with a lot of records.  | Load the records from Dataverse and store them in a collection. Set the items of the gallery to the filtered collection.  | Directly set the items of the gallery to the Dataverse-filtered data. |
  | Update multiple records. | Loop the records and patch them individually. | Bulk patch a collection containing all the modifications. |
 
@@ -38,9 +39,9 @@ Monitor is a tool that offers makers a deep view of what an app does and how it 
 ## Plan your offline app rollout
 
 > [!IMPORTANT]
->If you are using an **auto-generated offline profile** (canvas apps only), and if the first synchronization is taking too much time, you should probably create a manual offline profile and follow the best practices below. 
+>If you're using an **auto-generated offline profile** (available for canvas apps only), and if the first synchronization is taking too much time, you should create a manual, offline profile by using the following best practices. 
 
-Develop and roll out your offline app in three phases:
+Develop and roll-out your offline app in three phases.
 
 :::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
 
