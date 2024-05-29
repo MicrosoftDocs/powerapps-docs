@@ -32,7 +32,7 @@ Use this tool to explore what's possible in the RESTful API, test user-defined w
 ## Key features
 
 - Pre-authenticated: The API playground comes pre-authenticated, so developers can start testing and experimenting with API endpoints right away.
-- Web-based: With the API playground, developers can quickly interact with the Dataverse Web API without the need for extensive setup like software downloads or third party account setup. You can access the tool from the Dataverse Accelerator, a first party app available in all new Microsoft Dataverse environments and can be installed in any environment.
+- Web-based: With the API playground, developers can quickly interact with the Dataverse Web API without the need for extensive setup like software downloads or non-Microsoft account setup. You can access the tool from the Dataverse accelerator, a Microsoft app available in all new Dataverse environments and can be installed in any environment.
 - Convenient: Presents the various actions and capabilities available in the Dataverse Web API, making it easy to quickly learn what's possible and how to implement it.
 
 ## Prerequisites
@@ -43,48 +43,48 @@ You must have [access to Dataverse](/power-apps/maker/data-platform/data-platfor
 
 To get started with the API playground, [run](dataverse-accelerator.md#play-the-dataverse-accelerator) the Dataverse accelerator and navigate to the API playground page.
 
-![Run the API playground by clicking the feature card](media/api-play-run.svg)
+![Run the API playground by selecting the feature card](media/api-play-run.svg)
 
 ### Make requests to the Dataverse Web API
 
-On the landing screen, choose the request type to open the request editor by clicking the 'Create' button on any of the top cards.
+On the landing screen, choose the request type to open the request editor by selecting **Create** on any of the top cards.
 
 Three request types are presented:
 
 | Type | Description |
 |-|-|
-| Custom API | This includes any Microsoft Dataverse Web API first party [actions](/power-apps/developer/data-platform/webapi/use-web-api-actions), [functions](/power-apps/developer/data-platform/webapi/use-web-api-functions), or any public [user-defined Custom APIs](/power-apps/developer/data-platform/custom-api) registered in the working environment. |
-| Instant low code plugin | [Instant low code plugins](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant) are classified as any user-defined workflows registered as a Custom API in the environment with a related FxExpression. |
+| Custom API | This includes any Dataverse Web API [actions](/power-apps/developer/data-platform/webapi/use-web-api-actions), [functions](/power-apps/developer/data-platform/webapi/use-web-api-functions) from Microsoft, or any public [user-defined custom APIs](/power-apps/developer/data-platform/custom-api) registered in the working environment. |
+| Instant plug-in | [Instant plug-ins](/power-apps/maker/data-platform/low-code-plug-ins?tabs=instant) are classified as any user-defined workflows registered as a custom API in the environment with a related FxExpression. |
 | OData request | Allows more granular control over the request inputs to send [OData requests](/power-apps/developer/data-platform/webapi/perform-operations-web-api). |
 
-### Request a Custom API or instant low code plugin
+### Request a custom API or instant plug-in
 
-These request types are designed to simplify calling plugins available in the working environment.
+These request types are designed to simplify calling plug-ins available in the working environment.
 
 1. Select an option from the main dropdown, which presents the available plugins in the current environment.
    ![Custom APIs are listed in the dropdown](./media/api-play-list-customapi.svg)
 
-1. If parameters are available, they are displayed in the *Query params* table that appears. Provide values for required parameters.
+1. If parameters are available, they are displayed in the **Query params** table that appears. Provide values for required parameters.
 
-    ![Custom API parameters will dusplay automatically](./media/api-play-customapi-params.svg)
+    ![Custom API parameters display automatically](./media/api-play-customapi-params.svg)
 
     > [!NOTE]
-    > Checkboxes to the left of each parameter indicate whether they are included in the request. Required parameters have disabled checkboxes, while optional parameters have editable ones.
+    > Checkboxes to the left of each parameter indicate whether they are included in the request. Required parameters have disabled checkboxes while optional parameters have editable ones.
 
-1. Click **Send**
+1. Select **Send**.
 
-1. Observe the [response](#view-the-response) in the lower section of the screen.
+Observe the [response](#view-the-response) in the lower section of the screen.
 
-    ![Parameters are listed if registered](./media/api-play-response.svg)
+![Parameters are listed if registered](./media/api-play-response.svg)
 
 > [!NOTE]
-> The interface provides a convenient listing of all available plugins in the environment. When selected, the associated parameters with data types are presented. Behind the scenes an OData call is still being made, but the interface simplifies the construction of the call.
+> The interface provides a convenient listing of all available plug-ins in the environment. When selected, the associated parameters with data types are presented. Behind the scenes an OData call is still being made, but the interface simplifies the construction of the call.
 
 ### Make an OData request
 
 OData requests allow more options for request parameters.
 
-1. Select the *HTTP request method* in the first dropdown.
+1. Select the **HTTP request method** in the first dropdown list. <!-- start here-->
 
 1. Type in the *endpoint Url*. Only include the request Url after `[OrgUrl]/api/data/v9.2/`
 
