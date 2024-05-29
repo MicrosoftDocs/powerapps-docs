@@ -50,7 +50,7 @@ You can create an [automated cloud flow](/power-automate/get-started-logic-flow)
 > To retrieve the user’s email address within the flow, add the Dataverse action **Get a row by ID** using the **Owner** column of the **Sync Error** row.  
 
 ## Sync conflict
-When there is a mismatch of data between client and server, conflict errors occur. By default, changes that are made by a user in offline mode are automatically synced to the server when the user is back online. 
+When there's a mismatch of data between client and server, conflict errors occur. By default, changes that are made by a user in offline mode are automatically synced to the server when the user is back online. 
 
 ### How sync conflicts are resolved
 When a user makes changes to data in an offline app, updates to each column are pushed back to Dataverse as soon as the network is available. The last update to each column is stored in Dataverse, so this sync doesn't fail due to conflicting changes.
@@ -58,10 +58,10 @@ When a user makes changes to data in an offline app, updates to each column are 
 Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ### Conflict resolution settings
-It's possible to change the default behavior for all offline apps belonging to an environment. This is not recommended.
+It's possible to change the default behavior for all offline apps belonging to an environment. This isn't recommended.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select the environement.
+2. Select the environment.
 3. Select **Settings** in the command bar.
 4. Select **Product** > **Features**.
 5. In the **Advanced mobile offline settings for model-driven apps** section, turn on the **Enable conflict detection for mobile offline synchronization** option. When this option is turned on, the server wins over the client. Conflict errors must be resolved manually.
