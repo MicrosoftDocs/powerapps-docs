@@ -27,9 +27,10 @@ ms.contributors:
 
 Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Offline best practices](best-practices-offline.md) and the [Offline profile guidelines](mobile-offline-guidelines.md).
 
-These tables and corresponding commands are available in offline mode
-  > [!NOTE]
-  > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
+These tables and corresponding commands are available in offline mode.
+
+> [!NOTE]
+> Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
 |Table |Commands|  
 |-------------|---------|  
@@ -67,7 +68,7 @@ These tables and corresponding commands are available in offline mode
     - Primary image thumbnails aren't available for offline unless they were previously displayed online.
     - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
 
- - **Supported type of views** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
+ - **Supported type of views** - Only system views and quick views are supported in mobile offline. Personal views aren't supported.
    
 - **Views** aren't supported for the following tables in offline mode: 
 
@@ -120,7 +121,7 @@ These tables and corresponding commands are available in offline mode
 
 - **Quick find search** - When you search offline, the results might be different from online searches. Characters in your search terms must match exactly when searching offline, while online equivalent results might be found.
   
-- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
+- **Offline search** - Offline search is available only for offline tables. Users can only search one table at a time. Global search defaults to a categorized search in offline mode, even if Dataverse search is turned on, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
 
 ### Profile filters limitations
