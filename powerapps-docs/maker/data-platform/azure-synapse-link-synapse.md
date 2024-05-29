@@ -1,8 +1,8 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
-description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
+description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 01/24/2024
+ms.date: 05/06/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -39,13 +39,12 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 
-- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **allowAll** IP addresses access rule. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
 >
 > - The storage account and Synapse workspace must be created in the same Microsoft Entra tenant as your Power Apps tenant.
-> - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
-> - To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create an Azure Synapse Link with managed identities. More information: [Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable **public network access** for Azure resources for both initial setup and delta sync.)
+> - To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace, you must create an Azure Synapse Link with managed identities. More information: [Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable **public network access** for Azure resources for both initial setup and delta sync.)
 > - Synapse workspaces featuring managed private endpoints, data exfiltration protection, or managed virtual networks aren't supported.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
@@ -54,7 +53,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 ## Connect Dataverse to Synapse workspace
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the left navigation pane, select **Azure Synapse Link**. If **Azure Synapse Link** isn't visible in the side pane, select **…More** and choose **Discover all**. Select **Azure Synapse Link** in the **Data Management** section.
 1. On the command bar, select **+ New link**.
 1. Select the **Connect to your Azure Synapse workspace** option.
 1. Select the **Subscription**, **Resource group**, **Workspace name**, and **Storage account**. Ensure that the Synapse workspace and storage account meet the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
@@ -71,9 +70,9 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 You can follow the steps above to create a link from one environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
+> The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an out-of-the-box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
+> 
 > The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
->
-> Currently, you can't provide public IP addresses for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
 ## Manage table data to the Synapse workspace
@@ -92,7 +91,7 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- There are different stages the sync status circulates through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync is **Completed**, there's a post processing stage where incremental updates won't take place. This might take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
 - The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
 - The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 

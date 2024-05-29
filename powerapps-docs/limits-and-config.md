@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/08/2023
+ms.date: 04/04/2024
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -109,11 +109,12 @@ This list identifies all services to which Power Apps communicates and their usa
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| api.powerplatform.com<br>\*.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 | *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
+| dc.services.visualstudio.com | https | [Application Insights](/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in canvas app](maker/canvas-apps/application-insights.md) |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
@@ -158,7 +159,7 @@ Power Apps does not support running with a proxy enabled. This can cause unpredi
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](/power-platform/power-fx/data-types#text-hyperlink-image-and-media).
 
-For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](maker/data-platform/types-of-fields.md).
+For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](/maker/data-platform/types-of-fields.md).
 
 ## Power Apps per app plan
 

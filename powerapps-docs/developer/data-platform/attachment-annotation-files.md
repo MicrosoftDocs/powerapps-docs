@@ -4,9 +4,9 @@ description: Learn how to work with file data in the Attachments and Notes table
 ms.date: 02/02/2023
 ms.reviewer: jdaly
 ms.topic: conceptual
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 contributors:
@@ -1005,7 +1005,7 @@ More information:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 
 # [Web API](#tab/webapi)
@@ -1081,7 +1081,7 @@ More information:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 - [IOrganizationService.Update Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A)
 
 # [Web API](#tab/webapi)

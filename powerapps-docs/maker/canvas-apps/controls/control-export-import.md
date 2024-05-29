@@ -1,19 +1,19 @@
 ---
 title: Export and Import controls in Power Apps
 description: Learn about the details, properties and examples of the Export and Import controls in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/09/2020
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Export and Import controls in Power Apps
 Controls for exporting data to a local file and then importing that data into another app in Power Apps.

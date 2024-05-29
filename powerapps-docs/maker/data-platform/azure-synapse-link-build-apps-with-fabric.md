@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 11/27/2023
+ms.date: 04/30/2024
 ms.custom: template-how-to
 ---
 # Build apps and automations, drive action with insights from Microsoft Fabric (preview)
@@ -25,9 +25,9 @@ Link to Microsoft Fabric feature in Microsoft Dataverse enables extending your d
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Insights aren't complete unless you can drive action and business processes. Bring insights you found in Fabric to build apps, drive business processes with Power Automate without data copy, no-ETL or third-party integration tools.
+Insights aren't complete unless you can drive action and business processes. Bring insights you found in Fabric to build apps, drive business processes with Power Automate without data copy, no-ETL, or non-Microsoft integration tools.
 
-With Dataverse virtual tables sourced with Fabric, your low-code app builders connect to data in Microsoft OneLake and build Power Apps and drive business actions. Additionally, with Power Pages, low-code makers can build external facing websites and drive action from OneLake insights with partners, suppliers, and customers
+With Dataverse virtual tables sourced with Fabric, your low-code app builders connect to data in Microsoft OneLake and build Power Apps and drive business actions. Additionally, with Power Pages, low-code makers can build external facing websites and drive action from OneLake insights with partners, suppliers, and customers.
 
 ![Virtual table with insights from Microsoft Fabric](media/Fabric/Fabric_to_App_GIF_demo.gif)
 
@@ -36,9 +36,9 @@ With Dataverse virtual tables sourced with Fabric, your low-code app builders co
 - An existing Dataverse environment or you can create a new developer environment. More information: [Create a developer environment](/power-platform/developer/create-developer-environment)
 - Contributor or administrator access to a Fabric workspace with data.
 
-If you don’t have Power BI premium license or Fabric capacity, you can sign up for a free [Fabric trial capacity](/fabric/get-started/fabric-trial)
+If you don’t have Power BI premium license or Fabric capacity, you can sign up for a free [Fabric trial capacity](/fabric/get-started/fabric-trial).
 
-If you don't have a workspace with data, create a workspace with sample data using the [lakehouse tutorial](/fabric/data-engineering/tutorial-build-lakehouse)
+If you don't have a workspace with data, create a workspace with sample data using the [lakehouse tutorial](/fabric/data-engineering/tutorial-build-lakehouse).
 
 ## Create a virtual table with Fabric data
 
@@ -46,7 +46,7 @@ Follow these steps to create a virtual table using Fabric data.
 
 > [!NOTE]
 >
-> This feature is enabled by default with all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
+> This feature is enabled by default with all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings. 
 
 1. Sign into [Power Apps](https://make.powerapps.com), and then select **Tables** on the left navigation pane.
 2. On the command bar, select **New table** > **Create a virtual table**.
@@ -55,7 +55,13 @@ Follow these steps to create a virtual table using Fabric data.
 5. Choose a **Microsoft Fabric Lakehouse** from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose.
 6. On the **Data** page, select a table from the list of tables shown from the lakehouse. Select **Configure table and column names that will be used in Dataverse** if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
 7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you're shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
-8. Review the information shown, and then select **Finish**.
+8. Verify that the field chosen for **primary key field** is a unique field. You might need to verify the default field selected by the system as the primary key.
+
+> [!NOTE]
+>
+> While the table you selected from Fabric Lakehouse might not have a primary key defined, you need to select a field that is unique to continue. If you don't select a unique field, the table might not show all the records. While the wizard selects a field based on metadata available, the selection might not be accurate.  
+
+9. Review the information shown, and then select **Finish**.
 
 A new Dataverse virtual table is created with data from Fabric.
 

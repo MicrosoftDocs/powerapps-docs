@@ -1,7 +1,7 @@
 ---
 title: Filter rows using FetchXml
 description: Learn how to use FetchXml to filter rows when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 04/01/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -15,6 +15,7 @@ contributors:
  - dasussMS
  - apahwa-lab
  - DonaldlaGithub
+ - rappen
 ---
 # Filter rows using FetchXml
 
@@ -124,6 +125,26 @@ When you apply a [filter](reference/filter.md) within a [link-entity](reference/
 
 When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you might want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you're using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 
+For example, the following query returns contacts without a [parent account](../reference/entities/contact.md#BKMK_ParentCustomerId), or a parent account without a [fax](../reference/entities/account.md#BKMK_Fax).
+
+```xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <filter>
+      <condition entityname='a'
+        attribute='fax'
+        operator='null' />
+    </filter>
+    <link-entity name='account'
+      from='accountid'
+      to='parentcustomerid'
+      link-type='outer'
+      alias='a' />
+  </entity>
+</fetch>
+```
+
 ## Filter on column values in the same row
 
 You can create filters that compare columns on values in the same row using the `valueof` attribute. For example, if you want to find any contact records where the `firstname` column value matches the `lastname` column value, you can use this query:
@@ -141,7 +162,7 @@ You can create filters that compare columns on values in the same row using the 
 </fetch>
 ```
 
-### Cross table comparisons
+### Cross table column comparisons
 
 With FetchXML only, you can compare field values in related tables. The following example returns rows where the contact `fullname` column matches the account `name` column.
 

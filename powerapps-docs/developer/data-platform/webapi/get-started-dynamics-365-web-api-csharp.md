@@ -29,6 +29,6 @@ To learn more, please explore the [Web API Samples (C#)](web-api-samples-csharp.
   
 [Perform operations using the Web API](perform-operations-web-api.md)  
 [Web API Samples (C#)](web-api-samples-csharp.md)  
-[Set up a Postman environment](setup-postman-environment.md)
+[Use Insomnia with Dataverse Web API](insomnia.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
