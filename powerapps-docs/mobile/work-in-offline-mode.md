@@ -5,7 +5,7 @@ description: Learn how to work offline on your mobile device.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/26/2023
+ms.date: 05/29/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
