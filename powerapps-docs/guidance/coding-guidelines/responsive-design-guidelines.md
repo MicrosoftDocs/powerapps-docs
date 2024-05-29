@@ -9,7 +9,7 @@ ms.author: rachaudh
  
 ---
 
-# Responsive Design Guidelines
+# Responsive design guidelines
 
 In the section on responsive design guidelines for Canvas apps in Power Apps, we delve into essential strategies and practices for creating applications that adapt seamlessly across various devices. This section encompasses key principles ranging from screen adaptation techniques to container utilization, settings adjustments, and detailed implementation steps. Each guideline is aimed at ensuring your Canvas app provides an optimal user experience, regardless of the device's screen size or orientation, addressing one of the most critical aspects of modern app development. These guidelines are instrumental for developers looking to enhance the accessibility and user engagement of their Power Apps.
 
