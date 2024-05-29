@@ -53,8 +53,8 @@
     href: ../user/app-source.md
   - name: Draft well-written, input text with Copilot (preview)
     href: ../user/well-written-input-text-copilot.md
-  - name: Use Copilot chat in canvas apps (preview)
-    href: ../user/copilot-chat-in-webplayer.md
+  - name: Filter, sort, and search galleries with Copilot (preview)
+    href: ../user/smartGrid.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -247,6 +247,8 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
+  - name: Copilot in Power Apps overview
+    href: ./canvas-apps/ai-overview.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -288,14 +290,14 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI Copilot 
+    - name: Create an app using Copilot
       items:
-      - name: Overview
-        href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
       - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
+      - name: Use field suggestions by Copilot
+        href: ./canvas-apps/ai-field-suggestions.md  
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -520,6 +522,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Avatar (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md  
             - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
@@ -682,10 +686,14 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+        - name: Understand app functionality through code view (preview) 
+          href: ./canvas-apps/code-view.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Create Power Fx formulas with Copilot
+          href: ./canvas-apps/ai-formulas-formulabar.md  
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -1851,16 +1859,6 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Create and manage sites
-      items:
-        - name: Create a site using the older add-on
-          href: ./portals/provision-portal-add-on.md
-        - name: Create additional sites in an environment
-          href: ./portals/create-additional-portals.md
-        - name: Control site creation in a tenant
-          href: ./portals/control-portal-creation.md
-        - name: Manage existing sites
-          href: ./portals/manage-existing-portals.md
     - name: List OData feeds
       href: ./portals/configure/list-odata-feeds.md
     - name: Create custom Portal Management app
@@ -2051,6 +2049,10 @@
           href: ./data-platform/lowcode-plug-ins-examples.md
         - name: Low-code plug-ins Power Fx
           href: ./data-platform/low-code-plug-ins-powerfx.md
+        - name: Create low-code plug-ins to use with a copilot
+          href: ./data-platform/low-code-plugins-copilot-studio.md
+        - name: Low-code plug-ins tips and known issues
+          href: ./data-platform/low-code-plug-ins-tips.md
       - name: Work with actions
         items:
         - name: Use actions
@@ -2207,6 +2209,12 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
+  - name: Get experimental features early (preview)
+    items:
+    - name: Use the Dataverse accelerator
+      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
+    - name: Monitor plug-ins
+      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
   - name: For admins
     items:
     - name: Security in Dataverse
@@ -2229,6 +2237,8 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
+      - name: Transtion from legacy data generation services
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2577,6 +2587,12 @@
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about field suggestions by Copilot
+    href: ./common/faq-field-suggestions.md  
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
 - name: Resources
   items:
   - name: Blog
