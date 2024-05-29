@@ -11,7 +11,7 @@ ms.author: rachaudh
 
 # Code Optimization
 
-Canvas Apps have emerged as a transformative force, allowing organizations to break free from conventional constraints and build tailor-made solutions. However, as these apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within Canvas Apps necessitate a nuanced approach to code optimization.
+As Canvas Apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within Canvas Apps necessitate a nuanced approach to code optimization.
 
 As Canvas Apps become more intricate, developers encounter challenges related to data retrieval, formula complexity, and rendering speeds. The need to strike a balance between robust functionality and responsive user interfaces underscores the importance of adopting a systematic approach to code optimization.
 
@@ -35,13 +35,13 @@ The `Coalesce` function evaluates its arguments in order and returns the first v
 
 For example:
 
-```Power Appsfl
+```powerappsfl
 If(Not IsBlank(value1), value1, Not IsBlank(value2), value2)
 ```
 
 Requires value 1 and value 2 to be evaluated twice. This function can be reduced to:
 
-```Power Appsfl
+```powerappsfl
 Coalesce(value1, value2)
 ```
 
@@ -51,7 +51,7 @@ The `IsMatch` function tests whether a text string matches a pattern that can co
 
 For example, this formula matches a United States Social Security Number:
 
-```Power Appsfl
+```powerappsfl
 IsMatch(TextInput1.Text, "\d{3}-\d{2}-\d{4}")
 ```
 
@@ -69,7 +69,7 @@ Explanation of the regular expression:
 
 More examples of `IsMatch`:
 
-```Power Appsfl
+```powerappsfl
 IsMatch(TextInput1.Text, "Hello World")
 IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]{8,10})")
 ```
@@ -78,34 +78,36 @@ IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]
 
 The `OnStart` property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Underachaudhing and effectively utilizing the `OnStart` property is essential for creating responsive and efficient Canvas apps.
 
-The `App OnStart` function plays a crucial role in initializing the app globally, encompassing tasks such as setting up variables, connecting data sources, determining the initial screen display, and executing actions vital for the entire application. Traditionally, this function tends to accumulate extensive lines of code, often reaching into the hundreds or thousands.
-
 A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
 > [!NOTE]
-> One potential issue with the `OnStart` property is that it's **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown.  Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
+> The `OnStart` property is **Imperative.** It's an ordered list of work that needs to be done before the first screen is shown. Because it's so specific about not only *what* needs to be done, but also *when* that work must be done based on order, it limits the reordering and deferring optimizations that could otherwise be done.
 
 ### Start screen
 
-If `App.OnStart` contains a Navigate function call, even if it is in an If function and rarely called, we must complete execution of the App.OnStart before we show the first screen of the app. App.StartScreen is the new declarative way to indicate which screen should be shown first, that doesn't block optimizations.
+If `App.OnStart` contains a `Navigate` function call, even if it is in an `If` function and rarely called, we must complete execution of the App.`OnStart` before we show the first screen of the app. `App.StartScreen` is the new declarative way to indicate which screen should be shown first, that doesn't block optimizations.
 
-Setting Start Screen property shows the first screen before App.OnStart is complete. App StartScreen declares which screen object to show first without requiring any preprocessing.
+Setting the `StartScreen` property shows the first screen before `App.OnStart` is complete. `App.StartScreen declares` which screen object to show first without requiring any preprocessing.
 
 Instead of writing code like:
 
-```Power Appsfl
+```powerappsfl
 App.OnStart = Collect(OrdersCache, Orders);
 If(Param("AdminMode") = "1", Navigate(AdminScreen), Navigate(HomeScreen))
 ```
 
-Change the code to
+Change the code to:
 
-```Power Appsfl
+```powerappsfl
 App.OnStart = Collect(OrdersCache, Orders);
 App.StartScreen = If(Param("AdminMode") = "1", AdminScreen, HomeScreen)
 ```
 
-Refer: <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details
+Refer to <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-declarative-alternative-to-navigate-in-app-onstart/> for more details.
+
+> [!WARNING]
+> Avoid dependencies between `StartScreen` and `OnStart`. Referencing a named formulat that in turn references a global variable may cause a race condition in which `StartScreen` is not applied correctly. 
+**Note**: we should not have dependencies between StartScreen and OnStart. We block referencing global variables in StartScreen, but we can reference a named formula, that in turn references a global variable, and that may cause a race condition in which the StartScreen is not applied correctly.
 
 ### Named formulas
 
@@ -113,11 +115,11 @@ Named formulas are static or constants that can be defined on App.Formulas secti
 
 Named formulas can also address is declaring app themes. In many cases where enterprise apps are build, we want the app to have common themes to give consistent look and user experience. To create a theme, there are 10s and 100s of variables that need to be declared on App OnStart. This increased code length and initialization time of the app.
 
-Additionally, Modern Controls also help significantly with theming and help reduce customer written logic to handle theming. Modern controls are currently in preview.
+Modern controls can also help significantly with theming and help reduce customer written logic to handle theming. Modern controls are currently in preview.
 
 For example, the following code on `App.OnStart` can be moved to `App.Formulas`, thus reducing the startup time on global variable declarations.
 
-```Power Appsfl
+```powerappsfl
 Set(BoardDark, RGBA(181,136,99, 1));
 Set(BoardSelect, RGBA(34,177,76,1));
 Set(BoardRowWidth, 10);                      // expected 8 plus two guard characters for regular expressions.
@@ -126,9 +128,9 @@ Set(BoardBlank, "---------------------------------------------------------------
 Set(BoardClassic, "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000");
 ```
 
-The code can easily be moved to App.Formulas as follows:
+The code can be moved to App.Formulas as follows:
 
-```Power Appsfl
+```powerappsfl
 BoardSize = 70;
 BoardLight = RGBA(240,217,181, 1);
 BoardDark = RGBA(181,136,99, 1);
@@ -139,9 +141,9 @@ BoardBlank = "----------------------------------------------------------------\_
 BoardClassic = "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000";
 ```
 
-Another example can be setting `Lookups`. Here a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
+Another example is inn setting `Lookups`. Here a change is required in a Lookup formula to get the user information from Office 365, instead of Dataverse. There's only one place the change is required without changing the code everywhere.
 
-```Power Appsfl
+```powerappsfl
 UserEmail = User().Email;
 UserInfo = LookUp(Users, 'Primary Email' = User().Email);
 UserTitle = UserInfo.Title;
@@ -149,16 +151,15 @@ UserPhone = Switch(UserInfo.'Preferred Phone', 'Preferred Phone (Users)'.'Mobile
 UserInfo.'Main Phone');
 ```
 
+These formulas embody the essence of calculation. They articulate the process for determining `UserEmail`, `UserInfo`, `UserTitle`, and `UserPhone` based on other values. This logic is encapsulated, enabling widespread utilization throughout the app, and can be modified in a singular location. The adaptability extends to switching from the Dataverse Users table to the Office 365 connector without necessitating alterations to formulas scattered across the app.
+
 Another approach is to optimize `countRows`.
 
-```Power Appsfl
+```powerappsfl
 varListItems = CountRows(SampleList)
 ```
 
-With `Set` Function, variable `varListItems` will have to be initialized with the initial count of rows in sample list and set again after the list items were added or removed.
-With Named formulas, as the data changes, the varListitems variables get updated automatically.
-
-These formulas embody the essence of calculation. They articulate the process for determining `UserEmail`, `UserInfo`, `UserTitle`, and `UserPhone` based on other values. This logic is encapsulated, enabling widespread utilization throughout the app, and can be modified in a singular location. The adaptability extends to switching from the Dataverse Users table to the Office 365 connector without necessitating alterations to formulas scattered across the app.
+With `Set` Function, variable `varListItems` will have to be initialized with the initial count of rows in sample list and set again after the list items were added or removed. With Named formulas, as the data changes, the varListitems variables get updated automatically.
 
 Named Formulas in the `App.Formulas` property provide a more flexible and declarative approach for managing values and calculations throughout the app, offering advantages in terms of timing independence, automatic updates, maintainability, and immutable definitions compared to relying solely on `App.OnStart`.
 
@@ -171,7 +172,7 @@ Named Formulas in the `App.Formulas` property provide a more flexible and declar
 
 ### User defined functions
 
-User Defined Functions is an experimental functionality in Power Apps Studio that enables users to create their own custom function.
+User Defined Functions is an experimental functionality in Power Apps Authoring Studio that enables users to create their own custom function.
 
 To use this feature, under experimental settings, click New analysis engine and User-defined function (UDFs)
 
@@ -208,17 +209,19 @@ Variables are used to define and set local and global values to be used everywhe
 
 The following example demonstrates setting a variable for each attribute of an object, which requires using `Set` for every property.
 
-```typescript
+```powerappsfl
 Set(varEmpName, Office365Users.MyProfile().DisplayName);
 Set(varEmpCity, Office365Users.MyProfile().City);
 Set(varEmpPhone, Office365Users.MyProfile().BusinessPhones);
+Set(varEmpUPN, Office365Users.MyProfile().UserPrincipalName);
+Set(varEmpMgrName, Office365Users.ManagerV2(varEmpUPN).DisplayName);
 ```
 
 A more optimized approach is to use the property when you need it:
 
-```typescript
-Set(varEmployee, Office365Users.MyProfile());
-"Welcome " & varEmployee.DisplayName;
+```powerappsfl
+Set(varEmployee, Office365Users.MyProfile())
+"Welcome " & varEmployee.DisplayName
 ```
 
 Use context variables and global variables wisely. If a variable's scope expands beyond a single screen, then consider using global variables instead of context variables.
@@ -229,7 +232,7 @@ Too many unused variables contribute to increased memory usage and slightly slow
 
 Collections are temporary data storage structures that can be used to store and manipulate data within a Power Apps app. However, there's a fine line on when collections can lead to performance overhead. Therefore, limit your use of collections. Try to use them only when they're necessary.
 
-```typescript
+```powerappsfl
 // Use this pattern
 ClearCollect(colErrors, {Text: gblErrorText, Code: gblErrorCode});
 
@@ -246,17 +249,17 @@ Consider this guidance when working with collections:
 
 The following example function returns the entire dataset.
 
-```typescript
+```powerappsfl
 ClearCollect(colDemoAccount, Accounts);
 ```
 
 Compare to the below code that is going to return only specific records and columns:
 
-```typescript
+```powerappsfl
 ClearCollect(colAcc,
               ShowColumns(
                 Filter(Accounts, !IsBlank('Address 1: City')),
-                "name","address1\_city"))
+                "name","address1_city"))
 ```
 
 The example code returns this dataset:
@@ -269,7 +272,7 @@ The example code returns this dataset:
 
 A collection, essentially a table variable, is distinct in that it stores rows and columns of data rather than a single data item. Their utility lies in two main purposes: firstly, for aggregating data before transmitting it to the data source, and secondly, for caching information, eliminating the need for frequent queries to the data source. As collections align with the tabular structure of both the data source and Power Apps, they offer an efficient means of interacting with data, even in offline scenarios.
 
-```typescript
+```powerappsfl
 // Clear the contents of EmployeeCollection, it already contains data
 ClearCollect(
     colEmployee,
@@ -308,6 +311,10 @@ Here's an example of Cross-referenced controls. In the image below Gallery 1 con
 
 ![A screenshot of Power Apps Studio showing a cross-referenced control](media/image24.png)
 
+If you reference a control from the first screen in the app in the second screen, there will be no performance hit as the first screen will have already been loaded and this may actually be a good thing as the app declarative instead of using variables.
+
+If you reference controls that have yet to be loaded, such as the first screen referencing a control named `Label 3` from screen 3, will require the screen to be loaded in memory.
+
 ### Enable DelayOutput for text controls
 
 Delay output setting When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text, like filtering when input is used in other formulas.
@@ -324,7 +331,7 @@ For example, for a Gallery whose Items are Filtered depending on what is inputte
 
 Delegation in Power Apps is a concept that refers to the ability of the app to offload certain operations to the underlying data source rather than processing the operations within Power Apps itself. By using delegation in Power Apps, developers can create more efficient and scalable applications that perform well even in scenarios involving large datasets. It's important to be aware of delegation limitations for specific data sources and operations, and to design apps accordingly to achieve optimal performance.
 
-> ![NOTE] Not all functions are delegable. Please refer to [Underachaudhing Delegation](/power-apps/maker/canvas-apps/delegation-overview) to learn more about delegation.
+> ![NOTE] Not all functions are delegable. Please refer to [Understanding Delegation](/power-apps/maker/canvas-apps/delegation-overview) to learn more about delegation.
 
 Delegation has several advantages such as Query optimization and adds supports for large datasets. Additionally, if the source data changes frequently, delegation helps keep data up to date.
 
@@ -332,9 +339,10 @@ Delegation has several advantages such as Query optimization and adds supports f
 
 Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas App. Refer to the code below:
 
-In this example, I have two tables – Drivers and Trucks. Developer writes the code to create a collection of drivers and truck details and for each truck, they were calling drivers who own the trucks.
+In this example, there are two tables, Drivers and Trucks. The developer writes the code to create a collection of drivers and truck details and for each truck, they are calling drivers who own the trucks.
 
-```typescript
+```powerappsfl
+// Bad code
 ClearCollect(vartruckdata, AddColumns('Truck Details',
     "CITY",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],City),
         "FIRSTNAME",LookUp(Drivers, 'Truck Details'\[@'Dummy ID'\] = Drivers\[@'Truck Details'\],'Driver First Name'),
@@ -344,21 +352,46 @@ ClearCollect(vartruckdata, AddColumns('Truck Details',
 
 Performing such join operations from within canvas app can generate numerous calls to data source leading to very slow loading times.
 
-In the real time scenario, we were able to reduce loading times from 5 min to under 10 seconds by just correcting the data at the data source level.
+A better approach is:
+
+```powerappsfl
+// Good code
+Set(
+    varTruckData,
+    LookUp(
+        Drivers,
+        'Dummy ID' = ThisRecord.'Dummy ID',
+        'Driver First Name'
+    ) & LookUp(
+        Drivers,
+        'Dummy ID' = ThisRecord.'Dummy ID',
+        'Driver Last Name'
+        )
+);
+
+Set(
+    varTruckData,
+    With(
+        {
+            vDriver: LookUp(
+                Drivers,
+                'Dummy ID' = ThisRecord.'Dummy ID'
+            )
+        },
+        vDriver.'Driver First Name' & vDriver.'Driver Last Name'
+    )
+)
+```
+
+In the real time scenario, it is possible to reduce loading times from 5 minutes to under 10 seconds by just correcting the data at the data source level.
 
 ### Server side processing
 
-Different data source such as SQL, Dataverse enables you to delegate data processing such as Filter, Lookups etc. to be delegated to the data source. In SQL server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+Different data sources such as SQL and Dataverse enable you to delegate data processing such as Filter and Lookups to the data source. In SQL Server, users can create views, which has content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
 Learn more about [plugins in Dataverse](/power-apps/maker/data-platform/low-code-plug-ins).
-
-## Enable delay/lazy loading
-
-The 'Delayed load' feature enhances performance by setting up an app to load screens only when they're required. By default, this feature is activated, and if disabled, the app would load all screens and data controls upon startup. Enabling this setting allows for a notable improvement in the app's initial loading time, especially for apps containing numerous screens. Additionally, the overall performance of the app is enhanced, as it avoids preloading screens that a user may not open within a session when the setting is active.
-
-![A screenshot of the Settings window with Delayed Load turned on](media/image25.png)
 
 ## Optimize query data patterns
 
@@ -378,29 +411,23 @@ The N+1 problem is a common issue in database queries where, instead of fetching
 
 A simple call like this to load a collection can generate N+1 calls to data source.
 
-```typescript
+```powerappsfl
 ClearCollect(MyCollection, OrdersList,
     {
-        LookUp(CustomersList,CustomerID = OrdersList\[@CustomerID\])
+        LookUp(CustomersList,CustomerID = OrdersList[@CustomerID])
     }
 )
 ```
 
 In the context of Power Apps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when additional queries are made for each item displayed in the gallery, leading to a performance bottleneck.
 
-To address the N+1 problem in galleries within Power Apps, you can use the "AddColumns" function along with the "LookUp" or "Filter" functions to fetch related data in a single query rather than making separate queries for each item.
+Use View objects in SQL Server to avoid N+1 query problem, or change the user interface to avoid triggering the N+1 scenario.
 
-```typescript
-ClearCollect(GalleryData, AddColumns(
-    YourDataSource, "RelatedData", LookUp(
-        RelatedDataSource, RelatedField = YourDataSource\[@RelatedField\])
-    )
-)
-```
-
-For data source like Dataverse, N+1 problem can be avoided as Dataverse automatically fetches the required data in related tables.
+Dataverse automatically fetches the required data of related tables and you can select the columns from related tables.
 
 `ThisItem.Account.'Account Name'`
+
+If `RelatedDataSourc`e` size is small (<500 records), you can cache it in a collection and leverage the collection to drive the Lookup (N+1) query scenario.
 
 ### Limiting the package size
 
@@ -424,7 +451,7 @@ ForAll function is singular sequential function instead of concurrent function. 
 
 **Avoid Nesting ForAll at all cost.** This can lead to exponential iterations and significantly impact performance.
 
-```typescript
+```powerappsfl
 ClearCollect(FollowUpMeetingAttendees.ForAll(ForAll(Distinct(AttendeesList.EmailAddress.Address).Lookup(Attendees))))
 ```
 
@@ -434,7 +461,7 @@ ForAll + Patch can be one approach to Batch update the database. However, be car
 
 Following function:
 
-```typescript
+```powerappsfl
 Patch(SampleFoodSalesData, ForAll(colSampleFoodSales,
     {
         demoName:"fromCanvas2"
@@ -442,18 +469,12 @@ Patch(SampleFoodSalesData, ForAll(colSampleFoodSales,
 );
 ```
 
-Has 10 times better performance than:
+Has better performance than:
 
-```typescript
+```powerappsfl
 ForAll(colSampleFoodSales, Patch(SampleFoodSalesData,
     {
         demoName:"test"
     })
 );
-```
-
-Another approach can be to have all the updates in a collection and Patch the data source in one single call.
-
-```typescript
-Patch(SampleFoodSalesData,ShowColumns(colSampleFoodSales,"demoName"));
 ```

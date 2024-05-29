@@ -47,29 +47,27 @@ Set the form mode dynamically based on user actions. For example:
 - Place different controls (such as gallery, display form, and edit form) on separate screens to make them distinguishable.
 - Combine these controls with formulas to create a cohesive user experience.
 
-## Container vs Grouping Controls
+## Containers
 
-As the canvas app grows bigger in size to address more business scenarios, the number of controls continues to grow and it's required to organize the controls based on the function that they perform. One easy way to do this is to select the controls together and group them into a group. However, grouping controls isn't always recommended. The canvas app `Container` control can hold a set of controls and has its own properties.
+As the canvas app grows bigger in size to address more business scenarios, the number of controls continues to grow and it's required to organize the controls based on the function that they perform. One easy way to do this is to select the controls together and group them into a group. However, grouping controls isn't always recommended. The canvas app `Container` control can hold a set of controls and has its own properties. 
 
-When editing an app, you can select controls and group them using `Ctrl + G` or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
+Containers function as empty spaces where you can insert and organize controls in relation to the top-left corner of the container. You have the flexibility to nest containers, allowing for the creation of more complex layouts and providing freedom in design.
 
-In contrast, containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users underachaudh the structure of the app.
+Containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users underachaudh the structure of the app.
 
 While you can add any controls in a group, you should only add logically related controls in a container.
 
 Organizing elements in Power Apps using groups allows users to apply shared properties to multiple elements. However, making individual property changes within a group may necessitate manual adjustments. Furthermore, groups don't have a presence in the logical structure of an app for accessibility reasons, as screen readers are unable to recognize them. Additionally, the inability to nest groups makes it challenging to create more intricate layouts.
 
-In contrast, containers provide a more adaptable and efficient solution. Containers function as empty spaces where users can insert and organize controls in relation to the top-left corner of the container. Makers have the flexibility to nest containers, allowing for the creation of more complex layouts and providing freedom in design.
-
 ## Gallery design and guidelines
 
 ### Avoid changing gallery gtems from within
 
-Avoid modifying the Items property of a gallery within child controls' events like OnChange or OnSelect. This can lead to unexpected behavior, especially when dealing with certain controls that trigger events when their values change.
+Avoid modifying the `Items` property of a gallery within child controls' events like `OnChange` or `OnSelect`. This can lead to unexpected behavior, especially when dealing with certain controls that trigger events when their values change.
 
 ### Be cautious with OnChange triggered controls
 
-Be cautious when using controls like Combo box, Date picker, Slider, or Toggle in galleries. These controls may trigger the OnChange event unexpectedly, leading to potential issues like infinite loops.
+Be cautious when using controls like Combo box, Date picker, Slider, or Toggle in galleries. These controls may trigger the `OnChange` event unexpectedly, leading to potential issues like infinite loops.
 
 ### Performance impact on patching
 
@@ -77,7 +75,7 @@ Be mindful of the performance impact when patching or updating items in a galler
 
 ### Handle infinite loops with care**
 
-If modifying gallery data triggers events that lead to infinite loops, consider using modern controls or controls that don't trigger OnChange when their data changes to break the loop.
+If modifying gallery data triggers events that lead to infinite loops, consider using modern controls or controls that don't trigger `OnChange` when their data changes to break the loop.
 
 ### Avoid nested galleries
 
@@ -99,40 +97,23 @@ When optimizing data loading in Power Apps, you might want to fetch and display 
 
 Here's an example of how you can achieve this: Assuming you have a collection EmployeeData with multiple columns, and you want to display only the "Name" and "Department" columns in a gallery.
 
-```typescript
-// Clear the contents of EmployeeCollection, if it already contains data
-ClearCollect(
-    colEmployee,
-    {
-        Id: "1",
-        Name: "John",
-        Department: "IT"
-    },
-    {
-        ID: "2",
-        Name: "Nestor",
-        Department: "IT"
-    }
-);
+```powerappsfl
+// Collection named ProductSales with sample sales data
 
-// Fetch only necessary columns from the data source
-ClearCollect(EmployeeData, colEmployee);
-
-// Create a new collection with only the necessary columns
-ClearCollect(EmployeeNamesAndDepartments,
-    ForAll(EmployeeData,
-        {
-            EmployeeName: Name,
-            EmployeeDepartment: Department
-        }
+ClearCollect(ProductSales, 
+    Table(
+        { ProductName: "Phone", UnitPrice: 499.99, QuantitySold: 100 },
+        { ProductName: "Laptop", UnitPrice: 999.99, QuantitySold: 50 },
+        { ProductName: "Tablet", UnitPrice: 299.99, QuantitySold: 75 }
     )
 )
 
-// Bind the EmployeeNamesAndDepartments collection to the gallery
-Gallery1.Items = EmployeeNamesAndDepartments
+// Bind the gallery to display only the "ProductName" and "QuantitySold" columns
+
+Gallery1.Items = ShowColumns(ProductSales, ProductName, QuantitySold)
 ```
 
-For more information on Gallery best practices, see [here](/power-apps/maker/canvas-apps/gallery-best-practice).
+[Get more information](/power-apps/maker/canvas-apps/gallery-best-practice) on Gallery best practices.
 
 ## Building reusable components
 

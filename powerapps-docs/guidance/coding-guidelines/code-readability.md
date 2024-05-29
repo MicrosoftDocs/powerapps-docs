@@ -122,7 +122,7 @@ For more information about connectors and connections, see [Overview of canvas a
 
 In Standard action connectors that expose functions, such as LinkedIn, the data source name and its operations use Pascal casing. For example, the LinkedIn data source is named LinkedIn and has an operation named `ListCompanies`.
 
-```typescript
+```powerappsfl
 ClearCollect(
     colCompanies,
     LinkedIn.ListCompanies()
@@ -253,7 +253,7 @@ Utilize line comments to elucidate the functionality of the subsequent code. The
 
 This example shows the use of line comments.
 
-```typescript
+```powerappsfl
 // ClearCollect function populates the Expenses2 collection with sample data
 ClearCollect(
     Expenses2,
@@ -274,7 +274,7 @@ Block comments are useful for multiline explanations, such as documenting a code
 
 For optimal code organization, it's advisable to add comments after utilizing the Format Text feature. This is beneficial if your comments precede a code block.
 
-```typescript
+```powerappsfl
 /*
     Patch Operation to Insert Data:
     - Inserts a new employee record into the 'Employee' entity.
