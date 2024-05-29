@@ -2103,8 +2103,12 @@
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
-      - name: Work with catalogs
-        href: ./data-platform/catalog-overview.md  
+      - name: Work with catalogs (preview)
+        items:
+        - name: Catalog overview
+          href: ./data-platform/catalog-overview.md
+        - name: View, submit, and install catalog items
+          href: ./data-platform/submit-acquire-from-catalog.md
       - name: Other solution tasks
         items:
         - name: View solution layers
