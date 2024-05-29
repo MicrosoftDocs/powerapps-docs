@@ -1,5 +1,4 @@
 ---
-
 title: Best practices for for developing an app for offline use
 description: Learn about the best practices for developing an app for offline use.
 author: trdehove
