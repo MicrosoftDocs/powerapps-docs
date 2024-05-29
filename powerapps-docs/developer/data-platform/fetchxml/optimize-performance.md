@@ -27,7 +27,7 @@ If you select many lookup and computed columns, and you're experiencing performa
 Using the `latematerialize` attribute might not always provide a performance benefit. It might make simple queries run more slowly. It's most beneficial when your query:
 
 - Has many joins
-- Contains many columns lookup columns or computed columns
+- Contains many lookup or computed columns
 
 ## Query Hints
 
