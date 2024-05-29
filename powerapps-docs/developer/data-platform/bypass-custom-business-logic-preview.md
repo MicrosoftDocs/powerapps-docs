@@ -287,7 +287,7 @@ Use this FetchXml query to return `step.sdkmessageprocessingstepid` values you c
 
 ### Limit to the number of steps
 
-To ensure that the parameter size isn't too large, the default limit on the number of steps you can pass is three. The limit is controlled using data in the [Organization table OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings). Don't try to edit this value yourself. Use the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/topic/orgdborgsettings-tool-for-microsoft-dynamics-crm-20a10f46-2a24-a156-7144-365d49b842ba) or [OrgDbOrgSettings app](https://github.com/seanmcne/OrgDbOrgSettings?tab=readme-ov-file#where-to-find-the-releases) to change the `BypassBusinessLogicExecutionStepIdsLimit` value.
+To ensure that the parameter size isn't too large, the default limit on the number of steps you can pass is three. The limit is controlled using data in the [Organization table OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings). Use the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/topic/orgdborgsettings-tool-for-microsoft-dynamics-crm-20a10f46-2a24-a156-7144-365d49b842ba) or [OrgDbOrgSettings app](https://github.com/seanmcne/OrgDbOrgSettings?tab=readme-ov-file#where-to-find-the-releases) to change the `BypassBusinessLogicExecutionStepIdsLimit` value.
 
 The maximum recommended size for this limit is 10 steps.
 
