@@ -2,7 +2,7 @@
 title: Work with model-driven apps offline (classic mode)
 description: Learn how to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 10/27/2023
+ms.date: 05/29/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
