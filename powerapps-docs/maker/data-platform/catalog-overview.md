@@ -36,7 +36,7 @@ In any organization, there might be many components and templates distributed am
 - AI prompts
 - Copilot app templates
 - AI plugins
-- Power Platform Data Flows
+- Power Platform dataflows
 - Custom connectors
 - Power Apps component framework controls
 - Power Automate flows

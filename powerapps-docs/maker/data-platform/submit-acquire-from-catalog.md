@@ -3,7 +3,7 @@ title: "View, submit, and install catalog items (preview)"
 description: "Learn how to submit and acquire items from your organization's catalog."
 author: derekkwanpm
 ms.author: derekkwan
-ms.subservice: developer
+ms.subservice: 
 ms.date: 05/15/2024
 ms.reviewer: matp
 ms.topic: how-to
@@ -24,8 +24,8 @@ In any organization, there might be many components and templates distributed am
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
-> - While not required for preview, when this feature is generally available, it requires the use of Managed Environment capabilities. More information: [Managed Environments overview](../admin/managed-environment-overview.md)
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - While not required for preview, when this feature is generally available, it requires the use of Managed Environment capabilities. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
 Before reading this article, you should:
 
