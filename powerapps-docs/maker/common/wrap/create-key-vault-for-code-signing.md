@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 7/7/2023
+ms.date: 5/9/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -58,7 +58,10 @@ In this article, you will learn how to use an existing Azure Key Vault or create
 
 3. Create or access existing Key Vault. Make sure this Key Vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
-4. Add access policies for the Key Vault.
+4. Add access policies for the Key Vault. For **Secret permissions** and **Certificate permissions** make sure that **Get** and **List** permissions are selected.
+  
+    > [!div class="mx-imgBorder"] 
+    > ![Access Policies required: Get, List for secret and certificates permissions.](media/how-to-v2/AzureKV-Access-Policy.png "Access Policies required: Get, List for secret and certificates permissions")
   
 5. Choose one of the following options based on your device:
    
@@ -79,11 +82,11 @@ In this article, you will learn how to use an existing Azure Key Vault or create
          > [!NOTE]
          > When you upload to the Key Vault, you'll need to provide the password that you set in previous step for the .p12 file.
         
-       3. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run this command to encode it to base64:
-          - Mac: base64 `-i example.mobileprovision`
+       4. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run this command to encode it to base64:
+          - Mac: `base64 -i example.mobileprovision`
           - Windows:  `certutil -encode data.txt tmp.b64`
      
-       4. Upload the `base64` string obtained from the previous step to the Key Vault secret. Next, upload the .pfx file to Key Vault Certificate.
+       5. Upload the `base64` string obtained from the previous step to the Key Vault secret. Next, upload the .pfx file to Key Vault Certificate.
     
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::

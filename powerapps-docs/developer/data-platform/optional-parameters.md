@@ -327,6 +327,9 @@ Alternatively, you can use the `partitionid` value using alternate key style.
 
 ## Bypass custom synchronous logic
 
+> [!NOTE]
+> New ways to bypass business logic are in preview. [Learn about new capabilities to bypass Custom Business Logic (preview)](bypass-custom-business-logic-preview.md)
+
 Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. When performing bulk operations, the additional time for these individual operations can increase the time required. Use the `BypassCustomPluginExecution` parameter when you want to improve performance while performing bulk data operations.
 
 > [!IMPORTANT]

@@ -93,22 +93,20 @@ To disable administration mode for an organization instance:
 
 ## Solution checker fails due to missing security roles
 
-The application user for solution checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles aren't assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancellation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
+The application user for solution checker requires the following security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If any of these roles aren't assigned to the user **'Power Apps Checker Application'**,  attempts to run analysis, download results, and run cancellation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
-- Export customizations
-- Solution checker
+- Export Customizations (Solution Checker)
+- Service Writer
+- Solution Checker
 
 ### How to assign missing security roles
 
-To assign missing security roles to the Power Apps Checker user:
+To assign missing security roles to the Power Apps Checker Application user:
 
-1. Open your Dataverse organization and navigate to **Settings** > **Security** > **Users**.
-2. Select the **'Power Apps Checker'** user from the list of users.
-3. Select **MANAGE ROLES** on the command bar.
-4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes, and then select **OK**.
-
-![Required Security Roles.](media/solution-checker-required-roles.png)
-
+1. In the Power Platform admin center, navigate to your environment, then to **Users** > **app users list**.
+2. Select the **'Power Apps Checker Application'** user from the list of users.
+3. Select **Edit security roles** on the command bar.
+4. Select checkboxes for the roles listed above, and then select **Save**.
 5. Run solution checker again.
 
 ## Solution checker fails due to restricted access mode

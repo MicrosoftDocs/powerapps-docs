@@ -126,6 +126,9 @@
       items:
         - name: Use DeleteMultiple (preview)
           href: deletemultiple.md
+    - name: Restore deleted records (preview)
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -208,6 +211,10 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       href: bypass-custom-business-logic.md
+      items:
+      - name: New options (preview)
+        href: bypass-custom-business-logic-preview.md
+        displayName: Bypass Business logic (preview)
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
