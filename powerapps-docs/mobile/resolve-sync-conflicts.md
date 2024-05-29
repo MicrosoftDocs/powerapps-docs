@@ -61,7 +61,8 @@ Server-side plug-ins and validation can invalidate changes. Those changes are re
 It's possible to change the default behavior for all offline apps belonging to an environment. This isn't recommended.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select the environment.
-3. Select **Settings** in the command bar.
-4. Select **Product** > **Features**.
-5. In the **Advanced mobile offline settings for model-driven apps** section, turn on the **Enable conflict detection for mobile offline synchronization** option. When this option is turned on, the server wins over the client. Conflict errors must be resolved manually.
+1. Select **Environments** in the navigation pane.
+3. Select an environment.
+4. Select **Settings** in the command bar.
+5. Select **Product** > **Features**.
+6. In the **Advanced mobile offline settings for model-driven apps** section, turn on the **Enable conflict detection for mobile offline synchronization** option. When this option is turned on, the server wins over the client. Conflict errors must be resolved manually.
