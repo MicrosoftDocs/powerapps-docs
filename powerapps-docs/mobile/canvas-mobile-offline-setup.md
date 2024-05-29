@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 03/18/2024
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -140,9 +140,8 @@ You need to publish your new offline profile before you can select it in your ca
 
 1. Select **Save**.
 
-> [!IMPORTANT]
-> It is useless to add Users in the Offline profile in the **Users with offline access**. This capability is only applicable to model-driven apps  restricted to selected users. 
-
+    > [!IMPORTANT]
+    > It is useless to add users in the offline profile in the **Users with offline access**. This capability is only applicable to model-driven apps, restricted to selected users. 
 
 ### Create an offline profile (without admin rights)
 
