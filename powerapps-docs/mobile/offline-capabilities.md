@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 05/02/2024
+ms.date: 05/29/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -128,7 +128,7 @@ These tables and corresponding commands are available in offline mode.
 
 |Profile details |Limitation|  
 |-------------|---------|  
-|Relationship defined for each table|Maximum of 15 relationships. And maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Relationship defined for each table|There is a maximum of 15 relationships allowed. There is also a maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 
 
