@@ -264,7 +264,7 @@ ClearCollect(colAcc,
 
 The example code returns this dataset:
 
-![A screenshot of a dataset with a table named colAcc and two columns with data, address1_city and name](media/image22.png)
+![A screenshot of a dataset with a table named colAcc and two columns with data, address1_city and name](media/image21.png)
 
 **Set a data source refresh frequency**. If you're adding new records to the collection, you need to refresh it or collect to it to get the new or changed records into the collection. If your data source is updated by multiple users, you'll need to refresh the collection to get the new or changed records. More refresh calls mean more interaction with the server.
 
@@ -309,7 +309,7 @@ Power Apps App checker within authoring studio, shows controls that are cross re
 
 Here's an example of Cross-referenced controls. In the image below Gallery 1 controls is cross referenced in Screen 2, Label 2 control.
 
-![A screenshot of Power Apps Studio showing a cross-referenced control](media/image24.png)
+![A screenshot of Power Apps Studio showing a cross-referenced control](media/image23.png)
 
 If you reference a control from the first screen in the app in the second screen, there will be no performance hit as the first screen will have already been loaded and this may actually be a good thing as the app declarative instead of using variables.
 
@@ -321,7 +321,7 @@ Delay output setting When set to true, user input is registered after half a sec
 
 For example, for a Gallery whose Items are Filtered depending on what is inputted into the TextInput control:
 
-- With DelayOutput set to false, which is default, the Gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you're using the TextInput for a search string (See [Search](https://Power Apps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+- With DelayOutput set to false, which is default, the Gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the Gallery with changes right away slows down performance; it would be more advantageous to wait a little. This is practical when you're using the TextInput for a search string (See [Search](https://PowerApps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
 
 - With DelayOutput set to true, there's a second delay before the changes are detected. This is done to give you time to finish typing what you want. The delay works well when used to aid the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until everything you want is typed into the field.
 

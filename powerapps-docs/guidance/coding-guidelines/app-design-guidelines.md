@@ -49,7 +49,7 @@ Set the form mode dynamically based on user actions. For example:
 
 ## Containers
 
-As the canvas app grows bigger in size to address more business scenarios, the number of controls continues to grow and it's required to organize the controls based on the function that they perform. One easy way to do this is to select the controls together and group them into a group. However, grouping controls isn't always recommended. The canvas app `Container` control can hold a set of controls and has its own properties. 
+As the canvas app grows bigger in size to address more business scenarios, the number of controls continues to grow and it's required to organize the controls based on the function that they perform. One easy way to do this is to select the controls together and group them into a group. However, grouping controls isn't always recommended. The canvas app `Container` control can hold a set of controls and has its own properties.
 
 Containers function as empty spaces where you can insert and organize controls in relation to the top-left corner of the container. You have the flexibility to nest containers, allowing for the creation of more complex layouts and providing freedom in design.
 
