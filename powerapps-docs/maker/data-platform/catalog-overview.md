@@ -3,7 +3,7 @@ title: "Catalog in Power Platform"
 description: "Use the catalog in Power Platform to managed shared components and templates so that administrators, application makers, and developers within an organization can reuse each other's work."
 author: derekkwanpm
 ms.author: derekkwan
-ms.subservice: developer
+ms.subservice: 
 ms.date: 05/15/2024
 ms.reviewer: matp
 ms.topic: overview
@@ -21,8 +21,8 @@ Building from scratch every time by recreating branding, layouts, links, complex
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The catalog needs to be set up by an admin before you can use it, including permissions. Admin instructions for [catalog setup is here](administer-catalog.md).
-> - The catalog only works with Microsoft Dataverse enviornments. Environment without Dataverse aren't supported at this time.
+> - The catalog needs to be set up by an admin before you can use it, including permissions. More information [Administer the catalog](/power-platform/admin/administer-catalog).
+> - The catalog only works with Microsoft Dataverse environments. Environments without Dataverse aren't supported at this time.
 > - While not required for preview, when this feature is generally available, it'll require the use of Managed Environment capabilities. More information: [Managed Environments overview](../admin/managed-environment-overview.md)
 
 In any organization, there might be many components and templates distributed among many environments. The catalog in Power Platform enables developers and makers to:
@@ -169,7 +169,7 @@ Yes, documentation links are part of the metadata for a catalog item.
 
 ### Can catalogs be shared to security groups?
 
-Yes, catalog permissions can be targeted at [specific security groups](administer-catalog.md#access-controls).
+Yes, catalog permissions can be targeted at [specific security groups](/power-platform/admin/administer-catalog#access-controls).
 
 ## Next steps
 
