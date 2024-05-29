@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/27/2023
+ms.date: 05/29/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -110,14 +110,14 @@ The default offline profile is a starting point to help you quickly build an off
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limiting the amount of data that downloads on users' devices.
 
-Ensure that you configure at least one of the Profile rules for each table to download its data. 
+Be sure that you configure at least one of the profile rules for each table to download its data. 
 
   |Customization |Recommendation|  
   |-------------|---------|  
-  |All Records|	If you're selecting this filter, you can't define any other filter rule.|
-  |Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-  |Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
-  |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
+  |All Records|	If you're selecting this filter, you can't define any other filter rules.|
+  |Download related data only|If you're selecting this filter, you can't define any other filter rules. Be sure that the table has been defined as a Profile Item Association table.|
+  |Other data filter - if selected, then select at least one of these options:<br><br>- **Download my Records**<br>- **Download my team records**<br>- **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+  |Custom data filter |<=3 filters can be defined in the custom data filter. |
 
 Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
@@ -195,33 +195,35 @@ You can enable users to control the automatic sync intervals or the connection t
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
 
-## Supported  capabilities 
+## Supported capabilities 
 
 - **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
 
-- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
+- **Business process flows** - You can use business process flows in offline mode if the following conditions are met:
 
     - The business process flow is used in an app that you can run on Power Apps mobile.
-    - The Power Apps mobile app is enabled for offline use.
+    - The Power Apps mobile app is configured for offline use.
     - The business process flow has a single table.
     - The business process flow table is added in the [offline profile](setup-mobile-offline-classic.md#step-1-enable-tables-for-mobile-offline-synchronization).
-      > [!NOTE]
-      > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
+
+    > [!NOTE]
+    > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
     
-    There are three commands that are available for a business process flows, when you run an app in offline mode on the Power Apps mobile app.
+    There are three commands that are available for business process flows when you run an app in offline mode on the Power Apps mobile app:
     
     - Next stage
     - Previous stage
-    - Set Active stage
+    - Set active stage
 
-For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
+    For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
 
-- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
+- **Lookup support** - Lookups are supported for the tables that are configured for mobile offline. All the tables participating in the lookup should also be configured for offline use.
 
 - **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
-  > [!NOTE]
-  > The **Date** field isn't available for mobile offline search.
+
+    > [!NOTE]
+    > The **Date** field isn't available for mobile offline search.
   
-- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
+- **Custom tables** - These commands are available to edit the form: **Mark Complete**, **Refresh**, **Convert To Opportunity**, and **Delete**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
