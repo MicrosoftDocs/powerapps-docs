@@ -1,5 +1,5 @@
 ---
-title: Test and explore the Dataverse Web API (preview)
+title: Test and explore the Dataverse Web API
 description:  Quickly and conveniently interact with Power Platform web APIs, including the Dataverse Web API in a pre-authenticated software testing tool.
 author: denise-msft
 ms.author: demora
@@ -25,6 +25,7 @@ This web application allows developers to test and experiment with different API
 Use this tool to explore what's possible in the RESTful API, test user-defined workflows, and more.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
