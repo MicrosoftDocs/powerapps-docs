@@ -800,6 +800,8 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$filter=revenue ne null
 ```
 
+[!INCLUDE [cc-ordering-paging](../includes/cc-ordering-paging.md)]
+
 ## Filter rows
 
 Use the `$filter` [query option](#odata-query-options) to filter a collection of resources.

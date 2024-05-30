@@ -26,21 +26,36 @@
   - name: Query Data
     href: entity-operations-query-data.md
     items:
-    - name: Build queries with QueryExpression
-      href: build-queries-with-queryexpression.md
+    - name: Query data using QueryExpression
+      href: queryexpression/overview.md
       items:
-      - name: Use the QueryExpression class
-        href: use-queryexpression-class.md
-      - name: Use the ConditionExpression class
-        href: use-conditionexpression-class.md
-      - name: Use the FilterExpression class
-        href: use-filterexpression-class.md
-      - name: Use the ColumnSet class
-        href: use-the-columnset-class.md
-      - name: Page large result sets with QueryExpression
-        href: page-large-result-sets-with-queryexpression.md
-      - name: Use a left outer join in QueryExpression to query for rows "not in"
-        href: use-left-outer-join-queryexpression-query-records-not-in.md
+      - name: Select columns
+        displayName: Select columns using QueryExpression
+        href: queryexpression/select-columns.md
+      - name: Join tables
+        displayName: Join tables using QueryExpression
+        href: queryexpression/join-tables.md
+      - name: Order rows
+        displayName: Order rows using QueryExpression
+        href: queryexpression/order-rows.md
+      - name: Filter rows
+        displayName: Filter rows using QueryExpression
+        href: queryexpression/filter-rows.md
+      - name: Page results
+        displayName: Page results using QueryExpression
+        href: queryexpression/page-results.md
+      - name: Aggregate data
+        displayName: Aggregate data using QueryExpression
+        href: queryexpression/aggregate-data.md
+      - name: Count rows
+        displayName: Count rows using QueryExpression
+        href: queryexpression/count-rows.md
+      - name: Optimize performance
+        displayName: Optimize performance using QueryExpression
+        href: queryexpression/optimize-performance.md
+      - name: Sample code
+        displayName: QueryExpression, Sample code
+        href: queryexpression/sample.md
     - name: Use the QueryByAttribute class
       href: use-querybyattribute-class.md
   - name: Create table rows

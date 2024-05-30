@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 04/03/2024
+ms.date: 05/29/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -23,13 +23,13 @@ The release channel affects the features that impact users. When the monthly cha
 
 The release channel for model-driven apps can be changed in two primary ways.
 
-- App channel (starting with build 23111)
+- App channel
 - Environment channel
 
 In addition, the release channel can be overridden with either of these options.
 
-- [User channel override](/power-platform/admin/user-channel-override) (starting with build 23111)
-- Browser session channel
+- [User channel override](/power-platform/admin/user-channel-override)
+- [Browser session channel override](#changing-the-browser-session-channel)
 
 > [!NOTE]
 > When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
@@ -37,6 +37,12 @@ In addition, the release channel can be overridden with either of these options.
 ## Changing the environment channel
 
 The environment channel can be set using the Power Platform admin center or with code.
+
+| Environment release channel | Environment setting value | Behavior |
+|--|--|--|
+| Auto | 0 | Environment default value is currently **Semi-annual**, but will change to **Monthly** with 2024 release wave 2. |
+| Monthly | 1 | Environment explicitly set to **Monthly Channel**. |
+| Semi-annual | 3 | Environment explicitly set to **Semi-Annual Channel**. |
 
 Power Platform admins can change the release channel using the environment's behavior settings. More information: [Manage behavior settings](/power-platform/admin/settings-behavior).
 
@@ -52,7 +58,7 @@ The app channel can be used to override the release channel for a model-driven a
 
 | App release channel | App setting value | Behavior |
 |--|--|--|
-| Auto | 0 | App default value is **Semi-annual**, but will later change to **Monthly** in a future release wave. |
+| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 orgs and **Monthly** for Power Apps orgs. With 2024 release wave 2 the default will change to **Monthly**. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
@@ -103,6 +109,8 @@ A maker can use the **Solutions** area to explicitly set the release channel for
 ### Set the default for new apps to monthly channel
 
 As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
+
+To override this behavior, change the app setting to **No** in the environment or apply to multiple environments by including in a solution that is imported into the environments.
 
 ### Prevent new app default to monthly channel
 

@@ -554,6 +554,9 @@ Console.WriteLine($"Success: {records.Count}");
 > The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
 ---
+
+[!INCLUDE [cc-ordering-paging](../includes/cc-ordering-paging.md)]
+
 ## Next steps
 
 Learn how to aggregate data.

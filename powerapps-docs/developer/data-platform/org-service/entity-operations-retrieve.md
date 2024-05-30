@@ -169,7 +169,7 @@ If you are retrieving elastic table data stored in partitions be sure to specify
 
 ## Access Formatted values
 
-The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 <!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
 
