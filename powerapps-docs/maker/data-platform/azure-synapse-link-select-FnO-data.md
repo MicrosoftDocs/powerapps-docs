@@ -306,7 +306,7 @@ You can enable both finance and operations entities and finance and operations a
 
 The process of enabling finance and operations entities has the following steps. Each step is explained in the following subsections.
 
-1. [Enable finance and operations virtual entities in the Power Apps maker portal](#enable-finance-and-operations-virtual-tables-in-power-apps). This step lets you use finance and operations entities in Power Apps (make.powerapps.com) to build apps. You can also use them with Azure Synapse Link.
+1. [Enable finance and operations virtual entities in the Power Apps maker portal](#enable-finance-and-operations-virtual-entities-in-power-apps). This step lets you use finance and operations entities in Power Apps (make.powerapps.com) to build apps. You can also use them with Azure Synapse Link.
 2. [Enable row version change tracking for Entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You must complete this step to enable Azure Synapse Link to use finance and operations entities.
 
 After you complete both steps, you can select finance and operations entities in Azure Synapse Link under **Dataverse tables**. To create Azure Synapse Link for Dataverse in Delta Lake format, follow the steps in [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
