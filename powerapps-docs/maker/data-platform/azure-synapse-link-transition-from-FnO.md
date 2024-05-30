@@ -1,7 +1,7 @@
 ---
 title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 05/20/2024
+ms.date: 05/30/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
