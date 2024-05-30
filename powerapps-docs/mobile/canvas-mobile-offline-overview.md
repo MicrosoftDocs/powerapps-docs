@@ -54,4 +54,4 @@ There are some key benefits of using the built-in offline functionality for canv
 
 ### See also
 
-[Working with canvas apps offline](canvas-mobile-offline-working.md)
+[Work with canvas apps offline](canvas-mobile-offline-working.md)
