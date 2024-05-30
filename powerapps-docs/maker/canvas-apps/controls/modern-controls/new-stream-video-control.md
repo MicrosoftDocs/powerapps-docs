@@ -36,7 +36,7 @@ To add a Steam video in your canvas app, follow these steps to get the embed URL
 :::image type="content" source="media/sample-embed-code.png" alt-text="embed URL example":::
 
 
-## Add Steam control 
+## Add Stream control 
 
 1. Open your app canvas app for [editing](../../edit-app.md).
 1. On the [command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar), select **Insert** > **Media** > **Stream (preview)**.
