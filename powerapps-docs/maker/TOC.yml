@@ -1840,7 +1840,7 @@
       - name: Sync data in the background
         href: ../mobile/sync-data-offline-background.md
       - name: Mobile offline limitations for model-driven apps
-        href: ../mobile/offline-capabilities.md
+        href: ../mobile/offline-limitations.md
     - name: Optimize how offline works on mobile devices
       items:
       - name: Best practices to enable an app for offline
