@@ -48,7 +48,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 
 ### Known Limitations
-- There's a 1,0000 character limit for formula explanations.
+- There's a 1,000 character limit for formula explanations.
 - Copilot in Power Apps is only aware of default properties.
 - User defined functions aren't supported.
 - This feature isn't available in the Canada region.

@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 05/06/2024
+  ms.date: 05/29/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -31,7 +31,7 @@ sections:
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
 
-   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+   - question: Will Dataverse schema changes be handled by Dataverse long term retention? What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
      answer: |
         The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
 
@@ -88,7 +88,11 @@ sections:
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
-         You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention will not delete any retained data already in your own data lake. Dataverse API's are available to [delete retained data](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-manage#bulk-delete-long-term-retained-data) from Dataverse long term retention 
+         No.
+         
+   - question: I use Azure Synapse Link. Does retaining data with Dataverse long term retention remove the retained data from my own data lake?
+     answer: |
+         No. You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention doesn't delete retained data already in your own data lake. Dataverse APIs are available to [delete retained data](data-retention-manage.md#bulk-delete-long-term-retained-data) from Dataverse long term retention. This capability is the same for all Dynamics 365 customers including finance and operations applications. 
 
    - question: Do retention policy runs consume API requests?
      answer: |

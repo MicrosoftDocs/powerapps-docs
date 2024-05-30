@@ -2,7 +2,7 @@
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
 ms.custom: ""
-ms.date: 03/22/2024
+ms.date: 05/20/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -106,10 +106,13 @@ To work around this, you can display a custom card by configuring the table to u
 - The grid doesn't currently support legacy theme customizations.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
+- Columns lookup filters, when using the 'Equals' or 'Does not equal' operator, only show lookup options available within the current set of applied filters.
+  - For example, if the contact table has users 'Person A', 'Person B', and 'Person C' but account table data only has rows referencing 'Person B' and 'Person C', then the column filter lookup for the contact column in the account grid only shows the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
 
-### Known issue
+### Known issues
 
-If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If an user has read-only privileges to the main list and then navigates through a form to a sub-grid representing an entity to which they have write privileges, the sub-grid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
 
 ### See also
 
