@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/13/2024
+ms.date: 05/30/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -18,13 +18,13 @@ searchScope:
 
 # Mobile offline limitations for canvas apps
 
-Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Best practices to use an app for offline](best-practices-offline.md) and how to [Optimize the offline profile](mobile-offline-guidelines.md).
+Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review [Best practices to use an app for offline](best-practices-offline.md) and [Optimize the offline profile](mobile-offline-guidelines.md).
 
 ## Limitations and known issues
 
-- A **canvas app not in a solution** cannot be enabled for offline
+- A **canvas app not in a solution** can't be used in offline mode.
 
-- The offline-first feature **works for standalone canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md) or [custom pages](../maker/model-driven-apps/model-app-page-overview.md).
+- The offline-first feature **works for standalone, canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md) or [custom pages](../maker/model-driven-apps/model-app-page-overview.md).
 
 - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
    - **Relate**
@@ -32,15 +32,15 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
    - **UpdateIf**
    - **RemoveIf**
  
-- **Filter on column lookup** only supports one level of lookup when the app is enabled for offline.
+- **Filter on column look-up** only supports one level of look-up when the app is configured for offline use.
 
 - **Many-to-many relationships** aren't supported in offline mode.
  
 - **Non-Dataverse connectors** like Sharepoint aren't supported in offline mode.
 
-- **Virtual Tables** aren't not supported in offline mode
+- **Virtual tables** aren't not supported in offline mode.
 
-- **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
+- **Calculated and roll-up fields** - Calculated and roll-up fields --- that are part of rows synced to the client --- aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
