@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose finance and operations data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 04/01/2024
+ms.date: 05/30/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -38,8 +38,8 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
 >
 > You might need to apply additional updates for recent fixes. More information: [Known limitations with finance and operations tables]
-> 
-> If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Synapse Link see [transition guide](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno) as well as [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
+>
+> If you're planning to adopt the export to data lake feature in finance and operations apps, consider adopting Azure Synapse Link with finance and operations data support instead. Go to the software lifecycle announcements related to [export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from export to data lake to Azure Synapse Link go to [transition from legacy data generation services](azure-synapse-link-transition-from-FnO.md) as well as [TechTalk Series: Synapse Link for Dataverse: Transitioning from Export to Azure Data Lake to Synapse Link](https://aka.ms/TransitiontoSynapseLinkVideos)
 
 ## Prerequisites
 
@@ -219,7 +219,7 @@ You can enable both finance and operations tables and finance and operations ent
 
 > [!NOTE]
 >
-> - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't see them in the Tables area in Power Apps maker portal.
+> - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't see them in the **Tables** area in Power Apps (make.powerapps.com).
 > - You don't have to define finance and operations apps tables as virtual tables, and you don't have to enable change tracking for each table.
 >
 > To include finance and operations tables in Synapse Link, you must enable the [Delta lake feature](/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and operations table selection isn't visible if your Synapse Link profile isn't configured for Delta lake.
@@ -242,7 +242,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
    > - PU 63:7.0.7198.105
    > - PU 62:7.0.7120.159
    > 
-   > With this update, AOS authorization fields are added to tables.
+   > With this update, AOS authorization fields are added to tables:
    >   - Incremental updates include this column.
    >   - Modified records show these columns and value.
    >    - Full refresh includes these fields and all values.
@@ -260,8 +260,8 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
   
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation.
-- When Finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be re-initialized. Before re-initilizing Finance and operations tables, you must also restore the Datavase database. After restoring dataverse database, You must add finance and operations tables into the profile.
-- Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link. 
+- When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile.
+- Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
 - Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
@@ -309,19 +309,19 @@ The process of enabling finance and operations entities has the following steps.
 1. [Enable finance and operations virtual entities in the Power Apps maker portal](#enable-finance-and-operations-virtual-tables-in-power-apps). This step lets you use finance and operations entities in Power Apps (make.powerapps.com) to build apps. You can also use them with Azure Synapse Link.
 2. [Enable row version change tracking for Entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You must complete this step to enable Azure Synapse Link to use finance and operations entities.
 
-After you complete both steps, you can select finance and operations entities in Azure Synapse Link under **Dataverse tables**. To create Azure Synapse Link for Dataverse in Delta lake format, follow the steps in [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+After you complete both steps, you can select finance and operations entities in Azure Synapse Link under **Dataverse tables**. To create Azure Synapse Link for Dataverse in Delta Lake format, follow the steps in [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
 
 > [!NOTE]
 > Finance and operations entities start with the prefix **mserp\_**.
 
 ### Enable finance and operations virtual entities in Power Apps
 
-You must enable finance and operations entities as **virtual tables** in Dataverse. Makers can then use the chosen finance and operations entities to build apps, and the entities can also be used with Azure Synapse Link.
+You must enable finance and operations entities as [virtual tables](create-edit-virtual-entities.md) in Dataverse. Makers can then use the chosen finance and operations entities to build apps, and the entities can also be used with Azure Synapse Link.
 
 To enable finance and operations entities, follow the steps in [Enable Microsoft Dataverse virtual entities](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-virtual-entities).
 
 > [!TIP]
-> To validate Azure Synapse Link features, you can use a few of the sample entities from the following list. They appear under **Dataverse tables** section in SynapseLink. 
+> To validate Azure Synapse Link features, use a few of the sample entities from the following list. They appear under the **Dataverse tables** section in Azure Synapse Link.
 >
 > - **MainAccountBiEntity** – This entity contains a list of ledger accounts.
 > - **ExchangeRateBiEntity** – This entity contains exchange rates in the system.
@@ -329,7 +329,7 @@ To enable finance and operations entities, follow the steps in [Enable Microsoft
 
 ### Enable change tracking for finance and operations entities
 
-When you enable change tracking for finance and operations entities, they appear under Dataverse tables in Synapse Link. Finance and operations entities start with the prefix **mserp\_**.
+When you enable change tracking for finance and operations entities, they appear under Dataverse tables in Azure Synapse Link. Finance and operations entities start with the prefix **mserp\_**.
 
 To enable change tracking, follow these steps.
 
@@ -341,10 +341,10 @@ To enable change tracking, follow these steps.
 
 Currently, there are several limitations with finance and operations entities and Azure Synapse Link. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
-- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox may be  disabled for some tables backed by virtual entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration. 
+- Enabling change tracking might fail with the error message "chosen entity doesn't pass the validation rules..." or the **Track changes** checkbox might be  disabled for some tables that are virtual tables. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in finance and operations in the past for data migration.
 
    > [!NOTE]
-   > For a list of finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.** This reports shows Entities that pass and fail validation rules.
+   > For a list of finance and operations entities that pass validation rules, run the **Data entity row version change tracking validation report** available in finance and operations apps at path **System administration/Setup/Row version change tracking/Data entity row version change tracking validation report.** This reports shows entities that pass and fail validation rules.
    >
    > For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps.
    > 
