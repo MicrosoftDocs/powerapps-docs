@@ -3,14 +3,12 @@ title: "View, submit, and install catalog items (preview)"
 description: "Learn how to submit and acquire items from your organization's catalog."
 author: derekkwanpm
 ms.author: derekkwan
-ms.subservice: 
 ms.date: 05/15/2024
 ms.reviewer: matp
 ms.topic: how-to
+ms.subservice: common
 search.audienceType: 
   - maker
-contributors:
- - JimDaly
 ---
 # View, submit, and install catalog items (preview)
 
@@ -31,6 +29,9 @@ Before reading this article, you should:
 
 - [Learn about the catalog](catalog-overview.md)
 - [Learn how administrators setup and configure the catalog](/power-platform/admin/administer-catalog)
+
+> [!NOTE]
+> Developers can also use the Power Platform CLI to perform the operations described here. [Learn to use the catalog with Power Platform CLI (preview)](/power-platform/developer/submit-catalog-items)
 
 ## Access controls
 
@@ -167,6 +168,6 @@ As previously mentioned, templates can be acquired as many times as you like, ea
 
 ### See also
 
-[Catalog in Power Platform (Preview)](catalog-overview.md)
-
-[Administer the catalog (Preview)](/power-platform/admin/administer-catalog)
+[Catalog in Power Platform (Preview)](catalog-overview.md)   
+[Administer the catalog (Preview)](/power-platform/admin/administer-catalog)   
+[Use the catalog with Power Platform CLI (preview)](/power-platform/developer/submit-catalog-items)
