@@ -2215,7 +2215,7 @@
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
-    - name: Test and explore the Dataverse Web API
+    - name: Explore the Dataverse Web API
       href: ./data-platform/dataverse-accelerator/api-playground.md  
   - name: For admins
     items:
