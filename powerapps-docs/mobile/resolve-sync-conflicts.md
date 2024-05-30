@@ -58,11 +58,14 @@ When a user makes changes to data in an offline app, updates to each column are 
 Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ### Conflict resolution settings
-It's possible to change the default behavior for all offline apps belonging to an environment. This isn't recommended.
+In case the conflicts are not automatically resolved, you may have to change the conflict resolution setting to its default value.   
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 1. Select **Environments** in the navigation pane.
 3. Select an environment.
 4. Select **Settings** in the command bar.
 5. Select **Product** > **Features**.
-6. In the **Advanced mobile offline settings for model-driven apps** section, turn on the **Enable conflict detection for mobile offline synchronization** option. When this option is turned on, the server wins over the client. Conflict errors must be resolved manually.
+6. In the **Advanced mobile offline settings for model-driven apps** section, turn off the **Enable conflict detection for mobile offline synchronization** option. 
+
+> [!Note]
+> When this option is turned on, the server wins over the client (not recommended). Conflict errors must be resolved manually.
