@@ -41,7 +41,7 @@ You must have [access to Dataverse](/power-apps/maker/data-platform/data-platfor
 
 ## Get started
 
-To get started with the API playground, [play](dataverse-accelerator.md#play-the-dataverse-accelerator) the Dataverse accelerator and go to the API playground page.
+To get started with the API playground, [play](dataverse-accelerator.md#play-the-dataverse-accelerator) the Dataverse accelerator and go to the **API playground** page.
 
 ![Run the API playground by selecting the feature card](media/api-play-run.svg)
 
@@ -62,7 +62,7 @@ Three request types are presented:
 These request types are designed to simplify calling plug-ins available in the working environment.
 
 1. Select an option from the main dropdown list, which presents the available plug-ins in the current environment.
-   ![Custom APIs are listed in the dropdown list](./media/api-play-list-customapi.svg)
+   :::image type="content" source="media/api-play-list-customapi.svg" alt-text="Custom APIs are listed in the dropdown list" lightbox="media/api-play-list-customapi.svg":::
 
 1. If parameters are available, they're displayed in the **Query params** table that appears. Provide values for required parameters.
 
