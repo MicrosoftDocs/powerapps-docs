@@ -23,7 +23,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 ## Prerequisites
 
-- Have an existing canvas with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
+Have an existing canvas app with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
 
 ### View column properties for a file or image
 
