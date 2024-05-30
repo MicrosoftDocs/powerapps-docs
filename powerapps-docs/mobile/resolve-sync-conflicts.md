@@ -5,7 +5,7 @@ description: Learn how to resolve mobile sync conflicts with the server.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/29/2024
+ms.date: 05/30/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
