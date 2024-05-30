@@ -1843,7 +1843,7 @@
         href: ../mobile/offline-limitations.md
     - name: Optimize how offline works on mobile devices
       items:
-      - name: Best practices to enable an app for offline
+      - name: Best practices for developing an app for offline use
         href: ../mobile/best-practices-offline.md
       - name: Optimize the offline profile
         href: ../mobile/mobile-offline-guidelines.md  
