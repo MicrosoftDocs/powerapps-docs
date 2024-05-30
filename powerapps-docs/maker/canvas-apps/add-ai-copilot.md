@@ -31,6 +31,8 @@ The Copilot control is a next-generation AI assistant that can be integrated in 
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability  may be subject to usage limits or capacity throttling.
 > - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
+> - Your environment must be in the United States region.
+> - Your account must have English (United States) as the browser language.
 
 ## Step 1 - Enable Copilot for your environment
 

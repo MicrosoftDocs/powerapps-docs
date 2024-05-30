@@ -99,18 +99,18 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 
 ### Using `from` and `to` attributes
 
-It is best to set values for both the  `from` and `to`  attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `from` and `to`  attributes are not technically required.
+It's best to set values for both the  `from` and `to`  attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `from` and `to`  attributes aren't technically required.
 
 > [!NOTE]
 > - It is important that the columns specified in the `from` and `to`   attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
 > 
-> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/build-queries-with-queryexpression.md).
+> - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/queryexpression/overview.md).
 
-If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse will select the appropriate key values using that relationship.
+If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse selects the appropriate key values using that relationship.
 
-If you specify only one of the `from` or `to` attributes, Dataverse will attempt to figure out the correct relationship using the relationship schema definitions between the two tables.
+If you specify only one of the `from` or `to` attributes, Dataverse attempts to figure out the correct relationship using the relationship schema definitions between the two tables.
 
-Otherwise you will get an error like the following:
+Otherwise you'll get the following error:
 
 > Code: `0x80041102`  
 > Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
@@ -164,7 +164,7 @@ For example, both of these queries use the [teammembership_association](../../re
 
 ### link-type options
 
-Use `link-type` to apply filters on the records returned. The following table describes the valid `link-type` values
+Use `link-type` to apply filters on the records returned. The following table describes the valid `link-type` values:
 
 |Name|Description|
 |---------|---------|
@@ -184,7 +184,7 @@ Use `link-type` to apply filters on the records returned. The following table de
 |Name|Description|
 |---------|---------|
 |[entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
-|[link-entity](link-entity.md)|Joins a table related to the [entity](entity.md) or [link-entity](link-entity.md) to return additional columns with the result.|
+|[link-entity](link-entity.md)|Joins a table related to the [entity](entity.md) or [link-entity](link-entity.md) to return more columns with the result.|
 
 ## Child elements
 
@@ -193,7 +193,7 @@ Use `link-type` to apply filters on the records returned. The following table de
 |[all-attributes](all-attributes.md)|0 or 1|[!INCLUDE [all-attributes-description](includes/all-attributes-description.md)]|
 |[attribute](attribute.md)|0 or many|[!INCLUDE [attribute-description](includes/attribute-description.md)]|
 |[order](order.md)|0 or many|[!INCLUDE [order-description](includes/order-description.md)]|
-|[link-entity](link-entity.md)|0 or many|Joins a table related to the [entity](entity.md) or [link-entity](link-entity.md) to return additional columns with the result.|
+|[link-entity](link-entity.md)|0 or many|Joins a table related to the [entity](entity.md) or [link-entity](link-entity.md) to return more columns with the result.|
 |[filter](filter.md)|0 or 1|[!INCLUDE [filter-description](includes/filter-description.md)]|
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
