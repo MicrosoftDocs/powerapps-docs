@@ -40,7 +40,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 - **Virtual tables** aren't not supported in offline mode.
 
-- **Calculated and roll-up fields** - Calculated and roll-up fields --- that are part of rows synced to the client --- aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
+- **Calculated and roll-up fields** - Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
