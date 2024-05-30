@@ -1807,7 +1807,7 @@
       href: ../mobile/optimize-for-devices-overview.md
     - name: Optimize for devices controls (preview)
       href: ../mobile/optimize-for-devices-controls.md
-  - name: Enable mobile apps for offline use
+  - name: Configure mobile apps for offline use
     items:
     - name: Mobile offline for canvas apps
       items:
