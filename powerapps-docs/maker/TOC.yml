@@ -1819,7 +1819,7 @@
         href: ../mobile/files-images-offline-canvas-apps.md
       - name: Work with canvas apps offline 
         href: ../mobile/canvas-mobile-offline-working.md
-      - name: Sync data in the background
+      - name: Sync data offline in the background
         href: ../mobile/sync-data-offline-background.md
       - name: Mobile offline limitations for canvas apps
         href: ../mobile/limitations-canvas-apps.md
@@ -1837,7 +1837,7 @@
         href: ../mobile/work-offline-mode-classic.md 
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
-      - name: Sync data in the background
+      - name: Sync data offline in the background
         href: ../mobile/sync-data-offline-background.md
       - name: Mobile offline limitations for model-driven apps
         href: ../mobile/offline-limitations.md
