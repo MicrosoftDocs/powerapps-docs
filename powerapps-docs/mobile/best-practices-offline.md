@@ -1,5 +1,5 @@
 ---
-title: Best practices for for developing an app for offline use
+title: Best practices for developing an app for offline use
 description: Learn about the best practices for developing an app for offline use.
 author: trdehove
 ms.component: pa-user
@@ -16,7 +16,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Best practices for for developing an app for offline use
+# Best practices for developing an app for offline use
 This article provides recommendations for how to create the best experience for users of apps configured for offline use. 
 
 - If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps)
