@@ -26,13 +26,13 @@ In the event of a synchronization error, the system automatically generates a ne
 |Column name | Description | Example |
 |-------------------------------|----------------------------|--------------------------------|
 |**Error Time**| Time when the error was created. | 5/17/2024 7:16 AM |
-|**Error Message**| Description of the error. | Entity Account With Id = <RowId> Does Not Exist|
+|**Error Message**| Description of the error. | `Entity Account With Id = <RowId> Does Not Exist`|
 |**Error Type**| Type of the error, such as a conflict or record not found error.| Record not found|
 |**Record**| Updated record in sync error.| Contoso |
 |**Owner**| User who updated the record.| John Doe|
 |**Action**|Action applied to the record to sync.| Update|
 |**Action Data**|Json containing the payload of the action.| {"lastname":"Contoso2"}|
-|**Request Data**|Json containing the query. | {"lastname":"Contoso2","syncerror__regardingentityid":<syncerrorId>,"entitylogicalname":"account"}|
+|**Request Data**|Json containing the query. | {`"lastname":"Contoso2","syncerror__regardingentityid":<syncerrorId>,"entitylogicalname":"account"}`|
 |**Error Code**| Code of the error. | -2147015424 |
   
 ## Recommendation on how to use the Sync Error table
