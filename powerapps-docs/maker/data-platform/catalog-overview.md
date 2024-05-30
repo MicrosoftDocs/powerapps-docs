@@ -21,7 +21,7 @@ Building from scratch every time by recreating branding, layouts, links, complex
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The catalog needs to be set up by an admin before you can use it, including permissions. More information [Administer the catalog](/power-platform/admin/administer-catalog).
+> - The catalog needs to be set up by an admin before you can use it, including permissions. More information [Administer the catalog](/power-platform/admin/administer-catalog#set-up-the-catalog).
 > - The catalog only works with Microsoft Dataverse environments. Environments without Dataverse aren't supported at this time.
 > - While not required for preview, when this feature is generally available, it'll require the use of Managed Environment capabilities. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
@@ -60,7 +60,7 @@ These terms are important to understand when using the catalog:
 
 ## Catalog basics
 
-The catalog needs to be set up by an admin before you can use it, including privileges. More information: [Administer the catalog](/power-platform/admin/administer-catalog).
+The catalog needs to be set up by an admin before you can use it, including privileges. More information: [Administer the catalog](/power-platform/admin/administer-catalog#set-up-the-catalog).
 
 You might choose to have multiple catalogs across environments for different regions, departments, or any group. Most organizations only need one catalog. A catalog admin can set up new catalogs in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
@@ -91,7 +91,7 @@ On the page itself are the following controls:
 - Filters (filters for publisher, type, category, and more)
 - Catalog selector (some organizations might choose to create multiple catalogs for regions or departments). Users can have access to one or more catalogs.
 
-The list of Microsoft published catalog items that will be available in your catalog out of the box are: <!-- Are any of these unavailable for preview? If so, they need to be removed. -->
+The list of Microsoft published catalog items that will be available in your catalog out of the box are:
 
 - AI Prompts
 - Copilot app templates
