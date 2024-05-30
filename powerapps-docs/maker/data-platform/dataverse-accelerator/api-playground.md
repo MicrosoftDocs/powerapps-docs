@@ -65,8 +65,7 @@ These request types are designed to simplify calling plug-ins available in the w
    :::image type="content" source="media/api-play-list-customapi.svg" alt-text="Custom APIs are listed in the dropdown list" lightbox="media/api-play-list-customapi.svg":::
 
 1. If parameters are available, they're displayed in the **Query params** table that appears. Provide values for required parameters.
-
-    ![Custom API parameters display automatically](./media/api-play-customapi-params.svg)
+   :::image type="content" source="media/api-play-customapi-params.svg" alt-text="Custom API parameters display automatically" lightbox="media/api-play-customapi-params.svg":::
 
     > [!NOTE]
     > Checkboxes to the left of each parameter indicate whether they are included in the request. Required parameters have disabled checkboxes while optional parameters have editable ones.
@@ -74,9 +73,8 @@ These request types are designed to simplify calling plug-ins available in the w
 1. Select **Send**.
 
 1. Observe the [response](#view-the-response) in the lower section of the screen.
-
-   ![Parameters are listed if registered](./media/api-play-response.svg)
-
+   :::image type="content" source="media/api-play-response.svg" alt-text="Parameters are listed if registered" lightbox="media/api-play-response.svg":::
+ 
 > [!NOTE]
 > The interface provides a convenient listing of all available plug-ins in the environment. When selected, the associated parameters with data types are presented. Behind the scenes an OData call is still being made, but the interface simplifies the construction of the call.
 
@@ -92,10 +90,11 @@ OData requests allow more options for request parameters.
 
     1. In the URL.
         1. After the question mark (`?`) character in the URL, type in the query parameter key.
-        ![Key typed into Url after question mark](./media/api-play-key.svg)
+        :::image type="content" source="./media/api-play-key.svg" alt-text="Key typed into Url after question mark" lightbox="./media/api-play-key.svg":::
+
         1. Type an equals (`=`) character after the key.
         1. Type in the value.
-        ![Value typed into Url after the equals sign](./media/api-play-value.svg)
+        :::image type="content" source="./media/api-play-value.svg" alt-text="Value typed into Url after the equals sign" lightbox="./media/api-play-value.svg":::
 
         The keys and values will automatically populate the parameter table in the interface.
 
@@ -109,7 +108,7 @@ OData requests allow more options for request parameters.
 
 After a request is sent, the response is displayed in the lower half of the screen.
 
-![OData response](./media/api-play-odata-response.svg)
+:::image type="content" source="media/api-play-odata-response.svg" alt-text="OData response" lightbox="media/api-play-odata-response.svg":::
 
 The response status provides quick metrics on the request:
 
@@ -127,10 +126,11 @@ You can save requests for quick access later. Saved requests store the request d
 
    A dialog appears with form fields.
 1. Provide a name for the request. A default value is provided based on the request details, but you can update the value.
-    ![Save request dialog](./media/api-play-save.svg)
+    :::image type="content" source="./media/api-play-save.svg" alt-text="Save request dialog" lightbox="./media/api-play-save.svg":::
+
 1. Select **Save**.
 1. The saved request appears in the left pane of the screen.
-    ![Saved requests appear in the left pane of the screen](media/api-play-saved-requests.svg)
+    :::image type="content" source="media/api-play-saved-requests.svg" alt-text="Save requests appear in the left pane of the screen" lightbox="media/api-play-saved-requests.svg":::
 
 ### Load a saved request
 
