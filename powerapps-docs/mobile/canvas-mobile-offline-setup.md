@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 05/29/2024
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -79,7 +79,7 @@ A [page that's based on the **Offline** template](#create-an-offline-canvas-app)
 > [!NOTE]
 > If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
 
-## Create a custom mobile offline profile
+## Create a custom, mobile offline profile
 
 If the automatically generated offline profile doesn't meet your needs, create your own. [Learn about guidelines for offline profiles](mobile-offline-guidelines.md).
 
@@ -101,24 +101,24 @@ You need to publish your new offline profile before you can select it in your ca
 
 1. After the profile is created, select it to continue editing it.
   
-  ### Add a table to an offline profile and apply filters
+### Add a table to an offline profile and apply filters
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limiting the amount of data that downloads on users' devices.
 
 Be sure that you configure at least one of the profile rules for each table to download its data. 
 
-   |Customization |Recommendation|  
-  |-------------|---------|  
-  |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
-  |All Rows|	If you're selecting this filter, you can't define any other filter rules.|
-  |Related rows only | Be sure that the related table has been added to the Offline Profile.|
-  |Custom | You can define a custom filter up to three levels deep. |
+|Customization |Recommendation|  
+|-------------|---------|  
+|Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have a business unit-level filter for a table, unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+|All rows|	If you're selecting this filter, you can't define any other filter rules.|
+|Related rows only | Be sure that the related table has been added to the offline profile.|
+|Custom | You can define a custom filter up to three levels deep. |
 
 Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
-1. Choose a table, and then define the filters.
+1. Select a table, and then define the filters.
 
 1. Select **Next**.
    
@@ -128,12 +128,12 @@ Keep in mind, that you can have 15 related tables in a custom filter. You can al
 
     1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship ensures that related rows following that relationship are downloaded and made available offline. You can only have up to 15 related tables in a profile. If you exceed the limit, you get an error and won't be able to publish the offline profile.
       
-    1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
+    1. **Sync interval** defines the sync frequency to be applied on the device that syncs with the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
 
 1. Select **Save**.
 
 > [!IMPORTANT]
-> Don't add users in the offline profile in the **Users with offline access** area. This capability is only applicable to model-driven apps, restricted to selected users. 
+> Don't add users in the offline profile in the **Users with offline access** area. This capability is only applicable to model-driven apps and is restricted to selected users. 
 
 ### Create an offline profile (without admin rights)
 
