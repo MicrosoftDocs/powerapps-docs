@@ -54,6 +54,9 @@ UpdateContext(
 Errors can be detected with `IsError` and replaced or suppressed with `IfError`
 
 ```powerappsfl
+IfError(result, Notify("There was an issue saving data" , NotificationType.Error));
+IfError(result, Notify("There was an issue saving data" , & FirstError.Message, NotificationType.Error))
+
 If(
     IsError(
         Patch(
@@ -87,7 +90,7 @@ Notify("Error: the invoice could not be created", NotificationType.Error);
 
 ### Custom Error Message with OnError Property
 
-Power Apps `OnError` is a property on your app which lets you capture all your unhandled errors. The OnError property gives you the ability to execute an expression that runs every time an error is not handled by the app (such as storing it in a variable or using a function such as IfError to replace it with some other value). We can also point it to the official documentation for that property at <https://learn.microsoft.com>. To use the `OnError` property, you need to add it to the app that you want to apply it to. Then, you can specify the error message that you want to display by writing a formula in the `OnError` property box.
+Power Apps `OnError` is a property on your app which lets you capture all your unhandled errors. The `OnError` property gives you the ability to execute an expression that runs every time an error is not handled by the app (such as storing it in a variable or using a function such as `IfError` to replace it with some other value). To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), you need to add it to the app that you want to apply it to. Then, you can specify the error message that you want to display by writing a formula in the `OnError` property box.
 
 It's important to note that `App.OnError` can't replace the error in the same way that `IfError` can. At the point that `App.OnError` is executed, the error has already happened, and the result has propagated through other formulas. `App.OnError` only controls how the error is reported to the end user and provides a hook for the maker to log the error if desired.
 
@@ -105,11 +108,6 @@ Notify(
     NotificationType.Error
 )
 ```
-
-## See also
-
-[OnError property](/power-platform/power-fx/reference/object-app#onerror-property)
-
 ## Next step
 
 > [!div class="nextstepaction"]

@@ -43,9 +43,9 @@ On Selecting the event grid you can get some more information like Overview of t
 
 The introduction of the App checker represents a more streamlined method for identifying formula issues and addressing accessibility concerns within your app. Easily accessible through the App checker button situated in the upper right corner of Power Apps Studio, this tool presents a comprehensive list of formula-related issues and actionable recommendations. Its purpose extends beyond mere error detection, as it also contributes to improving debugging efficiency, optimizing performance, and ensuring alignment with best practices. The ongoing commitment of the Power Apps team involves continuous investment and expansion of the App checker, aiming to simplify the debugging process and empower developers with informed decision-making in app development.
 
-![A screenshot of Power Apps showing the App Checker icon highlighted](media/image34.png)
+![A screenshot of Power Apps showing the App Checker icon highlighted](media/image37.png)
 
-![A screenshot of Power Apps showing the App Checker user interface](media/image35.png)
+![A screenshot of Power Apps showing the App Checker user interface](media/image38.png)
 
 ### Accessibility Checker
 
@@ -53,4 +53,4 @@ The Accessibility Checker functions in a manner similar to the formula errors ch
 
 Upon select an item from the Accessibility Checker list, it opens the relevant property for addressing the identified issue. Clicking the right chevron reveals detailed information along with a link to additional resources providing insights into creating accessible apps. For more in-depth information on the Accessibility Checker and general principles of accessibility, refer [here](/power-apps/maker/canvas-apps/accessibility-checker).
 
-![A screenshot of Power Apps showing the results of Accessibility Checker](media/image36.png)
+![A screenshot of Power Apps showing the results of Accessibility Checker](media/image39.png)
