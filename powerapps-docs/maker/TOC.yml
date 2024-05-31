@@ -2215,12 +2215,14 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
-  - name: Get experimental features early (preview)
+  - name: Get preview features early (preview)
     items:
     - name: Use the Dataverse accelerator
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md  
   - name: For admins
     items:
     - name: Security in Dataverse
