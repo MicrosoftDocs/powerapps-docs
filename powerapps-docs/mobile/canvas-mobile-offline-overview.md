@@ -1,7 +1,7 @@
 ---
 title: Mobile offline for canvas apps overview
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 05/29/2024
+ms.date: 05/31/2024
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
@@ -45,7 +45,7 @@ There are some key benefits of using the built-in offline functionality for canv
 |Offline or connectivity user experience	| Not provided/custom only	|Automatic|
 |[Sync user experience or status](canvas-mobile-offline-working.md#sync-status-icons)	|Not provided/custom only |	Automatic|
 |[Image and file support](files-images-offline-canvas-apps.md)|	Yes, but may run into performance and memory limits	|Not supported|
-|[Optimized delta sync](canvas-mobile-offline-working#offline-delta-sync)|	No|	Yes|
+|[Optimized delta sync](canvas-mobile-offline-working.md#offline-delta-sync)|	No|	Yes|
 |[Conflict resolution](resolve-sync-conflicts.md#sync-conflict)	|Manual	|Automatic|
 |Local data store	|Files	|Transactional database|
 |Automatically handles schema changes	|No	|Yes|
