@@ -36,7 +36,7 @@ Mobile apps run on small screens with limited connectivity. Before you set up of
 
 Follow these best practices when you build an app for mobile offline use:
 
-- Performance is critical when you run an app on mobile. For more information on to create performant canvas apps, see [Overview of creating performant apps](../maker/canvas-apps/create-performant-apps-overview.md).
+- Performance is critical when you run an app on mobile. For more information about creating performant canvas apps, see [Overview of creating performant apps](../maker/canvas-apps/create-performant-apps-overview.md).
     
 - Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
 
@@ -46,7 +46,7 @@ Follow these best practices when you build an app for mobile offline use:
 
 ## Turn on offline capability for tables
 
-Tables that your offline-first app uses must have offline capability turned on. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
+Tables included in an offline-enabled app must be enabled for offline use. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left side panel, select **Tables**.
@@ -110,7 +110,7 @@ Be sure that you configure at least one of the profile rules for each table to d
 |Customization |Recommendation|  
 |-------------|---------|  
 |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have a business unit-level filter for a table, unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
-|All rows|	If you're selecting this filter, you can't define any other filter rules.|
+|All rows|	If select this filter, you can't define any other filter rules.|
 |Related rows only | Be sure that the related table has been added to the offline profile.|
 |Custom | You can define a custom filter up to three levels deep. |
 
@@ -145,7 +145,7 @@ If your Power Apps account doesn't have admin rights, you can still create a mob
 4. Publish the model-driven app.
 5. Select the offline profile in your canvas app.
 
-## Create an offline canvas app
+## Using the Offline template and offline status icon
 
 To make it easier to create or convert a canvas app for offline use, we created the **Offline** template. The template includes a globe icon in the navigation bar that shows the connectivity and sync state, putting offline at the center of the experience. Users always know whether their device and data are ready to go.
 
