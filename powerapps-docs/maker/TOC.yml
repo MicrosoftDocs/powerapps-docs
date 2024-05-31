@@ -686,6 +686,8 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+        - name: Understand app functionality through code view (preview) 
+          href: ./canvas-apps/code-view.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -2177,11 +2179,27 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
+  - name: Work with catalogs (preview)
+    items:
+    - name: Catalog overview
+      href: ./data-platform/catalog-overview.md
+    - name: View, submit, and install catalog items
+      href: ./data-platform/submit-acquire-from-catalog.md
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
     - name: Create and use dataflows
       href: ./data-platform/create-and-use-dataflows.md
+  - name: Get insights from Dataverse data
+    items:
+    - name: Overview
+      href: ./data-platform/data-get-insights-overview.md
+    - name: Power BI with Dataverse
+      href: ./data-platform/use-powerbi-dataverse.md
+    - name: Create a Power BI report
+      href: ./data-platform/data-platform-powerbi-connector.md
+    - name: View table data in Power BI Desktop
+      href: ./data-platform/view-entity-data-power-bi.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2189,14 +2207,6 @@
       href: ./data-platform/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./data-platform/data-platform-restricted-entities.md
-  - name: Use Power BI with Dataverse
-    items:
-    - name: Overview
-      href: ./data-platform/use-powerbi-dataverse.md
-    - name: Create a Power BI report
-      href: ./data-platform/data-platform-powerbi-connector.md
-    - name: View table data in Power BI Desktop
-      href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
   - name: Translate customized table and column text
@@ -2207,12 +2217,14 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
-  - name: Get experimental features early (preview)
+  - name: Get preview features early (preview)
     items:
     - name: Use the Dataverse accelerator
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md  
   - name: For admins
     items:
     - name: Security in Dataverse
@@ -2235,7 +2247,7 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
-      - name: Transtion from legacy data generation services
+      - name: Transtion from legacy data integration services
         href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
