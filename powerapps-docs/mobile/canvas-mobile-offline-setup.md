@@ -79,7 +79,7 @@ A [page that's based on the **Offline** template](#create-an-offline-canvas-app)
 > [!NOTE]
 > If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
 
-## Create a mobile offline profile
+## Create a custom mobile offline profile
 
 If the automatically generated offline profile doesn't meet your needs, create your own. [Learn about guidelines for offline profiles](mobile-offline-guidelines.md).
 
@@ -100,46 +100,40 @@ You need to publish your new offline profile before you can select it in your ca
 1. Enter a name and description, and then select **Create**.
 
 1. After the profile is created, select it to continue editing it.
+  
+  ### Add a table to an offline profile and apply filters
+
+Applying an appropriate filter for each of the tables configured in the offline profile is critical to limiting the amount of data that downloads on users' devices.
+
+Be sure that you configure at least one of the profile rules for each table to download its data. 
+
+   |Customization |Recommendation|  
+  |-------------|---------|  
+  |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+  |All Rows|	If you're selecting this filter, you can't define any other filter rules.|
+  |Related rows only | Be sure that the related table has been added to the Offline Profile.|
+  |Custom | You can define a custom filter up to three levels deep. |
+
+Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
-1. Select a table from the list. Only tables that can be set for offline use appear in the list.
+1. Choose a table, and then define the filters.
 
 1. Select **Next**.
+   
+1. Set the following filters:
+   
+    1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
 
-1. Select a filter based on the [table's ownership type](../maker/common-data-service/types-of-entities.md).
-
-    | Table ownership type | Available filter options for data download |
-    |----------------------|-------------------------|
-    | User or team | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows in this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li></br><li>**Other data filter**: Make only the specified rows in this table available offline. Select from the following options:</br></br><ul><li>**Download user rows**: Make only your rows available offline.</br></li></br><li>**Download team rows**: Make your team's rows available offline.</br></li></br><li>**Download my business unit's rows**: Make your business unit's rows available offline.</br></li></br></ul></li></ul> |
-    | Organization | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li></ul> |
-    | Business | <ul><li>**Download related data only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li><br><li>**Other rows**: Make only the specified rows in this table available offline. Select the following option:</br></blockquote></br><ul><li>**Download my business unit's rows**: Make your business unit's rows available offline.</br></li></ul></li></ul> |
-    | None | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></ul> |
-
-    If you select **Custom**, you can define a custom filter up to three levels deep with the following rules.
-
-    |Rules                      |  &nbsp;                      |  &nbsp;                 |
-    |-------------------------------|----------------------------|--------------------------------|
-    | equal                         | not equal                  | gt – greater than              |
-    | ge – greater than or equal to | le – less than or equal to | lt – less than                 |
-    | like                          | not-like                   | in                             |
-    | not-in                        | null                       | not-null                       |
-    | eq-userid                     | ne-userid                  | eq-userteams                   |
-    | eq-useroruserteams            | eq-useroruserhierarchy     | eq-useroruserhierarchyandteams |
-    | eq-businessid                 | ne-businessid              | eq-userlanguage                |
-    | begins-with                   | not-begin-with             | ends-with                      |
-    | not-end-with                  |                            |                                |
-
-1. In the **Include \[table name\] records related to these tables** section, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the `Account` and `Contact` tables, then you need to add both tables to the mobile offline profile.
-
-    For example, if you select **Contact \| Field name: Primary Contact**, then for every contact, the system also downloads the account that's related to it.
-
-    :::image type="content" source="media/include-account-records.png" alt-text="Screenshot of edit options for the Account table, with Include Account records related to these tables highlighted.":::
+    1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship ensures that related rows following that relationship are downloaded and made available offline. You can only have up to 15 related tables in a profile. If you exceed the limit, you get an error and won't be able to publish the offline profile.
+      
+    1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
 
 1. Select **Save**.
 
-    > [!IMPORTANT]
-    > Don't add users in the offline profile in the **Users with offline access** area. This capability is only applicable to model-driven apps, restricted to selected users. 
+> [!IMPORTANT]
+> Don't add users in the offline profile in the **Users with offline access** area. This capability is only applicable to model-driven apps, restricted to selected users. 
 
 ### Create an offline profile (without admin rights)
 
