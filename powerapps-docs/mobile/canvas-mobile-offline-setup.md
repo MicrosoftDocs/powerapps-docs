@@ -46,7 +46,7 @@ Follow these best practices when you build an app for mobile offline use:
 
 ## Turn on offline capability for tables
 
-Tables included in an offline-enabled app must be enabled for offline use. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
+Tables included in an offline app must be configured for offline use. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left side panel, select **Tables**.
@@ -110,7 +110,7 @@ Be sure that you configure at least one of the profile rules for each table to d
 |Customization |Recommendation|  
 |-------------|---------|  
 |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have a business unit-level filter for a table, unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
-|All rows|	If select this filter, you can't define any other filter rules.|
+|All rows|	If you select this filter, you can't define any other filter rules.|
 |Related rows only | Be sure that the related table has been added to the offline profile.|
 |Custom | You can define a custom filter up to three levels deep. |
 
