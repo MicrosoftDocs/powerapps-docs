@@ -112,12 +112,12 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
 Be sure that you configure at least one of the profile rules for each table to download its data. 
 
-  |Customization |Recommendation|  
+    |Customization |Recommendation|  
   |-------------|---------|  
-  |All Records|	If you're selecting this filter, you can't define any other filter rules.|
-  |Download related data only|If you're selecting this filter, you can't define any other filter rules. Be sure that the table has been defined as a Profile Item Association table.|
-  |Other data filter - if selected, then select at least one of these options:<br><br>- **Download my Records**<br>- **Download my team records**<br>- **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
-  |Custom data filter |<=3 filters can be defined in the custom data filter. |
+  |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+  |All Rows|	If you're selecting this filter, you can't define any other filter rules.|
+  |Related rows only | Be sure that the related table has been added to the Offline Profile.|
+  |Custom | You can define a custom filter up to three levels deep. |
 
 Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
