@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/30/2024
+ms.date: 05/31/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -24,7 +24,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 - A **canvas app not in a solution** can't be used in offline mode.
 
-- The offline-first feature **works for standalone, canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md) or [canvas app in Teams](/power-apps/teams/overview.md).
+- The offline-first feature **works for standalone, canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md), or [canvas apps in Teams](../teams/overview.md).
 
 - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
    - **Relate**
