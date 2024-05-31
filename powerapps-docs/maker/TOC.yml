@@ -2187,6 +2187,12 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
+  - name: Work with catalogs (preview)
+    items:
+    - name: Catalog overview
+      href: ./data-platform/catalog-overview.md
+    - name: View, submit, and install catalog items
+      href: ./data-platform/submit-acquire-from-catalog.md
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
@@ -2217,12 +2223,14 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
-  - name: Get experimental features early (preview)
+  - name: Get preview features early (preview)
     items:
     - name: Use the Dataverse accelerator
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md  
   - name: For admins
     items:
     - name: Security in Dataverse
