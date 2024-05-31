@@ -94,7 +94,7 @@ landingContent:
             url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
 
   # Card
-  - title: Get insights from you data
+  - title: Get insights from your data
     linkLists:
       - linkListType: concept
         links:
