@@ -1,4 +1,5 @@
 ---
+**This feature has been deprecated for any public**. We are working to light up this feature as soon as possible.
 title: "Overview of performance insights in Power Apps | MicrosoftDocs"
 description: Understand performance insights. 
 ms.custom: ""
