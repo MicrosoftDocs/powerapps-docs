@@ -2179,6 +2179,12 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
+  - name: Work with catalogs (preview)
+    items:
+    - name: Catalog overview
+      href: ./data-platform/catalog-overview.md
+    - name: View, submit, and install catalog items
+      href: ./data-platform/submit-acquire-from-catalog.md
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
