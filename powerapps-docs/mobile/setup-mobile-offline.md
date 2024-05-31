@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/29/2024
+ms.date: 05/31/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -114,9 +114,9 @@ Be sure that you configure at least one of the profile rules for each table to d
 
     |Customization |Recommendation|  
   |-------------|---------|  
-  |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have business unit-level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
-  |All Rows|	If you're selecting this filter, you can't define any other filter rules.|
-  |Related rows only | Be sure that the related table has been added to the Offline Profile.|
+  |Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have a business unit-level filter for a table, unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+  |All rows|	If you're selecting this filter, you can't define any other filter rules.|
+  |Related rows only | Be sure that the related table has been added to the offline profile.|
   |Custom | You can define a custom filter up to three levels deep. |
 
 Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
