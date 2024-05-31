@@ -18,7 +18,7 @@ ms.custom: bap-template
 # Work with canvas apps offline
 
 
-[Canvas apps](../maker/index.md) are a type of app that nondevelopers can make with Microsoft Power Apps. If a canvas app is designed for [offline use](canvas-mobile-offline-overview.md), you can work with it on your mobile device even when you don't have Internet access. All the data the app needs is stored locally on your device. Any changes you make are synchronized with the app server the next time your device connects to the network. If you're in the middle of changing some data and you lose your network connection, the app saves your changes and uploads them to the server when you're back online.
+If a [canvas apps](../maker/index.md) is designed for [offline use](canvas-mobile-offline-overview.md), you can work with it on your mobile device even when you don't have Internet access. All the data the app needs is stored locally on your device. Any changes you make are synchronized with the app server the next time your device connects to the network. If you're in the middle of changing some data and you lose your network connection, the app saves your changes and uploads them to the server when you're back online.
 
 ## Initial offline sync
 
