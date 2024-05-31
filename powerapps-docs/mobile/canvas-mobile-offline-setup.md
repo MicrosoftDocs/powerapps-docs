@@ -114,7 +114,7 @@ Be sure that you configure at least one of the profile rules for each table to d
 |Related rows only | Be sure that the related table has been added to the offline profile.|
 |Custom | You can define a custom filter up to three levels deep. |
 
-Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
+Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
