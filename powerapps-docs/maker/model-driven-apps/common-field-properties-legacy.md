@@ -43,7 +43,7 @@ The following table describes the common properties of columns. Certain types of
  |**Name**|The unique name across your environment. A name will be generated based on the display name that has been entered. However, this can be edited before saving. Once a column is created the name can't be changed as it may be referenced in your applications or code. The name will have the customization prefix for the **Dataverse Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, it is not possible to change the data type except for converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. |
- |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
+ |**Searchable**| This column appears in Advanced Find and is available when customizing views. De-selecting this will reduce the number of options shown to people using Edit filter panel to customize views |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
 
