@@ -13,7 +13,7 @@ search.audienceType:
 # Customize and manage Power BI components (preview)
 
 > [!IMPORTANT]
-> This feature will reach retirement on July 31st, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](create-edit-powerbi-embedded-page) instead.
+> This feature will reach retirement on July 31st, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
