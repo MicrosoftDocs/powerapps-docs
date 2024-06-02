@@ -12,6 +12,9 @@ search.audienceType:
 ---
 # Customize and manage Power BI components (preview)
 
+> [!IMPORTANT]
+> This feature will reach retirement on July 31st, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](create-edit-powerbi-embedded-page) instead.
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 In general, Power BI components are customized and managed much like other components in Power Apps. However, there are a number of characteristics of Power BI components that require additional steps or that have additional considerations. This article discusses these special characteristics.

@@ -12,6 +12,9 @@ search.audienceType:
 ---
 # Create Power BI report and dataset components (preview)
 
+> [!IMPORTANT]
+> This feature will reach retirement on July 31st, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](create-edit-powerbi-embedded-page) instead.
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As data culture spreads across more and more organizations, and analytics becomes a vital part of decision making and the daily actions taken by employees, it has become critical to have reliable, up-to-date analytics readily available in your Power Apps.  

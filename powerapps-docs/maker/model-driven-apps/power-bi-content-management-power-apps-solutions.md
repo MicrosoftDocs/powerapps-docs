@@ -12,6 +12,9 @@ search.audienceType:
 ---
 # Power BI content management in Power Apps solutions (preview)
 
+> [!IMPORTANT]
+> This feature will reach retirement on July 31st, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](create-edit-powerbi-embedded-page) instead.
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The Power BI/Power Apps solutions integration enables you, as an App maker, to add Power BI reports and datasets as Dataverse components in Power Apps solutions. When you add a Power BI report or dataset to a solution, it will stay connected as the solution is deployed across environments and tenants, and can be seamlessly managed as part of your Application Lifecycle Management process across environments and tenants.
