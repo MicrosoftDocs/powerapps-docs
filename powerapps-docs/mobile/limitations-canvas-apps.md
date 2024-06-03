@@ -61,4 +61,6 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Relationship defined for each table|A maximum of 15 relationships is allowed. The is a maximum of one many to many (M:M) or one to many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 
+### See also
 
+[Troubleshoot offline sync errors in the Power Apps mobile app](troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting.md)
