@@ -17,19 +17,34 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. Using Copilot saves time because you won’t have to worry about scrolling through the gallery to find the items you need.  
+You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. CoPilot uses the natural language expression to generate a query to the database that scopes down the current view of list of records in a gallery or grid helping users to quickly find the records they need. 
 
-When trying to quickly find the gallery items you need, you might worry about spending time scrolling without success. With the assistance of Copilot, you can quickly use natural language to sort, filter, and search the gallery to find the items you need.
+CoPilot for galleries and grids supports three key kinds of commands: 
+
+1. Search for a specific set of records using a "starts with" text example. 
+2. Filter the list of records to a specific set with complex criteria. This list includes 'and's and 'or's and relational operators (e.g., equal, greater than, etc.). 
+3. Sort the list of records (ascending, descending, multiple sorts).
+
+CoPilot for galleries and grids don't support aggregate queries (for example, top, min, max, sum, average) as these answers cannot be shown as a list of records. 
+
+Copilot for galleries and grids provides five key benefits:
+
+1. CoPilot enables natural language commands. Users can express commands (Search, Filter, Sort) in natural language. The prompt UI helps users formulate sentences by showing different examples of natural language sentences that work. 
+2. CoPilot enables queries over the full query result. Users can search, filter, and sort on fields even if the application doesn't provide UI controls for these tasks. For example, you can search for records even if the application doesn't have a search bar.  
+3. CoPilot saves development time. Authors save time developing apps because they don't need to develop all the UI controls necessary for the app. Instead, they can rely on CoPilot for this functionality. 
+4. CoPilot is query safe. It only generates queries that can be run on the server. Authors don't need to worry about whether or not their queries are delegable. 
+5. CoPilot keeps private data private. It only works with the data that is normally returned to the application. It doesn't access fields that aren't returned to app in a gallery/grid or form.
+
 
 > [!IMPORTANT]
-> - This feature is not yet available and is expected to begin rollout as on-by-default in early June.  However, if you turn the feature off before the release, the feature should be turned off when it rolls out to you.
+> - This feature is not yet available and is expected to begin rollout as on-by-default in late June.  However, if you turn the feature off before the release, the feature should be turned off when it rolls out to you.
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected.  Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is designed for galleries that use SharePoint as their sole data source. More data sources will be added to have this capability in the future.
+> - This feature is designed for galleries that use SharePoint as their sole data source. More data sources will be added to have this capability in the future. SharePoint effectively only supports Search, Filter, and Sort. When this feature is extended to other data sources, this feature will still only support Search, Filter, and Sort.
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
 ## Use this feature
@@ -43,7 +58,7 @@ When trying to quickly find the gallery items you need, you might worry about sp
 5. Copilot updates the gallery for you. Review the filters applied. The following options are available: 
     - If you want to remove any filters you have applied, select the **x** on the tag displaying the filter you want to remove. 
     - To clear all applied filters, select the trash icon button. 
-    - If you are satisfied with the filters that are applied to the gallery, select **Keep it**.  You can always go back and remove or add more filters. 
+    - If you're satisfied with the filters that are applied to the gallery, select **Keep it**.  You can always go back and remove or add more filters. 
   
 ## Turn off gallery filtering in web player
 
@@ -57,7 +72,7 @@ You can turn off gallery filtering for an app or an environment using a PowerShe
 
 ### Turn off gallery filtering for an app
 
-You can use a PowerShell cmdlet to turn this setting off for an app.
+You can use a PowerShell cmdlet to turn off this setting for an app.
 
 To turn off for an app using PowerShell:
 
