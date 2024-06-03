@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -62,5 +62,4 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 
 ### See also
-
 [Troubleshoot offline sync errors in the Power Apps mobile app](troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting.md)
