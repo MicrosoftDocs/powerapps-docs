@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -24,15 +24,15 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - [The canvas app must be in a solution](../maker/canvas-apps/add-app-solution.md).
 
-- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on `Canvas App`, `Mobile offline profile` and `Sync Error` tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
+- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
-- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on `Canvas App`, `Mobile offline profile` and `Sync Error` tables tables.
+- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
-- If you already have a custom security role, make sure it grants read privileges on `Canvas App`, `Mobile offline profile` and `Sync Error` tables. [Learn about miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
+- If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
 
 ## Optimize your app for mobile offline
 
-Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.
+Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.****
 
 Follow these best practices when you build an app for mobile offline use:
 
@@ -74,7 +74,7 @@ Tables included in an offline app must be configured for offline use. Some built
 
 1. Close the **Settings** window, and then save and publish your app.
 
-A page that's based on the  [**Offline** template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
+A page that's based on the  [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
 > If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
