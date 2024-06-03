@@ -1,7 +1,7 @@
 ---
 title: Filter, sort, and search galleries with Copilot (preview)
 description: Learn how to use Copilot to quickly sort, filter, and search canvas app galleries using natural language.
-ms.date: 05/16/2024
+ms.date: 06/03/2024
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -10,6 +10,8 @@ ms.author: jordanchodak
 ms.reviewer: sericks
 search.audienceType: 
   - enduser
+contributors:
+- lancedMicrosoft
 ---
 
 
@@ -17,23 +19,23 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. Copilot uses the natural language expression to generate a query to the database that scopes down the current view of list of records in a gallery or grid helping users to quickly find the records they need. 
+You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. Copilot uses a natural language expression to generate a query to the database that scopes the current view of records in a gallery or grid. This helps users to quickly find the records they need. 
 
 Copilot for galleries and grids supports three key kinds of commands: 
 
-1. Search for a specific set of records using a "starts with" text example. 
-2. Filter the list of records to a specific set with complex criteria. This list includes 'and's and 'or's and relational operators (e.g., equal, greater than, etc.). 
-3. Sort the list of records (ascending, descending, multiple sorts).
+- Search for a specific set of records using a _starts with_ text example. 
+- Filter the list of records to a specific set with complex criteria. This list includes _and_ and _or_ statements and relational operators such as, _equal_, _greater than_, and more). 
+- Sort the list of records, such as in ascending or descending order.
 
-Copilot for galleries and grids don't support aggregate queries (for example, top, min, max, sum, average) as these answers cannot be shown as a list of records. 
+Copilot for galleries and grids don't support aggregate queries, for example, _top_, _min_, _max_, _sum_, and _average_, as these answers can't be shown as a list of records. 
 
 Copilot for galleries and grids provides five key benefits:
 
-1. Copilot enables natural language commands. Users can express commands (Search, Filter, Sort) in natural language. The prompt UI helps users formulate sentences by showing different examples of natural language sentences that work. 
-2. Copilot enables queries over the full query result. Users can search, filter, and sort on fields even if the application doesn't provide UI controls for these tasks. For example, you can search for records even if the application doesn't have a search bar.  
-3. Copilot saves development time. Authors save time developing apps because they don't need to develop all the UI controls necessary for the app. Instead, they can rely on Copilot for this functionality. 
-4. Copilot is query safe. It only generates queries that can be run on the server. Authors don't need to worry about whether or not their queries are delegable. 
-5. Copilot keeps private data private. It only works with the data that is normally returned to the application. It doesn't access fields that aren't returned to app in a gallery/grid or form.
+- Copilot enables natural language commands. Users can express commands (search, filter, and sort) in natural language. The prompt user interface (UI) helps users formulate sentences by showing different examples of natural language sentences that work. 
+- Copilot enables queries over the full query result. Users can search, filter, and sort on fields even if the application doesn't provide UI controls for these tasks. For example, you can search for records even if the application doesn't have a search bar.  
+- Copilot saves development time. Authors save time developing apps because they don't need to develop all the UI controls necessary for the app. Instead, they can rely on Copilot for this functionality. 
+- Copilot is query safe. It only generates queries that can be run on the server. Authors don't need to worry about whether or not their queries can be delegated. 
+- Copilot keeps private data private. It only works with the data that is normally returned to the application. It doesn't access fields that aren't returned to the app in a gallery/grid or form.
 
 
 > [!IMPORTANT]
