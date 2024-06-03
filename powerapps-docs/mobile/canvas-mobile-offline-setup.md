@@ -74,7 +74,7 @@ Tables included in an offline app must be configured for offline use. Some built
 
 1. Close the **Settings** window, and then save and publish your app.
 
-A [page that's based on the **Offline** template](#create-an-offline-canvas-app) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
+A page that's based on the  [**Offline** template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
 > If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
