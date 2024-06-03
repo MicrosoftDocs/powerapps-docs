@@ -19,11 +19,11 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. Copilot uses a natural language expression to generate a query to the database that scopes the current view of records in a gallery or grid. This helps users to quickly find the records they need. 
+You can use Copilot to quickly sort, filter, and search the items in canvas app galleries. Copilot uses a natural language expression to generate a query to the database that scopes the current view of records in a gallery or grid so users can quickly find the records they need. 
 
 Copilot for galleries and grids supports three key kinds of commands: 
 
-- Search for a specific set of records using a _starts with_ text example. 
+- Search for a specific set of records using _starts with_ text. 
 - Filter the list of records to a specific set with complex criteria. This list includes _and_ and _or_ statements and relational operators such as, _equal_, _greater than_, and more). 
 - Sort the list of records, such as in ascending or descending order.
 
