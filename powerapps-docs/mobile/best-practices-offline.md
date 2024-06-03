@@ -59,7 +59,7 @@ You confirm that all the tables and forms work offline after the data is downloa
 
 ### Phase 2: Test with users
 
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the **Device status** page (available out-of-the-box in model-driven apps) for each user. For more information, see [enable the Device status page in canvas apps](canvas-mobile-offline-setup.md#create-an-offline-canvas-app). Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
+Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the **Device status** page (available out-of-the-box in model-driven apps) for each user. For more information, see [Using the Offline template and offline status icon](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon). Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
