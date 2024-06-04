@@ -32,7 +32,7 @@ After the initial offline sync, the data that's stored locally is kept in sync w
 
 ## Sync status icons
 
-Depending on how the [app was designed](canvas-mobile-offline-setup.md#create-an-offline-canvas-app), it includes information about its synchronization status in the form of a globe with various icons. At a glance, you can tell:
+Depending on how the [app was designed](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon), it includes information about its synchronization status in the form of a globe with various icons. At a glance, you can tell:
 
 - Whether the app is connected to the network
 - Whether a data update is in progress
