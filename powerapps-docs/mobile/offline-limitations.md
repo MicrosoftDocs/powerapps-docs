@@ -1,8 +1,8 @@
 ---
-title: Mobile offline capabilities and limitations
+title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 05/02/2024
+ms.date: 05/29/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -23,13 +23,14 @@ ms.contributors:
 - trdehove
 ---
 
-# Mobile offline capabilities and limitations
+# Mobile offline limitations for model-driven apps
 
-Before you set up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](mobile-offline-guidelines.md).
+Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Offline best practices](best-practices-offline.md) and the [Offline profile guidelines](mobile-offline-guidelines.md).
 
 These tables and corresponding commands are available in offline mode.
-  > [!NOTE]
-  > Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
+
+> [!NOTE]
+> Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
 |Table |Commands|  
 |-------------|---------|  
@@ -55,41 +56,8 @@ These tables and corresponding commands are available in offline mode.
 |Team |Read only	|
 |User |Read only	|
 
-## Supported  capabilities 
 
-- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
-
-- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
-
-    - The business process flow is used in an app that you can run on Power Apps mobile.
-    - The Power Apps mobile app is enabled for offline use.
-    - The business process flow has a single table.
-    - The business process flow table is added in the [offline profile](setup-mobile-offline-classic.md#step-1-enable-tables-for-mobile-offline-synchronization).
-      > [!NOTE]
-      > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
-    
-    There are three commands that are available for a business process flows, when you run an app in offline mode on the Power Apps mobile app.
-    
-    - Next stage
-    - Previous stage
-    - Set Active stage
-
-For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
-
-- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
-
-- **Supported view** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
-
-- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
-
-- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
-  > [!NOTE]
-  > The **Date** field isn't available for mobile offline search.
-  
-- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
-
-
-## Limitations 
+## Feature limitations 
 - **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
 - **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
@@ -99,7 +67,9 @@ For more information, see [Run business process flows offline](/power-automate/b
     - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
     - Primary image thumbnails aren't available for offline unless they were previously displayed online.
     - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
- 
+
+ - **Supported type of views** - Only system views and quick views are supported in mobile offline. Personal views aren't supported.
+   
 - **Views** aren't supported for the following tables in offline mode: 
 
      - Email
@@ -150,23 +120,17 @@ For more information, see [Run business process flows offline](/power-automate/b
 - **Work order service tasks** - Work order service tasks created through *custom* code require msdyn_lineorder to be set to -1. An actual value will be automatically set after the next synchronization cycle.
 
 - **Quick find search** - When you search offline, the results might be different from online searches. Characters in your search terms must match exactly when searching offline, while online equivalent results might be found.
-
-## Tips
-
-### Mobile offline synchronization
   
-- Mobile offline synchronization with mobile devices occurs periodically. A synchronization cycle could last for several minutes, depending on Azure network latency, the volume of data that’s set for synchronization, and mobile network speed. Users can still use the mobile apps during synchronization.  
-  
-- The time for initial metadata download is determined by the number of total tables in offline-enabled app modules. Make sure to enable only those tables and app modules for offline that are necessary to optimize the experience for end users. 
-  
-- Ensure that any view that you want to work in offline doesn’t reference the tables that aren't offline enabled. For example, assuming Account is in the offline profile, then an Account view that references the primary contact when Contact isn't in the profile isn't available.
+- **Offline search** - Offline search is available only for offline tables. Users can only search one table at a time. Global search defaults to a categorized search in offline mode, even if Dataverse search is turned on, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
-- Changes to a user’s security privileges are updated during the next synchronization cycle. Until that time, users can continue to access data according to their previous security privileges, but any changes they make are validated during the synchronization to the server. If they no longer have privileges to make changes for a row, they receive an error and the row won’t be created, updated, or deleted.
 
-- Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
+### Profile filters limitations
 
-- Mobile offline honors the mobile apps security model and the hierarchical security model except the [field level security and field sharing](/power-platform/admin/field-level-security).
-  
+|Profile details |Limitation|  
+|-------------|---------|  
+|Relationship defined for each table|There is a maximum of 15 relationships allowed. There is also a maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
+
 
 ### Organization data filter 
 
@@ -178,28 +142,7 @@ It's recommended that you have at least one rule defined for all mobile offline-
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
 
-
-### Profile filters 
-
-**Profile limitations**
-
-|Profile details |Limitation|  
-|-------------|---------|  
-|Relationship defined for each table|Maximum of 15 relationships. And maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
-|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
-
-
-### Profile filter rules recommendation 
-
-Ensure that you have configured at least one of the Profile rules for each table to download its data. 
-  
-|Customization |Recommendation|  
-|-------------|---------|  
-|All Records|	If you're selecting this filter, you can't define any other filter rule.|
-|Download Related Data only|If you're selecting this filter, you can't define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have Business Unit level filter for a table unless there's a strong justification. It's recommended for a master data scenario with a small data set like Country codes. |
-|Custom Data Filter |<=3 filters can be defined in the custom data filter. |
-
-
+### See also
+[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

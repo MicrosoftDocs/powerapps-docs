@@ -1807,40 +1807,48 @@
       href: ../mobile/optimize-for-devices-overview.md
     - name: Optimize for devices controls (preview)
       href: ../mobile/optimize-for-devices-controls.md
-  - name: Mobile offline for model-driven apps
+  - name: Configure mobile apps for offline use
     items:
-    - name: Mobile offline overview
-      href: ../mobile/mobile-offline-overview.md
-    - name: Set up guide
+    - name: Mobile offline for canvas apps
       items:
-      - name: Set up mobile offline
+      - name: Mobile offline for canvas apps overview 
+        href: ../mobile/canvas-mobile-offline-overview.md
+      - name: Set up mobile offline for canvas apps 
+        href: ../mobile/canvas-mobile-offline-setup.md
+      - name: Configure files and images in offline canvas apps 
+        href: ../mobile/files-images-offline-canvas-apps.md
+      - name: Work with canvas apps offline 
+        href: ../mobile/canvas-mobile-offline-working.md
+      - name: Sync data offline in the background
+        href: ../mobile/sync-data-offline-background.md
+      - name: Mobile offline limitations for canvas apps
+        href: ../mobile/limitations-canvas-apps.md
+    - name: Mobile offline for model-driven apps
+      items:
+      - name: Mobile offline for model-driven apps overview
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline for model-driven apps
         href: ../mobile/setup-mobile-offline.md 
-      - name: Configure mobile offline profiles for images and files
+      - name: Configure files and images in offline model-driven apps
         href: ../mobile/offline-file-images.md
-      - name: Offline profile guidelines
-        href: ../mobile/mobile-offline-guidelines.md  
-      - name: Mobile offline capabilities and limitations
-        href: ../mobile/offline-capabilities.md
-    - name: User guide
-      items:
-      - name: Work offline on your mobile device (offline-first mode)
+      - name: Work with model-driven apps offline (offline-first mode)
         href: ../mobile/work-in-offline-mode.md 
-      - name: Work offline on your mobile device (classic mode)
+      - name: Work with model-driven apps offline (classic mode)
         href: ../mobile/work-offline-mode-classic.md 
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
-      - name: Sync data in the background
+      - name: Sync data offline in the background
         href: ../mobile/sync-data-offline-background.md
-  - name: Mobile offline for canvas apps 
-    items:
-    - name: Mobile offline for canvas apps overview 
-      href: ../mobile/canvas-mobile-offline-overview.md
-    - name: Set up mobile offline for canvas apps 
-      href: ../mobile/canvas-mobile-offline-setup.md
-    - name: Configure files and images in offline canvas apps 
-      href: ../mobile/files-images-offline-canvas-apps.md
-    - name: Work with canvas apps offline 
-      href: ../mobile/canvas-mobile-offline-working.md
+      - name: Mobile offline limitations for model-driven apps
+        href: ../mobile/offline-limitations.md
+    - name: Optimize how offline works on mobile devices
+      items:
+      - name: Best practices for developing an app for offline use
+        href: ../mobile/best-practices-offline.md
+      - name: Optimize the offline profile
+        href: ../mobile/mobile-offline-guidelines.md  
+      - name: Resolve sync conflicts with the server
+        href: ../mobile/resolve-sync-conflicts.md
   - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
