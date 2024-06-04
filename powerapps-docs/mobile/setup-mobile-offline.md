@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/31/2024
+ms.date: 06/04/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -213,7 +213,7 @@ You can enable users to control the automatic sync intervals or the connection t
 
 - **Lookup support** - Lookups are supported for the tables that are configured for mobile offline. All the tables participating in the lookup should also be configured for offline use.
 
-- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You neet to add the 'Note' table using the 'Related rows only' option and the User (systemuser) in the Offline Profile.  
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You neet to add the **Note** table using the **Related rows only** option and the User (systemuser) in the offline profile.  
 
     > [!NOTE]
     > The **Date** field isn't available for mobile offline search.
