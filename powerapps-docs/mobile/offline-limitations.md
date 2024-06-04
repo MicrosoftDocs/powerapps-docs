@@ -142,5 +142,7 @@ It's recommended that you have at least one rule defined for all mobile offline-
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
 
+### See also
+[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
