@@ -1,7 +1,7 @@
 ---
 title: Use wildcard characters in conditions for string values
 description: Learn how to use wildcard characters in query conditions that use string values.
-ms.date: 04/17/2023
+ms.date: 06/04/2024
 ms.reviewer: jdaly
 ms.topic: conceptual
 author: mayadumesh
@@ -14,10 +14,10 @@ contributors:
 ms.custom: bap-template
 ---
 # Use wildcard characters in conditions for string values
-<!-- dasuss TODO: Improve this Docs to be clearer -->
+
 You can use wildcard characters with the following operators when you build queries that include conditions on string values:
 
-# [FetchXml](#tab/fetchxml)
+## [FetchXml](#tab/fetchxml)
 
 `like`<br/>
 `not-like`<br/>
@@ -29,7 +29,7 @@ You can use wildcard characters with the following operators when you build quer
 More information: [Query data using FetchXml](fetchxml/overview.md)
 
 
-# [QueryExpression](#tab/queryexpression)
+## [QueryExpression](#tab/queryexpression)
 
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`Like`<br/>
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`NotLike`<br/>
@@ -40,7 +40,7 @@ More information: [Query data using FetchXml](fetchxml/overview.md)
 
 More information: [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)
 
-# [Web API](#tab/webapi)
+## [Web API](#tab/webapi)
 
 `contains`<br/>
 `not contains`<br/>
@@ -67,15 +67,17 @@ When you use these condition operators, you can use certain characters to repres
 
 You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. More information: [Using Wildcard Characters As Literals](/sql/t-sql/language-elements/like-transact-sql#using-wildcard-characters-as-literals).
 
-## Don't use leading wild cards.
+## Don't use leading wild cards
 
-Queries which use condition operators with implicit leading wild cards (ex. ends-with) or explicit leading wild cards will be less performant and can lead to poor performance across the organization in certain scenarios. More information in [Optimize performance using FetchXml](fetchxml/optimize-performance.md). 
+Queries which use condition operators with implicit leading wild cards (like `ends-with`) or explicit leading wild cards will be less performant and can lead to poor performance across the organization in certain scenarios. More information: 
+- [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
+- [Optimize performance using QueryExpression](org-service/queryexpression/optimize-performance.md)
+
 Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
 
-# [FetchXml](#tab/fetchxml)
+### [FetchXml](#tab/fetchxml)
 
-Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`.
-Here are some examples of trailing wildcards:
+Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`. Here are some examples of trailing wildcards:
 
 |Bad Examples  |
 |---------|
@@ -85,10 +87,9 @@ Here are some examples of trailing wildcards:
 |`<condition attribute='name' operator='ends-with' value='value' />`|
 |`<condition attribute='name' operator='not-ends-with' value='value' />`|
 
-# [QueryExpression](#tab/queryexpression)
+### [QueryExpression](#tab/queryexpression)
 
-Don't use leading wild cards in expressions using `like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. 
-Here are some examples of excess wildcards:
+Don't use leading wild cards in expressions using `Like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. Here are some examples of excess wildcards:
 
 |Bad Examples  |
 |---------|
@@ -98,10 +99,9 @@ Here are some examples of excess wildcards:
 |`query.Criteria.AddCondition("name", ConditionOperator.EndsWith, "value");`|
 |`query.Criteria.AddCondition("name", ConditionOperator.DoesNotEndWith, "value");`|
 
-# [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
-Don't use leading wild cards in expressions using `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`.
-Here are some examples of excess wildcards:
+Don't use leading wild cards in expressions using `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`. Here are some examples of excess wildcards:
 
 
 |Bad Examples  |

@@ -1,6 +1,6 @@
 ## Patterns to avoid
 
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This sections describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](../elastic-tables.md) or when using [Dataverse Search](../search/overview.md).
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This section describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](../elastic-tables.md) or when using [Dataverse Search](../search/overview.md).
 
 
 ### Minimize the number of selected columns
@@ -76,7 +76,7 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 ### Avoid ordering by choice columns
 
-When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
+When you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
 <!-- 
 
@@ -115,12 +115,12 @@ Ordering by related tables should only be done when needed to as described here:
 
 Dataverse has two types of columns that can store large strings of text:
 
-- [StringAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.stringattributemetadata) can store up to 4000 characters.
-- [MemoAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.memoattributemetadata) can store a much higher number.
+- [StringAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.stringattributemetadata) can store up to 4,000 characters.
+- [MemoAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.memoattributemetadata) can store a higher number.
 
 The limit for both of these columns is specified using the `MaxLength` property.
 
-You can use conditions on string columns that have a `MaxLength` configured for less than 850 characters.
+You can use conditions on string columns that have a `MaxLength` configured for fewer than 850 characters.
 
 All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 
