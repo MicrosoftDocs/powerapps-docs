@@ -5,7 +5,7 @@ Composing optimized queries for Dataverse is vital to ensure applications provid
 
 ### Minimize the number of selected columns
 
-Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset.
+Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset or complexity of the query.
 
 This practice is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
@@ -43,25 +43,12 @@ The following example is a FetchXml query that uses a leading wild card:
 </fetch>
 ```
 
-
 When queries using leading wild cards timeout, the following error is returned:
 
-<!-- 
-
-Can this link to the current failure text in https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/web-service-error-codes 
-
-jdaly: No. You can't link to an item within a table.
--->
-<!-- 
-
-Also we should update the throttle page to link back to here for the different rules 
-
--->
-
-> Name: `DataEngineLeadingWildcardQueryThrottling`<br />
-> Code: `0x80048644`<br />
-> Number: `-2147187132`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
+> Name: `LeadingWildcardCauseTimeout`<br />
+> Code: `0x80048573`<br />
+> Number: `-2147187341`<br />
+> Message: `The database operation timed out; this may be due to a leading wildcard value being used in a filter condition. Please consider removing filter conditions on leading wildcard values, as these filter conditions are expensive and may cause timeouts.`
 
 Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](../query-throttling.md)
 
@@ -71,6 +58,7 @@ If you find yourself using leading wild card queries, look into these options:
 - Change your data model to help people avoid needing leading wild cards.
 
 [Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md)
+
 
 ### Avoid using formula or calculated columns in filter conditions
 
@@ -90,13 +78,16 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 When you request query results be ordered on a choice column, the results are ordered by the localized label of the choice values. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
-
 <!-- 
 
 jdaly: I don't think this example adds much here.
 
 Do you want to mention the fetch element useraworderby attribute?
 That might make for a good example
+
+dasuss: I'm conflicted when it comes to useraworderby, yeah its supported and technically works, 
+but I don't think its worth doing in place of ordering on the name. We would be adding an order that doesn't
+make logical sense for the customer (ie the state code Number doesn't mean anything of logical value).
 
 Example query ordering on the statecode choice column: 
 
@@ -120,8 +111,7 @@ Ordering by related tables should only be done when needed to as described here:
 - [Order rows using QueryExpression](../org-service/queryexpression/order-rows.md)
 
 
-### Avoid using like conditions on large text columns
-
+### Avoid using conditions on large text columns
 
 Dataverse has two types of columns that can store large strings of text:
 
@@ -130,7 +120,7 @@ Dataverse has two types of columns that can store large strings of text:
 
 The limit for both of these columns is specified using the `MaxLength` property.
 
-You can use `like` conditions on string columns that have a `MaxLength` configured for less than 850 characters.
+You can use conditions on string columns that have a `MaxLength` configured for less than 850 characters.
 
 All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 

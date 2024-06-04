@@ -37,17 +37,20 @@ application it will affect users that exercise that particular scenario.
 
 ## Query throttling behavior
 
-Throttling can manifest in two ways:
+Throttling can manifest in three ways:
 
 - A delay is introduced before each execution of the query, making the
     scenario that uses it slower
 
-- Some fraction of attempts to execute the query are failing with a dedicated
-    error:
+- Some fraction of attempts to execute the query are failing with any of the following errors:
 
-| **Error code** | **Hex code** | **Message**                                                                                                                    |
-|----------------|--------------|--------------------------------------------------------------------------------------------------------------------------------|
+| **Error code** | **Hex code** |  **Message**                                                                                                                      |
+|----------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | \-2147187388   | 0x80048544   | This query cannot be executed because it conflicts with query throttling. Please refer to [Query throttling](query-throttling.md) |
+| \-2147187132   | 0x80048644   |  This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952 |
+| \-2147186876   | 0x80048744   |  This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952 |
+
+For more infromation about more agressively throttled query patterns like leading wild cards can be found in [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
 
 ## Common causes
 

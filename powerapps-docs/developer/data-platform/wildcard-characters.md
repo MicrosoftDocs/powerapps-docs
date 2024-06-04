@@ -67,50 +67,51 @@ When you use these condition operators, you can use certain characters to repres
 
 You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. More information: [Using Wildcard Characters As Literals](/sql/t-sql/language-elements/like-transact-sql#using-wildcard-characters-as-literals).
 
-## Don't use trailing wild cards
+## Don't use leading wild cards.
 
-Using trailing wildcards isn't supported.
+Queries which use condition operators with implicit leading wild cards (ex. ends-with) or explicit leading wild cards will be less performant and can lead to poor performance across the organization in certain scenarios. More information in [Optimize performance using FetchXml](fetchxml/optimize-performance.md). 
+Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
 
 # [FetchXml](#tab/fetchxml)
 
-Don't use trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`.
+Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`.
 Here are some examples of trailing wildcards:
 
 |Bad Examples  |
 |---------|
+|`<condition attribute='name' operator='like' value='%value' />`|
 |`<condition attribute='name' operator='begins-with' value='%value' />`|
 |`<condition attribute='name' operator='not-begins-with' value='%value' />`|
-|`<condition attribute='name' operator='ends-with' value='value%' />`|
-|`<condition attribute='name' operator='not-ends-with' value='value%' />`|
+|`<condition attribute='name' operator='ends-with' value='value' />`|
+|`<condition attribute='name' operator='not-ends-with' value='value' />`|
 
 # [QueryExpression](#tab/queryexpression)
 
-Don't use trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. 
-Here are some examples of trailing wildcards:
+Don't use leading wild cards in expressions using `like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. 
+Here are some examples of excess wildcards:
 
 |Bad Examples  |
 |---------|
+|`query.Criteria.AddCondition("name", ConditionOperator.Like, "%value");`|
 |`query.Criteria.AddCondition("name", ConditionOperator.BeginsWith, "%value");`|
 |`query.Criteria.AddCondition("name", ConditionOperator.DoesNotBeginWith, "%value");`|
-|`query.Criteria.AddCondition("name", ConditionOperator.EndsWith, "value%");`|
-|`query.Criteria.AddCondition("name", ConditionOperator.DoesNotEndWith, "value%");`|
+|`query.Criteria.AddCondition("name", ConditionOperator.EndsWith, "value");`|
+|`query.Criteria.AddCondition("name", ConditionOperator.DoesNotEndWith, "value");`|
 
 # [Web API](#tab/webapi)
 
-Don't use trailing wild cards in expressions using `startswith`, `not startswith`, `endswith`, or `not endswith`.
-Here are some examples of trailing wildcards:
+Don't use leading wild cards in expressions using `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`.
+Here are some examples of excess wildcards:
 
 
 |Bad Examples  |
 |---------|
+|`like(name,'%value')`|
 |`startswith(name,'%value')`|
 |`not startswith(name,'%value')`|
 |`endswith(name,'value%')`|
 |`not endswith(name,'value%')`|
 
----
-
-Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
 
 ### See also
 
