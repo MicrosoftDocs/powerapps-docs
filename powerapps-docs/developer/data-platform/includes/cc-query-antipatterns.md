@@ -43,7 +43,7 @@ The following example is a FetchXml query that uses a leading wild card:
 </fetch>
 ```
 
-When queries using leading wild cards timeout, the following error is returned:
+When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
 
 > Name: `LeadingWildcardCauseTimeout`<br />
 > Code: `0x80048573`<br />
