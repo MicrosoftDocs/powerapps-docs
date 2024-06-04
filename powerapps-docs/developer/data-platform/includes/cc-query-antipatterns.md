@@ -9,38 +9,23 @@ Don't include columns you don't need in your query. Queries that return all colu
 
 This practice is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
-<!-- 
-
-David: Most lookups are not logical attributes. Lookups include several supporting attributes that are logical, but the API doesn't return data for many of these. I'm talking about the fields that end with *Name. 
-
-Common Lookups that are also logical are OwningTeam or OwningUser, because they are special.
-
-That's why I re-wrote the content below.
-
-   Queries with many logical attributes (for example, lookups) can also cause queries to be slow because each logical attribute needs to be retrieved from a seperate entity which can make a simple query much more complex and slow. 
-
-   We recommend customers to design their queries to select the bare minimum of columns needed.
-
--->
 
 ### Avoid leading wild cards in filter conditions
 
-Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other nonleading wild card queries that limit the result set.
+Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other non-leading wild card queries that limit the result set.
 
-The following example is a FetchXml query that uses a leading wild card:
+The following example is a FetchXml [condition element](../fetchxml/reference/condition.md) that uses a leading wild card:
 
 ```xml
-<fetch>
-   <entity name='account'>
-      <attribute name='accountid' />
-      <attribute name='accountnumber' />
-      <filter type='and'>
-         <condition attribute='accountnumber'
-            operator='like'
-            value='%234' />
-      </filter>
-   </entity>
-</fetch>
+<condition attribute='accountnumber'
+   operator='like'
+   value='%234' />
+```
+
+The following example is a [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) [ConditionExpression](xref:Microsoft.Xrm.Sdk.Query.ConditionExpression) that uses a leading wild card:
+
+```csharp
+new ConditionExpression("accountnumber", ConditionOperator.Like, "%234")
 ```
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
@@ -78,29 +63,6 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 When you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
-<!-- 
-
-jdaly: I don't think this example adds much here.
-
-Do you want to mention the fetch element useraworderby attribute?
-That might make for a good example
-
-dasuss: I'm conflicted when it comes to useraworderby, yeah its supported and technically works, 
-but I don't think its worth doing in place of ordering on the name. We would be adding an order that doesn't
-make logical sense for the customer (ie the state code Number doesn't mean anything of logical value).
-
-Example query ordering on the statecode choice column: 
-
-``` xml
-<fetch distinct='true'>
-   <entity name='account'>
-      <attribute name='accountnumber' />
-      <order attribute='statecode' />
-   </entity>
-</fetch> 
-```
--->
-
 ### Avoid ordering by columns in related tables
 
 Ordering by columns on related tables makes the query slower because of the added complexity.
@@ -109,7 +71,6 @@ Ordering by related tables should only be done when needed to as described here:
 
 - [Order rows using FetchXml](../fetchxml/order-rows.md)
 - [Order rows using QueryExpression](../org-service/queryexpression/order-rows.md)
-
 
 ### Avoid using conditions on large text columns
 

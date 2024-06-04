@@ -112,10 +112,11 @@ Don't use leading wild cards in expressions using `like`, `startswith`, `not sta
 |`endswith(name,'value%')`|
 |`not endswith(name,'value%')`|
 
+---
 
 ### See also
 
-[Query data using FetchXml](fetchxml/overview.md)   
+[Filter rows using FetchXml](fetchxml/filter-rows.md)   
 [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)   
 [Query data using the Web API](webapi/query-data-web-api.md)
 
