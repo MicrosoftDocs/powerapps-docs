@@ -28,7 +28,7 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
-- If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about[Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+- If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
 ## Optimize your app for mobile offline
 
