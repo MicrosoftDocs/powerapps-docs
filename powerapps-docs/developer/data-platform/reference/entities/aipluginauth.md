@@ -1,7 +1,7 @@
 ---
-title: "deploymentorchestration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the deploymentorchestration table/entity."
-ms.date: 02/22/2024
+title: "AIPluginAuth table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the AIPluginAuth table/entity."
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,50 +11,51 @@ search.audienceType:
   - developer
 ---
 
-# deploymentorchestration table/entity reference
+# AIPluginAuth table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+Entity to store AIPlugin Auth Information
 
-
-**Added by**: msdyn_SolutionPackageMapping Solution
+**Added by**: AIPlatformExtensionsCore Solution Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Create|POST /deploymentorchestrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /deploymentorchestrations(*deploymentorchestrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH /aipluginauths(*aipluginauthid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /aipluginauths<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /aipluginauths(*aipluginauthid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retrieve|GET /deploymentorchestrations(*deploymentorchestrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /deploymentorchestrations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|SetState|PATCH /deploymentorchestrations(*deploymentorchestrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /deploymentorchestrations(*deploymentorchestrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /aipluginauths(*aipluginauthid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /aipluginauths<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /aipluginauths(*aipluginauthid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /aipluginauths(*aipluginauthid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|deploymentorchestrations|
-|DisplayCollectionName|Deployment Orchestrations|
-|DisplayName|Deployment Orchestration|
-|EntitySetName|deploymentorchestrations|
+|CollectionSchemaName|AIPluginAuths|
+|DisplayCollectionName|AIPluginAuths|
+|DisplayName|AIPluginAuth|
+|EntitySetName|aipluginauths|
 |IsBPFEntity|False|
-|LogicalCollectionName|deploymentorchestrations|
-|LogicalName|deploymentorchestration|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|deploymentorchestrationid|
-|PrimaryNameAttribute|deploymentname|
-|SchemaName|deploymentorchestration|
+|LogicalCollectionName|aipluginauths|
+|LogicalName|aipluginauth|
+|OwnershipType|UserOwned|
+|PrimaryIdAttribute|aipluginauthid|
+|PrimaryNameAttribute|name|
+|SchemaName|AIPluginAuth|
 
 <a name="writable-attributes"></a>
 
@@ -62,114 +63,47 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [ApplicationId](#BKMK_ApplicationId)
-- [ApplicationName](#BKMK_ApplicationName)
-- [CatalogId](#BKMK_CatalogId)
-- [CorrelationId](#BKMK_CorrelationId)
-- [DeploymentName](#BKMK_DeploymentName)
-- [deploymentorchestrationId](#BKMK_deploymentorchestrationId)
+- [AIPluginAuthId](#BKMK_AIPluginAuthId)
+- [AuthReferenceId](#BKMK_AuthReferenceId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [OperationId](#BKMK_OperationId)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [PackageId](#BKMK_PackageId)
-- [PublisherId](#BKMK_PublisherId)
-- [PublisherName](#BKMK_PublisherName)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [StatusMessage](#BKMK_StatusMessage)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [Type](#BKMK_Type)
-- [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-- [Version](#BKMK_Version)
 
 
-### <a name="BKMK_ApplicationId"></a> ApplicationId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Application Id|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|applicationid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_ApplicationName"></a> ApplicationName
-
-|Property|Value|
-|--------|-----|
-|Description|The application name of the target for installation|
-|DisplayName|Application Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|applicationname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CatalogId"></a> CatalogId
-
-|Property|Value|
-|--------|-----|
-|Description|The catalog that acted as the source for the artifact|
-|DisplayName|Catalog Id|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|catalogid|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CorrelationId"></a> CorrelationId
-
-|Property|Value|
-|--------|-----|
-|Description|CorrelationId|
-|DisplayName|CorrelationId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|correlationid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_DeploymentName"></a> DeploymentName
-
-|Property|Value|
-|--------|-----|
-|Description|The display name for this deployment|
-|DisplayName|Deployment Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|deploymentname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_deploymentorchestrationId"></a> deploymentorchestrationId
+### <a name="BKMK_AIPluginAuthId"></a> AIPluginAuthId
 
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for entity instances|
-|DisplayName|Deployment Orchestration|
+|DisplayName|AIPluginAuth|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
-|LogicalName|deploymentorchestrationid|
+|LogicalName|aipluginauthid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_AuthReferenceId"></a> AuthReferenceId
+
+|Property|Value|
+|--------|-----|
+|Description|AuthReferenceId for AIPlugin.|
+|DisplayName|AuthReferenceId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|authreferenceid|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -189,17 +123,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_OperationId"></a> OperationId
+### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description|OperationId|
-|DisplayName|OperationId|
+|Description||
+|DisplayName|Name|
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|operationid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
+|LogicalName|name|
+|MaxLength|100|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -218,53 +155,42 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
-### <a name="BKMK_PackageId"></a> PackageId
+### <a name="BKMK_OwnerId"></a> OwnerId
+
+**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the package to install|
-|DisplayName|Package Id|
+|Description|Owner Id|
+|DisplayName|Owner|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|packageid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
+|LogicalName|ownerid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
-### <a name="BKMK_PublisherId"></a> PublisherId
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
+
+**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|Publisher Id|
-|IsValidForForm|True|
+|Description|Owner Id Type|
+|DisplayName||
+|IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|publisherid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_PublisherName"></a> PublisherName
-
-|Property|Value|
-|--------|-----|
-|Description|The publisher name of the target for installation|
-|DisplayName|Publisher Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|publishername|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the operation|
+|Description|Status of the AIPluginAuth|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -277,8 +203,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
-|0|Active|526430000|Active|
-|1|Inactive|526430003|Inactive|
+|0|Active|1|Active|
+|1|Inactive|2|Inactive|
 
 
 
@@ -286,7 +212,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the operation|
+|Description|Reason for the status of the AIPluginAuth|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -298,29 +224,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|State|
 |-----|-----|-----|
-|526430000|Requested|0|
-|526430001|Scheduled|0|
-|526430002|In Process|0|
-|526430003|Completed|1|
-|526430004|Failed|1|
-|526430005|Uninstalled|1|
+|1|Active|0|
+|2|Inactive|1|
 
-
-
-### <a name="BKMK_StatusMessage"></a> StatusMessage
-
-|Property|Value|
-|--------|-----|
-|Description|Status for the orchestration|
-|DisplayName|Status Message|
-|FormatName|TextArea|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statusmessage|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -339,42 +245,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_Type"></a> Type
-
-|Property|Value|
-|--------|-----|
-|Description|Deployment orchestration type|
-|DisplayName|Deployment Orchestration Type|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|type|
-|RequiredLevel|SystemRequired|
-|Type|Picklist|
-
-#### Type Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Package||
-
-
-
-### <a name="BKMK_UniqueName"></a> UniqueName
-
-|Property|Value|
-|--------|-----|
-|Description|The unique name of the target for installation|
-|DisplayName|Unique Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|uniquename|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -389,22 +259,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_Version"></a> Version
-
-|Property|Value|
-|--------|-----|
-|Description|The version of the target for installation|
-|DisplayName|Version|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|version|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
 
 <a name="read-only-attributes"></a>
 
@@ -426,8 +280,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
+- [OwnerIdName](#BKMK_OwnerIdName)
+- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
+- [OwningTeam](#BKMK_OwningTeam)
+- [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
 
@@ -669,23 +527,59 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_OrganizationId"></a> OrganizationId
+### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|Description|Name of the owner|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
-|RequiredLevel|None|
-|Targets|organization|
+|LogicalName|owneridname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Yomi name of the owner|
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridyominame|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the business unit that owns the record|
+|DisplayName|Owning Business Unit|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|SystemRequired|
+|Targets|businessunit|
 |Type|Lookup|
 
 
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
 **Added by**: Active Solution Solution
 
@@ -697,10 +591,42 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationidname|
+|LogicalName|owningbusinessunitname|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_OwningTeam"></a> OwningTeam
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the team that owns the record.|
+|DisplayName|Owning Team|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningteam|
+|RequiredLevel|None|
+|Targets|team|
+|Type|Lookup|
+
+
+### <a name="BKMK_OwningUser"></a> OwningUser
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the user that owns the record.|
+|DisplayName|Owning User|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
@@ -725,21 +651,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [deploymentorchestration_SyncErrors](#BKMK_deploymentorchestration_SyncErrors)
-- [deploymentorchestration_DuplicateMatchingRecord](#BKMK_deploymentorchestration_DuplicateMatchingRecord)
-- [deploymentorchestration_DuplicateBaseRecord](#BKMK_deploymentorchestration_DuplicateBaseRecord)
-- [deploymentorchestration_AsyncOperations](#BKMK_deploymentorchestration_AsyncOperations)
-- [deploymentorchestration_MailboxTrackingFolders](#BKMK_deploymentorchestration_MailboxTrackingFolders)
-- [deploymentorchestration_ProcessSession](#BKMK_deploymentorchestration_ProcessSession)
-- [deploymentorchestration_BulkDeleteFailures](#BKMK_deploymentorchestration_BulkDeleteFailures)
-- [deploymentorchestration_PrincipalObjectAttributeAccesses](#BKMK_deploymentorchestration_PrincipalObjectAttributeAccesses)
+- [aipluginauth_SyncErrors](#BKMK_aipluginauth_SyncErrors)
+- [aipluginauth_DuplicateMatchingRecord](#BKMK_aipluginauth_DuplicateMatchingRecord)
+- [aipluginauth_DuplicateBaseRecord](#BKMK_aipluginauth_DuplicateBaseRecord)
+- [aipluginauth_AsyncOperations](#BKMK_aipluginauth_AsyncOperations)
+- [aipluginauth_MailboxTrackingFolders](#BKMK_aipluginauth_MailboxTrackingFolders)
+- [aipluginauth_ProcessSession](#BKMK_aipluginauth_ProcessSession)
+- [aipluginauth_BulkDeleteFailures](#BKMK_aipluginauth_BulkDeleteFailures)
+- [aipluginauth_PrincipalObjectAttributeAccesses](#BKMK_aipluginauth_PrincipalObjectAttributeAccesses)
+- [AIPluginAuth_AIPlugin](#BKMK_AIPluginAuth_AIPlugin)
 
 
-### <a name="BKMK_deploymentorchestration_SyncErrors"></a> deploymentorchestration_SyncErrors
+### <a name="BKMK_aipluginauth_SyncErrors"></a> aipluginauth_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_SyncErrors](syncerror.md#BKMK_deploymentorchestration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [aipluginauth_SyncErrors](syncerror.md#BKMK_aipluginauth_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -747,16 +674,16 @@ Same as the [deploymentorchestration_SyncErrors](syncerror.md#BKMK_deploymentorc
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_SyncErrors|
+|ReferencedEntityNavigationPropertyName|aipluginauth_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_DuplicateMatchingRecord"></a> deploymentorchestration_DuplicateMatchingRecord
+### <a name="BKMK_aipluginauth_DuplicateMatchingRecord"></a> aipluginauth_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_deploymentorchestration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [aipluginauth_DuplicateMatchingRecord](duplicaterecord.md#BKMK_aipluginauth_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -764,16 +691,16 @@ Same as the [deploymentorchestration_DuplicateMatchingRecord](duplicaterecord.md
 |ReferencingAttribute|duplicaterecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_DuplicateMatchingRecord|
+|ReferencedEntityNavigationPropertyName|aipluginauth_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_DuplicateBaseRecord"></a> deploymentorchestration_DuplicateBaseRecord
+### <a name="BKMK_aipluginauth_DuplicateBaseRecord"></a> aipluginauth_DuplicateBaseRecord
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_DuplicateBaseRecord](duplicaterecord.md#BKMK_deploymentorchestration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [aipluginauth_DuplicateBaseRecord](duplicaterecord.md#BKMK_aipluginauth_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -781,16 +708,16 @@ Same as the [deploymentorchestration_DuplicateBaseRecord](duplicaterecord.md#BKM
 |ReferencingAttribute|baserecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_DuplicateBaseRecord|
+|ReferencedEntityNavigationPropertyName|aipluginauth_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_AsyncOperations"></a> deploymentorchestration_AsyncOperations
+### <a name="BKMK_aipluginauth_AsyncOperations"></a> aipluginauth_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_AsyncOperations](asyncoperation.md#BKMK_deploymentorchestration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [aipluginauth_AsyncOperations](asyncoperation.md#BKMK_aipluginauth_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -798,16 +725,16 @@ Same as the [deploymentorchestration_AsyncOperations](asyncoperation.md#BKMK_dep
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|aipluginauth_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_MailboxTrackingFolders"></a> deploymentorchestration_MailboxTrackingFolders
+### <a name="BKMK_aipluginauth_MailboxTrackingFolders"></a> aipluginauth_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_deploymentorchestration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [aipluginauth_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_aipluginauth_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -815,16 +742,16 @@ Same as the [deploymentorchestration_MailboxTrackingFolders](mailboxtrackingfold
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|aipluginauth_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_ProcessSession"></a> deploymentorchestration_ProcessSession
+### <a name="BKMK_aipluginauth_ProcessSession"></a> aipluginauth_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_ProcessSession](processsession.md#BKMK_deploymentorchestration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [aipluginauth_ProcessSession](processsession.md#BKMK_aipluginauth_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -832,16 +759,16 @@ Same as the [deploymentorchestration_ProcessSession](processsession.md#BKMK_depl
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_ProcessSession|
+|ReferencedEntityNavigationPropertyName|aipluginauth_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_BulkDeleteFailures"></a> deploymentorchestration_BulkDeleteFailures
+### <a name="BKMK_aipluginauth_BulkDeleteFailures"></a> aipluginauth_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_deploymentorchestration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [aipluginauth_BulkDeleteFailures](bulkdeletefailure.md#BKMK_aipluginauth_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -849,16 +776,16 @@ Same as the [deploymentorchestration_BulkDeleteFailures](bulkdeletefailure.md#BK
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|aipluginauth_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_deploymentorchestration_PrincipalObjectAttributeAccesses"></a> deploymentorchestration_PrincipalObjectAttributeAccesses
+### <a name="BKMK_aipluginauth_PrincipalObjectAttributeAccesses"></a> aipluginauth_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [deploymentorchestration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_deploymentorchestration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [aipluginauth_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_aipluginauth_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -866,9 +793,24 @@ Same as the [deploymentorchestration_PrincipalObjectAttributeAccesses](principal
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|deploymentorchestration_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|aipluginauth_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_AIPluginAuth_AIPlugin"></a> AIPluginAuth_AIPlugin
+
+Same as the [AIPluginAuth_AIPlugin](aiplugin.md#BKMK_AIPluginAuth_AIPlugin) many-to-one relationship for the [aiplugin](aiplugin.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aiplugin|
+|ReferencingAttribute|pluginauthid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|AIPluginAuth_AIPlugin|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -876,45 +818,59 @@ Same as the [deploymentorchestration_PrincipalObjectAttributeAccesses](principal
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_deploymentorchestration_createdby](#BKMK_lk_deploymentorchestration_createdby)
-- [lk_deploymentorchestration_createdonbehalfby](#BKMK_lk_deploymentorchestration_createdonbehalfby)
-- [lk_deploymentorchestration_modifiedby](#BKMK_lk_deploymentorchestration_modifiedby)
-- [lk_deploymentorchestration_modifiedonbehalfby](#BKMK_lk_deploymentorchestration_modifiedonbehalfby)
-- [organization_deploymentorchestration](#BKMK_organization_deploymentorchestration)
+- [lk_aipluginauth_createdby](#BKMK_lk_aipluginauth_createdby)
+- [lk_aipluginauth_createdonbehalfby](#BKMK_lk_aipluginauth_createdonbehalfby)
+- [lk_aipluginauth_modifiedby](#BKMK_lk_aipluginauth_modifiedby)
+- [lk_aipluginauth_modifiedonbehalfby](#BKMK_lk_aipluginauth_modifiedonbehalfby)
+- [user_aipluginauth](#BKMK_user_aipluginauth)
+- [team_aipluginauth](#BKMK_team_aipluginauth)
+- [business_unit_aipluginauth](#BKMK_business_unit_aipluginauth)
 
 
-### <a name="BKMK_lk_deploymentorchestration_createdby"></a> lk_deploymentorchestration_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_deploymentorchestration_createdby](systemuser.md#BKMK_lk_deploymentorchestration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_deploymentorchestration_createdonbehalfby"></a> lk_deploymentorchestration_createdonbehalfby
+### <a name="BKMK_lk_aipluginauth_createdby"></a> lk_aipluginauth_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_deploymentorchestration_createdonbehalfby](systemuser.md#BKMK_lk_deploymentorchestration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_aipluginauth_createdby](systemuser.md#BKMK_lk_aipluginauth_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_deploymentorchestration_modifiedby"></a> lk_deploymentorchestration_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_deploymentorchestration_modifiedby](systemuser.md#BKMK_lk_deploymentorchestration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_deploymentorchestration_modifiedonbehalfby"></a> lk_deploymentorchestration_modifiedonbehalfby
+### <a name="BKMK_lk_aipluginauth_createdonbehalfby"></a> lk_aipluginauth_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_deploymentorchestration_modifiedonbehalfby](systemuser.md#BKMK_lk_deploymentorchestration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_aipluginauth_createdonbehalfby](systemuser.md#BKMK_lk_aipluginauth_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_organization_deploymentorchestration"></a> organization_deploymentorchestration
+### <a name="BKMK_lk_aipluginauth_modifiedby"></a> lk_aipluginauth_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [organization_deploymentorchestration](organization.md#BKMK_organization_deploymentorchestration) one-to-many relationship for the [organization](organization.md) table/entity.
+See the [lk_aipluginauth_modifiedby](systemuser.md#BKMK_lk_aipluginauth_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_lk_aipluginauth_modifiedonbehalfby"></a> lk_aipluginauth_modifiedonbehalfby
+
+**Added by**: System Solution Solution
+
+See the [lk_aipluginauth_modifiedonbehalfby](systemuser.md#BKMK_lk_aipluginauth_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_user_aipluginauth"></a> user_aipluginauth
+
+**Added by**: System Solution Solution
+
+See the [user_aipluginauth](systemuser.md#BKMK_user_aipluginauth) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_team_aipluginauth"></a> team_aipluginauth
+
+**Added by**: System Solution Solution
+
+See the [team_aipluginauth](team.md#BKMK_team_aipluginauth) one-to-many relationship for the [team](team.md) table/entity.
+
+### <a name="BKMK_business_unit_aipluginauth"></a> business_unit_aipluginauth
+
+**Added by**: System Solution Solution
+
+See the [business_unit_aipluginauth](businessunit.md#BKMK_business_unit_aipluginauth) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.deploymentorchestration?text=deploymentorchestration EntityType" />
+<xref href="Microsoft.Dynamics.CRM.aipluginauth?text=aipluginauth EntityType" />

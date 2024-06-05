@@ -1,7 +1,7 @@
 ---
 title: "flowcapacityassignment table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowcapacityassignment table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Capacity assignment for usage in Power Automate
 |-|-|-|
 |Assign|PATCH /flowcapacityassignments(*flowcapacityassignmentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /flowcapacityassignments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /flowcapacityassignments(*flowcapacityassignmentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ Capacity assignment for usage in Power Automate
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /flowcapacityassignments(*flowcapacityassignmentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /flowcapacityassignments(*flowcapacityassignmentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -307,7 +307,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regarding|
 |RequiredLevel|SystemRequired|
-|Targets|flowmachine,flowmachinegroup|
+|Targets|flowmachine,flowmachinegroup,workflow|
 |Type|Lookup|
 
 
@@ -949,6 +949,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_flowcapacityassignment](#BKMK_business_unit_flowcapacityassignment)
 - [flowcapacityassignment_flowmachine](#BKMK_flowcapacityassignment_flowmachine)
 - [flowcapacityassignment_flowmachinegroup](#BKMK_flowcapacityassignment_flowmachinegroup)
+- [flowcapacityassignment_workflow](#BKMK_flowcapacityassignment_workflow)
 
 
 ### <a name="BKMK_lk_flowcapacityassignment_createdby"></a> lk_flowcapacityassignment_createdby
@@ -1000,6 +1001,12 @@ See the [flowcapacityassignment_flowmachine](flowmachine.md#BKMK_flowcapacityass
 ### <a name="BKMK_flowcapacityassignment_flowmachinegroup"></a> flowcapacityassignment_flowmachinegroup
 
 See the [flowcapacityassignment_flowmachinegroup](flowmachinegroup.md#BKMK_flowcapacityassignment_flowmachinegroup) one-to-many relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
+
+### <a name="BKMK_flowcapacityassignment_workflow"></a> flowcapacityassignment_workflow
+
+**Added by**: System Solution Solution
+
+See the [flowcapacityassignment_workflow](workflow.md#BKMK_flowcapacityassignment_workflow) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 
