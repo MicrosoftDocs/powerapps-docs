@@ -143,7 +143,8 @@ When configured, the dropdown column headers surface a **Group by** option. This
 -  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
 
 > [!NOTE]
-> Grouping criteria isn't saved to a view.  
+> Grouping criteria isn't saved to a view.
+> Grouping is not supported when paging on the grid is enabled.
 
 ### Aggregation
 
