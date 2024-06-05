@@ -171,7 +171,7 @@ PowerApps uses DataTables in Microsoft Excel to connect to data in Excel workshe
 
 ### Variable names
 
-Naming conventions for variables in Canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your Canvas app can make it easier for you and other collaborators to underachaudh, use, and manage the variables.
+Naming conventions for variables in canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your canvas app can make it easier for you and other collaborators to underachaudh, use, and manage the variables.
 
 - Use camel case, where the first letter of each word is capitalized except for the first word.
 - Choose meaningful and descriptive names that clearly describe the purpose or content of the variable. Avoid overly generic names like temp or var1. Instead, use descriptive names like userEmail or totalAmount.
@@ -302,9 +302,9 @@ Don't worry about adding too many comments or comments that are too long. All co
 
 ### Modern app designer with comments
 
-In Power Apps, it's considered the best practice for makers to effectively utilize commenting features within both Canvas Studio and Modern App Designer.
+In Power Apps, it's considered the best practice for makers to effectively utilize commenting features within both Power Apps Studio and Modern app designer.
 
-For optimal engagement in the Canvas Studio, makers are advised to add comments using the following methods:
+For optimal engagement in the Power Apps Studio, makers are advised to add comments using the following methods:
 
 1. Right-click the ellipsis ("...") of any item in the Tree View.
 2. Right-click a component in the canvas area.
