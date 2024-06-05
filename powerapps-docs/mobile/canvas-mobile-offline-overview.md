@@ -44,7 +44,7 @@ There are some key benefits of using the built-in offline functionality for canv
 |App checker rules|	None	|Common configuration problems are flagged|
 |Offline or connectivity user experience	| Not provided/custom only	|Automatic|
 |[Sync user experience or status](canvas-mobile-offline-working.md#sync-status-icons)	|Not provided/custom only |	Automatic|
-|[Image and file support](files-images-offline-canvas-apps.md)|	Yes, but may run into performance and memory limits	|Not supported|
+|[Image and file support](files-images-offline-canvas-apps.md)|	Yes, but may run into performance and memory limits	|Yes|
 |[Optimized delta sync](canvas-mobile-offline-working.md#offline-delta-sync)|	No|	Yes|
 |[Conflict resolution](resolve-sync-conflicts.md#sync-conflict)	|Manual	|Automatic|
 |Local data store	|Files	|Transactional database|
