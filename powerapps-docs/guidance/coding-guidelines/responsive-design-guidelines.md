@@ -11,7 +11,7 @@ ms.author: rachaudh
 
 # Responsive design guidelines
 
-In the section on responsive design guidelines for Canvas apps in Power Apps, we delve into essential strategies and practices for creating applications that adapt seamlessly across various devices. This section encompasses key principles ranging from screen adaptation techniques to container utilization, settings adjustments, and detailed implementation steps. Each guideline is aimed at ensuring your Canvas app provides an optimal user experience, regardless of the device's screen size or orientation, addressing one of the most critical aspects of modern app development. These guidelines are instrumental for developers looking to enhance the accessibility and user engagement of their Power Apps.
+In the section on responsive design guidelines for canvas apps in Power Apps, we delve into essential strategies and practices for creating applications that adapt seamlessly across various devices. This section encompasses key principles ranging from screen adaptation techniques to container utilization, settings adjustments, and detailed implementation steps. Each guideline is aimed at ensuring your canvas app provides an optimal user experience, regardless of the device's screen size or orientation, addressing one of the most critical aspects of modern app development. These guidelines are instrumental for developers looking to enhance the accessibility and user engagement of their Power Apps.
 
 ## Adapt to screen sizes
 
@@ -39,7 +39,7 @@ Effective responsive design involves anticipating how the app looks and function
 
 ### Practical implementation
 
-Transforming a nonresponsive Canvas app into a responsive one requires a systematic approach. This involves adjusting settings for responsiveness and carefully configuring container properties to ensure elements within the app adapt to different screen sizes.
+Transforming a nonresponsive canvas app into a responsive one requires a systematic approach. This involves adjusting settings for responsiveness and carefully configuring container properties to ensure elements within the app adapt to different screen sizes.
 
 ## Resources
 
