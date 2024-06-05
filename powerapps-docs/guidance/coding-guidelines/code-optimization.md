@@ -11,9 +11,9 @@ ms.author: rachaudh
 
 # Code Optimization
 
-As Canvas Apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within Canvas Apps necessitate a nuanced approach to code optimization.
+As canvas apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within canvas apps necessitate a nuanced approach to code optimization.
 
-As Canvas Apps become more intricate, developers encounter challenges related to data retrieval, formula complexity, and rendering speeds. The need to strike a balance between robust functionality and responsive user interfaces underscores the importance of adopting a systematic approach to code optimization.
+As canvas apps become more intricate, developers encounter challenges related to data retrieval, formula complexity, and rendering speeds. The need to strike a balance between robust functionality and responsive user interfaces underscores the importance of adopting a systematic approach to code optimization.
 
 ## Power Fx formulas optimization
 
@@ -76,7 +76,7 @@ IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]
 
 ## Optimize app OnStart
 
-The `OnStart` property in Power Apps Canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Underachaudhing and effectively utilizing the `OnStart` property is essential for creating responsive and efficient Canvas apps.
+The `OnStart` property for cavas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Underachaudhing and effectively utilizing the `OnStart` property is essential for creating responsive and efficient canvas apps.
 
 A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
@@ -337,7 +337,7 @@ Delegation has several advantages such as Query optimization and adds supports f
 
 ### Reduce API calls to data source
 
-Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas App. Refer to the code below:
+Sometimes, it may be convenient to just follow coding practices such as creating collections by performing joins within canvas app. Refer to the code below:
 
 In this example, there are two tables, Drivers and Trucks. The developer writes the code to create a collection of drivers and truck details and for each truck, they're calling drivers who own the trucks.
 
@@ -387,7 +387,7 @@ In the real time scenario, it's possible to reduce loading times from 5 minutes 
 
 ### Server side processing
 
-Different data sources such as SQL and Dataverse enable you to delegate data processing such as Filter and Lookups to the data source. In SQL Server, users can create views, which have content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in Canvas Apps.
+Different data sources such as SQL and Dataverse enable you to delegate data processing such as Filter and Lookups to the data source. In SQL Server, users can create views, which have content defined by a query. Similarly, with Dataverse, users can create low-code plugins to write logic for data processing at the server side and only get the final results in canvas apps.
 
 Delegating data processing to server can improve overall performance, reduce code on the client side and are easy to maintain.
 
@@ -419,7 +419,7 @@ ClearCollect(MyCollection, OrdersList,
 )
 ```
 
-In the context of Power Apps canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when more queries are made for each item displayed in the gallery, leading to a performance bottleneck.
+In the context of canvas apps and galleries, the N+1 problem may arise when working with data sources and galleries that display related records. The issue typically occurs when more queries are made for each item displayed in the gallery, leading to a performance bottleneck.
 
 Use View objects in SQL Server to avoid N+1 query problem, or change the user interface to avoid triggering the N+1 scenario.
 
