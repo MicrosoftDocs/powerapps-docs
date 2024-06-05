@@ -33,7 +33,7 @@ The monitor tool can return some important information, such as:
 
 ![A screenshot of the monitor results showing the columns described](media/image34.png)
 
-On Selecting the event grid you can get some more information like Overview of the event, Formula that's related to the selected event, HTTP request sent and response received. By default, the formula is only available during authoring, not for published apps. To show the formula for published apps, you need to enable an option in the app settings. Go to *File*, then *Settings*, and turn on *Debug published app*.
+On selecting the event grid you can get some more information like overview of the event, formula that's related to the selected event, HTTP request sent and response received. By default, the formula is only available during authoring, not for published apps. To show the formula for published apps, you need to enable an option in the app settings. Go to *File*, then *Settings*, and turn on *Debug published app*.
 
 ![A screenshot of Power Apps showing that the *Debug published app* option is turned on](media/image35.png)
 
