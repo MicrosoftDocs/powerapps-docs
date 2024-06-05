@@ -1,7 +1,7 @@
 ---
 title: "mainfewshot table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the mainfewshot table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ This fewshot entity will only be updated during solution installation.
 |-|-|-|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /mainfewshots<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /mainfewshots(*mainfewshotid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
@@ -37,7 +37,7 @@ This fewshot entity will only be updated during solution installation.
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /mainfewshots(*mainfewshotid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /mainfewshots(*mainfewshotid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -72,6 +72,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [Query](#BKMK_Query)
 - [Rephrase](#BKMK_Rephrase)
+- [SavedQueryVersionNumber](#BKMK_SavedQueryVersionNumber)
+- [SavedQueryViewId](#BKMK_SavedQueryViewId)
 - [StandardSQL](#BKMK_StandardSQL)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -243,6 +245,34 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_SavedQueryVersionNumber"></a> SavedQueryVersionNumber
+
+|Property|Value|
+|--------|-----|
+|Description|Track which saved query version.|
+|DisplayName|SavedQueryVersionNumber|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|savedqueryversionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_SavedQueryViewId"></a> SavedQueryViewId
+
+|Property|Value|
+|--------|-----|
+|Description|Referencing savedquery record Id, will be used to perform deletes.|
+|DisplayName|SavedQueryViewId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|savedqueryviewid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_StandardSQL"></a> StandardSQL

@@ -1,7 +1,7 @@
 ---
 title: "Basic Form (mspp_entityform)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Basic Form (mspp_entityform)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Defines the form to render for a given entity type.
 |-|-|-|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /mspp_entityforms<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /mspp_entityforms(*mspp_entityformid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
@@ -36,7 +36,7 @@ Defines the form to render for a given entity type.
 |RetrieveMultiple|GET /mspp_entityforms<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Update|PATCH /mspp_entityforms(*mspp_entityformid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_attachfiletypeerrormessage](#BKMK_mspp_attachfiletypeerrormessage)
 - [mspp_autogeneratesteps](#BKMK_mspp_autogeneratesteps)
 - [mspp_captcharequired](#BKMK_mspp_captcharequired)
+- [mspp_containername](#BKMK_mspp_containername)
 - [mspp_createdby](#BKMK_mspp_createdby)
 - [mspp_createdon](#BKMK_mspp_createdon)
 - [mspp_entityformId](#BKMK_mspp_entityformId)
@@ -101,6 +102,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_geolocation_statefieldname](#BKMK_mspp_geolocation_statefieldname)
 - [mspp_hideformonsuccess](#BKMK_mspp_hideformonsuccess)
 - [mspp_instructions](#BKMK_mspp_instructions)
+- [mspp_maximumnooffiles](#BKMK_mspp_maximumnooffiles)
 - [mspp_mode](#BKMK_mspp_mode)
 - [mspp_modifiedby](#BKMK_mspp_modifiedby)
 - [mspp_modifiedon](#BKMK_mspp_modifiedon)
@@ -145,6 +147,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_showcaptchaforauthenticatedusers](#BKMK_mspp_showcaptchaforauthenticatedusers)
 - [mspp_showownerfields](#BKMK_mspp_showownerfields)
 - [mspp_showunsupportedfields](#BKMK_mspp_showunsupportedfields)
+- [mspp_storageaccountname](#BKMK_mspp_storageaccountname)
 - [mspp_submitbuttonbusytext](#BKMK_mspp_submitbuttonbusytext)
 - [mspp_submitbuttoncssclass](#BKMK_mspp_submitbuttoncssclass)
 - [mspp_submitbuttontext](#BKMK_mspp_submitbuttontext)
@@ -498,6 +501,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_mspp_containername"></a> mspp_containername
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Container Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|mspp_containername|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_mspp_createdby"></a> mspp_createdby
@@ -908,6 +927,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_mspp_maximumnooffiles"></a> mspp_maximumnooffiles
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Maximum No Of Files|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|mspp_maximumnooffiles|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_mspp_mode"></a> mspp_mode
@@ -1707,6 +1742,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_mspp_storageaccountname"></a> mspp_storageaccountname
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Storage Account Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|mspp_storageaccountname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_mspp_submitbuttonbusytext"></a> mspp_submitbuttonbusytext

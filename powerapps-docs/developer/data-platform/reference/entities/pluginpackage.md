@@ -1,7 +1,7 @@
 ---
 title: "PluginPackage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the PluginPackage table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -26,14 +26,14 @@ search.audienceType:
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /pluginpackages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /pluginpackages(*pluginpackageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /pluginpackages(*pluginpackageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /pluginpackages<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH /pluginpackages(*pluginpackageid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /pluginpackages(*pluginpackageid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -61,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ExportKeyVersion](#BKMK_ExportKeyVersion)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [managedidentityid](#BKMK_managedidentityid)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PluginPackageId](#BKMK_PluginPackageId)
@@ -136,6 +137,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_managedidentityid"></a> managedidentityid
+
+|Property|Value|
+|--------|-----|
+|Description|Managed Identity Id to look up to ManagedIdentity Entity|
+|DisplayName|ManagedIdentityId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|managedidentityid|
+|RequiredLevel|None|
+|Targets|managedidentity|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -309,6 +324,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [FileId](#BKMK_FileId)
 - [FileId_Name](#BKMK_FileId_Name)
 - [IsManaged](#BKMK_IsManaged)
+- [managedidentityidName](#BKMK_managedidentityidName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -537,6 +553,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_managedidentityidName"></a> managedidentityidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|managedidentityidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -908,6 +940,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_pluginpackage_modifiedby](#BKMK_lk_pluginpackage_modifiedby)
 - [lk_pluginpackage_modifiedonbehalfby](#BKMK_lk_pluginpackage_modifiedonbehalfby)
 - [organization_pluginpackage](#BKMK_organization_pluginpackage)
+- [managedidentity_pluginpackage](#BKMK_managedidentity_pluginpackage)
 
 
 ### <a name="BKMK_lk_pluginpackage_createdby"></a> lk_pluginpackage_createdby
@@ -939,6 +972,12 @@ See the [lk_pluginpackage_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginpackag
 **Added by**: System Solution Solution
 
 See the [organization_pluginpackage](organization.md#BKMK_organization_pluginpackage) one-to-many relationship for the [organization](organization.md) table/entity.
+
+### <a name="BKMK_managedidentity_pluginpackage"></a> managedidentity_pluginpackage
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See the [managedidentity_pluginpackage](managedidentity.md#BKMK_managedidentity_pluginpackage) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "AIPluginOperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the AIPluginOperation table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ AIPluginOperations component
 |-|-|-|
 |Assign|PATCH /aipluginoperations(*aipluginoperationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /aipluginoperations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /aipluginoperations(*aipluginoperationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -36,10 +36,12 @@ AIPluginOperations component
 |RetrieveMultiple|GET /aipluginoperations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RetrieveUnpublished|<xref:Microsoft.Dynamics.CRM.RetrieveUnpublished?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
+|RetrieveUnpublishedMultiple|<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /aipluginoperations(*aipluginoperationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /aipluginoperations(*aipluginoperationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -66,13 +68,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AIPlugin](#BKMK_AIPlugin)
 - [AIPluginOperationExportKey](#BKMK_AIPluginOperationExportKey)
 - [AIPluginOperationId](#BKMK_AIPluginOperationId)
-- [connector](#BKMK_connector)
+- [AIPluginOperationResponseTemplate](#BKMK_AIPluginOperationResponseTemplate)
 - [CustomAPI](#BKMK_CustomAPI)
 - [Description](#BKMK_Description)
 - [DVFileSearch](#BKMK_DVFileSearch)
 - [DVTableSearch](#BKMK_DVTableSearch)
 - [Entity](#BKMK_Entity)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsConsequential](#BKMK_IsConsequential)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_AIModel](#BKMK_msdyn_AIModel)
 - [Name](#BKMK_Name)
@@ -81,7 +84,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ReferencedOperationId](#BKMK_ReferencedOperationId)
-- [SharedConnector](#BKMK_SharedConnector)
+- [ResponseSemantics](#BKMK_ResponseSemantics)
+- [statecode](#BKMK_statecode)
+- [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [Workflow](#BKMK_Workflow)
@@ -132,17 +137,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
-### <a name="BKMK_connector"></a> connector
+### <a name="BKMK_AIPluginOperationResponseTemplate"></a> AIPluginOperationResponseTemplate
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Connector|
+|DisplayName|AIPluginOperationResponseTemplate|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|connector|
+|LogicalName|aipluginoperationresponsetemplate|
 |RequiredLevel|None|
-|Targets|connector|
+|Targets|aipluginoperationresponsetemplate|
 |Type|Lookup|
 
 
@@ -235,6 +240,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_IsConsequential"></a> IsConsequential
+
+|Property|Value|
+|--------|-----|
+|Description|Defines if the AIPluginOperation is consequential.|
+|DisplayName|Is Consequential|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isconsequential|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsConsequential Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
@@ -364,20 +392,63 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
-### <a name="BKMK_SharedConnector"></a> SharedConnector
+### <a name="BKMK_ResponseSemantics"></a> ResponseSemantics
 
 |Property|Value|
 |--------|-----|
-|Description|SharedConnector Description|
-|DisplayName|SharedConnector|
+|Description|ResponseSemantics for the AI Plugin Operation|
+|DisplayName|ResponseSemantics|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|sharedconnector|
-|MaxLength|100|
+|LogicalName|responsesemantics|
+|MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_statecode"></a> statecode
+
+|Property|Value|
+|--------|-----|
+|Description|Status of the AIPluginOperation|
+|DisplayName|Status|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statecode|
+|RequiredLevel|SystemRequired|
+|Type|State|
+
+#### statecode Choices/Options
+
+|Value|Label|DefaultStatus|InvariantName|
+|-----|-----|-------------|-------------|
+|0|Active|1|Active|
+|1|Inactive|2|Inactive|
+
+
+
+### <a name="BKMK_statuscode"></a> statuscode
+
+|Property|Value|
+|--------|-----|
+|Description|Reason for the status of the AIPluginOperation|
+|DisplayName|Status Reason|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statuscode|
+|RequiredLevel|None|
+|Type|Status|
+
+#### statuscode Choices/Options
+
+|Value|Label|State|
+|-----|-----|-----|
+|1|Active|0|
+|2|Inactive|1|
+
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -432,9 +503,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AIPluginName](#BKMK_AIPluginName)
+- [AIPluginOperationResponseTemplateName](#BKMK_AIPluginOperationResponseTemplateName)
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
-- [connectorName](#BKMK_connectorName)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -484,6 +555,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_AIPluginOperationResponseTemplateName"></a> AIPluginOperationResponseTemplateName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|aipluginoperationresponsetemplatename|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
@@ -522,22 +609,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
-
-
-### <a name="BKMK_connectorName"></a> connectorName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|connectorname|
-|MaxLength|500|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -1079,6 +1150,8 @@ Listed by **SchemaName**.
 - [aipluginoperation_BulkDeleteFailures](#BKMK_aipluginoperation_BulkDeleteFailures)
 - [aipluginoperation_PrincipalObjectAttributeAccesses](#BKMK_aipluginoperation_PrincipalObjectAttributeAccesses)
 - [AIPluginOperationParameter_AIPluginO](#BKMK_AIPluginOperationParameter_AIPluginO)
+- [msdyn_knowledgeassetconfiguration_aipluginoperationid](#BKMK_msdyn_knowledgeassetconfiguration_aipluginoperationid)
+- [fabricaiskill_aipluginoperationid](#BKMK_fabricaiskill_aipluginoperationid)
 
 
 ### <a name="BKMK_aipluginoperation_SyncErrors"></a> aipluginoperation_SyncErrors
@@ -1197,6 +1270,40 @@ Same as the [AIPluginOperationParameter_AIPluginO](aipluginoperationparameter.md
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_msdyn_knowledgeassetconfiguration_aipluginoperationid"></a> msdyn_knowledgeassetconfiguration_aipluginoperationid
+
+**Added by**: Insights App Platform Base Solution
+
+Same as the [msdyn_knowledgeassetconfiguration_aipluginoperationid](msdyn_knowledgeassetconfiguration.md#BKMK_msdyn_knowledgeassetconfiguration_aipluginoperationid) many-to-one relationship for the [msdyn_knowledgeassetconfiguration](msdyn_knowledgeassetconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_knowledgeassetconfiguration|
+|ReferencingAttribute|msdyn_aipluginoperationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_knowledgeassetconfiguration_aipluginoperationid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_fabricaiskill_aipluginoperationid"></a> fabricaiskill_aipluginoperationid
+
+**Added by**: Insights App Platform Base Solution
+
+Same as the [fabricaiskill_aipluginoperationid](fabricaiskill.md#BKMK_fabricaiskill_aipluginoperationid) many-to-one relationship for the [fabricaiskill](fabricaiskill.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fabricaiskill|
+|ReferencingAttribute|aipluginoperationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|fabricaiskill_aipluginoperationid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1211,12 +1318,12 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_aipluginoperation](#BKMK_team_aipluginoperation)
 - [business_unit_aipluginoperation](#BKMK_business_unit_aipluginoperation)
 - [AIPluginOperation_AIPlugin_AIPlugin](#BKMK_AIPluginOperation_AIPlugin_AIPlugin)
-- [AIPluginOperation_connector_connector](#BKMK_AIPluginOperation_connector_connector)
 - [AIPluginOperation_CustomAPI_CustomAPI](#BKMK_AIPluginOperation_CustomAPI_CustomAPI)
 - [AIPluginOperation_DVFileSearch_DVFileSear](#BKMK_AIPluginOperation_DVFileSearch_DVFileSear)
 - [AIPluginOperation_DVTableSearch_DVTableSe](#BKMK_AIPluginOperation_DVTableSearch_DVTableSe)
 - [AIPluginOperation_Entity_Entity](#BKMK_AIPluginOperation_Entity_Entity)
 - [AIPluginOperation_Workflow_Workflow](#BKMK_AIPluginOperation_Workflow_Workflow)
+- [operationresponsetemplate_aipluginoperation](#BKMK_operationresponsetemplate_aipluginoperation)
 - [msdyn_AIPluginOperation_AIModel](#BKMK_msdyn_AIPluginOperation_AIModel)
 
 
@@ -1266,12 +1373,6 @@ See the [business_unit_aipluginoperation](businessunit.md#BKMK_business_unit_aip
 
 See the [AIPluginOperation_AIPlugin_AIPlugin](aiplugin.md#BKMK_AIPluginOperation_AIPlugin_AIPlugin) one-to-many relationship for the [aiplugin](aiplugin.md) table/entity.
 
-### <a name="BKMK_AIPluginOperation_connector_connector"></a> AIPluginOperation_connector_connector
-
-**Added by**: Power Connector Solution Solution
-
-See the [AIPluginOperation_connector_connector](connector.md#BKMK_AIPluginOperation_connector_connector) one-to-many relationship for the [connector](connector.md) table/entity.
-
 ### <a name="BKMK_AIPluginOperation_CustomAPI_CustomAPI"></a> AIPluginOperation_CustomAPI_CustomAPI
 
 **Added by**: Custom API Framework Solution
@@ -1301,6 +1402,10 @@ See the [AIPluginOperation_Entity_Entity](entity.md#BKMK_AIPluginOperation_Entit
 **Added by**: System Solution Solution
 
 See the [AIPluginOperation_Workflow_Workflow](workflow.md#BKMK_AIPluginOperation_Workflow_Workflow) one-to-many relationship for the [workflow](workflow.md) table/entity.
+
+### <a name="BKMK_operationresponsetemplate_aipluginoperation"></a> operationresponsetemplate_aipluginoperation
+
+See the [operationresponsetemplate_aipluginoperation](aipluginoperationresponsetemplate.md#BKMK_operationresponsetemplate_aipluginoperation) one-to-many relationship for the [aipluginoperationresponsetemplate](aipluginoperationresponsetemplate.md) table/entity.
 
 ### <a name="BKMK_msdyn_AIPluginOperation_AIModel"></a> msdyn_AIPluginOperation_AIModel
 

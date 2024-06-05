@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -101,6 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [InternetMessageHeaders](#BKMK_InternetMessageHeaders)
 - [IsBilled](#BKMK_IsBilled)
+- [IsDuplicateSenderUnresolved](#BKMK_IsDuplicateSenderUnresolved)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
 - [LastOpenedTime](#BKMK_LastOpenedTime)
@@ -691,6 +692,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### IsBilled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsDuplicateSenderUnresolved"></a> IsDuplicateSenderUnresolved
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if the sender of the email is unresolved in case of multiple match|
+|DisplayName|Is Duplicate Sender Unresolved|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|isduplicatesenderunresolved|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsDuplicateSenderUnresolved Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
