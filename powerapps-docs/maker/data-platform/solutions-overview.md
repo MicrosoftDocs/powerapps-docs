@@ -67,19 +67,20 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **Show dependencies**: [View solution dependencies](view-component-dependencies.md) for solutions that would block uninstall of this solution.
 - **Apply Upgrade**: [Apply a pending upgrade](update-solutions.md#apply-the-upgrade-or-update-in-the-target-environment) that has been initiated for a managed solution.
 
-Tasks available with no solution selected:
+Tasks available with no solution selected include: New solution, Import solution, Open AppSource, Publish all customizations, Set preferred solution.
 
 :::image type="content" source="media/solutions-area-tasks.png" alt-text="Commands available when a solution isn't selected." lightbox="media/solutions-area-tasks.png":::
 
-Tasks available with a solution selected:
+Tasks available with a solution selected include: New solution, Edit, Delete, Export solution, Solution checker, Show dependencies, Set preferred solution, See history, Clone, Apply Upgrade (when upgrade is available).
 
 :::image type="content" source="media/solutions-area-tasks-selected.png" alt-text="Commands available when solution is selected." lightbox="media/solutions-area-tasks-selected.png":::
 
-From the **Solutions** area, select a solution to view all of its components. 
+From the **Solutions** area, select a solution to view all of its objects. 
 
-:::image type="content" source="media/solution-all-items-list.png" alt-text="Example solution with all components.":::
+:::image type="content" source="media/solution-all-items-list.png" alt-text="Example solution with all objects.":::
 
 Browse through all the objects in a solution by scrolling through the items. If there are more than 100 items in the list, you can select **Load the next 100 items** to see more.
+
 :::image type="content" source="media/load-more.png" alt-text="Load next 100 items.":::
 
 Columns can be sorted and filtered by selecting the column header.
