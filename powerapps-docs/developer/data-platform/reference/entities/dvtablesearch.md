@@ -1,7 +1,7 @@
 ---
 title: "DVTableSearch table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the DVTableSearch table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ DVTableSearches component
 |-|-|-|
 |Assign|PATCH /dvtablesearchs(*dvtablesearchid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /dvtablesearchs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /dvtablesearchs(*dvtablesearchid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ DVTableSearches component
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /dvtablesearchs(*dvtablesearchid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /dvtablesearchs(*dvtablesearchid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -841,6 +841,8 @@ Listed by **SchemaName**.
 - [dvtablesearch_PrincipalObjectAttributeAccesses](#BKMK_dvtablesearch_PrincipalObjectAttributeAccesses)
 - [DVTableSearch_DVTableSearch_DVTableSearch](#BKMK_DVTableSearch_DVTableSearch_DVTableSearch)
 - [AIPluginOperation_DVTableSearch_DVTableSe](#BKMK_AIPluginOperation_DVTableSearch_DVTableSe)
+- [CopilotExampleQuestion_DVTableSearch](#BKMK_CopilotExampleQuestion_DVTableSearch)
+- [CopilotGlossaryTerm_DVTableSearch](#BKMK_CopilotGlossaryTerm_DVTableSearch)
 
 
 ### <a name="BKMK_dvtablesearch_SyncErrors"></a> dvtablesearch_SyncErrors
@@ -976,6 +978,40 @@ Same as the [AIPluginOperation_DVTableSearch_DVTableSe](aipluginoperation.md#BKM
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_CopilotExampleQuestion_DVTableSearch"></a> CopilotExampleQuestion_DVTableSearch
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+Same as the [CopilotExampleQuestion_DVTableSearch](copilotexamplequestion.md#BKMK_CopilotExampleQuestion_DVTableSearch) many-to-one relationship for the [copilotexamplequestion](copilotexamplequestion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|copilotexamplequestion|
+|ReferencingAttribute|skillid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|CopilotExampleQuestion_DVTableSearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_CopilotGlossaryTerm_DVTableSearch"></a> CopilotGlossaryTerm_DVTableSearch
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+Same as the [CopilotGlossaryTerm_DVTableSearch](copilotglossaryterm.md#BKMK_CopilotGlossaryTerm_DVTableSearch) many-to-one relationship for the [copilotglossaryterm](copilotglossaryterm.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|copilotglossaryterm|
+|ReferencingAttribute|skill|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|CopilotGlossaryTerm_DVTableSearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1032,6 +1068,16 @@ See the [team_dvtablesearch](team.md#BKMK_team_dvtablesearch) one-to-many relati
 **Added by**: System Solution Solution
 
 See the [business_unit_dvtablesearch](businessunit.md#BKMK_business_unit_dvtablesearch) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the DVTableSearch table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_botcomponent_dvtablesearch"></a> botcomponent_dvtablesearch
+
+See the [botcomponent_dvtablesearch](botcomponent.md#BKMK_botcomponent_dvtablesearch) many-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
 
 ### See also
 

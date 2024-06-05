@@ -1,7 +1,7 @@
 ---
 title: "datalakeworkspacepermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakeworkspacepermission table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,24 +16,21 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
-
 **Added by**: Data lake workspaces Solution
-
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /datalakeworkspacepermissions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /datalakeworkspacepermissions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -73,7 +70,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [whitelistedappid](#BKMK_whitelistedappid)
 - [workspaceid](#BKMK_workspaceid)
 
-
 ### <a name="BKMK_appid"></a> appid
 
 |Property|Value|
@@ -86,7 +82,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|appid|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_canexecute"></a> canexecute
 
@@ -109,8 +104,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
-
-
 ### <a name="BKMK_canread"></a> canread
 
 |Property|Value|
@@ -131,8 +124,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
-
-
 
 ### <a name="BKMK_canwrite"></a> canwrite
 
@@ -155,8 +146,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
-
-
 ### <a name="BKMK_datalakeworkspacepermission_UniqueName"></a> datalakeworkspacepermission_UniqueName
 
 |Property|Value|
@@ -173,7 +162,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_datalakeworkspacepermissionId"></a> datalakeworkspacepermissionId
 
 |Property|Value|
@@ -186,7 +174,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|datalakeworkspacepermissionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -206,7 +193,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 **Added by**: Basic Solution Solution
@@ -220,7 +206,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_name"></a> name
 
@@ -237,7 +222,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
@@ -253,7 +237,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_tenantid"></a> tenantid
 
 |Property|Value|
@@ -266,7 +249,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|tenantid|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -283,7 +265,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -299,12 +280,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_whitelistedappid"></a> whitelistedappid
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is allow listed in Microsoft Entra tenant id to access the Graph API.|
+|Description|Application Id that is allow listed in AAD tenant id to access the Graph API.|
 |DisplayName|Whitelisted App ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -312,7 +292,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|whitelistedappid|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_workspaceid"></a> workspaceid
 
@@ -360,7 +339,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [VersionNumber](#BKMK_VersionNumber)
 - [workspaceidName](#BKMK_workspaceidName)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
@@ -374,7 +352,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|componentidunique|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
@@ -399,8 +376,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
-
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
@@ -415,7 +390,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -434,7 +408,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -452,7 +425,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
@@ -466,7 +438,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
@@ -482,7 +453,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -501,7 +471,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -518,7 +487,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
@@ -543,8 +511,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
-
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
@@ -559,7 +525,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -578,7 +543,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -596,7 +560,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
@@ -610,7 +573,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
@@ -626,7 +588,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -645,7 +606,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -663,7 +623,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 **Added by**: Active Solution Solution
@@ -678,7 +637,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|organization|
 |Type|Lookup|
-
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
@@ -697,7 +655,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 **Added by**: Basic Solution Solution
@@ -714,7 +671,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
 
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -728,7 +684,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -749,8 +704,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
-
-
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -770,8 +723,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |1|Active|0|
 |2|Inactive|1|
 
-
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 **Added by**: Basic Solution Solution
@@ -785,7 +736,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|supportingsolutionid|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -802,7 +752,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MinValue|-9223372036854775808|
 |RequiredLevel|None|
 |Type|BigInt|
-
 
 ### <a name="BKMK_workspaceidName"></a> workspaceidName
 
@@ -834,7 +783,6 @@ Listed by **SchemaName**.
 - [datalakeworkspacepermission_BulkDeleteFailures](#BKMK_datalakeworkspacepermission_BulkDeleteFailures)
 - [datalakeworkspacepermission_PrincipalObjectAttributeAccesses](#BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses)
 
-
 ### <a name="BKMK_datalakeworkspacepermission_SyncErrors"></a> datalakeworkspacepermission_SyncErrors
 
 **Added by**: System Solution Solution
@@ -850,7 +798,6 @@ Same as the [datalakeworkspacepermission_SyncErrors](syncerror.md#BKMK_datalakew
 |ReferencedEntityNavigationPropertyName|datalakeworkspacepermission_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_datalakeworkspacepermission_DuplicateMatchingRecord"></a> datalakeworkspacepermission_DuplicateMatchingRecord
 
@@ -868,7 +815,6 @@ Same as the [datalakeworkspacepermission_DuplicateMatchingRecord](duplicaterecor
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_datalakeworkspacepermission_DuplicateBaseRecord"></a> datalakeworkspacepermission_DuplicateBaseRecord
 
 **Added by**: System Solution Solution
@@ -884,7 +830,6 @@ Same as the [datalakeworkspacepermission_DuplicateBaseRecord](duplicaterecord.md
 |ReferencedEntityNavigationPropertyName|datalakeworkspacepermission_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_datalakeworkspacepermission_AsyncOperations"></a> datalakeworkspacepermission_AsyncOperations
 
@@ -902,7 +847,6 @@ Same as the [datalakeworkspacepermission_AsyncOperations](asyncoperation.md#BKMK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_datalakeworkspacepermission_MailboxTrackingFolders"></a> datalakeworkspacepermission_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
@@ -918,7 +862,6 @@ Same as the [datalakeworkspacepermission_MailboxTrackingFolders](mailboxtracking
 |ReferencedEntityNavigationPropertyName|datalakeworkspacepermission_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_datalakeworkspacepermission_ProcessSession"></a> datalakeworkspacepermission_ProcessSession
 
@@ -936,7 +879,6 @@ Same as the [datalakeworkspacepermission_ProcessSession](processsession.md#BKMK_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_datalakeworkspacepermission_BulkDeleteFailures"></a> datalakeworkspacepermission_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -952,7 +894,6 @@ Same as the [datalakeworkspacepermission_BulkDeleteFailures](bulkdeletefailure.m
 |ReferencedEntityNavigationPropertyName|datalakeworkspacepermission_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses"></a> datalakeworkspacepermission_PrincipalObjectAttributeAccesses
 
@@ -982,7 +923,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_datalakeworkspacepermission_modifiedonbehalfby](#BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
 - [datalakeworkspace_workspacepermission](#BKMK_datalakeworkspace_workspacepermission)
-
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_createdby"></a> lk_datalakeworkspacepermission_createdby
 
