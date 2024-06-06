@@ -145,7 +145,7 @@ The **Header and form** screen contains the following controls:
     - Form container
         - Form  
     - Button container
-        - Canvel button
+        - Cancel button
         - Submit button
       
 #### Add and customize Header and form screen
