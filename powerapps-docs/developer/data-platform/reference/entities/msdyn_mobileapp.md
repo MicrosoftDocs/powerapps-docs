@@ -1,7 +1,7 @@
 ---
 title: "msdyn_mobileapp table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_mobileapp table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,7 @@ Mobile App
 |Assign|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_mobileapps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ Mobile App
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -81,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_buildDetails](#BKMK_msdyn_buildDetails)
 - [msdyn_bundleIdentifier](#BKMK_msdyn_bundleIdentifier)
 - [msdyn_buttonColor](#BKMK_msdyn_buttonColor)
+- [msdyn_customDimensions](#BKMK_msdyn_customDimensions)
 - [msdyn_displayName](#BKMK_msdyn_displayName)
 - [msdyn_fillColor](#BKMK_msdyn_fillColor)
 - [msdyn_headingTextColor](#BKMK_msdyn_headingTextColor)
@@ -92,6 +93,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_orgName](#BKMK_msdyn_orgName)
 - [msdyn_platformType](#BKMK_msdyn_platformType)
 - [msdyn_primaryPublishedAppName](#BKMK_msdyn_primaryPublishedAppName)
+- [msdyn_pushNotificationsEnabled_android](#BKMK_msdyn_pushNotificationsEnabled_android)
+- [msdyn_pushNotificationsEnabled_ios](#BKMK_msdyn_pushNotificationsEnabled_ios)
 - [msdyn_recentBuild](#BKMK_msdyn_recentBuild)
 - [msdyn_secondaryApps](#BKMK_msdyn_secondaryApps)
 - [msdyn_secondaryPublishedAppNames](#BKMK_msdyn_secondaryPublishedAppNames)
@@ -317,6 +320,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_customDimensions"></a> msdyn_customDimensions
+
+|Property|Value|
+|--------|-----|
+|Description|Custom Dimensions.|
+|DisplayName|Custom Dimensions|
+|Format|Email|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_customdimensions|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_msdyn_displayName"></a> msdyn_displayName
 
 |Property|Value|
@@ -487,6 +506,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Targets|canvasapp|
 |Type|Lookup|
+
+
+### <a name="BKMK_msdyn_pushNotificationsEnabled_android"></a> msdyn_pushNotificationsEnabled_android
+
+|Property|Value|
+|--------|-----|
+|Description|Push Notifications Enabled Android.|
+|DisplayName|Push Notifications Enabled Android|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsenabled_android|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_msdyn_pushNotificationsEnabled_ios"></a> msdyn_pushNotificationsEnabled_ios
+
+|Property|Value|
+|--------|-----|
+|Description|Push Notifications Enabled iOS.|
+|DisplayName|Push Notifications Enabled iOS|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsenabled_ios|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_recentBuild"></a> msdyn_recentBuild
@@ -757,6 +808,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [msdyn_mobileAppDefinitionIOS](#BKMK_msdyn_mobileAppDefinitionIOS)
 - [msdyn_mobileAppDefinitionIOS_Name](#BKMK_msdyn_mobileAppDefinitionIOS_Name)
 - [msdyn_primaryPublishedAppNameName](#BKMK_msdyn_primaryPublishedAppNameName)
+- [msdyn_proDev_customPackage](#BKMK_msdyn_proDev_customPackage)
+- [msdyn_proDev_customPackage_Name](#BKMK_msdyn_proDev_customPackage_Name)
+- [msdyn_pushNotificationsAndroidJson](#BKMK_msdyn_pushNotificationsAndroidJson)
+- [msdyn_pushNotificationsAndroidJson_Name](#BKMK_msdyn_pushNotificationsAndroidJson_Name)
+- [msdyn_pushNotificationsIosPlist](#BKMK_msdyn_pushNotificationsIosPlist)
+- [msdyn_pushNotificationsIosPlist_Name](#BKMK_msdyn_pushNotificationsIosPlist_Name)
 - [msdyn_tenantSplashImage](#BKMK_msdyn_tenantSplashImage)
 - [msdyn_tenantSplashImage_Name](#BKMK_msdyn_tenantSplashImage_Name)
 - [msdyn_tenantWelcomeImage](#BKMK_msdyn_tenantWelcomeImage)
@@ -1465,6 +1522,93 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|msdyn_primarypublishedappnamename|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_proDev_customPackage"></a> msdyn_proDev_customPackage
+
+|Property|Value|
+|--------|-----|
+|Description|Pro Dev Custom Package.|
+|DisplayName|Pro Dev Custom Package|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_prodev_custompackage|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_proDev_customPackage_Name"></a> msdyn_proDev_customPackage_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_prodev_custompackage_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_pushNotificationsAndroidJson"></a> msdyn_pushNotificationsAndroidJson
+
+|Property|Value|
+|--------|-----|
+|Description|Push Notifications Android JSON.|
+|DisplayName|Push Notifications Android JSON|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsandroidjson|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_pushNotificationsAndroidJson_Name"></a> msdyn_pushNotificationsAndroidJson_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsandroidjson_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_pushNotificationsIosPlist"></a> msdyn_pushNotificationsIosPlist
+
+|Property|Value|
+|--------|-----|
+|Description|Push Notifications iOS Plist.|
+|DisplayName|Push Notifications iOS Plist|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsiosplist|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_pushNotificationsIosPlist_Name"></a> msdyn_pushNotificationsIosPlist_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_pushnotificationsiosplist_name|
+|MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
 

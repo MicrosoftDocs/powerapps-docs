@@ -98,14 +98,5 @@ To create a custom **Portal Management** app:
 
 Now you can use the custom Portal Management app and configure portal settings.
 
-## Next steps
-
-[Configure site settings](configure-site-settings.md)
-
-### See also
-
-[Delete a portal](../manage-existing-portals.md#delete)
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

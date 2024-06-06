@@ -27,7 +27,7 @@ The mobile app provides a rich offline experience that helps users stay producti
   
 The offline experience uses [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)] services to periodically synchronize tables with the mobile app so that synchronized rows are available when a user's mobile devices is disconnected from the internet. 
 
-Before you set-up the mobile app in offline mode, be sure to review [Mobile offline capabilities and limitations](offline-capabilities.md).
+Before you set-up the mobile app in offline mode, be sure to review [Mobile offline limitations for model-driven apps](offline-limitations.md).
 
 > [!IMPORTANT]
 > - To use this feature, an administrator must set up mobile offline for their organization. The set up and configuration process for mobile offline is the same for [Power Apps mobile](/powerapps/mobile/run-powerapps-on-mobile) and Dynamics 365 for phones and tablets app. To enable mobile offline synchronization for Power Apps mobile or Dynamics 365 mobile, follow the steps in [Set up mobile offline (classic)](setup-mobile-offline-classic.md).

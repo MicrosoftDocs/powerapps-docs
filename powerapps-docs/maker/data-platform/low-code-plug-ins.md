@@ -256,9 +256,13 @@ Learn more about how you can [call Dataverse actions directly from Power Fx in c
 
 Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
 
-## Contacting Help + support
+## Getting help with you low-code plug-ins
 
-For issues with the Dataverse Accelerator solution installation or low-code plug-ins, such as errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
+If you encounter issues creating or running your low-code plug-in, go to these tips for common issues that can occur: [Microsoft Dataverse low-code plug-ins tips and known issues](low-code-plug-ins-tips.md)
+
+### Contacting Help + support
+
+For issues with the Dataverse Accelerator solution installation or low-code plug-ins not covered in [Microsoft Dataverse low-code plug-ins tips and known issues](low-code-plug-ins-tips.md), such as undocumented errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
 
 - Problem Type- Dataverse Web API and SDK
 - Problem Subtype- Accelerator kit for Dataverse

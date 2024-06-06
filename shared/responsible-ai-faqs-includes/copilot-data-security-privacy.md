@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 04/25/2024
+ms.date: 06/04/2024
 ms.topic: include
 ---
 
@@ -67,6 +67,14 @@ We also offer guidance in the user experience to reinforce the responsible use o
 
 For more information, see the Responsible AI FAQ for your product on Microsoft Learn.
 
+## How does Copilot block harmful content?
+
+Azure OpenAI Service includes a content filtering system that works alongside core models. The content filtering models for the Hate & Fairness, Sexual, Violence, and Self-harm categories have been specifically trained and tested in various languages. This system works by running both the input prompt and the response through classification models that are designed to identify and block the output of harmful content.
+
+Hate and fairness-related harms refer to any content that uses pejorative or discriminatory language based on attributes like race, ethnicity, nationality, gender identity and expression, sexual orientation, religion, immigration status, ability status, personal appearance, and body size. Fairness is concerned with making sure that AI systems treat all groups of people equitably without contributing to existing societal inequities. Sexual content involves discussions about human reproductive organs, romantic relationships, acts portrayed in erotic or affectionate terms, pregnancy, physical sexual acts, including those portrayed as an assault or a forced act of sexual violence, prostitution, pornography, and abuse. Violence describes language related to physical actions that are intended to harm or kill, including actions, weapons, and related entities. Self-harm language refers to deliberate actions that are intended to injure or kill oneself.
+
+[Learn more about Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython#harm-categories).
+
 ## Does Copilot block prompt injections (jailbreak attacks)? 
 
 [Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts that are designed to provoke the generative AI model into behaving in ways it was trained not to or breaking the rules it's been told to follow. Services across Dynamics 365 and Power Platform are required to protect against prompt injections. [Learn more about jailbreak attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
@@ -83,14 +91,6 @@ Foundation models like GPT-4 are enhanced by Retrieval Augmented Generation (RAG
 
 Another method for enhancing foundational models is known as *fine-tuning*. A large dataset of query-response pairs is shown to a foundational model to augment its original training with new samples that are targeted to a specific scenario. The model can then be deployed as a separate model—one that's fine-tuned for that scenario. While grounding is about making the AI's knowledge relevant to the real world, fine-tuning is about making the AI's knowledge more specific to a particular task or domain. Microsoft uses fine-tuning in multiple ways. For example, we use Power Automate flow creation from natural language descriptions provided by the user.
 
-## How does Copilot block harmful content?
-
-Azure OpenAI Service includes a content filtering system that works alongside core models. The content filtering models for the Hate & Fairness, Sexual, Violence, and Self-harm categories have been specifically trained and tested in various languages. This system works by running both the input prompt and the response through classification models that are designed to identify and block the output of harmful content.
-
-Hate and fairness-related harms refer to any content that uses pejorative or discriminatory language based on attributes like race, ethnicity, nationality, gender identity and expression, sexual orientation, religion, immigration status, ability status, personal appearance, and body size. Fairness is concerned with making sure that AI systems treat all groups of people equitably without contributing to existing societal inequities. Sexual content involves discussions about human reproductive organs, romantic relationships, acts portrayed in erotic or affectionate terms, pregnancy, physical sexual acts, including those portrayed as an assault or a forced act of sexual violence, prostitution, pornography, and abuse. Violence describes language related to physical actions that are intended to harm or kill, including actions, weapons, and related entities. Self-harm language refers to deliberate actions that are intended to injure or kill oneself.
-
-[Learn more about Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython#harm-categories).
-
 ## Does Copilot meet requirements for regulatory compliance? 
 
 Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and meets the same requirements for regulatory compliance. For more information about the regulatory certifications of Microsoft services, go to [Service Trust Portal](https://servicetrust.microsoft.com/). Additionally, Copilot adheres to our commitment to responsible AI, which is put into action through our [Responsible AI Standard](https://www.microsoft.com/ai/responsible-ai). As regulation in AI evolves, Microsoft continues to adapt and respond to new requirements.
@@ -104,6 +104,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Product | Feature | Managed Environments required? | How to turn the feature off |
 |-------------------------|-------------------------|-------------------------|-------------------------|
 | AI Builder | [Scenarios in preview](/ai-builder/previewability-scenarios) | No | [Scenarios in preview](/ai-builder/previewability-scenarios) |
+| Dynamics 365 Business Central | All (See the full list at [aka.ms/bcAI](https://aka.ms/bcAI).) | No | [Activate features](/dynamics365/business-central/enable-ai#activate-features) |
 | Dynamics 365 Customer Insights - Data | [Create segments with Copilot for Customer Insights - Data (preview)](/dynamics365/customer-insights/data/segments-copilot) | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent)  |
 | Dynamics 365 Customer Insights - Data | [Data prep report overview (preview)](/dynamics365/customer-insights/data/data-prep-overview) | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent)  |
 | Dynamics 365 Customer Insights - Data | [Get answers to questions about capabilities from Copilot (preview)](/dynamics365/customer-insights/data/help-pane-copilot)  | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent) |
@@ -121,7 +122,8 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Power Apps | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) | No, premium user license | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) |
 | Power Apps | [Excel to Table](/power-apps/maker/common/faqs-excel-to-table-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Apps | [Use natural language to edit an app using the Copilot panel](/power-apps/maker/canvas-apps/ai-edit-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
-| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
+| Power Automate | Copilot in cloud flows on the Home page and in the designer (See [Get started with Copilot in cloud flows](/power-automate/get-started-with-copilot) for details.) | No | Contact support to run a PowerShell script. |
+| Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details.) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
 
 
 ### Regional and language availability

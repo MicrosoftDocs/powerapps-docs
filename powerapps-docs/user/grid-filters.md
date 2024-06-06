@@ -4,13 +4,15 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/22/2024
+ms.date: 06/05/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- fikaradz 
 ---
 # Explore data on a grid page
 
@@ -110,6 +112,9 @@ To focus on records that meet particular criteria, you can filter a view by one 
 > [!IMPORTANT]
 > In Unified Interface, grids don't pre-populate column filters based on the current view definition.
 
+> [!NOTE]
+> Filtering is not supported on virtual entities.  
+
 #### Filtering on a lookup column
 
 When you filter data on a lookup column, you can select from a list of values, rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
@@ -138,7 +143,8 @@ When configured, the dropdown column headers surface a **Group by** option. This
 -  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
 
 > [!NOTE]
-> Grouping criteria isn't saved to a view.  
+> Grouping criteria isn't saved to a view.
+> Grouping is not supported when paging on the grid is allowed.
 
 ### Aggregation
 
