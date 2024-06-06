@@ -38,7 +38,7 @@ Offline data starts downloading as you continue to use the app. Data is download
 
 If you don't want to download offline data and select **Skip for now**, you can't use the app in offline mode until you manually download the updates.
 
-1. On the screen, select the **Globe** icon.
+1. On the screen, select the the **offline sync** (Globe) icon.
 
 1. On the **Device Status** page, select **Download offline updates**.
 
