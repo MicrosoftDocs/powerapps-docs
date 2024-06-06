@@ -22,7 +22,7 @@ The  **offline sync** (globe) icon indicates the synchronization status of the P
 - Whether updated data on the device is waiting to synchronize with the server 
 - Whether the app experienced an error or warning while syncing
 
-The offline sync icon is always visible in the main app navigation bar on iOS, Android and Windows devices. (It's not visible in web browsers).
+The offline sync icon is always visible in the main app navigation bar on iOS, Android and Windows devices. (It's not visible in web browsers.)
 
 :::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
 
