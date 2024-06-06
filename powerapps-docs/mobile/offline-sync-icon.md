@@ -1,7 +1,7 @@
 ---
 title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
-ms.date: 06/05/2023
+ms.date: 06/06/2023
 ms.author: trdehove
 author: trdehove
 ms.reviewer: sericks
@@ -15,20 +15,20 @@ search.audienceType:
 
 # View offline sync status
 
-The  **offline sync** (Globe) icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
+The  **offline sync** (globe) icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
 
 - Whether the app is connected to the network
 - Whether a data refresh is in progress
 - Whether updated data on the device is waiting to synchronize with the server 
 - Whether the app experienced an error or warning while syncing
 
-The offline sync icon is always visible in the main app navigation bar on iOS, Android and Windows devices (not visible in Web browsers).
+The offline sync icon is always visible in the main app navigation bar on iOS, Android and Windows devices. (It's not visible in web browsers).
 
 :::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
 
 ## Sync status icons
 
-The **offline sync** (Globe) icon changes based on the app's sync status. The following table describes the possible sync states and the icons associated with them.
+The **offline sync** (globe) icon changes based on the app's sync status. The following table describes the possible sync states and the icons associated with them.
 
 | Icon | Description |
 |------|--------------|
@@ -61,11 +61,11 @@ When you select the offline sync icon, the **Device Status** page opens. The **D
 
 ### Sync status 
 
-The **Sync status** area of the page tracks the overall offline status of the app (If the status is in error, see [Troubleshoot offline sync errors](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)) and the **downloaded data** area povides the status of each individual table. When the status appears as **Available**, offline mode is available and data synced successfully.  
+The **Sync status** area of the page tracks the overall offline status of the app. If the status is in error, see [Troubleshoot offline sync errors](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting) and the **Downloaded data** area povides the status of each individual table. When the status appears as **Available**, offline mode is available and data synced successfully.  
 
-The status can be **Not Available** due to an error during the first sync or if you dismissed downloading offline data (only applies to [offline classic mode](work-in-offline-mode.md)). If the status is **Not Available** try downloading the updates again.
+The status can be **Not available** due to an error during the first sync or if you dismissed downloading offline data (only applies to [offline classic mode](work-in-offline-mode.md)). If the status is **Not available** try downloading the updates again.
 
-You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress in the  **files available** section.
+You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress in the  **Files available** section.
 
 ### Offline sync settings
 
@@ -76,7 +76,7 @@ If your admin [enabled sync settings](setup-mobile-offline.md#define-sync-settin
 
 ## Notifications
 
-On iOS, Android and Windows devices, app sync notifications are consistent across the different sync states.
+On iOS, Android, and Windows devices, app sync notifications are consistent across the different sync states.
 
 ## Known issues
 
