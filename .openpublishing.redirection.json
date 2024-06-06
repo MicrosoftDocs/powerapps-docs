@@ -9116,11 +9116,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/user/use-@mentions.md",
-      "redirect_url": "collaboration",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "powerapps-docs/mobile/offline-capabilities.md",
       "redirect_url": "mobile-offline-overview",
       "redirect_document_id": "false"
