@@ -2,7 +2,7 @@
 title: Work with model-driven apps offline (classic mode)
 description: Learn how to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 05/29/2024
+ms.date: 05/06/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ If you're working on a record and lose your network connection, any updates made
 
 ## Download updates to work in offline mode
 
-When your admin [enables mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), you will be prompted to download offline updates. After downloading the updates, you can start using the app on your mobile device in offline mode.
+When your admin [enables mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), you are prompted to download offline updates. After downloading the updates, you can start using the app on your mobile device in offline mode.
 
 When you see the dialog box that asks you to download updates to work offline, select **Download**.
 
@@ -38,7 +38,7 @@ Offline data starts downloading as you continue to use the app. Data is download
 
 If you don't want to download offline data and select **Skip for now**, you can't use the app in offline mode until you manually download the updates.
 
-1. On the screen, select the the **offline sync** (Globe) icon.
+1. On the screen, select the the **offline sync** (globe) icon.
 
 1. On the **Device Status** page, select **Download offline updates**.
 
@@ -48,7 +48,7 @@ If you don't want to download offline data and select **Skip for now**, you can'
 
 ## See whether offline mode is available
 
-When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **offline sync** (Globe) icon and check on the [Device Status page](offline-sync-icon.md).
+When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **offline sync** (globe) icon and check on the [Device Status page](offline-sync-icon.md).
   
 ## Work in offline mode
 
@@ -60,7 +60,7 @@ When you have intermittent connectivity, we recommend that you switch to offline
 
 To work in offline mode, complete the following steps.
 
-1. On the screen, select the **offline sync** (Globe) icon.
+1. On the screen, select the **offline sync** (globe) icon.
 
 2. Turn on the **Work in offline mode** toggle.
 
