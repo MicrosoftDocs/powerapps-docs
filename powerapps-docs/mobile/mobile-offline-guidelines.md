@@ -97,7 +97,7 @@ If users have access to a large set of data when they're online, apply filters t
 
 **Filter by time and date fields** for time-centric data like bookings and timeline items. Consider both future and past dates. For example, a common filter might include appointments from the past month and the next three months.
 
-:::image type="content" source="media/mobile-offline-guidelines/filters4.png" alt-text="Screenshot that shows multiple filters, based on start and end times, in an OR condition.":::
+:::image type="content" source="media/mobile-offline-guidelines/filters4new.png" alt-text="Screenshot that shows multiple filters, based on start and end times, in an OR condition.":::
 
 **Filter by status** to limit downloads to rows with a certain Status.
 
