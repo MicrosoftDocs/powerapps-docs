@@ -4,7 +4,7 @@ description: Learn how to customize and work with Power BI components in Power A
 author: paulinbar
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/07/2024
+ms.date: 06/06/2024
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
