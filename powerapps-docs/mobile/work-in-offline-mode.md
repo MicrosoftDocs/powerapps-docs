@@ -31,7 +31,7 @@ When you refresh your data on a grid view, you get notification stating, **Updat
 
 :::image type="content" source="media/mobile-offline-first-update-notification.png" alt-text="Refreshing offline status.":::
 
-The sync status is always available, at a glance, with the sync icon. For more information about offline sync status, see [Offline sync icon](offline-sync-icon.md).
+The sync status is always available, at a glance, with the **offline sync** (Globe) icon. For more information about offline sync status, see [Offline sync icon](offline-sync-icon.md).
 
 :::image type="content" source="media/mobile-offline-device-status-page.png" alt-text="See more information about the sync process.":::
 
