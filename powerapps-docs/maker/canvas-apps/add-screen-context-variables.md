@@ -29,7 +29,8 @@ The following new screens are available:
 - [Welcome screen](add-screen-context-variables.md#welcome-screen)
 - [Header and gallery](add-screen-context-variables.md#header-and-gallery-screen)
 - [Approval request](add-screen-context-variables.md#approval-request-screen)
-- [Header and form]
+- [Header and form](add-screen-context-variables.md#header-and-form)
+- [Header and table](add-screen-context-variables.md#header-and-table)
 
 
 ## Add a new screen
