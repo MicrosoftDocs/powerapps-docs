@@ -2,7 +2,7 @@
 title: "Use modern themes | MicrosoftDocs"
 description: Learn how to change the colors of the app header in model-driven apps with the modern look.
 ms.custom: ""
-ms.date: 10/11/2023
+ms.date: 06/06/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,7 +19,8 @@ search.audienceType:
 Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md#turn-on-the-modern-refreshed-look) enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
-> Modern themes currently only support customizing the app header. Other customizations like customizing the business process flow control aren't available.
+> - Modern themes currently only support customizing the app header. Other customizations like customizing the business process flow control aren't available.
+> - For modern themes to work the model-driven app must be using the **New look**. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
 
 ## Modify the app header colors
 
@@ -66,7 +67,8 @@ As an example, this XML specifies a green background color for the app header wi
 1. Select **New** > **More** > **Web resource**.
 1. In the New web resource property pane, enter the following values:
    - **Display name**: Enter a display name, such as *XML for modern theming*.
-   - **Name**. Enter the unique name for the web resource.
+   - **Name**. Enter the unique name for the web resource. When entering the name, make sure to add the publisher prefix for the web resource and don't include quotes. For example, the name might appear as *contoso_xmlfor-modern-theme* as in this example.
+   :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_xmlfor-modern-theme." lightbox="media/environment-setting-theme.png":::
    - Type: **Data (XML)**
 1. Select **Choose file**, browse to and select the XML file you created earlier with the theme.
 1. Select **Save**. You publish this customization with the steps in the next section.
@@ -82,7 +84,7 @@ After you’ve selected your colors and created the web resource, follow these s
 1. Select **Save**.
 1. Select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
-With the example colors above, the app header should look like this after refreshing or playing the app.  
+With the example colors above, the app header should look like this when you play the app (you might need to perform a refresh.  
 :::image type="content" source="media/greenappheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
 
 ### Verifying new app header colors
