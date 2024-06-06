@@ -4,7 +4,7 @@ description: Learn how to create Power BI report and dataset components to use i
 author: paulinbar
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/07/2024
+ms.date: 06/06/2024
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
