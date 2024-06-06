@@ -47,7 +47,7 @@ Data is synchronized from Dataverse to your device over the lifetime of your app
 
   The first sync, which is the longest sync, is triggered when you sign in to the Power Apps mobile app. It also triggers after using the Reconfigure action (not recommended).
 
-- **Delta sync**: This offline sync is the fastest sync and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that changed since the last sync downloads to the mobile device.
+- **Delta sync**: This offline sync is faster than the first sync and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that changed since the last sync downloads to the mobile device.
 
 - **Full delta sync**: When you select **Refresh** on the **Device status** page, you trigger a full sync. A full sync doesn't redownload data, but it does recheck every record on the device, so it might take longer than a regular delta sync.
 
