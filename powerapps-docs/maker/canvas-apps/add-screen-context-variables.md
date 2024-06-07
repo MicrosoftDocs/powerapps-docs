@@ -164,7 +164,7 @@ The **Header and table** screen contains the following controls:
 - Header container 
     - Header 
 - Main container 
-    - table
+    - Table
 
       
 #### Add and customize Header and table screen
