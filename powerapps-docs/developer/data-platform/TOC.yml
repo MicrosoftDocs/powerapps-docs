@@ -348,6 +348,8 @@
   items:
     - name: Customer tables
       href: customer-entities-account-contact.md
+    - name: Environment settings
+      href: organization-table.md
     - name: Activity tables
       href: activity-entities.md
       items:
