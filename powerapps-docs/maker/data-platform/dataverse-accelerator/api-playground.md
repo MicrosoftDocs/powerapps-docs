@@ -6,7 +6,7 @@ ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/24/2024
+ms.date: 06/06/2024
 ms.custom: template-how-to
 contributors:
 - dikamath
@@ -41,7 +41,7 @@ You must have [access to Dataverse](/power-apps/maker/data-platform/data-platfor
 
 ## Get started
 
-To get started with the API playground, [play the Dataverse accelerator](dataverse-accelerator.md#play-the-dataverse-accelerator) and navigate to the **API playground** page.
+To get started with the API playground, [play the Dataverse accelerator](dataverse-accelerator.md#play-the-dataverse-accelerator), and then select the **API playground** page.
 
 ![Run the API playground by selecting the feature card](media/api-play-run.svg)
 
