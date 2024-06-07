@@ -46,6 +46,8 @@ For example, the following columns are supported because they are mentioned in t
 
 Some columns are explicitly not supported to update directly. For example, you should not try to update the [OrgDbOrgSettings](reference/entities/organization.md#BKMK_OrgDbOrgSettings) column directly. This string column contains multiple XML elements that control behavior for multiple features. If you update this value incorrectly, features that depend on these settings could break. Always use the tools described in [Environment database settings](/power-platform/admin/environment-database-settings) to change the values of this column.
 
+
+
 ## Read-only settings
 
 Some settings are available to retrieve but can't be set. These columns will have false values for both [AttributeMetadata.IsValidForCreate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforcreate) and [AttributeMetadata.IsValidForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforupdate). You can view the list of read-only columns here: [Organization table Read-only columns/attributes](reference/entities/organization.md#read-only-columnsattributes).
@@ -54,6 +56,23 @@ Some settings are available to retrieve but can't be set. These columns will hav
 > As with every kind of table, if you try to set a read-only column, the operation does not throw an error. The value you provide to update a read-only column is ignored.
 
 Settings that can be updated are listed here [Organization table Writable columns/attributes](reference/entities/organization.md#writable-columnsattributes). Keep in mind that being writable doesn't mean that [updating the setting is supported](#supported-settings).
+
+## Deprecated settings
+
+Some columns represent deprecated settings. You should look at the descriptions of the column in the list of [Organization table Writable columns/attributes](reference/entities/organization.md#writable-columnsattributes) to determine whether the setting still represents the way to modify the environment behavior. For example, the following columns are deprecated:
+
+- [CurrentBulkOperationNumber](reference/entities/organization.md#BKMK_CurrentBulkOperationNumber)
+- [CurrentCampaignNumber](reference/entities/organization.md#BKMK_CurrentCampaignNumber)
+- [CurrentCaseNumber](reference/entities/organization.md#BKMK_CurrentCaseNumber)
+- [CurrentCategoryNumber](reference/entities/organization.md#BKMK_CurrentCategoryNumber)
+- [CurrentContractNumber](reference/entities/organization.md#BKMK_CurrentContractNumber)
+- [CurrentInvoiceNumber](reference/entities/organization.md#BKMK_CurrentInvoiceNumber)
+- [CurrentKaNumber](reference/entities/organization.md#BKMK_CurrentKaNumber)
+- [CurrentKbNumber](reference/entities/organization.md#BKMK_CurrentKbNumber)
+- [CurrentOrderNumber](reference/entities/organization.md#BKMK_CurrentOrderNumber)
+- [CurrentQuoteNumber](reference/entities/organization.md#BKMK_CurrentQuoteNumber)
+- [MicrosoftFlowEnvironment](reference/entities/organization.md#BKMK_MicrosoftFlowEnvironment)
+
 
 ## Use PAC CLI to retrieve and update settings
 
