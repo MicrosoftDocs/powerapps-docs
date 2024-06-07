@@ -1,5 +1,5 @@
 ---
-title: Integrate your Teams app with calls and meetings (contains video)
+title: Integrate your Teams app with calls and meetings
 description: Learn how to use Teams calls and meetings with your Power Apps in Teams.
 author: joel-lindstrom
 

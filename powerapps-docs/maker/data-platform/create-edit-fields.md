@@ -1,5 +1,5 @@
 ---
-title: "How to create and edit columns for Microsoft Dataverse(contains video) | MicrosoftDocs"
+title: "How to create and edit columns for Microsoft Dataverse | MicrosoftDocs"
 description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
