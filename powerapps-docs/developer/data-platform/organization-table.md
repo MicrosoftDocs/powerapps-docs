@@ -83,5 +83,5 @@ The [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) i
  - [pac env list-settings](/power-platform/developer/cli/reference/env#pac-env-list-settings): Returns environment settings stored in the organization table.
  - [pac env update-settings](/power-platform/developer/cli/reference/env#pac-env-update-settings): Enables updating a single organization table column value.
 
- When you use the `pac env update-settings` command, make sure to only update columns that can be updated. If you use this command to set a [read-only column](#read-only-settings), the command will appear to succeed because no error occurs, but the change will not be applied.
+ When you use the `pac env update-settings` command, make sure to only update columns that can be updated. If you use this command to set a [read-only column](#read-only-settings), the command will incorrectly report that the change was applied successfully because no error occurred.
 
