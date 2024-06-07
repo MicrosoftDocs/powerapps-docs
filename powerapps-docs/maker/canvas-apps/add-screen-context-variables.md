@@ -151,8 +151,9 @@ The **Header and form** screen contains the following controls:
 #### Add and customize Header and form screen
 
 1. In Power Apps Studio, select **Add Screen** > **Header and form**.
-2. In the tree view, select **Form** and connect it to a data source.
-3. [Optional] Select each data card in the form and turn **Width Fit** on in the property pane to allow optimal performance for screen responsiveness.  
+1. In the tree view, select **Form** and connect it to a data source.
+1. [Optional] To ensure the best screen responsiveness, choose each data card on the form and set the **Width Fit** property to **On** in the **Properties** pane.
+ 
 
 
 ## Header and table 
@@ -170,7 +171,7 @@ The **Header and table** screen contains the following controls:
 #### Add and customize Header and table screen
 
 1. In Power Apps Studio, select **Add Screen** > **Header and table**.
-2. In the tree view, select **Table** and connect it to a data source. 
+1. In the tree view, select **Table** and connect it to a data source. 
 
 ## Reorder screens
 
