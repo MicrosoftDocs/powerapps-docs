@@ -1,6 +1,6 @@
 ---
-title: Understand new, preview, experimental, and retired features in canvas apps
-description: Learn about new, preview, experimental, and retired features.
+title: Understand New, Preview, Experimental, and Retired features in canvas apps
+description: Learn about New, Preview, Experimental, and Retired features.
 author: gregli-msft
 
 ms.topic: conceptual
@@ -15,7 +15,7 @@ contributors:
   - mduelae
   - gregli-msft
 ---
-# Understand new, preview, experimental, and retired features in canvas apps
+# Understand New, Preview, Experimental, and Retired features in canvas apps
 
 With every release, we make changes and add features to make Power Apps Studio the best tool to fit your needs. We move the product forward. 
 
@@ -43,7 +43,7 @@ Eventually, **New** features are no longer "new". If there is no breaking change
 
 Enable **Preview** features if you'd like to test a soon to be released feature before it is enabled for everyone.
 
-**Preview** features are well on their way to being a valued part of the product. But, they are not generally available yet and are not fully supported, instead offered under the preview features terms of service. **Preview** features should not be used in production. 
+**Preview** features are well on their way to being a valued part of the product. But, they are not generally available yet and are not fully supported, instead offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Preview** features should not be used in production. 
 
 In general, **Preview** features are not enabled by default when creating a new app. You should only enable a **Preview** feature for testing purposes and to provide feedback before the feature becomes generally available. This is the last stop for feedback before the feature is finalized. 
 
@@ -55,7 +55,7 @@ Eventually **Preview** features graduate to **New**.
 
 Enable **Experimental** features if you're an early adopter, see something useful to you, and would like to help test the feature. 
 
-**Experimental** features are in an early-stage preview that is true to the name "experiment". This feature may significantly change or be completely removed at any time. These features are very far from being generally available, are not fully supported, and are offered under the preview features terms of service. **Experimental** features should not be used in production. 
+**Experimental** features are in an early-stage preview that is true to the name "experiment". This feature may significantly change or be completely removed at any time. These features are very far from being generally available, are not fully supported, and are offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Experimental** features should not be used in production. 
 
 **Experimental** features are never enabled by default when creating a new app. You should only enable an **Experimental** feature for testing purposes and to provide feedback. If you don't know what the feature is referring to or its possible impact, you likely should not turn it on. 
 
