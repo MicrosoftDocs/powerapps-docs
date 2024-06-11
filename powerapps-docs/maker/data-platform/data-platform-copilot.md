@@ -36,3 +36,7 @@ With copilot chat in Power Apps model-driven apps and Dynamics 365 Sales, users 
 ## See also
 
 [Copilot in Power Apps overview](../canvas-apps/ai-overview.md)
+
+[FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md)
+
+[FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md)
