@@ -117,7 +117,7 @@ Additional tables can be accessed via their name (e.g., Table1, Table2, Table3, 
 
 
 ### Untyped results 
-Some complicated stored procedures return an untyped result. These results are not accessible with 'ResultSets' or 'OutputParameters'. However, you can access the data using the following pattern. 
+Some complicated stored procedures return an untyped result. These results aren't accessible with 'ResultSets' or 'OutputParameters'. However, you can access the data using the following pattern. 
 
 In this example, we first pull the results into a variable named "MyUntypedObject". Then we pull 'Table1' from that variable and put it into a variable named 'table1'. This step isn't strictly necessary. It is useful however to put all the results in a variable at a point in time and then pull out the parts you need. Then, we iterate through table1 and extract the JSON elements in named value pairs. Be sure to match the names with the names that are returned in the JSON payload. To validate, open a Power Apps monitor and look at the body section the data node for a record.
 
