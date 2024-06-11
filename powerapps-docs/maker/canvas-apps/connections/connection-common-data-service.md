@@ -67,9 +67,9 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | CountRows [4] [5], CountIf [6]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 | Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | First [7]                                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
-| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
+| In (membership) [8]        | Yes            | Yes          | Yes        | Yes              | Yes      |
 | In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
-| IsBlank [8]                                                     | Yes            | Yes          | No         | Yes              | Yes      |
+| IsBlank [9]                                                     | Yes            | Yes          | No         | Yes              | Yes      |
 | Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | Search                                                          | No             | Yes          | No         | No               | \-       |
 | Sort                                                            | Yes            | Yes          | Yes        | Yes              | \-       |
@@ -85,7 +85,8 @@ Dataverse for processing (rather than processing locally within Power Apps).
 5.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
 6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions aren't supported on Views.  
 7.  FirstN isn't supported.
-8.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
+8.  **In** is subject to the 15 table query limit of Dataverse. 
+9.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 
 ## Call Dataverse actions directly in Power Fx
