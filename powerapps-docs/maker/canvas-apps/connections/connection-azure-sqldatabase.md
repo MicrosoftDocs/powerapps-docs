@@ -66,7 +66,7 @@ Enable this option **only if**:
 2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons you should bring in less than 2,000 records.
 
 > [!IMPORTANT]
-> The schema of the return values of the stored procedure should be **static**. Meaning that it does not change from call to call. For example, if you call a stored procedure and it returns two tables then it should **always** return two tables. You can work with either typed or untyped results. But, the structure of the results need to be the same from call to call. If the schema of the results are **dynamic** then you should not use it with Power Apps. For example if you call the stored procedure and it sometimes returns one table and sometimes returns two tables then it will not work correctly in Power Apps. Power Apps requires a static schema for this call.
+> The schema of the return values of the stored procedure should be **static**. Meaning that it doesn't change from call to call. For example, if you call a stored procedure and it returns two tables, then it should **always** return two tables. You can work with either typed or untyped results. The structure of the results need to be the same from call to call. If the schema of the results are **dynamic** then you shouldn't use it with Power Apps. For example, if you call the stored procedure and it sometimes returns one table and sometimes returns two tables then it won't work in Power Apps. Power Apps requires a static schema for the call.
 
 ### SQL namespace pre-pended to stored procedure name
 The SQL Server namespace name that the stored procedure is stored in is pre-pended to the name of the stored procedure that is created for it in Power Apps.  For example, all stored procedures in the **'DBO'** SQL Server namespace will have the **'dbo'** at the start of the name.
@@ -80,7 +80,7 @@ When you add a stored procedure, you might see more than one data source in your
 
 ### Calling a stored procedure
 
-To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. Note also that when Power Apps brings the stored procedure in, it concatenates the namespace and the procedure name. So, 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
+To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. When Power Apps brings the stored procedure in, it concatenates the namespace and the procedure name, and 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
 
 Arguments are passed as a Power Apps record with named value pairs:
 
@@ -119,7 +119,7 @@ Additional tables can be accessed via their name (e.g., Table1, Table2, Table3, 
 ### Untyped results 
 Some complicated stored procedures return an untyped result. These results are not accessible with 'ResultSets' or 'OutputParameters'. However, you can access the data using the following pattern. 
 
-In this example, we first pull the results into a variable named "MyUntypedObject". Then we pull 'Table1' from that variable and put it into a variable named 'table1'. (This step is not strictly necessary. It is useful however to put all the results in a variable at a point in time and then pull out the parts you need.) Then, we iterate through table1 and extract the JSON elements in named value pairs. Be sure to match the names with the names that are returned in the JSON payload. To validate, open a Power Apps monitor and look at the body section the data node for a record.
+In this example, we first pull the results into a variable named "MyUntypedObject". Then we pull 'Table1' from that variable and put it into a variable named 'table1'. This step isn't strictly necessary. It is useful however to put all the results in a variable at a point in time and then pull out the parts you need. Then, we iterate through table1 and extract the JSON elements in named value pairs. Be sure to match the names with the names that are returned in the JSON payload. To validate, open a Power Apps monitor and look at the body section the data node for a record.
 
 ```powerapps-dot
 Set(
