@@ -43,9 +43,9 @@ Depending on which Power Apps interface you're using, reference the [new look](.
 
 ## Call stored procedures directly in Power Fx (preview)
 
-You can directly call SQL Server stored procedures from Power Fx by turning on the SQL Server stored procedure preview switch.
+You can now directly call SQL Server stored procedures from Power Fx. By default, this **new** switch should be on. If not, you can turn it on.
 
-1. Go to **Settings** > **Upcoming features** > **Preview**.
+1. Go to **Settings** > **Updates** > **New**.
 1. Search for **stored procedures**.
 1. Set the toggle to **On** for **SQL Server stored procedures**.
 2. Save and reopen the app.
