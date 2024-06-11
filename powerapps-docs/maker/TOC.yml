@@ -1997,6 +1997,8 @@
         href: ./data-platform/define-query-hierarchical-data.md
       - name: How to configure connection roles
         href: ./data-platform/configure-connection-roles.md
+  - name: Work with copilot
+    href: ./data-platform/data-platform-copilot.md 
   - name: Work with columns
     href: ./data-platform/fields-overview.md
     items:
