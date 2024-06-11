@@ -45,7 +45,8 @@ Filter, sort, and search galleries with Copilot provides five key benefits:
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is designed for galleries that use SharePoint as their sole data source. More data sources will be added to have this capability in the future. SharePoint effectively only supports filter, sort, and search. When this feature is extended to other data sources, this feature will still only support filter, sort, and search.
+> - This feature is designed for galleries that use SharePoint as their sole data source. More data sources will be added to have this capability in the future. SharePoint effectively only supports filter, sort, and search. When this feature is extended to other data sources, this feature will still only support filter, sort, and search. 
+> - Filters, Sorts, and Searches are restricted to actions that can be run on the server - all actions are delegable. For a complete list of delegable actions for SharePoint see [Power Apps delegable functions and operations for SharePoint](/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint).
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
 ## Use this feature
