@@ -1,7 +1,7 @@
 ---
 title: "System Job (AsyncOperation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the System Job (AsyncOperation)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -398,6 +398,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |102|AsyncArchive Async Operation||
 |103|Cancel Async Operations (System)||
 |104|Process Table For RecycleBin||
+|105|Cascade Assign All Async Operation||
+|187|Async Restore Job||
 |201|Provision language for user||
 |202|Export Solution Async Operation||
 |203|Import Solution Async Operation||
@@ -589,7 +591,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,activitymimeattachment,activitypointer,adx_externalidentity,adx_invitation,adx_inviteredemption,adx_portalcomment,adx_setting,adx_webformsession,aiplugin,aipluginexternalschema,aipluginexternalschemaproperty,aiplugininstance,aipluginoperation,aipluginoperationparameter,aipluginusersetting,annotation,annualfiscalcalendar,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,attributeimageconfig,attributemap,attributemaskingrule,bot,botcomponent,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,businessunit,businessunitnewsarticle,calendar,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,copilotexamplequestion,credential,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,deleteditemreference,deploymentorchestration,desktopflowbinary,desktopflowmodule,displaystring,dvfilesearch,dvfilesearchattribute,dvfilesearchentity,dvtablesearch,dvtablesearchattribute,dvtablesearchentity,email,emailserverprofile,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entitymap,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,fixedmonthlyfiscalcalendar,flowcapacityassignment,flowevent,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,goal,goalrollupquery,holidaywrapper,import,importdata,importfile,importlog,importmap,indexattributes,interactionforemail,internalcatalogassignment,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,mainfewshot,makerfewshot,managedidentity,maskingrule,metadataforarchival,metric,mobileofflineprofileextension,monthlyfiscalcalendar,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowconnectionreference,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_dmssyncrequest,msdyn_dmssyncstatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_modulerundetail,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organization,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,pdfsetting,phonecall,pluginpackage,position,post,postfollow,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,powerpagecomponent,powerpagesite,powerpagesitelanguage,powerpagesitepublished,privilege,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,quarterlyfiscalcalendar,queue,queueitem,reconciliationentityinfo,reconciliationentitystepinfo,reconciliationinfo,recordfilter,recurringappointmentmaster,recyclebinconfig,relationshipattribute,relationshiprole,relationshiprolemap,report,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,role,roleeditorlayout,rollupfield,routingrule,routingruleitem,savedquery,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,semiannualfiscalcalendar,serviceplan,serviceplancustomcontrol,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,sharepointdocumentlocation,sharepointsite,similarityrule,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagedmetadataasyncoperation,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemform,systemuser,systemuserauthorizationchangetracker,task,tdsmetadata,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,userform,usermapping,usermobileofflineprofilemembership,userquery,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
+|Targets|account,activityfileattachment,activitymimeattachment,activitypointer,adx_externalidentity,adx_invitation,adx_inviteredemption,adx_portalcomment,adx_setting,adx_webformsession,aicopilot,aiplugin,aipluginauth,aipluginconversationstarter,aipluginconversationstartermapping,aipluginexternalschema,aipluginexternalschemaproperty,aiplugingovernance,aiplugingovernanceext,aiplugininstance,aipluginoperation,aipluginoperationparameter,aipluginoperationresponsetemplate,aiplugintitle,aipluginusersetting,annotation,annualfiscalcalendar,appaction,appactionmigration,appactionrule,appelement,application,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,attributeimageconfig,attributemap,attributemaskingrule,bot,botcomponent,botcomponentcollection,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,businessunit,businessunitnewsarticle,calendar,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,copilotexamplequestion,copilotglossaryterm,copilotsynonyms,credential,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,deleteditemreference,desktopflowbinary,desktopflowmodule,displaystring,dvfilesearch,dvfilesearchattribute,dvfilesearchentity,dvtablesearch,dvtablesearchattribute,dvtablesearchentity,email,emailserverprofile,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entitymap,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,externalparty,externalpartyitem,fabricaiskill,fax,featurecontrolsetting,fixedmonthlyfiscalcalendar,flowcapacityassignment,flowcredentialapplication,flowevent,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,goal,goalrollupquery,holidaywrapper,import,importdata,importfile,importlog,importmap,indexattributes,interactionforemail,internalcatalogassignment,isvconfig,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,mainfewshot,makerfewshot,managedidentity,maskingrule,metadataforarchival,metric,mobileofflineprofileextension,monthlyfiscalcalendar,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowconnectionreference,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_dmssyncrequest,msdyn_dmssyncstatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeassetconfiguration,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_modulerundetail,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_salesforcestructuredobject,msdyn_salesforcestructuredqnaconfig,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organization,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,packagehistory,pdfsetting,phonecall,plannerbusinessscenario,plannersyncaction,pluginpackage,position,post,postfollow,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,powerpagecomponent,powerpagesite,powerpagesitelanguage,powerpagesitepublished,powerpagesscanreport,privilege,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,quarterlyfiscalcalendar,queue,queueitem,reconciliationentityinfo,reconciliationentitystepinfo,reconciliationinfo,recordfilter,recurringappointmentmaster,recyclebinconfig,relationshipattribute,relationshiprole,relationshiprolemap,report,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,role,roleeditorlayout,rollupfield,routingrule,routingruleitem,savedquery,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,semiannualfiscalcalendar,serviceplan,serviceplancustomcontrol,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,sharepointdocumentlocation,sharepointsite,sideloadedaiplugin,similarityrule,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagedmetadataasyncoperation,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemform,systemuser,systemuserauthorizationchangetracker,task,tdsmetadata,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,userform,usermapping,usermobileofflineprofilemembership,userquery,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
 |Type|Lookup|
 
 
@@ -1615,6 +1617,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [solutioncomponentconfiguration_AsyncOperations](#BKMK_solutioncomponentconfiguration_AsyncOperations)
 - [solutioncomponentrelationshipconfiguration_AsyncOperations](#BKMK_solutioncomponentrelationshipconfiguration_AsyncOperations)
 - [package_AsyncOperations](#BKMK_package_AsyncOperations)
+- [packagehistory_AsyncOperations](#BKMK_packagehistory_AsyncOperations)
 - [stagesolutionupload_AsyncOperations](#BKMK_stagesolutionupload_AsyncOperations)
 - [exportsolutionupload_AsyncOperations](#BKMK_exportsolutionupload_AsyncOperations)
 - [featurecontrolsetting_AsyncOperations](#BKMK_featurecontrolsetting_AsyncOperations)
@@ -1657,6 +1660,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [entityrecordfilter_AsyncOperations](#BKMK_entityrecordfilter_AsyncOperations)
 - [recordfilter_AsyncOperations](#BKMK_recordfilter_AsyncOperations)
 - [delegatedauthorization_AsyncOperations](#BKMK_delegatedauthorization_AsyncOperations)
+- [application_AsyncOperations](#BKMK_application_AsyncOperations)
 - [serviceplan_AsyncOperations](#BKMK_serviceplan_AsyncOperations)
 - [serviceplanmapping_AsyncOperations](#BKMK_serviceplanmapping_AsyncOperations)
 - [applicationuser_AsyncOperations](#BKMK_applicationuser_AsyncOperations)
@@ -1667,6 +1671,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [credential_AsyncOperations](#BKMK_credential_AsyncOperations)
 - [desktopflowmodule_AsyncOperations](#BKMK_desktopflowmodule_AsyncOperations)
 - [flowcapacityassignment_AsyncOperations](#BKMK_flowcapacityassignment_AsyncOperations)
+- [flowcredentialapplication_AsyncOperations](#BKMK_flowcredentialapplication_AsyncOperations)
 - [flowevent_AsyncOperations](#BKMK_flowevent_AsyncOperations)
 - [flowmachine_AsyncOperations](#BKMK_flowmachine_AsyncOperations)
 - [flowmachinegroup_AsyncOperations](#BKMK_flowmachinegroup_AsyncOperations)
@@ -1686,6 +1691,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [dvtablesearch_AsyncOperations](#BKMK_dvtablesearch_AsyncOperations)
 - [dvtablesearchattribute_AsyncOperations](#BKMK_dvtablesearchattribute_AsyncOperations)
 - [dvtablesearchentity_AsyncOperations](#BKMK_dvtablesearchentity_AsyncOperations)
+- [aicopilot_AsyncOperations](#BKMK_aicopilot_AsyncOperations)
+- [aipluginauth_AsyncOperations](#BKMK_aipluginauth_AsyncOperations)
+- [aipluginconversationstarter_AsyncOperations](#BKMK_aipluginconversationstarter_AsyncOperations)
+- [aipluginconversationstartermapping_AsyncOperations](#BKMK_aipluginconversationstartermapping_AsyncOperations)
+- [aiplugingovernance_AsyncOperations](#BKMK_aiplugingovernance_AsyncOperations)
+- [aiplugingovernanceext_AsyncOperations](#BKMK_aiplugingovernanceext_AsyncOperations)
+- [aipluginoperationresponsetemplate_AsyncOperations](#BKMK_aipluginoperationresponsetemplate_AsyncOperations)
+- [aiplugintitle_AsyncOperations](#BKMK_aiplugintitle_AsyncOperations)
+- [sideloadedaiplugin_AsyncOperations](#BKMK_sideloadedaiplugin_AsyncOperations)
 - [aiplugin_AsyncOperations](#BKMK_aiplugin_AsyncOperations)
 - [aipluginexternalschema_AsyncOperations](#BKMK_aipluginexternalschema_AsyncOperations)
 - [aipluginexternalschemaproperty_AsyncOperations](#BKMK_aipluginexternalschemaproperty_AsyncOperations)
@@ -1693,12 +1707,44 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [aipluginoperation_AsyncOperations](#BKMK_aipluginoperation_AsyncOperations)
 - [aipluginoperationparameter_AsyncOperations](#BKMK_aipluginoperationparameter_AsyncOperations)
 - [aipluginusersetting_AsyncOperations](#BKMK_aipluginusersetting_AsyncOperations)
+- [msdyn_aiconfiguration_AsyncOperations](#BKMK_msdyn_aiconfiguration_AsyncOperations)
+- [msdyn_aievent_AsyncOperations](#BKMK_msdyn_aievent_AsyncOperations)
+- [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
+- [msdyn_aitemplate_AsyncOperations](#BKMK_msdyn_aitemplate_AsyncOperations)
+- [msdyn_aibfeedbackloop_AsyncOperations](#BKMK_msdyn_aibfeedbackloop_AsyncOperations)
+- [msdyn_aifptrainingdocument_AsyncOperations](#BKMK_msdyn_aifptrainingdocument_AsyncOperations)
+- [msdyn_aiodimage_AsyncOperations](#BKMK_msdyn_aiodimage_AsyncOperations)
+- [msdyn_aiodlabel_AsyncOperations](#BKMK_msdyn_aiodlabel_AsyncOperations)
+- [msdyn_aiodtrainingboundingbox_AsyncOperations](#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations)
+- [msdyn_aiodtrainingimage_AsyncOperations](#BKMK_msdyn_aiodtrainingimage_AsyncOperations)
+- [msdyn_aibdataset_AsyncOperations](#BKMK_msdyn_aibdataset_AsyncOperations)
+- [msdyn_aibdatasetfile_AsyncOperations](#BKMK_msdyn_aibdatasetfile_AsyncOperations)
+- [msdyn_aibdatasetrecord_AsyncOperations](#BKMK_msdyn_aibdatasetrecord_AsyncOperations)
+- [msdyn_aibdatasetscontainer_AsyncOperations](#BKMK_msdyn_aibdatasetscontainer_AsyncOperations)
+- [msdyn_aibfile_AsyncOperations](#BKMK_msdyn_aibfile_AsyncOperations)
+- [msdyn_aibfileattacheddata_AsyncOperations](#BKMK_msdyn_aibfileattacheddata_AsyncOperations)
 - [msdyn_helppage_AsyncOperations](#BKMK_msdyn_helppage_AsyncOperations)
 - [msdyn_tour_AsyncOperations](#BKMK_msdyn_tour_AsyncOperations)
 - [msdynce_botcontent_AsyncOperations](#BKMK_msdynce_botcontent_AsyncOperations)
 - [conversationtranscript_AsyncOperations](#BKMK_conversationtranscript_AsyncOperations)
 - [bot_AsyncOperations](#BKMK_bot_AsyncOperations)
 - [botcomponent_AsyncOperations](#BKMK_botcomponent_AsyncOperations)
+- [botcomponentcollection_AsyncOperations](#BKMK_botcomponentcollection_AsyncOperations)
+- [fabricaiskill_AsyncOperations](#BKMK_fabricaiskill_AsyncOperations)
+- [msdyn_appinsightsmetadata_AsyncOperations](#BKMK_msdyn_appinsightsmetadata_AsyncOperations)
+- [msdyn_dataflowconnectionreference_AsyncOperations](#BKMK_msdyn_dataflowconnectionreference_AsyncOperations)
+- [msdyn_schedule_AsyncOperations](#BKMK_msdyn_schedule_AsyncOperations)
+- [msdyn_dataflowtemplate_AsyncOperations](#BKMK_msdyn_dataflowtemplate_AsyncOperations)
+- [msdyn_dataflow_datalakefolder_AsyncOperations](#BKMK_msdyn_dataflow_datalakefolder_AsyncOperations)
+- [msdyn_dmsrequest_AsyncOperations](#BKMK_msdyn_dmsrequest_AsyncOperations)
+- [msdyn_dmsrequeststatus_AsyncOperations](#BKMK_msdyn_dmsrequeststatus_AsyncOperations)
+- [msdyn_dmssyncrequest_AsyncOperations](#BKMK_msdyn_dmssyncrequest_AsyncOperations)
+- [msdyn_dmssyncstatus_AsyncOperations](#BKMK_msdyn_dmssyncstatus_AsyncOperations)
+- [msdyn_knowledgeassetconfiguration_AsyncOperations](#BKMK_msdyn_knowledgeassetconfiguration_AsyncOperations)
+- [msdyn_modulerundetail_AsyncOperations](#BKMK_msdyn_modulerundetail_AsyncOperations)
+- [msdyn_salesforcestructuredobject_AsyncOperations](#BKMK_msdyn_salesforcestructuredobject_AsyncOperations)
+- [msdyn_salesforcestructuredqnaconfig_AsyncOperations](#BKMK_msdyn_salesforcestructuredqnaconfig_AsyncOperations)
+- [msdyn_workflowactionstatus_AsyncOperations](#BKMK_msdyn_workflowactionstatus_AsyncOperations)
 - [Territory_AsyncOperations](#BKMK_Territory_AsyncOperations)
 - [activityfileattachment_AsyncOperations](#BKMK_activityfileattachment_AsyncOperations)
 - [chat_AsyncOperations](#BKMK_chat_AsyncOperations)
@@ -1722,11 +1768,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgesearchfilter_AsyncOperations](#BKMK_msdyn_knowledgesearchfilter_AsyncOperations)
 - [fxexpression_AsyncOperations](#BKMK_fxexpression_AsyncOperations)
 - [powerfxrule_AsyncOperations](#BKMK_powerfxrule_AsyncOperations)
+- [plannerbusinessscenario_AsyncOperations](#BKMK_plannerbusinessscenario_AsyncOperations)
+- [plannersyncaction_AsyncOperations](#BKMK_plannersyncaction_AsyncOperations)
 - [msgraphresourcetosubscription_AsyncOperations](#BKMK_msgraphresourcetosubscription_AsyncOperations)
 - [virtualentitymetadata_AsyncOperations](#BKMK_virtualentitymetadata_AsyncOperations)
 - [mobileofflineprofileextension_AsyncOperations](#BKMK_mobileofflineprofileextension_AsyncOperations)
-- [teammobileofflineprofilemembership_AsyncOperations](#BKMK_teammobileofflineprofilemembership_AsyncOperations)
-- [usermobileofflineprofilemembership_AsyncOperations](#BKMK_usermobileofflineprofilemembership_AsyncOperations)
 - [organizationdatasyncsubscription_AsyncOperations](#BKMK_organizationdatasyncsubscription_AsyncOperations)
 - [organizationdatasyncsubscriptionentity_AsyncOperations](#BKMK_organizationdatasyncsubscriptionentity_AsyncOperations)
 - [organizationdatasyncsubscriptionfnotable_AsyncOperations](#BKMK_organizationdatasyncsubscriptionfnotable_AsyncOperations)
@@ -1737,21 +1783,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [retentionfailuredetail_AsyncOperations](#BKMK_retentionfailuredetail_AsyncOperations)
 - [retentionoperation_AsyncOperations](#BKMK_retentionoperation_AsyncOperations)
 - [retentionoperationdetail_AsyncOperations](#BKMK_retentionoperationdetail_AsyncOperations)
-- [msdyn_appinsightsmetadata_AsyncOperations](#BKMK_msdyn_appinsightsmetadata_AsyncOperations)
-- [msdyn_dataflowconnectionreference_AsyncOperations](#BKMK_msdyn_dataflowconnectionreference_AsyncOperations)
-- [msdyn_schedule_AsyncOperations](#BKMK_msdyn_schedule_AsyncOperations)
-- [msdyn_dataflowtemplate_AsyncOperations](#BKMK_msdyn_dataflowtemplate_AsyncOperations)
-- [msdyn_dataflow_datalakefolder_AsyncOperations](#BKMK_msdyn_dataflow_datalakefolder_AsyncOperations)
-- [msdyn_dmsrequest_AsyncOperations](#BKMK_msdyn_dmsrequest_AsyncOperations)
-- [msdyn_dmsrequeststatus_AsyncOperations](#BKMK_msdyn_dmsrequeststatus_AsyncOperations)
-- [msdyn_modulerundetail_AsyncOperations](#BKMK_msdyn_modulerundetail_AsyncOperations)
-- [msdyn_workflowactionstatus_AsyncOperations](#BKMK_msdyn_workflowactionstatus_AsyncOperations)
 - [userrating_AsyncOperations](#BKMK_userrating_AsyncOperations)
 - [msdyn_mobileapp_AsyncOperations](#BKMK_msdyn_mobileapp_AsyncOperations)
 - [msdyn_insightsstorevirtualentity_AsyncOperations](#BKMK_msdyn_insightsstorevirtualentity_AsyncOperations)
 - [roleeditorlayout_AsyncOperations](#BKMK_roleeditorlayout_AsyncOperations)
 - [attributemaskingrule_AsyncOperations](#BKMK_attributemaskingrule_AsyncOperations)
 - [maskingrule_AsyncOperations](#BKMK_maskingrule_AsyncOperations)
+- [recyclebinconfig_AsyncOperations](#BKMK_recyclebinconfig_AsyncOperations)
 - [appaction_AsyncOperations](#BKMK_appaction_AsyncOperations)
 - [appactionmigration_AsyncOperations](#BKMK_appactionmigration_AsyncOperations)
 - [appactionrule_AsyncOperations](#BKMK_appactionrule_AsyncOperations)
@@ -1760,22 +1798,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_richtextfile_AsyncOperations](#BKMK_msdyn_richtextfile_AsyncOperations)
 - [msdyn_customcontrolextendedsettings_AsyncOperations](#BKMK_msdyn_customcontrolextendedsettings_AsyncOperations)
 - [msdyn_virtualtablecolumncandidate_AsyncOperations](#BKMK_msdyn_virtualtablecolumncandidate_AsyncOperations)
-- [msdyn_aiconfiguration_AsyncOperations](#BKMK_msdyn_aiconfiguration_AsyncOperations)
-- [msdyn_aievent_AsyncOperations](#BKMK_msdyn_aievent_AsyncOperations)
-- [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
-- [msdyn_aitemplate_AsyncOperations](#BKMK_msdyn_aitemplate_AsyncOperations)
-- [msdyn_aibfeedbackloop_AsyncOperations](#BKMK_msdyn_aibfeedbackloop_AsyncOperations)
-- [msdyn_aifptrainingdocument_AsyncOperations](#BKMK_msdyn_aifptrainingdocument_AsyncOperations)
-- [msdyn_aiodimage_AsyncOperations](#BKMK_msdyn_aiodimage_AsyncOperations)
-- [msdyn_aiodlabel_AsyncOperations](#BKMK_msdyn_aiodlabel_AsyncOperations)
-- [msdyn_aiodtrainingboundingbox_AsyncOperations](#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations)
-- [msdyn_aiodtrainingimage_AsyncOperations](#BKMK_msdyn_aiodtrainingimage_AsyncOperations)
-- [msdyn_aibdataset_AsyncOperations](#BKMK_msdyn_aibdataset_AsyncOperations)
-- [msdyn_aibdatasetfile_AsyncOperations](#BKMK_msdyn_aibdatasetfile_AsyncOperations)
-- [msdyn_aibdatasetrecord_AsyncOperations](#BKMK_msdyn_aibdatasetrecord_AsyncOperations)
-- [msdyn_aibdatasetscontainer_AsyncOperations](#BKMK_msdyn_aibdatasetscontainer_AsyncOperations)
-- [msdyn_aibfile_AsyncOperations](#BKMK_msdyn_aibfile_AsyncOperations)
-- [msdyn_aibfileattacheddata_AsyncOperations](#BKMK_msdyn_aibfileattacheddata_AsyncOperations)
 - [msdyn_pmanalysishistory_AsyncOperations](#BKMK_msdyn_pmanalysishistory_AsyncOperations)
 - [msdyn_pmbusinessruleautomationconfig_AsyncOperations](#BKMK_msdyn_pmbusinessruleautomationconfig_AsyncOperations)
 - [msdyn_pmcalendar_AsyncOperations](#BKMK_msdyn_pmcalendar_AsyncOperations)
@@ -1808,6 +1830,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [searchcustomanalyzer_AsyncOperations](#BKMK_searchcustomanalyzer_AsyncOperations)
 - [searchrelationshipsettings_AsyncOperations](#BKMK_searchrelationshipsettings_AsyncOperations)
 - [copilotexamplequestion_AsyncOperations](#BKMK_copilotexamplequestion_AsyncOperations)
+- [copilotglossaryterm_AsyncOperations](#BKMK_copilotglossaryterm_AsyncOperations)
+- [copilotsynonyms_AsyncOperations](#BKMK_copilotsynonyms_AsyncOperations)
 - [powerpagecomponent_AsyncOperations](#BKMK_powerpagecomponent_AsyncOperations)
 - [powerpagesite_AsyncOperations](#BKMK_powerpagesite_AsyncOperations)
 - [powerpagesitelanguage_AsyncOperations](#BKMK_powerpagesitelanguage_AsyncOperations)
@@ -1818,12 +1842,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [adx_portalcomment_AsyncOperations](#BKMK_adx_portalcomment_AsyncOperations)
 - [adx_setting_AsyncOperations](#BKMK_adx_setting_AsyncOperations)
 - [adx_webformsession_AsyncOperations](#BKMK_adx_webformsession_AsyncOperations)
+- [powerpagesscanreport_AsyncOperations](#BKMK_powerpagesscanreport_AsyncOperations)
 - [mspcat_catalogsubmissionfiles_AsyncOperations](#BKMK_mspcat_catalogsubmissionfiles_AsyncOperations)
 - [mspcat_packagestore_AsyncOperations](#BKMK_mspcat_packagestore_AsyncOperations)
-- [msdyn_dmssyncrequest_AsyncOperations](#BKMK_msdyn_dmssyncrequest_AsyncOperations)
-- [msdyn_dmssyncstatus_AsyncOperations](#BKMK_msdyn_dmssyncstatus_AsyncOperations)
-- [deploymentorchestration_AsyncOperations](#BKMK_deploymentorchestration_AsyncOperations)
-- [recyclebinconfig_AsyncOperations](#BKMK_recyclebinconfig_AsyncOperations)
 
 
 ### <a name="BKMK_theme_AsyncOperations"></a> theme_AsyncOperations
@@ -2156,6 +2177,12 @@ See the [solutioncomponentrelationshipconfiguration_AsyncOperations](solutioncom
 
 See the [package_AsyncOperations](package.md#BKMK_package_AsyncOperations) one-to-many relationship for the [package](package.md) table/entity.
 
+### <a name="BKMK_packagehistory_AsyncOperations"></a> packagehistory_AsyncOperations
+
+**Added by**: msdyn_SolutionPackageMapping Solution
+
+See the [packagehistory_AsyncOperations](packagehistory.md#BKMK_packagehistory_AsyncOperations) one-to-many relationship for the [packagehistory](packagehistory.md) table/entity.
+
 ### <a name="BKMK_stagesolutionupload_AsyncOperations"></a> stagesolutionupload_AsyncOperations
 
 **Added by**: StageSolutionUpload Solution
@@ -2368,19 +2395,19 @@ See the [synapselinkschedule_AsyncOperations](synapselinkschedule.md#BKMK_synaps
 
 ### <a name="BKMK_msdyn_dataflow_AsyncOperations"></a> msdyn_dataflow_AsyncOperations
 
-**Added by**: Dataflow Solution Solution
+**Added by**: Power Platform Dataflows Solution
 
 See the [msdyn_dataflow_AsyncOperations](msdyn_dataflow.md#BKMK_msdyn_dataflow_AsyncOperations) one-to-many relationship for the [msdyn_dataflow](msdyn_dataflow.md) table/entity.
 
 ### <a name="BKMK_msdyn_dataflowrefreshhistory_AsyncOperations"></a> msdyn_dataflowrefreshhistory_AsyncOperations
 
-**Added by**: Dataflow Solution Solution
+**Added by**: Power Platform Dataflows Solution
 
 See the [msdyn_dataflowrefreshhistory_AsyncOperations](msdyn_dataflowrefreshhistory.md#BKMK_msdyn_dataflowrefreshhistory_AsyncOperations) one-to-many relationship for the [msdyn_dataflowrefreshhistory](msdyn_dataflowrefreshhistory.md) table/entity.
 
 ### <a name="BKMK_msdyn_entityrefreshhistory_AsyncOperations"></a> msdyn_entityrefreshhistory_AsyncOperations
 
-**Added by**: Dataflow Solution Solution
+**Added by**: Power Platform Dataflows Solution
 
 See the [msdyn_entityrefreshhistory_AsyncOperations](msdyn_entityrefreshhistory.md#BKMK_msdyn_entityrefreshhistory_AsyncOperations) one-to-many relationship for the [msdyn_entityrefreshhistory](msdyn_entityrefreshhistory.md) table/entity.
 
@@ -2407,6 +2434,12 @@ See the [recordfilter_AsyncOperations](recordfilter.md#BKMK_recordfilter_AsyncOp
 **Added by**: Delegated Authorization Solution
 
 See the [delegatedauthorization_AsyncOperations](delegatedauthorization.md#BKMK_delegatedauthorization_AsyncOperations) one-to-many relationship for the [delegatedauthorization](delegatedauthorization.md) table/entity.
+
+### <a name="BKMK_application_AsyncOperations"></a> application_AsyncOperations
+
+**Added by**: RoleBasedAccessControl Solution
+
+See the [application_AsyncOperations](application.md#BKMK_application_AsyncOperations) one-to-many relationship for the [application](application.md) table/entity.
 
 ### <a name="BKMK_serviceplan_AsyncOperations"></a> serviceplan_AsyncOperations
 
@@ -2467,6 +2500,12 @@ See the [desktopflowmodule_AsyncOperations](desktopflowmodule.md#BKMK_desktopflo
 **Added by**: Power Automate Core Components Solution
 
 See the [flowcapacityassignment_AsyncOperations](flowcapacityassignment.md#BKMK_flowcapacityassignment_AsyncOperations) one-to-many relationship for the [flowcapacityassignment](flowcapacityassignment.md) table/entity.
+
+### <a name="BKMK_flowcredentialapplication_AsyncOperations"></a> flowcredentialapplication_AsyncOperations
+
+**Added by**: Power Automate Core Components Solution
+
+See the [flowcredentialapplication_AsyncOperations](flowcredentialapplication.md#BKMK_flowcredentialapplication_AsyncOperations) one-to-many relationship for the [flowcredentialapplication](flowcredentialapplication.md) table/entity.
 
 ### <a name="BKMK_flowevent_AsyncOperations"></a> flowevent_AsyncOperations
 
@@ -2582,6 +2621,60 @@ See the [dvtablesearchattribute_AsyncOperations](dvtablesearchattribute.md#BKMK_
 
 See the [dvtablesearchentity_AsyncOperations](dvtablesearchentity.md#BKMK_dvtablesearchentity_AsyncOperations) one-to-many relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
 
+### <a name="BKMK_aicopilot_AsyncOperations"></a> aicopilot_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aicopilot_AsyncOperations](aicopilot.md#BKMK_aicopilot_AsyncOperations) one-to-many relationship for the [aicopilot](aicopilot.md) table/entity.
+
+### <a name="BKMK_aipluginauth_AsyncOperations"></a> aipluginauth_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginauth_AsyncOperations](aipluginauth.md#BKMK_aipluginauth_AsyncOperations) one-to-many relationship for the [aipluginauth](aipluginauth.md) table/entity.
+
+### <a name="BKMK_aipluginconversationstarter_AsyncOperations"></a> aipluginconversationstarter_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginconversationstarter_AsyncOperations](aipluginconversationstarter.md#BKMK_aipluginconversationstarter_AsyncOperations) one-to-many relationship for the [aipluginconversationstarter](aipluginconversationstarter.md) table/entity.
+
+### <a name="BKMK_aipluginconversationstartermapping_AsyncOperations"></a> aipluginconversationstartermapping_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginconversationstartermapping_AsyncOperations](aipluginconversationstartermapping.md#BKMK_aipluginconversationstartermapping_AsyncOperations) one-to-many relationship for the [aipluginconversationstartermapping](aipluginconversationstartermapping.md) table/entity.
+
+### <a name="BKMK_aiplugingovernance_AsyncOperations"></a> aiplugingovernance_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugingovernance_AsyncOperations](aiplugingovernance.md#BKMK_aiplugingovernance_AsyncOperations) one-to-many relationship for the [aiplugingovernance](aiplugingovernance.md) table/entity.
+
+### <a name="BKMK_aiplugingovernanceext_AsyncOperations"></a> aiplugingovernanceext_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugingovernanceext_AsyncOperations](aiplugingovernanceext.md#BKMK_aiplugingovernanceext_AsyncOperations) one-to-many relationship for the [aiplugingovernanceext](aiplugingovernanceext.md) table/entity.
+
+### <a name="BKMK_aipluginoperationresponsetemplate_AsyncOperations"></a> aipluginoperationresponsetemplate_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginoperationresponsetemplate_AsyncOperations](aipluginoperationresponsetemplate.md#BKMK_aipluginoperationresponsetemplate_AsyncOperations) one-to-many relationship for the [aipluginoperationresponsetemplate](aipluginoperationresponsetemplate.md) table/entity.
+
+### <a name="BKMK_aiplugintitle_AsyncOperations"></a> aiplugintitle_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugintitle_AsyncOperations](aiplugintitle.md#BKMK_aiplugintitle_AsyncOperations) one-to-many relationship for the [aiplugintitle](aiplugintitle.md) table/entity.
+
+### <a name="BKMK_sideloadedaiplugin_AsyncOperations"></a> sideloadedaiplugin_AsyncOperations
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [sideloadedaiplugin_AsyncOperations](sideloadedaiplugin.md#BKMK_sideloadedaiplugin_AsyncOperations) one-to-many relationship for the [sideloadedaiplugin](sideloadedaiplugin.md) table/entity.
+
 ### <a name="BKMK_aiplugin_AsyncOperations"></a> aiplugin_AsyncOperations
 
 **Added by**: AIPlatformExtensionsCore Solution Solution
@@ -2624,6 +2717,102 @@ See the [aipluginoperationparameter_AsyncOperations](aipluginoperationparameter.
 
 See the [aipluginusersetting_AsyncOperations](aipluginusersetting.md#BKMK_aipluginusersetting_AsyncOperations) one-to-many relationship for the [aipluginusersetting](aipluginusersetting.md) table/entity.
 
+### <a name="BKMK_msdyn_aiconfiguration_AsyncOperations"></a> msdyn_aiconfiguration_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See the [msdyn_aiconfiguration_AsyncOperations](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_AsyncOperations) one-to-many relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
+
+### <a name="BKMK_msdyn_aievent_AsyncOperations"></a> msdyn_aievent_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See the [msdyn_aievent_AsyncOperations](msdyn_aievent.md#BKMK_msdyn_aievent_AsyncOperations) one-to-many relationship for the [msdyn_aievent](msdyn_aievent.md) table/entity.
+
+### <a name="BKMK_msdyn_aimodel_AsyncOperations"></a> msdyn_aimodel_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See the [msdyn_aimodel_AsyncOperations](msdyn_aimodel.md#BKMK_msdyn_aimodel_AsyncOperations) one-to-many relationship for the [msdyn_aimodel](msdyn_aimodel.md) table/entity.
+
+### <a name="BKMK_msdyn_aitemplate_AsyncOperations"></a> msdyn_aitemplate_AsyncOperations
+
+**Added by**: AISolution Solution
+
+See the [msdyn_aitemplate_AsyncOperations](msdyn_aitemplate.md#BKMK_msdyn_aitemplate_AsyncOperations) one-to-many relationship for the [msdyn_aitemplate](msdyn_aitemplate.md) table/entity.
+
+### <a name="BKMK_msdyn_aibfeedbackloop_AsyncOperations"></a> msdyn_aibfeedbackloop_AsyncOperations
+
+**Added by**: AISolutionFullAdditions Solution
+
+See the [msdyn_aibfeedbackloop_AsyncOperations](msdyn_aibfeedbackloop.md#BKMK_msdyn_aibfeedbackloop_AsyncOperations) one-to-many relationship for the [msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md) table/entity.
+
+### <a name="BKMK_msdyn_aifptrainingdocument_AsyncOperations"></a> msdyn_aifptrainingdocument_AsyncOperations
+
+**Added by**: AI Solution deprecated templates Solution
+
+See the [msdyn_aifptrainingdocument_AsyncOperations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_AsyncOperations) one-to-many relationship for the [msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md) table/entity.
+
+### <a name="BKMK_msdyn_aiodimage_AsyncOperations"></a> msdyn_aiodimage_AsyncOperations
+
+**Added by**: AI Solution deprecated templates Solution
+
+See the [msdyn_aiodimage_AsyncOperations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_AsyncOperations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
+
+### <a name="BKMK_msdyn_aiodlabel_AsyncOperations"></a> msdyn_aiodlabel_AsyncOperations
+
+**Added by**: AI Solution deprecated templates Solution
+
+See the [msdyn_aiodlabel_AsyncOperations](msdyn_aiodlabel.md#BKMK_msdyn_aiodlabel_AsyncOperations) one-to-many relationship for the [msdyn_aiodlabel](msdyn_aiodlabel.md) table/entity.
+
+### <a name="BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations"></a> msdyn_aiodtrainingboundingbox_AsyncOperations
+
+**Added by**: AI Solution deprecated templates Solution
+
+See the [msdyn_aiodtrainingboundingbox_AsyncOperations](msdyn_aiodtrainingboundingbox.md#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations) one-to-many relationship for the [msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboundingbox.md) table/entity.
+
+### <a name="BKMK_msdyn_aiodtrainingimage_AsyncOperations"></a> msdyn_aiodtrainingimage_AsyncOperations
+
+**Added by**: AI Solution deprecated templates Solution
+
+See the [msdyn_aiodtrainingimage_AsyncOperations](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_AsyncOperations) one-to-many relationship for the [msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md) table/entity.
+
+### <a name="BKMK_msdyn_aibdataset_AsyncOperations"></a> msdyn_aibdataset_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibdataset_AsyncOperations](msdyn_aibdataset.md#BKMK_msdyn_aibdataset_AsyncOperations) one-to-many relationship for the [msdyn_aibdataset](msdyn_aibdataset.md) table/entity.
+
+### <a name="BKMK_msdyn_aibdatasetfile_AsyncOperations"></a> msdyn_aibdatasetfile_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibdatasetfile_AsyncOperations](msdyn_aibdatasetfile.md#BKMK_msdyn_aibdatasetfile_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetfile](msdyn_aibdatasetfile.md) table/entity.
+
+### <a name="BKMK_msdyn_aibdatasetrecord_AsyncOperations"></a> msdyn_aibdatasetrecord_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibdatasetrecord_AsyncOperations](msdyn_aibdatasetrecord.md#BKMK_msdyn_aibdatasetrecord_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md) table/entity.
+
+### <a name="BKMK_msdyn_aibdatasetscontainer_AsyncOperations"></a> msdyn_aibdatasetscontainer_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibdatasetscontainer_AsyncOperations](msdyn_aibdatasetscontainer.md#BKMK_msdyn_aibdatasetscontainer_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md) table/entity.
+
+### <a name="BKMK_msdyn_aibfile_AsyncOperations"></a> msdyn_aibfile_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibfile_AsyncOperations](msdyn_aibfile.md#BKMK_msdyn_aibfile_AsyncOperations) one-to-many relationship for the [msdyn_aibfile](msdyn_aibfile.md) table/entity.
+
+### <a name="BKMK_msdyn_aibfileattacheddata_AsyncOperations"></a> msdyn_aibfileattacheddata_AsyncOperations
+
+**Added by**: AI Solution default templates Solution
+
+See the [msdyn_aibfileattacheddata_AsyncOperations](msdyn_aibfileattacheddata.md#BKMK_msdyn_aibfileattacheddata_AsyncOperations) one-to-many relationship for the [msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md) table/entity.
+
 ### <a name="BKMK_msdyn_helppage_AsyncOperations"></a> msdyn_helppage_AsyncOperations
 
 **Added by**: Contextual Help Solution
@@ -2659,6 +2848,102 @@ See the [bot_AsyncOperations](bot.md#BKMK_bot_AsyncOperations) one-to-many relat
 **Added by**: Power Virtual Agents Solution
 
 See the [botcomponent_AsyncOperations](botcomponent.md#BKMK_botcomponent_AsyncOperations) one-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
+
+### <a name="BKMK_botcomponentcollection_AsyncOperations"></a> botcomponentcollection_AsyncOperations
+
+**Added by**: Power Virtual Agents Solution
+
+See the [botcomponentcollection_AsyncOperations](botcomponentcollection.md#BKMK_botcomponentcollection_AsyncOperations) one-to-many relationship for the [botcomponentcollection](botcomponentcollection.md) table/entity.
+
+### <a name="BKMK_fabricaiskill_AsyncOperations"></a> fabricaiskill_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [fabricaiskill_AsyncOperations](fabricaiskill.md#BKMK_fabricaiskill_AsyncOperations) one-to-many relationship for the [fabricaiskill](fabricaiskill.md) table/entity.
+
+### <a name="BKMK_msdyn_appinsightsmetadata_AsyncOperations"></a> msdyn_appinsightsmetadata_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_appinsightsmetadata_AsyncOperations](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_AsyncOperations) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
+
+### <a name="BKMK_msdyn_dataflowconnectionreference_AsyncOperations"></a> msdyn_dataflowconnectionreference_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflowconnectionreference_AsyncOperations](msdyn_dataflowconnectionreference.md#BKMK_msdyn_dataflowconnectionreference_AsyncOperations) one-to-many relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
+
+### <a name="BKMK_msdyn_schedule_AsyncOperations"></a> msdyn_schedule_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_schedule_AsyncOperations](msdyn_schedule.md#BKMK_msdyn_schedule_AsyncOperations) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
+
+### <a name="BKMK_msdyn_dataflowtemplate_AsyncOperations"></a> msdyn_dataflowtemplate_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflowtemplate_AsyncOperations](msdyn_dataflowtemplate.md#BKMK_msdyn_dataflowtemplate_AsyncOperations) one-to-many relationship for the [msdyn_dataflowtemplate](msdyn_dataflowtemplate.md) table/entity.
+
+### <a name="BKMK_msdyn_dataflow_datalakefolder_AsyncOperations"></a> msdyn_dataflow_datalakefolder_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflow_datalakefolder_AsyncOperations](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_AsyncOperations) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequest_AsyncOperations"></a> msdyn_dmsrequest_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequest_AsyncOperations](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_AsyncOperations) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequeststatus_AsyncOperations"></a> msdyn_dmsrequeststatus_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequeststatus_AsyncOperations](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_AsyncOperations) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
+
+### <a name="BKMK_msdyn_dmssyncrequest_AsyncOperations"></a> msdyn_dmssyncrequest_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmssyncrequest_AsyncOperations](msdyn_dmssyncrequest.md#BKMK_msdyn_dmssyncrequest_AsyncOperations) one-to-many relationship for the [msdyn_dmssyncrequest](msdyn_dmssyncrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmssyncstatus_AsyncOperations"></a> msdyn_dmssyncstatus_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmssyncstatus_AsyncOperations](msdyn_dmssyncstatus.md#BKMK_msdyn_dmssyncstatus_AsyncOperations) one-to-many relationship for the [msdyn_dmssyncstatus](msdyn_dmssyncstatus.md) table/entity.
+
+### <a name="BKMK_msdyn_knowledgeassetconfiguration_AsyncOperations"></a> msdyn_knowledgeassetconfiguration_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_knowledgeassetconfiguration_AsyncOperations](msdyn_knowledgeassetconfiguration.md#BKMK_msdyn_knowledgeassetconfiguration_AsyncOperations) one-to-many relationship for the [msdyn_knowledgeassetconfiguration](msdyn_knowledgeassetconfiguration.md) table/entity.
+
+### <a name="BKMK_msdyn_modulerundetail_AsyncOperations"></a> msdyn_modulerundetail_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_modulerundetail_AsyncOperations](msdyn_modulerundetail.md#BKMK_msdyn_modulerundetail_AsyncOperations) one-to-many relationship for the [msdyn_modulerundetail](msdyn_modulerundetail.md) table/entity.
+
+### <a name="BKMK_msdyn_salesforcestructuredobject_AsyncOperations"></a> msdyn_salesforcestructuredobject_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_salesforcestructuredobject_AsyncOperations](msdyn_salesforcestructuredobject.md#BKMK_msdyn_salesforcestructuredobject_AsyncOperations) one-to-many relationship for the [msdyn_salesforcestructuredobject](msdyn_salesforcestructuredobject.md) table/entity.
+
+### <a name="BKMK_msdyn_salesforcestructuredqnaconfig_AsyncOperations"></a> msdyn_salesforcestructuredqnaconfig_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_salesforcestructuredqnaconfig_AsyncOperations](msdyn_salesforcestructuredqnaconfig.md#BKMK_msdyn_salesforcestructuredqnaconfig_AsyncOperations) one-to-many relationship for the [msdyn_salesforcestructuredqnaconfig](msdyn_salesforcestructuredqnaconfig.md) table/entity.
+
+### <a name="BKMK_msdyn_workflowactionstatus_AsyncOperations"></a> msdyn_workflowactionstatus_AsyncOperations
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_workflowactionstatus_AsyncOperations](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_AsyncOperations) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
 
 ### <a name="BKMK_Territory_AsyncOperations"></a> Territory_AsyncOperations
 
@@ -2798,6 +3083,18 @@ See the [fxexpression_AsyncOperations](fxexpression.md#BKMK_fxexpression_AsyncOp
 
 See the [powerfxrule_AsyncOperations](powerfxrule.md#BKMK_powerfxrule_AsyncOperations) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
 
+### <a name="BKMK_plannerbusinessscenario_AsyncOperations"></a> plannerbusinessscenario_AsyncOperations
+
+**Added by**: PlannerSync_Extensions Solution
+
+See the [plannerbusinessscenario_AsyncOperations](plannerbusinessscenario.md#BKMK_plannerbusinessscenario_AsyncOperations) one-to-many relationship for the [plannerbusinessscenario](plannerbusinessscenario.md) table/entity.
+
+### <a name="BKMK_plannersyncaction_AsyncOperations"></a> plannersyncaction_AsyncOperations
+
+**Added by**: PlannerSync_Extensions Solution
+
+See the [plannersyncaction_AsyncOperations](plannersyncaction.md#BKMK_plannersyncaction_AsyncOperations) one-to-many relationship for the [plannersyncaction](plannersyncaction.md) table/entity.
+
 ### <a name="BKMK_msgraphresourcetosubscription_AsyncOperations"></a> msgraphresourcetosubscription_AsyncOperations
 
 **Added by**: msft_ActivitiesInfra_Extensions Solution
@@ -2815,18 +3112,6 @@ See the [virtualentitymetadata_AsyncOperations](virtualentitymetadata.md#BKMK_vi
 **Added by**: MobileOfflineProfileExtensionSolution Solution
 
 See the [mobileofflineprofileextension_AsyncOperations](mobileofflineprofileextension.md#BKMK_mobileofflineprofileextension_AsyncOperations) one-to-many relationship for the [mobileofflineprofileextension](mobileofflineprofileextension.md) table/entity.
-
-### <a name="BKMK_teammobileofflineprofilemembership_AsyncOperations"></a> teammobileofflineprofilemembership_AsyncOperations
-
-**Added by**: MobileOfflineMembership Solution
-
-See the [teammobileofflineprofilemembership_AsyncOperations](teammobileofflineprofilemembership.md#BKMK_teammobileofflineprofilemembership_AsyncOperations) one-to-many relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
-
-### <a name="BKMK_usermobileofflineprofilemembership_AsyncOperations"></a> usermobileofflineprofilemembership_AsyncOperations
-
-**Added by**: MobileOfflineMembership Solution
-
-See the [usermobileofflineprofilemembership_AsyncOperations](usermobileofflineprofilemembership.md#BKMK_usermobileofflineprofilemembership_AsyncOperations) one-to-many relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
 
 ### <a name="BKMK_organizationdatasyncsubscription_AsyncOperations"></a> organizationdatasyncsubscription_AsyncOperations
 
@@ -2888,60 +3173,6 @@ See the [retentionoperation_AsyncOperations](retentionoperation.md#BKMK_retentio
 
 See the [retentionoperationdetail_AsyncOperations](retentionoperationdetail.md#BKMK_retentionoperationdetail_AsyncOperations) one-to-many relationship for the [retentionoperationdetail](retentionoperationdetail.md) table/entity.
 
-### <a name="BKMK_msdyn_appinsightsmetadata_AsyncOperations"></a> msdyn_appinsightsmetadata_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_appinsightsmetadata_AsyncOperations](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_AsyncOperations) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflowconnectionreference_AsyncOperations"></a> msdyn_dataflowconnectionreference_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dataflowconnectionreference_AsyncOperations](msdyn_dataflowconnectionreference.md#BKMK_msdyn_dataflowconnectionreference_AsyncOperations) one-to-many relationship for the [msdyn_dataflowconnectionreference](msdyn_dataflowconnectionreference.md) table/entity.
-
-### <a name="BKMK_msdyn_schedule_AsyncOperations"></a> msdyn_schedule_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_schedule_AsyncOperations](msdyn_schedule.md#BKMK_msdyn_schedule_AsyncOperations) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflowtemplate_AsyncOperations"></a> msdyn_dataflowtemplate_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dataflowtemplate_AsyncOperations](msdyn_dataflowtemplate.md#BKMK_msdyn_dataflowtemplate_AsyncOperations) one-to-many relationship for the [msdyn_dataflowtemplate](msdyn_dataflowtemplate.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflow_datalakefolder_AsyncOperations"></a> msdyn_dataflow_datalakefolder_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dataflow_datalakefolder_AsyncOperations](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_AsyncOperations) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequest_AsyncOperations"></a> msdyn_dmsrequest_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dmsrequest_AsyncOperations](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_AsyncOperations) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequeststatus_AsyncOperations"></a> msdyn_dmsrequeststatus_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dmsrequeststatus_AsyncOperations](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_AsyncOperations) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
-
-### <a name="BKMK_msdyn_modulerundetail_AsyncOperations"></a> msdyn_modulerundetail_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_modulerundetail_AsyncOperations](msdyn_modulerundetail.md#BKMK_msdyn_modulerundetail_AsyncOperations) one-to-many relationship for the [msdyn_modulerundetail](msdyn_modulerundetail.md) table/entity.
-
-### <a name="BKMK_msdyn_workflowactionstatus_AsyncOperations"></a> msdyn_workflowactionstatus_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_workflowactionstatus_AsyncOperations](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_AsyncOperations) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
-
 ### <a name="BKMK_userrating_AsyncOperations"></a> userrating_AsyncOperations
 
 **Added by**: User Rating Solution
@@ -2977,6 +3208,12 @@ See the [attributemaskingrule_AsyncOperations](attributemaskingrule.md#BKMK_attr
 **Added by**: Column Level Security Solution
 
 See the [maskingrule_AsyncOperations](maskingrule.md#BKMK_maskingrule_AsyncOperations) one-to-many relationship for the [maskingrule](maskingrule.md) table/entity.
+
+### <a name="BKMK_recyclebinconfig_AsyncOperations"></a> recyclebinconfig_AsyncOperations
+
+**Added by**: RecycleBin Base Components Solution
+
+See the [recyclebinconfig_AsyncOperations](recyclebinconfig.md#BKMK_recyclebinconfig_AsyncOperations) one-to-many relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
 
 ### <a name="BKMK_appaction_AsyncOperations"></a> appaction_AsyncOperations
 
@@ -3025,102 +3262,6 @@ See the [msdyn_customcontrolextendedsettings_AsyncOperations](msdyn_customcontro
 **Added by**: Virtual Connector Provider Solution
 
 See the [msdyn_virtualtablecolumncandidate_AsyncOperations](msdyn_virtualtablecolumncandidate.md#BKMK_msdyn_virtualtablecolumncandidate_AsyncOperations) one-to-many relationship for the [msdyn_virtualtablecolumncandidate](msdyn_virtualtablecolumncandidate.md) table/entity.
-
-### <a name="BKMK_msdyn_aiconfiguration_AsyncOperations"></a> msdyn_aiconfiguration_AsyncOperations
-
-**Added by**: AISolution Solution
-
-See the [msdyn_aiconfiguration_AsyncOperations](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_AsyncOperations) one-to-many relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
-
-### <a name="BKMK_msdyn_aievent_AsyncOperations"></a> msdyn_aievent_AsyncOperations
-
-**Added by**: AISolution Solution
-
-See the [msdyn_aievent_AsyncOperations](msdyn_aievent.md#BKMK_msdyn_aievent_AsyncOperations) one-to-many relationship for the [msdyn_aievent](msdyn_aievent.md) table/entity.
-
-### <a name="BKMK_msdyn_aimodel_AsyncOperations"></a> msdyn_aimodel_AsyncOperations
-
-**Added by**: AISolution Solution
-
-See the [msdyn_aimodel_AsyncOperations](msdyn_aimodel.md#BKMK_msdyn_aimodel_AsyncOperations) one-to-many relationship for the [msdyn_aimodel](msdyn_aimodel.md) table/entity.
-
-### <a name="BKMK_msdyn_aitemplate_AsyncOperations"></a> msdyn_aitemplate_AsyncOperations
-
-**Added by**: AISolution Solution
-
-See the [msdyn_aitemplate_AsyncOperations](msdyn_aitemplate.md#BKMK_msdyn_aitemplate_AsyncOperations) one-to-many relationship for the [msdyn_aitemplate](msdyn_aitemplate.md) table/entity.
-
-### <a name="BKMK_msdyn_aibfeedbackloop_AsyncOperations"></a> msdyn_aibfeedbackloop_AsyncOperations
-
-**Added by**: AISolutionFullAdditions Solution
-
-See the [msdyn_aibfeedbackloop_AsyncOperations](msdyn_aibfeedbackloop.md#BKMK_msdyn_aibfeedbackloop_AsyncOperations) one-to-many relationship for the [msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md) table/entity.
-
-### <a name="BKMK_msdyn_aifptrainingdocument_AsyncOperations"></a> msdyn_aifptrainingdocument_AsyncOperations
-
-**Added by**: AI Solution deprecated templates Solution
-
-See the [msdyn_aifptrainingdocument_AsyncOperations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_AsyncOperations) one-to-many relationship for the [msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md) table/entity.
-
-### <a name="BKMK_msdyn_aiodimage_AsyncOperations"></a> msdyn_aiodimage_AsyncOperations
-
-**Added by**: AI Solution deprecated templates Solution
-
-See the [msdyn_aiodimage_AsyncOperations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_AsyncOperations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
-
-### <a name="BKMK_msdyn_aiodlabel_AsyncOperations"></a> msdyn_aiodlabel_AsyncOperations
-
-**Added by**: AI Solution deprecated templates Solution
-
-See the [msdyn_aiodlabel_AsyncOperations](msdyn_aiodlabel.md#BKMK_msdyn_aiodlabel_AsyncOperations) one-to-many relationship for the [msdyn_aiodlabel](msdyn_aiodlabel.md) table/entity.
-
-### <a name="BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations"></a> msdyn_aiodtrainingboundingbox_AsyncOperations
-
-**Added by**: AI Solution deprecated templates Solution
-
-See the [msdyn_aiodtrainingboundingbox_AsyncOperations](msdyn_aiodtrainingboundingbox.md#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations) one-to-many relationship for the [msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboundingbox.md) table/entity.
-
-### <a name="BKMK_msdyn_aiodtrainingimage_AsyncOperations"></a> msdyn_aiodtrainingimage_AsyncOperations
-
-**Added by**: AI Solution deprecated templates Solution
-
-See the [msdyn_aiodtrainingimage_AsyncOperations](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_AsyncOperations) one-to-many relationship for the [msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md) table/entity.
-
-### <a name="BKMK_msdyn_aibdataset_AsyncOperations"></a> msdyn_aibdataset_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibdataset_AsyncOperations](msdyn_aibdataset.md#BKMK_msdyn_aibdataset_AsyncOperations) one-to-many relationship for the [msdyn_aibdataset](msdyn_aibdataset.md) table/entity.
-
-### <a name="BKMK_msdyn_aibdatasetfile_AsyncOperations"></a> msdyn_aibdatasetfile_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibdatasetfile_AsyncOperations](msdyn_aibdatasetfile.md#BKMK_msdyn_aibdatasetfile_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetfile](msdyn_aibdatasetfile.md) table/entity.
-
-### <a name="BKMK_msdyn_aibdatasetrecord_AsyncOperations"></a> msdyn_aibdatasetrecord_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibdatasetrecord_AsyncOperations](msdyn_aibdatasetrecord.md#BKMK_msdyn_aibdatasetrecord_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md) table/entity.
-
-### <a name="BKMK_msdyn_aibdatasetscontainer_AsyncOperations"></a> msdyn_aibdatasetscontainer_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibdatasetscontainer_AsyncOperations](msdyn_aibdatasetscontainer.md#BKMK_msdyn_aibdatasetscontainer_AsyncOperations) one-to-many relationship for the [msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md) table/entity.
-
-### <a name="BKMK_msdyn_aibfile_AsyncOperations"></a> msdyn_aibfile_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibfile_AsyncOperations](msdyn_aibfile.md#BKMK_msdyn_aibfile_AsyncOperations) one-to-many relationship for the [msdyn_aibfile](msdyn_aibfile.md) table/entity.
-
-### <a name="BKMK_msdyn_aibfileattacheddata_AsyncOperations"></a> msdyn_aibfileattacheddata_AsyncOperations
-
-**Added by**: AI Solution default templates Solution
-
-See the [msdyn_aibfileattacheddata_AsyncOperations](msdyn_aibfileattacheddata.md#BKMK_msdyn_aibfileattacheddata_AsyncOperations) one-to-many relationship for the [msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmanalysishistory_AsyncOperations"></a> msdyn_pmanalysishistory_AsyncOperations
 
@@ -3314,6 +3455,18 @@ See the [searchrelationshipsettings_AsyncOperations](searchrelationshipsettings.
 
 See the [copilotexamplequestion_AsyncOperations](copilotexamplequestion.md#BKMK_copilotexamplequestion_AsyncOperations) one-to-many relationship for the [copilotexamplequestion](copilotexamplequestion.md) table/entity.
 
+### <a name="BKMK_copilotglossaryterm_AsyncOperations"></a> copilotglossaryterm_AsyncOperations
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [copilotglossaryterm_AsyncOperations](copilotglossaryterm.md#BKMK_copilotglossaryterm_AsyncOperations) one-to-many relationship for the [copilotglossaryterm](copilotglossaryterm.md) table/entity.
+
+### <a name="BKMK_copilotsynonyms_AsyncOperations"></a> copilotsynonyms_AsyncOperations
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [copilotsynonyms_AsyncOperations](copilotsynonyms.md#BKMK_copilotsynonyms_AsyncOperations) one-to-many relationship for the [copilotsynonyms](copilotsynonyms.md) table/entity.
+
 ### <a name="BKMK_powerpagecomponent_AsyncOperations"></a> powerpagecomponent_AsyncOperations
 
 **Added by**: Power Pages Core Base Solution
@@ -3374,6 +3527,12 @@ See the [adx_setting_AsyncOperations](adx_setting.md#BKMK_adx_setting_AsyncOpera
 
 See the [adx_webformsession_AsyncOperations](adx_webformsession.md#BKMK_adx_webformsession_AsyncOperations) one-to-many relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
 
+### <a name="BKMK_powerpagesscanreport_AsyncOperations"></a> powerpagesscanreport_AsyncOperations
+
+**Added by**: Power Pages Runtime Extensions Solution
+
+See the [powerpagesscanreport_AsyncOperations](powerpagesscanreport.md#BKMK_powerpagesscanreport_AsyncOperations) one-to-many relationship for the [powerpagesscanreport](powerpagesscanreport.md) table/entity.
+
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_AsyncOperations"></a> mspcat_catalogsubmissionfiles_AsyncOperations
 
 **Added by**: Catalog in Power Platform Packaging Solution
@@ -3385,30 +3544,6 @@ See the [mspcat_catalogsubmissionfiles_AsyncOperations](mspcat_catalogsubmission
 **Added by**: Catalog in Power Platform Packaging Solution
 
 See the [mspcat_packagestore_AsyncOperations](mspcat_packagestore.md#BKMK_mspcat_packagestore_AsyncOperations) one-to-many relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
-
-### <a name="BKMK_msdyn_dmssyncrequest_AsyncOperations"></a> msdyn_dmssyncrequest_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dmssyncrequest_AsyncOperations](msdyn_dmssyncrequest.md#BKMK_msdyn_dmssyncrequest_AsyncOperations) one-to-many relationship for the [msdyn_dmssyncrequest](msdyn_dmssyncrequest.md) table/entity.
-
-### <a name="BKMK_msdyn_dmssyncstatus_AsyncOperations"></a> msdyn_dmssyncstatus_AsyncOperations
-
-**Added by**: Insights App Platform Base Solution
-
-See the [msdyn_dmssyncstatus_AsyncOperations](msdyn_dmssyncstatus.md#BKMK_msdyn_dmssyncstatus_AsyncOperations) one-to-many relationship for the [msdyn_dmssyncstatus](msdyn_dmssyncstatus.md) table/entity.
-
-### <a name="BKMK_deploymentorchestration_AsyncOperations"></a> deploymentorchestration_AsyncOperations
-
-**Added by**: msdyn_SolutionPackageMapping Solution
-
-See the [deploymentorchestration_AsyncOperations](deploymentorchestration.md#BKMK_deploymentorchestration_AsyncOperations) one-to-many relationship for the [deploymentorchestration](deploymentorchestration.md) table/entity.
-
-### <a name="BKMK_recyclebinconfig_AsyncOperations"></a> recyclebinconfig_AsyncOperations
-
-**Added by**: RecycleBin Base Components Solution
-
-See the [recyclebinconfig_AsyncOperations](recyclebinconfig.md#BKMK_recyclebinconfig_AsyncOperations) one-to-many relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
 
 ### See also
 

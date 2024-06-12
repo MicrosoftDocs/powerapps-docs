@@ -1,7 +1,7 @@
 ---
 title: "CopilotExampleQuestion table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CopilotExampleQuestion table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ CopilotExampleQuestions Component
 |-|-|-|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /copilotexamplequestions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /copilotexamplequestions(*copilotexamplequestionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
@@ -37,7 +37,7 @@ CopilotExampleQuestions Component
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /copilotexamplequestions(*copilotexamplequestionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /copilotexamplequestions(*copilotexamplequestionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -62,21 +62,43 @@ CopilotExampleQuestions Component
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AppContext](#BKMK_AppContext)
 - [Comment](#BKMK_Comment)
 - [CopilotExampleQuestionId](#BKMK_CopilotExampleQuestionId)
+- [CustomDimension](#BKMK_CustomDimension)
+- [CustomField](#BKMK_CustomField)
 - [EntityScope](#BKMK_EntityScope)
 - [EntityScopeColumn](#BKMK_EntityScopeColumn)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [Knowledge](#BKMK_Knowledge)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [Question](#BKMK_Question)
 - [Rephrase](#BKMK_Rephrase)
+- [Skill](#BKMK_Skill)
+- [SkillId](#BKMK_SkillId)
 - [SQLCorrectness](#BKMK_SQLCorrectness)
 - [StandardSQL](#BKMK_StandardSQL)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AppContext"></a> AppContext
+
+|Property|Value|
+|--------|-----|
+|Description|AppContext for distinguishing between apps within the organization.|
+|DisplayName|AppContext|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|appcontext|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_Comment"></a> Comment
@@ -107,6 +129,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|copilotexamplequestionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_CustomDimension"></a> CustomDimension
+
+|Property|Value|
+|--------|-----|
+|Description|CustomDimension.|
+|DisplayName|CustomDimension|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|customdimension|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_CustomField"></a> CustomField
+
+|Property|Value|
+|--------|-----|
+|Description|CustomField.|
+|DisplayName|CustomField|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|customfield|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_EntityScope"></a> EntityScope
@@ -175,6 +229,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_Knowledge"></a> Knowledge
+
+|Property|Value|
+|--------|-----|
+|Description|The information and understanding that the model has acquired through its training data.|
+|DisplayName|Knowledge|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|knowledge|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
@@ -221,6 +291,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_Skill"></a> Skill
+
+|Property|Value|
+|--------|-----|
+|Description|skill name for distinguishing between apps within the organization.|
+|DisplayName|Skill|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|skill|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_SkillId"></a> SkillId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|SkillId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|skillid|
+|RequiredLevel|None|
+|Targets|dvtablesearch|
+|Type|Lookup|
 
 
 ### <a name="BKMK_SQLCorrectness"></a> SQLCorrectness
@@ -363,6 +463,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [skillidName](#BKMK_skillidName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -736,6 +837,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_skillidName"></a> skillidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|skillidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -908,6 +1025,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_copilotexamplequestion_modifiedby](#BKMK_lk_copilotexamplequestion_modifiedby)
 - [lk_copilotexamplequestion_modifiedonbehalfby](#BKMK_lk_copilotexamplequestion_modifiedonbehalfby)
 - [organization_copilotexamplequestion](#BKMK_organization_copilotexamplequestion)
+- [CopilotExampleQuestion_DVTableSearch](#BKMK_CopilotExampleQuestion_DVTableSearch)
 
 
 ### <a name="BKMK_lk_copilotexamplequestion_createdby"></a> lk_copilotexamplequestion_createdby
@@ -939,6 +1057,12 @@ See the [lk_copilotexamplequestion_modifiedonbehalfby](systemuser.md#BKMK_lk_cop
 **Added by**: System Solution Solution
 
 See the [organization_copilotexamplequestion](organization.md#BKMK_organization_copilotexamplequestion) one-to-many relationship for the [organization](organization.md) table/entity.
+
+### <a name="BKMK_CopilotExampleQuestion_DVTableSearch"></a> CopilotExampleQuestion_DVTableSearch
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [CopilotExampleQuestion_DVTableSearch](dvtablesearch.md#BKMK_CopilotExampleQuestion_DVTableSearch) one-to-many relationship for the [dvtablesearch](dvtablesearch.md) table/entity.
 
 ### See also
 

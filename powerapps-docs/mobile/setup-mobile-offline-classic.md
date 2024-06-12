@@ -231,4 +231,4 @@ For information on how to work with file and image columns in offline modeo , se
   
 ## Mobile offline capabilities and limitations
 
-For information on capabilities and limitations of mobile offline, see [Mobile offline capabilities and limitations](offline-capabilities.md).
+For information on capabilities and limitations of mobile offline, see [Mobile offline limitations for model-driven apps](offline-limitations.md).

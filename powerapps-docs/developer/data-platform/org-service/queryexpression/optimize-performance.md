@@ -16,6 +16,8 @@ contributors:
 
 This article describes ways you can optimize performance when retrieving data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
 
+[!INCLUDE [cc-query-antipatterns](../../includes/cc-query-antipatterns.md)]
+
 ## Query Hints
 
 > [!IMPORTANT]
