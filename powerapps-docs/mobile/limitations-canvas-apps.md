@@ -38,7 +38,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
  
 - **Non-Dataverse connectors** like Sharepoint aren't supported in offline mode.
 
-- **Virtual tables** aren't not supported in offline mode.
+- **Virtual tables** and **elastic tables** aren't not supported in offline mode.
 
 - **Calculated and roll-up fields** - Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
