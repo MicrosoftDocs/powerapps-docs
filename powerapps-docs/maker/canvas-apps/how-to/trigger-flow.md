@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app that can trigger a Power Automate flow (contains video)
+title: Create a canvas app that can trigger a Power Automate flow
 description: Learn about how to create a canvas app that can trigger a Power Automate flow.
 author: joel-lindstrom
 

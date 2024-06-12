@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/15/2024
+ms.date: 06/11/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -15,6 +15,7 @@ ms.collection:
     - get started
 contributors:
   - mduelae
+  - Mattp123
 ---
 
 # Copilot in Power Apps overview
@@ -41,6 +42,9 @@ Learn how to use Copilot features in Power Apps.
 - [Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
 - [Add copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
 
+**Microsoft Dataverse**
+
+- [Add Dataverse tables in Microsoft Copilot Studio as a knowledge source](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
 
 > [!IMPORTANT]
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.

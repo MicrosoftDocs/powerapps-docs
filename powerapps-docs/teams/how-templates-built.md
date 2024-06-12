@@ -1,5 +1,5 @@
 ---
-title: How to build apps for Microsoft Teams (contains video)
+title: How to build apps for Microsoft Teams
 description: Learn the process in which Microsoft built the template apps for Microsoft Teams, and how you can use similar techniques when designing and building your own apps.
 
 ms.topic: conceptual
