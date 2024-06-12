@@ -59,6 +59,9 @@ Server-side plug-ins and validation can invalidate changes. Those changes are re
 
 ### Conflict resolution settings
 
+> [!Important]
+> The conflict resolution settings doen't apply to canvas apps.   
+
 If updates made while offline are being rejected too frequently, consider changing the conflict resolution setting to its default value.  
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
