@@ -1,7 +1,7 @@
 ---
 title: "MobileOfflineProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfile table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -627,8 +627,6 @@ Listed by **SchemaName**.
 - [MobileOfflineProfile_SystemUser](#BKMK_MobileOfflineProfile_SystemUser)
 - [mobileofflineprofile_profileextension](#BKMK_mobileofflineprofile_profileextension)
 - [mobileofflineprofile_mobileofflineprofile](#BKMK_mobileofflineprofile_mobileofflineprofile)
-- [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](#BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId)
-- [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId)
 
 
 ### <a name="BKMK_DefaultMobileOfflineProfile_Organization"></a> DefaultMobileOfflineProfile_Organization
@@ -707,40 +705,6 @@ Same as the [mobileofflineprofile_mobileofflineprofile](mobileofflineprofileitem
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|mobileofflineprofile_mobileofflineprofile|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId
-
-**Added by**: MobileOfflineMembership Solution
-
-Same as the [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](teammobileofflineprofilemembership.md#BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId) many-to-one relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|teammobileofflineprofilemembership|
-|ReferencingAttribute|mobileofflineprofileid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId
-
-**Added by**: MobileOfflineMembership Solution
-
-Same as the [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](usermobileofflineprofilemembership.md#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId) many-to-one relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usermobileofflineprofilemembership|
-|ReferencingAttribute|mobileofflineprofileid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>

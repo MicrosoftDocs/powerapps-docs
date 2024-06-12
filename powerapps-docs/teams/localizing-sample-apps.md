@@ -1,5 +1,5 @@
 ---
-title: Localize sample app templates (contains video)
+title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
 
 ms.topic: conceptual

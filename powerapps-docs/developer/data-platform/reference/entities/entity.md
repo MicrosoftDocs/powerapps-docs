@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -456,10 +456,10 @@ Listed by **SchemaName**.
 - [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
+- [recyclebinconfig_extensionofrecordid](#BKMK_recyclebinconfig_extensionofrecordid)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [msdyn_entity_msdyn_entitylinkchatconfiguration](#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration)
-- [recyclebinconfig_extensionofrecordid](#BKMK_recyclebinconfig_extensionofrecordid)
 
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
@@ -683,6 +683,23 @@ Same as the [msdyn_insightsstorevirtualentity_extensionofrecordid](msdyn_insight
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_recyclebinconfig_extensionofrecordid"></a> recyclebinconfig_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [recyclebinconfig_extensionofrecordid](recyclebinconfig.md#BKMK_recyclebinconfig_extensionofrecordid) many-to-one relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recyclebinconfig|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|recyclebinconfig_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
 
 **Added by**: Power Apps Actions Solution
@@ -732,23 +749,6 @@ Same as the [msdyn_entity_msdyn_entitylinkchatconfiguration](msdyn_entitylinkcha
 |ReferencedEntityNavigationPropertyName|msdyn_entity_msdyn_entitylinkchatconfiguration_entitytype|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_recyclebinconfig_extensionofrecordid"></a> recyclebinconfig_extensionofrecordid
-
-**Added by**: Active Solution Solution
-
-Same as the [recyclebinconfig_extensionofrecordid](recyclebinconfig.md#BKMK_recyclebinconfig_extensionofrecordid) many-to-one relationship for the [recyclebinconfig](recyclebinconfig.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|recyclebinconfig|
-|ReferencingAttribute|extensionofrecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|recyclebinconfig_extensionofrecordid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytomany"></a>
 

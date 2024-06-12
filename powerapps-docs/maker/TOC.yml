@@ -1807,40 +1807,48 @@
       href: ../mobile/optimize-for-devices-overview.md
     - name: Optimize for devices controls (preview)
       href: ../mobile/optimize-for-devices-controls.md
-  - name: Mobile offline for model-driven apps
+  - name: Configure mobile apps for offline use
     items:
-    - name: Mobile offline overview
-      href: ../mobile/mobile-offline-overview.md
-    - name: Set up guide
+    - name: Mobile offline for canvas apps
       items:
-      - name: Set up mobile offline
+      - name: Mobile offline for canvas apps overview 
+        href: ../mobile/canvas-mobile-offline-overview.md
+      - name: Set up mobile offline for canvas apps 
+        href: ../mobile/canvas-mobile-offline-setup.md
+      - name: Configure files and images in offline canvas apps 
+        href: ../mobile/files-images-offline-canvas-apps.md
+      - name: Work with canvas apps offline 
+        href: ../mobile/canvas-mobile-offline-working.md
+      - name: Sync data offline in the background
+        href: ../mobile/sync-data-offline-background.md
+      - name: Mobile offline limitations for canvas apps
+        href: ../mobile/limitations-canvas-apps.md
+    - name: Mobile offline for model-driven apps
+      items:
+      - name: Mobile offline for model-driven apps overview
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline for model-driven apps
         href: ../mobile/setup-mobile-offline.md 
-      - name: Configure mobile offline profiles for images and files
+      - name: Configure files and images in offline model-driven apps
         href: ../mobile/offline-file-images.md
-      - name: Offline profile guidelines
-        href: ../mobile/mobile-offline-guidelines.md  
-      - name: Mobile offline capabilities and limitations
-        href: ../mobile/offline-capabilities.md
-    - name: User guide
-      items:
-      - name: Work offline on your mobile device (offline-first mode)
+      - name: Work with model-driven apps offline (offline-first mode)
         href: ../mobile/work-in-offline-mode.md 
-      - name: Work offline on your mobile device (classic mode)
+      - name: Work with model-driven apps offline (classic mode)
         href: ../mobile/work-offline-mode-classic.md 
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
-      - name: Sync data in the background
+      - name: Sync data offline in the background
         href: ../mobile/sync-data-offline-background.md
-  - name: Mobile offline for canvas apps 
-    items:
-    - name: Mobile offline for canvas apps overview 
-      href: ../mobile/canvas-mobile-offline-overview.md
-    - name: Set up mobile offline for canvas apps 
-      href: ../mobile/canvas-mobile-offline-setup.md
-    - name: Configure files and images in offline canvas apps 
-      href: ../mobile/files-images-offline-canvas-apps.md
-    - name: Work with canvas apps offline 
-      href: ../mobile/canvas-mobile-offline-working.md
+      - name: Mobile offline limitations for model-driven apps
+        href: ../mobile/offline-limitations.md
+    - name: Optimize how offline works on mobile devices
+      items:
+      - name: Best practices for developing an app for offline use
+        href: ../mobile/best-practices-offline.md
+      - name: Optimize the offline profile
+        href: ../mobile/mobile-offline-guidelines.md  
+      - name: Resolve sync conflicts with the server
+        href: ../mobile/resolve-sync-conflicts.md
   - name: Set an app as a startup app
     href: ../mobile/set-startup-app-mobile.md
   - name: Troubleshoot issues in the mobile app
@@ -1989,6 +1997,8 @@
         href: ./data-platform/define-query-hierarchical-data.md
       - name: How to configure connection roles
         href: ./data-platform/configure-connection-roles.md
+  - name: Work with copilot
+    href: ./data-platform/data-platform-copilot.md 
   - name: Work with columns
     href: ./data-platform/fields-overview.md
     items:
@@ -2179,11 +2189,27 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
+  - name: Work with catalogs (preview)
+    items:
+    - name: Catalog overview
+      href: ./data-platform/catalog-overview.md
+    - name: View, submit, and install catalog items
+      href: ./data-platform/submit-acquire-from-catalog.md
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
     - name: Create and use dataflows
       href: ./data-platform/create-and-use-dataflows.md
+  - name: Get insights from Dataverse data
+    items:
+    - name: Overview
+      href: ./data-platform/data-get-insights-overview.md
+    - name: Power BI with Dataverse
+      href: ./data-platform/use-powerbi-dataverse.md
+    - name: Create a Power BI report
+      href: ./data-platform/data-platform-powerbi-connector.md
+    - name: View table data in Power BI Desktop
+      href: ./data-platform/view-entity-data-power-bi.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2191,14 +2217,6 @@
       href: ./data-platform/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./data-platform/data-platform-restricted-entities.md
-  - name: Use Power BI with Dataverse
-    items:
-    - name: Overview
-      href: ./data-platform/use-powerbi-dataverse.md
-    - name: Create a Power BI report
-      href: ./data-platform/data-platform-powerbi-connector.md
-    - name: View table data in Power BI Desktop
-      href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
   - name: Translate customized table and column text
@@ -2209,12 +2227,14 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
-  - name: Get experimental features early (preview)
+  - name: Get preview features early (preview)
     items:
     - name: Use the Dataverse accelerator
       href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md  
   - name: For admins
     items:
     - name: Security in Dataverse
@@ -2237,7 +2257,7 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
-      - name: Transtion from legacy data generation services
+      - name: Transtion from legacy data integration services
         href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml

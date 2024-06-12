@@ -1,7 +1,7 @@
 ---
 title: "Site (powerpagesite)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Site (powerpagesite)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,7 @@ search.audienceType:
 |Assign|PATCH /powerpagesites(*powerpagesiteid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /powerpagesites<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /powerpagesites(*powerpagesiteid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ search.audienceType:
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /powerpagesites(*powerpagesiteid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /powerpagesites(*powerpagesiteid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -1057,6 +1057,35 @@ See the [team_powerpagesite](team.md#BKMK_team_powerpagesite) one-to-many relati
 **Added by**: System Solution Solution
 
 See the [business_unit_powerpagesite](businessunit.md#BKMK_business_unit_powerpagesite) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the powerpagesite table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_powerpagesite_dvfilesearch"></a> powerpagesite_dvfilesearch
+
+IntersectEntityName: powerpagesite_dvfilesearch<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|powerpagesiteid|
+|IsCustomizable|False|
+|LogicalName|powerpagesite|
+|NavigationPropertyName|powerpagesite_dvfilesearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|dvfilesearch|
+|IntersectAttribute|dvfilesearchid|
+|NavigationPropertyName|powerpagesite_dvfilesearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
 
 ### See also
 

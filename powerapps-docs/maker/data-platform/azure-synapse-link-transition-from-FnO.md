@@ -1,7 +1,7 @@
 ---
-title: Transition from legacy data generation services to Fabric link and Azure Synapse Link for Dataverse
+title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 05/20/2024
+ms.date: 05/30/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 ms.custom: bap-template
 ---
-# Transition from legacy data generation services
+# Transition from legacy data integration services
 
 Data export service, [bring your own database (BYOD)](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database), and [Export to Data Lake](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) were features introduced in Dynamics 365 apps to export data for analytics and data integration scenarios. These services enabled IT admins and specialists to export data into external databases or data lakes and build data integration pipelines. While we improved these services over the years with updates as part of unification of Dynamics 365 with the power platform, we rearchitected the same capabilities of these disparate services into simpler, unified experiences built into Power Apps (make.powerapps.com). With a transition to Microsoft Fabric link or upgrade to Azure Synapse Link, the re-architected services provide you with an easy ramp to benefit from AI and Copilot investments in Microsoft Dataverse and Fabric.
 
