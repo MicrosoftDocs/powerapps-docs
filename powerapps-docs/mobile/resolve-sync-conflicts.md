@@ -34,7 +34,10 @@ In the event of a synchronization error, the system automatically generates a ne
 |**Action Data**|Json containing the payload of the action.| {"lastname":"Contoso2"}|
 |**Request Data**|Json containing the query. | {`"lastname":"Contoso2","syncerror__regardingentityid":<syncerrorId>,"entitylogicalname":"account"}`|
 |**Error Code**| Code of the error. | -2147015424 |
-  
+
+> [!Note]
+> Make sure that the role assigned to the user grants read privileges on the `Sync Error` table. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+
 ## Recommendation on how to use the Sync Error table
 The **Sync Error** table is a standard Dataverse table. We recommend that you create a [model-driven app](/power-apps/maker/model-driven-apps/create-model-driven-app) to manage the sync errors. 
 
