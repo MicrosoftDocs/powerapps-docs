@@ -1,8 +1,9 @@
 ﻿---
-title: Code optimization
-description: Code optimization
-ms.date: 05/28/2024
-ms.topic: guidance
+title: Power Apps code optimization
+description: Learn about how to optimize code in Power Apps.
+ms.date: 06/12/2024
+ms.topic: conceptual
+ms.subservice: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rachaudh

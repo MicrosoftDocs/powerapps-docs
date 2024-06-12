@@ -1,8 +1,9 @@
 ﻿---
-title: Code readability
-description: Code readability
-ms.date: 05/28/2024
-ms.topic: guidance
+title: Power Apps code readability
+description: Learn about how to optimize code readability in Power Apps.
+ms.date: 06/12/2024
+ms.topic: conceptual
+ms.subservice: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rachaudh

@@ -1,8 +1,9 @@
 ﻿---
-title: Testing and monitoring
-description: Testing and monitoring
-ms.date: 05/28/2024
-ms.topic: guidance
+title: Testing and monitoring in Power Apps
+description: Learn about testing and monitoring your Power Apps.
+ms.date: 06/12/2024
+ms.topic: conceptual
+ms.subservice: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rachaudh

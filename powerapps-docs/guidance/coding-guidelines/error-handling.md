@@ -1,8 +1,9 @@
 ﻿---
 title: Handling errors in Power Apps
 description: Learn about best practices for error handling in Power Apps
-ms.date: 05/28/2024
+ms.date: 06/12/2024
 ms.topic: conceptual
+ms.subservice: guidance
 ms.service: power-platform
 author: robstand
 ms.author: rstand

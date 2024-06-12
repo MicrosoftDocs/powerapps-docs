@@ -1,8 +1,9 @@
 ﻿---
-title: App design guidelines
-description: App design guidelines
-ms.date: 05/28/2024
-ms.topic: guidance
+title: Power Apps design guidelines
+description: Learn about guidelines for designing Power Apps
+ms.date: 06/12/2024
+ms.topic: conceptual
+ms.subservice: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rachaudh
