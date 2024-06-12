@@ -18,14 +18,13 @@ Many settings for the environment are stored as columns in the [Organization tab
 
 The organization table has a single row and the [OrganizationId](reference/entities/organization.md#BKMK_OrganizationId) primary key value is the same **Organization ID** value visible in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). [Find your environment and organization ID](/power-platform/admin/determine-org-id-name#find-your-environment-and-organization-id)
 
-The `WhoAmI` message response returns this value with the `OrganizationId` property. This is commonly used to retrieve the single row of the organization table. See [SDK for .NET WhoAmIRequest Class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and [Web API WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami).
+The `WhoAmI` message response returns the `OrganizationId` property. Use the `organizationid` value to retrieve the single row of the organization table. See [SDK for .NET WhoAmIRequest Class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and [Web API WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami).
 
 ## Supported settings
 
-Not every column in the organization table is supported to be set. Only set columns which are documented.
+The documentation for any feature with settings must document the settings they support changing. Not every column is documented. Only settings described in feature documentation are supported to set.
 
-For example, the following columns are supported because they are mentioned in the documentation:
-
+For example, the following columns are supported because they're mentioned in the feature documentation:
 
 |Setting|Link to documentation|
 |---------|---------|
@@ -44,13 +43,13 @@ For example, the following columns are supported because they are mentioned in t
 
 ## Unsupported settings
 
-Some columns are explicitly not supported to update directly. For example, you should not try to update the [OrgDbOrgSettings](reference/entities/organization.md#BKMK_OrgDbOrgSettings) column directly. This string column contains multiple XML elements that control behavior for multiple features. If you update this value incorrectly, features that depend on these settings could break. Always use the tools described in [Environment database settings](/power-platform/admin/environment-database-settings) to change the values of this column.
+Some columns are explicitly not supported to update directly. For example, you shouldn't try to update the [OrgDbOrgSettings](reference/entities/organization.md#BKMK_OrgDbOrgSettings) column directly. This string column contains multiple XML elements that control behavior for multiple features. If you update this value incorrectly, features that depend on these settings could break. Always use the tools described in [Environment database settings](/power-platform/admin/environment-database-settings) to change the values of this column.
 
 
 
 ## Read-only settings
 
-Some settings are available to retrieve but can't be set. These columns will have false values for both [AttributeMetadata.IsValidForCreate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforcreate) and [AttributeMetadata.IsValidForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforupdate). You can view the list of read-only columns here: [Organization table Read-only columns/attributes](reference/entities/organization.md#read-only-columnsattributes).
+Some settings are available to retrieve but can't be set. These columns have false values for both [AttributeMetadata.IsValidForCreate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforcreate) and [AttributeMetadata.IsValidForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforupdate). You can view the list of read-only columns here: [Organization table Read-only columns/attributes](reference/entities/organization.md#read-only-columnsattributes).
 
 > [!NOTE]
 > As with every kind of table, if you try to set a read-only column, the operation does not throw an error. The value you provide to update a read-only column is ignored.
@@ -76,9 +75,9 @@ Some columns represent deprecated settings. You should look at the descriptions 
 
 ## Use PAC CLI to retrieve and update settings
 
-You can retrieve and update column values for the organization table row using the SDK for .NET and Web API as you would for any Dataverse table, but these aren't your only options.
+You can retrieve and update column values for the organization table row using the SDK for .NET and Web API as you would for any Dataverse table. You can also use the [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction).
 
-The [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) includes these commands:
+The PAC CLI includes these commands:
 
  - [pac env list-settings](/power-platform/developer/cli/reference/env#pac-env-list-settings): Returns environment settings stored in the organization table.
  - [pac env update-settings](/power-platform/developer/cli/reference/env#pac-env-update-settings): Enables updating a single organization table column value.
