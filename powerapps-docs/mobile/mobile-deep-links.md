@@ -46,7 +46,7 @@ Deep links for the Power Apps mobile app should start with the following:
 | &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li>                                                                     | Yes|
 | &lt;org-url&gt;      | Connects to the correct org URL.                                              | Yes|
 | &lt;app-id&gt;       | Opens the correct app module.                                                 | Yes|
-| tenantId             | Connects to the correct tenant.                                               | Yes|
+| tenantId=&lt;tenand-id&gt;             | Connects to the correct tenant.                                               | Yes|
 |appType=AppModule     | indicates the the targeted app is a model-driven app                                                 | Yes|
 | restartApp=true      | Restarts the model-driven app, needed to ensure parameters are passed when the app is already open. | No |
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
@@ -78,7 +78,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | **Parameter**        | **Description**                                                                              | **Required**|
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 | Yes|
-| &lt;tenantId&gt;     | Connects to the correct tenant.                                                               | Yes|
+| tenantId=&lt;tenantId&gt;     | Connects to the correct tenant.                                                               | Yes|
 | restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open. | No|
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. | No|
 
@@ -89,7 +89,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | **Parameter**        | **Description**                                                                              |**Required**|
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 | Yes|
-| &lt;tenantId&gt;     | Connects to the correct tenant.                                                              | Yes|
+| tenantId=&lt;tenantId&gt;     | Connects to the correct tenant.                                                              | Yes|
 | restartApp=true      | Restarts the canvas app to ensure parameters are passed when the app is already open. | No|
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. |   No|
 
