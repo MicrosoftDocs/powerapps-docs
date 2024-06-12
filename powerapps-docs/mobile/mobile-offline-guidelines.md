@@ -140,8 +140,9 @@ First sync can take time to complete for organizations with very large datasets,
 
 
 > [!NOTE]
-> 1. For canvas app using an auto-generated offline profile, the system automatically optimize the columns downloaded on the device.
-> 1. We recommend to select colmuns on tables with a high number of unused columns.
+> 1. For canvas app using an auto-generated offline profile, the system automatically optimizes the columns downloaded on the device.
+> 1. We recommend to select columns on tables with a high number of unused columns.
+> 1. The **manage columns** option is not enalble in the **Offline configuration** of **Power Platform admind Center**. 
 
 
 ### See also
