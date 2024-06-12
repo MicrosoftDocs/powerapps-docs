@@ -1,19 +1,22 @@
 ---
-title: "Import data in model-driven apps| MicrosoftDocs"
-description: How to import data
-ms.custom: ""
+title: Import data in model-driven apps
+description: Discover how to import data into your model-driven app, ensuring correct column mapping and file formats.
 author: sericks007
-
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 01/03/2022
+ms.topic: how-to
+ms.date: 05/08/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.reviewer: sericks
-ms.assetid: 
-search.audienceType: 
+ms.assetid:
+search.audienceType:
   - enduser
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:05/08/2024
 ---
+
 # How to import data
 
 Import data that's stored somewhere else into your model-driven app using the import feature in Power Apps. 
@@ -149,10 +152,59 @@ To save the mapping settings for next time, enter a name in the **Name your data
 > [!div class="mx-imgBorder"]
 > ![Name your data map here.](media/import-save-settings.png "Name your data map here")
 
+## Open the import log
+
+After you initiate an import, you can monitor the status of the import job and view results in the import log. 
+
+In the last step of the import wizard, select **Track Progress** to view the progress of the import job.
+
+:::image type="content" source="media/track-progress.png" alt-text="Screenshot of the last step in the import wizard.":::
+
+If you missed this step, append the following code to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
+
+For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d`, then the URL to view the import log is `https://org12345.crm.dynamics.com/main.aspx?appid=ca78641d-b6f1-ee11-a1fe-000d3a379d2d&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
+
+
+### View the status of an import, and correct errors
+
+After the import is complete, you can view the records that were successfully imported, failed to import, or were partially imported.
+
+1. [Open the import log](#open-the-import-log).
+
+1. On the **My Imports** page, monitor the progress of the import.
+
+   The **Status** column shows the status of the import. The status progresses through these values:
+
+   - **Submitted**
+   - **Parsing**  
+   - **Transforming**
+   - **Importing**
+   - **Completed**
+
+1. After the import is complete, the **Success**, **Failures**, and **Partial Failures** columns show the number of records that were successfully imported, failed to import, or were partially imported.
+
+1. Select an import job to view the records that did not import or were partially imported.
+   :::image type="content" source="media/import-data-log.svg" alt-text="Screenshot of the import record with the **Success**, **Failures**, and **Partial Failures** columns.":::
+
+1. Select appropriate tabs to see information about failures, success, or partial failure of records during import.
+
+1. On the **Failures** tab, export rows that failed to import to a new file. Select **Export Error Rows**.
+1. Correct the errors in this file, and then import it.
+
+### Delete imported records
+
+You can delete the import file and imported records if you want to reimport the data or you don't need the data for some reason.
+
+1. [Open the import log](#open-the-import-log).
+
+2. Select the import file that you want to delete, followed by one of the following actions:
+
+    - **Delete import source file**. This option deletes the import log file and its details.
+
+    - **Delete imported records**. This option deletes all records that were imported from the selected file.
+
+    - **Delete All**. This option deletes the import file along with the records that were imported from the import file.
 
 ### See also
+
 [Download a template for data import](/power-platform/admin/download-template-data-import)
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
