@@ -120,6 +120,11 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
 - Avoid using many OR conditions.
 
 ### Optimize dowloaded data with Offline Table Column Selection (Preview)
+
+ > [!IMPORTANT]
+   > - This is a preview feature.
+   > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+   
 First sync can take time to complete for organizations with very large datasets, especially in remote areas. With **Offline Table Column Selection (Preview)** you can select the columns to download on the device to avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both first sync and delta sync, the former should see a greater impact as there are more records to download.
 
 1. In [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
