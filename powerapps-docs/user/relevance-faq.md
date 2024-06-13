@@ -109,6 +109,9 @@ When using the Dataverse search API, there's a throttling limit of one request p
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
+## Dataverse support for US Government
+Dataverse Search strives to maintain functional parity between our commercially available services and those enabled though our U.S. Government clouds. It is available in US Government Community Cloud (GCC) and US GC High.  It not available in US Department of Defense (US DoD).
+
 ### See also
 
 [What is Dataverse search?](relevance-search-benefits.md)<br/>
