@@ -28,8 +28,8 @@ Web resources are typically used by developers to extend an app using files that
 
 ## What are web resources?  
 
-Web resources are virtual files stored in the system. Each web resource has a unique name that can be used in a URL to retrieve the file. Think of them this way: If you had access to the actual web server running the web app, you could copy files over to that website. But with most online services, you can’t do this.  Instead, you can use web resources to upload files to the system and then reference them by name just as though you had copied them as files to the web server.  
-  
+Web resources are virtual files stored in the system. Each web resource has a unique name that can be used in a URL to retrieve the file. Think of them this way: If you had access to the actual web server running the web app, you could copy files over to that website. But with most online services, you can’t do this.  Instead, you can use web resources to upload files to the system and then reference them by name just as though you had copied them as files to the web server. They are used for rendering static files. 
+
 For example, if you create an HTML page as a web resource named “new_myWebResource.htm”, you could open that page in a browser using a URL like this:  
  
 `<base URL>/WebResources/new_myWebResource.htm`
