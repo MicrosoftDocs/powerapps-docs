@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 2/9/2023
+ms.date: 6/13/2024
 ms.subservice: canvas-maker
 ms.author: clromano
 search.audienceType: 
@@ -195,15 +195,19 @@ The following API permissions are required when manually configure API permissio
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
+> - Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it using the following command:
+>     ```powershell
+>     Install-Module -Name Microsoft.Graph
+>     ```
 > - Missing *Azure API Connections* permission: 
 >     ```powershell
->     Connect-AzureAD -TenantId <your tenant ID>
->     New-AzureADServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+>     Connect-MgGraph -TenantId <your tenant ID>
+>     New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
 >     ```
 > - Missing *PowerApps Service* permission:
 >     ```powershell
->     Connect-AzureAD -TenantId <your tenant ID>
->     New-AzureADServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+>     Connect-MgGraph -TenantId <your tenant ID>
+>     New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
 >     ```
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
