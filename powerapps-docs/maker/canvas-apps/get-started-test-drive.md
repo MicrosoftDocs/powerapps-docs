@@ -22,9 +22,9 @@ Create a canvas app automatically based on a template for a specific scenario, s
 
 To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
 
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md?wt.mc_id=studentamb_280505).
 
-If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program?wt.mc_id=studentamb_280505).
 
 ## Create an app
 
