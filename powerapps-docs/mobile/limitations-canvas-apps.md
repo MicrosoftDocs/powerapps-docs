@@ -22,6 +22,8 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 ## Limitations and known issues
 
+- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
+  
 - A **canvas app not in a solution** can't be used in offline mode.
 
 - The offline-first feature **works for standalone, canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md), or [canvas apps in Teams](../teams/overview.md).
