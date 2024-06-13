@@ -5,7 +5,7 @@ description: Learn how to resolve mobile sync conflicts with the server.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/30/2024
+ms.date: 06/13/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -36,7 +36,7 @@ In the event of a synchronization error, the system automatically generates a ne
 |**Error Code**| Code of the error. | -2147015424 |
 
 > [!Note]
-> Make sure that the role assigned to the user grants read privileges on the `Sync Error` table. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+> Make sure that the role assigned to the user grants read privileges on the **Sync Error** table. Learn more: [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role)
 
 ## Recommendation on how to use the Sync Error table
 The **Sync Error** table is a standard Dataverse table. We recommend that you create a [model-driven app](/power-apps/maker/model-driven-apps/create-model-driven-app) to manage the sync errors. 
@@ -63,7 +63,7 @@ Server-side plug-ins and validation can invalidate changes. Those changes are re
 ### Conflict resolution settings
 
 > [!Important]
-> The conflict resolution settings doen't apply to canvas apps.   
+> The conflict resolution settings don't apply to canvas apps.   
 
 If updates made while offline are being rejected too frequently, consider changing the conflict resolution setting to its default value.  
 
