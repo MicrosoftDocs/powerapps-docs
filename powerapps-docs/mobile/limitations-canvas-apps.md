@@ -38,6 +38,9 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
  
 - **Non-Dataverse connectors** like Sharepoint aren't supported in offline mode.
 
+  > [!NOTE]
+  > To enable offline if your data is in Excel files/CSVs or SharePoint lists, we recommend [Creating a canvas app with external data (Preview)](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) which uses copilot to assist with the Dataverse table generation. 
+
 - **Virtual tables** and **elastic tables** aren't not supported in offline mode.
 
 - **Calculated and roll-up fields** - Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
