@@ -132,9 +132,10 @@ The first sync can take time to complete for organizations with very large datas
 1. Select **Settings**.
 1. Select **General**.
 1. In the **Select offline mode and profile** section, edit the offline profile.
-1. Select **Edit** for the table you want to optimize.
-1. Select **Manage columns** in the **Selected columns** section.
-1. Select **Select only required columns**.
+1. Select **Edit selected profile**.
+1. The **Edit Profile** pane appears. In the **Data for offline use** section for the table you want to optimize, select the **More actiongs** (**...**) icon, and then select **Eddit**.
+1. To edit the table, select **Manage columns** in the **Selected columns** section.
+1. In the **Managed selected columns** pane, select the **Select only required columns** option, and then select more columns, if requried.
    
      > [!IMPORTANT]
      > If you have custom JavaScript code in the app, make sure that the columns used in the custom code are selected in the offline profile.
