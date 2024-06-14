@@ -125,30 +125,29 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
    > - This is a preview feature.
    > - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
    
-First sync can take time to complete for organizations with very large datasets, especially in remote areas. With **Offline Table Column Selection (Preview)** you can select the columns to download on the device to avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both first sync and delta sync, the former should see a greater impact as there are more records to download.
+The first sync can take time to complete for organizations with very large datasets, especially in remote areas. With **Offline Table Column Selection (Preview)** you can select the columns to download on the device to avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync should see a greater impact as there are more records to download.
 
 1. In [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 1. Select your model-driven app, and then select **Edit**.
 1. Select **Settings**.
 1. Select **General**.
-1. In the **Select offline mode and profile** section, edit the offline profile
-1. **Edit** the Table to optimize
-1. Select **Manage Columns** in the **Selected columns** section
-1. Select **Select only required columns**
+1. In the **Select offline mode and profile** section, edit the offline profile.
+1. Select **Edit** for the table you want to optimize.
+1. Select **Manage columns** in the **Selected columns** section.
+1. Select **Select only required columns**.
+   
      > [!IMPORTANT]
-     > If you have custom JS code in the app, make sure that the columns used in the custom code are selected in the offline profile.
-1. Select **Back**
-1. Select **Save**
-1. Select **Save + close**
-1. close the **Settings** and select **Publish** 
-
-
+     > If you have custom JavaScript code in the app, make sure that the columns used in the custom code are selected in the offline profile.
+     
+1. Select **Back**.
+1. Select **Save**.
+1. Select **Save + close**.
+1. Close the **Settings** and select **Publish**. 
 
 > [!NOTE]
-> 1. For canvas app using an auto-generated offline profile, the system automatically optimizes the columns downloaded on the device.
-> 1. We recommend to select columns on tables with a high number of unused columns.
-> 1. The **manage columns** option is not enalble in the **Offline configuration** of **Power Platform admind Center**. 
-
+> - For canvas app using an auto-generated offline profile, the system automatically optimizes the columns downloaded on the device.
+> - We recommend to select columns on tables with a high number of unused columns.
+> - The **manage columns** option is not enalble in the **Offline configuration** of **Power Platform admind Center**. 
 
 ### See also
 - [Best practices to use an app for offline](best-practices-offline.md)
