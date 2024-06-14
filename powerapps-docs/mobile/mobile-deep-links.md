@@ -4,7 +4,7 @@ description: How to configure deep links for Power Apps mobile.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/16/2023
+ms.date: 06/14/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -47,7 +47,7 @@ Deep links for the Power Apps mobile app should start with the following:
 | &lt;org-url&gt;      | Connects to the correct org URL.                                              | Yes|
 | &lt;app-id&gt;       | Opens the correct app module.                                                 | Yes|
 | tenantId=&lt;tenand-id&gt;             | Connects to the correct tenant.                                               | Yes|
-|appType=AppModule     | indicates the the targeted app is a model-driven app                                                 | Yes|
+|appType=AppModule     | Indicates that the targeted app is a model-driven app.                                                 | Yes|
 | restartApp=true      | Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No |
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
 
@@ -68,7 +68,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | etn=&lt;entity-logical-name&gt;                              | Designates which table to go to.                              | Yes|
 | pagetype=entitylist                                          | Indicates that we're going to a view.                               | Yes|
 | viewid=&lt;view-id&gt;                                       | Designates which view to open.                                       | No|
-| Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Indicates whether the targeted view is a system view or a personal view | No|
+| Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Indicates whether the targeted view is a system view or a personal view. | No|
 
 ## Supported Urls parameters for a canvas app
   
