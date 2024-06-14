@@ -1,5 +1,5 @@
 ---
-title: Canvas component overview (contains video)
+title: Canvas component overview
 description: Learn about how to create reusable components for canvas apps.
 author: jorisdg
 ms.subservice: canvas-developer

@@ -94,6 +94,24 @@ landingContent:
             url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
 
   # Card
+  - title: Get insights from your data
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Overview 
+            url: data-get-insights-overview.md
+          - text: Transition to Dataverse insights
+            url: azure-synapse-link-transition-from-FnO.md
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Synapse Link for Dataverse
+            url: export-to-data-lake.md
+          - text: Fabric link for Dataverse
+            url: azure-synapse-link-view-in-fabric.md
+          - text: Quick view and Power BI integration
+            url: use-powerbi-dataverse.md
+
+  # Card
   - title: Integrate with external data
     linkLists:
       - linkListType: concept

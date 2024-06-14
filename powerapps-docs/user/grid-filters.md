@@ -4,7 +4,7 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/22/2024
+ms.date: 06/05/2024
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: sericks
@@ -143,7 +143,8 @@ When configured, the dropdown column headers surface a **Group by** option. This
 -  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
 
 > [!NOTE]
-> Grouping criteria isn't saved to a view.  
+> Grouping criteria isn't saved to a view.
+> Grouping is not supported when paging on the grid is allowed.
 
 ### Aggregation
 

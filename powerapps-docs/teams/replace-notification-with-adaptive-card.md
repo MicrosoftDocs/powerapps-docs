@@ -1,5 +1,5 @@
 ---
-title: Replace notification with adaptive card (contains video)
+title: Replace notification with adaptive card
 description: Learn about how to replace notification with adaptive card to increase collaboration
 author: sbahl10
 

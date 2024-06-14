@@ -20,6 +20,8 @@ contributors:
 
 This article describes ways you can optimize performance when retrieving data using FetchXml.
 
+[!INCLUDE [cc-query-antipatterns](../includes/cc-query-antipatterns.md)]
+
 ## Late Materialize query
 
 If you select many lookup and computed columns, and you're experiencing performance issues, you can try setting the [fetch element](reference/fetch.md) boolean `latematerialize` attribute. Behind the scenes, this setting breaks the query into smaller parts and reassembles the results before returning them to you.

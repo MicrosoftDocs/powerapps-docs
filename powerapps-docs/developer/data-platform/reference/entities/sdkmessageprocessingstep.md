@@ -1,7 +1,7 @@
 ---
 title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -53,6 +53,7 @@ Stage in the execution pipeline that a plug-in is to execute.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AsyncAutoDelete](#BKMK_AsyncAutoDelete)
+- [CanBeBypassed](#BKMK_CanBeBypassed)
 - [CanUseReadOnlyConnection](#BKMK_CanUseReadOnlyConnection)
 - [Category](#BKMK_Category)
 - [Configuration](#BKMK_Configuration)
@@ -97,6 +98,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### AsyncAutoDelete Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_CanBeBypassed"></a> CanBeBypassed
+
+**Added by**: API messages extension solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|canbebypassed|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### CanBeBypassed Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|

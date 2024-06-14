@@ -1,5 +1,5 @@
 ---
-title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview (contains video) | MicrosoftDocs"
+title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one table relationships"
 ms.custom: ""
 ms.date: 10/04/2021
