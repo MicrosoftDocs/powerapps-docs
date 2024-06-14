@@ -41,7 +41,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 - Non-Dataverse connectors, like Sharepoint, aren't supported in offline mode.
 
 > [!NOTE]
-> To use offline if your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
+> If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
 
 - **Virtual tables** and **elastic tables** aren't supported in offline mode.
 
