@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/13/2024
+ms.date: 06/14/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -40,7 +40,10 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
  
 - Non-Dataverse connectors, like Sharepoint, aren't supported in offline mode.
 
-- Virtual tables aren't not supported in offline mode.
+> [!NOTE]
+> If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
+
+- **Virtual tables** and **elastic tables** aren't supported in offline mode.
 
 - Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
