@@ -44,7 +44,7 @@ After you select the table to start your query with, refine the query to get the
 
 There are some things that you can do using FetchXml that OData doesn't support.
 
-- [Aggregation limitations](aggregate-data.md#queryexpression-aggregation-limitations) lists the following limitations for aggregations using `QueryExpression`:
+- [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
 
    - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
    - [Time zone when grouping by date](aggregate-data.md#time-zone-when-grouping-by-date)
