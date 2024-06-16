@@ -14,6 +14,16 @@ contributors:
 ---
 # Order rows using OData
 
+Use the `$orderby` [query option](overview.md#odata-query-options) to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order, respectively. The default is ascending. The following example retrieves the `name` and `revenue` properties of accounts, ordered by ascending `revenue` and descending `name`:
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null
+```
+
+[!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
+
 ## Descending order
 
 ## Process `link-entity` orders first

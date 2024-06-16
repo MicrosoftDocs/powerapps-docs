@@ -208,7 +208,9 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 
 ### Column aliases
 
-There is currently no way to specify column aliases using Dataverse Web API. OData 4.0 doesn't include the [$compute system query option introduced in OData 4.01](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361047) that is required to provide this capability.
+For Web API, [use fetchxml to specify customized aliases for columns](../../fetchxml/select-columns.md?tabs=webapi#column-aliases).
+
+There is currently no way to specify column aliases using Dataverse Web API using OData. OData 4.0 doesn't include the [$compute system query option introduced in OData 4.01](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361047) that is required to provide this capability.
 
 
 ## Next steps

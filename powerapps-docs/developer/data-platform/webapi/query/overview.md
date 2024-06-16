@@ -89,7 +89,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name
 
 You can query any collection of entities represented by a collection-valued navigation property of a specified record.
 
-If you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+If you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
