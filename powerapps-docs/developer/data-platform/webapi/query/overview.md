@@ -14,16 +14,15 @@ contributors:
 ---
 # Use OData to query data
 
-The Dataverse Web API is an OData v4.0 service. These sections of the OData specification describe how to retrieve data from an OData service:
+The Dataverse Web API is an OData version 4.0 service. These sections of the OData 4.0 specification describe how to retrieve data:
 
 - [OData Version 4.0. Part 1: Protocol Plus Errata 03 11.2 Requesting Data](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752283)
 - [OData Version 4.0. Part 2: URL Conventions Plus Errata 03 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356)
 
-This article and the other articles in this section describe the parts of the OData specification that the Dataverse Web API applies and how you can use it to retrieve business data from Dataverse.
+This article and the other articles in this section describe the parts of the 4.0 OData specification implemented by the Dataverse Web API and how you can use it to retrieve business data from Dataverse.
 
-You can also use Web API to query data about *table definitions*, or *entity metadata*. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](../query-metadata-web-api.md) and [Query schema definitions](../../query-schema-definitions.md)
-
-## Compose a query
+> [!NOTE]
+> The OData version 4.01 is the latest version. It include enhancements and additional features not available in version 4.0, and therefore not currently available in the Dataverse Web API.
 
 ## Entity collections
 
@@ -32,6 +31,7 @@ Every query begins with a collection of entities. Entity collections can be:
 - [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](../web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
 - An expanded collection-valued navigation property. More information: [Expand collection-valued navigation properties](join-tables.md#expand-collection-valued-navigation-properties)
+- A collection returned by a function. Some functions are composable, which means you can apply `$select` or `$filter` system query options to limit the results returned. More information: [Composable functions](../use-web-api-functions.md#composable-functions)
 
 ### EntitySet resources
 
@@ -110,7 +110,7 @@ The following table describes the OData query options the Dataverse Web API supp
 |---------|---------|---------|
 |`$select`|Request a specific set of properties for each entity or complex type.|[Select columns](select-columns.md)|
 |`$expand`|Specify the related resources to be included in line with retrieved resources. |[Join tables](join-tables.md)|
-|`$filter `|Filter a collection of resources. |[Filter rows](filter-rows.md)|
+|`$filter`|Filter a collection of resources. |[Filter rows](filter-rows.md)|
 |`$orderby`|Request resources in a particular order. |[Order rows](order-rows.md)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](aggregate-data.md)|
 |`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Don't use the $top query option while paging records.](page-results.md#dont-use-the-top-query-option-while-paging-records)|
@@ -165,7 +165,9 @@ There are some things that you can do using FetchXml that OData doesn't support.
 
 ## Community tools
 
-## Use OData as a message parameter
+## Use system query options as parameters for functions
+
+
 
 ## Next steps
 
