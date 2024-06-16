@@ -113,7 +113,7 @@ The following table describes the OData query options the Dataverse Web API supp
 |`$filter `|Filter a collection of resources. |[Filter rows](filter-rows.md)|
 |`$orderby`|Request resources in a particular order. |[Order rows](order-rows.md)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](aggregate-data.md)|
-|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Use the $top query option](#use-the-top-query-option)|
+|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Don't use the $top query option while paging records.](page-results.md#dont-use-the-top-query-option-while-paging-records)|
 |`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](count-rows.md)|
 
 You can apply multiple options to a query. Separate query options from the resource path with a question mark (?). Separate each option after the first with an ampersand (&). Option names are case-sensitive.
@@ -123,6 +123,8 @@ The Dataverse Web API doesn't support these [OData query options](https://docs.o
 ## Limit the number of rows
 
 ## Return distinct results
+
+There is not any `$distinct` keyword in OData to restrict results to unique values. Instead, you can use the `$apply` system query option with the `groupby` transformation. This will effectively return distinct values for each property. 
 
 ## Retrieve Data
 

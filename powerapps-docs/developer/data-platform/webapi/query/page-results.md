@@ -99,7 +99,7 @@ Don't change the `@odata.nextLink` URL value or append any query options to it. 
 
 In the earlier examples, encoded information was set as the value of the `$skiptoken` parameter in the `@odata.nextLink` URL value. The server sets this encoded information to control paging. You shouldn't modify the encoded information or encode it further. Use the URL value provided to retrieve the next page.
 
-## Don't use the $top query option while paging record.
+## Don't use the $top query option while paging records
 
 Use the `$top` query option to limit the number of results returned. Don't use `$top` with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` is ignored.
 
