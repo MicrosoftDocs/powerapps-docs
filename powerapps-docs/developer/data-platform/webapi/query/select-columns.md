@@ -17,7 +17,7 @@ contributors:
 > [!IMPORTANT]
 > When you query data, it's important to limit the amount of data returned to optimize performance. Only select the columns with data that you need.
 
-Use the `$select` [query option](#odata-query-options) to choose which columns to return with your query. In OData, every column is represented as a [*property*](web-api-properties.md). If you don't include a `$select` query option, all properties are returned.
+Use the `$select` [query option](overview.md#odata-query-options) to choose which columns to return with your query. In OData, every column is represented as a [*property*](../web-api-properties.md). If you don't include a `$select` query option, all properties are returned.
 
 The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource:
 

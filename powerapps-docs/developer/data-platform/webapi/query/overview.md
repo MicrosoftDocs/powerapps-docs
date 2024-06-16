@@ -25,7 +25,100 @@ You can also use Web API to query data about *table definitions*, or *entity met
 
 ## Compose a query
 
+## Entity collections
 
+Every query begins with a collection of entities. Entity collections can be:
+
+- [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
+- [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](../web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
+- An expanded collection-valued navigation property. More information: [Expand collection-valued navigation properties](join-tables.md#expand-collection-valued-navigation-properties)
+
+### EntitySet resources
+
+To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [service document](../web-api-service-documents.md#service-document):
+
+**Request:**
+
+```http
+GET [Organization URI]/api/data/v9.2/
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata",
+    "value": [
+        {
+            "name": "aadusers",
+            "kind": "EntitySet",
+            "url": "aadusers"
+        },
+        {
+            "name": "accountleadscollection",
+            "kind": "EntitySet",
+            "url": "accountleadscollection"
+        },
+        {
+            "name": "accounts",
+            "kind": "EntitySet",
+            "url": "accounts"
+        },
+      ... <Truncated for brevity>
+   [
+}
+```
+
+> [!TIP]
+> These values are usually the plural name of the table, but they can be different. Use this query to confirm you're using the correct EntitySet resource name.
+
+To retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), you start with the `accounts` EntitySet resource.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
+```
+
+### Filtered collections
+
+You can query any collection of entities represented by a collection-valued navigation property of a specified record.
+
+If you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+
+```http
+GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
+```
+
+To locate the name of the collection-valued navigation property:
+
+- For any Dataverse tables and relationships, you can check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>
+- For any custom tables or relationships, look for the [collection-valued navigation properties](../web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document)
+
+
+### OData query options
+
+The following table describes the OData query options the Dataverse Web API supports.
+
+
+|Option|Use to|More information|
+|---------|---------|---------|
+|`$select`|Request a specific set of properties for each entity or complex type.|[Select columns](select-columns.md)|
+|`$expand`|Specify the related resources to be included in line with retrieved resources. |[Join tables](join-tables.md)|
+|`$filter `|Filter a collection of resources. |[Filter rows](filter-rows.md)|
+|`$orderby`|Request resources in a particular order. |[Order rows](order-rows.md)|
+|`$apply`|Aggregate and group your data. |[Aggregate data](aggregate-data.md)|
+|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Use the $top query option](#use-the-top-query-option)|
+|`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](count-rows.md)|
+
+You can apply multiple options to a query. Separate query options from the resource path with a question mark (?). Separate each option after the first with an ampersand (&). Option names are case-sensitive.
+
+The Dataverse Web API doesn't support these [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
 
 ## Limit the number of rows
 
@@ -66,9 +159,6 @@ There are some things that you can do using FetchXml that OData doesn't support.
    `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
 - [You can't override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
 - You can't use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query) performance optimization.
-
-> [!IMPORTANT]
-> If you use the `FetchXmlToQueryExpression` message with either the SDK [FetchXmlToQueryExpressionRequest class](/dotnet/api/microsoft.crm.sdk.messages.fetchxmltoqueryexpressionrequest) or Web API [FetchXmlToQueryExpression function](/power-apps/developer/data-platform/webapi/reference/fetchxmltoqueryexpression), any capabilities not supported by `QueryExpression` are not applied and there will be no error.
 
 
 ## Community tools

@@ -14,12 +14,12 @@ contributors:
 ---
 # Join tables using OData
 
-To control what data is returned from related table records, use the `$expand` [query option](#odata-query-options) with navigation properties.
+To control what data is returned from related table records, use the `$expand` [query option](overview.md#odata-query-options) with navigation properties.
 
 - You can include up to 15 `$expand` options in a query. Each `$expand` option creates a join that can affect performance.
-- Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+- Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](../compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
-The following table describes the [query options](#odata-query-options) you can apply in certain `$expand` options:
+The following table describes the [query options](overview.md#odata-query-options) you can apply in certain `$expand` options:
 
 
 |Option|Description|
@@ -170,7 +170,7 @@ OData-Version: 4.0
 
 The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
 
-However, the [User (SystemUser) table](../reference/entities/systemuser.md) has the primary key of [SystemUserId](../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](web-api-entitytypes.md#entitytype-inheritance)
+However, the [User (SystemUser) table](../../reference/entities/systemuser.md) has the primary key of [SystemUserId](../../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](../web-api-entitytypes.md#entitytype-inheritance)
 
 ### Return references
 
@@ -307,7 +307,7 @@ There are some important differences in the response that depend on whether you 
 
 ||Nested $expand|Single $expand|
 |---------|---------|---------|
-|**Paging**|Paging on expanded rows.|Paging only on [EntitySet resource](#entityset-resources). `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
+|**Paging**|Paging on expanded rows.|Paging only on [EntitySet resource](overview.md#entityset-resources). `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
 |**`$top` or `$orderby` supported**|No|Yes|
 
 ### Single $expand on collection-valued navigation properties
