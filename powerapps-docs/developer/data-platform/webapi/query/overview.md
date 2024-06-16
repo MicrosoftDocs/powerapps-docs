@@ -14,7 +14,18 @@ contributors:
 ---
 # Use OData to query data
 
+The Dataverse Web API is an OData v4.0 service. These sections of the OData specification describe how to retrieve data from an OData service:
+
+- [OData Version 4.0. Part 1: Protocol Plus Errata 03 11.2 Requesting Data](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752283)
+- [OData Version 4.0. Part 2: URL Conventions Plus Errata 03 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356)
+
+This article and the other articles in this section describe the parts of the OData specification that the Dataverse Web API applies and how you can use it to retrieve business data from Dataverse.
+
+You can also use Web API to query data about *table definitions*, or *entity metadata*. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](../query-metadata-web-api.md) and [Query schema definitions](../../query-schema-definitions.md)
+
 ## Compose a query
+
+
 
 ## Limit the number of rows
 
@@ -46,10 +57,10 @@ There are some things that you can do using FetchXml that OData doesn't support.
 
 - [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
 
-   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
-   - [Time zone when grouping by date](aggregate-data.md#time-zone-when-grouping-by-date)
-   - [Row aggregate](aggregate-data.md#row-aggregate)
-   - [Per query limit](aggregate-data.md#per-query-limit)
+  - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
+  - [Time zone when grouping by date](aggregate-data.md#time-zone-when-grouping-by-date)
+  - [Row aggregate](aggregate-data.md#row-aggregate)
+  - [Per query limit](aggregate-data.md#per-query-limit)
 
 - [Perform cross table column comparisons](../../fetchxml/filter-rows.md#cross-table-column-comparisons).
    `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
@@ -63,8 +74,6 @@ There are some things that you can do using FetchXml that OData doesn't support.
 ## Community tools
 
 ## Use OData as a message parameter
-
-
 
 ## Next steps
 
