@@ -101,6 +101,10 @@ This configuration can be considered a bootstrap step for average use cases.
 and then expand **Tables**. All Parquet tables are listed and available for analysis with the naming convention
 *DataverseTableName.* **(Non_partitioned Table)**.
 
+> [!NOTE]
+> You must not use tables with the naming convention _partitioned. When you choose Delta parquet as the format, tables with _partition naming convention are used as staging tables and will be removed after use by the system 
+>  
+
 ## View your data from Azure Data Lake Storage Gen2
 
 1. Select the Azure Synapse Link you want, and then select **Go to Azure data lake** on the command
