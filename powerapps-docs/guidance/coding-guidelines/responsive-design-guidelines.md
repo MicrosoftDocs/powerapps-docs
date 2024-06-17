@@ -1,5 +1,6 @@
 ﻿---
 title: Responsive design in Power Apps
+description: Learn about responsive design in Power Apps.
 ms.date: 06/12/2024
 ms.topic: conceptual
 ms.subservice: guidance
