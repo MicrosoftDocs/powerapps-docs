@@ -315,9 +315,23 @@ Enumerated fields are coded data fields in finance and operations apps. For exam
 If there are metadata changes to finance and operations tables, for example, a new field is added to a table, and the data exported in Azure Synapse Link reflects the latest metadata inclusive of the change. More information: [Azure Synapse Link FAQ](/power-apps/maker/data-platform/export-data-lake-faq#what-happens-when-i-add-a-column). If you're using Azure Synapse Link to query the data, you see the updated metadata reflected in Azure Synapse Link. If you consume incremental data changes, you can locate updated metadata within the incremental data folder with the latest date stamp. More information: [Incremental folder structure](/power-apps/maker/data-platform/azure-synapse-incremental-updates#view-incremental-folder-at-microsoft-azure-storage)
 
 You will also notice additional metadata fields appended by the system. Explanation of these fields is shown below.
-|--------------|----------------|
-| Metadata field |  how you can use this field |
-| createdon |  nnn|
+
+| Metadata field  |  How to use this field | equivalent field in Export to Data lake |
+|-------------------------------|------------------------------------|------------------------------------------|
+| createdon | Indicates the date and time the record was created |  |
+| Createdtransactionid |  | |
+| Id |  | |
+| IsDelete | if Yes this record is deleted |  |
+| modifiedon | | |
+| modifiedtransactionid | | |
+| SinkCreatedOn | | |
+| SinkModifiedOn | | |
+| sysdatastatecode | | |
+| sysrowversion |  |  | 
+| tableid |  |  |
+| versionnumber |  |  |
+
+
 
 
 ## Enable finance and operations data entities in Azure Synapse Link
