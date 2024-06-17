@@ -45,10 +45,10 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 - You must have a finance and operations sandbox (Tier-2) or higher environment.
 - For validation purposes, you can also use a [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
-- You can use a Tier-1 environment, also known as a cloud-hosted environment, for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
+- You can use a Tier-1 environment, also known as a cloud-hosted environment, for proof of concept validations (POCs). Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
 
    > [!NOTE]
-   > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+   > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments", we offer limited support for cloud hosted environments (CHE) as of June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
 
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
@@ -83,8 +83,12 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 After row version change tracking is enabled, a system event that's triggered in your environment might cause reinitialization of tables in export to data lake. If you have downstream consumption pipelines, you might have to reinitialize the pipelines. More information: [Some tables have been "initialized" without user action](/dynamics365/fin-ops-core/dev-itpro/data-entities/finance-data-azure-data-lake#some-tables-have-been-initialized-without-user-action).
 
 ### Additional steps to configure a cloud hosted environment
+  > [!NOTE]
+> 
+> With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments", weoffer limited support for cloud hosted environments (CHE).
+> 
 
-With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, you must perform the following additional configuration steps:
+If you're using cloud hosted environments, you must perform the following additional configuration steps:
 
 1. Complete a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 
@@ -246,10 +250,8 @@ Currently, there are limitations with finance and operations tables and Azure Sy
    >   - Incremental updates include this column.
    >   - Modified records show these columns and value.
    >    - Full refresh includes these fields and all values.
-   >      
-- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
-- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
-- In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
+   >
+   
 - When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies), the system might not export data. This issue is fixed in the latest application update.
   > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
@@ -258,6 +260,19 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   > - Version 10.0.39 (PU63) cumulative update update 10.0.1860.50
   >
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
+
+- In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. This issue is fixed in latest application update
+   > [!NOTE]
+  > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
+  > - Version 10.0.38 (PU62) platform update 7.0.7279.58
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.143
+  > - Version 10.0.40 (PU64) platform update 7.0.7120.179
+  >
+  > With this update, expired data rows are added to tables. You will need to perform a full refresh to include previous rows.
+
+- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
+- 
+- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
   
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation.
 - When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile.
