@@ -125,7 +125,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
-5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**.
+5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. You can use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
 
    > [!NOTE]
    > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
