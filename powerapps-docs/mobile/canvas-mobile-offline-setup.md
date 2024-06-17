@@ -15,6 +15,9 @@ searchScope:
 ms.custom: bap-template
 ---
 
+<!-- It's unclear why there are four asterisks at the end of the sentence in line 38. -->
+
+
 # Set up mobile offline for canvas apps
 
 
@@ -26,7 +29,7 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
-- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
+- Users with the Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
 - If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
