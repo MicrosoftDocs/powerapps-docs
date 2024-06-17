@@ -1,7 +1,7 @@
 ---
 title: "flowevent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowevent table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Entity to store the events that happen during usage of Power Automate.
 |-|-|-|
 |Assign|PATCH /flowevents(*floweventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /flowevents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /flowevents(*floweventid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ Entity to store the events that happen during usage of Power Automate.
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /flowevents(*floweventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /flowevents(*floweventid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [eventcontent](#BKMK_eventcontent)
 - [EventDuration](#BKMK_EventDuration)
 - [eventtype](#BKMK_eventtype)
+- [ExpiryDate](#BKMK_ExpiryDate)
 - [floweventId](#BKMK_floweventId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [level](#BKMK_level)
@@ -145,6 +146,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|500|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_ExpiryDate"></a> ExpiryDate
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date after which the event should no longer be displayed.|
+|DisplayName|Expiry Date|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|expirydate|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_floweventId"></a> floweventId
@@ -267,7 +283,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|parentobjectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|flowmachinegroup,flowsession|
+|Targets|flowmachine,flowmachinegroup,flowsession,workflow,workqueue|
 |Type|Lookup|
 
 
@@ -975,8 +991,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_flowevent](#BKMK_user_flowevent)
 - [team_flowevent](#BKMK_team_flowevent)
 - [business_unit_flowevent](#BKMK_business_unit_flowevent)
+- [flowevent_flowmachine](#BKMK_flowevent_flowmachine)
 - [flowevent_flowmachinegroup](#BKMK_flowevent_flowmachinegroup)
 - [flowevent_flowsession](#BKMK_flowevent_flowsession)
+- [flowevent_workqueue](#BKMK_flowevent_workqueue)
+- [flowevent_workflow](#BKMK_flowevent_workflow)
 
 
 ### <a name="BKMK_lk_flowevent_createdby"></a> lk_flowevent_createdby
@@ -1021,6 +1040,10 @@ See the [team_flowevent](team.md#BKMK_team_flowevent) one-to-many relationship f
 
 See the [business_unit_flowevent](businessunit.md#BKMK_business_unit_flowevent) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
+### <a name="BKMK_flowevent_flowmachine"></a> flowevent_flowmachine
+
+See the [flowevent_flowmachine](flowmachine.md#BKMK_flowevent_flowmachine) one-to-many relationship for the [flowmachine](flowmachine.md) table/entity.
+
 ### <a name="BKMK_flowevent_flowmachinegroup"></a> flowevent_flowmachinegroup
 
 See the [flowevent_flowmachinegroup](flowmachinegroup.md#BKMK_flowevent_flowmachinegroup) one-to-many relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
@@ -1028,6 +1051,16 @@ See the [flowevent_flowmachinegroup](flowmachinegroup.md#BKMK_flowevent_flowmach
 ### <a name="BKMK_flowevent_flowsession"></a> flowevent_flowsession
 
 See the [flowevent_flowsession](flowsession.md#BKMK_flowevent_flowsession) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
+
+### <a name="BKMK_flowevent_workqueue"></a> flowevent_workqueue
+
+See the [flowevent_workqueue](workqueue.md#BKMK_flowevent_workqueue) one-to-many relationship for the [workqueue](workqueue.md) table/entity.
+
+### <a name="BKMK_flowevent_workflow"></a> flowevent_workflow
+
+**Added by**: System Solution Solution
+
+See the [flowevent_workflow](workflow.md#BKMK_flowevent_workflow) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 

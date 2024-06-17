@@ -171,7 +171,7 @@ var formattedRevenueString1 = account.FormattedValues["revenue"];
 var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 ```
 
-More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 ## Entity.RelatedEntities
 

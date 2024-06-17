@@ -1,5 +1,5 @@
 ---
-title: Create an app with address input and map controls (contains video)
+title: Create an app with address input and map controls
 description: Learn about how to create apps using address input and map controls in canvas apps.
 author: joel-lindstrom
 

@@ -4,13 +4,16 @@ description: Learn how to customize and work with Power BI components in Power A
 author: paulinbar
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/16/2022
+ms.date: 06/06/2024
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
   - maker
 ---
 # Customize and manage Power BI components (preview)
+
+> [!IMPORTANT]
+> This feature will reach retirement on July 31, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
