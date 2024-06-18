@@ -142,9 +142,13 @@ Keep in mind that you can have 15 related tables in a custom filter. You can als
 If your Power Apps account doesn't have admin rights, you can still create a mobile offline profile. Coming soon, you'll be able to create an offline profile directly in Power Apps Studio. Until then, use this workaround.
 
 1. Create a model-driven app in your test environment that uses the same tables as your canvas app.
+
 2. [Set up the model-driven app for offline use](setup-mobile-offline.md).
+
 3. [Generate a default profile](setup-mobile-offline.md#generate-a-default-profile) and [add tables with filters](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
+
 4. Publish the model-driven app.
+
 5. Select the offline profile in your canvas app.
 
 ## Using the Offline template and offline status icon
@@ -198,7 +202,9 @@ Host.OfflineEnabled
 When you export a solution with an offline canvas app, you also need to export the offline profile for the app, as it is a dependency of the app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and in the left navigation pane, select **Solutions**.
+
 2. Select the solution that you want to export and then select **Edit**.
+
 3. Select the canvas app that is enabled for offline and then select **Advanced** > **Add required objects**.
 
 Make sure that the associated offline profile is in the solution and then you can export it.  
@@ -206,6 +212,6 @@ Make sure that the associated offline profile is in the solution and then you ca
 ## See also
 
 - [Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
-- [Best practices to enable an app for offline](best-practices-offline.md)
+- [Best practices for developing an app for offline use](best-practices-offline.md)
 - [Optimize the offline profile](mobile-offline-guidelines.md)
 
