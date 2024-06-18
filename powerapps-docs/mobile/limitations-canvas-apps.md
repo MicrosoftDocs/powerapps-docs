@@ -38,10 +38,10 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 - Many-to-many relationships aren't supported in offline mode.
  
-- Non-Dataverse connectors, like Sharepoint, aren't supported in offline mode.
+- Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.
 
-> [!NOTE]
-> If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
+  > [!NOTE]
+  > If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
 
 - **Virtual tables** and **elastic tables** aren't supported in offline mode.
 
@@ -63,7 +63,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 |Profile details |Limitation|  
 |-------------|---------|  
-|Relationship defined for each table|A maximum of 15 relationships is allowed. The is a maximum of one many to many (M:M) or one to many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Relationship defined for each table|A maximum of 15 relationships is allowed. There is a maximum of one many-to-many (M:M) or one-to-many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 
 ### See also
