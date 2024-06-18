@@ -80,11 +80,12 @@ Within the [resources element](manifest-schema-reference/resources.md), find two
 
 ```xml
 <resources>
-    <code path="index.ts" order="1" />
-   <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="9.46.2" />
+  <code path="index.ts" order="1" />
+  <platform-library name="React" version="16.8.6" />
+  <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
+
 > [!NOTE]
 > For more information about valid platform library versions, see [Supported platform libraries list](#supported-platform-libraries-list).
 
@@ -105,17 +106,17 @@ You can find two new controls added to the samples as part of this preview. Func
 |Sample |Description|Link|
 |---------|---------|---------|
 |ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |[ChoicesPickerReact Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerReactControl)|
-|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
+|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl) converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
 
 ## Supported platform libraries list
 
 Platform libraries are made available both at the build and runtime to the controls that are using platform libraries capability. Currently, the following versions are provided by the platform and are the highest currently supported versions.
 
-| Name   | npm package name | Version |
-| ------ | ---------------- | ------- |
-| React  | react            | 16.8.6  |
-| Fluent | @fluentui/react  | 8.29.0  |
-| Fluent | @fluentui/react  | 9.46.2  |
+| Name   | npm package name            | Allowed version range  | Version loaded |
+| ------ | --------------------------- | ---------------------- | -------------- |
+| React  | react                       | 16.8.6                 | 17.0.2 (Model), 16.14.0 (Canvas) |
+| Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
+| Fluent | @fluentui/react-components  | 9.4.0 >= && <= 9.46.2  | 9.46.2         |
 
 > [!NOTE]
 > The application might load a higher compatible version of a platform library at runtime, but the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
