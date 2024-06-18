@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
-description: Learn how to choose finance and operations data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 05/30/2024
+description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
+ms.date: 06/18/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -15,7 +15,7 @@ ms.custom: bap-template
 ---
 # Choose finance and operations data in Azure Synapse Link for Dataverse
 
-Microsoft Azure Synapse Link for Dataverse lets you choose data from finance and operations apps. Use Azure Synapse Link to continuously export data from finance and operations apps into Azure Synapse Analytics and Azure Data Lake Storage Gen2.
+Microsoft Azure Synapse Link for Dataverse lets you choose data from Dynamics 365 finance and operations apps. Use Azure Synapse Link to continuously export data from finance and operations apps into Azure Synapse Analytics and Azure Data Lake Storage Gen2.
 
 Azure Synapse Link for Dataverse is a service that's designed for enterprise big data analytics. It provides scalable high availability together with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments.
 
@@ -45,17 +45,17 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 - You must have a finance and operations sandbox (Tier-2) or higher environment.
 - For validation purposes, you can also use a [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
-- You can use a Tier-1 environment, also known as a cloud-hosted environment, for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
+- You can use a Tier-1 environment, also known as a cloud-hosted environment, for proof of concept validations. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
 
    > [!NOTE]
-   > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
+   > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as *unified environments*, Microsoft offers limited support for cloud hosted environments (CHE) as of June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC).
 
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
 - You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL Link profile. 
 - Depending on how you plan to consume finance and operations data, there are additional prerequisites as shown here.
 
-| How you plan to consume data  |  Azure Synapse Link feature you'll use | Prerequisites and Azure resources needed |
+| How you plan to consume data  |  Azure Synapse Link feature you use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
 | **Access finance and operations tables via Synapse query** <br><br> Finance and operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. | Go to [Add finance and operations tables in Azure Synapse Link](#add-finance-and-operations-tables-in-azure-synapse-link)  |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
 | **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | Go to [Access incremental data changes from finance and operations](#access-incremental-data-changes-from-finance-and-operations)  <br> Also go to [Azure Synapse Link - incremental update](/power-apps/maker/data-platform/azure-synapse-incremental-updates)) | Azure data lake  |
@@ -84,7 +84,11 @@ After row version change tracking is enabled, a system event that's triggered in
 
 ### Additional steps to configure a cloud hosted environment
 
-With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as "unified environments" for validation, we plan to remove support for cloud hosted environments (CHE) for validation beginning June 1, 2024. If you're using cloud hosted environments, you must perform the following additional configuration steps:
+> [!NOTE]
+>
+> With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as *unified environments*, Microsoft offers limited support for cloud hosted environments (CHE).
+
+If you're using cloud hosted environments, you must perform the following additional configuration steps:
 
 1. Complete a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
 
@@ -212,7 +216,7 @@ You can enable both finance and operations tables and finance and operations ent
 5. Select **Use Spark pool for processing**, and then select the precreated Spark pool and storage account.
 6. Select **Next**.
 7. Add the tables you want to export. You can choose finance and operations tables provided the [prerequisites](#prerequisites) are met.
-8. Select **Advanced**, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured.
+8. Select **Advanced**, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured. The options **Append only** and **Partition** available at the table level are ignored for finance and operations tables because the system determines the partitioning strategy.
 9. Select **Save**. Tables selected are initialized and ready for reporting.
 
 ![Adding finance and operations tables in Azure Synapse Link](media/synapse_link_delta_3_loops.gif)
@@ -245,11 +249,9 @@ Currently, there are limitations with finance and operations tables and Azure Sy
    > With this update, AOS authorization fields are added to tables:
    >   - Incremental updates include this column.
    >   - Modified records show these columns and value.
-   >    - Full refresh includes these fields and all values.
-   >      
-- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields.
-- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
-- In case of finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. As a workaround, until this issue is fixed, you can use a table such as ExchangeRateBIEntity.
+   >   - Full refresh includes these fields and all values.
+   >
+   
 - When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies), the system might not export data. This issue is fixed in the latest application update.
   > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
@@ -258,9 +260,21 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   > - Version 10.0.39 (PU63) cumulative update update 10.0.1860.50
   >
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
+
+- If there are finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. This issue is fixed in the latest application update shown here.
+   > [!NOTE]
+  > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
+  > - Version 10.0.38 (PU62) platform update 7.0.7279.58
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.143
+  > - Version 10.0.40 (PU64) platform update 7.0.7120.179
+  >
+  > With this update, expired data rows are added to tables. You need to perform a full refresh to include previous rows.
+
+- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
+- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
   
-- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You must add finance and operations tables into the profile after a database restore operation.
-- When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile.
+- Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
+- When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
 - Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
@@ -299,6 +313,40 @@ To create an Azure Synapse Link profile with incremental data:
 Enumerated fields are coded data fields in finance and operations apps. For example, the **AssetTrans** table contains a field called **TransType**, which is an **Enumerated** field. Table fields contain numeric codes like 110, 120, or 131, which represent detailed descriptions like "Depreciation", "Lease" or "Major repairs". You can access these detailed descriptions by using the **GlobalOptionsMetadata** table that's automatically exported when you choose a table that contains enumerated fields. Enumerated fields are also called choice labels or, formerly, option sets. More information: [Choice labels](/power-apps/maker/data-platform/azure-synapse-link-choice-labels)
 
 If there are metadata changes to finance and operations tables, for example, a new field is added to a table, and the data exported in Azure Synapse Link reflects the latest metadata inclusive of the change. More information: [Azure Synapse Link FAQ](/power-apps/maker/data-platform/export-data-lake-faq#what-happens-when-i-add-a-column). If you're using Azure Synapse Link to query the data, you see the updated metadata reflected in Azure Synapse Link. If you consume incremental data changes, you can locate updated metadata within the incremental data folder with the latest date stamp. More information: [Incremental folder structure](/power-apps/maker/data-platform/azure-synapse-incremental-updates#view-incremental-folder-at-microsoft-azure-storage)
+
+You'll also notice additional metadata fields appended by the system for each data row. Explanation of these fields is shown below.
+
+| Metadata field  |  What this field contains | Equivalent field or feature in export to data lake |
+|-------------------------------|------------------------------------|------------------------------------------|
+| `createdon` | Indicates the date and time the record was created | Derived from `Created Date` time field in each finance and operations records. |
+| `Createdtransactionid` | Not used  | Not used |
+| `Id`  | Record ID is used by the system to uniquely identify records | Contains the `RecID` field of the record from finance and operations. This value is converted from an integer to a GUID. |
+| `IsDelete` | If True this record is deleted from Dataverse or finance and operations | In  case of a delete at source, export to data lake deletes the row from the destination data lake immediately. Azure Synapse Link performs a "soft delete" for table data in Delta format such that you can identify deleted rows without consuming change feeds. <br>In case of table data in Delta files, soft deleted rows are purged after 28 days.<br><br>IsDelete field is also available in incremental updates. In case you want to access the latest row for incremental update `isDelete` is False, the latest version number and sync modified on date for a given ID. |
+| `modifiedon` |  Indicates the date and time the record was last modified | This field is populated from modified date time field in finance and operations tables. |
+| `modifiedtransactionid` |  Used internally | Because `modifiedtransactionid` is used internally, don't use this field. |
+| `SinkCreatedOn` | Indicates the date the record was written to the data lake. <br>In case of CSV change data (incremental update), data and time data was written to lake is shown. For table data in Delta format, indicates the date and time of Delta Lake conversion.  | You can use this date similar to the data lake modified date time field in the export to data lake feature. |
+| `SinkModifiedOn` | Indicates the date the record was modified. In case of tables in Delta format files as well as incremental CSV files, contains the same date time as `SinkCreatedOn`. | You can use this date similar to the data lake modified date time field in export to data lake feature. |
+| `sysdatastatecode` | If 1, this record is archived using the long term data retention feature. If 0 this is a live record. | You can use this field to identify finance and operations records that have been archived (and deleted from live data). The same field is available for for CSV change data (incremental update). |
+| `sysrowversion` | Used internally to determine incremental or delta changed to be processed. | Because `sysrowversion` is used internally, don't use this field. |
+| `tableid` |  Contains a unique ID of each table | Contains the table ID from finance and operations. |
+| `versionnumber` | Used internally - contains the last version of the row that has been synced to data lake. | Because `versionnumber` is used internally, don't use this field.  |
+
+## Reacting to system events and generating audit reports
+
+Azure Synapse Link generates events when data transfer activities are completed or an issue is encountered. These events are recorded in Dataverse tables. You can create automated actions and audit reports using these Dataverse tables. For example, if you have an automated data pipeline that continuously copies changed data rows from your data lake to another location, special actions might be required when a table is inactivated or reactivated, or when table metadata is updated. Creating events enables you to automate these tasks.
+
+If you used [business events generated by the export to data lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-generates-biz-events) in finance and operations to react to system events, you can continue to get alerted via Azure Synapse Link service. Synapse Link service contains additional configuration data that you can use to generate audit reports and Power Apps to monitor specific data of interest. For more information about receiving and consuming events from Synapse Link [go to this article](/power-apps/maker/data-platform/azure-synapse-link-notifications). 
+
+This table summarizes events form export to data lake and discusses how you can improve with Synapse Link configuration data.
+
+| Export to data lake event  |  Scenario  | How you can use configuration data in Synapse Link |
+|----------------------------|----------------------------|------------------------------------------|
+| **Initialize complete**   |  When you select a table, the system makes an initial copy of the data. This event indicates that initialization for a selected table has been completed. If multiple tables are enabled in the environment, you receive multiple events as initialization is completed for each table. | You can monitor Dataverse tables **Synapse Link Profile Entity State**  and **Synapse Link external table state**. <br><br> **InitialSyncProcessCompletedTime** and **InitialSyncState** return the initial sync completion status, which includes both metadata and data. The initial sync state is updated as **Completed** once the initial sync completes. You can also get additional information such as record counts for each table. <br><br>Synapse Link doesn't delete previous change data in CSV files (incremental update) when you reinitialize a table. |
+| **Metadata changed** | This event indicates that table metadata has changed. For example, a new column has been added to the table, or, in rarer cases, a column has been deleted. You receive multiple events for each table, one for each metadata change. If you have downstream data pipelines that can't react to metadata changes (a situation that is known as schema drift), you can detect changes by using these events and modify downstream pipelines. | The **Last Synced Metadata Time** field in the **Synapse Link Profile Entity State** table is updated when metadata changes are detected. Use this field to force metadata changes to downstream pipelines using metadata stored in the lake. |
+| **Deactivated**  | This event indicates that a previously active table has been deactivated. When a table is deactivated, data that is changed in finance and operations apps isn't updated in the data lake | There's no "deactivate" option in Synapse Link. You can however, delete a table from a Synapse Link profile. You can find deleted tables in the Dataverse table  **Synapse Link Profile Entity State**. |
+| **Activated** |  This event indicates that a previously inactivated table has been reactivated. When a table is reactivated, the system reinitializes data in the data lake. You might later receive an **Initialize complete** event. | There's no deactivate or activate option in Synapse Link. You can delete a table and readd the table into a Synapse Link profile. A new record is added in the **Synapse Link Profile Entity State** table when a table is added. You can monitor the status of the table during initialize stage using the Dataverse tables **Synapse Link Profile Entity State**  and **Synapse Link external table state**. |
+| **Error** | This event indicates that the data sync process has paused due to an error. | **Synapse Link Profile Entity State** status field indicates the status of tables. |
+| **Lake switch** | This event indicates that the system administrator has modified the destination of the data lake. | This event isn't applicable. Changing a data lake associated with a Synapse Link profile as well as changing configuration options isn't supported. However, Synapse Link supports multiple profiles. This means, an administrator can create multiple Synapse Link profiles with tables (the same table can be added to multiple profiles). Read the Dataverse table **Synapse Link profile** to find configuration data on all profiles including deleted profiles. |  
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
