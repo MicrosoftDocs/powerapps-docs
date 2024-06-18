@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 06/18/2024
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -100,6 +100,10 @@ This configuration can be considered a bootstrap step for average use cases.
 1. Expand **Lake Databases** on the left pane, select **dataverse-***environmentNameorganizationUniqueName*,
 and then expand **Tables**. All Parquet tables are listed and available for analysis with the naming convention
 *DataverseTableName.* **(Non_partitioned Table)**.
+
+> [!NOTE]
+> Don't use tables with the naming convention *_partitioned*. When you choose Delta parquet as the format, tables with the *_partition* naming convention are used as staging tables and removed after they're used by the system.
+>  
 
 ## View your data from Azure Data Lake Storage Gen2
 
