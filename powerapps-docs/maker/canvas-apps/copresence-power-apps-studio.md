@@ -50,8 +50,7 @@ If auto save is turned on, your changes are automatically saved. If auto save is
 
 [This section is pre-release documentation and is subject to change.]
 
-
-Coauthoring allows multiple makers to make changes to the app at the same time and see those changes. When more then one person is editing the app, you'll see presecne indicators showing where they are working and you'll see their changes in real time.
+Coauthoring allows multiple makers to make changes to the app at the same time. When more then one person is editing an app, you'll see presecne indicators showing where they are working and you'll see their changes in real time.
 
 > [!NOTE]
 > Since mltiple users can select and edit the same control at the same time, you may overwrite each others edits.
