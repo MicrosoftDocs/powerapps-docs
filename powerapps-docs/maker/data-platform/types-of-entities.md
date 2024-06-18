@@ -2,7 +2,7 @@
 title: "Types of tables | MicrosoftDocs"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 06/14/2023
+ms.date: 06/18/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -68,16 +68,12 @@ Enable activities to add activities to a table and use the Regarding lookup for 
    > Once enabled this setting can't be disabled.
 5. Select **Save**.
 
-### Enable users to associate activities to multiple records (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Enable users to associate email to multiple records
 
 Users sometimes need to associate an email to multiple records. For example, a customer sends an email that is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](../../developer/data-platform/activityparty-entity.md#activity-party-types) column named **related**. When an email is associated to multiple records, it appears in the [timeline](../../user/add-activities.md) for each of the associated records.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [preview-tags](../../includes/cc-preview-features-definition.md)]
+> [!NOTE]
+> This feature is currently only supported with email activities.
 
 The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, go to [add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
 
