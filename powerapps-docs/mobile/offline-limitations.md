@@ -109,6 +109,12 @@ These tables and corresponding commands are available in offline mode.
 
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
+> [!NOTE]
+> For the best compatibility across platforms, use one of the following instead of HTML web resources:
+> 1. If the web resource is a UX component, use a [PCF control](/power-apps/developer/component-framework/overview) instead
+> 1. If the web resource doesn't present UI, use [form handler events](/power-apps/maker/model-driven-apps/configure-event-handlers-legacy) which are available offline on all platforms
+
+
 - **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
