@@ -78,10 +78,10 @@ Tables included in an offline app must be configured for offline use. Some built
        
 1. Close the **Settings** window, and then save and publish your app.
 
-A page that's based on the  [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
+A page that's based on the [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
-> If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
+> If you're turning on offline capability for a new canvas app, make sure the default first screen is based on the **Offline** template.
 
 ## Create a custom mobile offline profile (with admin rights)
 
@@ -116,7 +116,7 @@ Be sure that you configure at least one of the profile rules for each table to d
 |Related rows only | Be sure that the related table has been added to the offline profile.|
 |Custom | You can define a custom filter up to three levels deep. |
 
-Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
+Keep in mind that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15-relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for a table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
@@ -195,7 +195,7 @@ Host.OfflineEnabled
     
 ## Export a solution that contains a canvas app enabled for offline
 
-When you export a solution with an offline canvas app, you also need export the offline profile for the app, as it is a dependency of the app.
+When you export a solution with an offline canvas app, you also need to export the offline profile for the app, as it is a dependency of the app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and in the left navigation pane, select **Solutions**.
 2. Select the solution that you want to export and then select **Edit**.
