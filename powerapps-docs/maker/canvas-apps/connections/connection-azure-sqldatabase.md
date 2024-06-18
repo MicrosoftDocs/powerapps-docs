@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 2/28/2024
+ms.date: 6/14/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -43,14 +43,12 @@ Depending on which Power Apps interface you're using, reference the [new look](.
 
 ## Call stored procedures directly in Power Fx (preview)
 
-You can directly call SQL Server stored procedures from Power Fx by turning on the SQL Server stored procedure preview switch.
-> [!NOTE]
-> Output parameters aren't supported.
+You can now directly call SQL Server stored procedures from Power Fx. By default, this **new** switch should be on. If not, you can turn it on.
 
-1. Go to **Settings** > **Upcoming features** > **Preview**.
+1. Go to **Settings** > **Updates** > **New**.
 1. Search for **stored procedures**.
 1. Set the toggle to **On** for **SQL Server stored procedures**.
-2. Save and reopen the app.
+1. Save and reopen the app.
 
 :::image type="content" source="media/connection-azure-sqldatabase/previewflag-call-sp-direct.png" alt-text="Screenshot that shows the SQL Server stored procedures toggle set to On.":::
 
@@ -65,25 +63,95 @@ Once you select a stored procedure, a child node appears and you can designate t
 Enable this option **only if**:
 
 1. There are **no side effects** to calling this procedure on demand, multiple times, whenever Power Apps refreshes the control. When used with an **Items** property of a gallery or table, Power Apps calls the stored procedure whenever the system determines a refresh is needed. You can't control when the stored procedure is called.
-2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons you should bring in less than 2,000 records.
+2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons, you should bring in less than 2,000 records.
 
 > [!IMPORTANT]
-> The schema of the return values of the stored procedure should be **static**. Meaning that it does not change from call to call. For example, if you call a stored procedure and it returns two tables then it should **always** return two tables. If the schema of the results are **dynamic** then you should not use it with Power Apps. For example if you call the stored procedure and it sometimes returns one table and sometimes returns two tables then it will not work correctly in Power Apps. Power Apps requires a static schema for this call.
->
+> The schema of the return values of the stored procedure should be **static**. Meaning that it doesn't change from call to call. For example, if you call a stored procedure and it returns two tables, then it should **always** return two tables. You can work with either typed or untyped results. The structure of the results need to be the same from call to call. If the schema of the results are **dynamic**, then results will be untyped and you will need to provide a type in order to use them in Power Apps. For more information, go to [Untyped results](#untyped-results).
 
-### Example
+### SQL namespace pre-pended to stored procedure name
+
+The SQL Server namespace name that the stored procedure is stored in is pre-pended to the name of the stored procedure that is created for it in Power Apps. For example, all stored procedures in the **'DBO'** SQL Server namespace have the **'dbo'** at the start of the name.
+
+## Example
 
 When you add a stored procedure, you might see more than one data source in your project.
 
 :::image type="content" source="media/connection-azure-sqldatabase/sqlserver-datasources.png" alt-text="Screenshot that shows SQL data sources.":::
 
-To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. Note also that when Power Apps brings the stored procedure in, it concatenates the full name. So, 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
+### Calling a stored procedure
 
-Remember to convert values appropriately as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using 'Value()'.
+To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. When Power Apps brings the stored procedure in, it concatenates the namespace and the procedure name, and 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
+
+Arguments are passed as a Power Apps record with named value pairs:
+
+```powerapps-dot
+<datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >})
+```
+
+Remember to convert values as necessary as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using 'Value()'.
 
 ![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
 
+### Accessing results
+
+A stored procedure can return a code, values from Out parameters or the results of queries. To access these results, use the following patterns:
+
+#### Return code
+
+```powerapps-dot
+<datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ReturnCode
+```
+
+Use this for accessing the results of a return statement.
+
+#### Output parameters
+
+```powerapps-dot
+<datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).OutputParameters.<parameterName>
+```
+
+Take note to use the parameter name as it appears in the JSON payload.
+
+#### Result Sets
+
+```powerapps-dot
+<datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ResultSets.Table1
+```
+
+Additional tables can be accessed via their name (for example, Table1, Table2, Table3, ... )
+
+### Untyped results
+
+Some complicated stored procedures return an untyped result. These results aren't accessible directly. You must first provide a type. You can access the data using the following pattern.
+
+In this example, we first pull the results into a variable named "MyUntypedObject". Then we pull 'Table1' from that variable and put it into a variable named 'table1'. This step isn't strictly necessary. It's useful however to put all the results in a variable at a point in time and then pull out the parts you need. Then, we iterate through table1 and extract the JSON elements in named value pairs. Be sure to match the names with the names that are returned in the JSON payload. To validate, open a Power Apps monitor and look at the body section the data node for a record.
+
+```powerapps-dot
+Set(
+    <MyUntypedObject>,
+    <datasourceName>.<StoredprocedureName>( 
+      { <paramName1>: "someString" }
+    ).ResultSets
+);
+Set(
+    table1,
+    <MyUntypedObject>.Table1
+);
+Set(
+    TypedTable,
+    ForAll(
+        table1,
+        {
+            BookID: Value(ThisRecord.BookID),
+            BookName: Text(ThisRecord.BookName)
+        }
+    )
+);
+
+```
+
 ### Working with a gallery
+
 You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by 'ResultSets'. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
 
 For example, your access of a stored procedure off of a data source named 'Paruntimedb' with a stored procedure named 'dbo.spo_show_all_library_books()' will look like the following.
@@ -91,7 +159,8 @@ For example, your access of a stored procedure off of a data source named 'Parun
 ```powerapps-dot
 Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
 ```
-This populates the gallery with records. However, stored procedures are an addition of **action** behaviors to the tabular model. Refresh() only works with tabular data sources and can't be used with stored procedures. Then you need to refresh the gallery when a record is created, updated, or deleted. When you use a Submit() on a form for a tabular data source it effectively calls Refresh() under the covers and updates the gallery.
+
+This populates the gallery with records. However, stored procedures are an addition of **action** behaviors to the tabular model. Refresh() only works with tabular data sources and can't be used with stored procedures. Then you need to refresh the gallery when a record is created, updated, or deleted. When you use a Submit() on a form for a tabular data source, it effectively calls Refresh() under the covers and updates the gallery.
 
 To get around this limitation, use a variable in the OnVisible property for the screen and set the stored procedure to the variable.
 

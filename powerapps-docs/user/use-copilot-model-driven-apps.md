@@ -4,7 +4,7 @@ description: Learn how to use Copilot chat in model-driven apps.
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 04/01/2024
+ms.date: 06/11/2024
 ms.subservice: end-user
 ms.author: srihas
 ms.custom: ""
@@ -48,11 +48,14 @@ To view more suggested prompts, select **View prompts** in the Copilot pane. Man
 
 ## Record picker to select object of the question
 
-You can use the record picker to select the object of your question. Enter a slash (**/**) to open the record picker, and then enter the name of the record. Select the record that you want, and complete the question to make it meaningful. Finally, submit the question to Copilot to view the response.
+You can use the record picker to select the object of your question. Enter a slash (**/**) to open the record picker, and then enter the name of the record. Select the record that you want, and complete the question to make it meaningful. Finally, submit the question to Copilot to view the response. Record picker is available in Dynamics 365 Sales and Power Apps model-driven apps.
 
-:::image type="content" source="media/record-picker.png" alt-text="Screenshot that shows the record picker being used to select the object of a question.":::
+:::image type="content" source="media/record-picker.png" alt-text="Screenshot that shows the record picker being used to select the object of a question." lightbox="media/record-picker.png":::
+
+For example, when you ask a question like "What are the details for Contoso?" there could be many accounts with names that include *Contoso*, such as Contoso Inc., Contoso Co., Contoso NW, and so on. What you really want are the details for Contoso Inc. Record picker helps copilot scope the question to the right record for a more relevant and accurate response.
 
 > [!NOTE]
+>
 > - By using the record picker, you increase the likelihood that Copilot chat can understand your question and therefore respond with an accurate answer.
 > - Record picker requires that [Dataverse Search is enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the type-ahead search capability.
 
