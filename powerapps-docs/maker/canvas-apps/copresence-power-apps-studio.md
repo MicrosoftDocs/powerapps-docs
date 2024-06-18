@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/09/2023
+ms.date: 06/18/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -46,37 +46,41 @@ When you're editing an app and become inactive for two hours, a **Continue editi
 If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
 
-## Live updates (experimental)
+## Coauthor (preview)
 
 [This section is pre-release documentation and is subject to change.]
 
+
+Coauthoring allows multiple makers to make changes to the app at the same time and see those changes. When more then one person is editing the app, you'll see presecne indicators showing where they are working and you'll see their changes in real time.
+
+> [!NOTE]
+> Since mltiple users can select and edit the same control at the same time, you may overwrite each others edits.
+
+
 > [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is an preview feature.
 > - This feature is in the process of rolling out, and might not be available in your region yet.
 
+### Enable coauthoring
 
-Live updates is a new experimental feature that works similarly to copresence. The user who opens the app first has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. The benefit of live updates is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
-
-### Enable live updates
-
-To use live updates, it must be turned on for each individual app. Once live updates is enabled, it takes precedence over the copresence feature.
+To use coauthoring, it must be turned on for each individual app. Once coauthoring is enabled, it takes precedence over the copresence feature.
 
 1. To enable live updates, open your app for editing in Power Apps Studio.
-2. Go to **Settings** > **Upcoming features** > **Experimental**.
-3. Set the toggle for **Enable live updates** to **On**.
+2. Go to **Settings** > **Updates** > **Experimental**.
+3. Set the toggle for **Coauthoring** to **On**.
 
 
-### Limitations of live updates
+### Limitations 
 
-The maker editing the app and those accessing it in read-only mode are unable to perform or have disabled access to these options:
+- The following options are disabled when there's more then one user editing the app:
+  - Search 
+  - Save as
+  - Within current app and open another app or start a new app 
+  - Copy and paste
+  - Undo and redo
+  - Switch authoring versions
+- The app language is locked to the locale of the first user that open the app for editing.
+- Coauthoring is disabled for Test Studio and the Monitor tool.
 
-- Undo or redo changes
-- Switch authoring version
-- Open a new app from data, app from template, new app from blank, and edit app
-- Use **Save as** option or save the app locally
-- [Monitor tool](../monitor-overview.md)
-- Search pane
-- Makers accessing the app in read-only mode can't make any changes
 
 
