@@ -14,18 +14,18 @@ contributors:
 ---
 # Grant limited access to Dataverse files using shared access signatures
 
-Anyone can download a file stored in Dataverse when you provide a url generated using the `GetFileSasUrl` message. This url provides anonymous access for anyone. No security is enforced to block anyone with the url from downloading the file. The caller must have access to the record containing the file. Anonymous access to the file using the url is limited to 1 hour after the url is generated.
+For one hour, anyone can download a file stored in Dataverse when you provide a url generated using the `GetFileSasUrl` message. This url provides anonymous access for anyone during this hour, starting when the url is generated. The person calling `GetFileSasUrl` to generate the url must have access to the record containing the file.
 
 Files can be attachments, notes, file columns, or image columns. [Some limitations apply](#limitations)
 
-You can use the `GetFileSasUrl` message using either the SDK for .NET or Web API. 
+You can use the `GetFileSasUrl` message using either the SDK for .NET or Web API.
 
 ## [SDK for .NET](#tab/sdk)
 
 Use the [GetFileSasUrlRequest class](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlrequest) to specify which file to generate a link for.
 
 - The [Target property](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlrequest.target) is an [EntityReference](/dotnet/api/microsoft.xrm.sdk.entityreference) that identifies the table row that contains an attachment, note, image, or file column.
-- Set the [FileAttributeName property](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlrequest.fileattributename) when the `Target` property doesn't refer to an attachment or note record. The columns storing the data for attachment and note records is known, so it isn't necessary to specify the column name.
+- The [FileAttributeName property](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlrequest.fileattributename) must specify the name of the file column unless the `Target` property refers an attachment or note record. In these cases, the parameter is still required, but should be an empty string.
 - Set the [DataSource property](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlrequest.datasource) to `retained` if the record was flagged for [long-term data retention](long-term-retention.md).
 
 The [GetFileSasUrlResponse class](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlresponse) instance returned contains a [Result property](/dotnet/api/microsoft.crm.sdk.messages.getfilesasurlresponse.result) that is an instance of the [FileSasUrlResponse class](/dotnet/api/microsoft.xrm.sdk.filesasurlresponse). This type contains properties with data you need to send the URL to someone so they can download the file: `Filename`, `FileSizeInBytes`, `MimeType`, and `SasUrl`.
@@ -35,7 +35,7 @@ The [GetFileSasUrlResponse class](/dotnet/api/microsoft.crm.sdk.messages.getfile
 Use the [GetFileSasUrl function](/power-apps/developer/data-platform/webapi/reference/getfilesasurl) to specify which file to generate a link for. 
 
 - The `Target` parameter is an identifies the table row that contains an attachment, note, image, or file column. [Pass record reference to a function](webapi/use-web-api-functions.md#pass-record-reference-to-a-function) describes how to do this using the `@odata.id` annotation.
-- Set the `FileAttributeName` parameter when the `Target` property doesn't refer to an attachment or note record. The columns storing the data for attachment and note records is known, so it isn't necessary to specify the column name.
+- The `FileAttributeName` parameter must specify the name of the file column unless the `Target` property refers an attachment or note record. In these cases, the parameter is still required, but should be an empty string.
 - Set the `DataSource` parameter to `retained` if the record was flagged for [long-term data retention](long-term-retention.md).
 
 The [GetFileSasUrlResponse complex type](/power-apps/developer/data-platform/webapi/reference/getfilesasurlresponse) instance returned contains a `Result` property that is an instance of the [FileSasUrlResponse complex type](/power-apps/developer/data-platform/webapi/reference/filesasurlresponse). This type contains properties with data you need to send the URL to someone so they can download the file: `Filename`, `FileSizeInBytes`, `MimeType`, and `SasUrl`.
@@ -43,7 +43,9 @@ The [GetFileSasUrlResponse complex type](/power-apps/developer/data-platform/web
 ---
 
 
-## Example
+## Examples
+
+These example functions show how to use the `GetFileSasUrl` with both the SDK for .NET and Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
