@@ -115,7 +115,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | ------ | --------------------------- | ---------------------- | -------------- |
 | React  | react                       | 16.8.6                 | 17.0.2 (Model), 16.14.0 (Canvas) |
 | Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
-| Fluent | @fluentui/react-components  | 9.4.0 >= && <= 9.46.2  | 9.46.2         |
+| Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.46.2         |
 
 > [!NOTE]
 > The application might load a higher compatible version of a platform library at runtime, but the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.
