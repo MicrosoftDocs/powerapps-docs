@@ -47,6 +47,9 @@ Follow these best practices when building an app for mobile offline use:
       > [!div class="mx-imgBorder"]
       > ![Form properties.](media/mobile-offline-image2.png)
 
+
+
+
 ## Enable your app for offline use
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -213,7 +216,7 @@ You can enable users to control the automatic sync intervals or the connection t
 
 - **Lookup support** - Lookups are supported for the tables that are configured for mobile offline. All the tables participating in the lookup should also be configured for offline use.
 
-- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You neet to add the **Note** table using the **Related rows only** option and the User (systemuser) in the offline profile.  
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You need to add the **Note** table using the **Related rows only** option and the User (systemuser) in the offline profile.  
 
     > [!NOTE]
     > The **Date** field isn't available for mobile offline search.
