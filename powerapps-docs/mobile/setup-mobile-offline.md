@@ -194,7 +194,7 @@ You can enable users to control the automatic sync intervals or the connection t
 
 ## Supported capabilities 
 
-- **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+- **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
 
 - **Business process flows**: You can use business process flows in offline mode if the following conditions are met:
 
