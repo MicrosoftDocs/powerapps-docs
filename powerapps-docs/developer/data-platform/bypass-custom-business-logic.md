@@ -19,14 +19,14 @@ contributors:
 
 There are times when you want to be able to perform data operations without having custom business logic applied in Dataverse. These scenarios typically involve bulk data operations where large numbers of records are being created, updated or deleted.
 
-Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
+Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the individual custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
 
-As a developer of a client application or plug, plug-in you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
+Instead of this manual process, as a developer of a client application or plug-in, you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
 
 
-|Logic type|When to use|
+|Logic type|When to bypass|
 |---------|---------|
-|**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
+|**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization, or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
 |**Asynchronous Logic**|When large numbers of system jobs created to process asynchronous logic cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the asynchronous logic while performing bulk operations.|
 
 > [!NOTE]
@@ -48,7 +48,7 @@ Use these optional parameters to control business logic executed in Dataverse:
 
 The `BypassBusinessLogicExecution` optional parameter works similarly to the [`BypassCustomPluginExecution`](#bypasscustompluginexecution) optional parameter except that you can choose whether to bypass synchronous logic, asynchronous logic or, both.
 
-This [optional parameter](optional-parameters.md) targets the custom business logic applied for your organization. When you send requests that bypass custom business logic, all custom plug-ins and workflows are disabled except:
+This optional parameter targets the custom business logic applied for your organization. When you send requests that bypass custom business logic, all custom plug-ins and workflows are disabled except:
 
 - Plug-ins that are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
 - Workflows included in a solution where Microsoft is the publisher.
@@ -71,9 +71,9 @@ The following table describes when to use the parameter values with `BypassBusin
 ### Requirements to use the `BypassBusinessLogicExecution` optional parameter
 
 - You must send the requests using the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md).
-- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#adding-the-prvbypasscustombusinesslogic-privilege-to-another-role)
+- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#adding-the-required-privileges-to-another-role)
 
-### How do I use the BypassBusinessLogicExecution optional parameter?
+### How do I use the `BypassBusinessLogicExecution` optional parameter?
 
 You can use this option with either the SDK for .NET or the Web API.
 
@@ -118,7 +118,7 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 ## `BypassBusinessLogicExecutionStepIds`
 
-Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the step ID passed doesn't run in the given request, it's ignored.
+Use the `BypassBusinessLogicExecutionStepIds` optional parameter to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the step ID passed doesn't run in the given request, it's ignored.
 
 ### How do I use the BypassBusinessLogicExecutionStepIds option?
 
@@ -297,31 +297,10 @@ The maximum recommended size for this limit is 10 steps.
 
 Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
 
-The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But disabling plug-ins means that the logic is disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you're done.
-
-Using the optional parameter allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
-
-There are two requirements:
-
-- You must send the requests using the `BypassCustomPluginExecution` optional parameter.
-- The user sending the requests must have the `prvBypassCustomPlugins` privilege. By default, only users with the system administrator security role have this privilege.
-
 > [!NOTE]
-> The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API. More information: [Adding the prvBypassCustomPlugins privilege to another role](#adding-the-prvbypasscustomplugins-privilege-to-another-role)
+> This was the first optional parameter that allowed limiting business logic. It remains supported, but we recommend using [`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution) with the `CustomSync` value to get the same result.
 
-### What does BypassCustomPluginExecution do?
-
-This solution targets the custom synchronous business logic that has been applied for your organization. When you send requests that bypass custom business logic, all synchronous plug-ins and real-time workflows are disabled except:
-
-- Plug-ins that are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
-- Workflows included in a solution where Microsoft is the publisher.
-
-System plug-ins define the core behaviors for specific entities. Without these plug-ins, you would encounter data inconsistencies that may not be easily fixed.
-
-Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365 Customer Service, or Dynamics 365 Sales also include critical business logic that can't be bypassed with this option.
-
-> [!IMPORTANT]
-> You may have purchased and installed solutions from other Independent Software Vendors (ISVs) which include their own business logic. The synchronous logic applied by these solutions will be bypassed. You should check with these ISVs before you use this option to understand what impact there may be if you use this option with data that their solutions use.
+Use this optional parameter in the same way you use `BypassBusinessLogicExecution`, except it requires a different privilege: `prvBypassCustomPlugins`
 
 ### How do I use the BypassCustomPluginExecution option?
 
@@ -399,14 +378,14 @@ MSCRM.BypassCustomPluginExecution: true
 
 ## Adding the required privileges to another role
 
-The optional parameters described in this article require security roles that are only added to the system administrator security role. These privileges aren't available in the security role designer to add to other security roles. If you need to grant this privilege to another security role, you must use the API. For example, you might want to grant this privilege to a user with the system customizer security role.
+The optional parameters described in this article require privileges that are only added to the system administrator security role. These privileges aren't available in the security role designer to add to other security roles. If you need to grant this privilege to another security role, you must use the API. For example, you might want to grant this privilege to a user with the system customizer security role.
 
-To add the privilege to another security role, you need the ID of the privilege. 
+To add the privilege to another security role, you need the ID of the privilege.
 
 
-|Name|ID|Optional Parameter|
+|Name|ID|Optional Parameter(s)|
 |---------|---------|---------|
-|`prvBypassCustomBusinessLogic`|`0ea552b0-a491-4470-9a1b-82068deccf66`|[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|
+|`prvBypassCustomBusinessLogic`|`0ea552b0-a491-4470-9a1b-82068deccf66`|[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)<br />[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|
 |`prvBypassCustomPlugins`|`148a9eaf-d0c4-4196-9852-c3a38e35f6a1`|[`BypassCustomPluginExecution`](#bypasscustompluginexecution)|
  
  These ID values are the same for all Dataverse environments.

@@ -211,7 +211,7 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       items:
-      - name: Bypass Custom Business logic
+      - name: Bypass Custom Dataverse logic
         href: bypass-custom-business-logic.md
       - name: Bypass Power Automate flows
         href: bypass-power-automate-flows.md
