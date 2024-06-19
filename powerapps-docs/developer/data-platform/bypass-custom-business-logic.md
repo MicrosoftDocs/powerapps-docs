@@ -1,6 +1,6 @@
 ---
-title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
-description: "Make data changes which bypass custom business logic." 
+title: "Bypass Custom Dataverse Logic" 
+description: "Make data changes which bypass custom Dataverse logic." 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
 ms.topic: article
@@ -15,9 +15,11 @@ contributors:
   - LearningEveryday1
   - NHelgren
 ---
-# Bypass Custom Business Logic
+# Bypass Custom Dataverse Logic
 
-There are times when you want to be able to perform data operations without having custom business logic applied.  These scenarios typically involve bulk data operations where large numbers of records are being created, updated or deleted.
+There are times when you want to be able to perform data operations without having custom business logic applied in Dataverse. These scenarios typically involve bulk data operations where large numbers of records are being created, updated or deleted.
+
+Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
 
 As a developer of a client application or plug, plug-in you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
 
@@ -27,17 +29,24 @@ As a developer of a client application or plug, plug-in you can pass special [op
 |**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
 |**Asynchronous Logic**|When large numbers of system jobs created to process asynchronous logic cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the asynchronous logic while performing bulk operations.|
 
+> [!NOTE]
+> Power Automate flows represent another type of asynchronous logic that can be managed separately. See [Bypass Power Automate Flows](bypass-power-automate-flows.md)
+
 ## Optional parameters
+
+Use these optional parameters to control business logic executed in Dataverse:
 
 |Optional parameter|Description|
 |---|---|
-|`BypassBusinessLogicExecution`|Pass the `CustomSync`, `CustomAsync`, or `CustomSync,CustomAsync` values to this optional parameter to bypass synchronous logic, asynchronous logic or, both. |
-|`BypassBusinessLogicExecutionStepIds`|Pass a comma separated list of plug-in step registrations to bypass only the specified plug-in steps.|
-|`BypassCustomPluginExecution`|Bypass only synchronous logic.|
+|[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)|Pass the values `CustomSync`, `CustomAsync`, or `CustomSync,CustomAsync` to this optional parameter to bypass synchronous logic, asynchronous logic or, both. |
+|[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|Pass a comma separated list of plug-in step registrations to bypass only the specified plug-in steps.|
+|[`BypassCustomPluginExecution`](#bypasscustompluginexecution)|Bypass only synchronous logic. This optional parameter is supported, but not recommended. Use `BypassBusinessLogicExecution` with the `CustomSync` value to get the same result.|
 
-## BypassBusinessLogicExecution
 
-The `BypassBusinessLogicExecution` optional parameter works similarly to the `BypassCustomPluginExecution`optional parameter except that you can choose whether to bypass synchronous logic, asynchronous logic or, both.
+
+## `BypassBusinessLogicExecution`
+
+The `BypassBusinessLogicExecution` optional parameter works similarly to the [`BypassCustomPluginExecution`](#bypasscustompluginexecution) optional parameter except that you can choose whether to bypass synchronous logic, asynchronous logic or, both.
 
 This [optional parameter](optional-parameters.md) targets the custom business logic applied for your organization. When you send requests that bypass custom business logic, all custom plug-ins and workflows are disabled except:
 
@@ -59,7 +68,7 @@ The following table describes when to use the parameter values with `BypassBusin
 |`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can impact performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
 |`CustomSync,CustomAsync`|Bypass both synchronous and asynchronous custom logic, excluding Power Automate Flows.|
 
-### Requirements to use the BypassBusinessLogicExecution optional parameter
+### Requirements to use the `BypassBusinessLogicExecution` optional parameter
 
 - You must send the requests using the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md).
 - The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#adding-the-prvbypasscustombusinesslogic-privilege-to-another-role)
@@ -107,7 +116,7 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 ```
 ---
 
-## BypassBusinessLogicExecutionStepIds
+## `BypassBusinessLogicExecutionStepIds`
 
 Use the `BypassBusinessLogicExecutionStepIds` [optional parameter](optional-parameters.md) to bypass specified registered plug-in steps instead of all synchronous and asynchronous custom logic. Pass the GUID values of the registered plug-in step registrations with this parameter. If the step ID passed doesn't run in the given request, it's ignored.
 
@@ -284,7 +293,7 @@ To ensure that the parameter size isn't too large, the default limit on the numb
 
 The maximum recommended size for this limit is 10 steps.
 
-## BypassCustomPluginExecution
+## `BypassCustomPluginExecution`
 
 Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
 
@@ -388,15 +397,23 @@ MSCRM.BypassCustomPluginExecution: true
 
 ---
 
-### Adding the prvBypassCustomPlugins privilege to another role
+## Adding the required privileges to another role
 
-Because the `prvBypassCustomPlugins` privilege isn't available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
+The optional parameters described in this article require security roles that are only added to the system administrator security role. These privileges aren't available in the security role designer to add to other security roles. If you need to grant this privilege to another security role, you must use the API. For example, you might want to grant this privilege to a user with the system customizer security role.
 
-The `prvBypassCustomPlugins` privilege has the ID `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
+To add the privilege to another security role, you need the ID of the privilege. 
 
-#### [SDK for .NET](#tab/sdk)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
+|Name|ID|Optional Parameter|
+|---------|---------|---------|
+|`prvBypassCustomBusinessLogic`|`0ea552b0-a491-4470-9a1b-82068deccf66`|[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|
+|`prvBypassCustomPlugins`|`148a9eaf-d0c4-4196-9852-c3a38e35f6a1`|[`BypassCustomPluginExecution`](#bypasscustompluginexecution)|
+ 
+ These ID values are the same for all Dataverse environments.
+
+### [SDK for .NET](#tab/sdk)
+
+Associate the `prvBypassCustomBusinessLogic` privilege to a security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
 
 ```csharp
 static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid roleId)
@@ -406,7 +423,7 @@ static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid r
         RoleId = roleId,
         Privileges = new[]{
             new RolePrivilege{
-                PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
+                PrivilegeId = new Guid("0ea552b0-a491-4470-9a1b-82068deccf66"),
                 Depth = PrivilegeDepth.Global
             }
         }
@@ -414,14 +431,15 @@ static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid r
     service.Execute(request);
 }
 ```
-#### [Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
+### [Web API](#tab/webapi)
+
+Associate the `prvBypassCustomBusinessLogic` privilege to a security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
 
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.1/roles(<id of role>)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
+POST [Organization URI]/api/data/v9.2/roles(<id of role>)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
 Content-Type: application/json   
 Accept: application/json   
 OData-MaxVersion: 4.0   
@@ -430,14 +448,14 @@ OData-Version: 4.0
 {
   "Privileges": [
     {
-      "PrivilegeId": "148a9eaf-d0c4-4196-9852-c3a38e35f6a1",
+      "PrivilegeId": "0ea552b0-a491-4470-9a1b-82068deccf66",
       "Depth": "3"
     }
   ]
 }
 ```
 
-You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because `prvBypassCustomPlugins` is a global privilege.
+You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because these are global privileges.
 
 **Response:**
 
@@ -448,26 +466,23 @@ OData-Version: 4.0
 
 ---
 
-### Frequently asked questions for bypassing synchronous logic (FAQ)
 
-Following are frequently asked questions about using the `BypassCustomPluginExecution` optional parameter to bypass synchronous business logic.
 
-#### Does BypassCustomPluginExecution bypass plug-ins for data operations by Microsoft plug-ins?
+### Frequently asked questions for bypassing business logic (FAQ)
 
-No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation are bypassed.
+Following are frequently asked questions about using the optional parameters to bypass synchronous business logic.
 
-#### Can I use BypassCustomPluginExecution for data operations I perform within a plug-in?
+#### Do these optional parameters bypass plug-ins for data operations by Microsoft plug-ins?
 
-Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For plug-ins, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You can't use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
+No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those plugins or workflows that apply to the specific operation are bypassed.
 
-#### What about asynchronous plug-in steps, asynchronous workflows and flows?
+#### Can I use these optional parameters for data operations I perform within a plug-in?
 
-Asynchronous logic isn't bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it isn't by passed by this parameter.
-
+Yes, but only when the plug-in is running in the context of a user who has the required privilege. For plug-ins, set the optional parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You can't use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
 
 ### See also
 
-[Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)<br />
+[Bypass Power Automate Flows](bypass-power-automate-flows.md)   
 [Use optional parameters](optional-parameters.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

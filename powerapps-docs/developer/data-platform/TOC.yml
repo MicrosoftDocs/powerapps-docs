@@ -210,8 +210,9 @@
     - name: Service protection API limits
       href: api-limits.md
     - name: Bypass Custom Business logic
-      href: bypass-custom-business-logic.md
       items:
+      - name: Bypass Custom Business logic
+        href: bypass-custom-business-logic.md
       - name: Bypass Power Automate flows
         href: bypass-power-automate-flows.md
     - name: Best Practices
