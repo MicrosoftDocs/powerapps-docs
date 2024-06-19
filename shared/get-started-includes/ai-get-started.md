@@ -14,7 +14,7 @@ Learn more in the blog post at [Innovate faster with generative AI on Azure Open
 
 The term *generative AI* sounds intriguing, but how can businesses use it to get ahead? Here's a blog post that provides some interesting examples that might inspire you: [Azure OpenAI Service: Ten ways generative AI is transforming businesses](https://azure.microsoft.com/blog/azure-openai-service-10-ways-generative-ai-is-transforming-businesses/).
 
-You can also get a quick overview of generative AI capabilities in Dynamics 365 apps at [Microsoft Copilot in Dynamics 365](../copilot/index.yml).  
+You can also get a quick overview of generative AI capabilities in Dynamics 365 apps at [Microsoft Copilot in Dynamics 365](/dynamics365/copilot/).  
 
 > [!TIP]
 > The next two sections are intended for organizations that want to deliver generative AI themselves, meaning not people who want to use the generative AI capabilities that are built into Dynamics 365 apps. If you're a business user, jump to one of the other sections - use the links in the *In this article* section at the top to find the right subject for you.
