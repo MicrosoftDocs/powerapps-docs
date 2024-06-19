@@ -146,10 +146,6 @@ Keep in mind that you can have 15 related tables in a custom filter. You can als
 
     When the app is published, the app is enabled for offline use.
 
-
-
-
-
 ### Add users to an offline profile
 
 If you selected the **Default** offline profile mode, all your users who have access to the app can also use it in offline mode.
@@ -164,7 +160,7 @@ However, if you selected **Restricted to selected users**, you have to manually 
 
 1. In the **Users with offline access** area, select **Add users**.
 
-1. Select the users that you want to add to the mobile offline profile. The users that are added, based on teams, are listed under each team. User's that are added individually are listed as individual users.
+1. Select the users that you want to add to the mobile offline profile. The users that are added, based on teams, are listed under each team. Users that are added individually are listed as individual users.
 
 1. When you're done adding people, select **Save**.
 
@@ -198,9 +194,9 @@ You can enable users to control the automatic sync intervals or the connection t
 
 ## Supported capabilities 
 
-- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+- **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
 
-- **Business process flows** - You can use business process flows in offline mode if the following conditions are met:
+- **Business process flows**: You can use business process flows in offline mode if the following conditions are met:
 
     - The business process flow is used in an app that you can run on Power Apps mobile.
     - The Power Apps mobile app is configured for offline use.
@@ -208,9 +204,9 @@ You can enable users to control the automatic sync intervals or the connection t
     - The business process flow table is added in the [offline profile](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
 
     > [!NOTE]
-    > If a table is associated with multiple business process flows, in order for any of the business process flows to work in offline, all the business process flows must be added to the offline profile.
+    > If a table is associated with multiple business process flows, in order for any of the business process flows to work offline, all the business process flows must be added to the offline profile.
     
-    There are three commands that are available for business process flows when you run an app in offline mode on the Power Apps mobile app:
+    Three commands are available for business process flows when you run an app in offline mode on the Power Apps mobile app:
     
     - Next stage
     - Previous stage
@@ -218,13 +214,13 @@ You can enable users to control the automatic sync intervals or the connection t
 
     For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
 
-- **Lookup support** - Lookups are supported for the tables that are configured for mobile offline. All the tables participating in the lookup should also be configured for offline use.
+- **Lookup support**: Lookups are supported for the tables that are configured for mobile offline. All the tables participating in the lookup should also be configured for offline use.
 
-- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You need to add the **Note** table using the **Related rows only** option and the User (systemuser) in the offline profile.  
+- **Notes on the Timeline control**: Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode. You need to add the **Note** table using the **Related rows only** option and the User (systemuser) in the offline profile.  
 
     > [!NOTE]
     > The **Date** field isn't available for mobile offline search.
   
-- **Custom tables** - These commands are available to edit the form: **Mark Complete**, **Refresh**, **Convert To Opportunity**, and **Delete**.
+- **Custom tables**: These commands are available to edit the form: **Mark Complete**, **Refresh**, **Convert To Opportunity**, and **Delete**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
