@@ -17,7 +17,7 @@ contributors:
 ---
 # Bypass Power Automate Flows
 
-Power Automate flows can respond to Dataverse events using the [When a row is added, modified or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
+Power Automate flows can respond to Dataverse events using the [When a row is added, modified or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](/power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
 
 When a program or plug-in performs bulk operations, a large number of system jobs may be created. A large number of system jobs can cause performance issues for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
