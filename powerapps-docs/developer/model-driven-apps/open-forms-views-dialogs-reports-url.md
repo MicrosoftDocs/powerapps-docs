@@ -22,7 +22,7 @@ URL addressable elements enable you to include links to apps, forms, views, dial
 ## App Urls
 
 > [!NOTE]
-> Embedding a model-driven application within an IFrame in another application is not supported.
+> Embedding a model-driven application within an IFrame in another application is not supported. See [model-driven app embedding](/limits-and-config#model-driven-app-embedding).
 
 You can open any model-driven application using the [AppModule.UniqueName](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
 
