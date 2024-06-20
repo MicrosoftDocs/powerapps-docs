@@ -46,7 +46,7 @@ When you're editing an app and become inactive for two hours, a **Continue editi
 If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
 
-## Coauthor (preview)
+## Coauthoring (preview)
 
 [This section is pre-release documentation and is subject to change.]
 
@@ -78,6 +78,7 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
   - Copy and paste
   - Undo and redo
   - Switch authoring versions
+- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first.
 - The app language is locked to the locale of the first user that opens the app for editing.
 - Coauthoring is disabled for Test Studio and the Monitor tool.
 
