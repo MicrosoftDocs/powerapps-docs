@@ -50,14 +50,14 @@ If auto save is turned on, your changes are automatically saved. If auto save is
 
 [This section is pre-release documentation and is subject to change.]
 
-Coauthoring allows multiple makers to make changes to the app at the same time. When more than one person is editing an app, you'll see presences indicators showing where they are working and you'll see their changes in real time.
+Coauthoring allows multiple makers to edit a canvas app at the same time. When more than one person is editing an app, you'll see presences indicators showing where another maker is working on the app and see their changes in real time.
 
 > [!NOTE]
-> Since mltiple users can select and edit the same control at the same time, you may overwrite each others edits.
+> Since multiple users can select and edit the same control at the same time, you may overwrite each other’s edits.
 
 
 > [!IMPORTANT]
-> - This is an preview feature.
+> - This is a preview feature.
 > - This feature is in the process of rolling out, and might not be available in your region yet.
 
 ### Enable coauthoring
