@@ -420,7 +420,7 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ---
 
-More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#bypass-power-automate-flows)
+More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
 ### See also
 
