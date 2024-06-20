@@ -335,7 +335,7 @@ No. The parameter isn't passed through to any operations performed by plug-ins t
 
 ### See also
 
-[Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)   
+[Bypass Custom Dataverse Logic](bypass-custom-business-logic.md)   
 [Use optional parameters](optional-parameters.md)   
 
 
