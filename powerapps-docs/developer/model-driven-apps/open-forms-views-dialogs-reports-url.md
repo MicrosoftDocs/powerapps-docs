@@ -1,6 +1,6 @@
 ---
-title: "Open apps, forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Open apps, forms, views, dialogs, and reports with a URL"
+description: "Learn more about URL addressable elements that enable you to include links to model-driven application forms, views, dialogs, and reports in other applications"
 author: HemantGaur
 ms.author: hemantg
 ms.date: 04/06/2022
@@ -14,15 +14,15 @@ contributors:
 ---
 # Open apps, forms, views, dialogs, and reports with a URL
 
-URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. 
+URL addressable elements enable you to include links to model-driven apps, forms, views, dialogs, and reports in other applications.
 
 > [!NOTE]
-> URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.    
+> URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.
 
 ## App Urls
 
 > [!NOTE]
-> Embedding a model-driven application within an IFrame in another application is not supported. See [model-driven app embedding](/limits-and-config#model-driven-app-embedding).
+> Embedding a model-driven application within an IFrame in another application is not supported. See [model-driven app embedding](../../limits-and-config.md#model-driven-app-embedding).
 
 You can open any model-driven application using the [AppModule.UniqueName](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
 

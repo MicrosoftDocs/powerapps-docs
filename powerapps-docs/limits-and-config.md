@@ -135,7 +135,7 @@ This section lists endpoints that we no longer support. Instead, use the new end
 
 ## Embedding limits for Power Apps
 
-### Canvas app embedding 
+### Canvas app embedding
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
 
@@ -156,6 +156,7 @@ The following table shows some of the examples where embedding a canvas app is a
 Power Apps does not support embedding a model-driven app or page within an IFrame in another application.
 
 ## Proxies
+
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 
 - Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app.
