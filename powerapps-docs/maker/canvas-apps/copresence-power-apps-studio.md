@@ -41,7 +41,7 @@ You might be working on the app, or you're inactive, but once someone else saves
 
 ## Inactive during editing
 
-When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can to become the editor. 
+When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can become the editor. 
 
 If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
@@ -50,7 +50,7 @@ If auto save is turned on, your changes are automatically saved. If auto save is
 
 [This section is pre-release documentation and is subject to change.]
 
-Coauthoring allows multiple makers to make changes to the app at the same time. When more then one person is editing an app, you'll see presecne indicators showing where they are working and you'll see their changes in real time.
+Coauthoring allows multiple makers to make changes to the app at the same time. When more than one person is editing an app, you'll see presences indicators showing where they are working and you'll see their changes in real time.
 
 > [!NOTE]
 > Since mltiple users can select and edit the same control at the same time, you may overwrite each others edits.
@@ -71,14 +71,14 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
 
 ### Limitations 
 
-- The following options are disabled when there's more then one user editing the app:
+- The following options are disabled when there's more than one user editing the app:
   - Search 
   - Save as
   - Within current app and open another app or start a new app 
   - Copy and paste
   - Undo and redo
   - Switch authoring versions
-- The app language is locked to the locale of the first user that open the app for editing.
+- The app language is locked to the locale of the first user that opens the app for editing.
 - Coauthoring is disabled for Test Studio and the Monitor tool.
 
 
