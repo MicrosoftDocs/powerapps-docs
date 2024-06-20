@@ -17,7 +17,7 @@ contributors:
 ---
 # Bypass Custom Dataverse Logic
 
-There are times when you want to be able to perform data operations without having custom business logic applied in Dataverse. These scenarios typically involve bulk data operations where large numbers of records are being created, updated or deleted.
+There are times when you want to be able to perform data operations without having custom business logic applied in Dataverse. These scenarios typically involve bulk data operations where large numbers of records are being created, updated, or deleted.
 
 Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the individual custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
 
@@ -27,7 +27,7 @@ Instead of this manual process, as a developer of a client application or plug-i
 |Logic type|When to bypass|
 |---------|---------|
 |**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization, or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
-|**Asynchronous Logic**|When large numbers of system jobs created to process asynchronous logic cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the asynchronous logic while performing bulk operations.|
+|**Asynchronous Logic**|When large numbers of system jobs created to process asynchronous logic cause a backup within Dataverse that can affect performance. You can mitigate this performance issue by not triggering the asynchronous logic while performing bulk operations.|
 
 > [!NOTE]
 > Power Automate flows represent another type of asynchronous logic that can be managed separately. See [Bypass Power Automate Flows](bypass-power-automate-flows.md)
@@ -65,7 +65,7 @@ The following table describes when to use the parameter values with `BypassBusin
 |Parameter|Description |
 |---------|---------|
 |`CustomSync` |Bypass only synchronous custom logic.<br />The compute time necessary for synchronous logic accrues to the total time required to perform each data operation. Use this option to reduce the amount of time required to complete operations in bulk.|
-|`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can impact performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
+|`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can affect performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
 |`CustomSync,CustomAsync`|Bypass both synchronous and asynchronous custom logic, excluding Power Automate Flows.|
 
 ### Requirements to use the `BypassBusinessLogicExecution` optional parameter
@@ -453,7 +453,7 @@ Following are frequently asked questions about using the optional parameters to 
 
 #### Do these optional parameters bypass plug-ins for data operations by Microsoft plug-ins?
 
-No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those plugins or workflows that apply to the specific operation are bypassed.
+ No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those plugins or workflows that apply to the specific operation are bypassed.
 
 #### Can I use these optional parameters for data operations I perform within a plug-in?
 

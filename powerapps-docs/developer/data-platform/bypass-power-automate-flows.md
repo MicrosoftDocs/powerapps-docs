@@ -1,6 +1,6 @@
 ---
 title: "Bypass Power Automate Flows" 
-description: "Make data changes which don't trigger Power Automate flows." 
+description: "Make data changes that don't trigger Power Automate flows." 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
 ms.topic: article
@@ -17,9 +17,9 @@ contributors:
 ---
 # Bypass Power Automate Flows
 
-Power Automate flows can respond to Dataverse events using the [When a row is added, modified or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](/power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
+Power Automate flows can respond to Dataverse events using the [When a row is added, modified, or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](/power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
 
-When a program or plug-in performs bulk operations, a large number of system jobs may be created. A large number of system jobs can cause performance issues for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+When a program or plug-in performs bulk operations, a large number of system jobs might be created. A large number of system jobs can cause performance issues for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that creates the system jobs.
 
@@ -31,10 +31,10 @@ The [CallbackRegistration table](reference/entities/callbackregistration.md) man
 > [!IMPORTANT]
 > Don't use the `SuppressCallbackRegistrationExpanderJob` optional parameter unless you know that the performance issues you are experiencing are because of a large number of specific system jobs that are created.
 
-People have added flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider the [Mitigation strategies](#mitigation-strategies) mentioned below.
+People add flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider these [Mitigation strategies](#mitigation-strategies).
 
 
-### Will SuppressCallbackRegistrationExpanderJob help you?
+### Will `SuppressCallbackRegistrationExpanderJob` help you?
 
 Use this option only if you see performance issues after bulk operations occur and you have a large number of  **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
 
@@ -146,7 +146,7 @@ How you bypass flows depends on whether you're using the SDK for .NET or Web API
 > [!NOTE]
 > For data operations initiated within plug-ins, you must use the SDK for .NET.
 
-The following examples create an account record that won't trigger Power Automate.
+The following examples create an account record that don't trigger Power Automate.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -187,19 +187,19 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ## Mitigation strategies
 
-Flow owners expect their logic to be executed. Flow owners won't be notified that their logic was bypassed when you use this option.  It's important to communicate to flow owners that the logic wasn't applied so that they know when and why their logic wasn't applied. They can then determine whether or how to apply their logic.
+Flow owners expect their logic to be executed. Flow owners aren't notified that their logic was bypassed when you use this option. It's important to communicate to flow owners that the logic wasn't applied so that they know when and why their logic wasn't applied. They can then determine whether or how to apply their logic.
 
-People can create child flows that contain logic that can be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means later. More information [Create child flows](/power-automate/create-child-flows)
+People can create child flows that contain logic that is invoked by multiple triggers, even manually. If the logic is contained within a child flow, it might be triggered by other means later. More information [Create child flows](/power-automate/create-child-flows)
 
 ### Identify flows that will be bypassed
 
-You may not be able to identify exactly which flows will be bypassed. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) table to assess how much impact there will be and who to contact about their flows not running. The following table describes some `CallbackRegistration` table columns that are useful;
+You might not be able to identify exactly which flows will be bypassed. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) table to assess how much impact there will be and who to contact about their flows not running. The following table describes some `CallbackRegistration` table columns that are useful;
 
 
 |Column|Description|
 |---------|---------|
 |`name`|If this value is a GUID value, it should match the `flowid` value and you should be able to view the flow definition in a URL with this value by adding it to this URL: `https://make.powerautomate.com/environments/<environmentid>/flows/<flowid>/details`.|
-|`message`|When the flow uses the **When a row is added, modified or deleted** trigger, it may subscribe to all the combinations of `Create`, `Update`, and `Delete` operations with these options:<br />- 1: Added<br />- 2: Deleted<br />- 3: Modified<br />- 4: Added or Modified<br />- 5: Added or Deleted<br />- 6: Modified or Deleted<br />- 7: Added or Modified or Deleted|
+|`message`|When the flow uses the **When a row is added, modified, or deleted** trigger, it might subscribe to all the combinations of `Create`, `Update`, and `Delete` operations with these options:<br />- 1: Added<br />- 2: Deleted<br />- 3: Modified<br />- 4: Added or Modified<br />- 5: Added or Deleted<br />- 6: Modified or Deleted<br />- 7: Added or Modified or Deleted|
 |`sdkmessage`|When the flow uses the **When an action is performed** trigger, this column contains the name of the message.|
 |`scope`|Flows only apply to the scope specified by the user as defined using these options:<br />- 1: User<br />- 2: BusinessUnit<br />- 3: ParentChildBusinessUnit<br />- 4: Organization|
 |`ownerid`|The owner of the callback registration and the flow.|
