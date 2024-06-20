@@ -1,5 +1,5 @@
 ---
-title: "Bypass Custom Dataverse Logic" 
+title: "Bypass custom Dataverse logic" 
 description: "Make data changes which bypass custom Dataverse logic." 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
@@ -15,7 +15,7 @@ contributors:
   - LearningEveryday1
   - NHelgren
 ---
-# Bypass Custom Dataverse Logic
+# Bypass custom Dataverse logic
 
 There are times when you want to be able to perform data operations without having custom business logic applied in Dataverse. These scenarios typically involve bulk data operations where large numbers of records are being created, updated, or deleted.
 
