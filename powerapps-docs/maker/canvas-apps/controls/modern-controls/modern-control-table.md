@@ -36,7 +36,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 - The **Table** control supports linking to Microsoft Dataverse tables and collections.
 - When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. You can also display or hide other fields based on your needs.
 - The **Table** control can automatically switch between tabular and list formats. You can manually manage this behavior using the **Reflow** property.
-- When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Your changes aren't saved.
+- When you run your app, you can adjust column width in the **Table** control. However, these changes to the column width are not saved, and the column widths will reset to their default values the next time you run your app.
 - Change the color palette for the **Table** via the Base palette color property. 
 
 ### Unsupported capabilities
