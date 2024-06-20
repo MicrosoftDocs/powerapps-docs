@@ -67,8 +67,7 @@ As an example, this XML specifies a green background color for the app header wi
 1. Select **New** > **More** > **Web resource**.
 1. In the New web resource property pane, enter the following values:
    - **Display name**: Enter a display name, such as *XML for modern theming*.
-   - **Name**. Enter the unique name for the web resource. When entering the name, make sure to add the publisher prefix for the web resource and don't include quotes. For example, the name might appear as *contoso_xmlfor-modern-theme* as in this example.
-   :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_xmlfor-modern-theme." lightbox="media/environment-setting-theme.png":::
+   - **Name**. Enter the unique name for the web resource. 
    - Type: **Data (XML)**
 1. Select **Choose file**, browse to, and then select the XML file you created earlier with the theme.
 1. Select **Save**. You publish this customization with the steps in the next section.
@@ -80,7 +79,8 @@ After you select your colors and create the web resource, follow these steps to 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
 1. Type *Override* in the **Search** box, select **Override app header color**, select **Next**, and then select **Add**.
 1. In the solution, select **Override app header color**, and then select **Edit** on the command bar.
-1. On the right **Edit Override app header color** properties pane, select **Setting environment value** and enter the unique name of your web resource you created earlier.
+1. On the right **Edit Override app header color** properties pane, select **Setting environment value** and enter the unique name of your web resource you created earlier. Make sure to add the publisher prefix for the web resource and don't include quotes. For example, the name might appear as *contoso_xmlfor-modern-theme* as in this example.
+   :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_xmlfor-modern-theme." lightbox="media/environment-setting-theme.png":::
 1. Select **Save**.
 1. Select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
