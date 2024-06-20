@@ -77,6 +77,10 @@ If you're a Power Apps user and want to run apps, you can request a Power Apps l
 
 If you've decided to purchase Power Apps, see here for detailed information: [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin).
 
+## Get Developer Tenent
+
+If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+
 ## Power Apps US Government plans
 
 Power Apps US Government consists of several plans designed for US government organizations to address the unique and evolving requirements of the United States public sector. The Power Apps GCC environment provides compliance with federal requirements for cloud services, including FedRAMP High, DoD DISA IL2, and requirements for criminal justice systems (CJI data types). More information: [Power Apps US Government](/power-platform/admin/powerapps-us-government)
