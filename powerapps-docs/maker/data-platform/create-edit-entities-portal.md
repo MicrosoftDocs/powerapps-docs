@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 5/2/2024
+ms.date: 05/01/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -33,40 +33,77 @@ You can also select a column heading from the table view, and then select **Filt
 
 There are several ways to create a new table:
 
-- [Add columns and data](#add-columns-and-data)
-- [Describe the new table](#describe-the-new-table)
+- [Create new tables (preview)](#create-new-tables-preview)
 - [Set advanced properties](#set-advanced-properties)
 - [Create with external data](#create-with-external-data)
 - [Create a virtual table](#create-a-virtual-table)
 
-### Add columns and data
+### Create new tables (preview)
 
-Create a table by entering the data rows and columns you want.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-1. From the **Tables** area, on the command bar select **New table** > **Add columns and data**.
-1. When you're finished, select **Create**.
+Use the table visual designer experience where you create and edit tables, configure table relationships, and can view a diagram of your data.
 
-More information: [Table designer](#table-designer)
+:::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
-### Describe the new table
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Create a table with the help of Copilot in Power Apps.
+1. Command bar:
+
+   - **Back**. Takes you back where you were in Power Apps.
+   - **New table**. Create a new table using any of the methods described in this article.
+   - **Hide data** or **View data**. Closes or displays the table row editor.
+   - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
+      (NOTE: many-to-many relationships aren't supported)
+   - **Delete**. Deletes the table and all associated table rows.
+2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
+3. Table visual designer canvas actions:
+   - **+**. Zoom in to increase the size of the table objects on the canvas.
+   - **-**. Zoom out to decrease the size of the table objects on the canvas.
+   - **Fit view**. Resize to fit within the available space in the browser tab.
+   - **Show map** or **Hide map**. When **Show map** is selected, displays a compact representation of the tables on the canvas.
+4. Table actions menu:
+   - **Hide data** or **View data**. Closes or displays the table row editor.
+   - **Row ownership**. Select the ownership type as either user or team, or organization. 
+   - **Properties**. Edit the table display name, plural name, description, and schema name.
+   - **Delete**. Delete the table and all associated rows.
+5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
+
+> [!TIP]
+> Can't find the tables you created on the canvas? Select **Fit view** on the table visual designer canvas actions menu.
+
+Create a table with the visual table designer by using any of the following methods:
+
+- [Start with Copilot](#start-with-copilot)
+- [Import with SharePoint list](#create-with-external-data)
+- [Import an Excel file or .CSV](#create-with-external-data)
+- [Start from blank](#table-properties)
+
+#### Start with Copilot
+
+Describe your data in natural language and Copilot generates tables along with relationships for you.
 
 > [!NOTE]
 > To use this feature, note the following requirements:
 >
 > - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
-> - This feature is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+> - This feature is available in English. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
-1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
-1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
-1. When you're finished, select **Create**.
+1. From the **Choose an option to create tables** page, select **Start with Copilot**.
+2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
+3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#review-the-table)
+4. When you're finished, select **Save and exit**.
 
 ### Set advanced properties
 
 From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel. You start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
+
+#### Table properties
 
 Enter data for the following properties.
 
