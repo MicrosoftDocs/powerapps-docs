@@ -185,7 +185,7 @@ GET [Organization URI]/api/data/v9.2/GetFileSasUrl(Target=@p1,FileAttributeName=
 The following limitations apply:
 
 - `GetFileSasUrl` only works for image columns configured to support full-size images. [Learn to detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)
-- `GetFileSasUrl` doesn't work for environments that have [enabled customer managed keys](/power-platform/admin/customer-managed-key).
+- `GetFileSasUrl` doesn't work for environments that [continue to use self-manage database encryption key feature (BYOK)](/power-platform/admin/manage-encryption-key). Customers using BYOK need to [migrate to use customer managed key (CMK)](/power-platform/admin/cmk-migrate-from-byok) to use `GetFileSasUrl`.
 
 ### See also
 
