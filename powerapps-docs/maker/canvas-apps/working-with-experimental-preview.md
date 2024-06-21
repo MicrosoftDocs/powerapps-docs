@@ -21,7 +21,7 @@ With every release, we make changes and add features to make Power Apps the best
 
 At the same time, keeping your apps running smoothly is our top priority. Despite our best efforts, any change or improvement may unintentionally introduce a side effect, and your app might not work exactly the way it did before.
 
-To help balance improvement against impact on existing apps, we take features through a progression of stages. These stages allow you a chance to try out the feature and give us feedback, and for us to roll out the feature gradually with progressively bigger audiences and watching for any problems. This article describes this process and how you can control your exposure to features that are under development.
+To help balance improvement against impact on existing apps, we take features through a progression of stages. These stages give you a chance to try out the feature and provide us feedback, and for us to gradually roll out the feature while watching for any problems. This article describes this process and how you can control your exposure to features that are under development.
 
 At each stage, the number of people who use the feature increases, helping us to validate that the feature is what you need and that we're not introducing an unintended side effect.
 
@@ -32,7 +32,7 @@ At each stage, the number of people who use the feature increases, helping us to
 In short, the stages are:
 - **New:** These features are new and generally available (GA), fully supported, and documented. Generally these features will be on by default for new apps, but may take time to deploy everywhere. Enable for existing apps on your own schedule.
 - **Preview:** These features are almost done and will be **New** soon. But at this stage there still may be some changes made. This stage is the last opportunity for feedback. These features will generally be off by default and will be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
-- **Experimental:** An early-stage "Preview", these features truly are experiments and may never reach GA. We're assessing the value proposition and design of the feature, and the feature may radically change or be removed completely at any time. These features will be off by default and will generally not be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
+- **Experimental:** An early stage "Preview," these features truly are experiments and may never reach GA. We're assessing the value proposition and design of the feature, and the feature may radically change or be removed completely at any time. These features will be off by default and will generally not be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
 - **Retired:** These features are GA features but are on their way to being removed from the product. They're still fully supported and document, but we either have a new, better way to do the same thing or usage is low. Disable for existing apps on your own schedule. Generally, these features are off by default.
 
 How long does a feature remain in each stage? It varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months. We may also skip some stages if we don't believe it would be helpful.
@@ -65,7 +65,7 @@ Generally, **Preview** features graduate to **New**.
 
 Enable **Experimental** features if you're an early adopter, see something useful to you, and would like to help test the feature. 
 
-**Experimental** features are in an early-stage preview that is true to the name "experiment". This feature may significantly change or be completely removed at any time. These features are very far from being generally available, aren't fully supported, and are offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Experimental** features shouldn't be used in production. 
+**Experimental** features are in an early-stage preview that is true to the name "experiment". This feature may significantly change or be completely removed at any time. These features are far from being generally available, aren't fully supported, and are offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Experimental** features shouldn't be used in production. 
 
 **Experimental** features are never enabled by default when creating a new app. You should only enable an **Experimental** feature for testing purposes and to provide feedback. If you don't know what the feature is referring to or its possible impact, you likely shouldn't turn it on. 
 
@@ -83,7 +83,7 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 **Retired** features are generally not enabled when creating a new app. They're provided for existing apps that still depend on the old behavior.
 
-**Retired** features will eventually be removed from the product after enough time and notice has been provided to makers.
+**Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals will be well communicated ahead of time.
 
 **Retired** features are fully documented in the [Power Apps documentation](./getting-started.md).
 
@@ -92,11 +92,11 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 In general, when creating a _new_ app:
 
 - **New switches are On.** These features are generally available and fully supported. There may be a small delay as we continue rolling out. 
-- **Preview switches are Off, but can be enabled for testing and feedback.** Enable the features that are interesting to you before they are enabled for all apps, for testing and feedback. Preview features are not ready for production.
-- **Experimental switches are Off.** These features are for early adopters and should only be used with caution, they can be changed or removed at any time. Experimental features are not ready for production.
+- **Preview switches are Off, but can be enabled for testing and feedback.** Enable the features that are interesting to you before they're enabled for all apps, for testing and feedback. Preview features aren't ready for production.
+- **Experimental switches are Off.** These features are for early adopters and should only be used with caution; they can be changed or removed at any time. Experimental features aren't ready for production.
 - **Retired switches are Off.** These features are generally available and fully supported, but will eventually be removed from the product. Avoid using these features.
 
-As _existing_ apps go through their lifecycle, you may want to adjust these switches to take advantage of new features or to remove a dependency on a feature that will be retired. Turning **New** switches On and **Retired** switches Off brings existing apps into alignment with new apps and the future of the product.
+As _existing_ apps go through their lifecycle, you may want to take advantage of new features or to remove dependencies on retired features by adjusting these switches in your app. Turning **New** switches On and **Retired** switches Off brings existing apps into alignment with new apps and the future of the product.
 
 ## Controlling which features are enabled
 
@@ -104,7 +104,7 @@ Experimental and preview features are listed in the app's **Settings** > **Updat
 
 ![Settings for canvas apps.](media/working-with-experimental/advanced-settings.png "Settings for canvas app")
 
-Each feature has a toggle switch. **Off** generally means that the feature is disabled, except in the **Retired** section where the title of the feature will indicate if the switch disables the feature.
+Each feature has a toggle switch. **Off** generally means that the feature is disabled, except in the **Retired** section where the title of the feature indicates if the switch disables the feature.
 
 In some cases, you might need to close and reopen the app after you change a setting. The feature description should indicate when you must perform this step.
 
