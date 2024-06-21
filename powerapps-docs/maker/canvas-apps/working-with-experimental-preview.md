@@ -15,7 +15,7 @@ contributors:
   - mduelae
   - gregli-msft
 ---
-# Understand New, Preview, Experimental, and Retired features in canvas apps
+# Understand new, preview, experimental, and retired features in canvas apps
 
 With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward. 
 
