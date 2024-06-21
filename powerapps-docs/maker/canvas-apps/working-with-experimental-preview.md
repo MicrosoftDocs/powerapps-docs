@@ -83,7 +83,7 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 **Retired** features are generally not enabled when creating a new app. They're provided for existing apps that still depend on the old behavior.
 
-**Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals will be well communicated ahead of time.
+**Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals are well communicated ahead of time.
 
 **Retired** features are fully documented in the [Power Apps documentation](./getting-started.md).
 
