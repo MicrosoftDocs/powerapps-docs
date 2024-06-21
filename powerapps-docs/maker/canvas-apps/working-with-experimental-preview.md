@@ -59,9 +59,9 @@ In general, **Preview** features aren't enabled by default when creating a new a
 
 Generally, **Preview** features graduate to **New**.
 
-**Preview** features are documented in the [Power Apps documentation](./getting-started.md). There may also be information available in the [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information.
+**Preview** features are documented in the [Power Apps documentation](./getting-started.md). Use the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information. Use the "Experimental" forum as many **Preview** features start out as **Experimental** features and there may already be information or comments there that can be helpful to you.
 
-Provide feedback on **Preview** features in the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback). Use the **Experimental** forum as many **Preview** features start out as **Experimental** features and there may already be information or comments there that can be helpful to you.
+Provide feedback on **Preview** features in the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback). Again, "Experimental" also covers **Preview** features in the forum.
 
 ## Experimental
 
@@ -73,7 +73,7 @@ Enable **Experimental** features if you're an early adopter, see something usefu
 
 Eventually **Experimental** features either graduate to **Preview** or are removed from the product.
 
-**Experimental** features typically aren't documented. The short description in the **App settings** pane might be the only information about them. Use the [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information.
+**Experimental** features typically aren't documented. The short description in the **App settings** pane might be the only information about them. Use the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information.
 
 Provide feedback on **Experimental** features in the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback). 
 
