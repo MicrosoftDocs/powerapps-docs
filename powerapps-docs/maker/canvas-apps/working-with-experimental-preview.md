@@ -91,10 +91,10 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 In general, when creating a _new_ app:
 
-- **New switches are On.** These features are generally available, ready for wide circulation, are documented, and are fully supported. One day, the option to turn off these features may be removed and they'll become a permanent part of the product. Most often, the old behavior before the feature was introduced moves to **Retired**.
-- **Preview switches can be enabled for testing and feedback.** These features are almost ready for wide deployment, are documented, but are under the preview terms of service. They aren't ready for production yet. Most of these features will move to **New** one day.
-- **Experimental switches are Off.** These features should only be used with caution, they can be changed or removed at any time. These features are under the preview terms of service and aren't ready for production. Some of these features will graduate to **Preview** and some will be removed from the product.
-- **Retired switches are Off.** These features are generally available, are fully document, and are fully supported. They will be eventually be removed from the product, often offering behavior that has been superseded by another feature. Documentation explains the alternatives to using these older features.
+- **New switches are On.** These features are generally available and fully supported. There may be a small delay as we continue rolling out. 
+- **Preview switches are Off, but can be enabled for testing and feedback.** Enable the features that are interesting to you before they are enabled for all apps, for testing and feedback. Preview features are not ready for production.
+- **Experimental switches are Off.** These features are for early adopters and should only be used with caution, they can be changed or removed at any time. Experimental features are not ready for production.
+- **Retired switches are Off.** These features are generally available and fully supported, but will eventually be removed from the product. Avoid using these features.
 
 As _existing_ apps go through their lifecycle, you may want to adjust these switches to take advantage of new features or to remove a dependency on a feature that will be retired. Turning **New** switches On and **Retired** switches Off brings existing apps into alignment with new apps and the future of the product.
 
