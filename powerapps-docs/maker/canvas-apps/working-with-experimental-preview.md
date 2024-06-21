@@ -31,8 +31,8 @@ At each stage, the number of people who use the feature increases, helping us to
 
 In short, the stages are:
 - **New:** These features are new and generally available (GA), fully supported, and documented. Generally these features are on by default for new apps, but might take time to deploy everywhere. Enable for existing apps on your own schedule.
-- **Preview:** These features are almost done and will be **New** soon. But at this stage there still might be some changes made. This stage is the last opportunity for feedback. These features are turned off by default and are documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
-- **Experimental:** An early stage "Preview," these features truly are experiments and might never reach GA. We're assessing the value proposition and design of the feature, and the feature might radically change or be removed completely at any time. These features are off by default and aren't documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
+- **Preview:** These features are almost done and will be **New** soon. But at this stage there still might be some changes made. This stage is the last opportunity for feedback. These features are generally turned off by default and are documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
+- **Experimental:** An early stage "Preview," these features truly are experiments and might never reach GA. We're assessing the value proposition and design of the feature, and the feature might radically change or be removed completely at any time. These features are off by default and aren't generally documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
 - **Retired:** These features are GA features but are on their way to being removed from the product. They're still fully supported and document, but we either have a new, better way to do the same thing or usage is low. Disable for existing apps on your own schedule. Generally, these features are off by default.
 
 How long does a feature remain in each stage? It varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months. We might also skip some stages if we don't believe it would be helpful.
@@ -59,7 +59,9 @@ In general, **Preview** features aren't enabled by default when creating a new a
 
 Generally, **Preview** features graduate to **New**.
 
-**Preview** features are documented in the [Power Apps documentation](./getting-started.md). Sometimes documentation for the feature isn't available on time, in this case you should check the [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) or [Power Apps blog](https://powerapps.microsoft.com/blog/).
+**Preview** features are documented in the [Power Apps documentation](./getting-started.md). There may also be information available in the [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information.
+
+Provide feedback on **Preview** features in the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback). Use the **Experimental** forum as many **Preview** features start out as **Experimental** features and there may already be information or comments there that can be helpful to you.
 
 ## Experimental
 
@@ -72,6 +74,8 @@ Enable **Experimental** features if you're an early adopter, see something usefu
 Eventually **Experimental** features either graduate to **Preview** or are removed from the product.
 
 **Experimental** features typically aren't documented. The short description in the **App settings** pane might be the only information about them. Use the [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) or [Power Apps blog](https://powerapps.microsoft.com/blog/) for more information.
+
+Provide feedback on **Experimental** features in the [Power Apps Experimental Features forum](https://aka.ms/pa-early-feedback). 
 
 ## Retired
 
@@ -115,7 +119,7 @@ These settings are specific to each app, so changing a toggle switch affects onl
 
 ## Preview and Experimental features without a switch
 
-Sometimes a tag is added in the product to indicate that a particular feature is Preview or Experimental without having a switch in **Updates**. For example, a control in an **Insert** menu might have the name **Grid (Preview)** or the entry point for the monitor was once **Monitor (Preview)**. In these cases, the feature can't be used without first seeing this tag.
+Sometimes a tag is added in the product to indicate that a particular feature is Preview or Experimental without having a switch in **Updates**. For example, a control in an **Insert** menu might have the name **Grid (Preview)** or the entry point for the [Monitor](../monitor-overview.md) was once **Monitor (Preview)**. In these cases, the feature can't be used without first seeing this tag.
 
 Like the **Preview** and **Experimental** feature categories previously described, these features shouldn't be used in production and are offered under the [preview terms of service](https://aka.ms/pa-preview-terms). 
 
