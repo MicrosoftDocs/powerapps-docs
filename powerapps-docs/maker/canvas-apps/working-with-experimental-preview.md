@@ -30,9 +30,9 @@ At each stage, the number of people who use the feature increases, helping us to
 ## Feature roll out stages
 
 In short, the stages are:
-- **New:** These features are new and generally available (GA), fully supported, and documented. Generally these features will be on by default for new apps, but may take time to deploy everywhere. Enable for existing apps on your own schedule.
-- **Preview:** These features are almost done and will be **New** soon. But at this stage there still may be some changes made. This stage is the last opportunity for feedback. These features will generally be off by default and will be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
-- **Experimental:** An early stage "Preview," these features truly are experiments and may never reach GA. We're assessing the value proposition and design of the feature, and the feature may radically change or be removed completely at any time. These features will be off by default and will generally not be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
+- **New:** These features are new and generally available (GA), fully supported, and documented. Generally these features are on by default for new apps, but may take time to deploy everywhere. Enable for existing apps on your own schedule.
+- **Preview:** These features are almost done and will be **New** soon. But at this stage there still may be some changes made. This stage is the last opportunity for feedback. These features will generally be off by default and are documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
+- **Experimental:** An early stage "Preview," these features truly are experiments and may never reach GA. We're assessing the value proposition and design of the feature, and the feature may radically change or be removed completely at any time. These features are off by default and will generally not be documented. These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
 - **Retired:** These features are GA features but are on their way to being removed from the product. They're still fully supported and document, but we either have a new, better way to do the same thing or usage is low. Disable for existing apps on your own schedule. Generally, these features are off by default.
 
 How long does a feature remain in each stage? It varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months. We may also skip some stages if we don't believe it would be helpful.
@@ -45,7 +45,7 @@ Enable **New** features for all your new apps, and enable for existing apps when
 
 In general, **New** features are enabled by default when creating a new app. When a **New** feature is first introduced, it may not be enabled in all regions initially, allowing us time to deploy and gather telemetry on usage and any problems. If you run into a problem with a feature, the switch can be used as a workaround to disable it until we can correct the problem.
 
-Eventually, **New** features are no longer "new". If there's no breaking change, the switch will be removed and the feature will be turned on for all apps. If there's a breaking change, the old behavior will be available in **Retired**.
+Eventually, **New** features are no longer "new". If there's no breaking change, the switch will be removed and the feature will be turned on for all apps. If there's a breaking change, the old behavior will be available in **Retired** as a disable switch.
 
 **New** features are fully documented in the [Power Apps documentation](./getting-started.md).
 
