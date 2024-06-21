@@ -1,5 +1,5 @@
 ---
-title: Share a canvas app with guest users (contains video)
+title: Share a canvas app with guest users
 description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.topic: conceptual

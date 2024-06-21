@@ -1,5 +1,5 @@
 ---
-title: Integrate your Teams Power Apps with Planner (contains video)
+title: Integrate your Teams Power Apps with Planner
 description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
 ms.topic: conceptual

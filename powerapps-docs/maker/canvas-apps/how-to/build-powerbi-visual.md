@@ -1,5 +1,5 @@
 ---
-title: How to create a canvas app with Power BI visual (contains video)
+title: How to create a canvas app with Power BI visual
 description: Learn about how to create a canvas app with Power BI visual.
 author: joel-lindstrom
 

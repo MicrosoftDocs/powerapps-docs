@@ -6,7 +6,7 @@ ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/24/2024
+ms.date: 06/06/2024
 ms.custom: template-how-to
 contributors:
 - dikamath
@@ -41,7 +41,7 @@ You must have [access to Dataverse](/power-apps/maker/data-platform/data-platfor
 
 ## Get started
 
-To get started with the API playground, [play](dataverse-accelerator.md#play-the-dataverse-accelerator) the Dataverse accelerator and go to the **API playground** page.
+To get started with the API playground, [play the Dataverse accelerator](dataverse-accelerator.md#play-the-dataverse-accelerator), and then select the **API playground** page.
 
 ![Run the API playground by selecting the feature card](media/api-play-run.svg)
 
@@ -117,27 +117,6 @@ The response status provides quick metrics on the request:
 - Size (in kilobytes)
 
 The response body is displayed below the response status. Select the copy icon to copy the response body to your clipboard.
-
-### Save an API request
-
-You can save requests for quick access later. Saved requests store the request details, such as the request method and endpoint for OData request, or the selected plug-in for custom API and instant plug-in, and the input parameters with associated values.
-
-1. In the request screen, select **Save** in the top right corner of the page.
-
-   A dialog appears with form fields.
-1. Provide a name for the request. A default value is provided based on the request details, but you can update the value.
-    :::image type="content" source="./media/api-play-save.svg" alt-text="Save request dialog" lightbox="./media/api-play-save.svg":::
-
-1. Select **Save**.
-1. The saved request appears in the left pane of the screen.
-    :::image type="content" source="media/api-play-saved-requests.svg" alt-text="Save requests appear in the left pane of the screen" lightbox="media/api-play-saved-requests.svg":::
-
-### Load a saved request
-
-To load a saved request, select a request name. This loads the request screen with the request details filled in, including input parameters and values.
-
-> [!NOTE]
-> You can only view saved requests that you've created.
 
 ## FAQs
 

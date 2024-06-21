@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/03/2024
+ms.date: 06/14/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -22,35 +22,40 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 ## Limitations and known issues
 
-- A **canvas app not in a solution** can't be used in offline mode.
+- The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
+  
+- A canvas app not in a solution can't be used in offline mode.
 
-- The offline-first feature **works for standalone, canvas apps only**. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md), or [canvas apps in Teams](../teams/overview.md).
+- The offline-first feature works for standalone, canvas apps only. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md), or [canvas apps in Teams](../teams/overview.md).
 
 - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
-   - **Relate**
-   - **Unrelate**
-   - **UpdateIf**
-   - **RemoveIf**
+   - Relate
+   - Unrelate
+   - UpdateIf
+   - RemoveIf
  
-- **Filter on column look-up** only supports one level of look-up when the app is configured for offline use.
+- Filter on column look-up only supports one level of look-up when the app is configured for offline use.
 
-- **Many-to-many relationships** aren't supported in offline mode.
+- Many-to-many relationships aren't supported in offline mode.
  
-- **Non-Dataverse connectors** like Sharepoint aren't supported in offline mode.
+- Non-Dataverse connectors, like Sharepoint, aren't supported in offline mode.
 
-- **Virtual tables** aren't not supported in offline mode.
+> [!NOTE]
+> If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
 
-- **Calculated and roll-up fields** - Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
+- **Virtual tables** and **elastic tables** aren't supported in offline mode.
 
-- **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+- Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
-- An **offline profile** can't be used in two canvas apps.
+- When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
-- If the **same offline profile** is used in a canvas app and in a model-driven app, it will create two separate local databases. 
+- An offline profile can't be used in two canvas apps.
+
+- If the same offline profile is used in a canvas app and in a model-driven app, it will create two separate local databases. 
  
-- The **auto-generated offline profile** doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.
+- The auto-generated, offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.
 
-- Items in a gallery may appear in a **different order** in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
+- Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
 
 - Data can only be synced regularly when Power Apps is running in the foreground of your device, with the screen unlocked. Learn more: [Sync data offline in the background](sync-data-offline-background.md)
 

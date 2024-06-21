@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 05/29/2024
+  ms.date: 06/11/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -53,7 +53,7 @@ sections:
         
    - question: How long will a policy run take to complete?
      answer: |
-        A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
+        Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting the live application processes. The policy run can take from three or four days up to two weeks for very large data volumes. An option is to schedule long term retention policy runs on a regular cadence like monthly or quarterly, unless the scenario absolutely requires longer durations, such as yearly schedules. 
 
    - question: Where can I view the capacity savings?
      answer: |

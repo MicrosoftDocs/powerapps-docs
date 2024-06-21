@@ -1,5 +1,5 @@
 ---
-title: Use the Hospital Emergency Response mobile app (contains video) | Microsoft Docs
+title: Use the Hospital Emergency Response mobile app | Microsoft Docs
 description: Walk-through different apps and components for the users of the Hospital Emergency Response sample app template 
 author: pankajarora-msft
 

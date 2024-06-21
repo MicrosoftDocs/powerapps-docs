@@ -1,5 +1,5 @@
 ---
-title: Working with Test Studio (contains video)
+title: Working with Test Studio
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
 

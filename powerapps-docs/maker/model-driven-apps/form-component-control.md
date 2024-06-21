@@ -131,8 +131,6 @@ Note the following limitations when you add the form component control to a tabl
 
 - All components used by the form in a form component must be [included in your app](add-edit-app-components.md#add-a-component). These components include related tables, views, and business process flows. If they aren't, they won't be available in the form or there might be unexpected behavior.
 
-- Form component controls have certain limitations when rendered in multi-session apps. If the client API is used to modify the form component control, or if data is entered on the form, the changes might not be persisted when switching multi-session tabs.
-
 - You might notice that the timeline wall might not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 
 - On mobile, the timeline control doesn't currently appear in the form component control.

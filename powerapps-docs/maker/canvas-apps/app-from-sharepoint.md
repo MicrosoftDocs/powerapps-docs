@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app with data from Microsoft Lists (contains video)
+title: Create a canvas app with data from Microsoft Lists
 description: In Power Apps, automatically create a canvas app to manage data in a list created using Microsoft Lists.
 author: mduelae
 

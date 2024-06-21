@@ -1,5 +1,5 @@
 ---
-title: Understand Power Apps Studio in Dataverse for a Teams environment (contains video) | Microsoft Docs
+title: Understand Power Apps Studio in Dataverse for a Teams environment | Microsoft Docs
 description: Learn the components inside Power Apps Studio in Teams.
 author: jessicaszelo
 ms.topic: conceptual

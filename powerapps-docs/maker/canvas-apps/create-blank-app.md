@@ -1,5 +1,5 @@
 ---
-title: Create a blank canvas app from scratch (contains video)
+title: Create a blank canvas app from scratch
 description: Create an app from scratch and then add your data.
 author: franklanmsft
 
