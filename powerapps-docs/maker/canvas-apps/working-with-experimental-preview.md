@@ -33,15 +33,15 @@ In short, the stages are:
 - **New:** These features are new and generally available (GA), fully supported, and documented. Generally these features will be on by default for new apps, but may take time to deploy everywhere.  Enable for existing apps on your own schedule.
 - **Preview:** These features are almost done and will be **New** soon.  But at this stage there still may be some changes made.  This stage is the last opportunity for feedback.  These features will generally be off by default and will be documented.  These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
 - **Experimental:** An early-stage "Preview", these features truly are experiments and may never reach GA.  We're assessing the value proposition and design of the feature, and the feature may radically change or be removed completely at any time. These features will be off by default and will generally not be documented.  These features aren't GA, shouldn't be used in production, and are covered by the [Preview terms of service](https://powerplatform.microsoft.com/legaldocs/supp-powerplatform-preview/).
-- **Retired:** These features are GA features but are on their way to being removed from the product.  they're still fully supported and document, but we either have a new, better way to do the same thing or usage is low.  Disable for existing apps on your own schedule.  Generally, these features are off by default.
+- **Retired:** These features are GA features but are on their way to being removed from the product.  They're still fully supported and document, but we either have a new, better way to do the same thing or usage is low.  Disable for existing apps on your own schedule.  Generally, these features are off by default.
 
 How long does a feature remain in each stage? It varies from feature to feature. We look at many factors, including the number of apps that use the feature, the number of issues reported, and how urgently the feature is needed. Features can remain in a stage for weeks to many months.  We may also skip some stages if we don't believe it would be helpful.
 
 ## New
 
-Enable **New** features for all your new apps, and enable for existing apps when you are ready.
+Enable **New** features for all your new apps, and enable for existing apps when you're ready.
 
-**New** features have been recently added to the product. they're generally available and fully supported.  You can use **New** features with confidence.
+**New** features have been recently added to the product. They're generally available and fully supported.  You can use **New** features with confidence.
 
 In general, **New** features are enabled by default when creating a new app. When a **New** feature is first introduced, it may not be enabled in all regions initially, allowing us time to deploy and gather telemetry on usage and any problems. If you run into a problem with a feature, the switch can be used as a workaround to disable it until we can correct the problem.
 
@@ -51,9 +51,9 @@ Eventually, **New** features are no longer "new". If there's no breaking change,
 
 ## Preview
 
-Enable **Preview** features if you'd like to test a soon to be released feature before it is enabled for everyone.
+Enable **Preview** features if you'd like to test a soon to be released feature before it's enabled for everyone.
 
-**Preview** features are well on their way to being a valued part of the product. But, they'ren't generally available yet and aren't fully supported, instead offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Preview** features shouldn't be used in production. 
+**Preview** features are well on their way to being a valued part of the product. But, they aren't generally available yet and aren't fully supported, instead offered under the [preview terms of service](https://aka.ms/pa-preview-terms). **Preview** features shouldn't be used in production. 
 
 In general, **Preview** features aren't enabled by default when creating a new app. You should only enable a **Preview** feature for testing purposes and to provide feedback before the feature becomes generally available. This stage is the last stop for feedback before the feature is finalized. 
 
@@ -77,11 +77,11 @@ Eventually **Experimental** features either graduate to **Preview** or are remov
 
 Enable **Retired** features only if you need an old behavior.  When appropriate, disable these features in your existing apps.
 
-**Retired** features are generally available and fully supported. But sometimes a feature or behavior has been superseded by a new, better way and it is time for the old behavior to exit.  Unpopular features are also pruned too as all features require some overhead to keep up with product changes around them.
+**Retired** features are generally available and fully supported. But sometimes a feature or behavior has been superseded by a new, better way and it's time for the old behavior to exit.  Unpopular features are also pruned too as all features require some overhead to keep up with product changes around them.
 
 When a feature moves from **New** to **Retired**, the meaning of its switch is often inverted.  For example, where "Delayed load" was on by default as a **New** feature, the **Retired** version becomes "Disable delayed load" and is off by default.
 
-**Retired** features are generally not enabled when creating a new app. they're provided for existing apps that still depend on the old behavior.
+**Retired** features are generally not enabled when creating a new app. They're provided for existing apps that still depend on the old behavior.
 
 **Retired** features will eventually be removed from the product after enough time and notice has been provided to makers.
 
