@@ -42,6 +42,10 @@ Learn how to use Copilot features in Power Apps.
 - [Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
 - [Add copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
 
+**For users**
+- [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
+- [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
+
 **Microsoft Dataverse**
 
 - [Add Dataverse tables in Microsoft Copilot Studio as a knowledge source](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
