@@ -83,7 +83,7 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 **Retired** features are generally not enabled when creating a new app. They're provided for existing apps that still depend on the old behavior.
 
-**Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals are well communicated ahead of time.
+**Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals are well communicated ahead of time for breaking changes.
 
 **Retired** features are fully documented in the [Power Apps documentation](./getting-started.md).
 
@@ -91,7 +91,7 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 In general, when creating a _new_ app:
 
-- **New switches are On.** These features are generally available and fully supported. There may be a small delay as we continue rolling out. 
+- **New switches are On.** These features are generally available and fully supported. There may be a small delay for the switch to be turned on by default as we continue rolling out. 
 - **Preview switches are Off, but can be enabled for testing and feedback.** Enable the features that are interesting to you before they're enabled for all apps, for testing and feedback. Preview features aren't ready for production.
 - **Experimental switches are Off.** These features are for early adopters and should only be used with caution; they can be changed or removed at any time. Experimental features aren't ready for production.
 - **Retired switches are Off.** These features are generally available and fully supported, but will eventually be removed from the product. Avoid using these features.
