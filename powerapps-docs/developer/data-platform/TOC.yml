@@ -213,11 +213,11 @@
     - name: Service protection API limits
       href: api-limits.md
     - name: Bypass Custom Business logic
-      href: bypass-custom-business-logic.md
       items:
-      - name: New options (preview)
-        href: bypass-custom-business-logic-preview.md
-        displayName: Bypass Business logic (preview)
+      - name: Bypass Custom Dataverse logic
+        href: bypass-custom-business-logic.md
+      - name: Bypass Power Automate flows
+        href: bypass-power-automate-flows.md
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data

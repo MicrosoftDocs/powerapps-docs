@@ -1,5 +1,15 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic.md#bypass-power-automate-flows",
+      "redirect_url": "bypass-power-automate-flows",
+      "redirect_document_id": "false"
+    },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic-preview.md",
+      "redirect_url": "bypass-custom-business-logic",
+      "redirect_document_id": "false"
+    },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/build-queries-with-queryexpression.md",
       "redirect_url": "queryexpression/overview",
