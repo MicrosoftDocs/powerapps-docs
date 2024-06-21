@@ -17,7 +17,7 @@ ms.custom: bap-template
 
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) and [Note (Annotation)](reference/entities/annotation.md) tables contain special string columns that store file data. These tables existed before file or image columns, so they work differently from those tables.
 
-- The binary file data is stored as Base64-encoded string values in string columns. Attachments are stored in the column[`ActivityMimeAttachment.Body`](reference/entities/activitymimeattachment.md#BKMK_Body) and notes are stored in the column [`Annotation.DocumentBody`](reference/entities/annotation.md#BKMK_DocumentBody).
+- The binary file data is stored as Base64-encoded string values in string columns. Attachments are stored in the column [`ActivityMimeAttachment.Body`](reference/entities/activitymimeattachment.md#BKMK_Body) and notes are stored in the column [`Annotation.DocumentBody`](reference/entities/annotation.md#BKMK_DocumentBody).
 - File name data is stored in the `FileName` column.
 - MIME type data is stored in the `MimeType` column.
 

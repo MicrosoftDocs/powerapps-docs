@@ -180,6 +180,9 @@
           href: image-column-data.md
         - name: Use Attachments and Annotations
           href: attachment-annotation-files.md
+        - name: Create link to download file
+          displayName: getFileSasUrl
+          href: getfilesasurl.md
     - name: Audit data changes
       items:
         - name: Overview
