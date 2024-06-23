@@ -16,14 +16,14 @@ contributors:
 
 Every query begins with a collection of entities. Entity collections can be:
 
-- [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
+- [EntitySet resources](#entityset-resources): One of the Web API `EntitySet` collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](../web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
-- An expanded collection-valued navigation property. More information: [Expand collection-valued navigation properties](join-tables.md#expand-collection-valued-navigation-properties)
+- [An expanded collection-valued navigation property](join-tables.md#expand-collection-valued-navigation-properties).
 - A collection returned by a function. Some functions are composable, which means you can apply `$select` or `$filter` system query options to limit the results returned. More information: [Composable functions](../use-web-api-functions.md#composable-functions)
 
-## EntitySet resources
+## `EntitySet` resources
 
-To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [service document](../web-api-service-documents.md#service-document):
+To find all the `EntitySet` resources available in your environment, send a `GET` request to the Web API [service document](../web-api-service-documents.md#service-document):
 
 **Request:**
 
@@ -67,7 +67,7 @@ OData-Version: 4.0
 > [!TIP]
 > These values are usually the plural name of the table, but they can be different. Use this query to confirm you're using the correct EntitySet resource name.
 
-To retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), you start with the `accounts` EntitySet resource.
+For example, start with the `accounts` EntitySet resource to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account).
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -75,9 +75,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name
 
 ## Filtered collections
 
-You can query any collection of entities represented by a collection-valued navigation property of a specified record.
-
-If you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+You can query any collection of entities represented by a collection-valued navigation property of a specified record. For example, if you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 
 ```http
@@ -88,14 +86,6 @@ To locate the name of the collection-valued navigation property:
 
 - For any Dataverse tables and relationships, you can check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>
 - For any custom tables or relationships, look for the [collection-valued navigation properties](../web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document)
-
-
-> [!TIP]
-> Filtered collections works for both many-to-many relationships and one-to-many relationships. For one-to-many relationships, a filtered collection returns the same results as using an `eq` `$filter` on the [Lookup property](../web-api-properties.md#lookup-properties) for the relationship.
-> 
-> ```http
-> GET [Organization URI]/api/data/v9.2/accounts?$select=name&$filter=_owninguser_value eq <systemuserid value>
-> ```
 
 ## Retrieve Data
 
@@ -231,7 +221,12 @@ There are some things that you can do using FetchXml that OData doesn't support.
 
 ## Community tools
 
+> [!NOTE]
+> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
+The [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) is an open source project that provides a user interface that helps you do many things using the Dataverse Web API, including composing queries.
+
+The [XrmToolBox](../../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for OData queries using the same designer experience.
 
 
 ## OData version 4.0 features

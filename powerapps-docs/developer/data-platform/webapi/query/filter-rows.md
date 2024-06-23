@@ -93,7 +93,7 @@ Use more than 60 specialized functions designed for business applications. These
 
 The <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> has the complete list. Each article provides a syntax example you can copy.
 
-You must use the function's *fully qualified name* and append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
+You must use the function's *fully qualified name* and append the [Service namespace](../web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
 
 Each function has a `PropertyName` parameter that specifies the property to be evaluated. The function may have more parameters, such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, you must supply a value, or values, to compare to the `PropertyName` parameter.
 
@@ -190,9 +190,24 @@ GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
 
 If you don't, you get an error like this: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
 
+
+
 ## Filter based on related data values
 
 You can filter rows returned based on values in related tables. How you filter depends on the type of relationship.
+
+### Filter on lookup property
+
+For one-to-many relationships, a filtered collection returns the same results as using an `eq` `$filter` on the [Lookup property](../web-api-properties.md#lookup-properties) for the relationship.
+
+```http
+GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
+```
+Is the same as:
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name&$filter=_owninguser_value eq <systemuserid value>
+```
 
 ### Filter using lookup column property values
 
