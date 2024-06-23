@@ -273,6 +273,51 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ## Distinct column values
 
+OData doesn't have a `$distinct` query option to restrict results to unique values. Instead, use the `$apply` system query option with the `groupby` transformation. This returns distinct values for each property.
+
+**Request:**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$apply=groupby((statecode,statuscode,accountcategorycode))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+
+{
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+   "value": [
+      {
+         "statuscode": 1,
+         "statecode": 0
+      },
+      {
+         "statuscode": 1,
+         "statecode": 0,
+         "accountcategorycode": 1
+      },
+      {
+         "statuscode": 1,
+         "statecode": 0,
+         "accountcategorycode": 2
+      },
+      {
+         "statuscode": 2,
+         "statecode": 1
+      }
+   ]
+}
+```
+
 ## Grouping
 
 ### Grouping by parts of a date

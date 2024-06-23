@@ -46,9 +46,6 @@
     - name: Overview
       displayName: OData
       href: query/overview.md
-    - name: Retrieve data
-      displayName: OData, retrieve
-      href: query/retrieve-data.md
     - name: Select columns
       displayName: OData, Select columns
       href: query/select-columns.md

@@ -29,7 +29,6 @@ This article describes ways you can optimize performance when retrieving data us
 ### See also
 
 [Query data using OData](overview.md)   
-[Use OData to retrieve data](retrieve-data.md)   
 [Select columns using OData](select-columns.md)  
 [Join tables using OData](join-tables.md)  
 [Order rows using OData](order-rows.md)  
