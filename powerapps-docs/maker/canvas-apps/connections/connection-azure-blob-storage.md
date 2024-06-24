@@ -97,7 +97,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Set the **Items** property of the gallery to:
 
-    ```powerapps-dot
+    ```power-fx
     AzureBlobStorage.ListRootFolderV2().value
     ```
 
