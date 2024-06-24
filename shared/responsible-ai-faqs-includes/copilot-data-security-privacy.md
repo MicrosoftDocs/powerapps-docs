@@ -1,7 +1,7 @@
 ---
 author: sericks007
 ms.author: sericks
-ms.date: 06/04/2024
+ms.date: 06/24/2024
 ms.topic: include
 ---
 
@@ -78,6 +78,9 @@ Hate and fairness-related harms refer to any content that uses pejorative or dis
 ## Does Copilot block prompt injections (jailbreak attacks)? 
 
 [Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts that are designed to provoke the generative AI model into behaving in ways it was trained not to or breaking the rules it's been told to follow. Services across Dynamics 365 and Power Platform are required to protect against prompt injections. [Learn more about jailbreak attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+
+## Does Copilot block indirect prompt injections (indirect attacks)?
+Indirect attacks, also referred to as _indirect prompt attacks_ or _cross-domain prompt injection attacks_, are a potential vulnerability where third parties place malicious instructions inside of documents that the generative AI system can access and process. Services across Dynamics 365 and Power Platform are required to protect against indirect prompt injections. [Learn more about indirect attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 ## How does Microsoft test and validate Copilot quality, including prompt injection protection and grounded responses? 
 
