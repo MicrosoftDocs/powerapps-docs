@@ -57,14 +57,13 @@ To add a Steam video in your canvas app, follow these steps to get the embed URL
 **Height** - The distance between a control's top and bottom edges. 
 
 ## Mobile support for stream control
-Stream control is now also supported on mobile. For iOS, end users will need to explicitly enable cross site tracking on Power Apps due to apple privacy policies through following steps:
+Stream control is now also supported on mobile. To comply with Apple's privacy policies, iOS users must follow these steps to enable cross-site tracking on Power Apps:
 
-1. On iOS, select **Settings**.
-2. Scroll down to **Power Apps**.
-3. Toggle on **Allow Cross-Website Tracking**.
+1. On iOS, select **Settings** > go to **Power Apps**.
+1. Set the toggle for **Allow Cross-Website Tracking** to **On**.
 
 ## Limitations
 
 1. Control properties such as auto start, auto play, and start from are coming soon.
-2. We don't recommend adding more than four videos on a single canvas app screen because it can cause performance issues.
-3. The last played state isn't preserved for videos within galleries.
+1. Don't add more than four videos on a single canvas app screen because it can cause performance issues.
+3. The last played state isn't preserved for a video that's in a gallery.
