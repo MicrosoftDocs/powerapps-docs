@@ -35,6 +35,15 @@ Model-driven apps
 
 **Type**: `boolean`
 
+## Remarks
+
+This function may return false if the table metadata is not locally cached. To ensure the table metadata is available in the local cache, call and await on [getEntityMetadata](getentitymetadata.md) before calling hasEntityPrivilege.
+
+```TypeScript
+await context.utils.getEntityMetadata(entityTypeName);
+context.utils.hasEntityPrivilege(entityTypeName, privilegeType, privilegeDepth);
+```
+
 ### Related articles
 
 [Utility](../utility.md)<br/>
