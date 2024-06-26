@@ -79,7 +79,7 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
   - Switch authoring versions
 - The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any additional coauthors or tabs beyond 10 will be in copresence and will not have the ability to edit the app or receive real-time updates.
 - The app language is locked to the locale of the first user that opens the app for editing.
--  Cut is disabled
+-  Cut is disabled.
 - Coauthoring is disabled in the Monitor tool.
 - Problems might occur with the following actions:
   - When you rename a control
