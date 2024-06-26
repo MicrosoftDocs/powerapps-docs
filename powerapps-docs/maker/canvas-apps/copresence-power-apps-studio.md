@@ -78,7 +78,7 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
   - Undo and redo
   - Switch authoring versions
 - Cut is disabled.
-- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Subsequent coauthors or tabs after 10 will be copresence and won't be able to edit the app or receive real-time updates
+- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any additional coauthors or tabs beyond 10 will be in copresence and will not have the ability to edit the app or receive real-time updates.
 - The app language is locked to the locale of the first user that opens the app for editing.
 - Coauthoring is disabled in the Monitor tool.
 - Problems might occur with the following actions:
@@ -86,7 +86,7 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
   - When you add AI Builder components
   - When you add geospatial controls
   - When one author adds a flow and another coauthor tries to run the flow without first refreshing the app
-  - Some errors from one author's actions will be visible to all other coauthors
+  - Some errors from one author's actions are visible to all other coauthors
   - When you copy and paste
 
 
