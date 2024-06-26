@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/18/2024
+ms.date: 06/26/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -51,6 +51,17 @@ If auto save is turned on, your changes are automatically saved. If auto save is
 [This section is pre-release documentation and is subject to change.]
 
 Coauthoring allows multiple makers to edit a canvas app at the same time. When more than one person is editing an app, you'll see presences indicators showing where another maker is working on the app and see their changes in real time.
+
+
+> [!div class="mx-imgBorder"] 
+> ![Coauthoring in Power Apps Studio.](media/copresence/coauthoring.png)
+
+
+Legend
+
+1. The command bar displays shows that you are in **Editing** mode.
+1. The area that's being edited is highlighted and show the makers initials.  
+1. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being edited by another maker. 
 
 > [!NOTE]
 > Since multiple users can select and edit the same control at the same time, you may overwrite each other’s edits.
