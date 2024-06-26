@@ -65,7 +65,7 @@ Coauthoring allows multiple makers to edit a canvas app at the same time. When m
 To use coauthoring, it must be turned on for each individual app. Once coauthoring is enabled, it takes precedence over the copresence feature.
 
 1. To enable live updates, open your app for editing in Power Apps Studio.
-2. Go to **Settings** > **Updates** > **Experimental**.
+2. Go to **Settings** > **Updates** > **Preview**.
 3. Set the toggle for **Coauthoring** to **On**.
 
 
@@ -74,13 +74,21 @@ To use coauthoring, it must be turned on for each individual app. Once coauthori
 - The following options are disabled when there's more than one user editing the app:
   - Search 
   - Save as
-  - Within current app and open another app or start a new app 
-  - Copy and paste
+  - Open another or new app
   - Undo and redo
   - Switch authoring versions
-- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first.
+- Cut is disabled.
+- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Subsequent coauthors or tabs after 10 will be copresence and won't be able to edit the app or receive real-time updates
 - The app language is locked to the locale of the first user that opens the app for editing.
-- Coauthoring is disabled for Test Studio and the Monitor tool.
+- Coauthoring is disabled in the Monitor tool.
+- Problems might occur with the following actions:
+  - When you rename a control
+  - When you add AI Builder components
+  - When you add geospatial controls
+  - When one author adds a flow and another coauthor tries to run the flow without first refreshing the app
+  - Some errors from one author's actions will be visible to all other coauthors
+  - When you copy and paste
+
 
 
 
