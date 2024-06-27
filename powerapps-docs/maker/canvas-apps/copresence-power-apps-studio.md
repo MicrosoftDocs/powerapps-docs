@@ -59,7 +59,7 @@ Coauthoring allows multiple makers to edit a canvas app at the same time. When m
 
 Legend
 
-1. The command bar shows that you are in **Editing** mode.
+1. The command bar shows that you are in **Editing** mode. When there's multiple editors, you'll see their avatar.
 1. The area that's being edited is highlighted and shows the makers initials.  
 1. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being edited by another maker. 
 
