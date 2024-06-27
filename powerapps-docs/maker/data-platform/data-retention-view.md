@@ -4,10 +4,11 @@ description: Learn how to access ready only data that is in long term storage.
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
+contributors: manasdalai
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/12/2024
-ms.custom: template-how-to 
+ms.date: 06/27/2024
+ms.custom: template-how-to
 ---
 # View long term retained data
 
@@ -39,8 +40,8 @@ If you need to retrieve long term data from multiple related tables, such as the
 
 More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
-## View retained data using using FetchXML
-In order to fetch the retained data for an entity, you need to specifiy the datasource="retained" in the fetchXML.
+## View retained data using using FetchXml
+In order to fetch the retained data for a table, specify the `datasource="retained"` in the FetchXml.
 
 Example:
 ```xml
@@ -51,8 +52,7 @@ Example:
 </fetch>
 ```
 
-
-More information: [Use FetchXml to retrieve data](/powerapps-docs/developer/data-platform/fetchxml/retrieve-data.md)
+More information: [Use FetchXml to retrieve data](/powerapps-docs/developer/data-platform/fetchxml/retrieve-data)
 
 ## View retained data using a flow
 
