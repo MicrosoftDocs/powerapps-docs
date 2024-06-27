@@ -52,7 +52,7 @@ Example:
 </fetch>
 ```
 
-More information: [Use FetchXml to retrieve data](/powerapps-docs/developer/data-platform/fetchxml/retrieve-data)
+More information: [Use FetchXml to retrieve data](/power-apps/developer/data-platform/fetchxml/retrieve-data?tabs=sdk)
 
 ## View retained data using a flow
 
