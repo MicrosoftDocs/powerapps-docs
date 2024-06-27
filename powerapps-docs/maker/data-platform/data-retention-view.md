@@ -39,6 +39,21 @@ If you need to retrieve long term data from multiple related tables, such as the
 
 More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
+## View retained data using using FetchXML
+In order to fetch the retained data for an entity, you need to specifiy the datasource="retained" in the fetchXML.
+
+Example:
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true" no-lock="false" datasource="retained">
+	<entity name="opportunity">
+		<attribute name="opportunityid"></attribute>
+	</entity>
+</fetch>
+```
+
+
+More information: [Use FetchXml to retrieve data](/powerapps-docs/developer/data-platform/fetchxml/retrieve-data.md)
+
 ## View retained data using a flow
 
 Create a Power Automate cloud flow to create an Excel file of the retained data from a FetchXML query and send as an email attachment. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
