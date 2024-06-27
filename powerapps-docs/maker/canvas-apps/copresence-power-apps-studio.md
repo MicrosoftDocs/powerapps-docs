@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/09/2023
+ms.date: 06/27/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -41,42 +41,65 @@ You might be working on the app, or you're inactive, but once someone else saves
 
 ## Inactive during editing
 
-When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can to become the editor. 
+When you're editing an app and become inactive for two hours, a **Continue editing** dialog box is displayed, asking if you want to continue editing the app or switch to read-only. If you don't respond, the system informs you that you were inactive and puts you in read-only mode, so other readers can become the editor. 
 
 If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
 
-## Live updates (experimental)
+## Coauthoring (preview)
 
 [This section is pre-release documentation and is subject to change.]
 
+Coauthoring allows multiple makers to edit a canvas app at the same time. When more than one person is editing an app, you'll see presences indicators showing where another maker is working on the app and see their changes in real time.
+
+
+> [!div class="mx-imgBorder"] 
+> ![Coauthoring in Power Apps Studio.](media/copresence/coauthoring.png)
+
+
+Legend
+
+1. The command bar shows that you're in **Editing** mode. When there's multiple editors, you'll see their avatar.
+1. The area that's being edited by another maker is highlighted and shows their initials.  
+1. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being edited by another maker. 
+
+> [!NOTE]
+> Since multiple users can select and edit the same control at the same time, you may overwrite each other’s edits.
+
+
 > [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature.
 > - This feature is in the process of rolling out, and might not be available in your region yet.
 
+### Enable coauthoring
 
-Live updates is a new experimental feature that works similarly to copresence. The user who opens the app first has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. The benefit of live updates is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
-
-### Enable live updates
-
-To use live updates, it must be turned on for each individual app. Once live updates is enabled, it takes precedence over the copresence feature.
+To use coauthoring, it must be turned on for each individual app. Once coauthoring is enabled, it takes precedence over the copresence feature.
 
 1. To enable live updates, open your app for editing in Power Apps Studio.
-2. Go to **Settings** > **Upcoming features** > **Experimental**.
-3. Set the toggle for **Enable live updates** to **On**.
+2. Go to **Settings** > **Updates** > **Preview**.
+3. Set the toggle for **Coauthoring** to **On**.
 
 
-### Limitations of live updates
+### Limitations 
 
-The maker editing the app and those accessing it in read-only mode are unable to perform or have disabled access to these options:
+- The following options are disabled when there's more than one user editing the app:
+  - Search 
+  - Save as
+  - Open another or new app
+  - Undo and redo
+  - Switch authoring versions
+- The maximum number of coauthors allowed is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any additional coauthors or tabs beyond 10 will be in copresence and will not have the ability to edit the app or receive real-time updates.
+- The app language is locked to the locale of the first user that opens the app for editing.
+-  Cut is disabled.
+- Coauthoring is disabled in the Monitor tool.
+- Problems might occur with the following actions:
+  - When you rename a control
+  - When you add AI Builder components
+  - When you add geospatial controls
+  - When one author adds a flow and another coauthor tries to run the flow without first refreshing the app
+  - Some errors from one author's actions are visible to all other coauthors
+  - When you copy and paste
 
-- Undo or redo changes
-- Switch authoring version
-- Open a new app from data, app from template, new app from blank, and edit app
-- Use **Save as** option or save the app locally
-- [Monitor tool](../monitor-overview.md)
-- Search pane
-- Makers accessing the app in read-only mode can't make any changes
+
 
 
