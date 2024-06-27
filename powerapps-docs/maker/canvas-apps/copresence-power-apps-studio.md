@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/26/2024
+ms.date: 06/27/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
