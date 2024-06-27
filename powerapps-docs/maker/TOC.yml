@@ -16,6 +16,8 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Copilot in Power Apps
+    href: ./canvas-apps/ai-overview.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: Get your developer environment
@@ -247,8 +249,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Copilot in Power Apps overview
-    href: ./canvas-apps/ai-overview.md
 - name: Canvas apps
   items:
   - name: Canvas apps
