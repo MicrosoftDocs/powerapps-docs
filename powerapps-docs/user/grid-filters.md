@@ -94,7 +94,7 @@ If your administrator has turned on quick find, then the search box shows **Quic
 
 ## Column header actions
 
-Dropdown column headers provide a variety of options to let you modify the data shown in the grid. 
+Dropdown column headers provide various options to let you modify the data shown in the grid. 
 
 ### Sorting
 
@@ -135,7 +135,7 @@ Use the activity type filter to show only the activities you're interested in, s
 
 When configured, the dropdown column headers surface a **Group by** option. This allows you to group the data in the grid by values in the selected group. 
 
--  Grouping is available for most kinds of columns. This notably does not include lookup columns.
+-  Grouping is available for most kinds of columns. This notably doesn't include lookup columns.
 -  When grouping on date fields, you need to choose a timeframe to on which to group. This includes day, week, month, quarter, and year.
 -  You can only group by one column at a time; selecting **Group by** on a different column replaces any existing grouping criteria.
 -  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
