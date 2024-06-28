@@ -111,7 +111,7 @@ To focus on records that meet particular criteria, you can filter a view by one 
 > In Unified Interface, grids don't pre-populate column filters based on the current view definition.
 
 > [!NOTE]
-> Filtering is not supported on virtual entities.  The grid filter's lookup list is limited to 100 results.  
+> Filtering isn't supported on virtual entities. The grid filter's look-up list is limited to 100 results.  
 
 #### Filtering on a lookup column
 
