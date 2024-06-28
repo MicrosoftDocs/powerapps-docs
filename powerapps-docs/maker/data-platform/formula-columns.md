@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 04/30/2024
+ms.date: 06/28/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -14,6 +14,7 @@ contributors:
   - mattp123
   - sanjeevgoyalmsft
   - JimDaly
+  - neerajatmsft
 ---
 # Work with formula columns
 
@@ -369,18 +370,36 @@ You can use the following scalar functions in a formula column:
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
 ## Create a decimal formula column
-1. Type a formula which returns numeric value. The following example creates a formula column called _Total Amount_. The _Price Per Unit_ column is of decimal data type.
+
+Create a formula that returns a decimal number.
+
+This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
    :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a decimal formula column definition.":::
 
-2. Expand Advanced Options accordian, and select Formula data type as _Decimal_ and set the required number of decimal places.
+1. When you create a column, enter the following information:
+   - A **Display name** for the column.
+   - Optionally, enter a **Description** of the column.
+1. For **Data type** select ***fx* Formula**.
+1. Enter a formula that returns a numeric value in the **Formula** box.
+1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
+1. Select **Save**.
 
 ## Create a whole number formula column
-1. Type a formula which returns numeric value. The following example creates a formula column called _Number of Units_. _Total Price_ and _Price Per Unit_ columns are of decimal data type.
+
+Create a formula that returns a whole number.
+
+This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
    :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a whole number formula column definition.":::
 
-2. Expand Advanced Options accordian, and select Formula data type as _Whole Number_ and set the required format for whole number column.
+1. When you create a column, enter the following information:
+   - A **Display name** for the column.
+   - Optionally, enter a **Description** of the column.
+1. For **Data type** select ***fx* Formula**.
+1. Enter a formula that returns a numeric value in the **Formula** box.
+1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
   :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
+1. Select **Save**.
 
 ## Guidelines and limitations
 
@@ -457,8 +476,8 @@ This section describes guidelines and the known limitations with formula columns
 - Duplicate detection rules aren't triggered on formula columns.
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
-- Default formula data type value is set to Decimal for numeric value returning formulas.
-- Updating whole number formula column's format is not supported.
+- Default formula data type value is set to **Decimal** for numeric value returning formulas.
+- Updating whole number formula column's format isn't supported.
 
 ### Power Fx functions not currently supported
 
