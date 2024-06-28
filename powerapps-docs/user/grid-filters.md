@@ -1,18 +1,16 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: jasongre
+author: fikaradz 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/05/2024
+ms.date: 06/28/2024
 ms.subservice: end-user
-ms.author: jasongre
+ms.author: fikaradz
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-contributors:
-- fikaradz 
 ---
 # Explore data on a grid page
 
