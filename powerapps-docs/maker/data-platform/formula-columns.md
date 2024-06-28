@@ -371,7 +371,7 @@ You can use the following scalar functions in a formula column:
 
 ## Create a decimal formula column
 
-Create a formula that returns a decimal number.
+Create a formula column that returns a decimal number.
 
 This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
    :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a decimal formula column definition.":::
@@ -387,7 +387,7 @@ This example creates a formula column called *Total Amount*. The *Price Per Unit
 
 ## Create a whole number formula column
 
-Create a formula that returns a whole number.
+Create a formula column that returns a whole number.
 
 This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
    :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a whole number formula column definition.":::
