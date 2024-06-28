@@ -47,6 +47,7 @@ The gallery control has these limitations:
 1. You can only add one gallery inside another gallery.
 1. The minimum **TemplateSize** is one. This can cause controls in the **Gallery** to drift from their expected **X** or **Y** values, when you don't account for the template size.
 1. If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show the data as expected.
+1. The gallery experience for end-users can result in unexpected or degraded performance experiences if the gallery contains a ComboBox, DatePicker, Slider or Toggle control that have an OnChange rule that patches the same data source or collection the gallery. An OnChange that patches the gallery bound data source can lead to an infinite patch and reload cycle. It's recommended that OnChange rules are not used when these controls are in a gallery. 
 
 
 ## Key properties
