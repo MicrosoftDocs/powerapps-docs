@@ -135,11 +135,12 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- Decimal number
+- [Decimal number](#create-a-decimal-formula-column)
 - Choice Yes/No (boolean)
 - Datetime
+- [Whole Number](#create-a-whole-number-formula-column)
 
-The currency, whole number, and choice (formerly option sets) data types aren't currently supported.
+The currency, and choice (formerly option sets) data types aren't currently supported.
 
 ## Function types
 
@@ -367,6 +368,20 @@ You can use the following scalar functions in a formula column:
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
+## Create a decimal formula column
+1. Type a formula which returns numeric value. The following example creates a formula column called _Total Amount_. The _Price Per Unit_ column is of decimal data type.
+   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a decimal formula column definition.":::
+
+2. Expand Advanced Options accordian, and select Formula data type as _Decimal_ and set the required number of decimal places.
+  :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
+
+## Create a whole number formula column
+1. Type a formula which returns numeric value. The following example creates a formula column called _Number of Units_. _Total Price_ and _Price Per Unit_ columns are of decimal data type.
+   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a whole number formula column definition.":::
+
+2. Expand Advanced Options accordian, and select Formula data type as _Whole Number_ and set the required format for whole number column.
+  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
+
 ## Guidelines and limitations
 
 This section describes guidelines and the known limitations with formula columns in Dataverse.
@@ -442,6 +457,8 @@ This section describes guidelines and the known limitations with formula columns
 - Duplicate detection rules aren't triggered on formula columns.
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
+- Default formula data type value is set to Decimal for numeric value returning formulas.
+- Updating whole number formula column's format is not supported.
 
 ### Power Fx functions not currently supported
 
@@ -453,7 +470,6 @@ This section describes guidelines and the known limitations with formula columns
 
 ### Formula columns of data types that can't be produced
 
-- Whole Number
 - Choices (except Yes/No choice)
 - Currency
 
