@@ -45,7 +45,7 @@ You can create the following different types of AI plugins using Power Apps expe
 
 ## Create AI plugins
 
-To create AI pluguins, go to Power Apps and choose AI plugin from the left-pane. And then, follow the guided walkthroughs as described in [Create AI plugins for Microsoft Copilot](/microsoft-copilot-studio/copilot-ai-plugins).
+To create AI plugins, go to Power Apps and choose AI plugin from the left-pane. And then, follow the guided walkthroughs as described in [Create AI plugins for Microsoft Copilot](/microsoft-copilot-studio/copilot-ai-plugins).
 
 ## Use AI plugins
 AI plugins enable adding new behaviors to Copilots across products such as MCS/PVA and Microsoft Copilot. To learn about how to use AI plugins, see [Use plugin actions in Microsoft Copilot Studio](/power-virtual-agents/advanced-plugin-actions).

@@ -72,7 +72,7 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Considerations and limitations for guest access
 
-- Users accessing web experiences in different Microsoft Entra tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
+- Users accessing web experiences in different Microsoft Entra tenants must access Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
 - Power Apps guest access uses Azure B2B.
 - Power Apps Mobile doesn't support authentication using [Microsoft Entra direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.

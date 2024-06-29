@@ -62,7 +62,7 @@ Learn how to use Copilot features in Power Apps.
 
 - To use Copilot in Power Apps, your administrator must turn on Copilot features.
 - For Copilot availability in your region, see  [Release Planner Availability Reports](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
-- Some Copilot features are already General Availabilible (GA), so they're turned on by default. For information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
+- Some Copilot features are already General Available (GA), so they're turned on by default. For information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
 - Each Copilot feature might have different requirements. Refer to the specific documentation for each feature for detailed information.
 
 ## Enable or disable Copilot (preview) in Power Apps

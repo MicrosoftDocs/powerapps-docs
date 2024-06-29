@@ -36,7 +36,7 @@ For more information on how privileges and access works, see [How access to a ro
 
   
 3. In the assign dialog box, select the **Assign to** column, and choose one of the following options:
-    - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
+    - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themselves.
     
       > [!div class="mx-imgBorder"]
       > ![Select Me to assign the row to yourself.](media/reassign-4.png "Select Me to assign the row to yourself")

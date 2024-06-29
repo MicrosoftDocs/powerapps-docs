@@ -36,7 +36,7 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 
 > [!NOTE]
 >
-> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 > - Once git version control is enabled, your app's autosave will be disabled. You will have to manually save or sync your changes.
 
@@ -51,7 +51,7 @@ Follow these steps to enable Git version control in your app.
 1. Scroll down to **Show the Git version control setting** and turn it to **On**.
 1. You'll see a new **Git version control** item on the left-hand side of the settings pane.
 
-   :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
+   :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Switch to enable Git version control.":::
 
    > [!TIP]
    > For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
