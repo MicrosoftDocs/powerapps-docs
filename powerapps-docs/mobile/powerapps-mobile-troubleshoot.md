@@ -20,7 +20,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Resolve canvas apps performance issues
 
-Learn about most common performance issues that can make canvas apps run slow and how to improve proformance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
+Learn about most common performance issues that can make canvas apps run slow and how to improve performance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
 
 ## Diagnose mobile apps with Monitor
 

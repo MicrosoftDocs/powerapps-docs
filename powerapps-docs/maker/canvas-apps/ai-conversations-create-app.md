@@ -68,9 +68,9 @@ Based on what you described, AI generates tables and relationships for your app.
    > If you encounter any issues during the app creation process related to permissions or if you don't have access to Dataverse, a dialog box will appear asking you to create the app in your own environment. You will need to confirm that the table and app can be created in your environment to proceed. In case you don't have a personal developer environment, a new one will be automatically created for you. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
 
 
-## Build apps through conversation (General Availabilible (GA) version)
+## Build apps through conversation (General Available (GA) version)
 
-The app building experince will look different if your using the General Availabilible (GA) version to build apps through conversation with Copilot. 
+The app building experience will look different if your using the General Available (GA) version to build apps through conversation with Copilot. 
 
 > [!div class="mx-imgBorder"]
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)

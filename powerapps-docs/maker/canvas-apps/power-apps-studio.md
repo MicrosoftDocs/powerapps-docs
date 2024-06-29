@@ -304,7 +304,7 @@ Switch between various authoring options while working with the app.
 
 > [!TIP]
 > You can select the tree view icon to collapse or expand the list to either include icons only or full names with icons.
-> :::image type="content" source="media/studio/pa-studio-collapse-tree.png" alt-text="Screenshot that showswhere to select the tree view icon in order to collapse the menu.":::
+> :::image type="content" source="media/studio/pa-studio-collapse-tree.png" alt-text="Screenshot that shows where to select the tree view icon in order to collapse the menu.":::
 
 - **Tree view**: Shows a tree view of all screens and controls in the current app.
 - **Insert**: Allows you to add different controls to the screen.
@@ -330,7 +330,7 @@ Select the tree view to show the screens available in the app.
 
 Switch to the **Components** tab of **Tree view** to work with component library features. You can add new components or reuse ones from the published component libraries. For more information, see [Component library](component-library.md).
 
-:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screeshot showing the Components tab of the Tree view pane.":::
+:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screenshot showing the Components tab of the Tree view pane.":::
 
 For more information on adding components, see the [Insert](#insert) section.
 
@@ -367,7 +367,7 @@ For more information, see [Using multimedia files in Power Apps](add-images-pict
 
 The canvas shows the currently selected screen from the authoring menu.
 
-Use inline actions when you're editing a canvas app. For mor information, see [Use inline actions in Power Apps Stuido](inline-actions.md).
+Use inline actions when you're editing a canvas app. For more information, see [Use inline actions in Power Apps Stuido](inline-actions.md).
 
 ## 8 – Properties pane
 

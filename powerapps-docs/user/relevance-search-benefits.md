@@ -29,7 +29,7 @@ Dataverse search for model-driven apps helps you quickly find what you're lookin
 
 - **Smart**: Finds matches that include inflectional words such as **stream**, **streaming**, or **streamed**. 
 
-- **Search activities**: Search includeds notes and attachements in activities. 
+- **Search activities**: Search includes notes and attachments in activities. 
 
 - **Understanding of underlying data**: Understands data types like **Choice** and **Lookup**, so it can effectively interpret a search query that includes multiple search terms.
 

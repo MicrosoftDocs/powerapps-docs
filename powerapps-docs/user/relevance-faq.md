@@ -57,7 +57,7 @@ Party list fields are special fields. They're not supported in Dataverse search,
 
 ## How come returns don't support HTLM formatting for memo data types?
 
-Dataverse search doesn't return HTML formatting for memo types to optomize the UI experience.
+Dataverse search doesn't return HTML formatting for memo types to optimize the UI experience.
 
 ## Why columns aren't enabled for Dataverse search after adding to a quick find view?
 
