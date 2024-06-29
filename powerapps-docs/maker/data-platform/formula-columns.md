@@ -373,14 +373,13 @@ You can use the following scalar functions in a formula column:
 
 Create a formula column that returns a decimal number.
 
-This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
-   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
-
 1. When you create a column, enter the following information:
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
 1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** box.
+1. Enter a formula that returns a numeric value in the **Formula** bar.
+   This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
+   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
 1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
 1. Select **Save**.
@@ -389,14 +388,13 @@ This example creates a formula column called *Total Amount*. The *Price Per Unit
 
 Create a formula column that returns a whole number.
 
-This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
-   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
-
 1. When you create a column, enter the following information:
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
 1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** box.
+1. Enter a formula that returns a numeric value in the **Formula** bar.
+   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
+   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
 1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
   :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
 1. Select **Save**.
