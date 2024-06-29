@@ -135,11 +135,14 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- Decimal number
-- Choice Yes/No (boolean)
+- [Decimal number](formula-column-data-types.md#create-a-decimal-formula-column)
+- [Whole number](formula-column-data-types.md#create-a-whole-number-formula-column)
+- [Float](formula-column-data-types.md#create-a-floating-point-number-formula-column)
+- Boolean choice (Yes/No)
+- [Choice](formula-column-data-types.md#create-a-choice-formula-column) (formerly option sets)
 - Datetime
 
-The currency, whole number, and choice (formerly option sets) data types aren't currently supported.
+The currency, data type isn't currently supported.
 
 ## Function types
 
@@ -148,12 +151,12 @@ You can use the following function types in a formula column:
 - Decimal
 - String
 - Boolean
-- Option Set
+- Choice
 - DateTime (TZI)
 - DateTime (User local) (limited to comparisons with other user local values DateAdd, and DateDiff functions)
 - DateTime (Date only) (limited to comparisons with other date-only values, DateAdd, and DateDiff functions)
 - Currency
-- Whole Number, promoted to Decimal
+- Whole Number
 
 ## Functions
 
@@ -354,6 +357,27 @@ You can use the following scalar functions in a formula column:
      [Decimal](../canvas-apps/functions/function-value.md) \*
    :::column-end:::
    :::column span="":::
+     [Float](../canvas-apps/functions/function-value.md) \*
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Sqrt](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+     [Ln](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+     [Power](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Exp](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -443,18 +467,8 @@ This section describes guidelines and the known limitations with formula columns
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
 
-### Power Fx functions not currently supported
-
-- Power
-- Sqrt
-- Exp
-- Ln
-- ^ (operator)
-
 ### Formula columns of data types that can't be produced
 
-- Whole Number
-- Choices (except Yes/No choice)
 - Currency
 
 ## See also
