@@ -2013,7 +2013,7 @@
       - name: Fx formula columns
         href: ./data-platform/formula-columns.md
       - name: Formula column data types
-        href: ./data-platform/formula-columns.md
+        href: ./data-platform/formula-column-data-types.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
     - name: Address validation for email columns (preview)
