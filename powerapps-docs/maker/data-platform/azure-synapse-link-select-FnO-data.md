@@ -327,9 +327,9 @@ You'll also notice additional metadata fields appended by the system for each da
 | `SinkCreatedOn` | Indicates the date the record was written to the data lake. <br>In case of CSV change data (incremental update), data and time data was written to lake is shown. For table data in Delta format, indicates the date and time of Delta Lake conversion.  | You can use this date similar to the data lake modified date time field in the export to data lake feature. |
 | `SinkModifiedOn` | Indicates the date the record was modified. In case of tables in Delta format files as well as incremental CSV files, contains the same date time as `SinkCreatedOn`. | You can use this date similar to the data lake modified date time field in export to data lake feature. |
 | `sysdatastatecode` | If 1, this record is archived using the long term data retention feature. If 0 this is a live record. | You can use this field to identify finance and operations records that have been archived (and deleted from live data). The same field is available for for CSV change data (incremental update). |
-| `sysrowversion` | Used internally to determine incremental or delta changed to be processed. | Because `sysrowversion` is used internally, don't use this field. |
+| `sysrowversion` | Version number maintained in each FnO record to determine whether changes have been made to data. This field is used by the system to determine incremental or delta changes to be processed. | `sysrowversion` is used internally, You can use this field as a "water-mark" to determine the last version of record that has been updated. This field may be empty for Dynamics CE tables |
 | `tableid` |  Contains a unique ID of each table | Contains the table ID from finance and operations. |
-| `versionnumber` | Used internally - contains the last version of the row that has been synced to data lake. | Because `versionnumber` is used internally, don't use this field.  |
+| `versionnumber` | Used internally - contains the last version of the row that has been synced to data lake. | Similar to `sysrowversion` field applicable for FnO tables, this field contains the last processed version for Dynamics CE tables. In case of Dynamics FnO tables, contains the same value as `sysrowversion` |
 
 ## Reacting to system events and generating audit reports
 
