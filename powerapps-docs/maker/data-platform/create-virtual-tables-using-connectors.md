@@ -103,7 +103,10 @@ Watch a short video showing how to create a virtual table with the virtual conne
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
    - If you have no connections and wish to create a new connection, select **+Add Connection**.
 
-1. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
+> [!IMPORTANT]
+> Unlike other areas of Power Apps, connections shared with a user are not available for use with this feature. Only connections created by the current user will appear in this wizard.
+
+2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
 
 <a name="SQL-or-SharePoint"></a>
 
