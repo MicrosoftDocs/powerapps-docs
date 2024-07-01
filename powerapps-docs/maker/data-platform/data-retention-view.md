@@ -4,10 +4,11 @@ description: Learn how to access ready only data that is in long term storage.
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
+contributors: manasdalai
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/12/2024
-ms.custom: template-how-to 
+ms.date: 06/27/2024
+ms.custom: template-how-to
 ---
 # View long term retained data
 
@@ -38,6 +39,20 @@ For more information about creating and editing Dataverse security roles, go to 
 If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case table, first use advanced find retrieve the retained case row. Then use the `Casenumber` column and use advanced find to retrieve the account row that contains the case number.
 
 More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
+
+## View retained data using using FetchXml
+In order to fetch the retained data for a table, specify the `datasource="retained"` in the FetchXml.
+
+Example:
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true" no-lock="false" datasource="retained">
+	<entity name="opportunity">
+		<attribute name="opportunityid"></attribute>
+	</entity>
+</fetch>
+```
+
+More information: [Use FetchXml to retrieve data](/power-apps/developer/data-platform/fetchxml/retrieve-data?tabs=sdk)
 
 ## View retained data using a flow
 
