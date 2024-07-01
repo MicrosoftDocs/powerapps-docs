@@ -186,7 +186,7 @@ You can add photos to Dataverse tables through an Image data type column. Image 
 
 For example, if you wanted to upload the first photo captured by the Markup in MR control to a Dataverse column called Image:
 
-```powerapps-dot
+```power-fx
     Image: {Full: First(MarkupInMR.Photos).ImageURI, Value: First(MarkupInMR.Photos).ImageURI}
 ```
 

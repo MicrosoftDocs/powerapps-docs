@@ -82,7 +82,7 @@ With your app open for editing in [Power Apps Studio](https://create.powerapps.c
 
 3. On the **Advanced** properties tab, select the *Items* property and type or paste the following code:
 
-    ```powerapps-dot
+    ```power-fx
     Table(
     {
     label: "Birds of Paradise",

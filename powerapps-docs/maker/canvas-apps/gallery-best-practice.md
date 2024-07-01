@@ -19,7 +19,7 @@ The **[Gallery](controls/control-gallery.md)** is the only control that can crea
 
 It's easy to create unstable behavior if `OnChange` or `OnSelect` of child controls modifies the **Items** of the parent gallery. For example, a **Text input** in a gallery can have its `OnChange` property set to:
 
-```powerapps-dot
+```power-fx
 Patch(GalleryData, ThisItem, {Name: TextInput.Text})
 ``` 
 
@@ -32,7 +32,7 @@ This is usually fine. Most controls will only trigger `OnChange` when users chan
 
 For example, when `ComboBox.DefaultSelectedItems` changes, it triggers `OnChange`. Consider a **Combo box** in a **Gallery** with `DefaultSelectedItems` set to `First(ThisItem.A)` and its `OnChange` property set to:
 
-```powerapps-dot
+```power-fx
 UpdateIf(GalleryData, Name = ThisItem.Name, {
     A: Table({
         B: First(Self.SelectedItems).B
@@ -60,7 +60,7 @@ The **Selected** property of the **Gallery** is a moving target. It can change w
 
 This might not be desirable for your scenario. If you want a stable copy of the item that is selected by the user, consider storing it in a variable. For example, set the **OnSelect** property of the **Gallery** to a global variable `CurrentItem`:
 
-```powerapps-dot
+```power-fx
 Set(CurrentItem, Self.Selected)
 ```
 
@@ -78,7 +78,7 @@ For example, when a user selects a **Checkbox** in a **Gallery**, the following 
 
 The order of these events isn't fixed. This is a problem if `Checkbox.OnSelect` is set to:
 
-```powerapps-dot
+```power-fx
 Notify(Gallery.Selected.Name)
 ```
 
@@ -92,7 +92,7 @@ Setting `Gallery.Items` to a variable or output of a [Canvas component](create-c
 
 **Galleries** need to know the schema of its **Items** when the app loads. A schema, also known as shape, is the name and type of columns in a data source. Consider this table:
 
-```powerapps-dot
+```power-fx
 [{A: "abc", B: 123}, {A: "def", B: 456}]
 ```
 
@@ -104,7 +104,7 @@ The same issue might happen when **Items** is set to a variable that's not initi
 
 As a workaround, you can hint the expected schema to the Gallery with a variable. Set **App.OnStart** to:
 
-```powerapps-dot
+```power-fx
 If(false, Set(GalleryData, [{A: "abc", B: 123}]), Set(GalleryData, []))
 ```
 

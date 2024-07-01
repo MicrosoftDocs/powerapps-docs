@@ -34,13 +34,13 @@ The formulas in this section can be used to bulk update records in canvas apps.
 
 - [Patch() function](functions/function-patch.md#modify-or-create-a-set-of-records-in-a-data-source-1)&mdash;Use this function when the collection matches the data source.
 
-    ```powerapps-dot
+    ```power-fx
     Patch( DataSource, Collection )
     ```
 
 - [ForAll() function](functions/function-forall.md) + [nested Patch](functions/function-patch.md) + [disambiguation operator](functions/operators.md)&mdash;Use this function when the data sources have different columns that you need to join.
 
-    ```powerapps-dot
+    ```power-fx
     ForAll( Collection,
         Patch( DataSource, 
             LookUp( DataSource, Id = Collection[@Id] ),
@@ -78,7 +78,7 @@ Every time a checklist item is checked, it's added into a collection called `Che
 
 You can toggle the status between **Done** and **Pending**, or you can use the `Oncheck` and `OnUncheck` events:
 
-```powerapps-dot
+```power-fx
 If( !IsBlank( 
         LookUp( CheckedItems, Id = ThisItem.Id )
     ),
@@ -97,7 +97,7 @@ When the user selects **Done** in the above example, you need to update `Checkli
 
 If your source and destination have the same column names, you can use a Patch statement. For example, `ChecklistItemsSource` and the `CheckedItems` collections have the same column names. You can use the formula below to update the source at once with all the changes.
 
-```powerapps-dot
+```power-fx
 Patch( ChecklistItemsSource, CheckedItems )
 ```
 
@@ -113,7 +113,7 @@ Here are the alternatives:
 
 To update the `Status` of `CheckedItems` to "Done", when the source and destination table column names are the same, use this formula:
 
-```powerapps-dot
+```power-fx
 ForAll( CheckedItems,
     Patch( ChecklistItemsSource, 
         LookUp( ChecklistItemsSource, Id = CheckedItems[@Id] ),
@@ -135,7 +135,7 @@ If you don't want to use an extra collection to store the checked items, you can
 
 1. Write the following formula on the OnSelect event of the Done Button:
 
-      ```powerapps-dot
+      ```power-fx
       ForAll(
           Filter( ChecklistGallery.AllItems,
             StatusCheckbox.Value = true
@@ -167,7 +167,7 @@ Here's an example using [Example of a checklist](#example-of-a-checklist).
 
 On the Create Checklist Items screen, each time you select **Add**, the information is stored in the `NewChecklistItems` collection. When you select **Submit**, `ForAll()` with `Patch()` are used to update the source collection.
 
-```powerapps-dot
+```power-fx
 ForAll( NewChecklistItems,
     Patch( ChecklistItemsSource,
         Defaults( ChecklistItemsSource ),{

@@ -42,7 +42,7 @@ Explicit column selection is on by default. However, some authors turn this feat
 
 Most issues arise when bringing data into collections. If a column is explicitly referenced in a control then ECS works well.  And, ECS generally does work for collections. However, the column lineage is occasionally lost when the data moves through collections and variables.  And, and so Power Apps may lose track of the column it should retrieve. To resolve this issue, you can force Power Apps to "remember" the column by using the `ShowColumns` function. For example:
 
-```powerapps-dot
+```power-fx
     ClearCollect(
         MyColTable, 
         ShowColumns(Filter(BankAccounts, AcountNo = 32),

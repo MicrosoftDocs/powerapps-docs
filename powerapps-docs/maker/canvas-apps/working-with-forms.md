@@ -336,7 +336,7 @@ The **[UpdateContext](functions/function-updatecontext.md)** function creates th
 
 The formula for the **[Items](controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
-```powerapps-dot
+```power-fx
 Sort( 
 	If( IsBlank(TextSearchBox1.Text),
 		Assets,
