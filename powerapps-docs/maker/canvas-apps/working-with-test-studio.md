@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 06/04/2020
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: maker
 search.audienceType: 
   - maker
 contributors:

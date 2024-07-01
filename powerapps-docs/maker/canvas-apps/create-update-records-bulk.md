@@ -51,13 +51,13 @@ The formulas in this section can be used to bulk update records in canvas apps.
 
 - [AddColumns() function](functions/function-table-shaping.md)&mdash;This function can be used to provide a lookup reference in the Collection that contains the updates to the DataSource if it doesn't have fields that easily reference the table.
 
-For a complete list of formulas to update bulk records, download [related files](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
+
 
 ## Example of a checklist
 
 This example uses a checklist of tasks. When you're done with a few tasks, you can mark them as complete. You could extend this scenario to a product launch checklist, home inspection checklist, or other lists.
 
-The following screenshot shows the checklist items in Microsoft Excel file. You can check off the tasks related to your blogging or posting on social media in this example. The table in Excel is called  `ChecklistItems`. Here's the [example in Excel](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
+The following screenshot shows the checklist items in Microsoft Excel file. You can check off the tasks related to your blogging or posting on social media in this example. The table in Excel is called  `ChecklistItems`. 
 
 The example uses collections to demo this behavior. The approach works for any tabular backend of your choice.
 
