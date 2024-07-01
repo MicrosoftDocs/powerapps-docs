@@ -130,7 +130,7 @@ In this example, we'll directly connect a **Microphone** control with an **Audio
 1. Add an **Audio** control to your app.
 1. Set the **Audio** control's **Media** property to the formula:
 
-    ```powerapps-dot
+    ```power-fx
     Microphone1.Audio
     ```
 
@@ -151,7 +151,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its **OnStop** property to this formula using the [Collect](../functions/function-clear-collect-clearcollect.md) function:
 
-    ```powerapps-dot
+    ```power-fx
     Collect( MySounds, MyMic.Audio )
     ```
 
@@ -159,7 +159,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the [Items](properties-core.md) property for the gallery to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     MySounds
     ```
 
@@ -167,7 +167,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the audio control's **Media** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Url
     ```
 
@@ -183,7 +183,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its [OnSelect](properties-core.md) property to the formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove( MySounds, ThisItem )
     ```
 
