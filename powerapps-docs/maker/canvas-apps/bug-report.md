@@ -1,6 +1,6 @@
 ---
-title: Get the session or app ID
-description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
+title: Create a effective service request
+description: Learn how to write a clear Power Apps service request so customer service can help you quickly.
 author: tahoon
 ms.subservice: troubleshoot
 ms.topic: conceptual
@@ -13,7 +13,7 @@ search.audienceType:
 contributors:
   - mduelae
 ---
-# How to write a good Power Apps bug report
+# Create a effective service request
 
 If an app isn't behaving as expected, it could be an issue with its configuration, the Power Apps system, or a system outside of Power Apps.
 
