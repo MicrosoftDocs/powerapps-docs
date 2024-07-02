@@ -14,7 +14,7 @@ contributors:
 ---
 # ui.removeLoaded (Client API reference)
 
-Removes a function from the form [Loaded](../../events/form-loaded.md) event.
+Removes a function from the form [Loaded](../events/form-loaded.md) event.
 
 ## Syntax
 
