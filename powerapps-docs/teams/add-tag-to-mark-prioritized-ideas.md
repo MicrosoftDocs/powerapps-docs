@@ -116,7 +116,7 @@ All the changes to the Manage Ideas app are completed. The app can now be publis
 
 1. To update the label text to indicate that the idea is prioritized, update the **Text** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Concatenate(
     
     gblRecordCampaignIdea.'Owning User'.'Full Name',

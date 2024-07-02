@@ -90,7 +90,7 @@ Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 
     The formula matches this example:
 
-    ```powerapps-dot
+    ```power-fx
     SortByColumns(
         Search(
             Schedule,

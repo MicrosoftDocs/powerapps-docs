@@ -140,7 +140,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Update the **Items** property of the list box added in the previous step to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Filter([@Shapes], StartsWith(Shape, TextInput1.Text))
     ```
 
@@ -175,7 +175,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **OnSelect** property of the list box control to the following function:
 
-    ```powerapps-dot
+    ```power-fx
     Set(TextSelected,1)
     ```
 
@@ -185,7 +185,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **Item** property of the edit form control to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(TextSelected=1,ListBox1.Selected,DataTable1.Selected)
     ```
 
@@ -203,7 +203,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **OnSelect** property of the **Save** button to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     SubmitForm(Form1);
     Set(TextSelected,0)
     ```
@@ -237,7 +237,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **OnSelect** property of the **Add** button to the following function:
 
-    ```powerapps-dot
+    ```power-fx
     NewForm(Form1)
     ```
 
@@ -255,7 +255,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **OnSelect** property of the **Delete** button to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove([@Shapes], If(TextSelected=1,ListBox1.Selected,DataTable1.Selected));
     Set(TextSelected,0)
     ```
