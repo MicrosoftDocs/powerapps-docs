@@ -147,10 +147,10 @@ For issues with professional development features, provide a link to the documen
 If the issue involves coding and other professional development features, simplify the code first. Usually, just a few lines of code are needed to demonstrate a Power Apps bug. Deploy it in a fresh environment with no other customizations. Verify the issue occurs and attach a snippet of the problematic code.
 
 Such professional development features include:
-* [Power Apps code components](./developer/component-framework/overview)
-* [Custom form scripts](/power-apps/developer/model-driven-apps/client-scripting) in model-driven apps
-* [Power Fx or JavaScript commands](/power-apps/maker/model-driven-apps/command-designer-overview) in model-driven apps
-* [Web resources](/power-apps/developer/model-driven-apps/web-resources) in model-driven apps
+- [Power Apps component framework overview](../../developer/component-framework/overview.md)
+- [Custom form scripts](../../developer/model-driven-apps/client-scripting.md) in model-driven apps
+- [Power Fx or JavaScript commands](../model-driven-apps/command-designer-overview.md) in model-driven apps
+- [Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md)
 
 Mention specific configuration steps so that others can reproduce the issue on their own environment.
 
@@ -170,4 +170,4 @@ Before reporting a bug, [check if it's a known issue](/power-platform/admin/view
 
 ## See also
 
-- [General Power Apps debugging strategies](isolate-common-issues.md)
+- [General Power Apps debugging strategies](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues)
