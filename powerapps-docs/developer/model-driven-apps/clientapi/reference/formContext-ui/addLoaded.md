@@ -14,7 +14,7 @@ contributors:
 ---
 # ui.addLoaded (Client API reference)
 
-Adds a function to be called on the form **Loaded** event which happens after the form completes the load process.
+Adds a function to be called on the form **Loaded** event that happens after the form completes the load process.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ Adds a function to be called on the form **Loaded** event which happens after th
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|`myFunction`|function reference|Yes|The function to be executed on the form [Loaded](../events/form-onload.md) event. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.|
+|`myFunction`|function reference|Yes|The function to be executed on the form [Loaded](../events/form-onload.md) event. The function is added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. For more information, see [Execution context](../../clientapi-execution-context.md).|
 
 ### Related articles
 
