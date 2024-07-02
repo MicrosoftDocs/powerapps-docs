@@ -12,7 +12,7 @@ search.audienceType:
 contributors:
   - JimDaly
 ---
-# ui.removeOnLoad (Client API reference)
+# ui.removeLoaded (Client API reference)
 
 Removes a function from the form [Loaded](../../events/form-loaded.md) event.
 
