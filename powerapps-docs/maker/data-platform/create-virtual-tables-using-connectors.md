@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/12/2024
+ms.date: 07/02/2024
 ms.reviewer: matp
 ms.topic: article
 author: NHelgren
@@ -103,8 +103,8 @@ Watch a short video showing how to create a virtual table with the virtual conne
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
    - If you have no connections and wish to create a new connection, select **+Add Connection**.
 
-> [!IMPORTANT]
-> Unlike other areas of Power Apps, connections shared with a user are not available for use with this feature. Only connections created by the current user will appear in this wizard.
+   > [!IMPORTANT]
+   > Connections that are shared with you aren't available for use with this feature. Only connections created by the current user appear in the virtual table wizard.
 
 2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
 
