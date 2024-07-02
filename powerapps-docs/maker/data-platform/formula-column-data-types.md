@@ -10,12 +10,15 @@ ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
+ai-usage: ai-assisted
 contributors:
   - mattp123
   - sanjeevgoyalmsft
   - neerajatmsft
 ---
 # Formula column data types
+
+The article provides guidance on creating and using different data types in Dataverse formula columns, such as the process of creating a formula column that returns a decimal number. It outlines steps starting with selecting **fx Formula** as the data type and entering a numeric value-returning formula in the formula bar.
 
 ## Create a decimal formula column
 
@@ -49,39 +52,50 @@ Create a formula column that returns float.
 1. Enter a formula that returns a floating point number in the **Formula** bar.
    This example creates a formula column called *TestFloat*.
    :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column.":::
-1. Expand **Advanced options**, and set the required required number of decimal places.
+1. Expand **Advanced options**, and set the required number of decimal places.
 1. Select **Save**.
 
 ### Guidelines for creating floating point number formula columns
-1. Floating point numbers store an extremely close approximation of a value. It is usually used for storing scientific numeric values.
-2. If one of the operand involved in an arithmetic operation is of float type, then result of the formula will be float type. 
-   E.g., ```1 + 2 + Float(1)``` as it uses a float type operand - ```Float(1)```.
-3. A numeric function returns float value if first parameter provided to the function is of float type, else the function returns a decimal value.
-   E.g., ```Sum(1, 2, Float(1))``` is of decimal type and ```Sum(Float(1), 1, 2)``` is of float type.
-4. ```Float```, ```Sqrt```, ```Ln```, ```Power```, ```Exp``` functions and ```^``` operator returns a float value.
-5. Float formula columns support a maximum precision of 5.
+
+- Floating point numbers store an extremely close approximation of a value. Floats are typically used for storing scientific numeric values.
+- If an operand involved in an arithmetic operation is of float type, then the result of the formula is of float type. For example:
+   - ```1 + 2 + Float(1)``` as it uses a float type operand - ```Float(1)```.
+- A numeric function returns a float value when the first parameter provided to the function is of float type. Otherwise, the function returns a decimal value. For example:
+  - ```Sum(1, 2, Float(1))``` is of decimal type and ```Sum(Float(1), 1, 2)``` is of float type.
+- ```Float```, ```Sqrt```, ```Ln```, ```Power```, ```Exp``` functions and the ```^``` operator return a float value.
+- Float formula columns support a maximum precision of 5.
 
 ## Create a choice formula column
+
 To create a choice formula column, either global choice or local choice of a simple choice column can be used as a result in ```If``` or ```Switch``` functions.
 
 ### Using global choice
-1. Create a global choice. This example creates a global choice called *Color*.
+
+1. Create a [global choice](custom-picklists.md). This example creates a global choice with a **Display name** that's *Color*.
+1. Add the following **Choices**:
+   - **Label**: *Red* **Value**: '*858,170,0000*'
+   - **Label**: *Pink* **Value**: *858,170,001*
+   - **Label**: *Yellow* **Value**: 858,170,002
+   - **Label**: *Blue* **Value**: *858,170,003*
    :::image type="content" source="media/global-choice-def.png" alt-text="Screenshot of a global choice.":::
-2. Create a formula column using global choice. This example creates a formula column *Color Column* using global choice *Color* created from above step.
+1. Create a formula column using the global choice. This example creates a formula column *Color Column* using the global choice *Color* created from the previous step.
    :::image type="content" source="media/formula-columns-global-choice-fd.png" alt-text="Screenshot of a creating global choice formula column.":::
+1. Select **Save**. Notice that the column created is of data type **Choice fx**.
 
 ### Using local choice from a simple choice column
-1. Create a simple choice column. This example creates a *Simple Color* choice column on *Account* entity.
+
+1. Create a simple choice column. This example creates a *Simple Color* choice column on the *Account* table.
    :::image type="content" source="media/local-choice-def.png" alt-text="Screenshot of a creating a simple choice column.":::
-2. Create formula column on the same entity as simple choice column using simple choice column's local choice in the formula. This example creates a formula column *Color Column 2* on *Account* entity using local choice column created from the above step.
+2. Create formula column on the same entity as simple choice column using simple choice column's local choice in the formula. This example creates a formula column *Color Column 2* on *Account* entity using local choice column created from the previous step.
    :::image type="content" source="media/formula-columns-local-choice-fd.png" alt-text="Screenshot of a creating local choice formula column.":::
 
 ### Guidelines for working with choices in formula columns
-1. Local choices of related entity's simple choice column cannot be used as result type in formula columns.
-2. Options from same option set should be used for all result arguments in choice formula columns.
-3. A choice used by a formula column cannot be updated.
-4. Options of a choice cannot be passed as an argument to string functions. Value function can be used to return numeric value of an option.
-5. Formula columnn's dependent local choice column or global choice cannot be deleted.
+
+- Local choices of a related table's simple choice column can't be used as result type in formula columns.
+- Options from the same choice column should be used for all result arguments in choice formula columns.
+- A choice used by a formula column can't be updated.
+- Options of a choice can't be passed as an argument to string functions. Value function can be used to return numeric a value of an option.
+- A formula column's dependent local choice column or global choice can't be deleted.
 
 ## See also
 
