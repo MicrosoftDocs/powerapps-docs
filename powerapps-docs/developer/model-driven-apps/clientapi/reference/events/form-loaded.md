@@ -14,7 +14,7 @@ contributors:
 ---
 # Form Loaded event
 
-This event occurs after the form load completes. It's recommended to run app logic that isn't immediately needed during the form load process. For example, moving extra APIs calls after form load completes can significiantly improve the loading experience and reduce time to first use.
+This event occurs after the form load completes. App logic that isn't immediately needed during the form load process should be run after load completes. For example, moving extra APIs calls after form load completes can significantly improve the loading experience and reduce time to first use.
  
 Use the formContext.ui.[addLoaded](../formContext-ui/addLoaded.md) and formContext.ui.[removeLoaded](../formContext-ui/removeLoaded.md) methods to manage event handlers for this event. 
 
