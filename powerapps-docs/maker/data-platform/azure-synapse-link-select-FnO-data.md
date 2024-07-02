@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 06/18/2024
+ms.date: 07/02/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -327,9 +327,9 @@ You'll also notice additional metadata fields appended by the system for each da
 | `SinkCreatedOn` | Indicates the date the record was written to the data lake. <br>In case of CSV change data (incremental update), data and time data was written to lake is shown. For table data in Delta format, indicates the date and time of Delta Lake conversion.  | You can use this date similar to the data lake modified date time field in the export to data lake feature. |
 | `SinkModifiedOn` | Indicates the date the record was modified. In case of tables in Delta format files as well as incremental CSV files, contains the same date time as `SinkCreatedOn`. | You can use this date similar to the data lake modified date time field in export to data lake feature. |
 | `sysdatastatecode` | If 1, this record is archived using the long term data retention feature. If 0 this is a live record. | You can use this field to identify finance and operations records that have been archived (and deleted from live data). The same field is available for for CSV change data (incremental update). |
-| `sysrowversion` | Version number maintained in each FnO record to determine whether changes have been made to data. This field is used by the system to determine incremental or delta changes to be processed. | `sysrowversion` is used internally, You can use this field as a "water-mark" to determine the last version of record that has been updated. This field may be empty for Dynamics CE tables |
+| `sysrowversion` | Version number maintained in each finance and operations apps record that determines whether changes have been made to data. This field is used by the system to determine incremental or delta changes to process. | `sysrowversion` is used internally, you can use this field as a *watermark* to determine the last version of record that was updated. This field might be empty for Dynamics 365 customer engagement apps tables. |
 | `tableid` |  Contains a unique ID of each table | Contains the table ID from finance and operations. |
-| `versionnumber` | Used internally - contains the last version of the row that has been synced to data lake. | Similar to `sysrowversion` field applicable for FnO tables, this field contains the last processed version for Dynamics CE tables. In case of Dynamics FnO tables, contains the same value as `sysrowversion` |
+| `versionnumber` | Used internally - contains the last version of the row that has been synced to the data lake. | Similar to the `sysrowversion` this field contains the last processed version for Dynamics customer engagement apps tables. In case of Dynamics finance and operations apps tables, this field contains the same value as `sysrowversion`. |
 
 ## Reacting to system events and generating audit reports
 
