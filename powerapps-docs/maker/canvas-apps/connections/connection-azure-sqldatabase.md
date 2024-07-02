@@ -84,7 +84,7 @@ To use a stored procedure in Power Apps, first prefix the stored procedure name 
 
 Arguments are passed as a Power Apps record with named value pairs:
 
-```powerapps-dot
+```power-fx
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >})
 ```
 
@@ -98,7 +98,7 @@ A stored procedure can return a code, values from Out parameters or the results 
 
 #### Return code
 
-```powerapps-dot
+```power-fx
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ReturnCode
 ```
 
@@ -106,7 +106,7 @@ Use this for accessing the results of a return statement.
 
 #### Output parameters
 
-```powerapps-dot
+```power-fx
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).OutputParameters.<parameterName>
 ```
 
@@ -114,7 +114,7 @@ Take note to use the parameter name as it appears in the JSON payload.
 
 #### Result Sets
 
-```powerapps-dot
+```power-fx
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ResultSets.Table1
 ```
 
@@ -126,7 +126,7 @@ Some complicated stored procedures return an untyped result. These results aren'
 
 In this example, we first pull the results into a variable named "MyUntypedObject". Then we pull 'Table1' from that variable and put it into a variable named 'table1'. This step isn't strictly necessary. It's useful however to put all the results in a variable at a point in time and then pull out the parts you need. Then, we iterate through table1 and extract the JSON elements in named value pairs. Be sure to match the names with the names that are returned in the JSON payload. To validate, open a Power Apps monitor and look at the body section the data node for a record.
 
-```powerapps-dot
+```power-fx
 Set(
     <MyUntypedObject>,
     <datasourceName>.<StoredprocedureName>( 
@@ -156,7 +156,7 @@ You can access a stored procedure for the **Items** property of a gallery after 
 
 For example, your access of a stored procedure off of a data source named 'Paruntimedb' with a stored procedure named 'dbo.spo_show_all_library_books()' will look like the following.
 
-```powerapps-dot
+```power-fx
 Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
 ```
 
@@ -164,19 +164,19 @@ This populates the gallery with records. However, stored procedures are an addit
 
 To get around this limitation, use a variable in the OnVisible property for the screen and set the stored procedure to the variable.
 
-```powerapps-dot
+```power-fx
 Set(SP_Books, Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1);
 ```
 
 And then set the 'Items' property of the gallery to the variable name.
 
-```powerapps-dot
+```power-fx
 SP_Books
 ```
 
 Then after you create, update, or delete a record with a call to the stored procedure, set the variable again. This updates the gallery.
 
-```powerapps-dot
+```power-fx
 Paruntimedb.dbonewlibrarybook({   
   book_name: DataCardValue3_2.Text, 
   author: DataCardValue1_2.Text,

@@ -186,7 +186,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
 1. Select **FrownIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
 
-    ```powerapps-dot
+    ```power-fx
     Trace(
        "App Feedback",
        TraceSeverity.Information,
@@ -207,7 +207,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
 1. Select **SmileIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
     
-    ```powerapps-dot
+    ```power-fx
     Trace(
        "App Feedback",
        TraceSeverity.Information,
