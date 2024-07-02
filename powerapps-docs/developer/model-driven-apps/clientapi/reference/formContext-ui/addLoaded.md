@@ -14,7 +14,7 @@ contributors:
 ---
 # ui.addLoaded (Client API reference)
 
-Adds a function to be called on the form **Loaded** event that happens after the form completes the load process.
+Adds a function to be called on the form [Loaded](../events/form-onload.md) event that happens after the form completes the load process.
 
 ## Syntax
 
