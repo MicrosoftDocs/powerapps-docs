@@ -1,5 +1,5 @@
 ---
-title: Create a effective service request
+title: Create an effective service request
 description: Learn how to write a clear Power Apps service request so customer service can help you quickly.
 author: tahoon
 ms.subservice: troubleshoot
@@ -13,7 +13,7 @@ search.audienceType:
 contributors:
   - mduelae
 ---
-# Create a effective service request
+# Create an effective service request
 
 If an app isn't behaving as expected, it could be an issue with its configuration, the Power Apps system, or a system outside of Power Apps.
 
@@ -23,7 +23,7 @@ Depending on where the issue lies, you can seek assistance from these people or 
 | ------------- | ----------------- |
 | App | Creators of the app, administrators |
 | Power Apps | Microsoft |
-| External data sources and integrations | Those who are responsible for the external system |
+| External data sources and integrations | Users who are responsible for the external system |
 
 
 ## Differences between app bugs and Power Apps bugs
@@ -33,21 +33,21 @@ An app bug is an unexpected behavior in a particular app. In comparison, a Power
 | App bug | Power Apps bug |
 | ------- | -------------- |
 | Explains how to reproduce an issue in a specific app | Explains how to create an app that reproduces an issue |
-| Requires access to specific data connections | Any data connection can be used to repro the issue, which may require a specific configuration of the data source |
+| Requires access to specific data connections | Any data connection can be used to repro the issue, which might require a specific configuration of the data source |
 | Affects only a single app in a single organization | Affects apps in multiple organizations, or has the potential to do so |
 | Complicated app with components not relevant to the issue | [Minimal repro app](/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro) that clearly shows an issue with just a few components |
 | Mentions custom features and code  | Mentions specific Power Apps features |
-| Microsoft documentation does not exist for the affected feature | Microsoft documentation exists for affected feature and explains its expected behavior |
+| Microsoft documentation doesn't exist for the affected feature | Microsoft documentation exists for affected feature and explains its expected behavior |
 
 ### Example app bugs
-#### Canvas app does not show invoices
-1. Log into Contoso app with app link.
-1. Home screen opens. Click on button that says _My Invoices_.
-1. Invoice screen opens. The list of invoices are displayed.
-- Expected behavior: Invoices created by the user are displayed.
-- Actual behavior: No invoices are shown.
+#### Canvas app doesn't show invoices
+1. Sign in to your canvas app, such as Contoso.
+1. Home screen opens, select _My Invoices_.
+1. The invoice screen opens and the list of invoices are displayed.
+    - Expected behavior: Invoices created by the user are displayed.
+    - Actual behavior: No invoices are shown.
 
-#### Model-driven app does not show invoices
+#### Model-driven app doesn't show invoices
 1. Log into Contoso app in a particular environment.
 1. Dashboard page opens. Click Invoices on the site map.
 1. Invoice page appears, with the view set to _My active invoices_. The list of invoices are displayed.
