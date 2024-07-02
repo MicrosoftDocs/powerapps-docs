@@ -15,9 +15,9 @@ contributors:
 ---
 # Create an effective service request
 
-If an app isn't behaving as expected, it could be an issue with its configuration, the Power Apps system, or a system outside of Power Apps.
+If an app isn't behaving as expected, it could be an issue with Power Apps configuration or a system outside of Power Apps.
 
-Depending on where the issue lies, you can seek assistance from these people or organizations:
+Depending on the issue, you can get help from the following individuals or organizations:
 
 | Type of issue | Who can help best |
 | ------------- | ----------------- |
