@@ -212,7 +212,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
 
 1. Copy the following formula in the **OnSelect** event of the button.
 
-    ```powerapps-dot
+    ```power-fx
     Patch(Conversations,Defaults(Conversations),{ID:MicrosoftTeams.PostMessageToChannelV3(team_ComboBox.Selected.id,channel_ComboBox.Selected.id,{content:message_TextBox.Value,contentType: "text"},{subject:"New conversation"}).id,Team:team_ComboBox.Selected.id,'Team Channel':channel_ComboBox.Selected.id, 'Team Name':team_ComboBox.Selected.displayName,'Channel Name':channel_ComboBox.Selected.displayName, Company: TemplateGalleryList1.Selected}); Set(enterMessage,false); Reset(team_ComboBox);Reset(channel_ComboBox);Reset(message_TextBox)
     ```
 
@@ -238,7 +238,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
 
 1. Copy the following formula in the **OnSelect** event of the button.
 
-    ```powerapps-dot
+    ```power-fx
     Launch(Concatenate("msteams://teams.microsoft.com/l/message/",Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel',"/",Gallery1.Selected.etag,"?tenantId=",Param("tenandId"),"&groupId=",Last(Sort(Conversations, 'Created On', Ascending)).Team,"&parentMessageId=",LookUp(MicrosoftTeams.GetMessagesFromChannel(Last(Sort(Conversations, 'Created On', Ascending)).Team,Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel').value,id = Last(Sort(Conversations, 'Created On', Ascending)).Team).etag,"&teamName=",Last(Sort(Conversations, 'Created  On', Ascending)).'Team Name',"&channelName=",Last(Sort(Conversations, 'Created On', Ascending)).'Channel Name'),{},LaunchTarget.New)
     ```
 

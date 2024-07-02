@@ -34,7 +34,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
  
    Select the generated formula.  
 
-    ```powerapps-dot
+    ```power-fx
     Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
     ```
     
@@ -50,7 +50,7 @@ To work with text display in a gallery using Power Apps Ideas:
 
 1. Enter your output in the **Desired format** text box or use one of the listed examples. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", press Enter, and then select the generated formula.
 
-    ```powerapps-dot
+    ```power-fx
     Left(ThisItem.'Account Name', Find(" ", ThisItem.'Account Name') + 1) 
     ```
 
@@ -72,7 +72,7 @@ To achieve this scenario, use **Add examples** by providing such examples using 
 
 1. Select and apply to see if it meets your needs.
 
-    ```powerapps-dot
+    ```power-fx
     First(Split(ThisItem.'Account Name', " ")).Result & Mid(Left(ThisItem.'Account Name', First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch + 1), First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch) 
     ```
 

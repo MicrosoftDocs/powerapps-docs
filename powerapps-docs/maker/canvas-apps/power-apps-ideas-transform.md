@@ -33,7 +33,7 @@ Power Apps Ideas also supports Microsoft Dataverse, Microsoft Lists, SharePoint 
 
 For example, instead of figuring out how to write the following formula ...
 
-```powerapps-dot
+```power-fx
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 

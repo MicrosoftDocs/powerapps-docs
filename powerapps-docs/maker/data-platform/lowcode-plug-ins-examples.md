@@ -34,7 +34,7 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
 1. Create an `Out` parameter to validate expected behavior that makes sense, such as a string Optionally use input parameters to make testing easier, that makes sense with the formula. 
 1. In the formula editor, wrap the `Out` parameter in curly brackets: 
 
-   ```powerapps-dot
+   ```power-fx
    {Out: "" }
    ```
 
@@ -42,7 +42,7 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
    - Validate that intellisense accepts the formula (text turns light blue).
    - Implement an expression that provides an output to help validate the result, for example.
 
-   ```powerapps-dot
+   ```power-fx
    {Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  }
    ```
 
@@ -60,7 +60,7 @@ Implement server-side input validation, such as duplicate error detection that t
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
-  ```powerapps-dot
+  ```power-fx
    If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
   	  Error("You have existing contacts with the same first name and last name")
   )
@@ -88,7 +88,7 @@ Display specific types of errors using the _ErrorKind_ enumeration.
    - **Run this plugin when the row is**: **Updated**
 1. Enter the formula below:
 
-   ```powerapps-dot
+   ```power-fx
    If(ThisRecord.'Due Date' < Now(), 
    	Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" })
    );
@@ -136,7 +136,7 @@ Here's an email template example that you can create for the SenMail based data 
    - **Run this plugin with the row is**: **Created**
    - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
    
-     ```powerapps-dot
+     ```power-fx
      XSendEmailFromTemplate(
          LookUp('Email Templates',StartsWith(title,"Order Thank You")).'Email Template',
 	 ThisRecord,
@@ -162,7 +162,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
    - **OrderID**: **String**
    - **TechnicianEmail**: **String**
 1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest&preserve-view=true ).
-   ```powerapps-dot
+   ```power-fx
     XSendAppNotification(
     	"New service",
     	LookUp(Users,'Primary Email'=TechnicianEmail),
@@ -187,7 +187,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. Select screen on the left navigation pane, or create a new one.
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
 1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.
-	```powerapps-dot
+	```power-fx
 	Environment.cr8b8_Notifytechnician1({
            OrderID: DataCardValue17.Text,
 	   TechnicianEmail: DataCardValue15.Text 
@@ -227,7 +227,7 @@ Prerequisites:
 > Use the [With()](/power-platform/power-fx/reference/function-with) function to capture the entire response from one action if you want to access different properties the response might have. In the example below, there's an input parameter `Location` (string) and an output parameter `Out` (string).
 >
 
-```powerapps-dot
+```power-fx
 With({ /* Capture current weather response from connector */
 c: new_MsnWeather.CurrentWeather( Location, "Imperial" ).responses.weather.current
 },{	/* Return concatenated weather details */

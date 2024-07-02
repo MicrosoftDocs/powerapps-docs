@@ -133,13 +133,13 @@ With the new *Improved data source experience and Microsoft Dataverse views* fea
 
 Previously, if you wanted to use a Choice value in a Filter expression you would need to use the *Value* field. For example:
 
-```powerapps-dot
+```power-fx
 Filter(Account,'Category Value' = "1")
 ```
 
 You'll need to edit this formula. Choice text identifer is no longer used for the value. This expression should be updated to:
 
-```powerapps-dot
+```power-fx
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
@@ -149,13 +149,13 @@ Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 
 Following is an example of earlier Patch statement for choice:
 
-```powerapps-dot
+```power-fx
 Patch( Accounts, First(Accounts), { ‘Category Value’: 1 } ) )
 ```
 
 You'll need to update your statements to follow this form:
 
-```powerapps-dot
+```power-fx
 Patch( Accounts, First(Accounts), { Category: ‘Category (Accounts)’.’Preferred Customer’ } )
 ```
 
@@ -163,7 +163,7 @@ Patch( Accounts, First(Accounts), { Category: ‘Category (Accounts)’.’Prefe
 
 If the display name of an choice **field** and the name of the choice are the same, you'll need to disambiguate the formula. To continue using the Accounts Category Code example, the **@** implies to use the choice, not the field.
 
-```powerapps-dot
+```power-fx
 Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
 ```
 
@@ -181,7 +181,7 @@ With the new *Improved data source experience and Microsoft Dataverse views* fea
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
-```powerapps-dot
+```power-fx
 Toggle1.Default = ThisItem.’Do not allow Bulk Emails’
 Toggle1.TrueText = ‘Do not allow Bulk Emails (Accounts)’.’Do Not Allow’
 Toggle1.FalseText = ‘Do not allow Bulk Emails (Accounts)’.Allow
@@ -210,7 +210,7 @@ For instance, the Owner field in a table can refer to a record in the Users tabl
 
 Record references can be used just like a full record:
 
-```powerapps-dot
+```power-fx
 Filter( Accounts, Owner = First( Teams ) )
 Patch( Accounts, First( Accounts ), { Owner: First( Users ) })
 ```
@@ -231,7 +231,7 @@ There are two new functions you can make use of:
 
 With these functions, you can write a formula that displays the name of the Owner taken from two differently named fields, based on the table type of the Owner:
 
-```powerapps-dot
+```power-fx
 If( IsType( ThisItem.Owner,  [@Teams]), 
     AsType( ThisItem.Owner, [@Teams]).'Team Name', 
     AsType( ThisItem.Owner, [@Users]).'Full Name' )
@@ -249,7 +249,7 @@ Customer lookup field is another polymorphic lookup that's similar to Owner. You
 
 Polymorphic lookups aren't limited to Accounts and Contacts. The list of tables is extensible with custom tables. For example, the Faxes table has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other tables. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field.
 
- ```powerapps-dot
+ ```power-fx
 If( IsBlank( ThisItem.Regarding ), "",
     IsType( ThisItem.Regarding, [@Accounts] ),
         "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
@@ -278,7 +278,7 @@ The records are being displayed from the Activity table. But you can still use t
 
 By using this formula, you can show the record type in a label control within the gallery:
 
- ```powerapps-dot
+ ```power-fx
 If( IsType( ThisItem, [@Faxes] ), "Fax",
     IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
     IsType( ThisItem, [@'Email Messages'] ), "Email Message",
@@ -298,7 +298,7 @@ When you create a table, you can enable attachments. If you select the check box
 
 You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available. To list all the Notes associated to an Account table, you can use the following formula:
 
-```powerapps-dot
+```power-fx
 First( Accounts ).Notes
 ```
 
@@ -306,7 +306,7 @@ First( Accounts ).Notes
 
 You can't set the Notes field on a table by using Patch. To add a record to a table's Notes table, you can use the Relate function. Create the note first, as in this example:
 
-```powerapps-dot
+```power-fx
 Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
 ```
 

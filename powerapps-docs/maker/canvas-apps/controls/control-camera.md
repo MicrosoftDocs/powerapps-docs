@@ -121,7 +121,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. Set the **Image** property of the **Image** control to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Camera1.Photo
     ```
 
@@ -136,7 +136,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. Add a **Camera** control, name it **MyCamera**, and set its [OnSelect](properties-core.md) property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Collect( MyPix, MyCamera.Photo )
     ```
 
@@ -151,13 +151,13 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. Set the [Items](properties-core.md) property of the **Image gallery** control to this formula:
  
-    ```powerapps-dot
+    ```power-fx
     MyPix
     ```
 
 1. Set the [Image](properties-visual.md) property of the **Image** control in the gallery to this formula:
 
-    ```powerapps-dot   
+    ```power-fx   
     ThisItem.Url
     ```
 
@@ -167,7 +167,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to the formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove( MyPix, ThisItem )
     ```
 
@@ -185,7 +185,7 @@ Use the [SaveData](../functions/function-savedata-loaddata.md) function to save 
 
 1. Set the **Items** property of the dropdown to:
 
-    ```powerapps-dot
+    ```power-fx
     Camera1.AvailableDevices
     ```
 
@@ -194,7 +194,7 @@ Use the [SaveData](../functions/function-savedata-loaddata.md) function to save 
     
 1. Set **Camera** property of the camera to: 
 
-    ```powerapps-dot
+    ```power-fx
     Dropdown1.Selected.Id
     ```
 
