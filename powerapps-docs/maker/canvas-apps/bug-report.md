@@ -35,7 +35,7 @@ An app bug is an unexpected behavior in a particular app. In comparison, a Power
 | Explains how to reproduce an issue in a specific app | Explains how to create an app that reproduces an issue |
 | Requires access to specific data connections | Any data connection can be used to repro the issue, which may require a specific configuration of the data source |
 | Affects only a single app in a single organization | Affects apps in multiple organizations, or has the potential to do so |
-| Complicated app with components not relevant to the issue | [Minimal repro app](minimal-canvas-app-repro.md) that clearly shows an issue with just a few components |
+| Complicated app with components not relevant to the issue | [Minimal repro app](/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro) that clearly shows an issue with just a few components |
 | Mentions custom features and code  | Mentions specific Power Apps features |
 | Microsoft documentation does not exist for the affected feature | Microsoft documentation exists for affected feature and explains its expected behavior |
 
@@ -64,7 +64,7 @@ Suppose the creators investigate and believe the cause to be a Power Apps bug. T
 #### Canvas app Filter function returns no results when filter text contains asterisk character
 1. A minimal repro app is attached to demonstrate the issue. Open it.
 1. This app contains a simple collection, `TestTable` with data `[{Name: "a"},  {Name: "*b"}]`.
-1. There are 2 **[Table](/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-table)** controls in the app. Both controls are configured to show the Name column.
+1. There are 2 **[Table](./controls/modern-controls/modern-control-table.md)** controls in the app. Both controls are configured to show the Name column.
    1. Table1 has **Items** set to `Filter(TestTable, Name="a")`.
    1. Table2 has **Items** set to `Filter(TestTable, Name="*b")`.
 - Expected behavior: Table1 shows the record `{Name: "a"}`, because it matches the **Filter** function's condition `Name="a"`. Table2 shows the record `{Name: "*b"}`, because it matches the **Filter** function's condition `Name="*b"`.
@@ -85,7 +85,7 @@ Suppose the creators investigate and believe the cause to be a Power Apps bug. T
 - Actual behavior: No records shown.
 - Notes: When the filter condition doesn't use an asterisk, like _b_, the filter works as expected.
 
-These describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](/power-apps/maker/model-driven-apps/create-edit-view-filters) for the model-driven app. They provide enough information for anybody to reproduce the issue easily. They mention investigative actions to isolate the issue.
+These describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app. They provide enough information for anybody to reproduce the issue easily. They mention investigative actions to isolate the issue.
 
 If you suspect a Power Apps bug, here are other tips on writing a good bug report so that Microsoft can assist you more effectively.
 
@@ -105,7 +105,7 @@ Example of a good title: "Filter function returns no results when filter text co
 
 ### Attach a simplified app, not the original app
 
-For issues with running an app, provide a [minimal repro app](minimal-canvas-app-repro.md) for canvas apps, or a [vanilla repro solution](vanilla-model-driven-app-repro.md) for model-driven apps.
+For issues with running an app, provide a [minimal repro app](/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro) for canvas apps, or a [vanilla repro solution](/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro) for model-driven apps.
 
 The most important goal is that **anyone should be able to reproduce the issue on their own device**. With a minimal or vanilla repro app, you show that it's a Power Apps bug instead of an app bug. Microsoft can resolve it swiftly. Without these repro apps, resolution may be delayed or the bug report may not be accepted.
 
@@ -116,13 +116,13 @@ A minimal or vanilla repro app isn't always feasible or needed for these issues:
 - Offline operation
 - General server issues
 
-Regardless, you should simplify your app as much as possible and [isolate the issue for canvas](isolate-canvas-app-issues.md) or [model-driven apps](isolate-model-app-issues.md).
+Regardless, you should simplify your app as much as possible and [isolate the issue for canvas](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-canvas-app-issues) or [model-driven apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues).
 
 ### Attach a network trace
 
-For data and server issues, examining network communications between the client and server helps [isolate the problematic layer](isolate-common-issues.md#find-out-which-layer-has-data-issues). A record of network calls is known as a network trace.
+For data and server issues, examining network communications between the client and server helps [isolate the problematic layer](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues). A record of network calls is known as a network trace.
 
-You can either use [Monitor](/power-apps/maker/monitor-overview) or [browser development tools](/azure/azure-web-pubsub/howto-troubleshoot-network-trace#collect-a-network-trace-in-the-browser-browser-based-apps-only) to record a network trace.
+You can either use [Monitor](../monitor-overview.md) or [browser development tools](/azure/azure-web-pubsub/howto-troubleshoot-network-trace#collect-a-network-trace-in-the-browser-browser-based-apps-only) to record a network trace.
 
 Be sure to start recording just before reproducing the issue and end it right after. This minimizes irrelevant information in the trace.
 
@@ -147,7 +147,7 @@ For issues with professional development features, provide a link to the documen
 If the issue involves coding and other professional development features, simplify the code first. Usually, just a few lines of code are needed to demonstrate a Power Apps bug. Deploy it in a fresh environment with no other customizations. Verify the issue occurs and attach a snippet of the problematic code.
 
 Such professional development features include:
-* [Power Apps code components](/power-apps/developer/component-framework/overview)
+* [Power Apps code components](./developer/component-framework/overview)
 * [Custom form scripts](/power-apps/developer/model-driven-apps/client-scripting) in model-driven apps
 * [Power Fx or JavaScript commands](/power-apps/maker/model-driven-apps/command-designer-overview) in model-driven apps
 * [Web resources](/power-apps/developer/model-driven-apps/web-resources) in model-driven apps
