@@ -25,6 +25,7 @@ You can export and import canvas apps by using packages. This feature allows you
 > - Canvas app packages can't be used with [Dataverse solution packages](../data-platform/solutions-overview.md) because of the package incompatibility.
 > - Canvas apps that have Dataverse dependencies, such as flows, connection references, etc. are not supported for canvas app packages. For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](/power-platform/alm/overview-alm)
 > - An App Insights instrumentation key may be present in imported canvas apps. Inspect the instrumentation key after importing an app to ensure it corresponds to the desired App Insights resource.
+> - When exporting a Canvas app, any associated flows will not be included in the export package. Once the Canvas app is imported, the flows association must be reconfigured again. [Add an existing flow](working-with-flows.md#add-an-existing-flow)
 
 ## Resources included in the package
 
