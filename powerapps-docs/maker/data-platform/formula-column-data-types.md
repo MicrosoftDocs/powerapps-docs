@@ -1,6 +1,6 @@
 ---
 title: Work with Dataverse formula column data types
-description: Learn how to create and use different data types in formula columns.
+description: Learn how to create and use decimal, whole number, float, and choice data types in formula columns.
 author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
@@ -16,9 +16,9 @@ contributors:
   - sanjeevgoyalmsft
   - neerajatmsft
 ---
-# Formula column data types
+# Create formula columns with decimal, whole number, float, and choice data types
 
-The article provides guidance on creating and using different data types in Dataverse formula columns, such as the process of creating a formula column that returns a decimal number. It outlines steps starting with selecting **fx Formula** as the data type and entering a numeric value-returning formula in the formula bar.
+The article provides guidance on creating and using different data types in Dataverse formula columns, such as decimal, whole number, floating point, and choice columns. It outlines steps starting with selecting **fx Formula** as the data type and entering a numeric value-returning formula in the formula bar.
 
 ## Create a decimal formula column
 

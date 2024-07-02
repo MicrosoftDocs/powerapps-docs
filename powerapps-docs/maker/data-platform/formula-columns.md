@@ -141,7 +141,9 @@ You can display the following data types in a formula column:
 - Datetime
 - [Whole Number](#create-a-whole-number-formula-column)
 
-The currency, and choice (formerly option sets) data types aren't currently supported.
+More information: [Create formula columns with decimal, whole number, float, and choice data types](formula-column-data-types.md)\
+
+The currency data type isn't currently supported.
 
 ## Function types
 
@@ -390,36 +392,6 @@ You can use the following scalar functions in a formula column:
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
-## Create a decimal formula column
-
-Create a formula column that returns a decimal number.
-
-1. When you create a column, enter the following information:
-   - A **Display name** for the column.
-   - Optionally, enter a **Description** of the column.
-1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** bar.
-   This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
-   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
-1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
-  :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
-1. Select **Save**.
-
-## Create a whole number formula column
-
-Create a formula column that returns a whole number.
-
-1. When you create a column, enter the following information:
-   - A **Display name** for the column.
-   - Optionally, enter a **Description** of the column.
-1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** bar.
-   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
-   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
-1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
-  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
-1. Select **Save**.
-
 ## Guidelines and limitations
 
 This section describes guidelines and the known limitations with formula columns in Dataverse.
@@ -500,7 +472,6 @@ This section describes guidelines and the known limitations with formula columns
 
 ### Formula columns of data types that can't be produced
 
-- Choices (except Yes/No choice)
 - Currency
 
 ## See also
