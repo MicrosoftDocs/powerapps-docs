@@ -24,12 +24,12 @@ Removes a function from the form [Loaded](../events/form-loaded.md) event.
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|`myFunction`|function reference|Yes|The function to be removed from the form [OnLoad](../events/form-loaded.md) event.
+|`myFunction`|function reference|Yes|The function to be removed from the form [Loaded](../events/form-loaded.md) event.
 
 ### Related articles
 
 [addLoaded](addLoaded.md)   
-[Form data Loaded event](../events/form-loaded.md)   
+[Form Loaded event](../events/form-loaded.md)   
 [formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
 
