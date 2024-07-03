@@ -94,7 +94,9 @@ If app creators investigate and find what they classify as a Power Apps bug, the
       - Actual behavior: No records shown.
       - Notes: When the filter condition doesn't use an asterisk, like _b_, the filter works as expected.
 
-These Power Apps bugs describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app. A good service request provides enough information for anybody to reproduce the issue easily. The author mentions investigative actions to isolate the issue.
+These Power Apps bugs describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app.
+
+A good service request provides enough information for anybody to reproduce the issue easily. The author might mention the result of their investigative actions or troubleshooting they tried when attempting to isolate the issue. For example, the author might mention the issue only occurs in the Chrome browser but not in Firefox.
 
 ## What makes a good Power Apps service request
 
