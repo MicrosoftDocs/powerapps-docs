@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 06/18/2024
+ms.date: 07/03/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -117,6 +117,8 @@ These tables and corresponding commands are available in offline mode.
 - **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+
+- **Lookup fields** - The value of a lookup field may not be updated in a form or grid when the display name of the lookup item is updated.
 
 - **Filter operations** - Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
