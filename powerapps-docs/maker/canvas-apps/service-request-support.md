@@ -52,12 +52,13 @@ The following examples show app bugs and how to describe them to app owners. You
       - Expected behavior: Invoices created by the user are displayed.
       - Actual behavior: No invoices are shown.
 
-1. Model-driven app doesn't show invoices
-   1. Sign in to the Contoso app in a particular environment.
-   1. On the **Dashboard** page, select **Invoices** on the site map.
-   1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
-      - Expected behavior: Invoices created by the user are displayed.
-      - Actual behavior: No invoices are shown.
+#### Model-driven app doesn't show invoices
+
+1. Sign in to the Contoso app in your environment.
+1. On the **Dashboard** page, select **Invoices** on the site map.
+1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
+   - Expected behavior: Invoices created by the user are displayed.
+   - Actual behavior: No invoices are shown.
 
 Bugs can have great variance because features, user interfaces, and tables are specific to an app and organization, making the cause of bugs different for everyone. For example, **invoice** isn't a built-in table in Power Apps. There isn't a specialized feature in canvas apps for filtering records by a certain user, therefore the app maker must write Power Fx expressions or configure data connectors. Similarly, the maker must configure **Views** in model-driven apps to display desired records.
 
