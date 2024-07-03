@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 06/18/2024
+ms.date: 07/03/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
