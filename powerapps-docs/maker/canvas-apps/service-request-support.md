@@ -28,7 +28,7 @@ Depending on the issue, you can get help from the following individuals or organ
 
 ## Differences between app bugs and Power Apps bugs
 
-An *app* bug is unexpected behavior in a particular app. In comparison, a *Power Apps* bug is unexpected behavior in the system that creates, runs, or manages the app. An underlying Power Apps bug might cause an app bug, making it difficult to determine if the bug is an app or PowerApps bug.
+An *app* bug is unexpected behavior in a particular app. In comparison, a *Power Apps* bug is unexpected behavior in the system that creates, runs, or manages the app. An underlying Power Apps bug might cause an app bug, making it difficult to determine if the bug is an app or Power Apps bug.
 
 Here are some distinguishing signs.
 
@@ -43,31 +43,29 @@ Here are some distinguishing signs.
 
 ### Example app bugs
 
-The following examples show app bugs and how to describe them in a service request. You can add steps to the request that reproduce the bug.
+The following examples show app bugs and how to describe them to app owners. You can add steps to the request that reproduce the bug.
 
-#### Canvas app doesn't show invoices
+1. Canvas app doesn't show invoices
+   1. Sign in to your canvas app, such as Contoso.
+   1. On your Home screen, select **My Invoices**.
+   1. On **My Invoices**, you see the list of invoices displayed.
+      - Expected behavior: Invoices created by the user are displayed.
+      - Actual behavior: No invoices are shown.
 
-1. Sign in to your canvas app, such as Contoso.
-1. On your Home screen, select **My Invoices**.
-1. On **My Invoices**, you see the list of invoices displayed.
-   - Expected behavior: Invoices created by the user are displayed.
-   - Actual behavior: No invoices are shown.
-
-#### Model-driven app doesn't show invoices
-
-1. Sign in to the Contoso app in a particular environment.
-1. On the **Dashboard** page, select **Invoices** on the site map.
-1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
-   - Expected behavior: Invoices created by the user are displayed.
-   - Actual behavior: No invoices are shown.
+1. Model-driven app doesn't show invoices
+   1. Sign in to the Contoso app in a particular environment.
+   1. On the **Dashboard** page, select **Invoices** on the site map.
+   1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
+      - Expected behavior: Invoices created by the user are displayed.
+      - Actual behavior: No invoices are shown.
 
 Bugs can have great variance because features, user interfaces, and tables are specific to an app and organization, making the cause of bugs different for everyone. For example, **invoice** isn't a built-in table in Power Apps. There isn't a specialized feature in canvas apps for filtering records by a certain user, therefore the app maker must write Power Fx expressions or configure data connectors. Similarly, the maker must configure **Views** in model-driven apps to display desired records.
 
-There isn't sufficient information in either of the service request examples to determine if there's a Power Apps issue. The creators of the app are best suited to investigate app issues.
+There isn't sufficient information in either of the examples to determine if there's a Power Apps issue. The creators of the app are best suited to investigate app issues.
 
 ### Example Power Apps bugs
 
-If app creators investigate and find what they classify as a Power Apps bug, they might report them similar to the following examples.
+If app creators investigate and find what they classify as a Power Apps bug, they might report them similarly to the following examples.
 
 1. **Canvas app Filter function returns no results when filter text contains asterisk character**
 
@@ -82,8 +80,6 @@ If app creators investigate and find what they classify as a Power Apps bug, the
 
 1. **Model-driven app View returns no results when filter condition contains asterisk character**
 
-   Steps to reproduce the bug:
-
    1. Create a **View** for any table.
    1. Remove all filters for the view.
    1. Add a filter for the primary column, matching text starts with _*b_.
@@ -97,7 +93,7 @@ If app creators investigate and find what they classify as a Power Apps bug, the
       - Actual behavior: No records shown.
       - Notes: When the filter condition doesn't use an asterisk, like _b_, the filter works as expected.
 
-These PowerApps bugs describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app. A good service request provides enough information for anybody to reproduce the issue easily. The author mentions investigative actions to isolate the issue.
+These Power Apps bugs describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app. A good service request provides enough information for anybody to reproduce the issue easily. The author mentions investigative actions to isolate the issue.
 
 ## What makes a good Power Apps service request
 
@@ -142,11 +138,11 @@ For data and server issues, examining network communications between the client 
 
 You can either use [Monitor](../monitor-overview.md) or [browser development tools](/azure/azure-web-pubsub/howto-troubleshoot-network-trace#collect-a-network-trace-in-the-browser-browser-based-apps-only) to record a network trace.
 
-Be sure to start recording just before reproducing the issue and end the recording right after you successfully reproduced it. This brief video minimizes irrelevant information in the trace that might cause delays.
+Be sure to start recording just before reproducing the issue and end the recording right after you successfully reproduced it. This brief interval minimizes irrelevant information in the trace that might cause delays.
 
 ### Provide detailed steps to reproduce the issue
 
-If you created a minimal or vanilla repro app, describe *how to reproduce the issue* in that app. Don't describe the app itself where you originally found the problem.
+If you created a minimal or vanilla repro app, describe *how to reproduce the issue* in that app. Don't describe issues with the app where you originally found the problem.
 
 Mention the observed behavior and the expected behavior.
 
@@ -164,12 +160,12 @@ For issues with professional development features, provide a link to the documen
 
 If the issue involves coding and other professional development features, simplify the code first. Usually, just a few lines of code are needed to demonstrate a Power Apps bug. Deploy the app in a fresh environment with no other customizations. Verify the issue occurs and attach a snippet of the problematic code.
 
-Some professional development features you might include:
+Examples of professional development features in Power Apps:
 
 - [Power Apps component framework overview](../../developer/component-framework/overview.md)
 - [Custom form scripts](../../developer/model-driven-apps/client-scripting.md) in model-driven apps
 - [Power Fx or JavaScript commands](../model-driven-apps/command-designer-overview.md) in model-driven apps
-- [Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md)
+- [Web resources](../../developer/model-driven-apps/web-resources.md)
 
 Mention specific configuration steps so that others can reproduce the issue in their own environment.
 
