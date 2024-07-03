@@ -55,7 +55,7 @@ The following examples show app bugs and how to describe them in a service reque
 
 #### Model-driven app doesn't show invoices
 
-1. Sign in to the Contoso app in a particular environment.
+1. Sign in to the Contoso app that's in your environment.
 1. On the **Dashboard** page, select **Invoices** on the site map.
 1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
    - Expected behavior: Invoices created by the user are displayed.
