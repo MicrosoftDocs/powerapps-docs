@@ -118,6 +118,8 @@ These tables and corresponding commands are available in offline mode.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
+- **Lookup fields** - The value of a lookup field may not be updated in a form or grid when the display name of the lookup item is updated.
+
 - **Filter operations** - Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
 - **Appointments** - Appointments can be created or updated in Dataverse, but they're not sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
