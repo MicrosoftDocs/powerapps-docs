@@ -55,7 +55,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
 1. Select first record of **BrowseGallery** gallery. And then, under **OnSelect**, enter the following:
 
-    ```powerapps-dot
+    ```power-fx
     Navigate(DetailScreen1, Fade, {accountVal:ThisItem})
     ```
 
@@ -98,7 +98,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. To store the **App ID** value, update the **OnStart** property formula as below.
 
-    ```powerapps-dot
+    ```power-fx
     Set(AppID, "GUID");
     If(Not(IsBlank(Param("accountId"))),Set(accountId,Param("accountId")));
     ```
@@ -112,7 +112,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. Select **StartScreen** property for the app, and add the following:
 
-    ```powerapps-dot
+    ```power-fx
     If(Not(IsBlank(Param("accountId"))),DetailScreen1,BrowseScreen1)
     ```
 
@@ -124,7 +124,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. Select **OnVisible** property, and enter the following:
 
-    ```powerapps-dot
+    ```power-fx
     If(Not(IsBlank(accountId)), UpdateContext({accountVal:LookUp(Accounts, Account = GUID(accountId))}))
     ```
 
@@ -165,7 +165,7 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 
 1. On the button's **OnSelect** property, enter the following:
 
-    ```powerapps-dot
+    ```power-fx
     Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://apps.powerapps.com/play/{App ID}?accountId=" & accountVal.Account)
     ```
 
