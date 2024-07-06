@@ -45,6 +45,11 @@ An **HTML text** control not only shows plain text and numbers but also converts
 **HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
 
 ## Additional properties
+**[AutoHeight](properties-core.md)** – Set to true to allow the control to auto-grow its height to show all text. Set to false to truncate the text to the height assigned.
+
+> [!NOTE]
+> Enabling the **AutoHeight** property will grow the **Height** property of the control to a maximum value of 7680.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
