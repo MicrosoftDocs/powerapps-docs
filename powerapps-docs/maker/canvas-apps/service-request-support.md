@@ -81,7 +81,7 @@ If app creators investigate and find what they classify as a Power Apps bug, the
 
    1. Create a **View** for any table.
    1. Remove all filters for the view.
-   1. Add a filter for the primary column, matching text starts with _*b_.
+   1. Add a filter for the primary column, matching text that starts with _*b_.
    1. Add this view and the table to any model-driven app.
    1. Save and publish all changes.
    1. Run the app.
@@ -149,7 +149,7 @@ Mention the observed behavior and the expected behavior.
 
 #### Provide screenshots or videos
 
-For user interface issues, screenshots or video can more quickly clarify the steps to reproduce the bug, rather than a written description.
+For user interface issues, screenshots or videos can more quickly clarify the steps to reproduce the bug, rather than a written description.
 
 #### Link to official documentation
 
