@@ -27,7 +27,7 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 
 ## Form events
 
-- [OnLoad](events/form-onload.md
+- [OnLoad](events/form-onload.md)
 - [Loaded](events/form-loaded.md)
 - [OnSave](events/form-onsave.md)
 
