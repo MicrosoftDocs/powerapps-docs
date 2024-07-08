@@ -3,8 +3,7 @@ title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
 description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
 author: HemantGaur
 ms.author: hemantg
-
-ms.date: 04/01/2022
+ms.date: 07/08/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: mda-developer
@@ -69,6 +68,7 @@ Using the following methods to add and remove event handler for events that cann
 |-------|-------|
 |Attribute [OnChange](reference/events/attribute-onchange.md) | [addOnChange](reference/attributes/addonchange.md) and [removeOnChange](reference/attributes/removeOnchange.md) methods|
 |Form [OnLoad](reference/events/form-onload.md)| formContext.ui [addOnLoad](reference/formcontext-ui/addonload.md) and [removeOnLoad](reference/formcontext-ui/removeonload.md) methods|
+|Form [OnLoaded](reference/events/form-onloaded.md)| formContext.ui [addOnLoaded](reference/formcontext-ui/addonloaded.md) and [removeOnLoaded](reference/formcontext-ui/removeonloaded.md) methods|
 |Form data [OnLoad](reference/events/form-data-onload.md)| formContext.data [addOnLoad](reference/formcontext-data/addonload.md) and [removeOnLoad](reference/formcontext-data/removeonload.md) methods|
 |Form [OnSave](reference/events/form-onsave.md)| [addOnSave](reference/formcontext-data-entity/addonsave.md) and [removeOnSave](reference/formcontext-data-entity/removeonsave.md) methods|
 |Lookup control [PreSearch](reference/events/presearch.md)| [addPreSearch](reference/controls/addpresearch.md) and [removePreSearch](reference/controls/removepresearch.md) methods|

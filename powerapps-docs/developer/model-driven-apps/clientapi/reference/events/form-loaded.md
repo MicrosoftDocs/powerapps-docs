@@ -1,5 +1,5 @@
 ---
-title: "Form Loaded event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form Loaded event (Client API reference) in model-driven apps | MicrosoftDocs"
 description: Includes description and supported parameters for the Loaded event.
 author: aorth
 ms.author: aorth

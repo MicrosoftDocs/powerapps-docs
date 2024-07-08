@@ -3,7 +3,7 @@ title: "ui.removeLoaded (Client API reference) in model-driven apps| MicrosoftDo
 description: Includes description and supported parameters for the ui.removeLoaded method.
 author: aorth
 ms.author: aorth
-ms.date: 07/02/2024
+ms.date: 07/08/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +28,7 @@ Removes a function from the form [Loaded](../events/form-loaded.md) event.
 
 ### Related articles
 
-[addLoaded](addLoaded.md)   
+[addLoaded](addloaded.md)   
 [Form Loaded event](../events/form-loaded.md)   
 [formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
