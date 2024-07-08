@@ -97,7 +97,7 @@ Keyboard navigation is an important aspect of any app. For many, the keyboard is
 
 **[AcceptsFocus](controls/properties-accessibility.md)** specifies whether controls can be reached by keyboard. For classic controls, the equivalent property is **[TabIndex](controls/properties-accessibility.md)**.
 
-Navigation order follows [control order](#logical-control-order): from left-to-right, then top-to-bottom, in a "Z" pattern. You can customize it the same way as with control order. For example, controls in **[Containers](control-container.md)**, **[Form Cards](control-card.md)** and **[Galleries](control-gallery.md)** are automatically grouped. The Tab key will navigate through all elements inside the container before proceeding to the next control outside of the container.
+Navigation order follows [control order](#logical-control-order): from left-to-right, then top-to-bottom, in a "Z" pattern. You can customize it the same way as with control order. For example, controls in **[Containers](controls/control-container.md)**, **[Form Cards](controls/control-card.md)** and **[Galleries](controls/control-gallery.md)** are automatically grouped. The Tab key will navigate through all elements inside the container before proceeding to the next control outside of the container.
 
 If the navigation order is unexpected, you should first check if the app structure is logical.
 
