@@ -163,7 +163,7 @@ If the issue involves coding and other professional development features, simpli
 
 Examples of professional development features in Power Apps:
 
-- [Power Apps component framework overview](../../developer/component-framework/overview.md)
+- [Power Apps components](../../developer/component-framework/overview.md)
 - [Custom form scripts](../../developer/model-driven-apps/client-scripting.md) in model-driven apps
 - [Power Fx or JavaScript commands](../model-driven-apps/command-designer-overview.md) in model-driven apps
 - [Web resources for model-driven apps](../../developer/model-driven-apps/web-resources.md)
