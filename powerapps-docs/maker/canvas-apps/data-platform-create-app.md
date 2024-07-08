@@ -24,7 +24,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) either directly or via a Dataverse team that is of type "AAD Security Group". You also need to [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role either directly or via a Dataverse team that is of type "AAD Security Group". You also need to [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
 
 ## Create an app
 
