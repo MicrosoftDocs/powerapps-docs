@@ -102,7 +102,7 @@ Navigation order follows [control order](#logical-control-order): from left-to-r
 If the navigation order is unexpected, you should first check if the app structure is logical.
 
 > [!NOTE]
-> If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or Power Fx expression, the navigation order will not be updated.
+> When controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a Power Fx expression, the navigation order will not be updated.
 
 
 ### Workaround for custom tab sequence

@@ -46,7 +46,7 @@ Use **Default** for normal text.
 ### AcceptsFocus and TabIndex
 Determines if the control participates in keyboard navigation.
 
-You can use **AcceptsFocus** to configure keyboard navigation for [modern controls](./modern-controls/overview-modern-controls.md). [Classic controls](../reference-properties.md) use TabIndex.
+You can use **AcceptsFocus** to configure keyboard navigation for [modern controls](./modern-controls/overview-modern-controls.md). [Classic controls](../reference-properties.md) use **TabIndex**.
 
 | AcceptsFocus | TabIndex | Behavior | Default for |
 |--------------|----------|----------|-------------|
