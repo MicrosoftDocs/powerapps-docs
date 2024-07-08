@@ -75,7 +75,7 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 
 ## Additional properties
 
-**AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
 **[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
 
