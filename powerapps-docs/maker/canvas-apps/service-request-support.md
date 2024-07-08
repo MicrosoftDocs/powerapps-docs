@@ -1,6 +1,6 @@
 ---
-title: Create an effective service request
-description: Learn how to write a clear Power Apps service request so customer service can help you quickly.
+title: Create an effective support request
+description: Learn how to write a clear Power Apps support request so Microsoft support can help you quickly.
 author: tahoon
 ms.subservice: troubleshoot
 ms.topic: conceptual
@@ -14,7 +14,7 @@ contributors:
   - mduelae
 ---
 
-# Create an effective service request
+# Create an effective support request
 
 If an app isn't behaving as expected, it could be an issue with your Power Apps configuration or a system outside of Power Apps.
 
@@ -43,22 +43,20 @@ Here are some distinguishing signs.
 
 ### Example app bugs
 
-The following examples show app bugs and how to describe them to app owners. You can add steps to the request that reproduce the bug.
+The following examples show app bugs and how users can describe them as steps to app owners, so owners can reproduce and resolve the bugs.
 
-1. Canvas app doesn't show invoices
+1. Canvas app doesn't show invoices.
    1. Sign in to your canvas app, such as Contoso.
    1. On your Home screen, select **My Invoices**.
-   1. On **My Invoices**, you see the list of invoices displayed.
       - Expected behavior: Invoices created by the user are displayed.
       - Actual behavior: No invoices are shown.
 
-#### Model-driven app doesn't show invoices
-
-1. Sign in to the Contoso app in your environment.
-1. On the **Dashboard** page, select **Invoices** on the site map.
-1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
-   - Expected behavior: Invoices created by the user are displayed.
-   - Actual behavior: No invoices are shown.
+1. Model-driven app doesn't show invoices.
+   1. Sign in to the Contoso app in your environment.
+   1. On the **Dashboard** page, select **Invoices** on the site map.
+   1. On the **Invoices** page, set the view to **My active invoices**. The list of invoices are displayed.
+      - Expected behavior: Invoices created by the user are displayed.
+      - Actual behavior: No invoices are shown.
 
 Bugs can have great variance because features, user interfaces, and tables are specific to an app and organization, making the cause of bugs different for everyone. For example, **invoice** isn't a built-in table in Power Apps. There isn't a specialized feature in canvas apps for filtering records by a certain user, therefore the app maker must write Power Fx expressions or configure data connectors. Similarly, the maker must configure **Views** in model-driven apps to display desired records.
 
@@ -96,11 +94,11 @@ If app creators investigate and find what they classify as a Power Apps bug, the
 
 These Power Apps bugs describe issues with specific Power Apps features: the **[Filter](/power-platform/power-fx/reference/function-filter-lookup)** function for the canvas app and [View filters](../model-driven-apps/create-edit-view-filters.md) for the model-driven app.
 
-A good service request provides enough information for anybody to reproduce the issue easily. The author might mention the result of their investigative actions or troubleshooting they tried when attempting to isolate the issue. For example, the author might mention the issue only occurs in the Chrome browser but not in Firefox.
+A good support request provides enough information for anybody to reproduce the issue easily. The author might mention the result of their investigative actions or troubleshooting they tried when attempting to isolate the issue. For example, the author might mention the issue only occurs in the Chrome browser but not in Firefox.
 
-## What makes a good Power Apps service request
+## What makes a good Power Apps support request
 
-A good service request frames an issue as a Power Apps bug, not an app bug. Follow these guidelines, where applicable, to help Microsoft understand and resolve the issue quickly.
+A good support request frames an issue as a Power Apps bug, not an app bug. Follow these guidelines, where applicable, to help Microsoft understand and resolve the issue quickly.
 
 ### Have a descriptive title
 
@@ -119,9 +117,9 @@ Example of a good title: "Filter function returns no results when filter text co
 For issues with running an app, provide a [minimal repro app](/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro) for canvas apps, or a [vanilla repro solution](/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro) for model-driven apps.
 
 > [!IMPORTANT]
-> The goal of a good service request is to include enough information so that anyone can reproduce the issue on their own device.
+> The goal of a good support request is to include enough information so that anyone can reproduce the issue on their own device.
 >
-> If you can show that the bug is a Power Apps bug instead of an app bug, with a minimal or vanilla repro app, Microsoft can resolve it swiftly. Without these repro apps, the resolution might be delayed or the service request might not be accepted.
+> If you can show that the bug is a Power Apps bug instead of an app bug, with a minimal or vanilla repro app, Microsoft can resolve it swiftly. Without these repro apps, the resolution might be delayed or the support request might not be accepted.
 
 #### Exceptions
 
@@ -141,7 +139,7 @@ For data and server issues, examining network communications between the client 
 
 You can either use [Monitor](../monitor-overview.md) or [browser development tools](/azure/azure-web-pubsub/howto-troubleshoot-network-trace#collect-a-network-trace-in-the-browser-browser-based-apps-only) to record a network trace.
 
-Be sure to start recording just before reproducing the issue and end the recording right after you successfully reproduced it. This brief interval minimizes irrelevant information in the trace that might cause delays.
+Be sure to start recording just before reproducing the issue and end the recording right after you successfully reproduced it. This brief interval minimizes irrelevant information in the trace that might cause delays in Microsoft's handling of the support request.
 
 ### Provide detailed steps to reproduce the issue
 
@@ -168,7 +166,7 @@ Examples of professional development features in Power Apps:
 - [Power Apps component framework overview](../../developer/component-framework/overview.md)
 - [Custom form scripts](../../developer/model-driven-apps/client-scripting.md) in model-driven apps
 - [Power Fx or JavaScript commands](../model-driven-apps/command-designer-overview.md) in model-driven apps
-- [Web resources](../../developer/model-driven-apps/web-resources.md)
+- [Web resources for model-driven apps](../../developer/model-driven-apps/web-resources.md)
 
 Mention specific configuration steps so that others can reproduce the issue in their own environment.
 
@@ -178,11 +176,11 @@ An issue might happen only on a specific version of Power Apps, a browser, or an
 
 ### Add notes from your investigation
 
-You might try different configurations to eliminate possible causes. Mention these configurations in the service request. This inclusion helps others understand the issue better and avoid repeating the same steps.
+You might try different configurations to eliminate possible causes. Mention these configurations in the support request. This inclusion helps others understand the issue better and avoid repeating the same steps.
 
-## Submitting a Power Apps service request
+## Submitting a Power Apps support request
 
-Before submitting a service request, [check if the bug is a known issue](/power-platform/admin/view-known-issues). If the bug isn't already known, you can [create a support request](/power-platform/admin/get-help-support) to report the bug.
+Before submitting a support request, [check if the bug is a known issue](/power-platform/admin/view-known-issues). If the bug isn't already known, you can [create a support request](/power-platform/admin/get-help-support) to report the bug.
 
 ## See also
 
