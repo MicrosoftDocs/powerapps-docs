@@ -1,5 +1,5 @@
 ---
-title: Add Copilot control for canvas app users
+title: Add a Copilot control for canvas app users
 description: Add Copilot AI control for apps users to your canvas app.
 author: mduelae
 ms.topic: conceptual
@@ -17,7 +17,7 @@ contributors:
   - mduelae
 ---
 
-# Add Copilot Control to a canvas app (preview)
+# Add a Copilot Control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
