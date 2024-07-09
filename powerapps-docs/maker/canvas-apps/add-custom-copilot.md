@@ -49,7 +49,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. On the command bar, select **Settings** > **Updates** > **Preview** tab and enable **Copilot from app settings**.
 
-1. You see a **Copilot** tab appear in **Settings**. From the drop-down list, select a custom Copilot that's published and shared in the same environment as your canvas app.
+1. You see a **Copilot** tab appear in **Settings**. In the drop-down list, select a custom Copilot that is published and shared in the same environment as your canvas app.
 
    :::image type="content" source="media/add-custom-copilot/copilot-tab.png" alt-text="Screenshot that shows the Copilot tab in Settings and where you can select an app that was shared with you." lightbox="media/add-custom-copilot/copilot-tab.png":::
 
