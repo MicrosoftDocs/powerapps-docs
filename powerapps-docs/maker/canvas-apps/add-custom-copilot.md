@@ -18,7 +18,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Microsoft Copilot Studio empowers makers to create their own custom Copilots with AI. In a few steps, you can add your custom Copilot across all your canvas app screens without modifying your app's design. This feature is available on the web and on the Power Apps mobile app.
+Microsoft Copilot Studio empowers makers to create their own custom Copilots with AI. In a few steps, you can add your custom Copilot across all your canvas app screens without modifying your app's design. You can use this feature both on the web and through the Power Apps mobile app.
 
 > [!IMPORTANT]
 > - App Copilot for canvas apps is currently rolling out and might not yet be available in your region.
