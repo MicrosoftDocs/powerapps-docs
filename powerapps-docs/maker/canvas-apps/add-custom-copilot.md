@@ -60,7 +60,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 ## Use App Copilot 
 
-- Open your canvas app in a web broswer. On the command bar, select **Copilot**.
+- Open your canvas app in a web browser. On the command bar, select **Copilot**.
 
    :::image type="content" source="media/add-custom-copilot/copilot-chat-in-app.png" alt-text="Screenshot that shows the Copilot chat in the app." lightbox="media/add-custom-copilot/copilot-chat-in-app.png":::
 
