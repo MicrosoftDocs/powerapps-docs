@@ -1,5 +1,5 @@
 ---
-title: Add Chatbot control to your canvas app
+title: Add a Chatbot control to your canvas app
 description: A control that enables embedding of any published Power Virtual Agent (PVA) bot into Power Apps for end-user.
 author: mduelae
 ms.topic: conceptual
@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/2/2024
+ms.date: 7/9/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -17,11 +17,11 @@ contributors:
   - mduelae
 ---
 
-# Add Chatbot control to a canvas app (preview)
+# Add a Chatbot control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
-Add Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with various requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
+Add a Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with various requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
 The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports Teams authenticated Microsoft Copilot Studio bots. A bot picker lists all bots that are in the same environment as your app.
 
