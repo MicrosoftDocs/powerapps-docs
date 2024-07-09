@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 4/4/2024
+ms.date: 7/9/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
