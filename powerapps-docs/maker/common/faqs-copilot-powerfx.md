@@ -31,6 +31,10 @@ Power Apps Studio has several features to help makers understand and write Power
 - Generate a single Power Fx expression from an English description.
 - Generate an English description of the formula shown in the formula bar.
 
+## What Languages are supported?
+
+Because Power Fx can be used across many different features, each Generally Available feature may have a different set of supported languages the meet Microsoft's responsible AI standards.  For details on language support for specific features, please see the documentation for that feature.
+
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
 We qualitatively test the model's Power Fx formula generation and descriptions against an internally built set of Power Fx formulas and descriptions. Additionally, we're monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
