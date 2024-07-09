@@ -46,12 +46,14 @@ Use Copilot in the formula bar to understand what a formula is doing.
     When Copilot provides an explanation of the formula, you can copy and insert it as a code comment or share it with other makers who are working on the same app.
 :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Formula explanation":::
 
+### Language Support
+
+Explain a formula currently supports the following languages as selected in the Platform and Browser settings:  en-US, ja-JP, es-ES, pt-BR, de-DE, fr-FR, nl-NL, zh-Hans, it-IT, pl-PL, da-DK, cs-CZ, el-GR, fi-FI, ko-KR, nb-NO, ru-RU, sv-SE, th-TH, & tr-TR
 
 ### Known Limitations
-- There's a 1,000 character limit for formula explanations.
+- There's a 5,000 character limit for formula explanations.
 - Copilot in Power Apps is only aware of default properties.
 - User defined functions aren't supported.
-- This feature isn't available in the Canada region.
 
 ## Copilot comment generated formulas (preview)
 
