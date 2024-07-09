@@ -95,7 +95,7 @@ Among other things, you can use **Language** to display translated text for your
 
 And then use a formula such as the following to pull translated strings from the table:
 
-```powerapps-dot
+```power-fx
 LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText
 ```
 

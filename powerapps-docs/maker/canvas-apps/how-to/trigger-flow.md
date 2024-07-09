@@ -212,7 +212,7 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Select the **Yes** button > in the **OnSelect** property enter the two parameters for the To email address and the Body of the email as follows:
 
-    ```powerapps-dot
+    ```power-fx
     FlowtriggeredbyaPowerapp.Run(
        EditForm3.LastSubmit.Email,
        TextInput1.Text

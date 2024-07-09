@@ -52,7 +52,7 @@ Watch this video to learn how to create and update a collection:
 
 1. Add a **Button** control, set its **Text** property to **"Add"**, and set its **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Collect(
         ProductList,
         {

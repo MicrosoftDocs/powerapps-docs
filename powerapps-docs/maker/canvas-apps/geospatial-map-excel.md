@@ -107,7 +107,7 @@ To avoid geocoding the same set of addresses every time the map control is launc
 
 To do so, add a button to save the geocoded address back to the original data source with the following formula:
 
-```powerapps-dot
+```power-fx
  ForAll(Map1.GeocodedItems, Patch(Accounts1, LookUp(Accounts1, ThisRecord.Address = Address && ThisRecord.Name = Label), {Latitude: Latitude, Longitude: Longitude }))
 ```
 

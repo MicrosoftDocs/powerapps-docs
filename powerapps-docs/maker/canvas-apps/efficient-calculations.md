@@ -45,11 +45,11 @@ For synchronous tasks, you'll often use the code in Power Apps for UI blocking t
 
 ### Place 'ForAll' appropriately
 If you have an expression with ForAll and collect that looks like this:
-```powerapps-dot
+```power-fx
 ForAll(x, Collect(y, { … }))
 ```
 Then, invert this to 
-```powerapps-dot
+```power-fx
 Collect(y, ForAll(x, { … }))
 ```
 In the first pattern, any dependent rule on collection y is notified of changes and evaluated for each iteration of x.  In the second pattern, these rules are only evaluated once.

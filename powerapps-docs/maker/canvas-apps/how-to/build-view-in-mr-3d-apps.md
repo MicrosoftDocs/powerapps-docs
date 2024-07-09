@@ -42,7 +42,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
 1. Select the **OnStart** property of the app, copy and paste the following:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(
         col3dObjects,
         {
