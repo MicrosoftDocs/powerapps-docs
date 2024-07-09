@@ -39,11 +39,11 @@ Microsoft Copilot Studio empowers makers to create their own custom Copilots wit
 
 ### Prerequisites
 
-- Create a custom Copilot in [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started?tabs=web) and publish it in the same environment as the app.
+- Create a custom Copilot in [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?tabs=web) and publish it in the same environment as the app.
 
-- Configure the custom Copilot with [user authentication in Microsoft Entra ID](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authentication-azure-ad).
+- Configure the custom Copilot with [user authentication in Microsoft Entra ID](/microsoft-copilot-studio/configuration-authentication-azure-ad).
 
-- [Give makers and users access](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots?tabs=web) to the custom Copilot within the environment.
+- [Give makers and users access](/microsoft-copilot-studio/admin-share-bots?tabs=web) to the custom Copilot within the environment.
 
 ## Connect your custom Copilot to your Canvas app
 
