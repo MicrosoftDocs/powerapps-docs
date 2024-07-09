@@ -51,7 +51,7 @@ In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudiotea
 
 1. Enter the following formula for the **Items** property of the gallery, replacing the example parameter values as appropriate.
 
-    ```powerapps-dot
+    ```power-fx
     AzureDevOps.ListQueriesInFolder("Project","Organization","Folder").value
     ```
 
@@ -82,7 +82,7 @@ Now we use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-r
 
 1. Enter the following formula for the **Items** property of the gallery, replacing the example parameter values as appropriate.  Substitute your Project and Organization names as appropriate.
 
-    ```powerapps-dot
+    ```power-fx
     AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id),"Organization").value
     ```
 
@@ -100,7 +100,7 @@ The returned result of **GetQueryResultsV2** is dynamic. And the values are ther
 
 However you can access some of the values.  Azure Dev Ops returns a basic set of values for all items that are typed.  Select the data card in the gallery and insert two text label.  Set the text property of the labels as follows:
 
-```powerapps-dot
+```power-fx
     ThisItem.Value.'System.WorkItemType'
     ThisItem.Value.'System.Title'
 ```
@@ -162,7 +162,7 @@ The app shows a list of all queries, and the list of work items for the selected
 ### Adding untyped and dynamic return values to your forms
 So far we have been using the Edit form which simplifies the data access story by providing a common DataSource and Item property which all of the data cards in the form can work with.  If you use the Edit form, to access the untyped values make sure you set **both** the data source and the item properties as follows: (Substituting in your values for Organization and Project.)
 
- ```powerapps-dot
+ ```power-fx
     AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
   ```
 When you pass the text property "WorkItemType", for instance, "Feature", it allows you to switch from items such as Features and Work Items. Since the set of fields for these items differ from one another, the return type from this call is dynamic.
@@ -172,7 +172,7 @@ You can access specific values using the common method Text(ThisItem.Value.'Syst
 If you're not utilizing an Edit form, but instead using a container, then you can retrieve these values by using a formula such as the one below, which retrieves information from a custom team field.
 
 
-```powerapps-dot
+```power-fx
 Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType').fields.One_custom_CustomField1)
 ```
 
@@ -184,7 +184,7 @@ Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organiza
 
 To update a value in Azure Dev ops use the UpdateWorkItem in the OnSelect of a button. 
 
-```powerapps-dot
+```power-fx
 AzureDevOps.UpdateWorkItem(
     Gallery2.Selected.Value.'System.Id', 
     Organization, 

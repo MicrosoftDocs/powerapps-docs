@@ -26,7 +26,7 @@ Bringing the power of Copilot to both app makers and their end-users in Power Ap
 
 Learn how to use Copilot features in Power Apps.
 
-**Canvas apps**
+## Canvas apps
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
@@ -36,13 +36,17 @@ Learn how to use Copilot features in Power Apps.
 - [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
 - [Use field suggestions by Copilot](ai-field-suggestions.md)
 
-**Model-driven apps**
+## Model-driven apps
 
 - [Add the Copilot control to the rich text editor](../model-driven-apps/copilot-control.md)
 - [Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
 - [Add copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
 
-**Microsoft Dataverse**
+## App users
+- [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
+- [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
+
+## Microsoft Dataverse
 
 - [Add Dataverse tables in Microsoft Copilot Studio as a knowledge source](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
 

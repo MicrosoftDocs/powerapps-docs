@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 05/29/2024
+ms.date: 07/03/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -109,9 +109,16 @@ These tables and corresponding commands are available in offline mode.
 
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
+    > [!NOTE]
+    > For the best compatibility across platforms, use one of the following redommendations, instead of HTML web resources:
+    > - If the web resource is a user expereince component, use a [PCF control](../developer/component-framework/overview.md).
+    > - If the web resource doesn't present in the user interface, use [form handler events](../maker/model-driven-apps/configure-event-handlers-legacy.md) which are available offline on all platforms.
+
 - **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+
+- **Lookup fields** - The value of a lookup field may not be updated in a form or grid when the display name of the lookup item is updated.
 
 - **Filter operations** - Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 

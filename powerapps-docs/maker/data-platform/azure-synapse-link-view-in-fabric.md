@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/30/2024
+ms.date: 06/18/2024
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -37,7 +37,7 @@ Watch this video to learn about accessing Dataverse data in Fabric:
   
 - Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - You must have the system administrator security role in the Dataverse environment.
-- You must be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
+- You must be an administrator of the Power BI workspace. You also need to be a Power BI capacity administrator to a capacity within the same geographic location as the Dataverse environment.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
@@ -125,7 +125,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
-5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**.
+5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
 
    > [!NOTE]
    > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
