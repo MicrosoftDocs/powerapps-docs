@@ -30,8 +30,9 @@ Learn how to use Copilot features in Power Apps.
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
-- [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
-- [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Add a Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
+- [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Add a custom Copilot to a canvas app](add-custom-copilot.md)
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 - [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
 - [Use field suggestions by Copilot](ai-field-suggestions.md)
