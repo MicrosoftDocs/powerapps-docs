@@ -53,7 +53,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
    :::image type="content" source="media/add-custom-copilot/copilot-tab.png" alt-text="Screenshot that shows the Copilot tab in Settings and where you can select an app that was shared with you." lightbox="media/add-custom-copilot/copilot-tab.png":::
 
-1. When your select a copilot close the settings and publish the app. This lets users to App Copilot in the canvas app.
+1. After choosing a copilot, close the settings dialog box and publish the app. App users will be able to use App Copilot in the app.
 
 > [!TIP]
 > Removing the custom Copilot from the app disables the functionality.
