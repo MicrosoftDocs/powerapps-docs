@@ -36,6 +36,18 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
+## Adding icon to button control
+Button control is now enhanced to support subset of fluent icons. We have introduced below properties:
+
+**Icon** - Allows the inclusion of Fluent icons within the button for visual enhancement. In properties panel, you can select the icon through dropdown menu showcasing available icons:
+
+
+**Layout** - Defines the positioning of the icon in relation to the text on the button or no icon at all.
+
+**Icon Rotation** - Provides the ability to rotate the icon to a desired orientation.
+
+**Icon Style** - Provides option for icon to be rendered in filled or outline state.
+
 ## Additional properties
 **Accessible label** – Label for screen readers.
 
