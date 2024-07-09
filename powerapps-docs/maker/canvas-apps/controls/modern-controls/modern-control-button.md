@@ -40,7 +40,8 @@ With the modern button you can set a button to be primary or secondary. Configur
 Button control is now enhanced to support subset of fluent icons. We have introduced below properties:
 
 **Icon** - Allows the inclusion of Fluent icons within the button for visual enhancement. In properties panel, you can select the icon through dropdown menu showcasing available icons:
-
+> [!div class="mx-imgBorder"]
+> ![List of icons](media/Icons-List.png)
 
 **Layout** - Defines the positioning of the icon in relation to the text on the button or no icon at all.
 
