@@ -408,8 +408,10 @@
             href: ./canvas-apps/add-screen-context-variables.md
           - name: Add a chatbot (preview)
             href: ./canvas-apps/add-ai-chatbot.md
-          - name: Add a copilot (preview)
+          - name: Add Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
+          - name: Add a custom Copilot
+            href: ./canvas-apps/add-custom-copilot.md
           - name: Create and edit tables
             href: ./canvas-apps/create-edit-tables.md
           - name: Work with a gallery
