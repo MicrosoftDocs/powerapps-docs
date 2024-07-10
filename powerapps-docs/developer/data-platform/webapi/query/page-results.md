@@ -108,7 +108,7 @@ The following example returns just the first three account rows:
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
-
+<!-- 
 ## Paging models
 
 ## Simple paging
@@ -125,7 +125,14 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 
 ### Last Page
 
-### Web API paging example
+### Web API paging example 
+
+-->
+<!-- 
+TODO: Add a RetrieveAll example similar to the FetchXml example here:
+https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/page-results?tabs=webapi#web-api-paging-example 
+
+-->
 
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
 

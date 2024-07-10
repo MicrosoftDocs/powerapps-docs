@@ -213,7 +213,7 @@ There are some things that you can do using FetchXml that OData doesn't support.
 
 - [Perform cross table column comparisons](../../fetchxml/filter-rows.md#cross-table-column-comparisons).
    OData supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
-- [You can't override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
+- [You don't need to override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order). The default behavior when sorting choice columns is to use the integer values rather than the localized label value.
 - You can't use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query) performance optimization.
 
 
