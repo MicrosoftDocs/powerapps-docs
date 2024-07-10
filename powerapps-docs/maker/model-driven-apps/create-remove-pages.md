@@ -47,7 +47,7 @@ Create and edit tables directly from the app designer.
 1. In the model-driven app designer, select **Add page**, select **Dataverse table** as the page type.
 1. Select **Create new tables**. Otherwise, if your table is already created select it from the list.
 1. If you selected **Create a new tables**: 
-   - Enter the table a name in the **Display name** field, and complete the additional fields to create one or more tables.
+   - Select the option you want to create a table and follow the instructions on your screen.
    - More information: [Create new tables (preview)](../data-platform/create-edit-entities-portal.md#create-new-tables-preview)
 
 ### Edit a table for a page
