@@ -31,11 +31,11 @@ Copilot doesn't support aggregate queries, such as _top_, _min_, _max_, _sum_, a
 
 Filter, sort, and search galleries with Copilot provides five key benefits:
 
-- **Natural Language Commands**: Copilot enables natural language commands. The prompt user interface (UI) helps users formulate sentences by showing different examples of natural language sentences that work.
-- **Comprehensive Query Capability**: Users can filter, sort, and search on fields even if the application doesn't provide UI controls for these tasks. For example, you can search for records without a search bar in the application.  
-- **Time-Saving for Developers**: Authors save time developing apps since they don't need to develop all the UI controls necessary for the app. Copilot handles this functionality.
--**Query Safety**: Copilot only generates queries that can be run on the server, ensuring that developers don't need to worry about query delegation.
-- **Privacy Protection**: Copilot only generates queries that can be executed on the server, ensuring that developers don't need to worry about query delegation.
+- **Natural language commands**: Copilot enables natural language commands. The prompt user interface (UI) helps users formulate sentences by showing different examples of natural language sentences that work.
+- **Comprehensive query capability**: Users can filter, sort, and search on fields even if the application doesn't provide UI controls for these tasks. For example, you can search for records without a search bar in the application.  
+- **Time-saving for sevelopers**: Authors save time developing apps since they don't need to develop all the UI controls necessary for the app. Copilot handles this functionality.
+-**Query safety**: Copilot only generates queries that can be run on the server, ensuring that developers don't need to worry about query delegation.
+- **Privacy protection**: Copilot only generates queries that can be executed on the server, ensuring that developers don't need to worry about query delegation.
 
 > [!IMPORTANT]
 >
