@@ -1,5 +1,5 @@
 ---
-title: "Work with pages in model-driven apps | MicrosoftDocs"
+title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
 ms.custom: ""
 ms.date: 07/10/2024
