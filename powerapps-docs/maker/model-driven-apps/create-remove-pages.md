@@ -18,7 +18,9 @@ search.audienceType:
 ---
 # Work with model-driven app pages
 
-App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
+App designer pages are containers for tables, dashboards, custom pages, or web resources. Pages determine your apps assets and navigation. You can choose whether to have the page appear in the app navigation (site map) or not.
+
+:::image type="content" source="media/pages-in-model-driven-app.png" alt-text="Pages in a model-driven app":::
 
 ## Create a page
 
