@@ -6,6 +6,41 @@
       "redirect_document_id": "false"
    },
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#select-columns",
+      "redirect_url": "query/select-columns",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#join-tables",
+      "redirect_url": "query/join-tables",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#order-rows",
+      "redirect_url": "query/order-rows",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#filter-rows",
+      "redirect_url": "query/filter-rows",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#page-results",
+      "redirect_url": "query/page-results",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#aggregate-data",
+      "redirect_url": "query/aggregate-data",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#count-number-of-rows",
+      "redirect_url": "query/count-rows",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic.md#bypass-power-automate-flows",
       "redirect_url": "bypass-power-automate-flows",
       "redirect_document_id": "false"
