@@ -79,7 +79,7 @@ In this article, the sample app used for notifications is built from the default
 ### Sample formulas
 Send a basic notification.
 
-```powerapps-dot
+```power-fx
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
@@ -90,7 +90,7 @@ PowerAppsNotification.SendPushNotification(
 
 Send a notification that opens an app and passes along specific parameters.
 
-```powerapps-dot
+```power-fx
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["email1@contoso.com", "email2@contoso.com"],

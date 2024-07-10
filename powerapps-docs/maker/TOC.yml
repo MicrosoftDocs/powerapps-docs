@@ -16,6 +16,8 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Copilot in Power Apps
+    href: ./canvas-apps/ai-overview.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: Get your developer environment
@@ -247,8 +249,6 @@
     href: search.md
   - name: Get help from a virtual agent
     href: ./common/virtual-agent.md
-  - name: Copilot in Power Apps overview
-    href: ./canvas-apps/ai-overview.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -400,7 +400,7 @@
             href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
-          - name: Understand copresence
+          - name: Understand coauthoring
             href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
@@ -2645,6 +2645,8 @@
     href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Create a support request  
+    href: ./canvas-apps/service-request-support.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps

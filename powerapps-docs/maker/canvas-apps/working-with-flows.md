@@ -94,7 +94,7 @@ After being added, the flow will appear under the **In your app** section inside
 
 To reference the added flow, update the formula bar for the control or component within Power Apps Studio with the flow details. For example, to reference a flow named "PowerAppsbutton" that triggers an email without accepting any input parameters, use the following formula on the button's **OnSelect** property:
 
-```powerapps-dot
+```power-fx
 PowerAppsbutton.Run()
 ```
 

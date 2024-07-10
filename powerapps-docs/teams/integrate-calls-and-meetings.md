@@ -68,7 +68,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Select the app from the left-pane, and update the **OnStart** property of the app with the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Set(gblIsHostClientWeb,Param("hostClientType")="web")
     ```
 
@@ -93,7 +93,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
     Copy the following formula in the **OnSelect** property of the button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
@@ -126,7 +126,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Copy the following formula in the **OnSelect** property of the new button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
@@ -154,7 +154,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Copy the following formula in the **OnSelect** property of the new button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
