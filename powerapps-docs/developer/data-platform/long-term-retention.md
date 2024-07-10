@@ -1,7 +1,7 @@
 ---
 title: Long-term data retention
 description: Learn how to use retention policies to transfer data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient long-term storage.
-ms.date: 04/02/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 author: pnghub
 ms.author: gned
@@ -18,6 +18,26 @@ ms.custom: bap-template
 
 > [!IMPORTANT]
 > To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview).
+
+
+## Retrieve retained data
+
+You can retrieve data that has been retained using FetchXml and [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
+
+With FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute value to `"retained"`.
+
+```xml
+<fetch datasource="retained">
+   <entity name="account">
+      <attribute name="accountId" />
+   </entity>
+</fetch>
+```
+
+With [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to `retained`.
+
+> [!NOTE]
+> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query-data-web-api.md).
   
 ## Set up a retention policy
 
@@ -37,7 +57,7 @@ public void CreateRetentionConfig(IOrganizationService orgService)
     retentionConfig["uniquename"] = "ui_RetainAllClosedOpportunities";
     retentionConfig["statecode"] = new OptionSetValue(0);
     retentionConfig["statuscode"] = new OptionSetValue(10);
-    retentionConfig["criteria"] = "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\"> " +
+    retentionConfig["criteria"] = "<fetch> " +
         "<entity name=\"opportunity\"> " +
             "<attribute name=\"name\" /> " +
             "<attribute name=\"statecode\" />" +
@@ -88,7 +108,7 @@ Accept: application/json
  "uniquename": "ui_RetainAllClosedOpportunities",
  "statuscode": 10,
  "criteria": 
-      "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">
+      "<fetch>
           <entity name=\"opportunity\">
               <attribute name=\"name\" />
               <attribute name=\"statecode\" />
@@ -302,7 +322,7 @@ This code sample shows a simple query to return all active retention policies fo
 public EntityCollection GetActivePolicies(IOrganizationService orgService)
 {
     string fetchXml = @"
-    <fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+    <fetch>
       <entity name='retentionconfig'>
         <attribute name='retentionconfigid' />
         <attribute name='name' />
@@ -342,7 +362,7 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 This code sample illustrates using a FetchXML statement to retrieve all paused retention policies for an email.  
   
 ```xml  
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+<fetch>
   <entity name="retentionconfig">
     <attribute name="retentionconfigid" />
     <attribute name="name" />
@@ -363,7 +383,7 @@ This code sample illustrates using a FetchXML statement to retrieve all paused r
 This code sample shows how to use a FetchXML statement to retrieve all retention operations for a retention policy.
 
 ```xml  
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+<fetch>
   <entity name="retentionoperation">
     <attribute name="retentionoperationid" />
     <attribute name="name" />
@@ -375,7 +395,10 @@ This code sample shows how to use a FetchXML statement to retrieve all retention
     <attribute name="criteria" />
     <order attribute="name" descending="false" />
     <filter type="and">
-      <condition attribute="retentionconfigid" operator="eq" uiname="All closed opportunities" uitype="retentionconfig" value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}" />
+      <condition 
+         attribute="retentionconfigid" 
+         operator="eq" 
+         value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}" />
     </filter>
   </entity>
 </fetch>
@@ -384,7 +407,7 @@ This code sample shows how to use a FetchXML statement to retrieve all retention
 This code sample shows a FetchXML statement that retrieves details for a retention operation.
 
 ```xml  
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+<fetch>
   <entity name="retentionoperationdetail">
     <attribute name="retentionoperationdetailid" />
     <attribute name="name" />
@@ -396,7 +419,7 @@ This code sample shows a FetchXML statement that retrieves details for a retenti
     <attribute name="entitylogicalname" />
     <order attribute="name" descending="false" />
     <filter type="and">
-      <condition attribute="retentionoperationid" operator="eq"  uitype="retentionoperation" value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}"/>
+      <condition attribute="retentionoperationid" operator="eq" value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}"/>
     </filter>
   </entity>
 </fetch>
@@ -405,7 +428,7 @@ This code sample shows a FetchXML statement that retrieves details for a retenti
 This code sample illustrates the FetchXML statement that retrieves details about a failure that occurred during a retention operation.
 
 ```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+<fetch>
   <entity name="retentionfailuredetail">
     <attribute name="retentionfailuredetailid" />
     <attribute name="name" />
