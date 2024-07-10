@@ -26,16 +26,10 @@ The following table describes the operators and functions you can use in `$filte
 |---------|---------|---------|
 |**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[ Comparison operators](#comparison-operators)|
 |**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
-|**Grouping operators**|Use parentheses: (), to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
+|**Grouping operators**|Use parentheses: `()`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
 |**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
 |**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
 |**Lambda expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
-
-If you're using a [lookup property](../web-api-properties.md#lookup-properties) in a `$filter`, you can also use a [filtered collection](overview.md#filtered-collections) with the corresponding collection-valued navigation property. For example, these two queries return the same results:
-
-`accounts?$filter=_owninguser_value eq '<systemuserid value>'&$select=name`
-
-`systemusers(<systemuserid value>)/user_accounts?$select=name`
 
 ## Comparison operators
 
@@ -70,7 +64,7 @@ The following table describes the logical operators you can use to create more c
 
 ## Grouping operators
 
-Use parentheses () with logical operators to specify the precedence to evaluate a complex expression; for example:
+Use parentheses `()` with logical operators to specify the precedence to evaluate a complex expression; for example:
 
 `$filter=(contains(name,'sample') or contains(name,'test')) and revenue gt 5000`
 
@@ -110,7 +104,7 @@ Keep the following points in mind when you filter on string values:
 
 - All filters using string values are case insensitive.
 - You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
-- You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
+- You may use wildcard characters, but avoid using them incorrectly. More information: [Use wildcard characters](#use-wildcard-characters)
 - You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
 - You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
 
@@ -147,9 +141,9 @@ When composing filters using strings, you can apply the following wildcard chara
 
 More information: [Use wildcard characters in conditions for string values](../../wildcard-characters.md)
 
-#### Trailing wildcards not supported
+#### Leading wildcards not supported
 
-It's important not to use trailing wild cards because they aren't supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of trailing wildcards:
+It's important not to use leading wild cards because they aren't supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of leading wildcards:
 
 ```
 startswith(name,'%value')
@@ -198,20 +192,21 @@ You can filter rows returned based on values in related tables. How you filter d
 
 ### Filter on lookup property
 
-For one-to-many relationships, a filtered collection returns the same results as using an `eq` `$filter` on the [Lookup property](../web-api-properties.md#lookup-properties) for the relationship.
+For one-to-many relationships, a [filtered collection](overview.md#filtered-collections) returns the same results as using an `eq` `$filter` on the [Lookup property](../web-api-properties.md#lookup-properties) for the relationship. For example, this filtered collection:
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
 ```
-Is the same as:
+
+Is the same as this filter on a lookup property.
 
 ```http
-GET [Organization URI]/api/data/v9.2/accounts?$select=name&$filter=_owninguser_value eq <systemuserid value>
+GET [Organization URI]/api/data/v9.2/accounts?$filter=_owninguser_value eq <systemuserid value>&$select=name
 ```
 
 ### Filter using lookup column property values
 
-You can filter based on values in single-valued navigation properties that represent lookup columns. Use this pattern:
+You can filter based on values in [single-valued navigation properties](../web-api-navigation-properties.md#single-valued-navigation-properties) that represent lookup columns. Use this pattern:
 
 `<single-valued navigation property>/<property name>`
 
@@ -250,7 +245,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
-You can also compare values further up the hierarchy of single-valued navigation properties.
+You can also compare values further up the hierarchy of [single-valued navigation properties](../web-api-navigation-properties.md#single-valued-navigation-properties).
 
 The following example returns the first account where the contact record represents the `primarycontactid`, where 'System Administrator' created the record, using `primarycontactid/createdby/fullname` in the `$filter`.
 
@@ -307,7 +302,10 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 Use the *Lambda operators* `any` and `all` to evaluate values in a collection to filter the results.
 
-- `any`: Returns `true` if the expression applied is true for any member of the collection; otherwise, it returns false. The `any` operator without an argument returns `true` if the collection isn't empty.
+- `any`: Returns `true` if the expression applied is true for any member of the collection; otherwise, it returns false.
+
+  - The `any` operator without an argument returns `true` if the collection isn't empty.
+
 - `all`: Returns true if the expression applied is true for all members of the collection; otherwise, it returns false.
 
 The syntax looks like this:
@@ -323,7 +321,7 @@ More information: [Lambda Operators at odata.org](https://www.odata.org/getting-
 
 #### Lambda operator examples
 
-The following example retrieves all account entity records that have at least one email with "sometext" in the subject:
+The following example retrieves all [account](xref:Microsoft.Dynamics.CRM.account) records that have at least one email with "sometext" in the subject:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -333,7 +331,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The following example retrieves all account entity records that have all associated tasks closed:
+The following example retrieves all [account](xref:Microsoft.Dynamics.CRM.account) records that have all associated tasks closed:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -343,7 +341,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The following example retrieves all account entity records that have at least one email with "sometext" in the subject and whose state code is active:
+The following example retrieves all [account](xref:Microsoft.Dynamics.CRM.account) records that have at least one email with "sometext" in the subject and whose state code is active:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -365,6 +363,14 @@ Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
+
+<!--
+
+These are the sections from 
+
+https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/filter-rows
+
+which don't map to OData query building described here.
 
 ## Operator parameters
 
@@ -392,9 +398,25 @@ OData-Version: 4.0
 
 #### `link-type` `not all`
 
-#### `link-type` `all`
+#### `link-type` `all` 
+
+-->
 
 ## Condition limits
+
+<!-- 
+
+TODO Verify this is true for OData as well
+-->
+
+You can include no more than 500 total conditions in a query. Otherwise, you see this error:
+
+> Name: `TooManyConditionsInQuery`<br />
+> Code: `0x8004430C`<br />
+> Number: `-2147204340`<br />
+> Message: `Number of conditions in query exceeded maximum limit.`
+
+You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the [In](xref:Microsoft.Dynamics.CRM.In) or [NotIn](xref:Microsoft.Dynamics.CRM.NotIn) query functions that can be used with numbers, unique identifiers, and strings up to 850 characters.
 
 ## Next steps
 

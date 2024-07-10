@@ -35,9 +35,9 @@ When you order using lookup columns, the results are sorted using the primary na
 When you order using choice columns, the results are ordered using the integer value of the choice.
 
 > [!NOTE]
-> This is different from how choice values are sorted using [FetchXml](../../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../../org-service/queryexpression/order-rows.md#choice-columns).
+> This is different from how choice values are sorted using [FetchXml](../../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../../org-service/queryexpression/order-rows.md#choice-columns). In these cases, the results are sorted by the localized label for the choice.
 > 
-> To order results by choice values with Dataverse Web API, you must use FetchXml to compose the query.
+> To order results by choice labels with Dataverse Web API, you must use FetchXml to compose the query.
 
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
 
