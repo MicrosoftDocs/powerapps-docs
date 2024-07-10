@@ -150,6 +150,8 @@ startswith(name,'%value')
 endswith(name,'value%')
 ```
 
+[Learn more about errors returned when leading wildcards are used](/power-apps/developer/data-platform/webapi/query/optimize-performance#avoid-leading-wild-cards-in-filter-conditions)
+
 ### Use OData query functions
 
 The following table describes the OData query functions you can use to filter on string values:

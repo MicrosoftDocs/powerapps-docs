@@ -70,8 +70,6 @@
     - name: Optimize performance
       displayName: OData, Optimize performance
       href: query/optimize-performance.md
-    - name: Query data OLD
-      href: query-data-web-api.md
     - name: Retrieve and execute predefined queries
       href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row

@@ -14,17 +14,10 @@ contributors:
 ---
 # Optimize performance using OData
 
-This article describes ways you can optimize performance when retrieving data using OData.
+This article describes ways you can optimize performance when retrieving data from Dataverse. These principles apply when using OData as well.
 
 [!INCLUDE [cc-query-antipatterns](../../includes/cc-query-antipatterns.md)]
 
-## Late Materialize query
-
-## Query Hints
-
-## No lock
-
-## Union Hint
 
 ### See also
 

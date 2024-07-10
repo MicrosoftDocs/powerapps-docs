@@ -92,7 +92,7 @@ You can use the following examples to retrieve System Job data.
 
 #### [Web API](#tab/webapi)
 
-Use the following Web API Query to retrieve the columns in the table above. [Learn how to query data using the Web API](webapi/query-data-web-api.md)
+Use the following Web API Query to retrieve the columns in the table above. [Learn how to query data using the Web API](webapi/query/overview.md
 
 ```http
 GET <organization URL>/api/data/v9.2/asyncoperations?$top=1000
@@ -291,7 +291,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn how to query data using the Web API](webapi/query-data-web-api.md)
+[Learn how to query data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -356,7 +356,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn to query data using the Web API](webapi/query-data-web-api.md)
+[Learn to query data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -436,7 +436,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -524,7 +524,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -604,7 +604,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -657,7 +657,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -713,7 +713,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query/overview.md)
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -779,7 +779,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)   
+[Learn to query Data using the Web API](webapi/query/overview.md)   
 
 
 #### [FetchXml](#tab/fetchxml)

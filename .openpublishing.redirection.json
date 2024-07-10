@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md",
+      "redirect_url": "query/overview",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic.md#bypass-power-automate-flows",
       "redirect_url": "bypass-power-automate-flows",
       "redirect_document_id": "false"

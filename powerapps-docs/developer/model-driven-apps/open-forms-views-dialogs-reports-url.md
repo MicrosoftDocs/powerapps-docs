@@ -32,7 +32,7 @@ You can retrieve these values using Web API using the following query:
 GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
 ```
 
-More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
+More information: [Query data using the Web API](../data-platform/webapi/query/overview.md)
 
 You can use either the `appname` or `appid` query parameters with the Unique Name or AppModuleId values respectively, but you can't use both at the same time.
 

@@ -14,7 +14,7 @@ contributors:
 ---
 # Aggregate data using OData
 
-Use the `$apply` option to aggregate and group your data dynamically.
+Use the `$apply` option to aggregate and group your data.
 
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Aggregate data using FetchXml](../../fetchxml/aggregate-data.md).
 
@@ -24,6 +24,8 @@ You can find more information about OData data aggregation here: [OData extensio
 > - `groupby` with datetime values is not supported.
 > 
 > - `$orderby` with aggregate values is not supported. This will return the error: `The query node SingleValueOpenPropertyAccess is not supported`.
+
+## Examples
 
 Following are some examples:
 
@@ -268,9 +270,6 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 }
 ```
 
-
-## Example
-
 ## Distinct column values
 
 OData doesn't have a `$distinct` query option to restrict results to unique values. Instead, use the `$apply` system query option with the `groupby` transformation. This returns distinct values for each property.
@@ -318,13 +317,6 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
-## Grouping
-
-### Grouping by parts of a date
-
-#### Fiscal period date grouping example
-
-
 ## OData aggregation limitations
 
 This section describes capabilities that are available using aggregation with FetchXml that are not currently available using OData.
@@ -342,8 +334,6 @@ Grouping by parts of a date always uses UTC time and there is no way to specify 
 ### Row aggregate
 
 When a table has a [hierarchical relationship defined](../../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate)
-
-
 
 ### Per query limit
 

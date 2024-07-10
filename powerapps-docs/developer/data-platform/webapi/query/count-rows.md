@@ -50,7 +50,10 @@ The response `@odata.count` annotation contains the number of rows, up to 5,000,
 > If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount). 
   
 
-If the count value is 5,000 and you want to know whether the count is exactly 5,000 or greater than 5,000, you can add the following header:
+If the count value is 5,000 and you want to know whether the count is exactly 5,000 or greater than 5,000, you can add the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628) for these annotations:
+
+ - `Microsoft.Dynamics.CRM.totalrecordcount`
+ - `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"
