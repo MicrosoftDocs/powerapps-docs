@@ -18,9 +18,9 @@ search.audienceType:
 ---
 # Work with model-driven app pages
 
-App designer pages are containers for tables, dashboards, custom pages, or web resources. Pages determine your apps assets and navigation. You can choose whether to have the page appear in the app navigation (site map) or not.
+App designer pages are containers for tables, dashboards, custom pages, or web resources. Pages determine your app's assets and navigation. You can choose whether to have the page appear in the app navigation (site map) or not.
 
-:::image type="content" source="media/pages-in-model-driven-app.png" alt-text="Pages in a model-driven app":::
+:::image type="content" source="media/pages-in-model-driven-app.png" alt-text="Pages in a model-driven app" lightbox="media/pages-in-model-driven-app.png":::
 
 ## Create a page
 
@@ -62,9 +62,9 @@ To delete the table, **Close** the table hub, select **...** to the right of the
 
 ### Edit a table view
 
-To edit a view for a table complete these steps:
+To edit a view for a table that's added to your app in a page, complete these steps:
 
-1. Select a page based on a table.
+1. In the model-driven app designer, select a page that is based on a table.
 1. On the command bar, select **Edit view**.
 
 The view designer is displayed where you can edit the table view. More information: [Edit public views from a table](create-or-edit-model-driven-app-view.md#edit-public-views-from-a-table)
@@ -73,7 +73,7 @@ The view designer is displayed where you can edit the table view. More informati
 
 To remove a page, complete these steps:
 
-1. Select a page.
+1. In the model-driven app designer, select a page.
 1. Select the ellipses (**...**), and then select **Remove from navigation**.
 
 ## Next steps
