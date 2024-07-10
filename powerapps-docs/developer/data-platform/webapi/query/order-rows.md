@@ -22,7 +22,26 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$filter=revenue ne null
 ```
 
+## Ordering lookup and choice columns
+
+The data contained by most column types is relatively simple and you can perform sorting operations that make sense. Lookup and choice columns are more complex because the data stored in the database isn't meaningful out of context.
+
+### Lookup Columns
+
+When you order using lookup columns, the results are sorted using the primary name field for the related table. The database stores a GUID value. The [formatted value](select-columns.md#formatted-values) returned is the corresponding primary name field.
+
+### Choice columns
+
+When you order using choice columns, the results are ordered using the integer value of the choice.
+
+> [!NOTE]
+> This is different from how choice values are sorted using [FetchXml](../../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../../org-service/queryexpression/order-rows.md#choice-columns).
+> 
+> To order results by choice values with Dataverse Web API, you must use FetchXml to compose the query.
+
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
+
+<!-- 
 
 ## Descending order
 
@@ -34,7 +53,9 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 
 ### Choice columns
 
-#### Override default choice columns sort order
+#### Override default choice columns sort order 
+
+-->
 
 ## Next steps
 

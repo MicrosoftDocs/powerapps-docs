@@ -19,7 +19,7 @@ contributors:
 
 Use the `$select` [query option](overview.md#odata-query-options) to choose which columns to return with your query. In OData, every column is represented as a [*property*](../web-api-properties.md). If you don't include a `$select` query option, all properties are returned.
 
-The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource:
+The following example requests the `name` and `revenue` properties from the first row of the `accounts` EntitySet resource:
 
 **Request:**
 
@@ -53,7 +53,7 @@ OData-Version: 4.0
 
 The primary key property is always returned so you don't need to include it in your `$select`. In this example, `accountid` is the primary key.
 
-Other property values may also be included. In this case, the `_transactioncurrencyid_value` [lookup property](../web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
+Other property values may also be included in the response. In this case, the `_transactioncurrencyid_value` [lookup property](../web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
 
 ### Which properties are available?
 
@@ -73,7 +73,7 @@ Formatted values are string values generated on the server that you can use in y
 - Currency values with currency symbols
 - Formatted date values in the user's time zone
 
-To include formatted values in your results, use this request header:
+To include formatted values in your results, use the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628)
 
 ```
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
@@ -146,11 +146,11 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 When a [lookup property](../web-api-properties.md#lookup-properties) represents a multi-table, or polymorphic, relationship, you need to request specific annotations to determine which table contains the related data.
 
-For example, many tables have records that users or teams may own. Ownership data is stored in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use the corresponding `_ownerid_value` lookup property with `$select`.
+For example, many tables have records that users or teams may own. Ownership data is stored in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use `$select` to get the corresponding `_ownerid_value` lookup property.
 
 When you include the `_ownerid_value` lookup property with your `$select`, it returns a GUID value. This value doesn't tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
 
-To include these annotations in your results, use this request header:
+To include these annotations in your results, use the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628) with these settings:
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
@@ -170,7 +170,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
 
-The following response returns two different account records. A `team` owns the first one, and a `systemuser` owns the second one. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation provides this information.
+The following response returns two different account records. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation tells you that a `team` owns the first one, and a `systemuser` owns the second one.
 
 **Response:**
 

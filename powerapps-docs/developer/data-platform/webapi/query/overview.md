@@ -19,7 +19,7 @@ Every query begins with a collection of entities. Entity collections can be:
 - [EntitySet resources](#entityset-resources): One of the Web API `EntitySet` collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](../web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
 - [An expanded collection-valued navigation property](join-tables.md#expand-collection-valued-navigation-properties).
-- A collection returned by a function. Some functions are composable, which means you can apply `$select` or `$filter` system query options to limit the results returned. More information: [Composable functions](../use-web-api-functions.md#composable-functions)
+- [A collection returned by a function](../use-web-api-functions.md#composable-functions).
 
 ## `EntitySet` resources
 
@@ -65,17 +65,17 @@ OData-Version: 4.0
 ```
 
 > [!TIP]
-> These values are usually the plural name of the table, but they can be different. Use this query to confirm you're using the correct EntitySet resource name.
+> These values are usually the plural name of the table, but they can be different. Use the results of this request to confirm you're using the correct `EntitySet` resource name.
 
 For example, start with the `accounts` EntitySet resource to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account).
 
 ```http
-GET [Organization URI]/api/data/v9.2/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts
 ```
 
 ## Filtered collections
 
-You can query any collection of entities represented by a collection-valued navigation property of a specified record. For example, if you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+You can query any collection of entities represented by a collection-valued navigation property of a specified record. For example, if you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account) where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 
 ```http
@@ -158,18 +158,18 @@ Use these options to change the results returned from a collection. The followin
 |`$orderby`|Request resources in a particular order. |[Order rows](order-rows.md)|
 |`$filter`|Filter a collection of resources. |[Filter rows](filter-rows.md)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](aggregate-data.md)|
-|`$top`|Specify the number of items in the queried collection to be included in the result. [Limit the number of rows](#limit-the-number-of-rows)|
+|`$top`|Specify the number of items in the queried collection to be included in the result. |[Limit the number of rows](#limit-the-number-of-rows)|
 |`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](count-rows.md)|
 
 To apply multiple options, separate query options from the resource path with a question mark (`?`). Separate each option after the first with an ampersand (`&`). Option names are case-sensitive.
 
-### URL length limitations
-
-The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../compose-http-requests-handle-errors.md#maximum-url-length). Including many complex OData query options as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the OData query options out of the URL and into the body of the request where the limit is twice as long. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. [Learn more about batch operations using the Web API](../execute-batch-operations-using-web-api.md).
-
 ### Unsupported OData query options
 
 The Dataverse Web API doesn't support the following [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
+
+### URL length limitations
+
+The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../compose-http-requests-handle-errors.md#maximum-url-length). Including many complex OData query options as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the OData query options out of the URL and into the body of the request where the limit is twice as long. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. [Learn more about batch operations using the Web API](../execute-batch-operations-using-web-api.md).
 
 ## Limit the number of rows
 
@@ -199,13 +199,11 @@ This seems to be no problem:
    }
 -->
 
-
-
-
 ## Limitations
 
 There are some things that you can do using FetchXml that OData doesn't support.
 
+- You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables using navigation properties that are part of the relationships in the data model.
 - [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
 
   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
@@ -214,7 +212,7 @@ There are some things that you can do using FetchXml that OData doesn't support.
   - [Per query limit](aggregate-data.md#per-query-limit)
 
 - [Perform cross table column comparisons](../../fetchxml/filter-rows.md#cross-table-column-comparisons).
-   `QueryExpression` supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
+   OData supports [filtering on column values in the same row](filter-rows.md#filter-on-column-values-in-the-same-row), but they must be in the same table.
 - [You can't override the default sort order for choice columns](../../fetchxml/order-rows.md#override-default-choice-columns-sort-order)
 - You can't use the [Late Materialize query](../../fetchxml/optimize-performance.md#late-materialize-query) performance optimization.
 

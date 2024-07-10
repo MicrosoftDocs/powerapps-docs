@@ -17,18 +17,18 @@ contributors:
 To control what data is returned from related table records, use the `$expand` [query option](overview.md#odata-query-options) with navigation properties.
 
 - You can include up to 15 `$expand` options in a query. Each `$expand` option creates a join that can affect performance.
-- Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](../compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+- Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. [Learn more about using HTTP Headers](../compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
 The following table describes the [query options](overview.md#odata-query-options) you can apply in certain `$expand` options:
 
 
-|Option|Description|
-|---------|---------|
-|`$select`|Select which properties are returned. More information: [Select columns](select-columns.md)|
-|`$filter`|For collection-valued navigation properties, limit the records returned. More information: [Filter rows](filter-rows.md)|
-|`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
-|`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
-|`$expand`|Expand navigation properties in the related entity set. Using `$expand` in an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|Option|Description|More information|
+|---------|---------|---------|
+|`$select`|Select which properties are returned.|[Select columns](select-columns.md)|
+|`$filter`|For collection-valued navigation properties, limit the records returned. |[Filter rows](filter-rows.md)|
+|`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. |[Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. |[Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|`$expand`|Expand navigation properties in the related entity set. Using `$expand` in an `$expand` is called a *nested `$expand`*. |[Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) and [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 
 These options are a subset of the query options described in [OData Version 4.0 Part 1: Protocol Plus Errata 02 11.2.4.2.1 Expand Options](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398299). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Dataverse Web API.
 
@@ -98,15 +98,15 @@ Preference-Applied: odata.maxpagesize=1
 
 ## Navigation property type differences
 
-It's important to remember there are two types of navigation properties. More information: [Web API Navigation Properties](../web-api-navigation-properties.md)  
+It's important to remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
   
 - *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. More information: [Page results](page-results.md)
+Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
 
-There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
+There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
 ## Expand single-valued navigation properties
 
@@ -170,7 +170,7 @@ OData-Version: 4.0
 
 The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
 
-However, the [User (SystemUser) table](../../reference/entities/systemuser.md) has the primary key of [SystemUserId](../../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](../web-api-entitytypes.md#entitytype-inheritance)
+However, the [User (SystemUser) table](../../reference/entities/systemuser.md) has the primary key of [SystemUserId](../../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. [Learn more about EntityType inheritance](../web-api-entitytypes.md#entitytype-inheritance)
 
 ### Return references
 
@@ -247,6 +247,7 @@ GET [Organization URI]/api/data/v9.2/tasks?$select=subject
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
+Prefer: odata.maxpagesize=2
 ```
 
 **Response:**
@@ -456,35 +457,48 @@ OData-Version: 4.0
 }
 ```
 
-Compare this response with the previous example, which doesn't use a nested `$expand`. In this response, the `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. Only one task is returned instead of three. The `Account_Tasks@odata.nextLink` URL returns the next two tasks. Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
+Compare this response with the previous example, which doesn't use a nested `$expand`. In this response:
 
-## Limitations
+- The `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. 
+- Only one task is returned instead of three.
+- The `Account_Tasks@odata.nextLink` URL returns the next two tasks. 
+- Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
 
-## Child elements
+<!-- 
 
-## Many-to-one relationships
+These are sections found in the fetchxml/join-tables.md file, but don't have any equivilent section here.
+See https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/join-tables
+The nature of the joining a table is different, so it needs to be described differently. But it is worth thinking about whether these sections contain information that is also relevant for OData.
 
-### Retrieve relationship information
+   ## Limitations
 
-## One-to-many relationships
+   ## Child elements
 
-## Many-to-many relationships
+   ## Many-to-one relationships
 
-## No relationship
+   ### Retrieve relationship information
 
-## Find records not in a set
+   ## One-to-many relationships
 
-## Use advanced link types
+   ## Many-to-many relationships
 
-### Use `exists` or `in` link types
+   ## No relationship
 
-#### `exists`
+   ## Find records not in a set
 
-#### `in`
+   ## Use advanced link types
 
-### Use `matchfirstrowusingcrossapply` link type
+   ### Use `exists` or `in` link types
 
-#### Related table property/attribute names are inconsistent
+   #### `exists`
+
+   #### `in`
+
+   ### Use `matchfirstrowusingcrossapply` link type
+
+   #### Related table property/attribute names are inconsistent 
+
+-->
 
 ## Next steps
 
