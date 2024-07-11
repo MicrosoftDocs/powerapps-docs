@@ -164,7 +164,7 @@ This section creates a single contact then performs a series of updates upon tha
    ```  
     
    > [!IMPORTANT]
-   >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query-data-web-api.md).  
+   >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query/overview.md).  
   
 1. Update the contact instance by supplying new values to these same properties.  
   
