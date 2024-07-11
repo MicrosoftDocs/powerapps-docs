@@ -4,7 +4,7 @@ description: Troubleshooting and known issues for the Power Apps mobile app
 author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2023
+ms.date: 07/11/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -146,7 +146,7 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
   
  **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
  
- If the user has the Global Administrator or Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you may notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
+ If the user has the Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you may notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
  
 Access the **Active** users section in the admin center and verify you have a **Dynamics 365 Customer Engagement Plan** license assigned to your user record.  
   
