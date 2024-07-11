@@ -26,7 +26,7 @@ There are two types of workflows:
 > [!IMPORTANT]
 > There are better ways to create modern automations. Consider using Power Automate flows to automate your processes. More information: [Power Automate](/power-automate/)
 
-1. Create a solution or open and existing one.
+1. Create a solution or open an existing one.
 1. Select **New** > **Automation** > **Process** > **Workflow**.
 1. Enter a **Display name**, select a **Table**, and then clear the **Run workflow in the background** option.
 1. Select **Create**.
