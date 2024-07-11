@@ -37,7 +37,7 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
    > ![Add a Teams meeting to an appointment.](media/teams-meeting-appt-1.png)  
 4. When you're done, select **Save**.
 > [!NOTE]
-> It may take a couple of minutes for the meeting to sync with Outlook and for the meeting link to appear in the appoitnment.
+> It may take a couple of minutes for the meeting to sync with Outlook and for the meeting link to appear in the appointment.
 
 ## Join a Teams meeting from an appointment
 

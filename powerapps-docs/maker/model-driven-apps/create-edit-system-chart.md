@@ -41,7 +41,7 @@ In this article you learn how to create a system chart. System charts are organi
    - Enter the chart name, such as *Number of employees by account*.
    - In the **Select Column** dropdowns:
       -  In the **Legend Entries (Series)** dropdown list select a column, such as **Number of Employees**.
-      - In the **Horizonal (Category) Axis** dropdown list select a column, such as **Account Name**.
+      - In the **Horizontal (Category) Axis** dropdown list select a column, such as **Account Name**.
 
    -   Add a description to identify the purpose of the chart, such as *This column chart displays the number of employees by account name*.
 

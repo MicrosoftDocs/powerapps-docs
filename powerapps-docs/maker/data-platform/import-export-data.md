@@ -21,7 +21,7 @@ Microsoft Dataverse is a SaaS data platform that helps you easily create and man
 
 ![Shape Description automatically generated](media/ppp-main.png)
 
-Data required by apps and processes doen't often originate from or reside within Dataverse. Mashing up external data with Dataverse is an essential component in building apps, adding data to existing apps, and creating valuable insights. With the proliferation of big data and the ever-multiplying types of data sources, such as AI, ML, IoT, web commerce, web API, services, ERP and line of business apps require Dataverse customers to be agile with using this variety of data.
+Data required by apps and processes doesn't often originate from or reside within Dataverse. Mashing up external data with Dataverse is an essential component in building apps, adding data to existing apps, and creating valuable insights. With the proliferation of big data and the ever-multiplying types of data sources, such as AI, ML, IoT, web commerce, web API, services, ERP and line of business apps require Dataverse customers to be agile with using this variety of data.
 
 There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Synapse Link, Azure Data Factory, Azure Logic Apps, and Power Automate.
 

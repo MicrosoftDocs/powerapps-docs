@@ -149,7 +149,7 @@ When configured, the dropdown column headers surface a **Group by** option. This
 When configured, the dropdown column headers surface a **Totals** option in numeric columns. This allows you to surface an aggregate calculation in the grid footer for the data in this column. You can choose between showing a sum, the maximum value, the minimum value, or the average value. If the data in the grid has been grouped, the aggregate is calculated and displayed for each group.  
 
 > [!NOTE]
-> Aggretations aren't saved to a view.  
+> Aggregations aren't saved to a view.  
 
 ## Jump bar
 
