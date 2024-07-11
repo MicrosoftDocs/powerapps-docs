@@ -48,7 +48,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 ### Language Support
 
-The following table lists the languages available for the Explain a formula feature, which is based on the settings in your Power Platform environment and browser settings.
+The following table lists the languages available for the Explain a formula feature, which is based on the settings in your Power Platform environment and browser.
 
 | **Name**                           | **Language Code** | 
 |------------------------------------|-------------------|
