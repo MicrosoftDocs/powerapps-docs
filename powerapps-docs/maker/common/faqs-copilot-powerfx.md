@@ -1,7 +1,7 @@
 ---
 title: FAQs about using Copilot with Power Fx
 description: FAQ that discusses Copilot and Power Fx
-ms.date: 4/23/2024
+ms.date: 7/15/2024
 ms.custom:
   - transparency-note
 ms.topic: article
@@ -33,7 +33,7 @@ Power Apps Studio has several features to help makers understand and write Power
 
 ## What languages are supported?
 
-Because Power Fx can be used across many different features, each Generally Available feature may have a different set of supported languages the meet Microsoft's responsible AI standards. For details on language support for specific features see the documentation for that feature.
+Because Power Fx can be used across many different features, each generally available (GA) feature may have a different set of supported languages the meet Microsoft's responsible AI standards. For details on language support for specific features see, [Create Power Fx formulas with Copilot](../canvas-apps/ai-formulas-formulabar.md#language-support)
 
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
@@ -43,7 +43,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 ## What are the limitations of Power Fx with Copilot? How can users minimize the impact of Power Fx Copilot limitations when using the system?
 
 - Named Formulas and User Defined Functions can't be generated with Copilot at this time.
-- Variables have to be in use (declared) already for Copilot to use them, it does not introduce new variables.
+- Variables have to be in use (declared) already for Copilot to use them, it doesn't introduce new variables.
 - Preview features aren't meant for production use and might restrict functionality. These features are available before an official release so that customers can get early access and provide feedback. 
 - More information available in [preview terms](https://go.microsoft.com/fwlink/?linkid=2173149). 
 - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 

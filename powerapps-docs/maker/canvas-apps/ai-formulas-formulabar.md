@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/2/2024
+ms.date: 7/15/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -48,7 +48,31 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 ### Language Support
 
-Explain a formula currently supports the following languages as selected in the Platform and Browser settings:  en-US, ja-JP, es-ES, pt-BR, de-DE, fr-FR, nl-NL, zh-Hans, it-IT, pl-PL, da-DK, cs-CZ, el-GR, fi-FI, ko-KR, nb-NO, ru-RU, sv-SE, th-TH, & tr-TR
+The following table lists the languages available for the Explain a formula feature, which is based on the settings in your Power Platform environment and browser settings.
+
+| **Name**                           | **Language Code** | 
+|------------------------------------|-------------------|
+| English                            | en-US             |
+| Chinese (simplified) - China       | zh-Hans           | 
+| Czech - Czech Republic             | cs-CZ             |
+| Danish - Denmark                   | da-DK             |
+| Dutch - Netherlands                | nl-NL             |
+| Finnish - Finland                  | fi-FI             |
+| French - France                    | fr-FR             | 
+| German - Germany                   | de-DE             | 
+| Greek - Greece                     | el-GR             |
+| Italian - Italy                    | it-IT             |
+| Japanese - Japan                   | ja-JP             |
+| Korean - Korea                     | ko-KR             |
+| Norwegian (Bokmål) - Norway        | nb-NO             |
+| Polish - Poland                    | pl-PL             |
+| Portuguese - Brazil                | pt-BR             |
+| Russian - Russia                   | ru-RU             |
+| Spanish (Traditional Sort) - Spain | es-ES             |
+| Swedish - Sweden                   | sv-SE             |
+| Thai - Thailand                    | th-TH             |
+| Turkish - Türkiye                  | tr-TR             |
+
 
 ### Known Limitations
 - There's a 5,000 character limit for formula explanations.
