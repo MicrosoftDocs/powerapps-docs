@@ -34,7 +34,7 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 
 **Visible** - Whether a control appears or is hidden.
 
-## Add a icon to a button control
+## Add an icon to a button control
 
 The button control now includes subset of Fluent icons. The following properties have been introduced:
 
