@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 7/10/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -34,10 +34,12 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 
 **Visible** - Whether a control appears or is hidden.
 
-## Adding icon to button control
-Button control is now enhanced to support subset of fluent icons. We have introduced below properties:
+## Add a icon to a button control
 
-**Icon** - Allows the inclusion of Fluent icons within the button for visual enhancement. In properties panel, you can select the icon through dropdown menu showcasing available icons:
+The button control now includes subset of Fluent icons. The following properties have been introduced:
+
+**Icon** - The button control now allows you to enhance its visual appeal by including Fluent icons. In the properties pane, select the desired icon from a dropdown menu that displays all available options.
+
 > [!div class="mx-imgBorder"]
 > ![List of icons](media/Icons-List.png)
 
