@@ -332,7 +332,7 @@ To use Insomnia to retrieve records, you must set the [entity set name](web-api-
    > [!NOTE]
    > These results include many *annotation values* such as `@OData.Community.Display.V1.FormattedValue` because the `Prefer: odata.include-annotations="*"` request header set in [Send a WhoAmI request](#send-a-whoami-request) is set to return all annotations. [Learn how to request specific annotations](compose-http-requests-handle-errors.md#request-annotations)
 
-[Learn more about how to query data](query-data-web-api.md)
+[Learn more about how to query data](query/overview.md)
 
 ## Create a record
 

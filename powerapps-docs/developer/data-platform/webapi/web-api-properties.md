@@ -77,7 +77,7 @@ Some properties use the following naming convention: `_<name>_value`. These prop
 
 OData represents lookup columns as [Single-valued navigation properties](web-api-navigation-properties.md#single-valued-navigation-properties) rather than properties. Dataverse provides lookup properties to simplify scenarios to retrieve data using the primary key of a related record. To change the value of a lookup property, you must change the single-valued navigation property that it represents. More information: [Lookup properties](web-api-navigation-properties.md#lookup-properties)
 
-When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes that aren't represented by a single-valued navigation property. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
+When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes that aren't represented by a single-valued navigation property. More information: [Lookup property data](query/select-columns.md#lookup-property-data)
 
 ## Next steps
 
