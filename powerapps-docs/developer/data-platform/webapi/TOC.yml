@@ -43,8 +43,33 @@
     href: compose-http-requests-handle-errors.md
   - name: Query Data with Web API
     items:
-    - name: Query data
-      href: query-data-web-api.md
+    - name: Overview
+      displayName: OData
+      href: query/overview.md
+    - name: Select columns
+      displayName: OData, Select columns
+      href: query/select-columns.md
+    - name: Join tables
+      displayName: OData, Join tables
+      href: query/join-tables.md
+    - name: Order rows
+      displayName: OData, Order rows
+      href: query/order-rows.md
+    - name: Filter rows
+      displayName: OData, Filter rows
+      href: query/filter-rows.md
+    - name: Page results
+      displayName: OData, Page results
+      href: query/page-results.md
+    - name: Aggregate data
+      displayName: OData, Aggregate data
+      href: query/aggregate-data.md
+    - name: Count rows
+      displayName: OData, Count rows
+      href: query/count-rows.md
+    - name: Optimize performance
+      displayName: OData, Optimize performance
+      href: query/optimize-performance.md
     - name: Retrieve and execute predefined queries
       href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row

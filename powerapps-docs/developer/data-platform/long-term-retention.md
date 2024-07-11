@@ -37,7 +37,7 @@ With FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource`
 With [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to `retained`.
 
 > [!NOTE]
-> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query-data-web-api.md).
+> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query/overview.md).
   
 ## Set up a retention policy
 

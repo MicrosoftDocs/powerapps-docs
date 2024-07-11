@@ -313,7 +313,7 @@ You can use the following Web API query to return failed system jobs for asynchr
 GET <your org uri>/api/data/v9.0/asyncoperations?$filter=operationtype eq 1 and statuscode eq 31&$select=name,message
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 Or use the following FetchXml:
 
