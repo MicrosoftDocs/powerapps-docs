@@ -29,6 +29,5 @@ This article describes ways you can optimize performance when retrieving data fr
 [Page results using OData](page-results.md)   
 [Aggregate data using OData](aggregate-data.md)   
 [Count rows using OData](count-rows.md)  
-[OData query sample code](sample.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
