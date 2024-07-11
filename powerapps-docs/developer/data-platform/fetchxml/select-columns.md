@@ -163,7 +163,7 @@ These values may not be the user-friendly values you need to display in an appli
 
 - The `accountclassificationcode` choice column returns the integer value.
 - The SDK reference to `createdby` must use the [EntityReference.Name property](xref:Microsoft.Xrm.Sdk.EntityReference.Name)
-- The Web API returns the `_createdby_value` [Lookup property](../webapi/query-data-web-api.md#lookup-property-data) that has the GUID value for the `createdby` lookup column.
+- The Web API returns the `_createdby_value` [Lookup property](../webapi/query/select-columns.md#lookup-property-data) that has the GUID value for the `createdby` lookup column.
 
 To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse.
 
@@ -358,7 +358,7 @@ static List<string> GetRowValues(List<string> columns, JsonObject record)
 Learn more about formatted values:
 
 - [SDK for .NET Query data:Formatted values](../org-service/entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
-- [Web API Query data: Formatted values](../webapi/query-data-web-api.md#formatted-values)
+- [Web API Query data: Formatted values](../webapi/query/select-columns.md#formatted-values)
 
 
 ## Column aliases
