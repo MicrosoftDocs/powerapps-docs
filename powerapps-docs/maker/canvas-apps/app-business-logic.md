@@ -44,7 +44,7 @@ There are a range of capabilities available through Power Platform that enable m
 
 ### Low latency use cases
 
-**Power Fx excels in delivering low latency for Power Apps**, making it the go to choice for developing responsive business logic. However, the actual latency experienced can vary based on the complexity of the operations and the volume of data being processed. It's crucial to understand that while Power Fx can facilitate swift interactions, the design, and objectives of your application play a pivotal role in its overall performance. For deeper insights, refer to [Performance considerations with PowerApps](https://powerapps.microsoft.com/en-us/blog/performance-considerations-with-powerapps/).
+**Power Fx excels in delivering low latency for Power Apps**, making it the go to choice for developing responsive business logic. However, the actual latency experienced can vary based on the complexity of the operations and the volume of data being processed. It's crucial to understand that while Power Fx can facilitate swift interactions, the design, and objectives of your application play a pivotal role in its overall performance. For more information, see [Performance considerations with Power Apps](https://powerapps.microsoft.com/en-us/blog/performance-considerations-with-powerapps/).
 
 When it comes to accessing data efficiently, the combination of Dataverse and Power Fx offers the quickest solution.
 
