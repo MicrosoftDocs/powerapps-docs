@@ -48,16 +48,9 @@ There are a range of capabilities available through Power Platform that enable m
 
 When it comes to accessing data efficiently, the combination of Dataverse and Power Fx offers the quickest solution.
 
-
-![](media/image1.png)
-
 ### Complex sequences and multi-connector
 
 When dealing with complex sequences of action that span various connectors, **Power Automate serves as an effective asynchronous solution to delegate processing away from the Power App**. This asynchronous capability lets Power Apps kick off a workflow and proceed with other tasks without having to pause for a response.
-
-![A diagram of a software project Description automatically generated](media/image2.png)
-
-&lt;more to add here&gt;
 
 ## Designing app experiences around inherent task latency
 
