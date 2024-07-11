@@ -209,7 +209,8 @@ OData-Version: 4.0
 ```
 
 
-If you want to retrieve grouped rows based on a specific field without aggregating them, you need to select distinct rows. However, Cosmos DB SQL API does not support the traditional DISTINCT keyword in the same way as SQL Server or other RDBMS.
+Note:
+Cosmos DB SQL API does not support the traditional DISTINCT keyword in the same way as SQL Server or other RDBMS.
 
 ---
 
