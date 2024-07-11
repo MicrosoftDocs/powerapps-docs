@@ -36,7 +36,7 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 
 ## Add an icon to a button control
 
-The button control now includes subset of Fluent icons. The following properties have been introduced:
+The button control now includes subset of Fluent icons. The following properties are available:
 
 **Icon** - The button control now allows you to enhance its visual appeal by including Fluent icons. In the properties pane, select the desired icon from a dropdown menu that displays all available options.
 
