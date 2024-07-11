@@ -1,0 +1,68 @@
+---
+title: Guidance for building power apps business logic 
+description: Guidance for building power apps business logic.
+author: mduelae
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: benapple
+ms.date: 07/11/2024
+ms.subservice: canvas-maker
+ms.author: benapple
+search.audienceType: 
+  - maker
+contributors:
+  - mduelae
+  - benapple
+---
+
+# Guidance for building power apps business logic 
+
+There are a range of capabilities available through Power Platform that enable makers to create business logic for their Power Apps. Below are the primary methods along with guidance to determine which one to use:
+
+**Power Apps with Power Fx** – Power Fx is the low code functional programming language shared by Excel and Power Platform. Combined with Power Platform connectors, makers can access data as well as create custom app logic. Power Fx supports the following characteristics:
+
+1. **Live** – Canvas Power Apps "recalc" just as Excel spreadsheets do. As the end user interacts with the app, Power Fx is in the background making data requests and keeping the state of the app up to date with Dataverse.
+
+2. **Delegation** – Power Fx automatically "delegates" what it can to the server. Functions such as Filter(), Lookup(), and Search() can enable an app to access to data using server side filtering, so that only sufficient data is brought into the app to support the experience and functional logic. Where delegation is not possible, functions execute in the local JavaScript context (i.e. in the local browser).
+
+3. **Optimized for Dataverse** – Dataverse is the native data storage service for Power Apps and as such there are fewer layers involved in using Power Fx in conjunction with Dataverse (which means low latency access). In addition, Power Fx supports the various many to one and one to many relationships available in Dataverse.
+
+4. **Offline** – Dataverse data can be taken offline with a mobile player for use in the field. Changes on both sides are synced when reconnected. Business logic defined in the app is run even when offline.
+
+**Power Automate** – A low code workflow service built on top of the Power Platform connector ecosystem. Power Automate adds the following capabilities when building Power Apps:
+
+1. **Asynchronous** – A Power Automate cloud flow is inherently asynchronous. This means that when a flow is initiated, it is leveraging a queuing system to manage the various subtasks. The asynchronous nature of Power Automate means that it is well suited for longer running complex sequences of logic.
+
+2. **Detailed logging** – All flows create a record of what happened when they executed, called the "Run History". This provides traceability and ensures there's an auditing record for what happened and why.
+
+3. **Multi-connector** – Although it is possible to create multi-connector Power Apps logic, due to the live nature of Power Apps, as you increase the number of connectors performance will degrade. These complex multi-connector scenarios are a great place to leverage Power Automate which can offload these cases from live execution in the app.
+
+## When should you use Power Fx vs Power Automate in Power Apps?
+
+**Power Fx in the app should be the <u>default</u> mechanism used for building Power App business logic** - Like any tool however there are sweet spots and break points where it makes sense to leverage other tools in the toolbox.
+
+### Low Latency Use Cases
+
+If **low latency** in a Power App is the focus, the live nature of a Power Fx function means that you have the **best ability to deliver low latency business logic via Power Fx**. Achieving low latency depends significantly on the complexity of the task and size of the dataset involved. It is therefore important to highlight, that although you can achieve low latency through Power Fx, what you're trying to do and how it's been designed will have a significant bearing on the performance realized. Additional guidance available [here](https://powerapps.microsoft.com/en-us/blog/performance-considerations-with-powerapps/).
+
+For common data access scenarios, Dataverse combined with Power Fx is going to be the fastest approach.
+
+![](media/image1.png)
+
+### Complex sequences & multi-connector
+
+For **complex sequences** of actions, across multiple connectors, **then Power Automate is an asynchronous mechanism to offload processing from the Power App**. In addition, the asynchronous nature of Power Automate allows the Power App to initiate a workflow and enable the experience to move on without waiting for a response.
+
+![A diagram of a software project Description automatically generated](media/image2.png)
+
+&lt;more to add here&gt;
+
+## Designing App Experiences Around Inherent Task Latency
+
+Designing the experience to factor in latency associated with complex tasks
+
+Two paths:
+
+1.  Hold the experience until it completes – this requires a progress experience
+
+2.  Build the complex task in Power Automate and release the experience
