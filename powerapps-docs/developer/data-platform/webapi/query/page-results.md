@@ -1,7 +1,7 @@
 ---
 title: Page results using OData
 description: Learn how to use OData to page results when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -108,30 +108,10 @@ The following example returns just the first three account rows:
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
+
 <!-- 
-## Paging models
-
-## Simple paging
-
-## Paging cookies
-
-### Queries that don't support paging cookies
-
-## Paging cookie examples
-
-### First Page
-
-### Following Pages
-
-### Last Page
-
-### Web API paging example 
-
--->
-<!-- 
-TODO: Add a RetrieveAll example similar to the FetchXml example here:
+TODO: Add a PowerShell RetrieveAll example similar to the FetchXml example here:
 https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/page-results?tabs=webapi#web-api-paging-example 
-
 -->
 
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]

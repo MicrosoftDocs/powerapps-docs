@@ -1,7 +1,7 @@
 ---
 title: Filter rows using OData
 description: Learn how to use OData to filter rows when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -24,7 +24,7 @@ The following table describes the operators and functions you can use in `$filte
 
 | |Description| More information|
 |---------|---------|---------|
-|**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[ Comparison operators](#comparison-operators)|
+|**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[Comparison operators](#comparison-operators)|
 |**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
 |**Grouping operators**|Use parentheses: `()`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
 |**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
@@ -366,50 +366,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-<!--
-
-These are the sections from 
-
-https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/filter-rows
-
-which don't map to OData query building described here.
-
-## Operator parameters
-
-### No parameters
-
-### Single parameter
-
-### Multiple parameters
-
-## Filters on link-entity
-
-## Filter on column values in the same row
-
-### Cross table column comparisons
-
-### Limitations on column comparison filters
-
-## Filter on values in related records
-
-### Examples of filters on values in related records
-
-#### Or filter with `link-type` `any`
-
-#### `link-type` `not any`
-
-#### `link-type` `not all`
-
-#### `link-type` `all` 
-
--->
-
 ## Condition limits
-
-<!-- 
-
-TODO Verify this is true for OData as well
--->
 
 You can include no more than 500 total conditions in a query. Otherwise, you see this error:
 

@@ -1,7 +1,7 @@
 ---
 title: Count rows using OData
 description: Learn how to use OData to count rows from Microsoft Dataverse tables using Dataverse Web API.
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly

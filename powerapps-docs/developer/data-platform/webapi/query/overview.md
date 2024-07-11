@@ -1,7 +1,7 @@
 ---
 title: Use OData to query data
 description: Learn to compose a query using OData with Microsoft Dataverse Web API
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -198,28 +198,6 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 rows.
 
 Alternatively, specify a number of records to return using paging. Don't use `$top` when you request pages of data. [Learn how to request paged results](page-results.md)
-
-<!-- 
-You can't use `$top` when you request a count of rows using the `$count=true` query option. [Learn to count rows](count-rows.md) 
-
-I tested this. 
-Unlike Fetchxml & QE 
-This seems to be no problem:
-
-   GET accounts?$select=name&$count=true&$top=1
-
-   {
-      "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
-      "@odata.count": 248,
-      "value": [
-         {
-            "@odata.etag": "W/\"112430907\"",
-            "name": "New Name",
-            "accountid": "4b757ff7-9c85-ee11-8179-000d3a9933c9"
-         }
-      ]
-   }
--->
 
 ## Limitations
 

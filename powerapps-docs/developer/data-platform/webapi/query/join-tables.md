@@ -1,7 +1,7 @@
 ---
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -463,42 +463,6 @@ Compare this response with the previous example, which doesn't use a nested `$ex
 - Only one task is returned instead of three.
 - The `Account_Tasks@odata.nextLink` URL returns the next two tasks. 
 - Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
-
-<!-- 
-
-These are sections found in the fetchxml/join-tables.md file, but don't have any equivilent section here.
-See https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/join-tables
-The nature of the joining a table is different, so it needs to be described differently. But it is worth thinking about whether these sections contain information that is also relevant for OData.
-
-   ## Limitations
-
-   ## Child elements
-
-   ## Many-to-one relationships
-
-   ### Retrieve relationship information
-
-   ## One-to-many relationships
-
-   ## Many-to-many relationships
-
-   ## No relationship
-
-   ## Find records not in a set
-
-   ## Use advanced link types
-
-   ### Use `exists` or `in` link types
-
-   #### `exists`
-
-   #### `in`
-
-   ### Use `matchfirstrowusingcrossapply` link type
-
-   #### Related table property/attribute names are inconsistent 
-
--->
 
 ## Next steps
 

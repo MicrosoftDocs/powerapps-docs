@@ -1,7 +1,7 @@
 ---
 title: Order rows using OData
 description: Learn how to use OData to order rows when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -41,21 +41,6 @@ When you order using choice columns, the results are ordered using the integer v
 
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
 
-<!-- 
-
-## Descending order
-
-## Process `link-entity` orders first
-
-## Ordering lookup and choice columns
-
-### Lookup Columns
-
-### Choice columns
-
-#### Override default choice columns sort order 
-
--->
 
 ## Next steps
 
