@@ -122,7 +122,7 @@ Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’
 1.	Sign in to [https://portal.azure.com](https://portal.azure.com). 
 2.	Search for **Microsoft Entra ID**.
 3.	[Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user). 
-4.	[Assign an Azure Active directory role](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you can to assign the [Microsoft Power Platform or the Dynamics 365](/power-platform/guidance/adoption/pp-admin) admin role your Microsoft Account has in Microsoft Entra ID.
+4.	[Assign an Azure Active directory role](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you must assign the same admin role as your Microsoft Account has in Microsoft Entra ID, such as [Power Platform or Dynamics 365](/power-platform/guidance/adoption/pp-admin) admin.
 
 ### The free license assigned to my Microsoft Account expired, how can I access Power Apps? 
 If your Microsoft Account is associated with an Microsoft Entra tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
