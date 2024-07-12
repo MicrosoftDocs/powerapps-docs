@@ -5,7 +5,7 @@ author: pankajarora-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 07/01/2024
 ms.author: pankar
 ms.reviewer: tapanm
 ---
@@ -244,7 +244,7 @@ This section provides information on how you can use the **Regional Emergency Re
 
 #### Prerequisites
 
--   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
+-   You must have Power BI Pro license to configure and publish report.
 
 -   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces)
 
@@ -350,8 +350,6 @@ This section provides information on how you can use the **Regional Emergency Re
 In this step, we will embed the Power BI report (published in the previous step) to your portal.
 
 ### Prerequisites
-
-- You must have Global Admin role to perform this step.
 
 - Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](../../maker/portals/admin/admin-overview.md).
 

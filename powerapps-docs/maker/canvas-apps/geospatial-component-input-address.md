@@ -56,7 +56,7 @@ You can add a button to your app to save entered addresses as a data collection.
     The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
 
 
-    ```powerapps-dot
+    ```power-fx
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 

@@ -59,7 +59,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
 1. Select the Advanced tab and change the **OnMixedRealitySelect** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(colMRMeasurements, Self.Measurements);  
     ClearCollect(colMRPhotos, Self.Photos)  
     ```
@@ -101,7 +101,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
 1. Change the **Text** property of the label to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     "Area: " & If(IsEmpty(colMRMeasurements), "no area measured", First(colMRMeasurements).Area & " sq. " & First(colMRMeasurements).Unit)
     ```
 

@@ -5,7 +5,7 @@ author: pankajarora-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 07/01/2024
 ms.author: pankar
 ms.reviewer: tapanm
 ---
@@ -18,8 +18,7 @@ If you are installing this solution for the first time, see [Deploy the solution
 
 ## Prerequisites
 
-- Ensure that you have the Global Admin credentials and environment details where
-    the Regional Government Emergency Response and Monitoring solution is deployed currently.
+- Ensure that you have the environment details where the Regional Government Emergency Response and Monitoring solution is deployed currently.
 
 -   Ensure all users are disconnected from your environment before you upgrade. You might have to plan the upgrade process at a time when there is minimal obstructions for your users.   
 

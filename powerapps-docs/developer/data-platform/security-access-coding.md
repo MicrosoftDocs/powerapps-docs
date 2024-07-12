@@ -458,7 +458,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Filtered collections](webapi/query-data-web-api.md#filtered-collections)
+More information: [Filtered collections](webapi/query/overview.md#filtered-collections)
 
 ---
 
