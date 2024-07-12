@@ -17,7 +17,7 @@ contributors:
 
 # Guidance for building Power Apps business logic 
 
-There are a range of capabilities available through Power Platform that enable makers to create business logic for Power Apps. The following outline the primary methods along with guidance to determine which one to use:
+Power Platform offers a variety of capabilities for makers to build business logic for Power Apps. The following provides an overview of the main methods and offers guidance to help determine the most suitable approach:
 
 **Power Apps with Power Fx** – Power Fx is the low code functional programming language shared by Excel and Power Platform. When used with Power Platform connectors, makers can access data and create custom app logic. Power Fx supports the following characteristics:
 
