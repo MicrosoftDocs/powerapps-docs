@@ -21,7 +21,7 @@ contributors:
 Microsoft Copilot Studio empowers makers to create their own custom Copilots with AI. In a few steps, you can add your custom Copilot across all your canvas app screens without modifying your app's design. You can use this feature both on the web and through the Power Apps mobile app.
 
 > [!IMPORTANT]
-> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
+> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
 > - You must allow data movement across regions, for generative AI features, as a prerequisite to use copilots in Power Apps. This step is important if your organization and your environment are in different regions. For more information, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot\#enable-data-movement-across-regions).
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
@@ -70,4 +70,4 @@ When previewing an app in Power Apps Studio, Copilot is not displayed. To see Co
 
 ## See Also
 
-[FAQ for Copilot](microsoft-copilot-studio/faqs-copilot)
+[FAQ for Copilot](/microsoft-copilot-studio/faqs-copilot)
