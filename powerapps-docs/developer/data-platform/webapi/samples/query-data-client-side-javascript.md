@@ -762,7 +762,7 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 ### See also
 
 [Use the Dataverse Web API](../overview.md)<br />
-[Query Data using the Web API](../query-data-web-api.md)<br />
+[Query Data using the Web API](../query/overview.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Query Data Sample](../web-api-query-data-sample.md)<br />
 [Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />

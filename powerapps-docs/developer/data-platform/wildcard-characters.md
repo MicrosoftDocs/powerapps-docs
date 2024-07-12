@@ -49,7 +49,7 @@ More information: [Filter rows using QueryExpression](org-service/queryexpressio
 `endswith`<br/>
 `not endswith`<br/>
 
-More information: [Use OData query functions](webapi/query-data-web-api.md#use-odata-query-functions)
+More information: [Use OData query functions](webapi/query/filter-rows.md#use-odata-query-functions)
 
 ---
 
@@ -118,6 +118,6 @@ Don't use leading wild cards in expressions using `like`, `startswith`, `not sta
 
 [Filter rows using FetchXml](fetchxml/filter-rows.md)   
 [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)   
-[Query data using the Web API](webapi/query-data-web-api.md)
+[Query data using the Web API](webapi/query/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
