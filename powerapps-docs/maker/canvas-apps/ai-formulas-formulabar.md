@@ -87,15 +87,6 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 - User defined functions aren't supported.
 - This feature isn't available in the Canada region.
 
-### Disable Copilot comment generated formulas
-
- Copilot comment generated formulas can be disabled from app settings.
-
-- Go to **Settings** > **Upcoming features**. Set the toggle to **Off** for **Copilot comment-generated formulas**.
-
-> [!NOTE]
-> You won't be able to disable **Copilot comment generated formulas** when it's generally available.
-
 ### Language Support
 
 The following table lists the languages available for the formula bar copilot features, which is based on the settings in your Power Platform environment and browser.
@@ -123,6 +114,15 @@ The following table lists the languages available for the formula bar copilot fe
 | Thai - Thailand                    | th-TH             | Explain a formula                             |
 | Turkish - Türkiye                  | tr-TR             | Explain a formula                             |
 
+
+## Disable Copilot comment generated formulas
+
+ Copilot comment generated formulas can be disabled from app settings.
+
+- Go to **Settings** > **Upcoming features**. Set the toggle to **Off** for **Copilot comment-generated formulas**.
+
+> [!NOTE]
+> You won't be able to disable **Copilot comment generated formulas** when it's generally available.
 
 
 ## Responsible AI
