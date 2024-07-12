@@ -50,7 +50,7 @@ This article shows you how to delete a canvas app.
 
 ## Delete an app as the administrator
 
-If owner of an app is unavailable, an administrator such as Global admin, Microsoft Entra Global admin, or Dynamics 365 admin can set the owner of an app. And then, the [new owner can delete the app](#delete-an-app-as-the-owner).
+If owner of an app is unavailable, a [Power Platform or Dynamics 365](/power-platform/guidance/adoption/pp-admin) admin can set the owner of an app. And then, the [new owner can delete the app](#delete-an-app-as-the-owner).
 
 To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell).
 
