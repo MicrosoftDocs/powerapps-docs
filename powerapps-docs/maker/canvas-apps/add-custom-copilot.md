@@ -21,7 +21,7 @@ contributors:
 Microsoft Copilot Studio empowers makers to create their own custom Copilots with AI. In a few steps, you can add your custom Copilot across all your canvas app screens without modifying your app's design. You can use this feature both on the web and through the Power Apps mobile app.
 
 > [!IMPORTANT]
-> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region.
+> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on Power Apps mobile for mobile devices before it becomes available on the web browser during rollout.
 > - You must allow data movement across regions, for generative AI features, as a prerequisite to use copilots in Power Apps. This step is important if your organization and your environment are in different regions. For more information, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot\#enable-data-movement-across-regions).
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
@@ -55,6 +55,8 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. After choosing a copilot, close the settings dialog box and publish the app. App users are able to use App Copilot in the app.
 
+When previewing an app in Power Apps Studio, Copilot is not displayed. To see Copilot in action, you need to save and publish your app, and then open it in Power Apps mobile or the web browser.
+
 > [!TIP]
 > Removing the custom Copilot from the app disables the functionality.
 
@@ -64,4 +66,8 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
    :::image type="content" source="media/add-custom-copilot/copilot-chat-in-app.png" alt-text="Screenshot that shows the Copilot chat in the app." lightbox="media/add-custom-copilot/copilot-chat-in-app.png":::
 
-- In Power Apps mobile running on iOS or Android devices, select the floating button to access App Copilot. You can move the button around or dismiss it. To use App Copilot after dismissing it, close and reopen the app. 
+- In Power Apps mobile running on iOS or Android devices, select the floating button to access App Copilot. You can move the button around or dismiss it. To use App Copilot after dismissing it, close and reopen the app.
+
+## See Also
+
+[FAQ for Copilot](microsoft-copilot-studio/faqs-copilot)
