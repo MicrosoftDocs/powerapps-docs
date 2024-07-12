@@ -46,33 +46,6 @@ Use Copilot in the formula bar to understand what a formula is doing.
     When Copilot provides an explanation of the formula, you can copy and insert it as a code comment or share it with other makers who are working on the same app.
 :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Formula explanation":::
 
-### Language Support
-
-The following table lists the languages available for the Explain a formula feature, which is based on the settings in your Power Platform environment and browser.
-
-| **Name**                           | **Language Code** | 
-|------------------------------------|-------------------|
-| English                            | en-US             |
-| Chinese (simplified) - China       | zh-Hans           | 
-| Czech - Czech Republic             | cs-CZ             |
-| Danish - Denmark                   | da-DK             |
-| Dutch - Netherlands                | nl-NL             |
-| Finnish - Finland                  | fi-FI             |
-| French - France                    | fr-FR             | 
-| German - Germany                   | de-DE             | 
-| Greek - Greece                     | el-GR             |
-| Italian - Italy                    | it-IT             |
-| Japanese - Japan                   | ja-JP             |
-| Korean - Korea                     | ko-KR             |
-| Norwegian (Bokmål) - Norway        | nb-NO             |
-| Polish - Poland                    | pl-PL             |
-| Portuguese - Brazil                | pt-BR             |
-| Russian - Russia                   | ru-RU             |
-| Spanish (Traditional Sort) - Spain | es-ES             |
-| Swedish - Sweden                   | sv-SE             |
-| Thai - Thailand                    | th-TH             |
-| Turkish - Türkiye                  | tr-TR             |
-
 
 ### Known Limitations
 - There's a 5,000 character limit for formula explanations.
@@ -122,6 +95,35 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 > [!NOTE]
 > You won't be able to disable **Copilot comment generated formulas** when it's generally available.
+
+### Language Support
+
+The following table lists the languages available for the formula bar copilot features, which is based on the settings in your Power Platform environment and browser.
+
+| **Name**                           | **Language Code** | **Functionality Supported**                   |
+|------------------------------------|-------------------|-----------------------------------------------|
+| English                            | en-US             | Explain a formula, Comment generated formulas |
+| Chinese (simplified) - China       | zh-Hans           | Explain a formula                             |
+| Czech - Czech Republic             | cs-CZ             | Explain a formula                             |
+| Danish - Denmark                   | da-DK             | Explain a formula                             |
+| Dutch - Netherlands                | nl-NL             | Explain a formula                             |
+| Finnish - Finland                  | fi-FI             | Explain a formula                             |
+| French - France                    | fr-FR             | Explain a formula                             |
+| German - Germany                   | de-DE             | Explain a formula                             |
+| Greek - Greece                     | el-GR             | Explain a formula                             |
+| Italian - Italy                    | it-IT             | Explain a formula                             |
+| Japanese - Japan                   | ja-JP             | Explain a formula                             |
+| Korean - Korea                     | ko-KR             | Explain a formula                             |
+| Norwegian (Bokmål) - Norway        | nb-NO             | Explain a formula                             |
+| Polish - Poland                    | pl-PL             | Explain a formula                             |
+| Portuguese - Brazil                | pt-BR             | Explain a formula                             |
+| Russian - Russia                   | ru-RU             | Explain a formula                             |
+| Spanish (Traditional Sort) - Spain | es-ES             | Explain a formula                             |
+| Swedish - Sweden                   | sv-SE             | Explain a formula                             |
+| Thai - Thailand                    | th-TH             | Explain a formula                             |
+| Turkish - Türkiye                  | tr-TR             | Explain a formula                             |
+
+
 
 ## Responsible AI
 
