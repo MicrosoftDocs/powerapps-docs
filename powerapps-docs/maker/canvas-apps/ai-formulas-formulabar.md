@@ -89,7 +89,7 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 
 
 
-## Disable Copilot comment generated formulas
+### Disable Copilot comment generated formulas
 
  Copilot comment generated formulas can be disabled from app settings.
 
