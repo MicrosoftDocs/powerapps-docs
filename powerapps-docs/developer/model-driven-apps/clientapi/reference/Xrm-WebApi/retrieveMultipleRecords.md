@@ -102,7 +102,7 @@ The following table lists more operations supported for each attribute type:
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -548,12 +548,12 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 });
 ```
 
-For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
+For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md).
 
  
 ### Related articles
 
-[Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)<br />
+[Query Data using the Web API](../../../../data-platform/webapi/query/overview.md)<br />
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)
 

@@ -93,6 +93,8 @@
         href: clientapi/reference/events/attribute-onchange.md
       - name: Form OnLoad event
         href: clientapi/reference/events/form-onload.md
+      - name: Form Loaded event
+        href: clientapi/reference/events/form-loaded.md
       - name: Form OnSave event
         href: clientapi/reference/events/form-onsave.md
       - name: Form data OnLoad event
@@ -502,6 +504,8 @@
       items:
       - name: addOnLoad
         href: clientapi/reference/formcontext-ui/addOnLoad.md
+      - name: addLoaded
+        href: clientapi/reference/formcontext-ui/addloaded.md
       - name: clearFormNotification
         href: clientapi/reference/formcontext-ui/clearFormNotification.md
       - name: close
@@ -516,6 +520,8 @@
         href: clientapi/reference/formcontext-ui/refreshRibbon.md
       - name: removeOnLoad
         href: clientapi/reference/formcontext-ui/removeOnLoad.md
+      - name: removeLoaded
+        href: clientapi/reference/formcontext-ui/removeloaded.md
       - name: setFormEntityName
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification

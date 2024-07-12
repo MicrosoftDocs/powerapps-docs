@@ -289,7 +289,7 @@ More information: [Choosing a PartitionId value](../elastic-tables.md#choosing-a
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
+[Query Data using the Web API](query/overview.md)<br />
 [Create a table row using the Web API](create-entity-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
