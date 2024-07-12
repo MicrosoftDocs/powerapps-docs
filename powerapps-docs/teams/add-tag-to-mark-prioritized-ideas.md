@@ -1,5 +1,5 @@
 ---
-title: How to add tag to mark prioritized ideas in the Employee ideas app (contains video)
+title: How to add tag to mark prioritized ideas in the Employee ideas app
 description: Learn about how to customize the employee ideas app to mark prioritized ideas.
 author: sbahl10
 
@@ -116,7 +116,7 @@ All the changes to the Manage Ideas app are completed. The app can now be publis
 
 1. To update the label text to indicate that the idea is prioritized, update the **Text** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Concatenate(
     
     gblRecordCampaignIdea.'Owning User'.'Full Name',

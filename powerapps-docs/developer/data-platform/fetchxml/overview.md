@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to query data
 description: Learn to compose a query using FetchXml, a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-ms.date: 02/29/2024
+ms.date: 03/05/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -90,7 +90,7 @@ You also use FetchXml as a parameter for Dataverse operations such as the follow
 |`BackgroundSendEmail`|[BackgroundSendEmailRequest](xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest)|[BackgroundSendEmail action](xref:Microsoft.Dynamics.CRM.BackgroundSendEmail)|
 |`BulkDetectDuplicates`|[BulkDetectDuplicatesRequest](xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest)|[BulkDetectDuplicates action](xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates)|
 |`FullTextSearchKnowledgeArticle`|[FullTextSearchKnowledgeArticleRequest](xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest)|[FullTextSearchKnowledgeArticle action](xref:Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle)|
-|`QueryExpressionToFetchXml`|[QueryExpressionToFetchXmlRequest](xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest)|[QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml)|
+|`FetchXmlToQueryExpression`|[FetchXmlToQueryExpressionRequest](xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest)|[FetchXmlToQueryExpression Function](xref:Microsoft.Dynamics.CRM.FetchXmlToQueryExpression)|
 |`SendBulkMail`|[SendBulkMailRequest](xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest)|[SendBulkMail action](xref:Microsoft.Dynamics.CRM.SendBulkMail)|
 |`Rollup`|[RollupRequest](xref:Microsoft.Crm.Sdk.Messages.RollupRequest)|[Rollup function](xref:Microsoft.Dynamics.CRM.Rollup)|
 

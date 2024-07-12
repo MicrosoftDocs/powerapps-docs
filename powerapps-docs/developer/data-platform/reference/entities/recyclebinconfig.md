@@ -1,7 +1,7 @@
 ---
-title: "Recycle Bin Configuration (RecycleBinConfig)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Recycle Bin Configuration (RecycleBinConfig)  table/entity."
-ms.date: 02/22/2024
+title: "Restore Deleted Records Configuration (RecycleBinConfig)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Restore Deleted Records Configuration (RecycleBinConfig)  table/entity."
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,12 +11,12 @@ search.audienceType:
   - developer
 ---
 
-# Recycle Bin Configuration (RecycleBinConfig)  table/entity reference
+# Restore Deleted Records Configuration (RecycleBinConfig)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds recyclebin configuration for entities
+Holds Restore Deleted Records configuration for entities
 
 **Added by**: RecycleBin Base Components Solution
 
@@ -27,7 +27,7 @@ Holds recyclebin configuration for entities
 |-|-|-|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /recyclebinconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /recyclebinconfigs(*recyclebinconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
@@ -37,7 +37,7 @@ Holds recyclebin configuration for entities
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /recyclebinconfigs(*recyclebinconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /recyclebinconfigs(*recyclebinconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -45,8 +45,8 @@ Holds recyclebin configuration for entities
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|RecycleBinConfigs|
-|DisplayCollectionName|Recycle Bin Configurations|
-|DisplayName|Recycle Bin Configuration|
+|DisplayCollectionName|Restore Deleted Records Configurations|
+|DisplayName|Restore Deleted Records Configuration|
 |EntitySetName|recyclebinconfigs|
 |IsBPFEntity|False|
 |LogicalCollectionName|recyclebinconfigs|
@@ -98,8 +98,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The metadata for RecycleBin.|
-|DisplayName|Metadata For RecycleBin|
+|Description|The metadata for Entity.|
+|DisplayName|Metadata For Entity|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -147,8 +147,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Is ready for recycle bin.|
-|DisplayName|Is ready for recycle bin.|
+|Description|Is Ready (Create Synchronously).|
+|DisplayName|Is Ready (Create Synchronously).|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|isreadyforrecyclebin|
@@ -203,7 +203,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for entity instances|
-|DisplayName|RecycleBinConfigId|
+|DisplayName|Restore Deleted Records Configuration|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -216,7 +216,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the Recycle Bin Configuration|
+|Description|Status of the Restore Deleted Records Configuration|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -238,7 +238,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the Recycle Bin Configuration|
+|Description|Reason for the status of the Restore Deleted Records Configuration|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|

@@ -1,19 +1,20 @@
 ---
 title: Solutions in Power Apps
 description: Provides an overview of solutions in Power Apps
-ms.date: 05/04/2023
-ms.reviewer: angieandrews
+ms.date: 06/05/2024
+ms.reviewer: matp
 ms.topic: overview
-author: "Mattp123"
+author: "shmcarth"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
 ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
+contributors: v-aangie
 ---
    
-# Solutions overview  
+# Solutions in Power Apps overview  
 
 Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, choices, flows, and more.
 
@@ -22,11 +23,12 @@ Solutions are the mechanism for implementing application lifecycle management (A
 > [!NOTE]
 > To learn more about the solution concepts and how solutions are used for application lifecycle management, go to [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
-This section will focus on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
+This section focuses on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
 
 ## Get started: solution concepts
 
 Before you work with solutions, it's important that you get acquainted with the following solution concepts:
+
 - Two types of solutions (managed and unmanaged)
 - Solution components
 - Lifecycle of a solution (create, update, upgrade, and patch a solution)
@@ -46,35 +48,57 @@ However, we recommend that you create a solution to manage your customizations. 
 
 ## Managed properties
 
-You can control which of your managed solution components are customizable by using managed properties. We recommend that you set managed properties so that your managed components can’t be modified. This helps protect your solution from modifications that may cause it to break after it's imported into another environment, such as test or production. 
+You can control which of your managed solution components are customizable by using managed properties. We recommend that you set managed properties so that your managed components can’t be modified. This helps protect your solution from modifications that might cause it to break after it's imported into another environment, such as test or production. 
 
 More information: [Managed properties in the Power Platform](/power-platform/alm/managed-properties-alm)
 
 ## Work with solutions in Power Apps
 
- Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can perform these solution tasks: 
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can perform these solution tasks:
+
 - **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
 - **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
 - **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
-- **Publish all customizations**: Publish all active customizations in your environment. 
+- **Publish all customizations**: Publish all active customizations in your environment.
+- **Set preferred solution**: Set your [preferred solution](preferred-solution.md) where all solution components are created in.
 - **Switch to classic**: Open the classic solution explorer. 
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+- **Solution checker**: Run or review results of [solution checker](use-powerapps-checker.md) for this solution.
+- **Show dependencies**: [View solution dependencies](view-component-dependencies.md) for solutions that would block uninstall of this solution.
+- **Apply Upgrade**: [Apply a pending upgrade](update-solutions.md#apply-the-upgrade-or-update-in-the-target-environment) that has been initiated for a managed solution.
 
-    > [!div class="mx-imgBorder"]
-    > ![Solutions area.](media/solutions-area-tasks.png)
+Tasks available with no solution selected include: New solution, Import solution, Open AppSource, Publish all customizations, Set preferred solution.
 
-From the **Solutions** area, select a solution to view all of its components. 
- 
-> [!div class="mx-imgBorder"]  
-> ![Demo solution with all components.](media/solution-all-items-list.PNG "Demo solution with all components")   
- 
- You can browse through all the components in a solution by scrolling through the items. If there are more than 100 items in the list you can select **Load the next 100 items** to see more.
- 
-> [!div class="mx-imgBorder"]  
-> ![Load more components.](media/load-more.PNG "Load more components")  
+:::image type="content" source="media/solutions-area-tasks.png" alt-text="Commands available when a solution isn't selected." lightbox="media/solutions-area-tasks.png":::
 
- ## Search and filter in a solution
-  You can also search for a specific component by its name. 
+Tasks available with a solution selected include: New solution, Edit, Delete, Export solution, Solution checker, Show dependencies, Set preferred solution, See history, Clone, Apply Upgrade (when upgrade is available).
+
+:::image type="content" source="media/solutions-area-tasks-selected.png" alt-text="Commands available when solution is selected." lightbox="media/solutions-area-tasks-selected.png":::
+
+From the **Solutions** area, select a solution to view all of its objects. 
+
+:::image type="content" source="media/solution-all-items-list.png" alt-text="Example solution with all objects.":::
+
+Browse through all the objects in a solution by scrolling through the items. If there are more than 100 items in the list, you can select **Load the next 100 items** to see more.
+
+:::image type="content" source="media/load-more.png" alt-text="Load next 100 items.":::
+
+Columns can be sorted and filtered by selecting the column header.
+
+Column headers include:
+
+- **Managed**: The solution object is from a managed solution. You can inspect the object by selecting the item and then select **Advanced** > **See solution layers**.
+- **Customizable**: The component is available to be customized.
+- **Customized**: This indicates that the object is an unmanaged object, or a managed object with an unmanaged customization layer.  You can use this column to quickly locate the unmanaged changes you have for components in the solution.
+- **Owner**: If the solution object supports user and team ownership, the current owner is displayed.
+- **Status**: If the solution object supports state management (on/off, enabled/disabled, active/inactive), the status is displayed.
+
+> [!TIP]
+> You can quickly locate all solution objects that are unmanaged or have unmanaged customizations by selecting the default solution and filtering on the **Customized** column.
+
+## Search and filter in a solution
+
+Search for a specific component by its name.
  
 > [!div class="mx-imgBorder"]  
 > ![Search component.](media/solution-search-box.png "Search component")  
@@ -86,12 +110,12 @@ From the **Solutions** area, select a solution to view all of its components.
 
  ## Contextual commands
 
- As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
+ As you select each component, the actions available in the command bar changes depending on the type of the component you have selected and if the solution is the default or a managed one. 
 
 > [!div class="mx-imgBorder"]  
 > ![Component specific commands.](media/component-commands.png "Component specific commands")  
 
- When you don't select any component, the command bar will show actions applied to the solution itself. 
+ When you don't select any component, the command bar shows actions applied to the solution itself. 
  
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands.](media/solution-commands.PNG "Solution specific commands")  
@@ -104,7 +128,7 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 
 ## Additional privileges required
 
-Some components may require certain Dataverse privileges for users to run the component when the component is imported into the environment from a  solution.
+Some components might require certain Dataverse privileges for users to run the component when the component is imported into the environment from a  solution.
 
 ### Flows
 
@@ -124,7 +148,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Canvas apps shared with **Everyone** that go through environment backup and environment restore operations aren't shared with **Everyone** in the restored environment. Notice that the canvas app can be shared with a security group, and the app in the restored environment is shared with that security group.  
 - Solution cloud flows using the [Project Roadmap](/connectors/projectroadmap/) connector or using delegated authorization can't be added into solutions yet. The workaround for this limitation is to edit the flow to remove the Project Roadmap connector usage and/or delegated authorization, add the flow into a solution, and then change the flow back as needed.
   
-To learn more about customizing the individual components in a solution, go to the following topics:  
+To learn more about customizing the individual components in a solution, go to the following articles:  
   
 - For table, table relationships, column and message customizations, go to [Metadata](create-edit-metadata.md).  
 - For table forms, go to [Forms](../model-driven-apps/create-design-forms.md).  

@@ -1,7 +1,7 @@
 ---
 title: "Component Version (Internal) (componentversionnrddatasource)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Component Version (Internal) (componentversionnrddatasource)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,18 +25,16 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /componentversionnrddatasourceset<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET /componentversionnrddatasourceset<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |Update|PATCH /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -49,7 +47,7 @@ search.audienceType:
 |IsBPFEntity|False|
 |LogicalCollectionName|componentversionnrddatasourceset|
 |LogicalName|componentversionnrddatasource|
-|OwnershipType|UserOwned|
+|OwnershipType|None|
 |PrimaryIdAttribute|componentversionnrddatasourceid|
 |PrimaryNameAttribute|componentversionname|
 |SchemaName|componentversionnrddatasource|
@@ -68,8 +66,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Operation](#BKMK_Operation)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwnerId](#BKMK_OwnerId)
-- [OwnerIdType](#BKMK_OwnerIdType)
 - [PartitionId](#BKMK_PartitionId)
 - [RestoredFromVersion](#BKMK_RestoredFromVersion)
 - [restoredfromversionPId](#BKMK_restoredfromversionPId)
@@ -212,37 +208,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
-### <a name="BKMK_OwnerId"></a> OwnerId
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|ownerid|
-|RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
-|Type|Owner|
-
-
-### <a name="BKMK_OwnerIdType"></a> OwnerIdType
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owneridtype|
-|RequiredLevel|SystemRequired|
-|Type|EntityName|
-
-
 ### <a name="BKMK_PartitionId"></a> PartitionId
 
 |Property|Value|
@@ -345,10 +310,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [OwnerIdName](#BKMK_OwnerIdName)
-- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [Payload](#BKMK_Payload)
@@ -627,40 +591,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_OwnerIdName"></a> OwnerIdName
+### <a name="BKMK_OwnerId"></a> OwnerId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Name of the owner|
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
+|Description|Owner Id|
+|DisplayName|Owner|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|ownerid|
 |RequiredLevel|SystemRequired|
-|Type|String|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
-### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Yomi name of the owner|
+|Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
-|Type|String|
+|Type|EntityName|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
@@ -679,24 +638,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
@@ -709,7 +650,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|owningteam|
 |RequiredLevel|None|
-|Targets|team|
+|Targets||
 |Type|Lookup|
 
 
@@ -725,7 +666,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|owninguser|
 |RequiredLevel|None|
-|Targets|systemuser|
+|Targets||
 |Type|Lookup|
 
 
@@ -841,9 +782,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_componentversionnrddatasource_createdonbehalfby](#BKMK_lk_componentversionnrddatasource_createdonbehalfby)
 - [lk_componentversionnrddatasource_modifiedby](#BKMK_lk_componentversionnrddatasource_modifiedby)
 - [lk_componentversionnrddatasource_modifiedonbehalfby](#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby)
-- [user_componentversionnrddatasource](#BKMK_user_componentversionnrddatasource)
-- [team_componentversionnrddatasource](#BKMK_team_componentversionnrddatasource)
-- [business_unit_componentversionnrddatasource](#BKMK_business_unit_componentversionnrddatasource)
 - [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
 - [nrd_restoreversions](#BKMK_nrd_restoreversions)
 - [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
@@ -872,24 +810,6 @@ See the [lk_componentversionnrddatasource_modifiedby](systemuser.md#BKMK_lk_comp
 **Added by**: System Solution Solution
 
 See the [lk_componentversionnrddatasource_modifiedonbehalfby](systemuser.md#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_componentversionnrddatasource"></a> user_componentversionnrddatasource
-
-**Added by**: System Solution Solution
-
-See the [user_componentversionnrddatasource](systemuser.md#BKMK_user_componentversionnrddatasource) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_componentversionnrddatasource"></a> team_componentversionnrddatasource
-
-**Added by**: System Solution Solution
-
-See the [team_componentversionnrddatasource](team.md#BKMK_team_componentversionnrddatasource) one-to-many relationship for the [team](team.md) table/entity.
-
-### <a name="BKMK_business_unit_componentversionnrddatasource"></a> business_unit_componentversionnrddatasource
-
-**Added by**: System Solution Solution
-
-See the [business_unit_componentversionnrddatasource](businessunit.md#BKMK_business_unit_componentversionnrddatasource) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
 

@@ -78,7 +78,7 @@ Unified Interface replaced the legacy web client for model-driven apps. Unified 
 [Sample: Modify query in PreOperation stage](../../org-service/samples/modify-query-preoperation-stage.md)<br />
 [Query data using the SDK for .NET](../../org-service/entity-operations-query-data.md)<br />
 [Query data using FetchXml](../../fetchxml/overview.md)<br />
-[Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
+[Build queries with QueryExpression](../../org-service/queryexpression/overview.md)<br />
 [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)<br />
 [Unified Interface Community](https://community.dynamics.com/forums/thread/?discussionforumid=bc304ecc-c131-4b63-92dd-7464bba3ce3b)
 

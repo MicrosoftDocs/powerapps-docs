@@ -1,7 +1,7 @@
 ---
 title: FAQ for building apps and tables through conversation
 description: FAQ that discusses building apps through conversation and the key considerations for making use of this technology responsibly.
-ms.date: 6/16/2023
+ms.date: 5/2/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -59,7 +59,7 @@ The following are requirements to access this feature:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
 
-For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
+For more information, see [Copilot in Power Apps overview](../canvas-apps/ai-overview.md) 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 

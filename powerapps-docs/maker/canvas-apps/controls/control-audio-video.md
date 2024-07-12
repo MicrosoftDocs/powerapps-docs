@@ -14,7 +14,7 @@ contributors:
   - mduelae
   - yogeshgupta698
 ---
-# Audio and Video controls in Power Apps (retired)
+# Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description

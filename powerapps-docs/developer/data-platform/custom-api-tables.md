@@ -38,7 +38,7 @@ You can use the following queries to retrieve data about custom APIs.
 
 # [Web API](#tab/webapi)
 
- More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+ More information: [Query Data using the Web API](webapi/query/overview.md)
 
 ```http
 GET [Organization URI]/api/data/v9.1/customapis?$select=
@@ -81,7 +81,7 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
 
 # [QueryExpression](#tab/queryexpression)
 
-More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 ```csharp
 string conn = $@"

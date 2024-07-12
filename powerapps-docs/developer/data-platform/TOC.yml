@@ -120,12 +120,29 @@
         - name: Sample code
           displayName: FetchXml, Sample code
           href: fetchxml/sample.md
+    - name: Query using wildcard characters
+      href: wildcard-characters.md
+    - name: Query throttling
+      href: query-throttling.md
+    - name: Query Hierarchical data
+      href: query-hierarchical-data.md
+    - name: Quick find
+      href: quick-find.md
+    - name: Saved Queries
+      href: saved-queries.md
+    - name: "Use SQL to query data"
+      href: dataverse-sql-query.md
+    - name: "Dataverse SQL"
+      href: how-dataverse-sql-differs-from-transact-sql.md
     - name: Bulk Operation messages
       displayName: CreateMultiple, UpdateMultiple, UpsertMultiple
       href: bulk-operations.md
       items:
         - name: Use DeleteMultiple (preview)
           href: deletemultiple.md
+    - name: Restore deleted records (preview)
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -142,32 +159,18 @@
               href: create-custom-api-solution.md
             - name: CustomAPI Tables
               href: custom-api-tables.md
+            - name: Use open types with custom APIs
+              href: use-open-types.md
             - name: "Sample: IsSystemAdmin custom API plug-in"
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
             - Name: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in"
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with custom APIs
-      href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Quick find
-      href: quick-find.md
-    - name: "Use SQL to query data"
-      href: dataverse-sql-query.md
-    - name: "Dataverse SQL"
-      href: how-dataverse-sql-differs-from-transact-sql.md
-    - name: Saved Queries
-      href: saved-queries.md
-    - name: Query using wildcard characters
-      href: wildcard-characters.md
-    - name: Query throttling
-      href: query-throttling.md
-    - name: Query Hierarchical data
-      href: query-hierarchical-data.md
     - name: Files and images overview
       href: files-images-overview.md
       items:
@@ -177,6 +180,9 @@
           href: image-column-data.md
         - name: Use Attachments and Annotations
           href: attachment-annotation-files.md
+        - name: Create link to download file
+          displayName: getFileSasUrl
+          href: getfilesasurl.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -207,7 +213,11 @@
     - name: Service protection API limits
       href: api-limits.md
     - name: Bypass Custom Business logic
-      href: bypass-custom-business-logic.md
+      items:
+      - name: Bypass Custom Dataverse logic
+        href: bypass-custom-business-logic.md
+      - name: Bypass Power Automate flows
+        href: bypass-power-automate-flows.md
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
@@ -341,6 +351,9 @@
   items:
     - name: Customer tables
       href: customer-entities-account-contact.md
+    - name: Environment settings
+      displayName: Organization table
+      href: organization-table.md
     - name: Activity tables
       href: activity-entities.md
       items:
@@ -350,7 +363,7 @@
           href: custom-activities.md
         - name: Email activity tables
           href: email-activity-entities.md
-        - name: Task, fax, phone call, and letter activity tables
+        - name: Activity tables for tasks, faxes, phone calls, and letters
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
@@ -379,7 +392,7 @@
       href: apply-slas-entities.md
     - name: Transaction Currency (currency) table
       href: transaction-currency-currency-entity.md
-    - name: Category table
+    - name: Structure Dataverse data with nested categories
       href: use-category-entity.md
     - name: Catalog & CatalogAssignment
       href: catalog-catalogassignment.md

@@ -47,7 +47,7 @@ Let's get started and define our first AI plugin. In this example, we're going t
 
 You can create a custom API using the Power Apps. More information: [Create a custom API in Power Apps](../../developer/data-platform/create-custom-api-maker-portal.md)
 
-The plugin infrastructure currently supports only custom APIs with 'IsFunction=False' and 'IsPrivate=False'. Hence, ensure that your custom API isn't a function or private API. At this point, you can test your custom API using an API client like Postman or [Insomnia](../../developer/data-platform/webapi/insomnia.md)
+The plugin infrastructure currently supports only custom APIs with 'IsFunction=False' and 'IsPrivate=False'. Hence, ensure that your custom API isn't a function or private API. At this point, you can test your custom API using an API client like [Insomnia](../../developer/data-platform/webapi/insomnia.md)
 
 ### Step 2 – Define AI plugin
 

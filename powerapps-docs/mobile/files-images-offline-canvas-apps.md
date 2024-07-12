@@ -23,7 +23,7 @@ This article explains how to configure files and images in a Power Apps table fo
 
 ## Prerequisites
 
-- Have an existing canvas with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
+Have an existing canvas app with Dataverse tables. For more information, see [Build an app](../maker/canvas-apps/getting-started.md#build-an-app).
 
 ### View column properties for a file or image
 
@@ -65,7 +65,7 @@ The remainder of this article helps you configure on sync.
 
 ### Prerequisites - mobile offline profile
 
-To configure the automatic download of files and images on sync, you need to  [create a mobile offline profile](canvas-mobile-offline-setup.md#create-a-mobile-offline-profile) in the Power Platform admin center.
+To configure the automatic download of files and images on sync, you need to [create a cusotm, mobile offline profile](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) in the Power Platform admin center.
 
 ### Enable offline access to images and files
 

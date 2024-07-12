@@ -1,7 +1,7 @@
 ---
 title: "Scalable Customization Design: Overview (Microsoft Dataverse) | Microsoft Docs"
 description: "The first in a series of articles. This article introduces symptoms that can appear when code customizations aren't optimized and the constraints that code customizations must operate within to avoid them. "
-ms.date: 06/23/2023
+ms.date: 04/23/2024
 ms.reviewer: pehecke
 ms.topic: overview
 author: rogergilchrist # GitHub ID
@@ -14,6 +14,8 @@ search.audienceType:
 > [!NOTE]
 > This is the first in a series of articles about scalable customization design. While this content has been divided into separate articles, it presents a wholistic view of concepts, issues, and strategies surrounding the design of scalable customizations. Each article builds upon concepts established in preceding articles.
 > You can download these articles as a single PDF document if you want to read it offline. Select the **Download PDF** link in the table of contents.
+>
+> This content refers only to Dataverse *standard* tables that use Azure SQL. Dataverse *elastic* tables us Azure Cosmos DB, and don't support transactions. Elastic tables have different characteristics. [Learn more about elastic tables](../elastic-tables.md)
 
 Dataverse protects itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
 

@@ -69,13 +69,13 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
     Default:
 
-    ```powerapps-dot
+    ```power-fx
     SortByColumns(Filter([@'Issue Tracking'], StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))
     ```
 
     Update to:
 
-    ```powerapps-dot
+    ```power-fx
     SortByColumns(Filter('Issue Tracking', 'Issue Status'.Value = "Active", StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))
     ```
 

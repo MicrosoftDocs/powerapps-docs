@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/09/2024
+ms.date: 06/18/2024
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -30,14 +30,14 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 ## Prerequisites
 
 - A Power BI premium license or Fabric capacity within the same Azure region as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1."
-- If you don’t have Power BI premium license or Fabric capacity within the same region, you buy a capacity in the region or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+- If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 
    > [!NOTE]
-   > This won't be a prerequisite in the update expected in all regions by April 30, 2024. When no longer required, you can link to a workspace within the same country or geo boundary even if you don't have a capacity within the same Azure region.
+   > As of April 30, 2024, you're no longer required to have a Fabric capacity within the same Azure region. Now, you can link to a workspace, which is assigned to a capacity within the same country or geographic boundary.
   
 - Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Microsoft Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
-- You must have the System Administrator security role in the Dataverse environment. 
-- You must be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
+- You must have the system administrator security role in the Dataverse environment.
+- You must be an administrator of the Power BI workspace. You also need to be a Power BI capacity administrator to a capacity within the same geographic location as the Dataverse environment.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
@@ -61,7 +61,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 >
 > If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and re-link existing environments), all tables will be added.  
 >  
-> Enabling this feature might result in an increase in Dataverse storage consumption. View additional storage consumption in Power Platform admin center.
+> Enabling this feature might result in an increase in *Dataverse database* storage consumption. View additional storage consumption in Power Platform admin center.
 >
 
 ## Comparing Link to Fabric with Azure Synapse Link for Dataverse
@@ -99,7 +99,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
    >
 
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
-4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same region as your Dataverse environment, the wizard notifies you to get a capacity in the required region. 
+4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or country as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
 5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
 6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
 7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](#troubleshooting-common-issues) if you don't see the desired workspace.  
@@ -125,7 +125,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
-5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**.
+5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
 
    > [!NOTE]
    > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
@@ -157,6 +157,7 @@ To enable an existing link, follow these steps:
 >
 > - Select **Enable Parquet/Delta lake** to enable the view in Fabric.
 > - Existing Azure Synapse Link for Dataverse profiles where the data is saved as CSV files can't be linked to Microsoft Fabric.
+> - Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric at this point in time.  
 
 ## Work with Dataverse data and generate Power BI reports
 
@@ -192,9 +193,19 @@ Choose the default dataset generated by Dataverse, and then select **Auto-create
 
 ## Secure data and grant access to other users
 
-You must have the Systems Administrator security role in the Power Platform environment to enable **Link to Fabric**. You must also have **Owner** access to the Fabric workspace linked with Dataverse.
+You must have the Systems Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. You must be an administrator of the Power BI workspace. If you want the system to create a Power BI workspace, you need to be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as the Dataverse environment.
 
-You need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
+The system creates a data connection between the Power Apps environment and Fabric workspace using the credentials of the user at the time of link creation. If you use the **Fabric Link** option from the Power Apps **Tables** area, the system creates the connection and asks you to save. If you use the **Synapse Link** option, you must create a data connection yourself before enabling the link.
+
+The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to consume this data in Fabric Lakehouse, you need to share this data connection with other users. To share the data connection with other users:
+
+1. Go to Fabric.Microsoft.com and select the gear icon on top left (next to user icon).
+2. On the **Settings** menu, select **Data connections and Gateways**. The available data connections are displayed.
+3. Select the **Connections** tab, and then choose the data connection you created with the connection type **Dataverse**. You might see a connection that is named like **org...crm.dynamics.com**. In case you have multiple connections like this, you need to select the connection that links to the specific Power Platform environment.
+4. Once you select the correct data connection, select **...** > **manage users**. Then you're shown users who have access to this connection.
+5. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
+
+In addition to granting users with access to the data connection, you need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
 
 ## Troubleshooting common issues
 
@@ -202,13 +213,19 @@ If you experience an error message, here are suggestions to resolve the issue.
 
 | Error message                      | How to resolve                | 
 |:-----------------------------------|:------------------------------|
-| You must have Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> More information: [Prerequisites](#prerequisites)  | 
-| Creation of Fabric workspace failed. You can try again. If this issue persists contact [Microsoft customer support](/power-platform/admin/get-help-support) with the corelation ID. | You must be a Power BI Capacity Administrator or have contributor access to a capacity within the same region as your Dataverse environment. <br> Currently, the system supports these premium capacity SKUs described in the [Prerequisites](#prerequisites). <br> Verify with your Power BI Tenant admin that you have permissions to create workspaces. You can find this setting in Power BI Admin portal under **Tenant settings > workspace settings > Create workspaces**. <br> If the issue isn't resolved, contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID |
+| You must have Power BI premium or Fabric capacity in the same region {Region}. You can also get a Fabric trial. <br><br> You won't receive this error after April 30, 2024. Instead, you're shown an error if you don't have capacity in the same geography. | You need a Power BI premium of a Fabric capacity in the same region as your Dataverse environment. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting [Fabric (preview) trial](/fabric/get-started/fabric-trial). <br> More information: [Prerequisites](#prerequisites)  | 
+| Creation of Fabric workspace failed. You can try again. If this issue persists contact [Microsoft customer support](/power-platform/admin/get-help-support) with the corelation ID. | You must be a Power BI Capacity Administrator or have contributor access to a capacity within the same geography  as your Dataverse environment. <br> Currently, the system supports these premium capacity SKUs described in the [Prerequisites](#prerequisites). <br> Verify with your Power BI Tenant admin that you have permissions to create workspaces. You can find this setting in Power BI Admin portal under **Tenant settings > workspace settings > Create workspaces**. <br> If the issue isn't resolved, contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID |
 | Creation of Fabric lakehouse failed. You can try again. If this issue persists contact [Microsoft customer support](/power-platform/admin/get-help-support) with the corelation ID. | Verify with your Power BI Tenant admin that you have permissions to create OneLake shortcuts. You can find this setting in Power BI Admin portal under  **Admin Portal > Tenant Settings > Microsoft Fabric > Users can create Fabric items**. <br> More information: [Prerequisites](#prerequisites) <br> If the issue isn't resolved after several retries, you can contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID. |
 | We ran into an issue, Creaton of Fabric Lakehouse failed. | Verify with your Power BI tenant admin that you have permissions to create artifacts in Fabric. You can find this setting in Power BI admin portal under **Tenant settings > oneLake settings > Users can access data stored in OneLake with apps external to Fabric**. <br> More information: [Prerequisites](#prerequisites) <br> If the issue isn't resolved after several retries, you can contact [Microsoft customer support](/power-platform/admin/get-help-support) with the provided reference ID. |
 | Your organization doesn't appear to have Microsoft Fabric. You can get a trial. | Contact your administrator or get a trial version of Microsoft Fabric. |
 |You need to get a trial version of Fabric to get started. | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity isn't sufficient. You can get a free trial capacity by visiting: [Fabric (preview) trial](/fabric/get-started/fabric-trial) |
 | You need to be a system administrator to link to Fabric. | You need the system administrator security role in Dataverse to perform this operation. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)  |
+| Newly added fields in tables aren't reflected in Fabric Lakehouse. | When a new field is added to a Dataverse table, the newly added column isn't added to Fabric Linked workspaces automatically. To include newly added columns, select **Synapse Link** in Power Apps (make.powerapps.com), select the Microsoft OneLake or the Azure Synapse Link profile and select **Refresh Fabric tables**. This action refreshes the table metadata in Fabric Lakehouse. |
+| Error message "Unauthorized. Access to target location https://[...].crm3.dynamics.com/ denied" when accessing Dataverse tables in Fabric Lakehouse. | This error message indicates that the user accessing tables in Fabric doesn't have the required permissions to access Dataverse tables. This error might be shown even if the same user has access to the tables in Dataverse. <br> The Link to Fabric wizard in Power Apps creates a data connection at the time of creating the Link to Fabric. This data connection uses credentials of the user, it's possible that: <br> - The password of the user who created the connection has changed or has expired. <br> - The user account of the user who created the Fabric link is inactive. <br> - Other users who need to access Dataverse tables in Fabric Lakehouse don't have access to the data connection. More information: [Secure data and grant access to other users](#secure-data-and-grant-access-to-other-users) |
+| Error message "A back end error occurred. The Fabric to Dataverse connection ID ... is not valid for this user. Please check that you have access to this connection, and that the connection is connected to this organization, with URL ... You can try again, if this issue persists please contact support. | This error message indicates that the user selecting the **Refresh Fabric tables** option in the Azure Synapse Link page doesn't have the required permissions. This error might be shown even when the user has access to the tables in Dataverse and is a system administrator. <br> The link to Fabric wizard in Power Apps creates a data connection at the time of creating the link to Fabric. This data connection uses credentials of the user, it's possible that: <br> - The password of the user who created the connection has changed or has expired. <br> - The user account of the user who created the Fabric link is inactive. <br> - The user performing the **Refresh Fabric tables** option doesn't have access to the data connection. More information: [Secure data and grant access to other users](#secure-data-and-grant-access-to-other-users) |
+|All tables from Dataverse show as **Unidentified** in Fabric Lakehouse. | You might see this error message while your data is being initialized for the first time. If this issue persists for more than several hours, go to **Synapse Link** in Power Apps (make.powerapps.com), choose the Microsoft OneLake or the Azure Synapse Link profile and select **Refresh Fabric Links**. This refreshes the table metadata in Fabric Lakehouse. | 
+| Tables from Dynamics 365 finance and operations apps are missing. | System auto selects nonsystem tables with **Change tracking** property set to **Yes** when creating a Fabric Link. To select more tables, open **Microsoft OneLake** profile in **Synapse Link** and select **Manage Tables**. If you have a finance and operations environment linked to this Power Platform environment, you can also select tables from finance and operations apps. Finance and operations apps tables aren't autoselected with Fabric Link. <br> More information: [Add Finance and Operations tables](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#add-finance-and-operations-tables-in-azure-synapse-link) |
+| There are {.. #tables} tables enabled for change tracking in your environment. Addition of more than one thousand tables isn't supported. | Fabric link feature currently can't be enabled on environments with more than 1,000 change tracking enabled tables. <br> As a workaround, select **Synapse Link** in Power Apps (make.powerapps.com) and create multiple profiles with less than 1,000 tables each. |     
 
 ## See also
 

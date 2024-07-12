@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 3/13/2023
+ms.date: 5/2/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -21,15 +21,15 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Add Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
+Add Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with various requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
 The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports Teams authenticated Microsoft Copilot Studio bots. A bot picker lists all bots that are in the same environment as your app.
 
-You can use an AI bot or AI boosted conversations bot:
+You can use an AI bot or AI-based copilot authoring:
 
-- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Microsoft Copilot Studio quickstart](/power-virtual-agents/quickstart-preview)
+- AI chatbots allow you to develop a comprehensive tree of responses to assist your users.. More information: [Quickstart: Create and deploy a Copilot Studio copilot](/microsoft-copilot-studio/fundamentals-get-started)
 
-- With AI boosted conversations Microsoft Copilot Studio bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website, which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
+- With AI-based copilot authoring can have a higher ability to respond to the user by using a number of prompts or generating a response based on the provided "fallback" website, that you set. The "fallback" website can include internal documents or publicly available websites. For more information, see [AI-based copilot authoring overview](/microsoft-copilot-studio/nlu-gpt-overview)
 
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
@@ -48,8 +48,8 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 ## Prerequisites 
 
-Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
-- To add the Chatbot control, you need to create and publish a bot on the [Microsoft Copilot Studio web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal). You can create any bot such as an AI bot or a new generative AI enriched Microsoft Copilot Studio bot.
+Follow the prerequisites for AI features: [Copilot in Power Apps overview (preview)](ai-overview.md)
+- To add the Chatbot control, you need to create and publish a bot. For more information, see [Microsoft Copilot Studio portal overview](/microsoft-copilot-studio/fundamentals-what-is-power-virtual-agents-portal). You can create any bot such as an AI bot or a new generative AI enriched Microsoft Copilot Studio bot.
 - You can see all your Microsoft Copilot Studio bots (published and unpublished) in the list of Chatbot control when you pick the bot to connect to. However, you can only add a published bot to the control. Unpublished bots are grayed out.
 
 
@@ -75,7 +75,7 @@ The following are the main properties for Chatbot control:
 
 - **Schema name**: This property refers to the Microsoft Copilot Studio bot that you connect to. The property automatically populates once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
 
-- **Visible**: Choose if you want the bot be visible or not.
+- **Visible**: Choose if you want the bot to be visible or not.
   
 - **Position** and **Size**: Determines how your bot looks on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
 
@@ -89,11 +89,11 @@ The following are the main properties for Chatbot control:
 
 1. Chatbot control isn't supported on the Power Apps mobile app.
 2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mooncake.
-3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in non-default locations of your tenant.
+3. Chatbot control doesn't support bots created using Microsoft Copilot Studio in nondefault locations of your tenant.
 
 ## See also
 
-[AI Copilot overview (preview)](ai-overview.md)
+[Copilot in Power Apps overview (preview)](ai-overview.md)
 
 [Microsoft Copilot Studio preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 

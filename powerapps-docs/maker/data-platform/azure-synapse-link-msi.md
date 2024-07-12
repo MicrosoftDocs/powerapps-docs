@@ -6,14 +6,14 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 12/13/2023
+ms.date: 05/06/2024
 ms.custom: template-how-to 
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
 Azure Data Lake Storage provides a layered security model. This model enables you to secure and control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources used. When network rules are configured, only applications requesting data over the specified set of networks or through the specified set of Azure resources can access a storage account. You can limit access to your storage account to requests originating from specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
 
-Managed identities for Azure, formerly know as Managed Service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of enterprise policy creation) that can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
+Managed identities for Azure, formerly known as Managed Service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of enterprise policy creation) that can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
 
 With managed identities, access to your storage account is restricted to requests originating from the Dataverse environment associated with your tenant. When Dataverse connects to storage on behalf of you, it includes additional context information to prove that the request originates from a secure, trusted environment. This allows storage to grant Dataverse access to your storage account. Managed identities are used to sign the context information in order to establish trust. This adds application-level security in addition to the network and infrastructure security provided by Azure for connections between Azure services.
 
@@ -22,8 +22,10 @@ With managed identities, access to your storage account is restricted to request
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
 - You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
+  - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- Go to this [compressed folder file on GitHub]((https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
+  - 
+- Go to this [compressed folder file on GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 ## Enable enterprise policy for the selected Azure subscription
@@ -222,6 +224,10 @@ If you receive 403 errors during the link creation:
 - You can identify the linked enterprise policy and `policyArmId` by running the PowerShell script `./GetIdentityEnterprisePolicyforEnvironment.ps1` with the Azure **Subscription ID** and **Resource group** name.
 - You can unlink the enterprise policy by running the PowerShell script `./RevertIdentity.ps1` with the Dataverse environment ID and `policyArmId`.
 - You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1 with policyArmId**.
+
+## Known limitation
+
+Only one enterprise policy can connect to the Dataverse environment simultaneously. If you need to create multiple Azure Synapse Link links with managed identity enabled, make sure all linked Azure resources are under the same resource group.
 
 ## See also
 

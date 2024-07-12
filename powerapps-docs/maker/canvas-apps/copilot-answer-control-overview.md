@@ -1,5 +1,5 @@
 ---
-title: Overivew of Copilot answer control for canvas apps
+title: Overview of Copilot answer control for canvas apps
 description: Use the Copilot answer control for canvas app.
 author: mduelae
 ms.topic: conceptual

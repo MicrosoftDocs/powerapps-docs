@@ -1,5 +1,5 @@
 ---
-title: Integrate Power Apps in Teams with Azure Active Directory (contains video)
+title: Integrate Power Apps in Teams with Azure Active Directory
 description: Learn how to integrate your apps with Azure Active Directory to use data about the people in your organization in your app.
 author: joel-lindstrom
 
@@ -112,7 +112,7 @@ We'll create an app with a button that will only show up if the user is a member
 
 1. Enter the following formula for the app OnStart:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         !IsEmpty(
             AzureAD.CheckMemberGroups(

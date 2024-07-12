@@ -1,5 +1,5 @@
 ---
-title: Enable consistent experience across sessions using LoadData and SaveData functions. (contains video)
+title: Enable consistent experience across sessions using LoadData and SaveData functions.
 description: Learn how to make your Teams-based Power Apps store session data so that the users don't lose their work when leaving the app tab.
 author: joel-lindstrom
 
@@ -147,7 +147,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
 1. Start with making sure that the changes we're applying are applicable only in the case of a new record. So, we're updating the variable **newMode** that will be used as a condition on the edit form to figure out what data needs to be displayed. Select **New record** and add the following formula on the **OnSelect** property of the button:
 
-    ```powerapps-dot
+    ```power-fx
     NewForm(EditForm1);
     UpdateContext({newMode: true})
     ```
@@ -156,7 +156,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
 1. Next, we'll add the data from the individual input controls to a collection, and then we'll save the data to a local file from that collection. Select the text input box&mdash;in our example it's the "DataCardValue1" of the "Name_DataCard1" on "EditForm1" for the **Name** field&mdash;enter the following formula in the **OnChange** property of the input field:
 
-    ```powerapps-dot
+    ```power-fx
     Collect(
         colAccount,    
         { Column:"Name",Value:Self.Value}
@@ -170,14 +170,14 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
     
     Similarly, enter the following code in the **OnChange** property for **Phone** (DataCardValue2):
     
-    ```powerapps-dot
+    ```power-fx
     Collect(colAccount, {Column:"Phone",Value:Self.Value});
     SaveData(colAccount,"colAccount");
     ```
     
     And enter the following code in **OnChange** property for **City** (DataCardValue3):
     
-    ```powerapps-dot
+    ```power-fx
     Collect(colAccount {Column:"City", Value:Self.Value});
     SaveData(colAccount, "colAccount");
     ```
@@ -186,7 +186,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
     Go to the **App** > **OnStart** property, and add the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     LoadData(colAccount,"colAccount", true)
     ```
 
@@ -198,7 +198,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
     
     For **Name** field, enter **Name_DataCard1:**
     
-    ```powerapps-dot
+    ```power-fx
     If(
         newMode && !IsBlank(
             Last(
@@ -216,7 +216,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
     
     Similarly, enter the following formula in the **Default** property formula for **Phone** (Phone_DataCard1):
     
-    ```powerapps-dot
+    ```power-fx
     If(
         newMode && !IsBlank(
             Last(
@@ -232,7 +232,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
     
     And use the following formula for **City** (City_DataCard1):
     
-    ```powerapps-dot
+    ```power-fx
     If(
         newMode && !IsBlank(
             Last(
@@ -253,7 +253,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
     Use the following formula in the **OnSelect** property of the **Submit** button.
 
-    ```powerapps-dot
+    ```power-fx
     SubmitForm(EditForm1);
     UpdateContext({editMode: false, newMode: false});
     Clear(colAccount);
@@ -264,7 +264,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
     Select the **Cancel** button, and enter the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ResetForm(EditForm1);
     UpdateContext({editMode: false, newMode: false});
     Clear(colAccount);

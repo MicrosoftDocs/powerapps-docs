@@ -149,7 +149,7 @@ static bool IsExternalSearchIndexEnabled(IOrganizationService service) {
 }
 ```
 
-More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
 #### [Web API](#tab/webapi)
 
@@ -184,7 +184,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query data using the Web API](../webapi/query-data-web-api.md)
+More information: [Query data using the Web API](../webapi/query/overview.md)
 
 #### [Search 2.0 endpoint](#tab/search)
 

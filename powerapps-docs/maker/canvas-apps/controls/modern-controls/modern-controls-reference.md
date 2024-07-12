@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 03/22/2023
+ms.date: 05/22/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -24,6 +24,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 
 ## Modern controls
+
+**[Avatar (preview)](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
 **[Badge (preview)](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 

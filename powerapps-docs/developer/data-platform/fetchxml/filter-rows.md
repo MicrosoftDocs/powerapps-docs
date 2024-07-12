@@ -162,7 +162,7 @@ You can create filters that compare columns on values in the same row using the 
 </fetch>
 ```
 
-### Cross table comparisons
+### Cross table column comparisons
 
 With FetchXML only, you can compare field values in related tables. The following example returns rows where the contact `fullname` column matches the account `name` column.
 

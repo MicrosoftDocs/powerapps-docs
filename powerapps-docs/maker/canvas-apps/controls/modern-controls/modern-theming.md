@@ -32,7 +32,7 @@ Modern themes, which are pre-established style sets, can transform the look of y
 To use modern themes, you need to enable it. More information, see [Enable modern controls and themes for your app](overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app).
 
 > [!NOTE]
-> When modern controls and themes is enabled, you won't be able to select classic themes from the command bar. To use classic themes, you'll need to turn off modern controls and themes.  
+> When modern controls and themes is enabled, you won't be able to select classic themes from the command bar. To use **retired** classic themes, you'll need to enable the **Keep classic themes** retired app setting.  
 
 ## Create a theme
 
@@ -44,7 +44,9 @@ There's several out-of-the-box themes available to style your app. You can also 
     -  **Theme name**: The theme name must be unique.
     -  **Font**: Choose the default font that the controls in the app use will use when the theme is applied.
     -  **Seed color**: Select the color you want to base your theme on, or manually enter the Hex or RGB representation of the color. The system generates a 16-slot palette that is optimized for accessibility.
-4. Select **Create**.
+    -  **Hue/Vibrancy**: Adjust the generation palette, especially the lighter colors, with the **Hue** and **Vibrancy** sliders. The **Hue** impacts the color shade, and **vibrancy** impacts the muteness or brightness of the palette.  
+4. Optionally, look at the static preview of your new theme. You can interact with the sample controls to see how your theme is applied to the rest state and various interaction states.    
+5. Select **Create**.
 
 Your new theme is created and applied to your app.
 
@@ -53,10 +55,10 @@ Your new theme is created and applied to your app.
 1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
 2. On the **Themes** pane, select one of the default themes. 
 
-When a modern theme is selected, the style of the theme is automatically applied to all the modern controls in your app. This action sets the **App.Theme** property.  
+When a modern theme is selected, the style of the theme is automatically applied to the controls in your app. This action sets the **App.Theme** property.  
 
 > [!NOTE]
-> Modern themes don't make any automatic changes to classic controls; however, these controls can be manually styled to align to the theme through Power Fx.
+> Modern themes do now impact classic controls by setting properties on the classic controls with Power Fx formulas that reference variables from the modern theme. 
 
 ## Edit a theme
 You can edit the theme and change one or more parameters of the custom theme.

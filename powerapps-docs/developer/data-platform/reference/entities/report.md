@@ -1,7 +1,7 @@
 ---
 title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Report table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,12 +65,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BodyUrl](#BKMK_BodyUrl)
 - [CreatedInMajorVersion](#BKMK_CreatedInMajorVersion)
 - [DefaultFilter](#BKMK_DefaultFilter)
+- [DependentModelReportId](#BKMK_DependentModelReportId)
 - [Description](#BKMK_Description)
 - [FileName](#BKMK_FileName)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsPersonal](#BKMK_IsPersonal)
 - [LanguageCode](#BKMK_LanguageCode)
+- [ManagedType](#BKMK_ManagedType)
 - [MimeType](#BKMK_MimeType)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
@@ -169,6 +171,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_DependentModelReportId"></a> DependentModelReportId
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Field to represent the dependent report dataset model.|
+|DisplayName|Dependent Model Report Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dependentmodelreportid|
+|RequiredLevel|None|
+|Targets|report|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Description"></a> Description
@@ -270,6 +288,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|0|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_ManagedType"></a> ManagedType
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determine how the report workspace is managed.|
+|DisplayName|ManagedType|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|managedtype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### ManagedType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Dataverse||
+|1|Customer||
+
 
 
 ### <a name="BKMK_MimeType"></a> MimeType
@@ -571,6 +613,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [CustomReportXml](#BKMK_CustomReportXml)
+- [DependentModelReportIdName](#BKMK_DependentModelReportIdName)
 - [FileContent](#BKMK_FileContent)
 - [FileContent_Name](#BKMK_FileContent_Name)
 - [FileSize](#BKMK_FileSize)
@@ -785,6 +828,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|customreportxml|
 |MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_DependentModelReportIdName"></a> DependentModelReportIdName
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentmodelreportidname|
+|MaxLength|425|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1351,6 +1412,7 @@ Listed by **SchemaName**.
 - [Report_AsyncOperations](#BKMK_Report_AsyncOperations)
 - [report_reportcategories](#BKMK_report_reportcategories)
 - [report_parent_report](#BKMK_report_parent_report)
+- [Report_Report_DependentModelReportId](#BKMK_Report_Report_DependentModelReportId)
 
 
 ### <a name="BKMK_Report_ProcessSessions"></a> Report_ProcessSessions
@@ -1427,6 +1489,23 @@ Same as the [report_parent_report](report.md#BKMK_report_parent_report) many-to-
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_Report_Report_DependentModelReportId"></a> Report_Report_DependentModelReportId
+
+**Added by**: CDS Report Schema Changes Solution
+
+Same as the [Report_Report_DependentModelReportId](report.md#BKMK_Report_Report_DependentModelReportId) many-to-one relationship for the [report](report.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|report|
+|ReferencingAttribute|dependentmodelreportid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|Report_Report_DependentModelReportId|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1439,6 +1518,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_reportbase_modifiedby](#BKMK_lk_reportbase_modifiedby)
 - [business_unit_reports](#BKMK_business_unit_reports)
 - [lk_reportbase_createdby](#BKMK_lk_reportbase_createdby)
+- [Report_Report_DependentModelReportId](#BKMK_Report_Report_DependentModelReportId)
 
 
 ### <a name="BKMK_lk_report_createdonbehalfby"></a> lk_report_createdonbehalfby
@@ -1464,6 +1544,10 @@ See the [business_unit_reports](businessunit.md#BKMK_business_unit_reports) one-
 ### <a name="BKMK_lk_reportbase_createdby"></a> lk_reportbase_createdby
 
 See the [lk_reportbase_createdby](systemuser.md#BKMK_lk_reportbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_Report_Report_DependentModelReportId"></a> Report_Report_DependentModelReportId
+
+See the [Report_Report_DependentModelReportId](report.md#BKMK_Report_Report_DependentModelReportId) one-to-many relationship for the [report](report.md) table/entity.
 
 ### See also
 

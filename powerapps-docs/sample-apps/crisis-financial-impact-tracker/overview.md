@@ -1,5 +1,5 @@
 ---
-title: Overview of Higher Education Crisis Financial Impact Tracker - Sample solution (contains video) | Microsoft Docs
+title: Overview of Higher Education Crisis Financial Impact Tracker - Sample solution | Microsoft Docs
 description: Provides an overview of Higher Education Financial Crisis Impact Tracker - Sample solution.
 author: ramanasridhar
 

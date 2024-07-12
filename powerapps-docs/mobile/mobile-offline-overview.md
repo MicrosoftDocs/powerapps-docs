@@ -1,11 +1,11 @@
 ---
 
-title: Mobile offline overview | Microsoft Docs
+title: Mobile offline for model-driven apps overview
 description: Learn how to configure model-driven apps for offline mode.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/26/2023
+ms.date: 05/29/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -17,7 +17,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Mobile offline overview
+# Mobile offline for model-driven apps overview
 
 Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With model-driven apps made with Power Apps and the new, mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connection.
 

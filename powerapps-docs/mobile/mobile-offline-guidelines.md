@@ -1,10 +1,10 @@
 ---
-title: Offline profile guidelines
+title: Optimize the offline profile
 description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 12/21/2023
+ms.date: 06/14/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -16,42 +16,11 @@ search.audienceType:
   - enduser
 ---
 
-# Offline profile guidelines
+# Optimize the offline profile
 
 There's a lot to keep in mind when you create or update an offline profile for model-driven apps. An offline profile should include all the data that app users need to complete tasks in the field. If it includes too much data, however, app users might get stuck waiting for their data to download. They may even run out of space on their device. You'll need to consider the devices and data plans your app users have to make sure they have a great experience.
 
 The following guidelines will help you create an offline profile that meets the exact needs of your organization.
-
-## Plan your offline profile rollout
-
-Develop and roll out your offline profile in three phases:
-
-:::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
-
-### Phase 1: Develop and iterate
-
-After you've [set up an offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) on to determine how the app behaves when it's offline. For Windows, you'll find the [app](windows-app-install.md) in the Microsoft Store that allow iterating without the need for a mobile device.
-
-In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
-
-***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
-
-> [!IMPORTANT]
-> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
-
-### Phase 2: Test with users
-
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
-
-:::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
-
-***Outcome:*** You confirm that the offline profile scales to real use cases.
-
-### Phase 3: Roll it out
-
-Deploy the app to the rest of your organization.
-
-***Outcome:*** You confirm that each class of user in the rollout is able to sync successfully and work offline.
 
 ## Don't make your users download too much data
 
@@ -128,7 +97,7 @@ If users have access to a large set of data when they're online, apply filters t
 
 **Filter by time and date fields** for time-centric data like bookings and timeline items. Consider both future and past dates. For example, a common filter might include appointments from the past month and the next three months.
 
-:::image type="content" source="media/mobile-offline-guidelines/filters4.png" alt-text="Screenshot that shows multiple filters, based on start and end times, in an OR condition.":::
+:::image type="content" source="media/mobile-offline-guidelines/filters4new.png" alt-text="Screenshot that shows multiple filters, based on start and end times, in an OR condition.":::
 
 **Filter by status** to limit downloads to rows with a certain Status.
 
@@ -150,23 +119,38 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
 
 - Avoid using many OR conditions.
 
-## Don't miss the data your users need
+### Optimize dowloaded data with Offline Table Column Selection (Preview)
 
-Test whether your users have all the data they need. Compare the data available when the app is online and when it's offline. With the device in airplane mode, make sure the views and forms show the same data as in a web browser online. If there are differences, either adjust the filters in your views or adjust the filters in your offline profile.
+ > [!IMPORTANT]
+   > - This is a preview feature.
+   > - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+   
+The first sync can take time to complete for organizations with very large datasets, especially in remote areas. With **Offline Table Column Selection (Preview)** you can select the columns to download on the device to avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync should see a greater impact as there are more records to download.
 
-### Add related tables if your app needs them
+1. In [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+1. Select your model-driven app, and then select **Edit**.
+1. Select **Settings**.
+1. Select **General**.
+1. In the **Select offline mode and profile** section, select **Edit selected profile** from the dropdown menu.
+1. The **Edit Profile** pane appears. In the **Data for offline use** section, for the table you want to optimize, select the **More actiongs** (**...**) icon, and then select **Eddit**.
+1. The **Edit Account** pange appers. In the **Selected columns** section, select the **Manage columns** option.
+1. In the **Managed selected columns** pane, select the **Select only required columns** option, and then select more columns, if requried.
+   
+     > [!IMPORTANT]
+     > If you have custom JavaScript code in the app, make sure that the columns used in the custom code are selected in the offline profile.
+     
+1. Select **Back**.
+1. Select **Save**.
+1. Select **Save + close**.
+1. Close the **Settings** and select **Publish**. 
 
-- **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. For more information, go to [Supported capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported-capabilities).
-
-- **Files and images:** If your offline profile contains files and images, you'll need to add tables for them. For more information, go to [Configure mobile offline profiles for files and images](offline-file-images.md). Use custom filters to limit download of critical files.
-
-- **Timeline:** To make notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the Notes table to limit download times.
-
-    > [!IMPORTANT]
-    > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.
+> [!NOTE]
+> - For canvas app using an auto-generated offline profile, the system automatically optimizes the columns downloaded on the device.
+> - We recommend to select columns on tables with a high number of unused columns.
+> - The **manage columns** option is not enalble in the **Offline configuration** of **Power Platform admind Center**. 
 
 ### See also
-
+- [Best practices to use an app for offline](best-practices-offline.md)
 - [Configure model-driven apps for offline (preview)](mobile-offline-overview.md)
 - [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
 - [Five tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)

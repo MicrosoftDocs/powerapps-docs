@@ -1,7 +1,7 @@
 ---
 title: "Logging and tracing (Microsoft Dataverse) | Microsoft Docs"
 description: "Use the plugin trace log to store plug-in execution information to aid in plug-in debugging."
-ms.date: 03/26/2024
+ms.date: 04/22/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -46,7 +46,7 @@ Recording of run-time tracing information for Microsoft Dataverse is provided by
 
 Whether trace logs will be written depends on the value of the [Organization](./reference/entities/organization.md) table [PluginTraceLogSetting](./reference/entities/organization.md#BKMK_PluginTraceLogSetting) column value. You can enable trace logging by programmatically updating the `PluginTraceLogSetting` value.
 
-A second method to enable trace logging is through the legacy web application. Navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options.
+A second method to enable trace logging is through the legacy web application. Navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options. More information: [Settings in Unified Interface apps](/power-platform/admin/admin-settings#settings-in-unified-interface-apps), [Settings in legacy web client apps](/power-platform/admin/admin-settings#settings-in-legacy-web-client-apps)
 
 A third option can be found in the Plug-in Registration tool. After connecting the tool to your organization (environment), select **Settings** > **Logging to Plug-in Trace Log** and then select one of the available options.
   

@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 11/14/2023
+ms.date: 06/28/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -14,6 +14,7 @@ contributors:
   - mattp123
   - sanjeevgoyalmsft
   - JimDaly
+  - neerajatmsft
 ---
 # Work with formula columns
 
@@ -44,7 +45,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 ---
 
 7. Select additional properties:
-   - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
+   - Select **Searchable** if you want this column to be available in views, charts, dashboards, and Advanced Find.
    - **Advanced options**:
      - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
 8. Select **Save**.
@@ -67,7 +68,7 @@ For example, the formula *price * discount* creates a column type of number. You
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using GPT-based AI model.
+Describe what you want the formula to do and get AI generated results. Formula suggestions accept your natural language input to interpret and suggest a Power Fx formula using GPT-based AI model.
 
 > [!IMPORTANT]
 > This is a preview feature available only in US regions only.
@@ -78,7 +79,7 @@ Describe what you want the formula to do and get AI generated results. Formula s
 
 #### Prerequisites
 
-To enabled this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
+To enable this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 
@@ -135,11 +136,12 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- Decimal number
+- [Decimal number](#create-a-decimal-formula-column)
 - Choice Yes/No (boolean)
 - Datetime
+- [Whole Number](#create-a-whole-number-formula-column)
 
-The currency, whole number, and choice (formerly option sets) data types aren't currently supported.
+The currency, and choice (formerly option sets) data types aren't currently supported.
 
 ## Function types
 
@@ -359,11 +361,43 @@ You can use the following scalar functions in a formula column:
 
 \* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
+\* **StartOfWeek** argument isn't supported for the **WeekNum** and **Weekday** functions in formula columns.
+
 ### Function example
 
 |Description  |Example  |
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
+
+## Create a decimal formula column
+
+Create a formula column that returns a decimal number.
+
+1. When you create a column, enter the following information:
+   - A **Display name** for the column.
+   - Optionally, enter a **Description** of the column.
+1. For **Data type** select ***fx* Formula**.
+1. Enter a formula that returns a numeric value in the **Formula** bar.
+   This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
+   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
+1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
+  :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
+1. Select **Save**.
+
+## Create a whole number formula column
+
+Create a formula column that returns a whole number.
+
+1. When you create a column, enter the following information:
+   - A **Display name** for the column.
+   - Optionally, enter a **Description** of the column.
+1. For **Data type** select ***fx* Formula**.
+1. Enter a formula that returns a numeric value in the **Formula** bar.
+   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
+   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
+1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
+  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
+1. Select **Save**.
 
 ## Guidelines and limitations
 
@@ -385,7 +419,7 @@ This section describes guidelines and the known limitations with formula columns
   - `DateTime(TZI)` behavior columns can be compared or used in `DateDiff` functions with another `DateTime(TZI)/DateOnly` behavior column.
   - `DateOnly` behavior columns can be compared or used in DateDiff function with another `DateTime(TZI)/DateOnly` behavior column.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
-- Date time columns and date time functions `UTCNow()`, `Now()` cannot be passed as a pararmeter to string functions.
+- Date time columns and date time functions `UTCNow()`, `Now()` can't be passed as a parameter to string functions.
   :::image type="content" source="media/formula-column-date-time-arg.png" alt-text="Formula column with unsupported date time parameter passed in formula":::
 
 ### Formula column usage in rollup fields
@@ -393,6 +427,7 @@ This section describes guidelines and the known limitations with formula columns
 - A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
+- A formula column which is dependent on time bound functions `UTCNow()` and `UTCToday()` can't be used in a rollup field.
 
 ### Power Fx text function recommendations
 
@@ -408,7 +443,7 @@ This section describes guidelines and the known limitations with formula columns
    Concatenate(Text(123,"#"),"ab")
    Text(123,"#") & "foo"
    ```
-- Locale-specific formatting tokens such as "." and "," are not supported in formula columns.
+- Locale-specific formatting tokens such as "." and "," aren't supported in formula columns.
   :::image type="content" source="media/formula-column-locale-specific-arg.png" alt-text="Unsupported locale-specific formatting token passed as parameter to Text function in formula":::
 
 ### Range validations on formula columns
@@ -423,7 +458,7 @@ This section describes guidelines and the known limitations with formula columns
 
 - Formula columns can reference other formula columns, but a formula column can't reference itself.
 - Formula columns don't support cyclic chains, such as `F1 = F2 + 10, F2 = F1 * 2`.
-- Maximum formula expression length in formula columns is 1000 characters.
+- Maximum formula expression length in formula columns is 1,000 characters.
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
   - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - In model-driven apps, sorting is disabled on:
@@ -431,14 +466,16 @@ This section describes guidelines and the known limitations with formula columns
   - A formula column that contains a logical column (for example, address column).
   - A formula column that contains another calculated or formula column.
   - A formula column that uses time-bound function `UTCNow()`.
-- Columns of type Whole Number with format Language, Duration, Time Zone are not supported in formula columns.
-- Columns of type String with format Email, Text Area, Ticker Symbol, URL are not supported in formula columns.
+- Columns of type Whole Number with format Language, Duration, Time Zone aren't supported in formula columns.
+- Columns of type String with format Email, Text Area, Ticker Symbol, URL aren't supported in formula columns.
 - Formula columns don't display values when the app is in mobile offline mode.
 - You can't trigger workflows or plug-ins on formula columns.
 - We don't recommend using calculated columns in formula columns and vice versa.
 - Duplicate detection rules aren't triggered on formula columns.
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
+- Default formula data type value is set to **Decimal** for numeric value returning formulas.
+- Updating whole number formula column's format isn't supported.
 
 ### Power Fx functions not currently supported
 
@@ -450,7 +487,6 @@ This section describes guidelines and the known limitations with formula columns
 
 ### Formula columns of data types that can't be produced
 
-- Whole Number
 - Choices (except Yes/No choice)
 - Currency
 

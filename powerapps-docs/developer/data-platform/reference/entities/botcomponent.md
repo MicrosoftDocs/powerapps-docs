@@ -1,7 +1,7 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |-|-|-|
 |Assign|PATCH /botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /botcomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /botcomponents(*botcomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /botcomponents(*botcomponentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -79,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ParentBotComponentCollectionId](#BKMK_ParentBotComponentCollectionId)
 - [ParentBotComponentId](#BKMK_ParentBotComponentId)
 - [ParentBotId](#BKMK_ParentBotId)
 - [ReusePolicy](#BKMK_ReusePolicy)
@@ -167,6 +168,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |12|Bot variable (V2)|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
 |13|Skill (V2)|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
 |14|Bot File Attachment|File attachments enable you to extend your bot with file content|
+|15|Custom GPT|A Custom GPT to answer customer queries in Copilot.|
+|16|Knowledge Source|A knowledge source enables to query/search over content configured.|
 
 
 
@@ -325,6 +328,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1057|Indonesian||
 |1081|Hindi||
 |2052|Chinese (Simplified)||
+|2057|English (United Kingdom)||
+|3081|English (Australia)||
+|3084|French (Canada)||
+|21514|Spanish (United States)||
 
 
 
@@ -389,6 +396,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_ParentBotComponentCollectionId"></a> ParentBotComponentCollectionId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Chatbot component collection associated with Chatbot subcomponent.|
+|DisplayName|ParentBotComponentCollection|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentbotcomponentcollectionid|
+|RequiredLevel|None|
+|Targets|botcomponentcollection|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ParentBotComponentId"></a> ParentBotComponentId
@@ -564,6 +585,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [ParentBotComponentCollectionIdName](#BKMK_ParentBotComponentCollectionIdName)
 - [ParentBotComponentIdName](#BKMK_ParentBotComponentIdName)
 - [ParentBotIdName](#BKMK_ParentBotIdName)
 - [SolutionId](#BKMK_SolutionId)
@@ -1022,6 +1044,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_ParentBotComponentCollectionIdName"></a> ParentBotComponentCollectionIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parentbotcomponentcollectionidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ParentBotComponentIdName"></a> ParentBotComponentIdName
 
 |Property|Value|
@@ -1246,6 +1284,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_botcomponent](#BKMK_business_unit_botcomponent)
 - [botcomponent_parent_bot](#BKMK_botcomponent_parent_bot)
 - [botcomponent_parent_botcomponent](#BKMK_botcomponent_parent_botcomponent)
+- [botcomponent_parent_botcomponentcollection](#BKMK_botcomponent_parent_botcomponentcollection)
 
 
 ### <a name="BKMK_lk_botcomponent_createdby"></a> lk_botcomponent_createdby
@@ -1297,6 +1336,10 @@ See the [botcomponent_parent_bot](bot.md#BKMK_botcomponent_parent_bot) one-to-ma
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
 See the [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) one-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
+
+### <a name="BKMK_botcomponent_parent_botcomponentcollection"></a> botcomponent_parent_botcomponentcollection
+
+See the [botcomponent_parent_botcomponentcollection](botcomponentcollection.md#BKMK_botcomponent_parent_botcomponentcollection) one-to-many relationship for the [botcomponentcollection](botcomponentcollection.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1309,6 +1352,8 @@ Relationship details provided where the botcomponent table is the first table in
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
 - [botcomponent_connectionreference](#BKMK_botcomponent_connectionreference)
 - [botcomponent_aipluginoperation](#BKMK_botcomponent_aipluginoperation)
+- [botcomponent_dvtablesearch](#BKMK_botcomponent_dvtablesearch)
+- [botcomponent_msdyn_aimodel](#BKMK_botcomponent_msdyn_aimodel)
 
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
@@ -1427,6 +1472,52 @@ IntersectEntityName: botcomponent_aipluginoperation<br />
 |LogicalName|aipluginoperation|
 |IntersectAttribute|aipluginoperationid|
 |NavigationPropertyName|botcomponent_aipluginoperation|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_dvtablesearch"></a> botcomponent_dvtablesearch
+
+IntersectEntityName: botcomponent_dvtablesearch<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_dvtablesearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|dvtablesearch|
+|IntersectAttribute|dvtablesearchid|
+|NavigationPropertyName|botcomponent_dvtablesearch|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_msdyn_aimodel"></a> botcomponent_msdyn_aimodel
+
+IntersectEntityName: botcomponent_msdyn_aimodel<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_msdyn_aimodel|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|msdyn_aimodel|
+|IntersectAttribute|msdyn_aimodelid|
+|NavigationPropertyName|botcomponent_msdyn_aimodel|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 

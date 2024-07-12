@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building and packaging plug-in code for Microsoft Dataverse, including assembly constraints and dependent assembly limitations.
-ms.date: 04/04/2024
+ms.date: 04/22/2024
 ms.topic: conceptual
 author: divkamath
 ms.author: dikamath
@@ -79,6 +79,12 @@ The following limitations apply when you use plug-in dependent assemblies:
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *custom workflow activities*, aren't supported.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
+
+### Performance consideration when importing or registering a plug-in package
+
+Plug-in packages containing assemblies with a large number (hundreds to thousands) of classes that implement `IPlugin` will take a relatively long time to import into Dataverse.
+
+We have seen import times of fifteen (15) minutes for a thousand plug-in types. This duration applies regardless if you are importing a solution using an API call or through the Web UI, or registering the package with the Plug-in Registration tool.
 
 ## Create a plug-in package
 

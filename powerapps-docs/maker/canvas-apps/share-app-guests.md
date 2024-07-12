@@ -1,5 +1,5 @@
 ---
-title: Share a canvas app with guest users (contains video)
+title: Share a canvas app with guest users
 description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.topic: conceptual
@@ -30,12 +30,7 @@ Watch this video to learn how to share an app with guests:
 
 - Access to an account that can add guest users to an Microsoft Entra tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
-- To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
-
-  - The tenant hosting the app being shared
-  - The home tenant of the guest user
-
-- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
+- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
   
 > [!NOTE]
 > Ensure that you perform the steps listed below on the **resource tenant**, and not on the **home tenant**.
@@ -85,7 +80,10 @@ After you share an app for guest access, guests can discover and access apps sha
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
   - In Azure national or sovereign clouds, they're recognized across tenants in guest scenarios. More information: [National clouds](/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
   - Licenses are not recognized across tenants in difference Azure clouds.
-  - Not all connectors create connections in the resource tenant by default. 
+  - Not all connectors create connections in the resource tenant by default.
+  - A user that signs in to an app using Azure B2B, won't see their identity information when the go to **My account**. 
+    
+    ![Power Apps Azure B2B user profile known issue](media/share-app/guest-my-account.png "My account")
 
 ## Frequently asked questions
 

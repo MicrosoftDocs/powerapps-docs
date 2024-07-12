@@ -1,11 +1,10 @@
 ---
-title: Create a table in Teams (contains video) | Microsoft Docs
+title: Create a table in Teams | Microsoft Docs
 description: Explains how to create a Dataverse for Teams table.
 author: NHelgren
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/09/2020
+ms.date: 07/01/2024
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
@@ -37,7 +36,7 @@ Watch this video for a quick overview about how to create a table in Dataverse f
    > [!div class="mx-imgBorder"] 
    > ![The Build tab.](media/create-table2.png "The Build tab")
 
-3. Select **New**, and then select **Table**.
+3. Select **New** on the command bar, and then select **Table**.
     > [!div class="mx-imgBorder"] 
     > ![New table menu option.](media/create-table3.png "New table menu option")
 

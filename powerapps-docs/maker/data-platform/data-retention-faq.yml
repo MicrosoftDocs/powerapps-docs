@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 04/11/2024
+  ms.date: 06/11/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -31,7 +31,7 @@ sections:
      answer: |
         Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
 
-   - question: What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+   - question: Will Dataverse schema changes be handled by Dataverse long term retention? What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
      answer: |
         The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
 
@@ -53,7 +53,7 @@ sections:
         
    - question: How long will a policy run take to complete?
      answer: |
-        A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
+        Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting the live application processes. The policy run can take from three or four days up to two weeks for very large data volumes. An option is to schedule long term retention policy runs on a regular cadence like monthly or quarterly, unless the scenario absolutely requires longer durations, such as yearly schedules. 
 
    - question: Where can I view the capacity savings?
      answer: |
@@ -66,6 +66,10 @@ sections:
      answer: |
         Yes. You can create a solution and add the policy from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
 
+   - question: Is the audit table supported for long term retention? 
+     answer: | 
+       No, the audit table isn't currently supported for long term retention. 
+   
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
        The feature is currently available in all public cloud regions and GCC. GCC High and DOD aren't currently supported.  
@@ -84,7 +88,11 @@ sections:
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
-         You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention will not delete any retained data already in your own data lake. Dataverse API's are available to [delete retained data](https://learn.microsoft.com/power-apps/maker/data-platform/data-retention-manage#bulk-delete-long-term-retained-data) from Dataverse long term retention 
+         No.
+         
+   - question: I use Azure Synapse Link. Does retaining data with Dataverse long term retention remove the retained data from my own data lake?
+     answer: |
+         No. You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention doesn't delete retained data already in your own data lake. Dataverse APIs are available to [delete retained data](data-retention-manage.md#bulk-delete-long-term-retained-data) from Dataverse long term retention. This capability is the same for all Dynamics 365 customers including finance and operations applications. 
 
    - question: Do retention policy runs consume API requests?
      answer: |

@@ -57,7 +57,7 @@ foreach (var c in retrieved.Entities)
 ```  
   
 ### See also  
- [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
+ [Build Queries with QueryExpression](queryexpression/overview.md)   
  <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>
 
 

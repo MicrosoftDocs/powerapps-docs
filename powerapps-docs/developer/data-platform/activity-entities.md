@@ -25,16 +25,15 @@ In Microsoft Dataverse, activities are tasks that you or your teams perform when
  To support the communication needs of the modern-day business, such as instant messaging (IM) and SMS, you can create custom activities in Dataverse.  
   
 ### See also  
+
  [Custom activities](custom-activities.md)  
   
  [Activity Pointer (Activity) table](activitypointer-activity-entity.md)  
   
  [Activity Party table](activityparty-entity.md)  
   
- [Task, Fax, Phone Call, and Letter activity tables](task-fax-phone-call-letter-activity-entities.md)  
+ [Activity tables for tasks, faxes, phone calls, and letters](task-fax-phone-call-letter-activity-entities.md)  
   
- [E-mail activity table](email-activity-entities.md)   
-
-
+ [E-mail activity table](email-activity-entities.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

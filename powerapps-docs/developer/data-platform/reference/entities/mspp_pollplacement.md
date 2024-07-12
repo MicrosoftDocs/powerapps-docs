@@ -1,7 +1,7 @@
 ---
 title: "Poll Placement (mspp_pollplacement)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Poll Placement (mspp_pollplacement)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ search.audienceType:
 |-|-|-|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /mspp_pollplacements<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /mspp_pollplacements(*mspp_pollplacementid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
@@ -36,7 +36,7 @@ search.audienceType:
 |RetrieveMultiple|GET /mspp_pollplacements<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Update|PATCH /mspp_pollplacements(*mspp_pollplacementid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -347,8 +347,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [mspp_pollplacement_ActivityPointers](#BKMK_mspp_pollplacement_ActivityPointers)
-- [mspp_pollplacement_adx_portalcomments](#BKMK_mspp_pollplacement_adx_portalcomments)
 - [mspp_pollplacement_adx_inviteredemptions](#BKMK_mspp_pollplacement_adx_inviteredemptions)
+- [mspp_pollplacement_adx_portalcomments](#BKMK_mspp_pollplacement_adx_portalcomments)
 - [mspp_pollplacement_chats](#BKMK_mspp_pollplacement_chats)
 - [mspp_pollplacement_Appointments](#BKMK_mspp_pollplacement_Appointments)
 - [mspp_pollplacement_Emails](#BKMK_mspp_pollplacement_Emails)
@@ -377,23 +377,6 @@ Same as the [mspp_pollplacement_ActivityPointers](activitypointer.md#BKMK_mspp_p
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_mspp_pollplacement_adx_portalcomments"></a> mspp_pollplacement_adx_portalcomments
-
-**Added by**: Active Solution Solution
-
-Same as the [mspp_pollplacement_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_pollplacement_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mspp_pollplacement_adx_portalcomments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_mspp_pollplacement_adx_inviteredemptions"></a> mspp_pollplacement_adx_inviteredemptions
 
 **Added by**: Active Solution Solution
@@ -407,6 +390,23 @@ Same as the [mspp_pollplacement_adx_inviteredemptions](adx_inviteredemption.md#B
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|mspp_pollplacement_adx_inviteredemptions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mspp_pollplacement_adx_portalcomments"></a> mspp_pollplacement_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [mspp_pollplacement_adx_portalcomments](adx_portalcomment.md#BKMK_mspp_pollplacement_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mspp_pollplacement_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 08/25/2023
+ms.date: 04/23/2024
 ms.topic: how-to
 ms.author: "craigm"
 author: Mattp123
@@ -19,13 +19,48 @@ ms.custom:
 
 # Add the rich text editor control to a model-driven app
 
-The rich text editor control is a lightweight, HTML-based editor that's built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
+The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-You can customize the editor's appearance, features, and behavior. The control's default configuration is shown in the following screenshot.
+You can customize the editor's appearance, features, and behavior. The control's modern text experience is shown in the following screenshot.
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
 
+Currently, the rich text editor is available as two different experiences:
+
+- Modern text editor: New experience you can enable
+- Classic text editor: Default experience
+
+## Modern text editor enhancements
+
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+
+> [!Note]
+> Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
+> - Configuration options, as described in this article for the classic experience
+> - Mentions
+
+## Enable the modern rich text editor experience
+
+The classic rich text editor experience is enabled by default. Complete the following steps to switch to the modern rich text editor experience.
+
+1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
+1. On the command bar, select **Settings**. The settings page is displayed.
+1. In the left pane, in **Settings**, select **Features**. The features page is displayed.
+1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
+   - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
+   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
+   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously mad on the rich text editor's classic (default) notes authoring experience.
+1. Select **Save**.
+1. In the App Designer, select **Publish**.
+
+### Revert from the modern rich text editor experience to the classic experience
+
+If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
+
+
 ## Add the rich text editor control to a text column
+
+The following configuration is available in the classic rich text editor experience.
 
 When you format a text column as rich text, the default rich text editor control is added automatically.
 
@@ -40,6 +75,8 @@ When you format a text column as rich text, the default rich text editor control
 1. Save the column, and then add it to a form.
 
 ## Add the rich text editor control to a text column in a form
+
+The following configuration is available in the classic rich text editor experience.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation pane, select **Solutions**.
@@ -56,6 +93,8 @@ When you format a text column as rich text, the default rich text editor control
 1. Select **Save and publish** to apply your changes to the form.
 
 ## Customize the rich text editor control
+
+The following customizations are available in the classic rich text editor experience.
 
 Power Apps allows you to change the properties of the rich text editor control to customize its appearance, features, and behavior. To [customize a specific instance of the control](#customize-a-specific-instance-of-the-rich-text-editor), specify properties and their values in an individual JSON-formatted configuration file. To [customize the control's global configuration](#customize-the-rich-text-editor-globally), change the properties in the default configuration file.
 
@@ -87,14 +126,14 @@ We have to add a slight qualification here. Not *all* properties are replaced by
     }
     ```
 
-    Note that the last *propertyName:value* pair doesn't end with a comma.
+    The last *propertyName:value* pair doesn't end with a comma.
 
 1. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
 
-      We've provided a few [example configurations](#example-configurations) for you, but you can define others to suit your needs.
+      We provided a few [example configurations](#example-configurations) for you, but you can define others to suit your needs.
 
 1. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
-1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form) and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
+1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
       Although you may enter the absolute URL of the web resource, we recommend you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
@@ -109,9 +148,7 @@ The editable global configuration file `RTEGlobalConfiguration.json` is the seco
 
 If your business needs require you to customize the control everywhere, specify the values you need in the `RTEGlobalConfiguration.json` file. Use the read-only file as an example to make sure you enter property-value pairs in the right format.
 
-## Use Copilot to refine text in the editor (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Use Copilot to refine text in the editor
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
 
@@ -219,8 +256,8 @@ The following table describes the most commonly used properties, but you can con
 | height | Sets the initial height of the content area, in pixels. | "185" |
 | stickyStyle | Sets the editor font and size. | See [defaultSupportedProps](#defaultsupportedprops) |
 | stickyStyles_defaultTag | Creates a wrapper around the text in the editor content area. It's initially set to "div," but you can change it to "p" or any alternate tag. | "div" |
-| font_defaultLabel | Sets the font label that's displayed in the toolbar. The label is for appearance only and isn't functional. The `stickyStyle` property determines the editor font and size. | "Segoe UI" |
-| fontSize_defaultLabel | Sets the font size label that's displayed in the toolbar. The label is for appearance only and isn't functional. The `stickyStyle` property determines the editor font and size. | "9" |
+| font_defaultLabel | Sets the font label displayed in the toolbar. The label is for appearance only and isn't functional. The `stickyStyle` property determines the editor font and size. | "Segoe UI" |
+| fontSize_defaultLabel | Sets the font size label displayed in the toolbar. The label is for appearance only and isn't functional. The `stickyStyle` property determines the editor font and size. | "9" |
 | toolbarLocation | Sets the location of the toolbar in the editor content area. Supported values are "top" and "bottom." | "bottom" |
 | toolbar | Lists the toolbar buttons to display. | See [defaultSupportedProps](#defaultsupportedprops) |
 | plugins | Lists preset plug-ins that the editor can use. The plug-ins in this list might be different from the plug-ins that are loaded, if `extraPlugins` and `removePlugins` are given a value. If you set this property to an empty string, the editor loads without the toolbar. | See [defaultSupportedProps](#defaultsupportedprops) |
@@ -239,23 +276,23 @@ The following table describes more properties you can use to customize the rich 
 | --- | --- | --- |
 | attachmentEntity | To enforce more security on [uploaded files](/power-apps/developer/data-platform/file-attributes) by using a table other than the default, set this property and specify a different table.<br/>Syntax: "name": "*tableName*", "fileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
 | disableContentSanitization | Content sanitization removes some custom attributes or tags from rich text content. It's disabled by default to allow copying and pasting of rich text content from external sources. This property applies only to edit mode. When the editor control is read-only or disabled, content is always sanitized. | true |
-| disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column that's configured to use the rich text editor control. | false |
+| disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column configured to use the rich text editor control. | false |
 | disableImages | Determines whether images can be inserted in the editor. This property has highest priority. When this property is set to true, images are disabled, regardless of the value of the `imageEntity` property. | false |
 | externalPlugins | Lists external plug-ins or plug-ins that you create that can be used in the rich text editor control.<br/>Syntax: "name": "*pluginName*", "path": "*pathToPlugin*" (the path value can be an absolute or relative URL) | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | imageEntity | To enforce more security on [images](/power-apps/developer/data-platform/image-attributes) by using a table other than the default, set this property and specify a different table.<br>Syntax: "imageEntityName": "*tableName*", "imageFileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
-| readOnlySettings | These properties determine the behavior of the column when it's viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
+| readOnlySettings | These properties determine the behavior of the column when viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | sanitizerAllowlist | Lists other kinds of content that can be displayed in the editor. | See [defaultSupportedProps](#defaultsupportedprops) |
 | showAsTabControl | Allows you to display more commands above the content area. Must be set to true to use the following properties: `showFullScreenExpander`, `showHtml`, `showPreview`, `showPreviewHeaderWarning` | false |
 | showFullScreenExpander | Determines whether the editor can be used in full-screen mode. `showAsTabControl` must be set to true. | false |
 | showHtml | Allows users to display and edit the HTML content directly. `showAsTabControl` must be set to true. | false |
 | showPreview | Allows users to preview the editor content rendered as HTML. `showAsTabControl` must be set to true. | false |
-| showPreviewHeaderWarning | Allows you to show or hide the warning message that's displayed when previewing content. `showAsTabControl` and `showPreview` must be set to true. | false |
+| showPreviewHeaderWarning | Allows you to show or hide the warning message displayed when previewing content. `showAsTabControl` and `showPreview` must be set to true. | false |
 | allowSameOriginSandbox | Allows the content in the editor to be treated as from the same origin as the rendering app.<br/>**Use this property with caution.** Only use trusted external content. When this property is set to true, any external content could have access to internal resources. | false |
 | | | |
 
 ## Example configurations
 
-The following sample configurations create specific customizations of the rich text editor. You can use them as-is or as a jumping-off point to [customize a specific instance of the rich text editor](#customize-a-specific-instance-of-the-rich-text-editor) or globally.
+The following sample configurations create specific customizations of the rich text editor in the classic experience. You can use them as-is or as a jumping-off point to [customize a specific instance of the rich text editor](#customize-a-specific-instance-of-the-rich-text-editor) or globally.
 
 ### Set the default font to 11-point Calibri
 
@@ -272,7 +309,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Make the Enter key insert a new line instead of a paragraph block
 
-By default, pressing the Enter key creates a paragraph block with the **\<p>** HTML tag. HTML uses paragraph blocks to group information, like paragraphs in a Word document. Browsers can format the **\<p>** tag slightly differently, so for visual consistency, you might want to use the new line or line break tag **\<br\\>**  tag instead.
+By default, pressing the Enter key creates a paragraph block with the **\<p>** HTML tag. HTML uses paragraph blocks to group information, like paragraphs in a Word document. Browsers can format the **\<p>** tag slightly different, so for visual consistency, you might want to use the new line or line break tag **\<br\\>**  tag instead.
 
 Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
 
@@ -384,7 +421,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 "height": 30,
 ```
 
-:::image type="content" source="media/cke-autogrow.png" alt-text="Screenshot that illustrates that typing into the rich text area or pasting an image will increase it to fit the content.":::
+:::image type="content" source="media/cke-autogrow.png" alt-text="Screenshot that illustrates that typing into the rich text area or pasting an image increases it to fit the content.":::
 
 ### Fix the height of the editor at 500 pixels
 
@@ -435,8 +472,8 @@ The following table describes the formatting tools that are available in the ric
 | Icon | Name | Shortcut key | Description |
 | --- | --- | --- | --- |
 | ![Format Painter.](media/format-painter.png "Format Painter") | Copy Formatting | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font that's applied to it is displayed. If your selection contains multiple fonts, the first one applied to the selection is displayed. |
-| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size that's applied to it is displayed. If your selection contains multiple sizes, the first one applied to the selection is displayed. |
+| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font applied to it is displayed. If your selection contains multiple fonts, the first one applied to the selection is displayed. |
+| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size applied to it is displayed. If your selection contains multiple sizes, the first one applied to the selection is displayed. |
 | ![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 | ![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 | ![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
@@ -456,7 +493,7 @@ The following table describes the formatting tools that are available in the ric
 | ![Subscript.](media/format-subscript.png "Subscript")| Subscript | | Type small letters just below the line of text. |
 | ![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough | | Cross out text by drawing a line through it. |
 | ![Insert Image.](media/insert-picture.png "Insert Image")| Image | | To insert an image, paste it from your clipboard into the content area or drag an image file from a folder to the content area. Drag any corner of the image to resize it. The control supports .png, .jpg., and .gif images.<br/><br/>To have more control over the image's source, appearance, and behavior, select the **Image** button. Browse to the image file in a local folder or enter its URL. If the image is stored on an external server, enter the absolute path. If it's on a local server, you can enter a relative path. Optionally, enter a specific height and width to resize the image, and select an alignment. You should also enter alt text to describe the image for people who use screen readers.<br/><br/>If the image is also a link to a web page or other cloud resource, enter the URL of the resource in the **Target URL** box and, if needed, select the **Target** where the link should open. |
-| ![Left to Right.](media/left-to-right.png "Left to Right")| Text direction from left to right | | Change the text to left-to-right. This is the default setting. |
+| ![Left to Right.](media/left-to-right.png "Left to Right")| Text direction from left to right | | Change the text to left-to-right. This setting is the default. |
 | ![Right to Left.](media/right-to-left.png "Right to Left")| Text direction from right to left | | Change the text to right-to-left for bi-directional language content. |
 | ![Undo.](media/undo-typing.png "Undo")| Undo | | Reverse the last change you made to the content. |
 | ![Redo.](media/redo-typing.png "Redo")| Redo | | Undo your last undo, or reapply the last change you made to the content. |
@@ -491,7 +528,7 @@ The following formatting tools are available in the rich text editor when it's o
 
 - In the default configuration, images don't negatively affect performance because they're stored separately from the HTML content. However, images are stored as base64 content in the text column when the user who uploads them doesn't have permissions on the `msdyn_richtextfiles` table. Base64 content is large, so you generally don't want to store images as part of the column content.
 
-- If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have create, read, and write privileges on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
+- If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
 
 ## Frequently asked questions
 

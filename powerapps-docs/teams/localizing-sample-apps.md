@@ -1,5 +1,5 @@
 ---
-title: Localize sample app templates (contains video)
+title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
 
 ms.topic: conceptual
@@ -128,7 +128,7 @@ To add Russian, you would first add Russian translation to the spreadsheet for e
 
 1. Update the app OnStart function **gblUserLanguage** to include the language that you added to the Excel file. In the example below we've added Russian:
 
-    ```powerapps-dot
+    ```power-fx
     //user language
     Set(gblUserLanguage,Switch(Left(Language(),2),"de","de-DE","en","en-US","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","nl","nl-NL",
     "pt","pt-BR","ru-RU",
@@ -202,7 +202,7 @@ Let us add a label to the Loading screen:
 
 1. Open the **Text** property of the label and paste the following formula:
 
-   ```powerapps-dot
+   ```power-fx
    With({varDefault: "Welcome to the app", varOOBTextId: "lblLoadingText_Welcome_locText"}, With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId, LocalizedText)}, Coalesce(varLocalizedText;varDefault)))
    ```
 

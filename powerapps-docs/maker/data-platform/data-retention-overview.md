@@ -6,7 +6,7 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 04/11/2024
+ms.date: 05/10/2024
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -14,12 +14,9 @@ ms.custom: template-overview
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
-> You must meet *both* of the following two requirements to use all long term data retention features:
-> - The Power Platform environment must be a [Managed Environment](/power-platform/admin/managed-environment-overview). This also applies to Dynamics 365 customers who will be required to upgrade to a Managed Environment if the environment isn't already a Managed Environment.
+> The Power Platform environment where the retention policy resides must be a [Managed Environment](/power-platform/admin/managed-environment-overview). This also applies to Dynamics 365 customers who will be required to upgrade to a Managed Environment if the environment isn't already a Managed Environment.
 >
-> - A minimum of 1000 Dynamics 365 licenses or 1000 Power Apps per user licenses, or 1000 licenses from a combination of both in a single tenant.
->
-> Customers who don't meet these requirements can continue to create data retention policies, but the policies are disabled.
+> Customers who don't meet this requirement can continue to create data retention policies, but the policies are disabled.
 
 Watch this video to learn about Dataverse long term data retention.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
@@ -128,6 +125,7 @@ When you include your retention policies in a solution, their definitions become
 > [!NOTE]
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
 > - Only retention policies created in Power Platform environments can be solution-aware.
+> - When long term retention, is enabled through a solution import process, the related child tables aren't automatically enabled.
 
 You create a solution before you add a retention policy to it. Exporting and importing solutions containing retention policies is the same as with other solution components.
 

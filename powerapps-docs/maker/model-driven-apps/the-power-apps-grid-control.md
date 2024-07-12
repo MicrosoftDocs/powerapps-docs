@@ -2,7 +2,7 @@
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
 ms.custom: ""
-ms.date: 03/22/2024
+ms.date: 06/06/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,7 +22,7 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 - **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are no page boundaries, users can select more rows at once (up to 1,000 rows) to facilitate taking action against a set of records or perform bulk editing.
 - **Inline editing**: This singular grid control can be utilized for read-only or edit scenarios.
 - **Nested grids**: Makers can configure the grid to show surface related records. When configured, users can expand a row to see a subgrid of related records. Multiple rows in the grid can be expanded simultaneously. This is an improvement over older grid experiences.  
-- **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of lookup columns.
+- **Grouping**: Users can organize tabular data in interesting ways by grouping the data based on a single column. Each group is collapsed initially, but users can expand and collapse the groups as desired. Grouping is exposed on most data types with the notable exception of lookup columns. Grouping isn't supported when paging on the grid is enabled.
 - **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping is applied, this aggregate value is also displayed for each group.
 - **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
 
@@ -106,10 +106,13 @@ To work around this, you can display a custom card by configuring the table to u
 - The grid doesn't currently support legacy theme customizations.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
+- Columns lookup filters, when using the 'Equals' or 'Does not equal' operator, only show lookup options available within the current set of applied filters.
+  - For example, if the contact table has users 'Person A', 'Person B', and 'Person C' but account table data only has rows referencing 'Person B' and 'Person C', then the column filter lookup for the contact column in the account grid only shows the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
 
-### Known issue
-
-If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+### Known issues
+- Column grouping is not supported when paging on the grid is enabled.
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If an user has read-only privileges to the main list and then navigates through a form to a sub-grid representing an entity to which they have write privileges, the sub-grid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
 
 ### See also
 

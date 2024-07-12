@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/09/2024
+ms.date: 04/30/2024
 ms.custom: template-how-to
 ---
 # Build apps and automations, drive action with insights from Microsoft Fabric (preview)
@@ -46,7 +46,7 @@ Follow these steps to create a virtual table using Fabric data.
 
 > [!NOTE]
 >
-> This feature is enabled by default with all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
+> This feature is enabled by default with all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings. 
 
 1. Sign into [Power Apps](https://make.powerapps.com), and then select **Tables** on the left navigation pane.
 2. On the command bar, select **New table** > **Create a virtual table**.
@@ -56,6 +56,11 @@ Follow these steps to create a virtual table using Fabric data.
 6. On the **Data** page, select a table from the list of tables shown from the lakehouse. Select **Configure table and column names that will be used in Dataverse** if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
 7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you're shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
 8. Verify that the field chosen for **primary key field** is a unique field. You might need to verify the default field selected by the system as the primary key.
+
+> [!NOTE]
+>
+> While the table you selected from Fabric Lakehouse might not have a primary key defined, you need to select a field that is unique to continue. If you don't select a unique field, the table might not show all the records. While the wizard selects a field based on metadata available, the selection might not be accurate.  
+
 9. Review the information shown, and then select **Finish**.
 
 A new Dataverse virtual table is created with data from Fabric.

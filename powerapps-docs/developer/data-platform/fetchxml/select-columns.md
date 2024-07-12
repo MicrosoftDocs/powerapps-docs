@@ -48,7 +48,7 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 The typed data returned may not be suitable to display in your application. Formatted values are string values returned with the request that you can display in your application.
 
-Let's look at the results *without* using formatted values first.
+Let's look at the results *without* using formatted values first. These functions use the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/) to show the table in a console application.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -58,7 +58,7 @@ This `SimpleOutput` method only accesses values in the [Entity.Attributes collec
 /// <summary>
 /// Output the entity attribute values
 /// </summary>
-/// <param name="service">The authenticated IOrganizaitonService instance</param>
+/// <param name="service">The authenticated IOrganizationService instance</param>
 static void SimpleOutput(IOrganizationService service) {
 
     string fetchXml = @"<fetch>
@@ -163,7 +163,7 @@ These values may not be the user-friendly values you need to display in an appli
 
 - The `accountclassificationcode` choice column returns the integer value.
 - The SDK reference to `createdby` must use the [EntityReference.Name property](xref:Microsoft.Xrm.Sdk.EntityReference.Name)
-- The Web API returns the `_createdby_value` [Lookup property](../webapi/query-data-web-api.md#lookup-property-data) that has the GUID value for the `createdby` lookup column.
+- The Web API returns the `_createdby_value` [Lookup property](../webapi/query/select-columns.md#lookup-property-data) that has the GUID value for the `createdby` lookup column.
 
 To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse.
 
@@ -357,8 +357,8 @@ static List<string> GetRowValues(List<string> columns, JsonObject record)
 
 Learn more about formatted values:
 
-- [SDK for .NET Query data: Access formatted values](../org-service/entity-operations-query-data.md#access-formatted-values)
-- [Web API Query data: Formatted values](../webapi/query-data-web-api.md#formatted-values)
+- [SDK for .NET Query data:Formatted values](../org-service/entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
+- [Web API Query data: Formatted values](../webapi/query/select-columns.md#formatted-values)
 
 
 ## Column aliases

@@ -126,7 +126,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 
 2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to the following formula:
 
-   ```powerapps-dot
+   ```power-fx
     DateDiff(Today(), Deadline.SelectedDate) & " days to go!"
     ```
 
@@ -145,7 +145,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add a **[Button](control-button.md)** control, and set its **[OnChange](properties-core.md)** property to the following formula:
-    ```powerapps-dot
+    ```power-fx
     Reset(DateTimeReset)
     ```
 

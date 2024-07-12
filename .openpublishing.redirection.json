@@ -1,5 +1,115 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md",
+      "redirect_url": "query/overview",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#select-columns",
+      "redirect_url": "query/select-columns",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#join-tables",
+      "redirect_url": "query/join-tables",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#order-rows",
+      "redirect_url": "query/order-rows",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#filter-rows",
+      "redirect_url": "query/filter-rows",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#page-results",
+      "redirect_url": "query/page-results",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#aggregate-data",
+      "redirect_url": "query/aggregate-data",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md#count-number-of-rows",
+      "redirect_url": "query/count-rows",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic.md#bypass-power-automate-flows",
+      "redirect_url": "bypass-power-automate-flows",
+      "redirect_document_id": "false"
+    },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bypass-custom-business-logic-preview.md",
+      "redirect_url": "bypass-custom-business-logic",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/build-queries-with-queryexpression.md",
+      "redirect_url": "queryexpression/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-queryexpression-class.md",
+      "redirect_url": "queryexpression/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md",
+      "redirect_url": "queryexpression/filter-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-filterexpression-class.md",
+      "redirect_url": "queryexpression/filter-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-the-columnset-class.md",
+      "redirect_url": "queryexpression/select-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-queryexpression.md",
+      "redirect_url": "queryexpression/page-results",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-left-outer-join-queryexpression-query-records-not-in.md",
+      "redirect_url": "queryexpression/join-tables#find-records-not-in-a-set",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md#column-comparison",
+      "redirect_url": "queryexpression/filter-rows#filter-on-column-values-in-the-same-row",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-conditionexpression-class.md#record-count",
+      "redirect_url": "queryexpression/count-rows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-filterexpression-class.md#about-the-isquickfindfilter-property",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-queryexpression-class.md#use-sql-hints-in-a-query",
+      "redirect_url": "queryexpression/optimize-performance#query-hints",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/build-queries-with-queryexpression.md#configuration-for-quick-find",
+      "redirect_url": "quick-find",
+      "redirect_document_id": "false"
+    },
     {
       "source_path": "powerapps-docs/developer/data-platform/tools/devtools-create-plugin.md",
       "redirect_url": "/power-platform/developer/howto/vs-create-plugin",
@@ -47,12 +157,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/paging-behaviors-and-ordering.md",
-      "redirect_url": "fetchxml/order-rows#ordering-and-paging",
+      "redirect_url": "../fetchxml/order-rows#ordering-and-paging",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/page-large-result-sets-with-fetchxml.md",
-      "redirect_url": "fetchxml/page-results",
+      "redirect_url": "../fetchxml/page-results",
       "redirect_document_id": "false"
     },
     {
@@ -9025,10 +9135,50 @@
       "redirect_url": "/power-pages/introduction",
       "redirect_document_id": "false"
     },
-   {
+    {
       "source_path": "powerapps-docs/maker/data-platform/data-platform-create-entity.md",
       "redirect_url": "/power-apps/maker/data-platform/create-edit-entities-portal",
       "redirect_document_id": "false"
-   }
+    },
+    {
+      "source_path": "powerapps-docs/user/copilot-chat-in-webplayer.md",
+      "redirect_url": "/power-platform/responsible-ai-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/control-portal-creation.md",
+      "redirect_url": "/power-pages/admin/control-site-creation",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-additional-portals.md",
+      "redirect_url": "/power-pages/admin/create-additional-sites",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/manage-existing-portals.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/provision-portal-add-on.md",
+      "redirect_url": "/power-pages/admin/provision-add-on",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/mobile/offline-capabilities.md",
+      "redirect_url": "mobile-offline-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/mobile/mobile-offline-overview-classic.md",
+      "redirect_url": "/dynamics365/mobile-app/migration",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/mobile/setup-mobile-offline-classic.md",
+      "redirect_url": "/dynamics365/mobile-app/migration",
+      "redirect_document_id": "false"
+    }
   ]
 }

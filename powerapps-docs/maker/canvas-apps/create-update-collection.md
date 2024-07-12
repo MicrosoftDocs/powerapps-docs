@@ -1,5 +1,5 @@
 ---
-title: Create and update a collection in a canvas app (contains video)
+title: Create and update a collection in a canvas app
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
 author: mduelae
 
@@ -52,7 +52,7 @@ Watch this video to learn how to create and update a collection:
 
 1. Add a **Button** control, set its **Text** property to **"Add"**, and set its **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Collect(
         ProductList,
         {
