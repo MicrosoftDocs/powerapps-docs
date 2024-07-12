@@ -5,7 +5,7 @@ author: tahoon-ms
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 09/16/2022
+ms.date: 07/12/2024
 ms.subservice: canvas-maker
 ms.author: tahoon
 ms.reviewer: mkaur
