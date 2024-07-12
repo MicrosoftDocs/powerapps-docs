@@ -2,9 +2,8 @@
 title: "Overview of performance insights in Power Apps | MicrosoftDocs"
 description: Understand performance insights. 
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 07/10/2024
 ms.reviewer: ""
-
 ms.topic: overview
 author: "Mattp123"
 ms.subservice: common
@@ -13,6 +12,9 @@ search.audienceType:
   - maker
 ---
 # What are performance insights? (preview)
+
+> [!IMPORTANT]
+> This feature is undergoing significant improvements and until the new version becomes available the current feature is disabled.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

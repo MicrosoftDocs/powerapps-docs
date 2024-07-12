@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 7/10/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -33,6 +33,21 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 **AccessibleLabel** – Label for screen readers.
 
 **Visible** - Whether a control appears or is hidden.
+
+## Add an icon to a button control
+
+The button control now includes subset of Fluent icons. The following properties are available:
+
+**Icon** - The button control now allows you to enhance its visual appeal by including Fluent icons. In the properties pane, select the desired icon from a dropdown menu that displays all available options.
+
+> [!div class="mx-imgBorder"]
+> ![List of icons](media/Icons-List.png)
+
+**Layout** - Defines the positioning of the icon in relation to the text on the button or no icon at all.
+
+**Icon Rotation** - Provides the ability to rotate the icon to a desired orientation.
+
+**Icon Style** - Provides option for icon to be rendered in filled or outline state.
 
 ## Behavior
 
@@ -75,7 +90,7 @@ Use the modern button to set a button to be primary or secondary. Configure the 
 
 ## Additional properties
 
-**AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
 **[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
 

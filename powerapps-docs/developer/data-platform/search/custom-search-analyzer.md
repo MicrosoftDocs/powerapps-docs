@@ -228,7 +228,7 @@ This PowerShell function depends on the following functions described in [Use Po
 
 - `Connect`: [Learn to create a Connect function](../webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
 - [Learn to create table operations functions](../webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions):
-  - `Get-Records`: [Learn to retrieve records using the Web API](../webapi/query-data-web-api.md)
+  - `Get-Records`: [Learn to retrieve records using the Web API](../webapi/query/overview.md)
   - `Remove-Record`: [Learn to delete records using the Web API](../webapi/update-delete-entities-using-web-api.md#basic-delete)
   - `New-Record`: [Learn to create records using the Web API](../webapi/create-entity-web-api.md)
 

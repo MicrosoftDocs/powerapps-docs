@@ -1,6 +1,6 @@
 ## Patterns to avoid
 
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This section describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). The guidance here might not apply for [Elastic tables](../elastic-tables.md) or when using [Dataverse Search](../search/overview.md).
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. This section describes patterns to avoid and concepts to understand when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). This guidance also applies when sending a `GET` request against a collection of records using OData. The guidance here might not apply for [Elastic tables](../elastic-tables.md) or when using [Dataverse Search](../search/overview.md).
 
 
 ### Minimize the number of selected columns
@@ -26,6 +26,12 @@ The following example is a [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryE
 
 ```csharp
 new ConditionExpression("accountnumber", ConditionOperator.Like, "%234")
+```
+
+The following example is a OData query that uses a leading wild card:
+
+```http
+$filter=startswith(accountnumber,'%234')
 ```
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
@@ -61,7 +67,12 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 ### Avoid ordering by choice columns
 
-When you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
+When using [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../org-service/queryexpression/order-rows.md#choice-columns), when you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
+
+> [!NOTE]
+> OData is different. With the Dataverse Web API, `$orderby` sorts rows using the integer value of the choice column rather than the localized label.
+
+
 
 ### Avoid ordering by columns in related tables
 
@@ -71,6 +82,7 @@ Ordering by related tables should only be done when needed to as described here:
 
 - [Order rows using FetchXml](../fetchxml/order-rows.md)
 - [Order rows using QueryExpression](../org-service/queryexpression/order-rows.md)
+- [Order rows using OData](../webapi/query/order-rows.md)
 
 ### Avoid using conditions on large text columns
 
@@ -85,4 +97,4 @@ You can use conditions on string columns that have a `MaxLength` configured for 
 
 All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 
-Dataverse search is a better choice to query data in these kinds of columns.
+[Dataverse search](../search/overview.md) is a better choice to query data in these kinds of columns.
