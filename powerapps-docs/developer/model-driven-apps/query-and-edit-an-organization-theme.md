@@ -60,7 +60,7 @@ OData-Version: 4.0
 }  
 ```
 
- More information: [Query Data using the Web API](../data-platform/webapi/query-data-web-api.md).
+ More information: [Query Data using the Web API](../data-platform/webapi/query/overview.md
   
 <a name="BKMK_EditAndPublish"></a>
 

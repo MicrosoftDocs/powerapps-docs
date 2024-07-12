@@ -225,7 +225,7 @@ In this case, there's only one: `4ab978b0-1d77-ec11-8d21-000d3a554d57`
 }
 ```
 
-[Learn more about querying data using Web API](webapi/query-data-web-api.md)
+[Learn more about querying data using Web API](webapi/query/overview.md)
 
 
 #### Query your environment with FetchXml
