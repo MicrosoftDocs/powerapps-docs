@@ -5,7 +5,7 @@ author: hemantgaur
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 09/06/2021
+ms.date: 07/12/2024
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -42,7 +42,7 @@ When this feature is turned on, it also enables the following boolean properties
 
 If not already enabled, follow these steps to enable this feature in your app, and set the properties mentioned earlier.
 
-1. Sign in to [Power Apps](https://make.poweraps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left-pane.
 
