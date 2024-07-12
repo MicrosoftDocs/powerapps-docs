@@ -131,7 +131,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ### See also
 
-[Query Data using the Web API](../query-data-web-api.md)  
+[Query Data using the Web API](../query/overview.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
 [Use the Dataverse Web API](../overview.md)
 [Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />

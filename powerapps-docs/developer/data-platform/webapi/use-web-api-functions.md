@@ -42,7 +42,7 @@ Avoid the `DateTimeOffset` issue by passing the values in as parameters, as show
 GET [Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific Standard Time'&@p2=1033  
 ```  
   
-When a parameter value is used multiple times, [parameter aliases](query-data-web-api.md#use-parameter-aliases-with-query-options) allow you to reuse it to reduce the length of the URL.
+When a parameter value is used multiple times, [parameter aliases](query/overview.md#use-parameter-aliases-with-query-options) allow you to reuse it to reduce the length of the URL.
   
 <a name="bkmk_passCrmEntityReference"></a>
 
@@ -205,7 +205,7 @@ Some functions listed in <xref:Microsoft.Dynamics.CRM.FunctionIndex> return a co
   
 ### Query functions
 
-Functions listed in the <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> are intended to be used to compose a query. You can use them in a manner similar to the [OData query functions](query-data-web-api.md#use-odata-query-functions), but there are some important differences. You must use the full name of the function and include the names of the parameters. 
+Functions listed in the <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> are intended to be used to compose a query. You can use them in a manner similar to the [OData query functions](query/filter-rows.md#use-odata-query-functions), but there are some important differences. You must use the full name of the function and include the names of the parameters. 
   
 The following example uses the <xref:Microsoft.Dynamics.CRM.LastXHours> query function to return all account entities modified in the past 12 hours:
   
@@ -247,7 +247,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Microsoft.Dyn
 [Web API functions and actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)   
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)   
-[Query data using the Web API](query-data-web-api.md)   
+[Query data using the Web API](query/overview.md)   
 [Create a table row using the Web API](create-entity-web-api.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
