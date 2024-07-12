@@ -21,22 +21,22 @@ Power Platform offers a variety of capabilities for makers to build business log
 
 **Power Apps with Power Fx** – Power Fx is the low code functional programming language shared by Excel and Power Platform. When used with Power Platform connectors, makers can access data and create custom app logic. Power Fx supports the following characteristics:
 
-1. **Live** – Canvas apps "recalc" just as Excel spreadsheets do. As end users interact with the app, Power Fx is in the background making data requests and keeping the state of the app up to date with Dataverse.
+- **Live** – Canvas apps "recalc" just as Excel spreadsheets do. As end users interact with the app, Power Fx is in the background making data requests and keeping the state of the app up to date with Dataverse.
 
-2. **Delegation** – Power Fx optimizes data handling by "delegating" operations to the server whenever possible. Functions like Filter(), Lookup(), and Search() enable server-side data filtering, ensuring that only the necessary data is retrieved to support the app's functionality and user experience. In cases where delegation isn't possible, functions run locally within the JavaScript environment of the browser.
+- **Delegation** – Power Fx optimizes data handling by "delegating" operations to the server whenever possible. Functions like Filter(), Lookup(), and Search() enable server-side data filtering, ensuring that only the necessary data is retrieved to support the app's functionality and user experience. In cases where delegation isn't possible, functions run locally within the JavaScript environment of the browser.
 
-3. **Optimized for Dataverse** – Dataverse serves as the primary data storage option for Power Apps, offering direct, and low-latency access due to fewer intermediary layers.  Power Fx is also compatible with Dataverse's diverse relationship types, including many-to-one and one-to-many associations.
+- **Optimized for Dataverse** – Dataverse serves as the primary data storage option for Power Apps, offering direct, and low-latency access due to fewer intermediary layers.  Power Fx is also compatible with Dataverse's diverse relationship types, including many-to-one and one-to-many associations.
 
-4. **Offline** – The [Power Apps mobile app](../../mobile/canvas-mobile-offline-overview.md) enables offline use of Dataverse data, allowing users to use the app in the field allowing a seamless connection. Any changes made offline are synchronized when internet connection is available. The app's predefined business logic remains operational, even without an internet connection.
+- **Offline** – The [Power Apps mobile app](../../mobile/canvas-mobile-offline-overview.md) enables offline use of Dataverse data, allowing users to use the app in the field allowing a seamless connection. Any changes made offline are synchronized when internet connection is available. The app's predefined business logic remains operational, even without an internet connection.
 
 
 **Power Automate** – A low code workflow service built on top of the Power Platform connector ecosystem. Power Automate adds the following capabilities when building Power Apps:
 
-1. **Asynchronous** – A Power Automate cloud flow is inherently asynchronous. This means that when a flow is initiated, it's using a queuing system to manage the various subtasks. The asynchronous nature of Power Automate means that it's well suited for longer running complex sequences of logic.
+- **Asynchronous** – A Power Automate cloud flow is inherently asynchronous. This means that when a flow is initiated, it's using a queuing system to manage the various subtasks. The asynchronous nature of Power Automate means that it's well suited for longer running complex sequences of logic.
 
-2. **Detailed logging** – All flows create a record of what happened when they executed, called the **Run History**. This provides traceability and ensures there's an auditing record for what happened and why.
+- **Detailed logging** – All flows create a record of what happened when they executed, called the **Run History**. This provides traceability and ensures there's an auditing record for what happened and why.
 
-3. **Multi-connector** – Although it's possible to create multi-connector Power Apps logic, due to the live nature of Power Apps, as you increase the number of connectors performance degrades. These complex multi-connector scenarios are a great place to use Power Automate which can offload these cases from live execution in the app.
+- **Multi-connector** – Although it's possible to create multi-connector Power Apps logic, due to the live nature of Power Apps, as you increase the number of connectors performance degrades. These complex multi-connector scenarios are a great place to use Power Automate which can offload these cases from live execution in the app.
 
 ## When to use Power Fx vs Power Automate in Power Apps?
 
