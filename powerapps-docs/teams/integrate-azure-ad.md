@@ -112,7 +112,7 @@ We'll create an app with a button that will only show up if the user is a member
 
 1. Enter the following formula for the app OnStart:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         !IsEmpty(
             AzureAD.CheckMemberGroups(

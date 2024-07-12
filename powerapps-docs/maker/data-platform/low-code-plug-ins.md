@@ -278,14 +278,14 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
 - Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below. If you're creating an automated plug-in, prepend @ to each table referenced in the Power Fx formula.
 
-    ```powerapps-dot
+    ```power-fx
     Patch(Faxes,
         Collect(Faxes, { Subject : "Sub1" } ),
         { Regarding : First(Accounts) }
     )
     ```
 - When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK methods (WebAPI, SDK, PowerShell, and so on). You can disable this using a low-code instant plug-in as follows:
-   ```powerapps-dot
+   ```power-fx
    Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
    ```
 - Plug-ins that use connectors can only output results from specific fields. Due to this, you need to map specific primitive values from the connector response to output values.

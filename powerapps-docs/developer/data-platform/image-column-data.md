@@ -320,7 +320,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 ---
 
