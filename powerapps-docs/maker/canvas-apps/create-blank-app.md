@@ -28,7 +28,7 @@ Watch this short video that shows you how to create a blank canvas app.
 
 ## Prerequisites
 
-In order to proceed with this quickstart, you need to be assigned the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that belongs to the **AAD Security Group** category
+In order to proceed with this quickstart, you need to be assigned the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that belongs to the **AAD Security Group** category.
 
 
 ## Create a blank canvas app
