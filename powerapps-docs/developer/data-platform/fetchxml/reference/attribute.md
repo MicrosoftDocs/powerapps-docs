@@ -4,7 +4,7 @@ description: Use this element to specify which columns in the containing entity 
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-ms.date: 02/29/2024
+ms.date: 07/12/2024
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -50,7 +50,7 @@ contributors:
 |`groupby`|No|When you aggregate data, this attribute specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
 |`name`|Yes|The logical name of the column.|
 |`rowaggregate`|No|When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the results. [Learn how to use this attribute](../../query-hierarchical-data.md#retrieve-the-number-of-hierarchically-related-child-records).|
-|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Specifies that the grouping use the user's time zone, otherwise UTC is used. Depending on the time zone, the same datetime value can fall in different days. [Learn about grouping by parts of a date](../aggregate-data.md#grouping-by-parts-of-a-date)|
+|`usertimezone`|No|Used by aggregate queries that group by datetime columns. Specifies that the grouping use the user's time zone, otherwise UTC is used. Depending on the time zone, the same datetime value can fall in different days. [Learn about grouping by parts of a date](../aggregate-data.md#grouping-by-parts-of-a-date)<br /><br />**Note**: When not included, the default behavior is `usertimezone='true'`. To override this default behavior so that UTC is used instead, you must include this attribute like this: `usertimezone='false'`|
 
 ## Parent elements
 
