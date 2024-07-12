@@ -79,6 +79,8 @@ The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses th
 
 There's a 1-GB size limitation on the size of a response that Dataverse returns.  Few APIs or queries are capable of returning this much data.  If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests.
 
+The maximum request size for any request routed to Dataverse is 128MB. Requests with payloads over this limit will recieve a 413 "Payload Too Large" HTTP status code.
+
 The deprecated SOAP endpoint returns serialized XML data that is much more verbose than the serialized JSON data returned by the Web API. If you're using the deprecated SOAP endpoint, you should use the Web API equivalent operation. More information: [About the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
