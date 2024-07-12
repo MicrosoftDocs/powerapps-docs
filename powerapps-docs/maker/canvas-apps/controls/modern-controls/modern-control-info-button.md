@@ -70,7 +70,7 @@ Use **Info button** control to provide additional information to users.
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
-**AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
 **OnSelect** - Actions to perform when the user selects a control.  
 
