@@ -44,7 +44,8 @@ Use classic solution explorer to perform app making and customization tasks that
 1. Select **Settings** > **Customizations**.
    :::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
 
-1. From the Customization area, select **Customize the System**.
+1. From the **Customization** area, select **Solutions**.
+1. From the **All Solutions** view, select the **Display name** for the solution you want to edit.
 
 The solution explorer is displayed in a new browser window.
 > [!div class="mx-imgBorder"]
