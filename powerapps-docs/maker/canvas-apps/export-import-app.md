@@ -25,7 +25,6 @@ You can export and import canvas apps by using packages. This feature allows you
 > - Canvas app packages can't be used with [Dataverse solution packages](../data-platform/solutions-overview.md) because of the package incompatibility.
 > - Canvas apps that have Dataverse dependencies, such as flows, connection references, etc. are not supported for canvas app packages. For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](/power-platform/alm/overview-alm)
 > - An App Insights instrumentation key may be present in imported canvas apps. Inspect the instrumentation key after importing an app to ensure it corresponds to the desired App Insights resource.
-> - When exporting a Canvas app, any associated flows will not be included in the export package. Once the Canvas app is imported, the flows association must be reconfigured again. [Add an existing flow](working-with-flows.md#add-an-existing-flow)
 
 ## Resources included in the package
 
@@ -162,7 +161,8 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
     ![Select connection.](media/export-import-app/select-or-create-connection-during-import.png "Select connection")
 
     > [!NOTE]
-    > If no connections are available, or the connection you want isn't listed, select **Create new** to create a new connection in a new browser tab. Ensure that you create the connection for the correct resource type. After creating the connection, return to the import app browser tab and select **Refresh list** to reflect and choose the newly created connection.
+    > - If no connections are available, or the connection you want isn't listed, select **Create new** to create a new connection in a new browser tab. Ensure that you create the connection for the correct resource type. After creating the connection, return to the import app browser tab and select **Refresh list** to reflect and choose the newly created connection.
+    > - When importing a Canvas app with flows, the flows association must be reconfigured in some cases. [Add an existing flow](working-with-flows.md#add-an-existing-flow)
 
 1. (Optional) If comments were entered for a resource during the export of the app package, the comment icon will appear filled and the text **Comment yes** will appear when you hover over it. Select the comment to view it.
 
