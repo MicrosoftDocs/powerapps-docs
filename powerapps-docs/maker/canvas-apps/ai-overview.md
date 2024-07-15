@@ -1,6 +1,6 @@
 ---
-title: Copilot in Power Apps overview
-description: Copilot in Power Apps overview.
+title: Copilot in Power Apps overview (preview)
+description: Learn how to use AI to build apps by describing what you want them to do with Copilot in Power Apps.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
@@ -18,9 +18,9 @@ contributors:
   - Mattp123
 ---
 
-# Copilot in Power Apps overview
+# Copilot in Power Apps overview (preview)
 
-[This article is prerelease documentation and is subject to change.]
+[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
 
 Bringing the power of Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
 
@@ -43,6 +43,7 @@ Learn how to use Copilot features in Power Apps.
 - [Add copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
 
 ## App users
+
 - [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
 - [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
 
@@ -51,7 +52,8 @@ Learn how to use Copilot features in Power Apps.
 - [Add Dataverse tables in Microsoft Copilot Studio as a knowledge source](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
 
 > [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+>
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in the process of rolling out, and may not be available in your region yet.
@@ -89,10 +91,8 @@ Follow these steps to enable or disable **Copilot** preview features for your en
    - To turn it on, set the toggle to **On** for **Copilot**.
    - To turn it off, set the toggle to **Off** for **Copilot**.
 
-
-## See also
+## Related information
 
 - [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 - [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
 - [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)
-  
