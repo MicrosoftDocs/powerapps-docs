@@ -55,7 +55,7 @@ When it comes to accessing data efficiently, the combination of Dataverse and Po
 
 For more information, see [Data call flow with Microsoft Dataverse](execution-phases-data-flow.md?#data-call-flow-with-microsoft-dataverse).
 
-### Complex sequences and multi-connector
+### Complex sequences and use of multiple connectors
 
 When dealing with complex sequences of action that span various connectors, Power Automate serves as an effective asynchronous solution to delegate processing away from Power Apps. This asynchronous capability lets Power Apps kick off a workflow and proceed with other tasks without having to pause for a response.
 
