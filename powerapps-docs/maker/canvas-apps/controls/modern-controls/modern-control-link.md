@@ -76,7 +76,7 @@ Use **Link** control to provide links that can be defined with accessibility com
 
 ## Additional properties
 
-**AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
 
 
