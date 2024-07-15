@@ -20,7 +20,7 @@ searchScope:
 This article provides recommendations for how to create the best experience for users of apps configured for offline use. 
 
 - If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps)
-- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to  plan the your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
+- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to plan your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
 
 ## How to create the best offline user experience in canvas apps
 
