@@ -63,8 +63,8 @@ Learn how to use Copilot features in Power Apps.
 ## Prerequisites for the Copilot features in Power Apps
 
 - To use Copilot in Power Apps, your administrator must turn on Copilot features.
-- For Copilot availability in your region, see  [Release Planner Availability Reports](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
-- Some Copilot features are already General Availabilible (GA), so they're turned on by default. For information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
+- For Copilot availability in your region, refer to [Release Planner Availability Reports](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- Some Copilot features are already generally available and are turned on by default. Learn more in [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
 - Each Copilot feature might have different requirements. Refer to the specific documentation for each feature for detailed information.
 
 ## Enable or disable Copilot (preview) in Power Apps
@@ -77,7 +77,7 @@ Follow these steps to disable **Copilot** (preview) in Power Apps for your tenan
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
-3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
+3. Select **Copilot (preview)**, turn the toggle **Off**, and then select **Save**.
 
 > [!NOTE]
 > Turning off Copilot for your tenant will only disable Copilot for makers. It won't disable [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
@@ -86,10 +86,8 @@ Follow these steps to enable or disable **Copilot** preview features for your en
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. In the left-side navigation pane, select **Environments**.
-3. Select the environment and on the command bar, select **Settings**.
-4. Select one of the following options:
-   - To turn it on, set the toggle to **On** for **Copilot**.
-   - To turn it off, set the toggle to **Off** for **Copilot**.
+3. Select the environment, and on the command bar, select **Settings**.
+4. Set the **Copilot** toggle to **On** or **Off**.
 
 ## Related information
 
