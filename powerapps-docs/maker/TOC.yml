@@ -16,7 +16,7 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Copilot in Power Apps
+  - name: Copilot in Power Apps (preview)
     href: ./canvas-apps/ai-overview.md
   - name: "What's new?"
     href: ../whats-new.md
