@@ -1,6 +1,6 @@
 ---
 title: Mobile offline limitations for model-driven apps
-description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
+description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app.
 ms.custom: 
 ms.date: 07/03/2024
 ms.reviewer: sericks
@@ -110,8 +110,8 @@ These tables and corresponding commands are available in offline mode.
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
     > [!NOTE]
-    > For the best compatibility across platforms, use one of the following redommendations, instead of HTML web resources:
-    > - If the web resource is a user expereince component, use a [PCF control](../developer/component-framework/overview.md).
+    > For the best compatibility across platforms, use one of the following recommendations, instead of HTML web resources:
+    > - If the web resource is a user experience component, use a [PCF control](../developer/component-framework/overview.md).
     > - If the web resource doesn't present in the user interface, use [form handler events](../maker/model-driven-apps/configure-event-handlers-legacy.md) which are available offline on all platforms.
 
 - **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
