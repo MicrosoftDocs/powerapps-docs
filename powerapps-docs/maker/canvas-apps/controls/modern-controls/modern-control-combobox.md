@@ -20,6 +20,8 @@ contributors:
 ---
 # Combobox modern control in Power Apps (preview)
 
+[This article is pre-release document and is subject to change.]
+
 A control that allows users to make selections from provided choices and supports search and multiple selections. 
 
 ## Description
