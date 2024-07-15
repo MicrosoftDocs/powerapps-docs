@@ -1,6 +1,6 @@
 ---
 title: Use Copilot chat in model-driven apps
-description: Learn how to use Copilot chat in model-driven apps.
+description: Learn how to use Copilot chat to gain insights about the data in your model-driven apps.
 author: srihas
 ms.component: pa-user
 ms.topic: overview
@@ -19,12 +19,13 @@ search.audienceType:
 Copilot chat for model-driven apps in Power Apps is a next-generation AI assistant that helps you gain insights into the data in your apps through conversations in natural language. Copilot chat helps you boost your productivity through AI-powered insights and navigation assistance.
 
 > [!IMPORTANT]
+>
 > This feature is generally available in Dynamics 365 apps.
 >
 > This feature is a preview feature in Power Apps.
 >
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
+> - An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
 
 ## Copilot pane
 
