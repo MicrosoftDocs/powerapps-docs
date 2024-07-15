@@ -18,7 +18,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Combobox modern control in Power Apps
+# Combobox modern control in Power Apps (preview)
 
 A control that allows users to make selections from provided choices and supports search and multiple selections. 
 
