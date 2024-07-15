@@ -126,7 +126,7 @@ The steps in this example apply to any [data source that provides tables](../con
 
 1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
     
-    ```powerapps-dot    
+    ```power-fx    
     First(DataSource)
     ```
 
@@ -135,7 +135,7 @@ The steps in this example apply to any [data source that provides tables](../con
 1. Select **Insert** > **Text label**, and then select **Label**.  
 1. Set the **Text** property to this expression, replacing *Text* with the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(CountRows(ComboBox1.SelectedItems)>0, Concat(ComboBox1.SelectedItems,'Account Name',", "), "NO SELECTED ITEM")
     ```
 

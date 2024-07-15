@@ -33,7 +33,7 @@ The default generated form consists of the following controls and their correspo
 
     * **Item** - The selected item from the list. This is set to First() item in the list for your convenience when working in Power Apps Studio.
 
-        ```powerapps-dot
+        ```power-fx
         If( IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),
             First('*YourListName*'),
             SharePointIntegration.Selected )
@@ -43,7 +43,7 @@ The default generated form consists of the following controls and their correspo
 
 * **OnSuccess** -  Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
 
-    ```powerapps-dot
+    ```power-fx
     ResetForm(SharePointForm1); RequestHide()
     ```
 
@@ -124,13 +124,13 @@ Now that you have a better understanding of the default generated form and the *
 
     - Instead of:
 
-        ```powerapps-dot
+        ```power-fx
         Set( selectedItem,
             SharePointIntegration.Selected );
         ```
 
     - Use:
-        ```powerapps-dot
+        ```power-fx
         Set( selectedLookupItem,
             LookUp( YourSharepointIntegrationObject, 
                     ID=SharePointIntegration.SelectedListItemID ) );

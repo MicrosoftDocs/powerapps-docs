@@ -4,10 +4,11 @@ description: Learn how to access ready only data that is in long term storage.
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
+contributors: manasdalai
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/12/2024
-ms.custom: template-how-to 
+ms.date: 06/27/2024
+ms.custom: template-how-to
 ---
 # View long term retained data
 
@@ -33,6 +34,10 @@ For more information about creating and editing Dataverse security roles, go to 
 1. Open the view you want. From the view, select **Edit filters**.
 1. Select **Change to retained data**.
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the edit filter pane.":::
+   
+   > [!NOTE]
+   > This changes the [fetch element](../../developer/data-platform/fetchxml/reference/fetch.md) `datasource` attribute value to `"retained"`.
+
 1. Select the tables and search filters you want, and then select **Apply**. The retained data is displayed in the read-only grid.
    :::image type="content" source="media/data-retention-advanced-find-results.png" alt-text="Advanced find query results displaying retained case records":::
 If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case table, first use advanced find retrieve the retained case row. Then use the `Casenumber` column and use advanced find to retrieve the account row that contains the case number.
@@ -46,7 +51,7 @@ Create a Power Automate cloud flow to create an Excel file of the retained data 
 > [!NOTE]
 > If the retained data includes attachments from the annotation table, the returned value is a base64 representation of the file. Large files might cause the cloud flow action to [time-out](/power-automate/limits-and-config#timeout) or to exceed its output [message size limit](/power-automate/limits-and-config#message-size).
 >
-> To workaround this behavior, use the Web API to perform the export action [ExportRetainedData](/power-apps/developer/data-platform/webapi/reference/exportretaineddata?view=dataverse-latest&preserve-view=true) using Azure Functions or other custom development options.
+> To workaround this behavior, use the `ExportRetainedData` message Web API to [ExportRetainedData action](/power-apps/developer/data-platform/webapi/reference/exportretaineddata) or SDK for .NET using Azure Functions or other custom development options.
 
 ## Limitations for retrieval of retained data
 

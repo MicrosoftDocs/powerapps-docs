@@ -31,7 +31,7 @@ Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the 
 
 To retrieve a theme name, use the following formula.
 
-```powerapps-dot
+```power-fx
 Switch(
     Teams.Theme.Name,
     TeamsTheme.Default,

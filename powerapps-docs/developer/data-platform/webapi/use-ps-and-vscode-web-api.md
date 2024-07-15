@@ -279,7 +279,7 @@ Let's put functions to perform common table operations a file named `TableOperat
    For information about how to compose these requests, see the following articles:
 
    - [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)
-   - [Query data using the Web API](query-data-web-api.md)
+   - [Query data using the Web API](query/overview.md)
    - [Create a table row using the Web API](create-entity-web-api.md)
    - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
    - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)

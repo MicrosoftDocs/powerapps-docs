@@ -19,7 +19,7 @@ contributors:
 
 Power Apps Test Engine is a component within the Power Platform CLI (PAC CLI) used for testing standalone canvas apps in Power Apps. You must [Install Microsoft Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli) to use the Test Engine.
 
-[!INCLUDE [preview-note](../../../shared/preview-includes/preview-note.md)]
+[!INCLUDE [preview-note](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Benefits
 
