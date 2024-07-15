@@ -19,9 +19,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Checkbox modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Checkbox modern control in Power Apps
 
 A control that the user can select or clear to set its value to **true** or **false**.
 
