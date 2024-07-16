@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to retrieve data
 description: Learn how to use the Dataverse SDK for .NET or Web API to send a request to retrieve data using FetchXml
-ms.date: 02/29/2024
+ms.date: 07/16/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -61,7 +61,7 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 Pass your FetchXml query as a URL-encoded string value to the entity set collection using the `fetchXml` query parameter.
 
 > [!NOTE]
-> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values.
+> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-are-not-returned)
 
 For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), you will compose a fetchXml query setting the [entity element](reference/entity.md) `name` parameter to the `account`.
 
@@ -146,6 +146,12 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 [Use the Microsoft Dataverse Web API](../webapi/overview.md)
 
 ---
+
+## Null column values are not returned
+
+When a table column contains a null value, or if the column wasn't requested, the record returned won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. This is the behavior using the SDK for .NET. [Learn more about this behavior](../org-service/entity-operations-query-data.md#null-column-values-are-not-returned)
+
+Columns that are not valid for read always return null values. The definition of these columns have the [AttributeMetadata.IsValidForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforread) property set to false.
 
 ## Next steps
 
