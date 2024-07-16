@@ -14,6 +14,8 @@ ms.collection:
     - bap-ai-copilot 
 search.audienceType: 
   - enduser
+contributors:
+- fafuxa-ms
 ---
 
 # Copilot assistance for form fill in model-driven apps 
