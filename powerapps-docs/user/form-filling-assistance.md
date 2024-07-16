@@ -54,6 +54,9 @@ To turn off form fill assistance, admins can complete the following steps.
 1. Select **Product** \> **Features**.
 1. In the **AI form fill assistance** section, in the **Enable this feature for** field, select **No one**.
 
+    > [!NOTE]
+    > Users may need to clear cache and refresh the browser twice for the setting change to take effect.
+
 ## Use form fill assistance 
 
 Copilot assistance for filling forms generates suggestions for text, numeric, choice, and date fields in main forms in model-driven apps. Suggestions are generated only for the tab that is open. They are presented inline in the form.
