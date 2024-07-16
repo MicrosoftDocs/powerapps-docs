@@ -162,7 +162,7 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
 
     > [!NOTE]
     > - If no connections are available, or the connection you want isn't listed, select **Create new** to create a new connection in a new browser tab. Ensure that you create the connection for the correct resource type. After creating the connection, return to the import app browser tab and select **Refresh list** to reflect and choose the newly created connection.
-    > - When importing a Canvas app with flows, the flows association must be reconfigured in some cases. [Add an existing flow](working-with-flows.md#add-an-existing-flow)
+    > - In some cases, it is necessary to reconfigure the flow association when you import a canvas app with flows. For more information, see [Add an existing flow](working-with-flows.md#add-an-existing-flow)
 
 1. (Optional) If comments were entered for a resource during the export of the app package, the comment icon will appear filled and the text **Comment yes** will appear when you hover over it. Select the comment to view it.
 
