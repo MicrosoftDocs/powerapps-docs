@@ -20,7 +20,7 @@ contributors:
 
 # Copilot in Power Apps overview (preview)
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/file-name.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Bringing the power of Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
 
