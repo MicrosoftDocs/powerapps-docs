@@ -18,9 +18,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Toggle modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Toggle modern control in Power Apps
 
 A control that the user can turn on or off by moving the handle.
 
