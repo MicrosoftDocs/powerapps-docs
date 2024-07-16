@@ -22,6 +22,10 @@ search.audienceType:
 
 View details about solution operations from the **Solutions** area of Power Apps. An operation can be a solution import, export, or uninstall. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
+> [!NOTE]
+> The system will automatically delete solution history records that are older than 180 days.
+> 
+
 ## View solution history
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
