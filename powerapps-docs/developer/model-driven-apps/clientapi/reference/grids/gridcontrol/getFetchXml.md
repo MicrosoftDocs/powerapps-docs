@@ -1,8 +1,8 @@
 ---
 title: "getFetchXml (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getFetchXml method.
-author: jasongre
-ms.author: jasongre
+author: fikaradz
+ms.author: fikaradz
 ms.date: 06/29/2022
 ms.reviewer: jdaly
 ms.topic: reference
