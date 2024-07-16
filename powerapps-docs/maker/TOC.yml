@@ -16,7 +16,7 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Copilot in Power Apps
+  - name: Copilot in Power Apps (preview)
     href: ./canvas-apps/ai-overview.md
   - name: "What's new?"
     href: ../whats-new.md
@@ -297,7 +297,7 @@
       - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
       - name: Use field suggestions by Copilot
-        href: ./canvas-apps/ai-field-suggestions.md  
+        href: ./canvas-apps/ai-field-suggestions.md
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -396,7 +396,7 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
-          - name: Use inline actions in Power Apps Studio  
+          - name: Use inline actions in Power Apps Studio
             href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
@@ -512,23 +512,23 @@
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Combobox   
+            - name: Combobox
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
-            - name: Progress bar 
+            - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Avatar (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md  
+              href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
-            - name: Copilot answer (preview) 
+            - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Date picker (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
@@ -553,7 +553,7 @@
             - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md 
+              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
           - name: Control reference
             items:
             - name: List of controls and properties
@@ -686,14 +686,14 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
-        - name: Understand app functionality through code view (preview) 
+        - name: Understand app functionality through code view (preview)
           href: ./canvas-apps/code-view.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
         - name: Create Power Fx formulas with Copilot
-          href: ./canvas-apps/ai-formulas-formulabar.md  
+          href: ./canvas-apps/ai-formulas-formulabar.md
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
@@ -1336,8 +1336,8 @@
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
       href: ./canvas-apps/small-data-payloads.md
-    - name: Optimized query data patterns 
-      href: ./canvas-apps/optimized-query-data-patterns.md 
+    - name: Optimized query data patterns
+      href: ./canvas-apps/optimized-query-data-patterns.md
     - name: Speed up app or page load
       href: ./canvas-apps/fast-app-page-load.md
     - name: Fast calculations
@@ -1575,7 +1575,7 @@
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
           - name: Add the Copilot control to the rich text editor
-            href: ./model-driven-apps/copilot-control.md  
+            href: ./model-driven-apps/copilot-control.md
           - name: Use Copilot in the email rich text editor
             href: ./model-driven-apps/use-copilot-email-assist.md
           - name: Add the news control to a table
@@ -1725,7 +1725,7 @@
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
-      href: ./model-driven-apps/modern-theme-overrides.md    
+      href: ./model-driven-apps/modern-theme-overrides.md
     - name: Use themes to apply organization branding (classic)
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Create guided help for your app
@@ -1811,13 +1811,13 @@
     items:
     - name: Mobile offline for canvas apps
       items:
-      - name: Mobile offline for canvas apps overview 
+      - name: Mobile offline for canvas apps overview
         href: ../mobile/canvas-mobile-offline-overview.md
-      - name: Set up mobile offline for canvas apps 
+      - name: Set up mobile offline for canvas apps
         href: ../mobile/canvas-mobile-offline-setup.md
-      - name: Configure files and images in offline canvas apps 
+      - name: Configure files and images in offline canvas apps
         href: ../mobile/files-images-offline-canvas-apps.md
-      - name: Work with canvas apps offline 
+      - name: Work with canvas apps offline
         href: ../mobile/canvas-mobile-offline-working.md
       - name: Sync data offline in the background
         href: ../mobile/sync-data-offline-background.md
@@ -1828,13 +1828,13 @@
       - name: Mobile offline for model-driven apps overview
         href: ../mobile/mobile-offline-overview.md
       - name: Set up mobile offline for model-driven apps
-        href: ../mobile/setup-mobile-offline.md 
+        href: ../mobile/setup-mobile-offline.md
       - name: Configure files and images in offline model-driven apps
         href: ../mobile/offline-file-images.md
       - name: Work with model-driven apps offline (offline-first mode)
-        href: ../mobile/work-in-offline-mode.md 
+        href: ../mobile/work-in-offline-mode.md
       - name: Work with model-driven apps offline (classic mode)
-        href: ../mobile/work-offline-mode-classic.md 
+        href: ../mobile/work-offline-mode-classic.md
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
       - name: Sync data offline in the background
@@ -1846,7 +1846,7 @@
       - name: Best practices for developing an app for offline use
         href: ../mobile/best-practices-offline.md
       - name: Optimize the offline profile
-        href: ../mobile/mobile-offline-guidelines.md  
+        href: ../mobile/mobile-offline-guidelines.md
       - name: Resolve sync conflicts with the server
         href: ../mobile/resolve-sync-conflicts.md
   - name: Set an app as a startup app
@@ -1857,7 +1857,7 @@
       href: ../mobile/powerapps-mobile-troubleshoot.md
     - name: Prevent canvas app restarts in the Power Apps mobile app
       href: ../mobile/power-apps-mobile-canvas-app-restarts.md
-  - name: Power Apps for Windows 
+  - name: Power Apps for Windows
     items:
     - name: Install Power Apps for Windows
       href: ../mobile/windows-app-install.md
@@ -1997,8 +1997,8 @@
         href: ./data-platform/define-query-hierarchical-data.md
       - name: How to configure connection roles
         href: ./data-platform/configure-connection-roles.md
-  - name: Work with copilot
-    href: ./data-platform/data-platform-copilot.md 
+  - name: Work with Copilot
+    href: ./data-platform/data-platform-copilot.md
   - name: Work with columns
     href: ./data-platform/fields-overview.md
     items:
@@ -2234,7 +2234,7 @@
     - name: Monitor plug-ins
       href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
     - name: Explore the Dataverse Web API
-      href: ./data-platform/dataverse-accelerator/api-playground.md  
+      href: ./data-platform/dataverse-accelerator/api-playground.md
   - name: For admins
     items:
     - name: Security in Dataverse
@@ -2250,7 +2250,7 @@
       - name: Advanced Configuration Settings
         href: ./data-platform/azure-synapse-link-advanced-configuration.md
       - name: Use managed identities for Azure
-        href: ./data-platform/azure-synapse-link-msi.md  
+        href: ./data-platform/azure-synapse-link-msi.md
       - name: Choose finance and operations data in Azure Synapse Link for Dataverse
         href: ./data-platform/azure-synapse-link-select-FnO-data.md
       - name: Azure Synapse Link for Dataverse troubleshooting guide
@@ -2512,12 +2512,12 @@
         - name: Send cards automatically with a flow (preview)
           href: ../cards/send-a-card/send-card-with-flow.md
     - name: Manage cards
-      items: 
+      items:
         - name: Manage cards in solutions
           href: ../cards/manage-cards/manage-cards.md
         - name: Manage access
           href: ../cards/manage-cards/manage-access.md
-        - name: Manage cards with DLP policies 
+        - name: Manage cards with DLP policies
           href: ../cards/manage-cards/data-loss-prevention.md
         - name: Delete a card
           href: ../cards/manage-cards/delete-cards.md
@@ -2532,9 +2532,9 @@
 - name: AI plugins (preview)
   items:
   - name: AI plugins in Power Platform
-    href: common/ai-plugin.md 
+    href: common/ai-plugin.md
   - name: Building AI plugins for discovery by Copilot
-    href: common/build-ai-plugin-for-copilot.md   
+    href: common/build-ai-plugin-for-copilot.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
@@ -2586,13 +2586,13 @@
   - name: Overview
     href: ./common/responsible-ai-overview.md
   - name: FAQ about building apps through conversation
-    href: ./common/faqs-build-apps-conversation.md     
-  - name: FAQ about generating app descriptions with Copilot 
+    href: ./common/faqs-build-apps-conversation.md
+  - name: FAQ about generating app descriptions with Copilot
     href: ./common/ai-app-descriptions-faq.md
   - name: FAQ about editing your app with Copilot
     href: ./common/faqs-copilot-panel.md
   - name: FAQ about using Copilot in model-driven apps
-    href: ./common/faqs-copilot-model-driven-app.md 
+    href: ./common/faqs-copilot-model-driven-app.md
   - name: FAQ about using the Copilot control in canvas apps
     href: ./common/faq-copilot-control.md
   - name: FAQ about using Copilot in the rich text editor
@@ -2603,14 +2603,14 @@
     href: ./common/faqs-sharepoint-list-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
-  - name: FAQ about form filling assistance  
+  - name: FAQ about form filling assistance
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
   - name: FAQ about using Copilot with Power Fx
     href: ./common/faqs-copilot-powerfx.md
   - name: FAQ about field suggestions by Copilot
-    href: ./common/faq-field-suggestions.md  
+    href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
 - name: Resources
@@ -2645,7 +2645,7 @@
     href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
-  - name: Create a support request  
+  - name: Create a support request
     href: ./canvas-apps/service-request-support.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
