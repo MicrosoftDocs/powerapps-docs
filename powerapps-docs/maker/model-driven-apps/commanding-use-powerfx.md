@@ -5,7 +5,7 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/06/2024
+ms.date: 07/17/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -213,6 +213,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Language()
 - LoadData()
 - Param()
+- Print()
 - ReadNFC()
 - RequestHide()
 - ResetForm()

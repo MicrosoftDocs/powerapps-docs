@@ -67,9 +67,6 @@ sample_filecolumn: <file id>
 sample_filecolumn_name: 25mb.pdf
 ```
 
-> [!NOTE]
-> You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
-
 More information:
 
 - [What is the SDK for .NET](org-service/overview.md)
