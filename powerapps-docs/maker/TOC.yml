@@ -1346,7 +1346,7 @@
       href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
-    - name: Guidance for building Power Apps business logic 
+    - name: Build business logic
       href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
