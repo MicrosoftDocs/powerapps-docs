@@ -213,6 +213,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Language()
 - LoadData()
 - Param()
+- Print()
 - ReadNFC()
 - RequestHide()
 - ResetForm()
