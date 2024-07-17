@@ -150,9 +150,9 @@ The first sync can take time to complete for organizations with very large datas
 > - The **manage columns** option is not enabled in the **Offline configuration** of **Power Platform admin center**. 
 
 ### See also
-- [Best practices to use an app for offline](best-practices-offline.md)
-- [Configure model-driven apps for offline (preview)](mobile-offline-overview.md)
-- [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
+- [Best practices for developing an app for offline use](best-practices-offline.md)
+- [Mobile offline for model-driven apps overview](mobile-offline-overview.md)
+- [Best practices and limitations (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
 - [Five tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
