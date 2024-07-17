@@ -90,7 +90,7 @@ The button control now includes subset of Fluent icons. The following properties
 
 ## Additional properties
 
-**AcceptsFocus** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
 **[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
 
