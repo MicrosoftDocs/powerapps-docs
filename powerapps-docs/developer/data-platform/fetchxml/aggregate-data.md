@@ -144,7 +144,7 @@ You can select which part of the date to use when grouping by date. Set [attribu
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
-By default date groupings use the UTC time. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to specify that the user's time zone be used instead.
+By default date groupings use the user's time zone. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to `"false"` to specify that the UTC time zone be used instead.
 
 The following query groups account records showing number of employees by when the records were created:
 
