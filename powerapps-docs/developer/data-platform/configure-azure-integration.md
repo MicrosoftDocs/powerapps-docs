@@ -1,7 +1,7 @@
 ---
 title: "Configure Azure integration (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about configuring Azure integration with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 07/19/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "jaredha" # GitHub ID
@@ -30,7 +30,7 @@ After configuring Azure integration, you will need to perform these additional t
 1. Register an Azure aware plug-in or a Azure-aware custom workflow activity with Dataverse. More information: [Tutorial: Register an Azure-aware plug-in using the Plug-in Registration tool](walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md)
 1. Perform the necessary Dataverse operation that triggers the plug-in or custom workflow activity to run.
 
-If all of the preceding steps were performed correctly, a message containing the Dataverse data context should be sent to a Azure queue or topic and ultimately received by the listener application. You can navigate to the System Jobs grid in the Dataverse web application and check the status of the related System Job to see if the post to the Azure Service Bus succeeded. In case of errors, the message section of the System Job displays the error details.
+If all of the preceding steps were performed correctly, a message containing the Dataversse data context should be sent to a Azure queue or topic and ultimately received by the listener application. You can navigate to the System Jobs grid in the Power Apps web application, under **Advanced settings**, and check the status of the related system job to see if the post to the Azure Service Bus succeeded. In case of errors, the message section of the system job displays the error details.
 
 ### See also
 
@@ -39,6 +39,5 @@ If all of the preceding steps were performed correctly, a message containing the
 [Work with Dataverse data in your Azure solution](work-data-azure-solution.md)<br />
 [Write a listener application for a Azure solution](write-listener-application-azure-solution.md)<br />
 [What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
