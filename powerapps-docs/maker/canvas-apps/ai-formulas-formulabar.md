@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/2/2024
+ms.date: 7/22/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -48,26 +48,20 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 
 ### Known Limitations
-- There's a 1,000 character limit for formula explanations.
+- There's a 5,000 character limit for formula explanations.
 - Copilot in Power Apps is only aware of default properties.
 - User defined functions aren't supported.
-- This feature isn't available in the Canada region.
 
 ## Copilot comment generated formulas (preview)
 
 [This section is prerelease documentation and is subject to change.]
 
-Add a comment in the formula bar and Copilot will suggest a suitable formula. You can accept the suggestion or typing through it. The comments can remain in the formula bar as documentation, similar to regular code comments.
-
-
-> [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. For more information, see [Power Apps preview program](../powerapps-preview-program.md).
-> - This capability is in the process of rolling out, and may not be available in your region yet.
+When you add a comment in the formula bar, Copilot will provide a suggested formula. You have the option to accept the suggestion or manually type the formula. These comments can serve as documentation in the formula bar, just like regular code comments.
 
 1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
 :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Typed comment":::
 
-    Wait few seconds for Copilot to generate a formula recommendation.
+    Wait few seconds for Copilot to generate a formula recommendation or press enter to generate immediately.
 
 1. Use the **Tab key** on the keyboard to select and use the recommended formula. You can also type through the recommendation.
 :::image type="content" source="media/copilot/ufb-commentfx-copilot.png" alt-text="Typed comment with recommended formula":::
@@ -83,20 +77,48 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 - Copilot in Power Apps only recognizes the default properties within the app.
 - Code comments only work with general Power Fx functions, and not Power Apps specific functions such as **Navigate()**.
 - The advanced panel doesn't trigger suggestions.
-- While Copilot is generating formula suggestions, other activities in the Power Apps Studio might be temporarily unavailable.
 - Existing formulas for that property aren't included in the recommendation.
 - User defined functions aren't supported.
 - This feature isn't available in the Canada region.
 
-### Disable Copilot comment generated formulas
 
- Copilot comment generated formulas can be disabled from app settings.
+### Enable or disable Copilot comment generated formulas
 
-- Go to **Settings** > **Upcoming features**. Set the toggle to **Off** for **Copilot comment-generated formulas**.
+
+ Copilot comment generated formulas are enabled by default for new apps, and disabled by default for existing apps, but can be enabled or disabled for any app from app settings.
+
+- Go to **Settings** > **Upcoming features**. Set the toggle to **On** or **Off** for **Copilot comment-generated formulas**.
 
 > [!NOTE]
-> You won't be able to disable **Copilot comment generated formulas** when it's generally available.
+> When **Copilot comment generated formulas** is fully integrated into the platform and generally available, it won't be possible to disable it.
 
 ## Responsible AI
 
 Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/faqs-copilot-powerfx.md) for questions regarding this functionality specifically.
+
+## Language Support
+
+The following table lists the languages available for the formula bar copilot features, which is based on the settings in your Power Platform environment and browser.
+
+| **Name**                           | **Language Code** | **Functionality Supported**                   |
+|------------------------------------|-------------------|-----------------------------------------------|
+| English                            | en-US             | Explain a formula, Comment generated formulas |
+| Chinese (simplified) - China       | zh-Hans           | Explain a formula                             |
+| Czech - Czech Republic             | cs-CZ             | Explain a formula                             |
+| Danish - Denmark                   | da-DK             | Explain a formula                             |
+| Dutch - Netherlands                | nl-NL             | Explain a formula                             |
+| Finnish - Finland                  | fi-FI             | Explain a formula                             |
+| French - France                    | fr-FR             | Explain a formula                             |
+| German - Germany                   | de-DE             | Explain a formula                             |
+| Greek - Greece                     | el-GR             | Explain a formula                             |
+| Italian - Italy                    | it-IT             | Explain a formula                             |
+| Japanese - Japan                   | ja-JP             | Explain a formula                             |
+| Korean - Korea                     | ko-KR             | Explain a formula                             |
+| Norwegian (Bokmål) - Norway        | nb-NO             | Explain a formula                             |
+| Polish - Poland                    | pl-PL             | Explain a formula                             |
+| Portuguese - Brazil                | pt-BR             | Explain a formula                             |
+| Russian - Russia                   | ru-RU             | Explain a formula                             |
+| Spanish (Traditional Sort) - Spain | es-ES             | Explain a formula                             |
+| Swedish - Sweden                   | sv-SE             | Explain a formula                             |
+| Thai - Thailand                    | th-TH             | Explain a formula                             |
+| Turkish - Türkiye                  | tr-TR             | Explain a formula                             |
