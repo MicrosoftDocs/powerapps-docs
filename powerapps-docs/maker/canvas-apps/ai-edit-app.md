@@ -58,25 +58,25 @@ The following table lists the supported languages.
 | **Name**                           | **Language Code** | 
 |------------------------------------|-------------------|
 | English                            | en-US             | 
-| Chinese (simplified) - China       | zh-Hans           | 
-| Czech - Czech Republic             | cs-CZ             | 
-| Danish - Denmark                   | da-DK             | 
-| Dutch - Netherlands                | nl-NL             | 
-| Finnish - Finland                  | fi-FI             |
-| French - France                    | fr-FR             | 
-| German - Germany                   | de-DE             | 
-| Greek - Greece                     | el-GR             | 
-| Italian - Italy                    | it-IT             | 
-| Japanese - Japan                   | ja-JP             | 
-| Korean - Korea                     | ko-KR             | 
-| Norwegian (Bokmål) - Norway        | nb-NO             | 
-| Polish - Poland                    | pl-PL             | 
-| Portuguese - Brazil                | pt-BR             |
-| Russian - Russia                   | ru-RU             | 
-| Spanish (Traditional Sort) - Spain | es-ES             |
-| Swedish - Sweden                   | sv-SE             | 
-| Thai - Thailand                    | th-TH             | 
-| Turkish - Türkiye                  | tr-TR             | 
+| Chinese (simplified)       | zh-Hans           | 
+| Czech            | cs-CZ             | 
+| Danish                 | da-DK             | 
+| Dutch                 | nl-NL             | 
+| Finnish                   | fi-FI             |
+| French                     | fr-FR             | 
+| German                   | de-DE             | 
+| Greek                   | el-GR             | 
+| Italian                     | it-IT             | 
+| Japanese                    | ja-JP             | 
+| Korean                      | ko-KR             | 
+| Norwegian (Bokmål)         | nb-NO             | 
+| Polish                     | pl-PL             | 
+| Portuguese                 | pt-BR             |
+| Russian                    | ru-RU             | 
+| Spanish (Traditional Sort)  | es-ES             |
+| Swedish                    | sv-SE             | 
+| Thai                    | th-TH             | 
+| Turkish                 | tr-TR             | 
 
 
 ## Sample commands you can try
