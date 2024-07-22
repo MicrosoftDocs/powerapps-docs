@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/3/2024
+ms.date: 7/22/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -53,9 +53,31 @@ Copilot in Power Apps supports the following commands:
     - Text label
     - Text input
 
-    > [!NOTE]
-    > - [Modern controls](controls/modern-controls/overview-modern-controls.md) aren't supported.
-    > - This feature supports English and its variants.
+The following table lists the supported languages.
+
+| **Name**                           | **Language Code** | 
+|------------------------------------|-------------------|
+| English                            | en-US             | 
+| Chinese (simplified) - China       | zh-Hans           | 
+| Czech - Czech Republic             | cs-CZ             | 
+| Danish - Denmark                   | da-DK             | 
+| Dutch - Netherlands                | nl-NL             | 
+| Finnish - Finland                  | fi-FI             |
+| French - France                    | fr-FR             | 
+| German - Germany                   | de-DE             | 
+| Greek - Greece                     | el-GR             | 
+| Italian - Italy                    | it-IT             | 
+| Japanese - Japan                   | ja-JP             | 
+| Korean - Korea                     | ko-KR             | 
+| Norwegian (Bokmål) - Norway        | nb-NO             | 
+| Polish - Poland                    | pl-PL             | 
+| Portuguese - Brazil                | pt-BR             |
+| Russian - Russia                   | ru-RU             | 
+| Spanish (Traditional Sort) - Spain | es-ES             |
+| Swedish - Sweden                   | sv-SE             | 
+| Thai - Thailand                    | th-TH             | 
+| Turkish - Türkiye                  | tr-TR             | 
+
 
 ## Sample commands you can try
 
