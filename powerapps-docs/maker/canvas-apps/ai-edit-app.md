@@ -54,8 +54,7 @@ Copilot in Power Apps supports the following commands:
     - Text input
 
     > [!NOTE]
-    > - [Modern controls](controls/modern-controls/overview-modern-controls.md) aren't supported.
-    > - This feature supports English and its variants.
+    > - The following languages are supported: English, Danish, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), Spanish, Chinese (Simplified), Czech, Finnish, Greek, Korean, Norwegian, Polish, Russian, Swedish, Thai, Turkish
 
 ## Sample commands you can try
 
