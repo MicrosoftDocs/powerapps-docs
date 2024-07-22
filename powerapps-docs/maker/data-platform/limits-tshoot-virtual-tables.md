@@ -5,7 +5,7 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 04/12/2024
+ms.date: 07/22/2024
 ms.custom: template-how-to
 contributors: 
   - psimolin
@@ -108,8 +108,8 @@ The following are limitations for each data source.
 # [Oracle (preview)](#tab/oracle)
 
 - For Oracle connector limitations, go to [Oracle connector reference](/connectors/oracle/).
-- Oracle table needs to have a primary key defined
-- Oracle table needs to have at least one string type field besides the primary key
+- Oracle table needs to have a primary key defined.
+- Oracle table needs to have at least one string type field besides the primary key.
 
 ---
 
