@@ -5,7 +5,7 @@ author: warrenbryant-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/2/2024
+ms.date: 7/22/2024
 ms.subservice: canvas-maker
 ms.author: warrenbryant
 search.audienceType: 
@@ -57,7 +57,7 @@ Use Copilot in the formula bar to understand what a formula is doing.
 
 [This section is prerelease documentation and is subject to change.]
 
-Add a comment in the formula bar and Copilot will suggest a suitable formula. You can accept the suggestion or type through it. The comments can remain in the formula bar as documentation, similar to regular code comments.
+When you add a comment in the formula bar, Copilot will provide a suggested formula. You have the option to accept the suggestion or manually type the formula. These comments can serve as documentation in the formula bar, just like regular code comments.
 
 1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
 :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Typed comment":::
@@ -82,15 +82,14 @@ Add a comment in the formula bar and Copilot will suggest a suitable formula. Yo
 - User defined functions aren't supported.
 - This feature isn't available in the Canada region.
 
-### Enable/Disable Copilot comment generated formulas
+### Enable or disable Copilot comment generated formulas
 
  Copilot comment generated formulas are enabled by default for new apps, and disabled by default for existing apps, but can be enabled or disabled for any app from app settings.
 
 - Go to **Settings** > **Upcoming features**. Set the toggle to **On** or **Off** for **Copilot comment-generated formulas**.
 
 > [!NOTE]
-> You won't be able to disable **Copilot comment generated formulas** once it is fully integrated into the platform.
-
+> When **Copilot comment generated formulas** is fully integrated into the platform and generally available, it won't be possible to disable it.
 ## Responsible AI
 
 Review the Microsoft Documentation on [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md) to understand the choices a user has when working with AI. Additionally, review the [Power Fx Copilot FAQ](../common/faqs-copilot-powerfx.md) for questions regarding this functionality specifically.
