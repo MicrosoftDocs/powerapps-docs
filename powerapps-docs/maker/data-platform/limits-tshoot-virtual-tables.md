@@ -105,6 +105,12 @@ The following are limitations for each data source.
 - For Salesforce connector limitations, go to [Salesforce connector reference](/connectors/salesforce/).
 - Fields that are referencing other Salesforce objects are locked.
 
+# [Oracle (preview)](#tab/oracle)
+
+- For Oracle connector limitations, go to [Oracle connector reference](/connectors/oracle/).
+- Table needs to have a primary key defined
+- Table needs to have at least one string type field besides the primary key
+
 ---
 
 ## Troubleshooting
