@@ -108,8 +108,8 @@ The following are limitations for each data source.
 # [Oracle (preview)](#tab/oracle)
 
 - For Oracle connector limitations, go to [Oracle connector reference](/connectors/oracle/).
-- Table needs to have a primary key defined
-- Table needs to have at least one string type field besides the primary key
+- Oracle table needs to have a primary key defined
+- Oracle table needs to have at least one string type field besides the primary key
 
 ---
 
