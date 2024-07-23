@@ -15,8 +15,6 @@ searchScope:
 ms.custom: bap-template
 ---
 
-<!-- It's unclear why there are four asterisks at the end of the sentence in line 38. -->
-
 
 # Set up mobile offline for canvas apps
 
@@ -35,7 +33,7 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 ## Optimize your app for mobile offline
 
-Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.****
+Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.
 
 Follow these best practices when you build an app for mobile offline use:
 
