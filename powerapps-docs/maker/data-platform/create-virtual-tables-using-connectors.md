@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 07/02/2024
+ms.date: 07/22/2024
 ms.reviewer: matp
 ms.topic: article
 author: NHelgren
@@ -23,6 +23,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - Microsoft SharePoint
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
 - Salesforce (preview)
+- Oracle (preview)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -32,6 +33,7 @@ To learn more about supported actions and limitations with the connector, go to:
 - [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
 - [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
 - [Connector reference for the Salesforce connector](/connectors/salesforce/)
+- [Connector reference for the Oracle connector](/connectors/oracle/)
 
 ## Overview
 
@@ -156,6 +158,19 @@ Select Add connection:
 
 - **Login URI**: Select either **Production** (default) or **Sandbox**.
 - **Salesforce API version**: Select **v41.0** (default) or a later version.
+
+# [Oracle (preview)](#tab/oracle)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+For Oracle connections, you must provide a server, authentication type, username, password, and a gateway.
+
+Server should be provided in **Server:Port/SID**-format. Notice that the server name or IP-address needs to be accessible from the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem).
 
 ---
 
