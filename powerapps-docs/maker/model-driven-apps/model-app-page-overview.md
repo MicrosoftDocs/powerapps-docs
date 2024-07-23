@@ -69,6 +69,9 @@ Embedded canvas apps also use the canvas capabilities with a hosting approach th
 
 In most cases, we recommend that you use custom pages instead of embedded canvas apps for tighter integration and better performance. 
 
+>[!Note]
+> The number of custom pages in a model driven app should not exceed 25. The amount of custom pages in an app can increase the wait time an end-user experiences when launching an app with custom pages, after the last app publish. The increased end-user wait time is limited to the first app launch, by the first user, after the last publish of the model driven app.
+
 ## Migrating standalone canvas app content to custom pages
 
 Existing standalone canvas apps aren't supported for use as a custom page and the expected app structure is different. A standalone canvas app often has many screens with global access to all controls and variables. The custom page is expected to typically be a single screen with loose coupling to provide performance and co-development capabilities.
