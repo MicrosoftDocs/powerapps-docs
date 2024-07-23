@@ -15,6 +15,7 @@ searchScope:
 ms.custom: bap-template
 ---
 
+
 # Set up mobile offline for canvas apps
 
 
@@ -26,13 +27,13 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
-- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
+- Users with the Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
 - If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
 ## Optimize your app for mobile offline
 
-Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.****
+Mobile apps run on small screens with limited connectivity. Before you set up offline mode, make sure your canvas app is optimized for offline and mobile use. Consider the user scenarios you want to cover and the amount of data the app uses. Create an app that's simple and lightweight.
 
 Follow these best practices when you build an app for mobile offline use:
 
@@ -75,10 +76,10 @@ Tables included in an offline app must be configured for offline use. Some built
        
 1. Close the **Settings** window, and then save and publish your app.
 
-A page that's based on the  [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
+A page that's based on the [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
-> If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
+> If you're turning on offline capability for a new canvas app, make sure the default first screen is based on the **Offline** template.
 
 ## Create a custom mobile offline profile (with admin rights)
 
@@ -113,7 +114,7 @@ Be sure that you configure at least one of the profile rules for each table to d
 |Related rows only | Be sure that the related table has been added to the offline profile.|
 |Custom | You can define a custom filter up to three levels deep. |
 
-Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
+Keep in mind that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15-relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for a table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
@@ -139,9 +140,13 @@ Keep in mind, that you can have 15 related tables in a custom filter. You can al
 If your Power Apps account doesn't have admin rights, you can still create a mobile offline profile. Coming soon, you'll be able to create an offline profile directly in Power Apps Studio. Until then, use this workaround.
 
 1. Create a model-driven app in your test environment that uses the same tables as your canvas app.
+
 2. [Set up the model-driven app for offline use](setup-mobile-offline.md).
+
 3. [Generate a default profile](setup-mobile-offline.md#generate-a-default-profile) and [add tables with filters](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
+
 4. Publish the model-driven app.
+
 5. Select the offline profile in your canvas app.
 
 ## Using the Offline template and offline status icon
@@ -192,10 +197,12 @@ Host.OfflineEnabled
     
 ## Export a solution that contains a canvas app enabled for offline
 
-When you export a solution with an offline canvas app, you also need export the offline profile for the app, as it is a dependency of the app.
+When you export a solution with an offline canvas app, you also need to export the offline profile for the app, as it is a dependency of the app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and in the left navigation pane, select **Solutions**.
+
 2. Select the solution that you want to export and then select **Edit**.
+
 3. Select the canvas app that is enabled for offline and then select **Advanced** > **Add required objects**.
 
 Make sure that the associated offline profile is in the solution and then you can export it.  
@@ -203,6 +210,6 @@ Make sure that the associated offline profile is in the solution and then you ca
 ## See also
 
 - [Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
-- [Best practices to enable an app for offline](best-practices-offline.md)
+- [Best practices for developing an app for offline use](best-practices-offline.md)
 - [Optimize the offline profile](mobile-offline-guidelines.md)
 

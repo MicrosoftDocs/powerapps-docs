@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 05/01/2024
+ms.date: 07/17/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -42,7 +42,7 @@ There are several ways to create a new table:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use the table visual designer experience where you create and edit tables, configure table relationships, and can view a diagram of your data.
+Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
@@ -50,6 +50,7 @@ Use the table visual designer experience where you create and edit tables, confi
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - The table visual designer currently only supports creating new tables. You can't edit existing tables using the experience.
 
 1. Command bar:
 
@@ -96,6 +97,15 @@ Describe your data in natural language and Copilot generates tables along with r
 2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
 3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#review-the-table)
 4. When you're finished, select **Save and exit**.
+
+#### Limitations using the table visual designer
+
+The following data types aren't currently supported when you create a column in the table visual designer:
+
+- Rich text
+- Customer
+- Autonumber
+- Formula
 
 ### Set advanced properties
 

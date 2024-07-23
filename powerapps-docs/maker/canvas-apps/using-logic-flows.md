@@ -141,7 +141,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
 1. Enter the following formula in the formula bar.
 
-    ```powerapps-dot
+    ```power-fx
     FlowInApp.Run(TextInput1.Text)
     ```
 

@@ -1,7 +1,7 @@
 ---
 title: Copilot assistance for form fill in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 04/18/2024
+ms.date: 07/16/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -14,6 +14,8 @@ ms.collection:
     - bap-ai-copilot 
 search.audienceType: 
   - enduser
+contributors:
+- fafuxa-ms
 ---
 
 # Copilot assistance for form fill in model-driven apps 
@@ -53,6 +55,9 @@ To turn off form fill assistance, admins can complete the following steps.
 1. On the command bar, select **Settings**.
 1. Select **Product** \> **Features**.
 1. In the **AI form fill assistance** section, in the **Enable this feature for** field, select **No one**.
+
+    > [!NOTE]
+    > Users may need to clear the cache and refresh the browser twice for the setting change to take effect.
 
 ## Use form fill assistance 
 

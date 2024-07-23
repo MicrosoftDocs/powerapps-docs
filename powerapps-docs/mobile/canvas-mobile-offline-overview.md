@@ -22,7 +22,7 @@ contributors:
 
 If users of your Dataverse-based canvas app have spotty or no Internet access, you can easily provide [offline-first](#mobile-offline-first) access with simple switches and a canvas control. Basic offline-first apps are easy to make. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference), and Power Apps offline features handle everything else.
 
-You can also build complex offline apps using custom *offline profiles*. An offline profile is the configuration which determines the data synchronized to users’ devices. Offline profiles help you to optimize your app's performance by reducing the amount of data downloaded to the device. For example, while you may have access rights to millions of records in a table, your app may need only a thousand of them. If you download only a thousand records, your app performs better. If you need more than 15 tables in your offline app, you may want to consider using a custom offline profile.
+You can also build complex offline apps using custom *offline profiles*. An offline profile is the configuration that determines the data synchronized to users’ devices. Offline profiles help you to optimize your app's performance by reducing the amount of data downloaded to the device. For example, while you may have access rights to millions of records in a table, your app may need only a thousand of them. If you download only a thousand records, your app performs better. If you need more than 15 tables in your offline app, you may want to consider using a custom offline profile.
 
 To get started with mobile offline, turn on the offline feature in your app and in the tables your app uses. A basic offline screen template is automatically inserted into the app for you to use directly or as a starting point. [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md).
 
@@ -34,7 +34,7 @@ When you turn on the offline capability in your app, the app always runs offline
 
 ## Why use offline for canvas apps instead of LoadData/SaveData?
 
-There are some key benefits of using the built-in offline functionality for canvas apps instead of LoadData/SaveData Power Fx functions.  
+There are some key benefits to using the built-in offline functionality for canvas apps instead of LoadData/SaveData Power Fx functions.  
 
 |Topic    |LoadData/SaveData | Built-in offline |
 |---------|--------------------|------------------|

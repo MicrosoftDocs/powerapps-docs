@@ -97,7 +97,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Set the **Items** property of the gallery to:
 
-    ```powerapps-dot
+    ```power-fx
     AzureBlobStorage.ListRootFolderV2().value
     ```
 
@@ -117,7 +117,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Set the **Items** property of the gallery to:
 
-    ```powerapps-dot
+    ```power-fx
     AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
     ```
 
@@ -178,7 +178,7 @@ Let's configure the app with controls and logic to allow upload of files to the 
 
 1. Set the **OnSelect** property of the button to:
 
-    ```powerapps-dot
+    ```power-fx
     AzureBlobStorage.CreateFile(Gallery1.Selected.Name,TextInput1.Text, UploadedImage1.Image)
     ```
 
@@ -211,7 +211,7 @@ So far you've added the ability to view containers, files from the selected cont
 
 1. Set the **OnSelect** property of the download icon to:
 
-    ```powerapps-dot
+    ```power-fx
     Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path).WebUrl)
     ```
 
@@ -220,7 +220,7 @@ So far you've added the ability to view containers, files from the selected cont
     > [!IMPORTANT]
     > SAS URI created using **CreateShareLinkByPath** has a [default expiry](/connectors/azureblob#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](../functions/function-datevalue-timevalue.md) and [DateAdd()](../functions/function-dateadd-datediff.md) functions.
     
-    ```powerapps-dot
+    ```power-fx
     Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path,{ExpiryTime:DateAdd( Now(),1)}).WebUrl)
     ```
 
@@ -243,7 +243,7 @@ You can use **Media type**, or **Path** fields for the gallery to optionally dis
 
 For example, to filter the files with the file extension type of **.pdf**, use the following sample formula.
 
-```powerapps-dot
+```power-fx
 If(".pdf" in Gallery2.Selected.Path, AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
 ```
 
@@ -261,13 +261,13 @@ For example, the following formulas allow you to update the collection for the t
 
 1. Append to the upload button **OnSelect** property:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
     ```
 
 3. Add to the screen **OnVisible** property:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
     ```
 

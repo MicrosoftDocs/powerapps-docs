@@ -67,7 +67,7 @@ After you build the control, you can package it inside solutions and use it for 
 
 ## Differences from standard components
 
-Thi section describes the differences between a React component and a standard component.
+This section describes the differences between a React component and a standard component.
 
 ### ControlManifest.Input.xml
 

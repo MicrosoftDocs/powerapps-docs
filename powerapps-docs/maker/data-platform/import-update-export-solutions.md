@@ -74,10 +74,11 @@ When you import a Power Apps app that uses an on-premises data gateway ID, note 
 
 ### See also
 
-[Update solutions](update-solutions.md) <br />
-[Export solutions](export-solutions.md) <br />
-[Publish changes](create-solution.md#publish-changes) <br />
-[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Update solutions](update-solutions.md)
+- [Export solutions](export-solutions.md)
+- [Publish changes](create-solution.md#publish-changes)
+- [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Import a solution (Power Automate)](/power-automate/import-flow-solution)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

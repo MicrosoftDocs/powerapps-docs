@@ -127,7 +127,7 @@ Next, add a button to append the user's data to the pin collection.
 3. Set the button's **Text** property to *Add pin*.
 4. Enter the following code in the button's **OnSelect** property, exactly as shown:
 
-    ```powerapps-dot
+    ```power-fx
     Collect( 
     PinsCollection,
       {
