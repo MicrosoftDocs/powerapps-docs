@@ -75,6 +75,9 @@ This configuration can be considered a bootstrap step for average use cases.
 - Dynamically allocate executors: Enabled
 - Default number of executors: 1 to 9
 
+> [!IMPORTANT]
+> Please use the Spark Pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark Pool.
+
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
