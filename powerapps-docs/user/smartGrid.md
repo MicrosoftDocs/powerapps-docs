@@ -93,3 +93,4 @@ Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -
 ## Known issue
 
 - This feature can't be turned off on a per-tenant basis. It can be turned off only as described in the [Turn off gallery filtering in the web player](#turn-off-gallery-filtering-in-the-web-player) section.
+

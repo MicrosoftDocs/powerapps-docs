@@ -406,10 +406,12 @@
             href: ./canvas-apps/add-configure-controls.md
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
-          - name: Add a chatbot (preview)
+          - name: Add a Chatbot control (preview)
             href: ./canvas-apps/add-ai-chatbot.md
-          - name: Add a copilot (preview)
+          - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
+          - name: Add a custom Copilot (preview)
+            href: ./canvas-apps/add-custom-copilot.md
           - name: Create and edit tables
             href: ./canvas-apps/create-edit-tables.md
           - name: Work with a gallery
@@ -510,24 +512,30 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
+            - name: Badge
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Combobox
-              href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
+            - name: Checkbox
+              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
+            - name: Radio group
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
+            - name: Spinner
+              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Toggle
+              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
             - name: Avatar (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
-            - name: Badge (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
-            - name: Checkbox (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Combobox (preview)   
+              href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Date picker (preview)
@@ -540,10 +548,6 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Number input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-number-input.md
-            - name: Radio group (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
-            - name: Spinner (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
@@ -552,8 +556,6 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
             - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
-            - name: Toggle (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
           - name: Control reference
             items:
             - name: List of controls and properties
