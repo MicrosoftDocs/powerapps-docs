@@ -51,7 +51,7 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
 > [!NOTE]
-> The minimum time interval is 15 minutes. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**
+> The minimum time interval is 5 minutes. That means the incremental update folder will be created every 5 minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**
 >
 > Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
 
