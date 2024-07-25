@@ -41,9 +41,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
 1. On the left pane, select **Apps**.
 
-    :::image type="content" source="media/share-app/file-apps.png" alt-text="Screenshot that shows the location of the Apps navigation menu selection.":::
-
-1. Select the app that you want to share by selecting its icon.
+1. Select the app that you want to share.
 
    :::image type="content" source="media/share-app/select-app.png" alt-text="Screenshot that shows your list of apps, where you can select one.":::
 
