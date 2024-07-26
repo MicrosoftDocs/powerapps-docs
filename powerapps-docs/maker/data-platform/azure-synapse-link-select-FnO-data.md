@@ -273,7 +273,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link. This issue is fixed in the latest application update shown here.
    > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
-  > - Version 10.0.39 (PU63) platform update 7.0.7198.143 or later
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.186 or later
   > - Version 10.0.40 (PU64) platform update 7.0.7279.115 or later
   > - Version 10.0.41 (PU65) platform update 7.0.7367.0 or later
   >
