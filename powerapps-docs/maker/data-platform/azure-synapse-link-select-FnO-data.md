@@ -270,14 +270,23 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   >
   > With this update, expired data rows are added to tables. You need to perform a full refresh to include previous rows.
 
+- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link. This issue is fixed in the latest application update shown here.
+   > [!NOTE]
+  > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.143 or later
+  > - Version 10.0.40 (PU64) platform update 7.0.7279.115 or later
+  > - Version 10.0.41 (PU65) platform update 7.0.7367.0 or later
+  >
+  > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
+   
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
-- If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link.
-  
+
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
 - Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
+- Following Tables, also known as kernal tables in Finance and Operations are supported by Fabric/ Synapse Link. But these tables are special, and you don't need to enable change tracking. Also, they are updated every 24hrs, not updated near-real time as the data doesn't change frequently. DATAAREA, USERINFO, SECURITYROLE, SECURITYUSERROLE, SQLDICTIONARY, PARTITIONS, SECURITYPRIVILEGE, TIMEZONESLIST, SECURITYDUTY, SECURITYSUBROLE, SECURITYUSERROLECONDITION, DATABASELOG, SECURITYROLERUNTIME, SECURITYROLEPRIVILEGEEXPLODEDGRAPH, SECURITYROLEDUTYEXPLODEDGRAPH, TIMEZONESRULESDATA, SECURITYROLEEXPLODEDGRAPH, USERDATAAREAFILTER, SYSINHERITANCERELATIONS
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
 ## Access incremental data changes from finance and operations
