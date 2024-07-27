@@ -6,5 +6,6 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]
-> - This is a production ready preview feature.
-> - Production ready previews are subject to supplemental terms of use. More information: [Supplemental terms of use for Power Platform](https://go.microsoft.com/fwlink/?linkid=2189520)
+>
+> - This is a production-ready preview feature.
+> - Production-ready previews are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520).
