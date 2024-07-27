@@ -17,7 +17,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Microsoft Dataverse supports integration with Azure. Developers can register plug-ins with Dataverse that can pass runtime message data, known as the execution context, to one or more Azure solutions in the cloud. This is especially important because Azure is one of a few supported solutions for communicating runtime context to external line-of-business (LOB) applications.
+Microsoft Dataverse supports integration with Azure. Developers can register plug-ins with Dataverse that can pass runtime message data, known as the execution context, to one or more Azure solutions in the cloud. This capability is especially important because Azure is one of a few supported solutions for communicating runtime context to external line-of-business (LOB) applications.
 
 The Azure Service Bus provides a secure and reliable communication channel between Dataverse runtime data and external cloud-based line-of-business (LOB) applications. This capability is especially useful in keeping disparate Dataverse systems or other Dataverse servers synchronized with business data changes.
 
@@ -27,9 +27,9 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
 ### Data Context
 
- The *data context* contains the business data that is being processed as part of the current Dataverse operation. This processing was initiated when a request to perform a certain Dataverse operation was made by a user, workflow, or application. The data context is passed to any plug-ins or custom workflow activities that are registered with the event pipeline to execute on the specific request and table combination that is currently being processed. The data context is of type <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> when it is being passed along the event execution pipeline and <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> when it is posted to the Service Bus.  
+ The *data context* contains the business data that is being processed as part of the current Dataverse operation. This processing was initiated when a request to perform a certain Dataverse operation was made by a user, workflow, or application. The data context is passed to any plug-ins or custom workflow activities that are registered with the event pipeline to execute on the specific request and table combination that is currently being processed. The data context is of type <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> when when passed along the event execution pipeline and <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> when  posted to the Service Bus.  
   
- The data context contained within the message that is posted to the Azure Service Bus can be formatted in XML or JSON in addition to the default .NET binary format. This allows for cross-platform interoperability where Azure hosted non-.NET clients can read Dataverse data from the service bus.
+ The data context contained within the message that is posted to the Azure Service Bus can be formatted in XML or JSON in addition to the default .NET binary format. Support for such data formats allows for cross-platform interoperability where Azure hosted non-.NET clients can read Dataverse data from the service bus.
 
 > [!IMPORTANT]
 > When the size of the entire HTTP payload exceeds 192Kb, the following properties will be removed:
@@ -51,7 +51,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
 ### Plug-ins
 
-Plug-ins are one of two methods used to initiate posting the message containing the data context to the Azure Service Bus, the other method being a custom workflow activity. There are two kinds of plug-ins supported by the Dataverse-Azure connection feature: out-of-box (OOB), and custom. In either case, it is recommended that you register the plug-in to run asynchronously for best system performance.  
+Plug-ins are one of two methods used to initiate posting the message containing the data context to the Azure Service Bus, the other method being a custom workflow activity. There are two kinds of plug-ins supported by the Dataverse-Azure connection feature: out-of-box (OOB), and custom. In either case, it's recommended that you register the plug-in to run asynchronously for best system performance.  
   
 An Azure-aware default (OOB) plug-in is available and can be registered with Dataverse by registering a service endpoint using the Plug-in Registration tool. You must register a plug-in 'step' in the event execution pipeline that identifies the message and table combination that triggers the plug-in to execute and perform the posting notification. When executed, the plug-in notifies the asynchronous service, through a service endpoint notification service (<xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService>), to post the current request data context to the Azure Service Bus.  
   
@@ -67,11 +67,11 @@ Similarly to plug-ins, custom workflow activities can be written to initiate pos
 
 Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the Power Apps web application. In the web application, choose **Advanced settings** to display the legacy Dynamics 365 interface. Next, select **Settings** > **System jobs**.
   
-For more information about the asynchronous service see [Asynchronous service](asynchronous-service.md).  
+For more information about the asynchronous service, see [Asynchronous service](asynchronous-service.md).  
   
 ### Microsoft Azure Service Bus
 
-The service bus relays the request message data context between Dataverse and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dataverse data.  Authorization of Dataverse to post the data context to the service bus and for listener applications to read it is managed by Azure Shared Access Signatures (SAS).  
+The service bus relays the request message data context between Dataverse and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dataverse data.  Authorization of Dataverse to post the data context to the service bus and for listener applications to read it's managed by Azure Shared Access Signatures (SAS).  
 
  For more information about service bus, see [Service Bus](https://azure.microsoft.com/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
   
@@ -79,7 +79,7 @@ The service bus relays the request message data context between Dataverse and Az
 
 For the Dataverse and Azure connection to work, there must be at least one solution in an Azure Service Bus solution account, where the solution contains one or more service endpoints. For a relay endpoint contract, a listener application that is “Dataverse-aware” must be actively listening on the endpoint for the Dataverse request on the Service Bus. For a queue endpoint contract, a listener doesn’t have to be actively listening. A listener is made Dataverse-aware by linking it to the <xref:Microsoft.Xrm.Sdk> assembly so that type <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> is defined. More information: [Write a Listener for a Microsoft Azure Solution](write-listener-application-azure-solution.md)  
   
-Dataverse supports sending event data to an Azure Event Hubs solution. More information about event hubs, see [Work with event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md).  
+Dataverse supports sending event data to an Azure Event Hubs solution. More information about event hubs, see [Work with event data in your Azure Event Hubs solution](work-event-data-azure-event-hub-solution.md).  
   
 <a name="bkmk_describing"></a>  
 
@@ -93,7 +93,7 @@ The following diagram shows the physical elements that make up the scenario.
   
 The sequence of events as identified in this diagram are as follows:  
   
-1. A listener application is registered on a Azure Service Bus solution endpoint, and begins actively listening for the Dataverse remote execution context on the Service Bus.  
+1. A listener application is registered on an Azure Service Bus solution endpoint, and begins actively listening for the Dataverse remote execution context on the Service Bus.  
 
 2. A user performs some operation in Dataverse that triggers execution of the registered OOB plug-in or a custom Azure-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the Service Bus.  
 3. The claims posted by Dataverse are authenticated. The Service Bus then relays the remote execution context to the listener. The listener processes the context information and performs some business-related task with that information. The Service Bus notifies the asynchronous service of a successful post and sets the related system job to a completed status.  
@@ -106,13 +106,13 @@ For each solution endpoint, you configure a contract that defines the handling o
   
 ### Queue
 
-A queue contract provides a message queue in the cloud. With a queue contract, a listener doesn’t have to be actively listening for messages on the endpoint. For queues, there is a destructive read and a non-destructive read. A destructive read reads an available message from the queue and the message is removed. A non-destructive read doesn’t remove a message from the queue.  
+A queue contract provides a message queue in the cloud. With a queue contract, a listener doesn’t have to be actively listening for messages on the endpoint. For queues, there's a destructive read and a nondestructive read. A destructive read reads an available message from the queue and the message is removed. A nondestructive read doesn’t remove a message from the queue.  
   
 The type of queue supported by Dataverse is called a persistent queue. Persistent queues have a long but finite message availability duration that can be specified in code.  
   
 ### One-way
 
-A one-way contract requires an active listener. If there is no active listener on an endpoint, the post to the Service Bus fails. Dataverse will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
+A one-way contract requires an active listener. If there's no active listener on an endpoint, the post to the Service Bus fails. Dataverse will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
   
 ### Two-way
 
@@ -126,9 +126,9 @@ A REST contract is similar to a two-way contract on a REST endpoint.
 
 Similar to a queue except that one or more listeners can subscribe to receive messages from the topic.  
   
-### Event Hub
+### Event Hubs
 
-This contract type applies to Azure Event Hub solutions.
+This contract type applies to Azure Event Hubs solutions.
   
 Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   

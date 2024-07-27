@@ -21,17 +21,17 @@ Writing a plug-in that works with Azure is similar to writing any other Datavers
 
 ## Plug-in design considerations
 
-For a plug-in that executes synchronously, the recommended design is for the plug-in to send a message to Azure for the purpose of retrieving information from a listener application or other external service. Use of a two-way or REST contract on the Azure Service Bus endpoint allows a data string to be returned to the plug-in.  
+For a plug-in that executes synchronously, the recommended design is for the plug-in to send a message to Azure for retrieving information from a listener application or other external service. Use of a two-way or REST contract on the Azure Service Bus endpoint allows a data string to be returned to the plug-in.  
   
-It is not recommended that a synchronous plug-in use the Azure Service Bus to update data with an external service. Problems can arise if the external service becomes unavailable or if there is a lot of data to update. Synchronous plug-ins should execute fast and not hold up all logged in users of an organization while a lengthy operation is performed. In addition, if a rollback of the current core operation that invoked the plug-in occurs, any data changes made by the plug-in are undone. This could leave Dataverse and an external service in an un-synchronized state.  
+It isn't recommended that a synchronous plug-in use the Azure Service Bus to update data with an external service. Problems can arise if the external service becomes unavailable or if there's much data to update. Synchronous plug-ins should execute fast and not hold up all logged in users of an organization while a lengthy operation is performed. In addition, if a rollback of the current core operation that invoked the plug-in occurs, any data changes made by the plug-in are undone. This rollback could leave Dataverse and an external service in an unsynchronized state.  
   
-Note that it is possible for synchronous registered plug-ins to post the current transaction's execution context to the Azure Service Bus.  
+It is possible for synchronous registered plug-ins to post the current transaction's execution context to the Azure Service Bus.  
   
 <a name="bkmk_writing"></a>
   
 ## Write the plug-in code
 
-In the following sample plug-in code has been added to obtain the Azure service provider and initiate posting the execution context to the Service Bus by calling <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService.Execute(Microsoft.Xrm.Sdk.EntityReference,Microsoft.Xrm.Sdk.IExecutionContext)>. Tracing code has been added to facilitate debugging of the plug-in because the plug-in must run in the sandbox.  
+In the following sample plug-in, code has been added to obtain the Azure service provider and initiate posting the execution context to the Service Bus by calling <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService.Execute(Microsoft.Xrm.Sdk.EntityReference,Microsoft.Xrm.Sdk.IExecutionContext)>. Tracing code has been added to facilitate debugging of the plug-in because the plug-in must run in the sandbox.  
 
 > [!NOTE]
 > The `serviceEndpointId` passed into the constructor in this code is the one you get from creating a service endpoint as described in [Walkthrough: Configure Azure (SAS) for integration with Dataverse](walkthrough-configure-azure-sas-integration.md)
@@ -115,9 +115,9 @@ In your plug-in code, you can update the writeable data in the context before in
 
 ## Plug-in registration
 
-There are a few restrictions when you register a Azure-aware custom plug-in. The plug-in must be registered to execute in the sandbox. Because of this, the plug-in is limited to calling <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, Azure solution methods, or accessing a network using a web client. No other external access, such as access to a local file system, is allowed.  
+There are a few restrictions when you register an Azure-aware custom plug-in. The plug-in must be registered to execute in the sandbox. Sandbox registration limits the plug-in to calling <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, Azure solution methods, or accessing a network using a web client. No other external access, such as access to a local file system, is allowed.  
   
-For a plug-in registered to execute in asynchronous mode, this also means that the order of plug-in execution compared to other asynchronous plug-ins is not guaranteed. In addition, asynchronous plug-ins always execute after the Dataverse core operation.  
+For a plug-in registered to execute in asynchronous mode, the order of plug-in execution compared to other asynchronous plug-ins isn't guaranteed. In addition, asynchronous plug-ins always execute after the Dataverse core operation.  
   
 <a name="bkmk_failure"></a>
 
