@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 06/11/2024
+  ms.date: 07/29/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -100,7 +100,7 @@ sections:
 
    - question: Is  customer managed key supported for long term retained data?
      answer: |
-        Yes. Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key.
+        No, currently long term data retention isn't supported for customer manged key enabled environments.
 
    - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
      answer: |
