@@ -1,7 +1,7 @@
 ---
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-ms.date: 01/17/2024
+ms.date: 07/26/2024
 ms.topic: article
 author: "Mattp123"
 ms.subservice: dataverse-maker
@@ -127,7 +127,7 @@ Use floating point numbers when you store data that represents fractions or valu
 Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It's used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
 
 > [!NOTE]
-> BigInt is currently only available for use through API. This includes column creation, data creation, and data management.
+> BigInt is currently only available for use through API. This includes data creation and data management.
 
 ## Using currency columns
 
