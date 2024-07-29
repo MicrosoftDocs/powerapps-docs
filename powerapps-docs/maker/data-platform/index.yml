@@ -28,6 +28,8 @@ landingContent:
             url: data-platform-intro.md
           - text: Why choose Dataverse?
             url: why-dataverse-overview.md
+          - text: Improve Copilot responses
+            url: data-platform-copilot.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
@@ -56,8 +58,6 @@ landingContent:
          links:
           - text: Create a custom table
             url: data-platform-create-entity.md
-          - text: Import or export data
-            url: data-platform-import-export.md
           - text: Create a relationship between tables
             url: data-platform-entity-lookup.md
           - text: Create and edit columns
@@ -78,20 +78,6 @@ landingContent:
             url: actions.md
           - text: More >
             url: processes.md
-
-  # Card
-  - title: Work with dataflows
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Self-service data prep
-            url: self-service-data-prep-with-dataflows.md
-      - linkListType: how-to-guide
-        links:
-          - text: Create and use dataflows
-            url: create-and-use-dataflows.md
-          - text: Connect Azure Data Lake Storage Gen2
-            url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
 
   # Card
   - title: Get insights from your data
@@ -116,15 +102,18 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Use Power BI 
-            url: use-powerbi-dataverse.md
+          - text: Import or export data
+            url: data-platform-import-export.md
+          - text: Create virtual tables to connect to other data sources
+            url: create-virtual-tables-using-connectors.md
+          - text: Self-service data prep with dataflows
+            url: self-service-data-prep-with-dataflows.md
           - text: Use SharePoint, OneNote, and OneDrive
             url: sharepoint-onedrive-onenote-intro.md
       - linkListType: how-to-guide
         links:
           - text: Create a Power BI report
             url: data-platform-powerbi-connector.md
-
 
   # Card
   - title: Use solutions for ALM
