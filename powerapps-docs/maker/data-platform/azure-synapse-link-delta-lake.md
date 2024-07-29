@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 06/18/2024
+ms.date: 07/29/2024
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -59,7 +59,7 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 - Synapse workspace: You must have a Synapse workspace and **Owner** role in access control(IAM) and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
-- A Spark Pool in the connected Azure Synapse workspace with **Apache Spark Version 3.3** using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
+- An Apache Spark pool in the connected Azure Synapse workspace with **Apache Spark Version 3.3** using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
 - The Microsoft Dynamics 365 minimum version requirement to use this feature is 9.2.22082. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates#how-to-enableearly-access-updates)
 
 ### Recommended Spark Pool configuration
@@ -74,6 +74,9 @@ This configuration can be considered a bootstrap step for average use cases.
 - Apache Spark: 3.3
 - Dynamically allocate executors: Enabled
 - Default number of executors: 1 to 9
+
+> [!IMPORTANT]
+> Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
