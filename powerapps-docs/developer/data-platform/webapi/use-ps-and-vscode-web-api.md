@@ -92,9 +92,9 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
    `. $PSScriptRoot\Core.ps1` at the top of the file uses [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) to direct the script to load the contents of that file.
 
-   Remember to change `yourorg` in `https://yourorg.crm.dynamics.com/` to match the URL for your environment.
+   Remember to change `https://yourorg.crm.dynamics.com/` to match the URL for your environment.
 
-1. To run the script, press `F5`.
+1. To run the script, press <kbd>F5</kbd>.
 
    The output might look similar to this output:
 
@@ -145,7 +145,7 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
 
    Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
-1. To run the script, press `F5`.
+1. To run the script, press <kbd>F5</kbd>.
 
    The output should look exactly like it did before.
 
@@ -350,7 +350,7 @@ Let's put functions to perform common table operations a file named `TableOperat
 
    Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
-1. To run the script, press `F5`.
+1. To run the script, press <kbd>F5</kbd>.
 
    The output might look similar to this output:
 
@@ -451,7 +451,7 @@ Add a helper function that can help detect the source of the errors and extract 
 
    Remember to change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
-1. To run the script, press `F5`.
+1. To run the script, press <kbd>F5</kbd>.
 
    The output might look similar to this output:
 
@@ -479,7 +479,7 @@ Add a helper function that can help detect the source of the errors and extract 
    }
    ```
 
-1. To run the script, press `F5`.
+1. To run the script, press <kbd>F5</kbd>.
 
    The output should be almost the same as if it wasn't included in the `Invoke-DataverseCommands` block:
 
@@ -495,7 +495,7 @@ Add a helper function that can help detect the source of the errors and extract 
 
 ## Manage Dataverse service protection limits
 
-[Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and the client application must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
+[Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and client applications must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
 
 The PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
 
@@ -769,7 +769,7 @@ This section contains some guidance for issues you might encounter.
 
 This error might occur when debugging with Visual Studio Code. To resolve the error:
 
-1. Select **View** > **Command Palette...** from the Visual Studio Code menu, or press `Ctrl` + `Shift` + `P`.
+1. Select **View** > **Command Palette...** from the Visual Studio Code menu, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>.
 1. Type `restart` and select `Powershell: Restart session`. See [PowerShell/vscode-powershell GitHub Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
 
 ## Next steps
