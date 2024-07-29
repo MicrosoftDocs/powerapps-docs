@@ -31,6 +31,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 - Whenever you make changes, you must save and publish the app again if you want others to see those changes.
 
 > [!NOTE]
+>
 > - To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md).
 > - To learn about sharing limits applicable to canvas apps in managed environments, see [Sharing limits](/power-platform/admin/managed-environment-sharing-limits).
 
@@ -40,40 +41,46 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
 1. On the left pane, select **Apps**.
 
-    ![Show a list of apps.](./media/share-app/file-apps.png "Show a list of apps")
+1. Select the app that you want to share.
 
-1. Select the app that you want to share by selecting its icon.
+   :::image type="content" source="media/share-app/select-app.png" alt-text="Screenshot that shows your list of apps, where you can select one.":::
 
-    ![Select an app.](./media/share-app/select-app.png "Select an app")
+1. You can share your app in one of two ways:
 
-1. On the command bar, select **Share**.  
-   or  
-   Select **More Commands** (**...**), and then select **Share** from the drop-down menu.
+   1. On the command bar, select **Share**.
 
-    ![Share an app.](./media/share-app/share-app.png "Share an app")
+      :::image type="content" source="media/share-app/share-icon-menu-bar.png" alt-text="Screenshot that shows location of the share icon on the menu bar." lightbox="media/share-app/share-icon-menu-bar.png":::
+
+   1. Select the overflow menu (**...**) next to your app name and select **Share** from the drop-down menu.
+
+      :::image type="content" source="media/share-app/share-app.png" alt-text="Screenshot that shows the location of the overflow menu and its share option.":::
 
 1. Specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
 
-    - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semicolons. If several people have the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
+    You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes \<meghan.holmes@contoso.com\>**) if the items are separated by semicolons.
 
-        ![Share with an individual user.](./media/share-app/individual-user.png "Share with an individual user")
+    If several people have the same name but different aliases, the first person found is added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
+
+    :::image type="content" source="media/share-app/individual-user.png " alt-text="Screenshot that shows what happens when you search for a name in the search field on an app page.":::
 
     > [!NOTE]
+    >
     > - You can't share an app with a distribution group in your organization or with a group outside your organization.
-    > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users
+    > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users.
 
-1. If your app contains premium components, such as a map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+1. If your app contains premium components, such as a map or address input, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses**, which submits the request to your admin.
 
-    :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
-    
-    > [!Note]
-    > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
+   :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
+
+   > [!NOTE]
+   >
+   > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
-    ![Select a co-owner.](./media/share-app/co-owner.png "Select a co-owner")
+    :::image type="content" source="media/share-app/co-owner.png" alt-text="Screenshot that shows where to check the box for Co-owner.":::
 
-    In the sharing UI, you can't grant Co-owner permission to a security group if you [created the app from within a solution](add-app-solution.md). However, its possible to grant co-owner permission to a security group for apps in a solution by using the [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment).  
+    In the sharing interface, you can't grant Co-owner permission to a security group if you [created the app from within a solution](add-app-solution.md). However, its possible to grant co-owner permission to a security group for apps in a solution by using the [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment).  
 
     > [!NOTE]
     > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
