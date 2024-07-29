@@ -106,16 +106,14 @@ landingContent:
         links:
           - text: Import or export data
             url: data-platform-import-export.md
-          - text: Create virtual tables to connect to other data sources
-            url: create-virtual-tables-using-connectors.md
           - text: Self-service data prep with dataflows
             url: self-service-data-prep-with-dataflows.md
           - text: Use SharePoint, OneNote, and OneDrive
             url: sharepoint-onedrive-onenote-intro.md
       - linkListType: how-to-guide
         links:
-          - text: Create a Power BI report
-            url: data-platform-powerbi-connector.md
+         - text: Create virtual tables to connect to other data sources
+           url: create-virtual-tables-using-connectors.md
 
   # Card
   - title: Use solutions for ALM
