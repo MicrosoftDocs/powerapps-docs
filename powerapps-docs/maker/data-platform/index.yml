@@ -57,7 +57,7 @@ landingContent:
        - linkListType: how-to-guide
          links:
           - text: Create an app 
-            url: /maker/canvas-apps/data-platform-create-app.md
+            url: ../canvas-apps/data-platform-create-app.md
           - text: Create a custom table
             url: data-platform-create-entity.md
           - text: Create a relationship between tables
