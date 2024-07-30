@@ -74,6 +74,8 @@ landingContent:
         links:
           - text: Business rules 
             url: data-platform-create-business-rule.md
+          - text: Plug-ins
+            url: low-code-plug-ins.md
           - text: Real-time workflows
             url: overview-realtime-workflows.md
           - text: Actions
