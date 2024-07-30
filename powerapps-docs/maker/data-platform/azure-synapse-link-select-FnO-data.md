@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 07/02/2024
+ms.date: 07/30/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -286,7 +286,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
 - Staging and temporary table types in finance and operations apps aren't allowed in Azure Synapse Link.
-- Following Tables, also known as kernal tables in Finance and Operations are supported by Fabric/ Synapse Link. But these tables are special, and you don't need to enable change tracking. Also, they are updated every 24hrs, not updated near-real time as the data doesn't change frequently. DATAAREA, USERINFO, SECURITYROLE, SECURITYUSERROLE, SQLDICTIONARY, PARTITIONS, SECURITYPRIVILEGE, TIMEZONESLIST, SECURITYDUTY, SECURITYSUBROLE, SECURITYUSERROLECONDITION, DATABASELOG, SECURITYROLERUNTIME, SECURITYROLEPRIVILEGEEXPLODEDGRAPH, SECURITYROLEDUTYEXPLODEDGRAPH, TIMEZONESRULESDATA, SECURITYROLEEXPLODEDGRAPH, USERDATAAREAFILTER, SYSINHERITANCERELATIONS
+- The following tables, known as *kernel* tables in finance and operations apps, are supported by Fabric and Synapse Link. These tables are special, and you don't need to enable change tracking. Also, they're updated every 24 hours and not updated near-real time as the data doesn't change frequently: `DATAAREA`, `USERINFO`, `SECURITYROLE`, `SECURITYUSERROLE`, `SQLDICTIONARY`, `PARTITIONS`, `SECURITYPRIVILEGE`, `TIMEZONESLIST`, `SECURITYDUTY`, `SECURITYSUBROLE`, `SECURITYUSERROLECONDITION`, `DATABASELOG`, `SECURITYROLERUNTIME`, `SECURITYROLEPRIVILEGEEXPLODEDGRAPH`, `SECURITYROLEDUTYEXPLODEDGRAPH`, `TIMEZONESRULESDATA`, `SECURITYROLEEXPLODEDGRAPH`, `USERDATAAREAFILTER`, `SYSINHERITANCERELATIONS`.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
 ## Access incremental data changes from finance and operations
