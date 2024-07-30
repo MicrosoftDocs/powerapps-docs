@@ -1,6 +1,6 @@
 ---
 title: Improve component performance, stability, and reliability with solution checker
-description: Use solution checker to analyze Dataverse customizations to enhance user experience. 
+description: Use solution checker to analyze Microsoft Dataverse customizations to enhance user experience. 
 author: Mattp123
 ms.component: cds
 ms.topic: article
