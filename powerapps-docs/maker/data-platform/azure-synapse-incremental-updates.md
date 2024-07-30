@@ -2,7 +2,7 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 02/07/2023
+ms.date: 07/29/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -51,7 +51,7 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
 > [!NOTE]
-> The minimum time interval is 15 minutes. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**
+> The minimum time interval is five minutes. That means the incremental update folder is created every five minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**
 >
 > Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
 
