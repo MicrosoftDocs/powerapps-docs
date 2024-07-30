@@ -51,10 +51,10 @@ The solution checker analyzes these solution components:
 
 :::image type="content" source="media/solution-checker-status.png" alt-text="Solution checker status" lightbox="media/solution-checker-status.png":::
 
-    Note the following:
-    - The solution checker can take a few minutes to complete the analysis.
-
-    - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
+   > [!NOTE]
+   >
+   > - The solution checker can take a few minutes to complete the analysis.
+   > - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
 5. [View the report](#review-the-solution-checker-report) when the check is completed.
 
