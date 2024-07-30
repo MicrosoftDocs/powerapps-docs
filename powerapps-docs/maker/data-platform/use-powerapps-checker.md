@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ---
-# Improve solution performance, stability and reliability with solution checker
+# Improve solution performance, stability, and reliability
 
 Solutions are used to distribute Power Platform objects, such as apps, tables, flows, web resources, and plugins. This article introduces the solution checker feature, a powerful tool that performs a comprehensive static analysis of your solution objects against a set of [best practice rules](#best-practice-rules-used-by-solution-checker). By using solution checker, you can quickly identify problematic patterns in your components and receive detailed reports that highlight issues, affected components, and provide links to documentation on how to resolve each issue. This ensures your solutions are optimized for performance, stability, and reliability.
 
@@ -36,7 +36,7 @@ The solution checker analyzes these solution components:
 > [!NOTE]
 >
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
-> - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment.
+> - Use of solution checker doesn't guarantee that a solution import will be successful. The static analysis checks performed against the solution don't know the configured state of the destination environment and import success might be dependent on other solutions or configurations in the environment.
 
 ## Run the solution checker
 
@@ -76,7 +76,7 @@ When you install the solution checker in your environment, the **Solution check*
 |Results as of *date and time*   | Solution analysis completed and results are available for download.      |
 |Couldn’t be completed. Result as of *date and time*     | The latest analysis request didn't complete successfully. The last successful results can be downloaded.         |
 |Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis isn't permitted on these solutions.         |
-|Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis isn't available for these solutions.        |
+|Checked by Publisher     | This is a non-Microsoft managed solution. Currently, solution analysis isn't available for these solutions.        |
 
 ## Review the solution checker report
 
@@ -157,10 +157,10 @@ The following table lists the component type, rule description, severity, and ca
 |Web Resources  | [use-utility-dialogs](./powerapps-checker/rules/web/use-utility-dialogs.md)   |    | Medium  | Usage |
 |Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    | Medium  | Upgrade readiness |
 |Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   | Medium | Upgrade readiness |
-| Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | Medium  | Usage |
+| Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in nondevelopment environments.  | Medium  | Usage |
 | Web Resources  | [use-strict-mode](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)  | Use strict mode when possible.  | Medium   | Usage |
 | Web Resources  | [use-strict-equality-operators](https://developer.mozilla.org/docs/Web/JavaScript/Equality_comparisons_and_sameness)  | Use strict equality operators.  | Medium  | Usage |
-| Web Resources  | [avoid-eval](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval)  | Don't use the 'eval' function or its functional equivalents.  | Critical  | Security |
+| Web Resources  | [avoid-eval](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval)  | Don't use the `eval` function or its functional equivalents.  | Critical  | Security |
 | Web Resources  | [avoid-with](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/with)  | Don't use the 'with' operator.  | High  | Performance |
 | Web Resources  | [remove-alert](https://eslint.org/docs/rules/no-alert)  | Don't use the 'alert' function or its functional equivalents.  | Medium  | Usage |
 | Web Resources  | [remove-console](https://eslint.org/docs/rules/no-console)  | Avoid using methods on console.  | Medium  | Usage |
@@ -170,13 +170,13 @@ The following table lists the component type, rule description, severity, and ca
 | Web Resources  | [web-sdl-no-cookies](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-cookies.md) | HTTP cookies are an old client-side storage mechanism with inherent risks and limitations. Use Web Storage, IndexedDB or other modern methods instead. | Medium | Security |
 | Web Resources  | [web-sdl-no-document-domain](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-document-domain.md) | Writes to document.domain property must be reviewed to avoid bypass of same-origin checks. Usage of top level domains such as azurewebsites.net is strictly prohibited. | Medium | Security |
 | Web Resources  | [web-sdl-no-document-write](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-document-write.md) | Calls to document.write or document.writeln manipulate DOM directly without any sanitization and should be avoided. Use document.createElement() or similar methods instead. | Medium | Security |
-| Web Resources  | [web-sdl-no-html-method](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-html-method.md) | Direct calls to method html() often (e.g. in jQuery framework) manipulate DOM without any sanitization and should be avoided. Use document.createElement() or similar methods instead. | Medium | Security |
+| Web Resources  | [web-sdl-no-html-method](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-html-method.md) | Direct calls to method html() often (for example, in jQuery framework) manipulate DOM without any sanitization and should be avoided. Use document.createElement() or similar methods instead. | Medium | Security |
 | Web Resources  | [web-sdl-no-inner-html](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-inner-html.md) |Assignments to innerHTML or outerHTML properties manipulate DOM directly without any sanitization and should be avoided. Use document.createElement() or similar methods instead. | Medium | Security |
 | Web Resources  | [web-sdl-no-insecure-url](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-insecure-url.md) | Insecure protocols such as HTTP or FTP should be replaced by their encrypted counterparts (HTTPS, FTPS) to avoid sending potentially sensitive data over untrusted networks in plaintext. | Medium | Security |
 | Web Resources  | [web-sdl-no-msapp-exec-unsafe](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-msapp-exec-unsafe.md) | Calls to MSApp.execUnsafeLocalFunction() bypass script injection validation and should be avoided. | Medium | Security |
 | Web Resources  | [web-sdl-no-postmessage-star-origin](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-postmessage-star-origin.md) | Always provide specific target origin, not * when sending data to other windows using postMessage to avoid data leakage outside of trust boundary. | Medium | Security |
 | Web Resources  | [web-sdl-no-winjs-html-unsafe](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-winjs-html-unsafe.md) | Calls to WinJS.Utilities.setInnerHTMLUnsafe() and similar methods do not perform any input validation and should be avoided. Use WinJS.Utilities.setInnerHTML() instead. | Medium | Security |
-| Canvas App  | [app-formula-issues-high](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details.  | Critical  | Design |
+| Canvas App  | [app-formula-issues-high](/powerapps/maker/canvas-apps/formula-reference)  | Go to [Power Apps formula reference](/power-platform/power-fx/formula-reference) for additional details.  | Critical  | Design |
 | Canvas App  | [app-formula-issues-medium](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details.  |  Medium  | Design |
 | Canvas App  | [app-formula-issues-low](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details. |  Low  | Design |
 | Canvas App  | [app-use-delayoutput-text-input](/powerapps/maker/canvas-apps/performance-tips#use-delayed-load)  | Use delayed load in some scenarios to improve performance. |  Medium  | Performance |
