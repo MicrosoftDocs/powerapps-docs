@@ -4,15 +4,26 @@ description: Use solution checker to analyze Dataverse customizations to enhance
 author: Mattp123
 ms.component: cds
 ms.topic: article
-ms.date: 05/07/2024
+ms.date: 07/30/2024
 ms.subservice: dataverse-maker
 ms.author: matp
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ---
-# Improve component performance, stability and reliability with solution checker
+# Improve solution performance, stability and reliability with solution checker
 
-To deliver on complex business requirements, makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
+Solutions are used to distribute Power Platform objects, such as apps, tables, flows, web resources, and plugins. This article introduces the solution checker feature, a powerful tool that performs a comprehensive static analysis of your solution objects against a set of [best practice rules](#best-practice-rules-used-by-solution-checker). By using solution checker, you can quickly identify problematic patterns in your components and receive detailed reports that highlight issues, affected components, and provide links to documentation on how to resolve each issue. This ensures your solutions are optimized for performance, stability, and reliability.
+
+   :::image type="content" source="media/solution-checker-viewresults.png" alt-text="Solution checker example results and details" lightbox="media/solution-checker-viewresults.png":::
+
+Solution checker works with unmanaged solutions that can be exported from an environment.
+
+You can run solution checker either from Power Apps (make.powerapps.com) or by using [PowerShell](#run-solution-checker-using-powershell).
+
+## How solution checker helps you
+
+To deliver on complex business requirements, makers often can end up with highly advanced solutions that customize and extend the Power Platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a check within seconds on your solution, which uses a set of best practice rules to quickly identify problematic patterns. After the check completes, you receive a detailed report in Power Apps as well as in an email message that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
 The solution checker analyzes these solution components:
 
@@ -22,11 +33,8 @@ The solution checker analyzes these solution components:
 - Power Automate flows (via [flow checker](/power-automate/error-checker))
 - Power Fx expressions (via [app checker](https://powerapps.microsoft.com/en-us/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/))
 
-Solution checker works with unmanaged solutions that can be exported from an environment.
-
 > [!NOTE]
 >
-> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/get-started-powerapps-checker?view=pa-ps-latest&preserve-view=true)
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
 > - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment.
 
@@ -41,8 +49,7 @@ Solution checker works with unmanaged solutions that can be exported from an env
 
 4. The **Solution checker** command button has a loading indicator, and you'll notice a **Running…** state in the **Solution check** column of the **Solution** list.
 
-    > [!div class="mx-imgBorder"]
-    > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
+:::image type="content" source="media/solution-checker-status.png" alt-text="Solution checker status" lightbox="media/solution-checker-status.png":::
 
     Note the following:
     - The solution checker can take a few minutes to complete the analysis.
@@ -79,8 +86,7 @@ When a solution check is completed, you can view the analysis report in the port
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
 3. Select an issue to view the details and guidance on how to resolve.
 
-    > [!div class="mx-imgBorder"]
-    > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
+   :::image type="content" source="media/solution-checker-viewresults.png" alt-text="Solution checker example results and details drill down" lightbox="media/solution-checker-viewresults.png":::
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided.
 
@@ -108,6 +114,10 @@ Here's a summary of each column in the report.
 ## Run solution checker rules locally
 
 You can run solution checker rules in your development environment to detect issues much sooner as you create your solution resources.  This is currently supported for web resources (JavaScript and [TypeScript](https://typescript-eslint.io/)). For more details, go to the NPM package [@microsoft/eslint-plugin-power-apps](https://www.npmjs.com/package/@microsoft/eslint-plugin-power-apps).
+
+## Run solution checker using PowerShell
+
+A PowerShell module is available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/get-started-powerapps-checker?view=pa-ps-latest&preserve-view=true)
 
 ## Best practice rules used by solution checker
 
