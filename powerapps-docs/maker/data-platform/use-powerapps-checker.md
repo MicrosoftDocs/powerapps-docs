@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ---
-# Improve solution performance, stability, and reliability
+# Improve solution performance, stability and reliability
 
 Solutions are used to distribute Power Platform objects, such as apps, tables, flows, web resources, and plugins. This article introduces the solution checker feature, a powerful tool that performs a comprehensive static analysis of your solution objects against a set of [best practice rules](#best-practice-rules-used-by-solution-checker). By using solution checker, you can quickly identify problematic patterns in your components and receive detailed reports that highlight issues, affected components, and provide links to documentation on how to resolve each issue. This ensures your solutions are optimized for performance, stability, and reliability.
 
