@@ -1,9 +1,8 @@
 ---
 title: "Converge model-driven and canvas apps using the custom page"
 description: "Add a custom page to use canvas as a page in your model-driven app" 
-ms.date: 05/26/2022
+ms.date: 07/30/2024
 ms.reviewer: "matp"
-
 ms.subservice: mda-maker
 ms.topic: overview
 author: "adrianorth"
@@ -69,6 +68,9 @@ Embedded canvas apps also use the canvas capabilities with a hosting approach th
 
 In most cases, we recommend that you use custom pages instead of embedded canvas apps for tighter integration and better performance. 
 
+> [!NOTE]
+> The number of custom pages in a model-driven app shouldn't exceed 25. The amount of custom pages in an app can increase the wait time an app user experiences when the user plays an app with custom pages, after the last app publish. The increased user wait time is limited to the first app launch, by the first user, after the last publish of the model-driven app.
+
 ## Migrating standalone canvas app content to custom pages
 
 Existing standalone canvas apps aren't supported for use as a custom page and the expected app structure is different. A standalone canvas app often has many screens with global access to all controls and variables. The custom page is expected to typically be a single screen with loose coupling to provide performance and co-development capabilities.
@@ -98,7 +100,7 @@ To migrate an existing standalone canvas app, first start by identifying a mappi
 
 * How is the custom page managed in a solution?
 
-  Each custom page is a separate component in the solution, which allows one maker to edit one custom page at a time. Most custom pages will have a single screen. Instead of multiple screens, they will use the custom page's navigation functions to move to another custom page or model-driven app page. When a custom page has multiple screens, it's still a single solution component so only one maker can be working on the contained set of screens.
+  Each custom page is a separate component in the solution, which allows one maker to edit one custom page at a time. Most custom pages will have a single screen. Instead of multiple screens, they'll use the custom page's navigation functions to move to another custom page or model-driven app page. When a custom page has multiple screens, it's still a single solution component so only one maker can be working on the contained set of screens.
 
 * What licenses are allowed to use a custom page and does a custom page impact app counts?
 
@@ -106,7 +108,7 @@ To migrate an existing standalone canvas app, first start by identifying a mappi
 
 * Do custom pages need to be shared like standalone canvas apps?
 
-  The custom page is aligned with the model-driven app page sharing, which relies on the model-driven app sharing without sharing individual pages for app users. Makers may need to share the custom page to allow editing.
+  The custom page is aligned with the model-driven app page sharing, which relies on the model-driven app sharing without sharing individual pages for app users. Makers might need to share the custom page to allow editing.
 
 ### See also
 
