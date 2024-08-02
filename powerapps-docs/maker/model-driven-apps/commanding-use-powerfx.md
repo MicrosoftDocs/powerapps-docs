@@ -198,9 +198,13 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Functions not supported
+## Functions available with commanding
 
-The following Power Fx functions are currently not supported with commanding in model-driven apps.
+For information about the formulas supported with commanding in model-driven apps, go to [Formula reference - model-driven apps](/power-platform/power-fx/formula-reference-model-driven-apps).
+
+### Functions not supported
+
+The following Power Fx functions are *currently not supported* with commanding in model-driven apps.
 
 - Back()
 - Clear()
