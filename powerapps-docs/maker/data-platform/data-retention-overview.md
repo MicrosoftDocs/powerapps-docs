@@ -46,7 +46,7 @@ Application admins set up custom policies for a table with criterion to retain d
 
 > [!IMPORTANT]
 > - Once data is retained with Dataverse long term retention it can't be moved back to the Dataverse live (active) application state.
-> - Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key. More information: [Migrate bring-your-own-key environments to customer-managed key](/power-platform/admin/cmk-migrate-from-byok)
+> - Customers using self-managed encryption key [bring your own key](https://learn.microsoft.com/en-us/power-platform/admin/cmk-migrate-from-byok) OR [customer managed key](https://learn.microsoft.com/en-us/power-platform/admin/cmk-migrate-from-byok) should be aware that long term retained data in does not support both options currently.
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 Dataverse provides read-only access to the retained data via:
