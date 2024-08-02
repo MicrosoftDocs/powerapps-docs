@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/28/2024
+ms.date: 08/01/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -159,8 +159,8 @@ You can use the following function types in a formula column:
 
 ## Functions
 
-You can use the following scalar functions in a formula column:
-
+For the scalar functions you can use in a formula column, go to [Formula reference - Dataverse formula columns](/power-platform/power-fx/formula-reference-formula-columns).
+<!--
 :::row:::
    :::column span="":::
       [Abs](../canvas-apps/functions/function-numericals.md)
@@ -357,7 +357,7 @@ You can use the following scalar functions in a formula column:
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end:::
+:::row-end::: -->
 
 \* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
