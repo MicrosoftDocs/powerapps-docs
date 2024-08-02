@@ -36,7 +36,7 @@ The following table lists the Power Fx formulas that work but have limitations o
 
 For information about the formulas supported with low-code plug-ins, go to [Formula reference- Dataverse plug-ins](/power-platform/power-fx/formula-reference-plug-ins).
 
-Formulas not currently supported with low-code plug-ins
+Formulas *not currently supported* with low-code plug-ins
 
 :::row:::
    :::column span="":::
