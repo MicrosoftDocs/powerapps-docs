@@ -4,7 +4,7 @@ description: "Learn how to associate and disassociate table rows using the SDK f
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer

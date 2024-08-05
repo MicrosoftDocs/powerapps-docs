@@ -4,7 +4,7 @@ description: "Learn how to register a plug-in assembly and step with the Microso
 ms.date: 06/22/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 

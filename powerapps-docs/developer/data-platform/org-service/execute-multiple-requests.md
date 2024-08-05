@@ -4,8 +4,8 @@ description: "ExecuteMultipleRequest message supports higher throughput bulk mes
 ms.date: 02/28/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

@@ -4,7 +4,7 @@ description: "Use impersonation to execute business logic on behalf of another M
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 

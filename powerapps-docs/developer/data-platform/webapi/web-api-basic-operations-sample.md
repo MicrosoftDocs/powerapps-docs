@@ -2,8 +2,8 @@
 title: "Web API basic operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. The samples are coded using C# and client-side JavaScript."
 ms.date: 08/29/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

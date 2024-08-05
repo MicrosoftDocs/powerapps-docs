@@ -3,8 +3,8 @@ title: Use Web API functions
 description: Learn how to use functions, which are reusable operations used with a GET request to retrieve data from Microsoft Dataverse Web API.
 ms.topic: how-to
 ms.date: 04/26/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
