@@ -37,6 +37,8 @@ To use this capability your environment must be in the US region.
 
 Copilot in model-driven apps is a preview feature. Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
+Copilot is not supported on mobile.
+
 This capability may be subject to usage limits or capacity throttling.
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
