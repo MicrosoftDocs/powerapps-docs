@@ -6,7 +6,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

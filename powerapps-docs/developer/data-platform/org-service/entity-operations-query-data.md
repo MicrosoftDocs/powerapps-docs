@@ -5,7 +5,7 @@ ms.date: 05/03/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: MicroSri
-ms.author: jdaly
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
