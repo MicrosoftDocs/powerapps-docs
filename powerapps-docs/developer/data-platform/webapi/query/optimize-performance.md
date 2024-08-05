@@ -2,8 +2,8 @@
 title: Optimize performance using OData
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using OData.
 ms.date: 07/11/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
