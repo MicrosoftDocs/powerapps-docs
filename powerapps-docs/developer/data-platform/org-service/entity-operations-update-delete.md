@@ -4,8 +4,8 @@ description: "Learn how to update and delete table rows using the SDK for .NET."
 ms.date: 07/22/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

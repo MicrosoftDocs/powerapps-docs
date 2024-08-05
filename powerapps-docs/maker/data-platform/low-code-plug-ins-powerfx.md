@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/09/2024
+ms.date: 08/02/2024
 ms.custom: template-how-to
 ---
 # Low-code plug-ins Power Fx (preview)
@@ -32,7 +32,11 @@ The following table lists the Power Fx formulas that work but have limitations o
 |Collect     | Yes        | Requires the variable to exist and the variable type to match what you’re trying to set it to.    |
 |Defaults     |  No       | Use Collect instead. For example, instead of *Patch(account, Defaults(account), {“Account Name”: “Example Account”})* use `Collect(account, {“Account Name”: “Example Account”})`.    |
 
-## Formulas not currently supported with low-code plug-ins
+## Power Fx formulas supported
+
+For information about the formulas supported with low-code plug-ins, go to [Formula reference- Dataverse plug-ins](/power-platform/power-fx/formula-reference-plug-ins).
+
+Formulas *not currently supported* with low-code plug-ins
 
 :::row:::
    :::column span="":::

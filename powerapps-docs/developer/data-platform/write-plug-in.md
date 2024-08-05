@@ -4,9 +4,9 @@ description: "Learn how to write custom code to be executed in response to data 
 ms.date: 03/26/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
