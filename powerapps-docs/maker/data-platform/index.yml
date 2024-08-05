@@ -107,7 +107,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Import or export data
-            url: data-platform-import-export.md
+            url: import-export-data.md
           - text: Self-service data prep with dataflows
             url: self-service-data-prep-with-dataflows.md
           - text: Use SharePoint, OneNote, and OneDrive
