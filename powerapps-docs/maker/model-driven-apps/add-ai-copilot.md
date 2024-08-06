@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: mijosh
 ms.reviewer: matp
-ms.date: 03/06/2024
+ms.date: 08/06/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -96,7 +96,7 @@ To provide feedback to help us improve Copilot's responses, app users can select
 1. **Copilot for app users** allows users to retrieve information from Dataverse through read-only operations. This means that users can only view data that matches their queries and can't make any changes to the data.
 1. Create, update, or other generic actions such as enable or disable Copilot and create a memo aren't supported.
 1. [Summarization](/dynamics365/sales/copilot-overview#record-summarization) skill feature is available in [Dynamics 365 Sales copilot](/dynamics365/sales/copilot-overview) and not in **Copilot for app user**.
-1. **Copilot for app users** is not supported on mobile.
+1. **Copilot for app users** is not supported with the Power Apps mobile app.
 
 ## Related information
 
