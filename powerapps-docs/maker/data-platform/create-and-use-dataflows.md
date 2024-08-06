@@ -2,7 +2,7 @@
 title: "Create and use dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
-ms.date: 10/03/2023
+ms.date: 08/06/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,7 +32,7 @@ A dataflow is a collection of tables that are created and managed in environment
 schedules, directly from the environment in which your dataflow was created.
 
 Once you create a dataflow in the Power Apps portal, you can get data from it
-using the Common Data Service connector or Power BI Desktop Dataflow connector, depending on
+using the Dataverse connector or Power BI Desktop Dataflow connector, depending on
 which destination you chose when creating the dataflow.
 
 There are three primary steps to using a dataflow:
@@ -64,13 +64,12 @@ it.
 > [!NOTE]
 > Creating dataflows is currently not available with Power Apps Developer Plan licenses.
 
-1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
+1. Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
     ![Environment switcher.](media/environment-switcher.png)
 
 1. On the left navigation pane, select **Dataflows**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. select **New dataflow**, and then select **Start from blank**.
-1. On the New Dataflow page, enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**. 
+1. Select **New dataflow**. On the **New Dataflow** page, enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**.
 
      > [!IMPORTANT]
      > There is only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
@@ -115,7 +114,7 @@ if you want to create your own shaping code, you can use the advanced editor.
 ## Dataflows and the Common Data Model
 
 Dataflows tables include new tools to easily map your business data to the
-Common Data Model, enrich it with Microsoft and third-party data, and gain simplified access to machine learning. These new capabilities can be leveraged to provide intelligent and actionable insights
+Common Data Model, enrich it with Microsoft and non-Microsoft data, and gain simplified access to machine learning. These new capabilities can be leveraged to provide intelligent and actionable insights
 into your business data. Once you’ve completed any transformations in the edit
 queries step described below, you can map columns from your data source tables to standard
 table columns as defined by the Common Data Model. Standard tables have a
@@ -146,7 +145,7 @@ dataflow.
 
 ## Set the refresh frequency
 
-Once your tables have been defined, you’ll want to schedule the refresh
+Once your tables have been defined, you should schedule the refresh
 frequency for each of your connected data sources.
 
 1. Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled
@@ -157,26 +156,6 @@ interval of your choice. To schedule a refresh automatically, select **Refresh a
 2. Enter the dataflow refresh frequency, start date, and time, in UTC.
 
 3. Select **Create.**
-<!-- 
-## Connect to your dataflow in Power BI Desktop
-Once you’ve created your dataflow and you have scheduled the refresh frequency
-for each data source that will populate the model, you’re ready for the final task, which is connecting to your dataflow from within Power BI Desktop.
-
-To connect to the dataflow, in Power BI Desktop select **Get Data** > **Power Platform** > **Power Platform dataflows** > **Connect**.
-
-![Connect to the dataflow.](media/get-data.png)
-
-Navigate to the environment where you saved your dataflow, select
-the dataflow, and then select the tables that you created from the list.
-
-You can also use the search bar, near the top of the window, to quickly find the
-name of your dataflow or tables from among many dataflow tables.
-
-When you select the table and then select the **Load** button, the tables
-appear in the **Columns** pane in Power BI Desktop, and appear and behave just
-like tables from any other dataset. -->
-
-## Using dataflows stored in Azure Data Lake Storage Gen2
 
 Some organizations might want to use their own storage for creation and management
 of dataflows. You can integrate dataflows with Azure Data Lake Storage Gen2 if
@@ -200,9 +179,7 @@ issues. This section provides troubleshooting tips when issues occur.
 -   **JSON File connector.** Currently you can connect to a JSON file using
     basic authentication only. For example, a URL similar to `https://XXXXX.blob.core.windows.net/path/file.json?sv=2019-01-01&si=something&sr=c&sig=123456abcdefg` is currently not supported.
 
--   **Azure Synapse Analytics.** Dataflows don't currently support Azure
-    Active Directory authentication for Azure Synapse Analytics. Use
-    basic authentication for this scenario.
+-   **Azure Synapse Analytics.** Dataflows don't currently support Microsoft Entra authentication for Azure Synapse Analytics. Use basic authentication for this scenario.
 
 > [!NOTE]
 > If you use data loss prevention (DLP) policies to block the **HTTP with Microsoft Entra (preauthorized)** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Microsoft Entra (preauthorized)** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
