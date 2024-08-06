@@ -24,7 +24,7 @@ There are many tools for developers you can use for different aspects of Microso
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
 
-All the above mentioned tools, except the Code Generation tool, are described below.
+All the above mentioned tools, except the Code Generation tool, are described in this article.
 
 ## Download and launch tools using Power Platform CLI
 
@@ -34,7 +34,7 @@ Follow these instructions to download and launch the Dataverse development tools
 > The Dataverse tools are not longer available individually by a direct download. The tools are now distributed in several NuGet packages.
 > We provide a Power Platform CLI command to download the correct package, extract and launch each tool, and update the installed tools.
 
-You will need version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed on your computer to follow along with these instructions.
+You need version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed on your computer to follow along with these instructions.
 Start by using the Power Platform CLI to get help on the tools.
 
 ```bash
