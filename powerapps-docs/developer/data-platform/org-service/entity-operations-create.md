@@ -4,8 +4,8 @@ description: "Learn how to create table rows using the SDK for .NET."
 ms.date: 01/18/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

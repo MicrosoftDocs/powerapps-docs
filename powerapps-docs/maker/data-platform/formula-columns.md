@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.custom: 
 ms.date: 08/01/2024
 ms.subservice: teams
-ms.author: dikamath
+ms.author: sriknair
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 contributors:
