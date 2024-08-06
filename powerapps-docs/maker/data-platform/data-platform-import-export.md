@@ -24,7 +24,9 @@ There are two ways to import data from Excel.
 - [Option 2: Import by bringing your own source file](#option-2-import-by-bringing-your-own-source-file)
 
 > [!IMPORTANT]
-> Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
+>
+> - To import or export data, you must have the **Environment Maker** security role.
+> - Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
 
 ### Option 1: Import by creating and modifying a file template
 
@@ -138,20 +140,8 @@ The following fields are system fields and aren't supported for import and expor
 
 Use a connector to import data from a selection of many different sources, such as Azure, SQL Server database, SharePoint, Access, OData, and more. More information: [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
-## Troubleshoot connection issues
+## See also
 
-Users might receive an error message if the connection they're using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
-
-To fix this issue:
-
-1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-2. Locate the **Microsoft Dataverse (legacy)** connection.
-3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
-
-After the fix completes, retry the export.
-
-## Permissions
-
-To import or export data, the user must have the **Environment Maker** security role.
+[Tables in Dataverse](entity-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
