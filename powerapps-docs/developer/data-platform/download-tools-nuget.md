@@ -1,7 +1,7 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
 description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
-ms.date: 09/25/2023
+ms.date: 08/06/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: davidjenni # GitHub ID
@@ -28,9 +28,13 @@ All the above mentioned tools, except the Code Generation tool, are described be
 
 ## Download and launch tools using Power Platform CLI
 
-Make sure that you have version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction).
+Make sure that you have version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed.
 
-Now get help on the tools.
+> [!NOTE]
+> The Dataverse tools are not longer available individually by a direct download. The tools are now distributed in a NuGet [package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools).
+> We provide a Power Platform CLI command to download the package, extract and launch each tool, and update the installed tools.
+
+Now use the Power Platform CLI to get help on the tools.
 
 ```bash
 > pac tool help
