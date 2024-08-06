@@ -4,8 +4,8 @@ description: "Introduces the different ways to query data using Microsoft Datave
 ms.date: 05/03/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath
-ms.author: jdaly
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

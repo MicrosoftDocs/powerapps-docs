@@ -5,8 +5,8 @@ ms.date: 12/31/2022
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors: 
