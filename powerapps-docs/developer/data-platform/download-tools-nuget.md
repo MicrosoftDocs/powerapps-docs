@@ -31,8 +31,8 @@ All the above mentioned tools, except the Code Generation tool, are described be
 Make sure that you have version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed.
 
 > [!NOTE]
-> The Dataverse tools are not longer available individually by a direct download. The tools are now distributed in a NuGet [package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools).
-> We provide a Power Platform CLI command to download the package, extract and launch each tool, and update the installed tools.
+> The Dataverse tools are not longer available individually by a direct download. The tools are now distributed in several NuGet packages.
+> We provide a Power Platform CLI command to download the correct package, extract and launch each tool, and update the installed tools.
 
 Now use the Power Platform CLI to get help on the tools.
 
