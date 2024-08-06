@@ -14,7 +14,7 @@ search.app:
   - D365CE
 contributors:
   - JimDaly
-  - divkamath
+  - MicroSri
 ---
 # Optimize performance for bulk operations
 

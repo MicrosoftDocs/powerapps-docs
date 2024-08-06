@@ -55,7 +55,7 @@ Plug-ins are one of two methods used to initiate posting the message containing 
   
 An Azure-aware default (OOB) plug-in is available and can be registered with Dataverse by registering a service endpoint using the Plug-in Registration tool. You must register a plug-in 'step' in the event execution pipeline that identifies the message and table combination that triggers the plug-in to execute and perform the posting notification. When executed, the plug-in notifies the asynchronous service, through a service endpoint notification service (<xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService>), to post the current request data context to the Azure Service Bus.  
   
-You can also write your own custom plug-in that is “Azure-aware”. The custom plug-in executes in partial-trust mode in the sandbox. A custom plug-in can initiate posting of the data context to the service bus through the service endpoint notification service. Adding code to invoke this service makes the plug-in “Azure-aware”.
+You can also write your own custom plug-in that is “Azure-aware”. The custom plug-in executes in the sandbox. A custom plug-in can initiate posting of the data context to the service bus through the service endpoint notification service. Adding code to invoke this service makes the plug-in “Azure-aware”.
 
 For more information about plug-ins in general, see [Writing a Plug-in](write-plug-in.md). For more information about Azure-aware plug-ins, see [Write a Custom Azure-aware Plug-in](write-custom-azure-aware-plugin.md).  
   

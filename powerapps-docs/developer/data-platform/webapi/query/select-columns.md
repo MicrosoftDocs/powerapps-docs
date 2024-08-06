@@ -2,8 +2,8 @@
 title: Select columns using OData
 description: Learn how to use OData to select columns when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 07/11/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 

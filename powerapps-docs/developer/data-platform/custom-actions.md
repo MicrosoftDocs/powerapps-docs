@@ -6,9 +6,9 @@ ms.date: 03/21/2022
 ms.reviewer: "jdaly"
 
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 ---
@@ -36,7 +36,7 @@ The following table describes some of the different capabilities.
 |Capability |Custom Process Action  |Custom API  |Description  |
 |---------|---------|---------|---------|
 |Declarative logic with workflow |Yes|No|Workflow Actions can have logic defined without writing code using the Classic Workflow designer. <br />Custom APIs require a plug-in written in .NET to implement logic that is applied on the server.|
-|Require specific privilege|No|Yes|With custom API you can designate that a user must have a specific privilege to call the message. If the user doesn’t have that privilege through their security roles or team membership, an error will be returned.|
+|Require specific privilege|No|Yes|With custom API you can designate that a user must have a specific privilege to call the message. If the user doesn't have that privilege through their security roles or team membership, an error will be returned.|
 |Define main operation logic with code|Yes|Yes|With Custom Process Actions the main operation processes the Workflow definition which may include custom workflow activities. The code in these custom workflow activities is processed in the main operation together with any other logic in the workflow.<br />When the custom process action doesn't contain any custom workflow activities, developers frequently add logic to the Post-Operation stage in the event pipeline to define logic. <br /><br />With custom API the message creator simply associates their plug-in type with the custom API to provide the main operation logic.<br />More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)|
 |Block Extension by other plug-ins|Yes|Yes| With Custom Process actions set the  [IsCustomProcessingStepAllowedForOtherPublishers](reference/entities/workflow.md#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property to `true` if you wish to allow 3rd party plug-ins to run when registered on the message for your custom process action. When set to `false`, only plug-ins from the same solution publisher will run when a plug-in step is registered for the message.<br /><br /> For custom API, set the [AllowedCustomProcessingStepType](reference/entities/customapi.md#BKMK_AllowedCustomProcessingStepType) to control whether any plug-ins steps may be registered, or if only asynchronous plug-ins may be registered. More information: [Select a Custom Processing Step Type](custom-api.md#select-a-custom-processing-step-type)|
 |Make message private|No|Yes|When you create a message using a Custom Process Action, it is exposed publicly in the endpoint for anyone else to discover and use. If someone else takes a dependency on the message you created, their code will be broken if you remove, rename, or change the input or output parameter signature in the future.<br /><br />If you do not intend for your message to be used by anyone else, you can mark it as a private message. This will indicate that you do not support others using the message you create, and it will not be included in definitions of available functions or actions exposed by the Web API $metadata service definition. Classes for calling these messages will not be generated using code generation tools, but you will still be able to use it. More information: [When to make your custom API private](custom-api.md#when-to-make-your-custom-api-private)|
