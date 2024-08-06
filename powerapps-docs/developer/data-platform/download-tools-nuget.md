@@ -28,13 +28,14 @@ All the above mentioned tools, except the Code Generation tool, are described be
 
 ## Download and launch tools using Power Platform CLI
 
-Make sure that you have version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed.
+Follow these instructions to download and launch the Dataverse development tools.
 
 > [!NOTE]
 > The Dataverse tools are not longer available individually by a direct download. The tools are now distributed in several NuGet packages.
 > We provide a Power Platform CLI command to download the correct package, extract and launch each tool, and update the installed tools.
 
-Now use the Power Platform CLI to get help on the tools.
+You will need version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction) installed on your computer to follow along with these instructions.
+Start by using the Power Platform CLI to get help on the tools.
 
 ```bash
 > pac tool help
