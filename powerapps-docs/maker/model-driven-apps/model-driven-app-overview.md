@@ -1,5 +1,5 @@
 ---
-title: Overview of building a model-driven app with Power Apps | Microsoft Docs
+title: Overview of building a model-driven app with Power Apps
 description: Step-by-step instructions for creating and configuring a table to use with a Power Apps model-driven app.
 author: Mattp123
 ms.topic: overview

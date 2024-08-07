@@ -1,6 +1,6 @@
 ---
-title: "Customize the command bar | MicrosoftDocs"
-description: "Use the command designer to customize the command bar."
+title: "Customize the command bar"
+description: "Use the command designer to customize the command bar in model-driven apps in Power Apps."
 Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
