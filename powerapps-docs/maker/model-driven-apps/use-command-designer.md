@@ -17,7 +17,7 @@ This article guides you through creating and editing modern commands using the c
   
 ## Open the app designer
 
-Either [Create a new model-driven app using modern app designer](#create-a-new-model-driven-app-using-modern-app-designer) or [Open an existing model-driven app using modern app designer](#open-an-existing-model-driven-app-using-modern-app-designer).
+Either [Create a new model-driven app using modern app designer](#create-a-new-model-driven-app-using-modern-app-designer) or [Open an existing model-driven app using app designer](#open-an-existing-model-driven-app-using-app-designer).
 
 ### Create a new model-driven app using modern app designer
 
