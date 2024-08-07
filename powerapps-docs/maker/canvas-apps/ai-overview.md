@@ -55,7 +55,7 @@ Learn how to use Copilot features in Power Apps.
 > [!IMPORTANT]
 >
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2173149).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in the process of rolling out, and may not be available in your region yet.
 > - This capability may be subject to usage limits or capacity throttling.
