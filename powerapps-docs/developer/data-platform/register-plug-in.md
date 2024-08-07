@@ -1,7 +1,7 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in assembly and step with the Microsoft Dataverse event framework pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/22/2023
+ms.date: 08/06/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: MicroSri
@@ -18,9 +18,9 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-After a plug-in is written and compiled, it must be registered with the [event framework](event-framework.md) to execute when a specific entity (table row) and message (operation) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio.
+After a plug-in is written and compiled, it must be registered with the [event framework](event-framework.md) to execute when a specific entity (table row) and message (operation) is processed by Microsoft Dataverse. To register a plug-in with Dataverse requires use of a tool - either the Plug-in Registration tool (PRT) or the Power Platform Tools extension for Visual Studio.
 
-The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step, add an assembly to a solution, and perform other common plug-in related operations using the Plug-in Registration tool.
+The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and message processing step, add an assembly to a solution, and perform other common plug-in related operations using the Plug-in Registration tool.
 
 The Visual Studio extension provides a more feature rich development environment and covers the entire coding, deployment, and debugging/profiling development process. For information about using the Power Platform Tools extension for Visual Studio, see the [quickstart](tools/devtools-create-plugin.md).
 
@@ -43,7 +43,7 @@ When an assembly is uploaded, it's stored in the `PluginAssembly` table. Most of
 
 ### View registered assemblies
 
-You can view information about registered plug-in assemblies in the Power Apps classic **Solution Explorer**, under **Solutions** in Power Apps left navigation pane, and in the PRT assembly view. To access **Solution Explorer** in Power Apps, choose **Solutions** and then choose **Switch to classic** in the toolbar. To access the default solution from Power Apps, choose **Solutions**, select "Default Solution" in the list, and then choose **Plug-in assemblies** within the left **Objects** pane.
+You can access information about registered plug-in assemblies and steps in Power Apps and in the PRT assembly view. To access plug-in information in Power Apps, choose **Solutions** in the left navigation pane and then choose an available solution from the list. Next, choose **Plug-in assemblies** or **Plug-in steps** within the left **Objects** pane.
 
 > [!NOTE]
 > Each assembly you register will be added to the **Default Solution** which should not be confused with the **Common Data Services Default Solution**.
@@ -60,9 +60,9 @@ To learn more about solutions and how to create one see [Solutions overview](../
 
 ## Step registration
 
-When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> are made available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
+Registering a message processing step informs Dataverse under what conditions your plug-in should execute, and how to execute it. By conditions we are referring to the table and message operation being processed by Dataverse. Other configuration options such as synchronous or asynchronous execution, before or after the core operation, and more can be specified during step registration. These runtime configuration options are detailed in the next section.
 
-When you register a step, there are several registration options available to you depending on the stage of the event pipeline and the type of operation you intend to register your code on.
+When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> are made available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
 ### General Configuration Information Fields
 
@@ -71,7 +71,7 @@ When you register a step, there are several registration options available to yo
 |**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the SDK for .NET](org-service/use-messages.md)|
 |**Primary Entity**|PRT auto-completes valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
-|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. Don't include the primary key of the entity in the filtering attributes. The primary key is always included in update operations, so doing this will negate all other filtered attributes. | 
+|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. Don't include the primary key of the entity in the filtering attributes. The primary key is always included in update operations, so doing this will negate all other filtered attributes. |
 |**Event Handler**|This field value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Set user impersonation for a step](#set-user-impersonation-for-a-step) |
@@ -105,7 +105,7 @@ Asynchronous plug-ins can only be registered for the **PostOperation** stage. Fo
 
 There are certain scenarios where a step registration and table combination isn't obvious. This is the result of how the system is designed internally where there's a special relationship between tables or operations. The information below identifies these cases and provides step registration guidance.
 
-- There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
+- There are certain cases where plug-ins registered for the *Update* event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
 - Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** records.
 
 ### Deployment
