@@ -6,7 +6,7 @@ applies_to:
   - "Dynamics 365 (online)"
 author: adrianorth
 ms.author: aorth
-ms.date: 01/31/2023
+ms.date: 08/07/2024
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -104,18 +104,18 @@ More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-ed
 
 You can use Safari on a Mac to debug JavaScript web resources on iOS.
 
-To debug JavaScript in mobile apps on iOS, you must complete the three steps below:
+To debug JavaScript in mobile apps on iOS, you must complete the two steps below:
 
-### Configure the mobile application
+### 1. Configure the mobile application
 
 1. In the mobile app, go to the list of Power Apps and select on the menu button.
 1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
 
-## Debug from your Mac
+### 2. Debug from your Mac
    
 1. Connect your iPhone or iPad to your Mac.
 1. Launch Safari on your Mac.
-1. In the Develop menu, find your connected iPhone or iPad, and then look for Power Apps or Field Service.
+1. In the **Develop** menu, find your connected iPhone or iPad, and then look for **Power Apps** or **Field Service**.
 
 More information: [Inspecting iOS and iPadOS | Apple Developer Documentation](https://developer.apple.com/documentation/safari-developer-tools/inspecting-ios)
 
