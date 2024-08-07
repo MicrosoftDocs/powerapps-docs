@@ -23,7 +23,7 @@ In a model-driven app viewed within a web browser, you can use developer tools t
 Model-driven apps viewed using mobile apps on Android, or the Windows desktop app require some additional steps. See:
 
 - [Debug JavaScript in mobile apps on Android](#debug-javascript-in-mobile-apps-on-android)
-- [Debug JavaScript in mobile apps on iOS](#debug-javascript-in-mobile-apps-on-iOS)
+- [Debug JavaScript in mobile apps on iOS](#debug-javascript-in-mobile-apps-on-ios)
 - [Debug JavaScript in the Windows desktop app](#debug-javascript-in-the-windows-desktop-app)
 
 > [!NOTE]
