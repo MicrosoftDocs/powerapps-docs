@@ -1,31 +1,20 @@
 ---
-title: Import or export data from Microsoft Dataverse
+title: Import data from Excel and export data to CSV
 description: Bulk import and export data from Excel or CSV files into tables in Microsoft Dataverse by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 07/25/2023
+ms.date: 08/06/2024
 ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
   - maker
 ---
-# Import or export data from Dataverse
+# Import data from Excel and export data to CSV
 
-To get (import) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma-separated values (CSV) file, or one of the many connectors available.
+To get (import) data into Microsoft Dataverse tables, use an Excel worksheet file or a comma-separated values (CSV) file. 
 
 When you export Dataverse table data, it's exported as a CSV file.
-
-## Import using a connector
-
-Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
-
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Data** > **Get data** > **Get data**.
-1. From the **Data sources** list, select the connector that you want to import data from.
-
-For information about the connector you want to use as your data source, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
 
 ## Import from an Excel or CSV file
 
@@ -35,7 +24,9 @@ There are two ways to import data from Excel.
 - [Option 2: Import by bringing your own source file](#option-2-import-by-bringing-your-own-source-file)
 
 > [!IMPORTANT]
-> Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
+>
+> - To import or export data, you must have the **Environment Maker** security role.
+> - Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
 
 ### Option 1: Import by creating and modifying a file template
 
@@ -53,7 +44,7 @@ Copy data from your Excel or CSV file into the template that you created in the 
 #### Import the file
 
 1. On [powerapps.com](https://make.powerapps.com/) select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Data**, to the right of **Get Data** select **>**, and then select **Get data from Excel**.
+1. Select **Import** > **Import data from Excel**.
 1. Select the tables where you want to import data, and then select **Next**.
 1. On the **Import data** page, select **Upload**, and choose your file. Follow the prompts to upload your file.
 1. After the file is uploaded and **Mapping status** indicates **Mapping was successful**, select **Import** from the top-right corner. Go to [Troubleshoot mapping errors with Excel](#troubleshoot-mapping-errors-with-excel) to navigate and fix any mapping errors.
@@ -145,20 +136,12 @@ The following fields are system fields and aren't supported for import and expor
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
-## Troubleshoot connection issues
+## Import using a connector
 
-Users might receive an error message if the connection they're using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
+Use a connector to import data from a selection of many different sources, such as Azure, SQL Server database, SharePoint, Access, OData, and more. More information: [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
-To fix this issue:
+## See also
 
-1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-2. Locate the **Microsoft Dataverse (legacy)** connection.
-3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
-
-After the fix completes, retry the export.
-
-## Permissions
-
-To import or export data, the user must have the **Environment Maker** security role.
+[Tables in Dataverse](entity-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
