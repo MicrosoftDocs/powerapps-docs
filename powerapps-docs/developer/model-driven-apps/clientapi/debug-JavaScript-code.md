@@ -23,6 +23,7 @@ In a model-driven app viewed within a web browser, you can use developer tools t
 Model-driven apps viewed using mobile apps on Android, or the Windows desktop app require some additional steps. See:
 
 - [Debug JavaScript in mobile apps on Android](#debug-javascript-in-mobile-apps-on-android)
+- [Debug JavaScript in mobile apps on iOS](#debug-javascript-in-mobile-apps-on-iOS)
 - [Debug JavaScript in the Windows desktop app](#debug-javascript-in-the-windows-desktop-app)
 
 > [!NOTE]
@@ -68,10 +69,7 @@ In this case, the name of the function was incorrect, `openalertDialog` should b
 
 While using JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected.
 
-> [!NOTE]
-> It is not currently possible to debug devices using iOS.
-
-To debug JavaScript in mobile apps, you must complete the three steps below:
+To debug JavaScript in mobile apps on Android, you must complete the three steps below:
 
 ### 1. Configure your device
 
@@ -88,12 +86,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
 1. In the mobile app, go to the list of Power Apps and select on the menu button.
 1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
-
-   :::image type="content" source="media/field-service-mobile-app-settings.png" alt-text="Field service mobile app settings":::
-
 1. When enabling this option, there's a confirmation dialog. Select **Confirm**.
-
-   :::image type="content" source="media/field-service-mobile-app-settings-confirm-remote-debugging.png" alt-text="Confirm remote debugging dialog":::
 
 ### 3. Debug from your development machine
 
@@ -106,6 +99,25 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 1. Click on **inspect**.
 
 More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-edge/devtools-guide-chromium/remote-debugging/)
+
+## Debug JavaScript in mobile apps on iOS
+
+You can use Safari on a Mac to debug JavaScript web resources on iOS.
+
+To debug JavaScript in mobile apps on iOS, you must complete the three steps below:
+
+### Configure the mobile application
+
+1. In the mobile app, go to the list of Power Apps and select on the menu button.
+1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
+
+## Debug from your Mac
+   
+1. Connect your iPhone or iPad to your Mac.
+1. Launch Safari on your Mac.
+1. In the Develop menu, find your connected iPhone or iPad, and then look for Power Apps or Field Service.
+
+More information: [Inspecting iOS and iPadOS | Apple Developer Documentation](https://developer.apple.com/documentation/safari-developer-tools/inspecting-ios)
 
 ## Debug JavaScript in the Windows desktop app
 
