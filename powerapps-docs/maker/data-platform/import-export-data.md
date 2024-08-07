@@ -67,7 +67,7 @@ IT professionals can also free up business users from the complexities of buildi
 
 ![A screenshot of a computer Description automatically generated with medium confidence](media/ppd-template-exc.gif)
 
-You can import data directly from an Excel file into a Dataverse table. More information: [Import data from Excel and export data to CSV](data-platform-import-export.md)
+You can also perform a one-time import of data directly from a single Excel file into a Dataverse table. More information: [Import data from Excel and export data to CSV](data-platform-import-export.md)
 
 ## Azure Data Factory
 
