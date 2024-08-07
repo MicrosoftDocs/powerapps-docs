@@ -4,7 +4,7 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/14/2024
+ms.date: 08/07/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -33,7 +33,6 @@ As you develop your offline profile and test with real or representative data, k
 - Limit the total data size to less than 1 GB. 
 - Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.
 - Reduce the number of records downloaded in tables that change frequently by filtering on fields like status, group, region, owner, or assigned to.
-
 
 If your app's offline data exceeds these recommendations, users will see slower syncs, higher data usage, higher battery usage, and slower app performance.
 
