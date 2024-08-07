@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page # Required
   author: tapanm-msft #Required; your GitHub user alias, with correct capitalization.
   ms.author: tapanm #Required; microsoft alias of author; optional team alias.
-  ms.date: 06/30/2023 #Required; mm/dd/yyyy format.
+  ms.date: 08/07/2024 #Required; mm/dd/yyyy format.
   ms.custom: bap-template
   hide_bc: true
 
@@ -35,7 +35,7 @@ highlightedContent:
 
     # Card
     - title: Troubleshoot
-      itemType: concept
+      itemType: how-to-guide
       url: /troubleshoot/power-platform/power-apps/welcome-power-apps
 
 additionalContent:

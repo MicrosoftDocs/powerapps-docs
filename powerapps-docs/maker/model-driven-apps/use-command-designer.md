@@ -5,7 +5,7 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 05/26/2022
+ms.date: 08/07/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -31,7 +31,7 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
    > [!div class="mx-imgBorder"]
    > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
 
-### Open an existing model-driven app using modern app designer
+### Open an existing model-driven app using app designer
 
 1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
@@ -64,41 +64,43 @@ Once you are in the app designer, use the command designer to customize your com
 
 Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted command transferring to other apps as well as better runtime performance.
 
-The first time command designer is opened for an app, a prompt to either use **JavaScript** only or **Power Fx** is displayed. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog will create a command component library to store **Power Fx** formulas.
+The first time command designer is opened for an app, a prompt to either use **JavaScript** only or **Power Fx** is displayed. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog creates a command component library to store **Power Fx** formulas.
 
-1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New Command**.
+1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **New** >  **Command**.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
 1. On the right pane, enter or select from the following options:
-   - **Label (optional)**. Enter a label that will be displayed on the command button. 
-   - **Icon**. Select an icon for the command button. You may choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
+   - **Label (optional)**. Enter a label that displays on the command button.
+   - **Icon**. Select an icon for the command button. You can choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
    - **Action**. Select from the following:
       - **Run formula**. Enter the Power Fx formula to run the command action. More information: [Use Power Fx for actions and visibility](#use-power-fx-for-actions-and-visibility)
       - **JavaScript**. Provide the JavaScript library and command to run the command action. More information: [Use JavaScript for actions](#use-javascript-for-actions)
    - **Visibility**. Select whether to **Show** the command button or to **Show on condition from formula**. 
-   - **Tooltip title (optional)**. Enter a tooltip title. The title appears to the user when they hover their mouse over the command.
-   - **Tooltip description (optional)**. Enter a tooltip description. The description appears for the user below the tooltip title when they hover their mouse over the command.
+   - **Tooltip title**. Optionally, enter a tooltip title. The title appears to the user when they hover their mouse over the command.
+   - **Tooltip description**. Optionally, enter a tooltip description. The description appears for the user below the tooltip title when they hover their mouse over the command.
 
       :::image type="content" source="media/command-tooltip.png" alt-text="Example of a command tooltip title and description.":::
-   - **Accessibility text (optional)**. Enter the text that will be read by screen readers.
-   - **Order number**. The order the command will display in at runtime in relation to other commands within the same command bar.
+   - **Accessibility text**. Optionally, enter the text that will be read by screen readers.
+   - **Order number**. The order the command displays in at runtime in relation to other commands within the same command bar.
 
 1. Drag and drop the command to the desired location. You can arrange modern commands amongst classic commands.
 1. Select **Save and Publish** to make the command available to app users.
 1. Select **Play** to run the app and test your changes 
 
 > [!NOTE]
-> - Publishing Power Fx formulas can take a few minutes to publish the command component library. This background operation may still be in-progress after command designer has completed the request and unlocks the designer. 
+> Publishing Power Fx formulas can take a few minutes to publish the command component library. This background operation might still be in-progress after command designer has completed the request and unlocks the designer.
 
 ## Use Power Fx for actions and visibility
 
-You can use Power Fx for both actions (what happens when the command button is selected) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands.
+You can use Power Fx for both actions (what happens when the command button is selected) as well as visibility (logic to control when the button is visible). Power Fx isn't supported in classic commands.
 
 You’ll notice the model-driven app command has a formula bar experience that is similar to canvas apps. For working with **Dataverse** data you can use Power Fx formulas just as you would in canvas apps. More information: [Using Power Fx with commands](commanding-use-powerfx.md)
-  > [!NOTE]
-  > - Dataverse is currently the only data source supported with commands in model-driven apps.
-  > - You can't currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
-  > - Not all functions available within canvas apps are supported currently for model-driven app commands. Additionally, we've introduced some new functions specific to model-driven app commands.
-  > - For more limitations with modern commands, see [Modern commanding known limitations](command-designer-limitations.md).
+
+> [!NOTE]
+>
+> - Dataverse is currently the only data source supported with commands in model-driven apps.
+> - You can't currently add additional tables as data sources directly from the command designer. However, you can open the command component library in canvas studio and add additional tables as data sources and then use them within the command designer.
+> - Not all functions available within canvas apps are supported currently for model-driven app commands. Additionally, we've introduced some new functions specific to model-driven app commands.
+> - For more limitations with modern commands, go to [Modern commanding known limitations](command-designer-limitations.md).
   
 ## Use JavaScript for actions
   
@@ -122,9 +124,9 @@ JavaScript is supported with both classic and modern commands. However, it's sim
 
     > [!div class="mx-imgBorder"]
     > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")
- 
+
 > [!NOTE]
-> The use of calling multiple JavaScript libraries or calling multiple functions from a single command is not supported.
+> The use of calling multiple JavaScript libraries or calling multiple functions from a single command isn't supported.
   
 ## See also
 
