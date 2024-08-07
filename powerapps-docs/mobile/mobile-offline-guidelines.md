@@ -32,6 +32,8 @@ As you develop your offline profile and test with real or representative data, k
 - Limit the number of tables to fewer than 100.
 - Limit the total data size to less than 1 GB. 
 - Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.
+- Reduce the number of records downloaded in tables that change frequently by filtering on fields like status, group, region, owner, or assigned to.
+
 
 If your app's offline data exceeds these recommendations, users will see slower syncs, higher data usage, higher battery usage, and slower app performance.
 
@@ -118,6 +120,8 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
     :::image type="content" source="media/mobile-offline-guidelines/filters6.png" alt-text="Screenshot that shows multiple filters with nested relationships.":::
 
 - Avoid using many **OR** conditions.
+
+- Avoid using small time windows to reduce data downloads on tables that change frequently. If a table in your offline profile is large and changes frequently, reduce the number of records downloaded by filtering on fields like status, group, region, owner, or assigned to.
 
 ### Optimize downloaded data with Offline Table Column Selection (Preview)
 
