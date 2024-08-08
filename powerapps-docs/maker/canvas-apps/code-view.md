@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.collection: get-started
 ms.topic: conceptual
 ms.reviewer: mkaur
-ms.date: 5/14/2024
+ms.date: 8/8/2024
 ms.subservice: canvas-maker
 ms.author: marcelbf
 search.audienceType: 
@@ -63,6 +63,7 @@ Follow these steps to view, copy, and paste the code for a control:
 * You can't copy and paste and there’s no code view for the **App Object**.
 * You can’t edit the code in the code view.
 * You can only copy controls that are on a screen. Copying a screen isn't supported.
+* When pasting code, the new control is positioned at coordinates X=40, Y=40. In the future, the X and Y properties are respected.
 
 This article provides an overview of working with formulas. For more detailed information about functions, operators, and other building blocks, see [Formula reference](formula-reference.md).
 
