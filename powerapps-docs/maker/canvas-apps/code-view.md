@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.collection: get-started
 ms.topic: conceptual
 ms.reviewer: mkaur
-ms.date: 5/14/2024
+ms.date: 08/08/2024
 ms.subservice: canvas-maker
 ms.author: marcelbf
 search.audienceType: 
