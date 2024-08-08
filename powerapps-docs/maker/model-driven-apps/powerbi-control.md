@@ -16,7 +16,9 @@ ms.custom: template-how-to
 Add a Power BI report to a model-driven app form using the Power BI report control. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
+> This is preview feature has a dependency on a separate feature that has been retired. - For now please use the supported approach of adding Power BI reports to model driven forms.
+https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/embed-powerbi-report-in-system-form 
+More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 :::image type="content" source="media/create-edit-powerbi-embedded-page/pbi-report-control-form.jpg" alt-text="Power BI report on a form":::
 
