@@ -68,19 +68,19 @@ When an assembly is loaded or updated, any classes that implement <xref:Microsof
 
 |Field|Description|
 |--|--|
-|**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the SDK for .NET](org-service/use-messages.md)|
-|**Primary Entity**|PRT auto-completes valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
+|**Message**|The message that when processed by Dataverse results in plug-in execution.<p/> If a primary entity is not specified for core messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple`, or any message that can be applied, the plug-in will be invoked for all entities that support that message. More information: [Use messages with the SDK for .NET](org-service/use-messages.md)|
+|**Primary Entity**|The entity (table) that when processed by Dataverse results in plug-in execution.<p/> Messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit execution of your plug-in to a specific entity being processed.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
-|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. Don't include the primary key of the entity in the filtering attributes. The primary key is always included in update operations, so doing this will negate all other filtered attributes. |
-|**Event Handler**|This field value will be populated based on the name of the assembly and the plug-in class. |
-|**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
+|**Filtering Attributes**|For the `Update`, `OnExternalUpdated`, or other message, when you set the primary entity, filtering attributes (columns) limits the execution of the plug-in to cases where the specified columns are included in the update.<p/>Setting this field is a best practice for performance. Don't include the primary key of the entity in the filtering attributes. The primary key is always included in update operations, so doing this will negate all other filtered attributes. |
+|**Event Handler**|This field value will be populated in the PRT based on the name of the assembly and the plug-in class. |
+|**Step Name**|The name of the message processing step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Set user impersonation for a step](#set-user-impersonation-for-a-step) |
-|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they'll be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It's not recommended to simply accept the default value. The actual execution order of the plugins with the same Execution Order value (for the same stage, table and message) isn't guaranteed and can be random.|
-|**Description**|A description for step. This value is pre-populated but can be overwritten.|
+|**Execution Order**|Multiple steps can be registered for the same stage and message. The number in this field determines the order in which the steps are applied within a stage from lowest to highest. You should set this to control the order in which plug-ins are executed in the same stage.<p/>It's not recommended to simply accept the default value. The actual execution order of plug-ins with the same Execution Order value (for the same stage, table and message) isn't guaranteed and can be random.|
+|**Description**|A description for the step. This value is pre-populated but can be overwritten.|
 
 ### Event Pipeline Stage of execution
 
-Choose the stage in the event pipeline that best suites the purpose for your plug-in.
+Choose the stage in the event pipeline that best suites the purpose for your plug-in. The prefix "Pre" and "Post" refers to before or after the Dataverse main (core) operation. The main operation is the stage in which the message and entity combination is processed.
 
 |Option|Description|
 |--|--|
@@ -92,11 +92,11 @@ More information: [Event execution pipeline](event-framework.md#event-execution-
 
 ### Execution Mode
 
-There are two modes of execution asynchronous, and synchronous.
+There are two modes of execution - asynchronous, and synchronous.
 
 |Option|Description|
 |--|--|
-|**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job, which will execute after the operation completes.|
+|**Asynchronous**|The execution context and the definition of the business logic to apply is moved to the system job queue, which will execute sometime after the main operation completes.|
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. The entire operation will wait until they complete.|
 
 Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
@@ -154,7 +154,7 @@ In Dataverse, only the following messages support entity images:
 
 #### Types of entity images
 
-There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure an entity image, you'll define a table alias* value that will be the key value you'll use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
+There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the main operation and after the main operation. When you configure an entity image, you'll define a table alias* value that will be the key value you'll use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
 
 #### Availability of images
 
@@ -171,7 +171,7 @@ Use the [Power Platform Tools](tools/devtools-install.md) extension for Visual S
 
 Alternately, you can use the Plug-in Registration Tool to add an entity image to a step by following the instructions in [Tutorial: Update a plug-in](tutorial-update-plug-in.md) under the section [Add an image](tutorial-update-plug-in.md#add-an-image).
 
-### Add step to solution
+### Add a step to a solution
 
 As mentioned in [Add your assembly to a solution](#add-your-assembly-to-a-solution), **Plug-in Assemblies** are solution components that can be added to an unmanaged solution. **Sdk Message Processing Steps** are also solution components and must also be added to an unmanaged solution in order to be distributed.
 
@@ -238,6 +238,8 @@ To disable or enable a registered plug-in step:
 You can also disable or enable steps in the legacy Dataverse Solution Explorer user interface using the **Activate** and **Deactivate** command options.
 
 :::image type="content" source="media/step-activate-deactivate-commands-solution-explorer.png" alt-text="Changing a plug-in step in legacy Solution Explorer.":::
+
+In Power Apps, disable or enable plug-in steps using the "Turn off" and "Turn on" options of the chosen step. You can access the step options by first navigating to **Solutions**, choosing a solution, and then in the left **Objects** pane choose **Plug-in steps**.
 
 ### Unregister components
 
