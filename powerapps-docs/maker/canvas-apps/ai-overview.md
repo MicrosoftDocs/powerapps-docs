@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/11/2024
+ms.date: 08/08/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
