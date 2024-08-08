@@ -56,7 +56,7 @@ As described in [View registered assemblies](#view-registered-assemblies), the a
 To learn more about solutions and how to create one see [Solutions overview](../../maker/data-platform/solutions-overview.md) and [Create a solution](../../maker/data-platform/create-solution.md). Once you have a solution created, you can add your plug-in assembly to it in Power Apps by first choosing the solution in the solution list, and then choose **Add existing** > **More** > **Developer** > **Plug-in assembly**.
 
 > [!NOTE]
-> Any existing or subsequent step registrations (see next section) are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-step-to-solution)
+> Any existing or subsequent step registrations (see next section) are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-a-step-to-a-solution)
 
 ## Step registration
 
