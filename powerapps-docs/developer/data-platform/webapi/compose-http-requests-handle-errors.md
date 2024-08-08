@@ -3,8 +3,8 @@ title: Compose HTTP requests and handle errors
 description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
 ms.topic: how-to
 ms.date: 09/26/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

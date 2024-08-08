@@ -1,7 +1,7 @@
 ---
 title: Copilot assistance for form fill in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 07/16/2024
+ms.date: 07/31/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -75,7 +75,7 @@ To accept all suggestions on the open tab of the form, on the notification bar, 
 
 :::image type="content" source="media/formfill_acceptall.png" alt-text="Screenshot that shows all form fill suggestions being accepted.":::
 
-To replace a suggestion with a different value, select the field and start typing to overwrite the suggestion. Alternative, select the field, select the **Backspace** or **Delete** key, and then start typing. 
+To replace a suggestion with a different value, select the field and start typing to overwrite the suggestion. Alternatively, select the field, select the **Backspace** or **Delete** key, and then start typing. 
 
 If you have unsaved suggestions in a form and try to navigate away, you get a prompt asking if you want to discard those suggestions. The suggestions are only saved when you accept them. You can continue navigating away or stay on the form to review your pending suggestions. You can also select **Do not show again** to avoid being prompted in the future.
 
