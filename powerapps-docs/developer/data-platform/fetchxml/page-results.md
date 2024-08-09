@@ -143,7 +143,7 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
         // Set the fetch paging-cookie attribute with the paging cookie from the previous query
         fetchNode.SetAttributeValue("paging-cookie", results.PagingCookie);
 
-        fetchNode.SetAttributeValue("page", page++);
+        fetchNode.SetAttributeValue("page", ++page);
     }
     return new EntityCollection(entities);
 }
