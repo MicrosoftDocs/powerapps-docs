@@ -589,7 +589,7 @@ Here's what to look for in the results:
 
 ### Queries for file storage
 
-When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `AsyncOperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
+Depending on the size of the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `AsyncOperation` table, the data in that column may be saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
 #### AsyncOperation file storage datablobid count
 

@@ -1905,8 +1905,12 @@
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
-    - name: Import or export data
-      href: ./data-platform/data-platform-import-export.md
+    - name: Import and export table data
+      items:
+      - name: Import data from Excel and export to CSV
+        href: ./data-platform/data-platform-import-export.md
+      - name: Import data with a dataflow connector
+        href: ./data-platform/create-and-use-dataflows.md     
     - name: Long term data retention for tables
       items:
       - name: Long term data retention overview
