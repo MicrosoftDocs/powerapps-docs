@@ -514,7 +514,7 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client,
         fetchNode.SetAttributeValue("paging-cookie", pagingCookie);
 
         // Increment the fetch page attribute value
-        fetchNode.SetAttributeValue("page", page++);
+        fetchNode.SetAttributeValue("page", ++page);
     }
 
     // Return the records from all requests
