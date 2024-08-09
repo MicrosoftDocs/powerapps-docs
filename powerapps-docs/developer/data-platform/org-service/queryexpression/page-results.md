@@ -1,7 +1,7 @@
 ---
 title: Page results using QueryExpression
 description: Learn how to use QueryExpression to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 05/12/2024
+ms.date: 08/09/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -98,14 +98,19 @@ After each request, the method checks the [EntityCollection.MoreRecords property
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
 /// <param name="query">The QueryExpression query</param>
+/// <param name="page">The page size to use. Defaults to 5000</param>
 /// <returns>All the records that match the criteria</returns>
-static EntityCollection RetrieveAll(IOrganizationService service, QueryExpression query)
+static EntityCollection RetrieveAll(IOrganizationService service, 
+QueryExpression query,
+int page = 5000)
 {
     // The records to return
     List<Entity> entities = new();
 
     // Set the page
     query.PageInfo.PageNumber = 1;
+    // Set the count
+    query.PageInfo.Count = page;
 
     while (true)
     {
@@ -150,10 +155,6 @@ static void Main(string[] args)
             QueryExpression query = new("contact")
             {
                 ColumnSet = new ColumnSet("fullname", "jobtitle", "annualincome"),
-                PageInfo = new PagingInfo() { 
-                  // Set the page size
-                     Count = 25;
-                },
                 Orders = {
                     { 
                         new OrderExpression(
