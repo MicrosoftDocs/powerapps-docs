@@ -84,6 +84,25 @@ Next, you add a new page to the model-driven app.
 
 After publishing the app, it's ready for you to run or share with others.
 
+### Create an app description with Copilot (preview)
+
+[This section is prerelease documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability is in process of rolling out, and may not be available in your region yet.
+> - This capability  may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+
+If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
+
+When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** if you want to replace your current description or, if you do not have a description, Copilot will generate one for you.
+
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
+
 ## Run your app on a desktop computer
 
 1. To run your app, sign in to [Power Apps](https://make.powerapps.com/), and  on the left navigation pane, select **Apps**.
