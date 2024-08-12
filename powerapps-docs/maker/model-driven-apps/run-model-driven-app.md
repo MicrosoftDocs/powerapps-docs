@@ -53,6 +53,11 @@ Additionally, some organizational or browser settings may increase the frequency
 
 Use the app URL described in the earlier section to run a model-driven app on a tablet's web browser. For phones, users download the Power Apps mobile app from the relevant app store. Then, sign into the app, and select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
 
+## View the app's description in the browser experience
+
+When hovering over the app name on the top of the web experience, the app's description will be shown. If the app's description was [generated using AI](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview), the disclaimer will be shown. Clicking the app's name will open the app switcher.
+
+
 ### See also
 
 [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
