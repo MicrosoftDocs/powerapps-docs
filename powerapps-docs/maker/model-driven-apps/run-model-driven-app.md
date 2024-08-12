@@ -55,7 +55,9 @@ Use the app URL described in the earlier section to run a model-driven app on a 
 
 ## View the app's description in the browser experience
 
-When hovering over the app name on the top of the web experience, the app's description will be shown. If the app's description was [generated using AI](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview), the disclaimer will be shown. Clicking the app's name will open the app switcher.
+:::image type="content" source="/media/app-description-browser.png" alt-text="hovering over the app name shows the app description":::
+
+When hovering over the app name on the top of the web experience, the app's description will be shown. If the app's description was [generated using AI](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview), a disclaimer will be shown. Clicking the app's name will open the app switcher.
 
 
 ### See also
