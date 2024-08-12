@@ -1,7 +1,7 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 05/06/2024
+ms.date: 08/08/2024
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
@@ -11,9 +11,6 @@ search.audienceType:
   - maker
 ---
 # Embed a Power BI report in a model-driven app main form
-
-> [!IMPORTANT]
-> There's a better way to add a Power BI report to a model-driven app form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
 
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your main forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
