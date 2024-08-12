@@ -118,11 +118,12 @@ We have to add a slight qualification here. Not *all* properties are replaced by
 
     ```json
     {
-    "defaultSupportedProps": {
-      "propertyName": "value",
-      "propertyName": "value",
-      "propertyName": "value"
-    },
+     "defaultSupportedProps": {
+       "propertyName": "value",
+       "propertyName": "value",
+       "propertyName": "value"
+     },
+     "propertyName": "value"
     }
     ```
 
@@ -164,87 +165,96 @@ The JSON file that determines the "look and feel" of an instance of the rich tex
 The following code is an example of a JSON file that contains both [`defaultSupportedProps`](#defaultsupportedprops) properties and [individual configuration properties](#individual-properties). If a property has a default value, the default value is shown. If a property doesn't have a default value, a sample value is shown to illustrate the syntax. The properties are described in the two tables that follow.
 
 ```json
-"defaultSupportedProps": {
-  "height": 185,
-  "stickyStyle": {
-    "font-size": "9pt",
-    "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
+{
+  "defaultSupportedProps": {
+    "height": 185,
+    "stickyStyle": {
+      "font-size": "9pt",
+      "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
+    },
+    "stickyStyles_defaultTag": "div",
+    "font_defaultLabel": "Segoe UI",
+    "fontSize_defaultLabel": "9",
+    "toolbarLocation": "bottom",
+    "toolbar": [
+      ["CopyFormatting"],
+      ["Font"],
+      ["FontSize"],
+      ["Bold"],
+      ["Italic"],
+      ["Underline"],
+      ["BGColor"],
+      ["TextColor"],
+      ["BulletedList"],
+      ["NumberedList"],
+      ["Outdent"],
+      ["Indent"],
+      ["Blockquote"],
+      ["JustifyLeft"],
+      ["JustifyCenter"],
+      ["JustifyRight"],
+      ["Link"],
+      ["Unlink"],
+      ["Subscript"],
+      ["Superscript"],
+      ["Strike"],
+      ["Image"],
+      ["BidiLtr"],
+      ["BidiRtl"],
+      ["Undo"],
+      ["Redo"],
+      ["RemoveFormat"],
+      ["Table"]
+    ],
+    "plugins": [
+      [
+        "button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"
+      ]
+    ],
+    "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filebrowser,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,notification,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools,uploadfile,uploadimage,uploadwidget",
+    "removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders",
+    "superimageImageMaxSize": 5,
+    "disallowedContent": "form[action]; *[formaction]; script; *[on*]",
+    "linkTargets": [
+      "notSet",
+      "_blank"
+    ]
   },
-  "stickyStyles_defaultTag": "div",
-  "font_defaultLabel": "Segoe UI",
-  "fontSize_defaultLabel": "9",
-  "toolbarLocation": "bottom",
-  "toolbar": [
-  [ "CopyFormatting" ],
-  [ "Font" ],
-  [ "FontSize" ],
-  [ "Bold" ],
-  [ "Italic" ],
-  [ "Underline" ],
-  [ "BGColor" ],
-  [ "TextColor" ],
-  [ "BulletedList" ],
-  [ "NumberedList" ],
-  [ "Outdent" ],
-  [ "Indent" ],
-  [ "Blockquote" ],
-  [ "JustifyLeft" ],
-  [ "JustifyCenter" ],
-  [ "JustifyRight" ],
-  [ "Link" ],
-  [ "Unlink" ],
-  [ "Subscript" ],
-  [ "Superscript" ],
-  [ "Strike" ],
-  [ "Image" ],
-  [ "BidiLtr" ],
-  [ "BidiRtl" ],
-  [ "Undo" ],
-  [ "Redo" ],
-  [ "RemoveFormat" ],
-  [ "Table" ]
- ],
-  "plugins": [["button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"]],
-  "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filebrowser,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,notification,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools,uploadfile,uploadimage,uploadwidget",
-  "removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders",
-  "superimageImageMaxSize": 5,
-  "disallowedContent": "form[action]; *[formaction]; script; *[on*]",
-  "linkTargets": ["notSet", "_blank"],
-},
-"attachmentEntity": {
-  "name": "msdyn_richtextfiles",
-  "fileAttributeName": "msdyn_fileblob"
-},
-"disableContentSanitization": true,
-"disableDefaultImageProcessing": false,
-"disableImages": false,
-"externalPlugins": [
-  {
-    "name": "EmbedMedia",
-    "path": "/WebResources/msdyncrm_/myplugins/embedmedia/"
-  }
-],
-"imageEntity": {
-  "imageEntityName": "msdyn_richtextfiles",
-  "imageFileAttributeName": "msdyn_imageblob"
-},
-"readOnlySettings": {
-  "height": 500,
-  "showFullScreenExpander": true
-},
-"sanitizerAllowlist": {
-  "attributes": [],
-  "cssProperties": [],
-  "domains": [],
-  "protocols": [],
-  "tags": []
-},
-"showAsTabControl": false,
-"showFullScreenExpander": false,
-"showHtml": false,
-"showPreview": false,
-"showPreviewHeaderWarning": false,
-"allowSameOriginSandbox": false
+  "attachmentEntity": {
+    "name": "msdyn_richtextfiles",
+    "fileAttributeName": "msdyn_fileblob"
+  },
+  "disableContentSanitization": true,
+  "disableDefaultImageProcessing": false,
+  "disableImages": false,
+  "externalPlugins": [
+    {
+      "name": "EmbedMedia",
+      "path": "/WebResources/msdyncrm_/myplugins/embedmedia/"
+    }
+  ],
+  "imageEntity": {
+    "imageEntityName": "msdyn_richtextfiles",
+    "imageFileAttributeName": "msdyn_imageblob"
+  },
+  "readOnlySettings": {
+    "height": 500,
+    "showFullScreenExpander": true
+  },
+  "sanitizerAllowlist": {
+    "attributes": [],
+    "cssProperties": [],
+    "domains": [],
+    "protocols": [],
+    "tags": []
+  },
+  "showAsTabControl": false,
+  "showFullScreenExpander": false,
+  "showHtml": false,
+  "showPreview": false,
+  "showPreviewHeaderWarning": false,
+  "allowSameOriginSandbox": false
+}
 ```
 
 ### defaultSupportedProps
