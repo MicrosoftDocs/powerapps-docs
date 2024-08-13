@@ -33,9 +33,9 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > 
 > This feature is generally available with finance and operations application versions shown in the following list. If you have not yet applied these application versions, install the latest cumulative update to use this feature.
 > 
-> - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later.
-> - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
 > - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
+> - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
+> - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later.
 >
 > You might need to apply additional updates for recent fixes. More information: [Known limitations with finance and operations tables]
 >
@@ -255,27 +255,27 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies), the system might not export data. This issue is fixed in the latest application update.
   > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
-  > - Version 10.0.37 (PU61) cumulative update 10.0.1725.175
-  > - Version 10.0.38 (PU62) cumulative update 10.0.1777.135
   > - Version 10.0.39 (PU63) cumulative update update 10.0.1860.50
+  > - Version 10.0.38 (PU62) cumulative update 10.0.1777.135
+  > - Version 10.0.37 (PU61) cumulative update 10.0.1725.175
   >
   > You'll need to apply a quality build where the system applies a bypass for extensible data security policies for the Azure Synapse Link service.
 
 - If there are finance and operations app tables that exhibit [valid time stamp behavior](/dynamicsax-2012/developer/valid-time-state-tables-and-date-effective-data), only the data rows that are currently valid are exported with Azure Synapse Link. For example, the **ExchangeRate** table contains both current and previous exchange rates. Only currently valid exchange rates are exported in Azure Synapse Link. This issue is fixed in the latest application update shown here.
    > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
-  > - Version 10.0.38 (PU62) platform update 7.0.7279.58
-  > - Version 10.0.39 (PU63) platform update 7.0.7198.143
   > - Version 10.0.40 (PU64) platform update 7.0.7120.179
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.143
+  > - Version 10.0.38 (PU62) platform update 7.0.7279.58  
   >
   > With this update, expired data rows are added to tables. You need to perform a full refresh to include previous rows.
 
 - If the table selected contains data columns that are of **Array** type, those columns are ignored and the exported data doesn't contain the column. For example, in a custom table named *WHSInventTable*, columns **FilterCode** and **FilterGroup** are of type array. These columns aren't exported with Azure Synapse Link. This issue is fixed in the latest application update shown here.
    > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
-  > - Version 10.0.39 (PU63) platform update 7.0.7198.186 or later
-  > - Version 10.0.40 (PU64) platform update 7.0.7279.115 or later
   > - Version 10.0.41 (PU65) platform update 7.0.7367.0 or later
+  > - Version 10.0.40 (PU64) platform update 7.0.7279.115 or later
+  > - Version 10.0.39 (PU63) platform update 7.0.7198.186 or later
   >
   > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
    
