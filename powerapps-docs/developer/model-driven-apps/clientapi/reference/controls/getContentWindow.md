@@ -50,13 +50,8 @@ First, add the following code in your HTML web resource:
 
 ```javascript
 // This script should be in the HTML web resource.
-// No usage of Xrm or formContext should happen until this method is called.
-function setClientApiContext(xrm, formContext) {
-    // Optionally set Xrm and formContext as global variables on the page.
-    window.Xrm = xrm;
-    window._formContext = formContext;
-     
-    // Add script logic here that uses xrm or the formContext.
+function doStuff() {
+    // Add desired script logic that executes on form load.
 }
 ```
 
@@ -71,7 +66,7 @@ function form_onload(executionContext) {
     if (wrControl) {
         wrControl.getContentWindow().then(
             function (contentWindow) {
-                contentWindow.setClientApiContext(Xrm, formContext);
+                contentWindow.doStuff();
             }
         )
     }

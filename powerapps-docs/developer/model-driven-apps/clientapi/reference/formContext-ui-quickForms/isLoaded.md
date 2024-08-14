@@ -44,15 +44,11 @@ function getAttributeValue(executionContext) {
             var myValue = quickViewControl.getControl(0).getAttribute().getValue();
             console.log(myValue);
             
-            // Search by a specific column present in the control       
+            // Search by a specific column present in the control
             var myValue2 =  quickViewControl.getControl().find(control => control.getName() == "<AttributeSchemaName>").getAttribute().getValue();
             console.log(myValue2);
             
             return;
-        }
-        else {
-            // Wait for some time and check again
-            setTimeout(getAttributeValue, 10, executionContext);
         }
     }
     else {

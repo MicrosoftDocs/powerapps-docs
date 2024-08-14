@@ -22,9 +22,6 @@ Grids present data in a tabular format. Grids can span the entire form or can be
 
 The Client API grid context object provides reference to a subgrid on a form against which the current code is executed. 
 
-> [!NOTE]
-> Getting the context of a grid (spanning the entire form) is only supported in ribbon commands. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
-
 Use the [formContext](clientapi-form-context.md) object to get an instance of the form where the code is executed, and then retrieve the subgrid control on the form. For example, when you know the name of a subgrid control (say **Contacts** subgrid in the default account form), you can access it using the following code:
 
 ```JavaScript
@@ -36,8 +33,11 @@ function doSomething(executionContext) {
 }
 ```
 
-> [!NOTE]
-> When using `gridContext`, calls to `getControl()` are not supported.
+## Limitations
+
+- Getting the context of a grid (spanning the entire form) is only supported in ribbon commands. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
+- When using `gridContext`, calls to `getControl()` are not supported.
+- Grid contexts have the same validity as their execution context. Once the event handler for the execution context finishes, these contexts are no longer safe to use. See [common mistakes in accessing contexts](./clientapi-execution-context.md#common-mistakes-in-accessing-contexts).
 
 
 ## Related articles
