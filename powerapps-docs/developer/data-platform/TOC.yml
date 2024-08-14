@@ -214,10 +214,10 @@
       href: api-limits.md
     - name: Bypass Custom Business logic
       items:
-      - name: Bypass Custom Dataverse logic
-        href: bypass-custom-business-logic.md
-      - name: Bypass Power Automate flows
-        href: bypass-power-automate-flows.md
+        - name: Bypass Custom Dataverse logic
+          href: bypass-custom-business-logic.md
+        - name: Bypass Power Automate flows
+          href: bypass-power-automate-flows.md
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
@@ -333,12 +333,22 @@
           href: write-custom-azure-aware-plugin.md
         - name: Write a listener application for a Azure solution
           href: write-listener-application-azure-solution.md
-        - name: "Tutorial: Configure Azure (SAS) for integration with Dataverse"
-          href: walkthrough-configure-azure-sas-integration.md
-        - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
-          href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-        - name: "Tutorial: Update a service endpoint imported from a solution"
-          href: walkthrough-update-service-endpoint-imported-solution.md
+        - name: Use a hybrid relay connection
+          href: azure-hybrid-relay-connection.md
+        - name: How to
+          items:
+            - name: "Configure a hybrid relay connection"
+              href: azure-configure-hybrid-relay.md
+            - name: "Register a service endpoint"
+              href: azure-register-service-endpoint.md
+        - name: Tutorials
+          items:
+            - name: "Configure Azure (SAS) for integration with Dataverse"
+              href: walkthrough-configure-azure-sas-integration.md
+            - name: "Register an Azure-aware plug-in using the Plug-in Registration Tool"
+              href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+            - name: "Update a service endpoint imported from a solution"
+              href: walkthrough-update-service-endpoint-imported-solution.md
     - name: Use Web Hooks
       href: use-webhooks.md
       items:
