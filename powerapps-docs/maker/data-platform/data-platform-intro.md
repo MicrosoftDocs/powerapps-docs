@@ -4,7 +4,7 @@ description: Introduction to Microsoft Dataverse, tables, server-side logic, sec
 author: mattp123
 ms.topic: overview
 ms.collection: get-started
-ms.date: 09/08/2023
+ms.date: 06/13/2024
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
@@ -64,7 +64,7 @@ Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Custome
 
 ## Integrating data into Dataverse
 
-Building an app typically involves data from more than one source. Although this can sometimes be done at the application level, there are cases where integrating this data into a common store allows for an easier app-building experience and a single set of logic to maintain and operate over the data. Dataverse allows data to be integrated from multiple sources into a single store, which can then be used in Power Apps, Power Automate, Power BI, and Power Virtual Agents along with data that's already available from the Dynamics 365 applications.
+Building an app typically involves data from more than one source. Although this can sometimes be done at the application level, there are cases where integrating this data into a common store allows for an easier app-building experience and a single set of logic to maintain and operate over the data. Dataverse allows data to be integrated from multiple sources into a single store, which can then be used in Power Apps, Power Automate, and Power BI along with data that's already available from the Dynamics 365 applications.
 
 * **Scheduled integration with other systems** &ndash; Data that's kept within another application can be regularly synchronized with Dataverse to allow you to take advantage of data from other applications in Power Apps.
 * **Transform and import data using Power Query** &ndash; Transforming data when importing into Dataverse can be done through Power Query&mdash;a tool commonly used across Excel and Power BI&mdash;from many online data sources.

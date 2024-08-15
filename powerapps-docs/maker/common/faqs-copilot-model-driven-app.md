@@ -1,7 +1,7 @@
 ---
 title: FAQ for Copilot in model-driven apps 
 description: FAQ that discusses model-driven apps with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 8/17/2023
+ms.date: 8/06/2024
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -13,7 +13,7 @@ ms.collection: bap-ai-copilot
 
 # FAQ for Copilot in model-driven apps
 
-This transparency note describes the AI impact of Power Apps model-driven apps Copilot feature.
+This FAQ describes the AI impact of Power Apps model-driven apps Copilot feature.
 
 ## What is Copilot in model-driven apps?
 
@@ -36,6 +36,8 @@ Copilot in model-driven apps underwent substantial testing before the feature wa
 To use this capability your environment must be in the US region.
 
 Copilot in model-driven apps is a preview feature. Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Copilot is not supported with the Power Apps mobile app.
 
 This capability may be subject to usage limits or capacity throttling.
 

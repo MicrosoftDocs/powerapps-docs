@@ -4,8 +4,8 @@ description: "Describes options available when retrieving a row programmatically
 ms.date: 05/18/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -41,7 +41,7 @@ Entity entity = svc.Retrieve("account", accountid, new ColumnSet("name"));
 Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 ```csharp
 RetrieveRequest request = new RetrieveRequest()
@@ -169,7 +169,7 @@ If you are retrieving elastic table data stored in partitions be sure to specify
 
 ## Access Formatted values
 
-The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 <!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
 

@@ -6,7 +6,7 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 02/29/2024
+ms.date: 05/10/2024
 ms.custom: template-how-to
 ---
 # Set a data retention policy for a table
@@ -26,6 +26,7 @@ Before you set up a retention policy, enable the parent (root) table for long te
 
 > [!NOTE]
 > When a parent (root) table is enabled for long term retention, all the related child tables are automatically enabled. You can't disable retention for a child table when the parent table is already enabled for retention. For example, assume a custom table and notes table are child tables of the case table. These child tables can't be disabled for retention when the parent case table is enabled. A maker can always disable the parent table for long term retention and separately enable the child tables for retention.
+> However, there's an exception to this related child tables behavior when long term retention is enabled through a solution import process. In this case, the related child tables aren't automatically enabled.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Properties** on the command bar, expand **Advanced options**, and then select **Enable long term retention**.

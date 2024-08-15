@@ -5,8 +5,10 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 09/27/2023
+ms.date: 07/22/2024
 ms.custom: template-how-to
+contributors: 
+  - psimolin
 ---
 # Known limitations and troubleshooting with virtual tables
 
@@ -18,8 +20,8 @@ The following is a list of known limitations for virtual tables created using th
 
 ## General
 
-- The table or list used must include at least one string field to be used as the primary field, and one GUID field. Without these, the virtual table can't be created and an error will be generated during the table details retrieval stage.
-   - SharePoint will use the hidden numeric ID field present in all lists
+- The table or list used must include at least one string field to be used as the primary field, and one GUID field. Without these string fields, the virtual table can't be created and an error will be generated during the table details retrieval stage.
+   - SharePoint uses the hidden numeric ID field present in all lists
    - SQL can use a GUID or integer field
    - Excel must have a GUID field
 - Dataverse can only create columns that include data types compatible with Dataverse. This includes the following data types:
@@ -36,12 +38,12 @@ The following is a list of known limitations for virtual tables created using th
    - File and attachments
    - Image
    - Lookup
-- Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
-- Virtual table queries are limited to return 1000 records. If you've a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
+- Maximum length of characters allowed for a text column in a virtual table is 4,000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit results in a validation error, and the operation fails.
+- Virtual table queries are limited to return 1,000 records. If you have a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit fails and provides an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 - Audit functionality isn't available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
 - Rollups and calculated fields can't be calculated for virtual tables. This is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
 - The **Microsoft Entra ID** virtual table provided by Microsoft only allows read access.
-- Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error will be provided indicating the record can't be saved because it exceeds the maximum size.
+- Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This behavior is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error is provided indicating the record can't be saved because it exceeds the maximum size.
 - Import and export functionality of table data isn't supported for virtual tables.
 
 
@@ -52,14 +54,14 @@ The following are limitations for each data source.
 # [SQL Server](#tab/sql)
 
 - SQL virtual tables can use a GUID or an Integer field for the Primary Key for functionality. 
-- SQL Server tables without primary keys: Any nonstring field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request wasn't successful: BadRequest: No primary key exists in table". For functionality a GUID or integer field must be used as the primary key.
-- SQL Server tables using a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. SQL Server string primary keys are supported only if the values can be parsed as GUID. If they can't be parsed as a GUID, the virtual table creation will succeed, but fail at runtime with the following errors:
+- SQL Server tables without primary keys: Any nonstring field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple works, the other operations fail with the following error message (coming from SQL connector): "APIM request wasn't successful: BadRequest: No primary key exists in table". For functionality a GUID or integer field must be used as the primary key.
+- SQL Server tables using a string primary key: The SQL string primary key is the only option available for the virtual table primary key. SQL Server string primary keys are supported only if the values can be parsed as GUID. If they can't be parsed as a GUID, the virtual table creation succeeds, but fails at runtime with the following errors:
    - Maker Portal: "We weren't able to open your table. Try reloading or reopening."
    - Network trace: "String primary keys are supported only if they can be parsed as GUID."
 - SQL Server tables without nonprimary key string fields for use as the Primary Name: If the SQL table doesn't have a string field available to use as the Primary Name, we display the following error in the Configuration step: "The table doesn't have a primary field"
 - SQL views can be used to create a virtual table but they'll only provide read operations.
 - For SQL Server Connector limitations, go to [SQL Server connector reference](/connectors/sql/).
-- SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created.
+- SQL data type bigint columns in the source table is mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table need to be deleted, and new columns should be created.
 - The following column types can't be included in a virtual table at this time:
    - Time
    - Datetime2
@@ -67,7 +69,7 @@ The following are limitations for each data source.
    - Geometry
    - Geography
    - RowVersion
- - The following column types will be included in a Virtual Table but will only be shown as text fields:
+ - The following column types are included in a virtual table but are only shown as text fields:
    - HierarchyID
    - XML
    - Sqlvariant
@@ -75,7 +77,7 @@ The following are limitations for each data source.
 # [Microsoft Excel Online (Business)](#tab/excel)
 - Excel is currently not supported in the table driven virtual table experience
 - Excel files must be stored on a OneDrive to participate in a Virtual Table connection. 
-- The Primary Key column should be included in the create form if you didn't set up the column to increment during the design of the underlying source table automatically. You'll have to enter a valid value in the primary key column for an insert operation to succeed. 
+- The Primary Key column should be included in the create form if you didn't set up the column to increment during the design of the underlying source table automatically. You have to enter a valid value in the primary key column for an insert operation to succeed. 
 - If Entity Catalog creation takes a long time, you can check the job completion status by navigating to Settings -> Advanced Settings -> Settings -> System Jobs view. 
 - The Primary key can only be a column holding GUID values: Because the Excel table metadata shows all columns as string, our current design assumes that the primary key will always be a GUID represented as a string. 
    >[!NOTE] 
@@ -98,6 +100,17 @@ The following are limitations for each data source.
    - **Compliance Asset ID** is an internal column from SharePoint for tracking purposes. It can be ignored.
    - **ID** is the external primary key from SharePoint. It's read-only and can be ignored.
 
+# [Salesforce (preview)](#tab/salesforce)
+
+- For Salesforce connector limitations, go to [Salesforce connector reference](/connectors/salesforce/).
+- Fields that are referencing other Salesforce objects are locked.
+
+# [Oracle (preview)](#tab/oracle)
+
+- For Oracle connector limitations, go to [Oracle connector reference](/connectors/oracle/).
+- Oracle table needs to have a primary key defined.
+- Oracle table needs to have at least one string type field besides the primary key.
+
 ---
 
 ## Troubleshooting
@@ -118,7 +131,7 @@ The following are limitations for each data source.
   1. Follow the steps to create the virtual table again.
 
 - A message is displayed “Connection ‘xyz’ not found in current environment.” when retrieving the list of connections.<br />
-   **Solution**: This occurs when there are a large number of connections in the user's Dataverse environment. This is fixed with version 1029 of the Connector Provider solution. The updated version should be in all regions by February 20, 2023.
+   **Solution**: This occurs when there are a large number of connections in the user's Dataverse environment. This is fixed with version 1,029 of the Connector Provider solution. The updated version should be in all regions by February 20, 2023.
   To determine whether your virtual connector provider solution needs an update:
   1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.

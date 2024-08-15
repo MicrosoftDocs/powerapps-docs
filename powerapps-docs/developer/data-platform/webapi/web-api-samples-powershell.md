@@ -1,9 +1,9 @@
 ---
 title: "Web API  Data operations Samples PowerShell"
 description: "This article provides a description of Web API samples that are implemented using PowerShell"
-ms.date: 01/20/2024
-author: divkamath
-ms.author: dikamath
+ms.date: 05/14/2024
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -25,7 +25,7 @@ The following samples use the patterns described here:
 |Not available yet| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions and Dataverse query functions. Includes examples of working with predefined queries and using FetchXML to perform queries. |
 |Not available yet| [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) | Demonstrates how to perform conditional operations you specify with ETag criteria.|
 |Not available yet|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)| Demonstrates how to use bound and unbound functions and actions, including custom actions.|
-|Not available yet|[Web API table schema operations sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
+|[Web API table schema operations sample (PowerShell)](samples/metadata-operations-powershell.md)|[Web API table schema operations sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
 
 
 ## Prerequisites

@@ -1,7 +1,7 @@
 ---
-title: "AttributeMaskingRule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the AttributeMaskingRule table/entity."
-ms.date: 02/22/2024
+title: "Secured Masking Column (AttributeMaskingRule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Secured Masking Column (AttributeMaskingRule)  table/entity."
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,12 +11,12 @@ search.audienceType:
   - developer
 ---
 
-# AttributeMaskingRule table/entity reference
+# Secured Masking Column (AttributeMaskingRule)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Defines masking rule of attribute
+Defines secured masking rule for column
 
 **Added by**: Column Level Security Solution
 
@@ -41,8 +41,8 @@ Defines masking rule of attribute
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|attributemaskingrules|
-|DisplayCollectionName|Attribute Masking Rules|
-|DisplayName|Attribute Masking Rule|
+|DisplayCollectionName|Secured Masking Columns|
+|DisplayName|Secured Masking Column|
 |EntitySetName|attributemaskingrules|
 |IsBPFEntity|False|
 |LogicalCollectionName|attributemaskingrules|
@@ -72,7 +72,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Logical name of the attribute for which masking rule is used|
+|Description|Logical name of the column for which the secured masking rule is used|
 |DisplayName|Attribute|
 |FormatName|Text|
 |IsLocalizable|False|

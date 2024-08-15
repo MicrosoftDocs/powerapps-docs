@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -107,6 +107,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PostponeTestEmailConfigurationUntil](#BKMK_PostponeTestEmailConfigurationUntil)
 - [ProcessAndDeleteEmails](#BKMK_ProcessAndDeleteEmails)
 - [ProcessEmailReceivedAfter](#BKMK_ProcessEmailReceivedAfter)
+- [ProcessingLastAttemptedOn](#BKMK_ProcessingLastAttemptedOn)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
 - [TagEmailsAfter](#BKMK_TagEmailsAfter)
@@ -1020,6 +1021,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_ProcessingLastAttemptedOn"></a> ProcessingLastAttemptedOn
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the processing of the mailbox was last attempted.|
+|DisplayName|Date Processing Last Attempted|
+|Format|DateAndTime|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processinglastattemptedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
@@ -1271,7 +1288,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ProcessedTimes](#BKMK_ProcessedTimes)
-- [ProcessingLastAttemptedOn](#BKMK_ProcessingLastAttemptedOn)
 - [ProcessingStateCode](#BKMK_ProcessingStateCode)
 - [ReceivingPostponedUntil](#BKMK_ReceivingPostponedUntil)
 - [ReceivingPostponedUntilForACT](#BKMK_ReceivingPostponedUntilForACT)
@@ -2088,21 +2104,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_ProcessingLastAttemptedOn"></a> ProcessingLastAttemptedOn
-
-|Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the processing of the mailbox was last attempted.|
-|DisplayName|Date Processing Last Attempted|
-|Format|DateAndTime|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|processinglastattemptedon|
-|RequiredLevel|None|
-|Type|DateTime|
 
 
 ### <a name="BKMK_ProcessingStateCode"></a> ProcessingStateCode

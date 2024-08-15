@@ -17,7 +17,7 @@ ms.collection:
 
 ## Power Fx documentation
 
-The [Power Fx documentation](/power-platform/power-fx/overview) is the primary source of information about Power Fx. When you're working with cards, you'll find the following articles especially helpful:
+For more information on Power Fx formulas that work in cards, see [Formula reference for Cards](/power-platform/power-fx/formula-reference-cards). When you're working with cards, you'll also find the following articles especially helpful:
 
 - [Expression grammar](/power-platform/power-fx/expression-grammar)
 - [Operators](/power-platform/power-fx/operators)

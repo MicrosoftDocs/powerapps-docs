@@ -1,5 +1,5 @@
 ---
-title: Create a blank canvas app from scratch (contains video)
+title: Create a blank canvas app from scratch
 description: Create an app from scratch and then add your data.
 author: franklanmsft
 
@@ -28,7 +28,8 @@ Watch this short video that shows you how to create a blank canvas app.
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
+In order to proceed with this quickstart, you need to be assigned the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that belongs to the **AAD Security Group** category.
+
 
 ## Create a blank canvas app
 

@@ -35,7 +35,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 ## Create a custom table
 
 1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. On the command bar select **New table**.
+1. On the command bar select **New table** > **Set advanced properties**.
 1. In the right pane, enter the following values, and then select **Create**.
 
     - **Display name**: *Pet* 

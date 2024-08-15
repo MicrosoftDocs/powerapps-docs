@@ -1,5 +1,5 @@
 ---
-title: Canvas component overview (contains video)
+title: Canvas component overview
 description: Learn about how to create reusable components for canvas apps.
 author: jorisdg
 ms.subservice: canvas-developer
@@ -106,7 +106,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. Set the component's **Items** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Table({Item:"SampleText"})
     ```
 
@@ -116,7 +116,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. Make sure that the property list shows the **Items** property (as it does by default). And then set the value of that property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     MenuComponent.Items
     ```
 
@@ -140,7 +140,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. Set the **Items** property of **MenuComponent_1** to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
@@ -164,7 +164,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the **Advanced** tab, set the value of the **Selected** property to this expression, adjusting the numeral in the gallery name if necessary:
 
-    ```powerapps-dot
+    ```power-fx
     Gallery1.Selected.Item
     ```
 
@@ -172,7 +172,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the default screen of the app, add a label, and set its **Text** property to this expression, adjusting the numeral in the component name if necessary:
 
-    ```powerapps-dot
+    ```power-fx
     MenuComponent_1.Selected
     ```
 

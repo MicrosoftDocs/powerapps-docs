@@ -1,10 +1,9 @@
 ---
 title: "Client API grid context in model-driven apps| MicrosoftDocs"
 description: "Describes the client api grid context"
-author: jasongre
-ms.author: jasongre
-
-ms.date: 04/01/2022
+author: fikaradz
+ms.author: fikaradz
+ms.date: 04/18/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
@@ -15,6 +14,7 @@ search.audienceType:
 contributors: 
   - JimDaly
   - caburk
+  - fikaradz
 ---
 # Client API grid context
 
@@ -35,6 +35,10 @@ function doSomething(executionContext) {
    // Perform operations on the subgrid
 }
 ```
+
+> [!NOTE]
+> When using `gridContext`, calls to `getControl()` are not supported.
+
 
 ## Related articles
 

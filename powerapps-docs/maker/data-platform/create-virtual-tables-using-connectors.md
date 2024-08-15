@@ -1,16 +1,17 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 06/08/2023
+ms.date: 07/22/2024
 ms.reviewer: matp
 ms.topic: article
-author: NHelgren # GitHub ID
+author: NHelgren
 ms.author: nhelgren
 search.audienceType: 
   - maker
 contributors: 
   - JimDaly
-  - phecke 
+  - phecke
+  - psimolin
 ---
 # Create virtual tables using the virtual connector provider
 
@@ -21,6 +22,8 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - SQL Server
 - Microsoft SharePoint
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
+- Salesforce (preview)
+- Oracle (preview)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -29,6 +32,8 @@ To learn more about supported actions and limitations with the connector, go to:
 - [Connector reference for the SQL Server connector](/connectors/sql/)
 - [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
 - [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
+- [Connector reference for the Salesforce connector](/connectors/salesforce/)
+- [Connector reference for the Oracle connector](/connectors/oracle/)
 
 ## Overview
 
@@ -68,7 +73,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in Power Apps for SQL or SharePoint
+## Create a virtual table in Power Apps for SQL, SharePoint, Fabric or Salesforce
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -77,8 +82,8 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 1. [Create and select the connection reference (optional)](#create-and-select-a-connection-reference-optional)
 1. Choose your connection details and select your data <a href="#SQL-or-SharePoint">SQL or SharePoint</a>.
 1. [Configure your data](#configure-your-data)
-2. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
-3. [Complete the setup](#complete-the-setup)
+1. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
+1. [Complete the setup](#complete-the-setup)
 
 ### Choose to create a table using an external data source
 
@@ -99,8 +104,11 @@ Watch a short video showing how to create a virtual table with the virtual conne
    - If you want to use an existing connection, select the connection you want, and then select **Next**.
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
    - If you have no connections and wish to create a new connection, select **+Add Connection**.
-   :::image type="content" source="media/ve-select-datasource.png" alt-text="Select an existing datasource or create one":::
-1. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
+
+   > [!IMPORTANT]
+   > Connections that are shared with you aren't available for use with this feature. Only connections created by the current user appear in the virtual table wizard.
+
+2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
 
 <a name="SQL-or-SharePoint"></a>
 
@@ -124,13 +132,51 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
+# [Microsoft Fabric (preview)](#tab/fabric)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+- Select a Microsoft Fabric workspace from the available list of workspaces. All workspace where you have access are available in the list.
+- Choose a Microsoft Fabric Lakehouse from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose. 
+- Follow the instructions on your screen. More information: [Build apps and automations, drive action with insights from Microsoft Fabric (preview)](azure-synapse-link-build-apps-with-fabric.md)
+
+# [Salesforce (preview)](#tab/salesforce)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+Select Add connection:
+
+- **Login URI**: Select either **Production** (default) or **Sandbox**.
+- **Salesforce API version**: Select **v41.0** (default) or a later version.
+
+# [Oracle (preview)](#tab/oracle)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+For Oracle connections, you must provide a server, authentication type, username, password, and a gateway.
+
+Server should be provided in **Server:Port/SID**-format. Notice that the server name or IP-address needs to be accessible from the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem).
 
 ---
 
 3. Select **Create**.
 4. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
 5. Select your connection.
-
 
 ### Create and select a connection reference (optional)
 
@@ -168,7 +214,7 @@ When you create a virtual table, by default you can choose to change the suggest
    - **Display name**: The name that will be used to identify your virtual table.
    - **Plural name**: The plural of the virtual table name, used in appropriate situations where you refer to one or more record from the table, such as *Customer* is the table for multiple records refereed to as *Customers*.
    - **Schema name**: The logical name Dataverse uses for the virtual table, which includes the solution publisher prefix.
-   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields may be selected. A primary key is a required field but will be chosen by Dataverse.
+   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields can be selected. A primary key is a required field but will be chosen by Dataverse.
  
 1. In the **External column** area, choose if you would like to rename any of your external columns from the data source. The following fields are provided:
    - **Schema name** (read-only). This is the schema name of the column in the data source. This property is read only.
@@ -325,7 +371,7 @@ With the connection reference and the virtual table data source setup, an **Enti
    > [!Note] 
    > After the save completes, the form will "reset" with all fields shown as blank, this is normal.
 
-1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
+1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It might take a few moments for the creation to complete.
 
    :::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
 

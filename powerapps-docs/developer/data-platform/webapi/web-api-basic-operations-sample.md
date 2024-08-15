@@ -2,8 +2,8 @@
 title: "Web API basic operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. The samples are coded using C# and client-side JavaScript."
 ms.date: 08/29/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -164,7 +164,7 @@ This section creates a single contact then performs a series of updates upon tha
    ```  
     
    > [!IMPORTANT]
-   >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query-data-web-api.md).  
+   >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query/overview.md).  
   
 1. Update the contact instance by supplying new values to these same properties.  
   

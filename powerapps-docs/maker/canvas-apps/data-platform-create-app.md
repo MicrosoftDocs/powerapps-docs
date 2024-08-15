@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app with data from Microsoft Dataverse (contains video)
+title: Create a canvas app with data from Microsoft Dataverse
 description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
 author: mduelae
 
@@ -24,7 +24,8 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
+- In order to proceed with this quickstart, you need to be assigned the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that belongs to the **AAD Security Group** category.
+- You also need to [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
 
 ## Create an app
 

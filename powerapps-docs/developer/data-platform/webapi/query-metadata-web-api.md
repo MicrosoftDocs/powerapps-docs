@@ -5,8 +5,8 @@ ms.date: 03/01/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: NHelgren # GitHub ID
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
@@ -26,7 +26,7 @@ Because Microsoft Dataverse is a metadata-driven application, developers may nee
 
 ## Querying the EntityMetadata entity type
 
-You'll use the same techniques described in [Query data using the Web API](query-data-web-api.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>. EntityMetadata entities contain a lot of data so you'll want to be careful to only retrieve the data that you need. The following example shows the data returned for just the `DisplayName`, `IsKnowledgeManagementEnabled`, and `EntitySetName` properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
+You'll use the same techniques described in [Query data using the Web API](query/overview.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>. EntityMetadata entities contain a lot of data so you'll want to be careful to only retrieve the data that you need. The following example shows the data returned for just the `DisplayName`, `IsKnowledgeManagementEnabled`, and `EntitySetName` properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
   
  **Request:**
 

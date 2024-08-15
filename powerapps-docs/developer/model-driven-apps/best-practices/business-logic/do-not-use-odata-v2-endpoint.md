@@ -2,8 +2,8 @@
 title: Do not use the OData v2.0 endpoint
 description: Learn about the requirement to upgrade your code to use the Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint.
 suite: powerapps
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.date: 04/12/2023
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -74,7 +74,7 @@ The Organization Data Service supports both JSON and ATOM, an XML-based format u
 
 The Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
+The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
 
 ### Legacy documentation
 
@@ -85,7 +85,7 @@ The following table connects related areas for the Organization Data Service and
 
 |Organization Data Service|Web API|
 |---------|---------|
-|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query-data-web-api.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
+|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query/overview.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
 |[Creating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#creating-records)|[Create a table row](../../../data-platform/webapi/create-entity-web-api.md)|
 |[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-entity-using-web-api.md)|
 |[Updating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#updating-records)|[Basic update](../../../data-platform/webapi/update-delete-entities-using-web-api.md#basic-update)|

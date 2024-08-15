@@ -3,9 +3,9 @@ title: Query schema definitions
 description: Write a query to retrieve definitions of tables, columns, relationships, and labels for a Dataverse organization. Optionally, track changes to these definitions over time.
 ms.date: 08/05/2023
 ms.topic: how-to
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

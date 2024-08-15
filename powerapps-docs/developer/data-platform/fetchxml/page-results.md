@@ -1,7 +1,7 @@
 ---
 title: Page results using FetchXml
 description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 08/09/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -15,6 +15,7 @@ contributors:
  - dasussMS
  - apahwa-lab
  - DonaldlaGithub
+ - tdashworth
 ---
 # Page results using FetchXml
 
@@ -143,7 +144,7 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
         // Set the fetch paging-cookie attribute with the paging cookie from the previous query
         fetchNode.SetAttributeValue("paging-cookie", results.PagingCookie);
 
-        fetchNode.SetAttributeValue("page", page++);
+        fetchNode.SetAttributeValue("page", ++page);
     }
     return new EntityCollection(entities);
 }
@@ -513,7 +514,7 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client,
         fetchNode.SetAttributeValue("paging-cookie", pagingCookie);
 
         // Increment the fetch page attribute value
-        fetchNode.SetAttributeValue("page", page++);
+        fetchNode.SetAttributeValue("page", ++page);
     }
 
     // Return the records from all requests
@@ -529,7 +530,7 @@ You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-conso
 ```csharp
 #region Web API call
 
-string fetchXml = @"<fetch count='3' page='1'>
+string fetchXml = @"<fetch>
       <entity name='contact'>
          <attribute name='fullname'/>
          <attribute name='jobtitle'/>
@@ -554,6 +555,9 @@ Console.WriteLine($"Success: {records.Count}");
 > The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
 ---
+
+[!INCLUDE [cc-ordering-paging](../includes/cc-ordering-paging.md)]
+
 ## Next steps
 
 Learn how to aggregate data.

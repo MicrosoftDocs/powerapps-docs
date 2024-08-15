@@ -5,7 +5,7 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/06/2024
+ms.date: 07/17/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -58,7 +58,7 @@ To define visibility logic, select the command. Then select **Visibility** on th
 
 ### Patch (update) the current selected record
 
-```powerapps-dot
+```power-fx
 Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 ```
 
@@ -67,25 +67,25 @@ Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 > [!NOTE]
 > If the related table is not already in the command component library you'll need to open it in canvas studio and add the data source there.
 
-```powerapps-dot
+```power-fx
 Patch(Tasks,Defaults(Tasks),{Regarding:Self.Selected.Item},{Subject:"Subject of the Task"})
 ```
 
 ### Check and edit a date property
 
-```powerapps-dot
+```power-fx
 If(Self.Selected.Item.'Last Date Included in Campaign'>DateAdd(Now(),-3), Patch(Accounts,Self.Selected.Item,{'Last Date Included in Campaign':Date(2021,10,19)}))
 ```
 
 ### Visible property: Only show the command if one or more records is selected in a grid view
 
-```powerapps-dot
+```power-fx
 CountRows(Self.Selected.AllItems) > 0
 ```
 
 ### Control visibility based on record data
 
-```powerapps-dot
+```power-fx
 //Button will be visible for accounts with Account Rating > 20
 Self.Selected.Item.'Account Rating'>20
 ```
@@ -99,7 +99,7 @@ Self.Selected.Item.'Account Rating'>20
 
 To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( myCustomPage )
 ```
 
@@ -107,7 +107,7 @@ Navigate( myCustomPage )
 
 To navigate to the default view of the table, pass the table name as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( Accounts )
 ```
 
@@ -115,7 +115,7 @@ Navigate( Accounts )
 
 To navigate to a specific system view of the table, pass the table's `Views` enum.
 
-```powerapps-dot
+```power-fx
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
 ```
 
@@ -123,7 +123,7 @@ Navigate( 'Accounts (Views)'.'My Active Accounts' )
 
 To navigate to the default form of the table, pass the record as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( Gallery1.Selected )
 ```
 
@@ -131,7 +131,7 @@ Navigate( Gallery1.Selected )
 
 To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
-```powerapps-dot
+```power-fx
 Navigate( Defaults( Accounts ) )
 ```
 
@@ -141,14 +141,14 @@ Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/functio
 
 For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" button using its **Visible** property:
 
-```powerapps-dot
+```power-fx
 EditButton.Visible = 
    RecordInfo( Gallery1.Selected, RecordInfo.EditPermission )
 ```
 
 For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide a "Create" button using its **Visible** property:
 
-```powerapps-dot
+```power-fx
 CreateButton.Visible = 
    DataSourceInfo( Accounts, DataSourceInfo.CreatePermission )
 ```
@@ -157,7 +157,7 @@ CreateButton.Visible =
 
 Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm) to display a dialog box on top of the current screen.
 
-```powerapps-dot
+```power-fx
 Notify( Confirm( "Are you sure?", 
                  { ConfirmButton: "Yes", CancelButton: "No" } 
         ) 
@@ -174,7 +174,7 @@ A notification can be shown to app users by calling the [Notify function](../can
 > [!NOTE]
 > `NotificationType.Success` is not currently supported and will result in an informational notification type.
 
-```powerapps-dot
+```power-fx
 Notify( "Model-driven app notification message" )
 ```
 
@@ -198,9 +198,13 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Functions not supported
+## Functions available with commanding
 
-The following Power Fx functions are currently not supported with commanding in model-driven apps.
+For information about the formulas supported with commanding in model-driven apps, go to [Formula reference - model-driven apps](/power-platform/power-fx/formula-reference-model-driven-apps).
+
+### Functions not supported
+
+The following Power Fx functions are *currently not supported* with commanding in model-driven apps.
 
 - Back()
 - Clear()
@@ -213,6 +217,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Language()
 - LoadData()
 - Param()
+- Print()
 - ReadNFC()
 - RequestHide()
 - ResetForm()

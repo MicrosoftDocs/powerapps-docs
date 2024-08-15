@@ -1,5 +1,5 @@
 ---
-title: Deploy the Higher Education Financial Crisis Impact Tracker - Sample solution (contains video) | Microsoft Docs
+title: Deploy the Higher Education Financial Crisis Impact Tracker - Sample solution | Microsoft Docs
 description: How to deploy the Higher Education Financial Crisis Impact Tracker - Sample solution.
 author: ramanasridhar
 

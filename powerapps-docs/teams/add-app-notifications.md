@@ -1,5 +1,5 @@
 ---
-title: Add notifications to make your apps collaborative (contains video)
+title: Add notifications to make your apps collaborative
 description: Learn how to add notifications to your Power Apps in Teams to make them more collaborative
 author: joel-lindstrom
 
@@ -80,7 +80,7 @@ The decision as to which approach you should use depends on what type of notific
 
 - Power Apps sending notifications directly use formulas to define the notification logic, Power Automate flow uses a more graphical interface to set the properties of a notification. For example, from a Power Apps app, you can use the following formula to send email with the Outlook connector:
 
-```powerapps-dot
+```power-fx
 Microsoft365Outlook.SendEmail("mailbox@contoso.com", Summary, Description)
 ```
 

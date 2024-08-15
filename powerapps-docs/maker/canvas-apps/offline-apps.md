@@ -1,5 +1,5 @@
 ---
-title: Develop offline-capable canvas apps (contains video)
+title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.subservice: canvas-developer
@@ -88,7 +88,7 @@ At a high level, the app performs these tasks:
 
 1. In the **Tree view** pane, select **App**, and then set its **OnStart** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
             Set( statusText, "Online data" ),
@@ -158,7 +158,7 @@ This formula determines whether the device is online. If it is, the label shows 
 
 1. Set the button's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
@@ -169,7 +169,7 @@ This formula determines whether the device is online. If it is, the label shows 
 
 1. In the **OnStart** property for the **App**, add a line at the end of the formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
             Set( statusText, "Online data" ),
@@ -203,7 +203,7 @@ Then the formula resets the text in the text-input box.
 
 1. Set the timer's **OnTimerEnd** to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
         Clear( LocalTweetsToPost );

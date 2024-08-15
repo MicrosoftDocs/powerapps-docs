@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/04/2023
+ms.date: 08/02/2024
 ms.custom: template-how-to
 ---
 # Low-code plug-ins Power Fx (preview)
@@ -29,12 +29,14 @@ The following table lists the Power Fx formulas that work but have limitations o
 
 |Power Fx formula  |Supported in plug-ins?  | Limitation or work around   |
 |---------|---------|---------|
-|Set     |  Yes      | Requires the variable to exist (as bound table row property) and the variable type to match what you’re trying to set it to. <br /> For an automated action, update the associated row’s values by passing `ThisRecord` as the first argument (referring to the row that triggered the data event), then the desired column updates in the second object parameter, such as `Set( ThisRecord, { Description: “Updated description text” } );`  |
 |Collect     | Yes        | Requires the variable to exist and the variable type to match what you’re trying to set it to.    |
 |Defaults     |  No       | Use Collect instead. For example, instead of *Patch(account, Defaults(account), {“Account Name”: “Example Account”})* use `Collect(account, {“Account Name”: “Example Account”})`.    |
-|User()     | No        | Instead use Viewer, which has a subset of information about the user who invoked the action (both instant and automated).    |
 
-## Formulas not currently supported with low-code plug-ins
+## Power Fx formulas supported
+
+For information about the formulas supported with low-code plug-ins, go to [Formula reference- Dataverse plug-ins](/power-platform/power-fx/formula-reference-plug-ins).
+
+Formulas *not currently supported* with low-code plug-ins
 
 :::row:::
    :::column span="":::

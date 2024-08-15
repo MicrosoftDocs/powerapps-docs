@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -905,10 +905,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Goal_Annotation](#BKMK_Goal_Annotation)
 - [KbArticle_Annotation](#BKMK_KbArticle_Annotation)
 - [DuplicateRule_Annotation](#BKMK_DuplicateRule_Annotation)
-- [chat_Annotations](#BKMK_chat_Annotations)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
+- [chat_Annotations](#BKMK_chat_Annotations)
 - [adx_invitation_Annotations](#BKMK_adx_invitation_Annotations)
 - [adx_inviteredemption_Annotations](#BKMK_adx_inviteredemption_Annotations)
 - [adx_portalcomment_Annotations](#BKMK_adx_portalcomment_Annotations)
@@ -1023,12 +1023,6 @@ See the [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotation) one-to-ma
 
 See the [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) one-to-many relationship for the [duplicaterule](duplicaterule.md) table/entity.
 
-### <a name="BKMK_chat_Annotations"></a> chat_Annotations
-
-**Added by**: Activities Patch Solution
-
-See the [chat_Annotations](chat.md#BKMK_chat_Annotations) one-to-many relationship for the [chat](chat.md) table/entity.
-
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
 **Added by**: AISolution Solution
@@ -1046,6 +1040,12 @@ See the [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#B
 **Added by**: AI Solution deprecated templates Solution
 
 See the [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
+
+### <a name="BKMK_chat_Annotations"></a> chat_Annotations
+
+**Added by**: Activities Patch Solution
+
+See the [chat_Annotations](chat.md#BKMK_chat_Annotations) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### <a name="BKMK_adx_invitation_Annotations"></a> adx_invitation_Annotations
 

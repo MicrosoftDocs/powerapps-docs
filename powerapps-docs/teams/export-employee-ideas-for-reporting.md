@@ -1,5 +1,5 @@
 ---
-title: How to export Ideas data for reporting (contains video)
+title: How to export Ideas data for reporting
 description: Learn about how the Ideas data can be exported for reporting purposes
 author: sbahl10
 

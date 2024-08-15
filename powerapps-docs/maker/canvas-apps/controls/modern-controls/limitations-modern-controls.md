@@ -5,7 +5,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 03/22/2023
+ms.date: 03/26/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -34,6 +34,8 @@ In this article, learn about the general limitations of the modern controls used
 4. Not all app checker rules such as accessibility and formulas run on modern controls currently. We offer support when the feature matures.
 
 5. Test Studio and Test engine compatibility with modern controls is under development and modern controls aren't fully supported on these tools.
+   
+7. You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and performance of the app
 
 
 

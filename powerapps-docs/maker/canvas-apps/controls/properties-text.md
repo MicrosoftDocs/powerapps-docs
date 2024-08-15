@@ -1,19 +1,19 @@
 ---
 title: Text properties in Power Apps
 description: Reference information about text properties in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/09/2020
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Text properties in Power Apps
 Configure the text that appears on a control, as a hint when the user types data, and specify other text-related characteristics.

@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Connector Entity to support Solutioning Integration
 |-|-|-|
 |Assign|PATCH /connectors(*connectorid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /connectors<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /connectors(*connectorid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ Connector Entity to support Solutioning Integration
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /connectors(*connectorid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /connectors(*connectorid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [Capabilities](#BKMK_Capabilities)
 - [ConnectionParameters](#BKMK_ConnectionParameters)
+- [ConnectionParameterSets](#BKMK_ConnectionParameterSets)
 - [connectorId](#BKMK_connectorId)
 - [ConnectorInternalId](#BKMK_ConnectorInternalId)
 - [ConnectorType](#BKMK_ConnectorType)
@@ -125,6 +126,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|connectionparameters|
+|MaxLength|500000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ConnectionParameterSets"></a> ConnectionParameterSets
+
+|Property|Value|
+|--------|-----|
+|Description|Connection parameter sets of the Connector|
+|DisplayName|ConnectionParameterSets|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|connectionparametersets|
 |MaxLength|500000|
 |RequiredLevel|None|
 |Type|String|
@@ -1058,7 +1075,7 @@ Listed by **SchemaName**.
 - [connector_PrincipalObjectAttributeAccesses](#BKMK_connector_PrincipalObjectAttributeAccesses)
 - [connector_connectionreference](#BKMK_connector_connectionreference)
 - [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
-- [AIPluginOperation_connector_connector](#BKMK_AIPluginOperation_connector_connector)
+- [AIPlugin_connector_connector](#BKMK_AIPlugin_connector_connector)
 
 
 ### <a name="BKMK_connector_SyncErrors"></a> connector_SyncErrors
@@ -1231,19 +1248,19 @@ Same as the [lk_connectioninstance_connectorid](connectioninstance.md#BKMK_lk_co
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_AIPluginOperation_connector_connector"></a> AIPluginOperation_connector_connector
+### <a name="BKMK_AIPlugin_connector_connector"></a> AIPlugin_connector_connector
 
 **Added by**: AIPlatformExtensionsCore Solution Solution
 
-Same as the [AIPluginOperation_connector_connector](aipluginoperation.md#BKMK_AIPluginOperation_connector_connector) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+Same as the [AIPlugin_connector_connector](aiplugin.md#BKMK_AIPlugin_connector_connector) many-to-one relationship for the [aiplugin](aiplugin.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|aipluginoperation|
+|ReferencingEntity|aiplugin|
 |ReferencingAttribute|connector|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|AIPluginOperation_connector_connector|
+|ReferencedEntityNavigationPropertyName|AIPlugin_connector_connector|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

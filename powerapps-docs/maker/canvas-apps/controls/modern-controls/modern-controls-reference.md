@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 03/22/2023
+ms.date: 05/22/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -25,13 +25,15 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 ## Modern controls
 
-**[Badge (preview)](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
+**[Avatar (preview)](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
+
+**[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
-**[Checkbox (preview)](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
+**[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
-**[Combobox](modern-control-combobox.md)** - A control that allows users to make selections from provided choices and supports search and multiple selections.
+**[Combobox (preview)](modern-control-combobox.md)** - A control that allows users to make selections from provided choices and supports search and multiple selections.
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
@@ -45,7 +47,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
 
-**[Number input](modern-control-number-input.md)** - A number input control the user can modify.
+**[Number input (preview)](modern-control-number-input.md)** - A number input control the user can modify.
 
 **[Progress bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
@@ -55,15 +57,17 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Slider](modern-control-slider.md)** - A control with which the user can specify a value by dragging a handle.
 
+**[Stream (preview)](new-stream-video-control.md)** - A control that lets you add Steam videos in your app.
+
 **[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
-**[Text](modern-control-text.md)** – Display text on the app, can also be used as label for fields.
+**[Text (preview)](modern-control-text.md)** – Display text on the app, can also be used as label for fields.
 
-**[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
+**[Text input (preview)](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
-**[Toggle (preview)](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
+**[Toggle](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
 
 
 ### See also

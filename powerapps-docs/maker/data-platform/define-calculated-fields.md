@@ -1,7 +1,7 @@
 ---
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
-ms.date: 01/19/2023
+ms.date: 05/22/2024
 ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -208,7 +208,8 @@ You should be aware of certain conditions and limitations when working with calc
 - Sorting is disabled on:  
   - A calculated column that contains a column of a parent row.  
   - A calculated column that contains a logical column (for example, address column)
-  - A calculated column that contains another calculated column.  
+  - A calculated column that contains another calculated column.
+  - A calculated column that contains `Now()` function.
 - Calculated columns can span two tables only.  
   - A calculated column can contain a column from another table (spanning two tables – current table and parent row).  
   - A calculated column can't contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
@@ -216,7 +217,11 @@ You should be aware of certain conditions and limitations when working with calc
 - You can't trigger workflows or plug-ins on calculated columns.  
 - You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you wouldn't be able to use the calculated columns feature without creating a new column.  
 - Duplicate detection rules aren't triggered on calculated columns.  
-- A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.  
+- A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.
+-  When a currency calculated column depends on a related table's currency column, the system performs calculations using corresponding base currency column values. This is because exchange rate values and currency values can vary between different table records. For example, consider a calculated column - `Account Revenue` on the `Opportunity` table, and consider `Account Revenue` has a dependency on the `Annual Revenue` currency column on the `Account` table, then `Account Revenue` is calculated as described here:
+
+    `'Account Revenue' = ['Annual Revenue (Base)' * 'Exchange Rate on Opportunity table record']` or
+    `'Account Revenue' = [('Annual Revenue' / 'Exchange Rate on Account table record') * 'Exchange Rate on Opportunity table record']`
   
 ### See also
  

@@ -4,8 +4,8 @@ description: "Learn how to use a single lookup type column to refer to data in m
 ms.date: 07/07/2021
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 search.audienceType: 
   - developer
 contributors:

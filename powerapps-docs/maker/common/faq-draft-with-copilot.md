@@ -1,7 +1,7 @@
 ---
-title: FAQs about drafting well-written input text with Copilot
-description: These FAQs provide information about the AI technology used to draft well-written input text with Copilot, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 12/21/2023
+title: FAQ about drafting well-written input text with Copilot
+description: This FAQ provides information about the AI technology used to draft well-written input text with Copilot, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+ms.date: 05/22/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -12,9 +12,9 @@ ms.collection:
     - bap-ai-copilot 
 ---
 
-# FAQs about drafting well-written input text with Copilot
+# FAQ about drafting well-written input text with Copilot
 
-These frequently asked questions (FAQs) describe the AI impact of drafting well-written input text with Copilot in Power Apps.
+These frequently asked questions (FAQ) describe the AI impact of drafting well-written input text with Copilot in Power Apps.
 
 ##  What is Draft with Copilot? 
 

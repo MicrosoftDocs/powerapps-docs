@@ -1,7 +1,7 @@
 ---
 title: "Security Role (Role)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Security Role (Role)  table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -823,6 +823,7 @@ Relationship details provided where the Role table is the first table in the rel
 - [roleprivileges_association](#BKMK_roleprivileges_association)
 - [appmoduleroles_association](#BKMK_appmoduleroles_association)
 - [teamroles_association](#BKMK_teamroles_association)
+- [application_role](#BKMK_application_role)
 - [applicationuserrole](#BKMK_applicationuserrole)
 
 
@@ -841,6 +842,10 @@ See the [appmoduleroles_association](appmodule.md#BKMK_appmoduleroles_associatio
 ### <a name="BKMK_teamroles_association"></a> teamroles_association
 
 See the [teamroles_association](team.md#BKMK_teamroles_association) many-to-many relationship for the [team](team.md) table/entity.
+
+### <a name="BKMK_application_role"></a> application_role
+
+See the [application_role](application.md#BKMK_application_role) many-to-many relationship for the [application](application.md) table/entity.
 
 ### <a name="BKMK_applicationuserrole"></a> applicationuserrole
 

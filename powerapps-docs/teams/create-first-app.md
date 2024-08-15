@@ -1,5 +1,5 @@
 ---
-title: Create your first app in Teams (contains video) | Microsoft Docs
+title: Create your first app in Teams | Microsoft Docs
 description: Learn how to create your first app in Teams. 
 author: mduelae
 
@@ -208,12 +208,12 @@ To manually connect to the new data:
 
     Change from:
 
-    ```powerapps-dot
+    ```power-fx
     Remove(Instructions, selectedRecord); If(IsEmpty(Errors(Instructions, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Instructions)););
     ```
     Change to:
 
-    ```powerapps-dot
+    ```power-fx
     Remove(Recipes, selectedRecord); If(IsEmpty(Errors(Recipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Recipes)););
     ```
 
@@ -235,7 +235,7 @@ To update the selected item background color:
 
 3. Update the *TemplateFill* property value in the formula bar to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
     ```
 

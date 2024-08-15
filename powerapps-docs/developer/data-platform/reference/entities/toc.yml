@@ -30,18 +30,34 @@
   href: adx_setting.md
 - name: adx_webformsession
   href: adx_webformsession.md
+- name: AICopilot
+  href: aicopilot.md
 - name: AIPlugin
   href: aiplugin.md
+- name: AIPluginAuth
+  href: aipluginauth.md
+- name: AIPluginConversationStarter
+  href: aipluginconversationstarter.md
+- name: AIPluginConversationStarterMapping
+  href: aipluginconversationstartermapping.md
 - name: AIPluginExternalSchema
   href: aipluginexternalschema.md
 - name: AIPluginExternalSchemaProperty
   href: aipluginexternalschemaproperty.md
+- name: AIPluginGovernance
+  href: aiplugingovernance.md
+- name: AIPluginGovernanceExt
+  href: aiplugingovernanceext.md
 - name: AIPluginInstance
   href: aiplugininstance.md
 - name: AIPluginOperation
   href: aipluginoperation.md
 - name: AIPluginOperationParameter
   href: aipluginoperationparameter.md
+- name: AIPluginOperationResponseTemplate
+  href: aipluginoperationresponsetemplate.md
+- name: AIPluginTitle
+  href: aiplugintitle.md
 - name: AIPluginUserSetting
   href: aipluginusersetting.md
 - name: Annotation
@@ -60,6 +76,8 @@
   href: appconfiginstance.md
 - name: AppConfigMaster
   href: appconfigmaster.md
+- name: Application
+  href: application.md
 - name: ApplicationUser
   href: applicationuser.md
 - name: AppModule
@@ -86,6 +104,8 @@
   href: bot.md
 - name: botcomponent
   href: botcomponent.md
+- name: botcomponentcollection
+  href: botcomponentcollection.md
 - name: BulkDeleteFailure
   href: bulkdeletefailure.md
 - name: BulkDeleteOperation
@@ -136,6 +156,10 @@
   href: conversationtranscript.md
 - name: CopilotExampleQuestion
   href: copilotexamplequestion.md
+- name: CopilotGlossaryTerm
+  href: copilotglossaryterm.md
+- name: CopilotSynonyms
+  href: copilotsynonyms.md
 - name: credential
   href: credential.md
 - name: CustomAPI
@@ -168,8 +192,6 @@
   href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
-- name: deploymentorchestration
-  href: deploymentorchestration.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
 - name: desktopflowmodule
@@ -230,6 +252,8 @@
   href: exportedexcel.md
 - name: ExportSolutionUpload
   href: exportsolutionupload.md
+- name: fabricaiskill
+  href: fabricaiskill.md
 - name: Fax
   href: fax.md
 - name: featurecontrolsetting
@@ -244,8 +268,12 @@
   href: fixedmonthlyfiscalcalendar.md
 - name: flowcapacityassignment
   href: flowcapacityassignment.md
+- name: flowcredentialapplication
+  href: flowcredentialapplication.md
 - name: flowevent
   href: flowevent.md
+- name: flowlog
+  href: flowlog.md
 - name: flowmachine
   href: flowmachine.md
 - name: flowmachinegroup
@@ -434,6 +462,8 @@
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
+- name: msdyn_knowledgeassetconfiguration
+  href: msdyn_knowledgeassetconfiguration.md
 - name: msdyn_knowledgeconfiguration
   href: msdyn_knowledgeconfiguration.md
 - name: msdyn_knowledgeinteractioninsight
@@ -480,6 +510,10 @@
   href: msdyn_pmview.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
+- name: msdyn_salesforcestructuredobject
+  href: msdyn_salesforcestructuredobject.md
+- name: msdyn_salesforcestructuredqnaconfig
+  href: msdyn_salesforcestructuredqnaconfig.md
 - name: msdyn_schedule
   href: msdyn_schedule.md
 - name: msdyn_serviceconfiguration
@@ -596,12 +630,18 @@
   href: ownermapping.md
 - name: package
   href: package.md
+- name: packagehistory
+  href: packagehistory.md
 - name: PersonalDocumentTemplate
   href: personaldocumenttemplate.md
 - name: PhoneCall
   href: phonecall.md
 - name: PickListMapping
   href: picklistmapping.md
+- name: plannerbusinessscenario
+  href: plannerbusinessscenario.md
+- name: PlannerSyncAction
+  href: plannersyncaction.md
 - name: PluginAssembly
   href: pluginassembly.md
 - name: PluginPackage
@@ -642,6 +682,10 @@
   href: powerpagesitelanguage.md
 - name: powerpagesitepublished
   href: powerpagesitepublished.md
+- name: PowerPagesLog
+  href: powerpageslog.md
+- name: PowerPagesScanReport
+  href: powerpagesscanreport.md
 - name: PrincipalObjectAttributeAccess
   href: principalobjectattributeaccess.md
 - name: Privilege
@@ -724,6 +768,8 @@
   href: searchcustomanalyzer.md
 - name: searchrelationshipsettings
   href: searchrelationshipsettings.md
+- name: SearchResultsCache
+  href: searchresultscache.md
 - name: searchtelemetry
   href: searchtelemetry.md
 - name: SemiAnnualFiscalCalendar
@@ -742,12 +788,16 @@
   href: sharedworkspace.md
 - name: sharedworkspaceaccesstoken
   href: sharedworkspaceaccesstoken.md
+- name: sharedworkspacenr
+  href: sharedworkspacenr.md
 - name: sharedworkspacepool
   href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
   href: sharepointsite.md
+- name: sideloadedaiplugin
+  href: sideloadedaiplugin.md
 - name: SiteMap
   href: sitemap.md
 - name: SLA
@@ -806,8 +856,6 @@
   href: task.md
 - name: Team
   href: team.md
-- name: teammobileofflineprofilemembership
-  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -836,8 +884,6 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
-- name: usermobileofflineprofilemembership
-  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

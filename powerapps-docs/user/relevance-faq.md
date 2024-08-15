@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/01/2023
+ms.date: 06/13/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -30,7 +30,7 @@ Your administrator defines the scope of content that's searched. An administrato
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
 
 ## Can I configure quick actions to show or hide certain commands?
@@ -53,7 +53,7 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 ## Why am I unable to view information for party list fields like To, From, and CC in full results?
 
-Party list fields are special fields that aren't searchable or viewable in the results page. 
+Party list fields are special fields. They're not supported in Dataverse search, nor are they included in the search results page.
 
 ## How come returns don't support HTLM formatting for memo data types?
 
@@ -108,6 +108,9 @@ When using the Dataverse search API, there's a throttling limit of one request p
 ## How can I use the search API?
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
+
+## Does Dataverse search support US Government clouds?
+Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It is available in US Government Community Cloud (GCC) and US GCC High. It's not available in US Department of Defense (DoD).
 
 ### See also
 

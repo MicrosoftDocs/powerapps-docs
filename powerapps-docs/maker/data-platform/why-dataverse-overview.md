@@ -51,7 +51,7 @@ For organizations that want to integrate Dataverse data into existing apps or wr
 
 You can also use Dataverse in bot-based apps that deliver intuitive,
 interactive dialogues with employees, partners, and customers. Whether they're embedded within Power Apps or custom code, bots can be built quickly
-by using Power Virtual Agents and powered by Dataverse data.
+by using Microsoft Copilot Studio and powered by Dataverse data.
 
 The goal of Dataverse working with any app means it should also work with the tools that knowledge workers and professional developers use. To help them be even more productive, Dataverse is integrated into popular tools such as Excel, Outlook, Dynamics 365 customer engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data Export Service, and SQL Server Management Studio. More information: [Work with any type of app](work-with-any-type-app.md)
 

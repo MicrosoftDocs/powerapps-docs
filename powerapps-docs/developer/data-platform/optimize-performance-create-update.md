@@ -3,7 +3,7 @@ title: Optimize performance for bulk operations
 description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
-ms.date: 08/28/2023
+ms.date: 07/01/2024
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ search.app:
   - D365CE
 contributors:
   - JimDaly
-  - divkamath
+  - MicroSri
 ---
 # Optimize performance for bulk operations
 
@@ -44,13 +44,13 @@ Any plug-in that is registered to run synchronously increases the time for the o
 
 ### Bypass business logic
 
-To expedite the bulk operation project, you can disable synchronous plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
+To expedite the bulk operation project, you can disable plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
 
-As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to by-pass synchronous logic. Only a system administrator, or users who have been granted a specific privilege can use this header. [Learn more about how to bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic).
+As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to by-pass logic. Only a system administrator, or users who have been granted a specific privilege can use this header. [Learn more about how to bypass custom Dataverse logic](bypass-custom-business-logic.md).
 
 ## Bulk operation APIs
 
-Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`. For elastic tables only, you can use `DeleteMultiple`. [UpsertRequest](xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest) is currently in preview with the SDK for .NET only.
+Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`, and `UpsertMultiple`. For elastic tables only, you can use `DeleteMultiple`.
 
 While these APIs provide the highest throughput, they have the following limitations for standard tables:
 
@@ -121,6 +121,7 @@ System.Net.ServicePointManager.Expect100Continue = false;
 // Can decrease overall transmission overhead but can cause delay in data packet arrival
 System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
+
 ## Recommendation summary
 
 Based on the factors previously described, follow these recommendations to optimize throughput for bulk operation projects:
@@ -136,7 +137,7 @@ Based on the factors previously described, follow these recommendations to optim
 
 [Elastic tables](elastic-tables.md)   
 [Use plug-ins to extend business processes](plug-ins.md)   
-[Bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic)   
+[Bypass custom Dataverse logic](bypass-custom-business-logic.md)   
 [Bulk Operation messages](bulk-operations.md)   
 [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)   
 [Send parallel requests](send-parallel-requests.md)

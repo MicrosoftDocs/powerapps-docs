@@ -4,8 +4,8 @@ description: "Shows how to programmatically create a custom table in Microsoft D
 ms.date: 03/22/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: NHelgren # GitHub ID
-ms.author: nhelgren  # MSFT alias of Microsoft employees only
+author: mkannapiran
+ms.author: kamanick
 search.audienceType: 
   - developer
 contributors:
@@ -22,7 +22,7 @@ This topic shows how to programmatically create a custom user-owned table (entit
 You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
 > [!NOTE]
-> You won’t be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
+> You won't be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
   
 <a name="BKMK_CreateCustomEntity"></a>   
 
@@ -30,7 +30,7 @@ You can also create organization-owned custom tables. More information: [Table o
 
  The following code sample uses the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> to create the table (entity) and the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata><xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute>.  
   
- The `_customEntityName` value is “new_bankaccount”.  
+ The `_customEntityName` value is "new_bankaccount".  
   
 ```csharp
 CreateEntityRequest createrequest = new CreateEntityRequest

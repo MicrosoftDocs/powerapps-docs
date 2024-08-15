@@ -2,8 +2,8 @@
 title: "Web API Query schema definitions and detect changes sample (C#)"
 description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API to query schema definitions and detect changes so that you can create a persistent cache."
 ms.date: 10/12/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

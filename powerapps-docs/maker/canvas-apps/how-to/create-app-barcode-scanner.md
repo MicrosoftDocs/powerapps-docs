@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app with the barcode reader control (contains video)
+title: Create a canvas app with the barcode reader control
 description: Learn how to make a canvas app that uses the barcode reader control.
 author: joel-lindstrom
 ms.topic: article
@@ -55,7 +55,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **OnScan** property of the Barcode scanner control to this expression by typing or pasting it in the formula bar.
 
-    ```powerapps-dot
+    ```power-fx
     Collect(
         colScannedItems,
         {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
@@ -80,7 +80,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **Items** property of the gallery control to this expression by typing or pasting it in the formula bar.
 
-    ```powerapps-dot
+    ```power-fx
     colScannedItems
     ```
 
@@ -92,7 +92,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Set the **Text** property of **Title2** to the following expression.
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.ScannedItem
     ```
 
@@ -100,7 +100,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
 1. Select **Subtitle2** label, and set it's **Text** property to this expression.
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.ScannedTime
     ```
 

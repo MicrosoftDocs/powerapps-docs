@@ -2,7 +2,7 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 11/07/2023
+ms.date: 05/28/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -56,11 +56,14 @@ Use **Date only** behavior when information about the time of the day and the ti
 
 **Time zone independent** behavior with **Date only** format is practically the same as **Date only** behavior. Use the former if you aren't sure whether you need the time portion in the future.
 
+> [!IMPORTANT]
+> Avoid **Date only** format with **User local** behavior. Users in different time zones might see a different date, which is not intended in most scenarios. When a user sets a date in a model-driven app, the time portion will automatically be set to midnight of their time zone. This might cause the date to appear a day earlier or later for other users.
+
 ## Examples
 
 ### Display values
 
-Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query-data-web-api.md#formatted-values):
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query/select-columns.md#formatted-values):
 
 | Behavior | Format | Display value |
 | -------- | ------ | ------------- |
@@ -103,7 +106,7 @@ Similarly, different clients have different ways to handle repeated time ranges.
 
 ### Get raw values with Web API
 
-Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in all time zones get these with a [Web API request for the value](../../developer/data-platform/webapi/query-data-web-api.md#select-columns):
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in all time zones get these with a [Web API request for the value](../../developer/data-platform/webapi/query/select-columns.md):
 
 | Behavior | Format | Raw value |
 | -------- | ------ | --------- |

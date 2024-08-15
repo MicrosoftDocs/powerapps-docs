@@ -1,5 +1,5 @@
 ---
-title: Customize a Microsoft Lists or SharePoint form by using Power Apps (contains video)
+title: Customize a Microsoft Lists or SharePoint form by using Power Apps
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a list.
 author: wimcoor
 ms.topic: conceptual
@@ -260,6 +260,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 - [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
 - [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
 - [Understand Power Platform environments](/power-platform/admin/environments-overview)
-- [SharePoint custom forms with Power Apps](https://go.microsoft.com/fwlink/?linkid=2263521)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 

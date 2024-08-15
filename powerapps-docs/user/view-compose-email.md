@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/09/2023
+ms.date: 05/10/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -69,8 +69,6 @@ For more information, see [Insert an email template](insert-email-template.md).
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
 
-
-
 ## Reply to an email
 The way you can reply to an email depends on where you are in your app. 
 
@@ -78,6 +76,20 @@ When enabled by your system administrator, the email option displays in the top 
 
 >[!Note]
 > The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you might notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance.
+
+## Enhanced recipient handling 
+
+If your administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form, users can perform the following actions:
+
+ - Drag and drop recipient names across **To**, **CC**, and **BCC** fields.
+ - View the recipient's email address along with their names.
+ - View the recipients' presence status and out-of-office messages.
+ - Resolve an unresolved email address faster. In the email editor, if there's an [unresolved email address](unresolved-email-recipient.md), the application displays a banner message and the **Review** option to map the email. Select the button to view and map an unresolved email address to an existing record. 
+   >[!Note]
+   > You can't resolve an unresolved email address for a read-only email.
+
+
+   :::image type="content" source="media/recepient-handling.png" alt-text="Screenshot of runtime experience.":::
 
 ### Access email
 When accessing email, there are a couple of options you can use. 

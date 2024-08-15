@@ -2,11 +2,11 @@
 title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.topic: article
 ms.date: 12/12/2023
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 search.audienceType:
   - developer
 contributors:

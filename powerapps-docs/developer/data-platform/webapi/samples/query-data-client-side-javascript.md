@@ -2,8 +2,8 @@
 title: "Web API Query Data Sample (Client-side JavaScript) | Microsoft Docs"
 description: "Learn how to perform basic query requests using the Microsoft Dataverse Web API and client-side JavaScript."
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -762,7 +762,7 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 ### See also
 
 [Use the Dataverse Web API](../overview.md)<br />
-[Query Data using the Web API](../query-data-web-api.md)<br />
+[Query Data using the Web API](../query/overview.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Query Data Sample](../web-api-query-data-sample.md)<br />
 [Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />

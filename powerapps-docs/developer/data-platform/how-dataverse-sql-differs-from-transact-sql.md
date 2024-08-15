@@ -92,7 +92,6 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - PIVOT and UNPIVOT
   - [GROUP BY](#select-group-by)/Having
 - General
-  - IF THEN ELSE
   - DECLARE variable
 
 ### [Not supported](#tab/not-supported)
@@ -111,6 +110,7 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - Without unique column name and alias
 - General
   - WHILE LOOP
+  - IF THEN ELSE
 
 ---
 

@@ -6,12 +6,13 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to
-ms.date: 10/26/2022
+ms.date: 08/08/2024
 ms.custom: template-how-to
 ---
 # Use the Power BI report control to add a report (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+> [!IMPORTANT]
+> The Power BI report control is retired on July 31, 2024. We recommend removing all Power BI report controls from your model-driven apps and use Power BI system dashboard embedding instead. More information: [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
 
 Add a Power BI report to a model-driven app form using the Power BI report control. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
 

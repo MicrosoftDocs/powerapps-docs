@@ -144,7 +144,7 @@ You can select which part of the date to use when grouping by date. Set [attribu
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
-By default date groupings use the UTC time. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to specify that the user's time zone be used instead.
+By default date groupings use the user's time zone. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to `"false"` to specify that the UTC time zone be used instead.
 
 The following query groups account records showing number of employees by when the records were created:
 
@@ -231,16 +231,7 @@ The following example returns the number of related accounts in a column named `
 </fetch>
 ```
 
-## Limitations
-
-Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query returns more than 50,000 records, you get the following error:
-
-> Number: `-2147164125`  
-> Code: `8004E023`  
-> Message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
-> Client error message: The maximum record limit is exceeded. Reduce the number of records.
-
-To avoid this error, add appropriate filters to your query to make sure it doesn't evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.
+[!INCLUDE [cc-query-aggregation-limitations](../includes/cc-query-aggregation-limitations.md)]
 
 ### Per query limit
 

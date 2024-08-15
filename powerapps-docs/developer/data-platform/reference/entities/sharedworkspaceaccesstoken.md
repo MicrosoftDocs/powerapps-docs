@@ -1,7 +1,7 @@
 ---
 title: "sharedworkspaceaccesstoken table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspaceaccesstoken table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -26,15 +26,15 @@ Contains information about the shared workspace access tokens.
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /sharedworkspaceaccesstokens<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /sharedworkspaceaccesstokens(*sharedworkspaceaccesstokenid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET /sharedworkspaceaccesstokens(*sharedworkspaceaccesstokenid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET /sharedworkspaceaccesstokens<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH /sharedworkspaceaccesstokens(*sharedworkspaceaccesstokenid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple|<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [sharedworkspaceaccesstokenId](#BKMK_sharedworkspaceaccesstokenId)
 - [SharedWorkspaceId](#BKMK_SharedWorkspaceId)
 - [SystemUserId](#BKMK_SystemUserId)
+- [TenantId](#BKMK_TenantId)
 - [TokenId](#BKMK_TokenId)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
@@ -97,7 +98,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|objectpartitionid|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -159,7 +160,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|sharedworkspaceid|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -175,8 +176,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|systemuserid|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|ApplicationRequired|
+|Type|String|
+
+
+### <a name="BKMK_TenantId"></a> TenantId
+
+|Property|Value|
+|--------|-----|
+|Description|The tenant where the workspace resides|
+|DisplayName|Tenant ID|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|tenantid|
+|MaxLength|256|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -191,7 +208,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|tokenid|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 

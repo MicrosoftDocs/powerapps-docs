@@ -2,8 +2,8 @@
 title: "Sample: CreateMultiple and UpdateMultiple plug-ins (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to write plug-ins for the CreateMultiple and UpdateMultiple messages"
 ms.date: 06/01/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

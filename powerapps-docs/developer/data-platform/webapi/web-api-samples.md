@@ -2,8 +2,8 @@
 title: "Web API data operation samples"
 description: "See C#, PowerShell, and JavaScript sample code that demonstrates how to use the Microsoft Dataverse Web API for basic table row operations, data query, conditional operations, and functions and actions."
 ms.date: 01/20/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -38,7 +38,7 @@ The following table classifies the samples by demonstrated operation groups.
 |Group|Description|  
 |-----------|-----------------|  
 |[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|How to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations.<p/> More information: <br/>-   [Create a table row using the Web API](create-entity-web-api.md)<br />-   [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />-   [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />-   [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
-|[Web API Query Data Sample](web-api-query-data-sample.md)|How to perform basic query requests.<p/> More information: <br /> -   [Query Data using the Web API](query-data-web-api.md)<br />-   [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)|  
+|[Web API Query Data Sample](web-api-query-data-sample.md)|How to perform basic query requests.<p/> More information: <br /> -   [Query Data using the Web API](query/overview.md)<br />-   [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)|  
 |[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|How to perform certain categories of operations that are conditionally based upon the version of the table row contained on the  server and/or currently maintained by the client. <p/>More information:<br/>-   [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)|  
 |[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|How to use bound/unbound functions and actions, including custom actions.<p/>More information: <br/>-   [Use Web API functions](use-web-api-functions.md)<br />-   [Use Web API actions](use-web-api-actions.md)|
 |[Web API table schema operations sample](web-api-metadata-operations-sample.md)|How to create, update, and delete table, column, and relationship definitions. More information: [Use the Web API with table definitions](use-web-api-metadata.md)|

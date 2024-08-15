@@ -6,7 +6,7 @@ author: emcoope-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 02/03/2019
+ms.date: 06/06/2024
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -29,6 +29,8 @@ The following new screens are available:
 - [Welcome screen](add-screen-context-variables.md#welcome-screen)
 - [Header and gallery](add-screen-context-variables.md#header-and-gallery-screen)
 - [Approval request](add-screen-context-variables.md#approval-request-screen)
+- [Header and form](add-screen-context-variables.md#header-and-form)
+- [Header and table](add-screen-context-variables.md#header-and-table)
 
 
 ## Add a new screen
@@ -130,6 +132,46 @@ The **Approval request** screen contains the following controls:
    - **Current**: Indicates whether this is the current stage of the approval request.
     
         You can also add a Power Automate approval workflow in the button to notify the approver. For more information, see [Create and test an approval workflow with Power Automate](/power-automate/modern-approvals).
+
+## Header and form   
+
+The **Header and form** screen contains the header, form, and two buttons to submit and cancel form submission. This screen is great for using a screen-wide form.  
+
+The **Header and form** screen contains the following controls:
+
+- Header container 
+    - Header 
+- Main container 
+    - Form container
+        - Form  
+    - Button container
+        - Cancel button
+        - Submit button
+      
+#### Add and customize Header and form screen
+
+1. In Power Apps Studio, select **Add Screen** > **Header and form**.
+1. In the tree view, select **Form** and connect it to a data source.
+1. [Optional] To ensure the best screen responsiveness, choose each data card on the form and set the **Width Fit** property to **On** in the **Properties** pane.
+ 
+
+
+## Header and table 
+
+The **Header and table** screen contains two controls, a header control and a table control. This template is great to showcase a detailed data table on a screen. 
+
+The **Header and table** screen contains the following controls:
+
+- Header container 
+    - Header 
+- Main container 
+    - Table
+
+      
+#### Add and customize Header and table screen
+
+1. In Power Apps Studio, select **Add Screen** > **Header and table**.
+1. In the tree view, select **Table** and connect it to a data source. 
 
 ## Reorder screens
 

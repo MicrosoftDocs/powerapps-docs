@@ -1,9 +1,9 @@
 ---
-title: "Sample: Dump choices/picklist information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to dump choices information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Dump choices/picklist information to a file (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to dump choices information to a file." 
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

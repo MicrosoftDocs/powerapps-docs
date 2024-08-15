@@ -1,12 +1,12 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 06/28/2023
+ms.date: 07/01/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: divkamath
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -325,22 +325,19 @@ Alternatively, you can use the `partitionid` value using alternate key style.
 - [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#using-the-alternate-key)
 - [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
 
-## Bypass custom synchronous logic
+## Bypass custom Dataverse logic
 
-Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. When performing bulk operations, the additional time for these individual operations can increase the time required. Use the `BypassCustomPluginExecution` parameter when you want to improve performance while performing bulk data operations.
+Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. When performing bulk operations, the additional time for these individual operations can increase the time required. Use the `BypassBusinessLogicExecution` parameter when you want to improve performance while performing bulk data operations.
 
 > [!IMPORTANT]
-> The calling user must have the `prvBypassCustomPlugins` privilege.
+> The calling user must have the `prvBypassCustomBusinessLogic` privilege.
 
-### [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
-There are two ways to use this parameter with the SDK for .NET.
-#### Set the value as an optional parameter
-
-The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest).
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when creating a new account record using the SDK for .NET [CreateRequest class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest).
 
 ```csharp
-static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
+static void DemonstrateBypassBusinessLogicExecution(IOrganizationService service)
 {
     Entity account = new("account");
     account["name"] = "Sample Account";
@@ -349,35 +346,14 @@ static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
     {
         Target = account
     };
-    request.Parameters.Add("BypassCustomPluginExecution", true);
+    request.Parameters.Add("BypassBusinessLogicExecution", "CustomSync,CustomAsync");
     service.Execute(request);
 }
 ```
 
+#### [Web API](#tab/webapi)
 
-#### Set the CrmServiceClient.BypassPluginExecution property
-
-The following example sets the [CrmServiceClient.BypassPluginExecution Property](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.BypassPluginExecution) when creating a new account record:
-
-```csharp
-var service = new CrmServiceClient(connectionString);  
-
-service.BypassPluginExecution = true;
-
-var account = new Entity("account");
-account["name"] = "Sample Account";
-
-service.Create(account);
-```
-
-Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
-
-> [!NOTE]
-> This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
-
-### [Web API](#tab/webapi)
-
-**Request:**
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-entity-web-api.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -386,18 +362,17 @@ OData-Version: 4.0
 OData-MaxVersion: 4.0
 Content-Type: application/json
 Accept: application/json
-MSCRM.BypassCustomPluginExecution: true
+MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 {
-    "name":"Sample Account"
+  "name":"Sample Account"
 }
-```
 
-The response shouldn't be affected by sending the `MSCRM.BypassCustomPluginExecution` request header.
+```
 
 ---
 
-More information: [Bypass Synchronous Logic](bypass-custom-business-logic.md#bypass-synchronous-logic)
+[Learn more about ways to bypass custom Dataverse logic](bypass-custom-business-logic.md)
 
 ## Bypass Power Automate Flows
 
@@ -445,7 +420,7 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ---
 
-More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#bypass-power-automate-flows)
+More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
 ### See also
 

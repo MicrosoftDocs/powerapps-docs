@@ -4,9 +4,9 @@ description: "When loading data into Dataverse from an external system, you may 
 ms.date: 05/30/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType:
   - developer
 contributors:

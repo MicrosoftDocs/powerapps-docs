@@ -68,7 +68,7 @@ Use these values with the `options` attribute to specify SQL Server hints to app
 options='OptimizeForUnknown,DisableRowGoal,Recompile'
 ```
 
-[!INCLUDE [fetch-options-table](includes/fetch-options-table.md)]
+[!INCLUDE [cc-query-options](../../includes/cc-query-options.md)]
 
 
 

@@ -4,8 +4,8 @@ description: Learn how to use the Web API to send a POST request to create a tab
 ms.date: 01/08/2024
 ms.service: powerapps
 ms.topic: how-to
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -74,7 +74,7 @@ You can compose your `POST` request so that data from the created record is retu
 
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
-Nested `$expand` on collection-valued navigation properties will not return data when used with the `return=representation` preference. More information: [Nested $expand on collection-valued navigation properties](query-data-web-api.md#nested-expand-on-collection-valued-navigation-properties)
+Nested `$expand` on collection-valued navigation properties will not return data when used with the `return=representation` preference. More information: [Nested $expand on collection-valued navigation properties](query/join-tables.md#nested-expand-on-collection-valued-navigation-properties)
 
 When an entity is created in this way, the `OData-EntityId` header containing the URI to the created record isn't returned.
 
@@ -365,7 +365,7 @@ More information: [Create a record in an elastic table](../use-elastic-tables.md
 [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom)   
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)   
-[Query data using the Web API](query-data-web-api.md)   
+[Query data using the Web API](query/overview.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   

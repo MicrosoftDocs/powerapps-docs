@@ -53,7 +53,7 @@ When you map table columns for a 1:N table relationship certain items of data fr
 > 
 > These mappings aren't applied for new related table forms that are opened when an app does not have an active network connection to Dataverse, except for parent lookup fields. 
 > 
-> Field mapping between tables isn’t supported when you’re using an app in offline mode. For more information, see the limitations listed in [Mobile offline capabilities and limitations](../../mobile/offline-capabilities.md#limitations).
+> Field mapping between tables isn’t supported when you’re using an app in offline mode. For more information, see the limitations listed in [Mobile offline limitations for model-driven apps](../../mobile/offline-limitations.md).
 
 ## Open solution explorer
 

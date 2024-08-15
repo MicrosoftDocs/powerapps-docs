@@ -1,7 +1,7 @@
 ---
 title: "msdyn_richtextfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_richtextfile table/entity."
-ms.date: 02/22/2024
+ms.date: 06/04/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,12 +28,13 @@ Image or file attached to a rich text field
 |Assign|PATCH /msdyn_richtextfiles(*msdyn_richtextfileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_richtextfiles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_richtextfiles(*msdyn_richtextfileid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Restore||Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = Restore|
 |Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Retrieve|GET /msdyn_richtextfiles(*msdyn_richtextfileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /msdyn_richtextfiles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -43,7 +44,7 @@ Image or file attached to a rich text field
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_richtextfiles(*msdyn_richtextfileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_richtextfiles(*msdyn_richtextfileid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -69,6 +70,7 @@ Image or file attached to a rich text field
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_imageblob](#BKMK_msdyn_imageblob)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_parententity_fieldname](#BKMK_msdyn_parententity_fieldname)
 - [msdyn_parententityname](#BKMK_msdyn_parententityname)
@@ -98,6 +100,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_imageblob"></a> msdyn_imageblob
+
+|Property|Value|
+|--------|-----|
+|Description|Base64 encoded image content for Rich Text Attachments|
+|DisplayName|Image Blob|
+|IsPrimaryImage|True|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_imageblob|
+|MaxHeight|144|
+|MaxWidth|144|
+|RequiredLevel|None|
+|Type|Image|
 
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
@@ -321,7 +340,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_fileblob](#BKMK_msdyn_fileblob)
 - [msdyn_fileblob_Name](#BKMK_msdyn_fileblob_Name)
-- [msdyn_imageblob](#BKMK_msdyn_imageblob)
 - [msdyn_imageblob_Timestamp](#BKMK_msdyn_imageblob_Timestamp)
 - [msdyn_imageblob_URL](#BKMK_msdyn_imageblob_URL)
 - [msdyn_imageblobId](#BKMK_msdyn_imageblobId)
@@ -599,22 +617,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
-
-
-### <a name="BKMK_msdyn_imageblob"></a> msdyn_imageblob
-
-|Property|Value|
-|--------|-----|
-|Description|Base64 encoded image content for Rich Text Attachments|
-|DisplayName|Image Blob|
-|IsPrimaryImage|True|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_imageblob|
-|MaxHeight|144|
-|MaxWidth|144|
-|RequiredLevel|None|
-|Type|Image|
 
 
 ### <a name="BKMK_msdyn_imageblob_Timestamp"></a> msdyn_imageblob_Timestamp

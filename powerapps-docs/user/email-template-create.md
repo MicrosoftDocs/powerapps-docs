@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/01/2023
+ms.date: 05/14/2024
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -25,6 +25,10 @@ You can create email templates by using one of the following options:
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
+## Prerequisites
+
+When you need to create an email template based on a table, make sure that you have the necessary permissions on the related tables, such as the Account table for the email template based on a case.
+ 
 ## Start with a blank template
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
@@ -88,6 +92,8 @@ The enhanced email template editor is displayed if the enhanced email template e
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
 - **Editor** tab: Use this tab to design and customize your email template. See: [Design and customize the email template](cs-template-options.md).
+  > [!NOTE]
+  > Across all the model-driven apps, the email template editor supports upto 1048576 characters.
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 

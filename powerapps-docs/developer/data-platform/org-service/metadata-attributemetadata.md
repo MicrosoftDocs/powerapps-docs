@@ -4,8 +4,8 @@ description: "Describes common operations on column definitions (attribute metad
 ms.date: 12/12/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 search.audienceType: 
   - developer
 contributors:

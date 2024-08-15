@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 02/07/2024
+ms.date: 03/29/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -23,7 +23,7 @@ contributors:
 
 Model-driven apps have a modern, refreshed look when the **Try the new look** feature is [turned on by end users](modern-fluent-design.md#turn-on-the-modern-refreshed-look). The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look feature that's now on by default will roll out on a slower schedule than other features. More information: [Managing on by default general availability rollout](modern-fluent-design.md#managing-on-by-default-general-availability-rollout).
+The modern, refreshed look feature that's now on by default will roll out on a slower schedule than other features. More information: [Managing on by default general availability rollout](modern-fluent-design.md#managing-the-on-by-default-general-availability-rollout).
 
 ## What's included with the modern, refreshed look
 
@@ -65,11 +65,11 @@ The following example shows a form page with the modern, refreshed look.
 
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. For example, the recommended icons are removed for simplicity. Input and error message styling is also refreshed based on Fluent design.
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
 The following example shows a set of fields with the modern, refreshed look.
 
-:::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
+:::image type="content" source="media/ModernFields2024April.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
 
@@ -152,9 +152,14 @@ Admins can disable the **New look** setting across all apps in an organization b
     > [!NOTE]
     > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
 
-### Managing on by default general availability rollout
+### Managing the on by default general availability rollout
 
-Starting with 2024 Release Wave 1, the modern, refreshed look for model-driven apps is on by default. Once generally available, end users will see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. The rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+The modern, refreshed look for model-driven apps is on by default in the following release channels:
+ 
+- Monthly channel in April 2024
+- Semi-annual channel as of 2024 Release Wave 1
+ 
+Once generally available, end users can see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For the semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 

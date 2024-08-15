@@ -1,12 +1,12 @@
 ---
-title: "Use environment variables in solutions | MicrosoftDocs"
+title: "Use environment variables in Power Platform solutions | MicrosoftDocs"
 description: "Use environment variables to migrate application configuration data in solutions."
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 01/31/2024
+ms.date: 04/11/2024
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -14,8 +14,9 @@ contributors:
   - shmcarth
   - asheehi1
   - lancedMicrosoft
+  - russrimm
 ---
-# Environment variables overview
+# Environment variables for Power Platform overview
 
 Environment variables enable the basic application lifecycle management (ALM) scenario of moving an application between Power Platform environments. In this scenario, the application stays exactly the same except for a few key external application references (such as tables, connections, and keys) that are different between the source environment and the destination environment. The application requires the structure of the tables or connections to be exactly the same between the source and the destination environments, with some differences. Environment variables allow you to specify which of these different external references should be updated as the application is moved across environments.
 
@@ -30,11 +31,11 @@ Benefits of using environment variables:
 - Package and transport your customization and configuration together and manage them in a single location.
 - Package and transport secrets, such as credentials used by different components, separately from the components that use them.
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
-- Additionally, if you need to retire a data source in production environments, you can update the environment variable values with information for the new data source. The apps and flows don't require modification and will start using the new data source.
+- Additionally, if you need to retire a data source in production environments, you can update the environment variable values with information for the new data source. The apps and flows don't require modification and start using the new data source.
 - Supported by [SolutionPackager](/power-platform/alm/solution-packager-tool) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
-- The environment variables can be unpacked and stored in source control. You might also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
+- The environment variables can be unpacked and stored in source control. You might also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution is imported to.
 
-## How do they work?
+## How do environment variables work?
 
 Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](/powerapps/developer/data-platform/work-with-data). They can also be imported to an environment via solutions. Once environment variables are present in an environment, they can be used as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, and many other places such as adding a Power BI dashboard to a model-driven app. When these types of objects use environment variables, the values are then derived from the environment variables, and can be changed when solutions are imported to other environments. 
 
@@ -96,6 +97,7 @@ If an environment variable is used in a flow and the display name of the environ
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
 - To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
+- Environment variables are limited to a maximum of 2,000 characters.
 
 ## Frequently asked questions
 
@@ -109,7 +111,7 @@ Either through selecting **Show dependencies** in the solution interface, while 
 
 ### Are data source environment variables the same as connections?
 
-No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection doesn't store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection and some additional parameters. 
+No. Although they're related a connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection doesn't store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection and some additional parameters. 
 
 ### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
 
@@ -135,7 +137,7 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 120 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
+No. However, the max size of a solution is 95 MB. More information: [Create a solution](/power-apps/maker/data-platform/create-solution)
 
 ### Can environment variable display names and descriptions be localized?
 
@@ -145,7 +147,7 @@ Yes.
 
 Yes if your configuration data isn't relational. Environment variables should be used for key: value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
-### Why is a different connection value than the one I want getting assigned automatically when importing?
+### Why is a different connection value than the one I want assigned automatically when importing?
 
 In some cases where there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections available for the environment variable. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
 

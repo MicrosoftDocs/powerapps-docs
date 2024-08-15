@@ -321,7 +321,7 @@ static void ShowNumberContactsDeletedByUserQE(
 
 Learn more about:
 
-- [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
@@ -416,7 +416,7 @@ These messages provide more details that depend on the type of action. The detai
 >
 > - The Web API types listed earlier that inherit from [AuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetail) don't return the `AuditRecord` navigation property value they should inherit from `AuditDetail`. The SDK for .NET classes returns this data.
 >
-> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellips;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
+> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellip;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
 
 ### RetrieveAuditDetails message
 
@@ -424,7 +424,7 @@ Use this message to retrieve the audit details for a single audit record.
 
 # [Web API](#tab/webapi)
 
-<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query-data-web-api.md#formatted-values).
+<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query/select-columns.md#formatted-values).
 
 The following example shows the [AttributeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AttributeAuditDetail) returned when the `parentaccountid` is set on an `account` record.
 

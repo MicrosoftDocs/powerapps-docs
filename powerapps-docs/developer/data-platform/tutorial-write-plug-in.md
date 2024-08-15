@@ -4,9 +4,9 @@ description: "Learn how to write plug-in code and then register the compiled ass
 ms.date: 03/20/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -65,7 +65,7 @@ Another alternative is to use the Power Platform Tools extension as described he
 
     > [!NOTE]
     > Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
-    >  
+    > 
     > Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present on the server and compatible with your code.
 
 1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
@@ -266,7 +266,7 @@ To register a plug-in, you'll need the Plug-in Registration tool.
     ![View the registered step.](media/tutorial-write-plug-in-view-registered-step.png)
 
 > [!NOTE]
-> At this point the assembly and steps are part of the system **Default Solution**. When creating a production plug-in, you would add them to the unmanaged solution that you will distribute. These steps are not included in this tutorial. For more information, see [Add your assembly to a solution](register-plug-in.md#add-your-assembly-to-a-solution) and [Add step to solution](register-plug-in.md#add-step-to-solution) .
+> At this point the assembly and steps are part of the system **Default Solution**. When creating a production plug-in, you would add them to the unmanaged solution that you will distribute. These steps are not included in this tutorial. For more information, see [Add your assembly to a solution](register-plug-in.md#add-your-assembly-to-a-solution) and [Add step to solution](register-plug-in.md#add-a-step-to-a-solution) .
 
 ## Test plug-in
 
@@ -313,7 +313,7 @@ You can use the following Web API query to return failed system jobs for asynchr
 GET <your org uri>/api/data/v9.0/asyncoperations?$filter=operationtype eq 1 and statuscode eq 31&$select=name,message
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 Or use the following FetchXml:
 

@@ -4,9 +4,9 @@ description: "Learn about how to create, retrieve, update and delete image colum
 ms.date: 01/17/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 search.audienceType: 
   - developer
 contributors:

@@ -1,7 +1,7 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 01/25/2024
+ms.date: 08/08/2024
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
@@ -11,9 +11,6 @@ search.audienceType:
   - maker
 ---
 # Embed a Power BI report in a model-driven app main form
-
-> [!IMPORTANT]
-> There's a better way to add a Power BI report to a model-driven app form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
 
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your main forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
@@ -159,6 +156,7 @@ Before you import the solution into the target environment, make sure the unmodi
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 - Embedding a Power BI tile on a form is only supported without contextual filtering.
 - Embedding a Power BI report doesn't support cross-tenant references. For example, trying to embed a Power BI report belonging to the Contoso tenant in a model-driven app belonging to the Fabrikam tenant isn't currently supported, even if the report being embedded has been shared with users in the Fabrikam tenant via Power BI.
+- Pinned reports as part of Power BI dashboards aren't meant to be interactive. If you want to have interactive Power BI reports, embed them directly instead of pinning them to a dashboard.
 
 ### Common issues
 
