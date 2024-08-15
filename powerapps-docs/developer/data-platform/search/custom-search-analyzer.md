@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 04/07/2024
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -59,7 +59,7 @@ To apply a different analyzer for a Dataverse table column, there needs to be a 
 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
-For primary name attribute the collumn is shared across multiple tables and can not be used as a collumn in the definition for a custom analyzer.
+For primary name attribute the column is shared across multiple tables and can't be used as a column in the definition for a custom analyzer.
 
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
