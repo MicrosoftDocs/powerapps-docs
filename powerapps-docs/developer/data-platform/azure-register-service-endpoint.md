@@ -1,121 +1,55 @@
 ---
-title: #Required; "<verb> * <noun>"
-description: #Required; Keep the description within 100- and 165-characters including spaces.
-author: #Required; your GitHub user alias, with correct capitalization
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: how-to #Required; leave this attribute/value as-is
-ms.date: #Required; mm/dd/yyyy format
-
-#CustomerIntent: As a < type of user >, I want < what? > so that < why? >.
+title: Register a Dataverse service endpoint
+description: Learn how to define a connection to an external system by registering a Dataverse service endpoint. In this scenario, we will establish a hybrid relay connection to an Azure listener app using the ServiceBus.
+author: phecke
+ms.author: pehecke
+ms.subservice: dataverse-developer
+ms.topic: how-to
+ms.date: 08/14/2024
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
+# Register a Dataverse service endpoint
 
-This template provides the basic structure of a How-to article pattern. See the
-[instructions - How-to](../level4/article-how-to-guide.md) in the pattern library.
+ In this article, you will use the Plug-in Registration tool (PRT) to register a Dataverse service endpoint. You will configure the endpoint to use the default system plug-in, a REST contract, and an Azure hybrid relay connection.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
-
-How-to is a procedure-based article pattern that show the user how to complete a task in their own environment. A task is a work activity that has a definite beginning and ending, is observable, consist of two or more definite steps, and leads to a product, service, or decision.
-
--->
-
-<!-- 1. H1 -----------------------------------------------------------------------------
-
-Required: Use a "<verb> * <noun>" format for your H1. Pick an H1 that clearly conveys the task the user will complete.
-
-For example: "Migrate data from regular tables to ledger tables" or "Create a new Azure SQL Database".
-
-* Include only a single H1 in the article.
-* Don't start with a gerund.
-* Don't include "Tutorial" in the H1.
-
--->
-
-# "<verb> * <noun>"
-
-TODO: Add your heading
-
-<!-- 2. Introductory paragraph ----------------------------------------------------------
-
-Required: Lead with a light intro that describes, in customer-friendly language, what the customer will do. Answer the fundamental “why would I want to do this?” question. Keep it short.
-
-Readers should have a clear idea of what they will do in this article after reading the introduction.
-
-* Introduction immediately follows the H1 text.
-* Introduction section should be between 1-3 paragraphs.
-* Don't use a bulleted list of article H2 sections.
-
-Example: In this article, you will migrate your user databases from IBM Db2 to SQL Server by using SQL Server Migration Assistant (SSMA) for Db2.
-
--->
-
-TODO: Add your introductory paragraph
-
-<!---Avoid notes, tips, and important boxes. Readers tend to skip over them. Better to put that info directly into the article text.
-
--->
-
-<!-- 3. Prerequisites --------------------------------------------------------------------
-
-Required: Make Prerequisites the first H2 after the H1. 
-
-* Provide a bulleted list of items that the user needs.
-* Omit any preliminary text to the list.
-* If there aren't any prerequisites, list "None" in plain text, not as a bulleted item.
-
--->
+A service endpoint configures a Dataverse connection to an external system. In this case, we are configuring the service endpoint to access a Azure hybrid relay connection using the ServiceBus. This enables Dataverse to post the execution context of its main operation on the service bus to be read by an active Azure listener app.
 
 ## Prerequisites
 
-TODO: List the prerequisites
+- Plug-in Registration tool installed on your development computer.
+- Azure account with a license to create Service Bus entities.
+- SAS configured Service Bus namespace.
+- SAS configured Service Bus hybrid relay connection with Send and Listen policy permissions.
 
-<!-- 4. Task H2s ------------------------------------------------------------------------------
+Detailed information on configuring the ServiceBus namespace and connection can be found in this article: [Configure an Azure hybrid relay connection](azure-configure-hybrid-relay.md).
 
-Required: Multiple procedures should be organized in H2 level sections. A section contains a major grouping of steps that help users complete a task. Each section is represented as an H2 in the article.
+To install the PRT, see [Dataverse development tools](download-tools-nuget.md).
 
-For portal-based procedures, minimize bullets and numbering.
+## Obtain Azure namespace and connection information
 
-* Each H2 should be a major step in the task.
-* Phrase each H2 title as "<verb> * <noun>" to describe what they'll do in the step.
-* Don't start with a gerund.
-* Don't number the H2s.
-* Begin each H2 with a brief explanation for context.
-* Provide a ordered list of procedural steps.
-* Provide a code block, diagram, or screenshot if appropriate
-* An image, code block, or other graphical element comes after numbered step it illustrates.
-* If necessary, optional groups of steps can be added into a section.
-* If necessary, alternative groups of steps can be added into a section.
+We will now record the Azure connection information needed to create a service endpoint.
 
--->
+1. Logon to the Azure [portal](https://portal.azure.com).
+1. Choose **ServiceBus** from the Azure services group or in the left navigation pane.
+1. On the **Home** page, under the **Resources** group, select the relay that you configured. In this example, we named the relay "contoso-relay".
+1. Select **Settings** > **Shared access policies**, and then choose **RootManagedSharedAccessKey**.
+1. Record the values of the **Primary Key** and the **Primary Connection String** for the SAS policy named RootManageSharedAccessKey.
+1. On the relay page, choose **Overview**, then near the page bottom below **Hybrid Connections** select the hybrid connection you configured.
+1. On the **Hybrid Connection** page, record the **Hybrid Connection Url** value.
 
-## "\<verb\> * \<noun\>"
+You can log out of the portal now.
 
-TODO: Add introduction sentence(s)
-[Include a sentence or two to explain only what is needed to complete the procedure.]
-TODO: Add ordered list of procedure steps
+## Launch the Plug-in Registration tool
 
-1. Step 1
-1. Step 2
-1. Step 3
+Launch the PRT using the Power Platform CLI.
 
-## "\<verb\> * \<noun\>"
+1. In Visual Studio Code or the standalone CLI, execute the following command to start the PRT.
 
-TODO: Add introduction sentence(s)
-[Include a sentence or two to explain only what is needed to complete the procedure.]
-TODO: Add ordered list of procedure steps
+`pac tool prt`
 
-1. Step 1
-1. Step 2
-1. Step 3
+## Register a service endpoint
 
-## "\<verb\> * \<noun\>"
-
-TODO: Add introduction sentence(s)
-[Include a sentence or two to explain only what is needed to complete the procedure.]
-TODO: Add ordered list of procedure steps
+Now we can create a service endpoint using the PRT.
 
 1. Step 1
 1. Step 2
@@ -143,7 +77,3 @@ TODO: Add your next step link(s)
 TODO: Add your next step link(s)
 
 - [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
