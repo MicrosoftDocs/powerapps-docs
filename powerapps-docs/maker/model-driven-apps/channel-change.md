@@ -76,7 +76,7 @@ Model-driven apps with the app release channel set to a value other than **Auto*
 
 ### Override apps when no explicit app release channel
 
-Model-driven apps in Dynamics 365 environment which have **Auto** for app release channel can either
+Model-driven apps in Dynamics 365 environment that have **Auto** for app release channel can either
 
 1. Change each environment release change to **Semi-annual**
 2. Change each app with to **Semi-annual**
@@ -151,7 +151,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
    1. Select **Save**.
-1. Republish any apps where the app setting was change at an app level for the change to take effect.
+1. Republish any apps where the app setting was changed at an app level for the change to take effect.
 
 ### Set the default for new apps to monthly channel
 
@@ -208,7 +208,7 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version reaches the environment.
+Validation should be done for each monthly channel release before it is automatically enabled for users. Users can test when the validation build version reaches the environment.
 
 The easiest way to validate is by appending ```&channelrelease=next``` that automatically sets the release channel to the next upcoming monthly release.
 
