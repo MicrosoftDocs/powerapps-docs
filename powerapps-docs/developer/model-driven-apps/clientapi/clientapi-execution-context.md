@@ -76,7 +76,7 @@ function onLoad(executionContext) {
         setTimeout(function () {
             // Using formContext or executionContext here is not supported
             // because onLoad has already completed when this delayed function executes.
-            onLoad(executionContext);
+            var name = formContext.getAttribute("name").getValue();
         }, 100);
     } else {
         formContext.getAttribute("name").setValue("abc");
@@ -88,14 +88,14 @@ function onLoad(executionContext) {
 
 ```JavaScript
 function onLoad(executionContext) {
-    window.__myContext = executionContext;
+    window.__myExecutionContext = executionContext;
 }
 
 // This function is called any time later.
 function customFunction() {
     // Using formContext or executionContext here is not supported
-    // because onLoad has already completed when this function executes.
-    var formContext = window.__myContext.getFormContext();
+    // because onLoad has already completed when customFunction executes.
+    var formContext = window.__myExecutionContext.getFormContext();
     formContext.getAttribute("name").setValue("abc");
 }
 ```
