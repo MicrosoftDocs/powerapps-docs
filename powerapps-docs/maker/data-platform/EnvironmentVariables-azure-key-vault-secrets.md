@@ -132,8 +132,7 @@ Follow these steps:
 
 1. Select the **Key Vault Secrets User** role, and then select **Next**.
 1. Select **Select Members**, search for *Power Virtual Agents Service*, select it, and then choose **Select**.
-1. Select **Review + assign** on the bottom of the screen.
-1. Review the information and select **Review + assign** again if all is correct.
+1. Select **Review + assign** on the bottom of the screen. Review the information and select **Review + assign** again if all is correct.
 
 ### Add a tag to the secret in Azure Key Vault
 
@@ -145,18 +144,15 @@ By completing the previous steps in this section, Copilot Studio now has access 
 1. Select the **Insert variable {x}** option in the **Send a message** node.
 1. Select the **Environment** tab. Select the environment variable secret you created in the [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret) step.
 1. Select **Save** to save your topic.
-1. In the test pane, test your topic by using one of the start phrases of the topic where you just added the **Send a message** node with the environment variable secret.
-1. You should run into an error that looks like this:
+1. In the test pane, test your topic by using one of the start phrases of the topic where you just added the **Send a message** node with the environment variable secret. You should run into an error that looks like this:
 
    :::image type="content" source="media/env-var-secret8.png" alt-text="Error when you don't add a tag to the secret.":::
 
    This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
 
-1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**.
-1. Select the secret you want to make available in Copilot Studio by selecting the name.
+1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
 1. Select the version of the secret.
-1. Select **0 tags** next to **Tags**.
-1. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. When done, select **OK**
+1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. When done, select **OK**
 1. Select **Apply** to apply the tag to the secret.
 1. Go back to Copilot Studio. Select **Refresh** in the **Test your copilot** pane.
 1. In the test pane, test your topic again by using one of the start phrases of the topic.
