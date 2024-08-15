@@ -1,6 +1,6 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
-description: "Learn about the model-driven application client api execution context"
+description: "Learn about the model-driven application client API execution context"
 author: adrianorth
 ms.author: aorth
 ms.date: 08/15/2024
@@ -16,7 +16,7 @@ contributors:
 ---
 # Client API execution context
 
-The execution context defines the event context in which your code executes. The execution context is passed when an event occurs on a form or grid, which you can use it in your event handler to perform various tasks such as determine [formContext](clientapi-form-context.md) or [gridContext](clientapi-grid-context.md), or manage the save event. 
+The execution context defines the event context in which your code executes. The execution context is passed when an event occurs on a form or grid. Use it in your event handler to perform various tasks such as determine [formContext](clientapi-form-context.md) or [gridContext](clientapi-grid-context.md), or manage the save event.
 
 The execution context is passed in one of the following ways:
 
@@ -34,15 +34,15 @@ The execution context is passed in one of the following ways:
 
 - **Defining event handlers using code**: The execution context is automatically passed as the first parameter to functions set using code. For a list of methods that can be used to define event handlers in code, see [Add or remove functions to events using code](events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-code).
 
-The execution context object provides a number of methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
+The execution context object provides many methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
 
 ## Common mistakes in accessing contexts
 
-Contexts are passed as part of lifecycle functions. These contexts are only valid during the event. Don't keep a reference to a context after the event ends. The following are common anti-patterns because they access the context after the event handler finishes:
+The context passed to an event is only valid during the event. Don't keep a reference to a context after the event ends. The following are common anti-patterns because they access the context after the event handler finishes:
 
 ### Accessing context in a promise
 
-The context is not valid in the [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API).
+The context isn't valid in the [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API).
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -59,7 +59,7 @@ function onLoad(executionContext) {
 
 ### Accessing context after an await statement
 
-The context is not valid after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
+The context isn't valid after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
 
 ```JavaScript
 async function onLoad(executionContext) {
@@ -73,7 +73,7 @@ async function onLoad(executionContext) {
 
 ### Accessing context in a timeout function
 
-The context is not valid after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) to defer executing some code.
+The context isn't valid after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
 
 ```JavaScript
 function onLoad(executionContext) {

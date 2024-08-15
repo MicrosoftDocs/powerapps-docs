@@ -74,7 +74,7 @@ function form_onload(executionContext) {
 }
 ```
 
-Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it's reused. For performance reasons, the form may destroy and reinitialize the control during tab navigation.
+Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it's reused. For performance reasons, the form  might destroy and reinitialize the control during tab navigation.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

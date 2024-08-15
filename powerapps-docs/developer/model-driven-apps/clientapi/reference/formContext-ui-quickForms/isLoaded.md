@@ -28,7 +28,7 @@ contributors:
 
 ## Remarks
 
-The data binding for the constituent controls in a quick view control may not be complete during the main form **OnLoad** event because the quick view form that the control is bound to may not have loaded completely. As a result, using the [getAttribute](../controls/getattribute.md) or any data-related methods on a constituent control might not work. The **isLoaded** method for the quick view control helps determine the data binding status for constituent controls in a quick view control.
+The data binding for the constituent controls in a quick view control might not be complete during the main form **OnLoad** event because the quick view form that the control is bound to might not be loaded. As a result, using the [getAttribute](../controls/getattribute.md) or any data-related methods on a constituent control might not work. The **isLoaded** method for the quick view control helps determine the data binding status for constituent controls in a quick view control.
 
 ## Example
 
