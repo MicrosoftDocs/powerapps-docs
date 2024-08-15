@@ -38,9 +38,11 @@ The execution context object provides a number of methods to further work with t
 
 ## Common mistakes in accessing contexts
 
-Contexts are passed as part of lifecycle functions. These contexts are only valid during the event. Don't keep a reference to a context after the event ends. The following are common errors because they access the context after the event handler finishes:
+Contexts are passed as part of lifecycle functions. These contexts are only valid during the event. Don't keep a reference to a context after the event ends. The following are common anti-patterns because they access the context after the event handler finishes:
 
 ### Accessing context in a promise
+
+The context is not valid in the [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API).
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -57,6 +59,8 @@ function onLoad(executionContext) {
 
 ### Accessing context after an await statement
 
+The context is not valid after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
+
 ```JavaScript
 async function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
@@ -68,6 +72,8 @@ async function onLoad(executionContext) {
 ```
 
 ### Accessing context in a timeout function
+
+The context is not valid after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) to defer executing some code.
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -85,6 +91,8 @@ function onLoad(executionContext) {
 ```
 
 ### Accessing context in a stored variable
+
+Don't cache the context as a variable.
 
 ```JavaScript
 function onLoad(executionContext) {
