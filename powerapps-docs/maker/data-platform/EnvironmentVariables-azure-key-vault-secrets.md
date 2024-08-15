@@ -6,13 +6,15 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/11/2023
+ms.date: 08/15/2024
 ms.topic: overview
+ms.collection: bap-ai-copilot
 search.audienceType: 
   - maker
 contributors:
   - shmcarth
   - asheehi1
+  - Laskewitz
 ---
 
 # Use environment variables for Azure Key Vault secrets
@@ -83,7 +85,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 > [!NOTE]
 > The URI for the web service in this example is not a functioning web service.
 
-1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1.	Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
 1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
@@ -116,58 +118,54 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
 ## Use environment variable secrets in Microsoft Copilot Studio
 
-Environment variable secrets in Microsoft Copilot Studio work a bit differently. You need to run through the steps in the sections [Configure Azure Key Vault](#configure-azure-key-vault) & [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret).
+Environment variable secrets in Microsoft Copilot Studio work a bit differently. You need to run through the steps in the sections in [Configure Azure Key Vault](#configure-azure-key-vault) and [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret) to use secrets with environment variables.
 
+### Give Copilot Studio access to Azure Key Vault
 
-### Give Microsoft Copilot Studio access to Azure Key Vault
-
-Follow the following steps:
+Follow these steps:
 
 1. Go back to your Azure Key Vault.
-1. Select **Access control (IAM)** in the left navigation.
-1.	Microsoft Copilot Studio needs to get access to the Key Vault. To grant Microsoft Copilot Studio the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown.
+1. Select **Access control (IAM)** on the left navigation.
+1. Copilot Studio needs access to the key vault. To grant Copilot Studio the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown list.
 
-      :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
+   :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
 
-1. Select the **Key Vault Secrets User** role and select Next. 
-1. Select **Select Members**, search for Power Virtual Agents Service, select it, and select the **Select** button. 
-1. Select the **Review + assign** button on the bottom of the screen. 
+1. Select the **Key Vault Secrets User** role, and then select **Next**.
+1. Select **Select Members**, search for *Power Virtual Agents Service*, select it, and then choose **Select**.
+1. Select **Review + assign** on the bottom of the screen.
 1. Review the information and select **Review + assign** again if all is correct.
 
 ### Add a tag to the secret in Azure Key Vault
 
-Microsoft Copilot Studio now has access to the Azure Key Vault, but you can't use it yet. There's one part you're missing now. Follow the following steps:
+By completing the previous steps in this section, Copilot Studio now has access to the Azure Key Vault, but you can't use it yet. To complete the task, follow these steps:
 
-1. Go to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and open a copilot you want to use for the environment variable secret or create a new one.
-1. Open a topic or create a new topic.
-1. Select the **+** icon to add a node and select **Send a message**.
-1. Select the **Insert variable {x}** option in the Send a message node.
-1. Select the **Environment** tab, your environment variable secret should show up.
-1. Select the environment variable secret you created in the [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret) step.
-1. Select the **Save** button to save your topic.
-1. In the test pane, test your topic by using one of the start phrases of the topic you just added the **Send a message** node with the environment variable secret to.
+1. Go to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and open the copilot you want to use for the environment variable secret or create a new one.
+1. Open a topic or create a new one.
+1. Select the **+** icon to add a node, and then select **Send a message**.
+1. Select the **Insert variable {x}** option in the **Send a message** node.
+1. Select the **Environment** tab. Select the environment variable secret you created in the [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret) step.
+1. Select **Save** to save your topic.
+1. In the test pane, test your topic by using one of the start phrases of the topic where you just added the **Send a message** node with the environment variable secret.
 1. You should run into an error that looks like this:
 
-      :::image type="content" source="media/env-var-secret8.png" alt-text="Error when you don't add a tag to the secret.":::
+   :::image type="content" source="media/env-var-secret8.png" alt-text="Error when you don't add a tag to the secret.":::
 
-This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
+   This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
 
-1. Go to Azure Key Vault
-1. In the left navigation, select **Secrets** under Objects.
+1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**.
 1. Select the secret you want to make available in Copilot Studio by selecting the name.
 1. Select the version of the secret.
-1. Select **0 tags** next to Tags.
-1. Next, you have to add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message.
-1. When done, select **OK**
-1. Select the **Apply** button to apply the tag to the secret.
-1. Go back to Microsoft Copilot Studio.
-1. Select the **Refresh** icon in the **Test your copilot** pane.
+1. Select **0 tags** next to **Tags**.
+1. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. When done, select **OK**
+1. Select **Apply** to apply the tag to the secret.
+1. Go back to Copilot Studio. Select **Refresh** in the **Test your copilot** pane.
 1. In the test pane, test your topic again by using one of the start phrases of the topic.
-1. Now the value of your secret should be shown in the test panel.
 
-## Limitations
+The value of your secret should be shown in the test panel.
 
-- Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
+## Limitation
+
+Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
 
 ### See also
 
