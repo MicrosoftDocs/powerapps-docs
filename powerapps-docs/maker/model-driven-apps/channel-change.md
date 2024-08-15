@@ -36,7 +36,7 @@ In addition, the release channel can be overridden with either of these options.
 
 ### Ordering of channel release usage
 
-The order of checks to determine which setting controls the channel is
+The order of checks to determine which setting controls the channel is:
 
 1. URL override
 1. User channel override
