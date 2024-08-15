@@ -207,13 +207,11 @@ For more information, see [Use Power Automate pane](working-with-flows.md).
 
 A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. For more information, see [Collections in canvas apps](create-update-collection.md).
 
-:::image type="content" source="media/studio/pa-studio-collections.png" alt-text="Screenshot that shows the collections in the app that are found in the Variables section.":::
-
 #### Variables
 
 You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. For more information, see [Variables in canvas apps](working-with-variables.md).
 
-:::image type="content" source="media/studio/pa-studio-variables.png" alt-text="Screenshot that shows the Variables section.":::
+:::image type="content" source="media/studio/pa-studio-collections.png" alt-text="Screenshot that shows the collections in the app that are found in the Variables section.":::
 
 ## 2 – App actions
 
@@ -367,7 +365,7 @@ For more information, see [Using multimedia files in Power Apps](add-images-pict
 
 The canvas shows the currently selected screen from the authoring menu.
 
-Use inline actions when you're editing a canvas app. For mor information, see [Use inline actions in Power Apps Stuido](inline-actions.md).
+Use inline actions when you're editing a canvas app. For more information, see [Use inline actions in Power Apps Studio](inline-actions.md).
 
 ## 8 – Properties pane
 

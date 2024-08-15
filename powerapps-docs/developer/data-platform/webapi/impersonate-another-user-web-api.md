@@ -2,8 +2,8 @@
 title: "Impersonate another user using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Impersonation is used to execute business logic(code) on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Dataverse using the Web API"
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -18,13 +18,13 @@ This topic should only cover the Web API specific details -->
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are times when your code will need to perform operations on behalf of another user. If the system account running your code has the necessary privileges, you can perform operations on behalf of other users.  
+There are times when your code needs to perform operations on behalf of another user. If the system account running your code has the necessary privileges, you can perform operations on behalf of other users.  
   
 <a name="bkmk_Requirementsforimpersonation"></a>
 
 ## Requirements for impersonation
 
-Impersonation is used to execute business logic (code) on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. This is necessary because the Dataverse Web services can be called by various clients and services on behalf of a Dataverse user, for example, in a workflow or custom ISV solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
+Impersonation is used to execute business logic (code) on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Impersonation is necessary because the Dataverse Web services can be called by various clients and services on behalf of a Dataverse user, for example, in a workflow or custom ISV (Independent Software Vendor) solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
   
 User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is included in the Delegate security role. The actual set of privileges that is used to modify data is the intersection of the privileges that the Delegate role user possesses with that of the user who is being impersonated. In other words, user (A) is allowed to do something if and only if user (A) and the impersonated user (B) have the privilege necessary for the action.  
   
@@ -32,12 +32,12 @@ User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is inc
 
 ## How to impersonate a user
 
-There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user id.
+There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user ID.
 
-1. **Preferred:** Impersonate a user based on their Microsoft Entra ID object id by passing that value along with the header `CallerObjectId`.
-1. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
+1. **Preferred:** Impersonate a user based on their Microsoft Entra ID object ID by passing that value along with the header `CallerObjectId`.
+1. **Legacy:** To impersonate a user based on their systemuserid, you can use `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with an Microsoft Entra ID object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
+ In this example, a new account entity is created on behalf of the user with a Microsoft Entra ID object ID `e39c5d16-675b-48d1-8e67-667427e9c084`.
   
  **Request:**
 
@@ -64,7 +64,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000
 
 ## Determine the actual user
 
-When an operation such as creating an entity is performed using impersonation, the user who actually performed the operation can be found by querying the record including the `createdonbehalfby` single-valued navigation property. A corresponding `modifiedonbehalfby` single-valued navigation property is available for operations that update the entity.  
+When an operation such as creating an entity is performed using impersonation, you can find the user who actually performed the operation by querying the record including the `createdonbehalfby` single-valued navigation property. A corresponding `modifiedonbehalfby` single-valued navigation property is available for operations that update the entity.  
   
  **Request:**
 
@@ -117,7 +117,7 @@ ETag: W/"506868"
 [Impersonate another user using the SDK for .NET](../impersonate-another-user.md#impersonate-another-user-using-the-sdk-for-net)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
+[Query Data using the Web API](query/overview.md)<br />
 [Create a table row using the Web API](create-entity-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />

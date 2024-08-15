@@ -902,7 +902,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    >
    > `[Environment URI]/api/data/v9.2/publishers?$select=uniquename,customizationprefix`
    >
-   > More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
+   > More information: [Query data using the Web API](../data-platform/webapi/query/overview.md)
 
 
 

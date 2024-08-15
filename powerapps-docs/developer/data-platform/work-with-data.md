@@ -4,9 +4,9 @@ description: "Microsoft Dataverse provides web services and APIs that you can us
 ms.date: 05/20/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID Temp owner
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -40,11 +40,11 @@ Dataverse provides two ways to retrieve, add, and modify data: SDK for .NET & We
 If you are working with .NET, we recommend using our [SDK for .NET](org-service/overview.md).
 
 - Use the [ServiceClient class](/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient) in the [DataverseServiceClient NuGet package](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) if you have a client application.
-- Use the [Microsoft.CrmSdk.CoreAssemblies NuGet package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) when you are writing a plug-in or custom workflow activity.
+- Use the [Microsoft.CrmSdk.CoreAssemblies NuGet package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) when you're writing a plug-in or custom workflow activity.
 
 The Dataverse SDK for .NET supports build targets for both .NET Framework and .NET 6+. However, plug-in and custom workflow activities must use .NET Framework.
 
-If you are using our [PowerShell module](https://www.powershellgallery.com/packages/Microsoft.Xrm.Tooling.CrmConnector.PowerShell/) or using our [custom log-in control](xrm-tooling/use-xrm-tooling-common-login-control-client-applications.md) with a Windows client application, use the [the Xrm.Tooling](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+If you're using our [PowerShell module](https://www.powershellgallery.com/packages/Microsoft.Xrm.Tooling.CrmConnector.PowerShell/) or using our [custom log-in control](xrm-tooling/use-xrm-tooling-common-login-control-client-applications.md) with a Windows client application, use the [the Xrm.Tooling](xrm-tooling/build-windows-client-applications-xrm-tools.md)
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [Quickstart: Execute an SDK for .NET request (C#)](org-service/quick-start-org-service-console-app.md)
@@ -75,10 +75,12 @@ The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses th
 [Learn to use SQL to query data](dataverse-sql-query.md)
 
 
-## Limitations
+## Request and Response payload size limitations
 
-There's a 1-GB size limitation on the size of a response that Dataverse returns.  Few APIs or queries are capable of returning this much data.  If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests.
+The maximum payload size for any request sent to Dataverse is 128 MB. Requests with payloads over this limit receive a [413 Payload Too Large](https://devdoc.net/web/developer.mozilla.org/docs/Web/HTTP/Status/413.html) HTTP status code in the response.
 
-The deprecated SOAP endpoint returns serialized XML data that is much more verbose than the serialized JSON data returned by the Web API. If you're using the deprecated SOAP endpoint, you should use the Web API equivalent operation. More information: [About the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
+There's a 1-GB size limitation on the size of a response that Dataverse returns. Few APIs or queries are capable of returning this much data.  If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests.
+
+The deprecated SOAP endpoint payloads use serialized XML data that is much more verbose than the serialized JSON data payloads the Web API uses. You're less likely to encounter errors where the request or response payload is too large when you use the Web API. [Learn about the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

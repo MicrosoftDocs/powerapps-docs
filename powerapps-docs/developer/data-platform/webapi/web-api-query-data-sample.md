@@ -3,8 +3,8 @@ title: Web API query data sample
 description: Use this sample code to learn how to query data using the Dataverse Web API. These samples use C# and client-side JavaScript.
 ms.date: 04/14/2023
 ms.topic: sample
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -27,13 +27,13 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topic(s)|
 |-------------------|---------------------------|
-|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query-data-web-api.md#formatted-values)|
-|[Section 2: Use query functions](#section-2-use-query-functions)|[Filter rows](query-data-web-api.md#filter-rows)<br />[Use OData query functions](query-data-web-api.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
-|[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query-data-web-api.md#order-rows)<br /> [Filter rows](query-data-web-api.md#filter-rows)<br />|
-|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Use the $top query option](query-data-web-api.md#use-the-top-query-option)<br />[Count number of rows](query-data-web-api.md#count-number-of-rows)|
-|[Section 5: Pagination](#section-5-pagination)|[Page results](query-data-web-api.md#page-results)|
-|[Section 6: Expand results](#section-6-expand-results)|[Join tables](query-data-web-api.md#join-tables)|
-|[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query-data-web-api.md#aggregate-data)|
+|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query/select-columns.md#formatted-values)|
+|[Section 2: Use query functions](#section-2-use-query-functions)|[Filter rows](query/filter-rows.md)<br />[Use OData query functions](query/filter-rows.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
+|[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query/order-rows.md)<br /> [Filter rows](query/filter-rows.md)<br />|
+|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit the number of rows](query/overview.md#limit-the-number-of-rows)<br />[Count number of rows](query/count-rows.md)|
+|[Section 5: Pagination](#section-5-pagination)|[Page results](query/page-results.md)|
+|[Section 6: Expand results](#section-6-expand-results)|[Join tables](query/join-tables.md)|
+|[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query/aggregate-data.md)|
 |[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXml reference](../fetchxml/reference/index.md)<br />[Query data using FetchXml](../fetchxml/overview.md)|
 |[Section 9: Use predefined queries](#section-9-use-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
@@ -284,9 +284,9 @@ The data is added using *deep insert* in a single `POST` request and matches the
 
 ## Section 1: Select specific properties
 
-Always include the `$select` query option in your queries. If you don't, the server returns all properties of each table row, which reduces performance. [Learn how to select columns](query-data-web-api.md#select-columns).
+Always include the `$select` query option in your queries. If you don't, the server returns all properties of each table row, which reduces performance. [Learn how to select columns](query/select-columns.md).
 
-This example demonstrates how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between [formatted](query-data-web-api.md#formatted-values) and unformatted values as seen in the results of the contact's `annualincome` property.
+This example demonstrates how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between [formatted](query/select-columns.md#formatted-values) and unformatted values as seen in the results of the contact's `annualincome` property.
   
 In this example, we are requesting for a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   
@@ -338,13 +338,13 @@ Contact basic info:
   
 ## Section 2: Use query functions
  
-Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter rows](query-data-web-api.md#filter-rows)  
+Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter rows](query/filter-rows.md)  
   
 Query functions are functions you can use as a filter criteria in a query. These functions accept parameters and return a `Boolean` value.There are standard query functions and Dataverse specific query functions.  This sample illustrates how to create a query for each type.  
   
 ### Standard query functions
 
-Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows you to filter for properties that match a string.  More information: [Use OData query functions](query-data-web-api.md#use-odata-query-functions)
+Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows you to filter for properties that match a string.  More information: [Use OData query functions](query/filter-rows.md#use-odata-query-functions)
 
 In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`.
   
@@ -638,7 +638,7 @@ Contacts that were created within the last 1hr:
 
 ### Use operators
 
-Use [comparison operators](query-data-web-api.md#comparison-operators) and [logical operators](query-data-web-api.md#logical-operators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine your results. In this example, we're requesting a list of all contacts where `fullname` contains `(sample)` and the annual income is greater than `55000`.  
+Use [comparison operators](query/filter-rows.md#comparison-operators) and [logical operators](query/filter-rows.md#logical-operators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine your results. In this example, we're requesting a list of all contacts where `fullname` contains `(sample)` and the annual income is greater than `55000`.  
   
 **Request:**
 
@@ -831,7 +831,7 @@ Contacts with '(sample)' in name senior jobtitle or high income:
 
 ### Order results
 
-To sort results in ascending or descending order, use the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending order based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order rows](query-data-web-api.md#order-rows)  
+To sort results in ascending or descending order, use the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending order based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order rows](query/order-rows.md)  
   
 **Request:**
 
@@ -977,7 +977,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ### Parameter alias
 
-Use [parameter aliases](query-data-web-api.md#use-parameter-aliases-with-query-options) to more easily reuse parameters in your filters. You can use aliases in `$filter` and `$orderby` options. If the alias isn't assigned a value, it's assumed to be null.
+Use [parameter aliases](query/overview.md#use-parameter-aliases-with-query-options) to more easily reuse parameters in your filters. You can use aliases in `$filter` and `$orderby` options. If the alias isn't assigned a value, it's assumed to be null.
 
 You can also use parameter aliases when you [call functions](use-web-api-functions.md). For example, we can rewrite the query in the previous order results operation to use parameters and get the same output.
   
@@ -1127,7 +1127,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 As a best practice, don't return more data than you need. To protect performance, the server returns a maximum of 5,000 table rows per request.
 
-To limit the number of results returned, [use the `$top` query option](query-data-web-api.md#use-the-top-query-option) or add [`odata.maxpagesize`](#bkmk_filterPagination) in the request header. The `$top` query option returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows to return per page with an `@odata.nextLink` property to get the results of the next page. [Learn more about page results](query-data-web-api.md#page-results).
+To limit the number of results returned, [use the `$top` query option](query/overview.md#limit-the-number-of-rows) or add [`odata.maxpagesize`](#bkmk_filterPagination) in the request header. The `$top` query option returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows to return per page with an `@odata.nextLink` property to get the results of the next page. [Learn more about page results](query/page-results.md).
   
 <a name="bkmk_topResults"></a>
  
@@ -1269,7 +1269,7 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get [the count of rows](query-data-web-api.md#count-number-of-rows) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns 5,000 as the maximum count even if the result may have more.
+You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns 5,000 as the maximum count even if the result may have more.
 
 In this example, we build a filter where `jobtitle` contains either `Senior` or `Manager` and we also request a `$count` of the result. The response contains the count in the `@odata.count` property along with the results of the query.
   
@@ -1392,7 +1392,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Section 5: Pagination
 
-Some queries return a large number of rows, and it's easier to view them one page at a time. To [retrieve paginated results](query-data-web-api.md#page-results), use the `odata.maxpagesize` option instead of `$top`.
+Some queries return a large number of rows, and it's easier to view them one page at a time. To [retrieve paginated results](query/page-results.md), use the `odata.maxpagesize` option instead of `$top`.
   
 In this example, we ask for a `$count` and set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but we're only retrieving 4 at a time. We also use the count and the max page size to figure out how many pages there are. The result of the first page is returned in this request.
   
@@ -1583,7 +1583,7 @@ Page 2 of 3:
 
 ## Section 6: Expand results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Join Tables](query-data-web-api.md#join-tables)
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Join Tables](query/join-tables.md)
   
 ### Expand on single-valued navigation property
 
@@ -3526,7 +3526,7 @@ OData-Version: 4.0
 ### See also
 
 [Use the Dataverse Web API](overview.md)   
-[Query Data using the Web API](query-data-web-api.md)   
+[Query Data using the Web API](query/overview.md)   
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)   
 [Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)   
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)

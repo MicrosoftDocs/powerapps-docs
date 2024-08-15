@@ -1,8 +1,8 @@
 ---
 title: "gridEntity.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the gridEntity.getEntityName method.
-author: jasongre
-ms.author: jasongre
+author: fikaradz
+ms.author: fikaradz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

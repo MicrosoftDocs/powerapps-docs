@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.date: 06/06/2024
 ms.custom: template-how-to
 contributors:
-- dikamath
+- sriknair
 ---
 
 # Explore and test Dataverse in the Web API playground (preview)

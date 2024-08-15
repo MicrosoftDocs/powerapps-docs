@@ -27,7 +27,7 @@ During the initial offline sync, you receive a notification stating that your ap
 
 When the initial sync is completed, you can start using the app in offline mode.
 
-When you refresh your data on a grid view, you get notification stating, **Updating data...**.
+When you refresh your data on a grid view, you get a notification stating, **Updating data...**.
 
 :::image type="content" source="media/mobile-offline-first-update-notification.png" alt-text="Refreshing offline status.":::
 

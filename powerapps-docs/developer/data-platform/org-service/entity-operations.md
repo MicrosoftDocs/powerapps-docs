@@ -4,8 +4,8 @@ description: "Learn about the Entity class used for data operations using the Mi
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
