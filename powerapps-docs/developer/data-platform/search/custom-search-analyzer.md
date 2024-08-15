@@ -59,6 +59,8 @@ To apply a different analyzer for a Dataverse table column, there needs to be a 
 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
+For primary name attribute the collumn is shared across multiple tables and can not be used as a collumn in the definition for a custom analyzer.
+
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
 Follow these steps to open the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com) and edit the view to enable editing the **Name**, **attributename**, **entityname**, and **settings** columns.
