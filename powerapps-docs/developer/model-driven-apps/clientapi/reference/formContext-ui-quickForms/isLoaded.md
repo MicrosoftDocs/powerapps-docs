@@ -3,14 +3,14 @@ title: "isLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the isLoaded method.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 03/12/2022
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: reference
-applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
 contributors:
   - JimDaly
+  - tahoon-ms
 ---
 # isLoaded (Client API reference)
 

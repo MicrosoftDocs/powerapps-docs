@@ -3,11 +3,9 @@ title: "Client API grid context in model-driven apps| MicrosoftDocs"
 description: "Describes the client api grid context"
 author: jasongre
 ms.author: jasongre
-ms.date: 04/18/2024
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -15,6 +13,7 @@ contributors:
   - JimDaly
   - caburk
   - fikaradz
+  - tahoon-ms
 ---
 # Client API grid context
 

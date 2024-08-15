@@ -1,20 +1,18 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
-description: "Explains the client api execution context"
+description: "Learn about the model-driven application client api execution context"
 author: adrianorth
 ms.author: aorth
-
-ms.date: 04/01/2022
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
 contributors: 
   - JimDaly
   - caburk
+  - tahoon-ms
 ---
 # Client API execution context
 
@@ -25,9 +23,11 @@ The execution context is passed in one of the following ways:
 - **Defining event handlers using UI**: The execution context is an *optional* parameter that can be passed to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specify the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.
 
    ### [Legacy](#tab/pass-execution-context-legacy)
+
      ![Pass execution context.](../media/ClientAPI-PassExecutionContext.png "Pass execution context")
 
    ### [Unified Interface](#tab/pass-execution-context-unified-interface)
+
      ![Pass execution context as parameter.](../media/pass-execution-context-as-first-parameter.png "Pass execution context as parameter")
 
    ---
@@ -38,7 +38,7 @@ The execution context object provides a number of methods to further work with t
 
 ## Common mistakes in accessing contexts
 
-Contexts are passed as part of lifecycle functions. These contexts are only valid during the event. Don't keep a reference to it after the event ends. The following are common errors because they access the context after the event handler finishes:
+Contexts are passed as part of lifecycle functions. These contexts are only valid during the event. Don't keep a reference to a context after the event ends. The following are common errors because they access the context after the event handler finishes:
 
 ### Accessing context in a promise
 

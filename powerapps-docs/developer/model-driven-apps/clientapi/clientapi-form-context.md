@@ -1,20 +1,18 @@
 ---
 title: "Client API form context in model-driven apps| MicrosoftDocs"
-description: The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
+description: The Client API form context provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
 author: HemantGaur
 ms.author: hemantg
-
-ms.date: 05/31/2022
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
 contributors: 
   - JimDaly
   - caburk
+  - tahoon-ms
 ---
 # Client API form context
 
