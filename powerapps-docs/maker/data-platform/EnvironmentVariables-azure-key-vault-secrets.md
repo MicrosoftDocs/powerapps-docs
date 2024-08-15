@@ -125,8 +125,7 @@ Environment variable secrets in Microsoft Copilot Studio work a bit differently.
 Follow these steps:
 
 1. Go back to your Azure Key Vault.
-1. Select **Access control (IAM)** on the left navigation.
-1. Copilot Studio needs access to the key vault. To grant Copilot Studio the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown list.
+1. Copilot Studio needs access to the key vault. To grant Copilot Studio the ability to use the secret, select **Access control (IAM)** on the left navigation, select **Add**, and then select **Add role assignment**.
 
    :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
 
