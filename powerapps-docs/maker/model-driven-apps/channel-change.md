@@ -36,12 +36,12 @@ In addition, the release channel can be overridden with either of these options.
 
 ## Ordering of channel release usage
 
-Below is the order of checks to determine which setting controls the channel
+The order of checks to determine which setting controls the channel is
 
 1. URL override
 1. User channel override
-1. App channel value other than Auto (e.g. Monthly, Semi-annual)
-1. Environment channel value value other than Auto (e.g. Monthly, Semi-annual)
+1. App channel value other than Auto (for example, Monthly, Semi-annual)
+1. Environment channel value value other than Auto (for example, Monthly, Semi-annual)
 1. When app and environment are both Auto
    1. With 2024 release wave 1, Power Apps environments uses monthly channel
    2. Starting with 2024 release wave 2, Dynamics 365 environments uses monthly channel
@@ -56,7 +56,7 @@ With 2024 Release wave 1, the following Dynamics 365 app changed their app relea
 - Marketing
 - Power Platform Environment Settings
 
-With 2024 Release wave 2, these additional apps will change their app release channel to **Monthly**:
+With 2024 Release wave 2, these apps change their app release channel to **Monthly**:
 - Sales Hub
 - Sales Team Member
 - Dynamics 365 App for Outlook
@@ -67,12 +67,12 @@ When an environment needs to have a slower release cadence, the following config
 
 ### Change apps with explicit app release channel
 
-Model-driven apps with the app release channel set to a value other than **Auto** will need to be changed to **Semi-annual**. These apps can be deployed to all environments as a managed solution.
+Model-driven apps with the app release channel set to a value other than **Auto** need to be changed to **Semi-annual**. These apps can be deployed to all environments as a managed solution.
 
 1. Customize any out of box Dynamics 365 app 
 1. Update any custom app created after 2024 release wave 1 when new app started defaulting to **Monthly**
 
-> Note: Model-driven apps in Power Apps environments will use **Monthly** when app release channel is **Auto** regardless of the org release channel. All model-driven apps in Power Apps environments need to set the app release channel explicitly. 
+> Note: Model-driven apps in Power Apps environments use **Monthly** when app release channel is **Auto** regardless of the org release channel. All model-driven apps in Power Apps environments need to set the app release channel explicitly. 
 
 ### Override apps when no explicit app release channel
 
@@ -87,7 +87,7 @@ The environment channel can be set using the Power Platform admin center or with
 
 | Environment release channel | Environment setting value | Behavior |
 |--|--|--|
-| Auto | 0 | Environment default value is currently **Semi-annual**, but will change to **Monthly** with 2024 release wave 2. |
+| Auto | 0 | Environment default value is currently **Semi-annual**, but changes to **Monthly** with 2024 release wave 2. |
 | Monthly | 1 | Environment explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | Environment explicitly set to **Semi-Annual Channel**. |
 
@@ -105,7 +105,7 @@ The app channel can be used to override the release channel for a model-driven a
 
 | App release channel | App setting value | Behavior |
 |--|--|--|
-| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 orgs and **Monthly** for Power Apps orgs. With 2024 release wave 2 the default will change to **Monthly**. |
+| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 orgs and **Monthly** for Power Apps orgs. With 2024 release wave 2, the default changes to **Monthly**. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
@@ -155,15 +155,15 @@ A maker can use the **Solutions** area to explicitly set the release channel for
 
 ### Set the default for new apps to monthly channel
 
-As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
+As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
 
 To override this behavior, change the app setting to **No** in the environment or apply to multiple environments by including in a solution that is imported into the environments.
 
 ### Prevent new app default to monthly channel
 
-The new app default can be prevented by switching **Allow new app channel default** to **No**. This causes the new app to be created with release channel **Auto** value.
+The new app default can be prevented by switching **Allow new app channel default** to **No**. This change causes the new app to be created with release channel **Auto** value.
 
-The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution that's migrated to all environments to prevent new apps from having a default set.
+The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution and imported into environments to prevent new apps from having a default set.
 
 1. Go to **Solutions** and open an existing or create a new solution.
 1. Add the existing app setting **Allow new app channel default** into the solution:
@@ -208,7 +208,7 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version reaches the environment.
+Validation should be done for each monthly channel release before it is automatically enabled for users. Users can test when the validation build version reaches the environment.
 
 The easiest way to validate is by appending ```&channelrelease=next``` that automatically sets the release channel to the next upcoming monthly release.
 
