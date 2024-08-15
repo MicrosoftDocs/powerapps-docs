@@ -31,7 +31,7 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 > - We have recently changed the security role that we use to assert access permissions within Azure Key Vault. Previous instructions included assigning the Key Vault Reader role. If you have set up your key vault previously with the Key Vault Reader role, make sure that you add the Key Vault Secrets User role to ensure that your users and Dataverse will have sufficient permissions to retrieve the secrets.
 > - We recognize that our service is using the Azure role-based access control APIs to assess security role assignment even if you still have your key vault configured to use the vault access policy permission model. To simplify your configuration, we recommended that you switch your vault permission model to Azure role-based access control. You can do this in the Access configuration tab.
 
-1. Register the `Microsoft.PowerPlatform` resource provider in your Azure subscription.  Follow these steps to verify and configure: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
+1. Register the `Microsoft.PowerPlatform` resource provider in your Azure subscription. Follow these steps to verify and configure: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
 
    :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
 
@@ -43,9 +43,9 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 1. On the **Add role assignment** wizard, leave the default assignment type as **Job function roles** and continue to the **Role** tab. Locate the **Key Vault Secrets User role** and select it. Continue to the members tab and select the **Select members** link and locate the user in the side panel. When you have the user selected and shown on the members section, continue to the review and assign tab and complete the wizard.
 
-1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity, and then select **Remove** to remove it from the list.
+1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the Application ID isn't 00000007-0000-0000-c000-000000000000**, then select the identity, and then select **Remove** to remove it from the list.
 
-1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security) you'll have to allow Power Platform IP addresses access to your key vault.  Power Platform isn't included in the "Trusted Services Only" option. Hence, refer to [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) article for the current IP addresses used in the service.
+1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security), you have to allow Power Platform IP addresses access to your key vault. Power Platform isn't included in the "Trusted Services Only" option. Hence, refer to [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) article for the current IP addresses used in the service.
 
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
 
@@ -89,7 +89,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
 1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
 1. Provide the environment variable unique name (not the display name) added in the previous section, for this example *new_TestSecret* is used.
-1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it has been renamed to **GetSecret**.
+1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it's renamed to **GetSecret**.
 
    :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
 
@@ -98,7 +98,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
    :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
 
-1. Select **New step**, search and select the **HTTP** connector.
+1. Select **New step**, search, and select the **HTTP** connector.
 1. Select the **Method** as **GET** and enter the **URI** for the web service. In this example, the fictitious web service *httpbin.org* is used.
 1. Select **Show advanced options**, select the **Authentication** as **Basic**, and then enter the **Username**.
 1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
@@ -113,6 +113,57 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
     Using the run history of the flow, the outputs can be verified.
 
     :::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
+
+## Use environment variable secrets in Microsoft Copilot Studio
+
+Environment variable secrets in Microsoft Copilot Studio work a bit differently. You need to run through the steps in the sections [Configure Azure Key Vault](#configure-azure-key-vault) & [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret).
+
+
+### Give Microsoft Copilot Studio access to Azure Key Vault
+
+Follow the following steps:
+
+1. Go back to your Azure Key Vault.
+1. Select **Access control (IAM)** in the left navigation.
+1.	Microsoft Copilot Studio needs to get access to the Key Vault. To grant Microsoft Copilot Studio the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown.
+
+      :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
+
+1. Select the **Key Vault Secrets User** role and select Next. 
+1. Select **Select Members**, search for Power Virtual Agents Service, select it, and select the **Select** button. 
+1. Select the **Review + assign** button on the bottom of the screen. 
+1. Review the information and select **Review + assign** again if all is correct.
+
+### Add a tag to the secret in Azure Key Vault
+
+Microsoft Copilot Studio now has access to the Azure Key Vault, but you can't use it yet. There's one part you're missing now. Follow the following steps:
+
+1. Go to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and open a copilot you want to use for the environment variable secret or create a new one.
+1. Open a topic or create a new topic.
+1. Select the **+** icon to add a node and select **Send a message**.
+1. Select the **Insert variable {x}** option in the Send a message node.
+1. Select the **Environment** tab, your environment variable secret should show up.
+1. Select the environment variable secret you created in the [Create a new environment variable for the Key Vault secret](#create-a-new-environment-variable-for-the-key-vault-secret) step.
+1. Select the **Save** button to save your topic.
+1. In the test pane, test your topic by using one of the start phrases of the topic you just added the **Send a message** node with the environment variable secret to.
+1. You should run into an error that looks like this:
+
+      :::image type="content" source="media/env-var-secret8.png" alt-text="Error when you don't add a tag to the secret.":::
+
+This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
+
+1. Go to Azure Key Vault
+1. In the left navigation, select **Secrets** under Objects.
+1. Select the secret you want to make available in Copilot Studio by selecting the name.
+1. Select the version of the secret.
+1. Select **0 tags** next to Tags.
+1. Next, you have to add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message.
+1. When done, select **OK**
+1. Select the **Apply** button to apply the tag to the secret.
+1. Go back to Microsoft Copilot Studio.
+1. Select the **Refresh** icon in the **Test your copilot** pane.
+1. In the test pane, test your topic again by using one of the start phrases of the topic.
+1. Now the value of your secret should be shown in the test panel.
 
 ## Limitations
 
