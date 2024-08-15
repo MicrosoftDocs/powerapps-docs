@@ -40,11 +40,11 @@ The order of checks to determine which setting controls the channel is
 
 1. URL override
 1. User channel override
-1. App channel value other than Auto (for example, Monthly, Semi-annual)
-1. Environment channel value value other than Auto (for example, Monthly, Semi-annual)
-1. When app and environment are both Auto
-   1. With 2024 release wave 1, Power Apps environments uses monthly channel
-   2. Starting with 2024 release wave 2, Dynamics 365 environments uses monthly channel
+1. App release channel value other than Auto (for example, Monthly, Semi-annual)
+1. Environment release channel value other than Auto (for example, Monthly, Semi-annual)
+1. App release channel and environment release channel are both Auto
+   1. With 2024 release wave 1, Power Apps environments use monthly channel
+   2. Starting with 2024 release wave 2, Dynamics 365 environments use monthly channel
   
 ## Dynamics 365 app release channel settings
 
@@ -151,7 +151,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
    1. Select **Save**.
-1. After changing an app setting for specific apps, the apps must be republished for the change to take effect.
+1. Republish any apps where the app setting was change at an app level for the change to take effect.
 
 ### Set the default for new apps to monthly channel
 
@@ -208,7 +208,7 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it is automatically enabled for users. Users can test when the validation build version reaches the environment.
+Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version reaches the environment.
 
 The easiest way to validate is by appending ```&channelrelease=next``` that automatically sets the release channel to the next upcoming monthly release.
 
