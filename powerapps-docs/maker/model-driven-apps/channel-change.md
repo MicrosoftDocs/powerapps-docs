@@ -76,7 +76,7 @@ Model-driven apps with the app release channel set to a value other than **Auto*
 1. Customize any out of box Dynamics 365 app 
 1. Update any custom app created after 2024 release wave 1 when new app started defaulting to **Monthly**
 
-> Note: Model-driven apps in Power Apps environments use **Monthly** when app release channel is **Auto** regardless of the org release channel. All model-driven apps in Power Apps environments need to set the app release channel explicitly. 
+> Note: Model-driven apps in Power Apps environments use **Monthly** when app release channel is **Auto** regardless of the environment release channel. All model-driven apps in Power Apps environments need to set the app release channel explicitly. 
 
 #### Override apps when no explicit app release channel
 
@@ -109,7 +109,7 @@ The app channel can be used to override the release channel for a model-driven a
 
 | App release channel | App setting value | Behavior |
 |--|--|--|
-| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 orgs and **Monthly** for Power Apps orgs. With 2024 release wave 2, the default changes to **Monthly**. |
+| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 environments and **Monthly** for Power Apps environments. With 2024 release wave 2, the default changes to **Monthly**. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
