@@ -60,29 +60,22 @@ Create a service endpoint using the PRT by following these instructions.
     :::image type="content" source="media/azure-service-endpoint-registration.PNG" alt-text="Service endpoint registration.":::
 1. Select **Save**.
 
-Now we are going to add a step to the service endpoint. The step indicates under what conditions the remote execution context will be posted to the service bus.
+Next, we are going to add a step to the service endpoint. The step indicates under what conditions the remote execution context will be posted to the service bus.
 
-1.
+1. Select **Register** > **Register New Step**.
+1. Fill out the displayed form as show below.
+    :::image type="content" source="media/azure-service-endpoint-step.png" alt-text="Step registration.":::
+1. Select **Register New Step**.
 
-<!-- 5. Next step/Related content------------------------------------------------------------------------
+Use the appropriate message, primary entity, service endpoint event handler, etc. for your setup. Leave the stage, execution mode, and deployment values as shown.
 
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
+If you are not ready to test sending the Dataverse remote execution context to Azure at this time, you can disable the step and then enable it when ready.
 
--->
-
-## Next step
-
-TODO: Add your next step link(s)
-
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
-
-<!-- OR -->
+1. Locate your registered service endpoint in the **Registered Plugins** list and expand it by selecting the arrow on the left.
+1. Expand the plug-in item within the service endpoint.
+1. Right-click the step item within the plug-in and choose **Disable**.
 
 ## Related content
 
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
+- [Azure integration](azure-integration.md)
+- [Configure an Azure hybrid relay connection](azure-hybrid-relay-connection.md)
