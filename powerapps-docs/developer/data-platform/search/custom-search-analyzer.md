@@ -58,7 +58,7 @@ To apply a different analyzer for a Dataverse table column, there needs to be a 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
 > [!NOTE]
-> Don't set an analyzer for the [primary name column of a table.](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
+> Don't set an analyzer for the [primary name column of a table](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
 > 
 > If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column and copy the content of the primary name column into it. Set an analyzer on that column instead.
 
