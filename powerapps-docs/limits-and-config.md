@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/04/2024
+ms.date: 08/15/2024
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -148,7 +148,7 @@ The following table shows some of the examples where embedding a canvas app is a
 | A canvas app used as a custom form in the SharePoint page.                                      | Web, for example,   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, for example.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, for example, Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
-| A canvas app is embedded in a third party client.                                                 | Third party web client that iframe's an app         | Third party native client via WebView            |
+| A canvas app is embedded in a third party client.                                                 | Third party websites in a browser         | Third party native applications            |
 |A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
 
 ### Model-driven app embedding
