@@ -24,12 +24,12 @@ This article provides guidance on creating and using different data types in Mic
 
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Tables**, and then select the table where you want to add a formula column. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the **Columns** area, and then select **New column**, and then select the data type and enter the Power Fx formula to create any of the following:
+1. Select the **Columns** area, select **New column**, and then select the data type and enter the Power Fx formula. Depending on the formula you enter, you can create any of the following:
 
-   - [Create a decimal formula column](#create-a-decimal-formula-column)
-   - [Create a whole number formula column](#create-a-whole-number-formula-column)
-   - [Create a floating point number formula column](#create-a-floating-point-number-formula-column)
-   - [Create a choice formula column](#create-a-choice-formula-column)
+   - [Decimal formula column](#create-a-decimal-formula-column)
+   - [Whole number formula column](#create-a-whole-number-formula-column)
+   - [Floating point number formula column](#create-a-floating-point-number-formula-column)
+   - [Choice formula column](#create-a-choice-formula-column)
 
 ## Create a decimal formula column
 
