@@ -37,7 +37,7 @@ Release channel can be configured on the environment, app, or user level. The re
 
 Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
 
-To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choices for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
+To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choice for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
 
 With 2024 release wave 1, the Power Apps environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps are default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments are changing to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need for the slower cadence. More information: [Keeping semi annual release channel](channel-change.md#keeping-semi-annual-release-channel).
 
@@ -56,7 +56,7 @@ The monthly release is the first weekly release of each month. The release typic
 | Monthly release | Doc published | Feature release | Group 1 | Group 2 | Group 3 | Group 4 | Group 5 | 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
 | Aug 2024 | Jul 19 | 2408.2 | Aug 16 | Aug 23 | Aug 30 | Sep 6 | Sep 13
-| Sep 2024 | Aug 16 | 2409.1 | Sep 6 | Sep 13 | Sep 20 | Sep 27 | Oc 4
+| Sep 2024 | Aug 16 | 2409.1 | Sep 6 | Sep 13 | Sep 20 | Sep 27 | Oct 4
 | Oct 2024 | Sep 20 | 2410.1 | Oct 11 | Oct 18 | Oct 25 | Nov 1 | Nov 8
 | Nov 2024 | Oct 18 | 2411.1 | Nov 8 | Nov 15 | Nov 22 | Dec 6 | Dec 13 
 | Dec 2024 | Nov 15 | 2412.2 | Dec 13 | Dec 20 | Jan 10 | Jan 17 | Jan 24
