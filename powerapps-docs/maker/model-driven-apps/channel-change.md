@@ -56,7 +56,7 @@ With 2024 Release wave 1, the following Dynamics 365 app changed their app relea
 - Marketing
 - Power Platform Environment Settings
 
-With 2024 Release wave 2, these apps change their app release channel to **Monthly**:
+With 2024 Release wave 2, these apps are changing their app release channel to **Monthly**:
 - Sales Hub
 - Sales Team Member
 - Dynamics 365 App for Outlook
