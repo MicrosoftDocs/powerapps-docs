@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/28/2024
+ms.date: 08/16/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -79,7 +79,7 @@ Describe what you want the formula to do and get AI generated results. Formula s
 
 #### Prerequisites
 
-To enable this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
+To enable this feature, you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 
@@ -421,7 +421,7 @@ This section describes guidelines and the known limitations with formula columns
 - A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
-- A formula column which is dependent on time bound functions `UTCNow()` and `UTCToday()` can't be used in a rollup field.
+- A formula column, which is dependent on time bound functions `UTCNow()` and `UTCToday()` can't be used in a rollup field.
 
 ### Power Fx text function recommendations
 

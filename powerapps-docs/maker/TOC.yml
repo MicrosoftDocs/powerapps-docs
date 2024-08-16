@@ -2008,9 +2008,9 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Work with Fx formula columns
+    - name: Work with Power Fx formula columns
       items:
-      - name: Fx formula columns
+      - name: Power Fx formula columns
         href: ./data-platform/formula-columns.md
       - name: Formula column data types
         href: ./data-platform/formula-column-data-types.md

@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/28/2024
+ms.date: 08/16/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -18,7 +18,18 @@ contributors:
 ---
 # Create formula columns with decimal, whole number, float, and choice data types
 
-The article provides guidance on creating and using different data types in Dataverse formula columns, such as decimal, whole number, floating point, and choice columns. It outlines steps starting with selecting **fx Formula** as the data type and entering a numeric value-returning formula in the formula bar.
+This article provides guidance on creating and using different data types in Microsoft Dataverse formula columns, such as decimal, whole number, floating point, and choice columns. It outlines steps starting with selecting **fx Formula** as the data type and entering a numeric value-returning formula in the formula bar.
+
+## Start by creating a column for a table
+
+1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Tables**, and then select the table where you want to add a formula column. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Columns** area, and then select **New column**, and then select the data type and enter the Power Fx formula to create any of the following:
+
+   - [Create a decimal formula column](#create-a-decimal-formula-column)
+   - [Create a whole number formula column](#create-a-whole-number-formula-column)
+   - [Create a floating point number formula column](#create-a-floating-point-number-formula-column)
+   - [Create a choice formula column](#create-a-choice-formula-column)
 
 ## Create a decimal formula column
 
