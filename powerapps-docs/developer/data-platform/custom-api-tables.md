@@ -4,9 +4,9 @@ description: "Describes the tables and column values to use when creating custom
 ms.date: 02/24/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: divkamath
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -38,7 +38,7 @@ You can use the following queries to retrieve data about custom APIs.
 
 # [Web API](#tab/webapi)
 
- More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+ More information: [Query Data using the Web API](webapi/query/overview.md)
 
 ```http
 GET [Organization URI]/api/data/v9.1/customapis?$select=

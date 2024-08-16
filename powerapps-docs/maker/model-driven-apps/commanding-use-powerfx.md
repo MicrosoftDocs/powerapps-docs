@@ -5,7 +5,7 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/06/2024
+ms.date: 07/17/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -198,9 +198,13 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Functions not supported
+## Functions available with commanding
 
-The following Power Fx functions are currently not supported with commanding in model-driven apps.
+For information about the formulas supported with commanding in model-driven apps, go to [Formula reference - model-driven apps](/power-platform/power-fx/formula-reference-model-driven-apps).
+
+### Functions not supported
+
+The following Power Fx functions are *currently not supported* with commanding in model-driven apps.
 
 - Back()
 - Clear()
@@ -213,6 +217,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Language()
 - LoadData()
 - Param()
+- Print()
 - ReadNFC()
 - RequestHide()
 - ResetForm()

@@ -4,9 +4,9 @@ description: "Make data changes which bypass custom Dataverse logic."
 ms.date: 07/01/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: divkamath
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -225,7 +225,7 @@ In this case, there's only one: `4ab978b0-1d77-ec11-8d21-000d3a554d57`
 }
 ```
 
-[Learn more about querying data using Web API](webapi/query-data-web-api.md)
+[Learn more about querying data using Web API](webapi/query/overview.md)
 
 
 #### Query your environment with FetchXml

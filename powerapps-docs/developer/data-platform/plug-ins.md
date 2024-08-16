@@ -5,9 +5,9 @@ ms.collection: get-started
 ms.date: 01/24/2024
 ms.reviewer: "phecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -20,7 +20,7 @@ A *plug-in* is a custom event handler that executes in response to a specific ev
 
 > [!TIP]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)<br/><br/>
-> Use plug-ins when a declarative process doesn’t meet your requirement.
+> Use plug-ins when a declarative process doesn't meet your requirement.
 
 ## More details about plug-ins
 

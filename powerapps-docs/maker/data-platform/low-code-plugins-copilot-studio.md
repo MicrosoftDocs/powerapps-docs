@@ -2,7 +2,7 @@
 title:  Create Dataverse low-code plug-ins to use with a copilot (preview)
 description: Learn how to create low-code plug-ins to use with Microsoft Copilot generative AI actions.
 author: mikefactorial
-ms.author: dikamath
+ms.author: sriknair
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to

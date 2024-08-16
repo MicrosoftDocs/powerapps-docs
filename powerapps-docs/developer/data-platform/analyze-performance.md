@@ -4,7 +4,7 @@ description: "Learn how to find and analyze performance data on plug-ins executi
 ms.date: 08/15/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath"
+author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
 search.audienceType: 

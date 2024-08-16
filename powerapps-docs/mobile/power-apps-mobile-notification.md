@@ -112,8 +112,6 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
-	 
-     ![Enter the notification information.](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.

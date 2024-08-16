@@ -19,9 +19,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Badge control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Badge control in Power Apps
 
 A badge is a visual decoration for UI elements.
 

@@ -2,8 +2,8 @@
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can use a predefined query to retrieve table data."
 ms.date: 09/27/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -82,7 +82,7 @@ GET [Organization URI]/api/data/v9.0/accounts(8f390c24-9c72-e511-80d4-00155d2a68
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
+[Query Data using the Web API](query/overview.md)<br />
 [Create a table row using the Web API](create-entity-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />

@@ -2,8 +2,8 @@
 title: "Sample: Web API Use bulk operations" 
 description: "This sample shows how to perform bulk create and update operations using the Web API CreateMultiple and UpdateMultiple actions. The messages for these actions are optimized to provide the most performant way to create or update records with Dataverse."
 ms.date: 02/08/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

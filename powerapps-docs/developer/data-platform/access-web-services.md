@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/23/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath"
+author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
 search.audienceType: 
