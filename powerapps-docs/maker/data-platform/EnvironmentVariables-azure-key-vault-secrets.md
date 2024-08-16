@@ -160,7 +160,7 @@ The value of your secret should be shown in the test panel.
 
 ## Limitation
 
-Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
+Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows, Copilot Studio copilots and custom connectors.
 
 ### See also
 
