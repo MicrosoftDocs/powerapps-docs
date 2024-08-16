@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 04/07/2024
+ms.date: 08/16/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -26,7 +26,7 @@ Here are some examples where Dataverse search doesn't return an exact match beca
 
 |Examples|Desired|Actual|
 |---------|---------|---------|
-|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)` or `(c)` in a column resulting in multiple records that aren't relevant.|
+|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)`, or `(c)` in a column resulting in multiple records that aren't relevant.|
 |`2.2.3.1`|Exact match|Unwanted matches: Returns records with `2.2`, `2.3.1`, `.2` resulting in multiple records that aren't relevant.|
 |`PG-11.1`|Exact match|Unwanted matches: Returns records with `PG`, `-11`, `-11.1` resulting in multiple records that aren't relevant.|
 |`"%mn" +"ABC-123"`|Exact match for: <br /> record has `mnABC-123`|Unwanted matches: <br /> record with `mn`<br />has a record with `ABC-123` but doesn't include `mn`|
@@ -48,8 +48,6 @@ For your search terms and phrases, the Azure AI Search built-in analyzers might 
 
 To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [Name](../reference/entities/searchattributesettings.md#BKMK_name), [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname), and [attributename](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [settings](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
 
-
-
 You can override the default on a for string columns. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
 
@@ -58,6 +56,11 @@ You can override the default on a for string columns. Alternative analyzers can 
 To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
+
+> [!NOTE]
+> Don't set an analyzer for the [primary name column of a table](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
+> 
+> If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column and copy the content of the primary name column into it. Set an analyzer on that column instead.
 
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
@@ -92,7 +95,7 @@ The following table describes what to add to each column:
 |**Name**|The name can be anything that helps you identify the custom analyzer you added.|
 |**entityname**|The logical name of the table that has the column you're configuring.|
 |**attributename**|The logical name of column of the table you want the analyzer used for your search terms or phrases.|
-|**settings**|The JSON string that identifies your custom analyzer. You should set only the `analyzer`, or the `indexanalyzer` and `searchanalyzer`.  The values might look something like these: `{ "analyzer": "name_analyzer"}` or `{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
+|**settings**|The JSON string that identifies your custom analyzer. You should set only the `analyzer`, or the `indexanalyzer` and `searchanalyzer`. The values might look something like these: `{ "analyzer": "name_analyzer"}` or `{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
 
 
