@@ -60,7 +60,7 @@ Setting this property doesn't require writing code. Anyone with access to [Power
 > [!NOTE]
 > Don't set an analyzer for the [primary name column of a table.](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
 > 
-> If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column where the content of the primary name column is duplicated. Set an analyzer on that column instead.
+> If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column and copy the content of the primary name column into it. Set an analyzer on that column instead.
 
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
