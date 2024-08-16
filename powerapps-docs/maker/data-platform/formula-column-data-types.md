@@ -38,7 +38,7 @@ Create a formula column that returns a decimal number.
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a numeric value in the **Formula** bar.
    This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
-   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
+   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number using 'Price Per Unit' * 150.":::
 1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
 1. Select **Save**.
@@ -52,7 +52,7 @@ Create a formula column that returns a whole number.
    This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
    :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
 1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
-  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
+  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition using 'Total Price' / 'Price Per Unit'.":::
 1. Select **Save**.
 
 ## Create a floating point number formula column
@@ -62,7 +62,7 @@ Create a formula column that returns float.
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a floating point number in the **Formula** bar.
    This example creates a formula column called *TestFloat*.
-   :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column.":::
+   :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column using Float(123) as the formula.":::
 1. Expand **Advanced options**, and set the required number of decimal places.
 1. Select **Save**.
 
