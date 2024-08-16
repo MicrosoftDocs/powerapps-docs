@@ -133,7 +133,7 @@ Follow these steps:
 1. Select **Select Members**, search for *Power Virtual Agents Service*, select it, and then choose **Select**.
 1. Select **Review + assign** on the bottom of the screen. Review the information and select **Review + assign** again if all is correct.
 
-### Add a tag to the secret in Azure Key Vault
+### Add a tag to allow a copilot to access the secret in Azure Key Vault
 
 By completing the previous steps in this section, Copilot Studio now has access to the Azure Key Vault, but you can't use it yet. To complete the task, follow these steps:
 
@@ -151,12 +151,21 @@ By completing the previous steps in this section, Copilot Studio now has access 
 
 1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
 1. Select the version of the secret.
-1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. When done, select **OK**
+1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. This value is formatted as `{envId}/{schemaName}`. In the case when there are multiple copilots that need to be allowed, seperate the values with a comma. When done, select **OK**
 1. Select **Apply** to apply the tag to the secret.
 1. Go back to Copilot Studio. Select **Refresh** in the **Test your copilot** pane.
 1. In the test pane, test your topic again by using one of the start phrases of the topic.
 
 The value of your secret should be shown in the test panel.
+
+### Add a tag to allow all copilots in an environment access to the secret in Azure Key Vault
+
+Alternatively, you can also allow all copilots in an environment access to the secret in Azure Key Vault. To complete the task, follow these steps:
+
+1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
+1. Select the version of the secret.
+1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. Under **Tag Name** you need to add **AllowedEnvironments** and in **Tag Value** you need to add the environment ID of the environment you want to allow. When done, select **OK**
+1. Select **Apply** to apply the tag to the secret.
 
 ## Limitation
 
