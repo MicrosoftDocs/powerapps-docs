@@ -53,13 +53,17 @@ With 2024 Release wave 1, the following Dynamics 365 app changed their app relea
 - Customer Service Hub
 - Customer Service admin center
 - Field Service
-- Marketing
+- Field Resource Hub
+- Field Service Mobile
+- Resource Scheduling
+- Resource Scheduling Optimization
+- Customer Insights - Journeys
+- Business performance analytics
+- Project Operations Team Member
 - Power Platform Environment Settings
 
 With 2024 Release wave 2, these apps are changing their app release channel to **Monthly**:
 - Sales Hub
-- Sales Team Member
-- Dynamics 365 App for Outlook
 
 ### Keeping Semi-annual release channel
 
