@@ -1,7 +1,7 @@
 ---
 title: "Custom column analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 08/15/2024
+ms.date: 08/16/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde
@@ -48,8 +48,6 @@ For your search terms and phrases, the Azure AI Search built-in analyzers might 
 
 To use one of the Azure AI Search built-in analyzers for a specific column, create a row in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) set the [Name](../reference/entities/searchattributesettings.md#BKMK_name), [entityname](../reference/entities/searchattributesettings.md#BKMK_entityname), and [attributename](../reference/entities/searchattributesettings.md#BKMK_attributename) to be used and set the [settings](../reference/entities/searchattributesettings.md#BKMK_settings) to refer to a built-in search analyzer like `{"analyzer": "keyword"}`, or a language analyzer like `{ "analyzer": "it.microsoft"}`. [Learn how to set an analyzer for a column](#set-an-analyzer-for-a-column)
 
-
-
 You can override the default on a for string columns. Alternative analyzers can be a [language analyzer](/azure/search/index-add-language-analyzers) for linguistic processing, a [custom analyzer](/azure/search/index-add-custom-analyzers), or a built-in analyzer from the list of [available analyzers](/azure/search/index-add-custom-analyzers#built-in-analyzers).
 
 
@@ -58,6 +56,11 @@ You can override the default on a for string columns. Alternative analyzers can 
 To apply a different analyzer for a Dataverse table column, there needs to be a row identifying that column in the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md). By default, this table has no data.
 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
+
+> [!NOTE]
+> Don't set an analyzer for the [primary name column of a table.](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
+> 
+> If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column where the content of the primary name column is duplicated. Set an analyzer on that column instead.
 
 For primary name attribute the column is shared across multiple tables and can't be used as a column in the definition for a custom analyzer.
 
