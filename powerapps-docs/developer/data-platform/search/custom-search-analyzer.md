@@ -26,7 +26,7 @@ Here are some examples where Dataverse search doesn't return an exact match beca
 
 |Examples|Desired|Actual|
 |---------|---------|---------|
-|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)` or `(c)` in a column resulting in multiple records that aren't relevant.|
+|`AB-84(q)(1)(c)`<br />or<br />`AB-84(1)(1)(-c)` |Exact match|Unwanted matches: Returns records with `AB`, `(1)`, or `(c)` in a column resulting in multiple records that aren't relevant.|
 |`2.2.3.1`|Exact match|Unwanted matches: Returns records with `2.2`, `2.3.1`, `.2` resulting in multiple records that aren't relevant.|
 |`PG-11.1`|Exact match|Unwanted matches: Returns records with `PG`, `-11`, `-11.1` resulting in multiple records that aren't relevant.|
 |`"%mn" +"ABC-123"`|Exact match for: <br /> record has `mnABC-123`|Unwanted matches: <br /> record with `mn`<br />has a record with `ABC-123` but doesn't include `mn`|
@@ -62,8 +62,6 @@ Setting this property doesn't require writing code. Anyone with access to [Power
 > 
 > If you need to apply a custom analyzer that uses the data in the primary name column of a table, create a separate string column where the content of the primary name column is duplicated. Set an analyzer on that column instead.
 
-For primary name attribute the column is shared across multiple tables and can't be used as a column in the definition for a custom analyzer.
-
 ### Configure Power Apps to edit the SearchAttributeSettings table
 
 Follow these steps to open the [SearchAttributeSettings table](../reference/entities/searchattributesettings.md) in [Power Apps](https://make.powerapps.com) and edit the view to enable editing the **Name**, **attributename**, **entityname**, and **settings** columns.
@@ -97,7 +95,7 @@ The following table describes what to add to each column:
 |**Name**|The name can be anything that helps you identify the custom analyzer you added.|
 |**entityname**|The logical name of the table that has the column you're configuring.|
 |**attributename**|The logical name of column of the table you want the analyzer used for your search terms or phrases.|
-|**settings**|The JSON string that identifies your custom analyzer. You should set only the `analyzer`, or the `indexanalyzer` and `searchanalyzer`.  The values might look something like these: `{ "analyzer": "name_analyzer"}` or `{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
+|**settings**|The JSON string that identifies your custom analyzer. You should set only the `analyzer`, or the `indexanalyzer` and `searchanalyzer`. The values might look something like these: `{ "analyzer": "name_analyzer"}` or `{"indexanalyzer": "name_analyzer", "searchanalyzer": "name_analyzer"}`|
 
 
 
