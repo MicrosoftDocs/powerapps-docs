@@ -14,7 +14,7 @@ search.audienceType:
 ---
 # Release channels for your model-driven app
 
-Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
+Microsoft provides new (and updated) features for your model-driven apps, regularly. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
 The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is currently the default for all existing apps and environments. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
 
@@ -29,7 +29,7 @@ Security and non-end user impacting changes continue to be delivered with the we
 
 The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
-Microsoft 365 products have seen a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
+Microsoft 365 products see a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
 
 ## Configuring release channel
 
@@ -37,13 +37,13 @@ Release channel can be configured on the environment, app, or user level. The re
 
 Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
 
-To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There is an explicit choices for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
+To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choices for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
 
 With 2024 release wave 1, the Power Apps environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps are default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments are changing to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need for the slower cadence. More information: [Keeping semi annual release channel](channel-change.md#keeping-semi-annual-release-channel).
 
 ## Monthly release schedule
 
-Model-driven apps release updates every week, which is gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
+Model-driven apps release updates every week, which is gradually rolled out to groups of regions over several weeks. These are the region groups with each group happening in successive weekend updates.
 
 1. First release environment (FRE)
 1. Canada, South America, India, France, South Africa, Germany, Switzerland, Norway, Korea, Singapore
