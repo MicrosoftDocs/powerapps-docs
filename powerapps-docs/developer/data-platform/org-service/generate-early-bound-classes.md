@@ -2,8 +2,8 @@
 title: "Generate early-bound classes for the SDK for .NET"
 description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
 ms.date: 01/26/2024
-author: kkanakas
-ms.author: kartikka
+author: sriknair
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: article
 search.audienceType: 
@@ -148,7 +148,7 @@ Generation Complete - 00:00:01.815
 PS C:\projects\exampleproject\model>
 ```
 
-When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated. 
+When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated.
 
 For `messageNamesFilter`, you can use `*` as a wildcard character in these values. This is useful when messages in your solution share a common customization prefix.
 
@@ -234,26 +234,23 @@ Consider changing the implementation of the ResolveName method on your DataContr
 Please see InnerException for more details.
 ```
 
-
 ## Community tools
 
 The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface and many other configurations to generating early-bound types.
 > [!NOTE]
-> The community tools are not a product of Microsoft and does not extend support to the community tools. 
+> The community tools are not a product of Microsoft and does not extend support to the community tools.
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
-
 
 ## For Dynamics 365 Customer Engagement on-premises
 
 The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-premises. You need to use the `CrmSvcUtil.exe` code generation tool to generate early bound classes. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
-
 ### Related articles
 
-[Late-bound and early-bound programming](early-bound-programming.md)   
-[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)   
-[Developer tools and resources](../developer-tools.md)   
-[Dataverse development tools](../download-tools-NuGet.md)   
+[Late-bound and early-bound programming](early-bound-programming.md)
+[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
+[Developer tools and resources](../developer-tools.md)
+[Dataverse development tools](../download-tools-NuGet.md)
 [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
