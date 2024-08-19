@@ -6,7 +6,7 @@ ms.author: cgarty
 ms.reviewer: angieandrews
 ms.topic: conceptual
 ms.custom: canvas, bap-template
-ms.date: 04/04/2023
+ms.date: 08/19/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -96,17 +96,11 @@ Once the feature is enabled, use solutions [export](../data-platform/export-solu
 Take the following considerations into account before you decide to create canvas apps and cloud flows in a solution by default.
 
 - Your Dataverse environment capacity consumption and related cost might increase.
-
 - Known solution limitations related to canvas apps still apply to canvas apps created in solutions by default.
-
 - This feature automatically creates environment variables when you add data sources for your apps.
-
 - By default, this feature saves all canvas apps to the default solution, **Common Data Services Default Solution**, published by **Microsoft Dataverse Default Publisher**. However, we recommend that you save your canvas apps to a different solution. [Learn more about adding existing canvas apps to solutions](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
-
 - When you turn the feature on or off for canvas apps and cloud flows in the Power Platform admin center, the Dataverse properties `enablecanvasappsinsolutionsbydefault` and `enableFlowsInSolutionByDefault` in the organization table are updated. You can view the value of these properties using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. For more information, see [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization).
-
 - If you're planning to change the prefix for the default publisher or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
-
 - Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there's no way to revert back.
 
 ## Improvements
@@ -114,15 +108,15 @@ Take the following considerations into account before you decide to create canva
 The following scenarios were improved to support cloud flows and canvas apps defined in Dataverse:
 
 - The **Monitor** > **Cloud flow activity** page now supports solution cloud flows.
-- The [List My Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. 
+- The [List My Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows.
 - [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing now include solution cloud flows.
-- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) now returns return solution cloud flows that haven't previously been turned on (published). This API will now return all non-solution and solution cloud flows.
+- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) now returns solution cloud flows that weren't previously turned on (published). This API now returns all non-solution and solution cloud flows.
 - Flows with delegated authentication to Roadmap can be added into a solution and migrated to Dataverse.
 - Flows with delegated authentication to SharePoint can be added into a solution and migrated to Dataverse.
 
 ### Related information
 
-[Solutions overview](../data-platform/solutions-overview.md)  
-[Application lifecycle management (ALM) guide](/power-platform/alm/overview-alm)
+- [Solutions overview](../data-platform/solutions-overview.md)  
+- [Application lifecycle management (ALM) guide](/power-platform/alm/overview-alm)
 
 [!INCLUDE [footer-include](../../includes/footer-banner.md)]
