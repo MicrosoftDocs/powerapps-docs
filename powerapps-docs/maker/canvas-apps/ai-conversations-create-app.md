@@ -70,7 +70,7 @@ Based on what you described, AI generates tables and relationships for your app.
 
 ## Build apps through conversation (generally available (GA) version)
 
-The app building experience looks different when your using the generally available (GA) version to build apps through conversation with Copilot. 
+The app building experience looks different when you're using the generally available (GA) version to build apps through conversation with Copilot. 
 
 > [!div class="mx-imgBorder"]
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
