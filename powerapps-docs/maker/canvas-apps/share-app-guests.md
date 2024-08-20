@@ -163,8 +163,8 @@ Intune only applies the policies of a user's home tenant. For instance, if Lesa@
 ### Can I disable cross tenant license recognition? 
 No. Authorization capabilities can and should be used to control which users access a resource. For instance, Dataverse environments can be bound to a security group that excludes Azure B2B guest users. 
 
-### Why can an Azure B2B user without a license access a model driven app. 
-The detection of a previously licensed user no longer having a license is not immediate. If a user is expected to lose access to an app using Dataverse, their authorization to the app or data should be updated.    
+### Why can an Azure B2B user without a license access a model driven app? 
+The detection of a previously licensed user no longer having a license is not immediate. If a user is expected to lose access to an app using Dataverse, their authorization to the app or data should be updated. E.g. the app should be unshared with the user or Dataverse security roles should be removed from the user.     
 
 ### Which connectors create connections in the resource tenant by default?
 
