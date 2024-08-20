@@ -34,6 +34,8 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 1. Embedded objects like scripts and buttons won't run.
 
+1. Printing the document is not supported.
+
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
 ## Key properties
