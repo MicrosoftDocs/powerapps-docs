@@ -2,8 +2,8 @@
 title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Browse code samples of LINQ queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
@@ -53,7 +53,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         System.Console.WriteLine(a.Name + " " + a.Address1_City);
     }
 }
-``` 
+```
   
 <a name="JoinandSimpleWhereClause"></a>
 
@@ -260,7 +260,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         System.Console.WriteLine(c.contact_name + "  " + c.account_name);
     }
 }
-``` 
+```
   
 <a name="UsingtheEqualsOperator"></a>
 
@@ -286,7 +286,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         " " + c.Address1_City);
     }
 }
-``` 
+```
   
  The following sample shows how to retrieve a list of contacts where the FamilyStatusCode is 3. This corresponds to the **Marital Status** choice of **Divorced**.  
   
@@ -308,7 +308,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         " " + c.Address1_City);
     }
 }
-``` 
+```
   
 <a name="UsingtheNotEqualsOperator"></a>
 
@@ -386,7 +386,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         " " + a.Attributes["lastname"]);
     }
 }
-``` 
+```
   
 <a name="BKMK_UsingGreaterThanOperator"></a>
 
@@ -412,7 +412,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         c.LastName + " " + c.Address1_City);
     }
 }
-``` 
+```
   
  The following sample shows how to retrieve contacts with a CreditLimit greater than $20,000.  
   
@@ -433,7 +433,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         c.LastName + " " + c.Address1_City);
     }
 }
-``` 
+```
   
 <a name="BKMK_UsingGreaterThanOrEqualsAndLessThanOrEqualsOperators"></a>
 
@@ -457,7 +457,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   System.Console.WriteLine(c.FirstName + " " + c.LastName);
  }
 }
-``` 
+```
   
 <a name="BKMK_UsingContainsOperator"></a>
 
@@ -528,7 +528,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
  The following sample shows how to retrieve contacts where LastName ends with “cox”.  
   
 ```csharp
@@ -548,7 +547,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingAndOrOperators"></a>
 
 ## Use the And and Or operators
@@ -573,7 +571,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMKUsingOrderByOperator"></a>
 
 ## Use the OrderBy operator
@@ -598,9 +595,8 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
         c.last + ", " + c.first);
     }
 }
-```   
+```
 
-  
  The following sample shows how to retrieve contacts ordered by LastName in descending order and FirstName in ascending order.  
   
 ```csharp
@@ -622,7 +618,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingFirstAndSingleOperators"></a>
 
 ## Use the First and Single operators
@@ -643,7 +638,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_RetrievingFormattedValues"></a>
 
 ## Retrieving formatted values
@@ -663,7 +657,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>
 
 ## Use the Skip and Take operators without paging
@@ -689,7 +682,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingTheFirstOrDefaultAndSingleOrDefaultOperators"></a>
 
 ## Use the FirstOrDefault and SingleOrDefault operators
@@ -714,7 +706,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>
 
 ## Use a self-join with a condition on the linked table row
@@ -736,7 +727,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingTransformationInTheWhereClause"></a>
 
 ## Use a transformation in the Where Clause
@@ -761,7 +751,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_UsingAPagingSort"></a>
 
 ## Use a paging sort
@@ -784,7 +773,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
  The following sample shows a paging sort where the column being sorted is different from the column being retrieved.  
   
 ```csharp
@@ -801,7 +789,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
  The following sample shows how to retrieve just the first 10 rows.  
   
 ```csharp
@@ -825,7 +812,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
-  
 <a name="BKMK_RetrievingRelatedEntityColumns"></a>
 
 ## Retrieve related table row columns for 1 to N relationships  
@@ -1062,7 +1048,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
          System.Console.WriteLine(c.AccountId + " " + c.Name);
     }
 }
-``` 
+```
   
 <a name="BKMK_UseLoadProperty"></a>
 
