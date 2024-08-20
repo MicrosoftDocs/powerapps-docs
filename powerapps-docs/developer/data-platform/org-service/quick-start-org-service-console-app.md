@@ -2,8 +2,8 @@
 title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
 ms.date: 11/11/2023
-author: phecke
-ms.author: pehecke
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
@@ -54,7 +54,7 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
 ## Add application code
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
-   
+
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
    using Microsoft.PowerPlatform.Dataverse.Client;
@@ -95,7 +95,7 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
       }
    }
    ```
-   
+
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
     > [!NOTE]
@@ -206,7 +206,6 @@ The following articles explain how to work with business data in Dataverse table
 ### Explore our code samples
 
 You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc).
-
 
 ### Use ServiceClient extensions
 

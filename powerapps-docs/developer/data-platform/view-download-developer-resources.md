@@ -6,9 +6,9 @@ ms.date: 09/07/2021
 
 ms.custom: 
 ms.topic: article
-author: phecke
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: pehecke
+ms.author: sriknair
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
