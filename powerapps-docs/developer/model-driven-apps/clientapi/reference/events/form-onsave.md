@@ -3,7 +3,7 @@ title: "Form OnSave event (Client API reference) in model-driven apps| Microsoft
 description: Includes description and supported parameters for the form OnSave event.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 07/26/2023
+ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -55,10 +55,12 @@ For example:
 
 ```JavaScript
  function myHandler(context) {
-    return new Promise((resolve) => {
-       setTimeout( () => {
-          context.getEventArgs().preventDefault();
-       }, 1000);
+    // Cancel saving
+    context.getEventArgs().preventDefault();
+    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values)) => {
+      var workOrder = values[0];
+      var customerAsset = values[1];
+      // Perform validation
    });
  }
 ```

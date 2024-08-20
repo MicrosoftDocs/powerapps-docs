@@ -3,7 +3,7 @@ title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDoc
 description: Information about PostSave event methods.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 09/15/2022
+ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -54,8 +54,6 @@ function displayOrgName(executionContext)
   var orgName = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
   var myuniqueId = "_myUniqueId";
   formContext.ui.setFormNotification(orgName, "INFO", myuniqueId);
-  window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 10000);
-  
 }
 
 ```
