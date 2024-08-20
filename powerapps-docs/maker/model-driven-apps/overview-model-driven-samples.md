@@ -50,7 +50,6 @@ Asset Checkout provides self-service capabilities to reserve the tools and equip
 
 |Display name  |Name  |Component type  |
 |---------|---------|---------|
-|Asset Checkout   | msdyn_AssetCheckout   | Model-driven app        |
 |Asset Checkout   | msdyn_AssetCheckout   | Site map        |
 |Asset Checkout App Image   | msdyn_AssetCheckoutApp    | Web resource      |
 |Product   | sample_product    | Table    |
@@ -83,7 +82,6 @@ Start a companywide innovation challenge. Ideas are submitted, reviewed, voted o
 |Idea  | sample_idea    | Table    |
 |Idea  | sample_Idea   | Web resource    |
 |Idea32   | sample_Idea32    | Web resource    |
-|Innovation Challenge  | sample_InnovationHub    | Model-driven app    |
 |Innovation Hub  |  sample_InnovationHub    | Web resource    |
 |Innovation Hub   | sample_InnovationHub    | Site map   |
 |Team Project     | sample_teamproject        | Table       |
@@ -108,7 +106,6 @@ Fundraiser provides employees the opportunity to donate time and money towards c
 |Donations Icon    | sample_DonationsIcon        | Web resource     |
 |Fundraiser     |  sample_fundraiser       | Table        |
 |Fundraiser     |  sample_Fundraiser       | Site map     |
-|Fundraiser     |  sample_Fundraiser       | Model-driven app     |
 |Fundraiser App Icon     |  sample_FundraiserApp       | Web resource     |
 |Fundraiser Icon   | sample_FundraiserIcon        | Web resource    |
 
