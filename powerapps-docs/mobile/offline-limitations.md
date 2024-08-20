@@ -131,7 +131,7 @@ These tables and corresponding commands are available in offline mode.
   
 - **Offline search**: Offline search is available only for offline tables. Users can only search one table at a time. Global search defaults to a categorized search in offline mode, even if Dataverse search is turned on, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
-- **Duplicate records**: The [experience of detecting duplicates and merging them](power-platform/admin/detect-duplicate-records) is not supported in offline mode. 
+- **Duplicate records**: The [experience of detecting duplicates and merging them](/power-platform/admin/detect-duplicate-records) is not supported in offline mode. 
 
 ### Profile filters limitations
 
