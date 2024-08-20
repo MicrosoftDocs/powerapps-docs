@@ -54,8 +54,6 @@ function displayOrgName(executionContext)
   var orgName = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
   var myuniqueId = "_myUniqueId";
   formContext.ui.setFormNotification(orgName, "INFO", myuniqueId);
-  window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 10000);
-  
 }
 
 ```

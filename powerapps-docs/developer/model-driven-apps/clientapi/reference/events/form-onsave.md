@@ -55,10 +55,12 @@ For example:
 
 ```JavaScript
  function myHandler(context) {
-    return new Promise((resolve) => {
-       setTimeout( () => {
-          context.getEventArgs().preventDefault();
-       }, 1000);
+    // Cancel saving
+    context.getEventArgs().preventDefault();
+    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values)) => {
+      var workOrder = values[0];
+      var customerAsset = values[1];
+      // Perform validation
    });
  }
 ```

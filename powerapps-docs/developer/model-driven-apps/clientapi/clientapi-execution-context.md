@@ -42,7 +42,7 @@ The context passed to an event is only valid during the event. Don't keep a refe
 
 ### Accessing context in a promise
 
-The context isn't valid in the [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API).
+The context isn't valid after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
 
 ```JavaScript
 function onLoad(executionContext) {
