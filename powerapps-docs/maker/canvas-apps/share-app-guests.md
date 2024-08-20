@@ -160,6 +160,12 @@ By default, Azure B2B users have limited permission to access information from M
 
 Intune only applies the policies of a user's home tenant. For instance, if Lesa@Contoso.com shares an app with Wanda@Fabrikam.com, Intune continues to apply Fabrikam.com policies on Wanda's device, regardless of the apps Wanda runs.
 
+### Can I disable cross tenant license recognition? 
+No. Authorization capabilities can and should be used to control which users access a resource. For instance, Dataverse environments can be bound to a security group that excludes Azure B2B guest users. 
+
+### Why can an Azure B2B user without a license access a model driven app. 
+The detection of a previously licensed user no longer having a license is not immediate. If a user is expected to lose access to an app using Dataverse, their authorization to the app or data should be updated.    
+
 ### Which connectors create connections in the resource tenant by default?
 
 Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
