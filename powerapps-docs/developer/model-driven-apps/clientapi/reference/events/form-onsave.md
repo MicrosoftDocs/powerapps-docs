@@ -54,13 +54,15 @@ In this scenario, since there are multiple async processes and both calls return
 For example:
 
 ```JavaScript
- function myHandler(context) {
-    // Cancel saving
-    context.getEventArgs().preventDefault();
+ function myHandler() {
     return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values)) => {
-      var workOrder = values[0];
-      var customerAsset = values[1];
-      // Perform validation
+        var workOrder = values[0];
+        var customerAsset = values[1];
+        // Perform validation
+        if (isValid(workOrder, customerAsset)) {
+            return Promise.resolve();
+        }
+        return Promise.reject(new Error("Validation failed for the work order and customer asset"));
    });
  }
 ```
