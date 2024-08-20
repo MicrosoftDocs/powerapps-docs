@@ -122,7 +122,7 @@ A two-way contract is similar to a one-way contract except that a string value c
 
 A REST contract is similar to a two-way contract on a REST endpoint.
 
-An Azure hybrid relay connection to Dataverse uses the REST contract. More information: [Use a hybrid relay connection](azure-hybrid-relay-connection.md)
+An Azure hybrid relay connection to Dataverse uses the REST contract. More information: [Use an Azure hybrid relay connection](azure-hybrid-relay-connection.md)
   
 ### Topic
 

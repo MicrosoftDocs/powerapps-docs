@@ -1,55 +1,23 @@
 ---
-title: #Required; Keep the title body to 60-65 chars max including spaces and brand
-description: #Required; Keep the description within 100- and 165-characters including spaces 
-author: #Required; your GitHub user alias, with correct capitalization
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: concept-article #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-
-#CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
+title: Use an Azure hybrid relay connection
+description: Learn about sending Dataverse message processing data to Azure using the ServiceBus and a hybrid relay connection. 
+author: phecke
+ms.author: pehecke
+ms.subservice: dataverse-developer
+ms.topic: concept-article
+ms.date: 08/19/2024
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the  main branch.
+# Use an Azure hybrid relay connection
 
-This template provides the basic structure of a Concept article pattern. See the [instructions - Concept](../level4/article-concept.md) in the pattern library.
+There are different types of messaging contracts with Microsoft Azure that Microsoft Dataverse supports - queue, one-way, REST, topic, etc. This article will delve into the hybrid relay connection, which uses a REST contract, as a means to send the Dataverse execution context across the Azure ServiceBus to a listener app.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
+The hybrid relay is presently the only supported Dataverse to Azure ServiceBus connection type that:
 
-Concept is an article pattern that defines what something is or explains an abstract idea.
+- You can target a .NET Core build of a listener app
+- Uses the latest [Microsoft.Azure.Relay](https://www.nuget.org/packages/Microsoft.Azure.Relay#supportedframeworks-body-tab) messaging APIs
 
-There are several situations that might call for writing a Concept article, including:
-
-* If there's a new idea that's central to a service or product, that idea must be explained so that customers understand the value of the service or product as it relates to their circumstances. A good recent example is the concept of containerization or the concept of scalability.
-* If there's optional information or explanations that are common to several Tutorials or How-to guides, this information can be consolidated and single-sourced in a full-bodied Concept article for you to reference.
-* If a service or product is extensible, advanced users might modify it to better suit their application. It's better that advanced users fully understand the reasoning behind the design choices and everything else "under the hood" so that their variants are more robust, thereby improving their experience.
-
--->
-
-<!-- 1. H1
------------------------------------------------------------------------------
-
-Required. Set expectations for what the content covers, so customers know the content meets their needs. The H1 should NOT begin with a verb.
-
-Reflect the concept that undergirds an action, not the action itself. The H1 must start with:
-
-* "\<noun phrase\> concept(s)", or
-* "What is \<noun\>?", or
-* "\<noun\> overview"
-
-Concept articles are primarily distinguished by what they aren't:
-
-* They aren't procedural articles. They don't show how to complete a task.
-* They don't have specific end states, other than conveying an underlying idea, and don't have concrete, sequential actions for the user to take.
-
-One clear sign of a procedural article would be the use of a numbered list. With rare exception, numbered lists shouldn't appear in Concept articles.
-
--->
-
-# [\<noun phrase\> concept(s)]
-
-TODO: Add your heading
+So if you are interested in developing a .NET Core version of ServiceBus listener app today, read on.
 
 <!-- 2. Introductory paragraph
 ----------------------------------------------------------
@@ -94,7 +62,7 @@ Required: In a series of H2 sections, the article body should discuss the ideas 
 
 ## [Section 1 heading]
 
-TODO: add your content
+All Dataverse to Azure ServiceBus supported connection types, other than the hybrid relay connection, target .NET Framework and use the (now) deprecated Microsoft.WindowsAzure.Messaging APIs. Those connections will continue to be supported for some time since the Microsoft.WindowsAzure.Messaging APIs will be supported by Microsoft until the year 2026.
 
 ## [Section 2 heading]
 

@@ -5,7 +5,7 @@ author: phecke
 ms.author: pehecke
 ms.subservice: dataverse-developer
 ms.topic: how-to
-ms.date: 08/14/2024
+ms.date: 08/19/2024
 ---
 
 # Register a Dataverse service endpoint
@@ -21,11 +21,11 @@ A service endpoint contains Dataverse configuration information for an external 
 - Configured Service Bus namespace.
 - Configured Service Bus hybrid relay connection with Send and Listen SAS policy permissions.
 
-Detailed information on configuring the ServiceBus namespace and connection can be found in this article: [Configure an Azure hybrid relay connection](azure-configure-hybrid-relay.md).
+Detailed information on configuring an Azure namespace and hybrid connection can be found in this article: [Get started with Relay Hybrid Connections HTTP requests in .NET](/azure/azure-relay/relay-hybrid-connections-http-requests-dotnet-get-started).
 
 To install the PRT, see [Dataverse development tools](download-tools-nuget.md).
 
-## Obtain Azure namespace and connection information
+## Obtain Azure namespace and hybrid connection information
 
 We will now record the Azure connection information needed to create a service endpoint.
 
@@ -78,4 +78,4 @@ If you are not ready to test sending the Dataverse remote execution context to A
 ## Related content
 
 - [Azure integration](azure-integration.md)
-- [Configure an Azure hybrid relay connection](azure-hybrid-relay-connection.md)
+- [Use an Azure hybrid relay connection](azure-hybrid-relay-connection.md)
