@@ -337,8 +337,6 @@
           href: azure-hybrid-relay-connection.md
         - name: How to
           items:
-            - name: "Configure a hybrid relay connection"
-              href: azure-configure-hybrid-relay.md
             - name: "Register a service endpoint"
               href: azure-register-service-endpoint.md
         - name: Tutorials

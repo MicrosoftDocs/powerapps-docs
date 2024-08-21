@@ -1,14 +1,16 @@
 ---
-title: Use an Azure hybrid relay connection
+title: Use a hybrid relay connection
 description: Learn about sending Dataverse message processing data to Azure using the ServiceBus and a hybrid relay connection. 
 author: phecke
 ms.author: pehecke
 ms.subservice: dataverse-developer
 ms.topic: concept-article
 ms.date: 08/19/2024
+search.audienceType: 
+  - developer
 ---
 
-# Use an Azure hybrid relay connection
+# Use a hybrid relay connection
 
 There are different types of messaging contracts with Microsoft Azure that Microsoft Dataverse supports - queue, one-way, REST, topic, etc. This article will delve into the hybrid relay connection, which uses a REST contract, as a means to send the Dataverse execution context across the Azure ServiceBus to a listener app.
 
@@ -19,112 +21,34 @@ The hybrid relay is presently the only supported Dataverse to Azure ServiceBus c
 
 So if you are interested in developing a .NET Core version of ServiceBus listener app today, read on.
 
-<!-- 2. Introductory paragraph
-----------------------------------------------------------
-
-Required. Lead with a light intro that describes what the article covers. Answer the fundamental “why would I want to know this?” question. Keep it short.
-
-* Answer the fundamental "Why do I want this knowledge?" question.
-* Don't start the article with a bunch of notes or caveats.
-* Don’t link away from the article in the introduction.
-* For definitive concepts, it's better to lead with a sentence in the form, "X is a (type of) Y that does Z."
-
--->
-
-[Introductory paragraph]
-TODO: Add your introductory paragraph
-
-<!-- 3. Prerequisites --------------------------------------------------------------------
-
-Optional: Make **Prerequisites** your first H2 in the article. Use clear and unambiguous
-language and use a unordered list format. 
-
--->
-
 ## Prerequisites
 
 TODO: [List the prerequisites if appropriate]
 
-<!-- 4. H2s (Article body)
---------------------------------------------------------------------
+## Transitioning to Microsoft.Azure.Relay
 
-Required: In a series of H2 sections, the article body should discuss the ideas that explain how "X is a (type of) Y that does Z":
+All supported Dataverse to Azure ServiceBus connection types, except for the hybrid relay connection, target .NET Framework and use the (now) deprecated [WindowsAzure.ServiceBus](https://www.nuget.org/packages/WindowsAzure.ServiceBus) APIs. Those non-relay connections will continue to be supported for some time since the WindowsAzure.ServiceBus APIs will be supported by Microsoft until the year 2026.
 
-* Give each H2 a heading that sets expectations for the content that follows.
-* Follow the H2 headings with a sentence about how the section contributes to the whole.
-* Describe the concept's critical features in the context of defining what it is.
-* Provide an example of how it's used where, how it fits into the context, or what it does. If it's complex and new to the user, show at least two examples.
-* Provide a non-example if contrasting it will make it clearer to the user what the concept is.
-* Images, code blocks, or other graphical elements come after the text block it illustrates.
-* Don't number H2s.
+Once Dataverse and the Plug-in Registration tool have been updated to use the newer Azure ServiceBus messaging technologies, our documentation and code samples will be updated. For now, we provide this article and related code sample for you to get started developing a listener app that uses Microsoft.Azure.Relay.
 
--->
+## Configuring an Azure namespace and connection
 
-## [Section 1 heading]
+## Write a listener app
 
-All Dataverse to Azure ServiceBus supported connection types, other than the hybrid relay connection, target .NET Framework and use the (now) deprecated Microsoft.WindowsAzure.Messaging APIs. Those connections will continue to be supported for some time since the Microsoft.WindowsAzure.Messaging APIs will be supported by Microsoft until the year 2026.
+## Configure a Dataverse service endpoint and step
 
-## [Section 2 heading]
+## Getting it all working
 
-TODO: add your content
+You can test the Dataverse-Azure connection by following these steps.
 
-## [Section n heading]
+1. Enable the service endpoint step if it is disabled.
+1. Execute the listener app so that it starts listening on the hybrid relay connection.
+1. Perform the intended Dataverse operation for which the step was registered. The operation triggers a plug-in to post the execution context to the service bus.
+1. Check the Dataverse asynchronous system log for success or failure of the post.
 
-TODO: add your content
-
-<!-- 5. Next step/Related content ------------------------------------------------------------------------ 
-
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
-
--->
-
-## Next step
-
-TODO: Add your next step link(s)
-
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
-
-<!-- OR -->
+If all goes well, the listener app will print the received remote execution context data to the terminal window. If not, then check the asynchronous system log for a failure. The log entry description details the reason for failure.
 
 ## Related content
 
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
-
-<!-- 6. Next step/Related content ------------------------------------------------------------------------
-
-Optional: You have two options for manually curated links in this pattern: Next step and Related
-content. You don't have to use either, but don't use both. For Next step, provide one link to the
-next step in a sequence. Use the blue box format For Related content provide 1-3 links. Include some
-context so the customer can determine why they would click the link. Add a context sentence for the
-following links.
-
--->
-
-## Next step
-
-TODO: Add your next step link(s)
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
-
-<!-- OR -->
-
-## Related content
-
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
-
--->
+- [Azure integration](azure-integration.md)
+- [Register a Dataverse service endpoint](azure-register-service-endpoint.md)

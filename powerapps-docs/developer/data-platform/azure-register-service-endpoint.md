@@ -78,4 +78,4 @@ If you are not ready to test sending the Dataverse remote execution context to A
 ## Related content
 
 - [Azure integration](azure-integration.md)
-- [Use an Azure hybrid relay connection](azure-hybrid-relay-connection.md)
+- [Use a hybrid relay connection](azure-hybrid-relay-connection.md)
