@@ -58,11 +58,11 @@ These tables and corresponding commands are available in offline mode.
 
 
 ## Feature limitations 
-- **Number of records synced**: The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records will fail. This number also includes hidden tables used for offline capabilities.
+- **Number of records synced**: The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.
 
 - **Security model**: [Field level security and field sharing](/power-platform/admin/field-level-security) aren't supported in Mobile offline mode.
 
-- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
+- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the qualified stage. The user has to manually select **Next stage** to move to the next stage.
 
 - **Grids**:
     - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
@@ -97,7 +97,7 @@ These tables and corresponding commands are available in offline mode.
 
 - **Add Existing on subgrids**: The **Add Existing** functionality isn't supported for mobile offline for certain types of relationships. When you're offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 
-- **Web resources**: Web resources are partially supported in offline mode. Refer to the following table for more information.
+- **Web resources**: Web resources are partially supported in offline mode. For more information, see the following table.
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
@@ -131,13 +131,13 @@ These tables and corresponding commands are available in offline mode.
   
 - **Offline search**: Offline search is available only for offline tables. Users can only search one table at a time. Global search defaults to a categorized search in offline mode, even if Dataverse search is turned on, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
-- **Duplicate records**: The [experience of detecting duplicates and merging them](/power-platform/admin/detect-duplicate-records) is not supported in offline mode. 
+- **Duplicate records**: The [experience of detecting duplicates and merging them](/power-platform/admin/detect-duplicate-records) isn't supported in offline mode. 
 
 ### Profile filters limitations
 
 |Profile details |Limitation|  
 |-------------|---------|  
-|Relationship defined for each table|A maximum of 15 relationships is allowed. There is also a maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Relationship defined for each table|A maximum of 15 relationships is allowed. There's also a maximum of one many to many (M:M) or one to many (1:M) relationships within those 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 
 
