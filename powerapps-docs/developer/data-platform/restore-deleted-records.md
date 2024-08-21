@@ -356,7 +356,7 @@ After enabling this setting, you might receive the following error:
 
 Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-In time, we expect that eventually all tables will be available to use the recycle bin feature. During this preview, some tables don't. For a list of tables that don't support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
+In time, we expect that eventually most tables will be available to use the recycle bin feature. [Solution components](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm#solution-components), [Virtual Tables](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/virtual-entities/get-started-ve) and [Elastic Tables](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/elastic-tables) are not supported for Recycle Bin. During this preview, some additional tables are not enabled that may be enabled later (Eg. Tables with more than 400 columns). For a list of tables that don't support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
 
 You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table) and [disable recycle bin for the environment](#disable-recycle-bin-for-the-environment). If the recycle bin isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the recycle bin is enabled for a table or not.
 
