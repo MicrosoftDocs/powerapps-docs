@@ -43,11 +43,12 @@ The following example displays the retrieved Fetch XML of the Contacts subgrid i
 function myFunction(executionContext) {
     var formContext = executionContext.getFormContext(); // get the form context
     var gridContext = formContext.getControl("Contacts"); // get the grid context
-    var retrieveFetchXML = function () {
-        var result = gridContext.getFetchXml();
+    var retrieveFetchXML = function (exeCtx) {
+        var gridCtx = exeCtx.getFormContext().getControl("Contacts");
+        var result = gridCtx.getFetchXml();
         console.log(result)
     };
-    gridContext.addOnLoad(retrieveFetchXML);    
+    gridContext.addOnLoad(retrieveFetchXML);
 }
 ```
 
