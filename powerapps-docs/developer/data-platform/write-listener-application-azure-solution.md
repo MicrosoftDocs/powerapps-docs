@@ -1,7 +1,7 @@
 ---
 title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
-ms.date: 04/05/2023
+ms.date: 08/21/2024
 author: jaredha
 ms.author: jaredha
 ms.reviewer: jdaly
@@ -19,7 +19,9 @@ contributors:
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 This topic describes how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dataverse listener. For more information, see the [Azure Service Bus documentation](/azure/service-bus/).
-  
+
+This article describes writing a listener app targeting .NET Framework and using a (now) deprecated Microsoft.ServiceBus namespace. For information about writing a listener app targeting .NET Core and using the Microsoft.Azure.Relay namespace, see [Use a hybrid relay connection](azure-hybrid-relay-connection.md).
+
 <a name="bkmk_writequeued"></a>
 
 ## Write a queue listener
@@ -77,10 +79,10 @@ For this two-way contract, the <xref:Microsoft.Xrm.Sdk.ITwoWayServiceEndpointPlu
 For the REST contract, the <xref:Microsoft.Xrm.Sdk.IWebHttpServiceEndpointPlugin.Execute*> method returns a string from the method call. Refer to the REST listener sample, [Sample: REST listener](org-service/samples/rest-listener.md), for more information. Notice that in the REST listener sample, a <xref:System.ServiceModel.Web.WebServiceHost> is instantiated and not a <xref:System.ServiceModel.ServiceHost> as was done in the two-way sample.
   
 > [!NOTE]
-> When using the out-of-box (ServiceBusPlugin) plug-in with a two-way or REST listener, the plug-in doesn't use any string data returned from the listener. However, a custom Azure-aware plug-in could make use of this information.  
+> When using the out-of-box service endpoint plug-in with a two-way or REST listener, the plug-in doesn't use any string data returned from the listener. However, a custom Azure-aware plug-in could make use of this information.  
 >
-> When you run the listener samples, the issuer secret you're prompted for is the Azure Service Bus management key. The WS2007 Federation HTTP binding uses `token` mode and the WS-Trust 1.3 protocol.  
-  
+> When you run the listener samples, the issuer secret you're prompted for is the Azure Service Bus management key. The WS2007 Federation HTTP binding uses `token` mode and the WS-Trust 1.3 protocol.
+
 <a name="filter"></a>
 
 ## Filter messages
@@ -96,7 +98,7 @@ There is a property bag of extra information added to each brokered message [Pro
 This information identifies the organization, user, table, and message request being processed by Dataverse that resulted in the Service Bus message being posted. The availability of these properties indicates that the message was sent from Dataverse. Your listener code can decide how to process the message based on these values.  
   
 <a name="bkmk_multiple-formats"></a>
- 
+
 ## Read the data context in multiple data formats
 
 The data context from the current Dataverse operation is passed to your Azure solution listener application in the body of a Service Bus message. In previous releases, only a .NET binary format was supported.  For cross-platform (non-.NET) interoperability, you can now specify one of three data formats for the message body: .NET Binary, JSON, or XML.  This format is specified in the [MessageFormat](reference/entities/serviceendpoint.md#BKMK_MessageFormat) column of the [ServiceEndpoint Table](reference/entities/serviceendpoint.md).
@@ -133,7 +135,5 @@ else if (receivedMessage.ContentType == "application/xml")
 [Sample: REST listener](org-service/samples/rest-listener.md)<br />
 [Work with Dataverse data in your Azure solution](work-data-azure-solution.md)<br />
 [Work with Dataverse event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md)
- 
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
