@@ -1,6 +1,6 @@
 ---
 title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Learn how to write an Azure solution listener application that can read Dataverse messages posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
 ms.date: 08/21/2024
 author: jaredha
 ms.author: jaredha
@@ -18,7 +18,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-This topic describes how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dataverse listener. For more information, see the [Azure Service Bus documentation](/azure/service-bus/).
+This topic describes how to write an Azure solution listener application that can read Microsoft Dataverse messages posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dataverse listener. For more information, see the [Azure Service Bus documentation](/azure/service-bus/).
 
 This article describes writing a listener app targeting .NET Framework and using a (now) deprecated Microsoft.ServiceBus namespace. For information about writing a listener app targeting .NET Core and using the Microsoft.Azure.Relay namespace, see [Use a hybrid relay connection](azure-hybrid-relay-connection.md).
 
@@ -26,25 +26,25 @@ This article describes writing a listener app targeting .NET Framework and using
 
 ## Write a queue listener
 
-A message *queue* is a repository of messages received at a Service Bus endpoint. A *queue listener* is an application that reads and processes these queued messages. Because the Service Bus messages are stored in a queue, a listener doesn't have to be actively listening for messages to be received in the queue. A queue listener can be started after messages have arrived in the queue and still process those messages. Other types of listeners discussed in the next section must be actively listening or they will miss the opportunity to read a message. These messages can originate from Dataverse or from some other source.
+A message *queue* is a repository of messages received at a Service Bus endpoint. A *queue listener* is an application that reads and processes these queued messages. Because the Service Bus messages are stored in a queue, a listener doesn't have to be actively listening for messages to be received in the queue. A queue listener can be started after messages arrive in the queue and still process those messages. Other types of listeners discussed in the next section must be actively listening or they'll miss the opportunity to read a message. These messages can originate from Dataverse or from some other source.
   
 > [!IMPORTANT]
 > When writing a queue listener, check each message header action to determine if the message originated from Dataverse. For information on how to do this see [Filter messages](write-listener-application-azure-solution.md#filter).  
   
-You can do a destructive message read using [Receive](/dotnet/api/microsoft.servicebus.messaging.queueclient.receive) in [ReceiveMode.ReceiveAndDelete](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [ReceiveMode.PeekLock](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read but still available in the queue. For more information about reading messages from a queue, see [How to receive messages from a queue](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues#receive-messages-from-the-queue).  
+You can do a destructive message read using [Receive](/dotnet/api/microsoft.servicebus.messaging.queueclient.receive) in [ReceiveMode.ReceiveAndDelete](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read and removed from the queue, or a nondestructive read using [ReceiveMode.PeekLock](/dotnet/api/microsoft.servicebus.messaging.receivemode) mode, where the message is read but still available in the queue. For more information about reading messages from a queue, see [How to receive messages from a queue](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues#receive-messages-from-the-queue).  
   
 A *topic* is similar to a queue but implements a publish/subscribe model. One or more listeners can subscribe to the topic and receive messages from its queue. More information: [Queues, topics, and subscriptions](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 > [!IMPORTANT]
 > To use these queue or topic contracts, you must write your listener applications using the [Azure SDK](https://azure.microsoft.com/downloads/archive-net-downloads/).
   
-Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dataverse will still succeed and the listener application can continue processing the queue message when it is back online. More information: [Queues, topics, and subscriptions](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
+Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dataverse still succeeds and the listener application can continue processing the queue message when it's back online. More information: [Queues, topics, and subscriptions](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 <a name="bkmk_writeoneway"></a>
 
 ## Write a one-way, two-way, or REST listener
 
-In addition to the queue listener described previously, you can write a listener for three other Service Bus contracts that are supported by Dataverse: one-way, two-way, and REST. A one-way listener can read and process a message posted to the Service Bus. A two-way listener can do the same but can also return a string of some information back to Dataverse. A REST listener is the same as the two-way listener except that it works with a REST endpoint. Notice that these listeners must be actively listening at a service endpoint to read a message sent over the Service Bus. If the listener isn't listening when Dataverse attempts to post a message to the Service Bus, the message doesn't get sent.
+In addition to the queue listener described previously, you can write a listener for three other Service Bus contracts supported by Dataverse: one-way, two-way, and REST. A one-way listener can read and process a message posted to the Service Bus. A two-way listener can do the same but can also return a string of some information back to Dataverse. A REST listener is the same as the two-way listener except that it works with a REST endpoint. Notice that these listeners must be actively listening at a service endpoint to read a message sent over the Service Bus. If the listener isn't listening when Dataverse attempts to post a message to the Service Bus, the message doesn't get sent.
   
 Writing a listener is structured around what is known as ABC: address, binding, and contract.
 
@@ -87,7 +87,7 @@ For the REST contract, the <xref:Microsoft.Xrm.Sdk.IWebHttpServiceEndpointPlugin
 
 ## Filter messages
 
-There is a property bag of extra information added to each brokered message [Properties](/dotnet/api/microsoft.servicebus.messaging.brokeredmessage#properties) property sent from Dataverse. The property bag, available with queue, relay, and topic contract endpoints, contains the following information:  
+There's a property bag of extra information added to each brokered message [Properties](/dotnet/api/microsoft.servicebus.messaging.brokeredmessage#properties) property sent from Dataverse. The property bag, available with queue, relay, and topic contract endpoints, contains the following information:  
   
 - Organization URI
 - Calling user ID
@@ -101,9 +101,9 @@ This information identifies the organization, user, table, and message request b
 
 ## Read the data context in multiple data formats
 
-The data context from the current Dataverse operation is passed to your Azure solution listener application in the body of a Service Bus message. In previous releases, only a .NET binary format was supported.  For cross-platform (non-.NET) interoperability, you can now specify one of three data formats for the message body: .NET Binary, JSON, or XML.  This format is specified in the [MessageFormat](reference/entities/serviceendpoint.md#BKMK_MessageFormat) column of the [ServiceEndpoint Table](reference/entities/serviceendpoint.md).
+The data context from the current Dataverse operation is passed to your Azure solution listener application in the body of a Service Bus message. In previous releases, only a .NET binary format was supported. For cross-platform (non-.NET) interoperability, you can now specify one of three data formats for the message body: .NET Binary, JSON, or XML. This format is specified in the [MessageFormat](reference/entities/serviceendpoint.md#BKMK_MessageFormat) column of the [ServiceEndpoint Table](reference/entities/serviceendpoint.md).
   
-When receiving messages, your listener application can read the data context in the message body based on the contentType of the message. Sample code to do so is shown below.  
+When receiving messages, your listener application can read the data context in the message body based on the contentType of the message as shown in the code sample.  
   
 ```csharp
 var receivedMessage = inboundQueueClient.Receive(TimeSpan.MaxValue);  
