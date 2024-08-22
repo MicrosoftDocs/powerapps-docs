@@ -26,7 +26,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
   
 - The offline-first feature works for standalone, canvas apps only. It doesn't work for [embedded canvas apps](../maker/model-driven-apps/embed-canvas-app-in-form.md), [custom pages](../maker/model-driven-apps/model-app-page-overview.md), or [canvas apps in Teams](../teams/overview.md).
 
-- **Virtual tables** and **elastic tables** aren't supported in offline mode.
+- Virtual tables and elastic tables aren't supported in offline mode.
 
 - The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
    - Relate
