@@ -65,7 +65,7 @@ contributors:
 Use these values with the `options` attribute to specify SQL Server hints to apply to the query. When more than one option is set, separate them by commas.
 
 ```text
-options='OptimizeForUnknown,DisableRowGoal,Recompile'
+options='HashJoin,DisableRowGoal'
 ```
 
 [!INCLUDE [cc-query-options](../../includes/cc-query-options.md)]
