@@ -103,7 +103,7 @@ class Program
 }
 ```
 
-The full code sample is available in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/) repo at [dataverse/orgsvc/C#-NETCore](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore).
+The full code sample is available in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/) repo at [dataverse/orgsvc/C#-NETCore/Azure](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/Azure/ServiceBus-HybridRelayListener/Program.cs).
 
 ## Configure a service endpoint and step
 
