@@ -5,7 +5,7 @@ author: phecke
 ms.author: pehecke
 ms.subservice: dataverse-developer
 ms.topic: concept-article
-ms.date: 08/19/2024
+ms.date: 08/22/2024
 search.audienceType: 
   - developer
 ---
@@ -23,18 +23,18 @@ So if you're interested in developing a Dataverse compatible ServiceBus listener
 
 ## Transitioning to Azure relay messaging
 
-All supported Dataverse to Azure ServiceBus connection types, except for the hybrid relay connection, target .NET Framework and use the (now) deprecated [WindowsAzure.ServiceBus](https://www.nuget.org/packages/WindowsAzure.ServiceBus) package and the Microsoft.ServiceBus namespace. Those non-relay connections continue to be supported for some time since the Microsoft.ServiceBus APIs are supported by Microsoft until the year 2026.
+All supported Dataverse to Azure ServiceBus connection types, except for the hybrid relay connection, target .NET Framework and use the (now) deprecated [WindowsAzure.ServiceBus](https://www.nuget.org/packages/WindowsAzure.ServiceBus) package and the [Microsoft.ServiceBus](/dotnet/api/microsoft.servicebus?view=azure-dotnet-legacy) namespace. Those non-relay connections continue to be supported for some time since the Microsoft.ServiceBus APIs are supported by Microsoft until the later part of year 2026.
 
 Once Dataverse and the Plug-in Registration tool are updated to use the newer Azure ServiceBus messaging technologies, our documentation and code samples will be updated. For now, we provide this article and related code sample for you to get started developing a listener app that uses the Microsoft.Azure.Relay namespace and can target .NET Core.
 
-## Configuring an Azure namespace and connection
+## Configure an Azure namespace and connection
 
 Read the Azure documentation, [Get started with Relay Hybrid Connections HTTP requests in .NET](/azure/azure-relay/relay-hybrid-connections-http-requests-dotnet-get-started#create-a-namespace), on how to configure a namespace and hybrid relay connection.
 
-Here's an example namespace configuration.
+Here's an example namespace configuration named contoso-relay.
 :::image type="content" source="media/azure-relay-namespace.png" alt-text="Example Azure namespace." lightbox="media/azure-relay-namespace.png":::
 
-Here's an example hybrid relay connection configuration.
+Here's an example hybrid relay connection configuration named contoso-hc.
 :::image type="content" source="media/azure-hybrid-connection.png" alt-text="Example hybrid relay connection." lightbox="media/azure-hybrid-connection.png":::
 
 ## Write a listener app
@@ -105,20 +105,22 @@ class Program
 
 The full code sample is available in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/) repo at [dataverse/orgsvc/C#-NETCore](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore).
 
-## Configure a Dataverse service endpoint and step
+## Configure a service endpoint and step
 
-Follow the instructions in this [article](azure-register-service-endpoint.md) on how to configure a service endpoint and step to post the Dataverse remote execution context to the Azure ServiceBus.
+Follow the instructions in [Register a service endpoint](azure-register-service-endpoint.md) to configure a service endpoint and plug-in step that posts the Dataverse remote execution context to the Azure ServiceBus.
 
 ## Getting it all working
 
 You can test the Dataverse-Azure connection by following these steps.
 
-1. Enable the service endpoint step if disabled.
+1. Enable the service endpoint plug-in step (if disabled).
 1. Execute the listener app so that it starts listening on the hybrid relay connection.
 1. Perform the intended Dataverse operation for which the step was registered. The operation triggers the service endpoint plug-in to post the execution context to the service bus.
 1. Check the Dataverse System Job records for success or failure of the post.
 
-If all goes well, the listener app outputs the received remote execution context data to the terminal window. If not, then check the Dataverse System Job records for a failure. The system job description details the reason for failure.
+If you are running the sample listener app linked in this article, the listener app outputs the received remote execution context data to the console window. If this does not happen, check the Dataverse System Job records for a failure. The system job description details the reason for failure.
+
+You can access the system jobs in Power Apps under **Advanced settings** > **Settings** > **System Jobs**.
 
 ## Related content
 
