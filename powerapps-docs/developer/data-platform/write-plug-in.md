@@ -246,7 +246,7 @@ When writing your plug-in, it's critical that it must execute efficiently and qu
 
 > [!IMPORTANT]
 > Plug-ins must adhere to an execution time limit and resource constraints.
-> More information: [Anaylyze plug-in performance](analyze-performance.md)
+> More information: [Analyze plug-in performance](analyze-performance.md)
 
 ## Using early-bound types in plug-in code
 

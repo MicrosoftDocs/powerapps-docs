@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "jaredha"
 ms.subservice: dataverse-developer
-ms.author: "jdaly" 
+ms.author: "pehecke" 
 search.audienceType: 
   - developer
 contributors:
@@ -120,7 +120,7 @@ A two-way contract is similar to a one-way contract except that a string value c
   
 ### REST
 
-A REST contract is similar to a two-way contract on a REST endpoint.  
+A REST contract is similar to a two-way contract on a REST endpoint.
   
 ### Topic
 
