@@ -51,7 +51,7 @@ function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     fetch("https://www.contoso.com/").then(
         function (result) {
-            // Using formContext or executionContext here is not supported
+            // Using formContext or executionContext here may not work as expected
             // because onLoad has already completed when the promise is resolved.
             formContext.getAttribute("name").setValue(result);
         }
@@ -67,7 +67,7 @@ The context may change in unexpected ways after using [await](https://developer.
 async function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     var result = await fetch("https://www.contoso.com/");
-    // Using formContext or executionContext here is not supported
+    // Using formContext or executionContext here may not work as expected
     // because the synchronous part of onLoad has already completed.
     formContext.getAttribute("name").setValue(result);
 }
@@ -82,7 +82,7 @@ function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     if (notReady) {
         setTimeout(function () {
-            // Using formContext or executionContext here is not supported
+            // Using formContext or executionContext here may not work as expected
             // because onLoad has already completed when this delayed function executes.
             var name = formContext.getAttribute("name").getValue();
         }, 100);
