@@ -5,7 +5,7 @@ author: udaykirang
 ms.author: udag
 ms.reviewer: udag
 ms.topic: how-to
-ms.date: 04/17/2024
+ms.date: 08/27/2024
 ms.subservice: mda-maker
 ms.collection: bap-ai-copilot
 tags:
@@ -24,7 +24,9 @@ When you draft customer emails in the rich text editor in a model-driven app, Co
 
 > [!IMPORTANT]
 >
-> By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
+>- This is an early access feature. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
+>- The Copilot in the email rich text editor feature is in early access for new organizations who are opting in to the feature. Existing organizations who are already using the feature can continue to use it.  
+>- By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
 
