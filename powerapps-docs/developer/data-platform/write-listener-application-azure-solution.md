@@ -20,8 +20,6 @@ contributors:
 
 This topic describes how to write an Azure solution listener application that can read Microsoft Dataverse messages posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dataverse listener. For more information, see the [Azure Service Bus documentation](/azure/service-bus/).
 
-This article describes writing a listener app targeting .NET Framework and using a (now) deprecated Microsoft.ServiceBus namespace. For information about writing a listener app targeting .NET Core and using the Microsoft.Azure.Relay namespace, see [Use a hybrid relay connection](azure-hybrid-relay-connection.md).
-
 <a name="bkmk_writequeued"></a>
 
 ## Write a queue listener
