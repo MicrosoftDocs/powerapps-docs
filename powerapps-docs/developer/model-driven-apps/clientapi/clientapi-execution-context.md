@@ -36,7 +36,7 @@ The execution context is passed in one of the following ways:
 
 The execution context object provides many methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
 
-## Considerations when accessing execution context in an async maner
+## Using context objects asynchronously
 
 The context passed to an event is only guaranteed to perform as expected during the event. If a reference to a context is kept after the event ends, actions may have ocurred in the meantime that may cause the context APIs to behave in an unexpected fashion. For example, if an event handler dispatches an async action that takes an extended amount of time or a reference is held, the end user may have navigated away from the current page by the time the promise resolves and the Client API executes. This may cause APIs like `formContext.getAttribute(<name>).getValue()` to return `null`, even though at the time the original event handler executed, the attribute had a value.
 
