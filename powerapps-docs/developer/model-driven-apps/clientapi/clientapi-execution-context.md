@@ -36,13 +36,15 @@ The execution context is passed in one of the following ways:
 
 The execution context object provides many methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
 
-## Common mistakes in accessing contexts
+## Considerations when accessing execution context in an async maner
 
-The context passed to an event is only valid during the event. Don't keep a reference to a context after the event ends. The following are common anti-patterns because they access the context after the event handler finishes:
+The context passed to an event is only guaranteed to perform as expected during the event. If a reference to a context is kept after the event ends, actions may have ocurred in the meantime that may cause the context APIs to behave in an unexpected fashion. For example, if an event handler dispatches an async action that takes an extended amount of time, the end user may have navigated away from the current page by the time the promise resolves an the Client API executes. This may cause APIs like formContext.getAttribute(<name>).getValue() to return null, even though at the time the original event handler executed, the attribute had a value.
+
+Below are some examples of asynchronous code where additional checks and caution should be taken.
 
 ### Accessing context in a promise
 
-The context isn't valid after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
+The context may change in unexpected ways after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -59,7 +61,7 @@ function onLoad(executionContext) {
 
 ### Accessing context after an await statement
 
-The context isn't valid after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
+The context may change in unexpected ways after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
 
 ```JavaScript
 async function onLoad(executionContext) {
@@ -73,7 +75,7 @@ async function onLoad(executionContext) {
 
 ### Accessing context in a timeout function
 
-The context isn't valid after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
+TThe context may change in unexpected ways after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -87,24 +89,6 @@ function onLoad(executionContext) {
     } else {
         formContext.getAttribute("name").setValue("abc");
     }
-}
-```
-
-### Accessing context in a stored variable
-
-Don't cache the context as a variable.
-
-```JavaScript
-function onLoad(executionContext) {
-    window.__myExecutionContext = executionContext;
-}
-
-// This function is called any time later.
-function customFunction() {
-    // Using formContext or executionContext here is not supported
-    // because onLoad has already completed when customFunction executes.
-    var formContext = window.__myExecutionContext.getFormContext();
-    formContext.getAttribute("name").setValue("abc");
 }
 ```
 
