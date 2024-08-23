@@ -3,7 +3,7 @@ title: "Client API execution context in model-driven apps| MicrosoftDocs"
 description: "Learn about the model-driven application client API execution context"
 author: adrianorth
 ms.author: aorth
-ms.date: 08/20/2024
+ms.date: 08/23/2024
 ms.reviewer: jdaly
 ms.topic: conceptual
 ms.subservice: mda-developer
@@ -13,6 +13,7 @@ contributors:
   - JimDaly
   - caburk
   - tahoon-ms
+  - fafuxa-ms
 ---
 # Client API execution context
 
@@ -38,13 +39,15 @@ The execution context object provides many methods to further work with the cont
 
 ## Using context objects asynchronously
 
-The context passed to an event is only guaranteed to perform as expected during the event. If a reference to a context is kept after the event ends, actions may have ocurred in the meantime that may cause the context APIs to behave in an unexpected fashion. For example, if an event handler dispatches an async action that takes an extended amount of time or a reference is held, the end user may have navigated away from the current page by the time the promise resolves and the Client API executes. This may cause APIs like `formContext.getAttribute(<name>).getValue()` to return `null`, even though at the time the original event handler executed, the attribute had a value.
+The context passed to an event is only guaranteed to perform as expected during the event. When you keep a reference to a context after the event ends, actions might occur that cause context methods to behave in an unexpected fashion.
 
-Below are some examples of asynchronous code where additional checks and caution should be taken.
+For example, if your event handler dispatches an async action that takes an extended amount of time while you're holding on to a reference to the execution context, the end user might navigate away from the current page by the time the promise resolves and you invoke the context method. This situation might cause methods like `formContext.getAttribute(<name>).getValue()` to return `null`, even though at the time the original event handler executed, the attribute had a value.
+
+The following examples show where you should add more checks and take caution because the event handler function uses the execution context after the event completes.
 
 ### Accessing context in a promise
 
-The context may change in unexpected ways after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
+The context might change in unexpected ways after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
 
 ```JavaScript
 function onLoad(executionContext) {
@@ -61,13 +64,13 @@ function onLoad(executionContext) {
 
 ### Accessing context after an await statement
 
-The context may change in unexpected ways after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
+The context might change in unexpected ways after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
 
 ```JavaScript
 async function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     var result = await fetch("https://www.contoso.com/");
-    // Using formContext or executionContext here may not work as expected
+    // Using formContext or executionContext here might not work as expected
     // because the synchronous part of onLoad has already completed.
     formContext.getAttribute("name").setValue(result);
 }
@@ -75,7 +78,7 @@ async function onLoad(executionContext) {
 
 ### Accessing context in a timeout function
 
-The context may change in unexpected ways after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
+The context might change in unexpected ways after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
 
 ```JavaScript
 function onLoad(executionContext) {
