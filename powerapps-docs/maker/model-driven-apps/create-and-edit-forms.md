@@ -38,7 +38,7 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
    - **Card form** For displaying compact data in a layout that is good for small screens or areas in a sub-grid or view.
  
 1. Enter a **Form name**, and optionally enter a **Description**.
-1. If you want to have suggestions from Copilot for the columns to create for the form based on the Form name and Description values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot-preview).
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the **Form name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot-preview).
    :::image type="content" source="media/new-form.png" alt-text="Create a new form card in Power Apps" lightbox="media/new-form.png":::
 1. Select **Create**.
 
