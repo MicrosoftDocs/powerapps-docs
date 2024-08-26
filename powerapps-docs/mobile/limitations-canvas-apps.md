@@ -32,8 +32,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 
  > [!NOTE]
-  > If using offline mode and your data is in Excel or CSV files or SharePoint lists, we recommend [creating a canvas app with external data](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint), which uses Copilot to assist with the Dataverse table generation. 
-
+> If your app connects to data from Excel, CSV files, or SharePoint lists, you can [Start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can enable offline support for your canvas apps with one click.
 
 ## Profile runtime limitations
 
@@ -42,7 +41,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
 | PowerFx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
-|LookUp support| Filter on column LookUp only supports one level of look-up when the app is configured for offline use.|
+|LookUp support| Filter on column Lookup only supports one level of relationship when the app is configured for offline use.|
 |Relationship |Many-to-many relationships aren't supported in offline mode in canvas apps.|
 |Column types |Calculated and roll-up fields &mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced. 
 |Column types |When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.| 
