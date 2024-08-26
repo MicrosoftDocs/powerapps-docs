@@ -38,7 +38,7 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
    - **Card form** For displaying compact data in a layout that is good for small screens or areas in a sub-grid or view.
  
 1. Enter a **Form name**, and optionally enter a **Description**.
-1. If you want to have suggestions from Copilot for the columns to create for the form based on the Form name and Description values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot).
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the Form name and Description values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot-preview).
    :::image type="content" source="media/new-form.png" alt-text="Create a new form card in Power Apps" lightbox="media/new-form.png":::
 1. Select **Create**.
 
@@ -47,13 +47,19 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a table, such as the account table, and then select the **Forms** area.
-1. Select the form name that you want, and then on the command bar, select **Edit**.
+1. Select the form that you want, and then on the command bar, select **Edit**.
 1. Make changes such as adding columns or [configuring properties](#form-properties).
 1. When you're done making changes to the form, select **Save and Publish** > **Save only** to save the form, or select **Save and Publish** to save and have your changes available to app users.
 
-## Column suggestions by Copilot
+## Column suggestions by Copilot (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use column suggestions by Copilot to select the best columns to display in your model-driven app form. Instead of using the default fields that Power Apps selects, makers can view up to 10 suggestions from Copilot. The column suggestions are based on the form name and description. Makers review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ### Prerequisites
 
@@ -61,7 +67,7 @@ Use column suggestions by Copilot to select the best columns to display in your 
 - See if this feature is available in your region: [Product availability report](https://releaseplans.microsoft.com/availability-reports/?report=productgeoreport)
 - Learn how to turn on Copilots in your region: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 
-### Limitations
+### How column suggestions work
 
 Column suggestions are available when you create a new form or view for a Microsoft Dataverse table.
 
