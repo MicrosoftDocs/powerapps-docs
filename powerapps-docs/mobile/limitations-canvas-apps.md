@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 08/22/2024
+ms.date: 08/26/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -30,9 +30,8 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Shared offline profile| An offline profile can't be used in two canvas apps. |
 |Shared offline profile| If the same offline profile is used in a canvas app and in a model-driven app, it will create two separate local databases.|
 
-
- > [!NOTE]
-> If your app connects to data from Excel, CSV files, or SharePoint lists, you can [Start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can enable offline support for your canvas apps with one click.
+> [!NOTE]
+> If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
 
 ## Profile runtime limitations
 
@@ -40,13 +39,13 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Area |Description|  
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
-| PowerFx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
+| Power Fx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
 |Relationship |Many-to-many relationships aren't supported in offline mode in canvas apps.|
-|Relationship| Filter on column Lookup only supports one level of relationship when the app is configured for offline use.|
-|Column types |Calculated and roll-up fields &mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced. 
+|Relationship| Filtering on column look-ups only supports one level of the relationship when the app is configured for offline use.|
+|Column types |Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced. |
 |Column types |When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.| 
 |Sort order|Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.|
-|Background synchronization|Data can only be synced regularly when Power Apps is running in the foreground of your device, with the screen unlocked. Learn more: [Sync data offline in the background](sync-data-offline-background.md)|
+|Background synchronization|Data can only be synced regularly when Power Apps is running in the foreground of your device, with the screen unlocked. Learn more in [Sync data offline in the background](sync-data-offline-background.md).|
 
 ## Profile filters limitations
 
