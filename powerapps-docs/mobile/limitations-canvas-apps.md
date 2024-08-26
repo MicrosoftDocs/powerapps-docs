@@ -20,9 +20,9 @@ searchScope:
 
 Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review [Best practices for developing an app for offline use](best-practices-offline.md) and [Optimize the offline profile](mobile-offline-guidelines.md).
 
-## Offline unsupported capabilities
+## Capabilities not supported in offline-enabled apps
 
-|area |description|  
+|Area |Description|  
 |-------------|---------|  
 | Canvas app types|The offline-first feature works for standalone canvas apps only. It doesn't work for embedded canvas apps, custom pages, or canvas apps in Teams.|
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
@@ -38,7 +38,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 ## Profile runtime limitations
 
 
-|area |description|  
+|Area |Description|  
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
 | PowerFx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
@@ -51,11 +51,11 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 ## Profile filters limitations
 
-|area |description|  
+|Area |Description|  
 |-------------|---------|  
 |Relationship defined for each table|A maximum of 15 relationships is allowed. There is a maximum of one many-to-many (M:M) or one-to-many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
-|auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
+|Auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
 
 ### See also
 [Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
