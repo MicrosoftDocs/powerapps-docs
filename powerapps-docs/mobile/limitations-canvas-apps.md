@@ -41,8 +41,8 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
 | PowerFx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
-|LookUp support| Filter on column Lookup only supports one level of relationship when the app is configured for offline use.|
 |Relationship |Many-to-many relationships aren't supported in offline mode in canvas apps.|
+|Relationship| Filter on column Lookup only supports one level of relationship when the app is configured for offline use.|
 |Column types |Calculated and roll-up fields &mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced. 
 |Column types |When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.| 
 |Sort order|Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.|
