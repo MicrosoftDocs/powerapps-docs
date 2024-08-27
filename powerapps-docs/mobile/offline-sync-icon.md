@@ -77,9 +77,9 @@ If your admin [activated sync settings](setup-mobile-offline.md#define-sync-sett
 
 ### Online mode (Preview)
 
-If your admin [activated online mode](setup-mobile-offline.md#enable-online-mode-preview) for the app, you can tempararily switch the app to online mode.    
+If your admin [activated online mode](setup-mobile-offline.md#enable-online-mode-preview) for the app, you can temporarily switch the app to online mode.    
 
-If you want to access online data directly from the server and your device is connected to the network, set the **online mode** setting to **On**. In this mode, the app loads data directly from the server in grids, forms and search pages. You can change back to offline mode anytime by setting the **online mode** to **Off**. If you close the app and launch it again later, the online mode is automatically reset to Off. 
+If you want to access online data directly from the server and your device is connected to the network, set the **online mode** setting to **On**. In this mode, the app loads data directly from the server in grids, forms and search pages. You can change back to offline mode anytime by setting the **online mode** to **Off**. If you close the app and open it again later, the online mode is automatically reset to Off. 
 
 When you work in online mode and the device lose network connectivity, you see the notification "Network disconnected. Switch to offline mode to continue working with the app". Use the Switch button to open the Devices status page and set the online mode to Off. 
 
