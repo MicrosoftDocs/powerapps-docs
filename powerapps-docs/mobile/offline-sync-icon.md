@@ -69,7 +69,7 @@ You can use the **Device Status** page to see the number of files and images to 
 
 ### Offline sync settings (Preview)
 
-If your admin [enabled sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile) for the app, you can control when offline synchronizations are triggered.
+If your admin [enabled sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile-preview) for the app, you can control when offline synchronizations are triggered.
 
 - Set the **Wifi only** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Enable this setting when you need to save your data plan or your battery, especially if you are in a low-network area.
 
@@ -77,7 +77,7 @@ If your admin [enabled sync settings](setup-mobile-offline.md#define-sync-settin
 
 ### Online mode (Preview)
 
-If your admin [enabled the online mode](setup-mobile-offline.mdenable-online-mode-preview) for the app, you can tempararily switch the app to online mode.    
+If your admin [enabled the online mode](setup-mobile-offline.md#enable-online-mode-preview) for the app, you can tempararily switch the app to online mode.    
 
 If you want to access online data directly from the server and your device is connected to the network, set the **online mode** setting to **On**. In this mode, the app loads data directly from the server in grids, forms and search pages. You can change back to offline mode anytime by setting the **online mode** to **Off**. If you close the app and launch it again later, the online mode is automatically reset to Off. 
 
