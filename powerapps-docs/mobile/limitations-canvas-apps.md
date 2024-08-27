@@ -32,7 +32,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 > [!NOTE]
 > If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
 
-## Profile runtime limitations
+## Offline runtime limitations
 
 
 |Area |Description|  
