@@ -280,7 +280,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Comma-separated list of attributes. If at least one of these attributes is modified, the plug-in should execute.|
+|Description|Comma-separated list of attributes. If any of these attributes is modified or included in the request, the plug-in should execute.|
 |DisplayName|Filtering Attributes|
 |FormatName|Text|
 |IsLocalizable|False|
