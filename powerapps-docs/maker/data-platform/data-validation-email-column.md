@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/30/2023
+ms.date: 08/22/2024
 ms.custom: template-how-to
 ---
 # Email address validation for email columns (preview)
@@ -17,6 +17,7 @@ Get email address columns validated automatically in model-driven apps with no-c
 Traditionally, the existing email column type had only basic email validation. With smart email address validation, the email column format comes with better validation that includes reasons for the column being invalid. Any model-driven apps using a text column with email format receives automatic validation, which is helpful in guiding users to enter better email data.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - During preview, these regions will have email address validation feature available: Asia (East, Southeast), Australia (East, Southeast), Canada (Central, East), Europe (North, West), France (Central, South), India (Central, South), Japan (East, West), South America – Brazil (South), Switzerland (North, West), UAE (North), UK (South, West), US (East, West).
 > - Smart email validation currently only works for model-driven apps.
@@ -52,9 +53,11 @@ Email address validation detects the following issues:
 Notice that the notification message **The domain is unknown** appears under the column.
 :::image type="content" source="media/address-validation-test.png" alt-text="Email address with invalid domain.":::
 
-## Known issue
+## Known issues
 
-The **Enable Smart Email Address Validation Control** app setting can be enabled even though the **Data Validation** Power Platform admin center environment setting is off. In this situation, email address validation won't work.
+- The **Enable Smart Email Address Validation Control** app setting can be enabled even though the **Data Validation** Power Platform admin center environment setting is off. In this situation, email address validation won't work.
+- When the form containing the control is set to read-only mode, the email column still allows editing of the value.
+- The email column doesn't import values when using a quick create form. For example, when you create a new parent contact record from a lead record.
 
 ## Next steps
 
