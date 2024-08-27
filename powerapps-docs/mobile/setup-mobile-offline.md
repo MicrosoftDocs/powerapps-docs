@@ -182,7 +182,7 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 1. Select **Save** and then publish the app.
 
-## Define sync settings on mobile
+## Define sync settings on mobile (Preview)
 You can enable users to control the automatic sync intervals or the connection type to synchronize the data.
 
 1. On the command bar, select **Settings**.
@@ -193,7 +193,7 @@ You can enable users to control the automatic sync intervals or the connection t
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
 
 
-## Enable Online toggle (Preview)
+## Enable Online mode (Preview)
 
 Offline-first is the best mode for the users who operate in no and low network condition. Once you have your data, you only work with the data on your local device all the time whatever the network status is. However, this mode sometimes prevent users to access more data than what is configured to work offline, even when the device is connected to the network. 
 
