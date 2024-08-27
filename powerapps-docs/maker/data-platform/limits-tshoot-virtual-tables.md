@@ -37,7 +37,7 @@ The following is a list of known limitations for virtual tables created using th
 - Data types not supported for virtual tables:
    - File and attachments
    - Image
-   - Lookup
+   - Lookup (There might be some partial support scenario seems to work, including virtual table lookup native tables, and virtual tables lookup virtual table from same provider. Currently, only support native tables looking up virtual tables currently.)
 - Maximum length of characters allowed for a text column in a virtual table is 4,000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit results in a validation error, and the operation fails.
 - Virtual table queries are limited to return 1,000 records. If you have a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit fails and provides an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 - Audit functionality isn't available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
