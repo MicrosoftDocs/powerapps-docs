@@ -192,6 +192,16 @@ You can enable users to control the automatic sync intervals or the connection t
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
 
+
+## Enable Online toggle (Preview)
+
+Offline-first is the best mode for the users who operate in no and low network condition. Once you have your data, you only work with the data on your local device all the time whatever the network status is. However, this mode sometimes prevent users to access more data than what is configured to work offline, even when the device is connected to the network. 
+
+You can enable a toggle that will be visible to the user in the Device status page. With the toggle, Users can switch temporary to online mode and access online data as appropriate.
+
+
+
+
 ## Supported capabilities 
 
 - **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
