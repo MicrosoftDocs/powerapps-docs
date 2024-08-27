@@ -40,7 +40,7 @@ There are some key benefits to using the built-in offline functionality for canv
 |---------|--------------------|------------------|
 |Power Apps Studio support	|Custom	| Built-in|
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
-|Supported Power Fx functions |	All |	Partial (See [Mobile offline limitations for canvas apps](limitations-canvas-apps.md#limitations-and-known-issues).)|
+|Supported Power Fx functions |	All |	Partial (See [Mobile offline limitations for canvas apps](limitations-canvas-apps.md).)|
 |App checker rules|	None	|Common configuration problems are flagged|
 |Offline or connectivity user experience	| Not provided/custom only	|Automatic|
 |[Sync user experience or status](canvas-mobile-offline-working.md#sync-status-icons)	|Not provided/custom only |	Automatic|
