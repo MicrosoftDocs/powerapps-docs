@@ -55,7 +55,7 @@
       href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams 
       href: ../user/open-app-embedded-in-teams.md
-    - href: Copilot features
+    - name: Copilot features
       items:
       - name: Draft well-written, input text with Copilot (preview)
         href: ../user/well-written-input-text-copilot.md
