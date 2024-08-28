@@ -4,7 +4,7 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 08/07/2024
+ms.date: 08/28/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -128,7 +128,7 @@ If a custom filter results in a slow Dataverse query, downloads will take longer
    > - This is a preview feature.
    > - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
-#### Enable the optimization for model-driven apps
+#### Optimize for model-driven apps
    
 The first sync can take time to complete for organizations with very large datasets, especially in remote areas. With **Offline Table Column Selection (Preview)** you can select the columns to download on the device to avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync should see a greater impact as there are more records to download.
 
@@ -153,7 +153,7 @@ The first sync can take time to complete for organizations with very large datas
 > - We recommend selecting columns on tables with a high number of unused columns.
 > - The **manage columns** option is not enabled in the **Offline configuration** of **Power Platform admin center**. 
 
-#### Enable the optimization for canvas apps
+#### Optimize for canvas apps
 
 > [!IMPORTANT]
 > The optimization is not supported on canvas apps using a selected offline profile.
