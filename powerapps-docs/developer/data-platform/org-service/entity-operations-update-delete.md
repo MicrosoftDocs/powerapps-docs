@@ -126,7 +126,7 @@ You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if y
 
 ## Use the UpdateMultipleRequest class
 
-he [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) is the most performant way to update multiple records in a single request. More information: [Bulk Operation messages](../bulk-operations.md)
+The [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) is the most performant way to update multiple records in a single request. More information: [Bulk Operation messages](../bulk-operations.md)
 
 ## Update related entities in one operation
 
