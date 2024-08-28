@@ -47,16 +47,20 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a SharePoint Online page (canvas apps)
-    href: ../user/powerapps-web-part.md
-  - name: In Microsoft Teams (canvas apps)
-    href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Draft well-written, input text with Copilot (preview)
-    href: ../user/well-written-input-text-copilot.md
-  - name: Filter, sort, and search galleries with Copilot (preview)
-    href: ../user/smartGrid.md
+  - name: Use canvas apps
+    items:
+    - name: On a SharePoint Online page
+      href: ../user/powerapps-web-part.md
+    - name: In Microsoft Teams 
+      href: ../user/open-app-embedded-in-teams.md
+    - href: Use Copilot features
+      items:
+      - name: Draft well-written, input text with Copilot (preview)
+        href: ../user/well-written-input-text-copilot.md
+      - name: Filter, sort, and search galleries with Copilot (preview)
+        href: ../user/smartGrid.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
