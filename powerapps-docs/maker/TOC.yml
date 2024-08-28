@@ -55,13 +55,13 @@
       href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams 
       href: ../user/open-app-embedded-in-teams.md
-    - href: Use Copilot features
+    - href: Copilot features
       items:
       - name: Draft well-written, input text with Copilot (preview)
         href: ../user/well-written-input-text-copilot.md
       - name: Filter, sort, and search galleries with Copilot (preview)
         href: ../user/smartGrid.md
-  - name: 'Use model-driven apps'
+  - name: Use model-driven apps
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
@@ -69,10 +69,12 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Form filling assistance
-      href: ../user/form-filling-assistance.md
-    - name: Use Copilot chat in model-driven apps
-      href: ../user/use-copilot-model-driven-apps.md
+    - name: Copilot features
+      items:
+      - name: Form filling assistance
+        href: ../user/form-filling-assistance.md
+      - name: Use Copilot chat in model-driven apps
+        href: ../user/use-copilot-model-driven-apps.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
