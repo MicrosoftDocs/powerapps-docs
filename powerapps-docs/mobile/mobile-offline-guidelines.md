@@ -77,7 +77,7 @@ Choose a row option based on the category of table you add:
 
 ### Use filters to reduce the data download size
 
-If users have access to a large set of data when they're online, apply filters to restrict the data that they'll download when they're offline.
+If users have access to a large set of data when they're online, apply filters to restrict the data that they download when they're offline.
 
 > [!IMPORTANT]
 > If you add a custom filter to a table that's set to download related rows, the filter is treated as an **OR**. That means that all related rows are downloaded, in addition to the rows specified by the filter. Users may download more data than you intend. If you want to download related rows and apply an additional filter, clear **Related rows only** and specify the relationship and the additional restrictions in a custom filter using **AND**.
