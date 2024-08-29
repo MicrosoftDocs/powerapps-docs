@@ -136,9 +136,9 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- [Decimal number](formula-columns-data-types.md#create-a-decimal-formula-column)
-- [Whole Number](formula-columns-data-types.md#create-a-whole-number-formula-column)
-- [Float](formula-columns-data-types.md#create-a-floating-point-number-formula-column)
+- [Create a decimal formula column](formula-column-data-types.md#create-a-decimal-formula-column)
+- [Whole Number](formula-column-data-types.md#create-a-whole-number-formula-column)
+- [Float](formula-column-data-types.md#create-a-floating-point-number-formula-column)
 - Choice (Yes/No)
 - Datetime
 
