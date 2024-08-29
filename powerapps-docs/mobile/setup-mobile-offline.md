@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/04/2024
+ms.date: 08/29/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -183,6 +183,8 @@ Offline-first is the default mode when you enable an app for offline use. If you
 1. Select **Save** and then publish the app.
 
 ## Define sync settings on mobile (Preview)
+[This section is prerelease documentation and is subject to change.]
+
 You can allow users to control the automatic sync intervals or the connection type to synchronize the data.
 
 1. On the command bar, select **Settings**.
@@ -191,13 +193,19 @@ You can allow users to control the automatic sync intervals or the connection ty
 
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
+  
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 
-## Enable Online mode (Preview)
+## Turn on Online mode (Preview)
+[This section is prerelease documentation and is subject to change.]
 
 Offline-first mode provides the best experience for users in no and low network conditions. Once your data is synchronized, you only work with the data on your local device regardless of the network status. However, if your offline profile includes filters, you may not be able to access all the data you could online in a browser, even when your device is connected to the network. 
 
-If it's important for users to access data that is not downloaded to their devices, you can activate the **online mode** toggle that will be visible to users in the Device status page. When users use the **online mode** toggle, they can access data that is not synchronized to the local device. The toggle can be activated only when the device is connected to a network. 
+If it's important for users to access data that's not downloaded to their devices, you can activate the **Online mode** toggle that's visible to users in the Device status page. When users use the **Online mode** toggle, they can access data that's not synchronized to the local device. The toggle can be activated only when the device is connected to a network. 
 
 1. On the command bar, select **Settings**.
 
@@ -205,6 +213,10 @@ If it's important for users to access data that is not downloaded to their devic
    
 1. Set the **Allow users to work in online mode** option to **On** to let users choose if they want to use the app in online mode when connected to a network.
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Supported capabilities 
 
