@@ -3,9 +3,9 @@ title: "Client API execution context in model-driven apps| MicrosoftDocs"
 description: "Learn about the model-driven application client API execution context"
 author: adrianorth
 ms.author: aorth
-ms.date: 08/15/2024
+ms.date: 08/23/2024
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: conceptual
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -13,6 +13,7 @@ contributors:
   - JimDaly
   - caburk
   - tahoon-ms
+  - fafuxa-ms
 ---
 # Client API execution context
 
@@ -36,20 +37,24 @@ The execution context is passed in one of the following ways:
 
 The execution context object provides many methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
 
-## Common mistakes in accessing contexts
+## Using context objects asynchronously
 
-The context passed to an event is only valid during the event. Don't keep a reference to a context after the event ends. The following are common anti-patterns because they access the context after the event handler finishes:
+The context passed to an event is only guaranteed to perform as expected during the event. When you keep a reference to a context after the event ends, actions might occur that cause context methods to behave in an unexpected fashion.
+
+For example, if your event handler dispatches an async action that takes an extended amount of time while you're holding on to a reference to the execution context, the end user might navigate away from the current page by the time the promise resolves and you invoke the context method. This situation might cause methods like `formContext.getAttribute(<name>).getValue()` to return `null`, even though at the time the original event handler executed, the attribute had a value.
+
+The following examples show where you should add more checks and take caution because the event handler function uses the execution context after the event completes.
 
 ### Accessing context in a promise
 
-The context isn't valid in the [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API).
+The context might change in unexpected ways after a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves.
 
 ```JavaScript
 function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     fetch("https://www.contoso.com/").then(
         function (result) {
-            // Using formContext or executionContext here is not supported
+            // Using formContext or executionContext here may not work as expected
             // because onLoad has already completed when the promise is resolved.
             formContext.getAttribute("name").setValue(result);
         }
@@ -59,13 +64,13 @@ function onLoad(executionContext) {
 
 ### Accessing context after an await statement
 
-The context isn't valid after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
+The context might change in unexpected ways after using [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) within an [async function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). 
 
 ```JavaScript
 async function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     var result = await fetch("https://www.contoso.com/");
-    // Using formContext or executionContext here is not supported
+    // Using formContext or executionContext here might not work as expected
     // because the synchronous part of onLoad has already completed.
     formContext.getAttribute("name").setValue(result);
 }
@@ -73,38 +78,20 @@ async function onLoad(executionContext) {
 
 ### Accessing context in a timeout function
 
-The context isn't valid after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
+The context might change in unexpected ways after using [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout) or [setInterval](https://developer.mozilla.org/docs/Web/API/setInterval) to defer executing some code.
 
 ```JavaScript
 function onLoad(executionContext) {
     var formContext = executionContext.getFormContext();
     if (notReady) {
         setTimeout(function () {
-            // Using formContext or executionContext here is not supported
+            // Using formContext or executionContext here may not work as expected
             // because onLoad has already completed when this delayed function executes.
             var name = formContext.getAttribute("name").getValue();
         }, 100);
     } else {
         formContext.getAttribute("name").setValue("abc");
     }
-}
-```
-
-### Accessing context in a stored variable
-
-Don't cache the context as a variable.
-
-```JavaScript
-function onLoad(executionContext) {
-    window.__myExecutionContext = executionContext;
-}
-
-// This function is called any time later.
-function customFunction() {
-    // Using formContext or executionContext here is not supported
-    // because onLoad has already completed when customFunction executes.
-    var formContext = window.__myExecutionContext.getFormContext();
-    formContext.getAttribute("name").setValue("abc");
 }
 ```
 
