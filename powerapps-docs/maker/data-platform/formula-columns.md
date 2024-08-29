@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/01/2024
+ms.date: 08/16/2024
 ms.subservice: teams
 ms.author: sriknair
 ms.reviewer: matp
@@ -79,7 +79,7 @@ Describe what you want the formula to do and get AI generated results. Formula s
 
 #### Prerequisites
 
-To enable this feature you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
+To enable this feature, you must enable the **AI suggestions for formula columns** environment setting. More information: [AI suggestions for formula columns](/power-platform/admin/settings-features#ai-suggestions-for-formula-columns)
 
 #### Example natural language input
 
@@ -136,12 +136,15 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- [Decimal number](#create-a-decimal-formula-column)
-- Choice Yes/No (boolean)
+- [Create a decimal formula column](formula-column-data-types.md#create-a-decimal-formula-column)
+- [Whole Number](formula-column-data-types.md#create-a-whole-number-formula-column)
+- [Float](formula-column-data-types.md#create-a-floating-point-number-formula-column)
+- Choice (Yes/No)
 - Datetime
-- [Whole Number](#create-a-whole-number-formula-column)
 
-The currency, and choice (formerly option sets) data types aren't currently supported.
+More information: [Create formula columns with decimal, whole number, float, and choice data types](formula-column-data-types.md)\
+
+The currency data type isn't currently supported.
 
 ## Function types
 
@@ -150,12 +153,12 @@ You can use the following function types in a formula column:
 - Decimal
 - String
 - Boolean
-- Option Set
+- Choice
 - DateTime (TZI)
 - DateTime (User local) (limited to comparisons with other user local values DateAdd, and DateDiff functions)
 - DateTime (Date only) (limited to comparisons with other date-only values, DateAdd, and DateDiff functions)
 - Currency
-- Whole Number, promoted to Decimal
+- Whole Number
 
 ## Functions
 
@@ -356,6 +359,27 @@ For the scalar functions you can use in a formula column, go to [Formula referen
      [Decimal](../canvas-apps/functions/function-value.md) \*
    :::column-end:::
    :::column span="":::
+     [Float](../canvas-apps/functions/function-value.md) \*
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Sqrt](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+     [Ln](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+     [Power](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Exp](../canvas-apps/functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end::: -->
 
@@ -368,36 +392,6 @@ For the scalar functions you can use in a formula column, go to [Formula referen
 |Description  |Example  |
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
-
-## Create a decimal formula column
-
-Create a formula column that returns a decimal number.
-
-1. When you create a column, enter the following information:
-   - A **Display name** for the column.
-   - Optionally, enter a **Description** of the column.
-1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** bar.
-   This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
-   :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number.":::
-1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
-  :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
-1. Select **Save**.
-
-## Create a whole number formula column
-
-Create a formula column that returns a whole number.
-
-1. When you create a column, enter the following information:
-   - A **Display name** for the column.
-   - Optionally, enter a **Description** of the column.
-1. For **Data type** select ***fx* Formula**.
-1. Enter a formula that returns a numeric value in the **Formula** bar.
-   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
-   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
-1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
-  :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition.":::
-1. Select **Save**.
 
 ## Guidelines and limitations
 
@@ -427,7 +421,7 @@ This section describes guidelines and the known limitations with formula columns
 - A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
-- A formula column which is dependent on time bound functions `UTCNow()` and `UTCToday()` can't be used in a rollup field.
+- A formula column, which is dependent on time bound functions `UTCNow()` and `UTCToday()` can't be used in a rollup field.
 
 ### Power Fx text function recommendations
 
@@ -477,17 +471,8 @@ This section describes guidelines and the known limitations with formula columns
 - Default formula data type value is set to **Decimal** for numeric value returning formulas.
 - Updating whole number formula column's format isn't supported.
 
-### Power Fx functions not currently supported
-
-- Power
-- Sqrt
-- Exp
-- Ln
-- ^ (operator)
-
 ### Formula columns of data types that can't be produced
 
-- Choices (except Yes/No choice)
 - Currency
 
 ## See also
