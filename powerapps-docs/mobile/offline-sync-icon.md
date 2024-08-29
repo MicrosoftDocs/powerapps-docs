@@ -74,7 +74,7 @@ If your admin [activated sync settings](setup-mobile-offline.md#define-sync-sett
 
 - Set the **Wifi only** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Turn on this setting to reduce cellular data and battery usage, especially in a low-network areas.
 
-- If you want to sync less frequently, change the sync interval value from the **Auto sync** setting. You can keep the default value, as defined by your admin, by selecting **Auto**, or you can pick a longer interval that meets your needs. If you choose **Manual**, the sync only happens when you select the **Check for updates** button in the **Device Status** page.
+- If you want to sync less frequently, change the sync interval value from the **Auto sync** setting. You can keep the default value, as defined by your admin, by selecting **Auto** or you can pick a longer interval that meets your needs. If you choose **Manual**, the sync only happens when you select the **Check for updates** button in the **Device Status** page.
 
 > [!IMPORTANT]
 >
@@ -87,9 +87,9 @@ If your admin [activated sync settings](setup-mobile-offline.md#define-sync-sett
 
 If your admin [activated online mode](setup-mobile-offline.md#enable-online-mode-preview) for the app, you can temporarily switch the app to online mode.    
 
-If you want to access online data directly from the server and your device is connected to the network, set the **online mode** setting to **On**. In this mode, the app loads data directly from the server in grids, forms and search pages. You can change back to offline mode anytime by setting the **online mode** to **Off**. If you close the app and open it again later, the online mode is automatically reset to Off. 
+If you want to access online data directly from the server and your device is connected to the network, set the **Online mode** setting to **On**. In this mode, the app loads data directly from the server in grids, forms, and search pages. You can change back to offline mode anytime by setting the **Online mode** to **Off**. If you close the app and open it again later, the online mode is automatically reset to **Off**. 
 
-When you work in online mode and the device lose network connectivity, you see the notification "Network disconnected. Switch to offline mode to continue working with the app". Use the Switch button to open the Devices status page and set the online mode to Off. 
+When you work in online mode and the device loses network connectivity, you see the notification: **Network disconnected. Switch to offline mode to continue working with the app.** Use the **Switch** button to open the **Devices Status** page and set the **Online mode** to **Off**. 
 
 > [!IMPORTANT]
 >
