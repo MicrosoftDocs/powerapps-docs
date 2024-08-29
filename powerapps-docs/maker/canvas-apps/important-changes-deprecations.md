@@ -5,7 +5,7 @@ author: mduelae
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/07/2022
+ms.date: 08/29/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 ms.reviewer: mkaur-msft
@@ -21,6 +21,10 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
+
+## Chatbot control is deprecated
+
+Effective September 5, 2024, [Chatbot control](add-ai-chatbot.md) is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md instead.
 
 ## Deprecated endpoints
 
