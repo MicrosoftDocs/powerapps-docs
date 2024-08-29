@@ -24,7 +24,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## Chatbot control is deprecated
 
-Effective September 5, 2024, [Chatbot control](add-ai-chatbot.md) is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md) instead.
+Effective September 5, 2024, [Chatbot control (Preview)](add-ai-chatbot.md) is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md) instead.
 
 ## Deprecated endpoints
 
