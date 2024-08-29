@@ -85,13 +85,13 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 > [!NOTE]
 > The URI for the web service in this example is not a functioning web service.
 
-1.	Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1.	Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
 1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
 1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
 1. Provide the environment variable unique name (not the display name) added in the previous section, for this example *new_TestSecret* is used.
-1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it's renamed to **GetSecret**.
+1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In this screenshot, it's renamed to **GetSecret**.
 
    :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
 
@@ -133,7 +133,7 @@ Follow these steps:
 1. Select **Select Members**, search for *Power Virtual Agents Service*, select it, and then choose **Select**.
 1. Select **Review + assign** on the bottom of the screen. Review the information and select **Review + assign** again if all is correct.
 
-### Add a tag to the secret in Azure Key Vault
+### Add a tag to allow a copilot to access the secret in Azure Key Vault
 
 By completing the previous steps in this section, Copilot Studio now has access to the Azure Key Vault, but you can't use it yet. To complete the task, follow these steps:
 
@@ -151,16 +151,25 @@ By completing the previous steps in this section, Copilot Studio now has access 
 
 1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
 1. Select the version of the secret.
-1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. When done, select **OK**
+1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. The error message in Copilot Studio should give you the exact values of those two properties. Under **Tag Name** you need to add **AllowedBots** and in **Tag Value** you need to add the value that was displayed in the error message. This value is formatted as `{envId}/{schemaName}`. In the case when there are multiple copilots that need to be allowed, separate the values with a comma. When done, select **OK**.
 1. Select **Apply** to apply the tag to the secret.
 1. Go back to Copilot Studio. Select **Refresh** in the **Test your copilot** pane.
 1. In the test pane, test your topic again by using one of the start phrases of the topic.
 
 The value of your secret should be shown in the test panel.
 
+### Add a tag to allow all copilots in an environment access to the secret in Azure Key Vault
+
+Alternatively, you can allow all copilots in an environment access to the secret in Azure Key Vault. To complete the task, follow these steps:
+
+1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
+1. Select the version of the secret.
+1. Select **0 tags** next to **Tags**. Add a **Tag Name** and a **Tag Value**. Under **Tag Name** add **AllowedEnvironments** and in **Tag Value** add the environment ID of the environment you want to allow. When done, select **OK**
+1. Select **Apply** to apply the tag to the secret.
+
 ## Limitation
 
-Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
+Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows, Copilot Studio copilots, and custom connectors.
 
 ### See also
 
