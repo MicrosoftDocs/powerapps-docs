@@ -22,7 +22,7 @@ contributors:
 [This article is prerelease documentation and is subject to change.]
 
 > [!IMPORTANT]
-> Effective September 5, 2024, Chatbot control is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md) instead.
+> Effective September 5, 2024, Chatbot control (Preview) is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md) instead.
 
 Add a Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with various requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
