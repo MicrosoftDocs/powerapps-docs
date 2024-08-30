@@ -41,7 +41,7 @@ Create a formula column that returns a decimal number.
    :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number using 'Price Per Unit' * 150.":::
 1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
-1. Select **Save**.
+1. Select **Save**. By default, **Formula data type** is set to Decimal and a Decimal formula field gets created.
 
 ## Create a whole number formula column
 
@@ -61,52 +61,55 @@ Create a formula column that returns float.
 
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a floating point number in the **Formula** bar.
-   This example creates a formula column called *TestFloat*.
+   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
    :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column using Float(123) as the formula.":::
 1. Expand **Advanced options**, and set the required number of decimal places.
 1. Select **Save**.
 
 ### Guidelines for creating floating point number formula columns
 
-- Floating point numbers store an extremely close approximation of a value. Floats are typically used for storing scientific numeric values.
 - If an operand involved in an arithmetic operation is of float type, then the result of the formula is of float type. For example:
    - ```1 + 2 + Float(1)``` as it uses a float type operand - ```Float(1)```.
 - A numeric function returns a float value when the first parameter provided to the function is of float type. Otherwise, the function returns a decimal value. For example:
   - ```Sum(1, 2, Float(1))``` is of decimal type and ```Sum(Float(1), 1, 2)``` is of float type.
 - ```Float```, ```Sqrt```, ```Ln```, ```Power```, ```Exp``` functions and the ```^``` operator return a float value.
-- Float formula columns support a maximum precision of 5.
 
 ## Create a choice formula column
 
-To create a choice formula column, either global choice or local choice of a simple choice column can be used as a result in ```If``` or ```Switch``` functions.
+To create a choice formula column, either global choice or local choice of a simple choice column can be used as result.
 
 ### Using global choice
+Create a global choice. This example creates a global choice called *Task Priority*.
 
-1. Create a [global choice](custom-picklists.md). This example creates a global choice with a **Display name** that's *Color*.
-1. Add the following **Choices**:
-   - **Label**: *Red* **Value**: '*858,170,0000*'
-   - **Label**: *Pink* **Value**: *858,170,001*
-   - **Label**: *Yellow* **Value**: 858,170,002
-   - **Label**: *Blue* **Value**: *858,170,003*
    :::image type="content" source="media/global-choice-def.png" alt-text="Screenshot of a global choice.":::
-1. Create a formula column using the global choice. This example creates a formula column *Color Column* using the global choice *Color* created from the previous step.
+   
+Create a formula column that returns choice using a global choice.
+
+1. Select **Data type** as ***fx* Formula**.
+1. Enter a formula that returns a choice value in the **Formula** bar.
+   This example creates a formula column *Priority* using global choice *Task Priority*.
    :::image type="content" source="media/formula-columns-global-choice-fd.png" alt-text="Screenshot of a creating global choice formula column.":::
-1. Select **Save**. Notice that the column created is of data type **Choice fx**.
+1. Select **Save**.
 
 ### Using local choice from a simple choice column
-
-1. Create a simple choice column. This example creates a *Simple Color* choice column on the *Account* table.
+1. Create a simple choice column. This example creates a *Task Priority* simple choice column on *Account* entity.
+   
    :::image type="content" source="media/local-choice-def.png" alt-text="Screenshot of a creating a simple choice column.":::
-2. Create formula column on the same entity as simple choice column using simple choice column's local choice in the formula. This example creates a formula column *Color Column 2* on *Account* entity using local choice column created from the previous step.
+
+Create a formula column that returns choice using a local choice of a simple choice column.
+
+1. Select **Data type** as ***fx* Formula**.
+1. Enter a formula that returns a choice value in the **Formula** bar.
+   This example creates a formula column *Priority* on *Account* entity using local choice of a choice column *Task Priority* on *Account* entity.
    :::image type="content" source="media/formula-columns-local-choice-fd.png" alt-text="Screenshot of a creating local choice formula column.":::
+1. Select **Save**.
 
 ### Guidelines for working with choices in formula columns
-
-- Local choices of a related table's simple choice column can't be used as result type in formula columns.
-- Options from the same choice column should be used for all result arguments in choice formula columns.
-- A choice used by a formula column can't be updated.
-- Options of a choice can't be passed as an argument to string functions. Value function can be used to return numeric a value of an option.
-- A formula column's dependent local choice column or global choice can't be deleted.
+1. Local choices of related entity's simple choice column cannot be used as result type in formula columns.
+2. Options from same option set should be used for all result arguments in choice formula columns.
+3. A choice used by a formula column cannot be updated.
+4. Options of a choice cannot be passed as an argument to string functions. Value function can be used to return numeric value of an option.
+5. Formula column's dependent local choice column or global choice cannot be deleted.
 
 ## See also
 
