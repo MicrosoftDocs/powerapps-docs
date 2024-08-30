@@ -1333,21 +1333,9 @@ items:
 - name: "Solution Component Configuration (solutioncomponentconfiguration)"
   displayName: "solutioncomponentconfiguration entity"
   href: solutioncomponentconfiguration.md
-- name: "Solution Component Count Data Source (msdyn_solutioncomponentcountdatasource)"
-  displayName: "msdyn_solutioncomponentcountdatasource entity"
-  href: msdyn_solutioncomponentcountdatasource.md
-- name: "Solution Component Count Summary (msdyn_solutioncomponentcountsummary)"
-  displayName: "msdyn_solutioncomponentcountsummary entity"
-  href: msdyn_solutioncomponentcountsummary.md
-- name: "Solution Component Data Source (msdyn_solutioncomponentdatasource)"
-  displayName: "msdyn_solutioncomponentdatasource entity"
-  href: msdyn_solutioncomponentdatasource.md
 - name: "Solution Component Relationship Configuration (solutioncomponentrelationshipconfiguration)"
   displayName: "solutioncomponentrelationshipconfiguration entity"
   href: solutioncomponentrelationshipconfiguration.md
-- name: "Solution Component Summary (msdyn_solutioncomponentsummary)"
-  displayName: "msdyn_solutioncomponentsummary entity"
-  href: msdyn_solutioncomponentsummary.md
 - name: "Solution Health Rule (msdyn_solutionhealthrule)"
   displayName: "msdyn_solutionhealthrule entity"
   href: msdyn_solutionhealthrule.md
