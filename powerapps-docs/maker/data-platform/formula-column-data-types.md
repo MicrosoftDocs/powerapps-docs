@@ -61,8 +61,8 @@ Create a formula column that returns float.
 
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a floating point number in the **Formula** bar.
-   This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
-   :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column using Float(123) as the formula.":::
+Enter a formula that returns a floating point number in the Formula bar. This example creates a formula column called Total Price. Weight is a simple float column and Price Per Gm is a simple decimal column.   
+:::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column":::
 1. Expand **Advanced options**, and set the required number of decimal places.
 1. Select **Save**.
 
