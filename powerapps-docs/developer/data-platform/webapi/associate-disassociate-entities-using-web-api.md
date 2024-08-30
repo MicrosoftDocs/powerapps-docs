@@ -271,7 +271,7 @@ The following example shows how to associate multiple existing [ActivityParty](.
 **Request:**
 
 ```HTTP
-PUT [Organization URI]/api/data/v9.0/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
+PUT [Organization URI]/api/data/v9.2/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
 Content-Type: application/json  
 Accept: application/json  
 OData-MaxVersion: 4.0  
