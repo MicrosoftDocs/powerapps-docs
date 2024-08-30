@@ -89,7 +89,7 @@ Create a formula column that returns choice using a global choice.
 1. Enter a formula that returns a choice value in the **Formula** bar.
    This example creates a formula column *Priority* using global choice *Task Priority*.
    :::image type="content" source="media/formula-columns-global-choice-fd.png" alt-text="Screenshot of a creating global choice formula column.":::
-1. Select **Save**.
+1. Select **Save**.  Notice that the column created is of data type **Choice fx**.
 
 ### Using local choice from a simple choice column
 1. Create a simple choice column. This example creates a *Task Priority* simple choice column on *Account* entity.
@@ -105,7 +105,7 @@ Create a formula column that returns choice using a local choice of a simple cho
 1. Select **Save**.
 
 ### Guidelines for working with choices in formula columns
-1. Local choices of related entity's simple choice column cannot be used as result type in formula columns.
+1. Local choices of related table's simple choice column cannot be used as result type in formula columns.
 2. Options from same option set should be used for all result arguments in choice formula columns.
 3. A choice used by a formula column cannot be updated.
 4. Options of a choice cannot be passed as an argument to string functions. Value function can be used to return numeric value of an option.
