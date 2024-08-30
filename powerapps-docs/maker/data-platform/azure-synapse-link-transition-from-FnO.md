@@ -205,9 +205,13 @@ Currently, there are several limitations that are being addressed by the product
 
 ## Frequently asked questions
 
-### BYOD and export to data lake services are working well for us. Why did you retire these services?
+### Export to data lake service is working well for us. Why did you retire these services?
 
 As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a service under the brand name Synapse Link for Dataverse. Using our learnings, we addressed many shortcomings of existing services in Synapse Link while maintaining same data formats – so that you can upgrade your investments with minimal disruptions. Fabric link service is a new, no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric.
+
+### Is BYOD service retired? Is there a retirement date? 
+
+As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications. [BYOD](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database) is a such a service that exports Entity data into customers own Azure SQL database. While we have not yet announced a retirement date for BYOD service, our guidance is to transition to Synapse Link or Fabric Link services. Fabric link service is a new, no-copy, no-ETL solution, which enables you to query your data with SQL similar to a “read-replica” of yur data in Fabric.
 
 ### Will you retire Synapse Link in the future?
 
