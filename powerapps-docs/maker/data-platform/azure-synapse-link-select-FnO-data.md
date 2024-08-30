@@ -52,7 +52,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 - The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
 - Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment).
-- You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL Link profile. 
+- You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new Synapse Link profile. 
 - Depending on how you plan to consume finance and operations data, there are additional prerequisites as shown here.
 
 | How you plan to consume data  |  Azure Synapse Link feature you use | Prerequisites and Azure resources needed |
