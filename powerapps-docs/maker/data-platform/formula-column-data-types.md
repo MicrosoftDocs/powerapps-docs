@@ -41,7 +41,7 @@ Create a formula column that returns a decimal number.
    :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number using 'Price Per Unit' * 150.":::
 1. Expand **Advanced options**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
-1. Select **Save**. By default, **Formula data type** is set to Decimal and a Decimal formula field gets created.
+1. Select **Save**. By default, **Formula data type** is set to **Decimal** and a decimal formula field is created.
 
 ## Create a whole number formula column
 
@@ -50,7 +50,7 @@ Create a formula column that returns a whole number.
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a numeric value in the **Formula** bar.
    This example creates a formula column called *Number of Units*. *Total Price* and *Price Per Unit* columns are of decimal data type.
-   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number..":::
+   :::image type="content" source="media/formula-columns-wholenum-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a whole number.":::
 1. Expand **Advanced options**, and select **Whole number** as the **Formula data type** and set the required format for whole number column.
   :::image type="content" source="media/formula-columns-wholenum-adv-options.png" alt-text="Screenshot of a whole number formula column definition using 'Total Price' / 'Price Per Unit'.":::
 1. Select **Save**.
@@ -61,7 +61,7 @@ Create a formula column that returns float.
 
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a floating point number in the **Formula** bar.
-Enter a formula that returns a floating point number in the Formula bar. This example creates a formula column called Total Price. Weight is a simple float column and Price Per Gm is a simple decimal column.   
+Enter a formula that returns a floating point number in the **Formula** bar. This example creates a formula column called *Total Price*. *Weight* is a simple float column and *Price Per Gm* is a simple decimal column.
 :::image type="content" source="media/formula-columns-float-fd.png" alt-text="Screenshot of a creating float formula column":::
 1. Expand **Advanced options**, and set the required number of decimal places.
 1. Select **Save**.
@@ -79,11 +79,12 @@ Enter a formula that returns a floating point number in the Formula bar. This ex
 To create a choice formula column, either global choice or local choice of a simple choice column can be used as result.
 
 ### Using global choice
+
 Create a global choice. This example creates a global choice called *Task Priority*.
 
-   :::image type="content" source="media/global-choice-def.png" alt-text="Screenshot of a global choice.":::
-   
-Create a formula column that returns choice using a global choice.
+:::image type="content" source="media/global-choice-def.png" alt-text="Screenshot of a global choice.":::
+
+Create a formula column that returns a choice using a global choice.
 
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a choice value in the **Formula** bar.
@@ -92,24 +93,26 @@ Create a formula column that returns choice using a global choice.
 1. Select **Save**.  Notice that the column created is of data type **Choice fx**.
 
 ### Using local choice from a simple choice column
-1. Create a simple choice column. This example creates a *Task Priority* simple choice column on *Account* entity.
-   
-   :::image type="content" source="media/local-choice-def.png" alt-text="Screenshot of a creating a simple choice column.":::
+
+Create a simple choice column. This example creates a *Task Priority* simple choice column for the account table.
+
+:::image type="content" source="media/local-choice-def.png" alt-text="Screenshot of a creating a simple choice column.":::
 
 Create a formula column that returns choice using a local choice of a simple choice column.
 
 1. Select **Data type** as ***fx* Formula**.
 1. Enter a formula that returns a choice value in the **Formula** bar.
-   This example creates a formula column *Priority* on *Account* entity using local choice of a choice column *Task Priority* on *Account* entity.
+   This example creates a formula column *Priority* on *Account* entity using local choice of a choice column *Task Priority* for the account table.
    :::image type="content" source="media/formula-columns-local-choice-fd.png" alt-text="Screenshot of a creating local choice formula column.":::
 1. Select **Save**.
 
 ### Guidelines for working with choices in formula columns
-1. Local choices of related table's simple choice column cannot be used as result type in formula columns.
-2. Options from same option set should be used for all result arguments in choice formula columns.
-3. A choice used by a formula column cannot be updated.
-4. Options of a choice cannot be passed as an argument to string functions. Value function can be used to return numeric value of an option.
-5. Formula column's dependent local choice column or global choice cannot be deleted.
+
+- Local choices of related table's simple choice column can't be used as a result type in formula columns.
+- Options from the same option set should be used for all result arguments in choice formula columns.
+- A choice used by a formula column can't be updated.
+- Options of a choice can't be passed as an argument to string functions. Value function can be used to return the numeric value of an option.
+- Formula column's dependent local choice column or global choice can't be deleted.
 
 ## See also
 
