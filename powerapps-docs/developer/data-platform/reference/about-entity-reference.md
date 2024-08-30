@@ -20,7 +20,7 @@ This reference includes only those tables where:
 - **IsPrivate** equals `false`
   - This excludes tables where no external use cases exist.
 
- - **IsIntersect** equals `false` or **IsIntersect** equals `true` and the table contains more than 4 columns.
+- **IsIntersect** equals `false` or **IsIntersect** equals `true` and the table contains more than 4 columns.
   - Most intersect tables contain just the 4 columns necessary to support the Many-to-Many relationship. They are not useful. Intersect tables with more than four columns are more interesting.
 
 To view information about all tables in your environment, see [Browse tables definitions in your environment](../browse-your-metadata.md).
@@ -81,7 +81,7 @@ Includes these `OneToManyRelationship` properties:
 
 ### Many-to-many relationships
 
-Each many-to-many relationship includes [Entity1LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity1logicalname) and [Entity2LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity2logicalname). For this documentation, relationship details are provided in the context of the current table.
+Each many-to-many relationship includes [Entity1LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity1logicalname) and [Entity2LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity2logicalname). For this documentation, relationship details are provided in the context of the current table. Whether it is `Entity1` or `Entity2` isn't really important.
 
 For each many-to-many relationship the following properties are included:
 
@@ -95,7 +95,7 @@ For each many-to-many relationship the following properties are included:
 |`AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table.|
 
 
-In the rare case where a many-to-many relationship is self-referencing, such as for [Connection Role (ConnectionRole) connectionroleassociation_association](entities/connectionrole.md#BKMK_connectionroleassociation_association)
+In the rare case where a many-to-many relationship is self-referencing, such as for [Connection Role (ConnectionRole) connectionroleassociation_association](entities/connectionrole.md#BKMK_connectionroleassociation_association), `Entity1` or `Entity2` is prepended to the property.
 
 |Property|Value|
 |---|---|
@@ -105,9 +105,5 @@ In the rare case where a many-to-many relationship is self-referencing, such as 
 |`Entity2NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship as the second table.|
 |`Entity1AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the first table.|
 |`Entity2AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the second table|
-
-
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
