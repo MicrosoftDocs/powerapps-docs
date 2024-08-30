@@ -39,7 +39,7 @@ Create a formula column that returns a decimal number.
 1. Enter a formula that returns a numeric value in the **Formula** bar.
    This example creates a formula column called *Total Amount*. The *Price Per Unit* column is of decimal data type.
    :::image type="content" source="media/formula-columns-decimal-fd.png" alt-text="Screenshot of a create a new formula column pane for use with a decimal number using 'Price Per Unit' * 150.":::
-1. Expand **Advanced options**, select **Decimal** as the **Formula data type**, and then set the required number of decimal places.
+1. Expand **Advanced options**, and then set the required number of decimal places.
   :::image type="content" source="media/formula-columns-decimal-adv-options.png" alt-text="Screenshot of a decimal formula column definition.":::
 1. Select **Save**. By default, **Formula data type** is set to Decimal and a Decimal formula field gets created.
 
