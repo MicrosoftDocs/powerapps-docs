@@ -2,7 +2,7 @@
 title: Compose HTTP requests and handle errors
 description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
 ms.topic: how-to
-ms.date: 09/26/2023
+ms.date: 08/29/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -51,9 +51,11 @@ Protocol + Environment Name + Region + Base URL + Web API path + Version + Resou
 
 The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
 
-### Maximum OData Segment length
+### Maximum OData segment length
 
-The maximum length of any individual segment in an odata request cannot be longer than 260 characters. If a single segment of the odata request is more than 260 characters in length, then this can result in 400 Bad Request - Invalid URL. The segment is the 'Resource' part of the url as described above and includes all characters needed to describe the endpoint and any inline paramters. i.e. for the request `api/data/v9.0/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that cannot exceed 260 characters. One work around is to use parameter aliasing like `<org>/api/data/v9.0/MyApi(MyParameter=@alias)?@alias='longvalue'` which shortens the segment to just `MyApi(MyParameter=@alias)`. An alternate work around is to use the $batch API to pass the request. [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request)
+The maximum length of any individual segment in an OData request cannot be longer than 260 characters. If a single segment of the OData request is more than 260 characters in length, then this can result in `400 Bad Request - Invalid URL`. The segment is the 'Resource' part of the url as described above and includes all characters needed to describe the endpoint and any inline parameters.
+
+For example, if the request is  `api/data/v9.2/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that cannot exceed 260 characters. We recommend that you always use parameter aliases with OData functions. For example, composing your function as `/api/data/v9.2/MyApi(MyParameter=@alias)?@alias='longvalue'` shortens the segment to just `MyApi(MyParameter=@alias)`. [Learn more about using parameter aliases with Web API functions](use-web-api-functions.md#passing-parameters-to-a-function)
 
 <a name="version_compatiblity"></a>
 
@@ -242,7 +244,7 @@ When this plug-in is registered on the Create message of an account entity, and 
 **Request:**
 
 ```http
-POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts HTTP/1.1
 Content-Type: application/json;
 Prefer: odata.include-annotations="*"
 {

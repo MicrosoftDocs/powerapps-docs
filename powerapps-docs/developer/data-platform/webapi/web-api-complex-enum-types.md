@@ -58,7 +58,7 @@ The example below grants `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AppendAcc
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/ModifyAccess
+POST [Organization URI]/api/data/v9.2/ModifyAccess
 OData-Version: 4.0
 OData-MaxVersion: 4.0
 Content-Type: application/json; charset=UTF-8

@@ -46,7 +46,7 @@ This example merges two account entity records while updating `accountnumber` pr
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/Merge HTTP/1.1
+POST [Organization URI]/api/data/v9.2/Merge HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
