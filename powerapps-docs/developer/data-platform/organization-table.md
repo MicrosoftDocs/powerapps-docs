@@ -33,7 +33,7 @@ For example, the following columns are supported because they're mentioned in th
 |[MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize)<br />[BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments)<br />[BlockedMimeTypes](reference/entities/organization.md#BKMK_BlockedMimeTypes)<br />[AllowedMimeTypes](reference/entities/organization.md#BKMK_AllowedMimeTypes)|[Files and images overview](files-images-overview.md)|
 |[PluginTraceLogSetting](reference/entities/organization.md#BKMK_PluginTraceLogSetting)|[Tracing and logging](logging-tracing.md)|
 |[QuickFindRecordLimitEnabled](reference/entities/organization.md#BKMK_QuickFindRecordLimitEnabled)|[About quick find queries](quick-find.md)|
-|[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions)|[Sharing and assigning](security-sharing-assigning.md)|
+|[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#BKMK_ShareToPreviousOwnerOnAssign)|[Sharing and assigning](security-sharing-assigning.md)|
 |[ExpireChangeTrackingInDays](reference/entities/organization.md#BKMK_ExpireChangeTrackingInDays)|[Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)|
 |[IsExternalSearchIndexEnabled](reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled)|[Search for Dataverse records](search/overview.md)|
 
