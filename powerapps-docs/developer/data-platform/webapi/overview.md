@@ -1,7 +1,7 @@
 ---
 title: "Use the Microsoft Dataverse Web API (Dataverse)| Microsoft Docs"
 description: "The Microsoft Dataverse Web API implements the OData v4 protocol and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
-ms.date: 06/20/2023
+ms.date: 08/29/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -32,7 +32,7 @@ The Web API allows you to do all the same operations as the SDK for .NET but pre
 
 Now that you have read an overview of the Web API, proceed to the [Get started with Dataverse Web API](get-started-dynamics-365-web-api-csharp.md) topic to learn how to write your first C# program in Visual Studio that uses the Web API.
 
-If you are a JavaScript developer and want to use the Web API in model-driven apps, navigate to [Client-side JavaScript using Web API in model-driven apps](get-started-web-api-client-side-javascript.md).
+If you are a JavaScript developer and want to use the Web API in model-driven apps, look at [Client-side JavaScript using Web API in model-driven apps](get-started-web-api-client-side-javascript.md).
   
 ### Related Sections
 
