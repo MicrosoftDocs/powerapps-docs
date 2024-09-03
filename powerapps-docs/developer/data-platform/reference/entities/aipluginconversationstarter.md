@@ -25,7 +25,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /aipluginconversationstarters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /aipluginconversationstarters(*aipluginconversationstarterid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |**DeleteMultiple action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -770,4 +769,4 @@ Many-To-One Relationship: [syncerror aipluginconversationstarter_SyncErrors](syn
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.aipluginconversationstarter?displayProperty=fullName>

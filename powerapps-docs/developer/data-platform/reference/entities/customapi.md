@@ -25,7 +25,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /customapis<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /customapis(*customapiid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |**DeleteMultiple action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -964,6 +963,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [customapi_SyncErrors](#BKMK_customapi_SyncErrors)
 - [fabricaiskill_customapiid](#BKMK_fabricaiskill_customapiid)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
+- [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [msdyn_knowledgeassetconfiguration_customapiid](#BKMK_msdyn_knowledgeassetconfiguration_customapiid)
 
 ### <a name="BKMK_AIPluginOperation_CustomAPI_CustomAPI"></a> AIPluginOperation_CustomAPI_CustomAPI
@@ -1120,6 +1120,18 @@ Many-To-One Relationship: [msdyn_pmbusinessruleautomationconfig msdyn_customapi_
 |ReferencingAttribute|`customapiid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_formmapping_customapiid"></a> msdyn_formmapping_customapiid
+
+Many-To-One Relationship: [msdyn_formmapping msdyn_formmapping_customapiid](msdyn_formmapping.md#BKMK_msdyn_formmapping_customapiid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`customapiid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_customapiid`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_knowledgeassetconfiguration_customapiid"></a> msdyn_knowledgeassetconfiguration_customapiid

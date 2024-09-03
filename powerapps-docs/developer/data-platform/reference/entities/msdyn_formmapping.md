@@ -1,6 +1,6 @@
 ---
-title: "Analysis Result Detail (msdyn_analysisresultdetail) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Analysis Result Detail (msdyn_analysisresultdetail) table/entity with Microsoft Dataverse."
+title: "Form Mapping (msdyn_FormMapping) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Form Mapping (msdyn_FormMapping) table/entity with Microsoft Dataverse."
 ms.date: 08/30/2024
 ms.service: powerapps
 ms.topic: reference
@@ -10,40 +10,39 @@ search.audienceType:
   - developer
 ---
 
-# Analysis Result Detail (msdyn_analysisresultdetail) table/entity reference
+# Form Mapping (msdyn_FormMapping) table/entity reference
 
 
 
 ## Messages
 
-The following table lists the messages for the Analysis Result Detail (msdyn_analysisresultdetail) table.
+The following table lists the messages for the Form Mapping (msdyn_FormMapping) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Create`<br />Event: True |`POST` /msdyn_analysisresultdetails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Assign`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Create`<br />Event: True |`POST` /msdyn_formmappings<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retrieve`<br />Event: True |`GET` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_analysisresultdetails<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_formmappings<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Analysis Result Detail (msdyn_analysisresultdetail) table.
+The following table lists the events for the Form Mapping (msdyn_FormMapping) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -56,19 +55,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Analysis Result Detail (msdyn_analysisresultdetail) table.
+The following table lists selected properties for the Form Mapping (msdyn_FormMapping) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Analysis Result Detail** |
-| **DisplayCollectionName** | **Analysis Result Details** |
-| **SchemaName** | `msdyn_analysisresultdetail` |
-| **CollectionSchemaName** | `msdyn_analysisresultdetails` |
-| **EntitySetName** | `msdyn_analysisresultdetails`|
-| **LogicalName** | `msdyn_analysisresultdetail` |
-| **LogicalCollectionName** | `msdyn_analysisresultdetails` |
-| **PrimaryIdAttribute** | `msdyn_analysisresultdetailid` |
-| **PrimaryNameAttribute** |`msdyn_name` |
+| **DisplayName** | **Form Mapping** |
+| **DisplayCollectionName** | **Form Mappings** |
+| **SchemaName** | `msdyn_FormMapping` |
+| **CollectionSchemaName** | `msdyn_FormMappings` |
+| **EntitySetName** | `msdyn_formmappings`|
+| **LogicalName** | `msdyn_formmapping` |
+| **LogicalCollectionName** | `msdyn_formmappings` |
+| **PrimaryIdAttribute** | `msdyn_formmappingid` |
+| **PrimaryNameAttribute** |`msdyn_formname` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -76,16 +75,17 @@ The following table lists selected properties for the Analysis Result Detail (ms
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AllowedOperations](#BKMK_AllowedOperations)
+- [BaseEntity](#BKMK_BaseEntity)
+- [CardId](#BKMK_CardId)
+- [CustomApiId](#BKMK_CustomApiId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [msdyn_AnalysisResult](#BKMK_msdyn_AnalysisResult)
-- [msdyn_analysisresultdetailId](#BKMK_msdyn_analysisresultdetailId)
-- [msdyn_CanOpenEntityRecord](#BKMK_msdyn_CanOpenEntityRecord)
-- [msdyn_EntityName](#BKMK_msdyn_EntityName)
-- [msdyn_Message](#BKMK_msdyn_Message)
-- [msdyn_name](#BKMK_msdyn_name)
-- [msdyn_ResultEntityId](#BKMK_msdyn_ResultEntityId)
-- [msdyn_ResultEntityLogicalName](#BKMK_msdyn_ResultEntityLogicalName)
-- [msdyn_ResultEntityPrimaryKey](#BKMK_msdyn_ResultEntityPrimaryKey)
+- [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_Context](#BKMK_msdyn_Context)
+- [msdyn_FormMappingId](#BKMK_msdyn_FormMappingId)
+- [msdyn_formname](#BKMK_msdyn_formname)
+- [msdyn_RequestedColumns](#BKMK_msdyn_RequestedColumns)
+- [Operation](#BKMK_Operation)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -93,6 +93,70 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_AllowedOperations"></a> AllowedOperations
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**AllowedOperations**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`allowedoperations`|
+|RequiredLevel|None|
+|Type|MultiSelectPicklist|
+|DefaultFormValue||
+|GlobalChoiceName|`formmappingallowedoperations`|
+
+#### AllowedOperations Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Create**|
+|1|**Update**|
+
+### <a name="BKMK_BaseEntity"></a> BaseEntity
+
+|Property|Value|
+|---|---|
+|Description|**The base entity that will be created or updated. Relationships to other entities will be described with respect to this entity.**|
+|DisplayName|**Base Entity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`baseentity`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_CardId"></a> CardId
+
+|Property|Value|
+|---|---|
+|Description|**Power Card Id**|
+|DisplayName|**CardId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`cardid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|card|
+
+### <a name="BKMK_CustomApiId"></a> CustomApiId
+
+|Property|Value|
+|---|---|
+|Description|**Custom API Id**|
+|DisplayName|**CustomApiId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`customapiid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|customapi|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -108,148 +172,101 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
-### <a name="BKMK_msdyn_AnalysisResult"></a> msdyn_AnalysisResult
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**Analysis Result**|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`iscustomizable`|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
+
+### <a name="BKMK_msdyn_Context"></a> msdyn_Context
+
+|Property|Value|
+|---|---|
+|Description|**Extended Properties associated with this form.**|
+|DisplayName|**Context**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_analysisresult`|
-|RequiredLevel|ApplicationRequired|
-|Type|Lookup|
-|Targets|msdyn_analysisresult|
+|LogicalName|`msdyn_context`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|800|
 
-### <a name="BKMK_msdyn_analysisresultdetailId"></a> msdyn_analysisresultdetailId
+### <a name="BKMK_msdyn_FormMappingId"></a> msdyn_FormMappingId
 
 |Property|Value|
 |---|---|
 |Description|**Unique identifier for entity instances**|
-|DisplayName|**Analysis Result Detail**|
+|DisplayName|**Form Mapping**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`msdyn_analysisresultdetailid`|
+|LogicalName|`msdyn_formmappingid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-### <a name="BKMK_msdyn_CanOpenEntityRecord"></a> msdyn_CanOpenEntityRecord
+### <a name="BKMK_msdyn_formname"></a> msdyn_formname
 
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**Can open entity record**|
+|DisplayName|**Form Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_canopenentityrecord`|
-|RequiredLevel|None|
-|Type|Boolean|
-|GlobalChoiceName|`msdyn_analysisresultdetail_msdyn_canopenentityrecord`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_msdyn_EntityName"></a> msdyn_EntityName
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Record Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_entityname`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|4000|
-
-### <a name="BKMK_msdyn_Message"></a> msdyn_Message
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Message**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_message`|
+|LogicalName|`msdyn_formname`|
 |RequiredLevel|None|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|4000|
+|MaxLength|850|
 
-### <a name="BKMK_msdyn_name"></a> msdyn_name
-
-|Property|Value|
-|---|---|
-|Description|**The name of the custom entity.**|
-|DisplayName|**Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_name`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msdyn_ResultEntityId"></a> msdyn_ResultEntityId
+### <a name="BKMK_msdyn_RequestedColumns"></a> msdyn_RequestedColumns
 
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**Record Id**|
+|DisplayName|**Form columns to predict**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_resultentityid`|
-|RequiredLevel|ApplicationRequired|
+|LogicalName|`msdyn_requestedcolumns`|
+|RequiredLevel|SystemRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|800|
 
-### <a name="BKMK_msdyn_ResultEntityLogicalName"></a> msdyn_ResultEntityLogicalName
+### <a name="BKMK_Operation"></a> Operation
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**Entity Logical Name**|
+|Description|**The type of operation to be performed.**|
+|DisplayName|**Operation**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_resultentitylogicalname`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
+|LogicalName|`operation`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`formmapping_operation`|
 
-### <a name="BKMK_msdyn_ResultEntityPrimaryKey"></a> msdyn_ResultEntityPrimaryKey
+#### Operation Choices/Options
 
-|Property|Value|
+|Value|Label|
 |---|---|
-|Description||
-|DisplayName|**Result Entity Primary Key**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_resultentityprimarykey`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
+|0|**Create**|
+|1|**Update**|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -297,7 +314,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Analysis Result Detail**|
+|Description|**Status of the Form Mapping**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -305,7 +322,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`msdyn_analysisresultdetail_statecode`|
+|GlobalChoiceName|`msdyn_formmapping_statecode`|
 
 #### statecode Choices/Options
 
@@ -318,7 +335,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Analysis Result Detail**|
+|Description|**Reason for the status of the Form Mapping**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -326,7 +343,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`msdyn_analysisresultdetail_statuscode`|
+|GlobalChoiceName|`msdyn_formmapping_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -368,18 +385,59 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`componentidunique`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`componentstate`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
+
+#### ComponentState Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
@@ -424,6 +482,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`ismanaged`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -466,6 +540,23 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`overwritetime`|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -540,6 +631,30 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`solutionid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|`supportingsolutionid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -558,19 +673,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
-- [lk_msdyn_analysisresultdetail_createdby](#BKMK_lk_msdyn_analysisresultdetail_createdby)
-- [lk_msdyn_analysisresultdetail_createdonbehalfby](#BKMK_lk_msdyn_analysisresultdetail_createdonbehalfby)
-- [lk_msdyn_analysisresultdetail_modifiedby](#BKMK_lk_msdyn_analysisresultdetail_modifiedby)
-- [lk_msdyn_analysisresultdetail_modifiedonbehalfby](#BKMK_lk_msdyn_analysisresultdetail_modifiedonbehalfby)
-- [msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult](#BKMK_msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult)
-- [owner_msdyn_analysisresultdetail](#BKMK_owner_msdyn_analysisresultdetail)
-- [team_msdyn_analysisresultdetail](#BKMK_team_msdyn_analysisresultdetail)
-- [user_msdyn_analysisresultdetail](#BKMK_user_msdyn_analysisresultdetail)
+- [business_unit_msdyn_formmapping](#BKMK_business_unit_msdyn_formmapping)
+- [lk_msdyn_formmapping_createdby](#BKMK_lk_msdyn_formmapping_createdby)
+- [lk_msdyn_formmapping_createdonbehalfby](#BKMK_lk_msdyn_formmapping_createdonbehalfby)
+- [lk_msdyn_formmapping_modifiedby](#BKMK_lk_msdyn_formmapping_modifiedby)
+- [lk_msdyn_formmapping_modifiedonbehalfby](#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
+- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
+- [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
+- [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
+- [team_msdyn_formmapping](#BKMK_team_msdyn_formmapping)
+- [user_msdyn_formmapping](#BKMK_user_msdyn_formmapping)
 
-### <a name="BKMK_business_unit_msdyn_analysisresultdetail"></a> business_unit_msdyn_analysisresultdetail
+### <a name="BKMK_business_unit_msdyn_formmapping"></a> business_unit_msdyn_formmapping
 
-One-To-Many Relationship: [businessunit business_unit_msdyn_analysisresultdetail](businessunit.md#BKMK_business_unit_msdyn_analysisresultdetail)
+One-To-Many Relationship: [businessunit business_unit_msdyn_formmapping](businessunit.md#BKMK_business_unit_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -581,9 +697,9 @@ One-To-Many Relationship: [businessunit business_unit_msdyn_analysisresultdetail
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_analysisresultdetail_createdby"></a> lk_msdyn_analysisresultdetail_createdby
+### <a name="BKMK_lk_msdyn_formmapping_createdby"></a> lk_msdyn_formmapping_createdby
 
-One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_createdby](systemuser.md#BKMK_lk_msdyn_analysisresultdetail_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_createdby](systemuser.md#BKMK_lk_msdyn_formmapping_createdby)
 
 |Property|Value|
 |---|---|
@@ -594,9 +710,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_createdby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_analysisresultdetail_createdonbehalfby"></a> lk_msdyn_analysisresultdetail_createdonbehalfby
+### <a name="BKMK_lk_msdyn_formmapping_createdonbehalfby"></a> lk_msdyn_formmapping_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisresultdetail_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_formmapping_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -607,9 +723,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_createdonbeh
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_analysisresultdetail_modifiedby"></a> lk_msdyn_analysisresultdetail_modifiedby
+### <a name="BKMK_lk_msdyn_formmapping_modifiedby"></a> lk_msdyn_formmapping_modifiedby
 
-One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_modifiedby](systemuser.md#BKMK_lk_msdyn_analysisresultdetail_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedby](systemuser.md#BKMK_lk_msdyn_formmapping_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -620,9 +736,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_modifiedby](
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_analysisresultdetail_modifiedonbehalfby"></a> lk_msdyn_analysisresultdetail_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_formmapping_modifiedonbehalfby"></a> lk_msdyn_formmapping_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisresultdetail_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -633,22 +749,35 @@ One-To-Many Relationship: [systemuser lk_msdyn_analysisresultdetail_modifiedonbe
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult"></a> msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult
+### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
 
-One-To-Many Relationship: [msdyn_analysisresult msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult](msdyn_analysisresult.md#BKMK_msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult)
+One-To-Many Relationship: [card msdyn_formmapping_cardid](card.md#BKMK_msdyn_formmapping_cardid)
 
 |Property|Value|
 |---|---|
-|ReferencedEntity|`msdyn_analysisresult`|
-|ReferencedAttribute|`msdyn_analysisresultid`|
-|ReferencingAttribute|`msdyn_analysisresult`|
-|ReferencingEntityNavigationPropertyName|`msdyn_AnalysisResult`|
+|ReferencedEntity|`card`|
+|ReferencedAttribute|`cardid`|
+|ReferencingAttribute|`cardid`|
+|ReferencingEntityNavigationPropertyName|`cardid`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_msdyn_analysisresultdetail"></a> owner_msdyn_analysisresultdetail
+### <a name="BKMK_msdyn_formmapping_customapiid"></a> msdyn_formmapping_customapiid
 
-One-To-Many Relationship: [owner owner_msdyn_analysisresultdetail](owner.md#BKMK_owner_msdyn_analysisresultdetail)
+One-To-Many Relationship: [customapi msdyn_formmapping_customapiid](customapi.md#BKMK_msdyn_formmapping_customapiid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`customapi`|
+|ReferencedAttribute|`customapiid`|
+|ReferencingAttribute|`customapiid`|
+|ReferencingEntityNavigationPropertyName|`customapiid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_msdyn_formmapping"></a> owner_msdyn_formmapping
+
+One-To-Many Relationship: [owner owner_msdyn_formmapping](owner.md#BKMK_owner_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -659,9 +788,9 @@ One-To-Many Relationship: [owner owner_msdyn_analysisresultdetail](owner.md#BKMK
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_msdyn_analysisresultdetail"></a> team_msdyn_analysisresultdetail
+### <a name="BKMK_team_msdyn_formmapping"></a> team_msdyn_formmapping
 
-One-To-Many Relationship: [team team_msdyn_analysisresultdetail](team.md#BKMK_team_msdyn_analysisresultdetail)
+One-To-Many Relationship: [team team_msdyn_formmapping](team.md#BKMK_team_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -672,9 +801,9 @@ One-To-Many Relationship: [team team_msdyn_analysisresultdetail](team.md#BKMK_te
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_msdyn_analysisresultdetail"></a> user_msdyn_analysisresultdetail
+### <a name="BKMK_user_msdyn_formmapping"></a> user_msdyn_formmapping
 
-One-To-Many Relationship: [systemuser user_msdyn_analysisresultdetail](systemuser.md#BKMK_user_msdyn_analysisresultdetail)
+One-To-Many Relationship: [systemuser user_msdyn_formmapping](systemuser.md#BKMK_user_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -690,108 +819,108 @@ One-To-Many Relationship: [systemuser user_msdyn_analysisresultdetail](systemuse
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [msdyn_analysisresultdetail_AsyncOperations](#BKMK_msdyn_analysisresultdetail_AsyncOperations)
-- [msdyn_analysisresultdetail_BulkDeleteFailures](#BKMK_msdyn_analysisresultdetail_BulkDeleteFailures)
-- [msdyn_analysisresultdetail_DuplicateBaseRecord](#BKMK_msdyn_analysisresultdetail_DuplicateBaseRecord)
-- [msdyn_analysisresultdetail_DuplicateMatchingRecord](#BKMK_msdyn_analysisresultdetail_DuplicateMatchingRecord)
-- [msdyn_analysisresultdetail_MailboxTrackingFolders](#BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders)
-- [msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses](#BKMK_msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses)
-- [msdyn_analysisresultdetail_ProcessSession](#BKMK_msdyn_analysisresultdetail_ProcessSession)
-- [msdyn_analysisresultdetail_SyncErrors](#BKMK_msdyn_analysisresultdetail_SyncErrors)
+- [msdyn_formmapping_AsyncOperations](#BKMK_msdyn_formmapping_AsyncOperations)
+- [msdyn_formmapping_BulkDeleteFailures](#BKMK_msdyn_formmapping_BulkDeleteFailures)
+- [msdyn_formmapping_DuplicateBaseRecord](#BKMK_msdyn_formmapping_DuplicateBaseRecord)
+- [msdyn_formmapping_DuplicateMatchingRecord](#BKMK_msdyn_formmapping_DuplicateMatchingRecord)
+- [msdyn_formmapping_MailboxTrackingFolders](#BKMK_msdyn_formmapping_MailboxTrackingFolders)
+- [msdyn_formmapping_PrincipalObjectAttributeAccesses](#BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses)
+- [msdyn_formmapping_ProcessSession](#BKMK_msdyn_formmapping_ProcessSession)
+- [msdyn_formmapping_SyncErrors](#BKMK_msdyn_formmapping_SyncErrors)
 
-### <a name="BKMK_msdyn_analysisresultdetail_AsyncOperations"></a> msdyn_analysisresultdetail_AsyncOperations
+### <a name="BKMK_msdyn_formmapping_AsyncOperations"></a> msdyn_formmapping_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation msdyn_analysisresultdetail_AsyncOperations](asyncoperation.md#BKMK_msdyn_analysisresultdetail_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_formmapping_AsyncOperations](asyncoperation.md#BKMK_msdyn_formmapping_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_BulkDeleteFailures"></a> msdyn_analysisresultdetail_BulkDeleteFailures
+### <a name="BKMK_msdyn_formmapping_BulkDeleteFailures"></a> msdyn_formmapping_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure msdyn_analysisresultdetail_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_analysisresultdetail_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_formmapping_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_formmapping_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_DuplicateBaseRecord"></a> msdyn_analysisresultdetail_DuplicateBaseRecord
+### <a name="BKMK_msdyn_formmapping_DuplicateBaseRecord"></a> msdyn_formmapping_DuplicateBaseRecord
 
-Many-To-One Relationship: [duplicaterecord msdyn_analysisresultdetail_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_analysisresultdetail_DuplicateBaseRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_formmapping_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_formmapping_DuplicateBaseRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_DuplicateBaseRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_DuplicateBaseRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_DuplicateMatchingRecord"></a> msdyn_analysisresultdetail_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_formmapping_DuplicateMatchingRecord"></a> msdyn_formmapping_DuplicateMatchingRecord
 
-Many-To-One Relationship: [duplicaterecord msdyn_analysisresultdetail_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_analysisresultdetail_DuplicateMatchingRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_formmapping_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_formmapping_DuplicateMatchingRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_DuplicateMatchingRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders"></a> msdyn_analysisresultdetail_MailboxTrackingFolders
+### <a name="BKMK_msdyn_formmapping_MailboxTrackingFolders"></a> msdyn_formmapping_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder msdyn_analysisresultdetail_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_formmapping_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_formmapping_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses"></a> msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses"></a> msdyn_formmapping_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_formmapping_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_ProcessSession"></a> msdyn_analysisresultdetail_ProcessSession
+### <a name="BKMK_msdyn_formmapping_ProcessSession"></a> msdyn_formmapping_ProcessSession
 
-Many-To-One Relationship: [processsession msdyn_analysisresultdetail_ProcessSession](processsession.md#BKMK_msdyn_analysisresultdetail_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_formmapping_ProcessSession](processsession.md#BKMK_msdyn_formmapping_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_analysisresultdetail_SyncErrors"></a> msdyn_analysisresultdetail_SyncErrors
+### <a name="BKMK_msdyn_formmapping_SyncErrors"></a> msdyn_formmapping_SyncErrors
 
-Many-To-One Relationship: [syncerror msdyn_analysisresultdetail_SyncErrors](syncerror.md#BKMK_msdyn_analysisresultdetail_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_formmapping_SyncErrors](syncerror.md#BKMK_msdyn_formmapping_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_analysisresultdetail_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -801,4 +930,4 @@ Many-To-One Relationship: [syncerror msdyn_analysisresultdetail_SyncErrors](sync
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.msdyn_analysisresultdetail?displayProperty=fullName>
+
