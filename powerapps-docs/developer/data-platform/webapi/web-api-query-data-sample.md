@@ -3225,7 +3225,7 @@ In the sample code, the `userqueryid` value is returned with the request that cr
 **Request:**
   
 ```http
-GET https://[Organization URI]/api/data/v9.0/userqueries?$select=name,userqueryid,&$filter=name%20eq%20'My%20User%20Query' HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.2/userqueries?$select=name,userqueryid,&$filter=name%20eq%20'My%20User%20Query' HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -3241,7 +3241,7 @@ OData-Version: 4.0
 Content-Length: 246  
   
 {   
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#userqueries(name,userqueryid)",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.2/$metadata#userqueries(name,userqueryid)",  
    "value":[   
       {   
          "@odata.etag":"W/\"621698\"",  
