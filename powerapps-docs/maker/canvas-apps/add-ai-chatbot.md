@@ -22,7 +22,10 @@ ai-usage: ai-assisted
 
 # Add a chatbot to your canvas app (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+> [!IMPORTANT]
+> Effective September 5, 2024, Chatbot control (Preview) is deprecated. This control can no longer be inserted into apps, and is no longer supported. Use [Copilot control](add-ai-copilot.md) instead.
+
+Add a Chatbot control to your canvas apps and embed a published [Microsoft Copilot Studio](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with various requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
 Add a chatbot to your canvas app without writing code or designing screens. With the Chatbot control in Power Apps, you can embed a published copilot, or chatbot, in your app to assist your app users with their requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. Learn more in [Microsoft Copilot Studio overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 

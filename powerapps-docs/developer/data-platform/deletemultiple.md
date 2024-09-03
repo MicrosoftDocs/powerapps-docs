@@ -1,7 +1,7 @@
 ---
 title: Use DeleteMultiple (preview)
 description: Learn how to use Delete to delete multiple rows of data in a Microsoft Dataverse elastic table. 
-ms.date: 11/15/2023
+ms.date: 09/03/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -70,10 +70,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 
 ##### [Web API](#tab/webapi)
 
-The following example shows how to use the `DeleteMultiple` action to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
-
-> [!NOTE]
-> At the time of this writing, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public soon. You can use it while it's private.
+The following example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
 
 **Request:**
 
