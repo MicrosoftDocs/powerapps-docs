@@ -2,21 +2,21 @@
 title: Add a chatbot to your canvas app (preview)
 description: Learn how to add a Chatbot control to your canvas app and embed a published Microsoft Copilot Studio bot to help your app users with their requests.
 author: mduelae
+ms.author: tapanm
 ms.topic: conceptual
-ms.custom: canvas
+ms.date: 7/9/2024
+ms.custom: 
+    - canvas
+    - diy-editor
 ms.collection: 
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 7/9/2024
 ms.subservice: canvas-maker
-ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-ms.custom:
-  - ai-gen-diyeditor
 ai-usage: ai-assisted
 ---
 
