@@ -680,4 +680,4 @@ Many-To-One Relationship: [syncerror privilegecheckerlog_SyncErrors](syncerror.m
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.privilegecheckerlog?displayProperty=fullName>

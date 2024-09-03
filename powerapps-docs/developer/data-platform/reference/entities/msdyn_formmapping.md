@@ -1,6 +1,6 @@
 ---
-title: "Connection Instance (ConnectionInstance) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Connection Instance (ConnectionInstance) table/entity with Microsoft Dataverse."
+title: "Form Mapping (msdyn_FormMapping) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Form Mapping (msdyn_FormMapping) table/entity with Microsoft Dataverse."
 ms.date: 08/30/2024
 ms.service: powerapps
 ms.topic: reference
@@ -10,51 +10,65 @@ search.audienceType:
   - developer
 ---
 
-# Connection Instance (ConnectionInstance) table/entity reference
+# Form Mapping (msdyn_FormMapping) table/entity reference
 
 
 
 ## Messages
 
-The following table lists the messages for the Connection Instance (ConnectionInstance) table.
+The following table lists the messages for the Form Mapping (msdyn_FormMapping) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Create`<br />Event: True |`POST` /connectioninstances<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Assign`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Create`<br />Event: True |`POST` /msdyn_formmappings<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /connectioninstances(*connectioninstanceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /connectioninstances(*connectioninstanceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /connectioninstances<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_formmappings<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /connectioninstances(*connectioninstanceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /connectioninstances(*connectioninstanceid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+
+
+## Events
+
+The following table lists the events for the Form Mapping (msdyn_FormMapping) table.
+Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
+
+|Name|Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
-The following table lists selected properties for the Connection Instance (ConnectionInstance) table.
+The following table lists selected properties for the Form Mapping (msdyn_FormMapping) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Connection Instance** |
-| **DisplayCollectionName** | **Connector Connections** |
-| **SchemaName** | `ConnectionInstance` |
-| **CollectionSchemaName** | `ConnectionInstances` |
-| **EntitySetName** | `connectioninstances`|
-| **LogicalName** | `connectioninstance` |
-| **LogicalCollectionName** | `connectioninstances` |
-| **PrimaryIdAttribute** | `connectioninstanceid` |
-| **PrimaryNameAttribute** |`connectioninternalid` |
+| **DisplayName** | **Form Mapping** |
+| **DisplayCollectionName** | **Form Mappings** |
+| **SchemaName** | `msdyn_FormMapping` |
+| **CollectionSchemaName** | `msdyn_FormMappings` |
+| **EntitySetName** | `msdyn_formmappings`|
+| **LogicalName** | `msdyn_formmapping` |
+| **LogicalCollectionName** | `msdyn_formmappings` |
+| **PrimaryIdAttribute** | `msdyn_formmappingid` |
+| **PrimaryNameAttribute** |`msdyn_formname` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -62,286 +76,88 @@ The following table lists selected properties for the Connection Instance (Conne
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [AccountName](#BKMK_AccountName)
-- [AllowSharing](#BKMK_AllowSharing)
-- [ConnectionInstanceDisplayName](#BKMK_ConnectionInstanceDisplayName)
-- [ConnectionInstanceId](#BKMK_ConnectionInstanceId)
-- [ConnectionInstanceLogicalName](#BKMK_ConnectionInstanceLogicalName)
-- [ConnectionInternalId](#BKMK_ConnectionInternalId)
-- [ConnectionMetadata](#BKMK_ConnectionMetadata)
-- [ConnectionParametersConfig](#BKMK_ConnectionParametersConfig)
-- [ConnectionParameterSetConfig](#BKMK_ConnectionParameterSetConfig)
-- [ConnectionReferenceId](#BKMK_ConnectionReferenceId)
-- [ConnectionStatus](#BKMK_ConnectionStatus)
-- [ConnectionVersion](#BKMK_ConnectionVersion)
-- [ConnectorId](#BKMK_ConnectorId)
-- [ConnectorInternalId](#BKMK_ConnectorInternalId)
-- [CredentialId](#BKMK_CredentialId)
-- [IconUri](#BKMK_IconUri)
+- [AllowedOperations](#BKMK_AllowedOperations)
+- [BaseEntity](#BKMK_BaseEntity)
+- [CardId](#BKMK_CardId)
+- [CustomApiId](#BKMK_CustomApiId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_Context](#BKMK_msdyn_Context)
+- [msdyn_FormMappingId](#BKMK_msdyn_FormMappingId)
+- [msdyn_formname](#BKMK_msdyn_formname)
+- [msdyn_RequestedColumns](#BKMK_msdyn_RequestedColumns)
+- [Operation](#BKMK_Operation)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [TestConnectionLinks](#BKMK_TestConnectionLinks)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-### <a name="BKMK_AccountName"></a> AccountName
+### <a name="BKMK_AllowedOperations"></a> AllowedOperations
 
 |Property|Value|
 |---|---|
-|Description|**The name for the account**|
-|DisplayName|**Account Name**|
+|Description||
+|DisplayName|**AllowedOperations**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`accountname`|
+|LogicalName|`allowedoperations`|
 |RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|400|
+|Type|MultiSelectPicklist|
+|DefaultFormValue||
+|GlobalChoiceName|`formmappingallowedoperations`|
 
-### <a name="BKMK_AllowSharing"></a> AllowSharing
+#### AllowedOperations Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Create**|
+|1|**Update**|
+
+### <a name="BKMK_BaseEntity"></a> BaseEntity
 
 |Property|Value|
 |---|---|
-|Description|**Whether or not allow sharing is enabled for the connection**|
-|DisplayName|**Allow Sharing**|
+|Description|**The base entity that will be created or updated. Relationships to other entities will be described with respect to this entity.**|
+|DisplayName|**Base Entity**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`allowsharing`|
-|RequiredLevel|None|
-|Type|Boolean|
-|GlobalChoiceName|`connectioninstance_allowsharing`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_ConnectionInstanceDisplayName"></a> ConnectionInstanceDisplayName
-
-|Property|Value|
-|---|---|
-|Description|**The display name of the Connection as seen by the user.**|
-|DisplayName|**Display Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectioninstancedisplayname`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|400|
-
-### <a name="BKMK_ConnectionInstanceId"></a> ConnectionInstanceId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**Connection Instance**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`connectioninstanceid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_ConnectionInstanceLogicalName"></a> ConnectionInstanceLogicalName
-
-|Property|Value|
-|---|---|
-|Description|**Connection Instance unique name**|
-|DisplayName|**Connection Instance Logical Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectioninstancelogicalname`|
+|LogicalName|`baseentity`|
 |RequiredLevel|SystemRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|400|
+|MaxLength|100|
 
-### <a name="BKMK_ConnectionInternalId"></a> ConnectionInternalId
-
-|Property|Value|
-|---|---|
-|Description|**The Id of the Connection in Api Hub**|
-|DisplayName|**Connection Internal Id**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectioninternalid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|400|
-
-### <a name="BKMK_ConnectionMetadata"></a> ConnectionMetadata
+### <a name="BKMK_CardId"></a> CardId
 
 |Property|Value|
 |---|---|
-|Description|**The Metadata for the connection**|
-|DisplayName|**Connection Metadata**|
+|Description|**Power Card Id**|
+|DisplayName|**CardId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`connectionmetadata`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|500000|
-
-### <a name="BKMK_ConnectionParametersConfig"></a> ConnectionParametersConfig
-
-|Property|Value|
-|---|---|
-|Description|**The connection parameters and values that will be passed on creation**|
-|DisplayName|**Connection Parameters Config**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectionparametersconfig`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|20000|
-
-### <a name="BKMK_ConnectionParameterSetConfig"></a> ConnectionParameterSetConfig
-
-|Property|Value|
-|---|---|
-|Description|**The connection parameters set and values that are mainly used in case of multiauth connections**|
-|DisplayName|**Connection Parameters Set Config**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectionparametersetconfig`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|20000|
-
-### <a name="BKMK_ConnectionReferenceId"></a> ConnectionReferenceId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for Connection Reference associated with the Connection Instance.**|
-|DisplayName|**Parent Connection Reference**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectionreferenceid`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|connectionreference|
-
-### <a name="BKMK_ConnectionStatus"></a> ConnectionStatus
-
-|Property|Value|
-|---|---|
-|Description|**The status of the connection in ApiHub**|
-|DisplayName|**Connection Status**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectionstatus`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|4000|
-
-### <a name="BKMK_ConnectionVersion"></a> ConnectionVersion
-
-|Property|Value|
-|---|---|
-|Description|**The version of the connection**|
-|DisplayName|**Connection Version**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectionversion`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|400|
-
-### <a name="BKMK_ConnectorId"></a> ConnectorId
-
-|Property|Value|
-|---|---|
-|Description|**The id of the corresponding connector if present in Dataverse**|
-|DisplayName|**Connector Id**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectorid`|
+|LogicalName|`cardid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|connector|
+|Targets|card|
 
-### <a name="BKMK_ConnectorInternalId"></a> ConnectorInternalId
-
-|Property|Value|
-|---|---|
-|Description|**The id of the Connector in ApiHub**|
-|DisplayName|**Connector Internal Id**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`connectorinternalid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|400|
-
-### <a name="BKMK_CredentialId"></a> CredentialId
+### <a name="BKMK_CustomApiId"></a> CustomApiId
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier for the Credential used in the Connection Instance.**|
-|DisplayName|**Credential identifier**|
+|Description|**Custom API Id**|
+|DisplayName|**CustomApiId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`credentialid`|
+|LogicalName|`customapiid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|credential|
-
-### <a name="BKMK_IconUri"></a> IconUri
-
-|Property|Value|
-|---|---|
-|Description|**Icon for the Connection Instance**|
-|DisplayName|**Icon Uri**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`iconuri`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Url|
-|FormatName|Url|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1000|
+|Targets|customapi|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -368,6 +184,90 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+### <a name="BKMK_msdyn_Context"></a> msdyn_Context
+
+|Property|Value|
+|---|---|
+|Description|**Extended Properties associated with this form.**|
+|DisplayName|**Context**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_context`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|800|
+
+### <a name="BKMK_msdyn_FormMappingId"></a> msdyn_FormMappingId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Form Mapping**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_formmappingid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_formname"></a> msdyn_formname
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Form Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_formname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|850|
+
+### <a name="BKMK_msdyn_RequestedColumns"></a> msdyn_RequestedColumns
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Form columns to predict**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_requestedcolumns`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|800|
+
+### <a name="BKMK_Operation"></a> Operation
+
+|Property|Value|
+|---|---|
+|Description|**The type of operation to be performed.**|
+|DisplayName|**Operation**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`operation`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`formmapping_operation`|
+
+#### Operation Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Create**|
+|1|**Update**|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -415,7 +315,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Connection Instance**|
+|Description|**Status of the Form Mapping**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -423,7 +323,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`connectioninstance_statecode`|
+|GlobalChoiceName|`msdyn_formmapping_statecode`|
 
 #### statecode Choices/Options
 
@@ -436,7 +336,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Connection Instance**|
+|Description|**Reason for the status of the Form Mapping**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -444,7 +344,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`connectioninstance_statuscode`|
+|GlobalChoiceName|`msdyn_formmapping_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -452,23 +352,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |1|Label: **Active**<br />State:0<br />TransitionData: None|
 |2|Label: **Inactive**<br />State:1<br />TransitionData: None|
-
-### <a name="BKMK_TestConnectionLinks"></a> TestConnectionLinks
-
-|Property|Value|
-|---|---|
-|Description|**Links to test the connection**|
-|DisplayName|**Test Connection Links**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`testconnectionlinks`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|500000|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -791,21 +674,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_connectioninstance](#BKMK_business_unit_connectioninstance)
-- [connectioninstance_CredentialId_credential](#BKMK_connectioninstance_CredentialId_credential)
-- [connectionreference_connectioninstance](#BKMK_connectionreference_connectioninstance)
-- [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
-- [lk_connectioninstance_createdby](#BKMK_lk_connectioninstance_createdby)
-- [lk_connectioninstance_createdonbehalfby](#BKMK_lk_connectioninstance_createdonbehalfby)
-- [lk_connectioninstance_modifiedby](#BKMK_lk_connectioninstance_modifiedby)
-- [lk_connectioninstance_modifiedonbehalfby](#BKMK_lk_connectioninstance_modifiedonbehalfby)
-- [owner_connectioninstance](#BKMK_owner_connectioninstance)
-- [team_connectioninstance](#BKMK_team_connectioninstance)
-- [user_connectioninstance](#BKMK_user_connectioninstance)
+- [business_unit_msdyn_formmapping](#BKMK_business_unit_msdyn_formmapping)
+- [lk_msdyn_formmapping_createdby](#BKMK_lk_msdyn_formmapping_createdby)
+- [lk_msdyn_formmapping_createdonbehalfby](#BKMK_lk_msdyn_formmapping_createdonbehalfby)
+- [lk_msdyn_formmapping_modifiedby](#BKMK_lk_msdyn_formmapping_modifiedby)
+- [lk_msdyn_formmapping_modifiedonbehalfby](#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
+- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
+- [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
+- [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
+- [team_msdyn_formmapping](#BKMK_team_msdyn_formmapping)
+- [user_msdyn_formmapping](#BKMK_user_msdyn_formmapping)
 
-### <a name="BKMK_business_unit_connectioninstance"></a> business_unit_connectioninstance
+### <a name="BKMK_business_unit_msdyn_formmapping"></a> business_unit_msdyn_formmapping
 
-One-To-Many Relationship: [businessunit business_unit_connectioninstance](businessunit.md#BKMK_business_unit_connectioninstance)
+One-To-Many Relationship: [businessunit business_unit_msdyn_formmapping](businessunit.md#BKMK_business_unit_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -816,48 +698,9 @@ One-To-Many Relationship: [businessunit business_unit_connectioninstance](busine
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_connectioninstance_CredentialId_credential"></a> connectioninstance_CredentialId_credential
+### <a name="BKMK_lk_msdyn_formmapping_createdby"></a> lk_msdyn_formmapping_createdby
 
-One-To-Many Relationship: [credential connectioninstance_CredentialId_credential](credential.md#BKMK_connectioninstance_CredentialId_credential)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`credential`|
-|ReferencedAttribute|`credentialid`|
-|ReferencingAttribute|`credentialid`|
-|ReferencingEntityNavigationPropertyName|`CredentialId`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_connectionreference_connectioninstance"></a> connectionreference_connectioninstance
-
-One-To-Many Relationship: [connectionreference connectionreference_connectioninstance](connectionreference.md#BKMK_connectionreference_connectioninstance)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`connectionreference`|
-|ReferencedAttribute|`connectionreferenceid`|
-|ReferencingAttribute|`connectionreferenceid`|
-|ReferencingEntityNavigationPropertyName|`connectionreferenceId`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_lk_connectioninstance_connectorid"></a> lk_connectioninstance_connectorid
-
-One-To-Many Relationship: [connector lk_connectioninstance_connectorid](connector.md#BKMK_lk_connectioninstance_connectorid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`connector`|
-|ReferencedAttribute|`connectorid`|
-|ReferencingAttribute|`connectorid`|
-|ReferencingEntityNavigationPropertyName|`connectorid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_lk_connectioninstance_createdby"></a> lk_connectioninstance_createdby
-
-One-To-Many Relationship: [systemuser lk_connectioninstance_createdby](systemuser.md#BKMK_lk_connectioninstance_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_createdby](systemuser.md#BKMK_lk_msdyn_formmapping_createdby)
 
 |Property|Value|
 |---|---|
@@ -868,9 +711,9 @@ One-To-Many Relationship: [systemuser lk_connectioninstance_createdby](systemuse
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_connectioninstance_createdonbehalfby"></a> lk_connectioninstance_createdonbehalfby
+### <a name="BKMK_lk_msdyn_formmapping_createdonbehalfby"></a> lk_msdyn_formmapping_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_connectioninstance_createdonbehalfby](systemuser.md#BKMK_lk_connectioninstance_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_formmapping_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -881,9 +724,9 @@ One-To-Many Relationship: [systemuser lk_connectioninstance_createdonbehalfby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_connectioninstance_modifiedby"></a> lk_connectioninstance_modifiedby
+### <a name="BKMK_lk_msdyn_formmapping_modifiedby"></a> lk_msdyn_formmapping_modifiedby
 
-One-To-Many Relationship: [systemuser lk_connectioninstance_modifiedby](systemuser.md#BKMK_lk_connectioninstance_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedby](systemuser.md#BKMK_lk_msdyn_formmapping_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -894,9 +737,9 @@ One-To-Many Relationship: [systemuser lk_connectioninstance_modifiedby](systemus
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_connectioninstance_modifiedonbehalfby"></a> lk_connectioninstance_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_formmapping_modifiedonbehalfby"></a> lk_msdyn_formmapping_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_connectioninstance_modifiedonbehalfby](systemuser.md#BKMK_lk_connectioninstance_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -907,9 +750,35 @@ One-To-Many Relationship: [systemuser lk_connectioninstance_modifiedonbehalfby](
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_connectioninstance"></a> owner_connectioninstance
+### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
 
-One-To-Many Relationship: [owner owner_connectioninstance](owner.md#BKMK_owner_connectioninstance)
+One-To-Many Relationship: [card msdyn_formmapping_cardid](card.md#BKMK_msdyn_formmapping_cardid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`card`|
+|ReferencedAttribute|`cardid`|
+|ReferencingAttribute|`cardid`|
+|ReferencingEntityNavigationPropertyName|`cardid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_formmapping_customapiid"></a> msdyn_formmapping_customapiid
+
+One-To-Many Relationship: [customapi msdyn_formmapping_customapiid](customapi.md#BKMK_msdyn_formmapping_customapiid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`customapi`|
+|ReferencedAttribute|`customapiid`|
+|ReferencingAttribute|`customapiid`|
+|ReferencingEntityNavigationPropertyName|`customapiid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_msdyn_formmapping"></a> owner_msdyn_formmapping
+
+One-To-Many Relationship: [owner owner_msdyn_formmapping](owner.md#BKMK_owner_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -920,9 +789,9 @@ One-To-Many Relationship: [owner owner_connectioninstance](owner.md#BKMK_owner_c
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_connectioninstance"></a> team_connectioninstance
+### <a name="BKMK_team_msdyn_formmapping"></a> team_msdyn_formmapping
 
-One-To-Many Relationship: [team team_connectioninstance](team.md#BKMK_team_connectioninstance)
+One-To-Many Relationship: [team team_msdyn_formmapping](team.md#BKMK_team_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -933,9 +802,9 @@ One-To-Many Relationship: [team team_connectioninstance](team.md#BKMK_team_conne
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_connectioninstance"></a> user_connectioninstance
+### <a name="BKMK_user_msdyn_formmapping"></a> user_msdyn_formmapping
 
-One-To-Many Relationship: [systemuser user_connectioninstance](systemuser.md#BKMK_user_connectioninstance)
+One-To-Many Relationship: [systemuser user_msdyn_formmapping](systemuser.md#BKMK_user_msdyn_formmapping)
 
 |Property|Value|
 |---|---|
@@ -951,108 +820,108 @@ One-To-Many Relationship: [systemuser user_connectioninstance](systemuser.md#BKM
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [connectioninstance_AsyncOperations](#BKMK_connectioninstance_AsyncOperations)
-- [connectioninstance_BulkDeleteFailures](#BKMK_connectioninstance_BulkDeleteFailures)
-- [connectioninstance_DuplicateBaseRecord](#BKMK_connectioninstance_DuplicateBaseRecord)
-- [connectioninstance_DuplicateMatchingRecord](#BKMK_connectioninstance_DuplicateMatchingRecord)
-- [connectioninstance_MailboxTrackingFolders](#BKMK_connectioninstance_MailboxTrackingFolders)
-- [connectioninstance_PrincipalObjectAttributeAccesses](#BKMK_connectioninstance_PrincipalObjectAttributeAccesses)
-- [connectioninstance_ProcessSession](#BKMK_connectioninstance_ProcessSession)
-- [connectioninstance_SyncErrors](#BKMK_connectioninstance_SyncErrors)
+- [msdyn_formmapping_AsyncOperations](#BKMK_msdyn_formmapping_AsyncOperations)
+- [msdyn_formmapping_BulkDeleteFailures](#BKMK_msdyn_formmapping_BulkDeleteFailures)
+- [msdyn_formmapping_DuplicateBaseRecord](#BKMK_msdyn_formmapping_DuplicateBaseRecord)
+- [msdyn_formmapping_DuplicateMatchingRecord](#BKMK_msdyn_formmapping_DuplicateMatchingRecord)
+- [msdyn_formmapping_MailboxTrackingFolders](#BKMK_msdyn_formmapping_MailboxTrackingFolders)
+- [msdyn_formmapping_PrincipalObjectAttributeAccesses](#BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses)
+- [msdyn_formmapping_ProcessSession](#BKMK_msdyn_formmapping_ProcessSession)
+- [msdyn_formmapping_SyncErrors](#BKMK_msdyn_formmapping_SyncErrors)
 
-### <a name="BKMK_connectioninstance_AsyncOperations"></a> connectioninstance_AsyncOperations
+### <a name="BKMK_msdyn_formmapping_AsyncOperations"></a> msdyn_formmapping_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation connectioninstance_AsyncOperations](asyncoperation.md#BKMK_connectioninstance_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_formmapping_AsyncOperations](asyncoperation.md#BKMK_msdyn_formmapping_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_BulkDeleteFailures"></a> connectioninstance_BulkDeleteFailures
+### <a name="BKMK_msdyn_formmapping_BulkDeleteFailures"></a> msdyn_formmapping_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure connectioninstance_BulkDeleteFailures](bulkdeletefailure.md#BKMK_connectioninstance_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_formmapping_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_formmapping_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_DuplicateBaseRecord"></a> connectioninstance_DuplicateBaseRecord
+### <a name="BKMK_msdyn_formmapping_DuplicateBaseRecord"></a> msdyn_formmapping_DuplicateBaseRecord
 
-Many-To-One Relationship: [duplicaterecord connectioninstance_DuplicateBaseRecord](duplicaterecord.md#BKMK_connectioninstance_DuplicateBaseRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_formmapping_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_formmapping_DuplicateBaseRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_DuplicateBaseRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_DuplicateBaseRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_DuplicateMatchingRecord"></a> connectioninstance_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_formmapping_DuplicateMatchingRecord"></a> msdyn_formmapping_DuplicateMatchingRecord
 
-Many-To-One Relationship: [duplicaterecord connectioninstance_DuplicateMatchingRecord](duplicaterecord.md#BKMK_connectioninstance_DuplicateMatchingRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_formmapping_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_formmapping_DuplicateMatchingRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_DuplicateMatchingRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_MailboxTrackingFolders"></a> connectioninstance_MailboxTrackingFolders
+### <a name="BKMK_msdyn_formmapping_MailboxTrackingFolders"></a> msdyn_formmapping_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder connectioninstance_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_connectioninstance_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_formmapping_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_formmapping_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_PrincipalObjectAttributeAccesses"></a> connectioninstance_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses"></a> msdyn_formmapping_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess connectioninstance_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_connectioninstance_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_formmapping_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_ProcessSession"></a> connectioninstance_ProcessSession
+### <a name="BKMK_msdyn_formmapping_ProcessSession"></a> msdyn_formmapping_ProcessSession
 
-Many-To-One Relationship: [processsession connectioninstance_ProcessSession](processsession.md#BKMK_connectioninstance_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_formmapping_ProcessSession](processsession.md#BKMK_msdyn_formmapping_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_connectioninstance_SyncErrors"></a> connectioninstance_SyncErrors
+### <a name="BKMK_msdyn_formmapping_SyncErrors"></a> msdyn_formmapping_SyncErrors
 
-Many-To-One Relationship: [syncerror connectioninstance_SyncErrors](syncerror.md#BKMK_connectioninstance_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_formmapping_SyncErrors](syncerror.md#BKMK_msdyn_formmapping_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`connectioninstance_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1062,4 +931,4 @@ Many-To-One Relationship: [syncerror connectioninstance_SyncErrors](syncerror.md
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.connectioninstance?displayProperty=fullName>
+

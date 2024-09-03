@@ -25,7 +25,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /environmentvariabledefinitions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType />|[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -910,6 +910,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition-one-to-many)
 - [environmentvariabledefinition_AsyncOperations](#BKMK_environmentvariabledefinition_AsyncOperations)
 - [environmentvariabledefinition_BulkDeleteFailures](#BKMK_environmentvariabledefinition_BulkDeleteFailures)
+- [environmentvariabledefinition_credential_certificate](#BKMK_environmentvariabledefinition_credential_certificate)
 - [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
 - [environmentvariabledefinition_credential_cyberarksafe](#BKMK_environmentvariabledefinition_credential_cyberarksafe)
 - [environmentvariabledefinition_credential_cyberarkusername](#BKMK_environmentvariabledefinition_credential_cyberarkusername)
@@ -960,6 +961,18 @@ Many-To-One Relationship: [bulkdeletefailure environmentvariabledefinition_BulkD
 |ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_certificate"></a> environmentvariabledefinition_credential_certificate
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_certificate](credential.md#BKMK_environmentvariabledefinition_credential_certificate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`certificate`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_certificate`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_environmentvariabledefinition_credential_cyberarkobject"></a> environmentvariabledefinition_credential_cyberarkobject
 

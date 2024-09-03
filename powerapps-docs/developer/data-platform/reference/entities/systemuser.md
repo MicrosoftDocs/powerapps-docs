@@ -3472,6 +3472,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_msdyn_flow_flowapproval_createdonbehalfby](#BKMK_lk_msdyn_flow_flowapproval_createdonbehalfby)
 - [lk_msdyn_flow_flowapproval_modifiedby](#BKMK_lk_msdyn_flow_flowapproval_modifiedby)
 - [lk_msdyn_flow_flowapproval_modifiedonbehalfby](#BKMK_lk_msdyn_flow_flowapproval_modifiedonbehalfby)
+- [lk_msdyn_formmapping_createdby](#BKMK_lk_msdyn_formmapping_createdby)
+- [lk_msdyn_formmapping_createdonbehalfby](#BKMK_lk_msdyn_formmapping_createdonbehalfby)
+- [lk_msdyn_formmapping_modifiedby](#BKMK_lk_msdyn_formmapping_modifiedby)
+- [lk_msdyn_formmapping_modifiedonbehalfby](#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
 - [lk_msdyn_helppage_createdby](#BKMK_lk_msdyn_helppage_createdby)
 - [lk_msdyn_helppage_createdonbehalfby](#BKMK_lk_msdyn_helppage_createdonbehalfby)
 - [lk_msdyn_helppage_modifiedby](#BKMK_lk_msdyn_helppage_modifiedby)
@@ -4431,6 +4435,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_msdyn_flow_awaitallapprovalmodel](#BKMK_user_msdyn_flow_awaitallapprovalmodel)
 - [user_msdyn_flow_basicapprovalmodel](#BKMK_user_msdyn_flow_basicapprovalmodel)
 - [user_msdyn_flow_flowapproval](#BKMK_user_msdyn_flow_flowapproval)
+- [user_msdyn_formmapping](#BKMK_user_msdyn_formmapping)
 - [user_msdyn_integratedsearchprovider](#BKMK_user_msdyn_integratedsearchprovider)
 - [user_msdyn_kalanguagesetting](#BKMK_user_msdyn_kalanguagesetting)
 - [user_msdyn_kbattachment](#BKMK_user_msdyn_kbattachment)
@@ -14561,6 +14566,54 @@ Many-To-One Relationship: [msdyn_flow_flowapproval lk_msdyn_flow_flowapproval_mo
 |ReferencingEntity|`msdyn_flow_flowapproval`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_msdyn_flow_flowapproval_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_formmapping_createdby"></a> lk_msdyn_formmapping_createdby
+
+Many-To-One Relationship: [msdyn_formmapping lk_msdyn_formmapping_createdby](msdyn_formmapping.md#BKMK_lk_msdyn_formmapping_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_formmapping_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_formmapping_createdonbehalfby"></a> lk_msdyn_formmapping_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_formmapping lk_msdyn_formmapping_createdonbehalfby](msdyn_formmapping.md#BKMK_lk_msdyn_formmapping_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_formmapping_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_formmapping_modifiedby"></a> lk_msdyn_formmapping_modifiedby
+
+Many-To-One Relationship: [msdyn_formmapping lk_msdyn_formmapping_modifiedby](msdyn_formmapping.md#BKMK_lk_msdyn_formmapping_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_formmapping_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_formmapping_modifiedonbehalfby"></a> lk_msdyn_formmapping_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_formmapping lk_msdyn_formmapping_modifiedonbehalfby](msdyn_formmapping.md#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_formmapping_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -26070,6 +26123,18 @@ Many-To-One Relationship: [msdyn_flow_flowapproval user_msdyn_flow_flowapproval]
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_msdyn_flow_flowapproval`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_msdyn_formmapping"></a> user_msdyn_formmapping
+
+Many-To-One Relationship: [msdyn_formmapping user_msdyn_formmapping](msdyn_formmapping.md#BKMK_user_msdyn_formmapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_formmapping`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_user_msdyn_integratedsearchprovider"></a> user_msdyn_integratedsearchprovider

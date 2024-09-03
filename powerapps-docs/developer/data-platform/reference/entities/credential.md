@@ -25,7 +25,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /credentials<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /credentials(*credentialid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType />|[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ListCredentialDependencies`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListCredentialDependencies?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
@@ -63,6 +63,7 @@ The following table lists selected properties for the credential table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [certificate](#BKMK_certificate)
 - [connectiontype](#BKMK_connectiontype)
 - [credentialId](#BKMK_credentialId)
 - [credentials](#BKMK_credentials)
@@ -86,6 +87,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [username](#BKMK_username)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+### <a name="BKMK_certificate"></a> certificate
+
+|Property|Value|
+|---|---|
+|Description|**Certificate used for authentication**|
+|DisplayName|**Certificate**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`certificate`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|environmentvariabledefinition|
+
 ### <a name="BKMK_connectiontype"></a> connectiontype
 
 |Property|Value|
@@ -108,6 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|**UsernamePasswordList**|
 |3|**UsernamePasswordListWithGroupMapping**|
 |4|**CyberArkIdentity**|
+|5|**CertificateBasedAuthentication**|
 
 ### <a name="BKMK_credentialId"></a> credentialId
 
@@ -724,6 +739,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_credential](#BKMK_business_unit_credential)
+- [environmentvariabledefinition_credential_certificate](#BKMK_environmentvariabledefinition_credential_certificate)
 - [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
 - [environmentvariabledefinition_credential_cyberarksafe](#BKMK_environmentvariabledefinition_credential_cyberarksafe)
 - [environmentvariabledefinition_credential_cyberarkusername](#BKMK_environmentvariabledefinition_credential_cyberarkusername)
@@ -749,6 +765,19 @@ One-To-Many Relationship: [businessunit business_unit_credential](businessunit.m
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_certificate"></a> environmentvariabledefinition_credential_certificate
+
+One-To-Many Relationship: [environmentvariabledefinition environmentvariabledefinition_credential_certificate](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_credential_certificate)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`environmentvariabledefinition`|
+|ReferencedAttribute|`environmentvariabledefinitionid`|
+|ReferencingAttribute|`certificate`|
+|ReferencingEntityNavigationPropertyName|`certificate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_environmentvariabledefinition_credential_cyberarkobject"></a> environmentvariabledefinition_credential_cyberarkobject
 

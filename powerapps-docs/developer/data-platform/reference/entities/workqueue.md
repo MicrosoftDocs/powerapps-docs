@@ -26,7 +26,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /workqueues<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /workqueues(*workqueueid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType />|[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Dequeue`<br />Event: False |<xref:Microsoft.Dynamics.CRM.Dequeue?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -71,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [inputschematype](#BKMK_inputschematype)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [itemmaxrequeuecount](#BKMK_itemmaxrequeuecount)
+- [itemmaxretrycount](#BKMK_itemmaxretrycount)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -189,6 +190,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`itemmaxrequeuecount`|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
+
+### <a name="BKMK_itemmaxretrycount"></a> itemmaxretrycount
+
+|Property|Value|
+|---|---|
+|Description|**The maximum number of times an item should be retried. This can be overridden at runtime.**|
+|DisplayName|**Item maximum retry count**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`itemmaxretrycount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
 |MaxValue|2147483647|
