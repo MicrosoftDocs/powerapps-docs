@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/08/2024
+ms.date: 09/03/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -34,17 +34,17 @@ To create a solution:
   
 3.  Select **Save**.  
   
- After you save the solution, you might wish to add information to columns that aren’t required. These steps are optional. Use the **Description** column to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by ISVs who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
+ After you save the solution, you might wish to add information to columns that aren’t required. These steps are optional. Use the **Description** column to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by independent software vendors (ISVs) who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
   
 <a name="BKMK_AddSolutionComponents"></a>
 
 ## Add solution components
 
-After you’ve created your solution, it won’t contain any solution components. You can create new components to be added to the solution or add existing components to your new solution.
+After you create your solution, it won’t contain any solution components. You can create new components to be added to the solution or add existing components to your new solution.
  
 ### Create components in a solution
 
-You can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
+You can use the **New** command to create different types of components. Selecting **New** takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it's added to the solution.
  
 > [!div class="mx-imgBorder"]  
 > ![Create new component in a solution.](media/solution-new-component.PNG "Create new component in a solution")  
@@ -59,7 +59,7 @@ With solutions that are unmanaged and not the default one, you can use the **Add
 > [!NOTE]
 > The list of existing components will be different depending on the version and solutions imported in your environment. 
   
-When you add an existing table, the best practice is to only add the table assets that have been updated in your solution. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This will avoid unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions.  The system will automatically select **Include all objects** if the table is unmanaged, and **Include table metadata** if there is an unmanaged layer on the table.  The system will also preselect the table assets that are unmanaged or have unmanaged customizations automatically and the user can click the **Select objects** link to review that selection before clicking the **Add* button to complete the process.   [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
+When you add an existing table, the best practice is to only add the table assets that were updated in your solution. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This avoids unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions. The system automatically selects **Include all objects** if the table is unmanaged, and **Include table metadata** if there's an unmanaged layer on the table. The system also preselects the table assets that are unmanaged or have unmanaged customizations automatically you can select the **Select objects** link to review that selection before select **Add* to complete the process. More information: [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
 
 Many of the customizations you’ll want to do involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into a table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
    
