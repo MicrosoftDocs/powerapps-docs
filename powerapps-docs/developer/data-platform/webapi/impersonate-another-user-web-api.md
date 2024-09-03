@@ -42,7 +42,7 @@ There are two ways you can impersonate a user, both of which are made possible b
  **Request:**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1  
 CallerObjectId: e39c5d16-675b-48d1-8e67-667427e9c084  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -57,7 +57,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000003)  
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-000000000003)  
 ```  
   
 <a name="bkmk_Determinetheactualuser"></a>
@@ -69,7 +69,7 @@ When an operation such as creating an entity is performed using impersonation, y
  **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000003)?$select=name&$expand=createdby($select=fullname),createdonbehalfby($select=fullname),owninguser($select=fullname) HTTP/1.1   
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-000000000003)?$select=name&$expand=createdby($select=fullname),createdonbehalfby($select=fullname),owninguser($select=fullname) HTTP/1.1   
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -83,7 +83,7 @@ Content-Type: application/json; odata.metadata=minimal
 ETag: W/"506868"  
   
 {
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,createdby(fullname,azureactivedirectoryobjectid),createdonbehalfby(fullname,azureactivedirectoryobjectid),owninguser(fullname,azureactivedirectoryobjectid))/$entity",
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,createdby(fullname,azureactivedirectoryobjectid),createdonbehalfby(fullname,azureactivedirectoryobjectid),owninguser(fullname,azureactivedirectoryobjectid))/$entity",
   "@odata.etag": "W/\"2751197\"",
   "name": "Sample Account created using impersonation",
   "accountid": "00000000-0000-0000-000000000003",
