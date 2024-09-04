@@ -35,18 +35,10 @@ For more information on how privileges and access checks work, go to [How access
 ## Check your access to a row
 
 
-1. Select a row and then select **Edit** on the command bar.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
-  
-2. On the open row, select **Check Access** on the command bar.
-3. The **Check Access** dialog box will appear and display your access information.
-
-
-    > [!div class="mx-imgBorder"]
-    > ![Access checker showing your access level.](media/check_access_page.png "Access checker showing your access level")
-    
+1. Select a row and then select **Check Access** button on the command bar.
+   < insert new check access button > here.
+1. The **Check Access** dialog box will appear and display your access information.
+   < replace with new access check details> here.
 Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](./find-admin.md).
 
 
@@ -57,8 +49,7 @@ If you're an administrator, you can check the access another user has to a row.
 1. Open a row, select **Check Access** on the command bar.
 2. In the **User Lookup** field select or enter a user name to search for the user.
 
-   > [!div class="mx-imgBorder"]
-   > ![Access checker showing your access level for an admin.](media/check_access_page_admin-1.png "Access checker showing your access level for an admin")
+   <replace with check access user lookup image>
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
@@ -83,18 +74,15 @@ To see who has access to a row and their respective access level, complete the f
 > - **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
 > - **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
 
-1. Select a row and then select **Edit** on the command bar.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
-  
-2. Select **Check Access** on the command bar.
-3. In the **Check Access** window, select **Who has access**.
-
-    :::image type="content" source="media/who-has-access.png" alt-text="Select who has access":::
+1. Select a row.
+1. Select **Check Access** on the command bar.
+1. In the **Check Access** window, select **Who has access**.
 
 > [!NOTE]
 > The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+> 
+> If you select a user who doesn't have access to the record, the page will return with a blank screen.
+  <insert screenshot for Check access where user doesn't have access image>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
