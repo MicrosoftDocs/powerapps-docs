@@ -89,7 +89,7 @@ Let us now identify a scenario that implements the previously mentioned connecti
   
 The following diagram shows the physical elements that make up the scenario.  
   
-![Dynamics 365 to Service Bus scenario.](media/crm-v5s-az.png "Dataverse to Service Bus scenario")  
+![Dynamics 365 to Service Bus scenario.](media/dataverse-azure-interface.png "Dataverse-Azure to interface")  
   
 The sequence of events as identified in this diagram are as follows:  
   
