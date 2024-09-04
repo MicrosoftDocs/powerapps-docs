@@ -71,7 +71,7 @@
       href: ../user/unified-interface.md
     - name: Copilot features
       items:
-      - name: Use form-fill assistance
+      - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
