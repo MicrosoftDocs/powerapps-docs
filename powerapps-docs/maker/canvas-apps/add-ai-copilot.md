@@ -22,7 +22,7 @@ ai-usage: ai-assisted
 
 # Add a copilot to your canvas app (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 The Copilot control is a next-generation AI assistant that you can add to your canvas apps. It lets app users get insights about the data in your app through natural language conversations with an AI-powered bot. You can add the control to any canvas app and choose what data it can provide answers for.
 

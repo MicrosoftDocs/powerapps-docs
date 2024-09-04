@@ -40,7 +40,7 @@ If you're inactive for two hours while you're editing an app, Power Apps asks if
 
 ## Use coauthoring (preview) to edit the same app together
 
-[!INCLUDE [preview-banner-section](../../shared-content/shared/preview-includes/preview-banner-section.md)]
+[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
 
 > [!IMPORTANT]
 >

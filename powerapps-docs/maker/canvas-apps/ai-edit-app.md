@@ -3,7 +3,6 @@ title: Edit your app with Copilot in Power Apps Studio (preview)
 description: Learn how to use natural language to edit your app with Copilot, an AI assistant that helps you make changes to your app in Power Apps Studio.
 author: mduelae
 ms.topic: conceptual
-ms.custom: canvas
 ms.collection: 
     - bap-ai-copilot
     - get started
@@ -16,13 +15,14 @@ search.audienceType:
 contributors:
   - mduelae
 ms.custom:
+  - canvas
   - ai-gen-diyeditor
 ai-usage: ai-assisted
 ---
 
 # Edit your app with Copilot in Power Apps Studio (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Edit your apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe the changes you want to make, and AI does the rest.
 

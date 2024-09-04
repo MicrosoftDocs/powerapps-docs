@@ -25,7 +25,7 @@ ai-usage: ai-assisted
 
 # Build apps with Copilot in Power Apps (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Create apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe what you want your app to do, and AI does the rest.
 
@@ -64,7 +64,11 @@ Copilot creates one or more Dataverse tables with data that includes typical hot
 > [!IMPORTANT]
 > If you don't have the right permissions and access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. You need to confirm that the table and app can be created in your environment to proceed. If you don't have a personal developer environment, a new one is created for you automatically. Learn more in [Get your developer environment (preview)](../maker-create-environment.md).
 
-## Review the tables for your app (preview version)
+## Review the table
+
+Copilot generates one (GA version) or more (preview version) tables and relationships based on your description. Review them and make any changes you need to before you go on to create your app.
+
+### Review the tables for your app (preview version)
 
 Copilot shows you the tables and relationships that it generated based on your description.
 
@@ -80,7 +84,7 @@ Legend:
 
 1. **Save and open app**: Save your tables and create your app. To start over, select **Back**.
 
-## Review the table for your app (GA version)
+### Review the table for your app (GA version)
 
 Copilot shows you the table that it generated based on your description.
 

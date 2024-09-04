@@ -26,7 +26,7 @@ contributors:
 
 # Create conversational apps with Copilot in Power Apps (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Copilot in Power Apps is a new way to create apps that understand natural language. You can build an app, including the data behind it, by having a conversation with Copilot. You don't need to write any code or design any screens. Copilot generates the app for you based on your description.
 

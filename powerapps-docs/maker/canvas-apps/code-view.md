@@ -19,7 +19,7 @@ ms.custom:
 
 # Use code view for canvas app controls (preview)
 
-[!INCLUDE [preview-banner](../../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Use the code view feature to look at the underlying code for each control on your app's screens. The code uses an improved format that's a subset of YAML. Learn more in [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
 

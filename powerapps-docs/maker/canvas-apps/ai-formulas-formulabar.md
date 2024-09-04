@@ -61,7 +61,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
 ## Generate formulas from code comments (preview)
 
-[!INCLUDE [preview-banner-section](../../shared-content/shared/preview-includes/preview-banner-section.md)]
+[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
