@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/18/2022
+ms.date: 09/03/2024
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -23,6 +23,7 @@ contributors:
 
 > [!IMPORTANT]
 >
+> - This experimental feature is discontinued and will be replaced with the source control integration feature. More information: [Source code integration](/power-platform/release-plan/2024wave1/data-platform/source-code-integration)
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
 > - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
