@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "jaredha"
 ms.subservice: dataverse-developer
-ms.author: "jdaly" 
+ms.author: "pehecke" 
 search.audienceType: 
   - developer
 contributors:
@@ -89,7 +89,7 @@ Let us now identify a scenario that implements the previously mentioned connecti
   
 The following diagram shows the physical elements that make up the scenario.  
   
-![Dynamics 365 to Service Bus scenario.](media/crm-v5s-az.png "Dataverse to Service Bus scenario")  
+![Dynamics 365 to Service Bus scenario.](media/dataverse-azure-interface.png "Dataverse-Azure to interface")  
   
 The sequence of events as identified in this diagram are as follows:  
   
@@ -120,7 +120,7 @@ A two-way contract is similar to a one-way contract except that a string value c
   
 ### REST
 
-A REST contract is similar to a two-way contract on a REST endpoint.  
+A REST contract is similar to a two-way contract on a REST endpoint.
   
 ### Topic
 

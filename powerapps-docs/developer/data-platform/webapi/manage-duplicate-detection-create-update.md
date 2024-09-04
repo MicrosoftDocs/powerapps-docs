@@ -39,7 +39,7 @@ The following example shows how to detect duplicates during `Create` and `Update
 **Request:**
 
 ```http
-POST [Organization URI]/org1/api/data/v9.0/leads HTTP/1.1
+POST [Organization URI]/org1/api/data/v9.2/leads HTTP/1.1
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0
@@ -86,7 +86,7 @@ The example shown below attempts to update an existing lead entity record which 
 **Request:**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/leads(c4567bb6-47a3-e711-811b-e0071b6ac1b1) HTTP/1.1
+PATCH [Organization URI]/api/data/v9.2/leads(c4567bb6-47a3-e711-811b-e0071b6ac1b1) HTTP/1.1
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0

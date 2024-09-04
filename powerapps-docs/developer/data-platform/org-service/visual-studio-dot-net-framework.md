@@ -3,8 +3,8 @@ title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft D
 description: "Learn about managed code development tools and requirements."
 ms.collection: get-started
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
@@ -22,7 +22,7 @@ Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While a
 
 > [!IMPORTANT]
 > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later.
-> Only applications using Transport Level Security (TLS) 1.2 or better security are allowed to connect with Dataverse. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2. 
+> Only applications using Transport Level Security (TLS) 1.2 or better security are allowed to connect with Dataverse. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 >
 > More information: <https://cloudblogs.microsoft.com/dynamics365/bdm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/>
 >
@@ -38,6 +38,5 @@ For a complete statement of supported and unsupported development, see [Supporte
 ## See Also
 
 [Developer Tools](/dynamics365/customer-engagement/developer/developer-tools)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

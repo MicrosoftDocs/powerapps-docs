@@ -62,7 +62,7 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Copilot is powe
 
 ## Are Copilot's responses always factual?
 
-As with any generative AI, Copilot responses aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, you should still use your judgment and review the output before you send it to others. Copilot provides helpful drafts and summaries to help you do more, but it's fully automatic. You always have a chance to review the AI-generated content.
+As with any generative AI, Copilot responses aren't 100% factual. While we continue to improve responses to fact-based inquiries, you should still use your judgment and review the output before you send it to others. Copilot provides helpful drafts and summaries to help you do more, but it's fully automatic. You always have a chance to review the AI-generated content.
 
 Our teams are working to proactively address issues such as misinformation and disinformation, content blocking, data safety, and promotion of harmful or discriminatory content, in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5).
 
