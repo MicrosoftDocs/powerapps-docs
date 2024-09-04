@@ -1053,6 +1053,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |10354|**Power Pages Log**|
 |10359|**Catalog Submission Files**|
 |10360|**Package Submission Store**|
+|10531|**Form Mapping**|
 |18085|**Event Expander Breadcrumb**|
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
@@ -1811,6 +1812,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |10354|**Power Pages Log**|
 |10359|**Catalog Submission Files**|
 |10360|**Package Submission Store**|
+|10531|**Form Mapping**|
 |18085|**Event Expander Breadcrumb**|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
