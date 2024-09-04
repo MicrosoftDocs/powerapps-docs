@@ -23,8 +23,8 @@ The release channel affects the features that impact users. When the monthly cha
 
 The release channel for model-driven apps can be changed in two primary ways.
 
-- App channel
-- Environment channel
+- [App channel](#changing-the-app-channel)
+- [Environment channel](#changing-the-environment-channel)
 
 In addition, the release channel can be overridden with either of these options.
 
@@ -34,13 +34,64 @@ In addition, the release channel can be overridden with either of these options.
 > [!NOTE]
 > When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
 
+### Ordering of channel release usage
+
+The order of checks to determine which setting controls the channel is:
+
+1. URL override
+1. User channel override
+1. App release channel value other than Auto (for example, Monthly, Semi-annual)
+1. Environment release channel value other than Auto (for example, Monthly, Semi-annual)
+1. App release channel and environment release channel are both Auto
+   1. With 2024 release wave 1, Power Apps environments use monthly channel
+   2. Starting with 2024 release wave 2, Dynamics 365 environments use monthly channel
+  
+### Dynamics 365 app release channel settings
+
+With 2024 Release wave 1, the following Dynamics 365 app changed their app release channel to **Monthly**:
+- Customer Service workspace
+- Customer Service Hub
+- Customer Service admin center
+- Field Service
+- Field Resource Hub
+- Field Service Mobile
+- Resource Scheduling
+- Resource Scheduling Optimization
+- Customer Insights - Journeys
+- Business performance analytics
+- Project Operations Team Member
+- Power Platform Environment Settings
+
+With 2024 Release wave 2, these apps are changing their app release channel to **Monthly**:
+- Sales Hub
+
+### Keeping Semi-annual release channel
+
+When an environment needs to have a slower release cadence, the following configurations are recommended.
+
+#### Change apps with explicit app release channel
+
+Model-driven apps with the app release channel set to a value other than **Auto** need to be changed to **Semi-annual**. These apps can be deployed to all environments as a managed solution.
+
+1. Customize any out of box Dynamics 365 app 
+1. Update any custom app created after 2024 release wave 1 when new app started defaulting to **Monthly**
+
+> Note: Model-driven apps in Power Apps environments use **Monthly** when app release channel is **Auto** regardless of the environment release channel. All model-driven apps in Power Apps environments need to set the app release channel explicitly. 
+
+#### Override apps when no explicit app release channel
+
+Model-driven apps in Dynamics 365 environment that have **Auto** for app release channel can either
+
+1. Change each environment release change to **Semi-annual**
+2. Change each app with to **Semi-annual**
+ 
 ## Changing the environment channel
 
 The environment channel can be set using the Power Platform admin center or with code.
 
 | Environment release channel | Environment setting value | Behavior |
 |--|--|--|
-| Auto | 0 | Environment default value is currently **Semi-annual**, but will change to **Monthly** with 2024 release wave 2. |
+| Auto | 0 | Environment default value is currently **Semi-annual**, but changes to **Monthly** with 2024 release wave 2. |
 | Monthly | 1 | Environment explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | Environment explicitly set to **Semi-Annual Channel**. |
 
@@ -58,7 +109,7 @@ The app channel can be used to override the release channel for a model-driven a
 
 | App release channel | App setting value | Behavior |
 |--|--|--|
-| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 orgs and **Monthly** for Power Apps orgs. With 2024 release wave 2 the default will change to **Monthly**. |
+| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 environments and **Monthly** for Power Apps environments. With 2024 release wave 2, the default changes to **Monthly**. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
@@ -104,19 +155,19 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
    1. Select **Save**.
-1. After changing an app setting for specific apps, the apps must be republished for the change to take effect.
+1. Republish any apps where the app setting was changed at an app level for the change to take effect.
 
 ### Set the default for new apps to monthly channel
 
-As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
+As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
 
 To override this behavior, change the app setting to **No** in the environment or apply to multiple environments by including in a solution that is imported into the environments.
 
 ### Prevent new app default to monthly channel
 
-The new app default can be prevented by switching **Allow new app channel default** to **No**. This causes the new app to be created with release channel **Auto** value.
+The new app default can be prevented by switching **Allow new app channel default** to **No**. This change causes the new app to be created with release channel **Auto** value.
 
-The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution that's migrated to all environments to prevent new apps from having a default set.
+The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution and imported into environments to prevent new apps from having a default set.
 
 1. Go to **Solutions** and open an existing or create a new solution.
 1. Add the existing app setting **Allow new app channel default** into the solution:
@@ -161,7 +212,7 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version reaches the environment.
+Validation should be done for each monthly channel release before it is automatically enabled for users. Users can test when the validation build version reaches the environment.
 
 The easiest way to validate is by appending ```&channelrelease=next``` that automatically sets the release channel to the next upcoming monthly release.
 
