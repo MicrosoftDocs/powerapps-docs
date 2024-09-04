@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 07/30/2024
+ms.date: 09/04/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -279,13 +279,13 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   >
   > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
    
-- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For an example if you choose `DirPerson` table, (a table derived from `DirPartyTable` aso known as the base table), exported data contains fields from base table ex. `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
+- [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For example, if you choose `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, exported data contains fields from the base table `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
 
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - Finance and operations apps tables included in an Azure Synapse Link profile can't be migrated to a different environment using the import and export profile feature in Azure Synapse Link.
 - Special fields such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
-- Staging tables, temporary tables and deprecated tables (whose names begin with `del_` ) in finance and operations apps aren't allowed in Azure Synapse Link.
+- Staging tables, temporary tables and deprecated tables, where names begin with `del_` in finance and operations apps, aren't allowed in Azure Synapse Link.
 - The following tables, known as *kernel* tables in finance and operations apps, are supported by Fabric and Synapse Link. These tables are special, and you don't need to enable change tracking. Also, they're updated every 24 hours and not updated near-real time as the data doesn't change frequently: `DATAAREA`, `USERINFO`, `SECURITYROLE`, `SECURITYUSERROLE`, `SQLDICTIONARY`, `PARTITIONS`, `SECURITYPRIVILEGE`, `TIMEZONESLIST`, `SECURITYDUTY`, `SECURITYSUBROLE`, `SECURITYUSERROLECONDITION`, `DATABASELOG`, `SECURITYROLERUNTIME`, `SECURITYROLEPRIVILEGEEXPLODEDGRAPH`, `SECURITYROLEDUTYEXPLODEDGRAPH`, `TIMEZONESRULESDATA`, `SECURITYROLEEXPLODEDGRAPH`, `USERDATAAREAFILTER`, `SYSINHERITANCERELATIONS`.
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
 
@@ -333,10 +333,10 @@ You'll also notice additional metadata fields appended by the system for each da
 | `IsDelete` | If True this record is deleted from Dataverse or finance and operations | In  case of a delete at source, export to data lake deletes the row from the destination data lake immediately. Azure Synapse Link performs a "soft delete" for table data in Delta format such that you can identify deleted rows without consuming change feeds. <br>In case of table data in Delta files, soft deleted rows are purged after 28 days.<br><br>IsDelete field is also available in incremental updates. In case you want to access the latest row for incremental update `isDelete` is False, the latest version number and sync modified on date for a given ID. |
 | `modifiedon` |  Indicates the date and time the record was last modified | This field is populated from modified date time field in finance and operations tables. |
 | `modifiedtransactionid` |  Used internally | Because `modifiedtransactionid` is used internally, don't use this field. |
-| `SinkCreatedOn` | Indicates the date the record was written to the data lake. <br>In case of CSV change data (incremental update), data and time data was written to lake is shown. For table data in Delta format, indicates the date and time of Delta Lake conversion.  | You can use this date similar to the data lake modified date time field in the export to data lake feature. |
+| `SinkCreatedOn` | Indicates the date the record was written to the data lake. <br>In case of CSV change data (incremental update), data, and time data was written to lake is shown. For table data in Delta format, indicates the date and time of Delta Lake conversion.  | You can use this date similar to the data lake modified date time field in the export to data lake feature. |
 | `SinkModifiedOn` | Indicates the date the record was modified. In case of tables in Delta format files as well as incremental CSV files, contains the same date time as `SinkCreatedOn`. | You can use this date similar to the data lake modified date time field in export to data lake feature. |
 | `sysdatastatecode` | If 1, this record is archived using the long term data retention feature. If 0 this is a live record. | You can use this field to identify finance and operations records that have been archived (and deleted from live data). The same field is available for for CSV change data (incremental update). |
-| `sysrowversion` | Version number maintained in each finance and operations apps record that determines whether changes have been made to data. This field is used by the system to determine incremental or delta changes to process. | `sysrowversion` is used internally, you can use this field as a *watermark* to determine the last version of record that was updated. This field might be empty for Dynamics 365 customer engagement apps tables. |
+| `sysrowversion` | Version number maintained in each finance and operations apps record that determines whether changes have been made to data. This field is used by the system to determine incremental or delta changes to process. | `sysrowversion` is used internally. You can use this field as a *watermark* to determine the last version of record that was updated. This field might be empty for Dynamics 365 customer engagement apps tables. |
 | `tableid` |  Contains a unique ID of each table | Contains the table ID from finance and operations. |
 | `versionnumber` | Used internally - contains the last version of the row that has been synced to the data lake. | Similar to the `sysrowversion` this field contains the last processed version for Dynamics customer engagement apps tables. In case of Dynamics finance and operations apps tables, this field contains the same value as `sysrowversion`. |
 
@@ -392,7 +392,7 @@ To enable change tracking, follow these steps.
 
 1. In Power Apps, select **Tables** on the left navigation pane, and then select the table you want.
 1. Select **Properties** >  **Advanced options**.
-1. Select the **Track changes** option, and then select **Save**. If the option is unavailable, see known limitations below. 
+1. Select the **Track changes** option, and then select **Save**. If the option is unavailable, go to [Known limitations with finance and operations entities](#known-limitations-with-finance-and-operations-entities)).
 
 ### Known limitations with finance and operations entities
 
