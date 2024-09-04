@@ -255,6 +255,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsDesktopFlowRuntimeRepairAttendedEnabled](#BKMK_IsDesktopFlowRuntimeRepairAttendedEnabled)
 - [IsDesktopFlowRuntimeRepairUnattendedEnabled](#BKMK_IsDesktopFlowRuntimeRepairUnattendedEnabled)
 - [IsDesktopFlowSchemaV2Enabled](#BKMK_IsDesktopFlowSchemaV2Enabled)
+- [IsDesktopFlowVanillaImageSharingEnabled](#BKMK_IsDesktopFlowVanillaImageSharingEnabled)
 - [IsDuplicateDetectionEnabled](#BKMK_IsDuplicateDetectionEnabled)
 - [IsDuplicateDetectionEnabledForImport](#BKMK_IsDuplicateDetectionEnabledForImport)
 - [IsDuplicateDetectionEnabledForOfflineSync](#BKMK_IsDuplicateDetectionEnabledForOfflineSync)
@@ -297,6 +298,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsPreviewForAutoCaptureEnabled](#BKMK_IsPreviewForAutoCaptureEnabled)
 - [IsPreviewForEmailMonitoringAllowed](#BKMK_IsPreviewForEmailMonitoringAllowed)
 - [IsPriceListMandatory](#BKMK_IsPriceListMandatory)
+- [IsProcessCapacityAutoClaimEnabled](#BKMK_IsProcessCapacityAutoClaimEnabled)
 - [IsQuickCreateEnabledForOpportunityClose](#BKMK_IsQuickCreateEnabledForOpportunityClose)
 - [IsReadAuditEnabled](#BKMK_IsReadAuditEnabled)
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
@@ -3800,7 +3802,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowconnectionembeddingenabled`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
@@ -3816,7 +3818,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowruntimerepairattendedenabled`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
@@ -3832,7 +3834,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowruntimerepairunattendedenabled`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
@@ -3852,6 +3854,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsDesktopFlowVanillaImageSharingEnabled"></a> IsDesktopFlowVanillaImageSharingEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Windows Vanilla Image will be readly available for Desktop Flow users in this organization.**|
+|DisplayName|**Enable Sharing the Windows Vanilla Image with every Desktop Flow user in this organization.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isdesktopflowvanillaimagesharingenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
 |True Label|Yes|
 |False Label|No|
 
@@ -4521,6 +4539,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`ispricelistmandatory`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsProcessCapacityAutoClaimEnabled"></a> IsProcessCapacityAutoClaimEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether the Process capacity auto-claim feature is enabled in this organization.**|
+|DisplayName|**Enable the Process capacity auto-claim feature for this organization**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isprocesscapacityautoclaimenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|

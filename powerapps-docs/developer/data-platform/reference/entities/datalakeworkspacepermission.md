@@ -12,6 +12,8 @@ search.audienceType:
 
 # Data Lake Workspace Permission (datalakeworkspacepermission) table/entity reference
 
+
+
 ## Messages
 
 The following table lists the messages for the Data Lake Workspace Permission (datalakeworkspacepermission) table.
@@ -22,7 +24,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /datalakeworkspacepermissions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |**DeleteMultiple action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: True |`GET` /datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /datalakeworkspacepermissions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -283,6 +284,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
 |Targets|datalakeworkspace|
+
 
 ## Read-only columns/attributes
 
@@ -641,6 +643,7 @@ One-To-Many Relationship: [organization organization_datalakeworkspacepermission
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+
 ## One-to-Many relationships
 
 These relationships are one-to-many. Listed by **SchemaName**.
@@ -750,8 +753,10 @@ Many-To-One Relationship: [syncerror datalakeworkspacepermission_SyncErrors](syn
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+
+
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.datalakeworkspacepermission?displayProperty=fullName>
