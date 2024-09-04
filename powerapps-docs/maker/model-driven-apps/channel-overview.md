@@ -2,7 +2,7 @@
 title: "Release channel for your model-driven app | MicrosoftDocs" 
 description: "This article outlines how release channels enable features within a model-driven app."
 ms.custom: ""
-ms.date: 2/19/2024
+ms.date: 9/04/2024
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -29,7 +29,7 @@ Security and non-end user impacting changes continue to be delivered with the we
 
 The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
-Microsoft 365 products see a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
+Microsoft 365 products experience consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
 
 ## Configuring release channel
 
@@ -39,7 +39,7 @@ Environment admins use the Power Platform admin center to select the channel for
 
 To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choice for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
 
-With 2024 release wave 1, the Power Apps environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps are default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments are changing to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need for the slower cadence. More information: [Keeping semi annual release channel](channel-change.md#keeping-semi-annual-release-channel).
+With 2024 release wave 1, the Power Platform environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments are changing to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need the slower cadence. More information: [Keeping semi-annual release channel](channel-change.md#keeping-semi-annual-release-channel).
 
 ## Monthly release schedule
 
