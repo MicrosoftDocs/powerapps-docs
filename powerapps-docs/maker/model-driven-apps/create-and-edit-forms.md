@@ -55,9 +55,10 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use column suggestions by Copilot to select the best columns to display in your model-driven app form. Instead of using the default fields that Power Apps selects, makers can view up to 10 suggestions from Copilot. The column suggestions are based on the form name and description. Makers review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
+Use column suggestions by Copilot to select the best columns to display in your model-driven app form. Instead of using the default fields that Power Apps selects, makers can view suggestions from Copilot. The column suggestions are based on the form name and description. Makers review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
