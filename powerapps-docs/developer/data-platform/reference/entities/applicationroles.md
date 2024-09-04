@@ -229,4 +229,4 @@ These relationships are many-to-many. Listed by **SchemaName**.
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.applicationroles?displayProperty=fullName>

@@ -667,6 +667,9 @@ items:
 - name: "Follow (PostFollow)"
   displayName: "PostFollow entity"
   href: postfollow.md
+- name: "Form Mapping (msdyn_FormMapping)"
+  displayName: "msdyn_FormMapping entity"
+  href: msdyn_formmapping.md
 - name: "Form Step (mspp_webformstep)"
   displayName: "mspp_webformstep entity"
   href: mspp_webformstep.md
