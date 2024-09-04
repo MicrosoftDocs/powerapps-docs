@@ -25,7 +25,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /cards<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /cards(*cardid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `DeleteMultiple`<br />Event: True |**DeleteMultiple action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -859,6 +858,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [card_PrincipalObjectAttributeAccesses](#BKMK_card_PrincipalObjectAttributeAccesses)
 - [card_ProcessSession](#BKMK_card_ProcessSession)
 - [card_SyncErrors](#BKMK_card_SyncErrors)
+- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
 
 ### <a name="BKMK_card_AsyncOperations"></a> card_AsyncOperations
 
@@ -955,6 +955,18 @@ Many-To-One Relationship: [syncerror card_SyncErrors](syncerror.md#BKMK_card_Syn
 |ReferencedEntityNavigationPropertyName|`card_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
+
+Many-To-One Relationship: [msdyn_formmapping msdyn_formmapping_cardid](msdyn_formmapping.md#BKMK_msdyn_formmapping_cardid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`cardid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_cardid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 ## Many-to-Many relationships

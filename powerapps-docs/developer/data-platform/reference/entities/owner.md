@@ -259,6 +259,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_flow_awaitallapprovalmodel](#BKMK_owner_msdyn_flow_awaitallapprovalmodel)
 - [owner_msdyn_flow_basicapprovalmodel](#BKMK_owner_msdyn_flow_basicapprovalmodel)
 - [owner_msdyn_flow_flowapproval](#BKMK_owner_msdyn_flow_flowapproval)
+- [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
 - [owner_msdyn_integratedsearchprovider](#BKMK_owner_msdyn_integratedsearchprovider)
 - [owner_msdyn_kalanguagesetting](#BKMK_owner_msdyn_kalanguagesetting)
 - [owner_msdyn_kbattachment](#BKMK_owner_msdyn_kbattachment)
@@ -1991,6 +1992,18 @@ Many-To-One Relationship: [msdyn_flow_flowapproval owner_msdyn_flow_flowapproval
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_msdyn_flow_flowapproval`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_msdyn_formmapping"></a> owner_msdyn_formmapping
+
+Many-To-One Relationship: [msdyn_formmapping owner_msdyn_formmapping](msdyn_formmapping.md#BKMK_owner_msdyn_formmapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_formmapping`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_owner_msdyn_integratedsearchprovider"></a> owner_msdyn_integratedsearchprovider

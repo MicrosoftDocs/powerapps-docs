@@ -157,6 +157,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |473330023|**VirtualAgent**|
 |473330024|**FormatNumber**|
 |473330025|**Skills**|
+|473330026|**PowerPages**|
 
 ### <a name="BKMK_OperationType"></a> OperationType
 

@@ -32,7 +32,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `SetParentSystemUser`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SetParentSystemUser?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|
 | `SetParentBusinessUnit`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.SetParentBusinessUnitRequest>|
 | `SetParentTeam`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SetParentTeam?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
-| `SyncGroupMembersToTeam`<br />Event: False |**SyncGroupMembersToTeam action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `SyncGroupMembersToTeam`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SyncGroupMembersToTeam?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Update`<br />Event: True |`PATCH` /teams(*teamid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `Upsert`<br />Event: False |`PATCH` /teams(*teamid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
@@ -974,6 +974,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_msdyn_flow_awaitallapprovalmodel](#BKMK_team_msdyn_flow_awaitallapprovalmodel)
 - [team_msdyn_flow_basicapprovalmodel](#BKMK_team_msdyn_flow_basicapprovalmodel)
 - [team_msdyn_flow_flowapproval](#BKMK_team_msdyn_flow_flowapproval)
+- [team_msdyn_formmapping](#BKMK_team_msdyn_formmapping)
 - [team_msdyn_integratedsearchprovider](#BKMK_team_msdyn_integratedsearchprovider)
 - [team_msdyn_kalanguagesetting](#BKMK_team_msdyn_kalanguagesetting)
 - [team_msdyn_kbattachment](#BKMK_team_msdyn_kbattachment)
@@ -2741,6 +2742,18 @@ Many-To-One Relationship: [msdyn_flow_flowapproval team_msdyn_flow_flowapproval]
 |ReferencingAttribute|`owningteam`|
 |ReferencedEntityNavigationPropertyName|`team_msdyn_flow_flowapproval`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_team_msdyn_formmapping"></a> team_msdyn_formmapping
+
+Many-To-One Relationship: [msdyn_formmapping team_msdyn_formmapping](msdyn_formmapping.md#BKMK_team_msdyn_formmapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`owningteam`|
+|ReferencedEntityNavigationPropertyName|`team_msdyn_formmapping`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_team_msdyn_integratedsearchprovider"></a> team_msdyn_integratedsearchprovider
