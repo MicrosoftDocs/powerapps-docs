@@ -53,14 +53,6 @@ If you're an administrator, you can check the access another user has to a row.
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
-### Check access results
-The user's record [privileges](/power-platform/admin/how-record-access-determined#privilege-check) are displayed. The user's privileges are either **Yes** or **No**.  The result shows a blank page when the user doesn't have the **Read** privilege.
-
-:::image type="content" source="media/check-access-1.png" alt-text="Check record privileges.":::
-
-For the **Yes** privileges, you can select them to see whether the privileges were granted from a security role or from the record being shared with the user. You can see the privilege's [Access level](/power-platform/admin/security-roles-privileges#access-levels) of the assigned security role. 
-
-:::image type="content" source="media/check-access-2.png" alt-text="See whether the privileges were granted from a security role or from the record being shared with the user.":::
 
 ## Check all users who have access to a row
 
@@ -84,5 +76,16 @@ To see who has access to a row and their respective access level, complete the f
 > If you select a user who doesn't have access to the record, the page will return with a blank screen.
   <insert screenshot for Check access where user doesn't have access image>
 
+### Check who has access results
+The user's record [privileges](/power-platform/admin/how-record-access-determined#privilege-check) are displayed. You can tab to each of these privileges to see who has this privilege on the record. 
+
+< replace with Check access privileges image >
+
+A user can have access to a record via one or more of these [categories](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#access-check) .
+<Check access record privilege image>
+1. **Direct role** - the record access is granted in a security role that is assigned to the user. see [role access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#role-access). 
+1. **Team role**   - the record access is granted to a security role that is assigned to the team and the user is a member of the team. see [role access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#role-access). 
+1. **Shared** - the record access is shared with the user or team who the user is a member of. see [Shared access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#shared-access).
+1. **Application users** - Dataverse's application users who have access to the record because they are assigned to a security role that has privilege to the record.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
