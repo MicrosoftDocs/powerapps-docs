@@ -34,8 +34,9 @@ For more information on how privileges and access checks work, go to [How access
 
 ## Check your access to a row
 
-1. Select a row, and then select the **Check Access** button on the command bar.
-1. The **Check Access** dialog box will appear and display your access information.
+1. Select a row.
+1. Select **Check Access** on the command bar.
+1. The **Check Access** dialog box displays your access information.
 
     Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](./find-admin.md).
 
@@ -43,9 +44,10 @@ For more information on how privileges and access checks work, go to [How access
 
 If you're an administrator, you can check the access another user has to a row.
 
-1. Select a row, and then select the **Check Access** button on the command bar.
+1. Select a row.
+1. Select **Check Access** on the command bar.
 1. In the **User Lookup** field, select or enter a user name to search for the user. 
-1. Note that the **Check Access** dialog box appears and displays the user's access information.
+1. The **Check Access** dialog box displays the user's access information.
 
 ## Check all users who have access to a row
 
