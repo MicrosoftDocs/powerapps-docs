@@ -111,6 +111,14 @@ Modern controls can be used with custom pages and the modern, refreshed look. Th
 
 It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
 
+### Using custom chart colors
+
+When new look is enabled, charts in views and dashboards are updated to a set of modern colors. However if the chart colors were customized, this is overriden in new look. The maker can keep the custom colors by addin the `CustomColorOverride` in the chart xml.
+
+```xml
+<Chart CustomColorOverride="true">
+```
+
 ## Working with the modern, refreshed look
 
 ### Provide feedback on the modern, refreshed look
