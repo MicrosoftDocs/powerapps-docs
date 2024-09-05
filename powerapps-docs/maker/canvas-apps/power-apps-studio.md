@@ -25,37 +25,37 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control selected.
 
-1. [App actions](#2--app-actions): Options to rename, share, run the app checker, add comments, preview, save, or publish the app.
+1. [App actions](#2--app-actions): Options to view properties, add comments, run the app checker, share, preview, save, or publish the app.
 
-1. [Properties list](#3--properties-list): List of properties for the selected object.
+1. [Properties list](#3--properties-list): List of properties for the selected object, such as *fill* or *height*.
 
 1. [Formula bar](#4--formula-bar): Compose or edit a formula for the selected property with one or more functions.
 
-1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and insert options.
+1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and allows you to insert options.
 
-1. [App authoring options](#6--app-authoring-options): Details pane with options relevant to the selected menu item for authoring the app.
+1. [App authoring options](#6--app-authoring-options): Tree view with all the screens and components of your app.
 
 1. [Canvas/screen](#7--canvasscreen): Primary canvas for composing the app structure.
 
-1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
+1. [Properties pane](#8--properties-pane): Properties list for the selected object in Tree view.
 
-1. [Settings and virtual agent](#9--virtual-agent): Go to the settings or get help building your app from a virtual agent.
+1. [Settings and copilot](#9--virtual-agent): Go to settings or get help building your app with a copilot.
 
-1. [Screen selector](#10--screen-selector): Switch between different screens in an app.
+1. [Screen selector](#10--screen-selector): Switch between different screens in your app. Tree view selections display here.
 
-1. [Change canvas screen size](#11--change-canvas-screen-size): Change the size of the canvas during an authoring experience in Power Apps Studio.
+1. [Change canvas screen size](#11--change-canvas-screen-size): Change the display size of the canvas as you author your app.
 
 Let's understand each option in Power Apps Studio in detail.
 
-## 1 – Power Apps Studio modern command bar
+### 1 – Power Apps Studio modern command bar
 
 Power Apps Studio options are available on the command bar. The options are relevant to the current session and app-related settings.
 
 :::image type="content" source="media/studio/pa-studio-options.png" alt-text="Screenshot that shows the command bar menu with lots of development options." lightbox="media/studio/pa-studio-options.png":::
 
-### Modern command bar
+#### Modern command bar
 
-The modern command bar displays the relevant set of commands depending on the control that is selected.
+The modern command bar displays the relevant set of commands depending on the control that is selected. For example, if you select an item to *insert*, you see the modern command bar change to accomodate your selection.
 
 :::image type="content" source="media/studio/pa-studio-command-bar.gif" alt-text="Moving image that shows how the command bar changes depending on which control is selected." lightbox="media/studio/pa-studio-command-bar.gif":::
 
@@ -105,17 +105,17 @@ Insert shows all the popular objects or controls that you can add on the selecte
 
 To insert controls on the canvas, you can drag the control to the canvas or select the control.
 
-##### Popular controls
+##### Popular controls to insert
 
 | **Name**      | **Description** |
 |---------------|-----------------|
-|*Text label* | A box that shows data such as text, numbers, dates, or currency.|
-|*Edit form*|Display, edit, or create a record in a data source.|
-|*Text input*|A box that shows text.|
-|*Vertical gallery*|A control that contains other controls and shows a set of data.|
-|*Rectangle*|A rectangular shape to configure the canvas appearance.|
-|*Date picker*|A control that the user can select to specify a date.|
-|*Button*|A control that the user can select to interact with the app.|
+| *Form* | Display, edit, or create a record in a data source. |
+| *Input* > *Button* | A control that the user can select to interact with the app. |
+| *Input* > *Date picker* | A control that the user can select to specify a date. |
+| *Input* > *Text input* | A text box that allows user intput. |
+| *Shapes* > *Rectangle* | A rectangular shape to configure the canvas appearance. |
+| *Text* | A box that displays data such as text, numbers, dates, or currency. |
+| *Vertical gallery* | A control that allows you to add other controls and display a set of data. For example, list items made up of an image, title, and description is contained within a vertical gallery. <br> :::image type="content" source="media/studio/vertical-gallery-example.png" alt-text="Screenshot showing what the vertical gallery template looks like."::: |
 
 For more information about the controls you can insert, including their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
 
@@ -130,15 +130,9 @@ From the **Add data** menu, you can:
 
 #### New screen layouts
 
-Select from the list of available screen layouts.
+Select from the list of available screen layouts such as **Sidebar**, new layouts in preview such as **Header and form**, or templates like **Email**.
 
 :::image type="content" source="media/studio/pa-add-screen.png" alt-text="Screenshot that shows how to choose a layout from the New screen menu":::
-
-##### Templates
-
-You can use a template for a screen. Select **Templates** and choose **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
-
-:::image type="content" source="media/studio/pa-studio-add-screen-templates.png" alt-text="Screenshot that shows how to choose a template from the New screen menu":::
 
 #### Background color
 
@@ -154,7 +148,7 @@ Select **Upload** to upload images to set as the background image.
 
 #### Settings
 
-Configure the app's settings from the **General**, **Display**, **Upcoming features**, or **Support** tab.
+Configure the app's settings from the [General](#general), [Display](#display), [Copilot](#copilot), [Updates](#updates), or [Support](#support) tab.
 
 :::image type="content" source="media/studio/pa-studio-general-settings.png" alt-text="Screenshot that shows where to choose settings from the command bar."  lightbox="media/studio/pa-studio-general-settings.png":::
 
@@ -165,11 +159,10 @@ Configure the app's settings from the **General**, **Display**, **Upcoming featu
 - Select an **Icon background fill** or **Icon fill** color.
 - Toggle **Auto save** to save every two minutes automatically.
 - Configure offline use.
-- Enable modern controls and themes to update automatically.
 - Set your **Data row limit**.
 - Include debug information when you publish.
 - Enable autocreation of environment variables.
-- **Enable App.OnStart property**.
+- Enable the `App.OnStart` property.
 
 For example, to edit the app **Name**, go to the **General** tab of **Settings**.
 
@@ -185,7 +178,11 @@ For example, to edit the app **Name**, go to the **General** tab of **Settings**
 
 For more information, see [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md).
 
-##### Upcoming features
+##### Copilot
+
+You can [add a custom Copilot to a canvas app (preview)](/power-apps/maker/canvas-apps/add-custom-copilot).
+
+##### Updates
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
@@ -197,7 +194,7 @@ Access current Power Apps Studio information such as environment, authoring vers
 
 #### Power Automate
 
-Create a new flow with Power Automate, or select any available flow.
+Create a new flow with Power Automate, or select a flow you added previously.
 
 :::image type="content" source="media/studio/pa-studio-create-flow.png" alt-text="Screenshot that shows where the Power Automate section is located.":::
 
@@ -215,7 +212,7 @@ You can save data such as the result values from a data set into temporary stora
 
 ## 2 – App actions
 
-To work with app-specific actions, use the options such as **Share**, **App checker**, **Comments**, **Preview the app**, **Save**, and **Publish**.
+To perform app-specific actions, use the options such as **Properties**, **Comments**, **App checker**, **Share**, **Preview the app**, **Save**, and **Publish**.
 
 :::image type="content" source="media/studio/pa-studio-actions-menu.png" alt-text="Screenshot that shows the app actions in the command bar.":::
 
