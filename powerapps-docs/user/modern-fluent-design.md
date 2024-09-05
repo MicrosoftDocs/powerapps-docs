@@ -21,9 +21,9 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **Try the new look** feature is [turned on by end users](modern-fluent-design.md#turn-on-the-modern-refreshed-look). The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
+Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look feature that's now on by default will roll out on a slower schedule than other features. More information: [Managing on by default general availability rollout](modern-fluent-design.md#managing-the-on-by-default-general-availability-rollout).
+The modern, refreshed look feature is on by default and will move to always on for monthly channel users with the October monthly release.will roll out on a slower schedule than other features. More information: [Working with the modern, refreshed look](#working-with-the-modern-refreshed-look).
 
 ## What's included with the modern, refreshed look
 
