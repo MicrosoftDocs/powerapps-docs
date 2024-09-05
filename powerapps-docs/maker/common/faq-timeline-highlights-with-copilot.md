@@ -64,7 +64,7 @@ We used the following metrics to measure Copilot's performance:
 
 Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
 
-- **Language**: Many languages are supported in Copilot scenarios. While the quality is expected to be highest in English, the quality in the other languages is expected to be improved over time. The following languages are available for Copilot in the timeline:
+- **Language**: Many languages are supported in Copilot scenarios. While the quality is expected to be highest in English, the quality in the other languages is expected to improve over time. The following languages are available for Copilot in the timeline:
   
    - Danish
    - Dutch
