@@ -113,7 +113,7 @@ It's possible to change the color of the app header to match your organization w
 
 ### Using custom chart colors
 
-When new look is enabled, charts in views and dashboards are updated to a set of modern colors. However if the chart colors were customized, this is overriden in new look. The maker can keep the custom colors by addin the `CustomColorOverride` in the chart xml.
+When new look is enabled, charts in views and dashboards are updated to a set of modern colors. However if the chart colors were customized, this is overriden in new look. The maker can keep the custom colors by adding the `CustomColorOverride` attribute in the chart xml.
 
 ```xml
 <Chart CustomColorOverride="true">
