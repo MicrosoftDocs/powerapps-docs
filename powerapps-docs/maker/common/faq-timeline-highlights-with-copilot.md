@@ -64,8 +64,29 @@ We used the following metrics to measure Copilot's performance:
 
 Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
 
-- **Language**: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot. 
-
+- **Language**: Many languages are supported in Copilot scenarios. While the quality is expected to be highest in English, the quality in the other languages is expected to be improved over time. The following languages are available for Copilot in the timeline:
+  
+   - Danish
+   - Dutch
+   - English
+   - French
+   - German
+   - Italian
+   - Japanese
+   - Portuguese (Brazil)
+   - Spanish
+   - Thai
+   - Simplified Chinese
+   - Czech
+   - Finnish
+   - Greek
+   - Korean
+   - Norwegian (Bokmål)
+   - Polish
+   - Russian
+   - Swedish
+   - Turkish
+  
 - **Suggestions**: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
 
 - **Ethics**: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot. 
