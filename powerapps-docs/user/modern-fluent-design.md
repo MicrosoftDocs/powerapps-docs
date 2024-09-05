@@ -23,7 +23,7 @@ contributors:
 
 Model-driven apps have a modern, refreshed look when the **Try the new look** feature is [turned on by end users](modern-fluent-design.md#turn-on-the-modern-refreshed-look). The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look feature that's now on by default will roll out on a slower schedule than other features. More information: [Managing on by default general availability rollout](modern-fluent-design.md#managing-the-on-by-default-general-availability-rollout).
+The modern, refreshed look feature that's now on by default rolls out on a slower schedule than other features. Learn more at [Managing on by default general availability rollout](modern-fluent-design.md#managing-the-on-by-default-general-availability-rollout).
 
 ## What's included with the modern, refreshed look
 
@@ -33,7 +33,7 @@ Here's what you can expect in the modern, refreshed experience:
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - A new mechanism for customizing the app header colors to match your personal or organizational branding. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
-- An end user setting called **Try the new look** that enables the modern, refreshed experience.
+- An end user setting called **Try the new look** that turns on the modern, refreshed experience.
 
 :::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
 
@@ -63,7 +63,7 @@ The following example shows a form page with the modern, refreshed look.
 
 ### Field controls
 
-Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
+Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls are planned to be modernized using Fluent design in future updates.
 
 Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
@@ -73,7 +73,7 @@ The following example shows a set of fields with the modern, refreshed look.
 
 ### Dashboard page
 
-The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't enabled by default.
+The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is turned on, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't turned on by default.
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
@@ -83,7 +83,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ### Modern, refreshed look outside of browser
 
-The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
+The mobile app and mail app don't support the modern, refreshed look, and aren't part of the preview or general availability.
 
 ### Switching themes or enabling dark mode
 
@@ -95,7 +95,7 @@ With the modern, refreshed look, Power Apps is no longer honoring [classic theme
 
 ### Custom icons
 
-Only SVG icons are supported. If you use other formats such as PNG, the navigation won't display them and a default icon will appear instead.
+Only SVG icons are supported. If you use other formats such as PNG, the navigation doesn't display them and a default icon appears instead.
 
 ## Frequently asked questions (FAQs)
 
@@ -132,11 +132,11 @@ The modern, refreshed look for model-driven apps is generally available in the f
 - Monthly channel in August 2023
 - Semi-annual Channel as of 2023 Release Wave 2
 
-Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
+Once generally available, end users see the **Try the new look** setting to turn on the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
 
 ### Turn on the modern, refreshed look
 
-End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#revert-to-the-old-ui).
+End users can turn on the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#revert-to-the-old-ui).
 
 ### Revert to the old UI
 
@@ -167,13 +167,13 @@ The modern, refreshed look for model-driven apps is on by default in the followi
 - Monthly channel in April 2024
 - Semi-annual channel as of 2024 Release Wave 1
  
-Once generally available, end users can see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For the semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
+Once generally available, end users can see the **New look** setting turned on, by default, showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For the semi-annual channel, the rollout happens slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 
-In scenarios where makers and admins want to turn on an "Always on" modern experience they can enable this by setting the **New look always on** app setting. This enables the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
+In scenarios where makers and admins want to turn on an "Always on" modern experience, they can activate this by setting the **New look always on** app setting. This turns on the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
 
-Admins can enable the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and enables the modern, refreshed look for all users.
+Admins can turn on the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and turns on the modern, refreshed look for all users.
 
 1. Open <https://make.powerapps.com/>
 1. Under Solutions open an existing solution with one or more model-driven apps:
