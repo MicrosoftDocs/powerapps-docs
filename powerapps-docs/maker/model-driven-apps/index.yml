@@ -30,8 +30,6 @@ landingContent:
             url: app-value-proposition.md
           - text: Meet the app editors
             url: model-driven-designers.md
-          - text: Sample model-driven apps
-            url: overview-model-driven-samples.md
           - text: Licensing guide
             url: /power-platform/admin/pricing-billing-skus
          
