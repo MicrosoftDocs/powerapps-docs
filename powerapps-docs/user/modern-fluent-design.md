@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 03/29/2024
+ms.date: 09/05/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -113,7 +113,7 @@ It's possible to change the color of the app header to match your organization w
 
 ### Using custom chart colors
 
-When using the new look, charts in views and dashboards are updated to a set of modern colors. However if the chart colors have been customized, the new look will override the custom colors. The maker can keep the custom colors by adding the `CustomColorOverride` property in the chart xml.
+When using the modern, refreshed look, charts in views and dashboards are updated to a set of modern colors. If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
 
 ```xml
 <Chart CustomColorOverride="True">
