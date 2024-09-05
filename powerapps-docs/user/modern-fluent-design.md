@@ -117,22 +117,13 @@ It's possible to change the color of the app header to match your organization w
 
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
 
-### Managing opt-in general availability rollout
+### Managing always on rollout
 
-The modern, refreshed look for model-driven apps is generally available in the following release channels:
-
-- Monthly channel in August 2023
-- Semi-annual Channel as of 2023 Release Wave 2
-
-Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
-
-### Turn on the modern, refreshed look
-
-End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#revert-to-the-old-ui).
+With the October 2024 monthly release, monthly channel users will no longer see **New look** toggle in the app header. Those users will have the new look always on. Makers and admins can force users to have the classic look by turning the app setting **New look for model driven apps** to **false**. Learn more at [Revert to the classic look](#revert-to-the-old-ui).
 
 ### Revert to the old UI
 
-Yes, end users can switch back to the old UI by turning off the **New look** toggle. Makers can also disable the new look by updating the app setting.
+End users in the semi-annual channel can switch back to the old UI by turning off the **New look** toggle. Makers can also disable the new look by updating the app setting.
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
@@ -151,15 +142,6 @@ Admins can disable the **New look** setting across all apps in an organization b
 
     > [!NOTE]
     > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
-
-### Managing the on by default general availability rollout
-
-The modern, refreshed look for model-driven apps is on by default in the following release channels:
- 
-- Monthly channel in April 2024
-- Semi-annual channel as of 2024 Release Wave 1
- 
-Once generally available, end users can see the **New look** setting enabled by default showing the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time. For the semi-annual channel, the rollout will happen slowly over many weeks starting in April. Makers and admins should expect delays in seeing this feature rollout to their apps.
 
 ### Enabling the modern look for my app and removing the toggle
 
