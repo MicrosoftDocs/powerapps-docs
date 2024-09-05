@@ -75,9 +75,9 @@ The user's record [privileges](/power-platform/admin/how-record-access-determine
 
 A user can have access to a record through one or more of these [categories](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#access-check).
 
-- **Direct role** - The record access is granted to a security role that is assigned to the user. Learn more at [Role access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#role-access). 
-- **Team role**   - The record access is granted to a security role that is assigned to the team, and the user is a member of the team. Learn more at [Role access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#role-access). 
-- **Shared** - The record access is shared with the user or team who the user is a member of. Learn more at [Shared access](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#shared-access).
+- **Direct role** - The record access is granted to a security role that is assigned to the user. Learn more at [Role access](/power-platform/admin/how-record-access-determined#role-access). 
+- **Team role**   - The record access is granted to a security role that is assigned to the team, and the user is a member of the team. Learn more at [Role access](/power-platform/admin/how-record-access-determined#role-access). 
+- **Shared** - The record access is shared with the user or team who the user is a member of. Learn more at [Shared access](/power-platform/admin/how-record-access-determined#shared-access).
 - **Application users** - Dataverse's application users who have access to the record because they are assigned to a security role that has privilege to the record.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
