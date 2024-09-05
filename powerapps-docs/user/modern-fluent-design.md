@@ -33,7 +33,7 @@ Here's what you can expect in the modern, refreshed experience:
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - A new mechanism for customizing the app header colors to match your personal or organizational branding. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
-- An end user setting called **Try the new look** that enables the modern, refreshed experience.
+- An end user setting called **Try the new look** that turns on the modern, refreshed experience.
 
 :::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
 
@@ -63,7 +63,7 @@ The following example shows a form page with the modern, refreshed look.
 
 ### Field controls
 
-Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
+Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls are planned to be modernized using Fluent design in future updates.
 
 Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons have been removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
@@ -73,7 +73,7 @@ The following example shows a set of fields with the modern, refreshed look.
 
 ### Dashboard page
 
-The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't enabled by default.
+The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is turned on, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't turned on by default.
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
@@ -83,7 +83,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ### Modern, refreshed look outside of browser
 
-The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
+The mobile app and mail app don't support the modern, refreshed look, and aren't part of the preview or general availability.
 
 ### Switching themes or enabling dark mode
 
@@ -95,7 +95,7 @@ With the modern, refreshed look, Power Apps is no longer honoring [classic theme
 
 ### Custom icons
 
-Only SVG icons are supported. If you use other formats such as PNG, the navigation won't display them and a default icon will appear instead.
+Only SVG icons are supported. If you use other formats such as PNG, the navigation doesn't display them and a default icon appears instead.
 
 ## Frequently asked questions (FAQs)
 
@@ -110,6 +110,14 @@ Modern controls can be used with custom pages and the modern, refreshed look. Th
 ### Change the color of the app header
 
 It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
+
+### Using custom chart colors
+
+When using the modern, refreshed look, charts in views and dashboards are updated to a set of modern colors. If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
+
+```xml
+<Chart CustomColorOverride="True">
+```
 
 ## Working with the modern, refreshed look
 
@@ -145,9 +153,9 @@ Admins can turn off the **New look** setting across all apps in an organization 
 
 ### Enabling the modern look for my app and removing the toggle
 
-In scenarios where makers and admins want to turn on an "Always on" modern experience they can enable this by setting the **New look always on** app setting. This enables the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
+In scenarios where makers and admins want to turn on an "Always on" modern experience, they can activate this by setting the **New look always on** app setting. This turns on the modern, refreshed look for all users of the app and remove the header switch ability for end users to turn off **New look**.
 
-Admins can enable the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and enables the modern, refreshed look for all users.
+Admins can turn on the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and turns on the modern, refreshed look for all users.
 
 1. Open <https://make.powerapps.com/>
 1. Under Solutions open an existing solution with one or more model-driven apps:
