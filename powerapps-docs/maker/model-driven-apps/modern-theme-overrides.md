@@ -2,7 +2,7 @@
 title: "Use modern themes | MicrosoftDocs"
 description: Learn how to change the colors of the app header in model-driven apps with the modern look.
 ms.custom: ""
-ms.date: 06/06/2024
+ms.date: 09/05/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,6 +12,8 @@ ms.subservice: mda-maker
 ms.author: "jasongre"
 search.audienceType: 
   - maker
+contributors:
+- adrianorth 
 ---
 
 # Use modern themes
