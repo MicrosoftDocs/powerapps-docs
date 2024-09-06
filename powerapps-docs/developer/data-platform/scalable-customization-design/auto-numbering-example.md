@@ -1,19 +1,25 @@
 ---
 title: "Scalable Customization Design: Auto-numbering example (Microsoft Dataverse) | Microsoft Docs" 
 description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization."
-ms.date: 04/23/2024
+ms.date: 09/06/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: rogergilchrist
-ms.author: jdaly # MSFT alias of Microsoft employees only
+ms.author: rogergil
 search.audienceType: 
   - developer
+contributors:
+ -JimDaly
 ---
 # Scalable Customization Design: Auto-numbering example
 
 
 
 > [!NOTE]
+> Dataverse has an [Autonumber columns](../../../maker/data-platform/autonumber-fields.md) feature you should use if it meets your requirements. This solution is provided by and supported by Microsoft.
+> 
+> This article uses the scenario of an auto-numbering requirement to describe factors that need to be considered related to transaction management that is important for the solution to scale. This article describes a process where likely approaches are attempted, tested, and analyzed. The third approach addresses weaknesses in the first two approaches, but this doesn't mean it is ideal for your requirements. You should fully test any solution you develop. You support the code you write.
+> 
 > This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).
 
 One scenario that illustrates the common misunderstanding of how transactions are handled within Dataverse is implementing an automatic numbering scheme.
