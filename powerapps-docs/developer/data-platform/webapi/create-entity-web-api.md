@@ -32,7 +32,7 @@ Use a `POST` request to send data to create a table row (entity record). You can
 
 ```http
 
-POST [Organization URI]/api/data/v9.0/accounts
+POST [Organization URI]/api/data/v9.2/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -54,7 +54,7 @@ Accept: application/json
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 
 ```
 
@@ -84,7 +84,7 @@ This example creates a new account entity and returns the requested data in the 
 
  ```http
 
-POST [Organization URI]/api/data/v9.0/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon
+POST [Organization URI]/api/data/v9.2/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
@@ -111,7 +111,7 @@ Preference-Applied: return=representation
 OData-Version: 4.0
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
     "@odata.etag": "W/\"536530\"",
     "accountid": "d6f193fc-ce85-e611-80d8-00155d2a68de",
     "accountcategorycode": 1,
@@ -158,7 +158,7 @@ More information:
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/accounts
+POST [Organization URI]/api/data/v9.2/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -191,7 +191,7 @@ Accept: application/json
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80dd-00155d2a68cb)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(3c6e4b5f-86f6-e411-80dd-00155d2a68cb)
 
 ```
 
@@ -209,7 +209,7 @@ This request is using the `Prefer: return=representation` header so it returns t
 
 ```http
 
-POST [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=fullname),Account_Tasks($select=subject)
+POST [Organization URI]/api/data/v9.2/accounts?$select=name&$expand=primarycontactid($select=fullname),Account_Tasks($select=subject)
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -236,7 +236,7 @@ OData-Version: 4.0
 Preference-Applied: return=representation
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid(fullname),Account_Tasks(subject))/$entity",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,primarycontactid(fullname),Account_Tasks(subject))/$entity",
     "@odata.etag": "W/\"36236432\"",
     "name": "Sample Account",
     "accountid": "00000000-0000-0000-0000-000000000004",
@@ -289,7 +289,7 @@ Use the [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) to
 
 To determine whether two entities can be mapped, use the following query:
 
-`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
+`GET [Organization URI]/api/data/v9.2/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
 Creating a new record from another record is a two-step process. First, use the `InitializeFrom` function to return property values mapped from the original record. Then, combine the response data returned in the `InitializeFrom` function with any changes you want to make and then `POST` the data to create the record.
 
@@ -300,7 +300,7 @@ The following example shows how to create an account record using the values of 
 **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate'
+GET [Organization URI]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate'
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0
@@ -312,7 +312,7 @@ Accept: application/json
 
 ```json
 {
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
     "@odata.type": "#Microsoft.Dynamics.CRM.account",
     "parentaccountid@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)",
     "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
@@ -331,14 +331,14 @@ The response received from `InitializeFrom` function consists of values of mappe
 Other property values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the following example:
 
 ```http
-POST [Organization URI]/api/data/v9.0/accounts
+POST [Organization URI]/api/data/v9.2/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 
     {
-        "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
+        "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
         "@odata.type": "#Microsoft.Dynamics.CRM.account",
         "parentaccountid@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)",
         "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
