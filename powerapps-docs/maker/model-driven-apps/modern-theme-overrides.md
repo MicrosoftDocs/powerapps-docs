@@ -2,7 +2,7 @@
 title: "Use modern themes | MicrosoftDocs"
 description: Learn how to change the colors of the app header in model-driven apps with the modern look.
 ms.custom: ""
-ms.date: 06/06/2024
+ms.date: 09/05/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,11 +12,13 @@ ms.subservice: mda-maker
 ms.author: "jasongre"
 search.audienceType: 
   - maker
+contributors:
+- adrianorth 
 ---
 
 # Use modern themes
 
-Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md#turn-on-the-modern-refreshed-look) enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
+Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
 > - Modern themes currently only support customizing the app header. Other customizations like customizing the business process flow control aren't available.
@@ -24,10 +26,7 @@ Users of model-driven apps with the [modern, refreshed look for model-driven app
 
 ## Modify the app header colors
 
-With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#turn-on-the-modern-refreshed-look) in the app, makers can modify the colors used by the app header to align with their organizational branding. To accomplish this, you encapsulate the desired colors into an XML resource, use an app setting to point to this web resource, and then verify the color changes match expectation.  
-
-  > [!NOTE]
-  > This functionality is available in build 9.2.23094 or later version.
+With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can modify the colors used by the app header to align with their organizational branding. To accomplish this, you encapsulate the desired colors into an XML resource, use an app setting to point to this web resource, and then verify the color changes match expectation.  
 
 ### Overview of the XML resource to use for app header colors
 
