@@ -78,6 +78,8 @@ To see who has access to a row and their respective access level, complete the f
 ### Check who has access results
 The user's record [privileges](/power-platform/admin/how-record-access-determined#privilege-check) are displayed. You can tab to each of these privileges to see who has this privilege on the record. 
 
+:::image type="content" source="media/check-who-has-access.png" alt-text="Screenshot showing who has access to the record.":::
+
 A user can have access to a record through one or more of these [categories](/power-platform/admin/how-record-access-determined#access-check).
 
 - **Direct role** - The record access is granted to a security role that is assigned to the user. Learn more at [Role access](/power-platform/admin/how-record-access-determined#role-access). 
