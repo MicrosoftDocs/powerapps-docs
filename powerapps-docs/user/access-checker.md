@@ -1,6 +1,6 @@
 ---
-title: Check your user access and permissions
-description: How to check user access and security role.
+title: Check user access and permissions
+description: Learn how to view user access to a row.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,7 +14,7 @@ search.audienceType:
   - enduser
 ---
 
-# Check your user access to a row
+# Check user access and permissions
 
 To perform an action on a row, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
