@@ -4,7 +4,7 @@ description: How to check user access and security role.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/05/2024
+ms.date: 09/09/2024
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -85,6 +85,6 @@ A user can have access to a record through one or more of these [categories](/po
 - **Direct role** - The record access is granted to a security role that is assigned to the user. Learn more at [Role access](/power-platform/admin/how-record-access-determined#role-access). 
 - **Team role**   - The record access is granted to a security role that is assigned to the team, and the user is a member of the team. Learn more at [Role access](/power-platform/admin/how-record-access-determined#role-access). 
 - **Shared** - The record access is shared with the user or team who the user is a member of. Learn more at [Shared access](/power-platform/admin/how-record-access-determined#shared-access).
-- **Application users** - Dataverse's application users who have access to the record because they are assigned to a security role that has privilege to the record.
+- **Application users** - Dataverse's application users who have access to the record because they're assigned to a security role that has privilege to the record.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
