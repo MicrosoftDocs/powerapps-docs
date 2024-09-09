@@ -27,7 +27,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 | Canvas app types|The offline-first feature works for standalone canvas apps only. It doesn't work for embedded canvas apps, custom pages, or canvas apps in Teams.|
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
 |Dataverse table types| Virtual tables and elastic tables aren't supported in offline mode.|
-|Shared offline profile| An offline profile can't be used in two canvas apps.<br><br>If the same offline profile is used in a canvas app and in a model-driven app, it will create two separate local databases. |
+|Shared offline profile| If the same offline profile is used in a canvas app and in a model-driven app, it will create two separate local databases. |
 
 > [!NOTE]
 > If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
