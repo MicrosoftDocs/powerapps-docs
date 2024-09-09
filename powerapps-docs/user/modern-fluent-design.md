@@ -99,7 +99,7 @@ Only SVG icons are supported. If you use other formats such as PNG, the navigati
 
 ## Frequently asked questions (FAQs)
 
-### Can I use the modern, refreshed look in the Power Apps component framework or custom code components?
+### Can I use the modern, refreshed look in the Power Apps component framework or in custom code components?
 
 The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
 
