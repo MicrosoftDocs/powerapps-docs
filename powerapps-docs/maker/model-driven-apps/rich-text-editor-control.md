@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 08/26/2024
+ms.date: 09/06/2024
 ms.topic: how-to
 ms.author: "craigm"
 author: Mattp123
@@ -391,17 +391,17 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 
 To remove the toolbar entirely, set the value of `toolbar` to '[]' (two square brackets).
 
-### Add a new font list and set 20-pixel Brush Script MT as the default font
+### Add a new font list and set 20-point Brush Script MT as the default font
 
 Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
 
 ```json
 "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;"
 "font_defaultLabel": "Brush Script MT"
-"fontSize_sizes": "8/8px;12/12px;20/20px;32/32px"
+"fontSize_sizes": "8/8pt;12/12pt;20/20pt;32/32pt"
 "fontSize_defaultLabel": "20"
 "stickyStyle": {
-  "font-size": "20px",
+  "font-size": "20pt",
   "font-family": "'Brush Script MT', cursive"
 },
 ```

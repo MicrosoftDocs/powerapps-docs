@@ -1370,8 +1370,6 @@
       href: ./model-driven-apps/app-value-proposition.md
     - name: Build an app in three steps (preview)
       href: ./model-driven-apps/build-app-three-steps.md
-    - name: Explore sample apps
-      href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
