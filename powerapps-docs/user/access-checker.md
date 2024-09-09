@@ -41,6 +41,8 @@ For more information on how privileges and access checks work, go to [How access
    
 1. The **Check Access** window displays your access information.
 
+     :::image type="content" source="media/check-access-details.png" alt-text="Screenshot showing your access details.":::
+
     Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](./find-admin.md).
 
 ## Check another user's access to a row
