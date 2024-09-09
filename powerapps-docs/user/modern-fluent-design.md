@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 09/05/2024
+ms.date: 09/09/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -99,19 +99,19 @@ Only SVG icons are supported. If you use other formats such as PNG, the navigati
 
 ## Frequently asked questions (FAQs)
 
-### Using the modern, refreshed look in Power Apps Component Framework / custom code components
+### Can I use the modern, refreshed look in the Power Apps component framework or custom code components?
 
 The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
 
-### Using the modern, refreshed look in custom pages
+### Can I use the modern, refreshed look in custom pages?
 
 Modern controls can be used with custom pages and the modern, refreshed look. The modern theme isn't currently inherited by custom pages.
 
-### Change the color of the app header
+### Can I change the color of the app header?
 
 It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
 
-### Using custom chart colors
+### Can I use custom chart colors?
 
 When using the modern, refreshed look, charts in views and dashboards are updated to a set of modern colors. If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
 
