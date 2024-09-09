@@ -1,5 +1,5 @@
 ---
-title: Check user access and permissions
+title: Check user access to a row
 description: Learn how to view user access to a row.
 author: paulliew
 ms.component: pa-user
@@ -14,7 +14,7 @@ search.audienceType:
   - enduser
 ---
 
-# Check user access and permissions
+# Check user access to a row
 
 To perform an action on a row, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
