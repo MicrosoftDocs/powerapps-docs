@@ -210,7 +210,7 @@ A business rule might also not execute because a column referenced in the busine
 
 ### Unsupported column types
 
-Columns of type unique identifier, and rollup columns aren't supported with business rules. 
+Columns of type unique identifier and rollup columns aren't supported with business rules.
 
 There are a few special columns which support localizable values, such as the **Name** column for the **Product** table that's included with Dynamics 365 for Sales apps. Columns that support localizable values aren't supported with business rules.
 
