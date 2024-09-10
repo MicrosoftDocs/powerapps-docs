@@ -10,9 +10,7 @@ ms.subservice: common
 search.audienceType: 
   - maker
 ---
-# View, submit, and install catalog items (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# View, submit, and install catalog items
 
 In any organization, there might be many components and templates distributed among many environments. The catalog in Power Platform enables developers and makers to:
 
@@ -21,9 +19,7 @@ In any organization, there might be many components and templates distributed am
 - Get started with templates and components that provide immediate value
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - While not required for preview, when this feature is generally available, it requires the use of Managed Environment capabilities. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
+> - You will need a managed environment in order to submit items to the catalog. You can however install catalog items from any environment. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
 Before reading this article, you should:
 
