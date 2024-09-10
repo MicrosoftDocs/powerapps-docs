@@ -208,6 +208,10 @@ A business rule may not execute because the column referenced in the business ru
 
 A business rule may also not execute because a column referenced in the business rule is a composite column. The constituent columns of the composite column can be used instead.
 
+### Unsupported column types
+
+Columns of type unique identifier, and rollups are not supported in Business rules. There are a few special columns which support localizable values E.g. name column for Product table. These columns which support localizable values are not supported in **Business rules**.
+
 ## Frequently asked questions (FAQ)
 
 *Can business rules unlock columns on a read-only form?*
