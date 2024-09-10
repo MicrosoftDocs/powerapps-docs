@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 09/09/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -30,7 +30,7 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 - If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
 > [!NOTE]
-> It's recommended that the [canvas app is in a solution](../maker/canvas-apps/add-app-solution.md). The offline profile **App usage** in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environements** > _select an environment_ > **Setings** > **User + permissions** > **Mobile configuration** only applies to apps within a solution.  
+> It's recommended that the [canvas app is in a solution](../maker/canvas-apps/add-app-solution.md). The offline profile **App usage** field in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) (**Environements** > _select an environment_ > **Setings** > **User + permissions** > **Mobile configuration**) only applies to apps within a solution.  
 
 ## Optimize your app for mobile offline
 
