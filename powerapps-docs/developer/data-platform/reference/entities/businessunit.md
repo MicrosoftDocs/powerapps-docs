@@ -1600,6 +1600,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_flow_awaitallapprovalmodel](#BKMK_business_unit_msdyn_flow_awaitallapprovalmodel)
 - [business_unit_msdyn_flow_basicapprovalmodel](#BKMK_business_unit_msdyn_flow_basicapprovalmodel)
 - [business_unit_msdyn_flow_flowapproval](#BKMK_business_unit_msdyn_flow_flowapproval)
+- [business_unit_msdyn_formmapping](#BKMK_business_unit_msdyn_formmapping)
 - [business_unit_msdyn_integratedsearchprovider](#BKMK_business_unit_msdyn_integratedsearchprovider)
 - [business_unit_msdyn_kalanguagesetting](#BKMK_business_unit_msdyn_kalanguagesetting)
 - [business_unit_msdyn_kbattachment](#BKMK_business_unit_msdyn_kbattachment)
@@ -3258,6 +3259,18 @@ Many-To-One Relationship: [msdyn_flow_flowapproval business_unit_msdyn_flow_flow
 |ReferencingEntity|`msdyn_flow_flowapproval`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_flow_flowapproval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_formmapping"></a> business_unit_msdyn_formmapping
+
+Many-To-One Relationship: [msdyn_formmapping business_unit_msdyn_formmapping](msdyn_formmapping.md#BKMK_business_unit_msdyn_formmapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_formmapping`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
