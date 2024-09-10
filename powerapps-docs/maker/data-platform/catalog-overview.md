@@ -4,7 +4,7 @@ description: "Use the catalog in Power Platform to managed shared components and
 author: derekkwanpm
 ms.author: derekkwan
 ms.subservice: 
-ms.date: 05/15/2024
+ms.date: 09/10/2024
 ms.reviewer: matp
 ms.topic: overview
 contributors:
@@ -19,7 +19,7 @@ Building from scratch every time by recreating branding, layouts, links, complex
 >
 > - The catalog needs to be set up by an admin before you can use it, including permissions. More information [Administer the catalog](/power-platform/admin/administer-catalog#set-up-the-catalog).
 > - The catalog only works with Microsoft Dataverse environments. Environments without Dataverse aren't supported at this time.
-> - You will need a managed environment in order to submit solutions to the catalog. However, you can install catalog items from any environment. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
+> - You need a Managed Environment in order to submit solutions to the catalog. However, you can install catalog items from any environment. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
 In any organization, there might be many components and templates distributed among many environments. The catalog in Power Platform enables developers and makers to:
 
@@ -65,15 +65,15 @@ You can submit unmanaged solutions to the catalog for other makers to install an
 - A **template**: A copy of your unmanaged solution that other makers can edit however they choose. Updates to the original unmanaged solution won't update templates, as templates are no longer "connected" to the solution it came from. If you want other makers to have the ability to change the catalog components as they see fit, use a template.
 
    > [!NOTE]
-   > Currently, certain components aren't supported for use as templates. The official list of supported components for templates are:
-   > 1. Entity and its sub components like forms, savedqueries, relationships, entity maps
-   > 2. Environment Variables
-   > 3. Canvas Apps
-   > 4. Modern Workflows
-   > 5. Security Roles
-   > 6. AiModel and its subcomponents like AiConfig
-   > 7. Web Resources
-   > 8. SCF components - modern solution aware components created using platform solution aware framework. E.g Custom API, AiPlugin, AIPlugin Operation
+   > Currently, certain components aren't supported for use as templates. The supported components for templates are:
+   > - Table and its sub components like forms, saved queries, relationships, table maps.
+   > - Environment variables.
+   > - Canvas apps.
+   > - Modern workflows.
+   > - Security roles.
+   > - `AiModel` and its subcomponents like `AiConfig`.
+   > - Web resources.
+   > - Power Apps component framework components. This includes modern solution aware components created using the Power Apps component framework. For example custom API, `AiPlugin`, and `AIPlugin` operation.
 
 - A **managed item**: Managed items can be updated with more versions as the original solution is updated, but are generally restricted from editing. If you want makers to use your solution *as is* and you also want to keep copies updated with your changes in the future, use a managed item. Managed items are useful for a variety of scenarios for makers:
 

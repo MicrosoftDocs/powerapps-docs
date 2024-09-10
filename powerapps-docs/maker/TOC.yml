@@ -2203,7 +2203,7 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
-  - name: Work with catalogs (preview)
+  - name: Work with catalogs
     items:
     - name: Catalog overview
       href: ./data-platform/catalog-overview.md
