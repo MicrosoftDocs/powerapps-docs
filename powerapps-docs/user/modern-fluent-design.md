@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 09/09/2024
+ms.date: 09/10/2024
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -91,7 +91,7 @@ Switching themes or enabling dark mode isn't supported at this time.
 
 ### Honoring classic theming
 
-With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. See [change the color of the app header](#change-the-color-of-the-app-header) for more details.  Other theme customization options for the modern, refreshed look aren't available yet.  
+With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. Leaern more in [Change the color of the app header](#change-the-color-of-the-app-header).  Other theme customization options for the modern, refreshed look aren't available yet.  
 
 ### Custom icons
 
