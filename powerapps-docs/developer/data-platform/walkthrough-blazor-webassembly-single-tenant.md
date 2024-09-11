@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse | Microsoft Docs"
 description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
-ms.date: 08/22/2023
+ms.date: 09/11/2024
 ms.topic: article
 author: JimDaly
 ms.subservice: dataverse-developer
@@ -71,9 +71,7 @@ It looks something like this: `https://yourorgname.api.crm.dynamics.com/api/data
 
 1. In the Microsoft Entra admin center, expand the **Applications** node in the left navigation pane and select **App registrations**.
 
-   :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Microsoft Entra App registrations page.":::
-
-This is where you will start step 2.
+   This is where you will start step 2.
 
 ## Step 2: Create a Blazor WebAssembly standalone app using Microsoft Entra ID for authentication
 
