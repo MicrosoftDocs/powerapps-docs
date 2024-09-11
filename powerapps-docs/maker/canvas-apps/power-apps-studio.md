@@ -33,7 +33,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and allows you to insert options.
 
-1. [App authoring options](#6--app-authoring-options): Tree view with all the screens and components of your app.
+1. [App authoring options](#6--app-authoring-options): This pane reveals the corresonding authoring feature when a feature is selected from the app authoring menu.
 
 1. [Canvas/screen](#7--canvasscreen): Primary canvas for composing the app structure.
 
@@ -144,7 +144,7 @@ For more information, see [List of all Power Apps connectors](/connectors/connec
 
 You can add a new screen to your app from the **New screen** option in the command bar or the **+ New screen** option in **Tree view**.
 
-:::image type="content" source="media/studio/new-screen-from-command-bar.png" alt-text="Screenshot that shows how to choose a layout from the New screen menu":::
+:::image type="content" source="media/studio/new-screen-from-command-bar.png" alt-text="Screenshot that shows the location of the New screen menu from the command bar.":::
 
 Select from the list of available screen layouts such as **Sidebar**, new layouts in preview such as **Header and form**, or templates like **Email**.
 
@@ -307,6 +307,8 @@ Switch between various authoring options while working with the app.
 - **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
 
 The options for working with canvas apps change depending on your selection from the authoring menu. For example, when you select the **Tree view** menu option, you see a **Tree view** pane appear.
+
+### 6 – App authoring options
 
 #### Tree view
 
