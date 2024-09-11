@@ -2,9 +2,10 @@
 title: Create Power BI report and dataset components (preview)
 description: Learn how to create Power BI report and dataset components to use in Power Apps solutions.
 author: paulinbar
+contributors: teddyberco
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/06/2024
+ms.date: 09/11/2024
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
@@ -13,13 +14,15 @@ search.audienceType:
 # Create Power BI report and dataset components (preview)
 
 > [!IMPORTANT]
-> This feature will reach retirement on July 31, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
+>
+> - This feature reached retirement on July 31, 2024 and is no longer available. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
+> - Using the Power BI embedded system dashboard doesn't deploy Power BI reports and datasets in a Power BI workspace. Power Apps will no longer create a dedicated environment aware workspace in Power BI. Additionally, embedding the Power BI embedded system dashboard in forms, similar to the feature described in this article, isn't possible.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As data culture spreads across more and more organizations, and analytics becomes a vital part of decision making and the daily actions taken by employees, it has become critical to have reliable, up-to-date analytics readily available in your Power Apps.  
 
-As a step towards achieving this goal, it's possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
+As a step towards achieving this goal, it's possible to add Power BI reports and datasets as components in Power Apps solutions. Once you add a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
 
 > [!IMPORTANT]
 > - This is a preview feature.
