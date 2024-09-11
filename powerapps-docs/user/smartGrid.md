@@ -12,6 +12,8 @@ search.audienceType:
   - enduser
 contributors:
 - lancedMicrosoft
+ms.collection: 
+    - bap-ai-copilot 
 ---
 
 # Filter, sort, and search galleries with Copilot (preview)

@@ -12,6 +12,8 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.collection: 
+    - bap-ai-copilot 
 ---
 
 # Use Copilot chat in model-driven apps
