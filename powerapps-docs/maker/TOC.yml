@@ -47,17 +47,21 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a SharePoint Online page (canvas apps)
-    href: ../user/powerapps-web-part.md
-  - name: In Microsoft Teams (canvas apps)
-    href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Draft well-written, input text with Copilot (preview)
-    href: ../user/well-written-input-text-copilot.md
-  - name: Filter, sort, and search galleries with Copilot (preview)
-    href: ../user/smartGrid.md
-  - name: 'Use model-driven apps'
+  - name: Use canvas apps
+    items:
+    - name: On a SharePoint Online page
+      href: ../user/powerapps-web-part.md
+    - name: In Microsoft Teams 
+      href: ../user/open-app-embedded-in-teams.md
+    - name: Copilot features
+      items:
+      - name: Draft well-written, input text (preview)
+        href: ../user/well-written-input-text-copilot.md
+      - name: Filter, sort, and search galleries (preview)
+        href: ../user/smartGrid.md
+  - name: Use model-driven apps
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
@@ -65,10 +69,12 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Form filling assistance
-      href: ../user/form-filling-assistance.md
-    - name: Use Copilot chat in model-driven apps
-      href: ../user/use-copilot-model-driven-apps.md
+    - name: Copilot features
+      items:
+      - name: Use form fill assistance
+        href: ../user/form-filling-assistance.md
+      - name: Use Copilot chat
+        href: ../user/use-copilot-model-driven-apps.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -105,7 +111,7 @@
         href: ../user/share-row.md
       - name: Share rows using Access Team
         href: ../user/Access-team.md
-      - name: Check your user access to a record
+      - name: Check user access to a row
         href: ../user/access-checker.md
       - name: Add a connection role
         href: ../user/add-connection-role.md
@@ -1366,8 +1372,6 @@
       href: ./model-driven-apps/app-value-proposition.md
     - name: Build an app in three steps (preview)
       href: ./model-driven-apps/build-app-three-steps.md
-    - name: Explore sample apps
-      href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
@@ -2201,7 +2205,7 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
-  - name: Work with catalogs (preview)
+  - name: Work with catalogs
     items:
     - name: Catalog overview
       href: ./data-platform/catalog-overview.md
@@ -2615,7 +2619,7 @@
     href: ./common/faqs-sharepoint-list-to-table-app.md
   - name: FAQ for drafting well-written, input text with Copilot
     href: ./common/faq-draft-with-copilot.md
-  - name: FAQ about form filling assistance
+  - name: FAQ about form fill assistance
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights
     href: ./common/faq-timeline-highlights-with-copilot.md
