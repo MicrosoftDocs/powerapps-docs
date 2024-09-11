@@ -18,6 +18,8 @@ For one hour, anyone can download a file stored in Dataverse using a url generat
 
 Files can be attachments, notes, file columns, or image columns. [Some limitations apply](#limitations)
 
+This funcationality has been enhanced to add additional security around who can access & use these URLs. More information can be found [HERE](https://learn.microsoft.com/en-us/power-platform/admin/security/data-storage#storage-shared-access-signature-sas-ip-restriction)
+
 ## Parameters
 
 The `GetFileSasUrl` message has the following parameters:
