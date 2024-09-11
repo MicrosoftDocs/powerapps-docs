@@ -9179,6 +9179,11 @@
       "source_path": "powerapps-docs/mobile/setup-mobile-offline-classic.md",
       "redirect_url": "/dynamics365/mobile-app/migration",
       "redirect_document_id": "false"
-    }
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/overview-model-driven-samples.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/",
+      "redirect_document_id": "false"
+   }
   ]
 }

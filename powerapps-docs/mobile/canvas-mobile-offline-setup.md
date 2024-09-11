@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 06/03/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -23,13 +23,14 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 ## Prerequisites
 
-- [The canvas app must be in a solution](../maker/canvas-apps/add-app-solution.md).
-
 - You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
 - Users with the Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
 - If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+
+> [!NOTE]
+> It's recommended that the [canvas app is in a solution](../maker/canvas-apps/add-app-solution.md). The offline profile **App usage** field in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) (**Environements** > _select an environment_ > **Settings** > **User + permissions** > **Mobile configuration**) only applies to apps within a solution.  
 
 ## Optimize your app for mobile offline
 
@@ -79,7 +80,7 @@ Tables included in an offline app must be configured for offline use. Some built
 A page that's based on the [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
-> If you're turning on offline capability for a new canvas app, make sure the default first screen is based on the **Offline** template.
+> You can use the same, offline profile in different canvas apps. The users can use the apps and share the same, offline profile in disconnected mode. The updates done in one app are reflected in the other apps since the apps share the same, local storage with this set up.    
 
 ## Create a custom mobile offline profile (with admin rights)
 
