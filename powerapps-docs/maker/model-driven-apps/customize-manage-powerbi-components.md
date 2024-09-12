@@ -2,9 +2,10 @@
 title: Customize and manage Power BI components (preview)
 description: Learn how to customize and work with Power BI components in Power Apps solutions.
 author: paulinbar
+contributors: teddyberco
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/06/2024
+ms.date: 09/11/2024
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
@@ -13,7 +14,9 @@ search.audienceType:
 # Customize and manage Power BI components (preview)
 
 > [!IMPORTANT]
-> This feature will reach retirement on July 31, 2024. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
+>
+> - This feature reached retirement on July 31, 2024 and is no longer available. We recommend removing all Power BI report and dataset components from existing solutions and use [Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) instead.
+> - Using the Power BI embedded system dashboard doesn't deploy Power BI reports and datasets in a Power BI workspace. Power Apps will no longer create a dedicated environment aware workspace in Power BI. Additionally, embedding the Power BI embedded system dashboard in forms, similar to the feature described in this article, isn't possible.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -35,7 +38,7 @@ The basic flow is as follows:
 
 1. Add an existing report and/or dataset component from the managed solution (From Dataverse) to the new solution.
 
-1. Once the report or dataset has been added to your new solution, select the solution  component(s) and choose **Open in Power BI**.
+1. Once the report or dataset has been added to your new solution, select the solution  components you want, and then choose **Open in Power BI**.
 
     ![Screenshot showing how to open Power BI items in Power B I to start customizing.](./media/customize-manage-powerbi-components/open-power-bi-start-customizing.png)
     
@@ -45,7 +48,7 @@ The basic flow is as follows:
 
     ![Screenshot showing the Sync changes button.](./media/customize-manage-powerbi-components/sync-changes.png)
 
-    A banner notifies you if changes were detected and if an unmanaged layer was created. Select **Download log** on the right to view where the changes were detected.
+    A banner notifies you if changes were detected and if an unmanaged layer was created. Select **Download log** to view where the changes were detected.
 
     ![Screenshot of banner notifying you if changes were detected and an unmanaged layer created.](./media/customize-manage-powerbi-components/banner-change-unmanaged-layer-detection.png)
 
@@ -56,11 +59,11 @@ The basic flow is as follows:
 
 ### Removing unmanaged layer/customization 
 
-After syncing changes, an unmanaged layer is created. Removing the unmanaged layer will roll back the changes to the active managed layer. The Power BI items (report and/or dataset) in the Power BI environment workspace will also revert to the original managed active layer. 
+After syncing changes, an unmanaged layer is created. Removing the unmanaged layer rolls back the changes to the active managed layer. The Power BI items (report and/or dataset) in the Power BI environment workspace also reverts to the original managed active layer. 
 
 ### Using the Default solution to sync all changes
 
-In some cases, it may be difficult to know exactly where the changes from Power BI are coming from. To make sure you sync all changes, go to the Default solution, select **Reports** or **Datasets**, and choose **Sync all changes**.
+In some cases, it might be difficult to know exactly where the changes from Power BI are coming from. To make sure you sync all changes, go to the Default solution, select **Reports** or **Datasets**, and choose **Sync all changes**.
 
 ![Screenshot showing default solution Sync all changes button.](./media/customize-manage-powerbi-components/sync-all-changes.png)
 
@@ -92,8 +95,8 @@ The table below shows:
 
 |Assign user to one of the following predefined roles in the Power Apps environment   |As a result, users get these workspace roles in the dedicated Power BI workspace     |
 |---------|---------|
-|Power BI workspace admin ; System administrator      |Admin        |
-|Power BI workspace contributor ; System customizer      |Contributor         |
+|Power BI workspace admin; System administrator      |Admin        |
+|Power BI workspace contributor; System customizer      |Contributor         |
 |Power BI workspace viewer     |Viewer         |
 
 ### Notes 
@@ -112,7 +115,7 @@ Updating a solution with Power BI components automatically updates the relevant 
 
 ## Authenticating Power BI dataset against data sources after deployment to new environment
 
-Importing a solution may require additional steps in Power BI such as authentication against data sources and dataset refresh.
+Importing a solution might require additional steps in Power BI such as authentication against data sources and dataset refresh.
 
 ### See also
 
