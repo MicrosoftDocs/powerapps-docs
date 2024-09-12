@@ -33,6 +33,10 @@ To get started, you can automatically generate an app from one of these sources,
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+
+If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+
 [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, select **Create** from the left-pane, and under **Start from template**, choose a sample app from the list of sample apps&mdash;such as **Meeting Capture** or **Onboarding Tasks**.
 
 ![Power Apps site.](./media/getting-started/create-page-samples.png)
