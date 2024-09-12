@@ -13,7 +13,7 @@ search.audienceType:
 ms.collection: 
     - bap-ai-copilot
     - get started
-ms.custom
+ms.custom:
     - copilot-learning-hub
 contributors:
   - mduelae
