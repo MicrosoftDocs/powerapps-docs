@@ -1,18 +1,16 @@
 ---
-title: "View, submit, and install catalog items (preview)"
+title: "View, submit, and install catalog items"
 description: "Learn how to submit and acquire items from your organization's catalog."
 author: derekkwanpm
 ms.author: derekkwan
-ms.date: 05/15/2024
+ms.date: 09/10/2024
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: common
 search.audienceType: 
   - maker
 ---
-# View, submit, and install catalog items (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# View, submit, and install catalog items
 
 In any organization, there might be many components and templates distributed among many environments. The catalog in Power Platform enables developers and makers to:
 
@@ -21,9 +19,7 @@ In any organization, there might be many components and templates distributed am
 - Get started with templates and components that provide immediate value
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - While not required for preview, when this feature is generally available, it requires the use of Managed Environment capabilities. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
+> You need a Managed Environment in order to submit items to the catalog. You can however install catalog items from any environment. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
 Before reading this article, you should:
 
@@ -168,6 +164,6 @@ As previously mentioned, templates can be acquired as many times as you like, ea
 
 ### See also
 
-[Catalog in Power Platform (Preview)](catalog-overview.md)   
-[Administer the catalog (Preview)](/power-platform/admin/administer-catalog)   
-[Use the catalog with Power Platform CLI (preview)](/power-platform/developer/submit-catalog-items)
+[Catalog in Power Platform)](catalog-overview.md)   
+[Administer the catalog](/power-platform/admin/administer-catalog)   
+[Use the catalog with Power Platform CLI](/power-platform/developer/submit-catalog-items)

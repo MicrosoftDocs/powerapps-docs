@@ -111,7 +111,7 @@
         href: ../user/share-row.md
       - name: Share rows using Access Team
         href: ../user/Access-team.md
-      - name: Check your user access to a record
+      - name: Check user access to a row
         href: ../user/access-checker.md
       - name: Add a connection role
         href: ../user/add-connection-role.md
@@ -2203,7 +2203,7 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
-  - name: Work with catalogs (preview)
+  - name: Work with catalogs
     items:
     - name: Catalog overview
       href: ./data-platform/catalog-overview.md
