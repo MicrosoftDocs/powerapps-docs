@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/2/2024
+ms.date: 9/12/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -111,9 +111,6 @@ Based on what you described, AI generates a table for your app. You can take the
 
 5. **Create app**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
-   > [!div class="mx-imgBorder"]
-   > ![Review table for your app.](media/artificial-intelligence/table-created.png)
-
    
    > [!IMPORTANT]
    > If you encounter issues during the app creation process related to permissions or if you don't have access to Dataverse, a dialog box appears asking you to create the app in your own environment. You need to confirm that the table and app can be created in your environment to proceed. In case you don't have a personal developer environment, a new one is automatically created for you. For more information, go to [Get your developer environment (preview)](../maker-create-environment.md).
@@ -132,8 +129,6 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 ### See also
 
 [Copilot in Power Apps overview (preview)](ai-overview.md)
-
-[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 
 [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
 

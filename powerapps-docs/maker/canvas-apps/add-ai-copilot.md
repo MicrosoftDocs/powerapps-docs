@@ -116,8 +116,6 @@ Admins can disable the option for apps users to provide feedback to Microsoft fr
 
 [Build apps through conversation (preview)](ai-conversations-create-app.md)
 
-[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
-
 [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
 
 [Add Copilot for app users in model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
