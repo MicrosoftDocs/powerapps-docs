@@ -3,7 +3,9 @@ title: Copilot in Power Apps overview (preview)
 description: Learn how to use AI to build apps by describing what you want them to do with Copilot in Power Apps.
 author: mduelae
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+ - canvas
+ - copilot-learning-hub
 ms.reviewer: 
 ms.date: 08/08/2024
 ms.subservice: canvas-maker
@@ -13,8 +15,6 @@ search.audienceType:
 ms.collection: 
     - bap-ai-copilot
     - get started
-ms.custom:
-    - copilot-learning-hub
 contributors:
   - mduelae
   - Mattp123
