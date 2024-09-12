@@ -8,7 +8,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/2/2024
+ms.date: 9/12/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -110,9 +110,6 @@ Based on what you described, AI generates a table for your app. You can take the
 4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
 
 5. **Create app**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
-
-   > [!div class="mx-imgBorder"]
-   > ![Review table for your app.](media/artificial-intelligence/table-created.png)
 
    
    > [!IMPORTANT]
