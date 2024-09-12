@@ -133,8 +133,6 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 [Copilot in Power Apps overview (preview)](ai-overview.md)
 
-[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
-
 [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
 
 [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
