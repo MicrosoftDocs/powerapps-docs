@@ -9181,6 +9181,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-ai-chatbot.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/add-ai-copilot",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/overview-model-driven-samples.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/",
       "redirect_document_id": "false"

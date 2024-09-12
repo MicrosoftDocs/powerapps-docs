@@ -38,7 +38,6 @@ In this article, you'll find resources to help you learn how to use Copilot feat
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
-- [Add a Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 - [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
