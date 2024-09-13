@@ -412,8 +412,6 @@
             href: ./canvas-apps/add-configure-controls.md
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
-          - name: Add a Chatbot control (preview)
-            href: ./canvas-apps/add-ai-chatbot.md
           - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
           - name: Add a custom Copilot (preview)
