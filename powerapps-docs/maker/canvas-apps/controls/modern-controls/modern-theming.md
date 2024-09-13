@@ -24,7 +24,7 @@ Modern themes are pre-established style sets that can transform the look of your
 
 Enable the modern themes feature in the settings of Power Apps:
 
-1. Open **Settings** from the app authoring menu or [modern command bar](/canvas-apps/power-apps-studio#1--power-apps-studio-modern-command-bar).
+1. Open **Settings** from the app authoring menu or [modern command bar](/canvas-apps/power-apps-studio.md#1--power-apps-studio-modern-command-bar).
 1. Go to **Updates** > **New** > **Modern controls and themes**.
 1. Set the **Modern controls and themes** toggle to **On**.
 
