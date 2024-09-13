@@ -3,7 +3,9 @@ title: Copilot in Power Apps overview (preview)
 description: Learn how to use AI to build apps by describing what you want them to do with Copilot in Power Apps.
 author: mduelae
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+ - canvas
+ - copilot-learning-hub
 ms.reviewer: 
 ms.date: 08/08/2024
 ms.subservice: canvas-maker
@@ -30,7 +32,6 @@ Learn how to use Copilot features in Power Apps.
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
-- [Add a Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
 - [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)

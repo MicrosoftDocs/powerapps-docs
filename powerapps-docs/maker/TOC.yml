@@ -412,8 +412,6 @@
             href: ./canvas-apps/add-configure-controls.md
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
-          - name: Add a Chatbot control (preview)
-            href: ./canvas-apps/add-ai-chatbot.md
           - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
           - name: Add a custom Copilot (preview)
@@ -2203,7 +2201,7 @@
                 href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
               - name: "use-utility-dialogs"
                 href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
-  - name: Work with catalogs (preview)
+  - name: Work with catalogs
     items:
     - name: Catalog overview
       href: ./data-platform/catalog-overview.md
