@@ -54,5 +54,5 @@ Follow these procedures to make the most of the feature:
 ## Related information
 
 [Add Copilot chat to model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md) <br />
-[Use Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps) <br />
+[Use Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) <br />
 [Responsible AI FAQs for Power Apps](responsible-ai-overview.md)
