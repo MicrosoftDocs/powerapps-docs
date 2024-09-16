@@ -20,7 +20,7 @@ ai-usage: ai-assisted
 ---
 # Create many-to-many table relationships using Power Apps
 
-[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit many-to-many relationships for Microsoft Dataverse tables. A many-to-many relationship defines the type of connection between two tables where multiple records in one table can be associated with multiple records in another table. For example, in a school scenario, a single student can enroll in multiple courses, and each course can have multiple students. This type of relationship allows for more complex data associations and is managed using Power Apps in Dataverse.
+[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit many-to-many relationships for Microsoft Dataverse tables. A many-to-many relationship defines the type of connection between two tables where multiple records in one table can be associated with multiple records in another table. For example, in a school scenario, a single student can enroll in multiple courses, and each course can have multiple students. This type of relationship allows for more complex data associations and is managed using Power Apps in Dataverse. For more information about many-to-many table relationships, go to [Create many-to-many table relationships overview](create-edit-nn-relationships.md).
 
 ## View many-to-many table relationships
 
@@ -43,13 +43,10 @@ While [viewing table relationships](#view-many-to-many-table-relationships), on 
 
 The **Many-to-many relationship** editor is displayed.
 
-> [!div class="mx-imgBorder"] 
-> ![Many-to-many panel with account table selected.](media/many-to-many-panel-1.png)
-
-In the **Related (Many)** dropdown list, choose the table you want to relate to the current table.
+In the **Related (Many)** dropdown list, choose the table you want to relate to the current table. In this example, a many-to-many relationship with the student and course tables is created.
 
 > [!div class="mx-imgBorder"] 
-> ![Many-to-many panel with More Options selected.](media/many-to-many-panel-2.png)
+> ![Many-to-many panel used to create the relationship with the student and course tables.](media/many-to-many-panel-2.png)
 
 The values for these columns are generated for you based on the tables chosen.
 
