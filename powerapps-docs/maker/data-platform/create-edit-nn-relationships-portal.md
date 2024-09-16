@@ -113,8 +113,6 @@ While [viewing table relationships](#view-many-to-many-table-relationships), sel
 
 ### See also
 
-[Create N:N (many-to-many) table relationships](create-edit-nn-relationships.md)<br />
-[Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)
-
+[Create N:N (many-to-many) table relationships overview](create-edit-nn-relationships.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
