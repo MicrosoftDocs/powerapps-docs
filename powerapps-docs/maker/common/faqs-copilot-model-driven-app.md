@@ -1,7 +1,7 @@
 ---
-title: FAQ for Copilot in model-driven apps 
+title: FAQ for Copilot chat in model-driven apps 
 description: FAQ that discusses model-driven apps with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 8/06/2024
+ms.date: 9/16/2024
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -11,11 +11,11 @@ ms.reviewer: matp
 ms.collection: bap-ai-copilot
 ---
 
-# FAQ for Copilot in model-driven apps
+# FAQ for Copilot chat in model-driven apps
 
 This FAQ describes the AI impact of Power Apps model-driven apps Copilot feature.
 
-## What is Copilot in model-driven apps?
+## What is Copilot chat in model-driven apps?
 
 Copilot for model-driven apps in Power Apps is a feature for app users to get insights about the data in their apps through conversation in natural language. Copilot helps app users boost their productivity through AI-powered insights and intuitive app navigation. This feature is available throughout the model-driven app.
 
