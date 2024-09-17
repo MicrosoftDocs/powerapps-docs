@@ -28,7 +28,7 @@ Model-driven apps are especially well suited to process driven apps that are dat
 
 ### Data modeling
 
-Although we call them*model-driven apps*, it's often easier to think of them as [data model](../model-driven-apps/model-driven-app-glossary.md#data-model) driven apps. This is because, without a data model housed within [Microsoft Dataverse](model-driven-app-glossary.md#dataverse), you can't create a model-driven app.
+Although we call them *model-driven apps*, it's often easier to think of them as [data model](../model-driven-apps/model-driven-app-glossary.md#data-model) driven apps. This is because, without a data model housed within [Microsoft Dataverse](model-driven-app-glossary.md#dataverse), you can't create a model-driven app.
 
 ### User experience
 
