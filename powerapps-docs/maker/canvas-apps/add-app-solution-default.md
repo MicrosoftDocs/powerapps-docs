@@ -49,7 +49,6 @@ The following table summarizes the methods that allow you to create canvas apps 
 | [Create a blank canvas app](create-blank-app.md)</br> **NOTE**: [Power Apps](https://make.powerapps.com) > **Apps** > **New app** > **Canvas** also creates a blank canvas app. | Yes |
 | [Create a canvas app from a template](get-started-test-drive.md) | No |
 | Create a canvas app by [customizing SharePoint forms](customize-list-form.md) | No |
-| Create a canvas app directly from [Azure portal](https://portal.azure.com) using [Azure SQL Database](app-from-azure-sql-database.md) | No |
 
 ### Cloud flows creation methods and entry points
 
