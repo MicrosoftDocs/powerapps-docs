@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/03/2024
+ms.date: 09/17/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -191,7 +191,7 @@ Follow the wizard. In Step 1, starting in alphabetical order, select the assets 
 
 ### Limitations
 
-- Solution size is limited to 32 MB.
+- Solution size is limited to 95 MB.
 - Number of solutions is limited by Microsoft Dataverse capacity.
 - Number of objects in a solution is limited by Dataverse capacity.
 
