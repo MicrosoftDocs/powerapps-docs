@@ -16,8 +16,7 @@ search.audienceType:
 
 Power Apps apps can include paginated style reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
-> [!div class="mx-imgBorder"] 
-> ![Progress against goals standard report.](media/progress-against-goals-report.png "Progress against goals standard report")
+:::image type="content" source="media/progress-against-goals-report.png" alt-text="Progress against goals standard report" lightbox="media/progress-against-goals-report.png":::
 
 System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Microsoft Dataverse and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
 
@@ -35,8 +34,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
 
 Now the app displays a **Reports** page where users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard.
 
-> [!div class="mx-imgBorder"] 
-> ![Report view.](media/report-feature-in-app.png "Report view")
+:::image type="content" source="media/report-feature-in-app.png" alt-text="Model-driven app with reporting added" lightbox="media/report-feature-in-app.png":::
 
 ## Options for creating new reports
 
