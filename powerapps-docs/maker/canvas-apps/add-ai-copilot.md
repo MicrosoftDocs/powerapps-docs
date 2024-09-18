@@ -10,7 +10,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 7/9/2024
+ms.date: 9/18/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-The Copilot control is a next-generation AI assistant that you can add to your canvas apps. It lets app users get insights about the data in your app through natural language conversations with an AI-powered bot. You can add the control to any canvas app and choose what data it can provide answers for.
+The Copilot control is a next-generation AI assistant that you can add to your canvas apps. Copilot lets app users get insights about the data in your app through natural language conversations with an AI-powered bot. You can add the control to any canvas app and choose which data provide answers.
 
 > [!IMPORTANT]
 >
@@ -42,11 +42,11 @@ The Copilot control is a next-generation AI assistant that you can add to your c
 
 - Your browser language must be set to English (United States).
 
-- Meet the prerequisites for Copilot features in Power Apps. Learn more in [Create conversational apps with Copilot in Power Apps](ai-overview.md).
+- Meet the prerequisites for Copilot features in Power Apps. For more information, see [Create conversational apps with Copilot in Power Apps](ai-overview.md).
 
 ### Set up Copilot for your environment
 
-Before app users can use the Copilot chat experience in a canvas app, an administrator needs to turn on **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in your environment. Learn more in [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
+Before app users can use the Copilot chat experience in a canvas app, an administrator needs to turn on **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in your environment. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 :::image type="content" source="media/copilot/copilot-for-app-users-on.png" alt-text="Screenshot of the Power Platform admin center environment settings, showing Copilot features.":::
 
