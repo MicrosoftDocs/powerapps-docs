@@ -49,13 +49,11 @@ The only way to view and map table columns is to use the classic solution explor
 1. Select **Switch to classic** on the command bar.
    The solution opens in the classic solution explorer.
 1. Expand **Entities**, expand the table you want, and then expand the relationship type, either **1:N Relationships** or **N:1 Relationships**, and then open the relationship where you want to view or edit column mappings.
-1. Column mappings aren’t actually defined within the table relationships, but they're exposed in the classic solution explorer relationship user interface. Not every 1:N table relationship has them. In the Type dropdown list, select **Mappable** to display only relationships with columns that can be mapped. 
+1. Column mappings aren’t actually defined within the table relationships, but they're exposed in the classic solution explorer relationship user interface. Not every 1:N table relationship has them. In the **Type** dropdown list, select **Mappable** to display only relationships with columns that can be mapped. 
  ![View mappable table relationships.](media/mappable-entity-relationships.png) 
 1. Double-click the relationship where you want to view or edit column mappings. A browser page opens to display the relationship properties.
-1. Select the **Mappings** tab on the left navigation.
+1. Select the **Mappings** tab on the left navigation. The mappings for the relationship are displayed.
    ![Select Mappings for the table relationship.](media/map-entity-fields-ui-solution-explorer.png)
-
-The mappings for the relationship are displayed.
 
 ## Add new mappings
 
