@@ -94,7 +94,7 @@ The following rules show what kinds of data can be mapped:
 
 ## Delete mappings
 
-If there are any mappings that you don't want to apply, you can select them and then select ![Delete](media/delete.gif).
+If there are any mappings that you don't want to apply, you can select them and then select ![Delete column mappings](media/delete.gif).
 
 ### See also
 
