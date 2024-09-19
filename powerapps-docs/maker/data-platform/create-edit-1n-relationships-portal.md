@@ -29,11 +29,11 @@ Power Apps provides an easy way to create and edit one-to-many (1:N) or many-to-
 1. Select **Solutions** on the left navigation pane, and then open the solution you want.
 1. Select **Tables** and open the table that has the relationships you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Relationships** area to view all relationships configured for the table.
-   :::image type="content" source="media/view-account-relationships-portal.png" alt-text="Account table relationships" lightbox"=media/view-account-relationships-portal.png":::
+   :::image type="content" source="media/view-account-relationships-portal.png" alt-text="Account table relationships" lightbox="media/view-account-relationships-portal.png":::
 
-## Create relationships
+## Create a relationship
 
-While [viewing table relationships](#view-table-relationships), on the command bar, select **Add relationship** and choose either **Many-to-one** or **One-to-many**.
+While [viewing table relationships](#view-table-relationships), on the command bar, select **New relationship**, and then select either **Many-to-one** or **One-to-many**.
 
 > [!NOTE]
 > For information about **Many-to-many** relationships see [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
@@ -48,8 +48,8 @@ Depending on your choice the following is displayed:
 Choose the **Related table** for the relationship you want to create between the two tables.
 
 > [!NOTE]
-> With either choice, a lookup column is created on the *current* table. For more information about look columns, go to [Use the lookup column on a row](../../user/lookup-field.md).
-
+> With either choice, a lookup column is created on the **Current** table. For more information about look columns, go to [Use the lookup column on a row](../../user/lookup-field.md).
+<!-- START HERE-->
 Once you select the table you can edit the details of the relationship. In this example, multiple contact table rows can be associated with a single account.
 
 <img src = "media/One-to-many-account-contact.png" alt = "One to many relationship account and contact" width = "308" height = "725">
