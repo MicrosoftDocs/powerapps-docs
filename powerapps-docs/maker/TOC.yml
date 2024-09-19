@@ -1965,10 +1965,8 @@
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
   - name: Work with table relationships
-    href: ./data-platform/relationships-overview.md
+    href: ./data-platform/create-edit-entity-relationships.md
     items:
-    - name: Table relationships overview
-      href: ./data-platform/create-edit-entity-relationships.md
     - name: Create one-to-many table relationships overview
       href: ./data-platform/create-edit-1n-relationships.md
     - name: Create many-to-many table relationships overview
@@ -1981,10 +1979,6 @@
       href: ./data-platform/create-edit-nn-relationships-portal.md
     - name: Set managed properties for table relationships
       href: ./data-platform/set-managed-properties-relationships.md
-    - name: Visualize hierarchical data
-      href: ./data-platform/visualize-hierarchical-data.md
-    - name: Define and query hierarchically related data
-      href: ./data-platform/define-query-hierarchical-data.md
     - name: Configure connection roles
       href: ./data-platform/configure-connection-roles.md
     - name: "How-to guides: Relationships"
