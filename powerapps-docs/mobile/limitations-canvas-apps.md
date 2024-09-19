@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/09/2024
+ms.date: 09/19/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
