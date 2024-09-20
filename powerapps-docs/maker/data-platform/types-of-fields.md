@@ -250,7 +250,6 @@ Most columns have options to enable searching or sorting of the column's content
 
 Almost every column data type is created with the **Searchable** value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types can't be search enabled:
 
-- File. Files are stored and retrieved using reference URLS and because of this they can't be searched.
 - Formulas. Formulas are used to create a dynamically calculated output and because of this can't be searched.
 - Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
 - Multivalue lookup (PartyList). Some system lookup columns can contain multiple values. For example, the **To** lookup column of **Email** rows can contain multiple recipients. Searching multivalue lookup columns isn't supported.
