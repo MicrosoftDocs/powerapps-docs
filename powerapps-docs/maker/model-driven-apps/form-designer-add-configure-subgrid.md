@@ -23,6 +23,8 @@ search.audienceType:
 
 A form that displays the details of a table record can use a subgrid component to display a read-only list of related or unrelated records in a tabular format. From the subgrid, app users can create new rows or open an existing row to edit. Makers add and configure a subgrid component using the form designer.
 
+:::image type="content" source="media/read-only-subgrid.png" alt-text="Subgrid component on a model-driven app form":::
+
 This article explains how makers can add a subgrid component to a model-driven app form. To learn how to add an editable grid to a model-driven app form, go to [Make model-driven app views editable using the editable grid control](make-grids-lists-editable-custom-control.md).
 
 ## Add a subgrid component
@@ -37,7 +39,7 @@ This article explains how makers can add a subgrid component to a model-driven a
 1. On the **Select subgrid views** pane:
    - Typically app users want to view related records. When **Show related records** is selected, only tables with a relationship are displayed.
    - Select the **Table** you want.
-   - Select the **Default view** from the table. When an existing view is not suitable for the app, [create or edit a view](create-edit-views.md) for the table.
+   - Select the **Default view** from the table. When an existing view isn't suitable for the app, [create or edit a view](create-edit-views.md) for the table.
 1. Select **Done**.
 1. Select **Save**, and then select **Publish**.
 
@@ -63,7 +65,7 @@ These are the properties available to configure when using a subgrid component o
 | **Display options** | **Show chart only**  | Rather than a list of records a chart is displayed.  |
 | **Display options** | **Allow users to change chart**  | When **Show chart only** is selected, app users can change the chart displayed in the subgrid.  |
 | **Display options** | **Maximum number of rows**  | Determines the maximum number of records to display in the subgrid. The minimum number of rows displayed is 2 and the maximum is 250.  |
-| **Display options** | **Use available space** | Note: This property only works with the legacy web client. It has no effect on Unified Interface. <br/><br/>Determines whether the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** is not chosen the form will provide space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
+| **Display options** | **Use available space** | Note: This property only works with the legacy web client. It has no effect on Unified Interface. <br/><br/>Determines whether the form allows space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** isn't chosen the form provides space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
 | **Formatting**  | **Component width**  | When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.  |
 
 ## See also
