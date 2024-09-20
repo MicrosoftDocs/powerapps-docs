@@ -48,7 +48,9 @@ When editable grids are enabled through the editable grid control, users can edi
    |Alphanumeric filter bar | Show the alphanumeric filter bar or Hide the alphanumeric filter bar       |  Determines whether the filter bar located at the bottom of the grid is displayed.       |
    |Show component on     |  Web, Mobile, Tablet   | Determines the client type that can use the editable grid control.    |
 1. Select **Done**.
-1. **Save and publish** the form to save and make it available for app users.
+1. **Save and publish** the form to save and make it available to app users.
+
+For information about editing the properties of an existing subgrid on a form, go to [Configure a subgrid component](form-designer-add-configure-subgrid.md#configure-a-subgrid-component).
 
 ## Make main grids editable for views using the classic solution explorer
 
