@@ -172,7 +172,7 @@ The following data types aren't editable in editable grids: Customer and Partyli
 
 ### Group by views work on client side only
 
-Grouping behavior works only on the client side and doesn't span pages. Group by is a client only function and works only on one page of data. Group by doesn't show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
+Grouping behavior works only on the client side and doesn't span pages. Group by is a client only function and works only on one page of data. Group by doesn't show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make a subgrid on a form editable using classic solution explorer](#make-a-subgrid-on-a-form-editable-using-classic-solution-explorer)
 
 ### Inline grid modifications aren't persisted
 
