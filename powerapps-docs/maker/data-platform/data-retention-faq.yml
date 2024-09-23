@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 07/29/2024
+  ms.date: 09/23/2024
   ms.author: matp
   ms.reviewer: 
   contributors: gned
@@ -112,6 +112,6 @@ sections:
 
    - question: Can multiple long-term retention policies run simultaneously?
      answer: |
-        You can schedule multiple retention policies, however only one policy will be executed at a time.  
+        You can schedule multiple retention policies, however only one policy is executed at a time.  
 
                               
