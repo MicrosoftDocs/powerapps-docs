@@ -4,9 +4,9 @@ description: "The topic explains about how to create alternate keys for a table.
 ms.date: 09/23/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 ---
