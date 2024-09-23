@@ -110,4 +110,8 @@ sections:
      answer: |
         Yes. Since your tenant and environment participated in the public preview, Dataverse long term retention is being made available for continued use.  
 
+   - question: Can multiple long-term retention policies run simultaneously?
+     answer: |
+        You can schedule multiple retention policies, however only one policy will be executed at a time.  
+
                               
