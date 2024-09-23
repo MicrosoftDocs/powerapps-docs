@@ -1,7 +1,7 @@
 ---
 title: "Work with alternate keys (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic explains about how to create alternate keys for a table. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/30/2023
+ms.date: 09/23/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: mayadumesh # GitHub ID
@@ -40,6 +40,7 @@ You should be aware of the following constraints when creating alternate keys:
   | LookupAttributeMetadata     |       Lookup        |
   | PicklistAttributeMetadata   |      Option Set       |
 
+- **Attributes must not have field-level security applied**
 
 - **Valid key size**  
 
