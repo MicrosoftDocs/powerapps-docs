@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/27/2024
+ms.date: 09/25/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -46,9 +46,7 @@ When you're editing an app and become inactive for two hours, a **Continue editi
 If auto save is turned on, your changes are automatically saved. If auto save isn't turned on, a **You're no longer editing** dialog box appears that lets you save a copy of your changes.
 
 
-## Coauthoring (preview)
-
-[This section is pre-release documentation and is subject to change.]
+## Coauthoring
 
 Coauthoring allows multiple makers to edit a canvas app at the same time. When more than one person is editing an app, you'll see presences indicators showing where another maker is working on the app and see their changes in real time.
 
