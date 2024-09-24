@@ -48,7 +48,7 @@ We have set up reports and dashboards to track the usage, net promoter score (NP
 
 - Users can configure the ownership of the table. Ownership depends on whether the data of the table is owned by specific users, teams, or the entire organization.
 
-- The Excel file uploaded by users is stored in Dataverse and isn't deleted automatically after table creation. If an Excel file contains personal data and a user wants to delete it, the user must request to delete the file from their environment. Open the **File Upload** table in Power Apps (make.powerapps.com), select **Edit** in the **File Upload columns and data** area, and then delete the Excel file from the table.
+- The Excel file uploaded by users is stored in Dataverse and isn't deleted automatically after table creation. If an Excel file contains personal data and a user wants to delete it, they must manually delete it from the File Upload table. Open the **File Upload** table in Power Apps (make.powerapps.com), select **Edit** in the **File Upload columns and data** area, and then delete the Excel file from the table.
 
 ## How can I use this feature in a Power Platform environment that is created outside of the United States or Switzerland?
 
