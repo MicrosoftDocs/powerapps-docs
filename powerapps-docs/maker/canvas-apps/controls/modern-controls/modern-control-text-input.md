@@ -44,6 +44,11 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
+**TriggerOutput** - When the control updates its **Value** and triggers OnChange.
+    - Delayed - Update the control's value when the user pauses typing.
+    - FocusOut - Update the control's value when the user selects a different control or clicks outside the control.
+    - Keypress - Update the control's value immediately on every character input.
+
 ## Size and position 
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
