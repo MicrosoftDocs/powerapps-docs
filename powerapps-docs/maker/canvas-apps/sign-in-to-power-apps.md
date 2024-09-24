@@ -90,6 +90,10 @@ The Power Apps sharing experience requires users to have permissions in the tena
 - Yes, but in separate browser sessions. For example, Microsoft Edge might be open in its standard mode and a separate session might be started in a new **InPrivate** window.
 - If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
 
+#### Can I sign in Power Apps, in a resource tenant, with GDAP?
+
+No, make.powerapps.com does not recognize [Granular delegated admin privileges (GDAP)](https://learn.microsoft.com/partner-center/customers/gdap-introduction). However, [Power Platform Admin Center does recognize GDAP](https://learn.microsoft.com/partner-center/customers/gdap-supported-workloads#dynamics-365-and-power-platform). 
+
 ## Sign in using Microsoft Account (preview)
 
 Anyone can build Power Apps, even if you don't have a work or school account. Simply sign up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
