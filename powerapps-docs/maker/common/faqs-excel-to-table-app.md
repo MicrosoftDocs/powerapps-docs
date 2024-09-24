@@ -1,7 +1,7 @@
 ---
 title: FAQ for Excel to table and app
 description: This FAQ provides information about the AI technology that's used in Excel to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 03/06/2024
+ms.date: 09/24/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -47,6 +47,8 @@ We have set up reports and dashboards to track the usage, net promoter score (NP
 - Users can configure whether the table should use first row of data as column headers. When this is turned on, the first row of the uploaded Excel file or SharePoint list is used as the header of the table.  
 
 - Users can configure the ownership of the table. Ownership depends on whether the data of the table is owned by specific users, teams, or the entire organization.
+
+- The Excel file uploaded by users is stored in Dataverse and isn't deleted automatically after table creation. If an Excel file contains personal data and a user wants to delete it, the user must manually delete the file from their environment.
 
 ## How can I use this feature in a Power Platform environment that is created outside of the United States or Switzerland?
 
