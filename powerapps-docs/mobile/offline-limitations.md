@@ -55,6 +55,11 @@ These tables and corresponding commands are available in offline mode.
 |Task |Create, Read, Update, Delete|
 |Team |Read only	|
 |User |Read only	|
+|Bookable Resource Booking |Create, Read, Update	|
+|Work Order  |Create, Read, Update	|
+|Work Order Product |Create, Read, Update	|
+|Work Order Service |Create, Read, Update	|
+|Work Order Service Task |Create, Read, Update	|
 
 
 ## Feature limitations 
