@@ -20,8 +20,6 @@ See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management]
 
 ## Event management
 
-- [Belron: Vehicle glass repair provider digitizes processes and increases productivity with self-developed apps](https://customers.microsoft.com/story/belron-autoglass-consumer-goods-powerapps) (conference app)
-
 - [Microsoft HR uses Microsoft Power Platform to transform employee experiences](https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-thrive/) (global HR conference app)
 
 ## Lifecycle or workflow management
