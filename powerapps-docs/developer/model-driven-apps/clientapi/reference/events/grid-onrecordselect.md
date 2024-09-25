@@ -62,5 +62,9 @@ When you enable the **Power Apps grid control**, an **Events** tab appears. Sele
 More information: [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md)
 
 
+### Related articles
+
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
