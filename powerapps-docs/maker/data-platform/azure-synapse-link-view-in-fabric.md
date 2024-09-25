@@ -129,7 +129,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 6. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
 7. If a new column is added to a table that’s already added (also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
-8. You can also **Unlink**, which removes the Fabric link to your Dataverse environment. When unlinking, the Fabric workspace or the lakehouse created aren't removed since you might have added your own tables and links.
+8. You can also **Unlink**, which removes the Fabric link to your Dataverse environment. When unlinking, the Fabric lakehouse gets removed as well.
 
 > [!NOTE]
 > If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
