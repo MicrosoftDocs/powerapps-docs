@@ -20,8 +20,9 @@ This event occurs when the search is complete in a knowledge base search control
 
 Use the [addOnPostSearch](../controls/addOnPostSearch.md) and [removeOnPostSearch](../controls/removeOnPostSearch.md) methods to manage event handlers for this event. 
 
+### Related articles
 
-
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
