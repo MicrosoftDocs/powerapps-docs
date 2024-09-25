@@ -58,10 +58,12 @@ function displayOrgName(executionContext)
 
 ```
 
-## Relates articles
+### Related articles
 
-[getEntityReference](../save-event-arguments/getEntityReference.md)<br/>
-[getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md)<br/>
-[getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md)
+[getEntityReference](../save-event-arguments/getEntityReference.md)   
+[getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md)   
+[getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

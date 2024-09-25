@@ -19,8 +19,9 @@ This event occurs when the status of a process instance changes.
 Use the **formContext.data.process**.[addOnProcessStatusChange](../formContext-data-process/eventhandlers/addOnProcessStatusChange.md) method to add event handlers for this event and the **formContext.data.process**.[removeOnProcessStatusChange](../formContext-data-process/eventhandlers/removeOnProcessStatusChange.md) method to remove them. 
 
 
+### Related articles
 
-
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
