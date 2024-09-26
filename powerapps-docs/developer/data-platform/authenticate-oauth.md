@@ -330,32 +330,9 @@ After you have created the custom security role, you must create the user accoun
 
 #### Manually create a Dataverse application user
 
-The procedure to create this user is different from creating a licensed user. Use the following steps:
+The procedure to create an application user can be found in the Administer Power Platform article: [Create and application user](/power-platform/admin/manage-application-users#create-an-application-user).
 
-1. Navigate to **Settings** > **Security** > **Users**
-
-2. In the view drop-down, select **Application Users**.
-
-3. Click **New**. Then verify that you are using the **Application user** form.
-
-   If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:
-
-   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")
-
-4. Add the appropriate values to the fields:
-
-   | Field              | Value                                                                  |
-   | ------------------ | ---------------------------------------------------------------------- |
-   | **User Name**      | A name for the user                                                    |
-   | **Application ID** | The Application ID value for the application registered with Microsoft Entra ID. |
-   | **Full Name**      | The name of your application.                                          |
-   | **Primary Email**  | The email address for the user.                                        |
-
-   The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.
-
-   When you create this user the values for these fields will be retrieved from Microsoft Entra ID based on the **Application ID** value when you save the user.
-
-5. Associate the application user with the custom security role you created.
+After creating an application user, associate the application user with the custom security role you created.
 
 #### Connect using the application secret
 
