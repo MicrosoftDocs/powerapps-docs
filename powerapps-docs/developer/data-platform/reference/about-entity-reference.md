@@ -3,7 +3,7 @@ title: "Dataverse table/entity reference | Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
 author: phecke
 ms.topic: reference
-ms.date: 08/30/2024
+ms.date: 09/26/2024
 ms.author: pehecke
 ms.reviewer: jdaly
 search.audienceType: 
@@ -37,6 +37,9 @@ Columns are listed in two separate sections: **Writable columns/attributes** and
 The columns in the **Writable columns/attributes** section return true for *either*  the **IsValidForCreate** or **IsValidForUpdate** properties, (usually both). If either of these properties return false, this is indicated.
 
 **Read-only columns/attributes** always return false for the **IsValidForCreate** *and* **IsValidForUpdate** properties.
+
+> [!NOTE]
+> Choice column options in this reference documentation come from a deployment where English is the base languages. Some choice options can vary depending on the base language selected when the environment is created. These changes are intended to more closely align to the options that best suite the region. You are free to customize these options by changing the labels or adding and removing them as needed.
 
 ## Relationships
 
