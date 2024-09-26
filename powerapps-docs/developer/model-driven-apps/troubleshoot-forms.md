@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Micr
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
-ms.date: 12/24/2023
+ms.date: 09/24/2024
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: article
@@ -238,7 +238,7 @@ Determine if the issue reproduces without involving forms. If it does, then ther
 - If you believe this issue only occurs on forms, see [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) to narrow down the component that's causing the issue.
 - If you identify that certain form libraries/script files caused the issue, follow up with the owner who made these customizations to find out the root cause of the issue.
 - If you identify that web resource controls cause the issue with the **DisableWebResourceControls** flag, then you can use the `DisableFormControl` flag to disable each one-by-one until the problem is longer reproduced. The last disabled control that doesn't reproduce the issue is the one that is causing the issue. Follow up with the owner of the control to further troubleshoot the issue.
-- If you identify that the issue is caused by the command bar/ribbon with the **DisableFormCommandbar** flag, it means this isn't an issue with the form but an issue with the command bar. Use [Command Checker](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/) to troubleshoot individual commands and identify which one is causing the issue.
+- If you identify that the issue is caused by the command bar/ribbon with the **DisableFormCommandbar** flag, it means this isn't an issue with the form but an issue with the command bar. Use [Command Checker](https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-command-checker-for-model-app-ribbons) to troubleshoot individual commands and identify which one is causing the issue.
 
 
 ## A business rule or custom script isn't working

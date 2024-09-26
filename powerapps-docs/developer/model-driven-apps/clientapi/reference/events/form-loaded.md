@@ -18,4 +18,9 @@ This event occurs after the form load completes. App logic that isn't immediatel
  
 Use the formContext.ui.[addLoaded](../formContext-ui/addLoaded.md) and formContext.ui.[removeLoaded](../formContext-ui/removeLoaded.md) methods to manage event handlers for this event. 
 
+## Related articles
+
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
+
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

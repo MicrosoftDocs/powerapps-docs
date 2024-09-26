@@ -18,6 +18,9 @@ The `OnChange` event occurs when a value is changed in a cell in the editable gr
 
 
 
+### Related articles
 
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
