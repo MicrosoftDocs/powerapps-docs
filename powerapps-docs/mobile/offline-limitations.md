@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app.
 ms.custom: 
-ms.date: 09/24/2024
+ms.date: 09/26/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -28,12 +28,12 @@ ms.contributors:
 
 Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Offline best practices](best-practices-offline.md) and the [Offline profile guidelines](mobile-offline-guidelines.md).
 
-These tables and corresponding commands are available in offline mode.
+These tables and corresponding permissions are available in offline mode.
 
 > [!NOTE]
-> Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
+> Custom permissions and default permissions without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. Learn more in [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
-|Table |Commands|  
+|Table |Permissions|  
 |-------------|---------|  
 |Account|	Create, Read, Update, Delete|
 |Activity Pointer|Read, Delete|
