@@ -358,7 +358,7 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 ---
 
 ## Handle Purge Failures due to Custom Plugin
- [Purge Failures due to Custom Plugin](./webapi/use-fetchxml-web-api.md)
+ [Purge Failures due to Custom Plugin](./Purge-Failures-Caused-by-Custom-Plugin.md)
 
 ### More examples of FetchXML query strings
 
