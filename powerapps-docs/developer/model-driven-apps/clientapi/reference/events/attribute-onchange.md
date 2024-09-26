@@ -43,11 +43,8 @@ There are three methods you can use to work with the `OnChange` event for a colu
 
 ### Related articles
 
-[Columns (Client API reference)](../attributes.md)
- 
-
-
-
-
+[Columns (Client API reference)](../attributes.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
