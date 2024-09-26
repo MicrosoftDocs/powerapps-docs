@@ -54,4 +54,9 @@ To enable the async Onload event handlers for a specific app:
 
 When using an async handler, a form load waits for the promise to be fulfilled, but only up to 10 seconds. This limit ensures that the form loads within a reasonable amount of time.
 
+### Related articles
+
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
+
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

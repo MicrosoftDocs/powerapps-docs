@@ -105,9 +105,11 @@ When [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) is ca
 
 This pattern should be used with caution as it might affect the performance of the form save.
 
-### Related article
+
+### Related articles
 
 [Grid OnSave Event](grid-onsave.md)   
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
