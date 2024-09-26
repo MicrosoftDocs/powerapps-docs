@@ -38,8 +38,7 @@ The columns in the **Writable columns/attributes** section return true for *eith
 
 **Read-only columns/attributes** always return false for the **IsValidForCreate** *and* **IsValidForUpdate** properties.
 
-> [!NOTE]
-> Choice column options in this reference documentation come from a deployment where English is the base languages. Some choice options can vary depending on the base language selected when the environment is created. These changes are intended to more closely align to the options that best suite the region. You are free to customize these options by changing the labels or adding and removing them as needed.
+Choice column options in this reference documentation come from a deployment where English is the base language. Some choice options can vary depending on the base language selected when the environment is created. These differences more closely align to options that best suite the language or culture. You are free to customize these options by changing the labels or adding and removing options as needed.
 
 ## Relationships
 
