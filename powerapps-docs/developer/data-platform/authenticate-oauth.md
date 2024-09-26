@@ -330,7 +330,7 @@ After you have created the custom security role, you must create the user accoun
 
 #### Manually create a Dataverse application user
 
-The procedure to create an application user can be found in the Administer Power Platform article: [Create and application user](/power-platform/admin/manage-application-users#create-an-application-user).
+The procedure to create an application user can be found in the Administer Power Platform article: [Create an application user](/power-platform/admin/manage-application-users#create-an-application-user).
 
 After creating an application user, associate the application user with the custom security role you created.
 
