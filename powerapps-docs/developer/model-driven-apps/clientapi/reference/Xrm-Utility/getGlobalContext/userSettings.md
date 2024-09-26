@@ -37,7 +37,7 @@ The `userSettings` object has the following properties:
 |`securityRoles`|string[]|Deprecated. Use the `roles` property.|
 |`transactionCurrency`|object|Object containing the `id`, `name`, and `entityType` of the transaction currency for the current user. See [transactionCurrency](#transactioncurrency)|
 |`transactionCurrencyId`|string|Deprecated. Use the `transactionCurrency` property|
-|`userId`|string|The [systemuser.systemuserid](../../../../../data-platform/reference/entities/systemuser.md#BKMK_systemuserid) value of the current user.|
+|`userId`|string|The [systemuser.systemuserid](../../../../../data-platform/reference/entities/systemuser.md#BKMK_SystemUserId) value of the current user.|
 |`userName`|string|The name of the current user.|
 
 
