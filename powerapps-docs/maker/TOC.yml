@@ -504,7 +504,7 @@
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
-          - name: Use modern themes (preview)
+          - name: Use modern themes
             href: ./canvas-apps/controls/modern-controls/modern-theming.md
           - name: Modern control reference
             items:
