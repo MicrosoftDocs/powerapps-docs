@@ -194,7 +194,7 @@ In Power Apps Studio:
 
    :::image type="content" source="media\add-screen-context-variables\select-data-source.png" alt-text="Screenshot that shows the location of the Data button, where you can select a data source from a list.":::
 
-   Once connected, the table and form controls are both bound to the data source.
+Once connected, the table and form controls are both bound to the data source.
 
 You can select a record in the table control and the form displays the details of the selected record.
 
