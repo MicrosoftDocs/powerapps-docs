@@ -51,7 +51,7 @@ Before app users can use the Copilot chat experience in a canvas app, a Power Pl
 
 - Open your environment and go to **Settings** > **Product** > **Features**.
 - Under **Copilot**, toggle to **On** these settings:
-  - **Enable new AI-powered Copilot features for people who make apps**. Learn more in [Prerequisites for the Copilot features in Power Apps](ai-overview.md#prerequisites-for-the-copilot-features-in-power-apps).
+  - **Enable new AI-powered Copilot features for people who make apps**. Learn more in [Prerequisites for the Copilot features in Power Apps](ai-overview.md#prerequisites).
   - **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**. Learn more in [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 :::image type="content" source="media/copilot/copilot-for-app-users-on.png" alt-text="Screenshot of the Power Platform admin center environment settings, showing Copilot features.":::
