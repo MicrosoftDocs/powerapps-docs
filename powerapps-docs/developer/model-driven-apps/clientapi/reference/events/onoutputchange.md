@@ -18,4 +18,9 @@ This event occurs when an output property control changes.
 
 Use the [addOnOutputChange](../controls/addonoutputchange.md) and [removeOnOutputChange](../controls/removeonoutputchange.md) methods to add and remove event handlers respectively for this event.
 
+### Related articles
+
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
+
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

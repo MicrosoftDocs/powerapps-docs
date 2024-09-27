@@ -9186,9 +9186,19 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/app-from-azure-sql-database.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/overview-model-driven-samples.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/",
       "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/data-platform/relationships-overview.md",
+    "redirect_url": "/power-apps/maker/data-platform/create-edit-entity-relationships",
+    "redirect_document_id": "false"
    }
   ]
 }
