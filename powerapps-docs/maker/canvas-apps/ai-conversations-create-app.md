@@ -88,7 +88,7 @@ Legend:
 
 Copilot shows you the table that it generated based on your description.
 
-:::image type="content" source="media/artificial-intelligence/data-workspace-copilot (2).png" alt-text="Screenshot of a Dataverse table for a hotel housekeeping app, with numbered annotations.":::
+:::image type="content" source="media/artificial-intelligence/data-workspace-copilot-2.png" alt-text="Screenshot of a Dataverse table for a hotel housekeeping app, with numbered annotations.":::
 
 Legend:
 
