@@ -48,8 +48,18 @@ Don't proceed without confirming each of the following prerequisites are met.
    if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
       Connect-AzAccount | Out-Null
    }
+
    # Get an access token
-   $token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+   $secureToken = (Get-AzAccessToken `
+      -ResourceUrl $environmentUrl `
+      -AsSecureString).Token
+
+   # Convert the secure token to a string
+   $token = ConvertFrom-SecureString `
+      -SecureString $secureToken `
+      -AsPlainText
+
+
    # Common headers
    $baseHeaders = @{
       'Authorization'    = 'Bearer ' + $token
@@ -99,7 +109,7 @@ When the `Get-AzTenant` command doesn't return anything, the script uses the [Co
 to open an interactive browser window where you can enter or select your credentials to sign in. [Learn more about signing into Azure PowerShell interactively](/powershell/azure/authenticate-interactive) or [noninteractively with a service principal](/powershell/azure/authenticate-noninteractive).
 
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
-[PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
+[PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a SecureString [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that you can convert into an access token you can use to authenticate with Dataverse.
 
 When you want to connect with a different set of credentials, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
 
