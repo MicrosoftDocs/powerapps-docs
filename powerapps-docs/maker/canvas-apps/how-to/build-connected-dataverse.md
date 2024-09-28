@@ -12,7 +12,6 @@ ms.reviewer: mkaur
 contributors:
     - sbahl10
     - mduelae
-    - ProfessorKendrick
 ---
 
 # How to create a canvas app connected to Microsoft Dataverse from scratch
