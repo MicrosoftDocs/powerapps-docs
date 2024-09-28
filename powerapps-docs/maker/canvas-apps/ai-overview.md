@@ -1,5 +1,5 @@
 ---
-title: Create conversational apps with Copilot in Power Apps (preview)
+title: Copilot in Power Apps overview (preview)
 description: Learn how Copilot in Power Apps makes it easy to build apps and provide insights to your users by describing what you need in natural language.
 author: mduelae
 ms.author: tapanm
@@ -24,7 +24,7 @@ contributors:
   - Mattp123
 ---
 
-# Create conversational apps with Copilot in Power Apps (preview)
+# Copilot in Power Apps overview (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
