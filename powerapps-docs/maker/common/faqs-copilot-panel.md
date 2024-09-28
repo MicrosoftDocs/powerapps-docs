@@ -18,7 +18,7 @@ These frequently asked questions (FAQ) describe the AI impact of Power Apps' con
 
 ##  What is continue to edit your app with Copilot? 
 
-With continue to edit your app with Copilot feature, makers can delegate some tasks of app development to an AI assistant by telling Copilot their requirements. Makers can expect actions such as add, edit, or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
+With continue to edit your app with Copilot feature, makers can delegate some tasks of app development to an AI assistant by telling Copilot their requirements. Makers can expect actions such as add, edit, rename or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
  
 ## What are the system’s capabilities? 
 
@@ -26,6 +26,7 @@ The following system capabilities supported:
 - Add a screen using pre-existing templates.
 - Add and modify properties of a single control, limited to classic controls only.
 - Update multiple controls at once.
+- Rename multiple controls with copilot suggested names at once.
 - Work with containers.
 - Provide default suggestions for users to help in typing.
 - Use templatized formulas such as Navigate() to create buttons that perform specific actions, like navigating to the Home screen, and SubmitForm() for creating a Submit button for Form2.
@@ -39,6 +40,10 @@ The following controls are supported:
 - Label 
 - TextInput 
 
+For control renaming, following controls are supported:
+- Label
+- Button
+  
 ## What is the system’s intended use? 
 
 As an AI assistant that helps people find information, Copilot provides the following list of UI actions for makers that are included in the preview release scope:
@@ -49,6 +54,7 @@ As an AI assistant that helps people find information, Copilot provides the foll
 - Provide default suggestions to guide users on what to type in
 - Offer the following templatized formulas to build your app:
     - Navigate(): For example, "Create a button for Home that navigates to the Home Screen"
+- Offer to bulk rename controls on the screen with default names, when you rename a control on the screen.
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
@@ -74,6 +80,8 @@ Here are some tips to help you get the most out of this feature:
 - Use simple language to explain the changes you want to make to your app, such as "add a new screen" or "insert 2 buttons."
 - If the results you get aren't what you expected, try being more precise. For example, you could say "add a new button to the selected container," "change the color of the selected button to red", or "display Screen 2 when Button1 is selected."
 - You can also try using the default suggestions provided in the Copilot panel and then customize them to suit your needs. And if you still can't get the desired results, send us your feedback.
+- Control renaming copilot is auto invoked when there are controls that can be renamed, it cannot be invoked on demand currently.
+- Control renaming utilizes control properties to suggest names, and you will have the option to preview the suggestions. Choose to apply all or select changes based on your preference.
 
 
 ## See also 
