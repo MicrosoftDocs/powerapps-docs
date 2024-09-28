@@ -11,7 +11,6 @@ search.audienceType:
   - developer
 contributors:
   - phecke
-  - ProfessorKendrick
 ---
 
 # Register a plug-in

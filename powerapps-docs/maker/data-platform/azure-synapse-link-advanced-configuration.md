@@ -17,7 +17,6 @@ search.audienceType:
   - maker
 contributors:
   - sama-zaki
-  - ProfessorKendrick
 ---
 
 # Advanced Configuration Options in Azure Synapse Link
