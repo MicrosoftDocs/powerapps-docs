@@ -9,8 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dmartens # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-contributors:
-  - ProfessorKendrick
 ---
 # Email activity tables
 
