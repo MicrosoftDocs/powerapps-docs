@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 12/12/2023
+ms.date: 09/25/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -300,20 +300,25 @@ When registering an app you follow many of the same steps described in [Walkthro
 
 - You must configure a secret for the app registration OR upload a public key certificate.
 
-While registering the app, select the **Keys** section on the **Settings** page.
+You can create or view credentials in your app registration under **Manage** > **Certificates & secrets**.
 
-To add a certificate:
+To add a certificate (public key):
 
-1. Select **Upload Public Key**.
+1. In the **Certificates** tab, select **Upload certificate**.
 2. Select the file you'd like to upload. It must be one of the following file types: .cer, .pem, .crt.
+3. Provide a description.
+4. Select **Add**.
 
-To add a password:
+To add an client secret (application password):
 
-1. Add a description for your key.
-2. Select a duration.
-3. Select **Save**.
+1. In the **Client secrets** tab, add a description for your client secret.
+2. Select an expiration time period.
+3. Select **Add**.
 
-The right-most column will contain the key value, after you save the configuration changes. Be sure to copy the key for use in your client application code, as it is not accessible once you leave this page.
+> [!IMPORTANT]
+> After you save the configuration changes, a secret value is displayed. Be sure to copy the secret value for use in your client application code, as that value is not accessible once you leave the page.
+
+More information: [Add credentials](/entra/identity-platform/quickstart-register-app?tabs=certificate#add-credentials)
 
 #### Dataverse user account bound to the registered app
 
@@ -325,32 +330,9 @@ After you have created the custom security role, you must create the user accoun
 
 #### Manually create a Dataverse application user
 
-The procedure to create this user is different from creating a licensed user. Use the following steps:
+The procedure to create an application user can be found in the Administer Power Platform article: [Create an application user](/power-platform/admin/manage-application-users#create-an-application-user).
 
-1. Navigate to **Settings** > **Security** > **Users**
-
-2. In the view drop-down, select **Application Users**.
-
-3. Click **New**. Then verify that you are using the **Application user** form.
-
-   If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:
-
-   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")
-
-4. Add the appropriate values to the fields:
-
-   | Field              | Value                                                                  |
-   | ------------------ | ---------------------------------------------------------------------- |
-   | **User Name**      | A name for the user                                                    |
-   | **Application ID** | The Application ID value for the application registered with Microsoft Entra ID. |
-   | **Full Name**      | The name of your application.                                          |
-   | **Primary Email**  | The email address for the user.                                        |
-
-   The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.
-
-   When you create this user the values for these fields will be retrieved from Microsoft Entra ID based on the **Application ID** value when you save the user.
-
-5. Associate the application user with the custom security role you created.
+After creating an application user, associate the application user with the custom security role you created.
 
 #### Connect using the application secret
 

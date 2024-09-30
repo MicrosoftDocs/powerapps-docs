@@ -12,8 +12,6 @@ ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-contributors: 
-    - ProfessorKendrick
 ---
 
 # Tables and metadata in Microsoft Dataverse

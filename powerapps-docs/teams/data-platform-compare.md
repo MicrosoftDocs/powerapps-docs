@@ -12,7 +12,6 @@ contributors:
   - mattp123
   - hemantgaur
   - mduelae
-  - ProfessorKendrick
 ---
 # How are Dataverse for Teams and Dataverse different?
 
