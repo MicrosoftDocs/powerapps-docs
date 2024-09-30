@@ -20,7 +20,7 @@ Returns information about the current organization settings.
 
 ## Properties
 
-The `userSettings` object has the following properties:
+The `organizationSettings` object has the following properties:
 
 
 |Name|Type|Description|
@@ -48,7 +48,13 @@ This method is supported only on Unified Interface.
 
 The lookup object will look something like the following:
 
-`{id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", entityType: "transactioncurrency", name: "US Dollar"}`
+```json
+{
+   id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", 
+   entityType: "transactioncurrency", 
+   name: "US Dollar"
+}
+```
 
 
 ### fullNameConventionCode
