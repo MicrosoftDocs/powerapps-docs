@@ -15,7 +15,6 @@ contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - melzoghbi
-  - ProfessorKendrick
 ---
 
 # Common canvas app performance issues and resolutions

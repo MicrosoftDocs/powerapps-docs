@@ -11,7 +11,6 @@ ms.author: wimcoor
 ms.reviewer: matp
 contributors:
   - mattp123
-  - ProfessorKendrick
 ---
 # Move customizations between environments
 
