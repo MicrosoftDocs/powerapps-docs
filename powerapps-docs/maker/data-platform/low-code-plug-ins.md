@@ -100,12 +100,6 @@ Unique properties:
 
 ## Prerequisites for creating a low-code plug-in
 
-> [!NOTE]
-> We're rolling out a set of updates to enable the Dataverse low-code plugins. These low-code plugins use a user interface built on the Power Platform [custom pages feature](../model-driven-apps/model-app-page-overview.md). As part of these updates we're deploying into environments using system maintenance accounts. In some circumstances these accounts have had an unexpected side effect of presenting as a [break-glass account](/entra/identity/role-based-access-control/security-emergency-access). We're working to correct this behavior as quickly as possible. In the meantime the following apps might appear in the Power Platform admin center:
-> - Dataverse Accelerator app – &lt;model-driven app&gt;, created by a global admin account
-> - Dataverse Actions page - &lt;canvas app&gt; This is a Custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
-> - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
-
 > [!div class="checklist"]
 > * System administrator or system customizer security role membership in the Power Platform environment.
 > * Access to the Dataverse accelerator app.
