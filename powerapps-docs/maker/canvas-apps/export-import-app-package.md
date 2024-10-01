@@ -4,7 +4,7 @@ description: Learn how to export and import canvas apps as a package.
 author: caburk
 
 ms.topic: conceptual
-ms.date: 09/30/2024
+ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: caburk
 ms.reviewer: mkaur
