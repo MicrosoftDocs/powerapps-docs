@@ -17,7 +17,7 @@ contributors:
 
 # Export and import canvas apps as a package
 
-In this article, you learn how to export and import canvas apps. Before you begin, review the overview article to understand all different options as there are several options available to export and import canvas apps.
+In this article, you'll learn how to export and import canvas apps. Before you begin, review the overview article to understand all different options as there are several options available to export and import canvas apps.
 > [!IMPORTANT]
 > It is strongly recommended to use solutions for ALM to ensure proper management and support.
 
