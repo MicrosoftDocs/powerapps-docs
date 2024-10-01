@@ -1411,7 +1411,7 @@
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
-          href: ./model-driven-apps/create-a-model-driven-app.md
+          href: ./model-driven-apps/build-first-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
         - name: Work with pages
