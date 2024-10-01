@@ -18,7 +18,8 @@ contributors:
 # Overview of exporting and importing canvas apps
 
 In this article, you'll learn about different options available to export and import canvas apps in the form of singular app file, app package, and considerations from the application lifecycle management (ALM) perspective. To effectively manage ALM, it's recommended to use solutions. Canvas apps packages don’t support ALM and should only be used for basic import and export capabilities when Dataverse isn’t accessible.
-You can choose to export and import canvas apps using one of the following options.
+
+You can export and import canvas apps using one of the following options:
 
 - [Export and import canvas apps as app packages](export-import-app-package.md)
 - [Export and import canvas apps as part of solutions](../data-platform/solutions-overview.md)
