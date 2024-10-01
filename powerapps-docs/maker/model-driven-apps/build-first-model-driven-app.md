@@ -23,7 +23,7 @@ In this tutorial, you create a model-driven app by using one of the standard tab
 
    Each environment can have one Dataverse database.
 
-   Select the environment you want, or go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to create a new one. You can choose the environment by selecting **Environment** from the upper right.
+   Select the environment you want. If your tenant allows you to create your own environment, select the current environment from the top right, and then select **Try it now**. More information: [Get your developer environment (preview)](../maker-create-environment.md)
 
 1. We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
