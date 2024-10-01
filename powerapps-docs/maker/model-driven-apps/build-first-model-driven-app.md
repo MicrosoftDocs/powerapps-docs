@@ -16,7 +16,7 @@ contributors:
 
 In this tutorial, you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 
-:::image type="content" source="media/build-first-model-driven-app/accounts-quickstart-app.png" alt-text="Run the model-driven app with account table" lightbox="media/build-first-model-driven-app/accounts-quickstart-app.png":::
+:::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Model-driven app with account table in app designer" lightbox="media/create-a-model-driven-app/add-pages-to-an-app-3.png":::
 
 1. Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a Power Apps account, select the **Get started free** link.
 1. Select an environment. An environment in Power Apps is a space to store, manage, and share your organization’s business data, apps, chatbots, and flows. It also serves as a container to separate apps that might have different roles, security requirements, or target audiences.
@@ -28,7 +28,7 @@ In this tutorial, you create a model-driven app by using one of the standard tab
 1. We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
    Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **New solution**, enter a **Display name** for your solution, such as **Power Apps Training**, select a publisher (the **CDS Default Publisher** is okay for this tutorial), and then select **Create**. For more information about creating a solution, go to [Create a solution](/powerapps/maker/data-platform/create-solution).
+1. Select **New solution**, enter a **Display name** for your solution, such as *Power Apps Training*, select a publisher (the **CDS Default Publisher** is okay for this tutorial), and then select **Create**. For more information about creating a solution, go to [Create a solution](/powerapps/maker/data-platform/create-solution).
 
 1. In your solution, select **Add existing**, and then select **Table.**
 
@@ -44,7 +44,7 @@ In this tutorial, you create a model-driven app by using one of the standard tab
 
    Your app loads in the model-driven app designer.
 
-## Add pages to your app
+## Add a page to your app
 
 Next, you add a new page to the model-driven app in the app designer.
 
