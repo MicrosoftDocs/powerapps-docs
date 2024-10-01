@@ -35,7 +35,7 @@ You can export and import canvas apps using one of the following options:
 
 You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another.
 
-## Resources included canvas apps as app packages
+## Resources included in canvas apps packages
 
 An app can consume different resources. For example, most apps use connections. Other apps might use Power Automate, have custom connectors, or connect by using gateways to on-premises resources. Some apps might also use Dataverse customizations
 
@@ -50,7 +50,7 @@ The following table explains different resource types, supportability, and impor
 | Dataverse customizations |No |Exporting Dataverse customizations as a part of a canvas app package isn't supported. You need to use Dataverse solutions instead. More information: [Dataverse solutions](../../developer/data-platform/introduction-solutions.md) |
 | Gateways |No | You can't export or import gateways. You need to re-create gateways on the target environment. |
 
-## Permissions required to export a canvas app package
+## Permissions
 
 Only the **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, the **Environment Maker** permission is required on the destination environment.
 
