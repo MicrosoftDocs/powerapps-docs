@@ -17,7 +17,7 @@ contributors:
 
 # Export and import canvas apps as a package
 
-In this article, you'll learn how to export and import canvas apps. Before you begin, review the overview article to understand all different options as there are several options available to export and import canvas apps.
+In this article, you learn how to export and import canvas apps. Before you begin, review the overview article to understand all different options as there are several options available to export and import canvas apps.
 > [!IMPORTANT]
 > It is strongly recommended to use solutions for ALM to ensure proper management and support.
 
@@ -27,7 +27,7 @@ To export a canvas app package, select your app, and then select **Export Packag
 
 ![Export package GIF demo with example export walkthrough.](media/export-import-app/export-app.gif "Export package GIF demo with example export walkthrough")
 
-You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will become the default action during the app import.
+You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will be the default action during the app import.
 
 > [!IMPORTANT]
 > You can only import the exported package. Changes to the exported package file aren't supported.
