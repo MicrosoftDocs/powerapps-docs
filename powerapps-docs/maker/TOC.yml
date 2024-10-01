@@ -1216,9 +1216,9 @@
       items:
       - name: Overview
         href: ./canvas-apps/export-import-app.md
-      - name: Export and import canvas apps as a package
+      - name: Export and import apps as a package
         href: ./canvas-apps/export-import-app-package.md  
-      - name: Export and import a canvas app as a single app file
+      - name: Export and import a single app file
         href: ./canvas-apps/export-import-single-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
