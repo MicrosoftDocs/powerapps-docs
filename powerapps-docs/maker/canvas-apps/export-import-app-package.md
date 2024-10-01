@@ -17,17 +17,20 @@ contributors:
 
 # Export and import canvas apps as a package
 
-In this article, you'll learn how to export and import canvas apps. Before you begin, review the overview article to understand all different options as there are several options available to export and import canvas apps.
+This article provides a step-by-step guide for exporting and importing canvas apps. Before you begin, review the [overview](export-import-app.md) article to learn about the different export and import options available.
+
 > [!IMPORTANT]
-> It is strongly recommended to use solutions for ALM to ensure proper management and support.
+> It's recommended to use solutions for application lifecycle management (ALM) to ensure proper management and support.
 
-## Exporting a canvas app package
+## Export a canvas apps package
 
-To export a canvas app package, select your app, and then select **Export Package**.
+To export a canvas apps package, select your app, and then select **Export Package**.
 
 ![Export package GIF demo with example export walkthrough.](media/export-import-app/export-app.gif "Export package GIF demo with example export walkthrough")
 
-You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will be the default action during the app import.
+
+You can change the default **Import Action** for each resource used by your canvas app. By default, resources in a canvas app package, including the app itself, are set to **Update**. However, you have the option to select **Create as new** during import, which will create the resource instead of updating an existing one. The import action you select will be the default action during the app import
+
 
 > [!IMPORTANT]
 > You can only import the exported package. Changes to the exported package file aren't supported.
