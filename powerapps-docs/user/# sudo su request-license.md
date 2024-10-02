@@ -1,3 +1,4 @@
+# sudo su 
 ---
 title: Request a Power Apps license for yourself
 description: Learn how to request a Power Apps license.
