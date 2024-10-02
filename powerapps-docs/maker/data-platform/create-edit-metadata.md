@@ -2,7 +2,7 @@
 title: "Tables and metadata in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 06/29/2022
+ms.date: 10/02/2024
 ms.reviewer: ""
 ms.topic: "overview"
 author: "Mattp123"
@@ -13,10 +13,9 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-
 # Tables and metadata in Microsoft Dataverse
 
-Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you're evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
+Microsoft Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this article introduces. But if you want to develop a deeper understanding about how apps that use Dataverse work or you're evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 
 *Metadata* means data about data. Dataverse provides a flexible platform for you because it's relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. Tables describe the kinds of data stored in the database. Table metadata is what controls the kinds of records you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you're editing this metadata. 
   
@@ -37,13 +36,13 @@ Each of these tables also contains many columns that represent common data that 
   
 For most organizations it's to your advantage to use the standard tables and attributes for the purposes they were provided. 
   
-If you install a solution, you can expect that the solution developer has leveraged the standard tables and attributes. Creating a new custom table that replaces a system table or attribute will mean that any solutions available may not work for your organization.  
+If you install a solution, you can expect that the solution developer has leveraged the standard tables and attributes. Creating a new custom table that replaces a system table or attribute will mean that any solutions available might not work for your organization.  
   
 For these reasons, we recommend that you look for and use the provided standard tables, columns, and table relationships when they make sense for your organization. If they don't make sense and can't be edited to match your need, you should evaluate if creating a new table, column, or table relationships is required. 
 
 Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it's common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-a-table).
   
-You can't delete standard tables, columns, or table relationships. They're considered part of the system solution and every organization is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This will remove the table from most parts of the application. If there's a system column that you don't need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they don't appear in advanced find. 
+You can't delete standard tables, columns, or table relationships. They're considered part of the system solution and every Dataverse environment is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This removes the table from most parts of the application. If there's a system column that you don't need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they don't appear in advanced find. 
   
 <a name="BKMK_LimitationsOnMetadata"></a>   
 
