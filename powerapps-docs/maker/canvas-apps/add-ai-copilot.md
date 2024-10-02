@@ -10,7 +10,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 9/25/2024
+ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-The Copilot control is an AI assistant that you can add to your canvas apps in Microsoft Powr Apps. Copilot lets app users get insights about the data in your app through natural language conversations with an AI-powered copilot. You can add the control to any canvas app and choose which data provide answers.
+The Copilot control is an AI assistant that you can add to your canvas apps in Microsoft Power Apps. Copilot lets app users get insights about the data in your app through natural language conversations with an AI-powered copilot. You can add the control to any canvas app and choose which data provide answers.
 
 > [!IMPORTANT]
 >
@@ -47,7 +47,7 @@ The Copilot control is an AI assistant that you can add to your canvas apps in M
 
 ### Set up Copilot for your environment
 
-Before app users can use the Copilot chat experience in a canvas app, a Power Platform admininstrator must enable the following settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home).
+Before app users can use the Copilot chat experience in a canvas app, a Power Platform administrator must enable the following settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home).
 
 - Open your environment and go to **Settings** > **Product** > **Features**.
 - Under **Copilot**, turn **On** these settings:
@@ -118,7 +118,7 @@ If you don't want your app users to provide feedback to Microsoft, turn off the 
 
 :::image type="content" source="media/copilot/allow-users-feedback-setting.png" alt-text="Screenshot that shows how to get to the Show existing column popup." lightbox="media/copilot/allow-users-feedback-setting.png":::
 
-## See also
+## Related information
 
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
 - [Use your prompt in Power Automate](/ai-builder/use-a-custom-prompt-in-flow)

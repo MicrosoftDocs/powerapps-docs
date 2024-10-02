@@ -7,7 +7,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 7/22/2024
+ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -26,24 +26,33 @@ ai-usage: ai-assisted
 
 Edit your apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe the changes you want to make, and AI does the rest.
 
-Copilot is a feature in Power Apps that helps you edit your apps with AI assistance. You can access Copilot from the Power Apps Studio when you edit a canvas app. Tell Copilot what kind of changes you want to make, such as adding a screen, configuring navigation, styling a control, or editing multiple controls at a time.
+Copilot is a feature in Power Apps that helps you edit your apps with AI assistance. You can access Copilot from Power Apps Studio when you edit a canvas app. Tell Copilot what kind of changes you want to make in the Copilot conversation pane, such as adding a screen, configuring navigation, styling a control, or editing multiple controls at a time.
 
-:::image type="content" source="media/artificial-intelligence/copilot-pane-04252024.png" alt-text="Screenshot of the Power Apps Studio, showing an app open for editing in the center of the screen and the Copilot panel on the right side of the screen.":::
+:::image type="content" source="media/artificial-intelligence/copilot-pane.png" alt-text="Screenshot of the Power Apps Studio, showing an app open for editing in the center of the screen and the Copilot panel on the right side of the screen.":::
 
 > [!IMPORTANT]
 >
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, read our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability might be subject to usage limits or capacity throttling.
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
+> [!NOTE]
+>
+> This capability:
+>
+> - Is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview)
+> - Might be subject to usage limits or capacity throttling
 
 ## Prerequisites
 
-Meet the prerequisites for Copilot features in Power Apps. Learn more in [Create conversational apps with Copilot in Power Apps](ai-overview.md).
+[Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#turn-on-copilots-and-generative-ai-features-1).
+
+Learn more in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
 ## Supported languages
 
 The following table lists the languages that Copilot understands.
+
+You can track future language availability in the [Copilot product report](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotproductreport).
 
 | **Name**                           | **Language Code** |
 |------------------------------------|-------------------|
@@ -72,9 +81,9 @@ The following table lists the languages that Copilot understands.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and open a canvas app for editing.
 1. In Power Apps Studio, in the upper-right corner of the page, select **Copilot**.
-1. In the Copilot text box, describe a change you want to make, such as  **Add an email screen**.
+1. In the Copilot text box, describe a change you want to make, such as  *Add an email screen*.
 
-    :::image type="content" source="media/artificial-intelligence/copilot-pane-add-screen-04252024.png" alt-text="Screenshot of the Power Apps Studio, showing an app open for editing in the center of the screen and a Copilot chat at the right side of the screen.":::
+:::image type="content" source="media/artificial-intelligence/ask-copilot.png" alt-text="Screenshot that shows where to ask Copilot a request.":::
 
 ## What you can do with Copilot in Power Apps
 
@@ -93,6 +102,10 @@ Copilot in Power Apps allows you to perform the following tasks:
 ## Sample commands you can try
 
 When you open the Copilot pane, you can select from three preset prompts that demonstrate Copilot's capabilities: **Create**, **Change**, and **Ask**. You can also try entering the following commands in the Copilot text box.
+
+> [!NOTE]
+>
+> Some Copilot requests are built into preview features, which only work when **Try the new data experience** toggle is turned on from your Power Apps home page. Learn more in [Build apps with Copilot in Power Apps (preview)](ai-conversations-create-app.md#prerequisites-for-the-preview-version).
 
 ### Scenario: Add a new screen using a template
 
@@ -119,7 +132,7 @@ When you open the Copilot pane, you can select from three preset prompts that de
 
 ### Scenario: Templatized formulas
 
-- When the user clicks on Button1, show Screen2
+- When the user selects `Button1`, show `Screen2`
 
 ### Scenario: Modern theming
 

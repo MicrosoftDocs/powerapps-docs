@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 7/22/2024
+ms.date: 10/2/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -27,14 +27,20 @@ Copilot is an AI feature in Power Apps that helps you create and modify Power Fx
 
 ## Prerequisites
 
-- The Power Fx formula bar is turned on in your app settings:
-    1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
-    1. On the command bar, select **Settings** > **Upcoming features**.
-    1. From the **Preview** tab, turn on the **Power Fx formula bar** toggle.
+- Turn on the Power Fx formula bar:
+
+  1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
+  1. On the command bar, select **Settings** > **Updates**.
+  1. From the **Preview** tab, turn on the **Copilot comment-generated formulas** toggle.
+
+     :::image type="content" source="media/copilot/copilot-formula-setting.png" alt-text="Screenshot that shows where to find the Copilot comment-generated formula setting." lightbox="media/copilot/copilot-formula-setting.png":::
+
+     > [!NOTE]
+     > When formula generation from code comments is fully integrated into the platform and generally available, you won't be able to turn it off.
 
 - Copilot is turned on for your environment and tenant. Learn more in [Enable or disable Copilot in Power Apps](ai-overview.md#enable-or-disable-copilot-in-power-apps).
 
-- Your browser and Power Apps language settings are set to **English (United States)**.
+- Your environment must be in the United States region with your browser language set to English (United States). Check regions for the future in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 > [!NOTE]
 > AI-generated content might be inaccurate and should be checked for accuracy.
@@ -65,15 +71,15 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
-1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
+1. With your canvas app open for editing, type a code comment using `//` or `/*` in the formula bar.
 
-    :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Screenshot of a comment typed in the Copilot formula bar.":::
+    :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Screenshot of a comment typed in the Copilot formula bar." lightbox="media/copilot/ufb-comment-copilot.png":::
 
     Wait a few seconds for Copilot to generate a formula suggestion or press Enter to generate it immediately.
 
 1. Press Tab on the keyboard to accept and use the suggested formula. You can also type through the suggestion.
 
-    :::image type="content" source="media/copilot/ufb-commentfx-copilot.png" alt-text="Screenshot of a comment with a suggested formula.":::
+    :::image type="content" source="media/copilot/ufb-commentfx-copilot.png" alt-text="Screenshot of a comment with a suggested formula." lightbox="media/copilot/ufb-commentfx-copilot.png":::
 
 The suggestion remains until you select elsewhere or type a character that doesn't match the suggestion.
 
@@ -82,25 +88,16 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 > [!NOTE]
 >
 > - If Copilot doesn't provide a suggestion, then it couldn't generate a formula based on your comment. Try rephrasing the comment.
-> - We recommend enclosing in quotes the elements that you want to include in your formula, such as **"Button1.text"**.
+> - We recommend enclosing in quotes the elements that you want to include in your formula, such as `"Button1.text"`.
 
 ### Known limitations of generating formulas from code comments
 
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
-- Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as **Navigate()**.
+- Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
 - This feature isn't available in the Canada region.
-
-### Enable or disable formula generation from code comments
-
-Formula generation from code comments is enabled by default for new apps and disabled by default for existing apps. You can enable or disable it for any app from the app settings.
-
-Go to **Settings** > **Upcoming features**. Turn the **Copilot comment-generated formulas** toggle on or off.
-
-> [!NOTE]
-> When formula generation from code comments is fully integrated into the platform and generally available, you won't be able to turn it off.
 
 ## Responsible AI
 
@@ -110,25 +107,25 @@ Understand the choices you have when working with AI. Learn more in [FAQ about u
 
 The following table lists the languages available for the formula bar copilot features, which is based on the settings in your Power Platform environment and browser.
 
-| **Name**                           | **Language Code** | **Functionality Supported**                   |
-|------------------------------------|-------------------|-----------------------------------------------|
-| English                            | en-US             | Explain a formula, Comment generated formulas |
-| Chinese (simplified) - China       | zh-Hans           | Explain a formula                             |
-| Czech - Czech Republic             | cs-CZ             | Explain a formula                             |
-| Danish - Denmark                   | da-DK             | Explain a formula                             |
-| Dutch - Netherlands                | nl-NL             | Explain a formula                             |
-| Finnish - Finland                  | fi-FI             | Explain a formula                             |
-| French - France                    | fr-FR             | Explain a formula                             |
-| German - Germany                   | de-DE             | Explain a formula                             |
-| Greek - Greece                     | el-GR             | Explain a formula                             |
-| Italian - Italy                    | it-IT             | Explain a formula                             |
-| Japanese - Japan                   | ja-JP             | Explain a formula                             |
-| Korean - Korea                     | ko-KR             | Explain a formula                             |
-| Norwegian (Bokmål) - Norway        | nb-NO             | Explain a formula                             |
-| Polish - Poland                    | pl-PL             | Explain a formula                             |
-| Portuguese - Brazil                | pt-BR             | Explain a formula                             |
-| Russian - Russia                   | ru-RU             | Explain a formula                             |
-| Spanish (Traditional Sort) - Spain | es-ES             | Explain a formula                             |
-| Swedish - Sweden                   | sv-SE             | Explain a formula                             |
-| Thai - Thailand                    | th-TH             | Explain a formula                             |
-| Turkish - Türkiye                  | tr-TR             | Explain a formula                             |
+| **Name** | **Language Code** | **Functionality Supported** |
+|----------|-------------------|-----------------------------|
+| English | en-US | Explain a formula, Comment generated formulas |
+| Chinese (simplified) - China | zh-Hans | Explain a formula |
+| Czech - Czech Republic | cs-CZ | Explain a formula |
+| Danish - Denmark | da-DK | Explain a formula |
+| Dutch - Netherlands | nl-NL | Explain a formula |
+| Finnish - Finland | fi-FI | Explain a formula |
+| French - France | fr-FR | Explain a formula |
+| German - Germany | de-DE | Explain a formula |
+| Greek - Greece | el-GR | Explain a formula |
+| Italian - Italy | it-IT | Explain a formula |
+| Japanese - Japan | ja-JP | Explain a formula |
+| Korean - Korea | ko-KR | Explain a formula |
+| Norwegian (Bokmål) - Norway | nb-NO | Explain a formula |
+| Polish - Poland | pl-PL | Explain a formula |
+| Portuguese - Brazil | pt-BR | Explain a formula |
+| Russian - Russia | ru-RU | Explain a formula |
+| Spanish (Traditional Sort) - Spain | es-ES | Explain a formula |
+| Swedish - Sweden | sv-SE | Explain a formula |
+| Thai - Thailand | th-TH | Explain a formula |
+| Turkish - Türkiye | tr-TR | Explain a formula |
