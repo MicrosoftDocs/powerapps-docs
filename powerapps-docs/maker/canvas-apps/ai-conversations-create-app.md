@@ -23,7 +23,7 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# Build apps with Copilot in Power Apps (preview)
+# Build apps with Copilot (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 

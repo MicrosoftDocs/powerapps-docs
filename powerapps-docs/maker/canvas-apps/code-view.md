@@ -1,9 +1,9 @@
 ---
 title: Use code view for canvas app controls (preview)
-description: Learn how to use the code view in Power Apps Studio to understand your canvas app's functionality.
+description: Learn how to use the code view in Microsoft Power Apps Studio to understand your canvas app's functionality.
 author: marcelbf
 ms.author: marcelbf
-ms.date: 8/8/2024
+ms.date: 10/2/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -25,27 +25,23 @@ Use the code view feature to look at the underlying code for each control on you
 
 With code view you can:
 
-- Look at the code for each control on your screen.
+- View the code for each control on your screen.
 - Copy the code for a control and share it outside of Power Apps Studio.
 - Paste the code for a control and create a new control based on it.
 
 > [!IMPORTANT]
 >
-> - This is a preview feature and the format is subject to change. We don't guarantee compatibility with the final version.
-> - The current code format isn't suitable for source control during the preview period.
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Prerequisites
-
-Turn on the Power Fx formula bar to view the code for a control.
-
-The formula bar is **ON** by default for new apps. To turn on the Power Fx formula bar for existing apps:
-
-1. Open your app in Power Apps Studio.
-1. Select **Settings** > **Upcoming features** > **Preview**, and then turn on the **Power Fx formula bar** toggle.
+> [!NOTE]
+> The current code format seen in the code view isn't suitable for source control during the preview period.
 
 ## View, copy, and paste code
 
-Code view shows the code for the selected control and all its child controls. Use the keyboard shortcut Ctrl+F to find a specific string in the code.
+Code view shows the code for the selected control and all its child controls.
+
+Code view lets you copy and paste code to any screen in your app, or outside of Power Apps, to duplicate the control. This duplication feature is helpful when controls are highly customized and you want to share or duplicate it.
 
 ### View code
 
@@ -55,23 +51,28 @@ Code view shows the code for the selected control and all its child controls. Us
 
     :::image type="content" source="media/code-view/view-code.png" alt-text="Screenshot of the tree view in Power Apps Studio, with the View code option on a control's context menu highlighted.":::
 
-### Copy code
+> [!TIP]
+> Use the keyboard shortcut `Ctrl+F` to find a specific string in the code.
 
-1. In the code view, select **Copy code**, and then share it or paste it to create a duplicate of the selected control.
+### Copy and paste code
 
-    - To share it, paste the copied code in any window.
-    - To add a new control from the copied code, right-click the screen where you want to add the new control, and then select, **Paste code (preview)**.
+1. When viewing your code in the code view popup, select **Copy code**.
+1. Share it or paste it to create a duplicate of the selected control:
 
-    :::image type="content" source="media/code-view/paste-code.png" alt-text="Screenshot of the tree view in Power Apps Studio, with the Paste code option highlighted on a control's context menu.":::
+   - To share it, paste the copied code in any window.
+   - To add a new control from the copied code, right-click the screen where you want to add the new control, and then select, **Paste code (preview)**.
 
-    You must use the YAML format that Power Apps Studio generates. The code is validated before the new control is created.
+   :::image type="content" source="media/code-view/paste-code.png" alt-text="Screenshot of the tree view in Power Apps Studio, with the Paste code option highlighted on a control's context menu.":::
+
+> [!IMPORTANT]
+> You must use the YAML format that Power Apps Studio generates. The code is validated before the new control is created.
 
 ## Known limitations
 
 - You can't copy and paste or view the code for the **App Object**.
 - You can't edit the code in the code view.
 - You can only copy controls that are on a screen. You can't copy a screen.
-- When you paste code, the new control is positioned at coordinates X=40, Y=40. In the future, the X and Y properties that you set will be respected.
+- When you paste code, the new control is positioned at coordinates X=40, Y=40. In the future, the X and Y properties that you set are respected.
 
 ## Related information
 

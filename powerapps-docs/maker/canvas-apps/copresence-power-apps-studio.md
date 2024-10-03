@@ -1,9 +1,9 @@
 ---
-title: Collaborate on canvas apps in Power Apps Studio
+title: Collaborate on canvas apps in Microsoft Power Apps Studio
 description: Learn how to use copresence and coauthoring to view who's working on the same canvas app as you and edit it together in real time.
 author: mkaur
 ms.author: mkaur
-ms.date: 06/27/2024
+ms.date: 10/2/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -19,7 +19,11 @@ ms.custom:
 
 # Collaborate on canvas apps in Power Apps Studio
 
-You can use two features in Power Apps Studio to collaborate with other makers on canvas apps: copresence and coauthoring. Copresence lets you view who else is working on the same app as you, but only one person can edit the app at a time. Coauthoring lets multiple people edit the app at the same time and view each other's changes in real time.
+You can use two features in Power Apps Studio to collaborate with other makers on canvas apps: copresence and coauthoring.
+
+**Copresence** lets you view who else is working on the same app as you, but only one person can edit the app at a time.
+
+**Coauthoring** lets multiple people edit the app at the same time and view each other's changes in real time.
 
 ## Use copresence to view who's working on the same app
 
@@ -29,14 +33,17 @@ The first person who opens the app has editing control. If another person tries 
 
 The command bar shows the names and icons of other makers who are editing or viewing the app. The left navigation pane shows the app's structure and highlights which part of the app someone else is editing. You also get a notification to refresh the app when someone saves changes to the app.
 
-:::image type="content" source="media/copresence/canvas-copresence.png" alt-text="Screenshot of copresence indicators in Power Apps Studio with annotations.":::
+:::image type="content" source="media/copresence/canvas-copresence.png" alt-text="Screenshot of copresence indicators in Power Apps Studio with annotations." lightbox="media/copresence/canvas-copresence.png":::
 
 Legend:
 
 1. The command bar shows the names and icons of other makers who are editing or viewing the app.
 1. The left navigation pane shows the app's structure and highlights which part of the app someone else is editing.
 
-If you're inactive for two hours while you're editing an app, Power Apps asks if you want to continue editing the app or switch to read-only mode. If you don't respond, the system puts you in read-only mode so that other makers can become the editor. If autosave is turned on, the changes you made are automatically saved. If autosave isn't turned on, Power Apps notifies you that you're no longer editing and lets you save a copy of your changes.
+> [!TIP]
+> If you're inactive for two hours while editing an app, Power Apps asks if you want to continue editing or switch to read-only mode. If you don't respond, the system puts you in read-only mode so that other makers can become the editor.
+>
+> If autosave is turned on, the changes you made are automatically saved. If autosave isn't turned on, Power Apps notifies you that you're no longer editing and lets you save a copy of your changes.
 
 ## Use coauthoring (preview) to edit the same app together
 
@@ -49,7 +56,7 @@ If you're inactive for two hours while you're editing an app, Power Apps asks if
 
 Coauthoring is a new feature that allows multiple makers to edit a canvas app at the same time. When you use coauthoring, you can tell where other makers are working on the app and view their changes in real time.
 
-:::image type="content" source="media/copresence/coauthoring.png" alt-text="Screenshot of coauthoring indicators in Power Apps Studio with annotations.":::
+:::image type="content" source="media/copresence/coauthoring.png" alt-text="Screenshot of coauthoring indicators in Power Apps Studio with annotations." lightbox="media/copresence/coauthoring.png" :::
 
 Legend:
 
@@ -78,13 +85,13 @@ To use coauthoring, you need to turn it on for each app. If you turn on coauthor
   - Undo and redo
   - Switch authoring versions
 
-- The maximum number of coauthors is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any other coauthors or tabs beyond 10 are in copresence and can't edit the app or view real-time updates.
+- The maximum number of coauthors is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any other coauthors or tabs beyond 10 are in [copresence](#use-copresence-to-view-whos-working-on-the-same-app) and can't edit the app or view real-time updates.
 
 - The app language is locked to the locale of the first maker who opens the app for editing.
 
 - Cut isn't available.
 
-- Coauthoring is turned off in the Monitor tool.
+- Coauthoring is turned off in the [Monitor tool](../monitor-overview.md).
 
 - You might encounter a problem with the following actions:
 

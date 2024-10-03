@@ -21,9 +21,9 @@ ms.custom:
   - canvas
 ---
 
-# Use Copilot to create and edit Power Fx formulas in Power Apps
+# Use Copilot to create and edit Power Fx formulas
 
-Copilot is an AI feature in Power Apps that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
+Copilot is an AI feature in Power Apps Studio that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
 
 ## Prerequisites
 
