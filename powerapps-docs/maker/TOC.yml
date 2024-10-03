@@ -1212,8 +1212,14 @@
       href: ./canvas-apps/set-name-tile.md
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
-    - name: Export and import an app
-      href: ./canvas-apps/export-import-app.md
+    - name: Export and import canvas apps
+      items:
+      - name: Overview
+        href: ./canvas-apps/export-import-app.md
+      - name: Export and import apps as a package
+        href: ./canvas-apps/export-import-app-package.md  
+      - name: Export and import a single app file
+        href: ./canvas-apps/export-import-single-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
     - name: License designation for an app
@@ -1405,7 +1411,7 @@
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
-          href: ./model-driven-apps/create-a-model-driven-app.md
+          href: ./model-driven-apps/build-first-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
         - name: Work with pages

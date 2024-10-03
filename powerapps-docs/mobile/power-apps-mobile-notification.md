@@ -37,7 +37,7 @@ Create an app
 
 You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md#create-your-model-driven-app)
+- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md)
 - [Create a canvas app](../maker/canvas-apps/get-started-test-drive.md)
      
 ## Create a notification from a flow

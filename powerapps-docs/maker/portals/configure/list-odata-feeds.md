@@ -8,11 +8,10 @@ ms.custom:
 ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: dmartens
 contributors:
-    - nickdoelman
+    - danamartens
     - sandhangitmsft
-    - ProfessorKendrick
 ---
 
 # List OData feeds
