@@ -25,7 +25,7 @@ ms.collection:
 - [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 - [FAQ about building apps through conversation](faqs-build-apps-conversation.md)
 - [Create app description for canvas apps with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
-- [Create app description for model-driven apps with Copilot (preview)](../model-driven-apps/create-a-model-driven-app.md#create-an-app-description-with-copilot-preview)
+- [Create a model-driven app description with Copilot (preview)](../model-driven-apps/build-first-model-driven-app.md#create-an-app-description-with-copilot-preview)
 - [FAQ about generating app descriptions with Copilot](ai-app-descriptions-faq.md)
 - [Edit your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
 - [FAQ about editing your app with Copilot](faqs-copilot-panel.md)

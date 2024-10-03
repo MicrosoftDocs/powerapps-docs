@@ -204,6 +204,45 @@ The **Header and table** screen has the following controls:
 
 1. In the tree view, select **Table** and connect it to a data source.
 
+## Table and form
+
+The Table and form screen contains two main controls: the modern table control and the modern form control. This template has built-in Power Fx formulas to allow easy data connection and customization. This template is ideal for selecting and editing a record using a form.  
+
+The Table and form screen contains the following controls:
+
+- Screen container
+  - Header container
+    - Header control
+  - Body container
+    - Text input (Search)
+    - Table control
+    - Form control
+    - Button
+      - New
+      - Edit
+      - Delete
+      - Submit
+      - Cancel
+
+### Add and customize Table and form screen
+
+In Power Apps Studio:
+
+1. Select **Add Screen** > **Table and form**.
+1. Select the screen in the canvas.
+1. Select **Data** in the inline action bar.
+1. Select the desired data source.
+
+   :::image type="content" source="media\add-screen-context-variables\select-data-source.png" alt-text="Screenshot that shows the location of the Data button, where you can select a data source from a list.":::
+
+Once connected, the table and form controls are both bound to the data source.
+
+You can select a record in the table control and the form displays the details of the selected record.
+
+All buttons in this template have prebuilt Power Fx, so there's no need for further customization. When you connect the screen to the selected data source, the screen is now fully functional.
+
+:::image type="content" source="media\add-screen-context-variables\screen-view-connected.png" alt-text="Screenshot that shows the screen view when connected to a data source: a data list and its form elements.":::
+
 ## Reorder screens
 
 When you have more than one screen in your app, you can put them in a different order in your tree view.
@@ -230,10 +269,12 @@ When you have more than one screen in your app, you can add navigation so that y
 
     In this example, when a user selects the arrow, the target screen fades in.
 
-1. On the *Target* screen, add a **Back arrow** icon the same way. Set its **[OnSelect](controls/properties-core.md)** property; for example, **Navigate(*Target*, ScreenTransition.Fade)**.
+1. On the *Target* screen, add a **Back arrow** icon the same way. Set its [OnSelect](controls/properties-core.md) property, for example, `Navigate(Target, ScreenTransition.Fade)`.
 
-    Replace *Target* with the name of the screen where you want to return.
+   Replace *Target* with the name of the screen where you want to return.
 
 ## Related information
 
-- [Screen-control reference](controls/control-screen.md)
+[Screen-control reference](controls/control-screen.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

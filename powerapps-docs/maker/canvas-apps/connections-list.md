@@ -15,7 +15,6 @@ contributors:
   - lancedMicrosoft
   - mduelae
   - alaug
-  - ProfessorKendrick
 ---
 # Overview of connectors for canvas apps
 
