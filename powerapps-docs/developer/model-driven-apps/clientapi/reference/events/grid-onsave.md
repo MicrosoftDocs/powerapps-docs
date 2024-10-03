@@ -31,12 +31,10 @@ Editable grid suppresses duplicate detection rules.
 
 [!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
 
-### Related article
+### Related articles
 
-[Form OnSave Event](form-onsave.md)
-
-
-
-
+[Form OnSave Event](form-onsave.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
