@@ -44,9 +44,7 @@ Copilot is a feature in Power Apps that helps you edit your apps with AI assista
 
 ## Prerequisites
 
-[Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#turn-on-copilots-and-generative-ai-features-1).
-
-Learn more in [Copilot in Power Apps overview (preview)](ai-overview.md).
+Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
 ## Supported languages
 

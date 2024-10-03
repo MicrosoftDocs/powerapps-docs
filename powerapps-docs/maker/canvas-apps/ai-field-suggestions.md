@@ -27,9 +27,7 @@ Copilot is an AI feature in Microsoft Power Apps that helps you select the best 
 
 ## Prerequisites
 
-- [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#turn-on-copilots-and-generative-ai-features-1). Learn more in [Copilot in Power Apps overview (preview)](ai-overview.md).
-
-- Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
 ## Use field suggestions
 

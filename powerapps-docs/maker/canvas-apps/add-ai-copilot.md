@@ -35,15 +35,9 @@ The Copilot control is an AI assistant that you can add to your canvas apps in M
 >
 > This feature is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 
-## Availability
-
-- This feature might be subject to usage limits or capacity throttling.
-- Copilot doesn't work in environments that have a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
-
 ## Prerequisites
 
-- Your environment must be in the United States region with your browser language set to English (United States). Check regions for the future in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
-- [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#turn-on-copilots-and-generative-ai-features-1) to allow data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
 ### Set up Copilot for your environment
 

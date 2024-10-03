@@ -1,5 +1,5 @@
 ---
-title: Build apps with Copilot in Power Apps (preview)
+title: Build apps through conversation with Copilot (preview)
 description: Build apps easily with AI in Microsoft Power Apps. Describe the information you want to collect, track, or show in your app, and Copilot creates Dataverse tables and guides you through the process.
 author: mduelae
 ms.topic: conceptual
@@ -23,7 +23,7 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# Build apps with Copilot (preview)
+# Build apps through conversation with Copilot (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
@@ -35,11 +35,11 @@ Depending on whether you use the preview or generally available (GA) version of 
 
 - The preview version is available in English. The GA version is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish.
 
-- The preview version has features that aren't available in the GA version. However, you use Copilot the same way in both versions to start building your app. These differences are explained in this article. 
+- The preview version has features that aren't available in the GA version. However, you use Copilot the same way in both versions to start building your app. These differences are explained in this article.
 
 ## Prerequisites
 
-- [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#turn-on-copilots-and-generative-ai-features-1). Learn more in [Copilot in Power Apps overview (preview)](ai-overview.md).
+- Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
 - Depending on where your environment is hosted, you might need to allow data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 

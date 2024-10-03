@@ -43,15 +43,19 @@ In this article, you learn how to use Copilot features in Power Apps.
 >
 > This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 
-## Availability
+## Prerequisites
+
+Each Copilot feature might have different requirements. Refer to the specific documentation for each feature in the following articles.
+
+If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-copilot-in-power-apps).
+
+Copilot doesn't work in environments that have a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
+
+### Availability
 
 - This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - This capability might be subject to usage limits or capacity throttling.
 - Understand the capabilities and limitations of AI-powered and Copilot features in Power Apps. Learn more in [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
-
-## Prerequisites
-
-Each Copilot feature might have different requirements. Refer to the specific documentation for each feature in the following articles.
 
 ## Copilot use in Power Apps
 
@@ -80,7 +84,7 @@ The following articles can help you build various apps in different scenarios us
 
 - [Add knowledge to an existing copilot: Dataverse](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
 
-## (Optional) Disable Copilot in Power Apps
+## Disable Copilot in Power Apps
 
 Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant.
 
