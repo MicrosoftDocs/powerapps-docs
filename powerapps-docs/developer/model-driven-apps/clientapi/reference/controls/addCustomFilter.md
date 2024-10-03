@@ -1,8 +1,8 @@
 ---
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
-author: chmoncay
-ms.author: chmoncay
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
