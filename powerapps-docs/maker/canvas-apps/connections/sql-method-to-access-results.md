@@ -26,7 +26,7 @@ Typical formulas for views and stored procedures
 
 | Control | Property |  Formula| Description |
 | --- | --- | --- | --- | 
-|Gallery or Table |Items  |`Data Source`|This is your view data source can be further refined with a [Filter](/power-platform/power-fx/reference/function-filter-lookup) and a [StartsWith](/power-platform/power-fx/reference/function-startswith).  The additional generated query clauses are ‘anded’ onto the existing query.
+|Gallery or Table |Items  |`Data Source`|This is your view data source can be further refined with a [Filter](/power-platform/power-fx/reference/function-filter-lookup) and a [StartsWith](/power-platform/power-fx/reference/function-startswith).  The other generated query clauses are ‘anded’ onto the existing query.
 |Form |DataSource  |`Data Source`|The **view data source**..
 |Submit Button/Icon on a form|[OnSelect](/power-apps/maker/canvas-apps/controls/properties-core)  |`Data source’.dboSPName({ args}); Refresh (‘Data Source’)`|The first Data Source in this formula is the **stored procedure data source** – the one that holds your stored procedure.  The Data Source in the refresh formula is the view data source.  .
 |Delete Button/Icon on a form.  |[OnSelect](/power-apps/maker/canvas-apps/controls/properties-core)  |`SP Data source’.dboSPName({ args}); Refresh (‘View Data Source’)`|The first Data Source in this formula is the **stored procedure data source** – the one that holds your stored procedure. The Data Source in the refresh formula is the **view data source**.  
@@ -53,7 +53,7 @@ Take note to use the parameter name as it appears in the JSON payload.
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ResultSets.Table1
 ```
 
-Additional tables can be accessed via their name (for example, Table1, Table2, Table3, ... )
+Other tables can be accessed via their name (for example, Table1, Table2, Table3, ... )
 
 ## Untyped results
 
