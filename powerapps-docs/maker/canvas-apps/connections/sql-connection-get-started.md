@@ -15,7 +15,7 @@ contributors:
   - lancedmicrosoft
 ---
 
-# Get started with connecting to SQL Server from Power Apps
+# Get started with connecting to SQL from Power Apps
 
 
 To connect to SQL from Power Apps, you can use the following methods:
