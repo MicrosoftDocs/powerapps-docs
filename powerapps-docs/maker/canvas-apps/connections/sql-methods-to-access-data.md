@@ -47,7 +47,7 @@ Enable this option **only if**:
 2. The amount of data you return in the stored procedure is **modest**. Action calls, such as stored procedures, **do not have a limit on the number of rows retrieved**. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views. So, if the stored procedure returns too much data (many thousands of records) then your app might slow down or crash. For performance reasons, you should bring in less than 2,000 records.
 
 > [!IMPORTANT]
-> The schema of the return values of the stored procedure should be **static**. Meaning that it doesn't change from call to call. For example, if you call a stored procedure and it returns two tables, then it should **always** return two tables. You can work with either typed or untyped results. The structure of the results need to be the same from call to call. If the schema of the results are **dynamic**, then results will be untyped and you will need to provide a type in order to use them in Power Apps. For more information, go to [Untyped results](#untyped-results).
+> The schema of the return values of the stored procedure should be **static**. Meaning that it doesn't change from call to call. For example, if you call a stored procedure and it returns two tables, then it should **always** return two tables. You can work with either typed or untyped results. The structure of the results need to be the same from call to call. If the schema of the results are **dynamic**, then results will be untyped and you will need to provide a type in order to use them in Power Apps. For more information, see [Untyped results](sql-methods-to-access-results#untyped-results).
 
 ### SQL namespace pre-pended to stored procedure name
 
