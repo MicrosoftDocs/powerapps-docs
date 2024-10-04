@@ -9204,6 +9204,16 @@
     "source_path": "powerapps-docs/maker/model-driven-apps/create-a-model-driven-app.md",
     "redirect_url": "/power-apps/maker/model-driven-apps/build-first-model-driven-app",
     "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/portals/configure/azure-ad-b2c.md",
+    "redirect_url": "/power-pages/configure/azure-ad-b2c",
+    "redirect_document_id": false
+   },
+   {
+    "source_path": "powerapps-docs/maker/portals/configure/list-odata-feeds.md",
+    "redirect_url": "/power-pages/configure/web-api-overview",
+    "redirect_document_id": false
    }
   ]
 }

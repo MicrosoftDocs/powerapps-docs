@@ -1880,7 +1880,7 @@
     - name: Create custom Portal Management app
       href: ./portals/configure/create-custom-portal-management-app.md
     - name: Customize the Microsoft Entra B2C user interface
-      href: ./portals/configure/azure-ad-b2c.md
+      href: /power-pages/configure/azure-ad-b2c.md
 - name: Dataverse
   items:
   - name: Dataverse
