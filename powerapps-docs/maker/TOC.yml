@@ -370,10 +370,12 @@
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
               items:
-                - name: Connect to SQL Server from Power Apps
-                  href: canvas-apps/connections/connection-azure-sqldatabase.md
-                - name: Use SQL Server securely with Power Apps
-                  href: canvas-apps/connections/sql-server-security.md
+                - name: Get started
+                  href: canvas-apps/connections/sql-connection-get-started.md
+                - name: Methods to access data
+                  href: canvas-apps/connections/sql-methods-to-access-data.md
+                - name: Methods to access results
+                  href: canvas-apps/connections/sql-method-to-access-results.md  
             - name: Twitter
               href: canvas-apps/connections/connection-twitter.md
         - name: Add a connection
