@@ -141,6 +141,8 @@ Note the following limitations when you add the form component control to a tabl
 
 - Form component controls aren't supported in bulk edit dialogs. They won't appear in the form in the bulk edit dialog by default and any changes made to related table records with them won't be saved.
 
+- When duplicate records are detected when a form component control is saved, users may not be able to view the duplicates to resolve conflicts.
+
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
