@@ -37,8 +37,18 @@ $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
 if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
    Connect-AzAccount | Out-Null
 }
+
 # Get an access token
-$token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+$secureToken = (Get-AzAccessToken `
+   -ResourceUrl $environmentUrl `
+   -AsSecureString).Token
+
+# Convert the secure token to a string
+$token = ConvertFrom-SecureString `
+   -SecureString $secureToken `
+   -AsPlainText
+
+
 # Common headers
 $baseHeaders = @{
    'Authorization'    = 'Bearer ' + $token

@@ -54,7 +54,7 @@ To prevent users from using the **See web results** option to perform external w
 
 ## Manage search providers
 
-The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Global admins, Microsoft Entra Global admins, or Dynamics 365 admin security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Power Platform administrator or Dynamics 365 administrator security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 
 By default, all search providers are enabled, except for the docs search provider `PowerPlatform.Search.disableDocsSearch`. The following search providers can be enabled or disabled.
 

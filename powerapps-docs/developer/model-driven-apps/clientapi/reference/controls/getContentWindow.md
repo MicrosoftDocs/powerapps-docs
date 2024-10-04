@@ -1,8 +1,8 @@
 ---
 title: "getContentWindow (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getContentWindow method.
-author: chmoncay
-ms.author: chmoncay
+author: clromano
+ms.author: clromano
 ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: reference

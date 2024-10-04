@@ -60,7 +60,14 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
       }
 
       # Get an access token
-      $token = (Get-AzAccessToken -ResourceUrl $uri).Token
+      $secureToken = (Get-AzAccessToken `
+         -ResourceUrl $environmentUrl `
+         -AsSecureString).Token
+
+      # Convert the secure token to a string
+      $token = ConvertFrom-SecureString `
+         -SecureString $secureToken `
+         -AsPlainText
 
       # Define common set of headers
       $global:baseHeaders = @{
@@ -726,7 +733,16 @@ if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
    Connect-AzAccount | Out-Null
 }
 # Get an access token
-$token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+$secureToken = (Get-AzAccessToken `
+   -ResourceUrl $environmentUrl `
+   -AsSecureString).Token
+
+# Convert the secure token to a string
+$token = ConvertFrom-SecureString `
+   -SecureString $secureToken `
+   -AsPlainText
+
+
 # Common headers
 $xmlHeaders = @{
    'Authorization'    = 'Bearer ' + $token
