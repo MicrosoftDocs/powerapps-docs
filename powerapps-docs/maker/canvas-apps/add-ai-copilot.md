@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-The Copilot control is an AI assistant that you can add to your canvas apps in Microsoft Power Apps. Copilot lets app users get insights about the data in your app through natural language conversations with an AI-powered copilot. You can add the control to any canvas app and choose which data provide answers.
+The Copilot control is an AI assistant that you can add to your canvas apps. Copilot lets app users get insights about the data in your app through natural language conversations with an AI-powered copilot. Makers can add the control to any canvas app and choose which data provide answers.
 
 > [!IMPORTANT]
 >
@@ -43,12 +43,7 @@ Copilot doesn't work in environments that have a customer-managed key or [Custom
 
 ### Set up Copilot for your environment
 
-Before app users can use the Copilot chat experience in a canvas app, a Power Platform administrator must enable the following settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home).
-
-- Open your environment and go to **Settings** > **Product** > **Features**.
-- Under **Copilot**, turn **On** these settings:
-  - **Enable new AI-powered Copilot features for people who make apps**
-  - **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**
+Before app users can use the Copilot chat experience in a canvas app, a Power Platform administrator must enable **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home). For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 :::image type="content" source="media/copilot/copilot-for-app-users-on.png" alt-text="Screenshot of the Power Platform admin center environment settings, showing Copilot features.":::
 
