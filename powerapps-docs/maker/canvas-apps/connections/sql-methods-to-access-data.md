@@ -16,7 +16,7 @@ contributors:
   - lancedmicrosoft
 ---
 
-# Connect to SQL Server from Power Apps
+# Methods to access data
 
 One common access pattern is to use a view (or table) and then stored procs for create, update, and delete.  This pattern accommodates a table with a trigger added to log changes to an audit table.  A strong benefit for this pattern is that it leverages the built-in paging capability of Power Apps for galleries or tables which helps keep the app performant.
 
