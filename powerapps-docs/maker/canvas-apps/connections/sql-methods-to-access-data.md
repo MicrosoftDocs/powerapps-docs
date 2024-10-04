@@ -25,9 +25,9 @@ One common access pattern is to use a view (or table) and then stored procs for 
 
 ## Using a view 
 
-Views show up in the list of tables you can select from if you add the data source.  Views only support queries – not updates.  You must use a stored procedure for these actions.   
+Views show up in the list of tables you can select from if you add the data source.  Views only support queries – not updates.  You must use a stored procedure for these actions.
 
-### Using views and stored procedures with `Start with data` 
+### Using views and stored procedures with `Start with data`
 
 If you use a table with `Start with data`, you will get screens and formulas that allow for display of records in a gallery and form.  And you will get formulas and functionality for creation, editing, and deletion. However, if you use a view you will only get a display screen for the gallery and form.  If you want the auto-generated screens from `Start with data` for a views and stored procedures then first choose to run `Starts with data` with a basic table and then delete the table data source and then replace the table data source and other create, update, and delete formulas with a view data source and stored procedure calls.  
 
@@ -61,7 +61,7 @@ When you add a stored procedure, you might see more than one data source in your
 
 ### Calling a stored procedure
 
-To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. 'Paruntimedb.dbonewlibrarybook' in the example illustrates this pattern. When Power Apps brings the stored procedure in, it concatenates the namespace and the procedure name, and 'dbo.newlibrarybook' becomes 'dbonewlibrarybook'.  
+To use a stored procedure in Power Apps, first prefix the stored procedure name with the name of connector associated with it and the name the stored procedure. `Paruntimedb.dbonewlibrarybook` in the example illustrates this pattern. When Power Apps brings the stored procedure in, it concatenates the namespace and the procedure name, and `dbo.newlibrarybook` becomes `dbonewlibrarybook`.  
 
 Arguments are passed as a Power Apps record with named value pairs:
 
@@ -69,15 +69,15 @@ Arguments are passed as a Power Apps record with named value pairs:
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >})
 ```
 
-Remember to convert values as necessary as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using 'Value()'.
+Remember to convert values as necessary as you pass them into your stored procedure as necessary since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using `Value()`.
 
 ![Calling stored procedures directly.](media/connection-azure-sqldatabase/calling-sp-directly.png "Calling stored procedures directly.")
 
 ## Variables and all stored procs 
 
-You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by 'ResultSets'. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
+You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by `ResultSets`. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
 
-For example, your access of a stored procedure off of a data source named 'Paruntimedb' with a stored procedure named 'dbo.spo_show_all_library_books()' will look like the following.
+For example, your access of a stored procedure off of a data source named `Paruntimedb` with a stored procedure named `dbo.spo_show_all_library_books()` will look like the following.
 
 ```power-fx
 Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1
@@ -93,7 +93,7 @@ To get around this limitation, use a variable in the OnVisible property for the 
 Set(SP_Books, Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1);
 ```
 
-And then set the 'Items' property of the gallery to the variable name.
+And then set the `Items` property of the gallery to the variable name.
 
 ```power-fx
 SP_Books
