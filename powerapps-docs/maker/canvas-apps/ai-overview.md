@@ -49,8 +49,6 @@ Each Copilot feature might have different requirements. Refer to the specific do
 
 If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-copilot-in-power-apps).
 
-Copilot doesn't work in environments that have a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
-
 ### Availability
 
 - This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).

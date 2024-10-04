@@ -64,7 +64,7 @@ The **Welcome screen** has the following template for controls:
 
 ### Add and customize the Welcome screen
 
-1. Select **New Screen** > **Welcome screen**.
+1. Select **New screen** > **Welcome screen**.
 
 1. To change the image of a tile, select it and then select **Edit**.
 
@@ -137,7 +137,7 @@ The **Approval request** screen has the following template for controls:
       - Reviewers text
       - Reviewers gallery
 
-:::image type="content" source="media/add-screen-context-variables/approval-request-screen.png" alt-text="Screenshot showing the Header and gallery screen." lightbox="media/add-screen-context-variables/approval-request-screen.png":::
+:::image type="content" source="media/add-screen-context-variables/approval-request-screen.png" alt-text="Screenshot showing the Approval request screen." lightbox="media/add-screen-context-variables/approval-request-screen.png":::
 
 ### Add and customize the Approval request screen
 
@@ -224,12 +224,13 @@ The Table and form screen contains the following controls:
       - Submit
       - Cancel
 
+:::image type="content" source="media/add-screen-context-variables/table-and-form-screen.png" alt-text="Screenshot showing theTable and form screen." lightbox="media/add-screen-context-variables/table-and-form-screen.png":::
+
 ### Add and customize Table and form screen
 
 In Power Apps Studio:
 
-1. Select **Add Screen** > **Table and form**.
-1. Select the screen in the canvas.
+1. Select **New Screen** > **Table and form**.
 1. Select **Data** in the inline action bar.
 1. Select the desired data source.
 
@@ -241,7 +242,7 @@ You can select a record in the table control and the form displays the details o
 
 All buttons in this template have prebuilt Power Fx, so there's no need for further customization. When you connect the screen to the selected data source, the screen is now fully functional.
 
-:::image type="content" source="media\add-screen-context-variables\screen-view-connected.png" alt-text="Screenshot that shows the screen view when connected to a data source: a data list and its form elements.":::
+:::image type="content" source="media\add-screen-context-variables\screen-view-connected.png" alt-text="Screenshot that shows the screen view when connected to a data source: a data list and its form elements with a submit button." lightbox="media\add-screen-context-variables\screen-view-connected.png" :::
 
 ## Reorder screens
 

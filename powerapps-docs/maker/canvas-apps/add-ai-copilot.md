@@ -39,6 +39,8 @@ The Copilot control is an AI assistant that you can add to your canvas apps in M
 
 Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
+Copilot doesn't work in environments that have a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
+
 ### Set up Copilot for your environment
 
 Before app users can use the Copilot chat experience in a canvas app, a Power Platform administrator must enable the following settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home).
