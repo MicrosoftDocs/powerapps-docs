@@ -24,7 +24,8 @@ To create an app from a template, you need a cloud-storage account (such as Drop
 
 If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
-If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+If you don't have an organization account or aren't part of a tenant or organization account, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can [sign up for a 1-month free trial or purchase a Microsoft 365 plan](https://www.microsoft.com/en-us/microsoft-365/try).
+
 
 ## Create an app
 
