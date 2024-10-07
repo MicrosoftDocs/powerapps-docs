@@ -31,7 +31,7 @@ Add a variety of UI elements to your canvas app, and configure aspects of their 
 
 Let's add a new screen and a button control. However, you can add any type of control.
 
-1. Select **Insert** from the [authoring menu](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio#5--app-authoring-menu), then select **New screen**.
+1. Select **Insert** from the [authoring menu](power-apps-studio.md#5--app-authoring-menu), then select **New screen**.
 1. Choose **Blank** to add a blank screen to your app. (Screens are a type of control that can contain other types of controls.)
 
    :::image type="content" source="./media/add-configure-controls/add-screen.png" alt-text="Screenshot that shows how to add a new screen from the Insert menu option.":::
@@ -167,6 +167,5 @@ Formulas are usually much more complex than this example so that they can update
 
 - Find step-by-step procedures for configuring common controls such as [screens](add-screen-context-variables.md), [lists](add-list-box-drop-down-list-radio-button.md), [galleries](add-gallery.md), [forms](add-form.md), and [charts](use-line-pie-bar-chart.md).
 - Find reference information about each type of control in the [control reference](reference-properties.md).
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
