@@ -79,7 +79,7 @@ When enabled by your system administrator, the email option displays in the top 
 
 ## Enhanced recipient handling 
 
-If your administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form, users can perform the following actions:
+Users can perform the following actions only if the administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form:
 
  - Drag and drop recipient names across **To**, **CC**, and **BCC** fields.
  - View the recipient's email address along with their names.
