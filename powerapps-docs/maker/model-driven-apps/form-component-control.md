@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 07/09/2024
+ms.date: 10/07/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -141,7 +141,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Form component controls aren't supported in bulk edit dialogs. They won't appear in the form in the bulk edit dialog by default and any changes made to related table records with them won't be saved.
 
-- When duplicate records are detected when a form component control is saved, users may not be able to view the duplicates to resolve conflicts.
+- When duplicate records are detected when a form component control is saved, users might not be able to view the duplicates to resolve conflicts.
 
 ### See also
 
