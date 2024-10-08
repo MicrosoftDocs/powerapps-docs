@@ -89,7 +89,7 @@ Learn more in [Quickstart: Create and deploy a copilot](/microsoft-copilot-studi
 
 ## Collect feedback from app users
 
-App users can indicate how satisfied they are with the copilot's responses by selecting the **Like** (thumbs up) or **Dislike** (thumbs down) button for each response. They can enter detailed feedback in the text box and then select **Submit**.
+Makers and app users can provide feedback on how satisfied they are with the copilot's responses by selecting the **Like** (thumbs up) or **Dislike** (thumbs down) button for each response. They can enter detailed feedback in the text box and then select **Submit**.
 
 Their feedback is sent to Microsoft to help us improve the Copilot control. 
 
