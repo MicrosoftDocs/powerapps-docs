@@ -24,13 +24,7 @@ contributors:
 
 ## Prerequisites
 - To use this feature, Power Fx formula bar must be turned on.
-    1. Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
-    1. On the command bar, select **Settings** > **Upcoming features**.
-    1. From the **Preview** tab, set the toggle for **Power Fx formula bar** to **On**.
-
 - Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
-- Your browser and Power Apps language settings must be set to **English (United States)**.
-To use this feature, Power Fx formula bar must be turned on in app settings.
 > [!NOTE]
 > AI generated content may be inaccurate and should be checked for accuracy.
 
