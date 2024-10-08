@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 12/15/2023
+ms.date: 10/08/2024
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -72,10 +72,13 @@ To create an app registration for a username/password authentication flow, and f
 9. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option
 
 10. Select **Grant admin consent for \<name>** even though it looks like it is already checked. Next, on the popup, select **Yes** to grant consent. If you do not approve consent here, your app will receive a consent error at run-time.
+  > [!NOTE]
+  > If the **Grant admin consent for \<name>** is ghosted (non-selectable), you do not have permission to set this value.
+  > More information: [Admin consent button](/entra/identity-platform/quickstart-configure-app-access-web-apis#admin-consent-button), [User and admin consent in Microsoft Entra ID](/entra/identity/enterprise-apps/user-admin-consent-overview)
 
-11. Select **Add permissions**.
+12. Select **Add permissions**.
 
-12. (Optional) On the **Authentication** page under **Advanced settings** and **Allow public client flows**, select **Yes** and then **Save**. See the description in the next paragraphs for more information.
+13. (Optional) On the **Authentication** page under **Advanced settings** and **Allow public client flows**, select **Yes** and then **Save**. See the description in the next paragraphs for more information.
 
 During authentication, if the client app does not supply a password for a username/password flow, the app user will be prompted for logon credentials in a browser window.
 
