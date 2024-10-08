@@ -77,10 +77,11 @@ Copilot Studio is an app that lets you create and edit copilots for your apps. Y
 
 You can customize your newly connected copilot in Power Apps through the properties menu in Power Apps.
 
+
 1. With the Copilot control on your canvas selected, choose **Edit** next to the **Customize copilot** field in **Properties**.
 
 1. If you don't have a copilot created already, select **Create new copilot** in the **Customize Copilot** pane. A Copilot control in Power Apps Studio does not support enabling an existing Copilot from Copilot Studio.
-2. 
+ 
    :::image type="content" source="media/copilot/edit-in-copilot-studio.png" alt-text="Screenshot of the Copilot control properties pane, with the Edit and Edit in Copilot Studio buttons highlighted." lightbox="media/copilot/edit-in-copilot-studio.png":::
 
    [Copilot Studio](https://web.powerva.microsoft.com/) opens in a new tab. Any modifications made in Copilot Studio appear in your connected copilot in your Power Apps app.
