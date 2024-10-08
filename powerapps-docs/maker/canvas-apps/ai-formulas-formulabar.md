@@ -52,11 +52,9 @@ Use Copilot in the formula bar to understand what a formula is doing.
 - Copilot in Power Apps is only aware of default properties.
 - User defined functions aren't supported.
 
-## Copilot comment generated formulas (preview)
+## Copilot comment generated formulas
 
-[This section is prerelease documentation and is subject to change.]
-
-When you add a comment in the formula bar, Copilot will provide a suggested formula. You have the option to accept the suggestion or manually type the formula. These comments can serve as documentation in the formula bar, just like regular code comments.
+When you add a comment in the formula bar, Copilot will attempt to provide a suggested formula. You have the option to accept the suggestion or manually type the formula. These comments can serve as documentation in the formula bar, just like regular code comments.
 
 1. With your canvas app open for editing, type a code comment using **//** or **/*** in the formula bar.
 :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Typed comment":::
@@ -79,7 +77,6 @@ When you add a comment in the formula bar, Copilot will provide a suggested form
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for that property aren't included in the recommendation.
 - User defined functions aren't supported.
-- This feature isn't available in the Canada region.
 
 
 ### Enable or disable Copilot comment generated formulas
@@ -87,10 +84,10 @@ When you add a comment in the formula bar, Copilot will provide a suggested form
 
  Copilot comment generated formulas are enabled by default for new apps, and disabled by default for existing apps, but can be enabled or disabled for any app from app settings.
 
-- Go to **Settings** > **Upcoming features**. Set the toggle to **On** or **Off** for **Copilot comment-generated formulas**.
+- Go to **Settings** > **Upcoming features** > **New**. Set the toggle to **On** or **Off** for **Copilot comment-generated formulas**.
 
 > [!NOTE]
-> When **Copilot comment generated formulas** is fully integrated into the platform and generally available, it won't be possible to disable it.
+> When **Copilot comment generated formulas** is fully integrated into the platform, it will be enabled for all apps and it will not be possible to disable it.
 
 ## Responsible AI
 
