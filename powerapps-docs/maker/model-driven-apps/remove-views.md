@@ -1,5 +1,5 @@
 ---
-title: "Delete or deactivate a model-driven app view in Power Apps"
+title: "Delete or turn off a model-driven app view in Power Apps"
 description: "Learn how to delete or deactivate a view"
 ms.custom: ""
 ms.date: 10/08/2024
@@ -19,7 +19,7 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Delete or deactivate a model-driven app view
+# Delete or turn off a model-driven app view
 
 Views allow the data in Microsoft Dataverse tables to be presented in a way that meets a business need at a given time.
 
