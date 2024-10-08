@@ -72,9 +72,9 @@ To create an app registration for a username/password authentication flow, and f
 9. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option
 
 10. Select **Grant admin consent for \<name>** even though it looks like it is already checked. Next, on the popup, select **Yes** to grant consent. If you do not approve consent here, your app will receive a consent error at run-time.
-  > [!NOTE]
-  > If the **Grant admin consent for \<name>** is ghosted (non-selectable), you do not have permission to set this value.
-  > More information: [Admin consent button](/entra/identity-platform/quickstart-configure-app-access-web-apis#admin-consent-button), [User and admin consent in Microsoft Entra ID](/entra/identity/enterprise-apps/user-admin-consent-overview)
+    > [!NOTE]
+    > If the **Grant admin consent for \<name>** is ghosted (non-selectable), you do not have permission to set this value.
+    > More information: [Admin consent button](/entra/identity-platform/quickstart-configure-app-access-web-apis#admin-consent-button), [User and admin consent in Microsoft Entra ID](/entra/identity/enterprise-apps/user-admin-consent-overview)
 
 12. Select **Add permissions**.
 
