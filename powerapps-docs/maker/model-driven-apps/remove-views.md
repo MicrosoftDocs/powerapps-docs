@@ -29,7 +29,7 @@ The views that are required in an organization might change over time. It's good
 
 Depending on the type of view, you can either turn it off or delete it. Turned off views can be turned on again, while the deletion of a view is permanent.
 
-- Custom public views can both be deleted and turned off/on. Public views that are standard with Dataverse, such as the active accounts and inactive accounts standard public views can also be turned off/on.
+- Custom table public views can both be deleted and turned off/on. Public views that are standard with Dataverse, such as the active accounts and inactive accounts standard public views can be turned off/on.
 - [System views](create-edit-views.md#system-views) can't be  deleted or turned off/on. This includes public views created by the system.
 
 ## Turn on or turn off views
