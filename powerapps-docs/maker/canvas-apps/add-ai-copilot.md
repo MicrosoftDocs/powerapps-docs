@@ -85,7 +85,7 @@ To connect the **Copilot (preview)** control to a Copilot Studio Copilot, you mu
 ### Create a new copilot  
 
 1. On the app authoring menu, select **Insert** > **Copilot (preview)**.
-2. On the properties pane, select **Edit** next to the **Customize copilot** property and then select **Create new copilot** to create a new copilot using Microsoft Copilot Studio. You can also set this value to an existing copilot in the **Advanced** properties tab.
+2. On the properties pane, select **Edit** next to the **Customize copilot** property and then select **Create new copilot** to create a new copilot using Microsoft Copilot Studio. A Copilot control in Power Apps Studio does not support enabling an existing Copilot from Copilot Studio.
   
    > [!div class="mx-imgBorder"]
    > ![Create a new copilot.](media/copilot/customize-copilot.png)
