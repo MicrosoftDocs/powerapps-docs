@@ -34,8 +34,6 @@ Copilot is an AI feature in Power Apps Studio that helps you create and modify P
   1. On the command bar, select **Settings** > **Updates**.
   1. From the **Preview** tab, turn on the **Copilot comment-generated formulas** toggle.
 
-     :::image type="content" source="media/copilot/copilot-formula-setting.png" alt-text="Screenshot that shows where to find the Copilot comment-generated formula setting." lightbox="media/copilot/copilot-formula-setting.png":::
-
 - Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
 - Your browser and Power Apps language settings must be set to **English (United States)**.
 
