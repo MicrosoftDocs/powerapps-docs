@@ -1,5 +1,5 @@
 ---
-title: Build apps through conversation with Copilot (preview)
+title: Build apps through conversation with Copilot 
 description: Build apps easily with AI in Microsoft Power Apps. Describe the information you want to collect, track, or show in your app, and Copilot creates Dataverse tables and guides you through the process.
 author: mduelae
 ms.topic: conceptual
@@ -23,19 +23,11 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# Build apps through conversation with Copilot (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Build apps through conversation with Copilot 
 
 Create apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe what you want your app to do, and AI does the rest.
 
 Copilot is a feature in Power Apps that helps you build apps with AI assistance. You can access Copilot from the Power Apps home screen. Type what kind of information you want to collect, track, or show in your app, and Copilot generates one or more Microsoft Dataverse tables that you can use to build your canvas app.
-
-Depending on whether you use the preview or generally available (GA) version of Copilot in Power Apps, your experience might be different.
-
-- The preview version is available in English. The GA version is available in English, Dutch, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish.
-
-- The preview version has features that aren't available in the GA version. However, you use Copilot the same way in both versions to start building your app. These differences are explained in this article.
 
 ## Prerequisites
 
@@ -43,19 +35,10 @@ Depending on whether you use the preview or generally available (GA) version of 
 
 - Depending on where your environment is hosted, you might need to allow data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
-### Prerequisites for the preview version
-
-Turn on the preview toggle from your Power Apps home screen, **Try the new data experience**.
-
-:::image type="content" source="media/artificial-intelligence/preview-copilot-toggle.png" alt-text="Screenshot that shows the location of the new Copilot experience toggle.":::
-
-### Prerequisites for the GA version
-
 - Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
 - Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
-- Turn the **Try the new data experience** toggle off.
 
 ## Create an app with Copilot
 
@@ -74,9 +57,9 @@ Copilot creates one or more Dataverse tables with data that includes typical hot
 
 ## Review the table
 
-Copilot generates one (GA version) or more (preview version) tables and relationships based on your description. Review them and make any changes you need to before you go on to create your app.
+Copilot generates tables and relationships based on your description. Review them and make any changes you need to before you go on to create your app.
 
-### Review the tables for your app (preview version)
+### Review the tables for your app
 
 Copilot shows you the tables and relationships that it generated based on your description.
 
@@ -92,23 +75,6 @@ Legend:
 
 1. **Save and open app**: Save your tables and create your app. To start over, select **Back**.
 
-### Review the table for your app (GA version)
-
-Copilot shows you the table that it generated based on your description.
-
-:::image type="content" source="media/artificial-intelligence/data-workspace-copilot-2.png" alt-text="Screenshot of a Dataverse table for a hotel housekeeping app, with numbered annotations." lightbox="media/artificial-intelligence/data-workspace-copilot-2.png":::
-
-**Legend**:
-
-1. **Suggestions**: Suggested commands that you can ask Copilot to do to help you finalize the table.
-
-1. **View column**: View or update the column properties.
-
-1. **Edit table name**: View or update the table properties.
-
-1. **Copilot text box**: [Ask Copilot to modify the table](#use-copilot-to-make-changes) for you.
-
-1. **Create app**: Save your table and create your app. To start over, select **Cancel**.
 
 ## Use Copilot to make changes
 
@@ -122,7 +88,7 @@ For example, ask Copilot to add columns to track cleaning start and end time.
 
 1. Continue editing the table as needed. For example, add room status, change room types, or set a priority level for each room.
 
-1. When you're ready to create your app, select **Save and open app** (preview version) or **Create app** (GA version).
+1. When you're ready to create your app, select **Save and open app**.
 
 ## Related information
 
