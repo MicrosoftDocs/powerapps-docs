@@ -36,13 +36,15 @@ Depending on the type of view, you can either turn it off or delete it. Turned o
 
 Custom public views can be turned off and these turned off views can be turned on. While a view is turned off, the view isn't available in the associated model-driven apps for users to select. Public views set as the default view for the table can't be turned off.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane and then open the unmanaged solution your want.  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane, and then open the unmanaged solution you want.  
 1. Open the table you want, and then select the **Views** area under **Data experiences**.
 1. Select the view you want to turn on or off, and then select either **Turn off** or **Turn on** on the command bar.
 
 ## Delete a view
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane and then open the unmanaged solution your want.  
+Deleting a view permanently removes it from the environment.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane, and then open the unmanaged solution you want.  
 1. Open the table you want, and then select the **Views** area under **Data experiences**.
 1. Select the view you want to remove, and then select **Remove** > **Delete from this environment** on the command bar.
 
@@ -55,7 +57,7 @@ Custom public views can be turned off and these turned off views can be turned o
 
 ### Delete a view in classic solution explorer  
 
-You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
+You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view is permanently deleted.  
   
 ### Deactivate or activate views in classic solution explorer
 
