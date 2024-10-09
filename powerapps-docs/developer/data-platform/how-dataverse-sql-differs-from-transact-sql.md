@@ -2,7 +2,7 @@
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/09/2022
+ms.date: 10/09/2024
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -35,7 +35,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - money
 - nchar
 - numeric
-- nvarchar*
+- [nvarchar*[](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
 - nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
@@ -43,7 +43,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - smallmoney
 - tinyint
 - uniqueidentifier
-- varchar*
+- [varchar*](/sql/t-sql/data-types/char-and-varchar-transact-sql#varchar---n--max--)
 - picklist
 - lookup
 - primarykey
