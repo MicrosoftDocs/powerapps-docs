@@ -1,6 +1,6 @@
 ---
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/09/2024
 ms.reviewer: "pehecke"
@@ -19,7 +19,7 @@ This article describes the differences between Dataverse SQL and Transact-SQL. D
 
 ## Data types
 
-In a SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+In an SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
 
 More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)
 
@@ -52,7 +52,6 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - state
 - status
 
-
 ### [Not supported](#tab/not-supported)
 
 - binary
@@ -72,7 +71,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 
 ## Statements
 
-A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. 
+A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compile successfully.
 
 More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
 
@@ -397,7 +396,7 @@ Retrieves rows from a Dataverse environment and enables the selection of one or 
 
 ### Hints
 
-Hints are not supported.
+Hints aren't supported.
 
 ### Predicates
 
