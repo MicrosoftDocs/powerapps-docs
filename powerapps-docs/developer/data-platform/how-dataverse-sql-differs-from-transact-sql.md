@@ -35,7 +35,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - money
 - nchar
 - numeric
-- [nvarchar*[](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
+- [nvarchar*](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
 - nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
