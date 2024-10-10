@@ -66,6 +66,7 @@ The following articles can help you build various apps in different scenarios us
 - [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
 - [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
 - [Use field suggestions by Copilot](ai-field-suggestions.md)
+- [Add a custom Copilot to a canvas app(preview)](add-custom-copilot.md)
 
 ### Copilot in model-driven apps
 
