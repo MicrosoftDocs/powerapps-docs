@@ -1114,7 +1114,7 @@ For more examples of client scripting using client API, see [Walkthrough: Write 
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
-In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending in-app notifications using the `SendAppNotification` message. It isn't required for sending in-app notifications by creating `appnotification` entity records. It isn't required to receive notifications.
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. It isn't required for sending in-app notifications by directly creating `appnotification` entity records without executing the `SendAppNotification` message. It isn't required to receive notifications.
 
 |Usage|Required table privileges|
 |------------|----------------|
@@ -1124,7 +1124,10 @@ In addition to the appropriate table permissions, a user must be assigned the **
 |User can send in-app notifications to others |Create privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit. Additionally, Send In-App Notification privilege is needed if using `SendAppNotification` message. |
 |User can delete in-app notifications |Global: Delete privileges on the app notification table. |
 
+The Send In-App Notification privilege can be added to a role using the Role Privilege Picker under the `Miscellaneous privileges` tab.
 
+> [!div class="mx-imgBorder"] 
+> ![Assigning Send In-App Notification privilege.](media/sendinappnotificationprivilegepicker.png "Assigning Send In-App Notification privilege")
 
 ## Notification storage
 
