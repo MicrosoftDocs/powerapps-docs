@@ -103,7 +103,7 @@ When you open the Copilot pane, you can select from three preset prompts that de
 
 > [!NOTE]
 >
-> Some Copilot requests are built into preview features, which only work when **Try the new data experience** toggle is turned on from your Power Apps home page. Learn more in [Build apps with Copilot in Power Apps (preview)](ai-conversations-create-app.md#prerequisites-for-the-preview-version).
+> Some Copilot requests are built into preview features, which only work when **Try the new data experience** toggle is turned on from your Power Apps home page. Learn more in [Build apps with Copilot in Power Apps (preview)](ai-conversations-create-app.md#prerequisites).
 
 ### Scenario: Add a new screen using a template
 
