@@ -1,8 +1,8 @@
 ---
-title: "Create and edit tables using Power Apps | MicrosoftDocs"
+title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 07/17/2024
+ms.date: 10/10/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -33,24 +33,19 @@ You can also select a column heading from the table view, and then select **Filt
 
 There are several ways to create a new table:
 
-- [Create new tables (preview)](#create-new-tables-preview)
+- [Create new tables](#create-new-tables)
 - [Set advanced properties](#set-advanced-properties)
 - [Create with external data](#create-with-external-data)
 - [Create a virtual table](#create-a-virtual-table)
 
-### Create new tables (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Create new tables
 
 Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The table visual designer currently only supports creating new tables. You can't edit existing tables using the experience.
+> [!NOTE]
+> The table visual designer currently only supports creating new tables. You can't edit existing tables using the experience.
 
 1. Command bar:
 
