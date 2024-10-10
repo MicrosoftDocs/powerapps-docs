@@ -93,10 +93,10 @@ Select **Advanced options** to see the optional properties you can set. Otherw
 | **Property** | **Description** |
 |--------------|-----------------|
 | **Schema name** | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change the schema name after the table is saved. |
-| Logical name | The name that can be used in code. |
+| **Logical name** | A unique identifier for the entity. This name can't be changed once the entity is created. |
 | **Type** | Select the type of table. Use standard for most tables. Activity tables are special tables that can only be owned by a user or team, but can't be owned by an organization. Virtual tables require the table be populated with data from an external source. |
 | **Record ownership** | Switch the table type to Activity table, so you can create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record. |
-| Color | You can select your table color using words or hex codes.|
+| **Color** | You can select your table color using words or hex codes.|
 | **Primary row image** | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. Learn more in [Image columns](../data-platform/types-of-fields.md#image-columns). |
 | **Apply duplicate detection rules** | If duplicate detection is enabled for your organization, enabling allows you to create duplicate detection rules for this table. |
 | **Track changes** | Enables data synchronization in a performant way by detecting what data changed since the data was initially extracted or last synchronized. |
