@@ -1471,7 +1471,7 @@
           href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
-        - name: Deleting and deactivating views
+        - name: Deleting and turning off views
           href: ./model-driven-apps/remove-views.md
       - name: Work with forms
         href:
