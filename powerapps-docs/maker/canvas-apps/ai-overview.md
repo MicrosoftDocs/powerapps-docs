@@ -9,7 +9,7 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 10/2/2024
+  - ai-seo-date: 10/10/2024
 ai-usage: ai-assisted
 ms.reviewer: 
 ms.date: 06/11/2024
@@ -28,7 +28,7 @@ contributors:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Copilot in Power Apps let's you create apps with natural language. You can build an app, including the data behind it, by having a conversation with Copilot. You don't need to write any code or design any screens. Copilot generates the app for you based on your description.
+Copilot in Power Apps helps you build apps using natural language. You can build an app with a data model behind it, by having a conversation with Copilot. You don't need to write any code or design any screens. Copilot generates the app for you based on your description of the business solution.
 
 Users can ask questions or give commands to the app, and Copilot responds with relevant insights or actions. All questions or commands can be in natural language, making your app more engaging and intuitive for your users.
 
