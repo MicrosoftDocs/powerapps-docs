@@ -67,7 +67,7 @@ When previewing an app in Power Apps Studio, Copilot is not displayed. To see Co
 > [!TIP]
 > Removing the custom Copilot from the app disables the functionality.
 
-## Use App Copilot 
+## Use App Copilot
 
 - Open your canvas app in a web browser. On the command bar, select **Copilot**.
 
