@@ -2,7 +2,7 @@
 title: Mobile offline limitations for model-driven apps
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app.
 ms.custom: 
-ms.date: 08/21/2024
+ms.date: 09/26/2024
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -19,6 +19,7 @@ search.audienceType:
 contributors:
 - joliedes 
 ms.contributors:
+- jobaker
 - bwalters
 - trdehove
 ---
@@ -27,12 +28,12 @@ ms.contributors:
 
 Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review the [Offline best practices](best-practices-offline.md) and the [Offline profile guidelines](mobile-offline-guidelines.md).
 
-These tables and corresponding commands are available in offline mode.
+These tables and corresponding permissions are available in offline mode.
 
 > [!NOTE]
-> Custom commands and default commands without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. For more information, see [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
+> Custom permissions and default permissions without the **Mscrm.IsEntityAvailableForUserInMocaOffline** rule won't be displayed in offline-first apps. Learn more in [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete).
 
-|Table |Commands|  
+|Table |Permissions|  
 |-------------|---------|  
 |Account|	Create, Read, Update, Delete|
 |Activity Pointer|Read, Delete|
@@ -55,6 +56,11 @@ These tables and corresponding commands are available in offline mode.
 |Task |Create, Read, Update, Delete|
 |Team |Read only	|
 |User |Read only	|
+|Bookable Resource Booking |Create, Read, Update	|
+|Work Order  |Create, Read, Update	|
+|Work Order Product |Create, Read, Update	|
+|Work Order Service |Create, Read, Update	|
+|Work Order Service Task |Create, Read, Update	|
 
 
 ## Feature limitations 
@@ -151,7 +157,7 @@ It's recommended that you have at least one rule defined for all mobile offline-
  > [!div class="mx-imgBorder"]
  > ![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
 
-### See also
+### Related information
 [Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -11,7 +11,6 @@ search.audienceType:
   - developer
 contributors:
   - JimDaly
-  - ProfessorKendrick
 ---
 # getFetchXml (Client API reference)
 

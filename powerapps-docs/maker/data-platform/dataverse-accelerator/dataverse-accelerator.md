@@ -155,11 +155,4 @@ For issues with the Dataverse accelerator solution installation or with features
 
 ## Limitations and known issues
 
-> [!IMPORTANT]
-> The Dataverse accelerator user interface is built on the Power Platform [custom pages feature](../../model-driven-apps/model-app-page-overview.md). Part of these updates we're deploying into environments use system maintenance accounts. In some circumstances these accounts have had a behavior of presenting as a [break-glass account](/entra/identity/role-based-access-control/security-emergency-access). We're working to correct this behavior as quickly as possible. In the meantime, the following apps might appear in the Power Platform admin center:
->
-> - Dataverse Accelerator app – &lt;model-driven app&gt;, created by a global admin account.
-> - Dataverse Actions page - &lt;canvas app&gt; This is a custom page on which the low-code plug-in is built, created with the user name associated to the global admin account.
-> - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plug-in is built, created with the user name associated to the global admin account.
-
 The Dataverse accelerator isn't available in GCC or GCC High environments.
