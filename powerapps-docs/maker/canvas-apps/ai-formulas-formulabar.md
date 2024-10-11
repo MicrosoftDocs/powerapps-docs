@@ -88,12 +88,34 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 
 ### Known limitations of generating formulas from code comments
 
+- Copilot works on that singular control and property, and it will not make changes to other controls or properties to achieve the desired outcome.
+- Copilot does not tae existing formula text into account.
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 - Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
 - This feature isn't available in the Canada region.
+
+## Create a Formula (preview)
+
+From the Copilot button in the formula bar, you can now generate a formula from natural language from a discrete request.
+
+1. Select a control and its corresponding property.
+
+1. On the formula bar, select the **Copilot functionality menu** > **Create a formula**.
+
+    :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item."::: //update image here
+
+    Copilot menu opens inline if the formula bar is expanded, or below the formula bar if it iscollapsed.
+
+1. Type your natural language request and press enter, or click the submit button
+
+   Copilot will attempt to create a formula.  Click **Accept** to insert the formula in the same position as the Copilot interface, or modify your request and resubmit as necessary
+
+### Known limitations of Create a Formula
+
+- Same limitations as generating formulas from code comments
 
 ## Responsible AI
 
@@ -105,7 +127,7 @@ The following table lists the languages available for the formula bar copilot fe
 
 | **Name** | **Language Code** | **Functionality Supported** |
 |----------|-------------------|-----------------------------|
-| English | en-US | Explain a formula, Comment generated formulas |
+| English | en-US | Explain a formula, Comment generated formulas, Create a formula |
 | Chinese (simplified) - China | zh-Hans | Explain a formula |
 | Czech - Czech Republic | cs-CZ | Explain a formula |
 | Danish - Denmark | da-DK | Explain a formula |
