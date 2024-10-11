@@ -9,7 +9,7 @@ ms.date: 08/04/2021
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

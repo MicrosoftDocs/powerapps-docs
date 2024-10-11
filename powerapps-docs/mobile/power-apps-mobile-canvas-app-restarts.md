@@ -8,7 +8,7 @@ ms.date: 01/05/2023
 ms.subservice: mobile
 ms.author: anuitz
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

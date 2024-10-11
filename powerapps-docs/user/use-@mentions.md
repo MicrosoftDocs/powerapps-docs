@@ -1,14 +1,14 @@
 ---
 title: Use @mention to collaborate with your team using Notes
 description: Learn how to use @mention to collaborate with your team using Notes.
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: overview
 ms.date: 10/09/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -8,7 +8,7 @@ ms.date: 06/29/2023
 ms.subservice: end-user
 ms.author: srihas
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
