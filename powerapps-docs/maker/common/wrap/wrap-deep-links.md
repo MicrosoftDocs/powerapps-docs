@@ -27,4 +27,4 @@ You can deep link to a wrapped native mobile app from other apps. Deep links for
 | &lt;tenantId&gt;     | Connects to the correct tenant                                               |
 
   
- For information on how to deep link into other apps in Power Apps, see [Use deep links with Power Apps mobile](/mobile/mobile-deep-links.md).
+ For information on how to deep link into other apps in Power Apps, see [Use deep links with Power Apps mobile](/power-apps/mobile/mobile-deep-links).
