@@ -1,14 +1,14 @@
 ---
-title: "Add a Power BI visual in a model-driven app | MicrosoftDocs"
+title: "Add a Power BI visual in a model-driven app"
 description: "Learn how to add Power BI visuals into model-driven apps"
-ms.date: 06/25/2021
+ms.date: 10/10/2024
 ms.topic: tutorial
 author: joel-lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
 
-# Tutorial: Add a Power BI visual into a model-driven app
+# Add a Power BI visual into a model-driven app
 
 Power BI is a powerful analysis and visualization tool. Power Apps is great at enabling people to take action via the web and mobile. With Power Apps, a Power BI dashboard can be embedded in an app. Similarly, a Power BI report tile can be added to an app. The best of both worlds can be achieved at the same place and at the same time.
 
@@ -17,41 +17,29 @@ In this tutorial, you create a quick Power BI report and a model-driven app. The
 ## Prerequisites
 
 To complete this tutorial, you need the following:
+
 - Ability to create Power BI dashboards and reports in Power BI.
-- Enable the Power BI visualization embedding setting for your environment from the Power Platform admin center. More information: [Manage feature settings](/power-platform/admin/settings-features)
+- Enable the Power BI visualization embedding setting for your environment from the Power Platform admin center. More information: [Manage feature settings](/power-platform/admin/settings-features#embedded-content)
 
 ## Create a workspace, dashboard, and report
 
-In this section, you sign in to Power BI and create a workspace and add a Power BI report and dashboard.
+First you sign in to Power BI, create a workspace, and then add a Power BI report and dashboard.
 
 1. Sign in to [Power BI](https://powerbi.microsoft.com) with the same Microsoft Office subscription as the one you use for creating apps in Power Apps.
 
-1. Select **Workspaces** on the left navigation menu, and then select **Create a workspace**.
+1. Select **Workspaces** on the left navigation pane, and then select **New workspace**.
 
-   ![Select Create a workspace](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-2.png "Select Create a workspace")
+<!-- Outdated   ![Select Create a workspace](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-2.png "Select Create a workspace") -->
 
-1. Enter a name for the workspace, such as *Power BI in Power App demo*, and then select **Save**.
-
-   ![Enter a name for the workspace and select Save](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-3.png "Enter a name for the workspace and select Save")
+1. Enter a name for the workspace, such as *Power BI in Power App demo*, and then select **Apply**.
 
    The workspace is created. 
    ![The workspace gets created](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-4.png "The workspace gets created")
 
-1. Select **+New**, and then select **Dashboard**.
+1. Select **New item**, select **Dashboard**, enter a **Name**, and then select **Create**.
 
-   ![Select the New button and add a Dashboard](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-5.png "Select the New button and add a Dashboard")
-
-1. Enter a name for the dashboard, and then select **Create**.
-
-   ![Add a name for the dashboard then select Create](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-6.png "Add a name for the dashboard then select Create")
-
-   The Power BI dashboard is created within the workspace.
-
-   ![Power BI Dashboard gets created within the workspace](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-7.png "Power BI Dashboard gets created within the workspace")
-
-1. Open the workspace, select **+New**, and then select **Dataset** to create a new dataset.
-
-   ![Open the workspace and select the New button](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-workspace-8.png "Open the workspace and select the New button")
+1. Select **Workspaces** on the left navigation pane, and then select the workspace you created in the previous step.
+1. Select **New item**, and then select **Dataset** to create a new dataset.
 
 1. Select the **Samples** link under **More ways to create your own content** to use sample data.
 
@@ -84,27 +72,18 @@ In this section, you sign in to Power BI and create a workspace and add a Power 
 In this section, you create a solution in Power Apps that includes a Power BI embedded dashboard.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. On the command bar select **+New solution**.
+1. Create a new solution or open an existing unmanaged solutoin.
 
-   ![Select new solution**](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-1.png "Select new solution")
+1. Open the solution and select **New** > **Dashboard** > **Power BI Embedded**.
 
-1. In the **Display name** box enter *Power BI in Power App Solution*, select the
-    **Default Publisher** for your environment, and then select **Create**.
-
-   ![Power BI in Power App Solution](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-2.png "Power BI in Power App Solution")
-
-1. Select the solution to open it.
-
-   ![The solution gets created](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-3.png "The solution gets created")
-
-1. Select **+New** > **Dashboard** > **Power BI Embedded**.
-
-   <!-- The UI in this screenshot doesn't have the option to select a PBI Embedded dashboard.  ![Select New Dashboard Power BI Embedded](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-4.png "Select New Dashboard Power BI Embedded")  -->
-
+<!-- These steps for the sales and marketing samples no longer work
+Revise using the Excel file to build a report here https://learn.microsoft.com/en-us/power-bi/create-reports/service-from-excel-to-stunning-report
+-->
 1. Select or enter the following options, and then select **Save**:
    - **Display name**: *Test Embedded BI Report*
    - **Type**: **Power BI report**
    - **Power BI workspace**: **Power BI in Power App Demo** (the workspace you created earlier)
+   - Clear **Show reports in this environment only**.
    - **Power BI report**: **Sales and Marketing Sample** (the report you created earlier)
 
      ![Enter the Display name Test Embedded BI Report](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-5.png "Enter the Display name Test Embedded BI Report")
