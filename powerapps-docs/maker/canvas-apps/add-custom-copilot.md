@@ -34,7 +34,7 @@ You can integrate a custom Copilot created in Microsoft Copilot Studio and enabl
 
 Before using this feature, make sure the following prerequisites are met:
 
-- Create a custom Copilot in [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?tabs=web) and publish it in the same environment as your cabvas app.
+- Create a custom Copilot in [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?tabs=web) and publish it in the same environment as your canvas app.
 
 - Configure the custom Copilot with [user authentication in Microsoft Entra ID](/microsoft-copilot-studio/configuration-authentication-azure-ad).
 
