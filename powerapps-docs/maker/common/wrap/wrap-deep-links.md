@@ -1,17 +1,17 @@
 ---
 title: Use deep links with wrapped native mobile apps
 description:  Learn about deep linking in wrap functionality in Power Apps.
-author: makolomi
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: smurkute
 ms.date: 12/05/2022
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: koagarwa
 search.audienceType: 
   - maker
 contributors:
-  - mkaur-msft
+  - mduelae
 ---
 # Use deep links with wrapped mobile apps
 
