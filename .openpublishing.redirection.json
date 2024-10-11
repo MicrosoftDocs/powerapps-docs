@@ -9199,6 +9199,11 @@
     "source_path": "powerapps-docs/maker/data-platform/relationships-overview.md",
     "redirect_url": "/power-apps/maker/data-platform/create-edit-entity-relationships",
     "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/model-driven-apps/create-a-model-driven-app.md",
+    "redirect_url": "/power-apps/maker/model-driven-apps/build-first-model-driven-app",
+    "redirect_document_id": "false"
    }
   ]
 }
