@@ -70,7 +70,7 @@ Copilot isn't visible when previewing an app in Power Apps Studio. To see Copilo
 
 This feature lets you add a custom Copilot created in Microsoft Copilot Studio to a canvas app, it doesn't require any changes to app layout. It's available both on the web and natively on mobile devices, and it can connect to existing custom Copilots created in Copilot Studio.
 
-When you add a [Copilot control to a canvas app](add-ai-copilot.md), it requires makers to update the canvas app layout to accommodate the control and is only available on the web. It supports asking questions about your data or connecting to a new [custom copilot from Copilot Studio](add-ai-copilo.md#customize-the-copilot-using-copilot-studio).
+When you add a [Copilot control to a canvas app](add-ai-copilot.md), it requires makers to update the canvas app layout to accommodate the control and is only available on the web. It supports asking questions about your data or connecting to a new [custom copilot from Copilot Studio](add-ai-copilot.md#customize-the-copilot-using-copilot-studio).
 
 
 ### See Also
