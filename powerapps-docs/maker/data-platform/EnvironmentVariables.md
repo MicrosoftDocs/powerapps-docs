@@ -123,6 +123,12 @@ Data source environment variables are used for connectors that rely on user base
 
 Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
+### Should I include the value in my solution?
+No.  Environment variables are intended to be used by applications that need to have different values in different environments where the solution is deployed.  Environment variable definitions should be included in your solution but the values should be provided for the target environment during deployment.  This will result in the environment variable definition being a managed solution object in the target environment while the environment variable value will be an unmanaged record.
+
+### Why can I not delete a value in my environment?
+If the value was included in a managed solution, the only way to delete the value is to update the solution in the source environment to exclude the value, then export a new version of the solution.  This new version then can be imported into the environment using an upgrade operation (not an update), resulting in the value record being deleted.
+
 ### What if someone inadvertently deletes a value?
 
 If not already prevented by dependency system, runtime uses the last known value as a fallback.
