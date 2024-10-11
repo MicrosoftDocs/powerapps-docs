@@ -51,7 +51,7 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
    :::image type="content" source="media/add-custom-copilot/copilot-tab.png" alt-text="Screenshot that shows the copilot tab in Settings and where you can select an app that was shared with you." lightbox="media/add-custom-copilot/copilot-tab.png":::
 
-1. Once you select a Copilot, close the settings dialog box and publish the app. Once the app is published, users will be able to use Copilot within it.
+1. Once you select a Copilot, close the settings dialog box and publish the app. Once the app is published, users are able to use Copilot within it.
 
 Copilot isn't visible when previewing an app in Power Apps Studio. To see Copilot in action, save and publish your app, and then open it using the Power Apps mobile or a web browser.
 
@@ -68,7 +68,7 @@ Copilot isn't visible when previewing an app in Power Apps Studio. To see Copilo
 
 ## Difference between this feature and the Copilot control
 
-This feature let's you add a custom Copilot created in Microsoft Copilot Studio to a canvas app, it doesn't require any changes to app layout. It's available both on the web and natively on mobile devices, and it can connect to existing custom Copilots created in Copilot Studio.
+This feature lets you add a custom Copilot created in Microsoft Copilot Studio to a canvas app, it doesn't require any changes to app layout. It's available both on the web and natively on mobile devices, and it can connect to existing custom Copilots created in Copilot Studio.
 
 When you add a [Copilot control to a canvas app](add-ai-copilot), it requires makers to update the canvas app layout to accommodate the control and is only available on the web. It supports asking questions about your data or connecting to a new [custom copilot from Copilot Studio](add-ai-copilo.mdt#customize-the-copilot-using-copilot-studio).
 
