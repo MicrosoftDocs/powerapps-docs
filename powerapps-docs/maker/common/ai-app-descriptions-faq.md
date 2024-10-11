@@ -50,7 +50,7 @@ If you get this error, **Something happened and we weren’t able to generate a 
 
 ## See also 
 - [Create a Canvas App description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
-- [Create a Model-Driven App description with Copilot (preview)](../model-driven-apps/create-a-model-driven-app.md#create-an-app-description-with-copilot-preview)
+- [Create a model-driven app description with Copilot (preview)](../model-driven-apps/build-first-model-driven-app.md#create-an-app-description-with-copilot-preview)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

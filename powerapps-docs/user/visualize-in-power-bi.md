@@ -1,15 +1,15 @@
 ---
 title: "Visualize your data in a view quickly with Power BI service| MicrosoftDocs"
 description: Visualize your data in a view quickly with Power BI service.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/19/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
