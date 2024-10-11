@@ -278,6 +278,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   > - Version 10.0.39 (PU63) platform update 7.0.7198.186 or later
   >
   > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
+  > Array fields of Enumerated type are currently excluded from Synapse Link and Fabric Link feature. Support for these additional Array type fields will be added on the future
    
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For example, if you choose `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, exported data contains fields from the base table `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
 
