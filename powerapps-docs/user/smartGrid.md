@@ -7,7 +7,7 @@ ms.component: pa-user
 ms.subservice: end-user
 author: jordanchodak
 ms.author: jordanchodak
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 contributors:

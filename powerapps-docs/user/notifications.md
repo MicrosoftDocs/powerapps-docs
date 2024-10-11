@@ -3,7 +3,7 @@ title: "In-app notifications in model-driven apps | MicrosoftDocs"
 description: How notification work in model-driven apps.
 ms.custom: ""
 ms.date: 04/26/2022
-ms.reviewer: sericks
+ms.reviewer: smurkute
 
 ms.subservice: end-user
 ms.topic: "article"

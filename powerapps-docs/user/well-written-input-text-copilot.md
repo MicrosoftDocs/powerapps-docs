@@ -9,7 +9,7 @@ ms.component: pa-user
 ms.subservice: end-user
 author: jordanchodak
 ms.author: jordanchodak
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.collection: 
     - bap-ai-copilot 
 search.audienceType: 

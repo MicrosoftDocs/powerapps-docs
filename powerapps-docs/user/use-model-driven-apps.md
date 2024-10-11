@@ -1,14 +1,14 @@
 ---
 title: Use model-driven apps in Power Apps | Microsoft Docs
 description: Provides information on how to use model-driven apps in Power Apps.
-author: sericks007
+author: shwetamurkute
 
 ms.topic: overview
 ms.date: 11/16/2018
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
