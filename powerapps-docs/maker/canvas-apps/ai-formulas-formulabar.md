@@ -36,6 +36,7 @@ Copilot is an AI feature in Power Apps Studio that helps you create and modify P
 
 - Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
 - Your browser and Power Apps language settings must be set to **English (United States)**.
+-  When **Copilot comment generated formulas** is fully integrated, it will be enabled by default for all your apps, and it cannot be disabled,
 
 
 ## Explain a formula
@@ -61,9 +62,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 > [!NOTE]
 > AI-generated content might be inaccurate and should be checked for accuracy.
 
-## Generate formulas from code comments (preview)
-
-[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
+## Generate formulas from code comments 
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
@@ -93,7 +92,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 - Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
-- This feature isn't available in the Canada region.
+
 
 ## Responsible AI
 
