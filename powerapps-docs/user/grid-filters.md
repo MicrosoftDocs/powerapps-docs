@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 06/28/2024
 ms.subservice: end-user
 ms.author: fikaradz
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

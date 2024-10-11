@@ -8,7 +8,7 @@ ms.subservice: mda-maker
 ms.author: srihas
 ms.reviewer: matp
 contributors:
- - sericks007
+ - shwetamurkute
  - anuitz
  - srihas
 ---

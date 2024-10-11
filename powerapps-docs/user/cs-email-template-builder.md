@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.date: 04/04/2023
 ms.author: mgandham
 ms.custom: bap-template
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ---
 # Configure the enhanced email template editor page
 

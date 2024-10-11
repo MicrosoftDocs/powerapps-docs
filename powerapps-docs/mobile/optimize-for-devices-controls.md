@@ -4,7 +4,7 @@ description: Learn which controls and properties are supported for device-optimi
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.date: 05/01/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -12,7 +12,7 @@ search.audienceType:
   - maker
 contributors:
 - gachasta 
-- sericks
+- smurkute
 ms.contributors:
 - devangpandya
 ---

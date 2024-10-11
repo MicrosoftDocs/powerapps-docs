@@ -7,7 +7,7 @@ ms.custom:
 ms.topic: article
 author: jordanchodak
 ms.author: jordanchodak
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.collection: 
     - bap-ai-copilot 
 ---

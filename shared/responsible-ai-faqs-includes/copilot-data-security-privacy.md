@@ -1,6 +1,6 @@
 ---
-author: sericks007
-ms.author: sericks
+author: shwetamurkute
+ms.author: smurkute
 ms.date: 10/02/2024
 ms.topic: include
 ms.contributors:
