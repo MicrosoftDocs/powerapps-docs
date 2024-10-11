@@ -9214,6 +9214,11 @@
     "source_path": "powerapps-docs/maker/portals/configure/list-odata-feeds.md",
     "redirect_url": "/power-pages/configure/web-api-overview",
     "redirect_document_id": false
+   },
+   {
+    "source_path": "powerapps-docs/maker/portals/configure/configure-azure-ad-b2c-provider-manual.md",
+    "redirect_url": "/power-pages/security/authentication/azure-ad-b2c-provider",
+    "redirect_document_id": false
    }
   ]
 }
