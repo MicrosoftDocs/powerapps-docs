@@ -1,17 +1,17 @@
 ---
 title: Create Key Vault for code signing
 description:  Learn how to create Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
-author: makolomi
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: smurkute
 ms.date: 5/9/2024
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: koagarwa
 search.audienceType: 
   - maker
 contributors:
-  - mkaur-msft
+  - mduelae
 ---
 # Create Azure Key Vault for wrap in Power Apps
 

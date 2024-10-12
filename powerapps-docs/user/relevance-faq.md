@@ -1,14 +1,14 @@
 ---
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/13/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
