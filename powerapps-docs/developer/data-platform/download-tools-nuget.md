@@ -11,7 +11,7 @@ ms.author: davidjen
 
 # Dataverse development tools
 
-There are many tools for developers you can use for different aspects of Microsoft Dataverse code development. The following table describes them briefly. Instructions to install and launch the tools are found in the next section after the table below.
+There are many tools for developers you can use for different aspects of Microsoft Dataverse code development. The following table describes them briefly. Instructions to install and launch the tools are found in the next section that follows the table.
 
 |Tool|Description|Documentation|
 |-|-|-|
