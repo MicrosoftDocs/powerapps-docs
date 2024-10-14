@@ -117,6 +117,14 @@ From the Copilot button in the formula bar, you can now generate a formula from 
 
     :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Ceate a Formula functionality showing recommended formula.":::
 
+### Create a Formula prerequisites
+
+  1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
+  2. 
+  1. On the command bar, select **Settings** > **Updates**.
+  2. 
+  1. From the **Preview** tab, turn on the **Copilot for formulas** toggle.
+
 ### Known limitations of Create a Formula
 
 - Same limitations as generating formulas from code comments
