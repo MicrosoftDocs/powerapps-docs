@@ -105,13 +105,17 @@ From the Copilot button in the formula bar, you can now generate a formula from 
 
 1. On the formula bar, select the **Copilot functionality menu** > **Create a formula**.
 
-    :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item."::: //update image here
+    :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Create a formula item.":::
 
     Copilot menu opens inline if the formula bar is expanded, or below the formula bar if it iscollapsed.
 
 1. Type your natural language request and press enter, or click the submit button
 
-   Copilot will attempt to create a formula.  Click **Accept** to insert the formula in the same position as the Copilot interface, or modify your request and resubmit as necessary
+    :::image type="content" source="media/copilot/ufb-create-input.png" alt-text="Screenshot of the Ceate a Formula functionality showing a sample input.":::
+
+    Copilot will attempt to create a formula.  Click **Accept** to insert the formula in the same position as the Copilot interface, or modify your request and resubmit as necessary
+
+    :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Ceate a Formula functionality showing recommended formula.":::
 
 ### Known limitations of Create a Formula
 
