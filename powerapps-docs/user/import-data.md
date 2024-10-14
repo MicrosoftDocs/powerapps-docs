@@ -1,13 +1,13 @@
 ---
 title: Import data in model-driven apps
 description: Discover how to import data into your model-driven app, ensuring correct column mapping and file formats.
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
 ms.date: 05/08/2024
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid:
 search.audienceType:
   - enduser

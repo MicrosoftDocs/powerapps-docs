@@ -13,7 +13,7 @@ applies_to:
 search.audienceType: 
   - maker
 contributors:
-- sericks007
+- shwetamurkute
 ---
 # Changing release channels for model-driven apps
 
