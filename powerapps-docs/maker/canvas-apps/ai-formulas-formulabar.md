@@ -58,9 +58,6 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 
-> [!NOTE]
-> AI-generated content might be inaccurate and should be checked for accuracy.
-
 ## Generate formulas from code comments 
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
