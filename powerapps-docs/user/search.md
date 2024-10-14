@@ -1,15 +1,15 @@
 ---
 title: Compare search options in Microsoft Dataverse
 description: Learn how to to use the different search option
-author: sericks
+author: smurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 05/10/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -3,8 +3,8 @@ title: Add variables to a card
 description: Learn how to add variables to your cards for Microsoft Power Apps.
 ms.date: 11/17/2022
 ms.topic: how-to
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
