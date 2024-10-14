@@ -1,14 +1,14 @@
 ---
 title: What is Dataverse search?
 description: Dataverse search for model-driven apps helps you quickly find what you're looking for. 
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/01/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: 
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

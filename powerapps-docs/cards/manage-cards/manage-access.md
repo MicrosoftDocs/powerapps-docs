@@ -3,8 +3,8 @@ title: Manage access
 description: This article helps you use security roles to manage cards.
 ms.date: 11/17/2022
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 

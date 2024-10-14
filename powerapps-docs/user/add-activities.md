@@ -8,8 +8,8 @@ ms.date: 04/16/2024
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
-ms.reviewer: sericks
-ms.assetid: sericks
+ms.reviewer: smurkute
+ms.assetid: smurkute
 search.audienceType: 
   - enduser
 ---

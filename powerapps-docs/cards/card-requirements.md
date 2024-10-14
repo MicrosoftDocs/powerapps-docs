@@ -3,8 +3,8 @@ title: Requirements for cards
 description: Learn about the requirements for using Cards for Power Apps.
 ms.date: 11/17/2022
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
