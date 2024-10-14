@@ -11,7 +11,7 @@ ms.reviewer: matp
 
 Power BI is a powerful analysis and visualization tool. Power Apps is great at enabling people to take action via the web and mobile. With Power Apps, a Power BI dashboard can be embedded in an app. Similarly, a Power BI report tile can be added to an app. The best of both worlds can be achieved at the same place and at the same time.
 
-In this tutorial, you create a quick Power BI report and a model-driven app. Then, you see how to add the report as a dashboard in the app.
+In this article, you create a simple Power BI report and a model-driven app. Then, you learn how to add the report as a dashboard in the app.
 
 ## Prerequisites
 
@@ -35,29 +35,29 @@ If you don't already have a workspace with a Power BI report, follow these steps
 1. Select the **financials** tab, and then select **Create**.
 1. Now, build a visual:
 
-- Expand **financials** in the right-hand **Data** pane, and drag **Profit** to the report canvas.
-- Drag **Date** and drop it on top of the **Profit** chart.
-- Drag an edge of the chart to resize it.
-- Select the chart and then select the forked double arrows to show quarters, then select them again to show months.
+   - Expand **financials** in the right-hand **Data** pane, and drag **Profit** to the report canvas.
+   - Drag **Date** and drop it on top of the **Profit** chart.
+   - Drag an edge of the chart to resize it.
+   - Select the chart and then select the forked double arrows to show quarters, then select them again to show months.
 
-   :::image type="content" source="media/add-a-power-bi-visual-into-a-model-driven-app/sample-pbi-report.png" alt-text="Sample Power BI report with date and profit information":::
+   :::image type="content" source="media/add-a-power-bi-visual-into-a-model-driven-app/sample-pbi-report.png" alt-text="Sample Power BI report with date and profit information" lightbox="media/add-a-power-bi-visual-into-a-model-driven-app/sample-pbi-report.png":::
 
 1. Save your report as *Financial Samples*.
 
 ## Add the dashboard and report to a solution
 
-In this section, you create a solution in Power Apps that includes a Power BI embedded dashboard.
+In this section, you create a solution in Power Apps that includes a Power BI embedded dashboard object.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
 1. Open the solution and select **New** > **Dashboard** > **Power BI Embedded**.
 1. In the right properties pane, enter or select the following properties:
 
-- **Name**. *Test Embedded BI Report*
-- Clear the **Show reports in this environment only** option.
-- **Type**: **Power BI report**
-- **Power BI workspace**: Locate and select the workspace you created earlier, such as **Contoso Power BI workspace**.
-- **Power BI Report**: Locate and select the **Financial Sample** report you created for the workspace.
+   - **Name**. *Test Embedded BI Report*
+   - Clear the **Show reports in this environment only** option.
+   - **Type**: **Power BI report**
+   - **Power BI workspace**: Locate and select the workspace you created earlier, such as **Contoso Power BI workspace**.
+   - **Power BI Report**: Locate and select the **Financial Sample** report you created for the workspace.
 
 1. Select **Save**.
 1. Select **Publish** on the command bar.
@@ -76,7 +76,7 @@ In this section, you create a model-driven app and add the Power BI embedded rep
 1. Select the **Test Power BI report** you created earlier, and then select **Add**.
 
    The report is loaded in the app designer similar to how it will appear to your users when they play the app.
-   :::image type="content" source="media/add-a-power-bi-visual-into-a-model-driven-app/embedded-power-bi-dashboard-in-model-driven-app.png" alt-text="Embedded Power BI report in a model-driven app dashboard":::
+   :::image type="content" source="media/add-a-power-bi-visual-into-a-model-driven-app/embedded-power-bi-dashboard-in-model-driven-app.png" alt-text="Embedded Power BI report in a model-driven app dashboard" lightbox="media/add-a-power-bi-visual-into-a-model-driven-app/embedded-power-bi-dashboard-in-model-driven-app.png":::
 
 1. Select **Save** to save your app or select **Publish** to save and publish you app making it available for users.
 
