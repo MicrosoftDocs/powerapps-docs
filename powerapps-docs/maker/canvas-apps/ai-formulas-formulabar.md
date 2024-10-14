@@ -46,7 +46,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
 1. On the formula bar, select the **Copilot functionality menu** > **Explain this formula**.
 
-    :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
+    :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
 
     Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app.
 
