@@ -33,7 +33,7 @@ Copilot is an AI feature in Power Apps Studio that helps you create and modify P
 Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
  
 > [!NOTE]
-> By default, the new formula bar is enabled. If it's not visible, check the following app settings:
+> By default, the new formula bar is enabled. If the **Copilot functionality menu** isn't visible, check the following app settings:
 > 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
 > 1. On the command bar, select **Settings** > **Updates**.
 > 1. From the **Retired** tab, turn off the **Legacy formula bar** toggle.
