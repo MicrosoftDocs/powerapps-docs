@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 07/11/2024
 ms.subservice: mobile
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 contributors:

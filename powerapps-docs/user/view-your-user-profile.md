@@ -1,15 +1,15 @@
 ---
 title: "View your user profile in model-driven apps| MicrosoftDocs"
 description: View your user profile in Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/4/2021
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
