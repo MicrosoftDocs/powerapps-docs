@@ -67,9 +67,12 @@ Now that all settings are configured, with your [canvas app open for editing](ed
 
 1. In the app [authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Insert**, and then select **Copilot (preview)**.
 
-1. You're prompted to add a data source to Copilot. Add a data source.
+1. You're prompted to add a data source to Copilot. Select an appropriate Dataverse table as the data source.
 
 :::image type="content" source="media/copilot/add-data-to-copilot.png" alt-text="Screenshot of the Copilot control properties pane, with the Create new copilot button highlighted.":::
+
+> [!NOTE]
+> Copilot control supports only Microsoft Dataverse tables as the data source.
 
 ## Customize the copilot using Copilot Studio
 
