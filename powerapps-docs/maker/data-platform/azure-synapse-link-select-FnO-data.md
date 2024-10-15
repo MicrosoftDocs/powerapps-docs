@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 09/04/2024
+ms.date: 10/15/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -278,7 +278,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
   > - Version 10.0.39 (PU63) platform update 7.0.7198.186 or later
   >
   > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
-  > Array fields of Enumerated type are currently excluded from Synapse Link and Fabric Link feature. Support for these additional Array type fields will be added on the future
+  > Array fields of Enumerated type are currently excluded from the Synapse Link and Fabric link features.
    
 - [Table inheritance and derived tables](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For example, if you choose `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, exported data contains fields from the base table `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
 
@@ -289,7 +289,7 @@ Currently, there are limitations with finance and operations tables and Azure Sy
 - Staging tables, temporary tables and deprecated tables, where names begin with `del_` in finance and operations apps, aren't allowed in Azure Synapse Link.
 - The following tables, known as *kernel* tables in finance and operations apps, are supported by Fabric and Synapse Link. These tables are special, and you don't need to enable change tracking. Also, they're updated every 24 hours and not updated near-real time as the data doesn't change frequently: `DATAAREA`, `USERINFO`, `SECURITYROLE`, `SECURITYUSERROLE`, `SQLDICTIONARY`, `PARTITIONS`, `SECURITYPRIVILEGE`, `TIMEZONESLIST`, `SECURITYDUTY`, `SECURITYSUBROLE`, `SECURITYUSERROLECONDITION`, `DATABASELOG`, `SECURITYROLERUNTIME`, `SECURITYROLEPRIVILEGEEXPLODEDGRAPH`, `SECURITYROLEDUTYEXPLODEDGRAPH`, `TIMEZONESRULESDATA`, `SECURITYROLEEXPLODEDGRAPH`, `USERDATAAREAFILTER`, `SYSINHERITANCERELATIONS`. 
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
-- [Master company data sharing](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/sysadmin/srs-overview#when-to-consider-duplicate-record-versus-master-company-sharing-preview) is preview feature in Finance and operations apps. Tables that participate in Master company data sharing feature are currently not supported with Synapse Link or Fabric Link features. While these tables can be selected, data exported may be associated with invalid data areas.
+- [Master company data sharing](/dynamics365/fin-ops-core/dev-itpro/sysadmin/srs-overview#when-to-consider-duplicate-record-versus-master-company-sharing-preview) is a preview feature in finance and operations apps. Tables that participate in the master company data sharing feature are currently not supported with the Synapse Link or Fabric link features. Although these tables can be selected, data exported might be associated with invalid data areas.
 
 ## Access incremental data changes from finance and operations
 
