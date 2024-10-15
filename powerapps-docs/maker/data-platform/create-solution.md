@@ -195,14 +195,14 @@ Because there are two different types of solutions, managed and unmanaged, the b
 
 The solution you want to delete might have components that have dependencies on other components. These dependencies must be removed before you can delete the component. More information: [View dependencies for a component in Power Apps](view-component-dependencies.md)
 
-## Delete a managed solution
+### Delete a managed solution
 
 Deleting a managed solution removes (uninstalls) *all* the components within the solution. Additionally, *all* associated data are also deleted.
 
 > [!CAUTION]
 > Because all components within the solution and all associated data is deleted, use caution when you delete a managed solution.
 
-## Delete an unmanaged solution
+### Delete an unmanaged solution
 
 Deleting an unmanaged solution deletes the solution container but doesn't delete any of the unmanaged components within. Any data associated also remains. Each unmanaged component must be individually deleted to remove all components within the unmanaged solution.
 
