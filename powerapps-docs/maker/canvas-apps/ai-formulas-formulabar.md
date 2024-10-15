@@ -44,17 +44,17 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
 1. Select a control and its corresponding property.
 
-1. On the formula bar, select the **Copilot functionality menu** > **Explain this formula**.
+1. On the formula bar, select the **Copilot functionality menu** > **Explain this formula**, or select a subset of a formula and then select the **Copilot functionality menu** > **Explain this Selection** to explain only that part.
 
     :::image type="content" source="media/copilot/ufb-explain-copilot.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
 
-    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app.
+    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app.  When explaining a selection, the Copilot may explain additional context around the selection if it is important to providing the explanation.
 
     :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Screenshot of Copilot's explanation of a formula.":::
 
 ### Known limitations of explaining formulas
 
-- The maximum length of a formula explanation is 5,000 characters.
+- The maximum length of a formula explanation is 5,000 characters, so for long formulas, explain individual selections.
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 
