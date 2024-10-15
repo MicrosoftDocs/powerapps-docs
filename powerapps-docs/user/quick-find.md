@@ -1,15 +1,15 @@
 ---
 title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/27/2022
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
