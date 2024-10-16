@@ -45,14 +45,7 @@ Legend:
 >
 > If autosave is turned on, the changes you made are automatically saved. If autosave isn't turned on, Power Apps notifies you that you're no longer editing and lets you save a copy of your changes.
 
-## Use coauthoring (preview) to edit the same app together
-
-[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - This feature is in the process of rolling out, and might not be available in your region yet.
+## Use coauthoring to edit the same app together
 
 Coauthoring is a new feature that allows multiple makers to edit a canvas app at the same time. When you use coauthoring, you can tell where other makers are working on the app and view their changes in real time.
 
@@ -72,7 +65,7 @@ Legend:
 To use coauthoring, you need to turn it on for each app. If you turn on coauthoring, it overrides the copresence feature.
 
 1. Open your app for editing in Power Apps Studio.
-1. Go to **Settings** > **Updates** > **Preview**.
+1. Go to **Settings** > **Updates** > **New**.
 1. Turn on the **Coauthoring** toggle.
 
 ### Limitations of coauthoring
@@ -80,7 +73,6 @@ To use coauthoring, you need to turn it on for each app. If you turn on coauthor
 - When more than one maker is editing an app, the following actions aren't available:
 
   - Search
-  - Save as
   - Open another or new app
   - Undo and redo
   - Switch authoring versions
