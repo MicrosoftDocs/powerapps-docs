@@ -21,7 +21,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Use the code view feature to look at the underlying code for each control on your app's screens. The code uses an improved format that's a subset of YAML. Learn more in [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
+Use the code view feature to look at the underlying code for each control on your app's screens. The code uses an improved format that's a subset of YAML.
 
 With code view you can:
 
@@ -35,6 +35,7 @@ With code view you can:
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 > [!NOTE]
+> This is a preview feature and the format is subject to change. We don't guarantee compatibility with the final version.
 > The current code format seen in the code view isn't suitable for source control during the preview period.
 
 ## View, copy, and paste code
