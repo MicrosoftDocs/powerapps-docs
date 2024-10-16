@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 10/10/2024
+ms.date: 10/16/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -11,7 +11,14 @@ ms.collection: bap-ai-copilot
 ---
 # Create and edit tables using Power Apps
 
-[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view, create, and edit tables for Microsoft Dataverse.
+Tables are used to model and manage business data. When you develop an app, you can use standard tables, custom tables, or both. Power Apps provides an easy way to view, create, and edit tables for Microsoft Dataverse.
+
+## Prerequisites
+
+To create and edit tables in Dataverse, you need the following:
+
+- A Power Platform environment with Dataverse.
+- The system customizer security role or equivalent privileges in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database)
 
 ## View tables
 
@@ -137,24 +144,24 @@ Select **Advanced options** to display additional properties that are optional f
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
 |**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
-|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
+|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
-| **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
-| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected.  |
+| **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on. |
+| **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected. |
 | **Enable long term retention**  | Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. More information: [Long term data retention overview](data-retention-overview.md)  |
-|**Creating a new activity**  | Associate activities to records for this table.  |
+|**Creating a new activity**  | Associate activities to records for this table. |
 | **Doing a mail merge**  | App users can use this table with mail merge.   |
 | **Setting up OneNote integration**  | When you turn on OneNote integration, you have the benefits of using OneNote to take or review customer notes from within your records. Requires SharePoint document management to be set up. More information: [Set up OneNote integration](/power-platform/admin/set-up-onenote-integration-in-dynamics-365)   |
 |**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint. More information: [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint) |
-| **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled.  |
-| **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one is created when you enable sending email.  |
-| **Have an access team**| Create team templates for this table.  |
+| **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled. |
+| **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one is created when you enable sending email. |
+| **Have an access team**| Create team templates for this table. |
 | **Can be linked to feedback**  | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](configure-entity-feedback.md)  |
-|**Appear in search results**   | Enable so that table records can be included in search results when using an app.  |
-|**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network.  |
+|**Appear in search results**   | Enable so that table records can be included in search results when using an app. |
+|**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network. |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Save** to continue, this closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+Select **Save** to continue. This action closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
 ### Create with external data
 
