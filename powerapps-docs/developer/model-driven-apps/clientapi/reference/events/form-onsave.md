@@ -55,7 +55,7 @@ For example:
 
 ```JavaScript
  function myHandler() {
-    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values)) => {
+    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values) => {
         var workOrder = values[0];
         var customerAsset = values[1];
         // Perform validation
