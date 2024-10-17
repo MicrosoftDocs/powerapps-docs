@@ -99,33 +99,33 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 
 From the Copilot button in the formula bar, you can now generate a formula from natural language from a discrete request.
 
+### Prerequisites
+
+Before you can use Copilot to create a formula from a discrete request in your canvas app, you need to turn on **Copilot for formula** in the app settings in [Power Apps](https://make.powerapps.com/).
+
+1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
+1. On the **Preview** tab, find and turn on the **Copilot for formulas** setting.
+
+### Use Copilot to create a formula from a discrete request
+
 1. Select a control and its corresponding property.
 
 1. On the formula bar, select the **Copilot functionality menu** > **Create a formula**.
 
     :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Create a formula item.":::
 
-    Copilot menu opens inline if the formula bar is expanded, or below the formula bar if it iscollapsed.
+    The Copilot menu opens inline when the formula bar is expanded, or below the formula bar if it's collapsed.
 
-1. Type your natural language request and press enter, or click the submit button
+1. In the Copilot text box, type your request, such as *show today's day of the week*.
 
     :::image type="content" source="media/copilot/ufb-create-input.png" alt-text="Screenshot of the Ceate a Formula functionality showing a sample input.":::
 
-    Copilot will attempt to create a formula.  Click **Accept** to insert the formula in the same position as the Copilot interface, or modify your request and resubmit as necessary
+1. Copilot will attempt to create a formula. Select **Accept** to insert the formula in the same position as the Copilot interface, or update and resumbit your request.
 
     :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Ceate a Formula functionality showing recommended formula.":::
 
-### Create a Formula prerequisites
-
-  1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
-  2. 
-  1. On the command bar, select **Settings** > **Updates**.
-  2. 
-  1. From the **Preview** tab, turn on the **Copilot for formulas** toggle.
-
-### Known limitations of Create a Formula
-
-- Same limitations as generating formulas from code comments
+> [!NOTE]
+> The same limitations apply for creating a formulas from a discrete request as [generating formulas from code comments](ai-formulas-formulabar.md#known-limitations-of-generating-formulas-from-code-comments).
 
 ## Responsible AI
 
