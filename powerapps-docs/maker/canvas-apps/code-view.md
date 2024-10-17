@@ -3,7 +3,7 @@ title: Use code view for canvas app controls (preview)
 description: Learn how to use the code view in Microsoft Power Apps Studio to understand your canvas app's functionality.
 author: marcelbf
 ms.author: marcelbf
-ms.date: 10/2/2024
+ms.date: 10/17/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -35,7 +35,7 @@ With code view you can:
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 > [!NOTE]
-> This is a preview feature and the format is subject to change. We don't guarantee compatibility with the final version.
+> Since this is a preview feature and the format is subject to change. We don't guarantee compatibility with the final version.
 > The current code format seen in the code view isn't suitable for source control during the preview period.
 
 ## View, copy, and paste code
