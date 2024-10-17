@@ -25,12 +25,9 @@ ms.custom:
 
 Copilot is an AI feature in Power Apps Studio that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
 
-> [!NOTE]
-> AI generated content may be inaccurate and should be checked for accuracy.
-
 ## Prerequisites
 
-Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
+Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
  
 > [!NOTE]
 > By default, the new formula bar is enabled. If the **Copilot functionality menu** isn't visible, check the following app settings in Power Apps Studio:
@@ -57,6 +54,9 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 - The maximum length of a formula explanation is 5,000 characters, so for long formulas, explain individual selections.
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
+
+> [!NOTE]
+> AI generated content may be inaccurate and should be checked for accuracy.
 
 ## Generate formulas from code comments 
 
