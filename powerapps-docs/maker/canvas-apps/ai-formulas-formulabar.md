@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 10/10/2024
+ms.date: 10/21/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -25,17 +25,17 @@ ms.custom:
 
 Copilot is an AI feature in Power Apps Studio that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
 
+> [!NOTE]
+> AI generated content may be inaccurate and should be checked for accuracy.
+
 ## Prerequisites
 
-- Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
-- Turn on the Power Fx formula bar:
-
-  1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
-  1. On the command bar, select **Settings** > **Updates**.
-  1. From the **Preview** tab, turn on the **Copilot comment-generated formulas** toggle.
-
-- Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
-- Your browser and Power Apps language settings must be set to **English (United States)**.
+Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#enable-or-disable-copilot-preview-in-power-apps).
+ 
+> [!NOTE]
+> By default, the new formula bar is enabled. If the **Copilot functionality menu** isn't visible, check the following app settings in Power Apps Studio:
+> 1. On the command bar, select **Settings** > **Updates**.
+> 1. From the **Retired** tab, turn off the **Legacy formula bar** toggle.
 
 
 ## Explain a formula
@@ -58,12 +58,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 
-> [!NOTE]
-> AI-generated content might be inaccurate and should be checked for accuracy.
-
-## Generate formulas from code comments (preview)
-
-[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
+## Generate formulas from code comments 
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
@@ -93,7 +88,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 - Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
-- This feature isn't available in the Canada region.
+
 
 ## Responsible AI
 
