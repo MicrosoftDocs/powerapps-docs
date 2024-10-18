@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 08/07/2024
+ms.date: 10/18/2024
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -90,9 +90,9 @@ The Power Apps sharing experience requires users to have permissions in the tena
 - Yes, but in separate browser sessions. For example, Microsoft Edge might be open in its standard mode and a separate session might be started in a new **InPrivate** window.
 - If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
 
-#### Can I sign in Power Apps, in a resource tenant, with GDAP?
+#### Can I sign in to Power Apps, in a resource tenant with GDAP?
 
-No, make.powerapps.com does not recognize [Granular delegated admin privileges (GDAP)](https://learn.microsoft.com/partner-center/customers/gdap-introduction). However, [Power Platform Admin Center does recognize GDAP](https://learn.microsoft.com/partner-center/customers/gdap-supported-workloads#dynamics-365-and-power-platform). 
+No, [https://make.powerapps.com](https://make.powerapps.com) doesn't recognize [Granular delegated admin privileges (GDAP)](partner-center/customers/gdap-introduction); however, the [Power Platform admin center does](/partner-center/customers/gdap-supported-workloads#dynamics-365-and-power-platform). 
 
 ## Sign in using Microsoft Account (preview)
 
