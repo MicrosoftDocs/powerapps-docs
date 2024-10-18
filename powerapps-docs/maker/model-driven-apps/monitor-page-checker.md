@@ -21,10 +21,6 @@ Monitor can help you debug and diagnose problems, which help you build faster, m
   > [!IMPORTANT]
   > Monitor must be run on the model-driven app and not directly on a custom page.
 
-When you filter on model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components on a custom page in Monitor as your app runs. More information: [Debug a model-driven app with Monitor](../monitor-modelapps.md)
-
-:::image type="content" source="media/add-component-to-model-app/monitor-app-with-custom-page.png" alt-text="Monitoring a model-driven app that has a custom page using the canvas app gallery control":::
-
 ## Start a Monitor session
 
 There are two ways to open a Monitor session.
@@ -51,6 +47,14 @@ There are two ways to open a Monitor session.
 3. Select **Monitor** on the command bar.
 
     > ![Location of Monitor button in global command bar](https://user-images.githubusercontent.com/69216748/146047014-b9428da5-138a-4ccf-b74c-b45a0a0685b9.png)
+
+## Filter monitored activity
+
+When you filter on a model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components, such as on a custom page, in Monitor as your app runs. More information: [Debug a model-driven app with Monitor](../monitor-modelapps.md)
+
+:::image type="content" source="media/add-component-to-model-app/monitor-app-with-custom-page.png" alt-text="Monitoring a model-driven app that has a custom page using the canvas app gallery control" lightbox="media/add-component-to-model-app/monitor-app-with-custom-page.png":::
+
+For example, to filter on the custom page that uses the `Gallery1` control, select the **Control** column header > **Filter by**, enter *Gallery1*, and then select **Apply**.
 
 ## Close a Monitor session
 
