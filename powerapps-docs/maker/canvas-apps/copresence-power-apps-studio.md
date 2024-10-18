@@ -2,8 +2,8 @@
 title: Collaborate on canvas apps in Microsoft Power Apps Studio
 description: Learn how to use copresence and coauthoring to view who's working on the same canvas app as you and edit it together in real time.
 author: mkaur
-ms.author: mkaur
-ms.date: 10/11/2024
+ms.author: szlo
+ms.date: 10/21/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -11,6 +11,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
+  - -szlo
 ai-usage: ai-assisted
 ms.custom:
   - ai-gen-diyeditor
