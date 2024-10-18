@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building and packaging plug-in code for Microsoft Dataverse, including assembly constraints and dependent assembly limitations.
-ms.date: 04/22/2024
+ms.date: 10/14/2024
 ms.topic: conceptual
 author: MicroSri
 ms.author: sriknair
@@ -59,7 +59,7 @@ When you upload your NuGet package, any assemblies that contain classes that imp
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
 > [!IMPORTANT]
-> The name and version of the plug-in package cannot be changed once created. Attempting to do so using an API call results in an error.
+> The name and version of the plug-in package cannot be changed (on the server) once created. Attempting to do so using an API call results in an error.
 
 ### Signed assemblies are not required
 

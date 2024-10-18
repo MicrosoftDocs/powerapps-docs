@@ -3,7 +3,7 @@ title: Sync data offline in the background
 description: Sync Power Apps data offline in the background.
 ms.custom: 
 ms.date: 05/29/2024
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article

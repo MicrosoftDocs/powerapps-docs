@@ -1,7 +1,7 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
 description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
-ms.date: 08/06/2024
+ms.date: 10/14/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: davidjenni # GitHub ID
@@ -11,7 +11,7 @@ ms.author: davidjen
 
 # Dataverse development tools
 
-There are many tools for developers you can use for different aspects of Microsoft Dataverse code development. The following table describes them briefly.
+There are many tools for developers you can use for different aspects of Microsoft Dataverse code development. The following table describes them briefly. Instructions to install and launch the tools are found in the next section that follows the table.
 
 |Tool|Description|Documentation|
 |-|-|-|

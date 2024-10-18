@@ -3,8 +3,8 @@ title: Power Fx and cards overview
 description: Learn about Power Fx and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 3/22/2024
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
