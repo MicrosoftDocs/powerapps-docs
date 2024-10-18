@@ -1,18 +1,17 @@
 ---
 title: Overview of wrap
 description: Learn about the wrap functionality in Power Apps.
-author: larryk78
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: smurkute
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: koagarwa
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - clromano
 ---
 
 # Overview of wrap

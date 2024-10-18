@@ -7,7 +7,7 @@ ms.custom:
 ms.topic: article
 author: MitiJ
 ms.author: mijosh 
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.collection: 
     - bap-ai-copilot 
 ---

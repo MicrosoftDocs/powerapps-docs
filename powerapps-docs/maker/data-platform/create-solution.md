@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/17/2024
+ms.date: 10/15/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -189,7 +189,33 @@ Follow the wizard. In Step 1, starting in alphabetical order, select the assets 
  > [!div class="mx-imgBorder"] 
  > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
 
-### Limitations
+## Delete a solution
+
+Because there are two different types of solutions, managed and unmanaged, the behavior for deleting each type of solution is different.
+
+The solution you want to delete might have components that have dependencies on other components. These dependencies must be removed before you can delete the component. More information: [View dependencies for a component in Power Apps](view-component-dependencies.md)
+
+### Delete a managed solution
+
+Deleting a managed solution removes (uninstalls) *all* the components within the solution. Additionally, *all* associated data are also deleted.
+
+> [!CAUTION]
+> Because all components within the solution and all associated data is deleted, use caution when you delete a managed solution.
+
+### Delete an unmanaged solution
+
+Deleting an unmanaged solution deletes the solution container but doesn't delete any of the unmanaged components within. Any data associated also remains. Each unmanaged component must be individually deleted to remove all components within the unmanaged solution.
+
+### Delete a managed or unmanaged solution
+
+> [!CAUTION]
+> Before you delete a solution, make sure you understand the consequences. Once a solution is deleted it can't be restored. More information: [Delete a managed solution](#delete-a-managed-solution) and [Delete an unmanaged solution](#delete-an-unmanaged-solution)
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Solutions** on the left navigation pane, and then select (don't open) the solution you want to delete in the **Solutions** list.
+1. Select **Delete** on the command bar.
+
+## Limitations
 
 - Solution size is limited to 95 MB.
 - Number of solutions is limited by Microsoft Dataverse capacity.
