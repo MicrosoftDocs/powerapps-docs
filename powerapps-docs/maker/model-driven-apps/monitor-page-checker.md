@@ -37,8 +37,8 @@ There are two ways to open a Monitor session.
 
 1. On the Monitor page, select **Play model-driven** app on the command bar.
 1. When prompted, select **Join**.
-1. The app loads in a new browser tab with a message describing the monitoring session. Switch back to the Monitor tab to view activity.
-   :::image type="content" source="media/monitored-app-session.png" alt-text="Monitored app session with message This app is currently connected to a monitor session.":::
+1. The app loads in a new browser tab with a message indicating the monitoring session. Switch back to the Monitor tab to view activity.
+   :::image type="content" source="media/monitored-app-session.png" alt-text="Monitored app session with message This app is currently connected to a monitor session." lightbox="media/monitored-app-session.png":::
 
 ### From a model-driven app
 
@@ -50,11 +50,13 @@ There are two ways to open a Monitor session.
 
 ## Filter monitored activity
 
-When you filter on a model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components, such as on a custom page, in Monitor as your app runs. More information: [Debug a model-driven app with Monitor](../monitor-modelapps.md)
+When you filter on a model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components, such as on a custom page, in Monitor as your app runs.
 
 :::image type="content" source="media/add-component-to-model-app/monitor-app-with-custom-page.png" alt-text="Monitoring a model-driven app that has a custom page using the canvas app gallery control" lightbox="media/add-component-to-model-app/monitor-app-with-custom-page.png":::
 
 For example, to filter on the custom page that uses the `Gallery1` control, select the **Control** column header > **Filter by**, enter *Gallery1*, and then select **Apply**.
+
+For more information about model-driven app monitoring, go to [Debug a model-driven app with Monitor](../monitor-modelapps.md)
 
 ## Close a Monitor session
 
