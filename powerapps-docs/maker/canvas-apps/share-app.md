@@ -1,19 +1,19 @@
 ---
 title: Share a canvas app with your organization
 description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
-author: alaug
+author: jessicaszelo
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/08/2023
+ms.date: 10/18/2024
 ms.subservice: canvas-maker
-ms.author: alaug
+ms.author: szlo
 search.audienceType: 
   - maker
 contributors:
   - mduelae
   - alaug
-  - msftsamperl
+  - szlo
 ---
 # Share a canvas app with your organization
 
@@ -35,7 +35,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 > - To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md).
 > - To learn about sharing limits applicable to canvas apps in managed environments, see [Sharing limits](/power-platform/admin/managed-environment-sharing-limits).
 
-## Share an app
+## Share an app from Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -55,25 +55,32 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
       :::image type="content" source="media/share-app/share-app.png" alt-text="Screenshot that shows the location of the overflow menu and its share option.":::
 
-## Simplified Canvas app sharing experience
+## Simplified canvas app sharing experience
 
 The canvas app sharing experience has now been revamped! The simplified sharing experience shows a light-weight sharing dialog, similar to other Microsoft Office products. 
 
 1. In the new sharing dialog, specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app in the people picker input box.
-   > - <Screenshot: Type in name>
-2. To assign users as co-owners of the app, change the settings picker to the right of the people picker text input box.
-   > - <Screenshot: share with co-owner>
-3. [Optional] Add a message in the text box below to be sent in the email to the recipients.
-4. [Optional] Attach an app image to be sent in the email to the recipeints.
-   > -  <Screenshot: Attach an image>
-6. "Manage access"  shows app access details, such as current users and co-owners of the app. You can also edit app user access here. The "Additional data access" tab, which shows app connections to data sources, such as Dataverse tables, or Excel files hosted on OneDrive for Business. To manage security roles for Dataverse tables, please revert to the classic sharing experience. For other data sources such as Excel files hosted on OneDrive, please ensure that you share these data sources with the users you shared the app with. 
-> -   <Screenshot: Additional data access>
-> -   <Screenshot: Revert to classic>
 
- > [!Known limitations]
-The following limitations only temporarily apply to the new simplified sharing experience.
-    > - Managing security roles for Dataverse tables. 
-    > - Sharing model-driven apps. For instructions on sharing model-driven apps, please see the Classic app sharing experience section. 
+    :::image type="content" source="media/share-app/share-app-enter-user-name.png" alt-text="enter user name":::
+
+1. To assign users as co-owners of the app, change the settings picker to the right of the people picker text input box.
+:::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
+
+1. [Optional] Add a message in the text box below to be sent in the email to the recipients.
+1. [Optional] Attach an app image to be sent in the email to the recipeints.
+
+    :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
+
+1. "Manage access"  shows app access details, such as current users and co-owners of the app. You can also edit app user access here. The "Additional data access" tab, which shows app connections to data sources, such as Dataverse tables, or Excel files hosted on OneDrive for Business. To manage security roles for Dataverse tables, please revert to the classic sharing experience. For other data sources such as Excel files hosted on OneDrive, please ensure that you share these data sources with the users you shared the app with. 
+
+    :::image type="content" source="media/share-app/additional-data-access.png" alt-text="Additional data access":::
+
+    :::image type="content" source="media/share-app/share-app-revert-to-classic.png" alt-text="revert to classic":::
+
+### Limitations for the simplified canvas app sharing experience
+
+- Managing security roles for Dataverse tables. 
+- Sharing model-driven apps. For instructions on sharing model-driven apps, please see the Classic app sharing experience section. 
 
 
 ## Classic app sharing experience
