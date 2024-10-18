@@ -1,14 +1,14 @@
 ---
 title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
-author: chmoncay
+author: adrianorth
 ms.topic: overview
-ms.date: 09/10/2024
+ms.date: 10/10/2024
 ms.service: powerapps
 ms.subservice: end-user
-ms.author: chmoncay
+ms.author: aorth
 ms.custom: bap-template
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -16,7 +16,6 @@ contributors:
   - HemantGaur
   - adrianorth
   - jasongre
-
 ---
 
 # Modern, refreshed look for model-driven apps
@@ -77,6 +76,16 @@ The system dashboard page, with independent subgrids and charts, has been update
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
+### Chart controls
+
+The chart controls on view pages and dashboards have been updated to a new color palette for the modern, refreshed look.
+
+If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
+
+```xml
+<Chart CustomColorOverride="true">
+```
+
 ## Known limitations
 
 The modern, refreshed look for model-driven apps has some limitations:
@@ -110,14 +119,6 @@ Modern controls can be used with custom pages and the modern, refreshed look. Th
 ### Can I change the color of the app header?
 
 It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
-
-### Can I use custom chart colors?
-
-When using the modern, refreshed look, charts in views and dashboards are updated to a set of modern colors. If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
-
-```xml
-<Chart CustomColorOverride="True">
-```
 
 ## Working with the modern, refreshed look
 

@@ -1,15 +1,15 @@
 ---
 title: "Find your administrator or support person| MicrosoftDocs"
 description: how to find your admin
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/25/2019
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

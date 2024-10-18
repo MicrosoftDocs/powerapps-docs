@@ -34,4 +34,9 @@ The **getTagValue** method returns an object with the following properties:
 
 
 
+### Related articles
+
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
+
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

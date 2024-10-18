@@ -1,18 +1,17 @@
 ---
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about how to use the wrap wizard to package canvas apps into a native mobile app package.
-author: makolomi
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: smurkute
 ms.date: 6/13/2024
 ms.subservice: canvas-maker
-ms.author: clromano
+ms.author: koagarwa
 search.audienceType: 
   - maker
 contributors:
   - mkaur
-  - makolomi
 ---
 
 # Use the wrap wizard to build your mobile app
