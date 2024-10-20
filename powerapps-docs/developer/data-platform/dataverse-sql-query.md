@@ -128,6 +128,9 @@ The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, the
 > [!TIP]
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
+> [!WARNING]
+> Five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` will adjust the limit to two (2) minute as those put too much pressure on the server when left running for a long time. It is advised to avoid using these patterns in SQL for maximum performance. 
+
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
 Querying data using SQL doesn't trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that are normally performed by such a plug-in don't take effect for a SQL query.
