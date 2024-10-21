@@ -181,6 +181,12 @@ A business rule may not execute because the field referenced in the business rul
    > [!div class="mx-imgBorder"] 
    > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
 
+### UTC Time Zone for DateOnly Fields
+ 
+When configuring Business Rules with DateOnly fields, the dates are in the UTC time zone by default, irrespective of the user's set time zone. This can lead to unexpected results if you're expecting DateOnly values to align with local time settings.
+ 
+**Suggested Handling:** Time Zone Independent Setting - To make the DateOnly field independent of time zones and display dates in parity with what was configured in the Business Rule (i.e., in UTC), you can enable the Time Zone Independent setting. For more information on configuring date handling settings, see the [Dataverse Date and Time Configuration documentation](/developer/data-platform/behavior-format-date-time-attribute#specify-the-behavior-of-a-date-and-time-column/).
+
 ## Frequently asked questions (FAQ)
 
 *Can business rules unlock fields on a read-only form?*
