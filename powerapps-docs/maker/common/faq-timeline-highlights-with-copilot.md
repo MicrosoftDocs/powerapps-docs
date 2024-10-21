@@ -5,7 +5,7 @@ author: lalexms
 ms.reviewer: matp
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/25/2024
+ms.date: 10/25/2024
 ms.subservice: mda-maker
 ms.author: laalexan
 search.audienceType: 
@@ -86,6 +86,7 @@ Copilot is a powerful and helpful feature, but it isn't perfect. It has some lim
    - Russian
    - Swedish
    - Turkish
+   - Vietnamese
   
 - **Suggestions**: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
 
