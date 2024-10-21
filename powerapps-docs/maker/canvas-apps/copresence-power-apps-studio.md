@@ -66,7 +66,7 @@ Legend:
 To use coauthoring, you need to turn it on for each app. If you turn on coauthoring, it overrides the copresence feature.
 
 1. Open your app for editing in Power Apps Studio.
-1. Go to **Settings** > **Updates** > **Preview**.
+1. Go to **Settings** > **Updates** > **New**.
 1. Turn on the **Coauthoring** toggle.
 
 ### Limitations of coauthoring
