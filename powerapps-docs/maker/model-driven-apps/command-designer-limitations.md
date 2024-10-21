@@ -25,6 +25,7 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 -	Not all out-of-the-box or custom visibility rules from classic commands are currently supported in Power Fx. Classic visibility is supported without using Power Fx. This is needed to migrate classic commands to modern and classic rule formats but won't be exposed in command designer. However, classic visibility is exposed within solution files and Dataverse.
 -	To delete command component libraries, you must delete the app. Alternatively, you can delete the associated record within the model-driven app element table, then delete the component library. The model-driven app element record exists in Dataverse but isn't exposed in solutions. More information: [Delete a Model-Driven App Element record](#delete-a-model-driven-app-element-record)
 - PowerFx based commands aren't supported and won't run within the Dynamics 365 app for Outlook or a model-driven app that's hosted within a Portal.
+- Metadata changes for attributes might not reflect in the Power Fx experession. To update the metadata, open the component library using command bar actions in Command designer. In the canvas designer select Data sources, select the data source and refresh. This will update the metadata for the component library.
 
 ## Command designer limitations
 
