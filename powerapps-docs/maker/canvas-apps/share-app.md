@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/18/2024
+ms.date: 10/31/2024
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -17,7 +17,8 @@ contributors:
 ---
 # Share a canvas app with your organization
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Microsoft Entra ID.
+When you create a canvas app, you can define which users in your organization can use the app, modify it, and even re-share it. You can specify individual users by name or designate a security group in Microsoft Entra ID.
+
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -30,62 +31,60 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
 - Whenever you make changes, you must save and publish the app again if you want others to see those changes.
 
-> [!NOTE]
->
-> - To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md).
-> - To learn about sharing limits applicable to canvas apps in managed environments, see [Sharing limits](/power-platform/admin/managed-environment-sharing-limits).
 
 ## Share an app from Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left pane, select **Apps**.
+1. On the left navigation pane, select **Apps**.
 
 1. Select the app that you want to share.
 
-   :::image type="content" source="media/share-app/select-app.png" alt-text="Screenshot that shows your list of apps, where you can select one.":::
+1. On the command bar, select **Share**. Or select the **Commands** menu next to your app name and then select **Share**.
 
-1. You can share your app in one of two ways:
+1. In the **Share** dialog box, type the names or alias of the user or security groups in Microsoft Entra ID with.
 
-   1. On the command bar, select **Share**.
+1. Select the down arrow to choose permissions for the app. Options include:
+    - **User**: Can use the app only.
+    - **Co-Ownwer**: Can use, edit, and share the app but not delete or change owners.
 
-      :::image type="content" source="media/share-app/share-icon-menu-bar.png" alt-text="Screenshot that shows location of the share icon on the menu bar." lightbox="media/share-app/share-icon-menu-bar.png":::
+        :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
 
-   1. Select the overflow menu (**...**) next to your app name and select **Share** from the drop-down menu.
+1. (optional) Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.sent in the email.
 
-      :::image type="content" source="media/share-app/share-app.png" alt-text="Screenshot that shows the location of the overflow menu and its share option.":::
-
-## Simplified canvas app sharing experience
-
-The canvas app sharing experience has now been revamped! The simplified sharing experience shows a light-weight sharing dialog, similar to other Microsoft Office products. 
-
-1. In the new sharing dialog, specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app in the people picker input box.
-
-    :::image type="content" source="media/share-app/share-app-enter-user-name.png" alt-text="enter user name":::
-
-1. To assign users as co-owners of the app, change the settings picker to the right of the people picker text input box.
-:::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
-
-1. [Optional] Add a message in the text box below to be sent in the email to the recipients.
-1. [Optional] Attach an app image to be sent in the email to the recipeints.
 
     :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
 
-1. "Manage access"  shows app access details, such as current users and co-owners of the app. You can also edit app user access here. The "Additional data access" tab, which shows app connections to data sources, such as Dataverse tables, or Excel files hosted on OneDrive for Business. To manage security roles for Dataverse tables, please revert to the classic sharing experience. For other data sources such as Excel files hosted on OneDrive, please ensure that you share these data sources with the users you shared the app with. 
+1. Add an optional message and then select **Share**.
 
-    :::image type="content" source="media/share-app/additional-data-access.png" alt-text="Additional data access":::
+> [!IMPORTANT]
+> **Manage access** displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.
 
-    :::image type="content" source="media/share-app/share-app-revert-to-classic.png" alt-text="revert to classic":::
+:::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
 
-### Limitations for the simplified canvas app sharing experience
+### App sharing limitations
 
-- Managing security roles for Dataverse tables. 
-- Sharing model-driven apps. For instructions on sharing model-driven apps, please see the Classic app sharing experience section. 
+- Managing security roles for Dataverse tables.
 
+> [!NOTE]
+> - To learn about sharing apps outside of your organization, see [Share a canvas app with guest users](share-app-guests.md).
+> - To learn about sharing limits applicable to canvas apps in managed environments, see [Sharing limits](/power-platform/admin/managed-environment-sharing-limits).
 
 ## Classic app sharing experience
 
-1. Specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. On the left navigation pane, select **Apps**.
+
+1. Select the app that you want to share.
+
+1. On the command bar, select **Share**. Or select the **Commands** menu next to your app name and then select **Share**
+
+1. Select the **overflow menu (...)** at the top-right corner and then select **Use classic sharing**.
+
+   :::image type="content" source="media/share-app/share-app-revert-to-classic.png" alt-text="Share app using classic sharing":::
+
+1. Specify the name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
 
     You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes \<meghan.holmes@contoso.com\>**) if the items are separated by semicolons.
 
@@ -93,17 +92,15 @@ The canvas app sharing experience has now been revamped! The simplified sharing 
 
     :::image type="content" source="media/share-app/individual-user.png " alt-text="Screenshot that shows what happens when you search for a name in the search field on an app page.":::
 
-    > [!NOTE]
-    >
-    > - You can't share an app with a distribution group in your organization or with a group outside your organization.
-    > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users.
+   > [!NOTE]
+   > - You can't share an app with a distribution group in your organization or with a group outside your organization.
+   > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users.
 
 1. If your app contains premium components, such as a map or address input, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses**, which submits the request to your admin.
 
    :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
 
    > [!NOTE]
-   >
    > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
@@ -174,6 +171,7 @@ Legend:
 5. **Launch app in Web**: Open the app directly in your browser.
 
 ## Request licenses for your users
+
 When sharing an app that requires a license for use, you can request Power Apps licenses for your users. For more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 ## Security group considerations
