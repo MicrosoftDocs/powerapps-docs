@@ -2,9 +2,8 @@
 title: Monitor and troubleshoot model-driven app form behavior in Power Apps | MicrosoftDocs
 description: "Monitor can help you debug and diagnose problems, which help you build faster, more reliable apps."
 ms.custom: ""
-ms.date: 08/11/2020
+ms.date: 10/18/2024
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
@@ -17,11 +16,11 @@ search.audienceType:
 ---
 # Use Monitor to troubleshoot model-driven app form behavior
 
-Monitor is a tool that can help app makers debug and diagnose problems, which helps them build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in the app as it runs.
+Monitor is a tool that can help app makers debug and diagnose problems, which help them build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in the app as it runs.
 
 Filtering on model-driven app form-related events in Monitor can provide information about related tables, tables, controls, and components on a form in Monitor as your app runs.  
 
-There are many situations where Monitor can help makers understand why a form behaves a certain way. Many form issues are based on business rules, JavaScript, form events, or client API that admins and makers have set. Monitor can also help identify whether the issue experienced is designed out-of-the-box or is due to a customization. It provides details that can help answer the following questions:
+There are many situations where Monitor can help makers understand why a form behaves a certain way. Many form issues are based on business rules, JavaScript, form events, or client API that admins and makers set. Monitor can also help identify whether the issue experienced is designed out-of-the-box or is due to a customization. It provides details that can help answer the following questions:
 
 - [Why aren't rows showing in the related menu of a table?](../../developer/model-driven-apps/troubleshoot-forms.md#related-menu-item-doesnt-appear-in-related-tab)
 - [Why a control is disabled/enabled or visible/hidden](../../developer/model-driven-apps/troubleshoot-forms.md#why-a-control-is-disabledenabled-or-visiblehidden)
@@ -29,33 +28,18 @@ There are many situations where Monitor can help makers understand why a form be
 
 ## Filter Monitor for form-related issues
 
-Follow the instructions below to understand the behavior of your model-driven app forms.
+Follow these instructions to understand the behavior of your model-driven app forms.
 
-### Step 1: Create a Monitor session
+## Create a Monitor session
 
-There are two ways to open a Monitor session. 
+Sign in to [Power Apps](https://make.powerapps.com/), select **Apps**, select **...** next to the model-driven app or on the global command bar, and then select **Monitor**.
 
-**Option 1:**
+On the Monitor page, select **Play model-driven** app on the command bar. For more information about creating a Monitor session, go to [Use Monitor to troubleshoot page behavior in model-driven apps](monitor-page-checker.md).
 
-1. Sign in to [Power Apps](https://make.powerapps.com/), select **Apps**.
-1. Select **...** next to the model-driven app or on the global command bar, and then select **Monitor**.
+## Filter for forms monitoring
 
-   :::image type="content" source="media/create-monitor-session.png" alt-text="Sample model-driven app":::
+While the app is running in a monitored session, perform actions within the model-driven app consistent with normal use of the app. For example, open and change data using a table form.
 
-1. Follow the instructions on your screen to run the app and join the monitoring session.
-
-**Option 2:**
-
-1. Play your model-driven app.
-2. Add `&monitor=true` to the end of the URL in your web browser, and then refresh the page.
-3. Select **Monitor** on the command bar.
-
-    > ![Location of Monitor button in global command bar](https://user-images.githubusercontent.com/69216748/146047014-b9428da5-138a-4ccf-b74c-b45a0a0685b9.png)
-
-### Step 2: Connect your app to the Monitor session
-
-1. Once in the monitor, select **Play model-driven app** from the menu on the command bar. This opens the app and begins the monitoring.
-1. Perform actions within the model-driven app consistent with normal use of the app. For example, open and change data using a table form.
 1. On the browser window running Monitor, select the **Category** column, and then select **Filter by**.
 
    > [!div class="mx-imgBorder"]
@@ -72,7 +56,7 @@ There are two ways to open a Monitor session.
 
 ## Use Monitor to understand form behavior
 
-For each row with Monitor, detailed information about the form event can be reviewed. For example, imagine you have a question about an error taking place within the form. You go to that form in the app and select the appropriate form component. Then return to the browser with Monitor enabled and review the results either with or without filtering.  In this case, there is an error on the composite control.  By expanding areas of the **Details**, you can learn more about the event itself.
+For each row with Monitor, detailed information about the form event can be reviewed. For example, imagine you have a question about an error taking place within the form. You go to that form in the app and select the appropriate form component. Then return to the browser with Monitor enabled and review the results either with or without filtering. In this case, there's an error on the composite control. By expanding areas of the **Details**, you can learn more about the event itself.
 
 > [!div class="mx-imgBorder"] 
 > ![Monitoring a related menu.](media/monitor-formchecker-related-menu.png)
@@ -105,6 +89,10 @@ Examples of the supported form-related events in Monitor include:
 - ControlStateChange.visible
 - SectionStateChange.visible
 - UnsupportedClientApi
+
+## Close a monitoring session
+
+To close the monitoring session, close the browser tab where the monitored model-driven app is playing.
 
 ## Next steps
 
