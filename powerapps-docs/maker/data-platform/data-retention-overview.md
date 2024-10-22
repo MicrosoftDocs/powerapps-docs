@@ -46,7 +46,6 @@ Application admins set up custom policies for a table with criterion to retain d
 
 > [!IMPORTANT]
 > - Once data is retained with Dataverse long term retention it can't be moved back to the Dataverse live (active) application state.
-> - You can't use the long term data retention feature with environments that have either self-managed encryption key [bring your own key](/power-platform/admin/cmk-migrate-from-byok) or [customer managed key](/power-platform/admin/cmk-migrate-from-byok) enabled.
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 Dataverse provides read-only access to the retained data via:
