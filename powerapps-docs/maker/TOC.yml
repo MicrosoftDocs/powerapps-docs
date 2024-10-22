@@ -300,7 +300,7 @@
       items:
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Continue editing your app with Copilot (preview)
+      - name: Edit your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
       - name: Use field suggestions by Copilot
         href: ./canvas-apps/ai-field-suggestions.md
@@ -696,7 +696,7 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
-        - name: Create Power Fx formulas with Copilot
+        - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
         - name: Understand variables
           href: ./canvas-apps/working-with-variables.md
@@ -1356,6 +1356,8 @@
       href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
+    - name: Build business logic
+      href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
   - name: Important changes and deprecations

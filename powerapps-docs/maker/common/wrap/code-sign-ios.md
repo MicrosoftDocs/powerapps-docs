@@ -1,13 +1,13 @@
 ---
 title: Code sign for iOS
 description: Learn about how to code sign for iOS for Power Apps wrap.
-author: larryk78
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: smurkute
 ms.date: 03/22/2024
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: koagarwa
 search.audienceType: 
   - maker
 contributors:

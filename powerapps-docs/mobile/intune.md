@@ -4,11 +4,11 @@ description: Manage mobile app with Microsoft Intune.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/28/2022
+ms.date: 10/11/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -33,6 +33,6 @@ With an Intune-enabled mobile app, IT administrators can:
 
 ## Get started
 
-Intune is a separate Microsoft product that is not included with Power Apps mobile. Refer to the documentation on [What is Microsoft Intune app management?](/intune/apps/app-management) and [Adding and assigning an app with Intune](/intune/apps/quickstart-add-assign-app) to get started.
+Intune is a separate Microsoft product that is not included with Power Apps mobile. Refer to the documentation on [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy) to get started.
 
 A configuration can be set up through the [Device Management portal](https://devicemanagement.microsoft.com/). Each supported platform (iOS, Android, and Windows) requires a separate configuration.

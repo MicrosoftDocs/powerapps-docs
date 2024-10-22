@@ -20,7 +20,7 @@ contributors:
 
 You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
 
-You may also want to use [Community tools](overview.md#community-tools) like the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/)
+You may also want to use [Community tools](overview.md#community-tools), like the [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
 
 How you retrieve data depends on whether you are using the [SDK for .NET](../org-service/overview.md) or [Dataverse Web API](../webapi/overview.md).
 
@@ -79,7 +79,7 @@ Then, URL-encode the value.  Most programming languages include a function to UR
 - In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String))
 
 > [!TIP]
-> The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
+> The [XrmToolBox](../community-tools.md#xrmtoolbox) tool [FetchXML Builder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
 
 The URL-encoded string for the previous query example looks like this:
 

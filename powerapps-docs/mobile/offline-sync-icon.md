@@ -4,7 +4,7 @@ description: Learn how to interpret the offline sync icon in the mobile app navi
 ms.date: 09/13/2024
 ms.author: trdehove
 author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.topic: conceptual
 ms.service: powerapps
 ms.custom: bap-template
