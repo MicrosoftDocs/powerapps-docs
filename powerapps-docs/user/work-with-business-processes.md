@@ -29,7 +29,7 @@ As you work on a new customer row, the business process flow helps you see each 
 
 The process bar can also be docked to the right side of the screen for easy reference as you work with a customer row. 
 
-- On the prcess bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout."](media/bp_stage_flyout.png "Pin business process stage flyout"). 
+- On the process bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout."](media/bp_stage_flyout.png "Pin business process stage flyout"). 
 
   > [!div class="mx-imgBorder"]
   > ![Business process.](media/bpdock.gif "Business process")
