@@ -1,13 +1,13 @@
 ---
 title: Build business logic 
 description: Build business logic in Power Apps.
-author: mduelae
+author: lancedMicrosoft 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: benapple
+ms.reviewer: mkaur
 ms.date: 10/22/2024
 ms.subservice: canvas-maker
-ms.author: benapple
+ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
