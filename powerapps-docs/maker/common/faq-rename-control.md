@@ -58,7 +58,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 - This capability can be subject to usage limits or capacity throttling. 
 - Your environment must be in the United States region.
 - This feature doesn’t support non-English language input. 
-- This feature only supports limited controls and actions as listed in the [intended use](faq-control-rename-copilot.md#what-is-rename-Canvas-controls-with-copilot) section. Microsoft is actively working on expanding the scope of this feature and support more controls incrementally. 
+- This feature only supports limited controls and actions as listed in the [intended use](faq-rename-control.md#what-is-rename-canvas-controls-with-copilot) section. Microsoft is actively working on expanding the scope of this feature and support more controls incrementally. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
