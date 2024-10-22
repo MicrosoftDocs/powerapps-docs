@@ -2,7 +2,7 @@
 title: "Create, edit, or configure forms using the model-driven form designer | MicrosoftDocs"
 description: Learn how to create and edit model-driven app forms
 ms.custom: ""
-ms.date: 00/22/2024
+ms.date: 10/22/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
