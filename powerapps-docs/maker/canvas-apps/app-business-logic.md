@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: benapple
-ms.date: 07/31/2024
+ms.date: 10/22/2024
 ms.subservice: canvas-maker
 ms.author: benapple
 search.audienceType: 
