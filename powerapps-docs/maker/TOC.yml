@@ -2623,6 +2623,8 @@
     href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
+  - name: FAQ about renaming contorls with Copilot
+    href: ./common/faq-rename-control.md
 - name: Resources
   items:
   - name: Blog
