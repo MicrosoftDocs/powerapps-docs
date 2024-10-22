@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2024
+ms.date: 10/22/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
@@ -129,7 +129,7 @@ The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, the
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
 > [!WARNING]
-> Five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` will adjust the limit to two (2) minute as those put too much pressure on the server when left running for a long time. It is advised to avoid using these patterns in SQL for maximum performance. 
+> The five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` will automatically adjust the timeout limit to two (2) minutes as those queries put too much pressure on the server when left running for a long time. It is advised to avoid using these patterns in SQL for maximum performance.
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
