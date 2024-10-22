@@ -5,8 +5,9 @@ ms.service: powerapps
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
+contributors: neerajatmsft
 ms.topic: overview
-ms.date: 08/02/2024
+ms.date: 10/22/2024
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
