@@ -50,21 +50,21 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
 
-1. (optional) Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
+1. Optional steps:
+   - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
 
 
     :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
+. 
+   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.
+
+     :::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
 
 1. Add an optional message and then select **Share**.
 
-> [!IMPORTANT]
-> Select  **Manage access** on the **Share** dialog box displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.:::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
-
-
-
 ### App sharing limitations
 
-- Managing security roles for Dataverse tables.
+Managing security roles for Dataverse tables. 
 
 > [!NOTE]
 > - To learn about sharing apps outside of your organization, see [Share a canvas app with guest users](share-app-guests.md).
