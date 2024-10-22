@@ -1,7 +1,7 @@
 ---
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/11/2024
+ms.date: 10/22/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -11,6 +11,7 @@ search.audienceType:
 contributors: 
   - JimDaly
   - JosinaJoy
+  - legunter
 ---
 # Join tables using OData
 
@@ -108,15 +109,17 @@ Expanding a collection-valued navigation property can make the size of the respo
 
 There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
-## Supported Relationship Types for $expand
-The table below shows the supported relationships when using $expand on multiple properties for the same entity vs nesting expands
+## Supported Relationship types for $expand
+
+The table below shows the supported relationships when using `$expand` on multiple properties for the same entity vs nesting expands.
+
 | Relationship Type | Multiple | Nested |
-|--|--|--|
-| Only N:1	| ✓	| ✓|
-| Only 1:N	| ✓	| ✓|
-| Only N:N	| ✓	| ✘|
-| All combinations of 1:N and N:1	| ✓	| ✓|
-| Combinations with N:N	| ✘	| ✘|
+|---|---|---|
+| Only N:1   | ✓   | ✓|
+| Only 1:N   | ✓   | ✓|
+| Only N:N   | ✓   | ✘|
+| All combinations of 1:N and N:1   | ✓   | ✓|
+| Combinations with N:N   | ✘   | ✘|
 
 ## Expand single-valued navigation properties
 
