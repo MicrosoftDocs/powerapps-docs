@@ -186,7 +186,7 @@ A business rule might not execute because the field referenced in the business r
 
 When you configure business rules with `DateOnly` columns, the dates are in the UTC time zone by default, irrespective of the user's set time zone. This can lead to unexpected results if you're expecting `DateOnly` values to align with local time settings.
 
-**Suggested Handling:** Time Zone Independent setting - To make the `DateOnly` columns independent of time zones and display dates in parity with what was configured in the business rule, UTC for example, you can enable the Time Zone Independent setting. For more information about configuring date handling settings, go to [Dataverse Date and Time Configuration documentation](/developer/data-platform/behavior-format-date-time-attribute#specify-the-behavior-of-a-date-and-time-column/).
+**Suggested Handling:** Time Zone Independent setting - To make the `DateOnly` columns independent of time zones and display dates in parity with what was configured in the business rule, UTC for example, you can enable the Time Zone Independent setting. For more information about configuring date handling settings, go to [Specify the behavior of a date and time column](../../developer/data-platform/behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
 
 ## Frequently asked questions (FAQ)
 
