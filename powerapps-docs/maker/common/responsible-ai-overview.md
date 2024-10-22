@@ -46,3 +46,4 @@ ms.collection:
 - [Use field suggestions by Copilot](../canvas-apps/ai-field-suggestions.md)
 - [FAQs for field suggestions by Copilot](faq-field-suggestions.md)
 - [FAQ about filtering, sorting, and searching canvas galleries with Copilot](faq-filter-with-copilot.md)
+- [FAQ about renaming Canvas controls with Copilot](faq-control-rename-copilot.md)
