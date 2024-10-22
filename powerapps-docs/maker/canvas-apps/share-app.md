@@ -19,10 +19,6 @@ contributors:
 
 When you create a canvas app, you can define which users in your organization can use the app, modify it, and even re-share it. You can specify individual users by name or designate a security group in Microsoft Entra ID.
 
-
-> [!IMPORTANT]
-> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
-
 ## Prerequisites
 
 Before you share an app, you must [save it](save-publish-app.md) (not locally) and then [publish](save-publish-app.md) it.
@@ -31,6 +27,8 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
 - Whenever you make changes, you must save and publish the app again if you want others to see those changes.
 
+> [!IMPORTANT]
+> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
 
 ## Share an app from Power Apps
 
