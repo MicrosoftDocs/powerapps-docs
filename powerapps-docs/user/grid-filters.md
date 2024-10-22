@@ -60,17 +60,17 @@ Smart grid enables you to ask data-related questions with natural language. For 
 
 ### Known limitations
 
-- Aggregation queries are not supported
-- Grouping queries are not supported
-- Adding columns are not supported
+- Aggregation queries aren't supported
+- Grouping queries aren't supported
+- Adding columns aren't supported
 
 ### Guidelines
 
-- After executing a query, review the generated filter tags to ensure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results were not filtered by that condition.
-- If Copilot does not produce the desired results, consider modifying your query by:
+- After executing a query, review the generated filter tags to ensure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results weren't filtered by that condition.
+- If Copilot doesn't produce the desired results, consider modifying your query by:
   - Referring to data columns by their names as they appear in the grid header
   - Separating multiple conditions with commas or periods
-- Search strings with two words or fewer will perform a text search (previous functionality).  To perform a Copilot search, use more than two words.  To perform a text search for more than two words, enclose the search term in single or double quotes.
+- Search strings with two words or fewer will do a text search (previous functionality).  To do a Copilot search, use more than two words.  To perform a text search for more than two words, enclose the search term in single or double quotes.
 
 ## View selector
   
