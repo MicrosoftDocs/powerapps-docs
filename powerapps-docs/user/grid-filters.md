@@ -21,9 +21,10 @@ In model-driven apps, the default control that's used to show data in tabular fo
 Legend:
 
 1. **Command bar**: The commands available for the page
-1. **View selector**: Select to change views
-1. **Edit columns**: Select to add, remove, or reorder columns
-1. **Edit filters**: Select to filter the view with advanced queries
+1. [**Smart grid**](#smart-grid-preview): Enables quick data search, filtering, and sorting using natural language.
+1. [**View selector**](#view-selector): Select to change views
+1. [**Edit columns**](#column-editor): Select to add, remove, or reorder columns
+1. [**Edit filters**](#filter-editor): Select to filter the view with advanced queries
 1. [**Filter by keyword** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
 1. **Hierarchy icon**: Indicates the record is part of a hierarchy
 1. **Record counter**: The position of this page of records in the total number of records that are shown in the view
@@ -38,6 +39,38 @@ If a record is in a hierarchy relationship, select the hierarchy icon to open th
 :::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
 
  If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in, including the grid control you had last chosen from the **Show as** menu.
+
+## Smart grid (preview)
+
+[!INCLUDE [preview-banner](../shared/preview-includes/preview-banner.md)]
+
+Smart grid enables you to ask data-related questions with natural language. For instance, requesting “cases with high priority with overdue follow-up by date” will filter your view to display only those relevant cases.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
+
+### Supported features
+
+- Filtering of record
+- Sorting
+- Text search  
+
+### Known limitations
+
+- Aggregation queries are not supported
+- Grouping queries are not supported
+- Adding columns are not supported
+
+### Guidelines
+
+- After executing a query, review the generated filter tags to ensure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results were not filtered by that condition.
+- If Copilot does not produce the desired results, consider modifying your query by:
+  - Referring to data columns by their names as they appear in the grid header
+  - Separating multiple conditions with commas or periods
+- Search strings with two words or fewer will perform a text search (previous functionality).  To perform a Copilot search, use more than two words.  To perform a text search for more than two words, enclose the search term in single or double quotes.
 
 ## View selector
   
@@ -87,7 +120,7 @@ The search box can offer two different experiences, depending on how your admini
 If your administrator has turned on quick find, then the search box shows **Quick find**. When you enter text in the **Quick find** box, the system filters the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
 
 > [!NOTE]
-> Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*). 
+> Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*).
 >
 > ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning-smaller.png "Searching for keywords that begin with an asterisk will display a warning message.")
   
