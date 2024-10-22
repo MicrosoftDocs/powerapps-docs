@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 10/17/2024
+ms.date: 10/21/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -28,6 +28,7 @@ Copilot is an AI feature in Power Apps Studio that helps you create and modify P
 ## Prerequisites
 
 Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
+
  
 > [!NOTE]
 > By default, the new formula bar is enabled. If the **Copilot functionality menu** isn't visible, check the following app settings in Power Apps Studio:
@@ -56,11 +57,9 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 - Copilot doesn't recognize user-defined functions.
 
 > [!NOTE]
-> AI-generated content might be inaccurate and should be checked for accuracy.
+> AI generated content may be inaccurate and should be checked for accuracy.
 
-## Generate formulas from code comments (preview)
-
-[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
+## Generate formulas from code comments 
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
@@ -90,7 +89,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 - Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
-- This feature isn't available in the Canada region.
+
 
 ## Responsible AI
 
