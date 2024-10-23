@@ -2,7 +2,7 @@
 title: "Create, edit, or configure forms using the model-driven form designer | MicrosoftDocs"
 description: Learn how to create and edit model-driven app forms
 ms.custom: ""
-ms.date: 08/26/2024
+ms.date: 10/22/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,7 +20,6 @@ tags:
 search.audienceType: 
   - maker
 ---
-
 # Create, edit, or configure forms using the form designer
 
 Use the form designer to create, edit, or configure forms for model-driven apps.
@@ -35,10 +34,10 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
    - **Quick view form** Quick view forms appear within a main form to display additional read-only data referencing a lookup column.
       [Learn more about main forms](create-edit-main-forms.md)
    - **Quick create form** Best for creating new records quickly where only essential columns are required. Appears in a side panel so users don't navigate away from the current screen.
-   - **Card form** For displaying compact data in a layout that is good for small screens or areas in a sub-grid or view.
+   - **Card form** For displaying compact data in a layout that is good for small screens or areas in a subgrid or view.
  
 1. Enter a **Form name**, and optionally enter a **Description**.
-1. If you want to have suggestions from Copilot for the columns to create for the form based on the **Form name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot-preview).
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the **Form name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](#column-suggestions-by-copilot).
    :::image type="content" source="media/new-form.png" alt-text="Create a new form card in Power Apps" lightbox="media/new-form.png":::
 1. Select **Create**.
 
@@ -51,16 +50,10 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
 1. Make changes such as adding columns or [configuring properties](#form-properties).
 1. When you're done making changes to the form, select **Save and Publish** > **Save only** to save the form, or select **Save and Publish** to save and have your changes available to app users.
 
-## Column suggestions by Copilot (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Column suggestions by Copilot
 
 Use column suggestions by Copilot to select the best columns to display in your model-driven app form. Instead of using the default fields that Power Apps selects, makers can view suggestions from Copilot. The column suggestions are based on the form name and description. Makers review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ### Prerequisites
 
@@ -88,7 +81,7 @@ These are the properties available to configure a form when you create or edit a
 |**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table, they will use this name to differentiate between the available forms. <br /><br />This property is required. |
 |**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for a table in the solution explorer. |
 |**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
-|**Show image** | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. <br /><br /> More information: [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) |
+|**Show image** | Show the table’s **Primary Image** if it has one set. This setting enables showing the image column in the header of the form. <br /><br /> More information: [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) |
 
 ## See also
 
