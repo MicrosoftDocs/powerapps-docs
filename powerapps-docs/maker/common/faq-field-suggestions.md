@@ -69,7 +69,7 @@ Copilot will only read your table’s metadata (so table name, description, colu
 
 [Use field suggestions by Copilot](../canvas-apps/ai-field-suggestions.md)
 
-[Column suggestions by Copilot](../model-driven-apps/create-and-edit-forms.md#column-suggestions-by-copilot-preview)
+[Column suggestions by Copilot](../model-driven-apps/create-and-edit-forms.md#column-suggestions-by-copilot)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
