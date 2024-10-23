@@ -178,7 +178,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable.
 To take advantage of this functionality, simply select "Use environment variables" when choosing a connection for your data source during virtual table create step. This feature links the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment.
 
-     :::image type="content" source="media/VT_Env_Variable.png" alt-text="ALM (Environment variable) for virtual table":::
+     [ALM for virtual table](./media/VT_Env_Variable.png)
 4. Select **Create**.
 5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
 6. Select your connection.
