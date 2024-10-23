@@ -62,9 +62,13 @@ Older msapps will not have the \src folder.
 
 To generate source code files for an older msapp you must import the .msapp in Power Apps Studio before [extract the source code files.](#extract-source-code-files-from-a-msapp-file)
 
+In the src folder, you have:
+- App.pa.yaml to represent the App
+- One file per screen [screen Name].pa.yaml to represent the screen
+- One file pre component [component Name].pa.yaml to represent the component.
+
 >[!IMPORTANT]
 > Only *.pa.yaml files within "\src" folder can be used as source code.
-
 
 ## Power Apps YAML versions
 
@@ -72,7 +76,7 @@ There are 3 versions of Power Apps Source Code:
 
 |Format Name|File Format|Description|
 |-----------|-----------|-------|
-| Experimental | *.fx.yaml| Version used by experimental [Power Apps Git version control](./canvas-apps/git-version-control.md) - no longer in development. |
+| Experimental | *.fx.yaml| Version used by the experimental [Power Apps Git version control](./canvas-apps/git-version-control.md) - no longer in development. |
 | Code View Preview | runtime only | Version used by Code View Preview - runtime only, not suitable for version control. |
 | Canvas Yaml Source Code | pa.yaml files | This is the current and effective version of Canvas YAML. |
 
@@ -81,9 +85,16 @@ There are 3 versions of Power Apps Source Code:
 
 ## Supported Scenario
 
+The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors.
+
+>[!Important]
+>
+> YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+> Content may be incomplete and subject to change.
+> pa.yaml files are read-only and should only be used to review changes made within Power Apps Studio. pa.yaml files are not used when loading the app. 
+> External editing, merging and conflict resolution are not supported.
 
 ## Improvements from Previous Version
-
 
 Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed. Content may be incomplete and subject to change.
 This file is read-only and should only be used to review changes made within Power Apps Studio. This file isn't used when loading the app. External editing, merging and conflict resolution are not supported.
