@@ -14,7 +14,7 @@ ms.custom:
   - canvas  
 ---
 
-To effectively manage ALM, it's recommended to use solutions. Canvas apps packages don’t support ALM and should only be used for basic import and export capabilities when Dataverse isn’t accessible.
+
 
 
 In a solution, canvas apps are included as binary .msapp files. Although this will work for ALM, you can't manage a binary file as a source code.

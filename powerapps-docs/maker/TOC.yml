@@ -1312,7 +1312,7 @@
     items:
     - name: Working with Source Code
       items:
-        - name: Understand app functionality through code view (preview)
+        - name: Code View (preview)
           href: ./canvas-apps/code-view.md
         - name: Source Code Integration (Preview)
           href: ./canvas-apps/pp-source-code-git.md
