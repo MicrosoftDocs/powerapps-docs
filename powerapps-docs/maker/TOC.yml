@@ -1311,7 +1311,7 @@
   - name: For developers
     items:
     - name: Working with Source Code
-        items:
+      items:
         - name: Understand app functionality through code view (preview)
           href: ./canvas-apps/code-view.md
         - name: Source Code Integration (Preview)
