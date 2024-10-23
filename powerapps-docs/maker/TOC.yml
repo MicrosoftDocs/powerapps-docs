@@ -1314,10 +1314,10 @@
       items:
         - name: Code View (preview)
           href: ./canvas-apps/code-view.md
-        - name: Source Code Integration (Preview)
-          href: ./canvas-apps/pp-source-code-git.md
+        - name: Dataverse Git Integration (Preview)
+          href: ./canvas-apps/power-apps-dataverse-git.md
         - name: Source Code files for Canvas apps (pa.yaml)
-          href: ./canvas-apps/pa-yaml-files.md
+          href: ./canvas-apps/power-apps-yaml.md
         - name: Use Git version control to edit canvas apps (experimental)
           href: ./canvas-apps/git-version-control.md
     - name: Canvas apps for enterprise developers, partners, and ISVs
