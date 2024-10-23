@@ -4,7 +4,7 @@ description: Learn how to connect to a SQL server from Power Apps.
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/3/2024
+ms.date: 10/25/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -16,7 +16,6 @@ contributors:
 ---
 
 # Get started with connecting to SQL from Power Apps
-
 
 To connect to SQL from Power Apps, you can use the following methods:
 
