@@ -180,7 +180,7 @@ To take advantage of this functionality, simply select "Use environment variable
 
 :::image type="content" source="media/VT_Env_Variable.png" alt-text="ALM (Environment variable) for virtual table":::
 4. Select **Create**.
-5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
+5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**. 
 6. Select your connection.
 
 ## ALM for virtual tables recommendation and limitations
