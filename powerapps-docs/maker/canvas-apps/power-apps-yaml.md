@@ -18,7 +18,7 @@ ms.custom:
 
 In this article, you'll learn about the source code files of a canvas app.
 
-We use YAML as our language. There are already a large number of editors, tools, and libraries for manipulating YAML. YAML is also human-readable. 
+We use Power FX + YAML as our language for Power Apps Source Code. YAML is friendly for humans to read, and there are already a large number of editors, tools, and libraries for manipulating YAML.
 
 >[NOTE]
 > We support only a restricted subset of YAML. Only the constructs described in this document are supported.
@@ -76,9 +76,9 @@ There are 3 versions of Power Apps Source Code:
 
 |Format Name|File Format|Description|
 |-----------|-----------|-------|
-| Experimental | *.fx.yaml| Version used by the experimental [Power Apps Git version control](./canvas-apps/git-version-control.md) - no longer in development. |
-| Code View Preview | runtime only | Version used by Code View Preview - runtime only, not suitable for version control. |
-| Canvas Yaml Source Code | pa.yaml files | This is the current and effective version of Canvas YAML. |
+| Experimental | *.fx.yaml| Version used by the experimental [Power Apps Git version control](./canvas-apps/git-version-control.md)  and [pac canvas unpack](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
+| Code View Preview | -  | Version used by Code View Preview - to be used in Power Apps Studio when building new apps only, not suitable for version control. |
+| Source Code Preview | *.pa.yaml files | Includes improvements and version information for Source Control. This is the current and effective version of Canvas YAML. |
 
 >[!NOTE]
 > You cannot copy YAML code from a pa.yaml file and paste as code in Power Apps Studio yet. In the future, Code View will use the same format.
