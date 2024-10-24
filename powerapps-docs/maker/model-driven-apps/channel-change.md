@@ -138,7 +138,7 @@ A maker can use the app designer to explicitly set the release channel for an ap
 
 ### Change app channel in the solutions area
 
-As an alternative, a maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment. However [Change app channel in app designer](#change-app-channel-in-app-designer) might be better for managed deployments.
+As an alternative, a maker can use the **Solutions** area to explicitly set the release channel for all apps within the environment.
 
   > [!div class="mx-imgBorder"]
   > ![Solution explorer app setting app channel edit](media/channel-change/solution-explorer-app-setting-app-channel-edit.png "Solution explorer app setting app channel edit")
@@ -150,17 +150,15 @@ As an alternative, a maker can use the **Solutions** area to explicitly set the 
    1. Search for *app channel*.
    1. Select the item **App channel**.
    1. Select **Add**.
-1. To change the app channel for multiple apps:
-   1. Edit the setting **App channel**.
-   1. Find the apps under the section **Setting app values**.
-   1. Select **New app value** and then enter the integer for the channel.
-   1. Select **Save**.
 1. To change the app channel for all apps in the environment:
    1. Edit the setting **App channel**.
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
-   1. Select **Save**.
-1. Republish any apps where the app setting was changed at an app level for the change to take effect.
+   1. Select **Save** which publishes the Setting Definition
+
+> [!NOTE]
+>  If the Setting Definition is used to change one or more apps as part of a single solution, then will need to explicitly republish the apps. Also it will cause the apps to have dependencies the solution with the customization.
+
 
 ### Set the default for new apps to monthly channel
 
