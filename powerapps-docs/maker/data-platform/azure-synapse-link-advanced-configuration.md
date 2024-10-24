@@ -21,10 +21,18 @@ contributors:
 
 # Advanced Configuration Options in Azure Synapse Link
 
-Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios.
+Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios. Depending on your analytical scenario, you can choose a specific configuration from the options below.
+
+|Scenario  | Appies to ...  | Available configuration options |
+|----------|----------------|---------------------------------|
+| Operational reporting | Dataverse tables,  Finance and Operations tables and Entities |  Synapse analytics with Delta lake option provides better query response times especially applicable for  querying large amounts of data. See [Synapse Link with Delta lake option](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-delta-lake )  |
+| Operational reporting | Dataverse tables only |  Synapse Link with "In place update" configuration option provides CSV files in your Data lake that are updated near-real time  <br> This option is not supported for tables from Finance and Operations apps |
+| Data integration | Dataverse tables and Finance and Operations tables and Entities | "Append only option" provides CSV files that contain incremental data. <br> "User specific data partition" feature enables choosing a custom data partitioning strategy.|     
+
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics. 
+> Starting Sept-2023, Azure Synapse Link also enables you to choose data from Dynamics 365 Finance and operations applications. Not all integration patterns are supported with Finance and Operations Apps. For guidance on transitioning from Export to Data lake feature in Finance and Operations Apps to Synapse Link, see the [Transition guide](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno) 
 
 This article covers:
 
