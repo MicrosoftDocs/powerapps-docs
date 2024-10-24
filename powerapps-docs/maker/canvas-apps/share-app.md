@@ -44,7 +44,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
 1. Select the down arrow to choose permissions for the app. Options include:
     - **User**: Can use the app only.
-    - **Co-Ownwer**: Can use, edit, and share the app but not delete or change owners.
+    - **Co-Owner**: Can use, edit, and share the app but not delete or change owners.
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
 
