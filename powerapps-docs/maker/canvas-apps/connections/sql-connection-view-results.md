@@ -1,6 +1,6 @@
 ---
-title: Methods to access results
-description: Methods to access results
+title: View results in SQL Server
+description: "Learn more about how to view the results of stored procedures from SQL Server in Microsoft Power Apps."
 author: lancedMicrosoft
 
 ms.topic: reference
@@ -16,9 +16,9 @@ contributors:
   - lancedmicrosoft
 ---
 
-# Methods to access results
+# View results in SQL Server
 
-A stored procedure can return a code, values from `Out` parameters, or the results of queries. To access these results, use the following patterns.
+A stored procedure can return a code, values from `Out` parameters, or the results of queries. To view these results, use the following patterns.
 
 ## Formulas for different controls
 
