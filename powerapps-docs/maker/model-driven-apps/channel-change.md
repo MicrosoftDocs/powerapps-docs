@@ -78,6 +78,8 @@ Model-driven apps with the app release channel set to a value other than **Auto*
 1. Customize any out of box Dynamics 365 app.
 1. Update any custom app created after 2024 release wave 1 when the new app started defaulting to **Monthly**.
 
+The preferred approach is to follow [Change app channel in app designer](#change-app-channel-in-app-designer) and then deploy the app's solution to all environments.
+
 > [!NOTE]
 > Model-driven apps in Power Platform environments use **Monthly** when the app release channel is **Auto** regardless of the environment release channel. All model-driven apps in Power Platform environments need to set the app release channel explicitly.
 
@@ -136,7 +138,7 @@ A maker can use the app designer to explicitly set the release channel for an ap
 
 ### Change app channel in the solutions area
 
-A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
+As an alternative, a maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment. However [Change app channel in app designer](#change-app-channel-in-app-designer) might be better for managed deployments.
 
   > [!div class="mx-imgBorder"]
   > ![Solution explorer app setting app channel edit](media/channel-change/solution-explorer-app-setting-app-channel-edit.png "Solution explorer app setting app channel edit")
