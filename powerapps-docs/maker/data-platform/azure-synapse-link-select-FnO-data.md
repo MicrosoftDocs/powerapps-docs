@@ -317,6 +317,8 @@ To create an Azure Synapse Link profile with incremental data:
 >
 > When you choose tables and enable incremental data changes, the row count shown in the Azure Synapse Link details page for each table reflects the total number of changes, not the number of records in the table.
 >
+> Data rows that contain deleted records from Finance and Operations tables contain the uniqueidentifier (Id) field. They do not contain the body of the record. Your downstream data pipeline may need to look-up the corresponding fields using the Id field.
+> 
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
 ## Working with data and metadata  
