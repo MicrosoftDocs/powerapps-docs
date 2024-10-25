@@ -18,7 +18,7 @@ search.audienceType:
 ---
 # Query and analyze the incremental updates
 
-Microsoft Dataverse data (including data from Dynamics 365 apps including Finance and Operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse provides incremental data in time stamped folders that contain data changes during within a user-specified time interval. 
+Microsoft Dataverse data (including data from Dynamics 365 apps including Finance and Operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes during within a user-specified time interval. 
 
 You can leverage incremental update feature for several scenarios. 
 
@@ -30,16 +30,21 @@ You can leverage incremental update feature for several scenarios.
 > - Track data changes during a user-specified time period.
 >   
 
-When creating an Azure Synapse Link for Dataverse, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
+Azure Synapse Link for Dataverse also provides the option to export and maintain a replica of tables in your Azure Data Lake (Gen 2) storage. You can configure Azure synapse Link to export incremental data in addition to exporting a replica of tables. Each configuration (known as a "Synapse Link profile") can export either tables or incremental. While you can create multiple profiles, you can not configure both tables and incremental updates within the same profile.
 
 > [!IMPORTANT]
-> Timestamp and table folders are created only when there is a data update during the user-specified time interval.
+> An initial time stamped folder will be created when you enable this feature with a copy of your data. Subsequent Timestamp and table folders are created only when there is a data update during the user-specified time interval. 
 >
-> This feature will apply to all selected tables within Azure Synapse Link for Dataverse and, by default, all the tables selected will be assigned append-only mode with incremental updates.
+> Once you create a Synapse Link profile with incremental update feature, the configuration will apply to all selected tables within the Synapse Link profile. 
 >
 > This feature can't be enabled with the option: **Connect to your Azure Synapse workspace**. For customers who require Azure Synapse analytics access, follow this instruction to setup the link: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md) 
 >  
-> This feature is designed to work with Azure Data Factory or Synapse Pipeline to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database. More information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md)
+> This feature is equivalent to [**Change feeds** feature in Export to Data lake](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-change-feeds) built into Dynamics 365 Finance and Operations apps. Customers using **Change feeds** feature now have the option to enable a Synapse Link profile with change data without having to export Table data.
+> 
+> This feature is designed to work with Azure Data Factory or Synapse Pipeline to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database. More information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md).
+>
+> Dynamics 365 Finance and Operations customers transitioning from Change feeds feature can use [Data integration sample tools provided in github](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) to update existing data pipelines used with the Change feeds feature.
+> 
 
 ## Prerequisites
 
