@@ -16,6 +16,7 @@ contributors:
   - mduelae
   - alaug
 ---
+
 # Overview of connectors for canvas apps
 
 Data is at the core of most apps, including the data you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
@@ -72,7 +73,7 @@ This table has links to more information about our most popular connectors. For 
 | [**Microsoft Translator**](connections/connection-microsoft-translator.md)| [**Office 365 Outlook**](connections/connection-office365-outlook.md)|
 | [**Office 365 Users**](connections/connection-office365-users.md) |[**Oracle**](connections/connection-oracledb.md)|
 | [**Power BI**](connections/connection-powerbi.md) |[**SharePoint**](connections/connection-sharepoint-online.md) |
-| [**SQL Server**](connections/connection-azure-sqldatabase.md) |[**Twitter**](connections/connection-twitter.md) |
+| [**SQL Server**](connections/sql-connection-overview.md) |[**Twitter**](connections/connection-twitter.md) |
 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business
 
