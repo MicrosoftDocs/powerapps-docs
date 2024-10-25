@@ -82,13 +82,15 @@ To see incremental data folders in the storage account
 > Due to the retry mechanism features, an extra empty timestamp folder might be created within the user-specified time interval.
 
 ## Consume incremental data
-You can consume incremental data using data integration tools such as Azure Data Factory or Synapse Pipelines to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database. We have provided a sample Data pipeline that can be used for this purpoe. For more information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md).
+You can copy incremental into an Azure SQL Database or a Data warehouse using data integration tools such as Azure Data Factory or Synapse Pipelines. We have provided a sample Data pipeline that can be used for this purpoe. For more information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md).
 
 If you are a Dynamics 365 Finance and Operations customers transitioning from Change feeds feature you can use [Data integration sample tools provided in github](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) to update existing data pipelines used with the Change feeds feature.
 
-You can also build your own data pipeline to consume incremental data. However, you need to consider the following when designing your own pipeline.
-- Consume data from previous time stamped folders only. This way, you can avoid read-write conflicts with the Synapse Link service which may be continupusly updating data in the current folder. You can find the current Folder by using the **Changelog/changelog.info** file. This file is a read-only file which contains a single row with the folder name that is being currently being updated. You should not update this file as it may cause system instability.
-- You can leverage **model.json** file located within each Time stamped folder to read metadata such as column names for the data contained in table folders. Notice that each model.json file in the folder located within  time stamped folders contain metadata for all the tables. Not just the tables contained within the time stamped folder.   
+You can also build your own data pipeline to consume incremental data. However, you need to consider the following best practices when designing your own pipeline.
+- **Consume data from previous time stamped folders only**: This way, you can avoid read-write conflicts with the Synapse Link service which may be continupusly updating data in the current folder. You can find the current Folder by using the **Changelog/changelog.info** file. This file is a read-only file which contains a single row with the folder name that is being currently being updated. You should not update this file as it may cause system instability.
+- You can leverage **model.json** file located within each Time stamped folder to read metadata such as column names for the data contained in table folders. Notice that each model.json file in the folder located within  time stamped folders contain metadata for all the tables. Not just the tables contained within the time stamped folder.
+- Avoid using other logfiles such as Synapse.log file. This file is used for internal purposes and may not reflect accurate data.
+- You can consider deleting obsolete incremental folders from your Azure Data lake after you have finished processing. At present, Synapse Link maintains a lease on these files in Azure Storage to recover from any failures. System may release the lease after a time period.
 
 :::image type="content" source="media/Synapse-Link-storage-change-Log-folder.png" alt-text="Incremental folders in Azure Data lake storage created by Synapse Link":::
 
