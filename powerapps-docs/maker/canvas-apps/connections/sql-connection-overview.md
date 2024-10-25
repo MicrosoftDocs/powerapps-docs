@@ -36,14 +36,15 @@ Before accessing data and viewing the results of queries in your app, create a r
 
    > [!NOTE]
    > If you don't already have a SQL Server connection, you're prompted to create one.
-1. Select your SQL connection and enter your **Server** name, and **Database name**, and choose a table.
+1. Select your SQL connection.
+1. Enter your **Server** name and **Database name**, then choose **Connect**. Choose a table from the list of tables that appear.
 
    :::image type="content" source="media/sql-connection/sql-server-details.png" alt-text="Screenshot that shows the Create an app page where you can choose a SQL Sever connection, including a table.":::
 
    > [!NOTE]
    > Only one connection is shown at a time. To use a different connection, select the **...** overflow menu on your SQL connection, then find a new one or create a new SQL connection.
 
-1. Choose **Create app**.
+1. Select **Create app**.
 
 ## Access data
 

@@ -27,6 +27,8 @@ One common data access pattern is to use a view (or table) and then stored proce
 
 ### Use a view
 
+A *view* is a saved query that displays as a single table of data.
+
 Views show up in the list of tables you can select when you add a data source. Views only support queries—not updates. You must use a [stored procedure](#use-stored-procedures) for updates.
 
 If you create a table with the `Start with data` option, you get screens and formulas that display records in a gallery and form. You can see formulas and functionality for creation, editing, and deletion. However, if you use a view, you only see a display screen for the gallery and form.
@@ -46,9 +48,11 @@ When you add a SQL Server connection to your app, you can add stored procedures 
 
 :::image type="content" source="media/connection-azure-sqldatabase/tables-views-stored-proc-selector.png" alt-text="Screenshot that shows lists of tables, views, and stored procedures available to be added to your app.":::
 
-Once you select a stored procedure, a child node appears and you can designate the stored procedure as **Safe to use for galleries and tables**. If you check this option, you can assign your stored procedure as an **Items** property in galleries for tables to use in your app.
+Once you select a stored procedure, a child node appears and you can designate the stored procedure as **Safe to use for galleries and tables**.
 
-**Enable this option only if**:
+A stored procedure is *safe* if it has no action it performs that might be unwanted in certain scenarios. For example, if a stored procedure collected all accounts from a given city, then sent them an email. You might not always want emails to be sent every time the stored procedure is called. Therefore, the stored procedure shouldn't marked as safe.
+
+**Check a stored procedure as safe only if**:
 
 1. There are **no side effects** to calling this procedure on demand.
 
@@ -59,6 +63,8 @@ Once you select a stored procedure, a child node appears and you can designate t
    Action calls, such as stored procedures, don't have a limit on the number of rows retrieved. They aren't automatically paged in 100 record increments like tabular data sources such as tables or views.
   
    If the stored procedure returns too much data (many thousands of records), then your app might slow down or crash. For performance reasons, bring in less than 2,000 records.
+
+If you check a stored procedure as safe, you can assign your stored procedure as an **Items** property in galleries for tables to use in your app.
 
 > [!IMPORTANT]
 > The schema of the return values of the stored procedure should be *static*, so the values don't change from call to call. For example, if a stored procedure returns two tables, then it *always* returns two tables. You can work with either typed or untyped results.
@@ -86,15 +92,18 @@ Arguments are passed as a Power Apps record with named value pairs:
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >})
 ```
 
-Remember to convert values if needed as you pass them into your stored procedure, since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using `Value()`.
+> [!TIP]
+> Remember to convert values if needed as you pass them into your stored procedure, since you're reading from a text value in Power Apps. For example, if you're updating an integer in SQL you must convert the text in the field using `Value()`.
 
-:::image type="content" source="media/connection-azure-sqldatabase/calling-sp-directly.png" alt-text="Screenshot that shows how to call stored procedures directly using key/value pairs and dot notation.":::
+Here's an example of what stored procedures could look like when assigning them to an `OnSelect` property.
+
+:::image type="content" source="media/sql-connection/stored-procedures.png" alt-text="Screenshot that shows how to call stored procedures directly using key/value pairs and dot notation.":::
 
 ## Variables and all stored procedures
 
 You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by `ResultSets`. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
 
-For example, a stored procedure accessed from `Paruntimedb` with the name `dbo.spo_show_all_library_books()` looks like:
+For example, a stored procedure accessed from the table `Paruntimedb` with the name `dbo.spo_show_all_library_books()` looks like:
 
 ```power-fx
 Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1

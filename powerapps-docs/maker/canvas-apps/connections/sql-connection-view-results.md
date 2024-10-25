@@ -18,7 +18,7 @@ contributors:
 
 # View results in SQL Server
 
-A stored procedure can return a code, values from `Out` parameters, or the results of queries. To view these results, use the following patterns.
+A stored procedure can return code, values from `Out` parameters, or the results of queries. To view these results, use the following patterns.
 
 ## Formulas for different controls
 
