@@ -79,7 +79,7 @@ In the src folder, you have:
 
 Microsoft Power Fx has a well-established grammar for expressions based on Excel. However, when used in Power Apps and other hosts where UI provides the name-to-expression binding for a formula, there is no standard way of editing the formula binding as text.
 
-We've selected the industry standard [YAML](https://yaml.org/spec/1.2/spec.html) as our language for this binding. There are already a large number of editors, tools, and libraries for working with YAML. This article describes how we represent formulas in YAML.
+We've selected the industry standard [YAML](https://yaml.org/spec/1.2/spec.html) as our language for this binding. There are already a large number of editors, tools, and libraries for working with YAML.
 
 At this time, we support only a restricted subset of YAML. Only the constructs described in this article are supported.
 
@@ -96,20 +96,21 @@ There are 3 schema versions of Power Apps Source Code:
 | [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | Includes improvements and version information for Source Control. This is the current and effective version of Canvas YAML. |
 
 >[!NOTE]
-> You cannot copy YAML code from a pa.yaml file and paste as code in Power Apps Studio yet. In the future, Code View will use the same format.
+> You cannot copy YAML code from a pa.yaml file and paste as code in Power Apps Studio yet. In the future, Code View will use the Source Code format.
 
 ## Experimental format (*.fx.yaml)
 
-This is an experimental format, used by Power Platform CLI to process and convert canvas application in a source code format.
+This is an experimental format, used by Power Platform CLI to process and convert canvas application in a source code format. It is no longer in development.
 
 You cannot directly convert *.fx.yaml files to the new formats. To convert older apps, you must pack the canvas app in a *.msapp and import the file in Power Apps Studio.
 
 ## Code View Preview 
 
 This format was designed to be used while creating apps within Power Apps Studio, to copy and paste controls. In this format, the source code is native instead of converted. 
+
 Other changes from the experimental format:
 
-- Removed Z Index Property
+- Removed ZIndex Property
 A screen is now represented as an array of controls. Because order is now significant, we can imply the ZIndex property from the position of the control. We use asc order for normal controls and desc order for responsive controls.
  
 - Replaced JSON Object representation
@@ -120,9 +121,9 @@ We no longer use the sintax "As" to define the control type. The name identifier
 
 These properties are used to instantiate the controls and don't accept Power Fx expressions.
 
-## Source Code Preview (*.pa.yaml)
+In the future this format will be retired and migrated to the Source Code Preview format.
 
-This schema was designed for source control and to allow use of a single YAML file. 
+## Source Code Preview (*.pa.yaml)
 
 >[!Important]
 >
@@ -131,7 +132,9 @@ This schema was designed for source control and to allow use of a single YAML fi
 > pa.yaml files are read-only and should only be used to review changes made within Power Apps Studio. pa.yaml files are not used when loading the app. 
 > External editing, merging and conflict resolution are not supported.
 
-Updates:
+This schema was designed for source control and to allow use of a single YAML file. It is an update from the Code View format.
+
+Updates from previous format:
 
 - High level node
 Elements are grouped in a high level node.
