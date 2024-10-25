@@ -370,8 +370,10 @@
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
               items:
-                - name: Connect to SQL overview
+                - name: Connect to SQL Server overview
                   href: canvas-apps/connections/sql-connection-overview.md
+                - name: Connect to SQL Server securely
+                  href: canvas-apps/connections/sql-server-security.md
                 - name: Access data
                   href: canvas-apps/connections/sql-connection-access-data.md
                 - name: View results

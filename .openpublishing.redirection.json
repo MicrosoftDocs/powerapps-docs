@@ -1916,8 +1916,8 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/connections/connection-azure-sqldatabase.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/connections/sql-connection-overview",
+      "source_path": "powerapps-docs/connection-azure-sqldatabase.md",
+      "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase",
       "redirect_document_id": "false"
     },
     {
@@ -2048,6 +2048,11 @@
     {
       "source_path": "powerapps-docs/connections/cloud-storage-blob-connections.md",
       "redirect_url": "/powerapps/maker/canvas-apps/connections/cloud-storage-blob-connections",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/connections/connection-azure-sqldatabase.md",
+      "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase",
       "redirect_document_id": "false"
     },
     {
@@ -9182,7 +9187,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/app-from-azure-sql-database.md",
-      "redirect_url": "/power-apps/maker/canvas-apps/connections/sql-connection-overview",
+      "redirect_url": "/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase",
       "redirect_document_id": "false"
     },
     {
@@ -9203,6 +9208,11 @@
    {
     "source_path": "powerapps-docs/maker/model-driven-apps/create-a-model-driven-app.md",
     "redirect_url": "/power-apps/maker/model-driven-apps/build-first-model-driven-app",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/canvas-apps/connections/connection-azure-sqldatabase.md",
+    "redirect_url": "/power-apps/maker/canvas-apps/connections/sql-connection-overview",
     "redirect_document_id": "false"
    }
   ]
