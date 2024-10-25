@@ -2052,7 +2052,7 @@
     },
     {
       "source_path": "powerapps-docs/connections/connection-azure-sqldatabase.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase",
+      "redirect_url": "/powerapps/maker/canvas-apps/connections/sql-connection-overview",
       "redirect_document_id": "false"
     },
     {
