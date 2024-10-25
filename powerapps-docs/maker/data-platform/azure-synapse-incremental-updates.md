@@ -18,19 +18,15 @@ search.audienceType:
 ---
 # Query and analyze the incremental updates
 
-Microsoft Dataverse data (including data from Dynamics 365 apps including Finance and Operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes during within a user-specified time interval. 
+Microsoft Dataverse data (including data from Dynamics 365 apps including Finance and Operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes within user-specified time intervals.
 
 You can leverage incremental update feature for several scenarios. 
 
-- **Update a downstream Data store or a data warehouse**. You may need to apply changes from your Business data into a downstream data store. Incremental update is a standard capability in most data transformation tools, such as Azure Data Factory. However, for the incremental update feature to work, you must identify the records that changed in source tables. Incremental update feature provides changed data as a set of files such that you don't need to detect changes by comparing before and after images of tables.
+- **Update a downstream Data store or a data warehouse**. You may need to apply changes from your PowerApps and Dynamics 365 data into a downstream data store. Incremental update is a standard capability in most data transformation tools, such as Azure Data Factory. However, for the incremental update feature to work, you must identify the records that changed in source tables. Incremental update feature provides changed data as a set of files such that you don't need to detect changes by comparing before and after images of tables.
   
-- **Analyze changes in large datasets**. If you need to analyze changes in large data sets, incremental update feature provides a continuous stream of data in small batches such that you don't need to store all data. 
->
-> - Drop stale and stagnant data to save data storage costs.  
-> - Track data changes during a user-specified time period.
->   
+- **Analyze changes in large datasets**. If you need to analyze changes in large data sets, incremental update feature provides a continuous stream of data in small batches such that you don't need to store all data. With this option you can drop stale and stagnant data to save data storage costs as well as track data changes relevant for a user-specified time period.
 
-Azure Synapse Link for Dataverse also provides the option to export and maintain a replica of tables in your Azure Data Lake (Gen 2) storage. You can configure Azure synapse Link to export incremental data in addition to exporting a replica of tables. Each configuration (known as a "Synapse Link profile") can export either tables or incremental. While you can create multiple profiles, you can not configure both tables and incremental updates within the same profile.
+Azure Synapse Link for Dataverse also provides the option to export and maintain a replica of tables in your Azure Data Lake (Gen 2) storage. You can configure Azure synapse Link to export incremental data in addition to exporting a replica of tables. Each configuration (known as a "Synapse Link profile") can export either tables or incremental data. While you can create multiple profiles, you can not configure both tables and incremental updates within the same profile.
 
 > [!IMPORTANT]
 > An initial time stamped folder will be created when you enable this feature with a copy of your data. Subsequent Timestamp and table folders are created only when there is a data update during the user-specified time interval. 
@@ -44,7 +40,7 @@ Azure Synapse Link for Dataverse also provides the option to export and maintain
 
 ## Prerequisites
 
-Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link. More information: [Create an Azure Synapse Link for Dataverse with Azure Data Lake](azure-synapse-link-data-lake.md#prerequisites)
+This guide assumes that you have already met the prerequisites to create an Azure Synapse Link. More information: [Create an Azure Synapse Link for Dataverse with Azure Data Lake](azure-synapse-link-data-lake.md#prerequisites)
 
 ## Create a Synapse Link profile to export incremental data 
 
@@ -64,7 +60,7 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 >
 > Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
 >
-> Incremental data in time stamped folders are stored as Comma Separated text files (CSV files). 
+> Incremental data in time stamped folders are stored as Comma Separated text files (CSV files). You can't use the Delta conversioon feature for incremental data and obtain incremental files in a Delta parquet format.  
 
 ## View incremental folder at Microsoft Azure Storage
 When you create a Synapse Link profile with incremental data, the system makes an initial copy of all tables and stores it in the first incremental update folder. Once the initial copy is created, system will create subsequent update folders with changed data. If there are no changes in any of the tables selected, you will not see incremental data folders.
