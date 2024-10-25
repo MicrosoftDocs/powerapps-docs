@@ -30,13 +30,6 @@ To use this feature you must create an [Early release cycle environment.](https:
 
 ## How to access the Source Code files
 
->[!Important]
->
-> YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-> Content may be incomplete and subject to change.
-> pa.yaml files are read-only and should only be used to review changes made within Power Apps Studio. pa.yaml files are not used when loading the app. 
-> External editing, merging and conflict resolution are not supported.
-
 Source code for Canvas Apps is represented as *.pa.yaml files and are managed by Power Apps Studio.
 
 A msapp file is collection of files compacted in a binary file, including the source code. 
@@ -51,7 +44,7 @@ You can also extract the source code files either from the .msapp file or by usi
 The *.pa.yaml files are within the \src folder of the extracted msapp. 
 
 >[!Important]
-> In the extracted msapp, only files within the directory \src are source code files intented to be used with source control.
+> In the extracted msapp, only files within the directory \src are designed to be used with source control.
 
 ### Use Power Platform CLI to download and extract the pa.yaml files
 
@@ -131,6 +124,15 @@ These properties are used to instantiate the controls and don't accept Power Fx 
 
 This schema was designed for source control and to allow use of a single YAML file. 
 
+>[!Important]
+>
+> YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+> Content may be incomplete and subject to change.
+> pa.yaml files are read-only and should only be used to review changes made within Power Apps Studio. pa.yaml files are not used when loading the app. 
+> External editing, merging and conflict resolution are not supported.
+
+Updates:
+
 - High level node
 Elements are grouped in a high level node.
 
@@ -145,7 +147,7 @@ All controls use ascending order to imply the ZIndex value, starting with 1.
 
 ## Supported Scenario
 
-The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors.
+The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors yet. More scenarios will be possible in the future.
 
 JSON files within the MSAPP are not designed to be stable across save and load cycles and should not be used as source code.
 
