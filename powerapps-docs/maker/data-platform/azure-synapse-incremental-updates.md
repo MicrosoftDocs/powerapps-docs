@@ -18,10 +18,17 @@ search.audienceType:
 ---
 # Query and analyze the incremental updates
 
-Microsoft Dataverse data can continuously change through create, update, and delete transactions. Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Organizations with large datasets can analyze the incremental update data and:
+Microsoft Dataverse data (including data from Dynamics 365 apps including Finance and Operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse provides incremental data in time stamped folders that contain data changes during within a user-specified time interval. 
 
-- Drop stale and stagnant data to save data storage costs.  
-- Track data changes during a user-specified time period.
+You can leverage incremental update feature for several scenarios. 
+
+- **Update a downstream Data store or a data warehouse**. You may need to apply changes from your Business data into a downstream data store. Incremental update is a standard capability in most data transformation tools, such as Azure Data Factory. However, for the incremental update feature to work, you must identify the records that changed in source tables. Incremental update feature provides changed data as a set of files such that you don't need to detect changes by comparing before and after images of tables.
+  
+- **Analyze changes in large datasets**. If you need to analyze changes in large data sets, incremental update feature provides a continuous stream of data in small batches such that you don't need to store all data. 
+>
+> - Drop stale and stagnant data to save data storage costs.  
+> - Track data changes during a user-specified time period.
+>   
 
 When creating an Azure Synapse Link for Dataverse, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
 
