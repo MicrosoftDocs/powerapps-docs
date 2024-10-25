@@ -63,7 +63,7 @@ Once you select a stored procedure, a child node appears and you can designate t
 > [!IMPORTANT]
 > The schema of the return values of the stored procedure should be *static*, so the values don't change from call to call. For example, if a stored procedure returns two tables, then it *always* returns two tables. You can work with either typed or untyped results.
 >
-> The structure of the results also need to be static. For example, if the schema of the results are *dynamic*, then results are untyped and you must provide a type in order to use them in Power Apps. For more information, see [Untyped results](sql-method-to-access-results.md#untyped-results).
+> The structure of the results also need to be static. For example, if the schema of the results are *dynamic*, then results are untyped and you must provide a type in order to use them in Power Apps. For more information, see [Untyped results](sql-view-results.md#untyped-results).
 
 #### SQL namespace prepended to stored procedure name
 

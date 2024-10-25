@@ -23,32 +23,34 @@ The results of your view and stored procedures can be made using formulas.
 
 ## Prerequisites
 
-Before accessing data in your app, create an app enabled with SQL Server. You can create an app through either a single-page gallery or a three-screen mobile option.
+Before accessing data and viewing the results of queries in your app, create a responsive app enabled with SQL Server by following these steps:
 
-Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and go to the **Home** page.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and go to the **Apps** page.
+1. Select **New app** > **Start with data**.
 
-### Single-page gallery
+   :::image type="content" source="media/sql-connection/new-app-start-with-data.png" alt-text="Screenshot that shows how to create an app by starting with data under the New app menu.":::
+1. From the **Start with data** page, choose **Connect external data**.
+1. Under **Choose a data set to start** select **From SQL**.
 
-To create a single-page gallery app with a responsive layout, choose either:
-
-- **Start with data** > **Connect external data** > **From SQL**.
-- **Start with a page design** > **Gallery connected to external data** > **From SQL**.
-
-### Three-screen mobile
-
-1. Select **Start with an app template** > **From SQL**.
-1. Select your SQL connection and choose a table. To use a different connection, select the **...** overflow menu to switch your connection or create a new SQL connection.
+   If you have an existing SQL Server connection, it loads.
 
    > [!NOTE]
-   > Only one connection is shown at a time.
-1. Select **Create app**.
+   > If you don't already have a SQL Server connection, you're prompted to create one.
+1. Select your SQL connection and enter your **Server** name, and **Database name**, and choose a table.
+
+   :::image type="content" source="media/sql-connection/sql-server-details.png" alt-text="Screenshot that shows the Create an app page where you can choose a SQL Sever connection, including a table.":::
+
+   > [!NOTE]
+   > Only one connection is shown at a time. To use a different connection, select the **...** overflow menu on your SQL connection, then find a new one or create a new SQL connection.
+
+1. Choose **Create app**.
 
 ## Access data
 
-Once your app is connected to SQL Server, you can access data: [Access data in SQL Server](sql-access-data.md).
+Once your app is connected to SQL Server, you can access data: [Access data in SQL Server](sql-connection-access-data.md).
 
 ## View results
 
-To view the results of your SQL queries: [View results in SQL Server](sql-view-results.md).
+To view the results of your SQL queries, see: [View results in SQL Server](sql-connection-view-results.md).
 
 ## Related information
