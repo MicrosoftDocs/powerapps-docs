@@ -157,7 +157,7 @@ As an alternative, a maker can use the **Solutions** area to explicitly set the 
    1. Select **Save** which publishes the Setting Definition
 
 > [!NOTE]
->  If the Setting Definition is used to change one or more apps as part of a single solution, then will need to explicitly republish the apps. Also it will cause the apps to have dependencies on the solution with the customization.
+> When the setting definition is used to change one or more apps as part of a single solution, you must republish the apps for the change to take effect. Also, making this change causes the apps to have dependencies on the solution with the customization.
 
 
 ### Set the default for new apps to monthly channel
