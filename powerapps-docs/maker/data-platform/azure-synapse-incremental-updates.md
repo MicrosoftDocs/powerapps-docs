@@ -73,10 +73,10 @@ To see incremental data folders in the storage account
 
 1. Select the desired Azure Synapse Link, and then select **Go to Azure data lake** on the command bar.
 2. Select the **Containers** under **Data Storage**.
-3. Select **dataverse**-*environmentName*-*organizationUniqueName*. Incremental updates folders are named by creation timestamp ("yyyy-MM-dd'T'HH:mm:ss.SSSz") in UTC.
-4. Within each 
+3. Select **dataverse**-*environmentName*-*organizationUniqueName*. Incremental updates folders are named by creation timestamp ("yyyy-MM-dd'T'HH:mm:ss.SSSz") in UTC. You will notice that the time difference between time stamped folders is the time interval specified by you in advanced settings. 
+4. Within each Time stamped folder, you will see folders for each tables. Not all tables chosen may have changed during the time interval and you will only see folders corresponding to tables whose data changed. 
 
-   :::image type="content" source="media/azure-synapse-incremental-folders.png" alt-text="Incremental folders in Azure Synapse":::
+   :::image type="content" source="media/Synapse_Link-Storage-folders.png" alt-text="Incremental folders in Azure Data lake storage created by Synapse Link":::
 
 > [!NOTE]
 > Due to the retry mechanism features, an extra empty timestamp folder might be created within the user-specified time interval.
@@ -87,9 +87,10 @@ You can consume incremental data using data integration tools such as Azure Data
 If you are a Dynamics 365 Finance and Operations customers transitioning from Change feeds feature you can use [Data integration sample tools provided in github](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) to update existing data pipelines used with the Change feeds feature.
 
 You can also build your own data pipeline to consume incremental data. However, you need to consider the following when designing your own pipeline.
-- Consume data from previous time stamped folders only. This way, you can avoid read-write conflicts with the Synapse Link service which may be continupusly updating data in the current folder. You can find the current Folder by using the **Athena.log** file. This file is a read-only file which contains a single row. You should not update this file as it may cause system instability.
-- You can leverage Model.JSON files located within each folder to 
+- Consume data from previous time stamped folders only. This way, you can avoid read-write conflicts with the Synapse Link service which may be continupusly updating data in the current folder. You can find the current Folder by using the **Changelog/changelog.info** file. This file is a read-only file which contains a single row with the folder name that is being currently being updated. You should not update this file as it may cause system instability.
+- You can leverage **model.json** file located within each Time stamped folder to read metadata such as column names for the data contained in table folders. Notice that each model.json file in the folder located within  time stamped folders contain metadata for all the tables. Not just the tables contained within the time stamped folder.   
 
+:::image type="content" source="media/Synapse-Link-storage-change-Log-folder.png" alt-text="Incremental folders in Azure Data lake storage created by Synapse Link":::
 
 ### See also
 
