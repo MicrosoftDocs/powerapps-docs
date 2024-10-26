@@ -37,11 +37,24 @@ Following controls are currently supported:
 ## Rename controls
 
 1. Rename a control (currently only label or a button) manually in tree View.
+
+![Manually rename a control.](./media/1-rename-manually.png)
+
 2. Copilot nudge will appear near tree view if it has renaming suggestions for other controls of same type under that Screen.
+
+![Copilot shows up](./media/2-copilot-shows-up.png)
+
 3. Clicking on Copilot will open a preview of rename suggestions.
+
+![rename suggestions](./media/3-click-to-see-rename-suggestions.png)
+
 4. Review suggestions and click Rename. Controls will be updated with renames at once. Any formulas referencing the controls will be auto updated with new names.
+
+![apply all renames](./media/4-apply-all-renames.png)
+
 5. Alternatively, you can unselect any rename suggestions if so desired and then click Rename.
 
+![optional unselect](./media/optional-unselect-if-needed.png)
 
 ## Limitations
 
