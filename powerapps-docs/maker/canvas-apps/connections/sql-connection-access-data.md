@@ -50,7 +50,7 @@ When you add a SQL Server connection to your app, you can add stored procedures 
 
 Once you select a stored procedure, a child node appears and you can designate the stored procedure as **Safe to use for galleries and tables**.
 
-A stored procedure is *safe* if it has no action it performs that might be unwanted in certain scenarios. For example, if a stored procedure collected all accounts from a given city, then sent them an email. You might not always want emails to be sent every time the stored procedure is called. Therefore, the stored procedure shouldn't marked as safe.
+A stored procedure is *safe* if it has no action it performs that might be unwanted in certain scenarios. For example, if a stored procedure collected all accounts from a given city, then sent them an email. You might not always want emails to be sent every time the stored procedure is called. Therefore, the stored procedure shouldn't be marked as safe.
 
 **Check a stored procedure as safe only if**:
 
