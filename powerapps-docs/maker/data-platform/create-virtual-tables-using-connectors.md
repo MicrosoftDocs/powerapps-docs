@@ -178,7 +178,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 
    When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
 
-   When creating a virtual table, you can associate it with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information:
+   You can associate a virtual table with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information: [Environment variable](#environment-variable)
 
      :::image type="content" source="media/vt-env-variable.png" alt-text="Environment variable for virtual tables":::
 
