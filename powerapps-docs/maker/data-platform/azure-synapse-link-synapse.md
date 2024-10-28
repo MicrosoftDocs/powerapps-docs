@@ -105,6 +105,11 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
+> [!NOTE]
+> Any custom database objects created by customers on the Azure Synapse Link Synapse Database will be deleted once the unlink is completed.
+> 
+> Customers will need to implement their own version control of their custom database objects scripts to ensure they have a backup.
+
 ## Relinking an Azure Synapse Link
 
 If you deleted the file system when unlinking, follow the steps above to relink the same Synapse workspace and data lake. If you didn't delete the file system when unlinking, you must clear the data to relink:
