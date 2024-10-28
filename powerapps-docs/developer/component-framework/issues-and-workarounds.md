@@ -17,7 +17,7 @@ Here are some common issues that you might come across while using the Power App
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-## Component changes are not reflected after the updated solution import?
+## Component changes aren't reflected after the updated solution import?
 
 Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
 
@@ -45,7 +45,7 @@ Update the component version (minor or patch) in the component manifest file (fo
 
 ## Issues while updating existing code components
 
-- If you have created a code component using the CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the updates to the `package.json` file as shown below:
+- If you created a code component using CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the following updates to the `package.json` file:
 
    ```JSON
    "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" }
@@ -94,7 +94,7 @@ There are two ways to work around this error:
   msbuild /property:configuration=Release
   ```
 
-- Run the msbuild command with an extra property as shown below:
+- Run the msbuild command with the following extra property:
 
   ```CLI
   msbuild /p:PcfBuildMode=production
@@ -125,7 +125,7 @@ This warning is by design since the default `msbuild` configuration is `Configur
 
 **Workaround**
 
-Re build the solution file using  the following either of the commands and reimport the solution into Dataverse.
+Re builds the solution file using  the following either of the commands and reimport the solution into Dataverse.
 
 ```CLI
 msbuild/property:configuration:Release
@@ -166,21 +166,21 @@ No workaround as of now. We are working on pushing a fix to our deployment train
 
 ## Authentication for third party services fails in Canvas
 
-PCF authentication for third parties is not supported.
+PCF authentication for third parties isn't supported.
 
 **Workaround**
 
 Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
 
-## Control cannot finish loading
+## Control can't finish loading
 
-If you use [refresh](./reference/dataset/refresh.md) in `updateView` you must include a guarding condition, otherwise it will create an infinite loop. Whenever `refresh` is called, it will reset the page number to 1, and then fetch the first page of records under the current filtering and sorting criteria. When the updated data is received by the client, `updateView` will be called to update the display.  The result is that the control cannot finish loading and will not be able to fetch records beyond the first page.
+If you use [refresh](./reference/dataset/refresh.md) in `updateView` you must include a guarding condition, otherwise it creates an infinite loop. Whenever `refresh` is called, it resets the page number to 1, and then fetch the first page of records under the current filtering and sorting criteria. When the client recieves the  updated data, `updateView` is called to update the display. The result is that the control can't finish loading and won't be able to fetch records beyond the first page.
 
 ## Same page is loaded rather than the expected one
 
-[refresh](./reference/dataset/refresh.md), [loadExactPage](./reference/paging/loadExactPage.md), [loadNextPage](./reference/paging/loadnextpage.md), [loadPreviousPage](./reference/paging/loadpreviouspage.md) do not support parallel execution.
+[refresh](./reference/dataset/refresh.md), [loadExactPage](./reference/paging/loadExactPage.md), [loadNextPage](./reference/paging/loadnextpage.md), [loadPreviousPage](./reference/paging/loadpreviouspage.md) don't support parallel execution.
 
-When these functions are called, the results for the requested page will not be available immediately in the next line. Instead they will trigger `updateView` on the control with newly fetched results.
+When these functions are called, the results for the requested page won't be available immediately in the next line. Instead they'll trigger `updateView` on the control with newly fetched results.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
