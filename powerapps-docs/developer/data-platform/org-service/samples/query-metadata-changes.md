@@ -1,9 +1,10 @@
 ---
-title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache."
 ms.date: 10/24/2022
 author: mkannapiran
 ms.author: kamanick
+ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
