@@ -174,28 +174,18 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 
 ---
 
-3. Determine whether to use an environment variable
+3. Determine whether to use a connection reference and/or environment variable.
 
-   Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable.
-   To take advantage of this functionality, select **Use environment variables** when choosing a connection for your data source during virtual table create step. This feature links the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment.
+   When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
 
-     :::image type="content" source="media/VT_Env_Variable.png" alt-text="Environment variable for virtual tables":::
+   When creating a virtual table, you can associate it with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information:
+
+     :::image type="content" source="media/vt-env-variable.png" alt-text="Environment variable for virtual tables":::
 
 4. Select **Create**.
-5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
-6. Select your connection.
+5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**, and then select your connection.
 
-## ALM for virtual tables recommendations and limitation
-
-### ALM recommendations
-
-- Create or update a virtual table in the context of a solution.
-- If an existing virtual table with environment variable needs to be added to a solution, then the environment variable related to this virtual table needs to be explicitly added to the solution. From the **Solutions** area in Power Apps, select **Add existing** > **Environment variable**, and then select the environment variable related to the virtual table. After this step, select the environment variable and then select **Advanced** and add the required objects.
-- If a virtual table is created without an environment variable specified, you must re-create the virtual table and select the environment variable option.
-
-### Limitation
-
-- Environment variable support with virtual tables currently only work with SharePoint and SQL virtual connectors.
+## Connection references and environment variables
 
 ### Create and select a connection reference (optional)
 
@@ -216,8 +206,26 @@ To create a connection reference, when you're creating the connection for the vi
 1. On the **Connection Reference** page, select or name your connection reference, and then select **Next**.
 
    - If you chose SQL and Microsoft Entra ID as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
+
+### Environment variables
+
+Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable. To take advantage of this functionality, select **Use environment variables** when choosing a connection for your data source during virtual table create step.
+
+
+
+#### Environment variables with virtual tables recommendations
+
+- Create or update a virtual table in the context of a solution.
+- If an existing virtual table with environment variable needs to be added to a solution, then the environment variable related to this virtual table needs to be explicitly added to the solution. From the **Solutions** area in Power Apps, select **Add existing** > **Environment variable**, and then select the environment variable related to the virtual table. After this step, select the environment variable and then select **Advanced** and add the required objects.
+- If a virtual table is created without an environment variable specified, you must re-create the virtual table and select the environment variable option.
+
+#### Environment variables with virtual tables limitation
+
+- Environment variable support with virtual tables currently only work with SharePoint and SQL virtual connectors.
+
    
 ### Configure your Data
+
    - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Microsoft Entra credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
