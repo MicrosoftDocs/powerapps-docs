@@ -3,7 +3,7 @@ title: Common issues and workarounds (Power Apps Component Framework) | Microsof
 description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
 ms.author: hemantg
 author: HemantGaur
-ms.date: 02/18/2023
+ms.date: 10/28/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -77,17 +77,31 @@ Update the component version (minor or patch) in the component manifest file (fo
 
 Error  **Import Solution Failed: Web resource content size is too big**.
 
-**Workaround**
+### Workarounds
 
-- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command
+There are two ways to work around this error:
+
+ - [Build the PCF using the release configuration](#build-the-pcf-using-the-release-configuration)
+ - [Increase the maximum size for email attachments](#increase-the-maximum-size-for-email-attachments)
+
+
+#### Build the PCF using the release configuration
+
+
+- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command:
+
   ```CLI
   msbuild /property:configuration=Release
   ```
+
 - Run the msbuild command with an extra property as shown below:
+
   ```CLI
   msbuild /p:PcfBuildMode=production
   ```
+
 - Edit the `.pcfproj` to always build the web pack in production mode by setting the property `PcfBuildMode` to production:
+
   ```XML
   <PropertyGroup>
     <Name>TS_ReactStandardControl</Name>
@@ -96,6 +110,12 @@ Error  **Import Solution Failed: Web resource content size is too big**.
     <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
   ```
+
+#### Increase the maximum size for email attachments
+
+The size limit for files used by PCF controls is limited by the same setting that limits the size of email attachments. See the **Maximum file size for attachments** setting described in [Manage email settings](/power-platform/admin/settings-email).
+
+This value is set in the [Organization.MaxUploadFileSize](../data-platform/reference/entities/organization.md#BKMK_MaxUploadFileSize) column. [Learn how to read and update environment settings using code](../data-platform/organization-table.md)
 
 ## When running Power Apps checker with the solution built using CLI tooling in default configuration
 

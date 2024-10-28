@@ -4,8 +4,7 @@ description: Learn how developers use web resources within model-driven apps.
 suite: powerapps
 author: sriharibs-msft
 ms.author: srihas
-
-ms.date: 04/01/2022
+ms.date: 10/28/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -18,7 +17,7 @@ contributors:
 
 # Use web resources
 
-There is a virtual folder called `webresources` within each Microsoft Dataverse instance where you can request HTML, JS, CSS, image, and other files by name and access them in your browser. You can upload these files using the application or programatically add them as [Web resource table](../data-platform/reference/entities/webresource.md) records. The [XrmToolBox web resources manager](https://www.xrmtoolbox.com/plugins/MsCrmTools.WebResourcesManager/) is a community tool which can facilitate working with these records.
+There is a virtual folder called `webresources` within each Microsoft Dataverse instance where you can request HTML, JS, CSS, image, and other files by name and access them in your browser. You can upload these files using the application or programmatically add them as [Web resource table](../data-platform/reference/entities/webresource.md) records. The [XrmToolBox web resources manager](https://www.xrmtoolbox.com/plugins/MsCrmTools.WebResourcesManager/) is a community tool which can facilitate working with these records.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -30,5 +29,9 @@ More information:
 - [Client scripting with model-driven apps](client-scripting.md)
 - [Web resources](web-resources.md)
 
+> [!NOTE]
+> The maximum size of web resources is controlled with same setting that limits the size of email attachments. See the **Maximum file size for attachments** setting described in [Manage email settings](/power-platform/admin/settings-email).
+>
+> This value is set in the [Organization.MaxUploadFileSize](../data-platform/reference/entities/organization.md#BKMK_MaxUploadFileSize) column. [Learn how to read and update environment settings using code](../data-platform/organization-table.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
