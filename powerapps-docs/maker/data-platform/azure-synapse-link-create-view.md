@@ -66,6 +66,14 @@ This section describes the prerequisites necessary to create a view of your Data
 You can use views in your queries the same way you use views in SQL Server queries.
 The view will be created and accessible under views folder in **SQL Server Management Studio (SSMS)** or **Azure Data Studio**
 
+
+> [!NOTE]
+> Any custom database objects created by customers on the Azure Synapse Link Synapse Database will be deleted if Azure Synapse link is unlinked.
+>
+> Customers will need to implement their own version control of their custom database objects scripts to ensure they have a backup.
+
+
+
 ### See also
 
 [Blog: Announcing Azure Synapse Link for Dataverse](https://aka.ms/synapse-dataverse)
