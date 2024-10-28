@@ -109,6 +109,8 @@ Expanding a collection-valued navigation property can make the size of the respo
 
 There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
+<!-- 
+
 ## Supported Relationship types for $expand
 
 The table below shows the supported relationships when using `$expand` on multiple properties for the same entity vs nesting expands.
@@ -119,7 +121,9 @@ The table below shows the supported relationships when using `$expand` on multip
 | Only 1:N   | ✓   | ✓|
 | Only N:N   | ✓   | ✘|
 | All combinations of 1:N and N:1   | ✓   | ✓|
-| Combinations with N:N   | ✘   | ✘|
+| Combinations with N:N   | ✘   | ✘| 
+
+-->
 
 ## Expand single-valued navigation properties
 
@@ -323,6 +327,7 @@ There are some important differences in the response that depend on whether you 
 |---------|---------|---------|
 |**Paging**|Paging on expanded rows.|Paging only on [EntitySet resource](overview.md#entityset-resources). `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
 |**`$top` or `$orderby` supported**|No|Yes|
+|**N:N Relationships supported**|No. See [Nested $expand with N:N relationships](#nested-expand-with-nn-relationships)|Yes|
 
 ### Single $expand on collection-valued navigation properties
 
@@ -476,6 +481,14 @@ Compare this response with the previous example, which doesn't use a nested `$ex
 - Only one task is returned instead of three.
 - The `Account_Tasks@odata.nextLink` URL returns the next two tasks. 
 - Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
+
+### Nested $expand with N:N relationships
+
+When a collection-valued navigation property represents an N:N relationship, you will get the following error when you use nested $expand statements:
+
+TODO: ADD error details here
+
+
 
 ## Next steps
 
