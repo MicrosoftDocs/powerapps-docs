@@ -1,12 +1,12 @@
 ---
-title: "Actions on dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about performing actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Actions on dashboards (model-driven apps) | Microsoft Docs"
+description: "Learn about performing actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards."
 ms.date: 04/01/2022
 ms.topic: article
 author: sriharibs-msft
-ms.subservice: mda-developer
 ms.author: srihas
-ms.reviewer:
+ms.reviewer: jdaly
+ms.subservice: mda-developer
 search.audienceType:
   - developer
 contributors:

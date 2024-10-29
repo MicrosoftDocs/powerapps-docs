@@ -4,9 +4,9 @@ description: "Organization-owned dashboards can be created by using the Microsof
 ms.date: 04/01/2022
 ms.topic: article
 author: sriharibs-msft
-ms.subservice: mda-developer
 ms.author: srihas
-ms.reviewer:
+ms.reviewer: jdaly
+ms.subservice: mda-developer
 search.audienceType:
   - developer
 contributors:
