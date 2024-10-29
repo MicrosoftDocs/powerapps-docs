@@ -5,7 +5,7 @@ author: tashaev
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/25/2024
+ms.date: 10/29/2024
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
