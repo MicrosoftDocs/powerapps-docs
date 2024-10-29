@@ -4,6 +4,7 @@ description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
 author: mkannapiran
 ms.author: kamanick
+ms.reviewer: jdaly
 ms.topic: article
 ms.date: 12/12/2023
 ms.subservice: dataverse-developer
