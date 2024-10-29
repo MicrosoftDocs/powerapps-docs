@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/29/24
+ms.date: 10/29/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
