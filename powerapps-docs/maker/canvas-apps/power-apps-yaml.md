@@ -17,6 +17,8 @@ ms.custom:
 
 # Source Code files for Canvas apps (preview)
 
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
 In this article, you'll learn about the source code files of a canvas app.
 
 We utilize Power FX and YAML as the language for Power Apps Source Code. YAML is known for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation.
