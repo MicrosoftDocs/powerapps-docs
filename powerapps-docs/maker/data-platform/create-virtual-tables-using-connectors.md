@@ -185,26 +185,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 4. Select **Create**.
 5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**, and then select your connection.
 
-<<<<<<< HEAD
-
-## ALM for virtual tables recommendation and limitations
-
-Environment variables support fundamental application lifecycle management (ALM) by enabling smooth transitions of applications across Power Platform environments. For virtual tables, environment variables allow developers to modify the connection reference when migrating a virtual table between environments.
-For instance, in a SharePoint integration, updating the connection reference could involve changing the URL to reflect a test or production environment. Similarly, for SQL integrations, this would mean modifying the server reference to switch between test and production servers.
-
-### ALM Recommendation 
-
-- Create or update a virtual table in the context of a solution.
-- If an existing virtual table with environment variable needs to be added a solution, then the environment variable related to this virtual table needs to be explicitly added to the solution. From Solution, by clicking Add existing --> Environment variable, choose the environment variable related to the virtual table. After this step, select the environment variable and click on advanced and add required objects.
-- If a virtual table was created without environment variable, then the virtual table needs to be recreated using the connection and by selecting environment variable during the create process. 
-
-
-### Limitations
-
-- ALM is currently enabled or supports only SharePoint & SQL
-=======
 ## Connection references and environment variables
->>>>>>> 19211a44213634df5769a670c9387593e3562608
 
 ### Create and select a connection reference (optional)
 
@@ -229,6 +210,8 @@ To create a connection reference, when you're creating the connection for the vi
 
 Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable. To take advantage of this functionality, expand **Advanced options**, and then select **Use environment variables** when choosing a connection for your data source during a virtual table create.
 
+:::image type="content" source="media/environment-variable-with-virtual-table.gif" alt-text="Environment variable with a virtual table":::
+
 #### Environment variables with virtual tables recommendations
 
 - Create or update a virtual table in the context of a solution.
@@ -239,9 +222,9 @@ Environment variables play a key role in the application lifecycle management (A
 
 - Environment variable support with virtual tables currently only work with SharePoint and SQL virtual connectors.
 
-### Configure your Data
+### Configure your data
 
-   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Microsoft Entra credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
+If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Microsoft Entra credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
 1. Select the check box if you want to configure the table name, column names, and primary field.
