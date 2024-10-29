@@ -22,6 +22,9 @@ Data is at the core of most apps, including the data you build in Power Apps. Da
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
 
+> [!NOTE]
+  > It's recommended to limit the number of connectors in a canvas app to 10 and connection references to 20. Exceeding these limits can result in longer wait times for users when launching the app and may cause difficulties in saving the app.
+
 ## Tables
 
 If your connector provides tables, you add your data source, and then select the table in the data source that you want to manage. Power Apps both retrieve table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
