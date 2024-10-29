@@ -3,7 +3,7 @@ title: Add and navigate screens in canvas apps
 description: Learn how to add screens to your canvas app, use arrows to navigate between them, reorder the screens, and set the start screen in Microsoft Power Apps.
 author: emcoope-msft
 ms.author: emcoope
-ms.date: 10/1/2024
+ms.date: 10/29/2024
 ms.topic: conceptual
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -236,7 +236,7 @@ In Power Apps Studio:
 
    :::image type="content" source="media\add-screen-context-variables\select-data-source.png" alt-text="Screenshot that shows the location of the Data button, where you can select a data source from a list.":::
 
-Once connected, the table and form controls are both bound to the data source.
+   Once connected, the table and form controls are both bound to the data source.
 
 You can select a record in the table control and the form displays the details of the selected record.
 
