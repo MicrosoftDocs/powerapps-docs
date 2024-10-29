@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 05/06/2024
+ms.date: 10/28/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -104,6 +104,11 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 3. To delete both the data lake file system as well as the Synapse Database, type the link name to confirm.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
+
+> [!IMPORTANT]
+> Custom database objects created by a customer within the Azure Synapse Link database are deleted once the unlink is completed.
+>
+> Customers will need to implement their own version control of their custom database objects scripts to ensure they have a backup.
 
 ## Relinking an Azure Synapse Link
 

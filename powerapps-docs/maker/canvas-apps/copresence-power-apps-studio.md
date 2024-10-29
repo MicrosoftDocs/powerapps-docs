@@ -2,8 +2,8 @@
 title: Collaborate on canvas apps in Microsoft Power Apps Studio
 description: Learn how to use copresence and coauthoring to view who's working on the same canvas app as you and edit it together in real time.
 author: mkaur
-ms.author: mkaur
-ms.date: 10/25/2024
+ms.author: szlo
+ms.date: 10/29/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -11,6 +11,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
+  - -szlo
 ai-usage: ai-assisted
 ms.custom:
   - ai-gen-diyeditor
@@ -46,14 +47,7 @@ The command bar shows the names and icons of other makers who are editing or vie
 >
 > If autosave is turned on, the changes you made are automatically saved. If autosave isn't turned on, Power Apps notifies you that you're no longer editing and lets you save a copy of your changes.
 
-## Use coauthoring (preview) to edit the same app together
-
-[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - This feature is in the process of rolling out, and might not be available in your region yet.
+## Use coauthoring to edit the same app together
 
 Coauthoring is a new feature that allows multiple makers to edit a canvas app at the same time. When you use coauthoring, you can tell where other makers are working on the app and view their changes in real time.
 
@@ -102,4 +96,3 @@ To use coauthoring, you need to turn it on for each app. If you turn on coauthor
   - Running a flow that another coauthor added, without refreshing the app first
   - Viewing errors from one author's actions on all other coauthors' screens
   - Copying and pasting
-  
