@@ -125,7 +125,7 @@ This warning is by design since the default `msbuild` configuration is `Configur
 
 **Workaround**
 
-Re builds the solution file using  the following either of the commands and reimport the solution into Dataverse.
+Re build the solution file using  the following either of the commands and reimport the solution into Dataverse.
 
 ```CLI
 msbuild/property:configuration:Release
