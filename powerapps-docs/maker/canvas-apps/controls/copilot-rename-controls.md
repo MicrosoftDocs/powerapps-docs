@@ -31,9 +31,9 @@ Currently, the following controls are supported:
 - Buttons
 
 
-To ensure quality results from Copilot, use this feature after setting the Text property of controls. For example, a button with the default Text property value **Button** or an invalid **Text** property value like If() will not be considered for renaming.
+To ensure quality results from Copilot, use this feature after setting the Text property of controls. For example, a button with the default Text property value **Button** or an invalid **Text** property value like If() won't be considered for renaming.
 
-If you still don't get the desired results, please send us your feedback.
+If you still don't get the desired results, send us your feedback.
 
 When manually renaming a control, use standard and relevant names and naming patterns so Copilot can reference them while suggesting renames. Avoid using special characters and spaces. For example, renaming a button to **collectResponse** will provide better renaming suggestions for other buttons than **collect_1**.
 
@@ -41,11 +41,11 @@ When manually renaming a control, use standard and relevant names and naming pat
 
 By default, **Proactive control rename** setting is enabled for new apps.
 
-To use this feauture for existing apps, follow these steps:
+To use this feature for existing apps, follow these steps:
 
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 1. On the **Preview** tab, find and turn on the **Proactive control rename** setting.
-1. On the **New** tab, find and turn on the **New analysis engine** settting.
+1. On the **New** tab, find and turn on the **New analysis engine** setting.
 
 
 
@@ -53,7 +53,7 @@ To use this feauture for existing apps, follow these steps:
 
 ## Rename controls
 
-When you rename a control such as the **Button** control, Copilot will suggest names for other **Button** controls based on the control properties.
+When you rename a control such as the **Button** control, Copilot suggests names for other **Button** controls based on the control properties.
 
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
 
@@ -61,7 +61,7 @@ When you rename a control such as the **Button** control, Copilot will suggest n
 
 1. Select **Rename** and type a new name for the control and then press Enter.
 
-1. Copilot will appear with suggestions to rename other controls that are the same type.
+1. Copilot appears with suggestions to rename other controls that are the same type.
 
     :::image type="content" source="media/rename-controls/rename-control-copilot-appears.png" alt-text="Copilot appears with suggestions to rename controls":::
 
@@ -70,15 +70,15 @@ When you rename a control such as the **Button** control, Copilot will suggest n
 1. Review the suggested names and unselect any item that you don't want to rename.
 :::image type="content" source="media/rename-controls/rename-control-unselect-rename.png" alt-text="Unselect a suggested renaming of a control":::
 
-1. When you done, select **Rename** to apply the changes. <br>If a formula references a control, it will automatically update with the control's new name.
+1. When you're done, select **Rename** to apply the changes. <br>If a formula references a control, it will automatically update with the control's new name.
 
     :::image type="content" source="media/rename-controls/rename-control-copilot-suggestions.png" alt-text="Suggested names from Copilot":::
 
 
 ## Limitations
 
-- Only the **Label** and **Button** controls are suppported.
-- When you rename a label manually, Copilot will appear only if there are other labels under the same screen that can be renamed.
+- Only the **Label** and **Button** controls are supported.
+- When you rename a label manually, Copilot appears only if there are other labels under the same screen that can be renamed.
 - Only controls with valid **Text** property are considered for renaming by Copilot. 
 - **Text** property can be a **Text** literal or a formula returning **Text** type.
-- Only controls with non-default **Text** property are considered for renaming. For instance, Text property value must not be the default value such as **Button** or **Text**.
+- Only controls with nondefault **Text** property are considered for renaming. For instance, Text property value must not be the default value such as **Button** or **Text**.
