@@ -1,6 +1,6 @@
 ---
-title: FAQ for rename Canvas controls with Copilot 
-description: FAQ that discusses renaming Power Apps Canvas controls with Copilot and the key considerations for making use of this technology responsibly.
+title: FAQ for rename controls in canvas apps with Copilot 
+description: FAQ that discusses renaming canvas apps controls with Copilot.
 ms.date: 11/5/2024
 ms.custom: 
   - transparency-note
@@ -12,7 +12,7 @@ ms.collection:
     - bap-ai-copilot
 ---
 
-# FAQ for rename Canvas controls with Copilot 
+# FAQ for rename controls in canvas apps with Copilot
 
 These frequently asked questions (FAQ) describe the AI impact of Power Apps' rename canvas controls with Copilot feature. 
 
