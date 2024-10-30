@@ -30,7 +30,6 @@ Currently, the following controls are supported:
 - Labels
 - Buttons
 
-
 ## Prerequisites
 
 By default, **Proactive control rename** setting is enabled for new apps.
@@ -52,7 +51,10 @@ When you rename a control like the **Button** control, Copilot suggests names fo
 
 1. Select **Rename** and type a new name for the control and then press Enter.
 
-1. Copilot appears with suggestions to rename other controls that are the same type.
+ > [!NOTE]
+ > When you  manually rename a control, Copilot will only appear if there are additional controls on the same screen that can be renamed.
+
+1. Copilot appears with suggestions to rename other controls that are the same type. 
 
     :::image type="content" source="media/rename-controls/rename-control-copilot-appears.png" alt-text="Copilot appears with suggestions to rename controls":::
 
