@@ -77,7 +77,7 @@ More information: [Configure Azure Storage firewalls and virtual networks]( /azu
 
 ## Manage table data to the Synapse workspace
 
-After you have set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
+After you set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
 - In the Power Apps (make.powerapps.com) **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
@@ -86,7 +86,7 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
 ## Monitor your Azure Synapse Link
 
-After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
+After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
@@ -106,9 +106,9 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
 > [!IMPORTANT]
-> Custom database objects created by a customer within the Azure Synapse Link database are deleted once the unlink is completed.
+> The custom database objects you create within the Azure Synapse Link database are deleted once the unlink is completed.
 >
-> Customers will need to implement their own version control of their custom database objects scripts to ensure they have a backup.
+> You need to implement your own version control for your custom database objects scripts to ensure you have a backup.
 
 ## Relinking an Azure Synapse Link
 
