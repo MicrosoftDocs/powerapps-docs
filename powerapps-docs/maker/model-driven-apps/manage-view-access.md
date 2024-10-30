@@ -53,6 +53,7 @@ System views are predefined views that exist for all system tables. These views 
 You can manage the table list of views with your business users based on the users’ security role assignment. Admins select the applicable system views and manage these views with security roles. When the user navigates to a table list form, they only see the system views that were managed with the security roles that are assigned to them.
 
 Examples of public views:
+
 | Table   | Public view                                      |
 |---------|--------------------------------------------------|
 | Account | My Active Accounts                               |
