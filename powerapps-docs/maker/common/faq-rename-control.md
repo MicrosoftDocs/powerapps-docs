@@ -1,7 +1,7 @@
 ---
 title: FAQ for rename Canvas controls with Copilot 
 description: FAQ that discusses renaming Power Apps Canvas controls with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 10/21/2024
+ms.date: 11/5/2024
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -18,7 +18,7 @@ These frequently asked questions (FAQ) describe the AI impact of Power Apps' ren
 
 ##  What is rename Canvas controls with Copilot?
 
-With rename canvas controls with Copilot feature, makers can delegate renaming Canvas controls during app development to an AI assistant. When makers rename a control manually, they can expect Copilot to show up with renaming suggestions for other controls with valid property value. Makers will be able to preview the suggestions before applying, ensuring full control over Copilot's suggestions. This feature's goal is to save makers time and effort otherwise spent manually renaming controls one by one, ensuring app maintainability and easy reference of controls in logic.
+With rename canvas controls with Copilot feature, makers can delegate renaming Canvas controls during app development to an AI assistant. When makers rename a control manually, they can expect Copilot to show up with renaming suggestions for other controls with valid property value. Makers can preview the suggestions before applying, ensuring full control over Copilot's suggestions. This feature's goal is to save makers time and effort otherwise spent manually renaming controls one by one, ensuring app maintainability and easy reference of controls in logic.
  
 ## What are the system’s capabilities? 
 
@@ -28,13 +28,13 @@ The following system capabilities are supported:
 - Apply rename to multiple controls at once, per the suggestions shown in preview.
 - Copilot will nudge the maker when maker manually renames a control and there are other controls of same type under the same Screen with valid, non-default value (like "Button" or "Text") in Text property.
 - Text property can be a Text literal or a formula returning Text type.
-- Any formulas referencing the control name will be automatically updated to use the rename.
+- Any formulas referencing the control name is automatically updated to use the rename.
 
 The following controls are supported: 
 - Button 
 - Label 
 
-Support for more controls will be added soon.
+Support for more controls is comming soon.
 
 ## What is the system’s intended use? 
 
