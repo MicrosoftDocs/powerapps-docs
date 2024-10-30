@@ -44,7 +44,7 @@ To use this feature for existing apps, follow these steps:
 
 ## Rename controls
 
-When you rename a control such as the **Button** control, Copilot suggests names for other **Button** controls based on the control properties.
+When you rename a control like the **Button** control, Copilot suggests names for other **Button** controls based on their properties.
 
 1. Open your [canvas app for editing](../edit-app.md) in Power Apps Studio.
 
@@ -56,7 +56,7 @@ When you rename a control such as the **Button** control, Copilot suggests names
 
     :::image type="content" source="media/rename-controls/rename-control-copilot-appears.png" alt-text="Copilot appears with suggestions to rename controls":::
 
-1. Select **View Suggestions** to see Copilot's suggestions.
+1. Select **View Suggestions**.
 
 1. Review the suggested names and unselect any item that you don't want to rename.
 :::image type="content" source="media/rename-controls/rename-control-unselect-rename.png" alt-text="Unselect a suggested renaming of a control":::
