@@ -115,7 +115,7 @@ The following scenarios were improved to support cloud flows and canvas apps def
 
 ## Is this feature generally available or preview?
 
-On October 30th 2004, the cloud flows setting became generally available. 
+On October 29th 2004, the cloud flows setting became generally available. 
 The canvas apps setting is still in preview.
 
 ### Related information
