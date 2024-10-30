@@ -127,7 +127,7 @@ Before you can use Copilot to create a formula from a discrete request in your c
 
 > [!NOTE]
 > The same limitations apply for creating a formulas from a discrete request as [generating formulas from code comments](ai-formulas-formulabar.md#known-limitations-of-generating-formulas-from-code-comments).
-=======
+
 
 
 ## Responsible AI
