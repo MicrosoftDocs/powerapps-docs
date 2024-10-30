@@ -33,6 +33,8 @@ The [Git](https://git-scm.com/) version control feature allowed multiple users t
 ## Suggested Next Steps
 Existing connections will continue to function. However, to avoid disruption we recommend that all users disconnect your existing apps from Git repositories.
 
+:::image type="content" source="media/git-version-control/git-disconnect.jpg" alt-text="Button to disconnect Git connection.":::
+
 While Git version control is no longer enabled for new canvas apps, Power Apps provides alternative ways to manage app changes. You may continue to publish and share apps as before, export versions as backups, and use built-in collaboration features. Additionally, tools for app lifecycle management within the Power Platform are available to support structured version tracking.
 
 ## Existing Git connected canvas apps
