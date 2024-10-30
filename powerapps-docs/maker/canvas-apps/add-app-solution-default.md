@@ -1,5 +1,5 @@
 ---
-title: Add canvas apps and cloud flows to a solution by default (preview)
+title: Add canvas apps and cloud flows to a solution by default
 description: Learn how to configure an environment to add new canvas apps and cloud flows to a solution by default.
 author: ChrisGarty
 ms.author: cgarty
@@ -14,7 +14,7 @@ contributors:
   - mduelae
 ---
 
-# Add canvas apps and cloud flows to a solution by default (preview)
+# Add canvas apps and cloud flows to a solution by default
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -23,7 +23,7 @@ You can [create a canvas app in a solution](add-app-solution.md) in Power Apps o
 Because canvas apps and cloud flows in a solution are defined in Microsoft Dataverse, you can use Dataverse capabilities to manage them, including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), [role-based security](/power-platform/admin/database-security#environments-with-a-dataverse-database), and solution-based [application lifecycle management (ALM)](/power-platform/alm).
 
 > [!IMPORTANT]
-> This is a preview feature. [!INCLUDE [cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> The Canvas Apps setting is a preview feature. [!INCLUDE [cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ This feature is disabled by default. You must enable it before you can use it.
 
 1. Sign in to the Power Platform admin center and select an environment.
 1. Go to **Settings** > **Product** > **Features**.
-1. Under **Create new canvas apps and cloud flows in Dataverse solutions (Preview`)**, turn on **Canvas apps** and **Cloud flows** as desired.
+1. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview`)** or **Cloud flows** as desired.
 
 [Learn more about managing feature settings](/power-platform/admin/settings-features).
 
@@ -112,6 +112,11 @@ The following scenarios were improved to support cloud flows and canvas apps def
 - The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) now returns solution cloud flows that weren't previously turned on (published). This API now returns all non-solution and solution cloud flows.
 - Flows with delegated authentication to Roadmap can be added into a solution and migrated to Dataverse.
 - Flows with delegated authentication to SharePoint can be added into a solution and migrated to Dataverse.
+
+## Is this feature generally available or preview?
+
+On October 30th 2004, the cloud flows setting became generally available. 
+The canvas apps setting is still in preview.
 
 ### Related information
 
