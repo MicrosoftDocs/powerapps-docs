@@ -29,7 +29,7 @@ Public views are available for users to display table records. App makers can cr
 1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a table, such as the account table, and then select the **Views** area.
 1. Select **New view** on the command bar, and then enter a **View name**, and optionally enter a **Description**.
-1. If you want to have suggestions from Copilot for the columns to create for the form based on the **View name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](create-and-edit-forms.md#column-suggestions-by-copilot-preview).
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the **View name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](create-and-edit-forms.md#column-suggestions-by-copilot).
 1. Select **Create**.
 
 > [!NOTE]

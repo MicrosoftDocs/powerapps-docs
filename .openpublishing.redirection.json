@@ -9201,8 +9201,48 @@
     "redirect_document_id": "false"
    },
    {
+    "source_path": "powerapps-docs/maker/data-platform/create-edit-global-option-sets-solution-explorer.md",
+    "redirect_url": "/power-apps/maker/data-platform/custom-picklists",
+    "redirect_document_id": "false"
+   },
+   {
     "source_path": "powerapps-docs/maker/model-driven-apps/create-a-model-driven-app.md",
     "redirect_url": "/power-apps/maker/model-driven-apps/build-first-model-driven-app",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/administrator.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/app-maker.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/bdm.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/developer.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/functional-consultant.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/learning-catalog.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/learning-catalog/solution-architect.md",
+    "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
     "redirect_document_id": "false"
    }
   ]

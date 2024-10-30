@@ -146,7 +146,6 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 
 - If you encounter a canvas app publishing error: **the app has connections to flows that are no longer in the environment**, remove any deleted flows from the app. Then save and publish the app.  
 - Canvas apps shared with **Everyone** that go through environment backup and environment restore operations aren't shared with **Everyone** in the restored environment. Notice that the canvas app can be shared with a security group, and the app in the restored environment is shared with that security group.  
-- Solution cloud flows using the [Project Roadmap](/connectors/projectroadmap/) connector or using delegated authorization can't be added into solutions yet. The workaround for this limitation is to edit the flow to remove the Project Roadmap connector usage and/or delegated authorization, add the flow into a solution, and then change the flow back as needed.
   
 To learn more about customizing the individual components in a solution, go to the following articles:  
   
