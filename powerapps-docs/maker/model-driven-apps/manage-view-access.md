@@ -53,7 +53,6 @@ System views are predefined views that exist for all system tables. These views 
 You can manage the table list of views with your business users based on the users’ security role assignment. Admins select the applicable system views and manage these views with security roles. When the user navigates to a table list form, they only see the system views that were managed with the security roles that are assigned to them.
 
 Examples of public views:
-
 | Table   | Public view                                      |
 |---------|--------------------------------------------------|
 | Account | My Active Accounts                               |
@@ -71,10 +70,10 @@ Examples of public views:
 ## Turn on manage table list views
 
 1. Make sure you enable the table list views feature in your environment. More information: [Prerequisites](#prerequisites)
-1. Manage public views with your security roles. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+1. You manage public views with security roles. If you need to create new security roles, go to [Security roles and privileges](/power-platform/admin/security-roles-privileges) for more information about security roles.
 1. Create a solution and add the tables and their corresponding views that you have managed.
-1. Export the solution. <!-- As managed?-->
-1. Import the solution into your production  environment. Inform your users that their system views are filtered based on their security role assignment.
+1. Export the solution as managed. <!-- As managed?-->
+1. Import the solution into your production  environment. Inform your users that their system views are now filtered based on their security role assignment.
 
 ## Manage public views with security roles
 
@@ -88,9 +87,9 @@ To manage system views with security roles:
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation pane, select **Solutions**, and then open the solution that has the table with the view you want to manage. If the item isn’t in the side panel pane, select …More and then select the item you want.
 1. Open a table, such as the account table, and then select the **Views** area.
-1. Select the non-default public view that you want, and then on the command bar, select **View settings**.
+1. Select the nondefault public view that you want, and then on the command bar, select **View settings**.
 1. Select the **Specific security roles** option.
-1. Select the security roles that you want to assigned to the public view.
+1. Select the security roles that you want to assign to the public view.
    :::image type="content" source="media/select-security-roles-public-view.png" alt-text="Select security roles for public view access":::
 1. When you're done selecting the security roles, select **Save and Publish**.
 
