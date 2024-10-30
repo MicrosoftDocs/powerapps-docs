@@ -27,7 +27,7 @@ Before reading this article, you should:
 - [Learn how administrators setup and configure the catalog](/power-platform/admin/administer-catalog)
 
 > [!NOTE]
-> Developers can also use the Power Platform CLI to perform the operations described here. [Learn to use the catalog with Power Platform CLI (preview)](/power-platform/developer/submit-catalog-items)
+> Developers can also use the Power Platform CLI to perform the operations described here. [Learn to use the catalog with Power Platform CLI](/power-platform/developer/submit-catalog-items)
 
 ## Access controls
 
