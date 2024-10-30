@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 
 [This article is prerelease documentation and is subject to change.]
 
-Canvas apps often contain numerous controls, so it's important to name them meaningfully for better maintenance and collaboration. By enabling the **Proactive control rename feature**, Copilot suggests relevant names for multiple controls at once. When a control’s name is updated, the name is updated across all references.
+Canvas apps often contain numerous controls, so it's important to name them meaningfully for better maintenance and collaboration. The new **Proactive control rename** feature uses Copilot to suggests relevant names for controls that you can review and then apply the changes to multiple controls at once. When a control’s name is updated, the name is updated across all references.
 
 Currently, the following controls are supported:
 
@@ -61,7 +61,7 @@ When you rename a control like the **Button** control, Copilot suggests names fo
 1. Review the suggested names and unselect any item that you don't want to rename.
 :::image type="content" source="media/rename-controls/rename-control-unselect-rename.png" alt-text="Unselect a suggested renaming of a control":::
 
-1. When you're done, select **Rename** to apply the changes. <br>If a formula references a control, it will automatically update with the control's new name.
+1. When you're done, select **Rename** to apply the changes. <br>If a formula references a control, the control's name is automatically updated in the formula.
 
     :::image type="content" source="media/rename-controls/rename-control-copilot-suggestions.png" alt-text="Suggested names from Copilot":::
 
