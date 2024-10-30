@@ -23,19 +23,13 @@ ai-usage: ai-assisted
 
 [This article is prerelease documentation and is subject to change.]
 
-Most canvas apps contain numerous controls, so it's crucial to name them meaningfully for better maintainability and collaboration. When you turn on the **Proactive control rename** feature, Copilot can help by suggesting and applying relevant names to multiple controls at once, ensuring these names are updated across all references.
+Canvas apps often contain numerous controls, so it's important to name them meaningfully for better maintenance and collaboration. By enabling the **Proactive control rename feature**, Copilot will suggest relevant names for multiple controls at once. When a control’s name is updated, Copilot will also update the control’s name across all references, such as formulas.
 
 Currently, the following controls are supported:
 
 - Labels
 - Buttons
 
-
-To ensure quality results from Copilot, use this feature after setting the Text property of controls. For example, a button with the default Text property value **Button** or an invalid **Text** property value like If() won't be considered for renaming.
-
-If you still don't get the desired results, send us your feedback.
-
-When manually renaming a control, use standard and relevant names and naming patterns so Copilot can reference them while suggesting renames. Avoid using special characters and spaces. For example, renaming a button to **collectResponse** provide better renaming suggestions for other buttons than **collect_1**.
 
 ## Prerequisites
 
@@ -46,9 +40,6 @@ To use this feature for existing apps, follow these steps:
 1. Open your [canvas app for editing](../edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 1. On the **Preview** tab, find and turn on the **Proactive control rename** setting.
 1. On the **New** tab, find and turn on the **New analysis engine** setting.
-
-
-
 
 
 ## Rename controls
@@ -75,10 +66,18 @@ When you rename a control such as the **Button** control, Copilot suggests names
     :::image type="content" source="media/rename-controls/rename-control-copilot-suggestions.png" alt-text="Suggested names from Copilot":::
 
 
+## Best practices and recommendations
+
+To get the best results from Copilot, use this feature after setting the **Text** property of a control. For example, Copilot won't suggest names for a button with the default Text property value **Button** or an invalid **Text** property value like **If()**.
+
+If you still don't get the desired results, send us your feedback.
+
+When you manually rename a control, use standard and relevant names and naming patterns so Copilot can reference them while suggesting renames. Avoid using special characters and spaces. For example, renaming a **Button** to **collectResponse** provides better renaming suggestions for other buttons compared to using a name like **collect_1**.
+
 ## Limitations
 
 - Only the **Label** and **Button** controls are supported.
 - When you rename a label manually, Copilot appears only if there are other labels under the same screen that can be renamed.
-- Only controls with valid **Text** property are considered for renaming by Copilot. 
-- **Text** property can be a **Text** literal or a formula returning **Text** type.
-- Only controls with nondefault **Text** property are considered for renaming. For instance, Text property value must not be the default value such as **Button** or **Text**.
+- Only controls with a valid **Text** property are considered for renaming by Copilot. 
+- The **Text** property can be a **Text** literal or a formula returning **Text** type.
+- Only controls with nondefault **Text** property are considered for renaming. For instance, **Text** property value must not be the default value such as **Button** or **Text**.
