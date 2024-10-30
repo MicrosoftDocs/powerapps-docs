@@ -47,7 +47,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
     :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
 
-    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app.  When explaining a selection, the Copilot may explain additional context around the selection if it is important to providing the explanation.
+    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app. When explaining a selection, Copilot may also provide additional context if it is important for the explanation.
 
     :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Screenshot of Copilot's explanation of a formula.":::
 
@@ -85,8 +85,8 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 
 ### Known limitations of generating formulas from code comments
 
-- Copilot works on that singular control and property, and it will not make changes to other controls or properties to achieve the desired outcome.
-- Copilot does not tae existing formula text into account.
+- Copilot works on that singular control and property, and it won't make changes to other controls or properties to achieve the desired outcome.
+- Copilot doesn't take existing formula text into account.
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 - Code comments only work with general Power Fx functions, and not Power Apps-specific functions such as `Navigate()`.
