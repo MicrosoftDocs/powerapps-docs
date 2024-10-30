@@ -90,8 +90,9 @@ To manage system views with security roles:
 1. Select the nondefault public view that you want, and then on the command bar, select **View settings**.
 1. Select the **Specific security roles** option.
 1. Select the security roles that you want to assign to the public view.
-   :::image type="content" source="media/select-security-roles-public-view.png" alt-text="Select security roles for public view access":::
 1. When you're done selecting the security roles, select **Save and Publish**.
+   :::image type="content" source="media/select-security-roles-public-view.png" alt-text="Select security roles for public view access":::
+
 
 ### See also
 
