@@ -35,7 +35,7 @@ To ensure quality results from Copilot, use this feature after setting the Text 
 
 If you still don't get the desired results, send us your feedback.
 
-When manually renaming a control, use standard and relevant names and naming patterns so Copilot can reference them while suggesting renames. Avoid using special characters and spaces. For example, renaming a button to **collectResponse** will provide better renaming suggestions for other buttons than **collect_1**.
+When manually renaming a control, use standard and relevant names and naming patterns so Copilot can reference them while suggesting renames. Avoid using special characters and spaces. For example, renaming a button to **collectResponse** provide better renaming suggestions for other buttons than **collect_1**.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ To use this feature for existing apps, follow these steps:
 
 When you rename a control such as the **Button** control, Copilot suggests names for other **Button** controls based on the control properties.
 
-1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio.
+1. Open your [canvas app for editing](../edit-app.md) in Power Apps Studio.
 
 1. In the **Tree view**, select a control and then select **More options** (...).
 
