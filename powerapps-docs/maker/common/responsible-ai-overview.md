@@ -47,4 +47,4 @@ ms.collection:
 - [FAQs for field suggestions by Copilot](faq-field-suggestions.md)
 - [FAQ about filtering, sorting, and searching canvas galleries with Copilot](faq-filter-with-copilot.md)
 - [FAQ for rename controls in canvas apps with Copilot ](faq-rename-control.md)
-- [Rename controls in canvas apps with Copilot(preview)](../canvas-apps/controls/copilot-rename-controls.md)
+- [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
