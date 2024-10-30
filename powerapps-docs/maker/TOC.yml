@@ -1457,6 +1457,8 @@
           href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
+        - name: Manage access to views (preview)
+          href: ./model-driven-apps/manage-view-access.md
         - name: Deleting and turning off views
           href: ./model-driven-apps/remove-views.md
       - name: Work with forms
@@ -2235,6 +2237,8 @@
     items:
     - name: Security in Dataverse
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Manage access to views (preview)
+      href: ./model-driven-apps/manage-view-access.md
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
