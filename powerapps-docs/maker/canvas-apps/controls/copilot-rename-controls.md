@@ -43,7 +43,7 @@ By default, **Proactive control rename** setting is enabled for new apps.
 
 To use this feature for existing apps, follow these steps:
 
-1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
+1. Open your [canvas app for editing](../edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 1. On the **Preview** tab, find and turn on the **Proactive control rename** setting.
 1. On the **New** tab, find and turn on the **New analysis engine** setting.
 
