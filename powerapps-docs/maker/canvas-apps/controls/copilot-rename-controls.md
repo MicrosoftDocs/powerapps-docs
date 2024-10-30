@@ -21,6 +21,8 @@ ai-usage: ai-assisted
 
 # Rename controls in canvas apps with Copilot (preview)
 
+[This article is prerelease documentation and is subject to change.]
+
 Most canvas apps contain numerous controls, so it's crucial to name them meaningfully for better maintainability and collaboration. When you turn on the **Proactive control rename** feature, Copilot can help by suggesting and applying relevant names to multiple controls at once, ensuring these names are updated across all references.
 
 Currently, the following controls are supported:
