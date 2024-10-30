@@ -70,7 +70,7 @@ Here are some tips to help you get the most out of this feature:
 
 
 ## See also 
-- [Rename controls with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
+- [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
