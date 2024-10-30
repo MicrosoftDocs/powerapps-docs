@@ -1,11 +1,11 @@
 ---
-title: Use Git version control to edit canvas apps (experimental)
-description: Learn how to connect to a Git repository and allow multiple users to work on the app at the same time (experimental).
+title: Discontinued Git version control for canvas apps (experimental)
+description: Retired status for Git version control feature.
 author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 09/03/2024
+ms.date: 10/30/2024
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -15,6 +15,7 @@ contributors:
   - gregli-msft
   - mkaur-msft
   - gesnaaggarwal
+  - angela21k
 ---
 
 # Discontinued: Git version control for canvas apps (experimental)
