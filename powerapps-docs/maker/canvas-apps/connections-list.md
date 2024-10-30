@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 01/05/2023
+ms.date: 10/30/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -23,7 +23,7 @@ Data is at the core of most apps, including the data you build in Power Apps. Da
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
 
 > [!NOTE]
-  > It's recommended to limit the number of connectors in a canvas app to 10 and connection references to 20. Exceeding these limits can result in longer wait times for users when launching the app and may cause difficulties in saving the app.
+  > It's recommended to keep the number of connectors in a canvas app to a maximum of 10 and connection references to no more than 20. Going beyond these limits may lead to longer loading times for users when launching the app and could cause issues when saving the app.
 
 ## Tables
 
