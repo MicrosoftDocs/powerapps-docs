@@ -83,3 +83,4 @@ When you manually rename a control, use standard and relevant names and naming p
 - Only controls with a valid **Text** property are considered for renaming by Copilot. 
 - The **Text** property can be a **Text** literal or a formula returning **Text** type.
 - Only controls with nondefault **Text** property are considered for renaming. For instance, **Text** property value must not be the default value such as **Button** or **Text**.
+
