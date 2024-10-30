@@ -94,7 +94,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 - Existing formulas for the property aren't included in the suggestion.
 
 
-## Create a Formula (preview)
+## Create a formula (preview)
 
 [This section is prerelease documentation and is subject to change.]
 
