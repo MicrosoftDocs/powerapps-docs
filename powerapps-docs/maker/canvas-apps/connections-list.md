@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 01/05/2023
+ms.date: 10/30/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -21,6 +21,9 @@ contributors:
 Data is at the core of most apps, including the data you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
+
+> [!NOTE]
+  > It's recommended to keep the number of connectors in a canvas app to a maximum of 10 and connection references to no more than 20. Going beyond these limits may lead to longer loading times for users when launching the app and could cause issues when saving the app.
 
 ## Tables
 
