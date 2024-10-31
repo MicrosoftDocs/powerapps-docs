@@ -86,7 +86,7 @@ After you set up the Azure Synapse Link, you can manage the tables that are expo
 
 ## Monitor your Azure Synapse Link
 
-After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
+After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link on the **Tables** tab.
 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
