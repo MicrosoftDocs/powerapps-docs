@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/14/2024
+ms.date: 10/31/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -135,7 +135,7 @@ For more details on how to use Dataverse actions in your formulas, see [Working 
 
 ### Passing Entity type arguments for bound/unbound actions
 
-Pass entity type arguments for Dataverse actions by first setting the Entity type argument value to a variable.  Additionally, make sure to fill in any values that might be missing (for instance: activityId.) This is important for entities that do not have defined types in the swagger. 
+To pass entity type arguments for Dataverse actions, start by setting the entity type argument value to a variable. Additionally, ensure that any missing values such as ***activityId** are filled in. This is particularly important for entities that do not have defined types in the swagger.
 
 ```power-fx
 Set(MyArgVar, {
