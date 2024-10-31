@@ -117,7 +117,7 @@ However, this expression won't:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-Certain aggregate functions can be delegated based on back-end support. Functions like **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions, such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, can also be delegated. However **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)**. Currently, only a limited number of data sources support delegation for these functions. For more details, refer to the [Delegation list](#delegable-data-sources).
+Certain aggregate functions can be delegated based on back-end support. Functions like **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions, such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, can also be delegated. However **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** have delegation restrictions. Currently, only a limited number of data sources support delegation for these functions. For more details, refer to the [Delegation list](#delegable-data-sources).
 
 
 
