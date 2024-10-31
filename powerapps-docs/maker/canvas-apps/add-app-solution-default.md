@@ -28,15 +28,15 @@ Because canvas apps and cloud flows in a solution are defined in Microsoft Datav
 ## Prerequisites
 
 - Solutions are stored in Dataverse, so the environment must have a Dataverse database to use this feature. If yours doesn't, [add a Dataverse database](/power-platform/admin/create-database).
-- To create canvas apps in solutions, you must have **Write** privileges to the [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md). To create cloud flows in solutions, you should have the [Environment Maker role](/power-platform/admin/database-security#predefined-security-roles). For more information, see [security roles and privileges](/power-platform/admin/security-roles-privileges).
+- To create canvas apps in solutions, you must have **write** privileges to the [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md). To create cloud flows in solutions, you should have the [Environment Maker role](/power-platform/admin/database-security#predefined-security-roles). Learn more in [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 - A canvas app or cloud flow in a solution must be shared with you before you can view or edit it.
 
 > [!IMPORTANT]
-> Before you enable the creation of canvas apps and cloud flows in solutions by default, review the [considerations](#considerations).
+> Before you enable the creation of canvas apps and cloud flows in solutions by default, review the [Considerations](#considerations) section in this article.
 
 ## Supported creation methods and entry points
 
-Several methods and entry points are available for creating canvas apps and cloud flows. 
+Several methods and entry points are available for creating canvas apps and cloud flows.
 
 ### Canvas apps creation methods and entry points
 
@@ -80,7 +80,7 @@ This feature is disabled by default. You must enable it before you can use it.
 1. Go to **Settings** > **Product** > **Features**.
 1. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview`)** or **Cloud flows** as desired.
 
-[Learn more about managing feature settings](/power-platform/admin/settings-features).
+Learn more about managing feature settings in [Manage feature settings](/power-platform/admin/settings-features).
 
 ## View canvas apps and cloud flows in solutions
 
@@ -98,8 +98,8 @@ Take the following considerations into account before you decide to create canva
 - Known solution limitations related to canvas apps still apply to canvas apps created in solutions by default.
 - This feature automatically creates environment variables when you add data sources for your apps.
 - By default, this feature saves all canvas apps to the default solution, **Common Data Services Default Solution**, published by **Microsoft Dataverse Default Publisher**. However, we recommend that you save your canvas apps to a different solution. [Learn more about adding existing canvas apps to solutions](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
-- When you turn the feature on or off for canvas apps and cloud flows in the Power Platform admin center, the Dataverse properties `enablecanvasappsinsolutionsbydefault` and `enableFlowsInSolutionByDefault` in the organization table are updated. You can view the value of these properties using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. For more information, see [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization).
-- If you're planning to change the prefix for the default publisher or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
+- When you turn the feature on or off for canvas apps and cloud flows in the Power Platform admin center, the Dataverse properties `enablecanvasappsinsolutionsbydefault` and `enableFlowsInSolutionByDefault` in the organization table are updated. You can view the value of these properties using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. Learn more in [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization).
+- If you're planning to change the prefix for the default publisher or solution for your environment, you can learn more in [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 - Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there's no way to revert back.
 
 ## Improvements
