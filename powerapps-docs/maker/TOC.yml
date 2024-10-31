@@ -1108,7 +1108,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps and cloud flows to a solution by default (preview)
+      - name: Add canvas apps and cloud flows to a solution by default
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
