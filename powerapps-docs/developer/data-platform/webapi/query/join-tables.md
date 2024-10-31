@@ -1,7 +1,7 @@
 ---
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 10/22/2024
+ms.date: 10/30/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -108,22 +108,6 @@ It's important to remember there are two types of navigation properties. [Learn 
 Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
 
 There's a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
-
-<!-- 
-
-## Supported Relationship types for $expand
-
-The table below shows the supported relationships when using `$expand` on multiple properties for the same entity vs nesting expands.
-
-| Relationship Type | Multiple | Nested |
-|---|---|---|
-| Only N:1   | ✓   | ✓|
-| Only 1:N   | ✓   | ✓|
-| Only N:N   | ✓   | ✘|
-| All combinations of 1:N and N:1   | ✓   | ✓|
-| Combinations with N:N   | ✘   | ✘| 
-
--->
 
 ## Expand single-valued navigation properties
 
@@ -529,13 +513,6 @@ To avoid this error, you can construct the query [using FetchXml](../../fetchxml
 ```
 
 [Learn more about joining tables using many-to-many relationships with FetchXml](../../fetchxml/join-tables.md#many-to-many-relationships)
-
-
-
-
-
-
-
 
 ## Next steps
 
