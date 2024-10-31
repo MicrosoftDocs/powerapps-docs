@@ -2,28 +2,28 @@
 title: Add canvas apps and cloud flows to a solution by default
 description: Learn how to configure an environment to add new canvas apps and cloud flows to a solution by default.
 author: ChrisGarty
+contributors:
+  - ChrisGarty
+  - mduelae
 ms.author: cgarty
 ms.reviewer: angieandrews
 ms.topic: conceptual
 ms.custom: canvas, bap-template
-ms.date: 08/19/2024
+ms.date: 10/31/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-contributors:
-  - mduelae
 ---
 
 # Add canvas apps and cloud flows to a solution by default
-
-[This article is prerelease documentation and is subject to change.]
 
 You can [create a canvas app in a solution](add-app-solution.md) in Power Apps or [create a cloud flow in a solution](/power-automate/create-flow-solution) in Power Automate. Creating a canvas app or a cloud flow in a solution previously required manual steps. Now you can create them in a solution by default.
 
 Because canvas apps and cloud flows in a solution are defined in Microsoft Dataverse, you can use Dataverse capabilities to manage them, including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), [role-based security](/power-platform/admin/database-security#environments-with-a-dataverse-database), and solution-based [application lifecycle management (ALM)](/power-platform/alm).
 
 > [!IMPORTANT]
-> The Canvas Apps setting is a preview feature. [!INCLUDE [cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - The canvas apps setting is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -115,8 +115,7 @@ The following scenarios were improved to support cloud flows and canvas apps def
 
 ## Is this feature generally available or preview?
 
-On October 29th 2004, the cloud flows setting became generally available. 
-The canvas apps setting is still in preview.
+On October 29, 2024, the cloud flows setting became generally available. The canvas apps setting remains in preview.
 
 ### Related information
 
