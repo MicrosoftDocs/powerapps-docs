@@ -102,22 +102,22 @@ The following table lists the languages available for the formula bar copilot fe
 | **Name** | **Language Code** | **Functionality Supported** |
 |----------|-------------------|-----------------------------|
 | English | en-US | Explain a formula, Comment generated formulas |
-| Chinese (simplified) - China | zh-Hans | Explain a formula |
-| Czech - Czech Republic | cs-CZ | Explain a formula |
-| Danish - Denmark | da-DK | Explain a formula |
-| Dutch - Netherlands | nl-NL | Explain a formula |
-| Finnish - Finland | fi-FI | Explain a formula |
-| French - France | fr-FR | Explain a formula |
-| German - Germany | de-DE | Explain a formula |
-| Greek - Greece | el-GR | Explain a formula |
-| Italian - Italy | it-IT | Explain a formula |
-| Japanese - Japan | ja-JP | Explain a formula |
-| Korean - Korea | ko-KR | Explain a formula |
-| Norwegian (Bokmål) - Norway | nb-NO | Explain a formula |
-| Polish - Poland | pl-PL | Explain a formula |
-| Portuguese - Brazil | pt-BR | Explain a formula |
-| Russian - Russia | ru-RU | Explain a formula |
-| Spanish (Traditional Sort) - Spain | es-ES | Explain a formula |
-| Swedish - Sweden | sv-SE | Explain a formula |
-| Thai - Thailand | th-TH | Explain a formula |
-| Turkish - Türkiye | tr-TR | Explain a formula |
+| Chinese (simplified) - China | zh-Hans | Explain a formula, Comment generated formulas |
+| Czech - Czech Republic | cs-CZ | Explain a formula, Comment generated formulas |
+| Danish - Denmark | da-DK | Explain a formula, Comment generated formulas |
+| Dutch - Netherlands | nl-NL | Explain a formula, Comment generated formulas |
+| Finnish - Finland | fi-FI | Explain a formula, Comment generated formulas |
+| French - France | fr-FR | Explain a formula, Comment generated formulas |
+| German - Germany | de-DE | Explain a formula, Comment generated formulas |
+| Greek - Greece | el-GR | Explain a formula, Comment generated formulas |
+| Italian - Italy | it-IT | Explain a formula, Comment generated formulas |
+| Japanese - Japan | ja-JP | Explain a formula, Comment generated formulas |
+| Korean - Korea | ko-KR | Explain a formula, Comment generated formulas |
+| Norwegian (Bokmål) - Norway | nb-NO | Explain a formula, Comment generated formulas |
+| Polish - Poland | pl-PL | Explain a formula, Comment generated formulas |
+| Portuguese - Brazil | pt-BR | Explain a formula, Comment generated formulas |
+| Russian - Russia | ru-RU | Explain a formula, Comment generated formulas |
+| Spanish (Traditional Sort) - Spain | es-ES | Explain a formula, Comment generated formulas |
+| Swedish - Sweden | sv-SE | Explain a formula, Comment generated formulas |
+| Thai - Thailand | th-TH | Explain a formula, Comment generated formulas |
+| Turkish - Türkiye | tr-TR | Explain a formula, Comment generated formulas |
