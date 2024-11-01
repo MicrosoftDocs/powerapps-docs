@@ -46,7 +46,7 @@ Source code for Canvas Apps is represented as *.pa.yaml files and are managed by
 A msapp file is a collection of files compacted in a binary file, including the source code. 
 
 > [!TIP]
-> To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package,md) don’t support ALM and should only be used for basic import and export capabilities when Dataverse isn’t accessible.
+> To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) don’t support ALM and should only be used for basic import and export capabilities when Dataverse isn’t accessible.
 
 The source code files are designed to be used with the Dataverse Git Integration, where you no longer need to use .msapp files.
 
