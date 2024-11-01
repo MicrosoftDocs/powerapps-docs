@@ -39,7 +39,7 @@ We utilize Power FX and YAML as the language for Power Apps Source Code. YAML is
 
 ## Prerequisite
 
-To use this feature you must create an [Early release cycle environment.](https://learn.microsoft.com/en-us/power-platform/admin/early-release). 
+To use this feature you must create an [Early release cycle environment.](/power-platform/admin/early-release). 
 
 ## How to access the Source Code files
 
