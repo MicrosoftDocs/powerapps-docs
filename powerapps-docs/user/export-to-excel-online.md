@@ -5,7 +5,7 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/12/2021
+ms.date: 10/22/2024
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -22,7 +22,7 @@ This feature requires that you have an Office 365 subscription or a subscription
 
 A few things to note:
 
-- The data for an *ad-hoc* analysis with Excel Online is stored temporarily. Any additions, such as charts, graphs, calculations, columns, and colors won’t be saved back to the app from the ad-hoc analysis in Excel Online. Keep the existing format of the Excel cells to prevent problems when you save the file. The file import might fail if you make a lot of changes. 
+- The data for an *ad-hoc* analysis with Excel Online is stored temporarily. Any additions, such as charts, graphs, calculations, columns, and colors won’t be saved back to the app from the ad-hoc analysis in Excel Online. Keep the existing format of the Excel cells to prevent problems when you save the file. The file import might fail if you make numerous changes. 
 - Updated data in an app isn't immediately reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
 - The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table, then it’s not available for that table.
   
@@ -31,7 +31,7 @@ A few things to note:
 
 1. On the left nav, select a table.
 
-3. On the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
+3. On the command bar, select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel Online.](media/export-excel-online.png "Select export to Excel Online")

@@ -7,7 +7,7 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 author: adrianorth
 ms.author: aorth
-
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 contributors:

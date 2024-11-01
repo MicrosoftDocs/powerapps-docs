@@ -3,11 +3,11 @@ title: "Consider disabling NavBar when programmatically opening forms or views |
 description: "Opening up forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
 suite: powerapps
 author: jowells
-
+ms.author: jowells
+ms.reviewer: jdaly
 ms.topic: article
 ms.date: 04/14/2021
 ms.subservice: mda-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---
