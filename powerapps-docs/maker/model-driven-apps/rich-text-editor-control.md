@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 09/06/2024
+ms.date: 11/08/2024
 ms.topic: how-to
 ms.author: "craigm"
 author: Mattp123
@@ -32,7 +32,7 @@ Currently, the rich text editor is available as two different experiences:
 
 ## Modern text editor enhancements
 
-The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
 
 > [!Note]
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
@@ -41,7 +41,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 ## Enable the modern rich text editor experience
 
-The classic rich text editor experience is enabled by default. Complete the following steps to switch to the modern rich text editor experience.
+If you are using the classic rich text editor experience, complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
 1. On the command bar, select **Settings**. The settings page is displayed.
