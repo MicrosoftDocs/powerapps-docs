@@ -27,7 +27,7 @@ If your app currently uses this feature, follow these steps to disconnect it:
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings**.
 1. Select **Git version control** and then select **Disconnect**.
 
-If you are using PASopa, download your app from your Git provider and [pack the .zip file to an .msapp file](https://github.com/microsoft/PowerApps-Tooling/tree/master/src/PASopa#power-platform-cli-usage). Once your .msapp file is uploaded to Power Apps, following the steps above to disconnect.
+If you are using PASopa, download your app from your Git provider and [pack the .zip file to an .msapp file](https://github.com/microsoft/PowerApps-Tooling/tree/master/src/PASopa#power-platform-cli-usage). Once your .msapp file is uploaded to Power Apps, follow the steps above to disconnect.
 
 
  > [!NOTE]
