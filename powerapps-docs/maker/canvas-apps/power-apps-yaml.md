@@ -3,7 +3,7 @@ title: Source Code files for Canvas apps (pa.yaml)
 description: Learn about Source Code files for canvas apps.
 author: marcelbf
 ms.author: marcelbf
-ms.date: 10/17/2024
+ms.date: 11/1/2024
 ms.topic: conceptual
 ms.reviewer: 
 ms.subservice: canvas-maker
@@ -21,9 +21,9 @@ ms.custom:
 
 You can use the source code for a canvas app to review changes made my makers in Power Apps Studio. The generated canvas app YAML code is read-only and shouldn't be modified.
 
-Currently, it is not recommended to modify pa.yaml files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
+Currently, it isn't recommended to modify pa.yaml files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
 
-The JSON files in the **msapp** shouldn't be used as source code because they are not stable between save and load cycles.
+The JSON files in the **msapp** shouldn't be used as source code because they aren't stable between save and load cycles.
 
 > [!NOTE]
 > - The YAML schema is in active development, the content may be incomplete.
@@ -46,7 +46,7 @@ The Power Apps Studio creates the source code for canvas apps, which is stored a
 > [!TIP]
 > To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
-The source code files is created to with Dataverse Git Integration, eliminating the need for **.msapp** files.
+The source code files are created to with Dataverse Git Integration, eliminating the need for **.msapp** files.
 
 You can get the source code files either from the **.msapp** file or by using Power Platform CLI.
 
@@ -92,11 +92,11 @@ Only ***.pa.yaml** files within the **\src** folder can be used as source code.
 
 ## Power Fx YAML
 
-Microsoft Power Fx utilizes a grammar for expressions that is based on Excel and well-established. However, when using Power Apps and other hosts that rely on UI for formula binding, there is no standardized method for editing formula bindings as text.
+Microsoft Power Fx utilizes a grammar for expressions that is based on Excel and well-established. However, when using Power Apps and other hosts that rely on UI for formula binding, there's no standardized method for editing formula bindings as text.
 
-To address this, we have chosen [YAML]https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
+To address this, we choose [YAML]https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
 
-Currently, we only support a limited subset of YAML. Only the constructs outlined in this article are supported. More informations: [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
+Currently, we only support a limited subset of YAML. Only the constructs outlined in this article are supported. More information: [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
 
 ## Power Apps YAML schema versions
 
@@ -105,7 +105,7 @@ Currently there are three schema versions of Power Apps Source Code:
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
 | [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When [code view](code.view.md) is generally available (GA) it will switch to the source code preview format.|
+| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When [code view](code.view.md) is generally available (GA) it switches to the source code preview format.|
 | [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | This includes enhancements and version details for source control. It represents the latest and most up-to-date version of canvas YAML. |
 
 >[!NOTE]
@@ -121,15 +121,15 @@ You can't directly convert ***.fx.yaml** files to the new formats. To convert ol
 
 [Code view](code-view.md) format is designed to create apps within Power Apps Studio, letting you easily copy and paste controls. In this format, the source code remains in its native form instead of being converted.
 
-[Code view](code-view.md) format is a preview feature and is temporary. Moving forward, both code view, copy code, and paste code will use the source code preview schema.
+[Code view](code-view.md) format is a preview feature and is temporary. In the future, both code view, copy code, and paste code will use the source code preview schema.
 
 Here are the changes made from the experimental format:
 
-1. **ZIndex Property Removal**: The ZIndex property has removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
-1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties hav been added to define the control type and default values:
+1. **ZIndex Property Removal**: The ZIndex property is removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
+1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties has been added to define the control type and default values:
 
 - **Control**: Represents the control type in YAML.
-- **Variant**: Identifies a variant of a control type, which may alter default property values, add or remove properties, or modify the behavior/layout of the control.
+- **Variant**: Identifies a variant of a control type, which might alter default property values, add or remove properties, or modify the behavior/layout of the control.
 
 These properties are used for instantiating controls and don't accept Power Fx expressions.
 
@@ -141,16 +141,16 @@ These properties are used for instantiating controls and don't accept Power Fx e
 > - The **.pa.yaml** files are read-only and should only be used to review changes made in Power Apps Studio. These files are not used when an app is loading.
 > - External editing, merging, and conflict resolution isn't supported.
 
-This schema has been designed for source control purposes and allows the use of a single YAML file. It is an updated format compared to the previous code view.
+This schema is designed for source control purposes and allows the use of a single YAML file. It's an updated format compared to the previous code view.
 
 Updates from the previous format include:
 
 1. Grouping of Top-Level Node Elements:
     - The top-level keywords "App" and "Screens" are examples of how elements are now grouped in a top-level node.
 2. Control Version Specification:
-    - You can now specify the version of a control using the Control Keyword followed by the **@** operator. If no version is specified, the most current version of the control will be used.
+    - You can now specify the version of a control using the Control Keyword followed by the **@** operator. If no version is specified, the most current version of the control is used.
 3. Simplified Variant Names:
-    - Not all controls require a variant. For controls that do require a variant, the name has been simplified and made more user-friendly.
+    - Not all controls require a variant. For controls that do require a variant, the name is simplified and more user-friendly.
 4. Consistent ZIndex for All Controls:
     - All controls now use an ascending order to determine the ZIndex value, starting from 1. This behavior aligns with the [CSS 2 spec](https://drafts.csswg.org/css2/#z-index).
 
