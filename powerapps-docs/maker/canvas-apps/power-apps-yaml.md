@@ -21,7 +21,7 @@ ms.custom:
 
 You can use the source code for a canvas app to review changes made my makers in Power Apps Studio. The generated canvas app YAML code is read-only and shouldn't be modified.
 
-Currently, it isn't recommended to modify pa.yaml files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
+Currently, we don't recommended that you modify **pa.yaml** files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
 
 The JSON files in the **msapp** shouldn't be used as source code because they aren't stable between save and load cycles.
 
