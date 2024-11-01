@@ -30,7 +30,7 @@ The JSON files in the **msapp** shouldn't be used as source code because they ar
 > - The current proposed static schema for ***.pa.yaml** files can be found, [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
 
 
-We use Power FX and YAML as the languages for Power Apps source code. YAML is appreciated for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation
+We use Power Fx and YAML as the languages for Power Apps source code. YAML is appreciated for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation
 
 > [!NOTE]
 > The supported YAML in this document is limited to a specific subset.
