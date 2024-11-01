@@ -37,23 +37,23 @@ We use Power Fx and YAML as the languages for Power Apps source code. YAML is ap
 
 ## Prerequisite
 
-To use this feature you must create an [Early release cycle environment.](/power-platform/admin/early-release). 
+To use this feature, you must create an [Early release cycle environment.](/power-platform/admin/early-release). 
 
 ## Access source code files
 
-The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the msapp file. The msapp file is a binary file that contains a collection of files, including the source code.
+The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **msapp** file. The **msapp** file is a binary file that contains a collection of files, including the source code.
 
 > [!TIP]
 > To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
-The source code files are specifically created for use with Dataverse Git Integration, eliminating the need for .msapp files.
+The source code files is created to with Dataverse Git Integration, eliminating the need for **.msapp** files.
 
-You have the option to obtain the source code files either from the **.msapp** file or by utilizing Power Platform CLI.
+You can get the source code files either from the **.msapp** file or by using Power Platform CLI.
 
-The ***.pa.yaml** files can be found in the **\Src** folder of the extracted msapp.
+The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **msapp**.
 
 > [!Important]
-> Only files located in the**\Src** directory of the extracted msapp are intended for use with source control.
+> Only files located in the**\Src** directory of the extracted **msapp** are intended for use with source control.
 
 ### Download and Extract the pa.yaml files using Power Platform CLI
 
@@ -67,7 +67,7 @@ Connect to your environment using Power Platform CLI and then use the following 
 
 To extract source code files from a [.msapp file](export-import-single-app.md#export-msapp-files-in-power-apps), you have two options:
 
-1. Manually unzip the .msapp file.
+1. Manually unzip the **.msapp** file.
 1. Alternatively, you can use the following command: [Command here].
 
 ```powershell
@@ -76,12 +76,12 @@ To extract source code files from a [.msapp file](export-import-single-app.md#ex
 
 ## File structure for a msapp file
 
-For older msapps without the \src folder, you will need to follow these steps to generate source code files:
+For older **msapp** files without the \src folder, follow these steps to generate source code files:
 
-1. Import and resave/download the new .msapp in Power Apps Studio.
+1. Import and resave and download the new **.msapp** in Power Apps Studio.
 1. After that, you can proceed to [extract the source code files](#extract-source-code-files-from-a-msapp-file).
 
-In the \src folder, you will find the following files and folders:
+In the **\src** folder, find the following files and folders:
 
 - **App.pa.yaml**: Represents the App.
 - **[screen Name].pa.yaml**: One file for each screen, representing the screen.
@@ -105,7 +105,7 @@ Currently there are three schema versions of Power Apps Source Code:
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
 | [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When the Code view feature is generally available (GA) i will switch to the source code preview format.|
+| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When [code view](code.view.md) is generally available (GA) it will switch to the source code preview format.|
 | [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | This includes enhancements and version details for source control. It represents the latest and most up-to-date version of canvas YAML. |
 
 >[!NOTE]
@@ -115,18 +115,18 @@ Currently there are three schema versions of Power Apps Source Code:
 
 This schema represents an experimental format employed by the Power Platform CLI to process and convert canvas apps into a source code format. However, this format is no longer being actively developed.
 
-You cannot directly convert ***.fx.yaml** files to the new formats. To convert older apps, you will need to package the canvas app as a **.msapp** file and import it into Power Apps Studio.
+You can't directly convert ***.fx.yaml** files to the new formats. To convert older apps, you need to package the canvas app as a **.msapp** file and import it into Power Apps Studio.
 
 ## Code view (preview)
 
-[Code view](code-view.md) format was specifically designed for creating apps within Power Apps Studio, allowing for easy copying and pasting of controls. In this format, the source code remains in its native form instead of being converted.
+[Code view](code-view.md) format is designed to create apps within Power Apps Studio, letting you easily copy and paste controls. In this format, the source code remains in its native form instead of being converted.
 
-[Code view](code-view.md) format is a preview feature and is temporary. Moving forward, both code view, copy code, and paste code will utilize the source code preview schema.
+[Code view](code-view.md) format is a preview feature and is temporary. Moving forward, both code view, copy code, and paste code will use the source code preview schema.
 
 Here are the changes made from the experimental format:
 
-1. **ZIndex Property Removal**: The ZIndex property has been removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
-1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties have been introduced to define the control type and default values:
+1. **ZIndex Property Removal**: The ZIndex property has removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
+1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties hav been added to define the control type and default values:
 
 - **Control**: Represents the control type in YAML.
 - **Variant**: Identifies a variant of a control type, which may alter default property values, add or remove properties, or modify the behavior/layout of the control.
