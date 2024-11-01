@@ -19,84 +19,84 @@ ms.custom:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
+You can use the source code for a canvas app to review changes made my makers in Power Apps Studio. The generated canvas app YAML code is read-only and shouldn't be modified.
 
-The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors yet. More scenarios will be possible in the future.
+Currently, it is not recommended to modify pa.yaml files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
 
-JSON files within the MSAPP are not designed to be stable across save and load cycles and should not be used as source code.
+The JSON files in the **msapp** shouldn't be used as source code because they are not stable between save and load cycles.
 
->[!Note]
-> - The generated canvas app YAML code is read-only and should not be modified.
+> [!NOTE]
 > - The YAML schema is in active development, the content may be incomplete.
-> - The current proposed static schema for *.pa.yaml files can be found [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
+> - The current proposed static schema for ***.pa.yaml** files can be found, [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
 
 
-We utilize Power FX and YAML as the language for Power Apps Source Code. YAML is known for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation.
+We use Power FX and YAML as the languages for Power Apps source code. YAML is appreciated for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation
 
->[!NOTE]
-> We support only a restricted subset of YAML. Only the constructs described in this document are supported.
-
-
+> [!NOTE]
+> The supported YAML in this document is limited to a specific subset.
 
 ## Prerequisite
 
 To use this feature you must create an [Early release cycle environment.](/power-platform/admin/early-release). 
 
-## How to access the Source Code files
+## Access source code files
 
-Power Apps Studio generates the source code for Canvas Apps, represented as *.pa.yaml files within the msapp.
-
-A msapp file is a collection of files compacted in a binary file, including the source code. 
+The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the msapp file. The msapp file is a binary file that contains a collection of files, including the source code.
 
 > [!TIP]
-> To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) don’t support ALM and should only be used for basic import and export capabilities when Dataverse isn’t accessible.
+> To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
-The source code files are designed to use with the Dataverse Git Integration, where you no longer need to use .msapp files.
+The source code files are specifically created for use with Dataverse Git Integration, eliminating the need for .msapp files.
 
-You can also extract the source code files either from the .msapp file or by using Power Platform CLI.
+You have the option to obtain the source code files either from the **.msapp** file or by utilizing Power Platform CLI.
 
-The *.pa.yaml files are within the \Src folder of the extracted msapp. 
+The ***.pa.yaml** files can be found in the **\Src** folder of the extracted msapp.
 
->[!Important]
-> In the extracted msapp, only files within the directory \Src are designed to be used with source control.
+> [!Important]
+> Only files located in the**\Src** directory of the extracted msapp are intended for use with source control.
 
-### Use Power Platform CLI to download and extract the pa.yaml files
+### Download and Extract the pa.yaml files using Power Platform CLI
 
-Use Power Platform CLI to connect to your enviroment.
+Connect to your environment using Power Platform CLI and then use the following commands:
 
-Once connected to a environment, use the command [pac canvas list](/power-platform/developer/cli/reference/canvas#pac-canvas-list) to list the canvas apps of your current environment and [pac canvas download](/power-platform/developer/cli/reference/canvas#pac-canvas-download) with the [parameter -d](/power-platform/developer/cli/reference/canvas#--extract-to-directory--d), to extract the source code files.
+1. To list the canvas apps in your current environment, use the command: [pac canvas list](/power-platform/developer/cli/reference/canvas#pac-canvas-list).
+1. To extract the source code files, use the command: [pac canvas download](/power-platform/developer/cli/reference/canvas#pac-canvas-download) with the [parameter -d](/power-platform/developer/cli/reference/canvas#--extract-to-directory--d).
+
 
 ### Extract source code files from a .msapp file
 
-You can [export your canvas app as a .msapp file](export-import-single-app.md#export-msapp-files-in-power-apps). 
+To extract source code files from a [.msapp file](export-import-single-app.md#export-msapp-files-in-power-apps), you have two options:
 
-You can either, manually unzip the .msapp file or use the following command:
+1. Manually unzip the .msapp file.
+1. Alternatively, you can use the following command: [Command here].
+
 ```powershell
  Expand-Archive -Path "C:\path\to\yourFile.msapp" -DestinationPath "C:\path\to\destination"
 ```
 
-## msapp file structure
+## File structure for a msapp file
 
-Older msapps don't have the \src folder.
+For older msapps without the \src folder, you will need to follow these steps to generate source code files:
 
-To generate source code files for an older msapp, you must import and resave/download the new .msapp in Power Apps Studio before [extract the source code files.](#extract-source-code-files-from-a-msapp-file)
+1. Import and resave/download the new .msapp in Power Apps Studio.
+1. After that, you can proceed to [extract the source code files](#extract-source-code-files-from-a-msapp-file).
 
-In the src folder, you have:
-- App.pa.yaml to represent the App
-- One file per screen [screen Name].pa.yaml to represent the screen
-- One folder \Component, with one file per [component](create-component.md#create-an-example-component) [component Name].pa.yaml.
+In the \src folder, you will find the following files and folders:
 
->[!IMPORTANT]
-> Only *.pa.yaml files within "\src" folder can be used as source code.
+- **App.pa.yaml**: Represents the App.
+- **[screen Name].pa.yaml**: One file for each screen, representing the screen.
+- **\Component**: A folder containing one file for each [component](create-component.md#create-an-example-component), represented as [component Name].pa.yaml.
+
+Only ***.pa.yaml** files within the **\src** folder can be used as source code.
+
 
 ## Power Fx YAML
 
-Microsoft Power Fx has a well-established grammar for expressions based on Excel. However, when used in Power Apps and other hosts where UI provides the name-to-expression binding for a formula, there's no standard way of editing the formula binding as text.
+Microsoft Power Fx utilizes a grammar for expressions that is based on Excel and well-established. However, when using Power Apps and other hosts that rely on UI for formula binding, there is no standardized method for editing formula bindings as text.
 
-We did select the industry standard [YAML](https://yaml.org/spec/1.2/spec.html) as our language for this binding. There are already a large number of editors, tools, and libraries for working with YAML.
+To address this, we have chosen [YAML]https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
 
-At this time, we support only a restricted subset of YAML. Only the constructs described in this article are supported.
-
-For more details, visit [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
+Currently, we only support a limited subset of YAML. Only the constructs outlined in this article are supported. More informations: [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
 
 ## Power Apps YAML schema versions
 
@@ -105,68 +105,55 @@ Currently there are three schema versions of Power Apps Source Code:
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
 | [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Code View (preview)](code-view.md) | -  | This is the version used by Code View, Copy Code and Paste Code - to be used in Power Apps Studio when building new apps only, not suitable for version control. This is an early preview version, Code view will switch to the Source Code Preview format when it is ready.|
-| [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | Includes improvements and version information for Source Control. This is the current and effective version of Canvas YAML. |
+| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When the Code view feature is generally available (GA) i will switch to the source code preview format.|
+| [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | This includes enhancements and version details for source control. It represents the latest and most up-to-date version of canvas YAML. |
 
 >[!NOTE]
-> You cannot copy YAML code from a pa.yaml file and paste as code in Power Apps Studio yet. In the future, Code View will use the Source Code format.
+> You can't copy YAML code from a pa.yaml file and paste it as code in Power Apps Studio. However, in the future, code view will utilize the source code format for this purpose.
 
 ## Experimental format (*.fx.yaml)
 
-This schema is an experimental format, used by Power Platform CLI to process and convert canvas application in a source code format. It's no longer in development.
+This schema represents an experimental format employed by the Power Platform CLI to process and convert canvas apps into a source code format. However, this format is no longer being actively developed.
 
-You can't directly convert *.fx.yaml files to the new formats. To convert older apps, you must pack the canvas app in a *.Msapp and import the file in Power Apps Studio.
+You cannot directly convert ***.fx.yaml** files to the new formats. To convert older apps, you will need to package the canvas app as a **.msapp** file and import it into Power Apps Studio.
 
-## Code View Early Preview 
+## Code view (preview)
 
-This format was designed to use while creating apps within Power Apps Studio, to copy and paste controls. In this format, the source code is native instead of converted. 
+[Code view](code-view.md) format was specifically designed for creating apps within Power Apps Studio, allowing for easy copying and pasting of controls. In this format, the source code remains in its native form instead of being converted.
 
->[!Important]
-> This format is an early preview and it is temporary. Code view, copy code and paste code will all use the Source Code Preview schema.
+[Code view](code-view.md) format is a preview feature and is temporary. Moving forward, both code view, copy code, and paste code will utilize the source code preview schema.
 
-Changes from the experimental format:
+Here are the changes made from the experimental format:
 
-- Removed ZIndex Property
-A screen is now represented as an array of controls. Because order is now significant, we can imply the ZIndex property from the position of the control. We use asc order for normal controls and desc order for responsive controls.
- 
-- Replaced JSON Object representation
+1. **ZIndex Property Removal**: The ZIndex property has been removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
+1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties have been introduced to define the control type and default values:
 
-We no longer use the syntax "As" to define the control type. The name identifier of the control stays on the left and it's unique. Only properties different than the default are serialized. Two new Properties define the control type and the default values:
-  - Control: The Control Type in YAML. 
-  - Variant: Identifies a variant of a control type. May change the default property values, add or remove properties, or modify the behaviour/layout of the control. 
+- **Control**: Represents the control type in YAML.
+- **Variant**: Identifies a variant of a control type, which may alter default property values, add or remove properties, or modify the behavior/layout of the control.
 
-These properties are used to instantiate the controls and don't accept Power Fx expressions.
+These properties are used for instantiating controls and don't accept Power Fx expressions.
 
-## Source Code Preview (*.pa.yaml)
+## Source code preview (*.pa.yaml)
 
->[!Important]
+> [!IMPORTANT]
 >
-> YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-> Content may be incomplete and subject to change.
-> pa.yaml files are read-only and should only be used to review changes made within Power Apps Studio. pa.yaml files are not used when loading the app. 
-> External editing, merging and conflict resolution are not supported.
+> - The YAML source code for canvas apps is currently in preview and actively being developed. The content may be incomplete and subject to change.
+> - The **.pa.yaml** files are read-only and should only be used to review changes made in Power Apps Studio. These files are not used when an app is loading.
+> - External editing, merging, and conflict resolution isn't supported.
 
-This schema was designed for source control and to allow use of a single YAML file. It's an update from the Code View format.
+This schema has been designed for source control purposes and allows the use of a single YAML file. It is an updated format compared to the previous code view.
 
-Updates from previous format:
+Updates from the previous format include:
 
-- Top-level node
-Elements are grouped in a top-level level node. "App" and "Screens" keywords are examples of the top-level keywords.
+1. Grouping of Top-Level Node Elements:
+    - The top-level keywords "App" and "Screens" are examples of how elements are now grouped in a top-level node.
+2. Control Version Specification:
+    - You can now specify the version of a control using the Control Keyword followed by the **@** operator. If no version is specified, the most current version of the control will be used.
+3. Simplified Variant Names:
+    - Not all controls require a variant. For controls that do require a variant, the name has been simplified and made more user-friendly.
+4. Consistent ZIndex for All Controls:
+    - All controls now use an ascending order to determine the ZIndex value, starting from 1. This behavior aligns with the [CSS 2 spec](https://drafts.csswg.org/css2/#z-index).
 
-- Includes the version of the control
-You can specify the version of the control in the Control Key-word, by using the operator @. If a version isn't specified, the most current version of the control will be used.
-
-- Simplified variant names
-Not all controls require variant. If the control requires a variant, the name is simplified and more user friendly.
-
-- Consistent ZIndex for all controls
-All controls use ascending order to imply the ZIndex value, starting with 1. This is similar behaviour to the [CSS 2 spec](https://drafts.csswg.org/css2/#z-index).
-
-## Supported Scenario
-
-The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors yet. More scenarios will be possible in the future.
-
-JSON files within the MSAPP are not designed to be stable across save and load cycles and should not be used as source code.
 
 
 ## Schema updates
