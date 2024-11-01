@@ -4,6 +4,7 @@ description: "Developers: Understand terminology in Dataverse."
 suite: powerapps
 author: phecke
 ms.author: pehecke
+ms.reviewer: pehecke
 ms.date: 03/04/2021
 ms.subservice: dataverse-developer
 search.audienceType: 

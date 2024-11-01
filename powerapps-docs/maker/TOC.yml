@@ -26,22 +26,6 @@
     href: powerapps-preview-program.md
   - name: System requirements, limits, and configuration
     href: ../limits-and-config.md
-  - name: "Learning catalog"
-    items:
-    - name: "Learning catalog"
-      href: ../learning-catalog/learning-catalog.md
-    - name: Business Decision Maker
-      href: ../learning-catalog/bdm.md
-    - name: App maker
-      href: ../learning-catalog/app-maker.md
-    - name: Developer
-      href: ../learning-catalog/developer.md
-    - name: Administrator
-      href: ../learning-catalog/administrator.md
-    - name: Functional consultant
-      href: ../learning-catalog/functional-consultant.md
-    - name: Solution architect
-      href: ../learning-catalog/solution-architect.md
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -1124,7 +1108,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps and cloud flows to a solution by default (preview)
+      - name: Add canvas apps and cloud flows to a solution by default
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:

@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/14/2024
+ms.date: 10/31/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -99,7 +99,7 @@ Working with untyped fields isn't restricted to Dataverse. It works for all type
 
 > [!NOTE]
 > 1. We do not fully support DV actions in  Power Fx commanding (specific to any actions call with parameters.) 
-> 2. We do not support Entity and Entity collections reference in canvas directly. 
+> 2. We do not support direct references to an Entity or an Entity collections. 
 > 3. For parameters of object type that are nested (2 or more levels deep), the second level attributes are treated required in PowerApps.
 
 ### Enable access to Microsoft Dataverse actions
@@ -132,6 +132,17 @@ Unbound Dataverse actions are peer level to tables and need the parenting scope 
 For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
+### Passing Entity type arguments for bound/unbound actions
+
+To pass entity type arguments for Dataverse actions, start by setting the entity type argument value to a variable. Additionally, ensure that any missing values such as ***activityId** are filled in. This is particularly important for entities that do not have defined types in the swagger.
+
+```power-fx
+Set(MyArgVar, {
+  name: first(systemUser).name, 
+  Id: First(systemUser).Id 
+  ... })
+```
 
 ### Rename, refresh, and actions in other environments
 
