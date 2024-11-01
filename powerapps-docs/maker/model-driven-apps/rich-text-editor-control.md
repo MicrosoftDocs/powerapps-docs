@@ -3,7 +3,7 @@ title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
 ms.date: 11/08/2024
 ms.topic: how-to
-ms.author: "craigm"
+ms.author: msomara
 author: Mattp123
 ms.reviewer: matp
 ms.subservice: mda-maker
