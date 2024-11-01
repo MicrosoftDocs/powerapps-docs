@@ -19,18 +19,22 @@ ms.custom:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-In this article describes how canvas apps are represented as source code files.
+The source code for a canvas app can be used to review changes done my makers within Power Apps Studio. You should not change pa.yaml files or create canvas apps with other text editors yet. More scenarios will be possible in the future.
+
+JSON files within the MSAPP are not designed to be stable across save and load cycles and should not be used as source code.
+
+>[!Note]
+> - The generated canvas app YAML code is read-only and should not be modified.
+> - The YAML schema is in active development, the content may be incomplete.
+> - The current proposed static schema for *.pa.yaml files can be found [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
+
 
 We utilize Power Fx and YAML as the language for Power Apps Source Code. YAML is known for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation.
 
 >[!NOTE]
 > We support only a restricted subset of YAML. Only the constructs described in this document are supported.
 
-## Supported Scenario
 
-The source code for a canvas app can be used to review changes done by makers within Power Apps Studio. You shouldn't change pa.yaml files or create canvas apps with other text editors yet. More scenarios will be possible in the future.
-
-JSON files within the MSAPP aren't designed to be stable across save and load cycles and shouldn't be used as source code.
 
 ## Prerequisite
 
