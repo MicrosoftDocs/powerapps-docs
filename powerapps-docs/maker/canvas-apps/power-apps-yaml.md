@@ -104,8 +104,8 @@ Currently there are three schema versions of Power Apps Source Code:
 
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
-| [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](./canvas-apps/git-version-control.md)  and [pac canvas unpack](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Code View Early Preview](#code-view-preview) | -  | This is the version used by Code View, Copy Code and Paste Code - to be used in Power Apps Studio when building new apps only, not suitable for version control. This is an early preview version, Code view will switch to the Source Code Preview format when it is ready.|
+| [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
+| [Code View (preview)](code-view.md) | -  | This is the version used by Code View, Copy Code and Paste Code - to be used in Power Apps Studio when building new apps only, not suitable for version control. This is an early preview version, Code view will switch to the Source Code Preview format when it is ready.|
 | [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | Includes improvements and version information for Source Control. This is the current and effective version of Canvas YAML. |
 
 >[!NOTE]
