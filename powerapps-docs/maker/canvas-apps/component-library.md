@@ -170,7 +170,7 @@ Sharing a component library works the same way you share a canvas app. When you 
 
 Additional considerations when sharing component libraries to security groups:
 
-- You can't use the [sharing UI](share-app.md#share-an-app) when sharing component libraries created as part of a solution. Instead, use [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment#parameters) with **CanEdit** permission level to share the component libraries with the selected security group.
+- You can't use the [sharing UI](share-app.md) when sharing component libraries created as part of a solution. Instead, use [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment#parameters) with **CanEdit** permission level to share the component libraries with the selected security group.
 - Component libraries created in a Power Platform environment [without a Dataverse database](/power-platform/admin/create-environment#create-an-environment-in-the-power-platform-admin-center) shared as **Co-owner** automatically grant **CanEdit** permission to the selected security group.
 
 ## Known limitations
