@@ -46,7 +46,7 @@ Legend
 > [!NOTE]
 > If you're using custom analyzers for searching records, the records don't show in the inline suggestions.
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for Dataverse search and included in your model-driven app. Suggested results are sometimes also based on non-primary columns of tables enabled for Dataverse search, depending on your search usage pattern and the search usage pattern in the environment. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on all searchable columns of a table, which is enabled for Dataverse search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
