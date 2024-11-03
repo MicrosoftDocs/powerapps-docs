@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 11/2/2024
+ms.date: 11/4/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -27,14 +27,14 @@ This feature makes it easier and faster to enter data. The suggestions are entir
 
 > [!IMPORTANT]
 > - This feature is generally available in Dynamics 365 apps.
-> - This feature is a preview feature in Power Apps.
+> - This feature is in preview in Power Apps.
 >   - Preview features aren’t meant for production use and may have restricted functionality.
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 > - Due to high demand, this feature may be unavailable intermittently. If the feature is unavailable, please try again later.
 
 ## Turn on form fill assistance
 
-Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on. Suggestions are generated for fields in main forms and quick create forms only. The currently supported field types are text, numeric, choice, and date. Fields that have column security aren't currently supported.
+Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on. Suggestions are generated for fields only in main forms and quick create forms. The currently supported field types are text, numeric, choice, and date. Fields that have column security aren't currently supported.
 
 Languages supported are Arabic, Chinese (Simplified), Czech, Danish, Dutch, English (US), Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Spanish, Swedish, Thai, and Turkish. 
 
@@ -74,8 +74,8 @@ Copilot assistance for filling forms generates suggestions for text, numeric, ch
 Suggestions are entirely optional and aren't saved in the app until you accept them. 
 
 Smart paste (Preview) is a capability can that reason over the form and the text copied to your clipboard to suggest what text could be used to fill specific fields, and provides suggestions inline in the form. To use smart paste (Preview):
-1. Copy the text based on which you would like to fill the form.
-2. You can use the **smart paste** icon in the command bar. Alternatively, ensure no specific fields are selected in the form, and then use the regular paste keyboard shortcut (CTRL+V or CMD+V).
+1. Copy the text based on which you would like to fill in the form.
+2. You can use the **smart paste** icon in the command bar. Alternatively, ensure no specific fields are selected in the form, and then use the regular paste keyboard shortcut (Ctrl+V or Cmd+V).
 
 Note that you can continue to paste directly, without smart paste (Preview), into a specific field by clicking on it first and then pasting.
 
@@ -102,3 +102,7 @@ If you have unsaved suggestions in a form and try to navigate away, you get a pr
 To provide feedback about the feature, select the thumbs up or down button on the notification bar, and (optionally) provide detailed comments to help improve the feature.
 
 :::image type="content" source="media/formfill_feedback.png" alt-text="Screenshot that shows the feedback survey for the form fill feature.":::
+
+### Related information
+
+[Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)
