@@ -18,7 +18,9 @@ contributors:
 
 # View results in SQL Server
 
-A stored procedure can return code, values from `Out` parameters, or the results of queries. To view these results, use the following patterns.
+If you are using a direct table access pattern or a view, the query result is bound to the control or table. Power Fx will automatically enable the paging of data in your app into the gallery or table. 
+
+However, stored procedures can return a query result, a return code, or values from `Out` parameters. To use these results in your application, use the following patterns.
 
 ## Formulas for different controls
 
@@ -57,7 +59,7 @@ Other tables can be accessed through their name, for example, `Table1`, `Table2`
 
 ## Untyped results
 
-Some complicated stored procedures return an untyped result. These results aren't accessible directly. You must first provide a type. You can access the data with the following example pattern.
+Some complicated stored procedures return an untyped results. This is common for stored procedures that use temp tables. Power Apps cannot easily determine the results ahead of time. Therefore, the return is marked as 'Untyped' and you cannot access these results directly. You must first provide a type. You can access the data with the following example pattern.
 
 ### Data access example
 
