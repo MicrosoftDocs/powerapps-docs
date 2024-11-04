@@ -1,6 +1,6 @@
 ---
-title: Source Code files for Canvas apps (pa.yaml)
-description: Learn about Source Code files for canvas apps.
+title: V source code files for canvas apps (pa.yaml)
+description: Learn about how to view source code files for canvas apps.
 author: marcelbf
 ms.author: marcelbf
 ms.date: 11/1/2024
@@ -15,7 +15,7 @@ ms.custom:
   - canvas  
 ---
 
-# Source Code files for Canvas apps (preview)
+# View source code files for canvas apps (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
