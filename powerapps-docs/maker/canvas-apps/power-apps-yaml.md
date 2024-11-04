@@ -28,7 +28,7 @@ Currently, we don't recommended that you modify **pa.yaml** files or create canv
 > - The current proposed static schema for ***.pa.yaml** files can be found, [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
 
 
-We use Power Fx and YAML as the languages for Power Apps source code. YAML is appreciated for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation
+We use Power Fx and YAML as the languages for Power Apps source code. YAML is appreciated for its human-readable format and benefits from a wide array of existing editors, tools, and libraries for its manipulation.
 
 ## Prerequisite
 
@@ -36,20 +36,20 @@ To use this feature, you must create an [Early release cycle environment.](/powe
 
 ## Access source code files
 
+You have access to the source code files if you're using the [Dataverse Git Integration]("add link to Matt documentation here"), eliminating the need for **.msapp** files.
+
 The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **msapp** file. The **msapp** file is a binary file that contains a collection of files, including the source code.
 
 > [!TIP]
 > To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
-The source code files are created to with Dataverse Git Integration, eliminating the need for **.msapp** files.
-
-You can get the source code files either from the **.msapp** file or by using Power Platform CLI.
+You can also get the source code files either from the **.msapp** file or by using [Power Platform CLI](/power-platform/developer/cli/introduction.md).
 
 The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **msapp**.
 
 > [!Important]
 > Only files located in the**\Src** directory of the extracted **msapp** are intended for use with source control.
-> The JSON files in the **msapp** shouldn't be used as source code because they aren't stable between save and load cycles.
+> The JSON files in the **msapp** shouldn't be used as source code because those aren't stable between save and load cycles.
 
 ### Download and Extract the pa.yaml files using Power Platform CLI
 
@@ -64,7 +64,7 @@ Connect to your environment using Power Platform CLI and then use the following 
 To extract source code files from a [.msapp file](export-import-single-app.md#export-msapp-files-in-power-apps), you have two options:
 
 1. Manually unzip the **.msapp** file.
-1. Alternatively, you can use the following command: [Command here].
+1. Alternatively, you can use the following command: 
 
 ```powershell
  Expand-Archive -Path "C:\path\to\yourFile.msapp" -DestinationPath "C:\path\to\destination"
@@ -90,7 +90,7 @@ Only ***.pa.yaml** files within the **\src** folder can be used as source code. 
 
 Microsoft Power Fx utilizes a grammar for expressions that is based on Excel and well-established. However, when using Power Apps and other hosts that rely on UI for formula binding, there's no standardized method for editing formula bindings as text.
 
-To address this, we choose [YAML]https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
+We choose [YAML](https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
 
 > [!NOTE]
 > Currently, we only support a limited subset of YAML. Only the constructs outlined in this article are supported. More information: [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
@@ -102,8 +102,8 @@ Currently there are three schema versions of Power Apps Source Code:
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
 | [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Code View (preview)](code-view.md) | -  | This is the version used by code view, copy code, and paste code. You can use this in Power Apps Studio when you create new apps and isn't suitable for version control. This is preview feature. When [code view](code-view.md) is generally available (GA) it switches to the source code preview format.|
-| [Source Code Preview](#source-code-preview-payaml) | *.pa.yaml files | This includes enhancements and version details for source control. It represents the latest and most up-to-date version of canvas YAML. |
+| [Early Preview](#early-preview) | -  | The version used by code view, copy code, and paste code. There's no version information in this schema, therefore it isn't suitable for version control. When [code view](code-view.md) is generally available (GA), it switches to the source code preview format.|
+| [Source Code](#source-code-preview-payaml) | *.pa.yaml files | Includes enhancements and version details for source control and it is in active development. |
 
 >[!NOTE]
 > You can't copy YAML code from a pa.yaml file and paste it as code in Power Apps Studio. However, in the future, code view will utilize the source code format for this purpose.
@@ -114,23 +114,23 @@ This schema represents an experimental format employed by the Power Platform CLI
 
 You can't directly convert ***.fx.yaml** files to the new formats. To convert older apps, you need to package the canvas app as a **.msapp** file and import it into Power Apps Studio.
 
-## Code view (preview)
+## Early Preview
 
-[Code view](code-view.md) format is designed to create apps within Power Apps Studio, letting you easily copy and paste controls. In this format, the source code remains in its native form instead of being converted.
+This version is used by [Code view](code-view.md). Is designed to create apps within Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted (like the experimental format).
 
-[Code view](code-view.md) format is a preview feature and is temporary. In the future, both code view, copy code, and paste code will use the source code preview schema.
+The Early Preview format is a preview feature and is temporary. In the future, both code view, copy code, and paste code are going to use the same source code version.
 
 Here are the changes made from the experimental format:
 
 1. **ZIndex Property Removal**: The ZIndex property is removed. Instead, a screen is now represented as an array of controls. The order of controls now determines their stacking order. Normal controls are ordered in ascending order, while responsive controls are ordered in descending order.
-1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties has been added to define the control type and default values:
+1. **JSON Object Representation Replacement**: We no longer use the "As" syntax to define the control type. Instead, the left side of the control's name identifier remains unique. Only properties that differ from the default values are serialized. Two new properties are added to define the control type and default values:
 
 - **Control**: Represents the control type in YAML.
 - **Variant**: Identifies a variant of a control type, which might alter default property values, add or remove properties, or modify the behavior/layout of the control.
 
 These properties are used for instantiating controls and don't accept Power Fx expressions.
 
-## Source code preview (*.pa.yaml)
+## Source code (*.pa.yaml)
 
 > [!IMPORTANT]
 >
