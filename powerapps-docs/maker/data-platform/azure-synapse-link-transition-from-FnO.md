@@ -208,7 +208,7 @@ Currently, there are several limitations that are being addressed by the product
 
 ### Export to data lake service is working well for us. Why did you retire these services?
 
-As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a service under the brand name Synapse Link for Dataverse. Using our learnings, we addressed many shortcomings of existing services in Synapse Link while maintaining same data formats – so that you can upgrade your investments with minimal disruptions. Fabric link service is a new, no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric.
+As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a single service under the brand name Synapse Link for Dataverse. Using our learnings, we addressed many shortcomings of existing services in Synapse Link while maintaining same data formats – so that you can upgrade your investments with minimal disruptions. Fabric link service is a new, no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric.
 
 ### Is BYOD service retired? Is there a retirement date? 
 
@@ -226,7 +226,7 @@ Export to data lake service will continue to run after the deprecation date duri
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
 
-Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we plan to introduce an evidence based self-upgrade option within the product in the coming weeks.
+Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we have introduced an in-product self-extend option. You can apply for an extension until 15-Feb-2025 by visiting Synapse Link menu in the Power Apps maker portal. This option is applicable for each environment and is visible for environments linked to Finance and Operations. 
 
 ## See also
 
