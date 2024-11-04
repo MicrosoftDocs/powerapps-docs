@@ -3,10 +3,11 @@ title: "Developers: Best practices and guidance for model-driven apps | Microsof
 description: Best practices and guidance for developers of model-driven apps in Power Apps.
 suite: powerapps
 author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 ms.topic: article
 ms.date: 04/14/2021
 ms.subservice: mda-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 ---
