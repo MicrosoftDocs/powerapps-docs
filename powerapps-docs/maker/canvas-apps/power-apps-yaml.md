@@ -23,8 +23,6 @@ You can use the source code for a canvas app to review changes made my makers in
 
 Currently, we don't recommended that you modify **pa.yaml** files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
 
-The JSON files in the **msapp** shouldn't be used as source code because they aren't stable between save and load cycles.
-
 > [!NOTE]
 > - The YAML schema is in active development, the content may be incomplete.
 > - The current proposed static schema for ***.pa.yaml** files can be found, [here](https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml).
@@ -54,6 +52,7 @@ The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **m
 
 > [!Important]
 > Only files located in the**\Src** directory of the extracted **msapp** are intended for use with source control.
+> The JSON files in the **msapp** shouldn't be used as source code because they aren't stable between save and load cycles.
 
 ### Download and Extract the pa.yaml files using Power Platform CLI
 
@@ -87,7 +86,7 @@ In the **\src** folder, find the following files and folders:
 - **[screen Name].pa.yaml**: One file for each screen, representing the screen.
 - **\Component**: A folder containing one file for each [component](create-component.md#create-an-example-component), represented as [component Name].pa.yaml.
 
-Only ***.pa.yaml** files within the **\src** folder can be used as source code.
+Only ***.pa.yaml** files within the **\src** folder can be used as source code. Any other file shouldn't be used as source code.
 
 
 ## Power Fx YAML
