@@ -18,9 +18,9 @@ contributors:
 
 # View results in SQL Server
 
-If you are using a direct table access pattern or a view, the query result is bound to the control or table. Power Fx will automatically enable the paging of data in your app into the gallery or table. 
+If you are using a direct table access pattern or a view, the query result is bound to the control or table. Power Fx will automatically enable the paging of data in your app into the gallery or table. However, stored procedures can return a query result, a return code, or values from `Out` parameters. 
 
-However, stored procedures can return a query result, a return code, or values from `Out` parameters. To use these results in your application, use the following patterns.
+To use these varying result types in your application, use the following patterns.
 
 ## Formulas for different controls
 
