@@ -28,10 +28,10 @@ Typical formulas for views and stored procedures:
 
 | Control | Property |  Formula| Description |
 | ------- | -------- | ------- | ----------- |
-| Gallery or Table | Items | `Data Source` | The table or view data source can be further refined with a [Filter](/power-platform/power-fx/reference/function-filter-lookup) and a [StartsWith](/power-platform/power-fx/reference/function-startswith). The other generated query clauses are appended onto the existing query. |
-| Form | DataSource | `Data Source` | The table or view data source |
-| Submit button on a form | [OnSelect](/power-apps/maker/canvas-apps/controls/properties-core) | `Data source.dboSPName({ args}); Refresh (‘Data Source’)` | The first `Data Source` in this formula is the stored procedure data source—the one that holds your stored procedure. The `Data Source` in the refresh formula is the view data source. |
-| Delete button on a form | [OnSelect](/power-apps/maker/canvas-apps/controls/properties-core) | `SP Data source.dboSPName({ args}); Refresh (‘View Data Source’)` | The first `Data source` in this formula is the stored procedure data source—the one that holds your stored procedure. The `Data Source` in the refresh formula is the view data source. |
+| Gallery or Table | Items | `DataSource` | The table or view data source can be further refined with a [Filter](/power-platform/power-fx/reference/function-filter-lookup) and a [StartsWith](/power-platform/power-fx/reference/function-startswith). The other generated query clauses are appended onto the existing query. |
+| Form | DataSource | `DataSource` | The table or view data source |
+| Submit button on a form | [OnSelect](/power-apps/maker/canvas-apps/controls/properties-core) | `DataSource.dboSPName({ args}); Refresh (‘DataSource’)` | The first `DataSource` in this formula is the stored procedure data source—the one that holds your stored procedure. The `DataSource` in the refresh formula is the view data source. |
+| Delete button on a form | [OnSelect](/power-apps/maker/canvas-apps/controls/properties-core) | `SP DataSource.dboSPName({ args}); Refresh (‘View DataSource’)` | The first `DataSource` in this formula is the stored procedure data source—the one that holds your stored procedure. The `DataSource` in the refresh formula is the view data source. |
 
 ## Return code
 
