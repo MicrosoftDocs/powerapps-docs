@@ -17,13 +17,14 @@ contributors:
 
 # Connect to SQL Server from Power Apps overview
 
-There are different ways to connect to data in SQL Server in your Power Apps app. You can access data using a view and then use stored procedures to create, update, or delete data in your app.
-
-The results of your view and stored procedures can be made using formulas.
+There are different ways to connect to data in SQL Server in your Power Apps app. You can access data directly or use a view or stored procedures to create, update, or delete data in your app. You use Power Fx formulas to access data for all of these ways. 
 
 ## Prerequisites
 
-Before accessing data and viewing the results of queries in your app, create a responsive app enabled with SQL Server by following these steps:
+To access data directly you can create a 'Start with data' app for your SQL Server data by following these steps:
+
+ > [!NOTE]
+   > Using the 'Start with data' is a good way to get a basic working app that you can modify to use views and stored procedures.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and go to the **Apps** page.
 1. Select **New app** > **Start with data**.
