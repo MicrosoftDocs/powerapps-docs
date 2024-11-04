@@ -17,7 +17,7 @@ contributors:
 
 # Connect to SQL Server from Power Apps overview
 
-There are different ways to connect to data in SQL Server in your Power Apps app. You can access data using a view and then use stored procedures to create, update, or delete data in your Power Apps app.
+There are different ways to connect to data in SQL Server in your Power Apps app. You can access data using a view and then use stored procedures to create, update, or delete data in your app.
 
 The results of your view and stored procedures can be made using formulas.
 
