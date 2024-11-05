@@ -18,7 +18,7 @@ contributors:
 
 # View results in SQL Server
 
-If you are using a direct table access pattern or a view, the query result is bound to the control or table. Power Fx will automatically enable the paging of data in your app into the gallery or table. However, stored procedures can return a query result, a return code, or values from `Out` parameters. 
+If you're using a direct table access pattern or a view, the query result is bound to the control or table. Power Fx automatically enables the paging of data in your app into the gallery or table. However, stored procedures can return a query result, a return code, or values from `Out` parameters.
 
 To use these varying result types in your application, use the following patterns.
 
@@ -59,7 +59,9 @@ Other tables can be accessed through their name, for example, `Table1`, `Table2`
 
 ## Untyped results
 
-Some complicated stored procedures return an untyped results. This is common for stored procedures that use temp tables. Power Apps cannot easily determine the results ahead of time. Therefore, the return is marked as 'Untyped' and you cannot access these results directly. You must first provide a type. You can access the data with the following example pattern.
+Some complicated stored procedures return untyped results. This result is common for stored procedures that use temporary tables. Power Apps can't easily determine the results ahead of time. Therefore, the return is marked as *untyped* and you can't access these results directly. You must first provide a type.
+
+You can access the data with the following data access example pattern.
 
 ### Data access example
 
@@ -69,7 +71,7 @@ Some complicated stored procedures return an untyped results. This is common for
    > [!TIP]
    > This step isn't strictly necessary. It's useful however to put all the results in a variable and then pull out the parts you need, later.
 1. Iterate through `table1` and extract the JSON elements in named value pairs.
-1. Match the names with those returned in the JSON payload.
+1. Match the names with names returned in the JSON payload.
 1. To validate, open a Power Apps monitor and look at the body section of the data node for a record.
 
 ```power-fx
