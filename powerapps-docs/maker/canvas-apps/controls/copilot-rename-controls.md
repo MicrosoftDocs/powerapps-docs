@@ -16,6 +16,7 @@ contributors:
   - mduelae
 ms.custom:
   - canvas
+  - ignite-2024
 ai-usage: ai-assisted
 ---
 
