@@ -36,7 +36,7 @@ To use this feature, you must create an [Early release cycle environment.](/powe
 
 ## Access source code files
 
-You have access to the source code files if you're using the [Dataverse Git Integration]("add link to Matt documentation here"), eliminating the need for **.msapp** files.
+You have access to the source code files if you're using the [Dataverse Git Integration](/power-platform/alm/git-integration/overview), eliminating the need for **.msapp** files.
 
 The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **msapp** file. The **msapp** file is a binary file that contains a collection of files, including the source code.
 
