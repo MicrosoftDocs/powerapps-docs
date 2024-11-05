@@ -55,9 +55,9 @@ Power Apps Studio options are available on the command bar. The options are rele
 
 #### Modern command bar
 
-The modern command bar displays the relevant set of commands depending on the control that is selected. For example, if you select an item to *insert*, you see the modern command bar change to accommodate your selection.
+The modern command bar displays the relevant set of commands depending on the control that is selected. For example, if you select an item to *insert* like a text label, you see the modern command bar change to accommodate your selection. The bar now has font type, size, color, and other text label controls.
 
-:::image type="content" source="media/studio/pa-studio-command-bar.gif" alt-text="Moving image that shows how the command bar changes depending on which control is selected." lightbox="media/studio/pa-studio-command-bar.gif":::
+:::image type="content" source="media/studio/pa-studio-command-bar.png" alt-text="Moving image that shows how the command bar changes depending on which control is selected." lightbox="media/studio/pa-studio-command-bar.png":::
 
 The command bar changes when one of the following controls or objects is selected:
 

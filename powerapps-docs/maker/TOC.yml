@@ -354,10 +354,14 @@
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
               items:
-                - name: Connect to SQL Server from Power Apps
-                  href: canvas-apps/connections/connection-azure-sqldatabase.md
-                - name: Use SQL Server securely with Power Apps
+                - name: Connect to SQL Server overview
+                  href: canvas-apps/connections/sql-connection-overview.md
+                - name: Connect to SQL Server securely
                   href: canvas-apps/connections/sql-server-security.md
+                - name: Access data
+                  href: canvas-apps/connections/sql-connection-access-data.md
+                - name: View results
+                  href: canvas-apps/connections/sql-connection-view-results.md  
             - name: Twitter
               href: canvas-apps/connections/connection-twitter.md
         - name: Add a connection
@@ -675,9 +679,7 @@
         - name: Change screen size and orientation
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
-          href: ./canvas-apps/create-responsive-layout.md
-        - name: Understand app functionality through code view (preview)
-          href: ./canvas-apps/code-view.md
+          href: ./canvas-apps/create-responsive-layout.md              
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -1110,7 +1112,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps and cloud flows to a solution by default (preview)
+      - name: Add canvas apps and cloud flows to a solution by default
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
@@ -1146,9 +1148,9 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Accessibility limitations
             href: ./canvas-apps/accessible-apps-limitations.md
-      - name: Send notifications from an app
+      - name: Send notifications from an app  
         href: ./canvas-apps/add-notifications.md
-      - name: Use Git version control to edit canvas apps (experimental)
+      - name: Disconnect Git version control to edit canvas apps
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
@@ -1300,6 +1302,14 @@
         href: ./common/wrap/faq.yml
   - name: For developers
     items:
+    - name: Working with Source Code
+      items:
+        - name: Code View (preview)
+          href: ./canvas-apps/code-view.md        
+        - name: View source code files for canvas apps (preview)
+          href: ./canvas-apps/power-apps-yaml.md
+        - name: Use Git version control to edit canvas apps (experimental)
+          href: ./canvas-apps/git-version-control.md
     - name: Canvas apps for enterprise developers, partners, and ISVs
       href: ./canvas-apps/dev-enterprise-intro.md
     - name: Build and certify custom connectors

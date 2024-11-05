@@ -67,7 +67,7 @@ For more information about troubleshooting issues with gateways, see [Troublesho
 ## Next steps
 
 * [Install the on-premises data gateway](/data-integration/gateway/service-gateway-install).
-* Create an app that connects to an on-premises data source, such as [SQL Server](connections/connection-azure-sqldatabase.md) or [SharePoint](connections/connection-sharepoint-online.md).
+* Create an app that connects to an on-premises data source, such as [SQL Server](connections/sql-connection-overview.md) or [SharePoint](connections/connection-sharepoint-online.md).
 * [Share an app](share-app.md) that connects to an on-premises data source.
 
 

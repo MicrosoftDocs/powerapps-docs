@@ -53,11 +53,11 @@ Coauthoring is a new feature that allows multiple makers to edit a canvas app at
 
 :::image type="content" source="media/copresence/coauthoring.png" alt-text="Screenshot of coauthoring indicators in Power Apps Studio with annotations." lightbox="media/copresence/coauthoring.png" :::
 
-Legend:
+When multiple editors are working on the app, their avatars are shown.
 
-1. The command bar shows that you're in editing mode. When multiple editors are working on the app, their avatars are shown.
-1. The area that another maker is editing is highlighted and shows their initials.
-1. The left navigation pane shows the app's structure and indicates which part of the app someone else is editing.
+- The left navigation pane shows the app's structure in **Tree view** and reveals which part of the app someone else is editing. For example, you might be editing **Screen 1**, while someone else is editing **Screen 2**.
+- The area that another maker is editing is highlighted and shows their initials. For example, someone else might edit a part of a form, which is highlighted for the first user.
+
 
 > [!IMPORTANT]
 > Multiple makers can select and edit a control at the same time. Be careful not to overwrite each other's edits.

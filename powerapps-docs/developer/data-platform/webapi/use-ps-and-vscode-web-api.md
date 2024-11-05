@@ -1,7 +1,7 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 08/27/2024
+ms.date: 10/30/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -51,7 +51,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
       param (
          [Parameter(Mandatory)] 
          [String] 
-         $uri
+         $environmentUrl
       )
 
       ## Login interactively if not already logged in
@@ -78,7 +78,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
       }
 
       # Set baseURI
-      $global:baseURI = $uri + 'api/data/v9.2/'
+      $global:baseURI = $environmentUrl + 'api/data/v9.2/'
    }
    ```
 
