@@ -38,6 +38,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
+> For more information, refer to [Modern text editor limitations](#modern-text-editor-known-issues)
 
 ## Enable the modern rich text editor experience
 
@@ -57,6 +58,26 @@ If you're using the classic rich text editor experience, complete the following 
 
 If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
 
+### Modern rich text editor known issues
+
+When using the modern rich text editor, be aware of these known issues in the following areas:
+
+Notes:
+- You can't extend the height of the editor to use all available vertical space.
+
+Knowledge management:
+- A preview tab isn't currently available.
+- Collapsible content is expanded by default instead of appearing as collapsed.
+
+Email: 
+- Attachment file types aren't in parity with the classic rich text editor.
+- Drag and drop functionality isn't currently available.
+- Zip files and .msg file types aren't currently supported.
+- Selecting vertical space height standardization doesn't currently work.
+
+Email templates and signatures:
+- If you select borderStyle none, the border still appears.
+- When you create a new template, the toolbar might appear in the subject field.
 
 ## Add the rich text editor control to a text column
 
