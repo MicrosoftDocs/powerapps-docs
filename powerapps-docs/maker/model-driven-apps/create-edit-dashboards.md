@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app dashboards | MicrosoftDocs"
 description: Learn how to create and edit dashboards for model-driven apps
 ms.custom: ""
-ms.date: 04/08/2020
+ms.date: 11/05/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -81,7 +81,7 @@ Dashboards can be standard or interactive.
 
 
 > [!NOTE]
-> Lists in the dashboard designer will not show data preview.
+> Lists in the dashboard designer don't display a data preview.
   
 ## Next steps
 
