@@ -82,6 +82,9 @@ Verify the following prerequisites before creating an app:
 
     :::image type="content" source="media/app-designer-draft.png" alt-text="App designer shown in draft stage":::
 
+    > [!NOTE]
+    > When opening the app designer, an error may appear that does not impact functionality. To avoid this, please use the [Modern app designer](app-designer-overview.md).
+    > ![Expected error in legacy app designer.](media/legacy-app-designer-error-message.png "Expected error in legacy app designer")
 
 ## Configure the site map
 
