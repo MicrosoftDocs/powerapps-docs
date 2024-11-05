@@ -2,7 +2,7 @@
 title: "Create or edit a model-driven app using the app designer in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 10/17/2023
+ms.date: 11/05/2024
 ms.custom: 
 ms.topic: get-started
 applies_to: 
@@ -82,6 +82,9 @@ Verify the following prerequisites before creating an app:
 
     :::image type="content" source="media/app-designer-draft.png" alt-text="App designer shown in draft stage":::
 
+    > [!NOTE]
+    > When opening the classic app designer, an error might appear similar to the image here. When this occurs, it doesn't impact the classic app designer functionality and you can close the error and continue editing the app. However, to avoid this issue, use the [Modern app designer](app-designer-overview.md).
+    > ![Expected error in legacy app designer.](media/legacy-app-designer-error-message.png "Expected error in legacy app designer")
 
 ## Configure the site map
 
