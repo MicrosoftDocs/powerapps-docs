@@ -226,7 +226,7 @@ Export to data lake service will continue to run after the deprecation date duri
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
 
-Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we have introduced an in-product self-extend option. You can apply for an extension until 15-Feb-2025 by visiting Synapse Link menu in the Power Apps maker portal. This option is applicable for each environment and is visible for environments linked to Finance and Operations. 
+Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we have introduced an in-product self-extend option. You can apply for a one-time extension until 15-Feb-2025 by visiting Synapse Link menu in the Power Apps maker portal. This option is applicable for each environment and is visible for environments linked to Finance and Operations. 
 
 ## See also
 
