@@ -43,7 +43,7 @@ The Power Apps Studio creates the source code for canvas apps, which is stored a
 > [!TIP]
 > To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
-You can also get the source code files either from the **.msapp** file or by using [Power Platform CLI](/power-platform/developer/cli/introduction.md).
+You can also get the source code files either from the **.msapp** file or by using [Power Platform CLI](/power-platform/developer/cli/introduction).
 
 The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **msapp**.
 
@@ -101,9 +101,9 @@ Currently there are three schema versions of Power Apps Source Code:
 
 |Format Name|File Extension|Description|
 |-----------|-----------|-------|
-| [Experimental](#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
-| [Early Preview](#early-preview) | -  | The version used by code view, copy code, and paste code. There's no version information in this schema, therefore it isn't suitable for version control. When [code view](code-view.md) is generally available (GA), it switches to the source code preview format.|
-| [Source Code](#source-code-preview-payaml) | *.pa.yaml files | Includes enhancements and version details for source control and it is in active development. |
+| [Experimental](power-apps-yaml.md#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md)  and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack) - no longer in development.|
+| [Early Preview](power-apps-yaml.md#early-preview) | -  | The version used by code view, copy code, and paste code. There's no version information in this schema, therefore it isn't suitable for version control. When [code view](code-view.md) is generally available (GA), it switches to the source code preview format.|
+| [Source Code](power-apps-yaml.md#source-code-payaml) | *.pa.yaml files | Includes enhancements and version details for source control and it is in active development. |
 
 >[!NOTE]
 > You can't copy YAML code from a pa.yaml file and paste it as code in Power Apps Studio. However, in the future, code view will utilize the source code format for this purpose.
