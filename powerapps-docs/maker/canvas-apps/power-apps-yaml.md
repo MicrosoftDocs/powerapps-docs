@@ -38,18 +38,18 @@ To use this feature, you must create an [Early release cycle environment](/power
 
 You have access to the source code files if you're using the [Dataverse Git Integration](/power-platform/alm/git-integration/overview), eliminating the need for **.msapp** files.
 
-The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **msapp** file. The **msapp** file is a binary file that contains a collection of files, including the source code.
+The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **.msapp** file. The **.msapp** file is a binary file that contains a collection of files, including the source code.
 
 > [!TIP]
 > To effectively use ALM, it's recommended to use solutions. [Canvas apps package](export-import-app-package.md) doesn't support ALM and should only be used for basic import and export capabilities when Dataverse isn't available.
 
 You can also get the source code files either from the **.msapp** file or by using [Power Platform CLI](/power-platform/developer/cli/introduction).
 
-The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **msapp**.
+The ***.pa.yaml** files can be found in the **\Src** folder of the extracted **.msapp**.
 
 > [!Important]
-> Only files located in the**\Src** directory of the extracted **msapp** are intended for use with source control.
-> The JSON files in the **msapp** shouldn't be used as source code because those aren't stable between save and load cycles.
+> Only files located in the **\Src** directory of the extracted **.msapp** are intended for use with source control.
+> The JSON files in the **.msapp** shouldn't be used as source code because those aren't stable between save and load cycles.
 
 ### Download and Extract the pa.yaml files using Power Platform CLI
 
@@ -70,9 +70,9 @@ To extract source code files from a [.msapp file](export-import-single-app.md#ex
  Expand-Archive -Path "C:\path\to\yourFile.msapp" -DestinationPath "C:\path\to\destination"
 ```
 
-## File structure for a msapp file
+## File structure for a .msapp file
 
-For older **msapp** files without the \src folder, follow these steps to generate source code files:
+For older **.msapp** files without the \src folder, follow these steps to generate source code files:
 
 1. Import and resave and download the new **.msapp** in Power Apps Studio.
 1. After that, you can proceed to [extract the source code files](#extract-source-code-files-from-a-msapp-file).
