@@ -1,7 +1,7 @@
 ---
 title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 10/15/2024
+ms.date: 11/05/2024
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -226,7 +226,7 @@ Export to data lake service will continue to run after the deprecation date duri
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
 
-Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we have introduced an in-product self-extend option. You can apply for a one-time extension until 15-Feb-2025 by visiting Synapse Link menu in the Power Apps maker portal. This option is applicable for each environment and is visible for environments linked to Finance and Operations. 
+Export to data lake service will continue to run after the deprecation date during the holiday season. However, our support will be limited. You can reduce the risk by beginning the transition process now. To help customers who might need more time to complete their transition, we have introduced an in-product self-extend option. You can apply for a one-time extension until February 15, 2025. To self-extend, go the **Azure Synapse Link** area in Power Apps (make.powerapps.com). This option is applicable for each environment and is visible for environments linked to finance and operations. 
 
 ## See also
 
