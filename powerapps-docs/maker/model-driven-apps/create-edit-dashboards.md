@@ -77,7 +77,11 @@ Dashboards can be standard or interactive.
   
 1. When the changes are complete select **Save** and then select **Close**.
 
-1. On the solution toolbar, select **Publish**.  
+1. On the solution toolbar, select **Publish**.
+
+
+> [!NOTE]
+> Lists in the dashboard designer will not show data preview.
   
 ## Next steps
 
