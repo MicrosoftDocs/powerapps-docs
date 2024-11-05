@@ -106,7 +106,7 @@ Developer tools for most browsers allow you to profile memory. It helps you visu
 
 ## Performance considerations for the SQL Server connector
 
-You can use the [SQL Server connector](connections/connection-azure-sqldatabase.md) for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app. More information: [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md)
+You can use the [SQL Server connector](connections/sql-connection-overview.md) for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app.
 
 > [!NOTE]
 > Though this section references the SQL Server connector for performance issues and resolutions, most of the recommendations also apply to using any database type&mdash;such as MySQL or PostgreSQL&mdash;as the data source.
