@@ -39,6 +39,8 @@ Currently, the following controls are supported:
 
 ## Prerequisites
 
+Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
+
 By default, **Proactive control rename** setting is enabled for new apps.
 
 To use this feature for existing apps, follow these steps:
