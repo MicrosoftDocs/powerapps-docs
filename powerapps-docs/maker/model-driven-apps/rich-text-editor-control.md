@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 11/05/2024
+ms.date: 11/06/2024
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -60,23 +60,23 @@ If you need to revert to the classic rich text editor experience, follow the sam
 
 ### Modern rich text editor known issues
 
-When using the modern rich text editor, be aware of these known issues in the following areas:
+When using the modern rich text editor, consider these known issues for the following areas:
 
 Notes:
-- You can't extend the height of the editor to use all available vertical space.
+- Extending the height of the editor does not use all available vertical space.
 
 Knowledge management:
-- A preview tab isn't currently available.
+- A preview tab is currently unavailable.
 - Collapsible content is expanded by default instead of appearing as collapsed.
 
 Email: 
-- Attachment file types aren't in parity with the classic rich text editor.
-- Drag and drop functionality isn't currently available.
-- Zip files and .msg file types aren't currently supported.
-- Selecting vertical space height standardization doesn't currently work.
+- Attachment file types aren't in aligned with the classic rich text editor experience.
+- Drag and drop functionality is currently unavailable.
+- Attachments with .zip and .msg file types are not currently supported.
+- Vertical space height standardization is not currently supported.
 
 Email templates and signatures:
-- If you select borderStyle none, the border still appears.
+- If you choose no border, a border might still appear.
 - When you create a new template, the toolbar might appear in the subject field.
 
 ## Add the rich text editor control to a text column
