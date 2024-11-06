@@ -3,7 +3,7 @@ title: "View, submit, and install catalog items"
 description: "Learn how to submit and acquire items from your organization's catalog."
 author: derekkwanpm
 ms.author: derekkwan
-ms.date: 09/10/2024
+ms.date: 11/05/2024
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: common
