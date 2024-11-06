@@ -27,7 +27,7 @@ Before reading this article, you should:
 - [Learn how administrators setup and configure the catalog](/power-platform/admin/administer-catalog)
 
 > [!NOTE]
-> Developers can also use the Power Platform CLI to perform the operations described here. [Learn to use the catalog with Power Platform CLI](/power-platform/developer/submit-catalog-items)
+> Developers can also use the Power Platform CLI, Dataverse SDK for .NET, and Dataverse Web API to perform the operations described here. [Catalog in Power Platform for developers](/power-platform/developer/catalog/overview)
 
 ## Access controls
 
@@ -166,4 +166,4 @@ As previously mentioned, templates can be acquired as many times as you like, ea
 
 [Catalog in Power Platform)](catalog-overview.md)   
 [Administer the catalog](/power-platform/admin/administer-catalog)   
-[Use the catalog with Power Platform CLI](/power-platform/developer/submit-catalog-items)
+[Catalog in Power Platform for developers](/power-platform/developer/catalog/overview)
