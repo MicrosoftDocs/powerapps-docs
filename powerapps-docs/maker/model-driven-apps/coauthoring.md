@@ -35,6 +35,7 @@ Here's what multiple makers can do at the same time in the app while seeing each
 First, once there are other makers editing the app together with you, you see their presence in the top navigation bar and the left menu. You can see what components other makers are working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
 
 :::image type="content" source="media/coauthoring1.png" alt-text="App makers working in the app are displayed":::
+
 When someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
 
 :::image type="content" source="media/coauthoring2.png" alt-text="Sparkle graphic indicator appears when changes are made by other makers":::
