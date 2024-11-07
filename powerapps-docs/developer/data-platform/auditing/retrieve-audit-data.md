@@ -393,7 +393,7 @@ You can use any of three messages to retrieve data changes that are audited.
 
 |Web API |SDK for .NET |Description|
 |---------|---------|---------|
-|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class>](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
+|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
 |[RetrieveAttributeChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory)|[RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest)|Retrieve the change history for a single column of an audited record.|
 |[RetrieveRecordChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory)|[RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)|Retrieve all audited data changes for a specific record.|
 
