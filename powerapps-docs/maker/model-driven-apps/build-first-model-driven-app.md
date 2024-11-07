@@ -83,7 +83,7 @@ If your app is in a [managed environment](/power-platform/admin/managed-environm
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
 When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.
 
