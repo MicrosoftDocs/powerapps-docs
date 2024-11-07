@@ -1,0 +1,86 @@
+---
+title: "Configure a row summary for a model-driven app main form"
+description: "Learn how configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
+ms.date: 11/07/2024
+ms.subservice: mda-maker
+ms.topic: how-to
+author: Mattp123
+ms.author: damialajogun
+ms.reviewer: matp
+ms.collection: bap-ai-copilot
+ms.service: powerapps
+---
+# Configure a row summary for a model-driven app main form
+
+Write a custom prompt to specify columns that you want to be included in a summary that appears above a form in a model-driven app. Forms can contain dozens and dozens of columns scattered throughout a handful of tabs, and sections, all of which make it time consuming for a user to parse the information.
+
+The collapsible summary bar at the top of a model-driven app form can be customized by makers to give users the most important information at-a-glance. The row summary can also include hyperlinks to related information, making it easy to copy-and-paste summaries to colleagues using tools like Microsoft Teams.
+
+:::image type="content" source="media/ai-row-summary-runtime.png" alt-text="Row summary on a main form":::
+
+## Prerequisites for configuring a row summary
+
+To enable this feature, the following criteria are required: 
+
+- System Administrator security role membership in the Microsoft Dataverse environment.
+- Copilot is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
+
+## Create a row summary
+
+Row summaries can be configured for table main forms. 
+
+> [!NOTE]
+> When you configure the row summary, it applies to all main forms for the table.
+
+1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Under **Customizations**, select **Row summary**.
+1. In the prompt box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph. More information: [Write a good prompt](#write-a-good-prompt)
+   :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary ":::
+1. Select **Test** to display a preview of the summary.
+   The most recently edited row in the table is used to generate a test response.
+1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
+
+## Determine which main forms include a row summary
+
+After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
+
+All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *name of table* table, and will appear in every model-driven app that uses this form."
+:::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary":::
+
+## Write a good prompt for the row summary
+
+Writing a custom prompt gives you the ability to instruct the generative pre-trained transformer (GPT) model to perform a specific task. By carefully crafting a prompt, you can generate a response that suits your specific business need. Here are some tips to consider when writing a prompt:
+
+- Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
+- Specify any formatting preferences, such as write the summary as a bulleted list.
+
+### Prompt examples for a row summary
+
+Here are some examples to use when building a main form row summary.
+
+*Summarize Account record in a way that is easy to understand for a sales manager. Make sure to include all important information, including main ideas and important details, while keeping the order of the content logical. Remove any repetitive elements to make the summary as concise as possible without losing the original text’s integrity. If the original text is too short to condense, present it as the summary.*
+
+*Do not include the title in the summary. Create the summary in two paragraphs. For the first paragraph, use the instructions under the header Data. For the second paragraph, use the data under the header Activity. Leave a blank line between the two paragraphs. Do not include the titles Data & Activity in the paragraphs.*
+
+*Data:*
+
+*Show the below values as bullet points using markdown text and bold the values. Make the primary contact a navigation link to the contact record. The link must not include query string parameters in it.*
+
+*Account.Annual Revenue, Account.Category, Account.Industry, Account.Ownership*
+
+*Activity:*
+
+*Generate a summary paragraph using the following customer communication fields identifying top 2 key information and top 2 important actions to take.*
+
+*Account.Regarding (Phone Call).Subject, Account.Regarding (Email).Subject*
+
+## Edit a row summary
+
+To edit a row summary for a main form, open the table, and then under **Customizations** select **Row summary (applied)**. Follow the steps similar in [Create a row summary](#create-a-row-summary) to make and apply changes.
+
+## Hide row summary for all main forms
+
+1. In Power Apps select **Tables** on the left navigation pane, and open the table where you want to edit a row summary.
+1. Under **Data experiences**, select **Forms**.
+1. On the command bar, select **Row summary** > **Hide on all main forms**.
+   :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
