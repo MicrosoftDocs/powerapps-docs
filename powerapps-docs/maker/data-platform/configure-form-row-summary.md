@@ -8,6 +8,7 @@ author: Mattp123
 ms.author: damialajogun
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
+ms.custom: ignite-2024
 ms.service: powerapps
 ---
 # Configure a row summary for a model-driven app main form (preview)
@@ -54,7 +55,7 @@ Row summaries can be configured for table main forms.
 
 After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
 
-All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *name of table* table, and appears in every model-driven app that uses this form."
+All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *table name* table, and appears in every model-driven app that uses this form."
 :::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary":::
 
 ## Write a good prompt for the row summary
@@ -64,9 +65,9 @@ Writing a custom prompt gives you the ability to instruct the generative pretrai
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
 
-### Prompt examples for a row summary
+### Prompt example for a row summary
 
-Here are some examples to use when building a main form row summary.
+Here are examples to use when building a main form row summary.
 
 *Summarize Account record in a way that is easy to understand for a sales manager. Make sure to include all important information, including main ideas and important details, while keeping the order of the content logical. Remove any repetitive elements to make the summary as concise as possible without losing the original text’s integrity. If the original text is too short to condense, present it as the summary.*
 
