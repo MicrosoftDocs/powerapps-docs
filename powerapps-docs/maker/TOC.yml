@@ -1936,7 +1936,7 @@
         href: ./data-platform/limits-tshoot-virtual-tables.md
     - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
-    - name: Table form customizations
+    - name: Table customizations
       items:
       - name: Create business rules
         href: ./data-platform/data-platform-create-business-rule.md

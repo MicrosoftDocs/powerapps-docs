@@ -1,6 +1,6 @@
 ---
 title: "Configure a row summary for a model-driven app main form"
-description: "Learn how configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
+description: "Learn how to configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
 ms.date: 11/07/2024
 ms.subservice: mda-maker
 ms.topic: how-to
@@ -32,7 +32,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 
 To enable this feature, the following criteria are required: 
 
-- System Administrator security role membership in the Microsoft Dataverse environment.
+- System Administrator security role membership in the Microsoft Dataverse environment. <!-- IS THIS REQUIRED TO CREATE OR EDIT OR HIDE ROW SUMMARIES ?? OR is this just for the Copilot environment setting? -->
 - Copilot is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
 
 ## Create a row summary
@@ -46,7 +46,7 @@ Row summaries can be configured for table main forms.
 1. Under **Customizations**, select **Row summary**.
 1. In the **Prompt** box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph. More information: [Write a good prompt for the row summary](#write-a-good-prompt-for-the-row-summary)
    :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary ":::
-1. Select **Test** to display a preview of the summary.
+1. Select **Test prompt** to display a preview of the summary.
    The most recently edited row in the table is used to generate a test response.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
 
@@ -54,12 +54,12 @@ Row summaries can be configured for table main forms.
 
 After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
 
-All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *name of table* table, and will appear in every model-driven app that uses this form."
+All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *name of table* table, and appears in every model-driven app that uses this form."
 :::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary":::
 
 ## Write a good prompt for the row summary
 
-Writing a custom prompt gives you the ability to instruct the generative pre-trained transformer (GPT) model to perform a specific task. By carefully crafting a prompt, you can generate a response that suits your specific business need. Here are some tips to consider when writing a prompt:
+Writing a custom prompt gives you the ability to instruct the generative pretrained transformer (GPT) model to perform a specific task. By carefully crafting a prompt, you can generate a response that suits your specific business need. Here are some tips to consider when writing a prompt:
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
