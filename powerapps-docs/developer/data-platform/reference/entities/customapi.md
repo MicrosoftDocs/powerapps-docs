@@ -1,7 +1,7 @@
 ---
 title: "Custom API (CustomAPI) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Custom API (CustomAPI) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -957,11 +957,13 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [customapi_MailboxTrackingFolders](#BKMK_customapi_MailboxTrackingFolders)
+- [customapi_plugin_CustomAPI](#BKMK_customapi_plugin_CustomAPI)
 - [customapi_PrincipalObjectAttributeAccesses](#BKMK_customapi_PrincipalObjectAttributeAccesses)
 - [customapi_ProcessSession](#BKMK_customapi_ProcessSession)
 - [customapi_serviceplanmapping](#BKMK_customapi_serviceplanmapping)
 - [customapi_SyncErrors](#BKMK_customapi_SyncErrors)
 - [fabricaiskill_customapiid](#BKMK_fabricaiskill_customapiid)
+- [msdyn_apirequestcache_CustomAPI_customapi](#BKMK_msdyn_apirequestcache_CustomAPI_customapi)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 - [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [msdyn_knowledgeassetconfiguration_customapiid](#BKMK_msdyn_knowledgeassetconfiguration_customapiid)
@@ -1050,6 +1052,18 @@ Many-To-One Relationship: [mailboxtrackingfolder customapi_MailboxTrackingFolder
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_customapi_plugin_CustomAPI"></a> customapi_plugin_CustomAPI
+
+Many-To-One Relationship: [plugin customapi_plugin_CustomAPI](plugin.md#BKMK_customapi_plugin_CustomAPI)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`customapi`|
+|ReferencedEntityNavigationPropertyName|`customapi_plugin_CustomAPI`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_customapi_PrincipalObjectAttributeAccesses"></a> customapi_PrincipalObjectAttributeAccesses
 
 Many-To-One Relationship: [principalobjectattributeaccess customapi_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_customapi_PrincipalObjectAttributeAccesses)
@@ -1107,6 +1121,18 @@ Many-To-One Relationship: [fabricaiskill fabricaiskill_customapiid](fabricaiskil
 |ReferencingEntity|`fabricaiskill`|
 |ReferencingAttribute|`customapiid`|
 |ReferencedEntityNavigationPropertyName|`fabricaiskill_customapiid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_apirequestcache_CustomAPI_customapi"></a> msdyn_apirequestcache_CustomAPI_customapi
+
+Many-To-One Relationship: [msdyn_apirequestcache msdyn_apirequestcache_CustomAPI_customapi](msdyn_apirequestcache.md#BKMK_msdyn_apirequestcache_CustomAPI_customapi)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`msdyn_customapi`|
+|ReferencedEntityNavigationPropertyName|`msdyn_apirequestcache_CustomAPI_customapi`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -1,7 +1,7 @@
 ---
 title: "Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Environment Variable Definition (EnvironmentVariableDefinition) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -918,6 +918,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [environmentvariabledefinition_DuplicateBaseRecord](#BKMK_environmentvariabledefinition_DuplicateBaseRecord)
 - [environmentvariabledefinition_DuplicateMatchingRecord](#BKMK_environmentvariabledefinition_DuplicateMatchingRecord)
 - [environmentvariabledefinition_environmentvariablevalue](#BKMK_environmentvariabledefinition_environmentvariablevalue)
+- [environmentvariabledefinition_flowmachinenetwork_domainpassword](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+- [environmentvariabledefinition_flowmachinenetwork_domainusername](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
 - [environmentvariabledefinition_MailboxTrackingFolders](#BKMK_environmentvariabledefinition_MailboxTrackingFolders)
 - [environmentvariabledefinition_PrincipalObjectAttributeAccesses](#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
 - [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
@@ -1067,6 +1069,30 @@ Many-To-One Relationship: [environmentvariablevalue environmentvariabledefinitio
 |ReferencingAttribute|`environmentvariabledefinitionid`|
 |ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_environmentvariablevalue`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword"></a> environmentvariabledefinition_flowmachinenetwork_domainpassword
+
+Many-To-One Relationship: [flowmachinenetwork environmentvariabledefinition_flowmachinenetwork_domainpassword](flowmachinenetwork.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachinenetwork`|
+|ReferencingAttribute|`domainpassword`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_flowmachinenetwork_domainpassword`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername"></a> environmentvariabledefinition_flowmachinenetwork_domainusername
+
+Many-To-One Relationship: [flowmachinenetwork environmentvariabledefinition_flowmachinenetwork_domainusername](flowmachinenetwork.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachinenetwork`|
+|ReferencingAttribute|`domainusername`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_domainusername`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_environmentvariabledefinition_MailboxTrackingFolders"></a> environmentvariabledefinition_MailboxTrackingFolders
