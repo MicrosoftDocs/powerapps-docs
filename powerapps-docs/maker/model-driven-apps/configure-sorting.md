@@ -40,7 +40,7 @@ To change the sort order in the view designer, go to [Create a public view in Po
 
    :::image type="content" source="media/create-or-edit-model-driven-app-view/sort-view-by-multiple-columns.png" alt-text="Sorting a table view for column Account Name":::
 
-1. To remove a filter expression, under **Filter by**, select **X**  button next to the filter expression you want to remove.
+1. To remove a filter expression, under **Filter by** in the view properties pane, select **X**  next to the filter expression you want to remove.
 1. Select **Save and publish** to save the view and make it available to apps that include the table.
 
 ## Next steps
