@@ -1,7 +1,7 @@
 ---
 title: "Privilege table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Privilege table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -403,6 +403,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [Privilege_AsyncOperations](#BKMK_Privilege_AsyncOperations)
 - [Privilege_BulkDeleteFailures](#BKMK_Privilege_BulkDeleteFailures)
+- [privilegecheckerlog_CheckedPrivilege](#BKMK_privilegecheckerlog_CheckedPrivilege)
 
 ### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
 
@@ -427,6 +428,18 @@ Many-To-One Relationship: [bulkdeletefailure Privilege_BulkDeleteFailures](bulkd
 |ReferencedEntityNavigationPropertyName|`Privilege_BulkDeleteFailures`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_privilegecheckerlog_CheckedPrivilege"></a> privilegecheckerlog_CheckedPrivilege
+
+Many-To-One Relationship: [privilegecheckerlog privilegecheckerlog_CheckedPrivilege](privilegecheckerlog.md#BKMK_privilegecheckerlog_CheckedPrivilege)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`privilegecheckerlog`|
+|ReferencingAttribute|`checkedprivilege`|
+|ReferencedEntityNavigationPropertyName|`privilegecheckerlog_CheckedPrivilege`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 ## Many-to-Many relationships

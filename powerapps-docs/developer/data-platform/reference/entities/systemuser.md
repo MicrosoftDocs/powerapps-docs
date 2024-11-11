@@ -1,7 +1,7 @@
 ---
 title: "User (SystemUser) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the User (SystemUser) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -2768,6 +2768,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_aipluginusersetting_createdonbehalfby](#BKMK_lk_aipluginusersetting_createdonbehalfby)
 - [lk_aipluginusersetting_modifiedby](#BKMK_lk_aipluginusersetting_modifiedby)
 - [lk_aipluginusersetting_modifiedonbehalfby](#BKMK_lk_aipluginusersetting_modifiedonbehalfby)
+- [lk_aiskillconfig_createdby](#BKMK_lk_aiskillconfig_createdby)
+- [lk_aiskillconfig_createdonbehalfby](#BKMK_lk_aiskillconfig_createdonbehalfby)
+- [lk_aiskillconfig_modifiedby](#BKMK_lk_aiskillconfig_modifiedby)
+- [lk_aiskillconfig_modifiedonbehalfby](#BKMK_lk_aiskillconfig_modifiedonbehalfby)
 - [lk_annotationbase_createdby](#BKMK_lk_annotationbase_createdby)
 - [lk_annotationbase_createdonbehalfby](#BKMK_lk_annotationbase_createdonbehalfby)
 - [lk_annotationbase_modifiedby](#BKMK_lk_annotationbase_modifiedby)
@@ -2887,6 +2891,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_category_createdonbehalfby](#BKMK_lk_category_createdonbehalfby)
 - [lk_category_modifiedby](#BKMK_lk_category_modifiedby)
 - [lk_category_modifiedonbehalfby](#BKMK_lk_category_modifiedonbehalfby)
+- [lk_certificatecredential_createdby](#BKMK_lk_certificatecredential_createdby)
+- [lk_certificatecredential_createdonbehalfby](#BKMK_lk_certificatecredential_createdonbehalfby)
+- [lk_certificatecredential_modifiedby](#BKMK_lk_certificatecredential_modifiedby)
+- [lk_certificatecredential_modifiedonbehalfby](#BKMK_lk_certificatecredential_modifiedonbehalfby)
 - [lk_columnmapping_createdby](#BKMK_lk_columnmapping_createdby)
 - [lk_columnmapping_createdonbehalfby](#BKMK_lk_columnmapping_createdonbehalfby)
 - [lk_columnmapping_modifiedby](#BKMK_lk_columnmapping_modifiedby)
@@ -3163,6 +3171,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_goalrollupquery_createdonbehalfby](#BKMK_lk_goalrollupquery_createdonbehalfby)
 - [lk_goalrollupquery_modifiedby](#BKMK_lk_goalrollupquery_modifiedby)
 - [lk_goalrollupquery_modifiedonbehalfby](#BKMK_lk_goalrollupquery_modifiedonbehalfby)
+- [lk_governanceconfiguration_createdby](#BKMK_lk_governanceconfiguration_createdby)
+- [lk_governanceconfiguration_createdonbehalfby](#BKMK_lk_governanceconfiguration_createdonbehalfby)
+- [lk_governanceconfiguration_modifiedby](#BKMK_lk_governanceconfiguration_modifiedby)
+- [lk_governanceconfiguration_modifiedonbehalfby](#BKMK_lk_governanceconfiguration_modifiedonbehalfby)
 - [lk_import_createdonbehalfby](#BKMK_lk_import_createdonbehalfby)
 - [lk_import_modifiedonbehalfby](#BKMK_lk_import_modifiedonbehalfby)
 - [lk_importbase_createdby](#BKMK_lk_importbase_createdby)
@@ -3368,6 +3380,14 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_msdyn_analysisresultdetail_createdonbehalfby](#BKMK_lk_msdyn_analysisresultdetail_createdonbehalfby)
 - [lk_msdyn_analysisresultdetail_modifiedby](#BKMK_lk_msdyn_analysisresultdetail_modifiedby)
 - [lk_msdyn_analysisresultdetail_modifiedonbehalfby](#BKMK_lk_msdyn_analysisresultdetail_modifiedonbehalfby)
+- [lk_msdyn_apirequestcache_createdby](#BKMK_lk_msdyn_apirequestcache_createdby)
+- [lk_msdyn_apirequestcache_createdonbehalfby](#BKMK_lk_msdyn_apirequestcache_createdonbehalfby)
+- [lk_msdyn_apirequestcache_modifiedby](#BKMK_lk_msdyn_apirequestcache_modifiedby)
+- [lk_msdyn_apirequestcache_modifiedonbehalfby](#BKMK_lk_msdyn_apirequestcache_modifiedonbehalfby)
+- [lk_msdyn_apirequestfolder_createdby](#BKMK_lk_msdyn_apirequestfolder_createdby)
+- [lk_msdyn_apirequestfolder_createdonbehalfby](#BKMK_lk_msdyn_apirequestfolder_createdonbehalfby)
+- [lk_msdyn_apirequestfolder_modifiedby](#BKMK_lk_msdyn_apirequestfolder_modifiedby)
+- [lk_msdyn_apirequestfolder_modifiedonbehalfby](#BKMK_lk_msdyn_apirequestfolder_modifiedonbehalfby)
 - [lk_msdyn_appinsightsmetadata_createdby](#BKMK_lk_msdyn_appinsightsmetadata_createdby)
 - [lk_msdyn_appinsightsmetadata_createdonbehalfby](#BKMK_lk_msdyn_appinsightsmetadata_createdonbehalfby)
 - [lk_msdyn_appinsightsmetadata_modifiedby](#BKMK_lk_msdyn_appinsightsmetadata_modifiedby)
@@ -3480,6 +3500,14 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_msdyn_helppage_createdonbehalfby](#BKMK_lk_msdyn_helppage_createdonbehalfby)
 - [lk_msdyn_helppage_modifiedby](#BKMK_lk_msdyn_helppage_modifiedby)
 - [lk_msdyn_helppage_modifiedonbehalfby](#BKMK_lk_msdyn_helppage_modifiedonbehalfby)
+- [lk_msdyn_historicalcaseharvestbatch_createdby](#BKMK_lk_msdyn_historicalcaseharvestbatch_createdby)
+- [lk_msdyn_historicalcaseharvestbatch_createdonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestbatch_createdonbehalfby)
+- [lk_msdyn_historicalcaseharvestbatch_modifiedby](#BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedby)
+- [lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby)
+- [lk_msdyn_historicalcaseharvestrun_createdby](#BKMK_lk_msdyn_historicalcaseharvestrun_createdby)
+- [lk_msdyn_historicalcaseharvestrun_createdonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestrun_createdonbehalfby)
+- [lk_msdyn_historicalcaseharvestrun_modifiedby](#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedby)
+- [lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby)
 - [lk_msdyn_insightsstorevirtualentity_createdby](#BKMK_lk_msdyn_insightsstorevirtualentity_createdby)
 - [lk_msdyn_insightsstorevirtualentity_createdonbehalfby](#BKMK_lk_msdyn_insightsstorevirtualentity_createdonbehalfby)
 - [lk_msdyn_insightsstorevirtualentity_modifiedby](#BKMK_lk_msdyn_insightsstorevirtualentity_modifiedby)
@@ -3520,6 +3548,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_msdyn_knowledgeconfiguration_createdonbehalfby](#BKMK_lk_msdyn_knowledgeconfiguration_createdonbehalfby)
 - [lk_msdyn_knowledgeconfiguration_modifiedby](#BKMK_lk_msdyn_knowledgeconfiguration_modifiedby)
 - [lk_msdyn_knowledgeconfiguration_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgeconfiguration_modifiedonbehalfby)
+- [lk_msdyn_knowledgeharvestjobrecord_createdby](#BKMK_lk_msdyn_knowledgeharvestjobrecord_createdby)
+- [lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby](#BKMK_lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby)
+- [lk_msdyn_knowledgeharvestjobrecord_modifiedby](#BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedby)
+- [lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby)
 - [lk_msdyn_knowledgeinteractioninsight_createdby](#BKMK_lk_msdyn_knowledgeinteractioninsight_createdby)
 - [lk_msdyn_knowledgeinteractioninsight_createdonbehalfby](#BKMK_lk_msdyn_knowledgeinteractioninsight_createdonbehalfby)
 - [lk_msdyn_knowledgeinteractioninsight_modifiedby](#BKMK_lk_msdyn_knowledgeinteractioninsight_modifiedby)
@@ -3726,6 +3758,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_picklistmapping_createdonbehalfby](#BKMK_lk_picklistmapping_createdonbehalfby)
 - [lk_picklistmapping_modifiedby](#BKMK_lk_picklistmapping_modifiedby)
 - [lk_picklistmapping_modifiedonbehalfby](#BKMK_lk_picklistmapping_modifiedonbehalfby)
+- [lk_plugin_createdby](#BKMK_lk_plugin_createdby)
+- [lk_plugin_createdonbehalfby](#BKMK_lk_plugin_createdonbehalfby)
+- [lk_plugin_modifiedby](#BKMK_lk_plugin_modifiedby)
+- [lk_plugin_modifiedonbehalfby](#BKMK_lk_plugin_modifiedonbehalfby)
 - [lk_pluginassembly_createdonbehalfby](#BKMK_lk_pluginassembly_createdonbehalfby)
 - [lk_pluginassembly_modifiedonbehalfby](#BKMK_lk_pluginassembly_modifiedonbehalfby)
 - [lk_pluginpackage_createdby](#BKMK_lk_pluginpackage_createdby)
@@ -3795,10 +3831,18 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_powerpageslog_createdonbehalfby](#BKMK_lk_powerpageslog_createdonbehalfby)
 - [lk_powerpageslog_modifiedby](#BKMK_lk_powerpageslog_modifiedby)
 - [lk_powerpageslog_modifiedonbehalfby](#BKMK_lk_powerpageslog_modifiedonbehalfby)
+- [lk_powerpagesmanagedidentity_createdby](#BKMK_lk_powerpagesmanagedidentity_createdby)
+- [lk_powerpagesmanagedidentity_createdonbehalfby](#BKMK_lk_powerpagesmanagedidentity_createdonbehalfby)
+- [lk_powerpagesmanagedidentity_modifiedby](#BKMK_lk_powerpagesmanagedidentity_modifiedby)
+- [lk_powerpagesmanagedidentity_modifiedonbehalfby](#BKMK_lk_powerpagesmanagedidentity_modifiedonbehalfby)
 - [lk_powerpagesscanreport_createdby](#BKMK_lk_powerpagesscanreport_createdby)
 - [lk_powerpagesscanreport_createdonbehalfby](#BKMK_lk_powerpagesscanreport_createdonbehalfby)
 - [lk_powerpagesscanreport_modifiedby](#BKMK_lk_powerpagesscanreport_modifiedby)
 - [lk_powerpagesscanreport_modifiedonbehalfby](#BKMK_lk_powerpagesscanreport_modifiedonbehalfby)
+- [lk_powerpagessiteaifeedback_createdby](#BKMK_lk_powerpagessiteaifeedback_createdby)
+- [lk_powerpagessiteaifeedback_createdonbehalfby](#BKMK_lk_powerpagessiteaifeedback_createdonbehalfby)
+- [lk_powerpagessiteaifeedback_modifiedby](#BKMK_lk_powerpagessiteaifeedback_modifiedby)
+- [lk_powerpagessiteaifeedback_modifiedonbehalfby](#BKMK_lk_powerpagessiteaifeedback_modifiedonbehalfby)
 - [lk_privilegecheckerlog_createdby](#BKMK_lk_privilegecheckerlog_createdby)
 - [lk_privilegecheckerlog_createdonbehalfby](#BKMK_lk_privilegecheckerlog_createdonbehalfby)
 - [lk_privilegecheckerlog_modifiedby](#BKMK_lk_privilegecheckerlog_modifiedby)
@@ -3905,6 +3949,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_retentionoperationdetail_createdonbehalfby](#BKMK_lk_retentionoperationdetail_createdonbehalfby)
 - [lk_retentionoperationdetail_modifiedby](#BKMK_lk_retentionoperationdetail_modifiedby)
 - [lk_retentionoperationdetail_modifiedonbehalfby](#BKMK_lk_retentionoperationdetail_modifiedonbehalfby)
+- [lk_retentionsuccessdetail_createdby](#BKMK_lk_retentionsuccessdetail_createdby)
+- [lk_retentionsuccessdetail_createdonbehalfby](#BKMK_lk_retentionsuccessdetail_createdonbehalfby)
+- [lk_retentionsuccessdetail_modifiedby](#BKMK_lk_retentionsuccessdetail_modifiedby)
+- [lk_retentionsuccessdetail_modifiedonbehalfby](#BKMK_lk_retentionsuccessdetail_modifiedonbehalfby)
 - [lk_role_createdonbehalfby](#BKMK_lk_role_createdonbehalfby)
 - [lk_role_modifiedonbehalfby](#BKMK_lk_role_modifiedonbehalfby)
 - [lk_rolebase_createdby](#BKMK_lk_rolebase_createdby)
@@ -3974,6 +4022,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_sharedworkspace_createdonbehalfby](#BKMK_lk_sharedworkspace_createdonbehalfby)
 - [lk_sharedworkspace_modifiedby](#BKMK_lk_sharedworkspace_modifiedby)
 - [lk_sharedworkspace_modifiedonbehalfby](#BKMK_lk_sharedworkspace_modifiedonbehalfby)
+- [lk_sharedworkspaceaccesstoken2_createdby](#BKMK_lk_sharedworkspaceaccesstoken2_createdby)
+- [lk_sharedworkspaceaccesstoken2_createdonbehalfby](#BKMK_lk_sharedworkspaceaccesstoken2_createdonbehalfby)
+- [lk_sharedworkspaceaccesstoken2_modifiedby](#BKMK_lk_sharedworkspaceaccesstoken2_modifiedby)
+- [lk_sharedworkspaceaccesstoken2_modifiedonbehalfby](#BKMK_lk_sharedworkspaceaccesstoken2_modifiedonbehalfby)
 - [lk_sharedworkspacepool_createdby](#BKMK_lk_sharedworkspacepool_createdby)
 - [lk_sharedworkspacepool_createdonbehalfby](#BKMK_lk_sharedworkspacepool_createdonbehalfby)
 - [lk_sharedworkspacepool_modifiedby](#BKMK_lk_sharedworkspacepool_modifiedby)
@@ -4036,6 +4088,22 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_solutioncomponentrelationshipconfiguration_createdonbehalfby](#BKMK_lk_solutioncomponentrelationshipconfiguration_createdonbehalfby)
 - [lk_solutioncomponentrelationshipconfiguration_modifiedby](#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedby)
 - [lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby](#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby)
+- [lk_sourcecontrolbranchconfiguration_createdby](#BKMK_lk_sourcecontrolbranchconfiguration_createdby)
+- [lk_sourcecontrolbranchconfiguration_createdonbehalfby](#BKMK_lk_sourcecontrolbranchconfiguration_createdonbehalfby)
+- [lk_sourcecontrolbranchconfiguration_modifiedby](#BKMK_lk_sourcecontrolbranchconfiguration_modifiedby)
+- [lk_sourcecontrolbranchconfiguration_modifiedonbehalfby](#BKMK_lk_sourcecontrolbranchconfiguration_modifiedonbehalfby)
+- [lk_sourcecontrolcomponent_createdby](#BKMK_lk_sourcecontrolcomponent_createdby)
+- [lk_sourcecontrolcomponent_createdonbehalfby](#BKMK_lk_sourcecontrolcomponent_createdonbehalfby)
+- [lk_sourcecontrolcomponent_modifiedby](#BKMK_lk_sourcecontrolcomponent_modifiedby)
+- [lk_sourcecontrolcomponent_modifiedonbehalfby](#BKMK_lk_sourcecontrolcomponent_modifiedonbehalfby)
+- [lk_sourcecontrolcomponentpayload_createdby](#BKMK_lk_sourcecontrolcomponentpayload_createdby)
+- [lk_sourcecontrolcomponentpayload_createdonbehalfby](#BKMK_lk_sourcecontrolcomponentpayload_createdonbehalfby)
+- [lk_sourcecontrolcomponentpayload_modifiedby](#BKMK_lk_sourcecontrolcomponentpayload_modifiedby)
+- [lk_sourcecontrolcomponentpayload_modifiedonbehalfby](#BKMK_lk_sourcecontrolcomponentpayload_modifiedonbehalfby)
+- [lk_sourcecontrolconfiguration_createdby](#BKMK_lk_sourcecontrolconfiguration_createdby)
+- [lk_sourcecontrolconfiguration_createdonbehalfby](#BKMK_lk_sourcecontrolconfiguration_createdonbehalfby)
+- [lk_sourcecontrolconfiguration_modifiedby](#BKMK_lk_sourcecontrolconfiguration_modifiedby)
+- [lk_sourcecontrolconfiguration_modifiedonbehalfby](#BKMK_lk_sourcecontrolconfiguration_modifiedonbehalfby)
 - [lk_stagedentity_createdby](#BKMK_lk_stagedentity_createdby)
 - [lk_stagedentity_createdonbehalfby](#BKMK_lk_stagedentity_createdonbehalfby)
 - [lk_stagedentity_modifiedby](#BKMK_lk_stagedentity_modifiedby)
@@ -4211,7 +4279,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_workqueueitem_createdonbehalfby](#BKMK_lk_workqueueitem_createdonbehalfby)
 - [lk_workqueueitem_modifiedby](#BKMK_lk_workqueueitem_modifiedby)
 - [lk_workqueueitem_modifiedonbehalfby](#BKMK_lk_workqueueitem_modifiedonbehalfby)
+- [mailbox_emailaddressapprovedby_systemuser](#BKMK_mailbox_emailaddressapprovedby_systemuser)
 - [mailbox_regarding_systemuser](#BKMK_mailbox_regarding_systemuser)
+- [mailbox_testandenablelastattemptedby_systemuser](#BKMK_mailbox_testandenablelastattemptedby_systemuser)
 - [modifiedby_connection](#BKMK_modifiedby_connection)
 - [modifiedby_connection_role](#BKMK_modifiedby_connection_role)
 - [modifiedby_pluginassembly](#BKMK_modifiedby_pluginassembly)
@@ -4337,12 +4407,14 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_aipluginoperationparameter](#BKMK_user_aipluginoperationparameter)
 - [user_aipluginoperationresponsetemplate](#BKMK_user_aipluginoperationresponsetemplate)
 - [user_aipluginusersetting](#BKMK_user_aipluginusersetting)
+- [user_aiskillconfig](#BKMK_user_aiskillconfig)
 - [user_appnotification](#BKMK_user_appnotification)
 - [user_appointment](#BKMK_user_appointment)
 - [user_bot](#BKMK_user_bot)
 - [user_botcomponent](#BKMK_user_botcomponent)
 - [user_botcomponentcollection](#BKMK_user_botcomponentcollection)
 - [user_card](#BKMK_user_card)
+- [user_certificatecredential](#BKMK_user_certificatecredential)
 - [user_componentversion](#BKMK_user_componentversion)
 - [user_connectioninstance](#BKMK_user_connectioninstance)
 - [user_connectionreference](#BKMK_user_connectionreference)
@@ -4385,6 +4457,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_fxexpression](#BKMK_user_fxexpression)
 - [user_goal](#BKMK_user_goal)
 - [user_goal_goalowner](#BKMK_user_goal_goalowner)
+- [user_governanceconfiguration](#BKMK_user_governanceconfiguration)
 - [user_interactionforemail](#BKMK_user_interactionforemail)
 - [user_keyvaultreference](#BKMK_user_keyvaultreference)
 - [user_knowledgearticle](#BKMK_user_knowledgearticle)
@@ -4411,6 +4484,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_msdyn_analysisoverride](#BKMK_user_msdyn_analysisoverride)
 - [user_msdyn_analysisresult](#BKMK_user_msdyn_analysisresult)
 - [user_msdyn_analysisresultdetail](#BKMK_user_msdyn_analysisresultdetail)
+- [user_msdyn_apirequestcache](#BKMK_user_msdyn_apirequestcache)
+- [user_msdyn_apirequestfolder](#BKMK_user_msdyn_apirequestfolder)
 - [user_msdyn_customcontrolextendedsettings](#BKMK_user_msdyn_customcontrolextendedsettings)
 - [user_msdyn_dataflow](#BKMK_user_msdyn_dataflow)
 - [user_msdyn_dataflow_datalakefolder](#BKMK_user_msdyn_dataflow_datalakefolder)
@@ -4436,6 +4511,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_msdyn_flow_basicapprovalmodel](#BKMK_user_msdyn_flow_basicapprovalmodel)
 - [user_msdyn_flow_flowapproval](#BKMK_user_msdyn_flow_flowapproval)
 - [user_msdyn_formmapping](#BKMK_user_msdyn_formmapping)
+- [user_msdyn_historicalcaseharvestbatch](#BKMK_user_msdyn_historicalcaseharvestbatch)
+- [user_msdyn_historicalcaseharvestrun](#BKMK_user_msdyn_historicalcaseharvestrun)
 - [user_msdyn_integratedsearchprovider](#BKMK_user_msdyn_integratedsearchprovider)
 - [user_msdyn_kalanguagesetting](#BKMK_user_msdyn_kalanguagesetting)
 - [user_msdyn_kbattachment](#BKMK_user_msdyn_kbattachment)
@@ -4443,6 +4520,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_msdyn_knowledgearticleimage](#BKMK_user_msdyn_knowledgearticleimage)
 - [user_msdyn_knowledgearticletemplate](#BKMK_user_msdyn_knowledgearticletemplate)
 - [user_msdyn_knowledgeassetconfiguration](#BKMK_user_msdyn_knowledgeassetconfiguration)
+- [user_msdyn_knowledgeharvestjobrecord](#BKMK_user_msdyn_knowledgeharvestjobrecord)
 - [user_msdyn_knowledgeinteractioninsight](#BKMK_user_msdyn_knowledgeinteractioninsight)
 - [user_msdyn_knowledgemanagementsetting](#BKMK_user_msdyn_knowledgemanagementsetting)
 - [user_msdyn_knowledgepersonalfilter](#BKMK_user_msdyn_knowledgepersonalfilter)
@@ -4480,6 +4558,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_phonecall](#BKMK_user_phonecall)
 - [user_plannerbusinessscenario](#BKMK_user_plannerbusinessscenario)
 - [user_plannersyncaction](#BKMK_user_plannersyncaction)
+- [user_plugin](#BKMK_user_plugin)
 - [user_powerbidataset](#BKMK_user_powerbidataset)
 - [user_powerbidatasetapdx](#BKMK_user_powerbidatasetapdx)
 - [user_powerbimashupparameter](#BKMK_user_powerbimashupparameter)
@@ -4491,7 +4570,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_powerpagesitelanguage](#BKMK_user_powerpagesitelanguage)
 - [user_powerpagesitepublished](#BKMK_user_powerpagesitepublished)
 - [user_powerpageslog](#BKMK_user_powerpageslog)
+- [user_powerpagesmanagedidentity](#BKMK_user_powerpagesmanagedidentity)
 - [user_powerpagesscanreport](#BKMK_user_powerpagesscanreport)
+- [user_powerpagessiteaifeedback](#BKMK_user_powerpagessiteaifeedback)
 - [user_privilegecheckerrun](#BKMK_user_privilegecheckerrun)
 - [user_processstageparameter](#BKMK_user_processstageparameter)
 - [user_recentlyused](#BKMK_user_recentlyused)
@@ -4500,6 +4581,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_retentionconfig](#BKMK_user_retentionconfig)
 - [user_retentionfailuredetail](#BKMK_user_retentionfailuredetail)
 - [user_retentionoperation](#BKMK_user_retentionoperation)
+- [user_retentionsuccessdetail](#BKMK_user_retentionsuccessdetail)
 - [user_settings](#BKMK_user_settings)
 - [user_sharepointdocumentlocation](#BKMK_user_sharepointdocumentlocation)
 - [user_sharepointsite](#BKMK_user_sharepointsite)
@@ -6121,6 +6203,54 @@ Many-To-One Relationship: [aipluginusersetting lk_aipluginusersetting_modifiedon
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_aiskillconfig_createdby"></a> lk_aiskillconfig_createdby
+
+Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_createdby](aiskillconfig.md#BKMK_lk_aiskillconfig_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_aiskillconfig_createdonbehalfby"></a> lk_aiskillconfig_createdonbehalfby
+
+Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_createdonbehalfby](aiskillconfig.md#BKMK_lk_aiskillconfig_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_aiskillconfig_modifiedby"></a> lk_aiskillconfig_modifiedby
+
+Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_modifiedby](aiskillconfig.md#BKMK_lk_aiskillconfig_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_aiskillconfig_modifiedonbehalfby"></a> lk_aiskillconfig_modifiedonbehalfby
+
+Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_modifiedonbehalfby](aiskillconfig.md#BKMK_lk_aiskillconfig_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_annotationbase_createdby"></a> lk_annotationbase_createdby
 
 Many-To-One Relationship: [annotation lk_annotationbase_createdby](annotation.md#BKMK_lk_annotationbase_createdby)
@@ -7548,6 +7678,54 @@ Many-To-One Relationship: [category lk_category_modifiedonbehalfby](category.md#
 |ReferencedEntityNavigationPropertyName|`lk_category_modifiedonbehalfby`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_certificatecredential_createdby"></a> lk_certificatecredential_createdby
+
+Many-To-One Relationship: [certificatecredential lk_certificatecredential_createdby](certificatecredential.md#BKMK_lk_certificatecredential_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_certificatecredential_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_certificatecredential_createdonbehalfby"></a> lk_certificatecredential_createdonbehalfby
+
+Many-To-One Relationship: [certificatecredential lk_certificatecredential_createdonbehalfby](certificatecredential.md#BKMK_lk_certificatecredential_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_certificatecredential_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_certificatecredential_modifiedby"></a> lk_certificatecredential_modifiedby
+
+Many-To-One Relationship: [certificatecredential lk_certificatecredential_modifiedby](certificatecredential.md#BKMK_lk_certificatecredential_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_certificatecredential_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_certificatecredential_modifiedonbehalfby"></a> lk_certificatecredential_modifiedonbehalfby
+
+Many-To-One Relationship: [certificatecredential lk_certificatecredential_modifiedonbehalfby](certificatecredential.md#BKMK_lk_certificatecredential_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_certificatecredential_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_lk_columnmapping_createdby"></a> lk_columnmapping_createdby
 
@@ -10861,6 +11039,54 @@ Many-To-One Relationship: [goalrollupquery lk_goalrollupquery_modifiedonbehalfby
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_governanceconfiguration_createdby"></a> lk_governanceconfiguration_createdby
+
+Many-To-One Relationship: [governanceconfiguration lk_governanceconfiguration_createdby](governanceconfiguration.md#BKMK_lk_governanceconfiguration_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`governanceconfiguration`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_governanceconfiguration_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_governanceconfiguration_createdonbehalfby"></a> lk_governanceconfiguration_createdonbehalfby
+
+Many-To-One Relationship: [governanceconfiguration lk_governanceconfiguration_createdonbehalfby](governanceconfiguration.md#BKMK_lk_governanceconfiguration_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`governanceconfiguration`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_governanceconfiguration_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_governanceconfiguration_modifiedby"></a> lk_governanceconfiguration_modifiedby
+
+Many-To-One Relationship: [governanceconfiguration lk_governanceconfiguration_modifiedby](governanceconfiguration.md#BKMK_lk_governanceconfiguration_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`governanceconfiguration`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_governanceconfiguration_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_governanceconfiguration_modifiedonbehalfby"></a> lk_governanceconfiguration_modifiedonbehalfby
+
+Many-To-One Relationship: [governanceconfiguration lk_governanceconfiguration_modifiedonbehalfby](governanceconfiguration.md#BKMK_lk_governanceconfiguration_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`governanceconfiguration`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_governanceconfiguration_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_import_createdonbehalfby"></a> lk_import_createdonbehalfby
 
 Many-To-One Relationship: [import lk_import_createdonbehalfby](import.md#BKMK_lk_import_createdonbehalfby)
@@ -13321,6 +13547,102 @@ Many-To-One Relationship: [msdyn_analysisresultdetail lk_msdyn_analysisresultdet
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_msdyn_apirequestcache_createdby"></a> lk_msdyn_apirequestcache_createdby
+
+Many-To-One Relationship: [msdyn_apirequestcache lk_msdyn_apirequestcache_createdby](msdyn_apirequestcache.md#BKMK_lk_msdyn_apirequestcache_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestcache_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestcache_createdonbehalfby"></a> lk_msdyn_apirequestcache_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_apirequestcache lk_msdyn_apirequestcache_createdonbehalfby](msdyn_apirequestcache.md#BKMK_lk_msdyn_apirequestcache_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestcache_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestcache_modifiedby"></a> lk_msdyn_apirequestcache_modifiedby
+
+Many-To-One Relationship: [msdyn_apirequestcache lk_msdyn_apirequestcache_modifiedby](msdyn_apirequestcache.md#BKMK_lk_msdyn_apirequestcache_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestcache_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestcache_modifiedonbehalfby"></a> lk_msdyn_apirequestcache_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_apirequestcache lk_msdyn_apirequestcache_modifiedonbehalfby](msdyn_apirequestcache.md#BKMK_lk_msdyn_apirequestcache_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestcache_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestfolder_createdby"></a> lk_msdyn_apirequestfolder_createdby
+
+Many-To-One Relationship: [msdyn_apirequestfolder lk_msdyn_apirequestfolder_createdby](msdyn_apirequestfolder.md#BKMK_lk_msdyn_apirequestfolder_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestfolder_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestfolder_createdonbehalfby"></a> lk_msdyn_apirequestfolder_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_apirequestfolder lk_msdyn_apirequestfolder_createdonbehalfby](msdyn_apirequestfolder.md#BKMK_lk_msdyn_apirequestfolder_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestfolder_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestfolder_modifiedby"></a> lk_msdyn_apirequestfolder_modifiedby
+
+Many-To-One Relationship: [msdyn_apirequestfolder lk_msdyn_apirequestfolder_modifiedby](msdyn_apirequestfolder.md#BKMK_lk_msdyn_apirequestfolder_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestfolder_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_apirequestfolder_modifiedonbehalfby"></a> lk_msdyn_apirequestfolder_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_apirequestfolder lk_msdyn_apirequestfolder_modifiedonbehalfby](msdyn_apirequestfolder.md#BKMK_lk_msdyn_apirequestfolder_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_apirequestfolder_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_msdyn_appinsightsmetadata_createdby"></a> lk_msdyn_appinsightsmetadata_createdby
 
 Many-To-One Relationship: [msdyn_appinsightsmetadata lk_msdyn_appinsightsmetadata_createdby](msdyn_appinsightsmetadata.md#BKMK_lk_msdyn_appinsightsmetadata_createdby)
@@ -14665,6 +14987,102 @@ Many-To-One Relationship: [msdyn_helppage lk_msdyn_helppage_modifiedonbehalfby](
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_msdyn_historicalcaseharvestbatch_createdby"></a> lk_msdyn_historicalcaseharvestbatch_createdby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch lk_msdyn_historicalcaseharvestbatch_createdby](msdyn_historicalcaseharvestbatch.md#BKMK_lk_msdyn_historicalcaseharvestbatch_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestbatch_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestbatch_createdonbehalfby"></a> lk_msdyn_historicalcaseharvestbatch_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch lk_msdyn_historicalcaseharvestbatch_createdonbehalfby](msdyn_historicalcaseharvestbatch.md#BKMK_lk_msdyn_historicalcaseharvestbatch_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestbatch_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedby"></a> lk_msdyn_historicalcaseharvestbatch_modifiedby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch lk_msdyn_historicalcaseharvestbatch_modifiedby](msdyn_historicalcaseharvestbatch.md#BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestbatch_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby"></a> lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby](msdyn_historicalcaseharvestbatch.md#BKMK_lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestbatch_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestrun_createdby"></a> lk_msdyn_historicalcaseharvestrun_createdby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun lk_msdyn_historicalcaseharvestrun_createdby](msdyn_historicalcaseharvestrun.md#BKMK_lk_msdyn_historicalcaseharvestrun_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestrun_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestrun_createdonbehalfby"></a> lk_msdyn_historicalcaseharvestrun_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun lk_msdyn_historicalcaseharvestrun_createdonbehalfby](msdyn_historicalcaseharvestrun.md#BKMK_lk_msdyn_historicalcaseharvestrun_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestrun_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestrun_modifiedby"></a> lk_msdyn_historicalcaseharvestrun_modifiedby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun lk_msdyn_historicalcaseharvestrun_modifiedby](msdyn_historicalcaseharvestrun.md#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestrun_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby"></a> lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby](msdyn_historicalcaseharvestrun.md#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_msdyn_insightsstorevirtualentity_createdby"></a> lk_msdyn_insightsstorevirtualentity_createdby
 
 Many-To-One Relationship: [msdyn_insightsstorevirtualentity lk_msdyn_insightsstorevirtualentity_createdby](msdyn_insightsstorevirtualentity.md#BKMK_lk_msdyn_insightsstorevirtualentity_createdby)
@@ -15142,6 +15560,54 @@ Many-To-One Relationship: [msdyn_knowledgeconfiguration lk_msdyn_knowledgeconfig
 |ReferencingEntity|`msdyn_knowledgeconfiguration`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_msdyn_knowledgeconfiguration_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_knowledgeharvestjobrecord_createdby"></a> lk_msdyn_knowledgeharvestjobrecord_createdby
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord lk_msdyn_knowledgeharvestjobrecord_createdby](msdyn_knowledgeharvestjobrecord.md#BKMK_lk_msdyn_knowledgeharvestjobrecord_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_knowledgeharvestjobrecord_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby"></a> lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby](msdyn_knowledgeharvestjobrecord.md#BKMK_lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_knowledgeharvestjobrecord_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedby"></a> lk_msdyn_knowledgeharvestjobrecord_modifiedby
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord lk_msdyn_knowledgeharvestjobrecord_modifiedby](msdyn_knowledgeharvestjobrecord.md#BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_knowledgeharvestjobrecord_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby"></a> lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby](msdyn_knowledgeharvestjobrecord.md#BKMK_lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_msdyn_knowledgeharvestjobrecord_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -17617,6 +18083,54 @@ Many-To-One Relationship: [picklistmapping lk_picklistmapping_modifiedonbehalfby
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_plugin_createdby"></a> lk_plugin_createdby
+
+Many-To-One Relationship: [plugin lk_plugin_createdby](plugin.md#BKMK_lk_plugin_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_plugin_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_plugin_createdonbehalfby"></a> lk_plugin_createdonbehalfby
+
+Many-To-One Relationship: [plugin lk_plugin_createdonbehalfby](plugin.md#BKMK_lk_plugin_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_plugin_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_plugin_modifiedby"></a> lk_plugin_modifiedby
+
+Many-To-One Relationship: [plugin lk_plugin_modifiedby](plugin.md#BKMK_lk_plugin_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_plugin_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_plugin_modifiedonbehalfby"></a> lk_plugin_modifiedonbehalfby
+
+Many-To-One Relationship: [plugin lk_plugin_modifiedonbehalfby](plugin.md#BKMK_lk_plugin_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_plugin_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_pluginassembly_createdonbehalfby"></a> lk_pluginassembly_createdonbehalfby
 
 Many-To-One Relationship: [pluginassembly lk_pluginassembly_createdonbehalfby](pluginassembly.md#BKMK_lk_pluginassembly_createdonbehalfby)
@@ -18445,6 +18959,54 @@ Many-To-One Relationship: [powerpageslog lk_powerpageslog_modifiedonbehalfby](po
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_powerpagesmanagedidentity_createdby"></a> lk_powerpagesmanagedidentity_createdby
+
+Many-To-One Relationship: [powerpagesmanagedidentity lk_powerpagesmanagedidentity_createdby](powerpagesmanagedidentity.md#BKMK_lk_powerpagesmanagedidentity_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagesmanagedidentity_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagesmanagedidentity_createdonbehalfby"></a> lk_powerpagesmanagedidentity_createdonbehalfby
+
+Many-To-One Relationship: [powerpagesmanagedidentity lk_powerpagesmanagedidentity_createdonbehalfby](powerpagesmanagedidentity.md#BKMK_lk_powerpagesmanagedidentity_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagesmanagedidentity_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagesmanagedidentity_modifiedby"></a> lk_powerpagesmanagedidentity_modifiedby
+
+Many-To-One Relationship: [powerpagesmanagedidentity lk_powerpagesmanagedidentity_modifiedby](powerpagesmanagedidentity.md#BKMK_lk_powerpagesmanagedidentity_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagesmanagedidentity_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagesmanagedidentity_modifiedonbehalfby"></a> lk_powerpagesmanagedidentity_modifiedonbehalfby
+
+Many-To-One Relationship: [powerpagesmanagedidentity lk_powerpagesmanagedidentity_modifiedonbehalfby](powerpagesmanagedidentity.md#BKMK_lk_powerpagesmanagedidentity_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagesmanagedidentity_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_powerpagesscanreport_createdby"></a> lk_powerpagesscanreport_createdby
 
 Many-To-One Relationship: [powerpagesscanreport lk_powerpagesscanreport_createdby](powerpagesscanreport.md#BKMK_lk_powerpagesscanreport_createdby)
@@ -18490,6 +19052,54 @@ Many-To-One Relationship: [powerpagesscanreport lk_powerpagesscanreport_modified
 |ReferencingEntity|`powerpagesscanreport`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_powerpagesscanreport_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagessiteaifeedback_createdby"></a> lk_powerpagessiteaifeedback_createdby
+
+Many-To-One Relationship: [powerpagessiteaifeedback lk_powerpagessiteaifeedback_createdby](powerpagessiteaifeedback.md#BKMK_lk_powerpagessiteaifeedback_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagessiteaifeedback_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagessiteaifeedback_createdonbehalfby"></a> lk_powerpagessiteaifeedback_createdonbehalfby
+
+Many-To-One Relationship: [powerpagessiteaifeedback lk_powerpagessiteaifeedback_createdonbehalfby](powerpagessiteaifeedback.md#BKMK_lk_powerpagessiteaifeedback_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagessiteaifeedback_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagessiteaifeedback_modifiedby"></a> lk_powerpagessiteaifeedback_modifiedby
+
+Many-To-One Relationship: [powerpagessiteaifeedback lk_powerpagessiteaifeedback_modifiedby](powerpagessiteaifeedback.md#BKMK_lk_powerpagessiteaifeedback_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagessiteaifeedback_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_powerpagessiteaifeedback_modifiedonbehalfby"></a> lk_powerpagessiteaifeedback_modifiedonbehalfby
+
+Many-To-One Relationship: [powerpagessiteaifeedback lk_powerpagessiteaifeedback_modifiedonbehalfby](powerpagessiteaifeedback.md#BKMK_lk_powerpagessiteaifeedback_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_powerpagessiteaifeedback_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -19765,6 +20375,54 @@ Many-To-One Relationship: [retentionoperationdetail lk_retentionoperationdetail_
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_retentionsuccessdetail_createdby"></a> lk_retentionsuccessdetail_createdby
+
+Many-To-One Relationship: [retentionsuccessdetail lk_retentionsuccessdetail_createdby](retentionsuccessdetail.md#BKMK_lk_retentionsuccessdetail_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`retentionsuccessdetail`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_retentionsuccessdetail_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_retentionsuccessdetail_createdonbehalfby"></a> lk_retentionsuccessdetail_createdonbehalfby
+
+Many-To-One Relationship: [retentionsuccessdetail lk_retentionsuccessdetail_createdonbehalfby](retentionsuccessdetail.md#BKMK_lk_retentionsuccessdetail_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`retentionsuccessdetail`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_retentionsuccessdetail_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_retentionsuccessdetail_modifiedby"></a> lk_retentionsuccessdetail_modifiedby
+
+Many-To-One Relationship: [retentionsuccessdetail lk_retentionsuccessdetail_modifiedby](retentionsuccessdetail.md#BKMK_lk_retentionsuccessdetail_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`retentionsuccessdetail`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_retentionsuccessdetail_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_retentionsuccessdetail_modifiedonbehalfby"></a> lk_retentionsuccessdetail_modifiedonbehalfby
+
+Many-To-One Relationship: [retentionsuccessdetail lk_retentionsuccessdetail_modifiedonbehalfby](retentionsuccessdetail.md#BKMK_lk_retentionsuccessdetail_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`retentionsuccessdetail`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_retentionsuccessdetail_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_role_createdonbehalfby"></a> lk_role_createdonbehalfby
 
 Many-To-One Relationship: [role lk_role_createdonbehalfby](role.md#BKMK_lk_role_createdonbehalfby)
@@ -20593,6 +21251,54 @@ Many-To-One Relationship: [sharedworkspace lk_sharedworkspace_modifiedonbehalfby
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_lk_sharedworkspaceaccesstoken2_createdby"></a> lk_sharedworkspaceaccesstoken2_createdby
+
+Many-To-One Relationship: [sharedworkspaceaccesstoken2 lk_sharedworkspaceaccesstoken2_createdby](sharedworkspaceaccesstoken2.md#BKMK_lk_sharedworkspaceaccesstoken2_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharedworkspaceaccesstoken2`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_sharedworkspaceaccesstoken2_createdby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sharedworkspaceaccesstoken2_createdonbehalfby"></a> lk_sharedworkspaceaccesstoken2_createdonbehalfby
+
+Many-To-One Relationship: [sharedworkspaceaccesstoken2 lk_sharedworkspaceaccesstoken2_createdonbehalfby](sharedworkspaceaccesstoken2.md#BKMK_lk_sharedworkspaceaccesstoken2_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharedworkspaceaccesstoken2`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sharedworkspaceaccesstoken2_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sharedworkspaceaccesstoken2_modifiedby"></a> lk_sharedworkspaceaccesstoken2_modifiedby
+
+Many-To-One Relationship: [sharedworkspaceaccesstoken2 lk_sharedworkspaceaccesstoken2_modifiedby](sharedworkspaceaccesstoken2.md#BKMK_lk_sharedworkspaceaccesstoken2_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharedworkspaceaccesstoken2`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_sharedworkspaceaccesstoken2_modifiedby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sharedworkspaceaccesstoken2_modifiedonbehalfby"></a> lk_sharedworkspaceaccesstoken2_modifiedonbehalfby
+
+Many-To-One Relationship: [sharedworkspaceaccesstoken2 lk_sharedworkspaceaccesstoken2_modifiedonbehalfby](sharedworkspaceaccesstoken2.md#BKMK_lk_sharedworkspaceaccesstoken2_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharedworkspaceaccesstoken2`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sharedworkspaceaccesstoken2_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_lk_sharedworkspacepool_createdby"></a> lk_sharedworkspacepool_createdby
 
 Many-To-One Relationship: [sharedworkspacepool lk_sharedworkspacepool_createdby](sharedworkspacepool.md#BKMK_lk_sharedworkspacepool_createdby)
@@ -21334,6 +22040,198 @@ Many-To-One Relationship: [solutioncomponentrelationshipconfiguration lk_solutio
 |ReferencingEntity|`solutioncomponentrelationshipconfiguration`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolbranchconfiguration_createdby"></a> lk_sourcecontrolbranchconfiguration_createdby
+
+Many-To-One Relationship: [sourcecontrolbranchconfiguration lk_sourcecontrolbranchconfiguration_createdby](sourcecontrolbranchconfiguration.md#BKMK_lk_sourcecontrolbranchconfiguration_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolbranchconfiguration`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolbranchconfiguration_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolbranchconfiguration_createdonbehalfby"></a> lk_sourcecontrolbranchconfiguration_createdonbehalfby
+
+Many-To-One Relationship: [sourcecontrolbranchconfiguration lk_sourcecontrolbranchconfiguration_createdonbehalfby](sourcecontrolbranchconfiguration.md#BKMK_lk_sourcecontrolbranchconfiguration_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolbranchconfiguration`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolbranchconfiguration_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolbranchconfiguration_modifiedby"></a> lk_sourcecontrolbranchconfiguration_modifiedby
+
+Many-To-One Relationship: [sourcecontrolbranchconfiguration lk_sourcecontrolbranchconfiguration_modifiedby](sourcecontrolbranchconfiguration.md#BKMK_lk_sourcecontrolbranchconfiguration_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolbranchconfiguration`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolbranchconfiguration_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolbranchconfiguration_modifiedonbehalfby"></a> lk_sourcecontrolbranchconfiguration_modifiedonbehalfby
+
+Many-To-One Relationship: [sourcecontrolbranchconfiguration lk_sourcecontrolbranchconfiguration_modifiedonbehalfby](sourcecontrolbranchconfiguration.md#BKMK_lk_sourcecontrolbranchconfiguration_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolbranchconfiguration`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolbranchconfiguration_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponent_createdby"></a> lk_sourcecontrolcomponent_createdby
+
+Many-To-One Relationship: [sourcecontrolcomponent lk_sourcecontrolcomponent_createdby](sourcecontrolcomponent.md#BKMK_lk_sourcecontrolcomponent_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponent`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponent_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponent_createdonbehalfby"></a> lk_sourcecontrolcomponent_createdonbehalfby
+
+Many-To-One Relationship: [sourcecontrolcomponent lk_sourcecontrolcomponent_createdonbehalfby](sourcecontrolcomponent.md#BKMK_lk_sourcecontrolcomponent_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponent`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponent_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponent_modifiedby"></a> lk_sourcecontrolcomponent_modifiedby
+
+Many-To-One Relationship: [sourcecontrolcomponent lk_sourcecontrolcomponent_modifiedby](sourcecontrolcomponent.md#BKMK_lk_sourcecontrolcomponent_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponent`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponent_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponent_modifiedonbehalfby"></a> lk_sourcecontrolcomponent_modifiedonbehalfby
+
+Many-To-One Relationship: [sourcecontrolcomponent lk_sourcecontrolcomponent_modifiedonbehalfby](sourcecontrolcomponent.md#BKMK_lk_sourcecontrolcomponent_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponent`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponent_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponentpayload_createdby"></a> lk_sourcecontrolcomponentpayload_createdby
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload lk_sourcecontrolcomponentpayload_createdby](sourcecontrolcomponentpayload.md#BKMK_lk_sourcecontrolcomponentpayload_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponentpayload_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponentpayload_createdonbehalfby"></a> lk_sourcecontrolcomponentpayload_createdonbehalfby
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload lk_sourcecontrolcomponentpayload_createdonbehalfby](sourcecontrolcomponentpayload.md#BKMK_lk_sourcecontrolcomponentpayload_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponentpayload_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponentpayload_modifiedby"></a> lk_sourcecontrolcomponentpayload_modifiedby
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload lk_sourcecontrolcomponentpayload_modifiedby](sourcecontrolcomponentpayload.md#BKMK_lk_sourcecontrolcomponentpayload_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponentpayload_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolcomponentpayload_modifiedonbehalfby"></a> lk_sourcecontrolcomponentpayload_modifiedonbehalfby
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload lk_sourcecontrolcomponentpayload_modifiedonbehalfby](sourcecontrolcomponentpayload.md#BKMK_lk_sourcecontrolcomponentpayload_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolcomponentpayload_modifiedonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolconfiguration_createdby"></a> lk_sourcecontrolconfiguration_createdby
+
+Many-To-One Relationship: [sourcecontrolconfiguration lk_sourcecontrolconfiguration_createdby](sourcecontrolconfiguration.md#BKMK_lk_sourcecontrolconfiguration_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolconfiguration`|
+|ReferencingAttribute|`createdby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolconfiguration_createdby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolconfiguration_createdonbehalfby"></a> lk_sourcecontrolconfiguration_createdonbehalfby
+
+Many-To-One Relationship: [sourcecontrolconfiguration lk_sourcecontrolconfiguration_createdonbehalfby](sourcecontrolconfiguration.md#BKMK_lk_sourcecontrolconfiguration_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolconfiguration`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolconfiguration_createdonbehalfby`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolconfiguration_modifiedby"></a> lk_sourcecontrolconfiguration_modifiedby
+
+Many-To-One Relationship: [sourcecontrolconfiguration lk_sourcecontrolconfiguration_modifiedby](sourcecontrolconfiguration.md#BKMK_lk_sourcecontrolconfiguration_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolconfiguration`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolconfiguration_modifiedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_sourcecontrolconfiguration_modifiedonbehalfby"></a> lk_sourcecontrolconfiguration_modifiedonbehalfby
+
+Many-To-One Relationship: [sourcecontrolconfiguration lk_sourcecontrolconfiguration_modifiedonbehalfby](sourcecontrolconfiguration.md#BKMK_lk_sourcecontrolconfiguration_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolconfiguration`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencedEntityNavigationPropertyName|`lk_sourcecontrolconfiguration_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -23437,6 +24335,18 @@ Many-To-One Relationship: [workqueueitem lk_workqueueitem_modifiedonbehalfby](wo
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_mailbox_emailaddressapprovedby_systemuser"></a> mailbox_emailaddressapprovedby_systemuser
+
+Many-To-One Relationship: [mailbox mailbox_emailaddressapprovedby_systemuser](mailbox.md#BKMK_mailbox_emailaddressapprovedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailbox`|
+|ReferencingAttribute|`emailaddressapprovedby`|
+|ReferencedEntityNavigationPropertyName|`systemuser_mailbox_emailaddressapprovedby`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_mailbox_regarding_systemuser"></a> mailbox_regarding_systemuser
 
 Many-To-One Relationship: [mailbox mailbox_regarding_systemuser](mailbox.md#BKMK_mailbox_regarding_systemuser)
@@ -23446,6 +24356,18 @@ Many-To-One Relationship: [mailbox mailbox_regarding_systemuser](mailbox.md#BKMK
 |ReferencingEntity|`mailbox`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`mailbox_regarding_systemuser`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_testandenablelastattemptedby_systemuser"></a> mailbox_testandenablelastattemptedby_systemuser
+
+Many-To-One Relationship: [mailbox mailbox_testandenablelastattemptedby_systemuser](mailbox.md#BKMK_mailbox_testandenablelastattemptedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailbox`|
+|ReferencingAttribute|`testandenablelastattemptedby`|
+|ReferencedEntityNavigationPropertyName|`systemuser_mailbox_testandenablelastattemptedby`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -24949,6 +25871,18 @@ Many-To-One Relationship: [aipluginusersetting user_aipluginusersetting](aiplugi
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_aiskillconfig"></a> user_aiskillconfig
+
+Many-To-One Relationship: [aiskillconfig user_aiskillconfig](aiskillconfig.md#BKMK_user_aiskillconfig)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_aiskillconfig`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_appnotification"></a> user_appnotification
 
 Many-To-One Relationship: [appnotification user_appnotification](appnotification.md#BKMK_user_appnotification)
@@ -25018,6 +25952,18 @@ Many-To-One Relationship: [card user_card](card.md#BKMK_user_card)
 |ReferencingEntity|`card`|
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_card`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_certificatecredential"></a> user_certificatecredential
+
+Many-To-One Relationship: [certificatecredential user_certificatecredential](certificatecredential.md#BKMK_user_certificatecredential)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_certificatecredential`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -25525,6 +26471,18 @@ Many-To-One Relationship: [goal user_goal_goalowner](goal.md#BKMK_user_goal_goal
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_governanceconfiguration"></a> user_governanceconfiguration
+
+Many-To-One Relationship: [governanceconfiguration user_governanceconfiguration](governanceconfiguration.md#BKMK_user_governanceconfiguration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`governanceconfiguration`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_governanceconfiguration`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_interactionforemail"></a> user_interactionforemail
 
 Many-To-One Relationship: [interactionforemail user_interactionforemail](interactionforemail.md#BKMK_user_interactionforemail)
@@ -25837,6 +26795,30 @@ Many-To-One Relationship: [msdyn_analysisresultdetail user_msdyn_analysisresultd
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_msdyn_apirequestcache"></a> user_msdyn_apirequestcache
+
+Many-To-One Relationship: [msdyn_apirequestcache user_msdyn_apirequestcache](msdyn_apirequestcache.md#BKMK_user_msdyn_apirequestcache)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestcache`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_apirequestcache`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_msdyn_apirequestfolder"></a> user_msdyn_apirequestfolder
+
+Many-To-One Relationship: [msdyn_apirequestfolder user_msdyn_apirequestfolder](msdyn_apirequestfolder.md#BKMK_user_msdyn_apirequestfolder)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_apirequestfolder`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_msdyn_customcontrolextendedsettings"></a> user_msdyn_customcontrolextendedsettings
 
 Many-To-One Relationship: [msdyn_customcontrolextendedsettings user_msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md#BKMK_user_msdyn_customcontrolextendedsettings)
@@ -26137,6 +27119,30 @@ Many-To-One Relationship: [msdyn_formmapping user_msdyn_formmapping](msdyn_formm
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_msdyn_historicalcaseharvestbatch"></a> user_msdyn_historicalcaseharvestbatch
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch user_msdyn_historicalcaseharvestbatch](msdyn_historicalcaseharvestbatch.md#BKMK_user_msdyn_historicalcaseharvestbatch)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_historicalcaseharvestbatch`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_msdyn_historicalcaseharvestrun"></a> user_msdyn_historicalcaseharvestrun
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun user_msdyn_historicalcaseharvestrun](msdyn_historicalcaseharvestrun.md#BKMK_user_msdyn_historicalcaseharvestrun)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_historicalcaseharvestrun`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_msdyn_integratedsearchprovider"></a> user_msdyn_integratedsearchprovider
 
 Many-To-One Relationship: [msdyn_integratedsearchprovider user_msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_user_msdyn_integratedsearchprovider)
@@ -26218,6 +27224,18 @@ Many-To-One Relationship: [msdyn_knowledgeassetconfiguration user_msdyn_knowledg
 |ReferencingEntity|`msdyn_knowledgeassetconfiguration`|
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_msdyn_knowledgeassetconfiguration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_msdyn_knowledgeharvestjobrecord"></a> user_msdyn_knowledgeharvestjobrecord
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord user_msdyn_knowledgeharvestjobrecord](msdyn_knowledgeharvestjobrecord.md#BKMK_user_msdyn_knowledgeharvestjobrecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_msdyn_knowledgeharvestjobrecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -26665,6 +27683,18 @@ Many-To-One Relationship: [plannersyncaction user_plannersyncaction](plannersync
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_plugin"></a> user_plugin
+
+Many-To-One Relationship: [plugin user_plugin](plugin.md#BKMK_user_plugin)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_plugin`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_powerbidataset"></a> user_powerbidataset
 
 Many-To-One Relationship: [powerbidataset user_powerbidataset](powerbidataset.md#BKMK_user_powerbidataset)
@@ -26797,6 +27827,18 @@ Many-To-One Relationship: [powerpageslog user_powerpageslog](powerpageslog.md#BK
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_user_powerpagesmanagedidentity"></a> user_powerpagesmanagedidentity
+
+Many-To-One Relationship: [powerpagesmanagedidentity user_powerpagesmanagedidentity](powerpagesmanagedidentity.md#BKMK_user_powerpagesmanagedidentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_powerpagesmanagedidentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_user_powerpagesscanreport"></a> user_powerpagesscanreport
 
 Many-To-One Relationship: [powerpagesscanreport user_powerpagesscanreport](powerpagesscanreport.md#BKMK_user_powerpagesscanreport)
@@ -26806,6 +27848,18 @@ Many-To-One Relationship: [powerpagesscanreport user_powerpagesscanreport](power
 |ReferencingEntity|`powerpagesscanreport`|
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_powerpagesscanreport`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_powerpagessiteaifeedback"></a> user_powerpagessiteaifeedback
+
+Many-To-One Relationship: [powerpagessiteaifeedback user_powerpagessiteaifeedback](powerpagessiteaifeedback.md#BKMK_user_powerpagessiteaifeedback)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_powerpagessiteaifeedback`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -26902,6 +27956,18 @@ Many-To-One Relationship: [retentionoperation user_retentionoperation](retention
 |ReferencingEntity|`retentionoperation`|
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_retentionoperation`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_user_retentionsuccessdetail"></a> user_retentionsuccessdetail
+
+Many-To-One Relationship: [retentionsuccessdetail user_retentionsuccessdetail](retentionsuccessdetail.md#BKMK_user_retentionsuccessdetail)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`retentionsuccessdetail`|
+|ReferencingAttribute|`owninguser`|
+|ReferencedEntityNavigationPropertyName|`user_retentionsuccessdetail`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

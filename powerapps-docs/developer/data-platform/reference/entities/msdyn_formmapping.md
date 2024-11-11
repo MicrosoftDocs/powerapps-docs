@@ -1,7 +1,7 @@
 ---
 title: "Form Mapping (msdyn_FormMapping) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Form Mapping (msdyn_FormMapping) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -38,20 +38,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /msdyn_formmappings(*msdyn_formmappingid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
-
-
-## Events
-
-The following table lists the events for the Form Mapping (msdyn_FormMapping) table.
-Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
-
-|Name|Web API Operation |SDK for .NET |
-| ---- | ----- |----- |
-| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
@@ -143,7 +129,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`cardid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|card|
+|Targets||
 
 ### <a name="BKMK_CustomApiId"></a> CustomApiId
 
@@ -678,7 +664,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_formmapping_createdonbehalfby](#BKMK_lk_msdyn_formmapping_createdonbehalfby)
 - [lk_msdyn_formmapping_modifiedby](#BKMK_lk_msdyn_formmapping_modifiedby)
 - [lk_msdyn_formmapping_modifiedonbehalfby](#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
-- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
 - [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
 - [team_msdyn_formmapping](#BKMK_team_msdyn_formmapping)
@@ -748,19 +733,6 @@ One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedonbehalfby](s
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
-
-One-To-Many Relationship: [card msdyn_formmapping_cardid](card.md#BKMK_msdyn_formmapping_cardid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`card`|
-|ReferencedAttribute|`cardid`|
-|ReferencingAttribute|`cardid`|
-|ReferencingEntityNavigationPropertyName|`cardid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_formmapping_customapiid"></a> msdyn_formmapping_customapiid
 

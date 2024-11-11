@@ -1,7 +1,7 @@
 ---
 title: "ElasticFileAttachment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the ElasticFileAttachment table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -138,7 +138,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|componentversionnrddatasource|
+|Targets|componentversionnrddatasource, sourcecontrolcomponentpayload|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -341,6 +341,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [componentversionnrddatasource_ElasticFileAttachments](#BKMK_componentversionnrddatasource_ElasticFileAttachments)
+- [sourcecontrolcomponentpayload_ElasticFileAttachments](#BKMK_sourcecontrolcomponentpayload_ElasticFileAttachments)
+
 ### <a name="BKMK_componentversionnrddatasource_ElasticFileAttachments"></a> componentversionnrddatasource_ElasticFileAttachments
 
 One-To-Many Relationship: [componentversionnrddatasource componentversionnrddatasource_ElasticFileAttachments](componentversionnrddatasource.md#BKMK_componentversionnrddatasource_ElasticFileAttachments)
@@ -354,10 +357,27 @@ One-To-Many Relationship: [componentversionnrddatasource componentversionnrddata
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_sourcecontrolcomponentpayload_ElasticFileAttachments"></a> sourcecontrolcomponentpayload_ElasticFileAttachments
+
+One-To-Many Relationship: [sourcecontrolcomponentpayload sourcecontrolcomponentpayload_ElasticFileAttachments](sourcecontrolcomponentpayload.md#BKMK_sourcecontrolcomponentpayload_ElasticFileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sourcecontrolcomponentpayload`|
+|ReferencedAttribute|`sourcecontrolcomponentpayloadid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_sourcecontrolcomponentpayload`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 
 ## One-to-Many relationships
 
 These relationships are one-to-many. Listed by **SchemaName**.
+
+- [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
+- [ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload](#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload)
+- [ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit](#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit)
 
 ### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
 
@@ -368,6 +388,30 @@ Many-To-One Relationship: [componentversionnrddatasource ElasticFileAttachment_c
 |ReferencingEntity|`componentversionnrddatasource`|
 |ReferencingAttribute|`payload`|
 |ReferencedEntityNavigationPropertyName|`ElasticFileAttachment_componentversionnrddatasource_Payload`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload"></a> ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload](sourcecontrolcomponentpayload.md#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`componentpayload`|
+|ReferencedEntityNavigationPropertyName|`ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit"></a> ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit
+
+Many-To-One Relationship: [sourcecontrolcomponentpayload ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit](sourcecontrolcomponentpayload.md#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolcomponentpayload`|
+|ReferencingAttribute|`componentpayloadingit`|
+|ReferencedEntityNavigationPropertyName|`ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
