@@ -1,7 +1,7 @@
 ---
 title: "Secured Masking Rule (MaskingRule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Secured Masking Rule (MaskingRule) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -71,10 +71,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DisplayName](#BKMK_DisplayName)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [MaskedCharacter](#BKMK_MaskedCharacter)
+- [MaskedRichTestData](#BKMK_MaskedRichTestData)
 - [MaskedTestData](#BKMK_MaskedTestData)
 - [MaskingRuleId](#BKMK_MaskingRuleId)
 - [Name](#BKMK_Name)
 - [RegularExpression](#BKMK_RegularExpression)
+- [RichTestData](#BKMK_RichTestData)
 - [TestData](#BKMK_TestData)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -142,6 +144,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1|
 
+### <a name="BKMK_MaskedRichTestData"></a> MaskedRichTestData
+
+|Property|Value|
+|---|---|
+|Description|**Rich text test data evaluated by a secured masking rule**|
+|DisplayName|**Masked Rich Text Test Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`maskedrichtestdata`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|RichText|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
+
 ### <a name="BKMK_MaskedTestData"></a> MaskedTestData
 
 |Property|Value|
@@ -204,6 +223,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|500|
+
+### <a name="BKMK_RichTestData"></a> RichTestData
+
+|Property|Value|
+|---|---|
+|Description|**Rich text test data to evaluate a secured masking rule**|
+|DisplayName|**Enter Rich Text Test Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`richtestdata`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|RichText|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_TestData"></a> TestData
 

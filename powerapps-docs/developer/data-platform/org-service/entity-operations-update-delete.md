@@ -44,7 +44,7 @@ Use the [Entity.Id property](xref:Microsoft.Xrm.Sdk.Entity.Id) to transfer the u
 
 #### [Late-bound](#tab/late)
 
-The following example shows using the [Entity class](xref:Microsoft.Xrm.Sdk.Entity] to create an account using the  [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A).
+The following example shows using the [Entity class](xref:Microsoft.Xrm.Sdk.Entity) to create an account using the  [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A).
 
 ```csharp
 var retrievedAccount = new Entity("account", new Guid("a976763a-ba1c-e811-a954-000d3af451d6"));

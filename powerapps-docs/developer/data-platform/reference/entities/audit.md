@@ -1,7 +1,7 @@
 ---
 title: "Auditing (Audit) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Auditing (Audit) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -116,6 +116,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ObjectId](#BKMK_ObjectId)
 - [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [Operation](#BKMK_Operation)
+- [TimeToLiveInSeconds](#BKMK_TimeToLiveInSeconds)
 - [TransactionId](#BKMK_TransactionId)
 - [UserId](#BKMK_UserId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -351,6 +352,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |117|**RollbackRetain**|
 |118|**Restore**|
 |200|**CustomOperation**|
+
+### <a name="BKMK_TimeToLiveInSeconds"></a> TimeToLiveInSeconds
+
+|Property|Value|
+|---|---|
+|Description|**Time to live in seconds for audit record**|
+|DisplayName|**Time To Live In Seconds**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`timetoliveinseconds`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_TransactionId"></a> TransactionId
 

@@ -1,7 +1,7 @@
 ---
 title: "Privilege Checker Run (PrivilegeCheckerRun) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Privilege Checker Run (PrivilegeCheckerRun) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -124,8 +124,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Owner Id**|
-|DisplayName|**Owner**|
+|Description|**User who privilege checker tool is tracing.**|
+|DisplayName|**Traced User**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`ownerid`|

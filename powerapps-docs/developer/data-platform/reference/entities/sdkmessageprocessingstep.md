@@ -1,7 +1,7 @@
 ---
 title: "Sdk Message Processing Step (SdkMessageProcessingStep) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Sdk Message Processing Step (SdkMessageProcessingStep) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -1035,6 +1035,7 @@ One-To-Many Relationship: [serviceendpoint serviceendpoint_sdkmessageprocessings
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [SdkMessageProcessingStep_AsyncOperations](#BKMK_SdkMessageProcessingStep_AsyncOperations)
+- [sdkmessageprocessingstep_plugin_SdkMessageProcessingStep](#BKMK_sdkmessageprocessingstep_plugin_SdkMessageProcessingStep)
 - [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage)
 
 ### <a name="BKMK_SdkMessageProcessingStep_AsyncOperations"></a> SdkMessageProcessingStep_AsyncOperations
@@ -1048,6 +1049,18 @@ Many-To-One Relationship: [asyncoperation SdkMessageProcessingStep_AsyncOperatio
 |ReferencedEntityNavigationPropertyName|`SdkMessageProcessingStep_AsyncOperations`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_sdkmessageprocessingstep_plugin_SdkMessageProcessingStep"></a> sdkmessageprocessingstep_plugin_SdkMessageProcessingStep
+
+Many-To-One Relationship: [plugin sdkmessageprocessingstep_plugin_SdkMessageProcessingStep](plugin.md#BKMK_sdkmessageprocessingstep_plugin_SdkMessageProcessingStep)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`plugin`|
+|ReferencingAttribute|`sdkmessageprocessingstep`|
+|ReferencedEntityNavigationPropertyName|`sdkmessageprocessingstep_plugin_SdkMessageProcessingStep`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage"></a> sdkmessageprocessingstepid_sdkmessageprocessingstepimage
 
