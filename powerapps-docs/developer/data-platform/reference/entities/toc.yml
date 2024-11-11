@@ -88,6 +88,9 @@ items:
 - name: "AI Plugin Governance Extended (AIPluginGovernanceExt)"
   displayName: "AIPluginGovernanceExt entity"
   href: aiplugingovernanceext.md
+- name: "AI Skill Config (aiskillconfig)"
+  displayName: "aiskillconfig entity"
+  href: aiskillconfig.md
 - name: "AI Template (msdyn_AITemplate)"
   displayName: "msdyn_AITemplate entity"
   href: msdyn_aitemplate.md
@@ -148,6 +151,12 @@ items:
 - name: "Annual Fiscal Calendar (AnnualFiscalCalendar)"
   displayName: "AnnualFiscalCalendar entity"
   href: annualfiscalcalendar.md
+- name: "API Request Cache (msdyn_APIRequestCache)"
+  displayName: "msdyn_APIRequestCache entity"
+  href: msdyn_apirequestcache.md
+- name: "API Request Folder (msdyn_APIRequestFolder)"
+  displayName: "msdyn_APIRequestFolder entity"
+  href: msdyn_apirequestfolder.md
 - name: "App Action (appaction)"
   displayName: "appaction entity"
   href: appaction.md
@@ -325,6 +334,9 @@ items:
 - name: "Category"
   displayName: "Category entity"
   href: category.md
+- name: "CertificateCredential"
+  displayName: "CertificateCredential entity"
+  href: certificatecredential.md
 - name: "Column Mapping (ColumnMapping)"
   displayName: "ColumnMapping entity"
   href: columnmapping.md
@@ -676,12 +688,30 @@ items:
 - name: "fxexpression"
   displayName: "fxexpression entity"
   href: fxexpression.md
+- name: "Git Branch (GitBranch)"
+  displayName: "GitBranch entity"
+  href: gitbranch.md
+- name: "Git Configuration Retrieval Data Source (GitConfigurationRetrievalDataSource)"
+  displayName: "GitConfigurationRetrievalDataSource entity"
+  href: gitconfigurationretrievaldatasource.md
+- name: "Git Organization (GitOrganization)"
+  displayName: "GitOrganization entity"
+  href: gitorganization.md
+- name: "Git Project (GitProject)"
+  displayName: "GitProject entity"
+  href: gitproject.md
+- name: "Git Repository (GitRepository)"
+  displayName: "GitRepository entity"
+  href: gitrepository.md
 - name: "Goal"
   displayName: "Goal entity"
   href: goal.md
 - name: "Goal Metric (Metric)"
   displayName: "Metric entity"
   href: metric.md
+- name: "Governance Configuration (GovernanceConfiguration)"
+  displayName: "GovernanceConfiguration entity"
+  href: governanceconfiguration.md
 - name: "Help Page (msdyn_helppage)"
   displayName: "msdyn_helppage entity"
   href: msdyn_helppage.md
@@ -763,6 +793,9 @@ items:
 - name: "Knowledge Federated Article Incident (msdyn_federatedarticleincident)"
   displayName: "msdyn_federatedarticleincident entity"
   href: msdyn_federatedarticleincident.md
+- name: "Knowledge Harvest Job Record (msdyn_knowledgeharvestjobrecord)"
+  displayName: "msdyn_knowledgeharvestjobrecord entity"
+  href: msdyn_knowledgeharvestjobrecord.md
 - name: "Knowledge Interaction Insight (msdyn_knowledgeinteractioninsight)"
   displayName: "msdyn_knowledgeinteractioninsight entity"
   href: msdyn_knowledgeinteractioninsight.md
@@ -859,6 +892,12 @@ items:
 - name: "Ms Graph Resource To Subscription (MsGraphResourceToSubscription)"
   displayName: "MsGraphResourceToSubscription entity"
   href: msgraphresourcetosubscription.md
+- name: "msdyn_historicalcaseharvestbatch"
+  displayName: "msdyn_historicalcaseharvestbatch entity"
+  href: msdyn_historicalcaseharvestbatch.md
+- name: "msdyn_historicalcaseharvestrun"
+  displayName: "msdyn_historicalcaseharvestrun entity"
+  href: msdyn_historicalcaseharvestrun.md
 - name: "Multistep Form (mspp_webform)"
   displayName: "mspp_webform entity"
   href: mspp_webform.md
@@ -943,6 +982,9 @@ items:
 - name: "Planner Sync Action (PlannerSyncAction)"
   displayName: "PlannerSyncAction entity"
   href: plannersyncaction.md
+- name: "Plug-in (plugin)"
+  displayName: "plugin entity"
+  href: plugin.md
 - name: "Plug-in Assembly (PluginAssembly)"
   displayName: "PluginAssembly entity"
   href: pluginassembly.md
@@ -1030,6 +1072,9 @@ items:
 - name: "Power Pages Scan Report (PowerPagesScanReport)"
   displayName: "PowerPagesScanReport entity"
   href: powerpagesscanreport.md
+- name: "Power Pages Site AI Feedback (PowerPagesSiteAIFeedback)"
+  displayName: "PowerPagesSiteAIFeedback entity"
+  href: powerpagessiteaifeedback.md
 - name: "Power Pages Site Published (powerpagesitepublished)"
   displayName: "powerpagesitepublished entity"
   href: powerpagesitepublished.md
@@ -1048,6 +1093,9 @@ items:
 - name: "powerpagesite_dvfilesearch"
   displayName: "powerpagesite_dvfilesearch entity"
   href: powerpagesite_dvfilesearch.md
+- name: "PowerPagesManagedIdentity"
+  displayName: "PowerPagesManagedIdentity entity"
+  href: powerpagesmanagedidentity.md
 - name: "PrincipalEntityBusinessUnitMap"
   displayName: "PrincipalEntityBusinessUnitMap entity"
   href: principalentitybusinessunitmap.md
@@ -1159,6 +1207,9 @@ items:
 - name: "retentionoperationdetail"
   displayName: "retentionoperationdetail entity"
   href: retentionoperationdetail.md
+- name: "retentionsuccessdetail"
+  displayName: "retentionsuccessdetail entity"
+  href: retentionsuccessdetail.md
 - name: "Ribbon Metadata To Process (RibbonMetadataToProcess)"
   displayName: "RibbonMetadataToProcess entity"
   href: ribbonmetadatatoprocess.md
@@ -1270,6 +1321,9 @@ items:
 - name: "Shared Workspace (sharedworkspace)"
   displayName: "sharedworkspace entity"
   href: sharedworkspace.md
+- name: "Shared Workspace Access Token (sharedworkspaceaccesstoken2)"
+  displayName: "sharedworkspaceaccesstoken2 entity"
+  href: sharedworkspaceaccesstoken2.md
 - name: "Shared Workspace Pool (sharedworkspacepool)"
   displayName: "sharedworkspacepool entity"
   href: sharedworkspacepool.md
@@ -1357,6 +1411,18 @@ items:
 - name: "SolutionHistoryData"
   displayName: "SolutionHistoryData entity"
   href: solutionhistorydata.md
+- name: "Source Control Branch Configuration (SourceControlBranchConfiguration)"
+  displayName: "SourceControlBranchConfiguration entity"
+  href: sourcecontrolbranchconfiguration.md
+- name: "Source Control Component (SourceControlComponent)"
+  displayName: "SourceControlComponent entity"
+  href: sourcecontrolcomponent.md
+- name: "Source Control Component Payload (SourceControlComponentPayload)"
+  displayName: "SourceControlComponentPayload entity"
+  href: sourcecontrolcomponentpayload.md
+- name: "Source Control Configuration (SourceControlConfiguration)"
+  displayName: "SourceControlConfiguration entity"
+  href: sourcecontrolconfiguration.md
 - name: "Staged Entity (StagedEntity)"
   displayName: "StagedEntity entity"
   href: stagedentity.md

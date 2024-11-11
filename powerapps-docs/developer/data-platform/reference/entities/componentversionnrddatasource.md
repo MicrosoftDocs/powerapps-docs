@@ -1,7 +1,7 @@
 ---
 title: "Component Version (Internal) (componentversionnrddatasource) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Component Version (Internal) (componentversionnrddatasource) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -588,7 +588,7 @@ One-To-Many Relationship: [workflow workflow_componentversionnrddatasourceset](w
 |ReferencingAttribute|`component`|
 |ReferencingEntityNavigationPropertyName|`component_workflow`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 
 ## One-to-Many relationships
