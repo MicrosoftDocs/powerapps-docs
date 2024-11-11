@@ -25,13 +25,10 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> 
-
-<!-- To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to INSERT AI FAQ LINK IN ABOVE ALERT -->
 
 ## Prerequisites for configuring a row summary
 
-To enable this feature, the following criteria are required: 
+To enable this feature, the following criteria are required:
 
 - System Administrator security role membership in the Microsoft Dataverse environment. <!-- IS THIS REQUIRED TO CREATE OR EDIT OR HIDE ROW SUMMARIES ?? OR is this just for the Copilot environment setting? -->
 - Copilot is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
@@ -96,3 +93,6 @@ To edit a row summary for a main form, open the table, and then under **Customiz
 1. On the command bar, select **Row summary** > **Hide on all main forms**.
    :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
 
+## Related information
+
+[FAQ for prompts and text generation capabilities](/ai-builder/faqs-text-generation)
