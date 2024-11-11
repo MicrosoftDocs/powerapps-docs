@@ -1,7 +1,7 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Contact table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -4518,6 +4518,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Contact_Tasks](#BKMK_Contact_Tasks)
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
 - [lk_contact_feedback_createdonbehalfby](#BKMK_lk_contact_feedback_createdonbehalfby)
+- [PowerPagesSiteAIFeedback_Contact_Contact](#BKMK_PowerPagesSiteAIFeedback_Contact_Contact)
 - [slakpiinstance_contact](#BKMK_slakpiinstance_contact)
 - [socialactivity_postauthor_contacts](#BKMK_socialactivity_postauthor_contacts)
 - [socialactivity_postauthoraccount_contacts](#BKMK_socialactivity_postauthoraccount_contacts)
@@ -5002,6 +5003,18 @@ Many-To-One Relationship: [feedback lk_contact_feedback_createdonbehalfby](feedb
 |ReferencedEntityNavigationPropertyName|`lk_contact_feedback_createdonbehalfby`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PowerPagesSiteAIFeedback_Contact_Contact"></a> PowerPagesSiteAIFeedback_Contact_Contact
+
+Many-To-One Relationship: [powerpagessiteaifeedback PowerPagesSiteAIFeedback_Contact_Contact](powerpagessiteaifeedback.md#BKMK_PowerPagesSiteAIFeedback_Contact_Contact)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessiteaifeedback`|
+|ReferencingAttribute|`contact`|
+|ReferencedEntityNavigationPropertyName|`PowerPagesSiteAIFeedback_Contact_Contact`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_slakpiinstance_contact"></a> slakpiinstance_contact
 
