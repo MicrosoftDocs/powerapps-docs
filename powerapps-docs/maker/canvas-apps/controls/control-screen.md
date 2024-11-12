@@ -42,9 +42,9 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **Name** - The name of the screen.
 
-**OnHidden** – The behavior of an app when the user navigates away from a screen.
+**OnHidden** – The behavior of an app when the user navigates away from a screen. This property might have to wait to start executing until App.OnStart is finished if the Disable non-blocking App.OnStart rule in the Power Platform Admin Center is enabled. The setting is default on. 
 
-**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started.
+**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started. This property might have to wait to start executing until App.OnStart is finished if the Disable non-blocking App.OnStart rule in the Power Platform Admin Center is enabled. The setting is default on. Additionally, it is possible that a screen can render and become interactive before Screen.OnVisible or App.OnStart completes if etiher are long-running. 
 
 **Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 
