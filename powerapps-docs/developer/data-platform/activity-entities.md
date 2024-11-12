@@ -23,6 +23,9 @@ In Microsoft Dataverse, activities are tasks that you or your teams perform when
  ![Activity diagram.](media/entity-model-activity.gif "Activity diagram")  
   
  To support the communication needs of the modern-day business, such as instant messaging (IM) and SMS, you can create custom activities in Dataverse.  
+
+> [!NOTE]
+>  In Power Apps, activities security is inherited through the activitypointer table in Microsoft Dataverse. This table stores data about various activities (fax, appointment, letter, etc.). Each activity is represented by a single entry in the activitypointer table, which helps manage permissions and security roles for all activities uniformly.
   
 ### See also  
 
