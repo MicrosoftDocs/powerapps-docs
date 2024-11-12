@@ -179,7 +179,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 
    When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
 
-   You can associate a virtual table with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information: [Environment variable](#environment-variable)
+   You can associate a virtual table with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information: [Environment variable (preview)](#environment-variable-preview)
 
      :::image type="content" source="media/vt-env-variable.png" alt-text="Environment variable for virtual tables":::
 
@@ -207,9 +207,17 @@ To create a connection reference, when you're creating the connection for the vi
 
    - If you chose SQL and Microsoft Entra ID as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
 
-### Environment variable
+### Environment variable (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable. To take advantage of this functionality, expand **Advanced options**, and then select **Use environment variables** when choosing a connection for your data source during a virtual table create.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - During the preview, to enable this feature you must append `?powerappsEntities.enableEnvironmentVariablesForVirtualTables=true` to the URL when you create or update the virtual table.
 
 #### Environment variables with virtual tables recommendations
 
