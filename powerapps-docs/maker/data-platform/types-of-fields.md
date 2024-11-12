@@ -233,6 +233,8 @@ The default **Maximum file size** is 32 MB and the largest size you can set usin
 >[!NOTE]
 > - Once the maximum file size has been saved, it can't be changed.
 > - File columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
+> - Required field validation does not work in file columns.
+> - In model-driven apps, deleting or uploading a file on a form happens immediately, not on form save. Discarding changes when navigating away will not bring back the file if it is deleted.
 
 To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
