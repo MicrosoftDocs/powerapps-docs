@@ -1,7 +1,7 @@
 ---
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-ms.date: 09/23/2024
+ms.date: 11/12/2024
 ms.topic: article
 author: "Mattp123"
 ms.subservice: dataverse-maker
@@ -233,6 +233,8 @@ The default **Maximum file size** is 32 MB and the largest size you can set usin
 >[!NOTE]
 > - Once the maximum file size has been saved, it can't be changed.
 > - File columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
+> - Required field validation doesn't work with file columns.
+> - In model-driven apps, deleting or uploading a file on a form happens immediately, not on form save. Discarding changes when navigating away doesn't bring back the file if it's deleted.
 
 To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 

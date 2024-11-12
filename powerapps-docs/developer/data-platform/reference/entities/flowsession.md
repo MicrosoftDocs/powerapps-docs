@@ -1,7 +1,7 @@
 ---
 title: "Flow Session (flowsession) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Session (flowsession) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -68,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ConnectionId](#BKMK_ConnectionId)
 - [Context](#BKMK_Context)
 - [CorrelationId](#BKMK_CorrelationId)
+- [Credentials](#BKMK_Credentials)
 - [ErrorCode](#BKMK_ErrorCode)
 - [ErrorDetails](#BKMK_ErrorDetails)
 - [ErrorInnerError](#BKMK_ErrorInnerError)
@@ -188,6 +189,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_Credentials"></a> Credentials
+
+|Property|Value|
+|---|---|
+|Description|**Credentials related to this run.**|
+|DisplayName|**Credentials**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`credentials`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_ErrorCode"></a> ErrorCode
 

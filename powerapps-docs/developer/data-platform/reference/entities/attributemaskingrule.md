@@ -1,7 +1,7 @@
 ---
 title: "Secured Masking Column (AttributeMaskingRule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Secured Masking Column (AttributeMaskingRule) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -135,7 +135,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`maskingruleid`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|maskingrule|
 
