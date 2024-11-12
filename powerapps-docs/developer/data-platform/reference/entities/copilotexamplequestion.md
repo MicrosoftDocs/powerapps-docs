@@ -1,7 +1,7 @@
 ---
 title: "CopilotExampleQuestion table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the CopilotExampleQuestion table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -74,11 +74,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CopilotExampleQuestionId](#BKMK_CopilotExampleQuestionId)
 - [CustomDimension](#BKMK_CustomDimension)
 - [CustomField](#BKMK_CustomField)
+- [DynamicKnowledge](#BKMK_DynamicKnowledge)
 - [EntityScope](#BKMK_EntityScope)
 - [EntityScopeColumn](#BKMK_EntityScopeColumn)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [knowledge](#BKMK_knowledge)
+- [Knowledge](#BKMK_Knowledge)
 - [knowledgetype](#BKMK_knowledgetype)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [Question](#BKMK_Question)
@@ -172,6 +173,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|20000|
 
+### <a name="BKMK_DynamicKnowledge"></a> DynamicKnowledge
+
+|Property|Value|
+|---|---|
+|Description|**DynamicKnowledge.**|
+|DisplayName|**DynamicKnowledge**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dynamicknowledge`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|True|
+|MaxLength|20000|
+
 ### <a name="BKMK_EntityScope"></a> EntityScope
 
 |Property|Value|
@@ -232,7 +250,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
-### <a name="BKMK_knowledge"></a> knowledge
+### <a name="BKMK_Knowledge"></a> Knowledge
 
 |Property|Value|
 |---|---|
@@ -240,7 +258,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DisplayName|**Knowledge**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`comment`|
+|LogicalName|`knowledge`|
 |RequiredLevel|None|
 |Type|Memo|
 |Format|Text|
@@ -318,7 +336,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
-|IsLocalizable|False|
+|IsLocalizable|True|
 |MaxLength|20000|
 
 ### <a name="BKMK_Skill"></a> Skill

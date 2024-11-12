@@ -22,7 +22,8 @@ contributors:
 
 Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look feature is on by default and will move to always on for monthly channel users with the October 2024 monthly release. Learn more at [Working with the modern, refreshed look](#working-with-the-modern-refreshed-look).
+> [!IMPORTANT]
+> With the [October monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle as been removed and users will have it be always on. Learn more at [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
 
 ## What's included with the modern, refreshed look
 
