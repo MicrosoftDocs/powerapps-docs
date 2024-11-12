@@ -50,4 +50,5 @@ Once someone removes the page, it disappears for other makers in real-time.
 
 ## See also
 
-[Add comments](comments.md)
+[Add comments](comments.md)  
+[Collaboration in Canvas Apps with Power Apps (video)](https://youtu.be/zOGQXz4-LnI?feature=shared)

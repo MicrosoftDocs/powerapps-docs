@@ -123,3 +123,5 @@ Create a formula column that returns choice using a local choice of a simple cho
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 
 [Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
+
+[Create formula columns with decimal (video)](https://youtu.be/NmpPG0_sPX0?feature=shared)

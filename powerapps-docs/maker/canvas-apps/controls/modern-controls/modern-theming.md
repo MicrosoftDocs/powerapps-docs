@@ -126,4 +126,5 @@ Using the theme brand ramp, you can manually style a classic control based on th
 
 ## See also
 
-[Modern controls blog post](https://go.microsoft.com/fwlink/?linkid=2229189)
+[Modern controls blog post](https://go.microsoft.com/fwlink/?linkid=2229189)  
+[Using modern themes with Power Apps (video)](https://youtu.be/xuyR2BikwyQ?feature=shared)

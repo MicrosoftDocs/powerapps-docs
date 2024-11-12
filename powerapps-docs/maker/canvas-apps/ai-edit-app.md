@@ -137,3 +137,8 @@ When you open the Copilot pane, you can select from three preset prompts that de
 - Change my app to deep forest green
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Editing your app with Copilot in Power Apps (video)](https://youtu.be/g9fFoQ5CETk?feature=shared)

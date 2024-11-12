@@ -94,3 +94,4 @@ Tab order first proceeds through the containers and controls with TabIndex value
 - [Use the Accessibility checker](accessibility-checker.md)
 - [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
 - [Accessibility properties](controls/properties-accessibility.md)
+- [Improved canvas keyboard navigation in canvas apps (video)](https://youtu.be/p_tCI6Kpj68?feature=shared)

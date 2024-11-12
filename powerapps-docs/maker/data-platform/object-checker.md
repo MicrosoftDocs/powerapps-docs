@@ -47,6 +47,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ### See also
 
-[Tools available to diagnose solutions](diagnose-solutions.md)
+[Tools available to diagnose solutions](diagnose-solutions.md)  
+[Use object checker to diagnose a solution component (video)](https://youtu.be/h_OwFRgj1U8?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

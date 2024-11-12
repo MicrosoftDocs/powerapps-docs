@@ -105,4 +105,5 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ### Related information
 
-[Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)
+[Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)  
+[Complete forms quickly with model-driven apps (video)](https://youtu.be/Jwlaue-Skzk?feature=shared)

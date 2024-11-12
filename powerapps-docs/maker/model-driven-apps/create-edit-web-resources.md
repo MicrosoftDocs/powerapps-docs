@@ -171,7 +171,8 @@ When your customizations are complete, publish them:
 [Web resource properties](web-resource-properties-legacy.md) <br /> 
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
-[Developer Documentation: Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md)
+[Developer Documentation: Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md) <br />
+[Create or edit model-driven app web resources (video)](https://youtu.be/8JRZQGX5mUU?feature=shared)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -94,5 +94,6 @@ For example, ask Copilot to add columns to track cleaning start and end time.
 
 - [Copilot in Power Apps overview (preview)](ai-overview.md)
 - [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Build apps through conversation (video)](https://youtu.be/A4cBqQjnIBg?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -83,3 +83,8 @@ Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -
   - You've reached capacity limits. In this case, try again after some time.
   - You've not provided enough information to properly generate output. In this case, add more details to try again.
 - There is not a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
+
+
+## Related information
+
+[Quickly generate well-written text with Copilot (video)](https://youtu.be/XY1sWTi4nl8?feature=shared)

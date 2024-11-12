@@ -161,3 +161,8 @@ The following table lists the languages available for the formula bar copilot fe
 | Thai - Thailand | th-TH | Explain a formula, Comment generated formulas |
 | Turkish - Türkiye | tr-TR | Explain a formula, Comment generated formulas |
 
+
+
+## Related information
+
+[Copilot comment generated formulas (video)](https://youtu.be/kV60VZoPoWw?feature=shared)

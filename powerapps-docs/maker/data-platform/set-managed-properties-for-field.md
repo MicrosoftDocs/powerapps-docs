@@ -54,3 +54,8 @@ These options are self-explanatory. If you set all the individual options to `Fa
 [Solutions overview](solutions-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Set managed properties for columns with Power Apps (video)](https://youtu.be/nKlRG5tHW2M?feature=shared)

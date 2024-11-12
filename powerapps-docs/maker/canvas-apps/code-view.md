@@ -81,3 +81,4 @@ Code view lets you copy and paste code to any screen in your app, or outside of 
 - [Use Find and Replace in the formula bar](formula-bar-find-replace.md)
 - [Formula reference - canvas apps](formula-reference.md)
 - [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar)
+- [Understand app functionality through code view (video)](https://youtu.be/qwXfvs9wzFY?feature=shared)

@@ -117,5 +117,6 @@ If you don't want your app users to provide feedback to Microsoft, turn off the 
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
 - [Use your prompt in Power Automate](/ai-builder/use-a-custom-prompt-in-flow)
 - [Add Copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
+- [Power Apps Copilot control (video)](https://youtu.be/11mTv6vZTvY?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

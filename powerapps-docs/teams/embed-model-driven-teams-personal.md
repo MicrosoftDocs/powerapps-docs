@@ -75,7 +75,8 @@ If you're an admin, you can use the **Download app** option to also [publish the
 
 ### See also
 
-[Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)
+[Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)  
+[Embed a model-driven app in Microsoft Teams (video)](https://youtu.be/vRzJAN5P4X8?feature=shared)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -889,4 +889,5 @@ Many-To-One Relationship: [syncerror flowevent_SyncErrors](syncerror.md#BKMK_flo
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.flowevent?displayProperty=fullName>
+<xref:Microsoft.Dynamics.CRM.flowevent?displayProperty=fullName>  
+[Leverage FlowEvent data monitoring effectively (video)](https://youtu.be/cy_WW1aXQQQ?feature=shared)

@@ -89,3 +89,8 @@ Customize a canvas app by changing its screen size and orientation.
 - Check [common issues and resolutions](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) if you're running into any problems.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Change screen size and orientation of canvas apps (video)](https://youtu.be/dsow8q4LzA8?feature=shared)

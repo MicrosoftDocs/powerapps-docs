@@ -57,4 +57,5 @@ You can delete your preferred solution or a preferred solution that other makers
 
 ## See also
 
-[Solutions overview](solutions-overview.md)
+[Solutions overview](solutions-overview.md)  
+[Set the preferred solution with Power Apps (video)](https://youtu.be/WohjakB8OdE?feature=shared)
