@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine (flowmachine) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine (flowmachine) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -84,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [SessionCapacity](#BKMK_SessionCapacity)
+- [SnapshotStartedAt](#BKMK_SnapshotStartedAt)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -438,6 +439,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|0|
+
+### <a name="BKMK_SnapshotStartedAt"></a> SnapshotStartedAt
+
+|Property|Value|
+|---|---|
+|Description|**Time at which the snapshot capture started for a Hosted Hachine**|
+|DisplayName|**Snapshot started at**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`snapshotstartedat`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -901,6 +919,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowmachine_PrincipalObjectAttributeAccesses](#BKMK_flowmachine_PrincipalObjectAttributeAccesses)
 - [flowmachine_ProcessSession](#BKMK_flowmachine_ProcessSession)
 - [flowmachine_SyncErrors](#BKMK_flowmachine_SyncErrors)
+- [flowmachineimageversion_flowmachine](#BKMK_flowmachineimageversion_flowmachine)
 
 ### <a name="BKMK_flowcapacityassignment_flowmachine"></a> flowcapacityassignment_flowmachine
 
@@ -1021,6 +1040,18 @@ Many-To-One Relationship: [syncerror flowmachine_SyncErrors](syncerror.md#BKMK_f
 |ReferencedEntityNavigationPropertyName|`flowmachine_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowmachineimageversion_flowmachine"></a> flowmachineimageversion_flowmachine
+
+Many-To-One Relationship: [flowmachineimageversion flowmachineimageversion_flowmachine](flowmachineimageversion.md#BKMK_flowmachineimageversion_flowmachine)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachineimageversion`|
+|ReferencingAttribute|`sourcemachineid`|
+|ReferencedEntityNavigationPropertyName|`flowmachineimageversion_flowmachine`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

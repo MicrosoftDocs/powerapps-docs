@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app dashboards | MicrosoftDocs"
 description: Learn how to create and edit dashboards for model-driven apps
 ms.custom: ""
-ms.date: 04/08/2020
+ms.date: 11/05/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -77,7 +77,11 @@ Dashboards can be standard or interactive.
   
 1. When the changes are complete select **Save** and then select **Close**.
 
-1. On the solution toolbar, select **Publish**.  
+1. On the solution toolbar, select **Publish**.
+
+
+> [!NOTE]
+> Lists in the dashboard designer don't display a data preview.
   
 ## Next steps
 
