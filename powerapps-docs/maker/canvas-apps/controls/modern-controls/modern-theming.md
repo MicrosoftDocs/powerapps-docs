@@ -6,7 +6,7 @@ author: jasongre
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 9/18/2024
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: jasongre
 
