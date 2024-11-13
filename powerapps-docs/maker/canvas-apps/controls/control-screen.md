@@ -44,7 +44,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnHidden** – The behavior of an app when the user navigates away from a screen. This property might have to wait to start executing until App.OnStart is finished if the Disable non-blocking App.OnStart rule in the App Settings dialog is enabled. The setting is default on. 
 
-**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started. When non-blocking App.OnStart is enabled,  Screen.OnVisible can run in parallel with it. As a result, it's recommended to avoid taking dependencies on variables or collections that App.OnStart is responsible for setting up since that might delay running Screen.OnVisibile. 
+**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started. When non-blocking App.OnStart is enabled,  Screen.OnVisible can run in parallel with it. As a result, it's recommended to avoid taking dependencies on variables or collections that App.OnStart is responsible for setting up since they might not be initialized. 
 
 **Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 
