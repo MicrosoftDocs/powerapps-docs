@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowedApplicationsForDVAccess](#BKMK_AllowedApplicationsForDVAccess)
 - [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
 - [AllowedIpRangeForStorageAccessSignatures](#BKMK_AllowedIpRangeForStorageAccessSignatures)
+- [AllowedListOfIpRangesForFirewall](#BKMK_AllowedListOfIpRangesForFirewall)
 - [AllowedMimeTypes](#BKMK_AllowedMimeTypes)
 - [AllowedServiceTagsForFirewall](#BKMK_AllowedServiceTagsForFirewall)
 - [AllowEntityOnlyAudit](#BKMK_AllowEntityOnlyAudit)
@@ -83,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowUserFormModePreference](#BKMK_AllowUserFormModePreference)
 - [AllowUsersHidingSystemViews](#BKMK_AllowUsersHidingSystemViews)
 - [AllowUsersSeeAppdownloadMessage](#BKMK_AllowUsersSeeAppdownloadMessage)
+- [AllowVirtualEntityPluginExecutionOnNestedPipeline](#BKMK_AllowVirtualEntityPluginExecutionOnNestedPipeline)
 - [AllowWebExcelExport](#BKMK_AllowWebExcelExport)
 - [AMDesignator](#BKMK_AMDesignator)
 - [AppDesignerExperienceEnabled](#BKMK_AppDesignerExperienceEnabled)
@@ -806,6 +808,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|4000|
 
+### <a name="BKMK_AllowedListOfIpRangesForFirewall"></a> AllowedListOfIpRangesForFirewall
+
+|Property|Value|
+|---|---|
+|Description|**Specifies list of allowed IP addresses for firewall.**|
+|DisplayName|**List of IP Ranges to be allowed by the firewall rule**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`allowedlistofiprangesforfirewall`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_AllowedMimeTypes"></a> AllowedMimeTypes
 
 |Property|Value|
@@ -1059,6 +1078,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 |GlobalChoiceName|`organization_allowusersseeappdownloadmessage`|
 |DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_AllowVirtualEntityPluginExecutionOnNestedPipeline"></a> AllowVirtualEntityPluginExecutionOnNestedPipeline
+
+|Property|Value|
+|---|---|
+|Description|**Warning : Allowing  Virtual Entity plugin execution on nested pipeline does not offer transactional support. i.e. if call in native entity pipeline fails, then virtual entity operation will not be reverted.**|
+|DisplayName|**Allow Virtual Entity Plugin Execution In Nested Pipeline.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`allowvirtualentitypluginexecutiononnestedpipeline`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_allowvirtualentitypluginexecutiononnestedpipelines`|
+|DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
 
@@ -3802,7 +3837,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowconnectionembeddingenabled`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
@@ -3818,7 +3853,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowruntimerepairattendedenabled`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
@@ -3834,7 +3869,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowruntimerepairunattendedenabled`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|

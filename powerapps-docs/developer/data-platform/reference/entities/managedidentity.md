@@ -1,7 +1,7 @@
 ---
 title: "Managed Identity (ManagedIdentity) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Managed Identity (ManagedIdentity) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -23,7 +23,6 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Create`<br />Event: False |`POST` /managedidentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
-| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /managedidentities(*managedidentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -35,9 +34,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `SetState`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
-| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -186,8 +183,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The name assigned to this Managed Identity.**|
-|DisplayName|**Name**|
+|Description||
+|DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`name`|
@@ -783,6 +780,7 @@ One-To-Many Relationship: [systemuser user_managedidentity](systemuser.md#BKMK_u
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [ComponentId_CertificateCredential_Managedidentity](#BKMK_ComponentId_CertificateCredential_Managedidentity)
 - [managedidentity_AsyncOperations](#BKMK_managedidentity_AsyncOperations)
 - [managedidentity_BulkDeleteFailures](#BKMK_managedidentity_BulkDeleteFailures)
 - [managedidentity_DuplicateBaseRecord](#BKMK_managedidentity_DuplicateBaseRecord)
@@ -795,6 +793,19 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [managedidentity_PrincipalObjectAttributeAccesses](#BKMK_managedidentity_PrincipalObjectAttributeAccesses)
 - [managedidentity_ProcessSession](#BKMK_managedidentity_ProcessSession)
 - [managedidentity_SyncErrors](#BKMK_managedidentity_SyncErrors)
+- [PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity](#BKMK_PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity)
+
+### <a name="BKMK_ComponentId_CertificateCredential_Managedidentity"></a> ComponentId_CertificateCredential_Managedidentity
+
+Many-To-One Relationship: [certificatecredential ComponentId_CertificateCredential_Managedidentity](certificatecredential.md#BKMK_ComponentId_CertificateCredential_Managedidentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`certificatecredential`|
+|ReferencingAttribute|`componentid`|
+|ReferencedEntityNavigationPropertyName|`ComponentId_CertificateCredential_Managedidentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_managedidentity_AsyncOperations"></a> managedidentity_AsyncOperations
 
@@ -939,6 +950,18 @@ Many-To-One Relationship: [syncerror managedidentity_SyncErrors](syncerror.md#BK
 |ReferencedEntityNavigationPropertyName|`managedidentity_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity"></a> PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity
+
+Many-To-One Relationship: [powerpagesmanagedidentity PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity](powerpagesmanagedidentity.md#BKMK_PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesmanagedidentity`|
+|ReferencingAttribute|`managedidentity`|
+|ReferencedEntityNavigationPropertyName|`PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

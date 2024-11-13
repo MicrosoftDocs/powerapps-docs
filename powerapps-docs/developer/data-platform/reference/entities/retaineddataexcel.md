@@ -1,7 +1,7 @@
 ---
 title: "RetainedData Excel (retaineddataexcel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the RetainedData Excel (retaineddataexcel) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke

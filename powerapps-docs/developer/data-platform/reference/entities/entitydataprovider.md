@@ -1,7 +1,7 @@
 ---
 title: "Virtual Entity Data Provider (EntityDataProvider) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -62,6 +62,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityDataProviderId](#BKMK_EntityDataProviderId)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [LookupExpansionEnabled](#BKMK_LookupExpansionEnabled)
 - [Name](#BKMK_Name)
 - [PurgeArchivedContentPlugin](#BKMK_PurgeArchivedContentPlugin)
 - [PurgeRetainedContentPlugin](#BKMK_PurgeRetainedContentPlugin)
@@ -235,6 +236,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+### <a name="BKMK_LookupExpansionEnabled"></a> LookupExpansionEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Enables expansion support for lookups columns. Only applicable to RetrieveMultiple plugin. Enabling this might modify the filter expression supplied to RetrieveMultiple plugin. Default value is false.**|
+|DisplayName|**LookupExpansionEnabled**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`lookupexpansionenabled`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`msdyn_lookupexpansionenabled_entitydataprovider`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Name"></a> Name
 

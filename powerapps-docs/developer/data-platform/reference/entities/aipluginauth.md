@@ -1,7 +1,7 @@
 ---
 title: "AIPluginAuth table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AIPluginAuth table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -63,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AIPluginAuthId](#BKMK_AIPluginAuthId)
 - [AuthReferenceId](#BKMK_AuthReferenceId)
+- [AuthType](#BKMK_AuthType)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -101,6 +102,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|256|
+
+### <a name="BKMK_AuthType"></a> AuthType
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**AuthType**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`authtype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`restapiauthtype`|
+
+#### AuthType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**OAuth2**|
+|1|**EntraSSO**|
+|2|**APIKey**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 

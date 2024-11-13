@@ -1,7 +1,7 @@
 ---
 title: "PM View (msdyn_pmview) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM View (msdyn_pmview) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
