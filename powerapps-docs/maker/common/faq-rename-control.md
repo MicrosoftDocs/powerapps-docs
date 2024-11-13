@@ -14,7 +14,7 @@ ms.collection:
 
 # FAQ for rename controls in canvas apps with Copilot
 
-These frequently asked questions (FAQ) describe the AI impact of Power Apps' rename canvas controls with Copilot feature. 
+These frequently asked questions (FAQ) describe the AI impact of Power Apps rename controls in canvas apps with Copilot feature. 
 
 ##  What is rename Canvas controls with Copilot?
 
@@ -26,7 +26,7 @@ The following system capabilities are supported:
 - Provide control rename suggestions based on primary property of the controls and naming convention/pattern used by maker during manual rename.
 - Enable makers to apply all or selected rename suggestions.
 - Apply rename to multiple controls at once, per the suggestions shown in preview.
-- Copilot will nudge the maker when they manually rename a control, and there are other controls of the same type under the same screen with valid, non-default value such as **Button** or **Text** in **Text** property.
+- Copilot nudges the maker when they manually rename a control, and there are other controls of the same type under the same screen with valid, non-default value such as **Button** or **Text** in **Text** property.
 - Text property can be a Text literal or a formula returning Text type.
 - Any formulas referencing the control name is automatically updated to use the rename.
 
