@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 11/6/2024
+ms.date: 11/13/2024
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -161,3 +161,8 @@ The following table lists the languages available for the formula bar copilot fe
 | Thai - Thailand | th-TH | Explain a formula, Comment generated formulas |
 | Turkish - Türkiye | tr-TR | Explain a formula, Comment generated formulas |
 
+
+
+## Related information
+
+[Copilot comment generated formulas (video)](https://youtu.be/kV60VZoPoWw?feature=shared)
