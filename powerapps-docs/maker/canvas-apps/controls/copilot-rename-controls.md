@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer: mkaur
-ms.date: 11/8/2024
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: mamali
 search.audienceType:
@@ -26,10 +26,12 @@ ai-usage: ai-assisted
 
 Canvas apps often contain numerous controls, so it's important to name them meaningfully for better maintenance and collaboration. With the new **Proactive control rename** feature, Copilot assists by suggesting appropriate names for controls. Makers can review the suggestions and apply the changes to multiple controls at once. When a control’s name is updated, the change is reflected across all its references.
 
-Currently, the following controls are supported:
+Currently, the most frequently renamed and supported controls are:
 
 - Labels
 - Buttons
+
+Additional support for more controls will be incorporated based on feedback from preview.
 
 > [!IMPORTANT]
 >
