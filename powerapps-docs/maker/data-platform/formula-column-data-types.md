@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/16/2024
+ms.date: 11/13/2024
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
