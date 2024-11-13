@@ -6,7 +6,7 @@ author: emcoope-MSFT
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/24/2021
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
