@@ -2639,7 +2639,7 @@
       items:
       - name: Debug a model-driven app
         href: monitor-modelapps.md
-      - name: Use Monitor to debug model-driven app forms
+      - name: Debug specific model-driven app features
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
         href: ../developer/model-driven-apps/troubleshoot-forms.md
