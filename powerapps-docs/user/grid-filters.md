@@ -9,6 +9,7 @@ ms.subservice: end-user
 ms.author: fikaradz
 ms.reviewer: smurkute
 ms.assetid: 
+ms.custom: ignite-2024
 search.audienceType: 
   - enduser
 ---
@@ -25,7 +26,7 @@ Legend:
 1. [**Edit columns**](#column-editor): Select to add, remove, or reorder columns
 1. [**Edit filters**](#filter-editor): Select to filter the view with advanced queries
 1. [**Filter by keyword** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
-1. [**Row counter**](): Shows total number of rows
+1. [**Row counter**](#row-counter): Shows total number of rows
 
 ## Command bar
 
