@@ -1,7 +1,7 @@
 ---
 title: "Privilege Checker Log (PrivilegeCheckerLog) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Privilege Checker Log (PrivilegeCheckerLog) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -68,7 +68,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [CheckedPrivilege](#BKMK_CheckedPrivilege)
 - [CheckedUser](#BKMK_CheckedUser)
+- [CheckType](#BKMK_CheckType)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
@@ -79,13 +81,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwnerId](#BKMK_OwnerId)
-- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningTeam](#BKMK_OwningTeam)
-- [OwningUser](#BKMK_OwningUser)
 - [PrivilegeCheckerLogId](#BKMK_PrivilegeCheckerLogId)
 - [PrivilegeDepth](#BKMK_PrivilegeDepth)
-- [PrivilegeName](#BKMK_PrivilegeName)
 - [Request](#BKMK_Request)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -93,6 +90,19 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [VersionNumber](#BKMK_VersionNumber)
+
+### <a name="BKMK_CheckedPrivilege"></a> CheckedPrivilege
+
+|Property|Value|
+|---|---|
+|Description|**The checked privilege.**|
+|DisplayName|**Checked Privilege**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`checkedprivilege`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|privilege|
 
 ### <a name="BKMK_CheckedUser"></a> CheckedUser
 
@@ -106,6 +116,27 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_CheckType"></a> CheckType
+
+|Property|Value|
+|---|---|
+|Description|**The type of authorization check that was done.**|
+|DisplayName|**Check Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`checktype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|5|
+|GlobalChoiceName|`privilegecheckerlog_checktype`|
+
+#### CheckType Choices/Options
+
+|Value|Label|
+|---|---|
+|1|**Privilege Check**|
+|2|**Access check**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
@@ -254,58 +285,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |ImeMode|Inactive|
 |SourceTypeMask|0|
 
-### <a name="BKMK_OwnerId"></a> OwnerId
-
-|Property|Value|
-|---|---|
-|Description|**Owner Id**|
-|DisplayName|**Owner**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`ownerid`|
-|RequiredLevel|SystemRequired|
-|Type|Owner|
-|Targets|systemuser, team|
-
-### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the business unit that owns the record**|
-|DisplayName|**Owning Business Unit**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|businessunit|
-
-### <a name="BKMK_OwningTeam"></a> OwningTeam
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the team that owns the record.**|
-|DisplayName|**Owning Team**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owningteam`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|team|
-
-### <a name="BKMK_OwningUser"></a> OwningUser
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the user that owns the record.**|
-|DisplayName|**Owning User**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owninguser`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|systemuser|
-
 ### <a name="BKMK_PrivilegeCheckerLogId"></a> PrivilegeCheckerLogId
 
 |Property|Value|
@@ -340,31 +319,15 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |1|**Local**|
 |2|**Deep**|
 |3|**Global**|
+|4|**Record Filter**|
 |5|**N/A**|
-
-### <a name="BKMK_PrivilegeName"></a> PrivilegeName
-
-|Property|Value|
-|---|---|
-|Description|**Name of the checked privilege.**|
-|DisplayName|**Privilege Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`privilegename`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
 
 ### <a name="BKMK_Request"></a> Request
 
 |Property|Value|
 |---|---|
-|Description|**Information about the web request.**|
-|DisplayName|**Privilege Name**|
+|Description|**A brief description of the web request.**|
+|DisplayName|**Request**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`request`|
@@ -481,6 +444,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_privilegecheckerlog_createdonbehalfby](#BKMK_lk_privilegecheckerlog_createdonbehalfby)
 - [lk_privilegecheckerlog_modifiedby](#BKMK_lk_privilegecheckerlog_modifiedby)
 - [lk_privilegecheckerlog_modifiedonbehalfby](#BKMK_lk_privilegecheckerlog_modifiedonbehalfby)
+- [privilegecheckerlog_CheckedPrivilege](#BKMK_privilegecheckerlog_CheckedPrivilege)
 - [privilegecheckerlog_CheckedUser_systemuser](#BKMK_privilegecheckerlog_CheckedUser_systemuser)
 - [privilegecheckerlog_ImpersonatingUser_systemuser](#BKMK_privilegecheckerlog_ImpersonatingUser_systemuser)
 - [privilegecheckerlog_SupportingCaller_systemuser](#BKMK_privilegecheckerlog_SupportingCaller_systemuser)
@@ -537,6 +501,19 @@ One-To-Many Relationship: [systemuser lk_privilegecheckerlog_modifiedonbehalfby]
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_privilegecheckerlog_CheckedPrivilege"></a> privilegecheckerlog_CheckedPrivilege
+
+One-To-Many Relationship: [privilege privilegecheckerlog_CheckedPrivilege](privilege.md#BKMK_privilegecheckerlog_CheckedPrivilege)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`privilege`|
+|ReferencedAttribute|`privilegeid`|
+|ReferencingAttribute|`checkedprivilege`|
+|ReferencingEntityNavigationPropertyName|`CheckedPrivilege`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_privilegecheckerlog_CheckedUser_systemuser"></a> privilegecheckerlog_CheckedUser_systemuser
 

@@ -1,7 +1,7 @@
 ---
 title: "Process (Workflow) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process (Workflow) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -76,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ConnectionReferences](#BKMK_ConnectionReferences)
 - [CreateMetadata](#BKMK_CreateMetadata)
 - [CreateStage](#BKMK_CreateStage)
+- [Credentials](#BKMK_Credentials)
 - [Definition](#BKMK_Definition)
 - [DeleteStage](#BKMK_DeleteStage)
 - [Dependencies](#BKMK_Dependencies)
@@ -281,6 +282,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |20|**Pre-operation**|
 |40|**Post-operation**|
+
+### <a name="BKMK_Credentials"></a> Credentials
+
+|Property|Value|
+|---|---|
+|Description|**Credentials related to this workflow.**|
+|DisplayName|**Credentials**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`credentials`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_Definition"></a> Definition
 
