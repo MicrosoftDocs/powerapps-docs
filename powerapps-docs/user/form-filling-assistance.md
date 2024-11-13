@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 11/4/2024
+ms.date: 11/13/2024
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
