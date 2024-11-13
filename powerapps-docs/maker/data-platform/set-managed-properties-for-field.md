@@ -2,7 +2,7 @@
 title: "Set managed properties for columns in Power Apps | MicrosoftDocs"
 description: "Learn how to set managed properties for a column"
 ms.custom: ""
-ms.date: 04/11/2022
+ms.date: 11/13/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -54,3 +54,8 @@ These options are self-explanatory. If you set all the individual options to `Fa
 [Solutions overview](solutions-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Set managed properties for columns with Power Apps (video)](https://youtu.be/nKlRG5tHW2M?feature=shared)
