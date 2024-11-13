@@ -6,7 +6,7 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 06/23/2023
+ms.date: 11/13/2024
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps
