@@ -2,7 +2,7 @@
 title: "Set managed properties for columns in Power Apps | MicrosoftDocs"
 description: "Learn how to set managed properties for a column"
 ms.custom: ""
-ms.date: 04/11/2022
+ms.date: 11/13/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
