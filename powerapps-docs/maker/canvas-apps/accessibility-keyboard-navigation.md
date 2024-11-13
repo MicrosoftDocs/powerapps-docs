@@ -5,7 +5,7 @@ author: hemantgaur
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 07/12/2024
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
