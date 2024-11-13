@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
-ms.date: 06/08/2022
+ms.date: 11/13/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
