@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: matp
-ms.date: 01/09/2021
+ms.date: 11/13/2024
 ms.subservice: teams
 ms.author: aorth
 search.audienceType: 
