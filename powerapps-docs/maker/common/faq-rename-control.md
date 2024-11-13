@@ -26,7 +26,7 @@ The following system capabilities are supported:
 - Provide control rename suggestions based on primary property of the controls and naming convention/pattern used by maker during manual rename.
 - Enable makers to apply all or selected rename suggestions.
 - Apply rename to multiple controls at once, per the suggestions shown in preview.
-- Copilot nudges the maker when they manually rename a control, and there are other controls of the same type under the same screen with valid, non-default value such as **Button** or **Text** in **Text** property.
+- Copilot nudges the maker when they manually rename a control, and there are other controls of the same type under the same screen with valid, nondefault value such as **Button** or **Text** in **Text** property.
 - Text property can be a Text literal or a formula returning Text type.
 - Any formulas referencing the control name is automatically updated to use the rename.
 
@@ -41,7 +41,7 @@ Support for more controls is coming soon.
 
 As an AI assistant that helps people rename Canvas controls, Copilot provides the following list of UI actions for makers that are included in the preview release scope:
 - Click on Copilot icon when it appears near Tree View after a manual rename action.
-- Copilo only appears if there are other controls of the same type under the same screen with valid, non-default value such as **Button** or **Text** in **Text** property.
+- Copilo only appears if there are other controls of the same type under the same screen with valid, nondefault value such as **Button** or **Text** in **Text** property.
 - Preview control renaming suggestions provided by Copilot.
 - Apply one or more rename suggestions at once.
 
