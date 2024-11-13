@@ -28,6 +28,10 @@ Your administrator defines the scope of content that's searched. An administrato
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
+## What are the Column Types that can be searched in Dataverse Search?
+
+The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. For more information, see [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization.md#select-searchable-fields-and-filters-for-each-table).
+
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
 If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
@@ -55,7 +59,7 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields. They're not supported in Dataverse search, nor are they included in the search results page.
 
-## How come returns don't support HTLM formatting for memo data types?
+## How come returns don't support HTML formatting for memo data types?
 
 Dataverse search doesn't return HTML formatting for memo types to optomize the UI experience.
 
