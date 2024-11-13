@@ -94,6 +94,31 @@ Examples of the supported form-related events in Monitor include:
 
 To close the monitoring session, close the browser tab where the monitored model-driven app is playing.
 
+## Using Monitor for debugging copilot control
+
+we need to filter the category by `CopilotEvent` 
+
+### Following are the events we log in monitor 
+
+|Event name| Description|
+|----------|------------|
+|AdaptiveCardActionData|Data sent to submit action for adaptive card|
+|adaptiveCardContent|Content of adaptiveCard |
+|AISummarize|This message is logged in case the summarize feature is off and logs the fcb status|
+|AutoTriggerSummarizeHandler.isAutoTriggeredSummaryEnabled|	Tells if auto trigger is enabled |
+|ClientActionCalled| Logs the name of the client action and payload passed ot it |
+|CopilotResponse|Response from the copilot|
+|DVCopilotAction|isDVChatEnabled: if dv chat is enabled for the org or not |
+|DynamicContextSentToBot|Dynamics context sent to bot|
+|EnvironmentHostedBotSchemaName|	Logs the environment bot schema name|
+|ExecutingAction|Adaptive card action is getting executed|
+|isSummaryEnabledForEntity|Tells if summarize is enabled for the entity|
+|queryStructuredDataRequest|Request sent to query structure data|
+|queryStructuredDataResponse|Response from query structure data |
+|SessionContextSentToBot|Session context sent to bot|
+|SummarizeResponse|Logs the response for the summarize |
+|UserPrompt|Prompt entered by the User|
+
 ## Next steps
 
 For more information about how to troubleshoot issues with forms in a model-driven app, see [Troubleshoot form issues in model-driven apps](../../developer/model-driven-apps/troubleshoot-forms.md).
