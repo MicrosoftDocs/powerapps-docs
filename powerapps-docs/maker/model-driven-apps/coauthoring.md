@@ -6,7 +6,7 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 06/23/2023
+ms.date: 11/13/2024
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps
@@ -50,4 +50,5 @@ Once someone removes the page, it disappears for other makers in real-time.
 
 ## See also
 
-[Add comments](comments.md)
+[Add comments](comments.md)  
+[Collaboration in Canvas Apps with Power Apps (video)](https://youtu.be/zOGQXz4-LnI?feature=shared)
