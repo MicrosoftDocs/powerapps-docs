@@ -42,7 +42,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **Name** - The name of the screen.
 
-**OnHidden** – The behavior of an app when the user navigates away from a screen. This property might have to wait to start executing until App.OnStart is finished if the Disable non-blocking App.OnStart rule in the App Settings dialog is enabled. The setting is default on. 
+**OnHidden** – The behavior of an app when the user navigates away from a screen. If the **Disable non-blocking App.OnStart** rule is enabled in app settings, this property may need to wait until **App.OnStart** is finished executing. By default, this setting is turned on. 
 
 **OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started. When non-blocking App.OnStart is enabled,  Screen.OnVisible can run in parallel with it. As a result, it's recommended to avoid taking dependencies on variables or collections that App.OnStart is responsible for setting up since they might not be initialized. 
 
