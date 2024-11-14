@@ -39,6 +39,7 @@ When you configure the Power Apps grid control for a table, all views for that t
 1. Expand **Entities**. Browse to the table you want and select it. On the **Controls** tab, select **Add control**.
 1. In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
+1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
 
 ## Add the Power Apps grid control to a subgrid on a form
 
