@@ -1593,7 +1593,7 @@
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md
+            href: ./model-driven-apps/monitor-form-checker.md#filter-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
@@ -2641,7 +2641,7 @@
       items:
       - name: Debug a model-driven app
         href: monitor-modelapps.md
-      - name: Use Monitor to debug model-driven app forms
+      - name: Debug specific model-driven app features
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
         href: ../developer/model-driven-apps/troubleshoot-forms.md
