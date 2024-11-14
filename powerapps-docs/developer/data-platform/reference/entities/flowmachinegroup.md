@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Group (flowmachinegroup) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Group (flowmachinegroup) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -136,6 +136,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**AadJoined**|
+|2|**HybridEntraJoined**|
 
 ### <a name="BKMK_FlowGroupType"></a> FlowGroupType
 
@@ -1119,6 +1120,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowmachinegroup_DuplicateBaseRecord](#BKMK_flowmachinegroup_DuplicateBaseRecord)
 - [flowmachinegroup_DuplicateMatchingRecord](#BKMK_flowmachinegroup_DuplicateMatchingRecord)
 - [flowmachinegroup_flowlog_flowmachinegroupid](#BKMK_flowmachinegroup_flowlog_flowmachinegroupid)
+- [flowmachinegroup_flowlog_parentobjectid](#BKMK_flowmachinegroup_flowlog_parentobjectid)
 - [flowmachinegroup_flowmachine](#BKMK_flowmachinegroup_flowmachine)
 - [flowmachinegroup_flowsession_MachineGroupId](#BKMK_flowmachinegroup_flowsession_MachineGroupId)
 - [flowmachinegroup_MailboxTrackingFolders](#BKMK_flowmachinegroup_MailboxTrackingFolders)
@@ -1220,6 +1222,18 @@ Many-To-One Relationship: [flowlog flowmachinegroup_flowlog_flowmachinegroupid](
 |ReferencingAttribute|`flowmachinegroupid`|
 |ReferencedEntityNavigationPropertyName|`flowmachinegroup_flowlog_flowmachinegroupid`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowmachinegroup_flowlog_parentobjectid"></a> flowmachinegroup_flowlog_parentobjectid
+
+Many-To-One Relationship: [flowlog flowmachinegroup_flowlog_parentobjectid](flowlog.md#BKMK_flowmachinegroup_flowlog_parentobjectid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowlog`|
+|ReferencingAttribute|`parentobjectid`|
+|ReferencedEntityNavigationPropertyName|`flowmachinegroup_flowlog_parentobjectid`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_flowmachinegroup_flowmachine"></a> flowmachinegroup_flowmachine

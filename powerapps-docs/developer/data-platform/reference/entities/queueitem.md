@@ -1,7 +1,7 @@
 ---
 title: "Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Queue Item (QueueItem) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -528,10 +528,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4216|**Social Activity**|
 |4251|**Recurring Appointment**|
 |9953|**Knowledge Article**|
-|10185|**Teams chat**|
-|10201|**Knowledge Article Template**|
-|10310|**Invite Redemption**|
-|10311|**Portal Comment**|
+|10197|**Teams chat**|
+|10213|**Knowledge Article Template**|
+|10331|**Invite Redemption**|
+|10332|**Portal Comment**|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 

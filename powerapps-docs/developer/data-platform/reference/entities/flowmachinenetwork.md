@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Network (flowmachinenetwork) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Network (flowmachinenetwork) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -63,7 +63,10 @@ The following table lists selected properties for the Flow Machine Network (flow
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CredentialId](#BKMK_CredentialId)
 - [description](#BKMK_description)
+- [DomainPassword](#BKMK_DomainPassword)
+- [DomainUsername](#BKMK_DomainUsername)
 - [flowmachinenetworkId](#BKMK_flowmachinenetworkId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -81,6 +84,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [type](#BKMK_type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
+### <a name="BKMK_CredentialId"></a> CredentialId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of a Credential entity providing user name and password to be used in hybrid Entra join configurations to join machines to the domain.**|
+|DisplayName|**Credential ID**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`credentialid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|credential|
+
 ### <a name="BKMK_description"></a> description
 
 |Property|Value|
@@ -97,6 +113,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_DomainPassword"></a> DomainPassword
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the secret environment variable holding the password used to join machines to the domain in hybrid Entra join configurations.**|
+|DisplayName|**Domain Password**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`domainpassword`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|environmentvariabledefinition|
+
+### <a name="BKMK_DomainUsername"></a> DomainUsername
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the environment variable holding the username used to join machines to the domain in hybrid Entra join configurations.**|
+|DisplayName|**Domain Username**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`domainusername`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|environmentvariabledefinition|
 
 ### <a name="BKMK_flowmachinenetworkId"></a> flowmachinenetworkId
 
@@ -660,6 +702,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowmachinenetwork](#BKMK_business_unit_flowmachinenetwork)
+- [credential_flowmachinenetwork](#BKMK_credential_flowmachinenetwork)
+- [environmentvariabledefinition_flowmachinenetwork_domainpassword](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+- [environmentvariabledefinition_flowmachinenetwork_domainusername](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
 - [lk_flowmachinenetwork_createdby](#BKMK_lk_flowmachinenetwork_createdby)
 - [lk_flowmachinenetwork_createdonbehalfby](#BKMK_lk_flowmachinenetwork_createdonbehalfby)
 - [lk_flowmachinenetwork_modifiedby](#BKMK_lk_flowmachinenetwork_modifiedby)
@@ -680,6 +725,45 @@ One-To-Many Relationship: [businessunit business_unit_flowmachinenetwork](busine
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_credential_flowmachinenetwork"></a> credential_flowmachinenetwork
+
+One-To-Many Relationship: [credential credential_flowmachinenetwork](credential.md#BKMK_credential_flowmachinenetwork)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`credential`|
+|ReferencedAttribute|`credentialid`|
+|ReferencingAttribute|`credentialid`|
+|ReferencingEntityNavigationPropertyName|`CredentialId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword"></a> environmentvariabledefinition_flowmachinenetwork_domainpassword
+
+One-To-Many Relationship: [environmentvariabledefinition environmentvariabledefinition_flowmachinenetwork_domainpassword](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`environmentvariabledefinition`|
+|ReferencedAttribute|`environmentvariabledefinitionid`|
+|ReferencingAttribute|`domainpassword`|
+|ReferencingEntityNavigationPropertyName|`DomainPassword`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername"></a> environmentvariabledefinition_flowmachinenetwork_domainusername
+
+One-To-Many Relationship: [environmentvariabledefinition environmentvariabledefinition_flowmachinenetwork_domainusername](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`environmentvariabledefinition`|
+|ReferencedAttribute|`environmentvariabledefinitionid`|
+|ReferencingAttribute|`domainusername`|
+|ReferencingEntityNavigationPropertyName|`DomainUsername`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_flowmachinenetwork_createdby"></a> lk_flowmachinenetwork_createdby
 

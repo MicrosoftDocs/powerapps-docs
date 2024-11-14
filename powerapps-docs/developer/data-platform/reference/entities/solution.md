@@ -1,7 +1,7 @@
 ---
 title: "Solution table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -55,11 +55,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ConfigurationPageId](#BKMK_ConfigurationPageId)
 - [Description](#BKMK_Description)
+- [EnabledForSourceControlIntegration](#BKMK_EnabledForSourceControlIntegration)
 - [FriendlyName](#BKMK_FriendlyName)
 - [PublisherId](#BKMK_PublisherId)
 - [SolutionId](#BKMK_SolutionId)
 - [SolutionPackageVersion](#BKMK_SolutionPackageVersion)
 - [SolutionType](#BKMK_SolutionType)
+- [SourceControlSyncStatus](#BKMK_SourceControlSyncStatus)
 - [TemplateSuffix](#BKMK_TemplateSuffix)
 - [Thumbprint](#BKMK_Thumbprint)
 - [UniqueName](#BKMK_UniqueName)
@@ -94,6 +96,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|True|
 |MaxLength|2000|
+
+### <a name="BKMK_EnabledForSourceControlIntegration"></a> EnabledForSourceControlIntegration
+
+|Property|Value|
+|---|---|
+|Description|**Indicates if solution is enabled for source control integration**|
+|DisplayName|**Enabled for Source Control Integration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`enabledforsourcecontrolintegration`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`solution_enabledforsourcecontrolintegration`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_FriendlyName"></a> FriendlyName
 
@@ -175,6 +193,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**None**|
 |1|**Snapshot**|
 |2|**Internal**|
+
+### <a name="BKMK_SourceControlSyncStatus"></a> SourceControlSyncStatus
+
+|Property|Value|
+|---|---|
+|Description|**Indicates the current status of source control integration**|
+|DisplayName|**Source Control Sync Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sourcecontrolsyncstatus`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`solution_sourcecontrolsyncstatus`|
+
+#### SourceControlSyncStatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Not started**|
+|1|**Initial sync in progress**|
+|2|**Errors in initial sync**|
+|3|**Pending changes to be committed**|
+|4|**Committed**|
 
 ### <a name="BKMK_TemplateSuffix"></a> TemplateSuffix
 
