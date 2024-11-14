@@ -25,22 +25,22 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 
 ## Prerequisites
 
-To view your apps performance the TBD the following settings must be turn on in Power Platform Admin Center.
+To view your apps performance the TBD the following settings must be turned on in Power Platform Admin Center.
 
-- TBD add link to admin topics
-- TBD add link to admin topics
+- TBD add link to admin articles
+- TBD add link to admin articles
 
 ## Open and pin Monitor
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation, select **Apps**.
-1. On the commandbar, select **Monitor**.
-1. On the left navigation pane, select select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button next to **Monitor**.
+1. On the command bar, select **Monitor**.
+1. On the left navigation pane, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button next to **Monitor**.
 
 
 ## Use Monitor 
 
-The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, no apps will be listed in that card
+The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, then no apps are listed in the card.
 
 :::image type="content" source="media/monitor-apps/monitor-screen.png" alt-text="Monitor main screen showing app metrics":::
 
@@ -48,16 +48,16 @@ The **Monitor** page displays metric cards at the top, highlighting the top thre
 | ------------- | ------------- |
 | **App open success rate**  | Indicates the percentage of app launch attempts that successfully allowed end-users to access the app. This metric is calculated once every 24 hours.|
 | **Time to interact**  | Measures the time end-users wait to access the first screen of an app. It doesn't include the time users wait to see all data presented on the first screen, such as filling in rows of a gallery. This metric is calculated every 24 hours and is measured using percentiles, with the 75th percentile being reported. |
-| **Time to full load**  | Measures the time end-users wait to see all data displayed on the first screen of an app. In the app launch lifecycle, this metric follows the **Time to interact** phase. It's calculated every 24 hours and is measured using percentiles, with the 75th percentile being reported.|
+| **Time to full load**  | Measures the time end-users wait to see all data displayed on the first screen of an app. In the app launch lifecycle, this metric follows the **Time to interact** phase. This metric is calculated every 24 hours and is measured using percentiles, with the 75th percentile being reported.|
 
 
 ### View metrics and recommendations for an app
 
-  When you select an app on the  **Monitor** page a side pane opens and display additional data for each metric, including a data chart for the last 30 days.
+  When you select an app on the  **Monitor** page a side pane opens and display more data for each metric, including a data chart for the last 30 days.
 
 1. On **Monitor** page, select an app.
 
-1. To view recommendations for an app, select the app’s name to open the side panel. On the chart, you will see a callout with a recommended action for improving the metric.
+1. To view recommendations for an app, select the app’s name to open the side panel. The chart shows a callout with a recommended action for improving the metric.
 
     :::image type="content" source="media/monitor-apps/monitor-side-pane.png" alt-text="App metrics and recommendations":::
 
