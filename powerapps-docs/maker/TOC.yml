@@ -2631,7 +2631,7 @@
   items:
   - name: Debug Power Apps with Monitor
     items:
-    - name: Monitor overview
+    - name: Live monitor overview
       href: monitor-overview.md
     - name: Debug canvas apps with Monitor
       href: monitor-canvasapps.md
