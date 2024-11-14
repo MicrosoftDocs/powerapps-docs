@@ -5,7 +5,7 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 08/07/2024
+ms.date: 11/14/2024
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -43,11 +43,12 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 Once you are in the app designer, use the command designer to customize your command bars.
 
 > [!NOTE]
+>
 > - Currently, the command designer can only be accessed through the modern app designer or within solutions for existing commands.
 > - Currently, classic commands can't be edited within the command designer.
 
 ### Edit the command bar
- 
+
 #### Open the command designer to edit a command bar
 
 1. Select any table from the **Pages** area in the app designer.
@@ -82,9 +83,9 @@ The first time command designer is opened for an app, a prompt to either use **J
    - **Accessibility text**. Optionally, enter the text that will be read by screen readers.
    - **Order number**. The order the command displays in at runtime in relation to other commands within the same command bar.
 
-1. Drag and drop the command to the desired location. You can arrange modern commands amongst classic commands.
+1. Drag and drop the command to the desired location. You can arrange modern commands among classic commands.
 1. Select **Save and Publish** to make the command available to app users.
-1. Select **Play** to run the app and test your changes 
+1. Select **Play** to run the app and test your changes.
 
 > [!NOTE]
 > Publishing Power Fx formulas can take a few minutes to publish the command component library. This background operation might still be in-progress after command designer has completed the request and unlocks the designer.
@@ -93,7 +94,7 @@ The first time command designer is opened for an app, a prompt to either use **J
 
 You can use Power Fx for both actions (what happens when the command button is selected) as well as visibility (logic to control when the button is visible). Power Fx isn't supported in classic commands.
 
-You’ll notice the model-driven app command has a formula bar experience that is similar to canvas apps. For working with **Dataverse** data you can use Power Fx formulas just as you would in canvas apps. More information: [Using Power Fx with commands](commanding-use-powerfx.md)
+Notice the model-driven app command has a formula bar experience that is similar to canvas apps. For working with **Dataverse** data you can use Power Fx formulas just as you would in canvas apps. More information: [Using Power Fx with commands](commanding-use-powerfx.md)
 
 > [!NOTE]
 >
@@ -120,7 +121,7 @@ JavaScript is supported with both classic and modern commands. However, it's sim
  
 1. Enter the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 
-1. Add parameters to pass to your function.
+1. Add parameters to pass to your function. For more information about the available parameters, go to [Grid values](../../developer/model-driven-apps/pass-data-page-parameter-ribbon-actions.md#grid-values).
 
     > [!div class="mx-imgBorder"]
     > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")
