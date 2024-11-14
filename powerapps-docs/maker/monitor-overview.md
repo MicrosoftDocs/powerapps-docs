@@ -105,9 +105,9 @@ When you select an event in the grid, a panel displays additional details about 
 
     ![Monitor - Response.](media/monitor/monitor-response.png "Monitor - Response")
 
-## Unsupported scenarios for Monitor
+## Unsupported scenarios for Live monitor
 
-To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - unsupported scenarios](monitor-advanced.md#unsupported-scenarios-for-monitor).
+To learn about unsupported scenarios for Live monitor, go to [Advanced monitoring - unsupported scenarios](monitor-advanced.md#unsupported-scenarios-for-live-monitor).
 
 ## Next steps
 
