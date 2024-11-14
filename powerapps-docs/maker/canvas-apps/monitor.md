@@ -14,7 +14,7 @@ contributors:
   - mduelae
   - damialajogun
 ---
-#  Get insights and recommendations for your canvas app with Monitor (preview)
+#  Use Monitor to get insights and recommendations for your canvas app (preview)
 
 Monitor in Power Apps offers insights and recommendations to enhance app performance. It provides makers with detailed information on their app's performance and actionable steps to improve their apps.
 
