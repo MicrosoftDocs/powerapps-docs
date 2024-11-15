@@ -6,7 +6,7 @@ author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 ms.custom: ""
-ms.date: 07/15/2024
+ms.date: 11/14/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -39,13 +39,8 @@ The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area
 
 Use classic solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps website (make.powerapps.com).
 
-1. From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced settings**.
-
-1. Select **Settings** > **Customizations**.
-   :::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
-
-1. From the **Customization** area, select **Solutions**.
-1. From the **All Solutions** view, select the **Display name** for the unmanaged solution you want to edit.
+1. From Power Apps (make.powerapps.com), go to **Solutions** on the left navigation pane, and then open the solution your want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar select **Switch to classic**.
 
 The solution explorer is displayed in a new browser window.
 > [!div class="mx-imgBorder"]
