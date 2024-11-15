@@ -1,7 +1,7 @@
 ---
 title: "DVTableSearch table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DVTableSearch table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DVTableSearchId](#BKMK_DVTableSearchId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [KnowledgeConfig](#BKMK_KnowledgeConfig)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -187,6 +188,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+### <a name="BKMK_KnowledgeConfig"></a> KnowledgeConfig
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Knowledge Configuration Json**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`knowledgeconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_Name"></a> Name
 

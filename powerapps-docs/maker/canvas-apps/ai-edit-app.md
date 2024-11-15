@@ -7,7 +7,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 10/10/2024
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -137,3 +137,8 @@ When you open the Copilot pane, you can select from three preset prompts that de
 - Change my app to deep forest green
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Editing your app with Copilot in Power Apps (video)](https://youtu.be/g9fFoQ5CETk?feature=shared)
