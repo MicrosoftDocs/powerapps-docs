@@ -2,7 +2,7 @@
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
 ms.custom: ""
-ms.date: 06/06/2024
+ms.date: 11/14/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,7 +17,7 @@ search.audienceType:
 ---
 # Power Apps grid control
 
-The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, aggregation, and is customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
+The Power Apps grid control represents the next evolution of the classic Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides a number of other powerful capabilities including infinite scrolling, nested grids, grouping, aggregation, and is customizable. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
 - **Infinite scroll**: A modern data browsing experience in which users can scroll indefinitely through data until they find the records they're interested in. Since there are no page boundaries, users can select more rows at once (up to 1,000 rows) to facilitate taking action against a set of records or perform bulk editing.
 - **Inline editing**: This singular grid control can be utilized for read-only or edit scenarios.
@@ -28,14 +28,29 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
-## Add the Power Apps grid control to views for an entity
+> [!NOTE]
+> The Power Apps grid control can only be added to a table or form using the legacy solution explorer.
 
-When you configure the Power Apps grid control for an entity, all views for that entity display using that grid.
+## Add the Power Apps grid control to views for a table
 
-1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
-1.	Expand **Entities**. Browse to the table you want and select it. On the **Controls** tab, select **Add control**.
-1.	In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
+When you configure the Power Apps grid control for a table, all views for that table display using that grid.
+
+1. Open the [solution explorer](advanced-navigation.md#solution-explorer).
+1. Expand **Entities**. Browse to the table you want and select it. On the **Controls** tab, select **Add control**.
+1. In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
+1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
+
+## Add the Power Apps grid control to a subgrid on a form
+
+1. Open the [solution explorer](advanced-navigation.md#solution-explorer).
+1. Expand **Entities**, expand the table you want, and then select **Forms**.
+1. Open the form where you want to add the Power Apps grid control.
+1. On the form canvas, select the subgrid where you want to configure this grid (usually located on a form section), and then select **Change properties** on the command bar.
+1. In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **Power Apps grid control**.
+1. To configure the control, go to [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
+1. Select **OK** to close the **Set properties** dialog box.
+1. To save and make available to apps, select **Save**, and then select **Publish**.
 
 ## Configure the Power Apps grid control
 
@@ -53,7 +68,7 @@ When you configure the Power Apps grid control for an entity, all views for that
     - The **Enable jump bar** property can be used to display an alphabetic list at the bottom of views or subgrids. The default value is **No**. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app. 
        :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
     - The **Enable pagination** property can be used to decide between modern data browsing (infinite scroll) and paging buttons. The default value is **No**. Select **Yes** to disable infinite scrolling and surface paging buttons. Note that the **Select all** action isn't available currently when using infinite scroll, but users can still perform range selection
-    - The **Enable OptionSet colors** property can be used to increase the visual appeal of choice columns by showing each value with its configured background color.  The default value is **No**. Be sure to verify the configured color for each choice column to ensure readability and accessibility before enabling this property for a table.
+    - The **Enable OptionSet colors** property can be used to increase the visual appeal of choice columns by showing each value with its configured background color. The default value is **No**. Be sure to verify the configured color for each choice column to ensure readability and accessibility before enabling this property for a table.
     - The **Show row status icons** property controls whether users see status icons (invalid, save in progress, saving, etc.) at the beginning of a grid row during the editing experience. The default value is **Yes**.
     - The **Show data type icons** property determines whether column headers display an icon corresponding to the data type next to the column name. The default value is **No**.
     - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity, or **None** to suppress all hyperlinks in the grid.
@@ -61,17 +76,9 @@ When you configure the Power Apps grid control for an entity, all views for that
     - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the field (and relationship) to use to link the parent and child entities together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
-    -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
+    -  The **Customizer control** property allows the maker to link to a single customizer Power Apps component framework control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
 
 3. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
- 
-## Add the Power Apps grid control to a subgrid
-
-1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
-1.	Open the form that contains the subgrid.
-1.	Select the subgrid where you want to configure this grid, and then select **Change properties** on the command bar.
-1.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **Power Apps grid control**.
-1.	To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 
 ## Customization
 
@@ -83,16 +90,17 @@ For information about how to customize the Power Apps grid control using extensi
 
 When a view or subgrid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps grid control displays the following behavior in a card list:
 
--  Sort isn't currently available in a card list view. To work around this limitation, create views with the sort order you want.
--  **Select all** and **Clear all** aren't available in a card list view.
--  The jump bar isn't available in a card list view. To work around this limitation, select **Search** to filter records. Type the desired letter, and then press Enter.
--  Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
--  There are no icons for context menu commands in a card list view.
--  When there are no records, some lists have a prompt to create a new item. This button isn't displayed in a card list view that uses the Power Apps read-only grid control.
+- Sort isn't currently available in a card list view. To work around this limitation, create views with the sort order you want.
+- **Select all** and **Clear all** aren't available in a card list view.
+- The jump bar isn't available in a card list view. To work around this limitation, select **Search** to filter records. Type the desired letter, and then press Enter.
+- Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
+- There are no icons for context menu commands in a card list view.
+- When there are no records, some lists have a prompt to create a new item. This button isn't displayed in a card list view that uses the Power Apps read-only grid control.
 
 #### The list view doesn’t display custom cards for the table
 
 To work around this, you can display a custom card by configuring the table to use the card form of the legacy read-only grid control.
+
 1. Go to Power Apps (make.powerapps.com) > **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the table you want to customize > **Controls** tab > **Add Control**.
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors.
 
@@ -110,10 +118,11 @@ To work around this, you can display a custom card by configuring the table to u
   - For example, if the contact table has users 'Person A', 'Person B', and 'Person C' but account table data only has rows referencing 'Person B' and 'Person C', then the column filter lookup for the contact column in the account grid only shows the options for 'Person B' and 'Person C'. This is a change in behavior from previous grids.
 
 ### Known issues
-- Column grouping is not supported when paging on the grid is enabled.
-- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
-- If an user has read-only privileges to the main list and then navigates through a form to a sub-grid representing an entity to which they have write privileges, the sub-grid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
 
-### See also
+- Column grouping isn't supported when paging on the grid is enabled.
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
+- If a user has read-only privileges to the main list and then navigates through a form to a subgrid representing an entity to which they have write privileges, the subgrid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
+
+### Related articles
 
 [Explore data in a view on a grid page](../../user/grid-filters.md)
