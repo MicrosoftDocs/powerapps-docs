@@ -50,7 +50,7 @@ If you find yourself using leading wild card queries, look into these options:
 
 #### Other wildcard characters
 
-As described in [Use wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the percent sign ('%') character can act like a wildcard. Below are two example query strings that also behave like leading wildcards:
+As described in [Use wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the percent sign ('%') character can act like a wildcard. Following are two example query strings that also behave like leading wildcards:
 
 - `_234%`
 - `[^a]234%`
@@ -59,7 +59,7 @@ Dataverse heavily throttles queries with search strings that start with these ot
 
 #### Hyphen character
 
-Database collation unicode sorting rules make some search strings that start with a hyphen ('-') perform like leading wildcard searches. Search strings that start with a hyphen can't take advantage of database indexes if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` cannot efficiently use database indexes, while `-234%` can. Dataverse heavily throttles inefficient search strings that start with hyphens. To understand more about the database collation unicode sorting rules for hyphens, please see [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
+Database collation unicode sorting rules make some search strings that start with a hyphen ('-') perform like leading wildcard searches. Search strings that start with a hyphen can't take advantage of database indexes if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` can't efficiently use database indexes, while `-234%` can. Dataverse heavily throttles inefficient search strings that start with hyphens. To understand more about the database collation unicode sorting rules for hyphens, see [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
 
 ### Avoid using formula or calculated columns in filter conditions
 
