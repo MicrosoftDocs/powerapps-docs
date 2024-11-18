@@ -1591,7 +1591,7 @@
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md#filter-monitor-for-form-related-issues
+            href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
@@ -2631,9 +2631,9 @@
   items:
   - name: Debug Power Apps with Monitor
     items:
-    - name: Monitor overview
+    - name: Live monitor overview
       href: monitor-overview.md
-    - name: Debug canvas apps with Monitor
+    - name: Debug canvas apps with Live monitor
       href: monitor-canvasapps.md
     - name: Debug model-driven apps with Monitor
       items:
@@ -2643,7 +2643,7 @@
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
         href: ../developer/model-driven-apps/troubleshoot-forms.md
-    - name: Collaborative debugging with Monitor
+    - name: Collaborative debugging with Live monitor
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
