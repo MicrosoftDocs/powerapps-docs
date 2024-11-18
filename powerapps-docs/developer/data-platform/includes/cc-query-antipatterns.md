@@ -12,7 +12,7 @@ This practice is especially true for *logical columns*. A logical column contain
 
 ### Avoid leading wild cards in filter conditions
 
-Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other non-leading wild card queries that limit the result set.
+Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other nonleading wild card queries that limit the result set.
 
 The following example is a FetchXml [condition element](../fetchxml/reference/condition.md) that uses a leading wild card:
 
@@ -48,19 +48,17 @@ If you find yourself using leading wild card queries, look into these options:
 - Use [Dataverse search](../search/overview.md) instead.
 - Change your data model to help people avoid needing leading wild cards.
 
-[Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md)
+#### Other wildcard characters
 
-As the documentation link above details, it is more than just the '%' character that acts as a wildcard. The following example query strings also behave like leading wildcards and are also heavily throttled by Dataverse:
+As described in [Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the '%' character can act like a wildcard. The following example query strings also behave like leading wildcards and Dataverse throttles them heavily:
 
-- "_%"
-- "[%"
-- "[]%"
+- `_%`
+- `[%`
+- `[]%`
 
-Regarding the two bracket ('[') examples above: the bracket examples behave like leading wildcards because the brackets do not capture any characters. In contrast, a value like "[a]%" matches any string that starts with 'a', and does not behave like a leading wildcard.
+Brackets behave like leading wildcards because they don't capture any characters. In contrast, a value like `[a]%` matches any string that starts with 'a', and doesn't behave like a leading wildcard.
 
-Search strings that start with a hyphen ('-') also behave like leading wildcards if the search string does not contain a non-wildcard character before the occurrence of the '%' character in the string. For example, "-%" and "-%234" behave like leading wildcards, while "-234%" does not. Hyphens are conditionally treated like leading wildcards due to the database collation sorting rules that are discussed here: https://learn.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16#SQL-collations
-
-Please note that the above examples for the special characters '_', '[', '-' are not a complete list of all possible leading wildcard string values.
+Search strings that start with a hyphen (`-`) also behave like leading wildcards if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` behave like leading wildcards, while `-234%`" doesn't. Hyphens are conditionally treated like leading wildcards due to the database collation sorting rules that are discussed in [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16#SQL-collations). '_', '[', and '-' aren't a complete list of all possible leading wildcard string values.
 
 ### Avoid using formula or calculated columns in filter conditions
 
@@ -78,7 +76,7 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 ### Avoid ordering by choice columns
 
-When using [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../org-service/queryexpression/order-rows.md#choice-columns), when you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
+When you use [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../org-service/queryexpression/order-rows.md#choice-columns), when you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
 > [!NOTE]
 > OData is different. With the Dataverse Web API, `$orderby` sorts rows using the integer value of the choice column rather than the localized label.
