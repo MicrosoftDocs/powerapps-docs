@@ -22,13 +22,11 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 ## Prerequisites
 
-To view your apps performance the following settings must be turned on in Power Platform Admin Center.
-
-- [Tenant-level analytics](/power-platform/admin/tenant-level-analytics) must be turned on for data to be available for monitoring experiences. 
-- [Managed Environments](/power-platform/admin/managed-environment-overview) is required to view monitoring recommendations.
+To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. More information: [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers)
 
 ## Open and pin Monitor
 
