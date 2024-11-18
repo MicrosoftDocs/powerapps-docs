@@ -50,6 +50,17 @@ If you find yourself using leading wild card queries, look into these options:
 
 [Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md)
 
+As the documentation link above details, it is more than just the '%' character that acts as a wildcard. The following example query strings also behave like leading wildcards and are also heavily throttled by Dataverse:
+
+- "_%"
+- "[%"
+- "[]%"
+
+Regarding the two bracket ('[') examples above: the bracket examples behave like leading wildcards because the brackets do not capture any characters. In contrast, a value like "[a]%" matches any string that starts with 'a', and does not behave like a leading wildcard.
+
+Search strings that start with a hyphen ('-') also behave like leading wildcards if the search string does not contain a non-wildcard character before the occurrence of the '%' character in the string. For example, "-%" and "-%234" behave like leading wildcards, while "-234%" does not. Hyphens are conditionally treated like leading wildcards due to the database collation sorting rules that are discussed here: https://learn.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16#SQL-collations
+
+Please note that the above examples for the special characters '_', '[', '-' are not a complete list of all possible leading wildcard string values.
 
 ### Avoid using formula or calculated columns in filter conditions
 
