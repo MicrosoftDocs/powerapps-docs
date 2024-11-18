@@ -16,12 +16,12 @@ contributors:
 ---
 # Debug a model-driven app with Live monitor
 
-Live monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Live monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs. You can also collaboratively debug a published model-driven app with a support engineer or debug issues of another user's session. For more information on how to collaboratively debug a published model-driven app, go to [Collaborative troubleshooting using Monitor](monitor-collaborative-debugging.md).
+Live monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Live monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs. You can also collaboratively debug a published model-driven app with a support engineer or debug issues of another user's session. For more information on how to collaboratively debug a published model-driven app, go to [Collaborative troubleshooting using Live monitor](monitor-collaborative-debugging.md).
 
 > [!IMPORTANT]
 > Live monitor for model-driven app requires the client version of your model-driven app to be 1.4.5973-2307.2 or later.
 
-For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Live monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
+For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Live monitor with a canvas app, see [Debugging canvas apps with Live monitor](monitor-canvasapps.md).
 
 ## Use Live monitor to diagnose a model-driven app
 
@@ -35,7 +35,7 @@ For more information about when you should monitor an app, see [Monitor overview
 
 1. After the app is opened from Live monitor, you’ll see a **Join monitor debug session?** dialog box. This lets you know that any data from the app will be sent to the Live monitor owner. Select **Join**. Events begin to flow to the Live monitor session screen as they occur in the app.
 
-   :::image type="content" source="media/monitor-model-session.png" alt-text="Monitor session with events displayed.":::
+   :::image type="content" source="media/monitor-model-session.png" alt-text="Live monitor session with events displayed.":::
 
 1. Select an event to display additional information in the right pane. 
 
@@ -96,7 +96,8 @@ See [previous blog post](https://powerapps.microsoft.com/blog/turbocharge-your-
 For every page load, the data platform sends all KPI for the loading sequence as well as network request details as mentioned earlier.
 
 ### See also
-[Use Monitor to troubleshoot model-driven app form behavior](model-driven-apps/monitor-form-checker.md)
+
+[Use Live monitor to troubleshoot model-driven app form behavior](model-driven-apps/monitor-form-checker.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

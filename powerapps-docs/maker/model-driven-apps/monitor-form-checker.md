@@ -24,7 +24,7 @@ To help you isolate certain model-driven app features, you can filter on specifi
 
 Sign in to [Power Apps](https://make.powerapps.com/), select **Solutions** on the left navigation pane, open the solution that contains the app you want to monitor, select the app, and then select **Live monitor** on the command bar.
 
-On the Live monitor page, select **Play model-driven** app on the command bar. For more information about creating a Live monitor session, go to [Use Monitor to troubleshoot page behavior in model-driven apps](monitor-page-checker.md).
+On the Live monitor page, select **Play model-driven** app on the command bar. For more information about creating a Live monitor session, go to [Use Live monitor to troubleshoot page behavior in model-driven apps](monitor-page-checker.md).
 
 ## Filter Live monitor for form-related issues
 
@@ -39,7 +39,7 @@ There are many situations where Live monitor can help makers understand why a fo
 1. On the browser window running Live monitor, select the **Category** column, and then select **Filter by**.
 
    > [!div class="mx-imgBorder"]
-   > ![Filter on form events in Monitor.](media/monitor-filter-formchecker.png)
+   > ![Filter on form events in Live monitor.](media/monitor-filter-formchecker.png)
 
 1. Select **Equals** or **Contains** from the dropdown list, and then enter `formchecker` in the box. Select **Apply**.
 
@@ -123,6 +123,6 @@ To close the monitoring session, close the browser tab where the monitored model
 
 For more information about how to troubleshoot issues with forms in a model-driven app, see [Troubleshoot form issues in model-driven apps](../../developer/model-driven-apps/troubleshoot-forms.md).
 
-[Learn about Monitor as a Power Apps tool](../../maker/monitor-overview.md)
+[Learn about Live monitor as a Power Apps tool](../../maker/monitor-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

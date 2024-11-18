@@ -1591,7 +1591,7 @@
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md#filter-monitor-for-form-related-issues
+            href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
