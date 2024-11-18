@@ -25,10 +25,10 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 
 ## Prerequisites
 
-To view your apps performance the TBD the following settings must be turned on in Power Platform Admin Center.
+To view your apps performance the following settings must be turned on in Power Platform Admin Center.
 
-- TBD add link to admin articles
-- TBD add link to admin articles
+- [Tenant-level analytics](/power-platform/admin/tenant-level-analytics) must be turned on for data to be available for monitoring experiences. 
+- [Managed Environments](/power-platform/admin/managed-environment-overview) is required to view monitoring recommendations.
 
 ## Open and pin Monitor
 
