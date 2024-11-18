@@ -50,15 +50,17 @@ If you find yourself using leading wild card queries, look into these options:
 
 #### Other wildcard characters
 
-As described in [Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the '%' character can act like a wildcard. The following example query strings also behave like leading wildcards and Dataverse throttles them heavily:
+As described in [Use wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the percent sign ('%') character can act like a wildcard. The following examples show more query strings that also behave like leading wildcards and Dataverse throttles them heavily:
 
 - `_%`
 - `[%`
 - `[]%`
+- `-%`
+- *This isn't a complete list.*
 
 Brackets behave like leading wildcards because they don't capture any characters. In contrast, a value like `[a]%` matches any string that starts with 'a', and doesn't behave like a leading wildcard.
 
-Search strings that start with a hyphen (`-`) also behave like leading wildcards if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` behave like leading wildcards, while `-234%`" doesn't. Hyphens are conditionally treated like leading wildcards due to the database collation sorting rules that are discussed in [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations). '_', '[', and '-' aren't a complete list of all possible leading wildcard string values.
+Search strings that start with a hyphen ('-') also behave like leading wildcards if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` behave like leading wildcards, while `-234%` doesn't. Hyphens are conditionally treated like leading wildcards due to the database collation sorting rules that are discussed in [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
 
 ### Avoid using formula or calculated columns in filter conditions
 
