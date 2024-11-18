@@ -37,6 +37,7 @@ By combining conditions and actions, you can do any of the following with busine
 
 Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
 
+* Set column requirement levels
 * Show or hide columns  
 * Enable or disable columns  
 * Create business recommendations based on business intelligence.  
