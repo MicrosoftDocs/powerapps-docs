@@ -1,13 +1,13 @@
 ---
-title: Monitor overview
-description: Overview of Power Apps Monitor.
+title: Live monitor overview
+description: Overview of Power Apps Live monitor.
 author: mattgon
 
 ms.subservice: troubleshoot
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/23/2021
+ms.date: 11/14/2024
 ms.author: austinj
 search.audienceType: 
   - maker
@@ -17,19 +17,19 @@ contributors:
   - maustinjones
 ---
 
-# Monitor overview
+# Live monitor overview
 
-Monitor is a tool that offers makers the ability to view a stream of events from a user's session to diagnose and troubleshoot problems. Makers of canvas apps can use Monitor either to view events while building a new app in Power Apps Studio or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigation, command executions, [form-related issues](/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand app behavior and make improvements.
+Live monitor is a tool that offers makers the ability to view a stream of events from a user's session to diagnose and troubleshoot problems. Makers of canvas apps can use Live monitor either to view events while building a new app in Power Apps Studio or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigation, command executions, [form-related issues](/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand app behavior and make improvements.
 
 ## Benefits
 
-Monitor can help you diagnose and troubleshoot problems faster, and build more reliable apps. It provides a deep view of your app by logging all the key activities that occur in the app as it runs. Monitor also provides a better understanding of how the events and formulas contained in your app work, so you can improve performance and identify any errors or problems.
+Live monitor can help you diagnose and troubleshoot problems faster, and build more reliable apps. It provides a deep view of your app by logging all the key activities that occur in the app as it runs. Live monitor also provides a better understanding of how the events and formulas contained in your app work, so you can improve performance and identify any errors or problems.
 
 ## Debugging an app
 
 The key to debugging a problem is to have a better understanding of what your app does, and how it does it. Sometimes it's difficult to isolate a problem by just looking at the app formulas, or even by reviewing runtime errors. Watching the events as they occur in your app can help you understand the order of events and how your app is performing, to spot errors and diagnose problems faster.
 
-Some examples of problems and queries that you can uncover when using Monitor are:
+Some examples of problems and queries that you can uncover when using Live monitor are:
 
 - **A high number of network calls**
     - Is the app fetching data too frequently?
@@ -53,7 +53,7 @@ Some examples of problems and queries that you can uncover when using Monitor ar
 
 ## Prerequisites
 
-You'll need the following security role membership in the environment to use Monitor.
+You'll need the following security role membership in the environment to use Live monitor.
 
 | App type | Required security role |
 | - | - |
@@ -62,9 +62,9 @@ You'll need the following security role membership in the environment to use Mon
 
 More information: [Configure user security to resources in an environment](/power-platform/admin/database-security)
 
-## Monitor dashboard
+## Live monitor dashboard
 
-You can review various properties for each event inside Monitor. Depending on the event category, some of these properties might not contain data. The following image shows an example of the Monitor dashboard for canvas apps.
+You can review various properties for each event inside Live monitor. Depending on the event category, some of these properties might not contain data. The following image shows an example of the Live monitor dashboard for canvas apps.
 
 ![Monitor dashboard.](media/monitor/monitor.png "Monitor dashboard")
 
@@ -105,9 +105,9 @@ When you select an event in the grid, a panel displays additional details about 
 
     ![Monitor - Response.](media/monitor/monitor-response.png "Monitor - Response")
 
-## Unsupported scenarios for Monitor
+## Unsupported scenarios for Live monitor
 
-To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - unsupported scenarios](monitor-advanced.md#unsupported-scenarios-for-monitor).
+To learn about unsupported scenarios for Live monitor, go to [Advanced monitoring - unsupported scenarios](monitor-advanced.md#unsupported-scenarios-for-live-monitor).
 
 ## Next steps
 
@@ -117,7 +117,7 @@ To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - u
 ### See also
 
 [Troubleshoot form issues in model-driven apps](/powerapps/developer/model-driven-apps/troubleshoot-forms)  
-[Collaborative debugging with Monitor](monitor-collaborative-debugging.md)  
+[Collaborative debugging with Live monitor](monitor-collaborative-debugging.md)  
 [Advanced monitoring](monitor-advanced.md)
 
 
