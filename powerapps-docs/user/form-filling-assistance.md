@@ -58,6 +58,8 @@ Smart paste (Preview) is a capability can that reason over the form and the text
 1. Copy the text based on which you would like to fill in the form.
 2. You can use the **smart paste** icon in the command bar. Alternatively, ensure no specific fields are selected in the form, and then use the regular paste keyboard shortcut (Ctrl+V or Cmd+V).
 
+To use the smart paste (preview) capability, your administrator must enable it. For more information on how to enable smart paste, see [Manage feature settings](/power-platform/admin/settings-features.md).
+
 Note that you can continue to paste directly, without smart paste (Preview), into a specific field by clicking on it first and then pasting.
 
 :::image type="content" source="media/formfill_smartpaste.png" alt-text="Screenshot that shows the smart paste icon in the form's command bar.":::
