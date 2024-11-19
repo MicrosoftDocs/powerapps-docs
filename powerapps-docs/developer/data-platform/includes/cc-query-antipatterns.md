@@ -12,7 +12,7 @@ This practice is especially true for *logical columns*. A logical column contain
 
 ### Avoid leading wild cards in filter conditions
 
-Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other non-leading wild card queries that limit the result set.
+Queries that use conditions with leading wild cards (either explicitly, or implicitly with an operator like `ends-with`) can lead to bad performance. Dataverse can't take advantage of database indexes when a query using leading wild cards, which forces SQL to scan the entire table. Table scans can happen even if there are other nonleading wild card queries that limit the result set.
 
 The following example is a FetchXml [condition element](../fetchxml/reference/condition.md) that uses a leading wild card:
 
@@ -48,8 +48,18 @@ If you find yourself using leading wild card queries, look into these options:
 - Use [Dataverse search](../search/overview.md) instead.
 - Change your data model to help people avoid needing leading wild cards.
 
-[Learn more about using wildcard characters in conditions for string values](../wildcard-characters.md)
+#### Other wildcard characters
 
+As described in [Use wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the percent sign ('%') character can act like a wildcard. Following are two example query strings that also behave like leading wildcards:
+
+- `_234%`
+- `[^a]234%`
+
+Dataverse heavily throttles queries with search strings that start with these other leading wildcard special characters.
+
+#### Hyphen character
+
+Database collation unicode sorting rules make some search strings that start with a hyphen ('-') perform like leading wildcard searches. Search strings that start with a hyphen can't take advantage of database indexes if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` can't efficiently use database indexes, while `-234%` can. Dataverse heavily throttles inefficient search strings that start with hyphens. To understand more about the database collation unicode sorting rules for hyphens, see [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
 
 ### Avoid using formula or calculated columns in filter conditions
 
@@ -67,7 +77,7 @@ To help prevent outages, Dataverse applies throttles on queries that have filter
 
 ### Avoid ordering by choice columns
 
-When using [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../org-service/queryexpression/order-rows.md#choice-columns), when you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
+When you use [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpression](../org-service/queryexpression/order-rows.md#choice-columns), when you order query results using a choice column, the results are sorted using the localized label for each choice option. Ordering by the number value stored in the database wouldn't provide a good experience in your application. You should know that ordering on choice columns requires more compute resources to join and sort the rows by the localized label value. This extra work makes the query slower. If possible, try to avoid ordering results by choice column values.
 
 > [!NOTE]
 > OData is different. With the Dataverse Web API, `$orderby` sorts rows using the integer value of the choice column rather than the localized label.
