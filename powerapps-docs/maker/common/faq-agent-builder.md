@@ -34,9 +34,9 @@ We qualitatively tested the model's agent generation capabilities by testing aga
 
 - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
 
-- For more information, see preview terms. 
+- For more information, see [preview terms](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/). 
 
-- This capability is powered by Azure OpenAI Service. 
+- This capability is powered by [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview). 
 
 - This capability is in the process of rolling out and might not be available in your region yet. 
 
@@ -54,10 +54,10 @@ Follow these procedures to make the most out of the feature:
 
   - “Generate reports for claims filed within a specific date range” 
 
-Review all suggestions for accuracy and appropriateness before proceeding to the next step.  
+- Review all suggestions for accuracy and appropriateness before proceeding to the next step.  
 
 ## Related information
 
-Agent builder documentation  
+[Agent builder documentation](https://go.microsoft.com/fwlink/?linkid=2292632).  
 
 
