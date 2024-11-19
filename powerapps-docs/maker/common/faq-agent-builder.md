@@ -34,11 +34,11 @@ We qualitatively tested the model's agent generation capabilities by testing aga
 
 - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
 
-- For more information, see [preview terms](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/). 
+- For more information, see [preview terms](https://www.microsoft.com/business-applications/legal/supp-powerplatform-preview/). 
 
 - This capability is powered by [Azure OpenAI Service](/azure/ai-services/openai/overview). 
 
-- This capability is in the process of rolling out and might not be available in your region yet. 
+- This capability is in the process of rolling out and might not be available in your region yet.
 
 - This capability can be subject to usage limits or capacity throttling. 
 
