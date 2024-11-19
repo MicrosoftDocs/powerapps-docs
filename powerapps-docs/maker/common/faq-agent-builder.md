@@ -58,6 +58,6 @@ Follow these procedures to make the most out of the feature:
 
 ## Related information
 
-[Agent builder documentation](https://go.microsoft.com/fwlink/?linkid=2292632).  
+[Automate your business process with Agent Builder](../canvas-apps/agent-builder.md)
 
 
