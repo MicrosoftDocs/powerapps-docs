@@ -682,6 +682,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Automate your business process with Agent Builder
+          href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
         - name: Understand variables
@@ -2619,6 +2621,8 @@
     href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
+  - name:  FAQ about Agent builder in canvas apps 
+    href: ./common/faq-agent-builder.md  
 - name: Resources
   items:
   - name: Blog
