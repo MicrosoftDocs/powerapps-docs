@@ -1,5 +1,5 @@
 ---
-title: Agent Builder in Power Apps
+title: Agent Builder in canvas apps
 description: Generate an agent in canvas apps
 author: noazarur-microsoft
 
@@ -14,4 +14,4 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Agent builder in Power Apps
+# Agent builder in canvas apps
