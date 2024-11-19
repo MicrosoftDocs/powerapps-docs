@@ -1,6 +1,6 @@
 ---
-title: FAQ about Agent builder in canvas apps (preview)
-description: This FAQ provides information about the AI technology used in Agent builder with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+title: FAQ about Agent Builder in canvas apps (preview)
+description: This FAQ provides information about the AI technology used in Agent Builder with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 11/19/2024
 author: noazarur-microsoft
 ms.author: noazarur
@@ -13,7 +13,7 @@ ms.collection:
     - bap-ai-copilot
 ---
 
-# FAQ for Agent builder in canvas apps (preview)
+# FAQ for Agent Builder in canvas apps (preview)
 
 These frequently asked questions (FAQ) describe the AI impact of Agent builder in canvas apps.
 
@@ -36,7 +36,7 @@ We qualitatively tested the model's agent generation capabilities by testing aga
 
 - For more information, see [preview terms](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/). 
 
-- This capability is powered by [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview). 
+- This capability is powered by [Azure OpenAI Service](/azure/ai-services/openai/overview). 
 
 - This capability is in the process of rolling out and might not be available in your region yet. 
 
