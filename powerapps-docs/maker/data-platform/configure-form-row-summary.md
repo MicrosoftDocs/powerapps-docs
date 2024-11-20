@@ -31,7 +31,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 To enable this feature, the following criteria are required:
 
 - System Administrator security role membership in the Microsoft Dataverse environment. <!-- IS THIS REQUIRED TO CREATE OR EDIT OR HIDE ROW SUMMARIES ?? OR is this just for the Copilot environment setting? -->
-- Copilot is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
+- AI insight cards is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
 
 ## Create a row summary
 
@@ -61,6 +61,7 @@ Writing a custom prompt gives you the ability to instruct the generative pretrai
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
+- Leverage [aka.ms/promptguide](aka.ms/promptguide) for good prompt guidance
 
 ### Prompt example for a row summary
 
