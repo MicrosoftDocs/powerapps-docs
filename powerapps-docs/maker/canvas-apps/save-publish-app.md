@@ -5,7 +5,7 @@ author: amchern
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 2/15/2024
+ms.date: 11/19/2024
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
