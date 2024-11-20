@@ -31,7 +31,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 To enable this feature, the following criteria are required:
 
 - System Administrator security role membership in the Microsoft Dataverse environment. <!-- IS THIS REQUIRED TO CREATE OR EDIT OR HIDE ROW SUMMARIES ?? OR is this just for the Copilot environment setting? -->
-- AI insight cards is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
+- AI insight cards is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Create a row summary
 
