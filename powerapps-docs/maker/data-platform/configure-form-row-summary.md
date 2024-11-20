@@ -30,8 +30,8 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 
 To enable this feature, the following criteria are required:
 
-- System Administrator security role membership in the Microsoft Dataverse environment. <!-- IS THIS REQUIRED TO CREATE OR EDIT OR HIDE ROW SUMMARIES ?? OR is this just for the Copilot environment setting? -->
-- AI insight cards is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features)
+- System Administrator security role membership in the Microsoft Dataverse environment.
+- AI insight cards setting is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Create a row summary
 
@@ -50,7 +50,7 @@ Row summaries can be configured for table main forms.
 
 ## Determine which main forms include a row summary
 
-After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
+After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps, select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
 
 All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *table name* table, and appears in every model-driven app that uses this form."
 :::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary":::
@@ -61,7 +61,7 @@ Writing a custom prompt gives you the ability to instruct the generative pretrai
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
-- Leverage [aka.ms/promptguide](aka.ms/promptguide) for good prompt guidance
+- For information about how to craft effective prompts, download the [AI Builder prompt engineering guide](https://aka.ms/promptguide).
 
 ### Prompt example for a row summary
 
