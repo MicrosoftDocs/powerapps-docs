@@ -84,7 +84,7 @@ Xrm.App.sidePanes.createPane({
     pane.navigate({
         pageType: "entityrecord",
         entityName: "sample_reservation",
-        entityId: "d4034340-4623-e811-a847-000d3a30c619",
+        entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
     })
 });
 ```

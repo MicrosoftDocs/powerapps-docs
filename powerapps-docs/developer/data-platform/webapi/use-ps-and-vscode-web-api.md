@@ -110,8 +110,8 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
    {
    "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
    "BusinessUnitId": "3a277578-5996-ee11-be36-002248227994",
-   "UserId": "2c2e7578-5996-ee11-be36-002248227994",
-   "OrganizationId": "97bf0e8b-aa99-ee11-be32-000d3a106c3a"
+   "UserId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+   "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
    }
    ```
 
@@ -661,7 +661,7 @@ Vary: Accept-Encoding
 x-ms-service-request-id: 7341c0c1-3343-430b-98ea-292567ed4776
 Set-Cookie: ARRAffinity=f60cbee43b7af0a5f322e7ce57a018546ed978f67f0c11cbb5e15b02ddb091a915134d20c556b0b34b9b6ae43ec3f5dcdad61788de889ffc592af7aca85fc1c508DC0FC94CB062A12107345846; path=/; secure; HttpOnly
 Set-Cookie: ReqClientId=4fc95009-0b3d-4a19-b223-0d80745636ac; expires=Sun, 07-Jan-2074 21:10:42 GMT; path=/; secure; HttpOnly
-Set-Cookie: orgId=648e8efd-db86-466e-a5bc-a4d5eb9c52d4; expires=Sun, 07-Jan-2074 21:10:42 GMT; path=/; secure; HttpOnly
+Set-Cookie: orgId=33dd33dd-ee44-ff55-aa66-77bb77bb77bb; expires=Sun, 07-Jan-2074 21:10:42 GMT; path=/; secure; HttpOnly
 x-ms-service-request-id: 1ee13aa7-47f3-4a75-95fa-2916775a1f79
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 REQ_ID: 1ee13aa7-47f3-4a75-95fa-2916775a1f79
@@ -678,7 +678,7 @@ X-Source: 2302101791355821068628523819830862152291172232072372448021147103846182
 Date: Sun, 07 Jan 2024 21:10:42 GMT
 Content-Length: 277
 
-{"@odata.context":"https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse","BusinessUnitId":"1647bf36-e90a-4c4d-9b61-969d57ce7a66","UserId":"24e34f5e-7f1a-43fe-88da-7e4b862d51ad","OrganizationId":"648e8efd-db86-466e-a5bc-a4d5eb9c52d4"}
+{"@odata.context":"https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse","BusinessUnitId":"1647bf36-e90a-4c4d-9b61-969d57ce7a66","UserId":"22cc22cc-dd33-ee44-ff55-66aa66aa66aa","OrganizationId":"33dd33dd-ee44-ff55-aa66-77bb77bb77bb"}
 ```
 
 If Fiddler isn't running, you get an error:

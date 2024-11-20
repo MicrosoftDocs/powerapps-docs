@@ -66,14 +66,14 @@ This section creates a single contact then performs a series of updates upon tha
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
     
    **Console output:**
     
    ```
-   Contact URI: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
-   Contact relative Uri: contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
+   Contact URI: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+   Contact relative Uri: contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```  
     
    The properties available for each type are defined within the metadata document and are also documented for each type in the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> section. For more general information, see [Web API types and operations](web-api-types-operations.md).  
@@ -83,7 +83,7 @@ This section creates a single contact then performs a series of updates upon tha
    **Request:**
    
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: *
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -101,7 +101,7 @@ This section creates a single contact then performs a series of updates upon tha
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
     
    **Console output:**  
@@ -122,7 +122,7 @@ This section creates a single contact then performs a series of updates upon tha
    **Request:**
    
    ```http
-   GET [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)?$select=fullname,annualincome,jobtitle,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=fullname,annualincome,jobtitle,description HTTP/1.1
    Prefer: odata.include-annotations="*"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -150,7 +150,7 @@ This section creates a single contact then performs a series of updates upon tha
     "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
     "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
     "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1",
-    "contactid": "0928bcb4-bb27-ed11-9db1-002248274ada"
+    "contactid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
    }
    ```
     
@@ -171,7 +171,7 @@ This section creates a single contact then performs a series of updates upon tha
    **Request:**
    
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: *
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -190,7 +190,7 @@ This section creates a single contact then performs a series of updates upon tha
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
     
    **Console output:**  
@@ -210,7 +210,7 @@ This section creates a single contact then performs a series of updates upon tha
    **Request:**
    
    ```http
-   PUT [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)/telephone1 HTTP/1.1
+   PUT [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/telephone1 HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -239,7 +239,7 @@ This section creates a single contact then performs a series of updates upon tha
    **Request:**
    
    ```http
-   GET [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)/telephone1 HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/telephone1 HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -253,7 +253,7 @@ This section creates a single contact then performs a series of updates upon tha
    OData-Version: 4.0
    
    {
-    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#contacts(0928bcb4-bb27-ed11-9db1-002248274ada)/telephone1",
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/telephone1",
     "value": "555-0105"
    }
    ```
@@ -284,7 +284,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    {
     "name": "Contoso Ltd",
     "telephone1": "555-5555",
-    "primarycontactid@odata.bind": "contacts(0928bcb4-bb27-ed11-9db1-002248274ada)"
+    "primarycontactid@odata.bind": "contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)"
    }
    ```
    
@@ -293,14 +293,14 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
    ```  
     
    **Console output:**  
     
    ```  
    Account 'Contoso Ltd' created.
-   Account URI: accounts(2728bcb4-bb27-ed11-9db1-002248274ada)
+   Account URI: accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
    ```  
    
 1. Retrieve the primary contact for the account Contoso, Ltd., again using `$expand`  with the  `primarycontactid` single-valued navigation property to access the associated <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType> record.  
@@ -308,7 +308,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    **Request:**
    
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada)?$select=name,&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)?$select=name,&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
    Prefer: odata.include-annotations="*"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -328,7 +328,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
     "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts(name,primarycontactid(fullname,jobtitle,annualincome))/$entity",
     "@odata.etag": "W/\"72935670\"",
     "name": "Contoso Ltd",
-    "accountid": "2728bcb4-bb27-ed11-9db1-002248274ada",
+    "accountid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
     "primarycontactid": {
       "@odata.etag": "W/\"72935663\"",
       "fullname": "Rafel Shillo",
@@ -339,7 +339,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
       "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
       "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
       "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1",
-      "contactid": "0928bcb4-bb27-ed11-9db1-002248274ada"
+      "contactid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     }
    }
    ```
@@ -410,7 +410,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
    ```
     
    **Console output:**  
@@ -424,7 +424,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
    **Request:**
    
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)?$select=name&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)?$select=name&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1
    Prefer: odata.include-annotations="*"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -444,7 +444,7 @@ This section creates an account, its primary contact, and a set of tasks for tha
     "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts(name,primarycontactid(fullname,jobtitle,annualincome))/$entity",
     "@odata.etag": "W/\"72935710\"",
     "name": "Fourth Coffee",
-    "accountid": "2e28bcb4-bb27-ed11-9db1-002248274ada",
+    "accountid": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
     "primarycontactid": {
       "@odata.etag": "W/\"72935689\"",
       "fullname": "Susie Curtis",
@@ -560,14 +560,14 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:**
    
    ```http
-   POST [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts/$ref HTTP/1.1
+   POST [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)/contact_customer_accounts/$ref HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
    Accept: application/json
    
    {
-    "@odata.id": "[Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)"
+    "@odata.id": "[Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)"
    }
    ```
    
@@ -583,7 +583,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:**
    
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts?$select=fullname,jobtitle HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)/contact_customer_accounts?$select=fullname,jobtitle HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -603,7 +603,7 @@ This section demonstrates how to associate and disassociate existing table rows.
         "@odata.etag": "W/\"72935741\"",
         "fullname": "Rafel Shillo",
         "jobtitle": "Senior Developer",
-        "contactid": "0928bcb4-bb27-ed11-9db1-002248274ada"
+        "contactid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
       }
     ]
    }
@@ -621,7 +621,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:**
    
    ```http
-   DELETE [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada)/contact_customer_accounts(0928bcb4-bb27-ed11-9db1-002248274ada)/$ref HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)/contact_customer_accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/$ref HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -657,7 +657,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/roles(e359feba-bb27-ed11-9db1-002248274ada)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/roles(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
    ``` 
   
 1. Associate the new security role to your systemuser record.
@@ -672,7 +672,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    
    {
-    "@odata.id": "[Organization Uri]/api/data/v9.2/roles(e359feba-bb27-ed11-9db1-002248274ada)"
+    "@odata.id": "[Organization Uri]/api/data/v9.2/roles(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)"
    }
    ```
    
@@ -713,7 +713,7 @@ This section demonstrates how to associate and disassociate existing table rows.
       {
         "@odata.etag": "W/\"72935763\"",
         "name": "Example Security Role",
-        "roleid": "e359feba-bb27-ed11-9db1-002248274ada"
+        "roleid": "33dd33dd-ee44-ff55-aa66-77bb77bb77bb"
       }
     ]
    }
@@ -730,7 +730,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:**
    
    ```http
-   DELETE [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/systemuserroles_association(e359feba-bb27-ed11-9db1-002248274ada)/$ref HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/systemuserroles_association(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)/$ref HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -753,7 +753,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:**
    
    ```http
-   DELETE [Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -772,16 +772,16 @@ This section demonstrates how to associate and disassociate existing table rows.
    **Request:** 
      
    ```http    
-   DELETE [Organization Uri]/api/data/v9.2/accounts(2728bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff) HTTP/1.1
    . . .  
     
-   DELETE [Organization Uri]/api/data/v9.2/accounts(2e28bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1 
+   DELETE [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa) HTTP/1.1 
    . . .  
      
    DELETE [Organization Uri]/api/data/v9.2/contacts(2f28bcb4-bb27-ed11-9db1-002248274ada) HTTP/1.1
    . . .  
      
-   DELETE [Organization Uri]/api/data/v9.2/roles(e359feba-bb27-ed11-9db1-002248274ada) HTTP/1.1  
+   DELETE [Organization Uri]/api/data/v9.2/roles(33dd33dd-ee44-ff55-aa66-77bb77bb77bb) HTTP/1.1  
    ```  
   
 ### See also  

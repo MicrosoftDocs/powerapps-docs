@@ -99,7 +99,7 @@ Content-Length: 361
 
 {
   "Target": {
-    "accountid": "e41ac31a-dcdf-ed11-a7c7-000d3a993550",
+    "accountid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
     "@odata.type": "Microsoft.Dynamics.CRM.account"
   },
   "PrincipalAccess": {
@@ -177,7 +177,7 @@ Content-Length: 388
 
 {
   "Target": {
-    "accountid": "e41ac31a-dcdf-ed11-a7c7-000d3a993550",
+    "accountid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
     "@odata.type": "Microsoft.Dynamics.CRM.account"
   },
   "PrincipalAccess": {
@@ -289,7 +289,7 @@ Content-Length: 274
 
 {
   "Target": {
-    "accountid": "e41ac31a-dcdf-ed11-a7c7-000d3a993550",
+    "accountid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
     "@odata.type": "Microsoft.Dynamics.CRM.account"
   },
   "Revokee": {
@@ -373,7 +373,7 @@ public static void OutputRetrieveAccessOrigin(IOrganizationService service,
 }
 ```
 
-Example output: `PrincipalId is object owner (e41ac31a-dcdf-ed11-a7c7-000d3a993550)`
+Example output: `PrincipalId is object owner (aaaaaaaa-bbbb-cccc-1111-222222222222)`
 
 
 # [Web API](#tab/webapi)
@@ -384,9 +384,9 @@ The [RetrieveAccessOrigin function](xref:Microsoft.Dynamics.CRM.RetrieveAccessOr
 
 ```http
 GET [Organization URI]/api/data/v9.2/RetrieveAccessOrigin(ObjectId=@objectId,LogicalName=@logicalName,PrincipalId=@principalId)?
-@objectId=e41ac31a-dcdf-ed11-a7c7-000d3a993550
+@objectId=aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 &@logicalName='account'
-&@principalId=4026be43-6b69-e111-8f65-78e7d1620f5e
+&@principalId=bbbbbbbb-cccc-dddd-2222-333333333333
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -400,7 +400,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 {  
     "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAccessOriginResponse",
-    "Response": "PrincipalId is object owner (e41ac31a-dcdf-ed11-a7c7-000d3a993550)"
+    "Response": "PrincipalId is object owner (aaaaaaaa-bbbb-cccc-1111-222222222222)"
 }
 ```
 
@@ -411,4 +411,3 @@ OData-Version: 4.0
 [Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

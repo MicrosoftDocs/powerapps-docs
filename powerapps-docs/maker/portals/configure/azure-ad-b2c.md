@@ -393,7 +393,7 @@ Site settings are required to configure cross-origin resource sharing (CORS) to 
 | Name                              | Value                             |
 |-----------------------------------|-----------------------------------|
 | HTTP/Access-Control-Allow-Methods | `GET, OPTIONS`                      |
-| HTTP/Access-Control-Allow-Origin  | `https://tenant-name.b2clogin.com` <br> For example, if tenant name is ContosoOrg, enter `https://contosoorg.b2clogin.com`. <br> **Note**: You can get this value by copying the domain name part of the [Issuer URL](configure-azure-ad-b2c-provider-manual.md). Ensure you exclude the non-domain part of the Issuer URL value&mdash;for example, exclude&mdash;`/tfp/799f7b50-f7b9-49ec-ba78-67eb67210998/b2c_1_contoso/v2.0`. |
+| HTTP/Access-Control-Allow-Origin  | `https://tenant-name.b2clogin.com` <br> For example, if tenant name is ContosoOrg, enter `https://contosoorg.b2clogin.com`. <br> **Note**: You can get this value by copying the domain name part of the [Issuer URL](configure-azure-ad-b2c-provider-manual.md). Ensure you exclude the non-domain part of the Issuer URL value&mdash;for example, exclude&mdash;`/tfp/aaaabbbb-0000-cccc-1111-dddd2222eeee/b2c_1_contoso/v2.0`. |
 
 To create site settings:
 

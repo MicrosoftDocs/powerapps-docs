@@ -79,7 +79,7 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 > For development and prototyping purposes we have provided the following AppId or ClientId and Redirect URI for use in OAuth Flows.<br/>
 > For production use, you should create an AppId or ClientId that is specific to your tenant in the Azure Management portal.<br/>
 > Sample AppId or ClientId = 51f81489-12ee-4a9e-aaae-a2591f45987d<br/>
-> Sample RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97<br/>
+> Sample RedirectUri = app://00001111-aaaa-2222-bbbb-3333cccc4444<br/>
 
 <a name="Examples"></a>
 
@@ -118,7 +118,7 @@ Create a new connection to Dataverse using a UserID or Password via OAuth.
   Password=passcode;
   Url=https://contosotest.crm.dynamics.com;
   AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
-  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  RedirectUri=app://00001111-aaaa-2222-bbbb-3333cccc4444;
   TokenCacheStorePath=c:\MyTokenCache;
   LoginPrompt=Auto"/>  
 ```  
@@ -138,7 +138,7 @@ Create a new connection to Dataverse using the current logged in user via OAuth.
   Integrated Security=true;
   Url=https://contosotest.crm.dynamics.com;
   AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
-  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  RedirectUri=app://00001111-aaaa-2222-bbbb-3333cccc4444;
   TokenCacheStorePath=c:\MyTokenCache\msal_cache.data;
   LoginPrompt=Auto"/>  
 ```  

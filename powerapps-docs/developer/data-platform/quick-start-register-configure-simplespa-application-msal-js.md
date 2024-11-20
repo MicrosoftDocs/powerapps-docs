@@ -122,7 +122,7 @@ The configured permissions should look like this when you are done:
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script>
          const baseUrl = "https://org.api.crm.dynamics.com";      //<= Change this
-         const clientId = "11111111-1111-1111-1111-111111111111"; //<= Change this
+         const clientId = "00001111-aaaa-2222-bbbb-3333cccc4444"; //<= Change this
          const tenantId = "22222222-2222-2222-2222-222222222222"; //<= Change this
          const redirectUrl = "http://localhost:5500/index.html";
          const webAPIEndpoint = baseUrl +"/api/data/v9.2";
@@ -401,7 +401,7 @@ The configured permissions should look like this when you are done:
 
    ```javascript
    const baseUrl = "https://org.api.crm.dynamics.com";      //<= Change this
-   const clientId = "11111111-1111-1111-1111-111111111111"; //<= Change this
+   const clientId = "00001111-aaaa-2222-bbbb-3333cccc4444"; //<= Change this
    const tenantId = "22222222-2222-2222-2222-222222222222"; //<= Change this
    ```
   

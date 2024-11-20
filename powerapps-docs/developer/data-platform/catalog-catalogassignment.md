@@ -357,7 +357,7 @@ OData-Version: 4.0
 Accept: application/json
 {
     "name": "Account",
-    "EntityId@odata.bind": "entities(70816501-edb9-4740-a16c-6a5efbc05d84)",
+    "EntityId@odata.bind": "entities(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)",
     "iscustomizable": {
         "Value": false
     },
@@ -370,7 +370,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000003)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 
 ```
 
@@ -440,7 +440,7 @@ CatalogAssignment accountAssignment = new CatalogAssignment
 {
     Name = "Account",
     IsCustomizable = new BooleanManagedProperty(false),
-    Object = new EntityReference("entity",new Guid("70816501-edb9-4740-a16c-6a5efbc05d84")),
+    Object = new EntityReference("entity",new Guid("00aa00aa-bb11-cc22-dd33-44ee44ee44ee")),
     CatalogId = new EntityReference("catalog", tableEventsId)
 
 };
