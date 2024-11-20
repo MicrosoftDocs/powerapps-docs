@@ -147,8 +147,8 @@ By completing the previous steps in this section, Copilot Studio now has access 
 1. Select **Save** to save your topic.
 1. In the test pane, test your topic by using one of the start phrases of the topic where you just added the **Send a message** node with the environment variable secret. You should run into an error that looks like this:
 
-   :::image type="content" source="media/env-var-secret8.png" alt-text="Error when you don't add a tag to the secret.":::
-
+   :::image type="content" source="media/env-var-secret8.png" alt-text="Error message: Bot is not allowed to use environment variable. To add the bot to the allowed list add a tag 'AllowedBots' with value.":::
+   
    This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
 
 1. Go to Azure Key Vault. In the left navigation, select **Secrets** under **Objects**. Select the secret you want to make available in Copilot Studio by selecting the name.
