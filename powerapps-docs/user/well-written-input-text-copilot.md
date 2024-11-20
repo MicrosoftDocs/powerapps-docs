@@ -20,9 +20,9 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-You can use Copilot to quickly generate well-written text to use as input text in text boxes in canvas apps. Using Copilot saves time because you won’t have to worry about creating text that meets grammar rules. Copilot is especially helpful for users who are using apps that aren’t in their native language. 
+You can use Copilot to quickly generate well-written text to use as input text in text boxes in canvas apps. Using Copilot saves time because you won’t have to worry about creating text that flows well and meets grammar rules. Copilot is especially helpful for users who are using apps that aren’t in their native language. 
 
-When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly jot down ideas in a text box without worrying about format and grammar. Copilot corrects errors in grammar and eloquently refines your ideas. You can also change the tone and length of the output to fit the scenario.
+When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly write a prompt to generate content or jot down some ideas and have Copilot refine the grammar and flow. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected.  Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
@@ -31,24 +31,32 @@ When trying to quickly input text into multiline text boxes or rich text editors
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out, and may not be available in your region yet. 
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
-## Use this feature
+## Use this feature: To generate content by writing a prompt for a blank text box
 
-1. Insert your cursor into a multiline text box or rich text editor in a canvas app.
-1. The option to **Draft with Copilot** should appear. Select that option.
-2. Insert text into the text box. For example, you can quickly jot down an idea.
+1. Insert your cursor into a blank multiline text box or rich text editor in a canvas app.
+2. The option to **Draft with Copilot**  should appear along with some optional prompt starters.  If you choose **Draft with Copilot**, you will see a blank prompt box.  If you select one of the prompt starters, it will populate in the prompt box to help you get started. Select one of these options.
+3. Insert text into the text box. You can jot down a prompt to generate content.
 
      > [!Note]
      > You must enter the text in English. This feature only supports the English language at this time.
      
-4. Select the **Send** icon.
+4. Select the **Generate** button.
 5. Copilot generates well-written text for you. Review the text. The following options are available:
-    - If you want Copilot to suggest text that is shorter or longer, select **Length** and then select the appropriate length.
-    - If you want Copilot to suggest text that has a different tone, select **Tone** and then select the appropriate tone for the text.
-    - If you want Copilot to suggest different text, select **Rewrite**.
-    - If you are satisfied with the text that Copilot suggested, select **Add** to enter the text in the text box.
+    - If you want Copilot to suggest text that is shorter or longer, select **Adjust** icon and then select the appropriate length.  Then click the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest text that has a different tone, select **Adjust** icon and then select the appropriate tone.  Then click the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest different text, select the **Refresh** icon.
+    - If you are satisfied with the text that Copilot suggested, select **Keep it** to enter the text in the text box.
+  
+## Use this feature: To rewrite content in a text box
+1. Insert your cursor into a multiline text box or rich text editor in a canvas app that contains text.  If it does not, jot down some ideas in the box.
+2. The option to **Rewrite my text** should appear.  Select this option.
+3. Copilot generates well-written text for you. Review the text. The following options are available:
+    - If you want Copilot to suggest text that is shorter or longer, select **Adjust** icon and then select the appropriate length.  Then click the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest text that has a different tone, select **Adjust** icon and then select the appropriate tone.  Then click the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest different text, select the **Refresh** icon.
+    - If you are satisfied with the text that Copilot suggested, select **Replace** to replace the content currently in the text box or **Insert Below** to avoid overwriting the text in the box and instead, insert the generated text below it.
   
 ## Turn off text assistance in web player
 
