@@ -17,7 +17,7 @@ ms.custom:
 
 # Create business solutions with Copilot
 
-The Plan Designer is an AI-driven experience that creates a comprehensive business solution in just minutes. By simply describing your business problem in natural language and including images like a legacy app or process diagram, you will receive an outline of user roles and requirements. More importantly, it generates a complete Power Platform solution with components such as Dataverse tables, Power Apps with both canvas apps and model-driven apps, and Power Automate flows. You can iterate and further refine your business requirements to produce a more precise output tailored to your specific needs.
+The Plan Designer is an AI-driven tool that creates a business solution in minutes. Describe your business problem in natural language and include images like a legacy app or process diagram. You'll receive an outline of user roles and requirements. It generates a complete Power Platform solution with Dataverse tables, Power Apps (canvas and model-driven apps), and Power Automate flows. You can refine your requirements to produce a more precise output tailored to your needs.
 
 Accessible directly from the Power Apps home page, the Plan Designer guides you through a multi-step process to generate user roles, user stories, data tables, and the appropriate user experiences.
 
@@ -25,15 +25,15 @@ Accessible directly from the Power Apps home page, the Plan Designer guides you 
 
 ## Prerequisites
 
-All following steps are <u>required</u> in order to enable Plan designer in your environment.
+The following steps are required to enable Plan Designer in your environment.
 
-1. **US region requirement**: Make sure your environment is set to: **Cluster geo name: US**
+1. **US region requirement**: Ensure your environment is set to **Cluster geo name: US**
 
   - To see your geo region, navigate to [Power Apps](https://make.powerapps.com) \> **Settings** \> **Session details**.
 
     :::image type="content" source="media/plan-designer/pd-2-session-details.png" alt-text="Screenshot of the Power Apps settings showing the US region requirement.":::
 
-1. **Import the solution:** The solution that you need to import can be found under the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
+1. **Import the solution**: Find the solution in the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
 
     1. Navigate to [Power Apps](https://make.powerapps.com).
 
@@ -44,17 +44,17 @@ All following steps are <u>required</u> in order to enable Plan designer in your
 > [!NOTE]
 > This step can take up to 5 minutes.
 
-1. **Turn on the new Copilot experience**: On the Power Apps home page turn on, **Try the new Power Apps experience**. Once turned on, you should see the **Create a solution for almost any business problem** banner at the top.
+1. **Turn on the new Copilot experience**: On the Power Apps home page, turn on **Try the new Power Apps experience**. You should see the **Create a solution for almost any business problem** banner at the top.
 
   :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
 
 ## Create a plan
 
-To show you how the Plan Designer works, let’s use a sample scenario to build a solution for your business needs to help employees and managers manage paid time off (PTO) requests.
+Let's use a sample scenario to build a solution for managing paid time off (PTO) requests for employees and managers.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. As an optional step, provide additional context like process diagrams, data models, or screenshots of legacy apps in the dialog box. When you’re done, press Enter.
+1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide additional context like process diagrams, data models, or screenshots of legacy apps. When you're done, press Enter.
 
   :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan Designer with a sample scenario input.":::
 
