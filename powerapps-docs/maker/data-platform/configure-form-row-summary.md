@@ -28,7 +28,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 
 ## Prerequisites for configuring a row summary
 
-To enable this feature, the following criteria are required:
+To enable and use this feature, the following criteria are required:
 
 - System Administrator security role membership in the Microsoft Dataverse environment.
 - AI insight cards setting is enabled in Power Platform. More information: [Manage feature settings](/power-platform/admin/settings-features)

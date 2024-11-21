@@ -1944,8 +1944,6 @@
         href: ./model-driven-apps/command-designer-overview.md
       - name: Edit messages for a system table
         href: ./data-platform/edit-system-entity-messages.md
-      - name: Configure a row summary (preview)
-        href: ./data-platform/configure-form-row-summary.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
@@ -2255,6 +2253,8 @@
     items:
     - name: Security in Dataverse
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Configure a row summary (preview)
+      href: ./data-platform/configure-form-row-summary.md  
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
