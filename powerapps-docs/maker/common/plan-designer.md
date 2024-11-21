@@ -7,6 +7,12 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ms.author: mduelae
 ms.reviewer: mkaur
+ms.collection: 
+    - bap-ai-copilot
+ms.custom: 
+  - ai-gen-docs-bap
+  - ai-gen-title
+  - ai-gen-desc
 ---
 
 # Create business solutions with Copilot
