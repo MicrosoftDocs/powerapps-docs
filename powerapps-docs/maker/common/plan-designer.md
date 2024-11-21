@@ -5,7 +5,7 @@ author: mduelae
 contributors:
 ms.topic: conceptual
 ms.date: 11/21/2024
-ms.author: mduelae
+ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
   - bap-ai-copilot
@@ -35,13 +35,12 @@ All following steps are <u>required</u> in order to enable Plan designer in your
 
 1. **Import the solution:** The solution that you need to import can be found under the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
 
-  1. Navigate to [Power Apps](https://make.powerapps.com) ([www.make.preview.powerapps.com](http://www.make.preview.powerapps.com)).
+    1. Navigate to [Power Apps](https://make.powerapps.com).
 
-  1. From the navigation pane, select **Solutions.**
+    1. From the navigation pane, select **Solutions.**
 
-  1. In the command bar, select **Import solution**. For more information on how to install a solution, see [Import solutions](../data-platform/import-update-export-solutions.md).
+    1. In the command bar, select **Import solution**. For more information on how to install a solution, see [Import solutions](../data-platform/import-update-export-solutions.md).
   
-
 > [!NOTE]
 > This step can take up to 5 minutes.
 
@@ -134,7 +133,7 @@ The proposed apps will then open in a new tab, with the added data tables as a f
 
 For canvas apps, you’ll see a preview of the canvas app with a welcome screen along with other screens with tables connected. Opening a model-driven app will launch the Modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published to be used.
 
-# Known limitations
+## Known limitations
 
 - **Exit feedback state after initiation**: After selecting **Change** to iterate on any of the generated content, there is currently no way to exit out of the change mode. To exit, type in “Nothing to change or add in this section” in the text box, and it should not alter any existing content.
 - **Inline editing user roles and user stories**: Currently, you cannot inline edit the content directly. All changes must be prompted in copilot first to re-generate iterations.
