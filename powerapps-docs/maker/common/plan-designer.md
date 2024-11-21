@@ -1,5 +1,5 @@
 ---
-title: Create business solutions with Copilot
+title: Create business solutions with Copilot (preview)
 description: Learn how to use the Plan Designer to create comprehensive business solutions with AI-driven experiences.
 author: mduelae
 contributors:
@@ -15,13 +15,21 @@ ms.custom:
   - ai-gen-desc
 ---
 
-# Create business solutions with Copilot
+# Create business solutions with Copilot (preview)
+
+[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+
 
 The Plan Designer is an AI-driven tool that creates a business solution in minutes. Describe your business problem in natural language and include images like a legacy app or process diagram. You'll receive an outline of user roles and requirements. It generates a complete Power Platform solution with Dataverse tables, Power Apps (canvas and model-driven apps), and Power Automate flows. You can refine your requirements to produce a more precise output tailored to your needs.
 
 Accessible directly from the Power Apps home page, the Plan Designer guides you through a multi-step process to generate user roles, user stories, data tables, and the appropriate user experiences.
 
 :::image type="content" source="media/plan-designer/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan Designer.":::
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
