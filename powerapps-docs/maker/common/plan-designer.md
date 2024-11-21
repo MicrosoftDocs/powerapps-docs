@@ -54,11 +54,11 @@ Let's use a sample scenario to build a solution for managing paid time off (PTO)
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide additional context like process diagrams, data models, or screenshots of legacy apps. When you're done, press Enter.
+1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press Enter.
 
   :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan Designer with a sample scenario input.":::
 
-  Copilot will open the Plan Designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
+  Copilot opens the Plan Designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
   :::image type="content" source="media/plan-designer/pd-5-plan-loading.png" alt-text="Screenshot of the Plan Designer generating user roles.":::
 
@@ -91,7 +91,7 @@ In this example, it generated two roles: Employee and Manager, along with their 
 
       :::image type="content" source="media/plan-designer/pd-8-show-detailed-data.png" alt-text="Screenshot of the proposed data tables in the Plan Designer.":::
 
-1. **Show details**, opens the data workspace, where you can view the complete Entity Relationship Diagram (ERD) containing all the generated tables. These Dataverse tables come with pre-defined columns and sample data. To see the specific details of a table, select **View data**.
+1. **Show details** opens the data workspace, where you can view the complete Entity Relationship Diagram (ERD) containing all the generated tables. These Dataverse tables come with predefined columns and sample data. To see the specific details of a table, select **View data**.
 
       :::image type="content" source="media/plan-designer/pd-9-view-data.png" alt-text="Screenshot of the data workspace showing the ERD.":::
 
@@ -113,7 +113,7 @@ In this example, it generated two roles: Employee and Manager, along with their 
 
 ## Generate user experiences
 
-The Plan Designer will propose a set of user experiences tailored to solve your business problem. For our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
+The Plan Designer proposes a set of user experiences tailored to solve your business problem. For our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
 :::image type="content" source="media/plan-designer/pd-12-generate-user-exp.png" alt-text="Screenshot of the proposed user experiences in the Plan Designer.":::
 
@@ -125,20 +125,20 @@ To make changes, select **Change** and follow the steps as mentioned above. Or s
 
 ## Accept user experiences
 
-Once you accept the proposed user experiences, they will then be created. To open a canvas app or model-driven app, select the **plus icon**. Note that opening Power Automate flows with the flow pre-created is not yet supported. It will only navigate to the Power Automate page within your solution.
+Once you accept the proposed user experiences, they'll then be created. To open a canvas app or model-driven app, select the **plus icon**. Opening Power Automate flows with the flow precreated isn't supported. It navigates to the Power Automate page within your solution.
 
 :::image type="content" source="media/plan-designer/pd-14-open-app.png" alt-text="Screenshot of the Plan Designer with the option to open created apps.":::
 
-The proposed apps will then open in a new tab, with the added data tables as a fully functioning app.
+The proposed apps open in a new tab, with the added data tables as a fully functioning app.
 
-For canvas apps, you’ll see a preview of the canvas app with a welcome screen along with other screens with tables connected. Opening a model-driven app will launch the Modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published to be used.
+For canvas apps, you’ll see a preview of the canvas app with a welcome screen along with other screens with tables connected. Opening a model-driven app launches the Modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published to be used.
 
 ## Known limitations
 
-- **Exit feedback state after initiation**: After selecting **Change** to iterate on any of the generated content, there is currently no way to exit out of the change mode. To exit, type in “Nothing to change or add in this section” in the text box, and it should not alter any existing content.
-- **Inline editing user roles and user stories**: Currently, you cannot inline edit the content directly. All changes must be prompted in copilot first to re-generate iterations.
-- **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer is not supported.
-- **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer is not currently supported.
+- **Exit feedback state after initiation**: After selecting **Change** to iterate on any of the generated content, there's currently no way to exit out of the change mode. To exit, type in “Nothing to change or add in this section” in the text box, and it shouldn't alter any existing content.
+- **Inline editing user roles and user stories**: Currently, you can't inline edit the content directly. All changes must be prompted in copilot first to regenerate iterations.
+- **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
+- **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer isn't currently supported.
 - **Supported user experiences**: Currently, the only supported artifacts that the Plan designer can generate are canvas apps, model-driven apps, and Power Automate flows.
-- **Generated Power Automate flows**: Power Automate flows generated in the Plan designer can be opened, but not with the PA flow already created. It will take you to the Power Automate page (within the proper solution).
-- **Solution/ ALM support**: Data and artifacts will be saved to a new solution matching the name of the plan. The publisher will default to the preferred publisher in your preferred solution. You can define the publisher in the save icon of the UI.
+- **Generated Power Automate flows**: Power Automate flows generated in the Plan designer can be opened, but not with the PA flow already created. It takes you to the Power Automate page (within the proper solution).
+- **Solution/ ALM support**: Data and artifacts are saved to a new solution matching the name of the plan. The publisher defaults to the preferred publisher in your preferred solution. You can define the publisher in the save icon of the UI.
