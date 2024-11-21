@@ -43,12 +43,9 @@ The see solution layers feature:
 1. Sign in to Power Apps, select **Solutions**, open the solution you want, select a component, such as the **Account** table, and then on the command bar select **Advanced** > **See solution layers**.
 1. The solution layer page appears. It displays each layer for the component, such as the Active Accounts view for the **Account** table as shown here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component. To view the details for a solution layer, select it.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Solution layer changed properties.](media/solution-layers-change-prop.png "Solution layer changed properties")
+   :::image type="content" source="media/solution-layers-change-prop.png" alt-text="Solution layer updated properties" lightbox="media/solution-layers-change-prop.png":::
 
 1. The **Properties** pane is displayed on the right. The **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
-
-
 
 1. If the component includes translations that have been imported, select the **Localized Labels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
