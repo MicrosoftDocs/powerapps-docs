@@ -26,7 +26,7 @@ Managed and unmanaged solutions exist at different levels within a Microsoft Pow
 
 ## Solution merge behavior
 
-When you prepare your managed solution for distribution, remember that an environment might have multiple solutions installed or that other solutions might be installed in the future. Construct a solution that follows best practices so that your solution will not interfere with other solutions.
+When you prepare your managed solution for distribution, remember that an environment might have multiple solutions installed or that other solutions might be installed in the future. Construct a solution that follows best practices so that your solution doesn't interfere with other solutions.
 
 The processes that Dataverse uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations might require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](/power-platform/alm/how-managed-solutions-merged)
 
@@ -42,7 +42,7 @@ The see solution layers feature:
 
 1. Sign in to Power Apps, select **Solutions**, open the solution you want, select a component, such as the **Account** table, and then on the command bar select **Advanced** > **See solution layers**.
 1. The solution layer page appears. It displays each layer for the component, such as the Active Accounts view for the **Account** table used as an example here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component.
-1. To view the details for a solution layer, select it. The **Properties** pane is displayed on the right. The **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
+1. To view the details for a solution layer, select it. The **Properties** pane is displayed. The **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
 
    :::image type="content" source="media/solution-layers-change-prop.png" alt-text="Solution layer updated properties for the Active Accounts view solution component" lightbox="media/solution-layers-change-prop.png":::
 1. If the component includes translations that have been imported, select the **Localized Labels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
@@ -51,7 +51,7 @@ The see solution layers feature:
 
     Select a label to see its full layering.
 
-There are additional tabs available for specific component solution layers.
+There are other tabs available for specific component solution layers.
 
 |Tab name  |Description  |Possible value  |
 |---------|---------|---------|
