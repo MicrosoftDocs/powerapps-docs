@@ -41,12 +41,10 @@ The see solution layers feature:
 - Can be used to troubleshoot dependency or solution-layering issues by displaying change details for a component that was introduced by a solution change.
 
 1. Sign in to Power Apps, select **Solutions**, open the solution you want, select a component, such as the **Account** table, and then on the command bar select **Advanced** > **See solution layers**.
-1. The solution layer page appears. It displays each layer for the component, such as the Active Accounts view for the **Account** table as shown here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component. To view the details for a solution layer, select it.
+1. The solution layer page appears. It displays each layer for the component, such as the Active Accounts view for the **Account** table used as an example here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component.
+1. To view the details for a solution layer, select it. The **Properties** pane is displayed on the right. The **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
 
-   :::image type="content" source="media/solution-layers-change-prop.png" alt-text="Solution layer updated properties" lightbox="media/solution-layers-change-prop.png":::
-
-1. The **Properties** pane is displayed on the right. The **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
-
+   :::image type="content" source="media/solution-layers-change-prop.png" alt-text="Solution layer updated properties for the Active Accounts view solution component" lightbox="media/solution-layers-change-prop.png":::
 1. If the component includes translations that have been imported, select the **Localized Labels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
    > ![Solution layer localized labels.](media/localized-labels.png "Solution layer localized labels")
@@ -61,7 +59,7 @@ There are additional tabs available for specific component solution layers.
 |AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for a choice .   | Added, Updated, Removed, Unchanged        |
 |AttributePicklistValues (optionset attribute)   |  When selected for a choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
-### Remove an unmanaged layer
+## Remove an unmanaged layer
 
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components in your test and production environments.
 
