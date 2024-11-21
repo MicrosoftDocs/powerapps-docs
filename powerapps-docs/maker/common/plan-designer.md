@@ -37,11 +37,11 @@ The following steps are required to enable Plan Designer in your environment.
 
 1. **US region requirement**: Ensure your environment is set to **Cluster geo name: US**
 
-  - To see your geo region, navigate to [Power Apps](https://make.powerapps.com) \> **Settings** \> **Session details**.
+   To see your geo region, navigate to [Power Apps](https://make.powerapps.com) \> **Settings** \> **Session details**.
 
     :::image type="content" source="media/plan-designer/pd-2-session-details.png" alt-text="Screenshot of the Power Apps settings showing the US region requirement.":::
 
-1. **Import the solution**: Find the solution in the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
+2. **Import the solution**: Find the solution in the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
 
     1. Navigate to [Power Apps](https://make.powerapps.com).
 
@@ -52,7 +52,7 @@ The following steps are required to enable Plan Designer in your environment.
 > [!NOTE]
 > This step can take up to 5 minutes.
 
-1. **Turn on the new Copilot experience**: On the Power Apps home page, turn on **Try the new Power Apps experience**. You should see the **Create a solution for almost any business problem** banner at the top.
+3. **Turn on the new Copilot experience**: On the Power Apps home page, turn on **Try the new Power Apps experience**. You should see the **Create a solution for almost any business problem** banner at the top.
 
   :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
 
