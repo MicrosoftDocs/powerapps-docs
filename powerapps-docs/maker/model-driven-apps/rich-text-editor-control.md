@@ -71,7 +71,7 @@ Knowledge management:
 - A preview tab isn't currently available.
 
 Email templates and signatures: 
-If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
+- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
 
 ## Add the rich text editor control to a text column
 
