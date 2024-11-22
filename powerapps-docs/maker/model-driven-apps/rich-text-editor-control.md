@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 11/06/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -28,7 +28,7 @@ You can customize the editor's appearance, features, and behavior. The control's
 Currently, the rich text editor is available as two different experiences:
 
 - Modern text editor: New experience, set by default
-- Classic text editor: Original experience
+- Classic text editor: Original experience, to be deprecated in April 2025
 
 ## Modern text editor enhancements
 
@@ -38,11 +38,11 @@ The modern text editor is designed to align with the familiar and intuitive inte
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
-> For more information, refer to [Modern text editor known issues](#modern-rich-text-editor-known-issues)
+> For more information, refer to [Modern text editor limitations](#modern-rich-text-editor-known-issues)
 
-## Enable the modern rich text editor experience
+## Enable the modern rich text editor experience from the classic experience
 
-If you're using the classic rich text editor experience, complete the following steps to switch to the modern rich text editor experience.
+The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
 1. On the command bar, select **Settings**. The settings page is displayed.
@@ -58,26 +58,20 @@ If you're using the classic rich text editor experience, complete the following 
 
 If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
 
-### Modern rich text editor known issues
+### Modern rich text editor limitations
 
-When using the modern rich text editor, consider these known issues for the following areas:
+When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
 
 Notes:
-- Extending the height of the editor does not use all available vertical space.
+- Localization isn't currently supported.
+- In-app notifications aren't currently supported.
+- Only the following file types for attachments are supported: .pdf, .xls, .xlsx, .xlsm, .doc, .docx, .ppt, .pptx, .vsd, .msg, .mp3, .mid, .midi, .wav, .aac, .mpeg, .mp4, .avi, .txt, .csv, .html, .jpeg, .png, .gif, and .svg
+ 
+Knowledge management: 
+- A preview tab isn't currently available.
 
-Knowledge management:
-- A preview tab is currently unavailable.
-- Collapsible content is expanded by default instead of appearing as collapsed.
-
-Email: 
-- Attachment file types aren't in aligned with the classic rich text editor experience.
-- Drag and drop functionality is currently unavailable.
-- Attachments with .zip and .msg file types are not currently supported.
-- Vertical space height standardization is not currently supported.
-
-Email templates and signatures:
-- If you choose no border, a border might still appear.
-- When you create a new template, the toolbar might appear in the subject field.
+Email templates and signatures: 
+If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
 
 ## Add the rich text editor control to a text column
 
@@ -452,7 +446,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Fix the height of the editor at 500 pixels
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma.
 
 ```json
 "removePlugins": [ "autogrow" ],
