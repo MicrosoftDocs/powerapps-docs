@@ -2,8 +2,8 @@
 title: "View, submit, and install catalog items"
 description: "Learn how to submit and acquire items from your organization's catalog."
 author: derekkwanpm
-ms.author: derekkwan
-ms.date: 11/05/2024
+ms.author: yonai
+ms.date: 11/14/2024
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: common
@@ -36,9 +36,9 @@ The catalog has a separate set of access controls from Power Platform. This mean
 |Role|Enables user to:|
 |---------|---------|
 |**Catalog Submitter**|Submit items to the catalog|
-|**Catalog Read-Only Member**|Discover and install items from the catalog|
+|**Catalog Consumer**|Discover and install items from the catalog|
 |**Catalog Approver**|Approve submissions to the catalog.<br />Catalog approvers can be users from your central IT department or line of business that your organization wants to empower to participate in the approvals process.|
-|**Catalog Administrator**|Administer the catalog.|
+|**Catalog Admin**|Administer the catalog.|
 
 Any environment that has a catalog sees these roles inside of Power Platform admin center, and can be [assigned to groups or individuals](/power-platform/admin/security-roles-privileges) just like any other security roles.
 
