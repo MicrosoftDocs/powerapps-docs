@@ -65,7 +65,7 @@ When using the modern rich text editor, consider the limitations listed in this 
 Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
-- Only the following file types for attachments are supported: .pdf, .xls, .xlsx, .xlsm, .doc, .docx, .ppt, .pptx, .vsd, .msg, .mp3, .mid, .midi, .wav, .aac, .mpeg, .mp4, .avi, .txt, .csv, .html, .jpeg, .png, .gif, and .svg
+- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
 - A preview tab isn't currently available.
