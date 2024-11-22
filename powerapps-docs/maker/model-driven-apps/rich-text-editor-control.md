@@ -38,7 +38,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
-> For more information, refer to [Modern text editor limitations](#modern-rich-text-editor-known-issues)
+> For more information, refer to [Modern text editor limitations](#modern-rich-text-editor-limiations)
 
 ## Enable the modern rich text editor experience from the classic experience
 
@@ -56,7 +56,7 @@ The modern rich text editor is enabled by default, but if you're using the class
 
 ### Revert from the modern rich text editor experience to the classic experience
 
-If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
+If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
 
 ### Modern rich text editor limitations
 
