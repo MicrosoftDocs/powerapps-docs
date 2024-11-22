@@ -30,7 +30,7 @@ Your administrator defines the scope of content that's searched. An administrato
 
 ## What are the Column Types that can be searched in Dataverse Search?
 
-The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. For more information, see [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization.md#select-searchable-fields-and-filters-for-each-table).
+The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. For more information, see [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table).
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
@@ -61,7 +61,7 @@ Party list fields are special fields. They're not supported in Dataverse search,
 
 ## How come returns don't support HTML formatting for memo data types?
 
-Dataverse search doesn't return HTML formatting for memo types to optomize the UI experience.
+Dataverse search doesn't return HTML formatting for memo types to optimize the UI experience.
 
 ## Why columns aren't enabled for Dataverse search after adding to a quick find view?
 
@@ -114,7 +114,7 @@ When using the Dataverse search API, there's a throttling limit of one request p
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
 ## Does Dataverse search support US Government clouds?
-Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It is available in US Government Community Cloud (GCC) and US GCC High. It's not available in US Department of Defense (DoD).
+Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It's available in US Government Community Cloud (GCC) and US GCC High. It's not available in US Department of Defense (DoD).
 
 ### See also
 
