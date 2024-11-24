@@ -58,7 +58,7 @@ Create a [blank canvas app](../create-blank-app.md).
     ```power-fx
     Collect(
         colScannedItems,
-        {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
+        {ScannedItem: First(BarcodeScanner1.Barcodes).Value, ScannedTime: Now()}
     )
     ```
 
