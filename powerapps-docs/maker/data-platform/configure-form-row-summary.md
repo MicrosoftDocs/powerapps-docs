@@ -28,7 +28,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 
 ## Prerequisites for configuring a row summary
 
-To enable and use this feature, the following criteria are required:
+To enable and use this feature, the following criterion is required:
 
 - A Power Platform administrator has enabled the AI insight cards environment setting. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
@@ -68,7 +68,7 @@ Here are examples to use when building a main form row summary.
 
 *Summarize Account record in a way that is easy to understand for a sales manager. Make sure to include all important information, including main ideas and important details, while keeping the order of the content logical. Remove any repetitive elements to make the summary as concise as possible without losing the original text’s integrity. If the original text is too short to condense, present it as the summary.*
 
-*Do not include the title in the summary. Create the summary in two paragraphs. For the first paragraph, use the instructions under the header Data. For the second paragraph, use the data under the header Activity. Leave a blank line between the two paragraphs. Do not include the titles Data & Activity in the paragraphs.*
+*Don't include the title in the summary. Create the summary in two paragraphs. For the first paragraph, use the instructions under the header Data. For the second paragraph, use the data under the header Activity. Leave a blank line between the two paragraphs. Don't include the titles Data & Activity in the paragraphs.*
 
 *Data:*
 
@@ -88,7 +88,7 @@ To edit a row summary for a main form, open the table, and then under **Customiz
 
 ## Hide row summary for all main forms
 
-1. In Power Apps select **Tables** on the left navigation pane, and open the table where you want to edit a row summary.
+1. In Power Apps, select **Tables** on the left navigation pane, and open the table where you want to edit a row summary.
 1. Under **Data experiences**, select **Forms**.
 1. On the command bar, select **Row summary** > **Hide on all main forms**.
    :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
