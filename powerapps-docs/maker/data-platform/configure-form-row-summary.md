@@ -26,7 +26,7 @@ The collapsible summary bar at the top of a model-driven app form can be customi
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-## Prerequisites for configuring a row summary
+## Prerequisite for configuring a row summary
 
 To enable and use this feature, the following criterion is required:
 
