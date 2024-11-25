@@ -1,7 +1,7 @@
 ---
 title: Filter, sort, and search galleries with Copilot (preview)
 description: Learn how to use Copilot to quickly filter, sort, and search canvas app galleries by using natural language.
-ms.date: 06/11/2024
+ms.date: 11/22/2024
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
