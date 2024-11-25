@@ -87,5 +87,6 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ### Related information
 
+[Manage feature settings](/power-platform/admin/settings-features)
 [Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)  
 [Complete forms quickly with model-driven apps (video)](https://youtu.be/Jwlaue-Skzk?feature=shared)
