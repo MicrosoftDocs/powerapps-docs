@@ -42,7 +42,7 @@ Row summaries can be configured for table main forms.
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
 1. In the **Prompt** box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph. More information: [Write a good prompt for the row summary](#write-a-good-prompt-for-the-row-summary)
-   :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary ":::
+   :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary " lightbox="media/row-summary-main-form-example.png":::
 1. Select **Test prompt** to display a preview of the summary.
    The most recently edited row in the table is used to generate a test response.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
@@ -52,7 +52,7 @@ Row summaries can be configured for table main forms.
 After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps, select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
 
 All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *table name* table, and appears in every model-driven app that uses this form."
-:::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary":::
+:::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary" lightbox="media/ai-row-summary-indicator2.png":::
 
 ## Write a good prompt for the row summary
 
