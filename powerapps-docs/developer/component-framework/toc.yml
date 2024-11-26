@@ -371,7 +371,7 @@ items:
         href: reference/position.md
       - name: Property
         href: reference/property.md
-      - name: ReactControl (Preview)
+      - name: ReactControl
         href: reference/react-control.md
         items:
         - name: destroy
