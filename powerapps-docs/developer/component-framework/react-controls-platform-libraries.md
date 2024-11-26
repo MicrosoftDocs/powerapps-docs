@@ -16,7 +16,7 @@ contributors:
   - JimDaly
 ---
 
-# React controls & platform libraries (preview)
+# React controls & platform libraries
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -31,7 +31,7 @@ By reusing the existing platform React and Fluent libraries, you can expect the 
 With the benefits available by reusing these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
 
 > [!NOTE]
-> With GA level support, all existing virtual controls will continue to function. However, they should be rebuilt and deployed using the latest CLI version (>=1.37) to facilitate future platform React version upgrades.
+> With GA release, all existing virtual controls will continue to function. However, they should be rebuilt and deployed using the latest CLI version (>=1.37) to facilitate future platform React version upgrades.
 
 ## Prerequisites
 
