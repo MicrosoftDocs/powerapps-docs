@@ -3,7 +3,7 @@ title: "Power Apps component framework API reference | MicrosoftDocs"
 description: "The topic provides Power Apps component framework API reference."
 ms.author: hemantg
 author: HemantGaur
-ms.date: 05/27/2022
+ms.date: 11/26/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf

@@ -3,7 +3,7 @@ title: Package a code component| Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
 ms.author: hemantg
 author: HemantGaur
-ms.date: 03/22/2023
+ms.date: 11/26/2024
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf

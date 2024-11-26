@@ -4,7 +4,7 @@ description: You can style your components based on the modern theme used in the
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 11/15/2023
+ms.date: 11/26/2024
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -13,7 +13,6 @@ ms.topic: article
 ms.subservice: pcf
 contributors:
   - HemantGaur
-  - noazarur-microsoft
   - JimDaly
 ---
 
