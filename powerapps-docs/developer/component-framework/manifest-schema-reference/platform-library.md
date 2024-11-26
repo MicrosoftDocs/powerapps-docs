@@ -39,14 +39,14 @@ Model-driven and canvas apps
 ```xml
 <resources>
    <code path="index.ts" order="1" />
-   <platform-library name="React" version="16.8.6" />
+   <platform-library name="React" version="16.14.0" />
    <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
 
 ### Related articles
 
-[React controls & platform libraries (Preview)](../react-controls-platform-libraries.md)<br />
+[React controls & platform libraries](../react-controls-platform-libraries.md)<br />
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
