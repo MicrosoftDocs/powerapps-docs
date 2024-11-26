@@ -11,7 +11,7 @@ contributors:
  - JimDaly
 ---
 
-# ReactControl (Preview)
+# ReactControl 
 
 [!INCLUDE [react-control-description](includes/react-control-description.md)]
 
@@ -30,7 +30,7 @@ Model-driven and canvas apps
 
 ### Related articles
 
-[React controls & platform libraries (Preview) ](../react-controls-platform-libraries.md)<br />
+[React controls & platform libraries](../react-controls-platform-libraries.md)<br />
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
 
