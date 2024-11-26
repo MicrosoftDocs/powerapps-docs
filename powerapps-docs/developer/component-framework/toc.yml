@@ -12,7 +12,7 @@ items:
     href: component-framework-for-canvas-apps.md
   - name: For Power Pages
     href: /power-pages/configure/component-framework
-  - name: "React controls & platform libraries (Preview)"
+  - name: "React controls & platform libraries"
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
