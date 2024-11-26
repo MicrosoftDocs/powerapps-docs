@@ -207,7 +207,7 @@ You can delete the import file and imported records if you want to reimport the 
 
 ### Limitations
 
-- Excel Import is not supported with Elastic tables
+- Excel Import is not supported with Virtual or Elastic tables
 
 ### See also
 
