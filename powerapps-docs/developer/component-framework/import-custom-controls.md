@@ -39,8 +39,18 @@ To create and import a solution file:
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the following command. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
 
    ```CLI
-   msbuild /t:build /restore
+   msbuild /t:restore
    ```
+   ```CLI
+   msbuild
+   ```
+
+   Or if you have installed the .NET 6 SDK:
+
+   ```CLI
+   dotnet build
+   ```
+
 
     > [!TIP]
     > - If msbuild 15.9.* is not in the path, open Developer Command Prompt for VS 2017 to run the `msbuild` commands.
