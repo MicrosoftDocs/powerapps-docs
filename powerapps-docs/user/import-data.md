@@ -205,6 +205,10 @@ You can delete the import file and imported records if you want to reimport the 
 
     - **Delete All**. This option deletes the import file along with the records that were imported from the import file.
 
+### Limitations
+
+- Excel Import is not supported with Elastic tables
+
 ### See also
 
 [Download a template for data import](/power-platform/admin/download-template-data-import)
