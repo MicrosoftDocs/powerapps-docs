@@ -38,7 +38,7 @@ Wrapping Fluent UI v9 controls as a component is the easiest way to utilize mode
 <resources>
   <code path="index.ts" order="1"/>
   <!-- Dependency on React controls & platform libraries -->
-  <platform-library name="React" version="16.8.6" />
+  <platform-library name="React" version="16.14.0" />
   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
