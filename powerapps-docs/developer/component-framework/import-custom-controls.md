@@ -45,7 +45,7 @@ To create and import a solution file:
    msbuild
    ```
 
-   Or if you have installed the .NET 6 SDK:
+   Or if you have installed the .NET SDK, version >= 6 :
 
    ```CLI
    dotnet build
