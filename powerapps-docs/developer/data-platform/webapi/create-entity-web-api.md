@@ -1,7 +1,7 @@
 ---
 title: Create a table row using the Web API
 description: Learn how to use the Web API to send a POST request to create a table row in Microsoft Dataverse.
-ms.date: 01/08/2024
+ms.date: 11/26/2024
 ms.service: powerapps
 ms.topic: how-to
 author: MicroSri
@@ -58,7 +58,16 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create an record you must identify the valid [entity set name](web-api-service-documents.md#entity-set-name), property names, and types. For all system tables and attributes (table columns), you can find this information in the article for that entity in the [Web API Entity Type Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
+To create an record you must identify the valid [entity set name](web-api-service-documents.md#entity-set-name), property names, and types. 
+
+> [!NOTE]
+> In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), when viewing a list of tables, select **Advanced** > **Tools**. Select **Copy set name** to copy the entity set name for the table.
+> 
+> You can also select **API link to table data** to view the top 10 rows of data in your browser. This works best when you have a browser extension like [JSON formatter](https://microsoftedge.microsoft.com/addons/search/JSON%20formatter) installed that will format the JSON text data returned.
+>
+> The entity set name isn't always the same as the collection name or plural name of the table. It is stored a separate property called `EntitySetName`.
+
+For all system tables and attributes (table columns), you can find this information in the article for that entity in the [Web API Entity Type Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
 
 ### Setting the primary key value
 
