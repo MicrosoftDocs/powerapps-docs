@@ -1,5 +1,5 @@
 ---
-title: "React controls & platform libraries (preview) | Microsoft Docs"
+title: "React controls & platform libraries | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
@@ -29,6 +29,9 @@ By reusing the existing platform React and Fluent libraries, you can expect the 
 - Faster runtime transfer, scripting, and control rendering
 
 With the benefits available by reusing these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
+
+> [!NOTE]
+> With GA level support, all existing virtual controls will continue to function. However, they should be rebuilt and deployed using the latest CLI version (>=1.37) to facilitate future platform React version upgrades.
 
 ## Prerequisites
 
@@ -81,7 +84,7 @@ Within the [resources element](manifest-schema-reference/resources.md), find two
 ```xml
 <resources>
   <code path="index.ts" order="1" />
-  <platform-library name="React" version="16.8.6" />
+  <platform-library name="React" version="16.14.0" />
   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
@@ -113,7 +116,7 @@ Platform libraries are made available both at the build and runtime to the contr
 
 | Name   | npm package name            | Allowed version range  | Version loaded |
 | ------ | --------------------------- | ---------------------- | -------------- |
-| React  | react                       | 16.8.6                 | 17.0.2 (Model), 16.14.0 (Canvas) |
+| React  | react                       | 16.14.0                | 17.0.2 (Model), 16.14.0 (Canvas) |
 | Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
 | Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.46.2         |
 
