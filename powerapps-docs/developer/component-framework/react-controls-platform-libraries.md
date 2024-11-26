@@ -18,15 +18,14 @@ contributors:
 
 # React controls & platform libraries
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent libraries individually for each control. All controls share a common library instance and version to provide a seamless and consistent experience.
+When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent libraries individually for each control. All controls share a common library instance and version to provide a seamless and consistent experience.
 
 By reusing the existing platform React and Fluent libraries, you can expect the following benefits:
 
 - Reduced control bundle size
 - Optimized solution packaging
 - Faster runtime transfer, scripting, and control rendering
+- Design and theme alignment with the Power Apps Fluent design system  
 
 With the benefits available by reusing these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
 
