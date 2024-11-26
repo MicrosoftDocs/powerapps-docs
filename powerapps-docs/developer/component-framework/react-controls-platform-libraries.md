@@ -102,7 +102,7 @@ React and Fluent libraries aren't included in the package because they're shared
 
 ## Sample controls
 
-You can find two new controls added to the samples as part of this preview. Functionally, they're the same as their standard version but have better performance.
+The following controls are included in the samples. They function the same as their standard versions but offer better performance since they are virtual controls.
 
 |Sample |Description|Link|
 |---------|---------|---------|
