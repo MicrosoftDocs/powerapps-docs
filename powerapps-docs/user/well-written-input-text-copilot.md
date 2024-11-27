@@ -25,6 +25,7 @@ You can use Copilot to quickly generate well-written text to use as input text i
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly write a prompt to generate content or jot down some ideas and have Copilot refine the grammar and flow. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
+
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected.  Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -41,10 +42,9 @@ When trying to quickly input text into multiline text boxes or rich text editors
 
      > [!Note]
      > You must enter the text in English. This feature only supports the English language at this time.
-     
 4. Select the **Generate** button.
 5. Copilot generates well-written text for you. Review the text. The following options are available:
-    - If you want Copilot to suggest text that is shorter or longer, select **Adjust** icon and then select the appropriate length.  Then select the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest shorter or longer text, select **Adjust** icon and then select the appropriate length.  Then select the **Refresh** icon to regenerate the output.
     - If you want Copilot to suggest text that has a different tone, select **Adjust** icon and then select the appropriate tone.  Then select the **Refresh** icon to regenerate the output.
     - If you want Copilot to suggest different text, select the **Refresh** icon.
     - If you're satisfied with the text that Copilot suggested, select **Keep it** to enter the text in the text box.
@@ -54,16 +54,17 @@ When trying to quickly input text into multiline text boxes or rich text editors
 1. Insert your cursor into a multiline text box or rich text editor in a canvas app that contains text.  If it doesn't, jot down some ideas in the box.
 2. The option to **Rewrite my text** should appear.  Select this option.
 3. Copilot generates well-written text for you. Review the text. The following options are available:
-    - If you want Copilot to suggest text that is shorter or longer, select **Adjust** icon and then select the appropriate length.  Then select the **Refresh** icon to regenerate the output.
+    - If you want Copilot to suggest is shorter or longer text, select **Adjust** icon and then select the appropriate length.  Then select the **Refresh** icon to regenerate the output.
     - If you want Copilot to suggest text that has a different tone, select **Adjust** icon and then select the appropriate tone.  Then select the **Refresh** icon to regenerate the output.
     - If you want Copilot to suggest different text, select the **Refresh** icon.
     - If you're satisfied with the text that Copilot suggested, select **Replace** to replace the content currently in the text box or **Insert Below** to avoid overwriting the text in the box and instead, insert the generated text below it.
   
 ## Turn off text assistance in web player
 
-You can turn off text assistance for an app or an environment using a PowerShell cmdlet. 
+You can turn off text assistance for an app or an environment using a PowerShell cmdlet.
 
 > [!NOTE]
+
 > - When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 > - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
 > - The PowerShell cmdlets might take up to two hours to take effect.
@@ -85,14 +86,13 @@ To turn off text assistance for a specific environment, use the following cmdlet
 ```powershell
 Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -AppDraftingCopilotEnabled $false
 ```
-   
+
 ## Known issue
 
 - You might see "There was a problem using this description. Try again." error. This error occurs because of the following possibilities:
   - You've reached capacity limits. In this case, try again after some time.
   - You've not provided enough information to properly generate output. In this case, add more details to try again.
 - There isn't a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
-
 
 ## Related information
 
