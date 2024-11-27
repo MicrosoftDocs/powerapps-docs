@@ -207,7 +207,7 @@ You can delete the import file and imported records if you want to reimport the 
 
 ### Limitations
 
-- Excel Import isn't supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables.md) or Elastic tables
+- Excel Import isn't supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables.md#general-limitations) or Elastic tables
 
 ### See also
 
