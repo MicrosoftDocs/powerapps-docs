@@ -207,7 +207,7 @@ You can delete the import file and imported records if you want to reimport the 
 
 ### Limitations
 
-- Excel Import is not supported with [Virtual tables](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/limits-tshoot-virtual-tables) or Elastic tables
+- Excel Import is not supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables) or Elastic tables
 
 ### See also
 
