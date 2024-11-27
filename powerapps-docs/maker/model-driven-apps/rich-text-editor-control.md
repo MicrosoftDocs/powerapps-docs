@@ -1,9 +1,9 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 09/06/2024
+ms.date: 11/26/2024
 ms.topic: how-to
-ms.author: "craigm"
+ms.author: msomara
 author: Mattp123
 ms.reviewer: matp
 ms.subservice: mda-maker
@@ -27,21 +27,22 @@ You can customize the editor's appearance, features, and behavior. The control's
 
 Currently, the rich text editor is available as two different experiences:
 
-- Modern text editor: New experience you can enable
-- Classic text editor: Default experience
+- Modern text editor: New experience, set by default
+- Classic text editor: Original experience, to be deprecated in April 2025
 
 ## Modern text editor enhancements
 
-The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This update introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
 
 > [!Note]
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
+> For more information, refer to [Modern text editor limitations](#modern-rich-text-editor-limitations)
 
-## Enable the modern rich text editor experience
+### Enable the modern rich text editor experience from the classic experience
 
-The classic rich text editor experience is enabled by default. Complete the following steps to switch to the modern rich text editor experience.
+The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
 1. On the command bar, select **Settings**. The settings page is displayed.
@@ -55,8 +56,22 @@ The classic rich text editor experience is enabled by default. Complete the foll
 
 ### Revert from the modern rich text editor experience to the classic experience
 
-If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience), but deselect the options you selected in Step 4.
+If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
 
+### Modern rich text editor limitations
+
+When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
+
+Notes:
+- Localization isn't currently supported.
+- In-app notifications aren't currently supported.
+- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
+ 
+Knowledge management: 
+- A preview tab isn't currently available.
+
+Email templates and signatures: 
+- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
 
 ## Add the rich text editor control to a text column
 
@@ -431,7 +446,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Fix the height of the editor at 500 pixels
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma.
 
 ```json
 "removePlugins": [ "autogrow" ],
@@ -535,6 +550,8 @@ The following formatting tools are available in the rich text editor when it's o
 - In the default configuration, images don't negatively affect performance because they're stored separately from the HTML content. However, images are stored as base64 content in the text column when the user who uploads them doesn't have permissions on the `msdyn_richtextfiles` table. Base64 content is large, so you generally don't want to store images as part of the column content.
 
 - If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
+ 
+- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the the correct permissions to `msdyn_richtextfiles`.
 
 ## Frequently asked questions
 
