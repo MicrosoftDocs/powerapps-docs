@@ -551,7 +551,7 @@ The following formatting tools are available in the rich text editor when it's o
 
 - If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
  
-- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles`table. For appropriate users to be able to view the inline image, make sure you apply the the correct permissions to `msdyn_richtextfiles`.
+- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the the correct permissions to `msdyn_richtextfiles`.
 
 ## Frequently asked questions
 
