@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 01/31/2023
+ms.date: 11/26/2024
 ms.reviewer: jdaly
 ms.topic: article
 author: MicroSri
@@ -15,14 +15,16 @@ contributors:
 
 # Service protection API limits
 
-To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
+To ensure consistent availability and performance for everyone, we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
 
-The limits should not affect normal users of interactive clients. Only client applications that perform extraordinary API requests should be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Microsoft Dataverse platform.
+These limits should not affect normal users of interactive clients. Only client applications that perform extraordinary volume of API requests should be affected. These limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Microsoft Dataverse platform.
 
 When a client application makes extraordinarily demanding requests, the Dataverse follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API, we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Dataverse SDK for .NET, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service protection API limit errors returned](#service-protection-api-limit-errors-returned)
+- With the Dataverse SDK for .NET, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes.
+
+[Learn about the service protection API limit errors returned](#service-protection-api-limit-errors-returned)
 
 
 ## Impact on client applications
@@ -31,29 +33,29 @@ It is the responsibility of client applications to manage service protection API
 
 ### Interactive client applications
 
-The service protection limits are high enough that it should be rare for an individual using an interactive client application to encounter them during normal usage. However, it is possible if the client application allows for bulk operations. Client application developers should be aware of how service protection API limits are enforced and design the UI to reduce the potential for users to send extremely demanding requests to the server. But they should still expect that service protection API limit errors can occur and be prepared to handle them.
+The service protection limits are high enough that it should be rare for an individual using an interactive client application to encounter them during normal usage. However, it is possible when the client application allows for bulk operations. Client application developers should be aware of how service protection API limits are enforced and design the UI to reduce the potential for users to send extremely demanding requests to the server. Even when they do this, they should still expect that service protection API limit errors can occur and be prepared to handle them.
 
-Client application developers should not simply throw the error to display the message to the user. The error message is not intended for end users. See [Retry operations](#retry-operations) for specific strategies.
+Client application developers should not simply throw the error to display the message to the user. The error message is not intended for end users. [Learn about specific strategies to retry operations](#retry-operations)
 
 ### Data integration applications
 
-Applications designed to load data into Dataverse or perform bulk updates must also be able to manage service protection API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
+Applications designed to load data into Dataverse or perform bulk updates must manage service protection API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. [Learn how to maximize throughput](#how-to-maximize-throughput)
 
 ### Portal applications
 
-Portal applications typically send requests from anonymous users through a service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits based on the amount of traffic the portal experiences. Like interactive client applications, it isn't expected that the service protection API limits errors should be displayed to the portal end user. It is expected that the UI should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests.
+Portal applications typically send requests from anonymous users through a service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits based on the amount of traffic the portal experiences. Like interactive client applications, don't display service protection API limits errors to the portal end user. The UI for the portal should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests calculated using [the Retry-After duration](#the-retry-after-duration) returned with the error.
 
 ## Impact on plug-ins and custom workflow activities
 
-Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
+Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to data operations that originate from plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
 
-If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How service protection API limits are enforced](#how-service-protection-api-limits-are-enforced)
+If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. [Learn how service protection API limits are enforced](#how-service-protection-api-limits-are-enforced)
 
 ## Retry operations
 
 When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests from the user can be processed.
 
-- When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
+- When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) header with number of seconds.
 - With the SDK for .NET, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
 ### The Retry-After duration
@@ -79,11 +81,11 @@ The following describes how to retry .NET applications using the Dataverse SDK f
 #### [SDK for .NET](#tab/sdk)
 
 
-If you are using the SDK for .NET, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
+If you are using the SDK for .NET, we recommend that you use the [PowerPlatform.Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) or [Xrm.Tooling.Connector.CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. Those classes implement the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) methods and can manage any service protection API limit errors that are returned.
 
-Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
+[Xrm.Tooling.Connector](xref:Microsoft.Xrm.Tooling.Connector) versions after [9.0.2.16 (May 2019)](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.0.2.16), it will automatically pause and re-send the request after the `Retry-After` duration period.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+If your application is currently using the low-level [Xrm.Sdk.Client.OrganizationServiceProxy](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy) or [Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient](xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient) classes, replace those with the `ServiceClient` or `CrmServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 
@@ -94,6 +96,8 @@ More information:
 #### [Web API](#tab/webapi)
 
 If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
+
+If you are using PowerShell, the PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. [Learn more about managing Dataverse service protection limits using PowerShell](webapi/use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
 
 If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [WebAPIService class library (C#)](webapi/samples/webapiservice.md).
 
@@ -164,7 +168,7 @@ If the only limit was on the number of requests sent by a user, it would be poss
 - Rather than sending requests individually in succession, you could send a large number of concurrent requests before service protection API limits are enforced.
   - The concurrent request limit will counter this.
 
-Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service we provide. One of the factors is how many user licenses you have purchased.
+Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service Dataverse provides. One of the factors is how many user licenses you have purchased.
 
 The following table describes the default service protection API limits enforced *per web server*:
 
@@ -227,7 +231,7 @@ Client applications are not limited to sending individual requests sequentially.
 
 Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control. When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed the limit. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
 
-More information: [Send parallel requests](send-parallel-requests.md)
+[Learn about sending parallel requests](send-parallel-requests.md)
 
 ## How to maximize throughput
 
@@ -239,7 +243,7 @@ Don't try to calculate how many requests to send at a time. Each environment can
 
 ### Use multiple threads
 
-The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput. More information: [Send parallel requests](send-parallel-requests.md)
+The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput. [Learn about sending requests in parallel](send-parallel-requests.md)
 
 ### Avoid large batches
 
@@ -251,10 +255,10 @@ With the SDK for .NET this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteM
 
 In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
 
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. [Learn about executing batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
-> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. [Learn about entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
 
 ## Strategies to manage Service Protection API limits
 
@@ -281,11 +285,11 @@ Work with the ETL application vendor to learn which settings to apply. Make sure
 
 No. Dataverse native search is a different API (`api/search` rather than `api/data`) and has different rules. When using the Dataverse search API, there is a throttling limit of one request per second for each user.
 
-More information: [Dataverse Search Service Protection Limits](search/overview.md#service-protection-limits)
+[Learn about Dataverse Search Service Protection Limits](search/overview.md#service-protection-limits)
 
 ### How do these limits apply to how many requests a user is entitled to each day?
 
-These limits are not related to entitlement limits. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+These limits are not related to entitlement limits. [Learn about entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
 
 ### Are limits applied differently for application users?
 
