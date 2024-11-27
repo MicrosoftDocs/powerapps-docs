@@ -92,7 +92,7 @@ Set-AdminPowerAppEnvironmentCopilotSettings -EnvironmentName 'EnvironmentName' -
 - You might see "There was a problem using this description. Try again." error. This error occurs because of the following possibilities:
   - You've reached capacity limits. In this case, try again after some time.
   - You've not provided enough information to properly generate output. In this case, add more details to try again.
-- There isn't a way to disable this feature on a per-tenant basis.  It can only be disabled by the methods listed in this document.
+- There isn't a way to disable this feature on a per-tenant basis.  The methods listed in this document can disable it.
 
 ## Related information
 
