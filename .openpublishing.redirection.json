@@ -9249,6 +9249,11 @@
     "source_path": "powerapps-docs/learning-catalog/solution-architect.md",
     "redirect_url": "/training/browse/?expanded=power-platform&products=power-apps",
     "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/user/find-admin.md",
+    "redirect_url": "/power-apps/user/navigation",
+    "redirect_document_id": "false"
    }
   ]
 }
