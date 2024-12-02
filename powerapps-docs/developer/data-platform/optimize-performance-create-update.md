@@ -85,7 +85,7 @@ Service protection limit errors are just another kind of transient error that yo
 
 Read these articles to learn more:
 
-- [How to retry Dataverse requests](api-limits.md#how-to-re-try)
+- [How to retry Dataverse requests](api-limits.md#how-to-retry)
 - [Dataverse service protection limits](api-limits.md)
 - [Azure best practices: Transient fault handling](/azure/architecture/best-practices/transient-faults)
 

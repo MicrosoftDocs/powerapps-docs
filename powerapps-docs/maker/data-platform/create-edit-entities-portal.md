@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 10/16/2024
+ms.date: 11/22/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -139,14 +139,14 @@ Select **Advanced options** to display additional properties that are optional f
 |Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
-|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can't be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
+|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can't be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements. |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
-| **Color** | Set a color to be used for the table in model-driven apps.  |
-|**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
+| **Color** | Set a color to be used for the table in model-driven apps. |
+|**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table. |
 |**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
-| **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
-| **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on. |
+| **Provide custom help**  | When selected, set a **Help URL** to control what page users see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table. |
+| **Audit changes to its data**  | When auditing is enabled for your environment, this allows for changes to table records to be captured over time. When you enable auditing for a table, by default, many table columns, such as data types of owner, number, text, and choice are enabled for auditing. However, some columns aren’t enabled by default such as those with data types of lookup, but those columns can be enabled. Select or clear the **Enable auditing** property for the columns that you want to enable auditing on. |
 | **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity is visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form is used when the custom table icon is selected. |
 | **Enable long term retention**  | Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. More information: [Long term data retention overview](data-retention-overview.md)  |
 |**Creating a new activity**  | Associate activities to records for this table. |
