@@ -1,6 +1,6 @@
 ---
 title: Modern, refreshed look for model-driven apps
-description: Learn about the updated, user interface that makes model-driven apps easier to use.
+description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: adrianorth
 ms.topic: overview
 ms.date: 10/10/2024
@@ -20,10 +20,10 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
+Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
 > [!IMPORTANT]
-> With the [October monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle as been removed and users will have it be always on. Learn more at [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
+> With the [October monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle is removed. Learn more at [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
 
 ## What's included with the modern, refreshed look
 
@@ -32,7 +32,7 @@ Here's what you can expect in the modern, refreshed experience:
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
-- A new mechanism for customizing the app header colors to match your personal or organizational branding. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
+- A new mechanism for customizing the app header colors to match your personal or organizational branding. Learn more at [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md).
 - An end user setting called **Try the new look** that turns on the modern, refreshed experience.
 
 :::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
