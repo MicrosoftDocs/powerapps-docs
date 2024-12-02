@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 5/2/2024
+ms.date: 11/19/2024
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"

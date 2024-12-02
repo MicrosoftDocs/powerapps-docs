@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 10/10/2024
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 06/11/2024
+ms.date: 11/19/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
