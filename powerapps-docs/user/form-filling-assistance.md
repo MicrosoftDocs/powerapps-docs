@@ -27,7 +27,6 @@ Copilot provides form fill assistance for model-driven apps. This means that use
 This feature makes it easier and faster to enter data. The suggestions are entirely optional, and don't get saved until the user accepts them.
 
 > [!IMPORTANT]
-
 > - This feature is generally available in Dynamics 365 apps.
 > - This feature is in preview in Power Apps.
 >   - Preview features aren’t meant for production use and may have restricted functionality.
@@ -88,5 +87,6 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ### Related information
 
+[Manage feature settings](/power-platform/admin/settings-features)  
 [Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)  
 [Complete forms quickly with model-driven apps (video)](https://youtu.be/Jwlaue-Skzk?feature=shared)
