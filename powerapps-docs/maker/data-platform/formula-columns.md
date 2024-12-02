@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/16/2024
+ms.date: 11/19/2024
 ms.subservice: teams
 ms.author: sriknair
 ms.reviewer: matp
@@ -60,7 +60,7 @@ The formula column displays the result of *Price* multiplied by *Number of units
 
 :::image type="content" source="media/record-in-app-formula-column.png" alt-text="Screenshot of a record with a formula column.":::
 
-The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you've created the column only if it doesn't change the column type.
+The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you create the column only when it doesn't change the column type.
 
 For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn't change the column type. However, you can't change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
 
@@ -121,6 +121,7 @@ Check the computed **Rating Description** formula column, which appears like thi
 #### Responsible AI
 
 For information about responsible AI, go to these resources:
+
 - [FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
 - [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md)
 
