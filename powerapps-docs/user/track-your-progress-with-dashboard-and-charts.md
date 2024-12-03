@@ -1,15 +1,15 @@
 ---
 title: "Track your progress with dashboards and charts in model-driven apps| MicrosoftDocs"
 description: How to use charts in Power Apps.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 01/17/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

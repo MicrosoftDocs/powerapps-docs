@@ -6,15 +6,16 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/23/2022
+ms.date: 10/31/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - gregli-msft
   - lanced-microsoft
+  - gregli-msft
+  
 ---
 # Query limitations: Delegation and query limits
 
@@ -116,9 +117,9 @@ However, this expression won't:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-Some aggregate functions can be delegated depending on support on the back-end.  **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can also be delegated. Only a limited number of data sources support these functions for delegation at this time. For more information, see, [Delegation list](#delegable-data-sources).
+Certain aggregate functions can be delegated based on back-end support. Functions like **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions, such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, can also be delegated. However **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** have delegation restrictions. Currently, only a limited number of data sources support delegation for these functions. For more details, refer to the [Delegation list](#delegable-data-sources).
 
-**[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** delegation support is in Experimental and off by default off.
+
 
 ## non-delegable functions
 All other functions don't support delegation, including these notable functions:

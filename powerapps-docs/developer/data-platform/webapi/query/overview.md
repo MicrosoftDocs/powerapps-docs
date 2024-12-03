@@ -204,6 +204,7 @@ Alternatively, specify a number of records to return using paging. Don't use `$t
 There are some things that you can do using FetchXml that OData doesn't support.
 
 - You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables using navigation properties that are part of the relationships in the data model.
+- [You can't use nested $expand with N:N relationships](join-tables.md#nested-expand-with-nn-relationships).
 - [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
 
   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)

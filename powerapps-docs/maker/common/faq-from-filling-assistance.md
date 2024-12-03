@@ -7,7 +7,7 @@ ms.custom:
 ms.topic: article
 author: MitiJ
 ms.author: mijosh 
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.collection: 
     - bap-ai-copilot 
 ---
@@ -18,27 +18,31 @@ These frequently asked questions (FAQ) describe the AI impact of form fill assis
 
 ## What is form fill assistance?  
 
-Form fill assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use. These suggestions are entirely optional, and don't get saved until the user explicitly accepts them. 
+Form fill assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use, or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form. These suggestions are entirely optional, and don't get saved until the user explicitly accepts them.
 
-## What can form fill assistance do?   
+## What can form fill assistance do?
 
-Based on user’s recent usage of the app, optional suggestions for empty form fields are shown. The user can choose to accept, reject, or ignore these suggestions. 
+Based on user’s recent usage of the app or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form, optional suggestions for empty form fields are shown. The user can choose to accept, reject, or ignore these suggestions.
 
 ## What is the intended use of form fill assistance?
 
-Help users fill forms more efficiently by providing optional suggestions based on the user’s recent app usage. Users always need to choose to accept these suggestions in order to save them, otherwise these suggestions automatically get discarded. 
+Help users fill forms more efficiently by providing optional suggestions based on the user’s recent app usage or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form. Users always need to choose to accept these suggestions in order to save them, otherwise these suggestions automatically get discarded.
 
 ## How was form fill assistance evaluated? What metrics are used to measure performance?  
 
-In our evaluations, we look at how good the suggestions are based on how often they're accepted in the form. We also look at how often suggestions are generated. Moreover, the suggestions are evaluated for satisfying Microsoft’s responsible AI principles. 
+In our evaluations, we look at how good the suggestions are based on how often they're accepted in the form. We also look at how often suggestions are generated. Moreover, the suggestions are evaluated for satisfying Microsoft’s responsible AI principles.
 
 ## What are the limitations of form fill assistance? How can users minimize the impact of form fill assistance’s limitations when using the system?  
 
-The suggestions are optional and AI-generated. Users should ensure these suggestions are accurate and appropriate before accepting them. 
+The suggestions are optional and AI-generated. Users should ensure these suggestions are accurate and appropriate before accepting them.
 
 ## What operational factors and settings allow for effective and responsible use of form fill assistance?  
 
-Users are always required to review suggestions and explicitly accept the suggestions that are accurate and appropriate. 
+Users are always required to review suggestions and explicitly accept the suggestions that are accurate and appropriate.
+
+## How do I provide feedback?
+
+To provide feedback about this feature, users can select the thumbs up or thumbs down button and (optional) type in comments to describe their feedback and submit.
 
 ## Related information
 

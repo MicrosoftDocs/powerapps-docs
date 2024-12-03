@@ -5,7 +5,7 @@ author: lalexms
 ms.reviewer: matp
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/25/2024
+ms.date: 10/29/2024
 ms.subservice: mda-maker
 ms.author: laalexan
 search.audienceType: 
@@ -64,7 +64,9 @@ We used the following metrics to measure Copilot's performance:
 
 Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include: 
 
-- **Language**: Many languages are supported in Copilot scenarios. While the quality is expected to be highest in English, the quality in the other languages is expected to improve over time. The following languages are available for Copilot in the timeline:
+- **Language**: Many languages are supported in Copilot scenarios. While the quality is expected to be highest in English, the quality in the other languages is expected to improve over time.
+
+  The following languages are available for Copilot in the timeline:
   
    - Danish
    - Dutch
@@ -86,6 +88,7 @@ Copilot is a powerful and helpful feature, but it isn't perfect. It has some lim
    - Russian
    - Swedish
    - Turkish
+   - Vietnamese
   
 - **Suggestions**: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you. 
 

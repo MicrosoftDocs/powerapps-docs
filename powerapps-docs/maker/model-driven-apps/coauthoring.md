@@ -6,7 +6,7 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 06/23/2023
+ms.date: 11/13/2024
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps
@@ -35,6 +35,7 @@ Here's what multiple makers can do at the same time in the app while seeing each
 First, once there are other makers editing the app together with you, you see their presence in the top navigation bar and the left menu. You can see what components other makers are working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
 
 :::image type="content" source="media/coauthoring1.png" alt-text="App makers working in the app are displayed":::
+
 When someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
 
 :::image type="content" source="media/coauthoring2.png" alt-text="Sparkle graphic indicator appears when changes are made by other makers":::
@@ -49,4 +50,5 @@ Once someone removes the page, it disappears for other makers in real-time.
 
 ## See also
 
-[Add comments](comments.md)
+[Add comments](comments.md)  
+[Collaboration in Canvas Apps with Power Apps (video)](https://youtu.be/zOGQXz4-LnI?feature=shared)

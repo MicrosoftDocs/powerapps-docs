@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 04/11/2024
+ms.date: 10/31/2024
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -123,6 +123,14 @@ Data source environment variables are used for connectors that rely on user base
 
 Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
+### Should I include the value in my solution?
+
+No. Environment variables are intended to be used by applications that need to have different values in different environments where the solution is deployed. Environment variable definitions should be included in your solution but the values should be provided for the target environment during deployment. This behavior results in the environment variable definition being a managed solution object in the target environment while the environment variable is an unmanaged record.
+
+### Why can't I delete a value in my environment?
+
+If the value was included in a managed solution, the only way to delete the value is to update the solution in the source environment to exclude the value, then export a new version of the solution. This new version then can be imported into the environment using an upgrade operation (not an update), resulting in the value record being deleted.
+
 ### What if someone inadvertently deletes a value?
 
 If not already prevented by dependency system, runtime uses the last known value as a fallback.
@@ -133,7 +141,7 @@ It might take up to an hour to fully publish updated environment variables becau
 
 ### Are premium licenses required?
 
-No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors isn't required. The one caveat is if you're using the Dataverse connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
+No. While ALM requires Dataverse (or Dynamics 365 apps), use of premium connectors isn't required. The one caveat is if you're using the Dataverse connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
 ### Is there a limit to the number of environment variables I can have?
 
@@ -147,9 +155,11 @@ Yes.
 
 Yes if your configuration data isn't relational. Environment variables should be used for key: value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
-### Why is a different connection value than the one I want assigned automatically when importing?
+### Why isn't my connection saved for data source environment variables?
 
-In some cases where there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections available for the environment variable. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
+Connections are only used to generate the user interface. For example, to retrieve friendly names for SharePoint lists associated with a site. When editing a data source environment variable, be sure to select a connection with access to the data source. If you no longer have access to the connection, you can manually enter a value. For example, enter the SharePoint site URL or unique identifier (GUID) for a list.
+
+When there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
 
 ### How do I remove a value from an environment variable?
 

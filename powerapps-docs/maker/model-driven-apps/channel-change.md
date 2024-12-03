@@ -6,14 +6,14 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 09/04/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
   - maker
 contributors:
-- sericks007
+- shwetamurkute
 ---
 # Changing release channels for model-driven apps
 
@@ -78,6 +78,8 @@ Model-driven apps with the app release channel set to a value other than **Auto*
 1. Customize any out of box Dynamics 365 app.
 1. Update any custom app created after 2024 release wave 1 when the new app started defaulting to **Monthly**.
 
+The preferred approach is to follow [Change app channel in app designer](#change-app-channel-in-app-designer) and then deploy the app's solution to all environments.
+
 > [!NOTE]
 > Model-driven apps in Power Platform environments use **Monthly** when the app release channel is **Auto** regardless of the environment release channel. All model-driven apps in Power Platform environments need to set the app release channel explicitly.
 
@@ -136,7 +138,7 @@ A maker can use the app designer to explicitly set the release channel for an ap
 
 ### Change app channel in the solutions area
 
-A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
+As an alternative, a maker can use the **Solutions** area to explicitly set the release channel for all apps within the environment.
 
   > [!div class="mx-imgBorder"]
   > ![Solution explorer app setting app channel edit](media/channel-change/solution-explorer-app-setting-app-channel-edit.png "Solution explorer app setting app channel edit")
@@ -148,17 +150,15 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Search for *app channel*.
    1. Select the item **App channel**.
    1. Select **Add**.
-1. To change the app channel for multiple apps:
-   1. Edit the setting **App channel**.
-   1. Find the apps under the section **Setting app values**.
-   1. Select **New app value** and then enter the integer for the channel.
-   1. Select **Save**.
 1. To change the app channel for all apps in the environment:
    1. Edit the setting **App channel**.
    1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
-   1. Select **Save**.
-1. Republish any apps where the app setting was changed at an app level for the change to take effect.
+   1. Select **Save** which publishes the Setting Definition
+
+> [!NOTE]
+> When the setting definition is used to change one or more apps as part of a single solution, you must republish the apps for the change to take effect. Also, making this change causes the apps to have dependencies on the solution with the customization.
+
 
 ### Set the default for new apps to monthly channel
 

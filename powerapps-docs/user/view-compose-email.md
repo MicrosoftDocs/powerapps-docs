@@ -1,15 +1,15 @@
 ---
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 05/10/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -79,7 +79,7 @@ When enabled by your system administrator, the email option displays in the top 
 
 ## Enhanced recipient handling 
 
-If your administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form, users can perform the following actions:
+Users can perform the following actions only if the administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form:
 
  - Drag and drop recipient names across **To**, **CC**, and **BCC** fields.
  - View the recipient's email address along with their names.

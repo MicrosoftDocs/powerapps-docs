@@ -1,28 +1,29 @@
 ---
 title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
-author: chmoncay
-ms.author: chmoncay
+author: adrianorth
 ms.topic: overview
-ms.date: 09/10/2024
+ms.date: 10/10/2024
 ms.service: powerapps
 ms.subservice: end-user
+ms.author: aorth
 ms.custom: bap-template
-ms.reviewer: sericks
+ms.reviewer: smurkute
+ms.assetid: 
 search.audienceType: 
   - enduser
 contributors:
   - HemantGaur
   - adrianorth
   - jasongre
-
 ---
 
 # Modern, refreshed look for model-driven apps
 
 Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-The modern, refreshed look feature is on by default and will move to always on for monthly channel users with the October 2024 monthly release. Learn more at [Working with the modern, refreshed look](#working-with-the-modern-refreshed-look).
+> [!IMPORTANT]
+> With the [October monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle as been removed and users will have it be always on. Learn more at [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
 
 ## What's included with the modern, refreshed look
 
@@ -76,6 +77,16 @@ The system dashboard page, with independent subgrids and charts, has been update
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
+### Chart controls
+
+The chart controls on view pages and dashboards have been updated to a new color palette for the modern, refreshed look.
+
+If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
+
+```xml
+<Chart CustomColorOverride="true">
+```
+
 ## Known limitations
 
 The modern, refreshed look for model-driven apps has some limitations:
@@ -109,14 +120,6 @@ Modern controls can be used with custom pages and the modern, refreshed look. Th
 ### Can I change the color of the app header?
 
 It's possible to change the color of the app header to match your organization while in the modern, refreshed look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the modern, refreshed look aren't available yet.
-
-### Can I use custom chart colors?
-
-When using the modern, refreshed look, charts in views and dashboards are updated to a set of modern colors. If the chart colors have been customized, the new look overrides the custom colors. The maker can keep the custom colors by adding the **CustomColorOverride** property in the chart .xml file.
-
-```xml
-<Chart CustomColorOverride="True">
-```
 
 ## Working with the modern, refreshed look
 
