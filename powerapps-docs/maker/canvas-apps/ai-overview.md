@@ -59,6 +59,10 @@ If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-cop
 
 The following articles can help you build various apps in different scenarios using Copilot.
 
+### Copilot in Power Apps
+
+- [Create a business solution with Copilot (preview)](../common/plan-designer.md)
+
 ### Copilot in canvas apps
 
 - [Build apps through conversation](ai-conversations-create-app.md)

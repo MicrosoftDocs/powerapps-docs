@@ -231,6 +231,8 @@
   items:
   - name: Overview
     href: index.md
+  - name: Create a business solution with Copilot (preview)
+    href: ./common/plan-designer.md  
   - name: Use the learn hub
     href: ./common/learn-hub.md
   - name: Find it with unified search
