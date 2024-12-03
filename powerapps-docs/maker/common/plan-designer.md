@@ -4,7 +4,7 @@ description: Learn how to use the Plan Designer to create comprehensive business
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/3/2024
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-The Plan Designer is an AI-driven tool that creates a business solution in minutes. Describe your business problem in natural language and include images like a legacy app or process diagram. You receive an outline of user roles and requirements. It generates a complete Power Platform solution with Dataverse tables, Power Apps, and Power Automate flows. Refine your requirements to produce a more precise output tailored to your needs.
+In this article, you'll learn how to use the Plan Designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan Designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow this step-by-step guide to create a business solution using the Plan Designer and refine your requirements to achieve precise and customized outputs.
 
 Accessible from the Power Apps home page, the Plan Designer guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -35,7 +35,9 @@ Accessible from the Power Apps home page, the Plan Designer guides you through a
 
 1. **Turn on the new Copilot experience**: On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
-  :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
+  :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
+
+
 
 ## Create a plan
 
@@ -45,7 +47,7 @@ Let's use a sample scenario to build a solution for managing paid time off (PTO)
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-  :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan Designer with a sample scenario input.":::
+  :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Plan Designer with a sample scenario input.":::
 
   Copilot opens the Plan Designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
