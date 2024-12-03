@@ -9210,9 +9210,14 @@
     "redirect_url": "/power-apps/maker/model-driven-apps/build-first-model-driven-app",
     "redirect_document_id": "false"
    },
-   {
+    {
     "source_path": "powerapps-docs/maker/portals/configure/azure-ad-b2c.md",
     "redirect_url": "/power-pages/configure/azure-ad-b2c",
+    "redirect_document_id": false
+   },
+   {
+    "source_path": "powerapps-docs/maker/portals/configure/create-custom-portal-management-app.md",
+    "redirect_url": "/power-pages/configure/portal-management-app",
     "redirect_document_id": false
    },
    {
