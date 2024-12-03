@@ -1,5 +1,5 @@
-n ---
-title: Create business solutions with Copilot (preview)
+---
+title: Create a business solution with Copilot (preview)
 description: Learn how to use the Plan Designer to create comprehensive business solutions with AI-driven experiences.
 author: mduelae
 contributors:
@@ -15,7 +15,7 @@ ms.custom:
   - ai-gen-desc
 ---
 
-# Create business solutions with Copilot (preview)
+# Create a business solution with Copilot (preview)
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
@@ -30,7 +30,7 @@ Accessible directly from the Power Apps home page, the Plan Designer guides you 
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - The Plan designer is only available in the US region during preview. 
+> - This capability is only available in the US region during preview. 
 
 ## Prerequisite
 
@@ -128,6 +128,6 @@ For canvas apps, you’ll see a preview of the canvas app with a welcome screen 
 - **Inline editing user roles and user stories**: Currently, you can't inline edit the content directly. All changes must be prompted in copilot first to regenerate iterations.
 - **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
 - **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer isn't currently supported.
-- **Supported user experiences**: Currently, the only supported artifacts that the Plan designer can generate are canvas apps, model-driven apps, and suggested Power Automate flows.
-- **Generated Power Automate flows**: Power Automate flows generated in the Plan designer takes you to the Power Automate page but will not be automatically generated. 
+- **Supported user experiences**: Plan Designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
+- **Generated Power Automate flows**: Power Automate flows generated in the Plan Designer takes you to the Power Automate page but won't be automatically generated. 
 - **Solution/ ALM support**: Data and artifacts are saved to a new solution matching the name of the plan. The publisher defaults to the preferred publisher in your preferred solution. You can define the publisher in the save icon on the top right corner. 
