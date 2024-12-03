@@ -1865,16 +1865,6 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows
       href: ../mobile/windows-app-use.md
-- name: Power Pages
-  items:
-    - name: What is Power Pages?
-      href: /power-pages/introduction
-    - name: List OData feeds
-      href: ./portals/configure/list-odata-feeds.md
-    - name: Create custom Portal Management app
-      href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Customize the Microsoft Entra B2C user interface
-      href: /power-pages/configure/azure-ad-b2c.md
 - name: Dataverse
   items:
   - name: Dataverse
