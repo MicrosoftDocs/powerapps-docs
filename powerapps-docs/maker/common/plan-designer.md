@@ -1,4 +1,4 @@
----
+n ---
 title: Create business solutions with Copilot (preview)
 description: Learn how to use the Plan Designer to create comprehensive business solutions with AI-driven experiences.
 author: mduelae
@@ -30,29 +30,11 @@ Accessible directly from the Power Apps home page, the Plan Designer guides you 
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - The Plan designer is only available in the US region during preview. 
 
-## Prerequisites
+## Prerequisite
 
-The following steps are required to enable Plan Designer in your environment.
-
-1. **US region requirement**: Ensure your environment is set to **Cluster geo name: US**
-
-   To see your geo region, navigate to [Power Apps](https://make.powerapps.com) \> **Settings** \> **Session details**.
-
-    :::image type="content" source="media/plan-designer/pd-2-session-details.png" alt-text="Screenshot of the Power Apps settings showing the US region requirement.":::
-
-2. **Import the solution**: Find the solution in the EAP Teams channel under the **Files** tab \> **Getting started** folder \> **PowerAppsPlanGen_x_x_x_x_managed**.
-
-    1. Navigate to [Power Apps](https://make.powerapps.com).
-
-    1. From the navigation pane, select **Solutions.**
-
-    1. In the command bar, select **Import solution**. For more information on how to install a solution, see [Import solutions](../data-platform/import-update-export-solutions.md).
-  
-> [!NOTE]
-> This step can take up to 5 minutes.
-
-3. **Turn on the new Copilot experience**: On the Power Apps home page, turn on **Try the new Power Apps experience**. You should see the **Create a solution for almost any business problem** banner at the top.
+1. **Turn on the new Copilot experience**: On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
   :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
 
@@ -143,10 +125,9 @@ For canvas apps, you’ll see a preview of the canvas app with a welcome screen 
 
 ## Known limitations
 
-- **Exit feedback state after initiation**: After selecting **Change** to iterate on any of the generated content, there's currently no way to exit out of the change mode. To exit, type in “Nothing to change or add in this section” in the text box, and it shouldn't alter any existing content.
 - **Inline editing user roles and user stories**: Currently, you can't inline edit the content directly. All changes must be prompted in copilot first to regenerate iterations.
 - **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
 - **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer isn't currently supported.
-- **Supported user experiences**: Currently, the only supported artifacts that the Plan designer can generate are canvas apps, model-driven apps, and Power Automate flows.
-- **Generated Power Automate flows**: Power Automate flows generated in the Plan designer can be opened, but not with the PA flow already created. It takes you to the Power Automate page (within the proper solution).
-- **Solution/ ALM support**: Data and artifacts are saved to a new solution matching the name of the plan. The publisher defaults to the preferred publisher in your preferred solution. You can define the publisher in the save icon of the UI.
+- **Supported user experiences**: Currently, the only supported artifacts that the Plan designer can generate are canvas apps, model-driven apps, and suggested Power Automate flows.
+- **Generated Power Automate flows**: Power Automate flows generated in the Plan designer takes you to the Power Automate page but will not be automatically generated. 
+- **Solution/ ALM support**: Data and artifacts are saved to a new solution matching the name of the plan. The publisher defaults to the preferred publisher in your preferred solution. You can define the publisher in the save icon on the top right corner. 
