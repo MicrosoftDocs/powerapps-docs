@@ -1,6 +1,6 @@
 ---
-title: "Create a dashboard (model-driven apps)""
-description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file.""
+title: "Create a dashboard (model-driven apps)"
+description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file."
 ms.date: 04/01/2022
 ms.topic: article
 author: sriharibs-msft

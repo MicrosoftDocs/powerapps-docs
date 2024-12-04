@@ -1,6 +1,6 @@
 ---
-title: "Create, manage, and publish model-driven apps using code""
-description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps.""
+title: "Create, manage, and publish model-driven apps using code"
+description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps."
 author: caburk
 ms.author: caburk
 ms.date: 04/01/2022

@@ -1,6 +1,6 @@
 ---
-title: "Data (XML) Web resources (model-driven apps)""
-description: "Learn about using data (XML) Web resources to save and access data.""
+title: "Data (XML) Web resources (model-driven apps)"
+description: "Learn about using data (XML) Web resources to save and access data."
 author: sriharibs-msft
 ms.author: srihas
 ms.date: 04/01/2022
