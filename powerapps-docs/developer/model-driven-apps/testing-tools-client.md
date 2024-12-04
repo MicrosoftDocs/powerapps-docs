@@ -1,12 +1,12 @@
 ---
-title: "Testing tools for client-side development (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about testing frameworks for client-side development." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Testing tools for client-side development (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about testing frameworks for client-side development."
 ms.date: 04/01/2022
 ms.topic: article
 author: ChrisBal-MSFT
 ms.subservice: mda-developer
 ms.author: chrisbal
- # MSFT alias of manager or PM counterpart
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Flow Log (flowlog) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Log (flowlog) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -283,7 +283,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`parentobjectid`|
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
-|Targets|flowsession, workqueue|
+|Targets|flowmachinegroup, flowsession, workqueue|
 
 ### <a name="BKMK_parentobjectidIdType"></a> parentobjectidIdType
 
@@ -575,6 +575,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 
 - [flowmachine_flowlog_flowmachineid](#BKMK_flowmachine_flowlog_flowmachineid)
 - [flowmachinegroup_flowlog_flowmachinegroupid](#BKMK_flowmachinegroup_flowlog_flowmachinegroupid)
+- [flowmachinegroup_flowlog_parentobjectid](#BKMK_flowmachinegroup_flowlog_parentobjectid)
 - [flowrun_flowlog_cloudflowrunid](#BKMK_flowrun_flowlog_cloudflowrunid)
 - [flowsession_flowlog_flowsessionid](#BKMK_flowsession_flowlog_flowsessionid)
 - [flowsession_flowlog_parentobjectid](#BKMK_flowsession_flowlog_parentobjectid)
@@ -613,6 +614,19 @@ One-To-Many Relationship: [flowmachinegroup flowmachinegroup_flowlog_flowmachine
 |ReferencingEntityNavigationPropertyName|`flowmachinegroupid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowmachinegroup_flowlog_parentobjectid"></a> flowmachinegroup_flowlog_parentobjectid
+
+One-To-Many Relationship: [flowmachinegroup flowmachinegroup_flowlog_parentobjectid](flowmachinegroup.md#BKMK_flowmachinegroup_flowlog_parentobjectid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowmachinegroup`|
+|ReferencedAttribute|`flowmachinegroupid`|
+|ReferencingAttribute|`parentobjectid`|
+|ReferencingEntityNavigationPropertyName|`parentobjectid_flowmachinegroup`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_flowrun_flowlog_cloudflowrunid"></a> flowrun_flowlog_cloudflowrunid
 

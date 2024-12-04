@@ -1,7 +1,7 @@
 ---
 title: "credential table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the credential table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -83,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [usagetype](#BKMK_usagetype)
 - [username](#BKMK_username)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
@@ -416,6 +417,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_usagetype"></a> usagetype
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Usage Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`usagetype`|
+|RequiredLevel|ApplicationRequired|
+|Type|MultiSelectPicklist|
+|DefaultFormValue|280920000|
+|GlobalChoiceName|`credential_usagetype`|
+
+#### usagetype Choices/Options
+
+|Value|Label|
+|---|---|
+|280920000|**Connection**|
+|280920001|**DesktopScript**|
 
 ### <a name="BKMK_username"></a> username
 
@@ -944,6 +966,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [credential_BulkDeleteFailures](#BKMK_credential_BulkDeleteFailures)
 - [credential_DuplicateBaseRecord](#BKMK_credential_DuplicateBaseRecord)
 - [credential_DuplicateMatchingRecord](#BKMK_credential_DuplicateMatchingRecord)
+- [credential_flowmachinenetwork](#BKMK_credential_flowmachinenetwork)
 - [credential_MailboxTrackingFolders](#BKMK_credential_MailboxTrackingFolders)
 - [credential_PrincipalObjectAttributeAccesses](#BKMK_credential_PrincipalObjectAttributeAccesses)
 - [credential_ProcessSession](#BKMK_credential_ProcessSession)
@@ -1008,6 +1031,18 @@ Many-To-One Relationship: [duplicaterecord credential_DuplicateMatchingRecord](d
 |ReferencedEntityNavigationPropertyName|`credential_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_credential_flowmachinenetwork"></a> credential_flowmachinenetwork
+
+Many-To-One Relationship: [flowmachinenetwork credential_flowmachinenetwork](flowmachinenetwork.md#BKMK_credential_flowmachinenetwork)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachinenetwork`|
+|ReferencingAttribute|`credentialid`|
+|ReferencedEntityNavigationPropertyName|`flowmachinenetwork_credentialId_credential`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_credential_MailboxTrackingFolders"></a> credential_MailboxTrackingFolders
 

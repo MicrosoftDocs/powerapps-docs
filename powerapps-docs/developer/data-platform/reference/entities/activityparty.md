@@ -1,7 +1,7 @@
 ---
 title: "Activity Party (ActivityParty) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Activity Party (ActivityParty) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -50,6 +50,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AddressUsed](#BKMK_AddressUsed)
 - [Effort](#BKMK_Effort)
 - [ExchangeEntryId](#BKMK_ExchangeEntryId)
+- [ExternalId](#BKMK_ExternalId)
+- [ExternalIdType](#BKMK_ExternalIdType)
 - [ParticipationTypeMask](#BKMK_ParticipationTypeMask)
 - [PartyId](#BKMK_PartyId)
 - [PartyObjectTypeCode](#BKMK_PartyObjectTypeCode)
@@ -129,6 +131,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1024|
+
+### <a name="BKMK_ExternalId"></a> ExternalId
+
+|Property|Value|
+|---|---|
+|Description|**The external id used when the party does not have an email address.**|
+|DisplayName|**External Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`externalid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_ExternalIdType"></a> ExternalIdType
+
+|Property|Value|
+|---|---|
+|Description|**The external id type used when the party does not have an email address.**|
+|DisplayName|**External Id Type**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`externalidtype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_ParticipationTypeMask"></a> ParticipationTypeMask
 

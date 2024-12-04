@@ -1,7 +1,7 @@
 ---
 title: "AI Model (msdyn_AIModel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Model (msdyn_AIModel) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -812,6 +812,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_AIBDatasetsContainer_msdyn_AIModelI](#BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI)
 - [msdyn_AIBFeedbackLoop_msdyn_AIModel](#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel)
+- [msdyn_aimodel_aiskillconfig_AIModel](#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
 - [msdyn_aimodel_BulkDeleteFailures](#BKMK_msdyn_aimodel_BulkDeleteFailures)
@@ -845,6 +846,18 @@ Many-To-One Relationship: [msdyn_aibfeedbackloop msdyn_AIBFeedbackLoop_msdyn_AIM
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_AIBFeedbackLoop_msdyn_AIModel`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aimodel_aiskillconfig_AIModel"></a> msdyn_aimodel_aiskillconfig_AIModel
+
+Many-To-One Relationship: [aiskillconfig msdyn_aimodel_aiskillconfig_AIModel](aiskillconfig.md#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`aimodel`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aimodel_aiskillconfig_AIModel`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations

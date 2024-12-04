@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Entity table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -445,6 +445,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
 - [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
+- [entity_aiskillconfig_Entity](#BKMK_entity_aiskillconfig_Entity)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
@@ -505,6 +506,18 @@ Many-To-One Relationship: [dvtablesearchentity DVTableSearchEntity_Entity_Entity
 |ReferencingEntity|`dvtablesearchentity`|
 |ReferencingAttribute|`entity`|
 |ReferencedEntityNavigationPropertyName|`DVTableSearchEntity_Entity_Entity`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_entity_aiskillconfig_Entity"></a> entity_aiskillconfig_Entity
+
+Many-To-One Relationship: [aiskillconfig entity_aiskillconfig_Entity](aiskillconfig.md#BKMK_entity_aiskillconfig_Entity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`entity`|
+|ReferencedEntityNavigationPropertyName|`entity_aiskillconfig_Entity`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

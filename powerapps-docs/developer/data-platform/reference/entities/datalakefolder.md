@@ -1,7 +1,7 @@
 ---
 title: "Data Lake Folder (datalakefolder) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Data Lake Folder (datalakefolder) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [deltaLakePath](#BKMK_deltaLakePath)
 - [extendedproperties](#BKMK_extendedproperties)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsComplianceLake](#BKMK_IsComplianceLake)
 - [iscustomercapacity](#BKMK_iscustomercapacity)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [isdeepcopyenabled](#BKMK_isdeepcopyenabled)
@@ -234,6 +235,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_IsComplianceLake"></a> IsComplianceLake
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether lake is used for compliance purposes or not.**|
+|DisplayName|**Is Compliance Lake**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`iscompliancelake`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`datalakefolder_iscompliancelake`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_iscustomercapacity"></a> iscustomercapacity
 

@@ -2,7 +2,7 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 12/07/2023
+ms.date: 12/03/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
@@ -118,6 +118,7 @@ Table features currently not supported with elastic tables:
 - Access teams
 - Queues
 - [Attachment](../../developer/data-platform/attachment-annotation-files.md)
+- Import and export functionality of table data.
 
 Column data types currently not available with elastic tables:
 

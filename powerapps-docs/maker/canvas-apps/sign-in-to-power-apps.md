@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 08/07/2024
+ms.date: 10/18/2024
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -90,6 +90,10 @@ The Power Apps sharing experience requires users to have permissions in the tena
 - Yes, but in separate browser sessions. For example, Microsoft Edge might be open in its standard mode and a separate session might be started in a new **InPrivate** window.
 - If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
 
+#### Can I sign in to Power Apps, in a resource tenant with GDAP?
+
+No, [https://make.powerapps.com](https://make.powerapps.com) doesn't recognize [Granular delegated admin privileges (GDAP)](/partner-center/customers/gdap-introduction); however, the [Power Platform admin center does](/partner-center/customers/gdap-supported-workloads#dynamics-365-and-power-platform). 
+
 ## Sign in using Microsoft Account (preview)
 
 Anyone can build Power Apps, even if you don't have a work or school account. Simply sign up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
@@ -155,7 +159,7 @@ Yes, however, you need to add users to the Microsoft Entra tenant associated wit
    1. Sign in to [https://portal.azure.com)](https://portal.azure.com). 
    2. Search for **Microsoft Entra ID**.
    3. [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user) or [Add a guest user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-guest-user). You can add users that have either a Microsoft Account or Microsoft Entra identity. 
-3. With your Microsoft Entra admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/) or sign-up for [Power Apps trial](https://businessstore.microsoft.com/create-account/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
+3. With your Microsoft Entra admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
 4. With your Microsoft Entra admin identity, assign licenses to the users you added to your Microsoft Entra tenant. With your Microsoft Entra admin identity, [assign licenses to the users](/azure/active-directory/fundamentals/license-users-groups#assign-licenses-to-users-or-groups) you added to your Microsoft Entra tenant. 
 5. Sign in to [Power Apps](https://make.powerapps.com) to proceed with [sharing your apps to users](share-app-guests.md). 
 
