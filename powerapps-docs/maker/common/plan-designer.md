@@ -1,6 +1,6 @@
 ---
-title: Create a business solution with Copilot (preview)
-description: Learn how to use the Plan Designer to create comprehensive business solutions with AI-driven experiences.
+title: Use the Plan designer to create a business solution with Copilot (preview)
+description: Learn how to use the Plan designer to create comprehensive business solutions with AI-driven experiences.
 author: mduelae
 contributors:
 ms.topic: conceptual
@@ -15,15 +15,15 @@ ms.custom:
   - ai-gen-desc
 ---
 
-# Create a business solution with Copilot (preview)
+# Use the Plan designer (preview)
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-In this article, you'll learn how to use the Plan Designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan Designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow this step-by-step guide to create a business solution using the Plan Designer and refine your requirements to achieve precise and customized outputs.
+In this article, you'll learn how to use the Plan designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow this step-by-step guide to create a business solution using the Plan designer and refine your requirements to achieve precise and customized outputs.
 
-Accessible from the Power Apps home page, the Plan Designer guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
+Accessible from the Power Apps home page, the Plan designer guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-:::image type="content" source="media/plan-designer/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan Designer.":::
+:::image type="content" source="media/plan-designer/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer.":::
 
 > [!IMPORTANT]
 >
@@ -47,11 +47,11 @@ Let's use a sample scenario to build a solution for managing paid time off (PTO)
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-  :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Plan Designer with a sample scenario input.":::
+  :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Plan designer with a sample scenario input.":::
 
-  Copilot opens the Plan Designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
+  Copilot opens the Plan designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
-  :::image type="content" source="media/plan-designer/pd-5-plan-loading.png" alt-text="Screenshot of the Plan Designer generating user roles.":::
+  :::image type="content" source="media/plan-designer/pd-5-plan-loading.png" alt-text="Screenshot of the Plan designer generating user roles.":::
 
 ## Generate user roles and user stories
 
@@ -59,7 +59,7 @@ Copilot shows you the user roles and stories that it generated based on your des
 
 In this example, it generated two roles: Employee and Manager, along with their descriptions and user stories. On the left-hand side, you can see the user roles and stories in a bullet list, while a visual diagram is displayed on the right-hand side.
 
-:::image type="content" source="media/plan-designer/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan Designer.":::
+:::image type="content" source="media/plan-designer/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer.":::
 
 1. Review the user roles and user stories and select one of the following options:
 
@@ -74,13 +74,13 @@ In this example, it generated two roles: Employee and Manager, along with their 
 
 1. When you get the updated results, review the changes and choose either **Keep** or **Undo**. When you’re satisfied, select **Accept** to proceed to the next step and generate data tables.
 
-    :::image type="content" source="media/plan-designer/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan Designer showing updated user roles and stories."::: 
+    :::image type="content" source="media/plan-designer/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan designer showing updated user roles and stories."::: 
 
 ## Generate data tables
 
 1. The proposed data tables are listed in the **Data** section of the plan. Select **Show details** to view the data in a diagram.
 
-      :::image type="content" source="media/plan-designer/pd-8-show-detailed-data.png" alt-text="Screenshot of the proposed data tables in the Plan Designer.":::
+      :::image type="content" source="media/plan-designer/pd-8-show-detailed-data.png" alt-text="Screenshot of the proposed data tables in the Plan designer.":::
 
 1. **Show details** opens the data workspace, where you can view the complete Entity Relationship Diagram (ERD) containing all the generated tables. These Dataverse tables come with predefined columns and sample data. To see the specific details of a table, select **View data**.
 
@@ -96,17 +96,17 @@ In this example, it generated two roles: Employee and Manager, along with their 
 
 ## Edit tables
 
-1. If you want to modify the proposed tables, navigate back to the Plan Designer and select **Change**.
+1. If you want to modify the proposed tables, navigate back to the Plan designer and select **Change**.
 
 1. When you’re ready to generate user experiences, select **Save tables**.
 
-      :::image type="content" source="media/plan-designer/pd-11-save-tables.png" alt-text="Screenshot of the Plan Designer with the option to save tables.":::
+      :::image type="content" source="media/plan-designer/pd-11-save-tables.png" alt-text="Screenshot of the Plan designer with the option to save tables.":::
 
 ## Generate user experiences
 
-The Plan Designer proposes a set of user experiences tailored to solve your business problem. For our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
+The Plan designer proposes a set of user experiences tailored to solve your business problem. For our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
-:::image type="content" source="media/plan-designer/pd-12-generate-user-exp.png" alt-text="Screenshot of the proposed user experiences in the Plan Designer.":::
+:::image type="content" source="media/plan-designer/pd-12-generate-user-exp.png" alt-text="Screenshot of the proposed user experiences in the Plan designer.":::
 
 To view details of the proposed user experiences, hover over the **information icon**. The pop-up info card shows the name, description, targeted user role, and the data tables included.
 
@@ -118,7 +118,7 @@ To make changes, select **Change** and follow the steps as mentioned above. Or s
 
 Once you accept the proposed user experiences, they'll then be created. To open a canvas app or model-driven app, select the **plus icon**. Opening Power Automate flows with the flow precreated isn't supported. It navigates to the Power Automate page within your solution.
 
-:::image type="content" source="media/plan-designer/pd-14-open-app.png" alt-text="Screenshot of the Plan Designer with the option to open created apps.":::
+:::image type="content" source="media/plan-designer/pd-14-open-app.png" alt-text="Screenshot of the Plan designer with the option to open created apps.":::
 
 The proposed apps open in a new tab, with the added data tables as a fully functioning app.
 
@@ -129,8 +129,8 @@ For canvas apps, you’ll see a preview of the canvas app with a welcome screen 
 - **Inline editing user roles and user stories**: Currently, you can't inline edit the content directly. All changes must be prompted in copilot first to regenerate iterations.
 - **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
 - **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer isn't currently supported.
-- **Supported user experiences**: Plan Designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
-- **Generated Power Automate flows**: Power Automate flows created in the Plan Designer take you to the Power Automate page but aren't automatically generated.
+- **Supported user experiences**: Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
+- **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
 - **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
 
 
