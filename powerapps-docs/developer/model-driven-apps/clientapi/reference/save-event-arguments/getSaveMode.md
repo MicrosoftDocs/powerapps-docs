@@ -1,5 +1,5 @@
 ---
-title: "getSaveMode (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSaveMode (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSaveMode method.
 author: HemantGaur
 ms.author: hemantg

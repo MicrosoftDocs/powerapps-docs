@@ -1,5 +1,5 @@
 ---
-title: "OnProcessStatusChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "OnProcessStatusChange event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the onProcessStatusChange event.
 author: HemantGaur
 ms.author: hemantg

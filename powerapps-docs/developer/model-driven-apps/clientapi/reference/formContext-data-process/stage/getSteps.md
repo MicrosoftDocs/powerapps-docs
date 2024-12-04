@@ -1,5 +1,5 @@
 ---
-title: "getSteps (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSteps (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSteps method.
 author: HemantGaur
 ms.author: hemantg

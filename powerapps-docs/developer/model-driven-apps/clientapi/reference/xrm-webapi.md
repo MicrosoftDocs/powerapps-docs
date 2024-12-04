@@ -1,5 +1,5 @@
 ---
-title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi (Client API reference) in model-driven apps"
 description: "Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps."
 author: lancedMicrosoft
 ms.author: lanced

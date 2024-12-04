@@ -1,5 +1,5 @@
 ---
-title: "Form data OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form data OnLoad event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the form data OnLoad event.
 author: HemantGaur
 ms.author: hemantg

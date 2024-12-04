@@ -1,10 +1,9 @@
 ---
-title: "View data with visualizations (charts)  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Visualizations let you see your business data graphically. A visualization is attached to a table in Microsoft Dataverse. You can attach multiple visualizations to a table, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "View data with visualizations (charts)  (model-driven apps)"
+description: "Visualizations let you see your business data graphically. A visualization is attached to a table in Microsoft Dataverse. You can attach multiple visualizations to a table, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard."
 author: sriharibs-msft
 ms.author: srihas
-
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 search.audienceType: 
@@ -36,7 +35,7 @@ In model-driven apps, there are two types of visualization ownership: organizati
 
 ## Chart visualizations 
 
-Charts let you see summaries of grid data. The charts are built by using the Microsoft Chart Controls for Microsoft .NET Framework 3.5. For more information about Microsoft Chart Controls, see [Download: Chart Controls for .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=128852).  
+Charts let you see summaries of grid data. The charts are built by using the Microsoft Chart Controls for Microsoft .NET Framework 3.5. For more information about Microsoft Chart Controls, see [Toolbox - Microsoft Chart Controls, Visual Studio Automatic Code Snippets, And More](/archive/msdn-magazine/2009/april/microsoft-chart-controls-visual-studio-automatic-code-snippets).  
   
 These charts are integrated with the grids in the web application. When you apply a filter (query) to the data in a grid, the filter is applied to the chart also, and the chart is updated accordingly. Similarly, when you perform drill-down operations on a chart, the grid data is updated automatically.  
   
@@ -54,11 +53,13 @@ Microsoft Chart Controls is used to build charts in model-driven apps. Microsoft
   
 The following chart types are supported out-of-box in Dataverse: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
   
-<a name="WebResources"></a>   
-## Web resource visualizations  
- Web resources are virtual files that are stored in the model-driven apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in model-driven apps together with other charts for a table. For more information about web resources, see [Web resources for model-driven apps](web-resources.md).  
-  
- You can use the following types of web resources in a visualization: [Webpage (HTML) web resources](webpage-html-web-resources.md) and [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md). For more information about how to create a visualization with a web resource, see [Create a web resource visualization](create-visualization-chart.md#create-a-web-resource-visualization).  
+<a name="WebResources"></a>
+
+## Web resource visualizations
+
+Web resources are virtual files that are stored in the model-driven apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in model-driven apps together with other charts for a table. For more information about web resources, see [Web resources for model-driven apps](web-resources.md).  
+
+You can use the following types of web resources in a visualization: [Webpage (HTML) web resources](webpage-html-web-resources.md) and [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md). For more information about how to create a visualization with a web resource, see [Create a web resource visualization](create-visualization-chart.md#create-a-web-resource-visualization).  
   
 
 ## Tables supported for visualizations 
@@ -121,19 +122,18 @@ Team
 Territory  
 UoMSchedule  
   
-### See also  
- [Chart and analyze data](customize-visualizations-dashboards.md)   
- [Specifying chart data](understand-charts-underlying-data-chart-representation.md)   
- [Actions on chart](actions-visualizations-charts.md)   
- [Create a chart](create-visualization-chart.md)   
- [Sample charts](sample-charts.md)   
- [SavedQueryVisualization table](../data-platform/reference/entities/savedqueryvisualization.md)   
- [UserQueryVisualization table](../data-platform/reference/entities/userqueryvisualization.md)
- [Download: Chart Controls for .NET Framework language pack](https://www.microsoft.com/downloads/details.aspx?FamilyId=581FF4E3-749F-4454-A5E3-DE4C463143BD&displaylang=en)   
- [Download: Chart Controls Add-on for Visual Studio](https://www.microsoft.com/downloads/details.aspx?FamilyId=1D69CE13-E1E5-4315-825C-F14D33A303E9&displaylang=en)   
- [Download: Chart Controls for .NET Framework documentation](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))   
- [Samples Environment for Microsoft Chart Controls](https://code.msdn.microsoft.com/mschart)   
- [Chart Controls forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)
+### See also
+
+[Chart and analyze data](customize-visualizations-dashboards.md)   
+[Specifying chart data](understand-charts-underlying-data-chart-representation.md)   
+[Actions on chart](actions-visualizations-charts.md)   
+[Create a chart](create-visualization-chart.md)   
+[Sample charts](sample-charts.md)   
+[SavedQueryVisualization table](../data-platform/reference/entities/savedqueryvisualization.md)   
+[UserQueryVisualization table](../data-platform/reference/entities/userqueryvisualization.md)   
+[Download: Chart Controls for .NET Framework documentation](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))   
+[Samples Environment for Microsoft Chart Controls](https://code.msdn.microsoft.com/mschart)   
+[Chart Controls forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

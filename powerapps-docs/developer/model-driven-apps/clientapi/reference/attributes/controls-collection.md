@@ -1,5 +1,5 @@
 ---
-title: "Controls collection (Client API reference)| MicrosoftDocs"
+title: "Controls collection (Client API reference)"
 description: "Learn about how to access controls associated with columns."
 author: HemantGaur
 ms.author: hemantg

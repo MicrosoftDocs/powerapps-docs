@@ -1,8 +1,8 @@
 ---
-title: "Customize views (model-driven apps) | Microsoft Docs"
+title: "Customize views (model-driven apps)"
 description: "Learn about customizing the views."
-author: sriharibs-msft
-ms.author: srihas
+author: clromano
+ms.author: clromano
 ms.reviewer: jdaly
 ms.date: 04/01/2022
 ms.topic: article

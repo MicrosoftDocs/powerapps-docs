@@ -1,6 +1,6 @@
 ---
-title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create a visualization (chart) (model-driven apps)"
+description: "The topic shows how to create a chart visualization and a web resource visualization."
 author: sriharibs-msft
 ms.author: srihas
 ms.date: 04/01/2022

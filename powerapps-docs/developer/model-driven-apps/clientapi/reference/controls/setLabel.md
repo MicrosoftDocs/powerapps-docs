@@ -1,5 +1,5 @@
 ---
-title: "control.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.setLabel (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.setLabel method.
 author: clromano
 ms.author: clromano

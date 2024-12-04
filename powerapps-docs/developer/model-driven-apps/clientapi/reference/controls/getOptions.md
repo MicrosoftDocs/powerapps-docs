@@ -1,5 +1,5 @@
 ---
-title: "control.getOptions (Client API reference)| MicrosoftDocs"
+title: "control.getOptions (Client API reference)"
 description: Includes description and supported parameters for the control.getOptions method.
 author: clromano
 ms.author: clromano

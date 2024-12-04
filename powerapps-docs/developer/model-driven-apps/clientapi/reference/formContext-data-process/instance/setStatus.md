@@ -1,5 +1,5 @@
 ---
-title: "setStatus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setStatus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setStatus method.
 author: HemantGaur
 ms.author: hemantg

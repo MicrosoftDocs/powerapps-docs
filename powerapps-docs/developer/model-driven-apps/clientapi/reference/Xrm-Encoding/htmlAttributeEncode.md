@@ -1,5 +1,5 @@
 ---
-title: "htmlAttributeEncode| MicrosoftDocs"
+title: "htmlAttributeEncode"
 description: Includes description and supported parameters for the htmlAttributeEncode method.
 author: adrianorth
 ms.author: aorth

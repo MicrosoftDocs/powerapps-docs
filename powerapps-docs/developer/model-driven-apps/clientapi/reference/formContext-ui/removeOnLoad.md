@@ -1,5 +1,5 @@
 ---
-title: "ui.removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ui.removeOnLoad (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ui.removeOnLoad method.
 author: HemantGaur
 ms.author: hemantg

@@ -1,5 +1,5 @@
 ---
-title: "getNavigationBehavior (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getNavigationBehavior (Client API reference) in model-driven apps"
 description: Returns a navigation behavior object for stage that can be used to define whether the create button is available for users.
 author: HemantGaur
 ms.author: hemantg

@@ -1,5 +1,5 @@
 ---
-title: "OnSelection event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "OnSelection event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the OnSelection event.
 author: sriharibs-msft
 ms.author: srihas

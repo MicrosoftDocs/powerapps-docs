@@ -1,5 +1,5 @@
 ---
-title: "section.getParent (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "section.getParent (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the section.getParent method.
 author: HemantGaur
 ms.author: hemantg

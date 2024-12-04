@@ -1,5 +1,5 @@
 ---
-title: "reflow (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "reflow (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the reflow method.
 author: HemantGaur
 ms.author: hemantg

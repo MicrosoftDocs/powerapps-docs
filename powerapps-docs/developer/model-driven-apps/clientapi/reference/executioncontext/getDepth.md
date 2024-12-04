@@ -1,5 +1,5 @@
 ---
-title: "getDepth (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getDepth (Client API reference) in model-driven apps"
 description: "Learn about the getDepth method that returns a value that indicates the order in which this handler is executed." 
 author: HemantGaur
 ms.author: hemantg

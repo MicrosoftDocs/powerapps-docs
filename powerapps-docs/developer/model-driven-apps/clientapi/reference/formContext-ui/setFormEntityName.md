@@ -1,5 +1,5 @@
 ---
-title: "setFormEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setFormEntityName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setFormEntityName method.
 author: HemantGaur
 ms.author: hemantg

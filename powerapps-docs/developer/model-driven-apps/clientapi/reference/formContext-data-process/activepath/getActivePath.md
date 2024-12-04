@@ -1,5 +1,5 @@
 ---
-title: "getActivePath (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getActivePath (Client API reference) in model-driven apps"
 description: Gets a collection of stages currently in the active path with methods to interact with the stages displayed in the business process flow control.
 author: HemantGaur
 ms.author: hemantg

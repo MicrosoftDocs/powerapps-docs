@@ -1,5 +1,5 @@
 ---
-title: "ui.addLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ui.addLoaded (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ui.addLoaded method.
 author: aorth
 ms.author: aorth

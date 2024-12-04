@@ -1,5 +1,5 @@
 ---
-title: "process.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "process.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the process.getVisible method.
 author: HemantGaur
 ms.author: hemantg

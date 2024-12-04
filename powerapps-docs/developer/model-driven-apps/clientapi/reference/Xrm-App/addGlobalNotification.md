@@ -1,5 +1,5 @@
 ---
-title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addGlobalNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addGlobalNotification method.
 author: adrianorth
 ms.author: aorth

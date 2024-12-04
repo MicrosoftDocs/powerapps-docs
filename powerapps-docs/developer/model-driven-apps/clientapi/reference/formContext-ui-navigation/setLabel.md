@@ -1,5 +1,5 @@
 ---
-title: "navigationItem.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "navigationItem.setLabel (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigationItem.setLabel method.
 author: HemantGaur
 ms.author: hemantg

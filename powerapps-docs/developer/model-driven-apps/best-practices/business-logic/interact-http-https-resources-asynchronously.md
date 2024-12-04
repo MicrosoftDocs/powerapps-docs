@@ -1,5 +1,5 @@
 ---
-title: "Interact with HTTP and HTTPS resources asynchronously | MicrosoftDocs"
+title: "Interact with HTTP and HTTPS resources asynchronously "
 description: "You should interact with HTTP and HTTPS resources asynchronously when writing JavaScript client extensions for model driven apps."
 suite: powerapps
 author: jowells
