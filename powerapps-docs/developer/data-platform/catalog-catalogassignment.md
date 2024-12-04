@@ -306,7 +306,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(00000000-0000-0000-0000-000000000001)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1)
 
 ```
 
@@ -329,7 +329,7 @@ Accept: application/json
     "iscustomizable": {
         "Value": false
     },
-    "ParentCatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000001)"
+    "ParentCatalogId@odata.bind": "catalogs(a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1)"
 }
 
 ```
@@ -338,7 +338,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000002)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2)
 
 ```
 
@@ -357,11 +357,11 @@ OData-Version: 4.0
 Accept: application/json
 {
     "name": "Account",
-    "EntityId@odata.bind": "entities(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)",
+    "EntityId@odata.bind": "entities(70816501-edb9-4740-a16c-6a5efbc05d84)",
     "iscustomizable": {
         "Value": false
     },
-    "CatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000002)"
+    "CatalogId@odata.bind": "catalogs(b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2)"
 }
 
 ```
@@ -370,7 +370,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3)
 
 ```
 
@@ -440,7 +440,7 @@ CatalogAssignment accountAssignment = new CatalogAssignment
 {
     Name = "Account",
     IsCustomizable = new BooleanManagedProperty(false),
-    Object = new EntityReference("entity",new Guid("00aa00aa-bb11-cc22-dd33-44ee44ee44ee")),
+    Object = new EntityReference("entity",new Guid("70816501-edb9-4740-a16c-6a5efbc05d84")),
     CatalogId = new EntityReference("catalog", tableEventsId)
 
 };

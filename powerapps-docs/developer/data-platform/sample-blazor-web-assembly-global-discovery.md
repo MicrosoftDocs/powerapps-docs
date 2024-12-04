@@ -84,7 +84,7 @@ To run this sample you must first configure an Microsoft Entra ID application on
 
 1. Open the BlazorCDS Visual Studio solution file (BlazorCDS.sln) with Visual Studio.
 1. In **Solution Explorer**, expand `wwwroot` and open the `appsettings.json` file.
-1. Replace the placeholder `ClientId` value (`00001111-aaaa-2222-bbbb-3333cccc4444`) with the application (client) ID value you copied in [Create an app registration](#create-an-app-registration).
+1. Replace the placeholder `ClientId` value (`11111111-1111-1111-1111-111111111111`) with the application (client) ID value you copied in [Create an app registration](#create-an-app-registration).
 
 #### Run the sample
 

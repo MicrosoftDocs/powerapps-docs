@@ -63,9 +63,9 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-  "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
-  "UserId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
-  "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
+  "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+  "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+  "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 }
 ```
 
@@ -73,9 +73,9 @@ OData-Version: 4.0
 
 ```
 WhoAmI tells us:
-WhoAmIResponse.BusinessUnitId:cca3985e-c618-ea11-a811-000d3a33f066
-WhoAmIResponse.UserId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
-WhoAmIResponse.OrganizationId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+WhoAmIResponse.BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+WhoAmIResponse.UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
+WhoAmIResponse.OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 ```
 
 The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).

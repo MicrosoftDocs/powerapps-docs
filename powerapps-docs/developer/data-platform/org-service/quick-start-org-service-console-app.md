@@ -161,8 +161,8 @@ To see and understand the `IOrganizationService` interface a little better, try 
 1. Run the sample again and you should see something like:
 
    ```console
-   OrganizationId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
-   BusinessUnitId:38e0dbe4-131b-e111-ba7e-78e7d1620f5e
+   OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+   BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
    UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    Press the <Enter> key to exit.
    ```

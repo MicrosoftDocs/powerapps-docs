@@ -47,7 +47,7 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 ```
   
 > [!NOTE]
-> You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
+> You'll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
  After creating a service client object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
   
@@ -79,7 +79,7 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 > For development and prototyping purposes we have provided the following AppId or ClientId and Redirect URI for use in OAuth Flows.<br/>
 > For production use, you should create an AppId or ClientId that is specific to your tenant in the Azure Management portal.<br/>
 > Sample AppId or ClientId = 51f81489-12ee-4a9e-aaae-a2591f45987d<br/>
-> Sample RedirectUri = app://00001111-aaaa-2222-bbbb-3333cccc4444<br/>
+> Sample RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97<br/>
 
 <a name="Examples"></a>
 
@@ -118,7 +118,7 @@ Create a new connection to Dataverse using a UserID or Password via OAuth.
   Password=passcode;
   Url=https://contosotest.crm.dynamics.com;
   AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
-  RedirectUri=app://00001111-aaaa-2222-bbbb-3333cccc4444;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
   TokenCacheStorePath=c:\MyTokenCache;
   LoginPrompt=Auto"/>  
 ```  
@@ -138,7 +138,7 @@ Create a new connection to Dataverse using the current logged in user via OAuth.
   Integrated Security=true;
   Url=https://contosotest.crm.dynamics.com;
   AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
-  RedirectUri=app://00001111-aaaa-2222-bbbb-3333cccc4444;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
   TokenCacheStorePath=c:\MyTokenCache\msal_cache.data;
   LoginPrompt=Auto"/>  
 ```  

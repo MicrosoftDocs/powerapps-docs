@@ -86,9 +86,9 @@ Don't proceed without confirming each of the following prerequisites are met.
    ```json
    {
    "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-   "BusinessUnitId": "639dea3c-505c-4c3a-b8b5-d916cb507e1e",
-   "UserId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
-   "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
+   "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+   "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+   "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
    }
    ```
 

@@ -181,9 +181,9 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 {  
  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
- "BusinessUnitId": "ded5a64f-f06d-e511-80d0-00155db07cb1",  
- "UserId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",  
- "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"  
+ "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",  
+ "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",  
+ "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"  
 }  
 ```  
   

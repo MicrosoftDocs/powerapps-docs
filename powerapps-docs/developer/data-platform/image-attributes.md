@@ -254,7 +254,7 @@ OData-Version: 4.0
       "CanStoreFullImage": true,
       "MaxSizeInKB": 30720,
       "IsPrimaryImage": true,
-      "MetadataId": "53ba4b29-6a8c-ed11-81ad-000d3a9933c9"
+      "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     }
   ]
 }
