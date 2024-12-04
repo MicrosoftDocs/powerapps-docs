@@ -1,5 +1,5 @@
 ---
-title: "tab.getDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.getDisplayState (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.getDisplayName method.
 author: HemantGaur
 ms.author: hemantg

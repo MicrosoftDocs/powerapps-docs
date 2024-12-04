@@ -1,6 +1,6 @@
 ---
-title: "Configure a form to accept custom querystring parameters (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about configuring a form to accept custom querystring parameters. Use these parameters to set default values when you create a new record in the application." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Configure a form to accept custom querystring parameters (model-driven apps)""
+description: "Learn about configuring a form to accept custom querystring parameters. Use these parameters to set default values when you create a new record in the application.""
 author: HemantGaur
 ms.author: hemantg
 ms.date: 04/01/2022

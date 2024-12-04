@@ -1,5 +1,5 @@
 ---
-title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
+title: "Client API Xrm object for model-driven apps "
 description: "Describes the client api Xrm object"
 author: adrianorth
 ms.author: aorth

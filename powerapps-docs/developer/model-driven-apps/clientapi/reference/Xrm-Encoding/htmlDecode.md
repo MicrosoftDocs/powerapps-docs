@@ -1,5 +1,5 @@
 ---
-title: "htmlDecode| MicrosoftDocs"
+title: "htmlDecode"
 description: "The Client API method converts a string that has been HTML-encoded into a decoded string."
 author: adrianorth
 ms.author: aorth

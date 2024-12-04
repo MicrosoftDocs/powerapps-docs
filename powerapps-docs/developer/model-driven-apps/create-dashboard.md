@@ -1,6 +1,6 @@
 ---
-title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create a dashboard (model-driven apps)""
+description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file.""
 ms.date: 04/01/2022
 ms.topic: article
 author: sriharibs-msft

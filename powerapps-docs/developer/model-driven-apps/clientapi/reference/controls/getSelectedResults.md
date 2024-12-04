@@ -1,5 +1,5 @@
 ---
-title: "getSelectedResults (Client API Reference)| MicrosoftDocs"
+title: "getSelectedResults (Client API Reference)"
 description: Includes description and supported parameters for the getSelectedResults method.
 author: clromano
 ms.author: clromano

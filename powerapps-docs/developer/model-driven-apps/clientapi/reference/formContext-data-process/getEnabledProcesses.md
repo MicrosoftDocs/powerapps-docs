@@ -1,5 +1,5 @@
 ---
-title: "getEnabledProcesses (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEnabledProcesses (Client API reference) in model-driven apps"
 description: Asynchronously retrieves the business process flows enables for a table that the current user can switch to.
 author: HemantGaur
 ms.author: hemantg

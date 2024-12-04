@@ -1,5 +1,5 @@
 ---
-title: "setNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setNotification method.
 ms.author: clromano
 author: clromano

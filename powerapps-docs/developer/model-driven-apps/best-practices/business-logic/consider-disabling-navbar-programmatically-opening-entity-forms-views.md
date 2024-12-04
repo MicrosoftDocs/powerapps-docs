@@ -1,5 +1,5 @@
 ---
-title: "Consider disabling NavBar when programmatically opening forms or views | MicrosoftDocs"
+title: "Consider disabling NavBar when programmatically opening forms or views "
 description: "Opening up forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
 suite: powerapps
 author: jowells

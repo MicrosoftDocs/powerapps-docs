@@ -1,5 +1,5 @@
 ---
-title: "quickViewControl.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.setFocus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the quickViewControl.setFocus method.
 author: HemantGaur
 ms.author: hemantg

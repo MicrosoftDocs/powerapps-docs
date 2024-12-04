@@ -1,5 +1,5 @@
 ---
-title: "control.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.setFocus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.setFocus method.
 author: clromano
 ms.author: clromano

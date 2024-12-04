@@ -1,5 +1,5 @@
 ---
-title: "setActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setActiveProcess (Client API reference) in model-driven apps"
 description: Sets a process as the active process.
 author: HemantGaur
 ms.author: hemantg

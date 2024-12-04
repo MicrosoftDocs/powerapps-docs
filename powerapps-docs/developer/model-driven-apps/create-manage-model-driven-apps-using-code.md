@@ -1,6 +1,6 @@
 ---
-title: "Create, manage, and publish model-driven apps using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create, manage, and publish model-driven apps using code""
+description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps.""
 author: caburk
 ms.author: caburk
 ms.date: 04/01/2022

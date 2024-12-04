@@ -1,6 +1,6 @@
 ---
-title: "Sample charts (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic contains sample charts along with the respective data description and presentation XML strings." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample charts (model-driven apps)"
+description: "The topic contains sample charts along with the respective data description and presentation XML strings."
 author: sriharibs-msft
 ms.author: srihas
 

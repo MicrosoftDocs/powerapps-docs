@@ -1,5 +1,5 @@
 ---
-title: "isOnPremises (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isOnPremises (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isOnPremises method.
 author: adrianorth
 ms.author: aorth

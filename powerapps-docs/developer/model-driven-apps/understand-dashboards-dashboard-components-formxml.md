@@ -1,6 +1,6 @@
 ---
-title: "Understand dashboards: Dashboard components and FormXML (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Dashboards are one of the different types of forms in Mode-driven Apps. You can use the SystemForm.Type or UserForm.Type to determine whether the form is a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Understand dashboards: Dashboard components and FormXML (model-driven apps)"
+description: "Dashboards are one of the different types of forms in Mode-driven Apps. You can use the SystemForm.Type or UserForm.Type to determine whether the form is a dashboard."
 ms.date: 04/01/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"

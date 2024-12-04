@@ -1,5 +1,5 @@
 ---
-title: "addOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnSelection (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnSelection method.
 author: clromano
 ms.author: clromano

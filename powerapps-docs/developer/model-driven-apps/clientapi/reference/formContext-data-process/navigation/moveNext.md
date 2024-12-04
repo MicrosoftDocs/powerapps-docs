@@ -1,5 +1,5 @@
 ---
-title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "moveNext (Client API reference) in model-driven apps"
 description: Progresses to the next stage.
 author: HemantGaur
 ms.author: hemantg

@@ -1,5 +1,5 @@
 ---
-title: "isAvailableOffline (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isAvailableOffline (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isAvailableOffline method.
 author: lancedMicrosoft
 ms.author: lanced

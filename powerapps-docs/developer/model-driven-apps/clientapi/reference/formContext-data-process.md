@@ -1,5 +1,5 @@
 ---
-title: "formContext.data.process (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.data.process (Client API reference) in model-driven apps"
 description: "Provides events, methods, and objects to interact with the business process flow data on a form."
 author: HemantGaur
 ms.author: hemantg

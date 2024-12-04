@@ -1,5 +1,5 @@
 ---
-title: "getFormType (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getFormType (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getFormType method.
 author: HemantGaur
 ms.author: hemantg

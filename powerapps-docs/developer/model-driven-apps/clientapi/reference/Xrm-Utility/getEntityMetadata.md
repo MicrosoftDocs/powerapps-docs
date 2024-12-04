@@ -1,5 +1,5 @@
 ---
-title: "getEntityMetadata (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEntityMetadata (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getEntityMetadata method.
 author: adrianorth
 ms.author: aorth

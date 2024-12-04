@@ -1,5 +1,5 @@
 ---
-title: "removeOnLookupTagClick (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnLookupTagClick (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnLookupTagClick method.
 author: clromano
 ms.author: clromano

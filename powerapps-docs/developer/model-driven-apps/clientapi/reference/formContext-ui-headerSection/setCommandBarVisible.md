@@ -1,5 +1,5 @@
 ---
-title: "setCommandBarVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setCommandBarVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setCommandBarVisible method.
 author: HemantGaur
 ms.author: hemantg

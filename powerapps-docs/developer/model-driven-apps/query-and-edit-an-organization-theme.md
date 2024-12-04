@@ -1,6 +1,6 @@
 ---
-title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query and edit an organization theme(model-driven apps)"
+description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application."
 ms.author: hemantg
 author: HemantGaur
 ms.date: 04/01/2022

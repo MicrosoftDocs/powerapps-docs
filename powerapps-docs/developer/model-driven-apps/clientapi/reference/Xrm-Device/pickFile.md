@@ -1,5 +1,5 @@
 ---
-title: "pickFile| MicrosoftDocs"
+title: "pickFile"
 description: Opens a dialog box to select files for the upload
 author: adrianorth
 ms.author: aorth

@@ -1,5 +1,5 @@
 ---
-title: "addCustomView (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addCustomView (Client API reference) in model-driven apps"
 description: Adds a new view for the lookup dialog box.
 author: clromano
 ms.author: clromano

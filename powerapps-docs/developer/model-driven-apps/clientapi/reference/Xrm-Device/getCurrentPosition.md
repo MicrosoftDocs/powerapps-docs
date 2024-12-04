@@ -1,5 +1,5 @@
 ---
-title: "getCurrentPosition| MicrosoftDocs"
+title: "getCurrentPosition"
 description: Includes description and supported parameters for the getCurrentPosition method.
 author: adrianorth
 ms.author: aorth

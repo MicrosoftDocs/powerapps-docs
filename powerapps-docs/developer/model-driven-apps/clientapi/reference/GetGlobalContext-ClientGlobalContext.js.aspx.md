@@ -1,5 +1,5 @@
 ---
-title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
+title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps"
 description: "Describes the GetGlobalContext function and ClientGlobalContext.js.aspx used with web resources."
 author: adrianorth
 ms.author: aorth

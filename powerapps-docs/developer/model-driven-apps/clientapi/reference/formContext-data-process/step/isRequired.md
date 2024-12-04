@@ -1,5 +1,5 @@
 ---
-title: "isRequired (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isRequired (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isRequired method.
 author: HemantGaur
 ms.author: hemantg

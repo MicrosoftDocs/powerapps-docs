@@ -1,5 +1,5 @@
 ---
-title: "setProgress (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setProgress (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setProgress method.
 author: HemantGaur
 ms.author: hemantg

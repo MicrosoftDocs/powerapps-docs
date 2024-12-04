@@ -1,8 +1,8 @@
 ---
-title: "Subgrid OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Subgrid OnLoad event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the subgrid OnLoad event.
-author: fikaradz
-ms.author: fikaradz
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # Subgrid OnLoad event (Client API reference)
-
-
 
 This event occurs every time the subgrid refreshes. This includes when users sort values in subgrid by selecting the column headings. 
 

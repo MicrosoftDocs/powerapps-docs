@@ -1,8 +1,8 @@
 ---
-title: "Client API grid context in model-driven apps| MicrosoftDocs"
+title: "Client API grid context in model-driven apps"
 description: "Describes the client API grid context"
-author: fikaradz
-ms.author: fikaradz
+author: clromano
+ms.author: clromano
 ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"

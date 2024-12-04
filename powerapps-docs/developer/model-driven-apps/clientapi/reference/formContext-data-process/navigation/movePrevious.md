@@ -1,5 +1,5 @@
 ---
-title: "movePrevious (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "movePrevious (Client API reference) in model-driven apps"
 description: Moves to the previous stage.
 author: HemantGaur
 ms.author: hemantg
