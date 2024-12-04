@@ -33,7 +33,7 @@ Accessible from the Power Apps home page, the Plan designer guides you through a
 
 ## Prerequisite
 
-1. **Turn on the new Copilot experience**: On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
+**Turn on the new Copilot experience**: On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
   :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
 
@@ -47,11 +47,11 @@ Let's use a sample scenario to build a solution for managing paid time off (PTO)
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. Optionally, provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-  :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Plan designer with a sample scenario input.":::
+   :::image type="content" source="media/plan-designer/pd-3-enable-setting.png" alt-text="Screenshot of the Plan designer with a sample scenario input.":::
 
-  Copilot opens the Plan designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
+   Copilot opens the Plan designer and begin creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
-  :::image type="content" source="media/plan-designer/pd-5-plan-loading.png" alt-text="Screenshot of the Plan designer generating user roles.":::
+   :::image type="content" source="media/plan-designer/pd-5-plan-loading.png" alt-text="Screenshot of the Plan designer generating user roles.":::
 
 ## Generate user roles and user stories
 
