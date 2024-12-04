@@ -9,7 +9,7 @@ ms.author: cgarty
 ms.reviewer: angieandrews
 ms.topic: conceptual
 ms.custom: canvas, bap-template
-ms.date: 10/31/2024
+ms.date: 11/18/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -115,7 +115,13 @@ The following scenarios were improved to support cloud flows and canvas apps def
 
 ## Is this feature generally available or preview?
 
-On October 29, 2024, the cloud flows setting became generally available. The canvas apps setting remains in preview.
+As of October 29, 2024, the cloud flows setting is generally available. The canvas apps setting remains in preview.
+
+The cloud flows setting continues to be off by default and optional.
+
+## Does putting flows into Dataverse use Dataverse capacity?
+
+Moderately. Flow definitions use a small amount of Dataverse storage. A large flow definition could reach 10 KB. With this worst case scenario: 10,000 flows x 10 KB = 100 MB or 0.1 GB. The small increase in Dataverse storage used provides significant benefits, since solution cloud flows are needed to leverage capabilities including [application lifecycle management (ALM)](/power-platform/alm/overview-alm), [governance with Dataverse](/power-platform/admin/governance-considerations), [automation center](/power-automate/automation-center-overview), [drafts and versioning](/power-automate/drafts-versioning), and [expanded security capabilities](/power-platform/admin/database-security#environments-with-a-dataverse-database).
 
 ### Related information
 

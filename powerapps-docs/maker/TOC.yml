@@ -67,8 +67,6 @@
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
-      - name: Find your admin or support person
-        href: ../user/find-admin.md
       - name: Set personal options
         href: ../user/set-personal-options.md
       - name: Use a screen reader
@@ -1591,7 +1589,7 @@
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md
+            href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
@@ -1867,16 +1865,6 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows
       href: ../mobile/windows-app-use.md
-- name: Power Pages
-  items:
-    - name: What is Power Pages?
-      href: /power-pages/introduction
-    - name: List OData feeds
-      href: ./portals/configure/list-odata-feeds.md
-    - name: Create custom Portal Management app
-      href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Customize the Microsoft Entra B2C user interface
-      href: ./portals/configure/azure-ad-b2c.md
 - name: Dataverse
   items:
   - name: Dataverse
@@ -2641,19 +2629,19 @@
   items:
   - name: Debug Power Apps with Monitor
     items:
-    - name: Monitor overview
+    - name: Live monitor overview
       href: monitor-overview.md
-    - name: Debug canvas apps with Monitor
+    - name: Debug canvas apps with Live monitor
       href: monitor-canvasapps.md
     - name: Debug model-driven apps with Monitor
       items:
       - name: Debug a model-driven app
         href: monitor-modelapps.md
-      - name: Use Monitor to debug model-driven app forms
+      - name: Debug specific model-driven app features
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
         href: ../developer/model-driven-apps/troubleshoot-forms.md
-    - name: Collaborative debugging with Monitor
+    - name: Collaborative debugging with Live monitor
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
