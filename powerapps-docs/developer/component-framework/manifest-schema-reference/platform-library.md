@@ -3,7 +3,7 @@ title: platform-library Element | Microsoft Docs
 description: "Platform library resources used in the component."
 ms.author: hemantg
 author: HemantGaur
-ms.date: 11/26/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
