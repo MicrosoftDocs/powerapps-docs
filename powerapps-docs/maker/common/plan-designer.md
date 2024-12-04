@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-In this article, you'll learn how to use the Plan designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow this step-by-step guide to create a business solution using the Plan designer and refine your requirements to achieve precise and customized outputs.
+In this article, you'll learn how to use the Plan designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow the steps in this article to create a business solution using the Plan designer and refine your requirements to achieve precise and customized outputs.
 
 Accessible from the Power Apps home page, the Plan designer guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -35,7 +35,7 @@ Accessible from the Power Apps home page, the Plan designer guides you through a
 
 **Turn on the new Copilot experience**: On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
-  :::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
+:::image type="content" source="media/plan-designer/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner.":::
 
 
 
