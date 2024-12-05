@@ -112,8 +112,8 @@ You can use Windows PowerShell to adjust the number of dashboard controls as des
 
 ### See also
 
-[Dashboards](analyze-data-with-dashboards.md)
-[Actions on dashboards](actions-dashboards.md)
+[Dashboards](analyze-data-with-dashboards.md)   
+[Actions on dashboards](actions-dashboards.md)   
 [Create a dashboard](create-dashboard.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
