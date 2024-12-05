@@ -85,6 +85,9 @@ These are the methods available for a Standard control.
    :::column:::
       [setVisible](controls/setVisible.md)
    :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
 :::row-end:::
 
 
@@ -146,6 +149,9 @@ These are the methods available for an IFRAME control.
    :::column:::
       [setVisible](controls/setVisible.md)
    :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
 :::row-end:::
 
 ## kbsearch (Knowledge base search) control type
@@ -206,7 +212,7 @@ These are the methods available for knowledge base search control.
    :::column-end:::
    :::column:::
       [removeOnSelection](controls/removeOnSelection.md)
-   :::column-end:::   
+   :::column-end:::
 :::row-end:::
 :::row:::
    :::column:::
@@ -226,7 +232,7 @@ These are the methods available for knowledge base search control.
 
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can't be changed. 
+>When the knowledge base search control is added to the social pane, the name of the control will be `searchwidgetcontrol_notescontrol`. This name can't be changed. 
 
 ## lookup control type
 
@@ -387,6 +393,12 @@ Both choices and choice controls have the same set of methods available.
    :::column:::
       [setVisible](controls/setVisible.md)
    :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
 :::row-end:::
 
 
@@ -439,6 +451,9 @@ The timeline control presents the Posts, Activities, and Notes in a unified view
    :::column-end:::
    :::column:::
       [setVisible](controls/setVisible.md)
+   :::column-end:::
+   :::column:::
+      &nbsp;
    :::column-end:::
 :::row-end:::
 
