@@ -1,8 +1,8 @@
 ---
 title: "Create a visualization (chart) (model-driven apps)"
-description: "The topic shows how to create a chart visualization and a web resource visualization."
-author: sriharibs-msft
-ms.author: srihas
+description: "Learn how to create a chart visualization and a web resource visualization."
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -92,10 +92,10 @@ For example, to create a _Sample Visualization_ that displays an existing Web re
 ### See also
 
 [Charts](view-data-with-visualizations-charts.md)  
- [Specifying chart data](understand-charts-underlying-data-chart-representation.md)  
- [Actions on chart](actions-visualizations-charts.md)  
- [Sample charts](sample-charts.md)  
- [Data visualization and analytics](customize-visualizations-dashboards.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart)
+[Specifying chart data](understand-charts-underlying-data-chart-representation.md)  
+[Actions on chart](actions-visualizations-charts.md)  
+[Sample charts](sample-charts.md)  
+[Data visualization and analytics](customize-visualizations-dashboards.md)  
+[Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

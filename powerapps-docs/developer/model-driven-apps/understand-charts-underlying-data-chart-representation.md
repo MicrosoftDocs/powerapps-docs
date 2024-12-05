@@ -1,9 +1,8 @@
 ---
 title: "Understand charts: Underlying data and chart representation (model-driven apps)"
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis."
-author: sriharibs-msft
-ms.author: srihas
-
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -60,12 +59,12 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 
  The `<CategoryCollection>` element contains information about the category (horizontal) and the series (vertical) axes in a chart.  
   
--   Each `<Category>` sub-element has a child element called `<MeasureCollection>` that maps to the `<Series>` element in the presentation description XML. A single series chart has a single `<MeasureCollection>` child element whereas a multi-series chart will have multiple `<MeasureCollection>` child elements, each mapped to the respective `<Series>` element in the presentation description XML.  
+- Each `<Category>` sub-element has a child element called `<MeasureCollection>` that maps to the `<Series>` element in the presentation description XML. A single series chart has a single `<MeasureCollection>` child element whereas a multi-series chart will have multiple `<MeasureCollection>` child elements, each mapped to the respective `<Series>` element in the presentation description XML.
+- Each `<MeasureCollection>` child element has an element called `<Measure>` that corresponds to the series (vertical) axis value, corresponding to each value on the category (horizontal) axis.  
   
--   Each `<MeasureCollection>` child element has an element called `<Measure>` that corresponds to the series (vertical) axis value, corresponding to each value on the category (horizontal) axis.  
-  
-### Example  
- The following is a sample data description XML string:  
+### Example
+
+The following is a sample data description XML string:  
   
 ```xml  
 <datadefinition>  

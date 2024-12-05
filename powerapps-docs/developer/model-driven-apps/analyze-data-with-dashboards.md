@@ -1,8 +1,8 @@
 ---
 title: "Analyze data with dashboards (model-driven apps)"
 description: "The dashboard tables in Microsoft Dataverse enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots."
-author: sriharibs-msft
-ms.author: srihas
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

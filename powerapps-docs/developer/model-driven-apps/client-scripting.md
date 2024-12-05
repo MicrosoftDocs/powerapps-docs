@@ -1,5 +1,5 @@
 ---
-title: Apply business logic using client scripting in model-driven apps using JavaScript | Microsoft Docs
+title: Apply business logic using client scripting in model-driven apps using JavaScript
 description: Learn how developers can use JavaScript in client-side scripts to apply custom business logic in model-driven apps.
 suite: powerapps
 author: HemantGaur
