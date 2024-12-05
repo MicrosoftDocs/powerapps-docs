@@ -13,7 +13,7 @@ contributors:
 ---
 # Controls (Client API reference)
 
-A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others may represent unbound controls such as an IFRAME, web resource, or a subgrid that has been added to the form. 
+A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others might represent unbound controls such as an IFRAME, web resource, or a subgrid added to the form.
 
 The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. You access controls using one of the following collections: 
 
@@ -29,7 +29,7 @@ This article provides information about the methods available per control type.
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
-## standard control type
+## Standard control type
 
 These are the methods available for a Standard control.
 
@@ -93,9 +93,9 @@ These are the methods available for a Standard control.
 
 The following methods for the Standard control are [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in this release: `addOnKeyPress`, `fireOnKeyPress`, and `removeOnKeyPress`.
 
-## iframe control type
+## IFRAME control type
 
-These are the methods available for an IFRAME control.
+These methods are available for an IFRAME control.
 
 :::row:::
    :::column:::
@@ -154,9 +154,9 @@ These are the methods available for an IFRAME control.
    :::column-end:::
 :::row-end:::
 
-## kbsearch (Knowledge base search) control type
+## Kbsearch (Knowledge base search) control type
 
-These are the methods available for knowledge base search control.
+These methods are available for knowledge base search control.
 
 :::row:::
    :::column:::
@@ -234,9 +234,9 @@ These are the methods available for knowledge base search control.
 >[!NOTE]
 >When the knowledge base search control is added to the social pane, the name of the control will be `searchwidgetcontrol_notescontrol`. This name can't be changed. 
 
-## lookup control type
+## Lookup control type
 
-These are the methods available for a lookup control.
+These methods are available for a lookup control.
 
 :::row:::
    :::column:::
@@ -326,7 +326,7 @@ These are the methods available for a lookup control.
 
 
 
-## choices and choice control types
+## Choices and choice control types
 
 Both choices and choice controls have the same set of methods available.
 
@@ -402,17 +402,17 @@ Both choices and choice controls have the same set of methods available.
 :::row-end:::
 
 
-## quickform control type
+## Quickform control type
 
 See [formContext.ui.quickForms](formcontext-ui-quickforms.md) for information about methods supported for this control type.
 
-## subgrid control type
+## Subgrid control type
 
 See [Grids and subgrids](grids.md) for information methods supported for this control type.
 
-## timelinewall control type
+## Timelinewall control type
 
-The timeline control presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
+The timeline control presents the Posts, Activities, and Notes in a unified view. These methods are available for this control type.
 
 :::row:::
    :::column:::
@@ -457,9 +457,9 @@ The timeline control presents the Posts, Activities, and Notes in a unified view
    :::column-end:::
 :::row-end:::
 
-## timer control type
+## Timer control type
 
-These are the methods available for the timer control.
+These methods are available for the timer control.
 
 :::row:::
    :::column:::
@@ -505,11 +505,11 @@ These are the methods available for the timer control.
 :::row-end:::
 
 
-## web resource control type
+## Web resource control type
 
 A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
 
-The Siliverlight web resource has these additional methods: 
+The Silverlight web resource has these extra methods: 
 
 - [getData](controls/getData.md)
 - [setData](controls/setData.md)
