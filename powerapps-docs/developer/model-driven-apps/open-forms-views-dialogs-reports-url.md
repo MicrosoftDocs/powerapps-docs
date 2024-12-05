@@ -1,8 +1,8 @@
 ---
 title: "Open apps, forms, views, dialogs, and reports with a URL"
 description: "Learn more about URL addressable elements that enable you to include links to model-driven application forms, views, dialogs, and reports in other applications"
-author: mijosh
-ms.author: MitiJ
+author: MitiJ
+ms.author: mijosh
 ms.date: 06/20/2024
 ms.reviewer: jdaly
 ms.topic: article

@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
-author: mijosh
-ms.author: MitiJ
+author: MitiJ
+ms.author: mijosh
 ms.date: 09/24/2024
 ms.reviewer: jdaly
 ms.subservice: troubleshoot

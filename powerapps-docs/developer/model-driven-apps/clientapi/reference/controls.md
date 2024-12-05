@@ -1,8 +1,8 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365"
 description: A control represents an HTML element present on the form.
-author: mijosh
-ms.author: MitiJ
+author: MitiJ
+ms.author: mijosh
 ms.date: 01/06/2023
 ms.reviewer: jdaly
 ms.topic: reference

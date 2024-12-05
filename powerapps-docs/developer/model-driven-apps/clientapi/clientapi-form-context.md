@@ -1,8 +1,8 @@
 ---
 title: "Client API form context in model-driven apps"
 description: The Client API form context provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
-author: mijosh
-ms.author: MitiJ
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"

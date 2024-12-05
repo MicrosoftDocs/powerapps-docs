@@ -1,8 +1,8 @@
 ---
 title: "Customize forms (model-driven apps)"
 description: "Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit forms. This topic will provide information necessary to create or edit forms programmatically."
-author: mijosh
-ms.author: MitiJ
+author: MitiJ
+ms.author: mijosh
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
