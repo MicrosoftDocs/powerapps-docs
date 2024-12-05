@@ -86,7 +86,9 @@ The following articles can help you build various apps in different scenarios us
 
 ### Microsoft Dataverse
 
-- [Add knowledge to an existing copilot: Dataverse](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
+
+
+- [Add knowledge to an existing copilot: Dataverse](../data-platform/data-platform-copilot.md)
 
 ## Disable Copilot in Power Apps
 
