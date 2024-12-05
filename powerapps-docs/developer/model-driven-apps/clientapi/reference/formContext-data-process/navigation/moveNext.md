@@ -1,8 +1,8 @@
 ---
-title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "moveNext (Client API reference) in model-driven apps"
 description: Progresses to the next stage.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,11 +14,9 @@ contributors:
 ---
 # moveNext (Client API reference)
 
-
-
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-Moving to next stage is not supported for different table.
+Moving to next stage isn't supported for different table.
 
 ## Syntax
 
@@ -30,7 +28,7 @@ Moving to next stage is not supported for different table.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|callbackFunction|Function|No| A function to call when the operation is complete. See [callbackFunction](#callbackfunction) |
+|`callbackFunction`|Function|No| A function to call when the operation is complete. See [callbackFunction](#callbackfunction) |
 
 ### callbackFunction
 
@@ -42,8 +40,8 @@ This callback function is passed one of the following string values to indicate 
 |`crossEntity`|The next stage is for a different table.|
 |`end`|The active stage is the last stage of the active path.|
 |`invalid`|The operation failed because the selected stage isn't the same as the active stage.|
-|`dirtyForm`|This value will be returned if the data in the page is not saved.|
-|`stageGate`|One or more required column on the current stage is empty.|
+|`dirtyForm`|This value is returned if the data in the page isn't saved.|
+|`stageGate`|One or more required columns on the current stage are empty.|
 
 
 >[!IMPORTANT]
@@ -51,7 +49,7 @@ This callback function is passed one of the following string values to indicate 
 
 ## Remarks
 
-This methods will cause the [OnStageChange](../../events/onstagechange.md) event to occur.
+This method causes the [OnStageChange](../../events/onstagechange.md) event to occur.
 
 ### Related articles
 

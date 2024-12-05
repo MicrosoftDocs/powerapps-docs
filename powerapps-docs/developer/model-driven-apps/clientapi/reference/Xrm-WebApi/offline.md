@@ -1,5 +1,5 @@
 ---
-title: "Xrm.WebApi.offline (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.offline (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.offline method.
 author: lancedMicrosoft
 ms.author: lanced

@@ -1,5 +1,5 @@
 ---
-title: "entity.getPrimaryAttributeValue (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "entity.getPrimaryAttributeValue (Client API reference) in model-driven apps"
 description: Gets a string for the value of the primary column of the table.
 author: HemantGaur
 ms.author: hemantg

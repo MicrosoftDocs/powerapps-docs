@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 10/08/2024
+ms.date: 12/04/2024
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -21,7 +21,10 @@ The included instructions in this article are specific to app registration in Mi
 
 ## About app registration and authentication
 
-There are several authentication flows that Dataverse supports: username/password, client secret, and certificate. App registration and authentication is slightly different for each of these flows. This article covers the username/password and client secret authentication flows. Certificate flows are planned to be documented in a future article.
+There are several authentication flows that Dataverse supports: username/password, client secret, certificate, and managed identity. App registration and authentication is slightly different for each of these flows. This article covers the username/password and client secret authentication flows. Certificate flows are planned to be documented in a future article.
+
+Read the following important information about using username/password authentication in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
 For an app to authenticate with Dataverse and gain access to business data, you must first register the app in Microsoft Entra ID. That app registration is then used during the authentication process.
 
@@ -61,7 +64,7 @@ To create an app registration for a username/password authentication flow, and f
 
 5. On the **Overview** page under **Essentials**, select the **Add a Redirect URI** link. Set the redirect URI by first selecting **Add a platform**, enter a URI value, and then select **Configure**.
 
-    You must supply a redirect URI value described as follows. For a .NET Framework built desktop or mobile app, use a URI value of "app://\<Application (client) ID>". This ID value is displayed on the **Overview** page of the registered app. For a .NET Core built desktop or mobile app that uses [MSAL](/entra/identity-platform/msal-overview) for authentication, use a URI value of "http://localhost". For a Web API app, use any valid web address though the address does not have to actually exist.
+    You must supply a redirect URI value described as follows. For a .NET Framework built desktop or mobile app, use a URI value of "app://\<Application (client) ID>". This ID value is displayed on the **Overview** page of the registered app. For a .NET Core built desktop or mobile app that uses [MSAL](/entra/identity-platform/msal-overview) for authentication, use a URI value of "<http://localhost>". For a Web API app, use any valid web address though the address does not have to actually exist.
 
 6. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the ID value. Record the value somewhere. You need to specify this value later in your application's authentication code or app.config file where appropriate.
 

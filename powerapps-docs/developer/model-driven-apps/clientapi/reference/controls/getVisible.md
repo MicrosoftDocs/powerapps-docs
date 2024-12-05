@@ -1,5 +1,5 @@
 ---
-title: "control.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.getVisible method.
 author: clromano
 ms.author: clromano

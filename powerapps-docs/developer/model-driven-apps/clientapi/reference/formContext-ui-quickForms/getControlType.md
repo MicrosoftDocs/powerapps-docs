@@ -1,5 +1,5 @@
 ---
-title: "quickViewControl.getControlType (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.getControlType (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getControlType method.
 author: HemantGaur
 ms.author: hemantg

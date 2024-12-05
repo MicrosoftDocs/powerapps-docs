@@ -1,5 +1,5 @@
 ---
-title: "setSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setSharedVariable (Client API reference) in model-driven apps"
 description: "Learn about the getEventSource method that returns a reference to the form or an item on the form depending on where the method was called." 
 author: adrianorth
 ms.author: aorth

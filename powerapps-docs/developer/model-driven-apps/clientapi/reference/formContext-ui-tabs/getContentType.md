@@ -1,5 +1,5 @@
 ---
-title: "getContentType (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getContentType (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getContentType method.
 author: HemantGaur
 ms.author: hemantg

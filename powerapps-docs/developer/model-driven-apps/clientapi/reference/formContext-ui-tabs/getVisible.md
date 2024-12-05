@@ -1,5 +1,5 @@
 ---
-title: "tab.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.getVisible method.
 author: HemantGaur
 ms.author: hemantg

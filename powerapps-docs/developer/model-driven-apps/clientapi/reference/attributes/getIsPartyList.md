@@ -1,8 +1,8 @@
 ---
-title: "getIsPartyList (Client API reference)| MicrosoftDocs"
+title: "getIsPartyList (Client API reference)"
 description: Returns a boolean value indicating whether the lookup represents a partylist lookup.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,5 +1,5 @@
 ---
-title: "addOption (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOption (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOption method.
 author: clromano
 ms.author: clromano

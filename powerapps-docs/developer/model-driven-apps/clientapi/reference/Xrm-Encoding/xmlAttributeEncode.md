@@ -1,5 +1,5 @@
 ---
-title: "xmlAttributeEncode| MicrosoftDocs"
+title: "xmlAttributeEncode"
 description: "The Client API method Encodes the specified string so that it can be used in an XML."
 author: adrianorth
 ms.author: aorth

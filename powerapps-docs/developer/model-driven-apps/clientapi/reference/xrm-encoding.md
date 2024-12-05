@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Encoding| MicrosoftDocs"
+title: "Xrm.Encoding"
 description: "Xrm.Encoding provides Client API methods to encode and decode strings."
 author: adrianorth
 ms.author: aorth

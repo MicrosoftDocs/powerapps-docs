@@ -1,8 +1,8 @@
 ---
-title: "Grid OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Grid OnSave event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the grid OnSave event.
-author: fikaradz
-ms.author: fikaradz
+author: clromano
+ms.author: clromano
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: reference

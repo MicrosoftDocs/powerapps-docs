@@ -1,5 +1,5 @@
 ---
-title: "navigationItem.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "navigationItem.setFocus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigationItem.setFocus method.
 author: HemantGaur
 ms.author: hemantg
