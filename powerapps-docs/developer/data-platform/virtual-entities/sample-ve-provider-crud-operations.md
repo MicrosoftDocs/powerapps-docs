@@ -60,7 +60,7 @@ There are four steps to enable a custom data provider to create a virtual table.
    | Newtonsoft.Json                                 | <https://www.nuget.org/packages/Newtonsoft.Json/13.0.1-beta2>    |
    |||
 
-1. Add the following six class files to your solution. In each of the class files, add the following using statements
+2. Add the following six class files to your solution. In each of the class files, add the following using statements
 
     ```csharp
     using System; 
@@ -323,19 +323,19 @@ public class DeletePlugin : IPlugin
 }
 ```
 
-1. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
+3. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
 
     > [!div class="mx-imgBorder"]
     > ![Assembly dll.](../media/custom-ve-assembly-dll.png "Assembly dll")
 
-1. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
+4. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
 
-1. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
+5. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
 
    > [!div class="mx-imgBorder"]
    > ![Register new step.](../media/custom-ve-register-plugin-step.png "Register new step")
 
-1. Select the assembly file and register the plug-ins. Make sure that you have selected all the plug-ins (Create, Update, Delete, Retrieve, and RetrieveMultiple plug-ins).
+6. Select the assembly file and register the plug-ins. Make sure that you have selected all the plug-ins (Create, Update, Delete, Retrieve, and RetrieveMultiple plug-ins).
 
     > [!div class="mx-imgBorder"]
     > ![Register new assembly.](../media/custom-ve-register-assembly-step.png "Register new assembly")
