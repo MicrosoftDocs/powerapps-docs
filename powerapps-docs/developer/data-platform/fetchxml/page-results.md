@@ -1,7 +1,7 @@
 ---
 title: Page results using FetchXml
 description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 08/09/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -24,6 +24,7 @@ You can specify a limit on the number of rows retrieved for each request by sett
 The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
 
 > [!NOTE]
+>
 > - Don't use the [fetch element](reference/fetch.md) `top` attribute with paging. These different methods of limiting the results of a query are not compatible.
 > - Ordering plays an important part in getting consistent paging results. [Learn more about ordering and paging](order-rows.md#ordering-and-paging)
 
@@ -50,7 +51,6 @@ Dataverse has two paging models: *simple* and using *paging cookies*:
       - [Learn more about using paging cookies](#paging-cookies)
    :::column-end:::
 :::row-end:::
-
 
 ## Simple paging
 
@@ -81,7 +81,6 @@ To get the next three records, increment the `page` value and send another reque
 With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
 
 Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using paging cookies.
-
 
 ## Paging cookies
 
@@ -195,10 +194,11 @@ static void Main(string[] args)
 }
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
 
-
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
 ### [Web API](#tab/webapi)
 
@@ -230,7 +230,7 @@ The following series of FetchXML requests show the use of paging cookies. This e
 
 ### First Page
 
-Send the first page with the `page` value set to `'1'`. 
+Send the first page with the `page` value set to `'1'`.
 
 Use this request header:
 
@@ -551,7 +551,7 @@ Console.WriteLine($"Success: {records.Count}");
 
 > [!IMPORTANT]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
-> 
+>
 > The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
 ---
