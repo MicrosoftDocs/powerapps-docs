@@ -74,7 +74,7 @@ Customize Copilot chat and make it even more intelligent and relevant for your o
    :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer" lightbox="media/mda-command-copilot-studio.png":::
 1. Customize your copilot by adding [knowledge sources](#bring-your-knowledge-to-copilot-chat) or [topics](#add-new-ai-skills-to-copilot-chat) to extend the intelligence of your app’s copilot chat. Customizing this Copilot only impacts the Copilot chat of your app.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
-1. **Publish** your app. After the Copilot is created for your app for the first time or any time you make customizations to the Copilot, make sure to publish the app to make changes available to users.
+1. **Publish** your app. After the Copilot is created for your app for the first time or anytime you make customizations to the Copilot, make sure to publish the app to make changes available to users.
 
 ### Bring your knowledge to Copilot chat
 
@@ -116,7 +116,7 @@ To provide feedback to help us improve Copilot's responses, app users can select
 1. **Copilot for app users** allows users to retrieve information from Dataverse through read-only operations. This means that users can only view data that matches their queries and can't make any changes to the data.
 1. Create, update, or other generic actions such as enable or disable Copilot and create a memo aren't supported.
 1. [Summarization](/dynamics365/sales/copilot-overview#record-summarization) skill feature is available in [Dynamics 365 Sales copilot](/dynamics365/sales/copilot-overview) and not in **Copilot for app user**.
-1. **Copilot for app users** is not supported with the Power Apps mobile app.
+1. **Copilot for app users** isn't supported with the Power Apps mobile app.
 
 ## Related information
 
