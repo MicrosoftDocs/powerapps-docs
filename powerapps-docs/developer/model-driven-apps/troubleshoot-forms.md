@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs"
+title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
