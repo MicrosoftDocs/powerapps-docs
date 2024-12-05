@@ -1,5 +1,5 @@
 ---
-title: "setEntityTypes (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setEntityTypes (Client API reference) in model-driven apps"
 description: Sets the types of tables allowed in the lookup control.
 author: clromano
 ms.author: clromano

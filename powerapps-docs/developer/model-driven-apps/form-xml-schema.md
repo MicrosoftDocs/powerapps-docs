@@ -1,6 +1,6 @@
 ---
-title: "Form XML schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about schema definition for form customizations." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Form XML schema (model-driven apps)"
+description: "Learn about schema definition for form customizations."
 author: HemantGaur
 ms.author: hemantg
 ms.date: 04/01/2022

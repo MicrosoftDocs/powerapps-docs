@@ -1,5 +1,5 @@
 ---
-title: "OnStageChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "OnStageChange Event (Client API reference) in model-driven apps"
 description: This event occurs when the stage of a business process flow control changes.
 author: HemantGaur
 ms.author: hemantg

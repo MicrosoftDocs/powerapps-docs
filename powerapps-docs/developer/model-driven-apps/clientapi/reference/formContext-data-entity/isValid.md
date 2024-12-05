@@ -1,5 +1,5 @@
 ---
-title: "entity.isValid (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "entity.isValid (Client API reference) in model-driven apps"
 description: Gets a boolean value indicating whether all of the table data is valid.
 author: HemantGaur
 ms.author: hemantg

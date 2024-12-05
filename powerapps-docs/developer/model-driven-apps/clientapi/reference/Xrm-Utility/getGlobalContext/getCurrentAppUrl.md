@@ -1,5 +1,5 @@
 ---
-title: "getCurrentAppUrl (Client API reference)| MicrosoftDocs"
+title: "getCurrentAppUrl (Client API reference)"
 description: Includes description and supported parameters for the getCurrentAppUrl method.
 author: adrianorth
 ms.author: aorth

@@ -1,5 +1,5 @@
 ---
-title: "addOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnSave (Client API reference) in model-driven apps"
 description: Adds a function to be called when the OnSave event is triggered.
 author: HemantGaur
 ms.author: hemantg

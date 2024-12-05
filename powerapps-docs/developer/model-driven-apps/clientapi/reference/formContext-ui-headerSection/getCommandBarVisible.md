@@ -1,8 +1,8 @@
 ---
-title: "getCommandBarVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getCommandBarVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCommandBarVisible method.
-author: HemantGaur
-ms.author: hemantg
+author: jasongre
+ms.author: jasongre
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

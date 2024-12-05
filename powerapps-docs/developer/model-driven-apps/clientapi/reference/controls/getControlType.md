@@ -1,5 +1,5 @@
 ---
-title: "control.getControlType (Client API reference) in model-driven apps for Dynamics 365| MicrosoftDocs"
+title: "control.getControlType (Client API reference) in model-driven apps for Dynamics 365"
 description: Includes  description and supported parameters for the getControlType method.
 author: clromano
 ms.author: clromano

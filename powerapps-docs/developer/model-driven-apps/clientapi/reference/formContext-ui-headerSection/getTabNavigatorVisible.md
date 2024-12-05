@@ -1,5 +1,5 @@
 ---
-title: "getTabNavigatorVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getTabNavigatorVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getTabNavigationVisible method.
 author: HemantGaur
 ms.author: hemantg

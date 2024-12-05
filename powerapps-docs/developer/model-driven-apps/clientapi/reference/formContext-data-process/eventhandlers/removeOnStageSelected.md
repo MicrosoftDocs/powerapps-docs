@@ -1,8 +1,8 @@
 ---
-title: "removeOnStageSelected (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnStageSelected (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnStageSelected method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # removeOnStageSelected (Client API reference)
-
-
 
 [!INCLUDE[./includes/removeOnStageSelected-description.md](./includes/removeOnStageSelected-description.md)]
 

@@ -1714,12 +1714,6 @@
         href: ./model-driven-apps/add-reporting-to-app.md
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
-      - name: Power BI content management in Power Apps solutions (preview)
-        href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
-      - name: Create Power BI report and dataset components (preview)
-        href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
-      - name: Customize and manage Power BI components (preview)
-        href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Add Copilot to apps
@@ -1865,16 +1859,6 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows
       href: ../mobile/windows-app-use.md
-- name: Power Pages
-  items:
-    - name: What is Power Pages?
-      href: /power-pages/introduction
-    - name: List OData feeds
-      href: ./portals/configure/list-odata-feeds.md
-    - name: Create custom Portal Management app
-      href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Customize the Microsoft Entra B2C user interface
-      href: ./portals/configure/azure-ad-b2c.md
 - name: Dataverse
   items:
   - name: Dataverse

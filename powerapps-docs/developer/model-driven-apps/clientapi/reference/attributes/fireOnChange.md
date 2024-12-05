@@ -1,8 +1,8 @@
 ---
-title: "fireOnChange (Client API reference)| MicrosoftDocs"
+title: "fireOnChange (Client API reference)"
 description: Includes description and supported parameters for the fireOnChange method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,6 +27,7 @@ All
 
 
 ### Related articles
+
 [Column OnChange Event](../events/attribute-onchange.md)
 
 

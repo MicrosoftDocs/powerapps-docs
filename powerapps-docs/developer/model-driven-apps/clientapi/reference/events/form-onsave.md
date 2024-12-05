@@ -1,5 +1,5 @@
 ---
-title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form OnSave event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the form OnSave event.
 author: HemantGaur
 ms.author: hemantg

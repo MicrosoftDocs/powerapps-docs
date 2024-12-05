@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
-ms.date: 11/11/2023
+ms.date: 12/04/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -33,6 +33,9 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
 - Logon credentials of a Dataverse system user account for the target environment
 - URL address of the Dataverse environment you want to connect with
 - Basic understanding of the Visual C# language
+
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
 ## Create Visual Studio project
 

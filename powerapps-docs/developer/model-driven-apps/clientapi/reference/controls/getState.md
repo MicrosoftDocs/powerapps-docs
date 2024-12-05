@@ -1,5 +1,5 @@
 ---
-title: "getState (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getState (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getState method.
 author: clromano
 ms.author: clromano

@@ -1,5 +1,5 @@
 ---
-title: "removeOption (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOption (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOption method.
 author: clromano
 ms.author: clromano

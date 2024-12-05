@@ -1,9 +1,8 @@
 ---
-title: "Ribbons available in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The article describes where ribbons are defined and modified" # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-
+title: "Ribbons available in model-driven apps"
+description: "The article describes where ribbons are defined and modified"
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -185,6 +184,6 @@ It is not possible to use a `<PageRule>` to enable or display custom ribbon comp
 ### See also
 
 [Customize the ribbon](customize-commands-ribbon.md)  
- [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
+[Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

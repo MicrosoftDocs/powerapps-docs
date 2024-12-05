@@ -1,8 +1,8 @@
 ---
-title: "Grid OnRecordSelect event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Grid OnRecordSelect event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the grid OnRecordSelect event.
-author: fikaradz
-ms.author: fikaradz
+author: clromano
+ms.author: clromano
 ms.date: 06/29/2023
 ms.reviewer: jdaly
 ms.topic: reference

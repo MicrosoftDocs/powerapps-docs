@@ -1,5 +1,5 @@
 ---
-title: "section.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "section.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the section.getVisible method.
 author: HemantGaur
 ms.author: hemantg

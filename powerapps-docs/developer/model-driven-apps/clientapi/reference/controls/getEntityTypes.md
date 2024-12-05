@@ -1,5 +1,5 @@
 ---
-title: "getEntityTypes (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEntityTypes (Client API reference) in model-driven apps"
 description: Gets the types of tables allowed in the lookup control.
 author: clromano
 ms.author: clromano

@@ -1,5 +1,5 @@
 ---
-title: "getDataXml (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getDataXml (Client API reference) in model-driven apps"
 description: Returns a string representing the XML that will be sent to the server when the record is saved.
 author: HemantGaur
 ms.author: hemantg

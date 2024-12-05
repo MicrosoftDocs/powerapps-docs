@@ -1,5 +1,5 @@
 ---
-title: "ui.clearFormNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ui.clearFormNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ui.clearNotification method.
 author: HemantGaur
 ms.author: hemantg

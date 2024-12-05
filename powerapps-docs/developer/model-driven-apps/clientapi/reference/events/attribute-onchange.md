@@ -1,5 +1,5 @@
 ---
-title: "Column OnChange Event in model-driven apps| MicrosoftDocs"
+title: "Column OnChange Event in model-driven apps"
 description: Learn about how to set the column OnChange event.
 author: HemantGaur
 ms.author: hemantg
