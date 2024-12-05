@@ -1,5 +1,5 @@
 ---
-title: "getActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getActiveProcess (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getActiveProcess method.
 author: HemantGaur
 ms.author: hemantg

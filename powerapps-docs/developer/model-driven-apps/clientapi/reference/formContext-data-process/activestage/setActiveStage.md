@@ -1,5 +1,5 @@
 ---
-title: "setActiveStage (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setActiveStage (Client API reference) in model-driven apps"
 description: Sets a completed stage as the active stage.
 author: HemantGaur
 ms.author: hemantg

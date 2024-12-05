@@ -1,5 +1,5 @@
 ---
-title: "setDefaultView (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setDefaultView (Client API reference) in model-driven apps"
 description: Sets teh default view for the lookup control dialog box.
 author: clromano
 ms.author: clromano

@@ -1,5 +1,5 @@
 ---
-title: "addOnResultOpened (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnResultOpened (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnResultOpened method.
 author: clromano
 ms.author: clromano

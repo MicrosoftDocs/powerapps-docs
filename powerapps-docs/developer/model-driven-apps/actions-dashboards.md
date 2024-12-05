@@ -1,10 +1,10 @@
 ---
-title: "Actions on dashboards (model-driven apps) | Microsoft Docs"
+title: "Actions on dashboards (model-driven apps)"
 description: "Learn about performing actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards."
 ms.date: 04/01/2022
 ms.topic: article
-author: sriharibs-msft
-ms.author: srihas
+author: jasongre
+ms.author: jasongre
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 search.audienceType:

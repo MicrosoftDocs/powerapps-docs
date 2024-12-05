@@ -1,5 +1,5 @@
 ---
-title: "quickViewControl.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the quickViewControl.getVisible method.
 author: HemantGaur
 ms.author: hemantg

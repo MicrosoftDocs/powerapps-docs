@@ -1,6 +1,6 @@
 ---
-title: "Publish request schema  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The following is the schema definition for the PublishXmlRequest message." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Publish request schema  (model-driven apps)"
+description: "The following is the schema definition for the PublishXmlRequest message."
 author: caburk
 ms.author: caburk
 

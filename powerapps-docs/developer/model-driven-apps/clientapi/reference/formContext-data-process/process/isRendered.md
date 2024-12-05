@@ -1,5 +1,5 @@
 ---
-title: "isRendered (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isRendered (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isRendered method.
 author: HemantGaur
 ms.author: hemantg

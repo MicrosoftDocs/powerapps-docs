@@ -1,5 +1,5 @@
 ---
-title: "invokeProcessAction (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "invokeProcessAction (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the invokeProcessAction method.
 author: adrianorth
 ms.author: aorth

@@ -1,8 +1,8 @@
 ---
-title: "Export ribbon definitions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about exporting the ribbon definitions." # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
+title: "Export ribbon definitions (model-driven apps)"
+description: "Learn about exporting the ribbon definitions."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -219,7 +219,7 @@ If you are experiencing an issue with a ribbon command bar button, use this [tro
 ### See also
 
 [Customize the ribbon](customize-commands-ribbon.md)  
- [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)  
- [Export, prepare to edit, and import the ribbon](export-prepare-edit-import-ribbon.md)
+[Command bar or ribbon presentation](command-bar-ribbon-presentation.md)  
+[Export, prepare to edit, and import the ribbon](export-prepare-edit-import-ribbon.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

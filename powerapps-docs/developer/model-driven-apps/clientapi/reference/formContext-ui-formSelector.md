@@ -1,5 +1,5 @@
 ---
-title: "formContext.ui.FormSelector (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.FormSelector (Client API reference) in model-driven apps"
 description: "This property lets you work with form items where a form item represents a form that is available to a user because it is associated with a security role that the user is also associated to. "
 author: HemantGaur
 ms.author: hemantg

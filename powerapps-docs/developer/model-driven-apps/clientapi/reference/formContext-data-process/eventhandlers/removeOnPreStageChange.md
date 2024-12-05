@@ -1,5 +1,5 @@
 ---
-title: "removeOnPreStageChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnPreStageChange (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnPreStageChange method.
 author: HemantGaur
 ms.author: hemantg

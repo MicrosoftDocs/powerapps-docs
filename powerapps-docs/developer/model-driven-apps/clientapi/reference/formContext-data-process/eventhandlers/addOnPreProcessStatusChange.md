@@ -1,5 +1,5 @@
 ---
-title: "addOnPreProcessStatusChange (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
+title: "addOnPreProcessStatusChange (Client API reference) in model-driven apps in Power Apps"
 description: Includes description and supported parameters for the addOnPreProcessStatusChange method.
 author: HemantGaur
 ms.author: hemantg

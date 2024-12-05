@@ -1,5 +1,5 @@
 ---
-title: "getIsSaveSuccess (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getIsSaveSuccess (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getIsSaveSuccess method.
 author: HemantGaur
 ms.author: hemantg

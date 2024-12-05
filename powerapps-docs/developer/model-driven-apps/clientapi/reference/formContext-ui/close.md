@@ -1,5 +1,5 @@
 ---
-title: "close (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "close (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the close method.
 author: HemantGaur
 ms.author: hemantg

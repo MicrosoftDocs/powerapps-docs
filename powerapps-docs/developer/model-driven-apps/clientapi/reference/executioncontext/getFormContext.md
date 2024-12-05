@@ -1,5 +1,5 @@
 ---
-title: "getFormContext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getFormContext (Client API reference) in model-driven apps"
 description: "Learn about the getFormContext method that returns a reference to the form or an item on the form depending on where the method was called." 
 author: HemantGaur
 ms.author: hemantg
