@@ -1,8 +1,8 @@
 ---
 title: "control.getAttribute (Client API reference) in model-driven apps"
 description: Returns the column that the control is bound to.
-author: clromano
-ms.author: clromano
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -51,8 +51,5 @@ if (quickViewMobilePhoneControl.getAttribute().getValue() == null) {
 
 [Quick view control](../formContext-ui-quickForms.md)   
 [Columns](../attributes.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
