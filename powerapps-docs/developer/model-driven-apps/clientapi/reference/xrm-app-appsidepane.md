@@ -1,8 +1,8 @@
 ---
 title: AppSidePane (Client API reference) in model-driven apps
 description: Includes description and supported parameters for the AppSidePane method.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 08/10/2022
 ms.reviewer: jdaly
 ms.topic: reference

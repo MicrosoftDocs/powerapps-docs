@@ -1,6 +1,6 @@
 ---
-title: "xmlAttributeEncode"
-description: "The Client API method Encodes the specified string so that it can be used in an XML."
+title: "xmlAttributeEncode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the xmlAttributeEncode method.
 author: adrianorth
 ms.author: aorth
 ms.date: 03/12/2022
