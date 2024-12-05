@@ -1,7 +1,7 @@
 ---
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: pehecke
@@ -46,19 +46,18 @@ There are four steps to enable a custom data provider to create a virtual table.
 
 ## Step 1: Implementing CRUD plug-ins and registering the assembly
 
-
 1. Create your plug-in project and install the following NuGet packages. The solution in this example is named **StubProvider**.
 
    |Assembly                                         |  URL |
    |-------------------------------------------------|-------|
-   | Microsoft.CrmSdk.CoreAssemblies                 | https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies  |
-   | Microsoft.CrmSdk.Data                           | https://www.nuget.org/packages/Microsoft.CrmSdk.Data            |
-   | Microsoft.CrmSdk.Deployment                     | https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment      |
-   | Microsoft.CrmSdk.Workflow                       | https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow        |
-   | Microsoft.CrmSdk.XrmTooling.CoreAssembly        | https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly   |
-   | Microsoft.IdentityModel.Clients.ActiveDirectory | https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory |
-   | Microsoft.Rest.ClientRuntime                    | https://www.nuget.org/packages/Microsoft.Rest.ClientRuntime                    |
-   | Newtonsoft.Json                                 | https://www.nuget.org/packages/Newtonsoft.Json/13.0.1-beta2    |
+   | Microsoft.CrmSdk.CoreAssemblies                 | <https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies>  |
+   | Microsoft.CrmSdk.Data                           | <https://www.nuget.org/packages/Microsoft.CrmSdk.Data>            |
+   | Microsoft.CrmSdk.Deployment                     | <https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment>      |
+   | Microsoft.CrmSdk.Workflow                       | <https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow>        |
+   | Microsoft.CrmSdk.XrmTooling.CoreAssembly        | <https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly>   |
+   | Microsoft.IdentityModel.Clients.ActiveDirectory | <https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory> |
+   | Microsoft.Rest.ClientRuntime                    | <https://www.nuget.org/packages/Microsoft.Rest.ClientRuntime>                    |
+   | Newtonsoft.Json                                 | <https://www.nuget.org/packages/Newtonsoft.Json/13.0.1-beta2>    |
    |||
 
 1. Add the following six class files to your solution. In each of the class files, add the following using statements
@@ -88,7 +87,10 @@ There are four steps to enable a custom data provider to create a virtual table.
     | **DeletePlugin.cs**  | This class contains code that allows you to delete a record in the virtual table.|
     |||
 
-     #### Code for Connection.cs   
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
+
+#### Code for Connection.cs
 
      ```csharp
       public static class Connection
@@ -115,7 +117,7 @@ There are four steps to enable a custom data provider to create a virtual table.
     }
      ```
 
-    #### Code for CreatePlugin.cs  
+#### Code for CreatePlugin.cs  
 
     ```csharp
     public class CreatePlugin : IPlugin
@@ -153,7 +155,8 @@ There are four steps to enable a custom data provider to create a virtual table.
         }
     }
     ```
-    #### Code for UpdatePlugin.cs 
+
+#### Code for UpdatePlugin.cs
 
     ```csharp
     public class UpdatePlugin: IPlugin {
@@ -198,7 +201,7 @@ There are four steps to enable a custom data provider to create a virtual table.
     }
     ```
 
-    #### Code for RetrievePlugin.cs  
+#### Code for RetrievePlugin.cs  
 
     ```csharp
     public class RetrievePlugin : IPlugin
@@ -242,7 +245,8 @@ There are four steps to enable a custom data provider to create a virtual table.
         }
     }
     ```
-    #### Code for RetrieveMultiplePlugin.cs 
+
+#### Code for RetrieveMultiplePlugin.cs
 
     ```csharp
     public class RetrieveMultiplePlugin : IPlugin
@@ -282,7 +286,7 @@ There are four steps to enable a custom data provider to create a virtual table.
     }
     ```
 
-    #### Code for DeletePlugin.cs 
+#### Code for DeletePlugin.cs
 
     ```csharp
     public class DeletePlugin : IPlugin
@@ -344,7 +348,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
     1. Enter **Data Provider Name**.
 
-    2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**. 
+    2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**.
 
     3. In the **Data Source Table (Entity)** option, select **Create New Data Source**. Enter the details. Make sure that the data source is part of the solution you created or selected.
 

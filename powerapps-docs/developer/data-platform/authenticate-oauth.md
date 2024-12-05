@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 09/25/2024
+ms.date: 12/04/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -240,6 +240,9 @@ class Program
     }
 }
 ```
+
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
 The configuration string values have been moved into an App.config file connection string, and the Http client is configured in the `GetHttpClient` method.
 
