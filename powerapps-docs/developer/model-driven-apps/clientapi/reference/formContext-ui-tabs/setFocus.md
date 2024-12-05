@@ -1,5 +1,5 @@
 ---
-title: "tab.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.setFocus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.setFocus method.
 author: HemantGaur
 ms.author: hemantg

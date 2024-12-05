@@ -1,5 +1,5 @@
 ---
-title: "retrieveRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "retrieveRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the retrieveRecord method.
 author: lancedMicrosoft
 ms.author: lanced

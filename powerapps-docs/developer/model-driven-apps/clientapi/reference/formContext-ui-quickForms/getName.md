@@ -1,5 +1,5 @@
 ---
-title: "quickViewControl.getName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.getName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the quickViewControl.getName method.
 author: HemantGaur
 ms.author: hemantg

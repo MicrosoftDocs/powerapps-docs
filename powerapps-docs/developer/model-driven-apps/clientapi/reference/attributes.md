@@ -1,5 +1,5 @@
 ---
-title: "Columns in model-driven apps| MicrosoftDocs"
+title: "Columns in model-driven apps"
 description: "Learn about working with columns in model-driven apps using client API."
 author: HemantGaur
 ms.author: hemantg

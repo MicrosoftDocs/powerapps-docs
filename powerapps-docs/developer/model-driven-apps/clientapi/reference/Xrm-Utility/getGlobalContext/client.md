@@ -1,5 +1,5 @@
 ---
-title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getGlobalContext.client (Client API reference) in model-driven apps"
 description: "Describes the client object returned from the getGlobalContext method."
 author: adrianorth
 ms.author: aorth

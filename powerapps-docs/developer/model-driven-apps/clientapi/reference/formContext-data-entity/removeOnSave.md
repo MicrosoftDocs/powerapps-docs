@@ -1,5 +1,5 @@
 ---
-title: "removeOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnSave (Client API reference) in model-driven apps"
 description: Removes a function to be called when the record is saved.
 author: HemantGaur
 ms.author: hemantg

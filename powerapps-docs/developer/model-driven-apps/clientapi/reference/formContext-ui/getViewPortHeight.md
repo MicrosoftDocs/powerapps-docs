@@ -1,5 +1,5 @@
 ---
-title: "getViewPortHeight (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getViewPortHeight (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getViewPortHeight method.
 author: HemantGaur
 ms.author: hemantg

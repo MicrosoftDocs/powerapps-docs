@@ -1,5 +1,5 @@
 ---
-title: "Collections (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Collections (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Collections method.
 author: HemantGaur
 ms.author: hemantg

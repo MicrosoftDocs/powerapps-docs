@@ -1,5 +1,5 @@
 ---
-title: "tab.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.setLabel (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.setLabel method.
 author: HemantGaur
 ms.author: hemantg

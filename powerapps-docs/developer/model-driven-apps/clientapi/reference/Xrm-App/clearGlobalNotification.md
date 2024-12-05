@@ -1,5 +1,5 @@
 ---
-title: "clearGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "clearGlobalNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the clearGlobalNotification method.
 author: adrianorth
 ms.author: aorth

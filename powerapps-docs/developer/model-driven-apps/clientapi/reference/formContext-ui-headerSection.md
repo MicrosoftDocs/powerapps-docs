@@ -1,5 +1,5 @@
 ---
-title: "formContext.ui.headerSection item (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.headerSection item (Client API reference) in model-driven apps"
 description: "Learn about working with header sections in model-driven apps using client API."
 author: HemantGaur
 ms.author: hemantg

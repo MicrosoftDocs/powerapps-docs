@@ -1,5 +1,5 @@
 ---
-title: "getCurrentAppName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getCurrentAppName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCurrentAppName method.
 author: adrianorth
 ms.author: aorth

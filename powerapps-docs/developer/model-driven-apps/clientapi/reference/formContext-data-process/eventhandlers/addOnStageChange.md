@@ -1,8 +1,8 @@
 ---
-title: "addOnStageChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnStageChange (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnStageChange method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # addOnStageChange (Client API reference)
-
-
 
 [!INCLUDE[./includes/addOnStageChange-description.md](./includes/addOnStageChange-description.md)]
 
@@ -33,8 +31,4 @@ contributors:
 [removeOnStageChange](removeOnStageChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

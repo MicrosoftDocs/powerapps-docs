@@ -1,5 +1,5 @@
 ---
-title: "xmlEncode| MicrosoftDocs"
+title: "xmlEncode"
 description: "The Client API method converts a string to an XML-encoded string."
 author: adrianorth
 ms.author: aorth

@@ -1,5 +1,5 @@
 ---
-title: "setTabNavigatorVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setTabNavigatorVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setTabNavigationVisible method.
 author: HemantGaur
 ms.author: hemantg

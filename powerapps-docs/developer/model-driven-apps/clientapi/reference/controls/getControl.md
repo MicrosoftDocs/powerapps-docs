@@ -1,5 +1,5 @@
 ---
-title: "formContext.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.getControl (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the formContext.getControl method.
 author: clromano
 ms.author: clromano

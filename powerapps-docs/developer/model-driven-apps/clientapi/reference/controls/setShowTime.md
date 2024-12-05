@@ -1,5 +1,5 @@
 ---
-title: "setShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setShowTime (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setShowTime method.
 author: clromano
 ms.author: clromano
