@@ -1,8 +1,8 @@
 ---
 title: "addOnPreStageChange (Client API reference) in model-driven apps in Power Apps"
 description: Includes description and supported parameters for the addOnPreStageChange method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

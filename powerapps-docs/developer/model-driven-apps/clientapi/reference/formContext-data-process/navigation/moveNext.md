@@ -1,8 +1,8 @@
 ---
 title: "moveNext (Client API reference) in model-driven apps"
 description: Progresses to the next stage.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # moveNext (Client API reference)
-
-
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 

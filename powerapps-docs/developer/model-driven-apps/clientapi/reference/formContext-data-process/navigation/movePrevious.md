@@ -1,8 +1,8 @@
 ---
 title: "movePrevious (Client API reference) in model-driven apps"
 description: Moves to the previous stage.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -29,7 +29,7 @@ You can also move to a previous stage in a different table.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|callbackFunction|Function|No| A function to call when the operation is complete. See [callbackFunction](#callbackfunction) |
+|`callbackFunction`|Function|No| A function to call when the operation is complete. See [callbackFunction](#callbackfunction) |
 
 ### callbackFunction
 
