@@ -1,8 +1,8 @@
 ---
-title: "stage.getStatus (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "stage.getStatus (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the stage.getStatus method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # stage.getStatus (Client API reference)
-
-
 
 [!INCLUDE[./includes/getStatus-description.md](./includes/getStatus-description.md)]
 

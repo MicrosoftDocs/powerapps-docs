@@ -1,5 +1,5 @@
 ---
-title: "loadPanel| MicrosoftDocs"
+title: "loadPanel"
 description: Includes description and supported parameters for the loadPanel method.
 ms.date: 04/17/2022
 ms.service: powerapps

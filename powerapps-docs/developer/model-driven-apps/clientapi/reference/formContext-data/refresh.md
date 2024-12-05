@@ -1,5 +1,5 @@
 ---
-title: "data.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "data.refresh (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the data.refresh method.
 author: HemantGaur
 ms.author: hemantg

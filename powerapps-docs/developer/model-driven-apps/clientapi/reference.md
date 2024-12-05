@@ -1,5 +1,5 @@
 ---
-title: "Client API Reference for model-driven apps | MicrosoftDocs"
+title: "Client API Reference for model-driven apps "
 description: "The topic provides client API reference for model-driven apps."
 ms.date: 05/13/2024
 author: JimDaly

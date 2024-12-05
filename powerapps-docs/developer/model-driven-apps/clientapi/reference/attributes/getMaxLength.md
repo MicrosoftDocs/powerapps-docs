@@ -1,8 +1,8 @@
 ---
-title: "getMaxLength (Client API reference)| MicrosoftDocs"
+title: "getMaxLength (Client API reference)"
 description: Includes description and supported parameters for the getMaxLength method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getMaxLength (Client API reference)
-
-
 
 Returns a number indicating the maximum length of a string or memo column. 
 

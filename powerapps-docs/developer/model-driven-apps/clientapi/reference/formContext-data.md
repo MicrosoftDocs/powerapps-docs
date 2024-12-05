@@ -1,5 +1,5 @@
 ---
-title: "formContext.data (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.data (Client API reference) in model-driven apps"
 description: "Provides properties and methods to work with the data on a form."
 author: HemantGaur
 ms.author: hemantg

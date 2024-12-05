@@ -1,5 +1,5 @@
 ---
-title: "isDefaultPrevented (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isDefaultPrevented (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isDefaultPrevented method.
 author: HemantGaur
 ms.author: hemantg

@@ -1,5 +1,5 @@
 ---
-title: "control.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.refresh (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.refresh method.
 author: clromano
 ms.author: clromano

@@ -1,5 +1,5 @@
 ---
-title: "setSearchQuery (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setSearchQuery (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setSearchQuery method.
 author: clromano
 ms.author: clromano

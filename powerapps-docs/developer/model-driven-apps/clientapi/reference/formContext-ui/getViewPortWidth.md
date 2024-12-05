@@ -1,5 +1,5 @@
 ---
-title: "getViewPortWidth (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getViewPortWidth (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getViewPortWidth method.
 author: HemantGaur
 ms.author: hemantg

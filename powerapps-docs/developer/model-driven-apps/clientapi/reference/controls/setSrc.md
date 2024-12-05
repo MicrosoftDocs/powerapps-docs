@@ -1,5 +1,5 @@
 ---
-title: "setSrc (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setSrc (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setSrc method.
 author: clromano
 ms.author: clromano
