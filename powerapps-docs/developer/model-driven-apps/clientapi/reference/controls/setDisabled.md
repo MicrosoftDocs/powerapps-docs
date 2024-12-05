@@ -1,5 +1,5 @@
 ---
-title: "control.setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.setDisabled (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.setDisabled method.
 author: clromano
 ms.author: clromano

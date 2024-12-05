@@ -1,5 +1,5 @@
 ---
-title: "Events (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Events (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Events method.
 author: adrianorth
 ms.author: aorth

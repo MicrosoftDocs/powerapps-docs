@@ -1,8 +1,8 @@
 ---
-title: "getCategory (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getCategory (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCategory method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getCategory (Client API reference)
-
-
 
 [!INCLUDE[./includes/getCategory-description.md](./includes/getCategory-description.md)]
 

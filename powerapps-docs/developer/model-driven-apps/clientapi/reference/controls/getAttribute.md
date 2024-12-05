@@ -1,5 +1,5 @@
 ---
-title: "control.getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.getAttribute (Client API reference) in model-driven apps"
 description: Returns the column that the control is bound to.
 author: clromano
 ms.author: clromano

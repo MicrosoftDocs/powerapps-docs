@@ -1,5 +1,5 @@
 ---
-title: "openSearchResult (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "openSearchResult (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openSearchResult method.
 author: clromano
 ms.author: clromano

@@ -1,7 +1,7 @@
 ---
 title: "Sample: Blazor WebAssembly with Global Discovery (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample a Blazor WebAssembly project that uses the Global Discovery Service and Dataverse Web API to access multiple environments available to the user." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/18/2022
+ms.date: 12/04/2024
 author: ImadYanni
 ms.author: iyanni
 ms.reviewer: jdaly
@@ -69,6 +69,9 @@ To run this sample you must first configure an Microsoft Entra ID application on
    - ID tokens (used for implicit and hybrid flows)
 
 1. Click **Save**.
+
+Read the following important information about using implicit grant or implicit flow in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
 #### Configure Permissions
 

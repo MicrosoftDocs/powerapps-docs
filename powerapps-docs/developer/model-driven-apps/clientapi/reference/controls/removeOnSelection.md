@@ -1,5 +1,5 @@
 ---
-title: "removeOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnSelection (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnSelection method.
 author: clromano
 ms.author: clromano

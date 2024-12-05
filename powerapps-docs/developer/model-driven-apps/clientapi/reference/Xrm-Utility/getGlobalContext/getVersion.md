@@ -1,5 +1,5 @@
 ---
-title: "getVersion (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getVersion (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getVersion method.
 author: adrianorth
 ms.author: aorth

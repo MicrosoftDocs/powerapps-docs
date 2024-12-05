@@ -1,8 +1,8 @@
 ---
-title: "getInstanceId (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getInstanceId (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getInstanceId method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getInstanceId (Client API reference)
-
-
 
 [!INCLUDE[./includes/getInstanceId-description.md](./includes/getInstanceId-description.md)]
 

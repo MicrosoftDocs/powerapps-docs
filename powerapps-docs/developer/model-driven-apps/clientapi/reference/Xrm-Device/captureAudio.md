@@ -1,5 +1,5 @@
 ---
-title: "captureAudio| MicrosoftDocs"
+title: "captureAudio"
 description: Includes description and supported parameters for the captureAudio method.
 author: adrianorth
 ms.author: aorth

@@ -1,5 +1,5 @@
 ---
-title: "quickViewControl.setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.setDisabled (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the quickViewControl.setDisabled method.
 author: HemantGaur
 ms.author: hemantg

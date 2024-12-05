@@ -1,5 +1,5 @@
 ---
-title: "removeOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnPostSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnPostSearch method.
 author: clromano
 ms.author: clromano

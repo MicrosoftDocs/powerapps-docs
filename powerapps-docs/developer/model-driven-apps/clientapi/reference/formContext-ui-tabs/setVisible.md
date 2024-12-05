@@ -1,5 +1,5 @@
 ---
-title: "tab.setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.setVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.setVisible method.
 author: HemantGaur
 ms.author: hemantg

@@ -1,5 +1,5 @@
 ---
-title: "captureVideo| MicrosoftDocs"
+title: "captureVideo"
 description: Includes description and supported parameters for the captureVideo method.
 author: adrianorth
 ms.author: aorth

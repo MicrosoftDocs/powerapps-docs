@@ -1,5 +1,5 @@
 ---
-title: "tab.getName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "tab.getName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the tab.getName method.
 author: HemantGaur
 ms.author: hemantg

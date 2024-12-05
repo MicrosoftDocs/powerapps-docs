@@ -1,6 +1,6 @@
 ---
-title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Web Resources (model-driven apps)"
+description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address."
 author: sriharibs-msft
 ms.author: srihas
 

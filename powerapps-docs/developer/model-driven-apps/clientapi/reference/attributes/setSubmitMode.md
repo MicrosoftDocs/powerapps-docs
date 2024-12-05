@@ -1,8 +1,8 @@
 ---
-title: "setSubmitMode (Client API reference)| MicrosoftDocs"
+title: "setSubmitMode (Client API reference)"
 description: Sets whether data from the column will be submitted when the record is saved. 
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 09/18/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # setSubmitMode (Client API reference)
-
-
 
 Sets whether data from the column will be submitted when the record is saved. 
 
@@ -49,7 +47,5 @@ Columns that do not get updated after the initial save of the record, such as `c
 ### Related articles
 
 [getSubmitMode (Client API reference)](getSubmitMode.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
