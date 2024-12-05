@@ -54,5 +54,4 @@ We evaluate the feature both qualitatively and quantitatively. To assess the qua
 - For Early access program, you can also directly reach out to the product team by contacting them in the Teams channel Intelligent Apps Early Access Discussion.
 
 ### See also 
-
-[Use the Plan designer (preview)](plan-designer.md)
+[Use the Plan designer (preview)](../plan-designer/plan-designer.md)

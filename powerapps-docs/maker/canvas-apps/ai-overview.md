@@ -61,7 +61,8 @@ The following articles can help you build various apps in different scenarios us
 
 ### Copilot in the Power Apps home page
 
-- [Use the Plan designer (preview)](../common/plan-designer.md)
+- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+
 
 ### Copilot in canvas apps
 
