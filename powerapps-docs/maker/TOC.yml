@@ -231,7 +231,7 @@
   items:
   - name: Overview
     href: index.md
-  - name: Create a business solution with Copilot (preview)
+  - name: Use the Plan designer (preview)
     href: ./common/plan-designer.md  
   - name: Use the learn hub
     href: ./common/learn-hub.md
@@ -2609,6 +2609,8 @@
     href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
+  - name: FAQ about the Plan designer
+    href: ./common/faq-plan-designer.md
 - name: Resources
   items:
   - name: Blog
