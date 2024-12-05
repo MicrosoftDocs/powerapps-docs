@@ -84,7 +84,7 @@ More information: [formContext.data](reference/formContext-data.md)
 Provides methods to retrieve information about the user interface, in addition to collections for several sub components of the form or grid. Contains the following objects:
 
 | Object| Description|
-----
+|----|----|
 |`formSelector`|Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
 |`navigation`|Doesn't contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
 |`process`|Provides methods to interact with the business process flow control on a form.|
