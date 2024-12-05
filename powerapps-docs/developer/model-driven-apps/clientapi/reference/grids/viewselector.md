@@ -1,8 +1,8 @@
 ---
-title: "ViewSelector methods (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ViewSelector methods (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ViewSelector method.
-author: sriharibs-msft
-ms.author: srihas
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

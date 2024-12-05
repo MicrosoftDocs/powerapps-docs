@@ -1,8 +1,8 @@
 ---
-title: "getSaveErrorInfo (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSaveErrorInfo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSaveErrorInfo method.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

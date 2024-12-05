@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Device| MicrosoftDocs"
+title: "Xrm.Device"
 description: Provides methods to use native device capabilities via Xrm.Device.
 author: adrianorth
 ms.author: aorth

@@ -1,9 +1,8 @@
 ---
-title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
+title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps"
 description: This event occurs before the stage of a business process flow control changes.
-author: HemantGaur
-ms.author: hemantg
-
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

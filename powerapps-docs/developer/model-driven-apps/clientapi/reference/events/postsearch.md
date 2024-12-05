@@ -1,8 +1,8 @@
 ---
-title: "PostSearch event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "PostSearch event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the PostSearch event.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # PostSearch event (Client API reference)
-
-
 
 This event occurs when the search is complete in a knowledge base search control, and the results are displayed. 
 

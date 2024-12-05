@@ -1,6 +1,6 @@
 ---
-title: "Use IFRAME and web resource controls on a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use IFRAME and web resource controls on a form (model-driven apps)"
+description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  "
 author: sriharibs-msft
 ms.author: srihas
 ms.date: 06/10/2022

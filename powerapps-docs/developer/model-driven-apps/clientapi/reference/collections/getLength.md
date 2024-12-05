@@ -1,5 +1,5 @@
 ---
-title: "getLength method for collections (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getLength method for collections (Client API reference) in model-driven apps"
 description: "Describes the getLength method used for collections."
 author: HemantGaur
 ms.author: hemantg

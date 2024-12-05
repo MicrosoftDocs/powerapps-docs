@@ -1,8 +1,8 @@
 ---
-title: "getSubmitMode (Client API reference)| MicrosoftDocs"
+title: "getSubmitMode (Client API reference)"
 description: Includes description and supported parameters for the getSubmitMode method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getSubmitMode (Client API reference)
-
-
 
 Returns a string indicating when data from the column will be submitted when the record is saved. 
 
@@ -32,6 +30,7 @@ All
 **Type**: String. 
 
 **Description**: Returns one of the following values:
+
 - always
 - never
 - dirty
@@ -39,7 +38,5 @@ All
 ### Related article
 
 [setSubmitMode (Client API reference)](setSubmitMode.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

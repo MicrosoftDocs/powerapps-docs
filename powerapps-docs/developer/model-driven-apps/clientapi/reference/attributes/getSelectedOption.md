@@ -1,8 +1,8 @@
 ---
-title: "getSelectedOption| MicrosoftDocs"
+title: "getSelectedOption"
 description: Includes description and supported parameters for the getSelectedOption method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getSelectedOption (Client API reference)
-
-
 
 Returns the option object or an array of option objects selected in a **choice** or **choices** column respectively. 
 
@@ -39,7 +37,5 @@ choice, choices
 [getOption (Client API reference)](getOption.md)   
 [getOptions (Client API reference)](getOptions.md)   
 [getText (Client API reference)](getText.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

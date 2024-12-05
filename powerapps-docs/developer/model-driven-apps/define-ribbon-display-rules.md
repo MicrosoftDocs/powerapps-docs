@@ -1,8 +1,8 @@
 ---
-title: "Define ribbon display rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about defining specific rules to control when the ribbon elements will display during the configuration of ribbon elements. " # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
+title: "Define ribbon display rules (model-driven apps)"
+description: "Learn about defining specific rules to control when the ribbon elements will display during the configuration of ribbon elements."
+author: clromano
+ms.author: clromano
 ms.date: 02/02/2024
 ms.reviewer: jdaly
 ms.topic: article
@@ -46,7 +46,8 @@ The `Type` values correspond to the following:
 | `Refresh` | The command bar is presented using the updated user interface.        |
 | `Legacy`  | The ribbon is presented in forms for tables that were not updated or in a list view in Dynamics 365 for Outlook. |
 
-### `<CrmClientTypeRule>`  
+### `<CrmClientTypeRule>`
+
  Allows definition of rules depending on the type of client used. `Type` options are as follows:  
 
 - Web  
@@ -81,15 +82,15 @@ Use this kind of rule to display ribbon elements when a user has specific privil
 
 Allows definition of rules depending on the Boolean values of specific table properties. `PropertyName` options are as follows:  
 
-   - DuplicateDetectionEnabled  
-   - GridFiltersEnabled  
-   - HasStateCode  
-   - IsConnectionsEnabled  
-   - MailMergeEnabled  
-   - WorksWithQueue  
-   - HasActivities  
-   - IsActivity  
-   - HasNotes  
+- DuplicateDetectionEnabled  
+- GridFiltersEnabled  
+- HasStateCode  
+- IsConnectionsEnabled  
+- MailMergeEnabled  
+- WorksWithQueue  
+- HasActivities  
+- IsActivity  
+- HasNotes  
 
 ### `<EntityRule>`  
 
@@ -105,11 +106,11 @@ The `EntityRule` also includes an optional context parameter to specify whether 
 
 Use the form state rule to determine the current type of form that is displaying a record. `State` options are as follows:  
 
-   - Create 
-   - Existing  
-   - ReadOnly  
-   - Disabled  
-   - BulkEdit  
+- Create 
+- Existing  
+- ReadOnly  
+- Disabled  
+- BulkEdit  
 
 ### `<FormTypeRule>`  
 
@@ -170,9 +171,9 @@ This type of rule checks the URL of the page being displayed. It returns true if
 
 A rule that detects whether the referencing attribute for an entity is required.
 
-This is a very specific rule for a very specific case. Use this rule when there is a relationship bound subgrid or an associated grid on the page. This rule will test whether the referencing attribute used in the relationship is required. This rule is used to hide the Add Existing record type button when it isn’t appropriate to display it.
+This is a very specific rule for a very specific case. Use this rule when there is a relationship bound subgrid or an associated grid on the page. This rule will test whether the referencing attribute used in the relationship is required. This rule is used to hide the Add Existing record type button when it isn't appropriate to display it.
 
-In an entity relationship the lookup field in the related record (the referencing attribute) may be required or not. For example, the Regarding field of an activity is not required yet the Potential Customer field of an opportunity is required. The Add Existing Activity button will set the Regarding field value to the current record context and it can only work if the Regarding field doesn’t already have a value. All Opportunity records have a value in their Potential Customer field, so it never makes sense to display an Add Existing Opportunity button. This rule detects that the referencing attribute is required and therefore returns true.
+In an entity relationship the lookup field in the related record (the referencing attribute) may be required or not. For example, the Regarding field of an activity is not required yet the Potential Customer field of an opportunity is required. The Add Existing Activity button will set the Regarding field value to the current record context and it can only work if the Regarding field doesn't already have a value. All Opportunity records have a value in their Potential Customer field, so it never makes sense to display an Add Existing Opportunity button. This rule detects that the referencing attribute is required and therefore returns true.
 
 ### `<RelationshipTypeRule>` 
 
@@ -198,9 +199,10 @@ Use this rule to check the value of a specific column in the record being displa
 >  For commands defined for subgrid for forms using the updated user experience, value rules cannot be used within display rules. Use this element within an `<EnableRule>` to hide an element.  
 
 ### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define ribbon enable rules](define-ribbon-enable-rules.md)   
- [Define ribbon actions](define-ribbon-actions.md)
+
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Define ribbon enable rules](define-ribbon-enable-rules.md)   
+[Define ribbon actions](define-ribbon-actions.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

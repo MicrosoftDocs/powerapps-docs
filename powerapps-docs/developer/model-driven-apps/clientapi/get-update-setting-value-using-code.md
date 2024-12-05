@@ -1,5 +1,5 @@
 ---
-title: "Get or update setting value using client API | MicrosoftDocs"
+title: "Get or update setting value using client API "
 description: "Get or update setting value using client API."
 Keywords: settings, settings environment value, settings app value, model-driven app
 ms.subservice: dataverse-developer

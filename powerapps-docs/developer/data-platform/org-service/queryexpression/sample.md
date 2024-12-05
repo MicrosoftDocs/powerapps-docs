@@ -1,7 +1,7 @@
 ---
 title: QueryExpression Sample code
 description: Try using QueryExpression to retrieve Dataverse data using this sample code.
-ms.date: 05/17/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -25,7 +25,7 @@ You can use the following `OutputQueryExpression` static method to test QueryExp
 
 The `OutputQueryExpression` method demonstrates how to use the [QueryExpression class](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) and the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) to return an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing the requested data.
 
-The `OutputQueryExpression` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all all [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that contain columns specify an [EntityAlias](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias). 
+The `OutputQueryExpression` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all all [LinkEntity](xref:Microsoft.Xrm.Sdk.Query.LinkEntity) instances that contain columns specify an [EntityAlias](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.EntityAlias).
 
 ```csharp
 /// <summary>
@@ -217,6 +217,9 @@ You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../quick-s
         }
     ```
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
+
 When you run the program using the `OutputQueryExpression` method, the output should look like this:
 
 ```text
@@ -237,6 +240,6 @@ When you run the program using the `OutputQueryExpression` method, the output sh
 
 ### Related articles
 
-[Query data using QueryExpression](overview.md)   
-[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)   
+[Query data using QueryExpression](overview.md)
+[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)
 [Sample: Use QueryExpression with a paging cookie](../samples/use-queryexpression-with-a-paging-cookie.md)
