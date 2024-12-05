@@ -92,187 +92,145 @@ Read the following important information about using a connection string or user
 
 #### Code for Connection.cs
 
-     ```csharp
-      public static class Connection
+ ```csharp
+  public static class Connection
+{
+    public static SqlConnection GetConnection()
     {
-        public static SqlConnection GetConnection()
+        try
         {
-            try
-            {
-                //sample database to connect to 
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "Enter name or network address of the SQL Server";
-                builder.UserID = "Enter User Name";
-                builder.Password = "Enter password";
-                builder.InitialCatalog = "Enter database details";
-                SqlConnection connection = new SqlConnection(builder.ConnectionString);
-                return connection;
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.ToString());
-                throw;
-            }
+            //sample database to connect to 
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "Enter name or network address of the SQL Server";
+            builder.UserID = "Enter User Name";
+            builder.Password = "Enter password";
+            builder.InitialCatalog = "Enter database details";
+            SqlConnection connection = new SqlConnection(builder.ConnectionString);
+            return connection;
+        }
+        catch (SqlException e)
+        {
+            Console.WriteLine(e.ToString());
+            throw;
         }
     }
-     ```
+}
+ ```
 
 #### Code for CreatePlugin.cs  
 
-    ```csharp
-    public class CreatePlugin : IPlugin
+```csharp
+public class CreatePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        public void Execute(IServiceProvider serviceProvider)
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
         {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
-            {
-                Entity entity = (Entity)context.InputParameters["Target"];
-                Guid id = Guid.NewGuid();
-                //change the table name below to the source table name you have created 
-                string cmdString = "INSERT INTO VETicket (TicketID,Name,Severity) VALUES (@TicketID, @Name, @Severity)";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = cmdString;
-                    command.Parameters.AddWithValue("@TicketID", id);
-                    command.Parameters.AddWithValue("@Name", entity["new_name"]);
-                    command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
-                    connection.Open();
-                    try
-                    {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("inserted {0} records", numRecords);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-                context.OutputParameters["id"] = id;
-            }
-        }
-    }
-    ```
-
-#### Code for UpdatePlugin.cs
-
-    ```csharp
-    public class UpdatePlugin: IPlugin {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
-            {
-                Entity entity = (Entity)context.InputParameters["Target"];
-                //change the table name below to the source table name you have created  
-                string cmdString = "UPDATE VETicket SET {0} WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.Parameters.AddWithValue("@TicketID", entity["new_ticketid"]);
-                    List<string> setList = new List<string>();
-                    if (entity.Attributes.Contains("new_name"))
-                    {
-                        command.Parameters.AddWithValue("@Name", entity["new_name"]);
-                        setList.Add("Name=@Name");
-                    }
-                    if (entity.Attributes.Contains("new_severity"))
-                    {
-                        command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
-                        setList.Add("Severity=@Severity");
-                    }
-                    command.CommandText = string.Format(cmdString, string.Join(",", setList)); connection.Open();
-                    try
-                    {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("updated {0} records", numRecords);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-            }
-        }
-    }
-    ```
-
-#### Code for RetrievePlugin.cs  
-
-    ```csharp
-    public class RetrievePlugin : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
-            {
-                EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
-                Entity e = new Entity("new_ticket");
-                //change the table name below to the source table name you have created  
-                string cmdString = "SELECT TicketID, Severity, Name FROM VETicket WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = cmdString;
-                    command.Parameters.AddWithValue("@TicketID", entityRef.Id);
-                    connection.Open();
-                    try
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                e.Attributes.Add("new_ticketid", reader.GetGuid(0));
-                                e.Attributes.Add("new_severity", reader.GetInt32(1));
-                                e.Attributes.Add("new_name", reader.GetString(2));
-                            }
-                        }
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-                context.OutputParameters["BusinessEntity"] = e;
-            }
-        }
-    }
-    ```
-
-#### Code for RetrieveMultiplePlugin.cs
-
-    ```csharp
-    public class RetrieveMultiplePlugin : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            EntityCollection collection = new EntityCollection();
-            //change the table name below to the source table name you have created  
-            string cmdString = "SELECT TicketID, Severity, Name FROM VETicket";
+            Entity entity = (Entity)context.InputParameters["Target"];
+            Guid id = Guid.NewGuid();
+            //change the table name below to the source table name you have created 
+            string cmdString = "INSERT INTO VETicket (TicketID,Name,Severity) VALUES (@TicketID, @Name, @Severity)";
             SqlConnection connection = Connection.GetConnection();
             using (SqlCommand command = connection.CreateCommand())
             {
                 command.CommandText = cmdString;
+                command.Parameters.AddWithValue("@TicketID", id);
+                command.Parameters.AddWithValue("@Name", entity["new_name"]);
+                command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
+                connection.Open();
+                try
+                {
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("inserted {0} records", numRecords);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
+            }
+            context.OutputParameters["id"] = id;
+        }
+    }
+}
+```
+
+#### Code for UpdatePlugin.cs
+
+```csharp
+public class UpdatePlugin: IPlugin {
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
+        {
+            Entity entity = (Entity)context.InputParameters["Target"];
+            //change the table name below to the source table name you have created  
+            string cmdString = "UPDATE VETicket SET {0} WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.Parameters.AddWithValue("@TicketID", entity["new_ticketid"]);
+                List<string> setList = new List<string>();
+                if (entity.Attributes.Contains("new_name"))
+                {
+                    command.Parameters.AddWithValue("@Name", entity["new_name"]);
+                    setList.Add("Name=@Name");
+                }
+                if (entity.Attributes.Contains("new_severity"))
+                {
+                    command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
+                    setList.Add("Severity=@Severity");
+                }
+                command.CommandText = string.Format(cmdString, string.Join(",", setList)); connection.Open();
+                try
+                {
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("updated {0} records", numRecords);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
+            }
+        }
+    }
+}
+```
+
+#### Code for RetrievePlugin.cs  
+
+```csharp
+public class RetrievePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
+        {
+            EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
+            Entity e = new Entity("new_ticket");
+            //change the table name below to the source table name you have created  
+            string cmdString = "SELECT TicketID, Severity, Name FROM VETicket WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = cmdString;
+                command.Parameters.AddWithValue("@TicketID", entityRef.Id);
                 connection.Open();
                 try
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.Read())
                         {
-                            Entity e = new Entity("new_ticket");
                             e.Attributes.Add("new_ticketid", reader.GetGuid(0));
                             e.Attributes.Add("new_severity", reader.GetInt32(1));
                             e.Attributes.Add("new_name", reader.GetString(2));
-                            collection.Entities.Add(e);
                         }
                     }
                 }
@@ -280,48 +238,90 @@ Read the following important information about using a connection string or user
                 {
                     connection.Close();
                 }
-                context.OutputParameters["BusinessEntityCollection"] = collection;
+                // other codes. 
             }
+            context.OutputParameters["BusinessEntity"] = e;
         }
     }
-    ```
+}
+```
+
+#### Code for RetrieveMultiplePlugin.cs
+
+```csharp
+public class RetrieveMultiplePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        EntityCollection collection = new EntityCollection();
+        //change the table name below to the source table name you have created  
+        string cmdString = "SELECT TicketID, Severity, Name FROM VETicket";
+        SqlConnection connection = Connection.GetConnection();
+        using (SqlCommand command = connection.CreateCommand())
+        {
+            command.CommandText = cmdString;
+            connection.Open();
+            try
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Entity e = new Entity("new_ticket");
+                        e.Attributes.Add("new_ticketid", reader.GetGuid(0));
+                        e.Attributes.Add("new_severity", reader.GetInt32(1));
+                        e.Attributes.Add("new_name", reader.GetString(2));
+                        collection.Entities.Add(e);
+                    }
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            context.OutputParameters["BusinessEntityCollection"] = collection;
+        }
+    }
+}
+```
 
 #### Code for DeletePlugin.cs
 
-    ```csharp
-    public class DeletePlugin : IPlugin
+```csharp
+public class DeletePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        public void Execute(IServiceProvider serviceProvider)
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        //comment 
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
         {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            //comment 
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
+            EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
+            id = entityRef.Id;
+            //change the table name below to the source table name you have created 
+            string cmdString = "DELETE VETicket WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
             {
-                EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
-                id = entityRef.Id;
-                //change the table name below to the source table name you have created 
-                string cmdString = "DELETE VETicket WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
+                command.CommandText = cmdString; command.Parameters.AddWithValue("@TicketID", id);
+                connection.Open();
+                try
                 {
-                    command.CommandText = cmdString; command.Parameters.AddWithValue("@TicketID", id);
-                    connection.Open();
-                    try
-                    {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("deleted {0} records", numRecords);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("deleted {0} records", numRecords);
                 }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
             }
         }
     }
-    ```
+}
+```
 
 1. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
 
