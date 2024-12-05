@@ -1,5 +1,5 @@
 ---
-title: "getPageContext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getPageContext (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getPageContext method.
 author: adrianorth
 ms.author: aorth

@@ -1,8 +1,8 @@
 ---
-title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
+title: "Events in forms and grids in model-driven apps"
 description: Events initiate all client-side code. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 07/08/2024
 ms.reviewer: jdaly
 ms.topic: reference
@@ -90,7 +90,5 @@ Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and
 [Understand the Client API object model](understand-clientapi-object-model.md)   
 [Client API execution context](clientapi-execution-context.md)   
 [Events (Client API reference)](reference/events.md)   
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getGlobalContext.userSettings (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
 author: adrianorth
 ms.author: aorth
