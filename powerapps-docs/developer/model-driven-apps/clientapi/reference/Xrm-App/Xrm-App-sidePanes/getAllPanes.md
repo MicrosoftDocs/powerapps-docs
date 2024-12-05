@@ -1,5 +1,5 @@
 ---
-title: "getAllPanes (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getAllPanes (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getAllPanes method.
 author: adrianorth
 ms.author: aorth

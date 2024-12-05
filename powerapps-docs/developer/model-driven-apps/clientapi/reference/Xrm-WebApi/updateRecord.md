@@ -1,5 +1,5 @@
 ---
-title: "updateRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "updateRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the updateRecord method.
 author: lancedMicrosoft
 ms.author: lanced

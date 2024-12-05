@@ -1,5 +1,5 @@
 ---
-title: "getPane (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getPane (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getPane method.
 author: adrianorth
 ms.author: aorth

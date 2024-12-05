@@ -1,5 +1,5 @@
 ---
-title: "captureImage | MicrosoftDocs"
+title: "captureImage "
 description: Includes description and supported parameters for the captureImage method.
 author: adrianorth
 ms.author: aorth

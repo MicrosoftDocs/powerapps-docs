@@ -1,6 +1,6 @@
 ---
-title: "Get started with model-driven apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Get started with model-driven apps customization using code"
+description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. "
 author: HemantGaur
 ms.author: hemantg
 
