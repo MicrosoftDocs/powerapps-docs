@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 10/10/2024
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 11/19/2024
+ms.date: 12/5/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -59,9 +59,9 @@ If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-cop
 
 The following articles can help you build various apps in different scenarios using Copilot.
 
-### Copilot in Power Apps
+### Copilot in the Power Apps home page
 
-- [Create a business solution with Copilot (preview)](../common/plan-designer.md)
+- [Use the Plan designer (preview)](../common/plan-designer.md)
 
 ### Copilot in canvas apps
 
