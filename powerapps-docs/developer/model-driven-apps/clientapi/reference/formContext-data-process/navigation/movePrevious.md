@@ -41,16 +41,16 @@ This callback function is passed one of the following string values to indicate 
 |`crossEntity`|The next stage is for a different table.|
 |`beginning`|The active stage is the first stage of the active path.|
 |`invalid`|The operation failed because the selected stage isn't the same as the active stage.|
-|`dirtyForm`|This value will be returned if the data in the page is not saved.|
-|`stageGate`|One or more required column on the current stage is empty.|
-|`preventDefault`|This value will be returned if an `OnPreStageChange` event handler invokes preventDefault.|
+|`dirtyForm`|This value is returned if the data in the page isn't saved.|
+|`stageGate`|One or more required columns on the current stage are empty.|
+|`preventDefault`|This value is returned if an `OnPreStageChange` event handler invokes preventDefault.|
 
 >[!IMPORTANT]
 >This method can only be used when the selected stage and the active stage are the same. When your code is initiated from the [OnStageChange](../../events/onstagechange.md) event, the current stage will be selected. When your code is initiated from the [OnStageSelected](../../events/onstageselected.md) event, you should use the [getActiveStage](../activestage/getActiveStage.md) method to verify that the selected stage is also the active stage. For any other form event, it isn't possible to determine which stage is currently selected. For best results, this method should only be used in code that is called in functions initiated by the [OnStageChange](../../events/onstagechange.md) and [OnStageSelected](../../events/onstageselected.md) events.
 
 ## Remarks
 
-This methods will cause the [OnStageChange](../../events/onstagechange.md) event to occur.
+This method causes the [OnStageChange](../../events/onstagechange.md) event to occur.
 
 ### Related articles
 
