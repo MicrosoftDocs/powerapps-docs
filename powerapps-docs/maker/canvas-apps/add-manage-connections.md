@@ -106,8 +106,8 @@ Microsoft’s Azure API connectors service is used by all Power Apps using conne
 A tenant admin must run the following PowerShell commands:
 
 ```Powershell
- Connect-AzureAD -TenantId <target tenant id>
- New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
+ Connect-MgGraph -Scope Application.ReadWrite.All -TenantId <target tenant id>
+ New-MgServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
 ```
 
 Example successful output:
