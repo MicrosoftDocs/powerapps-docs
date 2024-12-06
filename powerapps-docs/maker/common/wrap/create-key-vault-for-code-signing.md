@@ -30,10 +30,10 @@ In this article, you will learn how to use an existing Azure Key Vault or create
    
 ## Create Azure Key Vault and configure Key Vault URI
 
-1. To create a new Azure service principal for the 1P Microsoft Entra application **00001111-aaaa-2222-bbbb-3333cccc4444 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
+1. To create a new Azure service principal for the 1P Microsoft Entra application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
 
     `Connect-AzureAD -TenantId <your tenant ID>`<br>
-   `New-AzureADServicePrincipal -AppId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName "Wrap KeyVault Access App"`
+   `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
 
 2. Follow these steps to ensure that the Service Principal representing your app, such as Wrap Key Vault Access App, has the necessary access permissions, add a **Reader** role assignment to it in the **Access Control (IAM)** of your default subscription. This should also be present in the IAM of both the subscription and the Key Vault.
