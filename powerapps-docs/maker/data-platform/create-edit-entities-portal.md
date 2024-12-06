@@ -62,7 +62,7 @@ Use the table visual designer experience where you create tables, configure tabl
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
       (NOTE: many-to-many relationships aren't supported)
-   - **Delete**. Deletes the table and all associated table rows. <!-- START HERE -->
+   - **Remove**. Deletes the table and all associated table rows when *a new table* is selected. Remove doesn't delete the table and associated rows when an existing table is selected.
 2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
 3. Table visual designer canvas actions:
    - **+**. Zoom in to increase the size of the table objects on the canvas.
@@ -73,8 +73,10 @@ Use the table visual designer experience where you create tables, configure tabl
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Row ownership**. Select the ownership type as either user or team, or organization. 
    - **Properties**. Edit the table display name, plural name, description, and schema name.
-   - **Delete**. Delete the table and all associated rows.
+   - **Remove**. Remove the table and all associated rows. If the tables is a new table, all data is deleted. For existing tables, that table is only removed from the table designer and no data is removed.
 5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
+6. Show more or less column. You can select and clear the columns to be displayed in the table card. Also displays or hides the relationship for lookup columns that connect to another table currently in the designer.
+7. Add new relationship handle. Drag the handle and create a new relationship by pointing it towards another table. Some relationship types are currently not supported. More information: [Limitations using the table visual designer](#limitations-using-the-table-visual-designer)
 
 > [!TIP]
 > Can't find the tables you created on the canvas? Select **Fit view** on the table visual designer canvas actions menu.
@@ -94,7 +96,7 @@ Describe your data in natural language and Copilot generates tables along with r
 > To use this feature, note the following requirements:
 >
 > - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
-> - This feature is available in English. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+> - This feature is available in 20 languages including Danish, Dutch, English (United States), French, German, Italian, Japanese, Portuguese (Brazil), Spanish, Chinese (Simplified), Czech, Finnish, Greek, Korean, Norwegian (Bokmål), Polish, Russian, Swedish, Thai, and Turkish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Choose an option to create tables** page, select **Start with Copilot**.
 2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
@@ -109,6 +111,22 @@ The following data types aren't currently supported when you create a column in 
 - Customer
 - Autonumber
 - Formula
+
+Editing existing tables isn’t currently supported in the table visual designer. To edit an existing table, select it, and then select **View data** > **Edit** on the new tab. This opens the selected table in the traditional table designer, allowing you to edit the table.
+
+Some relationship configurations are currently not supported.
+
+| Starting table | Targeting table | Relationship type | Status        |
+|----------------|-----------------|-------------------|---------------|
+| New            | New             | One-to-many       | Supported     |
+| New            | New             | Many-to-one       | Supported     |
+| New            | New             | Many-to-many      | Not supported |
+| Existing       | New             | One-to-many       | Supported     |
+| Existing       | New             | Many-to-one       | Not supported |
+| Existing       | New             | Many-to-many      | Not supported |
+| Existing       | Existing        | One-to-many       | Not supported |
+| Existing       | Existing        | Many-to-one       | Not supported |
+| Existing       | Existing        | Many-to-many      | Not supported |
 
 ### Set advanced properties
 
