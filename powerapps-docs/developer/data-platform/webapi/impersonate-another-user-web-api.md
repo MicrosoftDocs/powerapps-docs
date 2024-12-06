@@ -37,13 +37,13 @@ There are two ways you can impersonate a user, both of which are made possible b
 1. **Preferred:** Impersonate a user based on their Microsoft Entra ID object ID by passing that value along with the header `CallerObjectId`.
 1. **Legacy:** To impersonate a user based on their systemuserid, you can use `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with a Microsoft Entra ID object ID `e39c5d16-675b-48d1-8e67-667427e9c084`.
+ In this example, a new account entity is created on behalf of the user with a Microsoft Entra ID object ID `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
   
  **Request:**
 
 ```http 
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1  
-CallerObjectId: e39c5d16-675b-48d1-8e67-667427e9c084  
+CallerObjectId: aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -90,23 +90,23 @@ ETag: W/"506868"
   "createdby": {
     "@odata.etag": "W/\"2632435\"",
     "fullname": "Impersonated User",
-    "azureactivedirectoryobjectid": "e39c5d16-675b-48d1-8e67-667427e9c084",
-    "systemuserid": "75df116d-d9da-e711-a94b-000d3a34ed47",
-    "ownerid": "75df116d-d9da-e711-a94b-000d3a34ed47"
+    "azureactivedirectoryobjectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
+    "systemuserid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+    "ownerid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
   },
   "createdonbehalfby": {
     "@odata.etag": "W/\"2632445\"",
     "fullname": "Actual User",
-    "azureactivedirectoryobjectid": "3d8bed3e-79a3-47c8-80cf-269869b2e9f0",
-    "systemuserid": "278742b0-1e61-4fb5-84ef-c7de308c19e2",
-    "ownerid": "278742b0-1e61-4fb5-84ef-c7de308c19e2"
+    "azureactivedirectoryobjectid": "bbbbbbbb-1111-2222-3333-cccccccccccc",
+    "systemuserid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+    "ownerid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
   },
   "owninguser": {
     "@odata.etag": "W/\"2632435\"",
     "fullname": "Impersonated User",
-    "azureactivedirectoryobjectid": "e39c5d16-675b-48d1-8e67-667427e9c084",
-    "systemuserid": "75df116d-d9da-e711-a94b-000d3a34ed47",
-    "ownerid": "75df116d-d9da-e711-a94b-000d3a34ed47"
+    "azureactivedirectoryobjectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
+    "systemuserid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+    "ownerid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
   }
 }
 ```  
