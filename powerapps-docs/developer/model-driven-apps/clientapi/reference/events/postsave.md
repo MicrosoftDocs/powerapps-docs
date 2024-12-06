@@ -1,8 +1,8 @@
 ---
 title: "PostSave Event (Client API reference) in model-driven apps"
 description: Information about PostSave event methods.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
