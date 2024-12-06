@@ -32,9 +32,12 @@ The *impersonator* needs the privilege **Act on Behalf of Another User** (`prvAc
 > [!NOTE]
 > Remember that users can be associated with more than one security role. Assigning the **Delegate** security role to a user will grant them the `prvActOnBehalfOfAnotherUser` privilege as well as the privileges provided by any other security roles associated with the user account.
 
-The actual set of privileges that is used to modify data is the intersection of the privileges that the *impersonator* user possesses with that of the *impersonated user*. 
+The actual set of privileges that is used to modify data is the intersection of the privileges that the *impersonator* user possesses with that of the *impersonated user*.
 
 In other words, the *impersonator* is allowed to do something *if and only if* the *impersonator* and the *impersonated user* have the privilege necessary for the action.
+
+> [!NOTE]
+> Intersection of privileges donot apply to field level security. The *impersonated user's* field level security will be honored.
 
 ### Direct assignment required
 
