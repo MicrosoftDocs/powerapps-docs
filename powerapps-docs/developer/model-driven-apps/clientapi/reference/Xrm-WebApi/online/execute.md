@@ -1,11 +1,10 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-author: lancedMicrosoft
-ms.author: lanced
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 12/08/2023
 ms.reviewer: jdaly
-
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 

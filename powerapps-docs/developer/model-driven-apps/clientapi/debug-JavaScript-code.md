@@ -4,8 +4,8 @@ description: "Explains how to debug JavaScript code for model-driven apps"
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 08/07/2024
 ms.reviewer: jdaly
 search.audienceType: 

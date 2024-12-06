@@ -1,8 +1,8 @@
 ---
 title: "openForm (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openForm method.
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 12/01/2022
 ms.reviewer: jdaly
 ms.topic: reference

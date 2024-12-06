@@ -1,8 +1,8 @@
 ---
 title: "control.setLabel (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.setLabel method.
-author: clromano
-ms.author: clromano
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # control.setLabel (Client API reference)
-
-
 
 Sets the label of the control.
 
@@ -29,7 +27,7 @@ All
 ## Parameter
 
 |Name|Type|Required|Description|
-|--|--|--|--|
+|----|----|----|----|
 |`label`|String|Yes|The new label of the control.|
 
 ### Related articles

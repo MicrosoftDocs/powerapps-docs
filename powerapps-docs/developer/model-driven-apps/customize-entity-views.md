@@ -281,7 +281,7 @@ function displayIconTooltip(rowData, userLCID) {
     var coldata = str.opportunityratingcode_Value;  
     var imgName = "";  
     var tooltip = "";  
-    switch (coldata) {  
+    switch (parseInt(coldata,10)) {
         case 1:  
             imgName = "new_Hot";  
             switch (userLCID) {  
