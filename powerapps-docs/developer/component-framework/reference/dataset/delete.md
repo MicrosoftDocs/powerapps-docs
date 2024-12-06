@@ -27,7 +27,7 @@ Canvas apps
 
 | Parameter Name | Type       | Required | description                 |
 | -------------- | ---------- | -------- | --------------------------- |
-| ids            | `string[]` | Yes      | Array of IDs to be deleted. |
+| `ids`          | `string[]` | Yes      | Array of IDs to be deleted. |
 
 ## Return value
 
