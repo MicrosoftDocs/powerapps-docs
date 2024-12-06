@@ -180,21 +180,21 @@ OutputSearchSuggest START
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9335eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Yvonne McKay (sample)
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9535eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: bbbbbbbb-1111-2222-3333-cccccccccccc
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Susanna Stubberod (sample)
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9735eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: cccccccc-2222-3333-4444-dddddddddddd
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Nancy Anderson (sample)
@@ -302,7 +302,7 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchsuggestResponse",
-  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9335eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9535eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9735eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
+  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"bbbbbbbb-1111-2222-3333-cccccccccccc\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"cccccccc-2222-3333-4444-dddddddddddd\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
 }
 ```
 
@@ -315,7 +315,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9335eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Yvonne McKay (sample)"
@@ -324,7 +324,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9535eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "bbbbbbbb-1111-2222-3333-cccccccccccc",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Susanna Stubberod (sample)"
@@ -333,7 +333,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9735eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "cccccccc-2222-3333-4444-dddddddddddd",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Nancy Anderson (sample)"

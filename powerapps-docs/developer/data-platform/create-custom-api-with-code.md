@@ -170,7 +170,7 @@ Content-Type: application/json
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a812-0022481d298f)
+OData-EntityId: [Organization URI]/api/data/v9.1/customapis(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ---

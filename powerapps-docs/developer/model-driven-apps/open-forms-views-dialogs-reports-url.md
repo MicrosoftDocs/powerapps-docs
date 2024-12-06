@@ -60,7 +60,7 @@ https://myorg.crm.dynamics.com/main.aspx?appid={AppModuleId}
 For example:
 
 ```
-https://myorg.crm.dynamics.com/main.aspx?appid=12fd1cf3-e06e-e911-a95f-000d3a13c42a
+https://myorg.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444
 ``` 
 
 
@@ -152,7 +152,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url="/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d"
+Url="/main.aspx?appid=11112222-bbbb-3333-cccc-4444dddd5555&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d"
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
