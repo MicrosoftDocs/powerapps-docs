@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2024
+ms.date: 12/6/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -42,7 +42,7 @@ One database pattern is to use triggers on tables. If a table has a trigger, the
 You can, however, directly access the table for query purposes, but to handle `Create`, `Update`, or `Delete` you must call a stored procedure.
 
 [!NOTE]
-> The SQL Server connector, like all of the connectors that work with relational data, assumes that tables have a primary key. A primary key is critical for finding specific records to update. If a SQL Server table does not have a primary key then the data will be treated as 'read-only.' If you have access and edit rights to the SQL Server table, consider adding an auto-generated key.
+> The SQL Server connector, like all of the connectors that work with relational data, assumes that tables have a primary key. A primary key is critical for finding specific records to update. If a SQL Server table doesn't have a primary key then the data will be treated as read-only. If you have access and edit rights to the SQL Server table, consider adding an auto-generated key.
 >
 
 ## Use a view
