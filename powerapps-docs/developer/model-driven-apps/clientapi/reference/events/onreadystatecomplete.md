@@ -1,5 +1,5 @@
 ---
-title: "IFRAME OnReadyStateComplete event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "IFRAME OnReadyStateComplete event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the OnReadyStateComplete event.
 author: sriharibs-msft
 ms.author: srihas

@@ -1,5 +1,5 @@
 ---
-title: "deleteRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "deleteRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the deleteRecord method.
 author: lancedMicrosoft
 ms.author: lanced

@@ -1,8 +1,8 @@
 ---
-title: "getFormat (Client API reference)| MicrosoftDocs"
+title: "getFormat (Client API reference)"
 description: Includes description and supported parameters for the getFormat method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getFormat (Client API reference)
-
-
 
 Returns a string value that represents formatting options for the column. 
 

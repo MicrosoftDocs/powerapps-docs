@@ -1,8 +1,8 @@
 ---
-title: "getSteps (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSteps (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSteps method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getSteps (Client API reference)
-
-
 
 [!INCLUDE[./includes/getSteps-description.md](./includes/getSteps-description.md)]
 
@@ -31,7 +29,5 @@ contributors:
 ### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

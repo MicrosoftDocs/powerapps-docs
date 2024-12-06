@@ -1,8 +1,8 @@
 ---
-title: "Client API form context in model-driven apps| MicrosoftDocs"
+title: "Client API form context in model-driven apps"
 description: The Client API form context provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: "conceptual"
@@ -83,8 +83,8 @@ More information: [formContext.data](reference/formContext-data.md)
 
 Provides methods to retrieve information about the user interface, in addition to collections for several sub components of the form or grid. Contains the following objects:
 
-| Object          | Description|
-|-----------------|----------------|
+| Object| Description|
+|----|----|
 |`formSelector`|Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
 |`navigation`|Doesn't contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
 |`process`|Provides methods to interact with the business process flow control on a form.|
@@ -96,8 +96,8 @@ More information: [formContext.ui](reference/formContext-ui.md)
 The following table describes the collections in **Xrm** object model. For
 information about the methods available for collections in general, see [Collections (Client API reference)](reference/collections.md).
 
-|Collection                              | Description|
-|----------------------------------------|----------------|
+|Collection| Description|
+|----|----|
 | [attributes](reference/attributes.md)  | Two objects contain a column collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-table bound columns.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each table column that is available on the form. Only those columns added to the form are available.| 
 | [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because a column might have more than one control on the form, this collection provides access to each of them. This collection contains only one item unless multiple controls for the column are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|
 |**formContext.data.process.**[stages](reference/formContext-data-process/process/getStages.md) and **formContext.data.process**.[steps](reference/formContext-data-process/stage/getSteps.md)| Provides access to stages and steps collection in a business process flow. These also allow for adding and removing of items from the collection.|

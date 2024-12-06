@@ -2,7 +2,7 @@
 title: "Use of Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
-ms.date: 01/23/2023
+ms.date: 12/04/2024
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -33,6 +33,9 @@ workflow activities, or on-premises/IFD service connections.
   - When using the `CrmServiceClient` or `ServiceClient` class with a connection string:
 
     `connectionString="AuthType=Office365; Username=jsmith\@contoso.onmicrosoft.com;Password=passcode;Url=https://contoso.crm.dynamics.com"`
+
+    Read the following important information about using a connection string in application code.
+    [!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
   - When using the `OrganizationServiceProxy` class constructors:
 

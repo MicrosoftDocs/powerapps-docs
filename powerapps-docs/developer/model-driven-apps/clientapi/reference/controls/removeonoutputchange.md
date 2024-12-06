@@ -1,8 +1,8 @@
 ---
-title: "removeOnOutputChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnOutputChange (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.removeOnOutputChange method.
-ms.author: noazarur
-author: noazarur-microsoft
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/17/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -30,14 +30,11 @@ control.removeOnOutputChange(myFunction);
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
+|----|----|----|----|
 |`myFunction` |Function |Yes|The function to remove from the **OnOutputChange** event.| 
 
 ### Related articles
 
 [addOnOutputChange](addonoutputchange.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
