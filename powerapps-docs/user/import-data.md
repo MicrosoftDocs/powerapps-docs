@@ -160,9 +160,9 @@ In the last step of the import wizard, select **Track Progress** to view the pro
 
 :::image type="content" source="media/track-progress.png" alt-text="Screenshot of the last step in the import wizard.":::
 
-If you missed this step, append the following code to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=11112222-bbbb-3333-cccc-4444dddd5555&viewType=1039`.
+If you missed this step, append the following code to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
 
-For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444`, then the URL to view the import log is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&newWindow=true&pagetype=entitylist&etn=importfile&viewid=11112222-bbbb-3333-cccc-4444dddd5555&viewType=1039`.
+For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444`, then the URL to view the import log is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
 
 
 ### View the status of an import, and correct errors
