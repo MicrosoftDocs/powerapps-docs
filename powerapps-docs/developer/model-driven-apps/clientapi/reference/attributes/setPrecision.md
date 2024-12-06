@@ -1,8 +1,8 @@
 ---
-title: "setPrecision (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setPrecision (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setPrecision method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # setPrecision (Client API reference)
-
-
 
 Sets the number of digits allowed to the right of the decimal point. 
 
@@ -36,7 +34,5 @@ Money, decimal, double, and integer
 ### Related articles
 
 [getPrecision](getPrecision.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

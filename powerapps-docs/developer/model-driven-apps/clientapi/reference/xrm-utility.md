@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
+title: "Xrm.Utility (Client API reference)"
 description: Provides container for useful methods.
 author: adrianorth
 ms.author: aorth

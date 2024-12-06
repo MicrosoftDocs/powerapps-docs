@@ -1,5 +1,5 @@
 ---
-title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getGlobalContext.organizationSettings method.
 author: adrianorth
 ms.author: aorth

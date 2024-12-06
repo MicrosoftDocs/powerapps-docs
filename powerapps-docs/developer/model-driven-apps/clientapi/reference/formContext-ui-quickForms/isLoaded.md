@@ -1,8 +1,8 @@
 ---
-title: "isLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isLoaded (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isLoaded method.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: reference

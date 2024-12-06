@@ -1,5 +1,5 @@
 ---
-title: "getBarcodeValue| MicrosoftDocs"
+title: "getBarcodeValue"
 description: Includes description and supported parameters for the getBarCodeValue method.
 author: adrianorth
 ms.author: aorth

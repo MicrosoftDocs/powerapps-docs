@@ -1,5 +1,5 @@
 ---
-title: "getEntityMainFormDescriptor (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEntityMainFormDescriptor (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getEntityMainFormDescriptor method.
 author: HemantGaur
 ms.author: hemantg
