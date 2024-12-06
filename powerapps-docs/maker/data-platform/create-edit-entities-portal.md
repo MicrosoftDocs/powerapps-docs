@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 11/22/2024
+ms.date: 12/06/2024
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -52,16 +52,17 @@ Use the table visual designer experience where you create tables, configure tabl
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
 > [!NOTE]
-> The table visual designer currently only supports creating new tables. You can't edit existing tables using the experience.
+> The table visual designer currently only supports creating and editing tables. You can add existing tables to the designer, but existing tables will be in read-only mode and can only be edited in a new tab.
 
 1. Command bar:
 
    - **Back**. Takes you back where you were in Power Apps.
    - **New table**. Create a new table using any of the methods described in this article.
+   - **Existing table**. Add one more more existing tables and visualize them in the designer.
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
       (NOTE: many-to-many relationships aren't supported)
-   - **Delete**. Deletes the table and all associated table rows.
+   - **Delete**. Deletes the table and all associated table rows. <!-- START HERE -->
 2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
 3. Table visual designer canvas actions:
    - **+**. Zoom in to increase the size of the table objects on the canvas.
