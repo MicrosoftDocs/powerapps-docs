@@ -21,6 +21,7 @@ The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endp
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
+To prevent data exfiltration, turn on the [user level access control for TDS endpoint](https://learn.microsoft.com/power-platform/admin/control-tds-settings#enable-user-level-control) and assign a least privilege security role with data access permission to only the tables that your users need to access and grant the **Allow user to access TDS endpoint** miscellaneous privilege.
 
 ## Applications support
 
