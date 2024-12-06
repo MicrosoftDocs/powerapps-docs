@@ -75,7 +75,7 @@ OData-Version: 4.0
   "revenue": 5000000.0,
   "telephone1": "555-0000",
   "description": "Parent company of Contoso Pharmaceuticals, etc.",
-  "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
   "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
 }
 ```
@@ -91,7 +91,7 @@ Created and retrieved the initial account, shown below:
   "revenue": 5000000.0,
   "telephone1": "555-0000",
   "description": "Parent company of Contoso Pharmaceuticals, etc.",
-  "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
   "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
 }
 ```
@@ -107,7 +107,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    If-None-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -134,7 +134,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    **Request:**
 
    ```http
-   PUT [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)/telephone1 HTTP/1.1
+   PUT [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/telephone1 HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -161,7 +161,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    If-None-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -182,7 +182,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    "revenue": 5000000.0,
    "telephone1": "555-0001",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -199,7 +199,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    "revenue": 5000000.0,
    "telephone1": "555-0001",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```  
@@ -215,7 +215,7 @@ This section of the program demonstrates how to perform conditional delete and u
    **Request:**
 
    ```http
-   DELETE [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -250,7 +250,7 @@ This section of the program demonstrates how to perform conditional delete and u
    **Request:**
 
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -290,7 +290,7 @@ This section of the program demonstrates how to perform conditional delete and u
    **Request:**
 
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965025"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -308,7 +308,7 @@ This section of the program demonstrates how to perform conditional delete and u
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
    
    **Console output:**  
@@ -324,7 +324,7 @@ This section of the program demonstrates how to perform conditional delete and u
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -345,7 +345,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "revenue": 6000000.0,
    "telephone1": "555-0003",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -361,7 +361,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "revenue": 6000000.0,
    "telephone1": "555-0003",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -384,7 +384,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 115
 
-DELETE /api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+DELETE /api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 
 
 --batch_98e0fdc2-a298-4f42-85a8-da0536140b78--
