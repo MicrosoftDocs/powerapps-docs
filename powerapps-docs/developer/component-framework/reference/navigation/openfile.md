@@ -1,8 +1,8 @@
 ---
 title: openFile (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a file.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 08/22/2022
 ms.reviewer: jdaly
 ms.topic: reference

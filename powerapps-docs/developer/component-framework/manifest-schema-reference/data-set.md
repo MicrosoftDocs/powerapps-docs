@@ -1,8 +1,8 @@
 ---
 title: DataSet Element | Microsoft Docs
 description: The data-set node in the component manifest represents a specific, configurable representation of a set of table records.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

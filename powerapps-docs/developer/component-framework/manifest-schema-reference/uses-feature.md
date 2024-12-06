@@ -1,8 +1,8 @@
 ---
 title: uses-feature | Microsoft Docs
 description: Indicates which feature their components want to use.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
