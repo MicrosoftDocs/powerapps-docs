@@ -55,13 +55,13 @@ External usage enabled for multiple domains.
 
 ## Example 3
 
-External usage is not enabled.
+External usage isn't enabled.
 
 ```xml
 <external-service-usage enabled="false" />
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
