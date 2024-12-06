@@ -107,7 +107,7 @@ A tenant admin must run the following PowerShell commands:
 
 ```Powershell
  Connect-AzureAD -TenantId <target tenant id>
- New-AzureADServicePrincipal -AppId "00001111-aaaa-2222-bbbb-3333cccc4444" -DisplayName "Azure API Connections"
+ New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
 ```
 
 Example successful output:
@@ -118,9 +118,9 @@ Example successful output:
   
 For each custom connector where consent is expected to be suppressed, authorize "Microsoft’s Azure API Connections" service principal to one of the scopes defined in your app.
 
-The owner of the Microsoft Entra custom application used by a custom connector must add the app ID “00001111-aaaa-2222-bbbb-3333cccc4444” to one of the application scopes. Any scope can be created and used for single-sign-on to succeed.
+The owner of the Microsoft Entra custom application used by a custom connector must add the app ID “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes. Any scope can be created and used for single-sign-on to succeed.
 
-To set the scope using Azure portal, go to [Azure portal](https://portal.azure.com) > Microsoft Entra ID > App Registrations > Select the relevant app > Expose an API > Add a client application > Add the app ID “00001111-aaaa-2222-bbbb-3333cccc4444” to one of the application scopes.
+To set the scope using Azure portal, go to [Azure portal](https://portal.azure.com) > Microsoft Entra ID > App Registrations > Select the relevant app > Expose an API > Add a client application > Add the app ID “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes.
 
 ![Preauthorize Azure API connections to custom API 1](./media/add-manage-connections/custom_connector_oauth_preauthorize_1.png)
   
