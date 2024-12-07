@@ -4,9 +4,9 @@ description: "Learn how to query Microsoft Dataverse table data using SQL." # 11
 ms.date: 12/06/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "RichdiMSFT" # GitHub ID
+author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "richdi" # MSFT alias of Microsoft employees only
+ms.author: "gned" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
