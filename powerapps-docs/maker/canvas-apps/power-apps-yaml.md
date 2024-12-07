@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-You can use the source code for a canvas app to review changes made my makers in Power Apps Studio. The generated canvas app YAML code is read-only and shouldn't be modified. Any change in the file will be ignored and can be lost.
+You can use the source code for a canvas app to review changes made by makers in Power Apps Studio. The generated canvas app YAML code is read-only and shouldn't be modified. Any change in the file will be ignored and can be lost.
 
 Currently, we don't recommended that you modify **pa.yaml** files or create canvas apps using other text editors. However, more scenarios will be supported in the future.
 
@@ -90,7 +90,7 @@ Only ***.pa.yaml** files within the **\src** folder can be used as source code. 
 
 Microsoft Power Fx utilizes a grammar for expressions that is based on Excel and well-established. However, when using Power Apps and other hosts that rely on UI for formula binding, there's no standardized method for editing formula bindings as text.
 
-We choose [YAML](https://yaml.org/spec/1.2/spec.html)  as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
+We choose [YAML](https://yaml.org/spec/1.2/spec.html) as the industry standard language for formula binding. YAML has a wide array of editors, tools, and libraries available for working with it.
 
 > [!NOTE]
 > Currently, we only support a limited subset of YAML. Only the constructs outlined in this article are supported. More information: [Power Fx YAML formula grammar](/power-platform/power-fx/yaml-formula-grammar).
