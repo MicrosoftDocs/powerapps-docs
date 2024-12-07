@@ -343,7 +343,7 @@ If you are connecting using a client secret and using the <xref:Microsoft.Xrm.To
 
 ```csharp
 string SecretID = "00000000-0000-0000-0000-000000000000";
-string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string AppID = "00001111-aaaa-2222-bbbb-3333cccc4444";
 string InstanceUri = "https://yourorg.crm.dynamics.com";
 
 string ConnectionStr = $@"AuthType=ClientSecret;
@@ -367,7 +367,7 @@ If you are connecting using a certificate and using the <xref:Microsoft.Xrm.Tool
 
 ```csharp
 string CertThumbPrintId = "DC6C689022C905EA5F812B51F1574ED10F256FF6";
-string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string AppID = "00001111-aaaa-2222-bbbb-3333cccc4444";
 string InstanceUri = "https://yourorg.crm.dynamics.com";
 
 string ConnectionStr = $@"AuthType=Certificate;

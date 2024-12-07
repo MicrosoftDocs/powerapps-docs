@@ -1,8 +1,8 @@
 ---
 title: Customized editable grid  | Microsoft Docs
 description: "This sample demonstrates how to customize the editable grid control"
-ms.author: jasongre
-author: jasongre
+author: clromano
+ms.author: clromano
 ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: sample

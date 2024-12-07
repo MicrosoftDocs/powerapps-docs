@@ -1,8 +1,8 @@
 ---
 title: getWeekOfYear (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the ISO week number of the year for a given date. Range is from 1-53.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

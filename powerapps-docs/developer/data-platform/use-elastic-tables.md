@@ -266,7 +266,7 @@ Accept: application/json
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: 240:8#144035050#7=-1
-OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
@@ -360,7 +360,7 @@ If-Match: *
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=21d455f2-70f3-ed11-8848-000d3a993550,partitionid='deviceid-001')
+OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=11bb11bb-cc22-dd33-ee44-55ff55ff55ff,partitionid='deviceid-001')
 x-ms-session-token: 240:8#144035978#7=-1
 ```
 

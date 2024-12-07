@@ -1,8 +1,8 @@
 ---
 title: isValid (Power Apps component framework API reference) | Microsoft Docs
 description: Whether this record is valid.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
