@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2024
+ms.date: 12/6/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -17,6 +17,8 @@ contributors:
 ---
 
 # Access data in SQL Server
+
+## Add a data source
 
 **Direct access**:
 
@@ -32,15 +34,18 @@ Search([@'[dbo].[BOOKLENDING]'], SearchInput1.Text, author, author,book_name,cat
 
 A common professional data access pattern is to use views and then stored procedures for create, update, and delete rather than allow direct access. If you want to use views or stored procedures, you must change the example formula. Similarly, the form for the record doesn't use the built-in direct approach of the `SubmitForm()` formula either.
 
+
 **Triggers**:
 
 One database pattern is to use triggers on tables. If a table has a trigger, then you can't use the direct pattern `Submit()` for create, update, and delete. `Submit()` has a conflict between the handling of SQL triggers and the built-in Power Apps behavior, which uses the same output parameter.
 
 You can, however, directly access the table for query purposes, but to handle `Create`, `Update`, or `Delete` you must call a stored procedure.
 
-## Add a data source
+[!NOTE]
+> The SQL Server connector, like all of the connectors that work with relational data, assumes that tables have a primary key. A primary key is critical for finding specific records to update. If a SQL Server table doesn't have a primary key then the data will be treated as read-only. If you have access and edit rights to the SQL Server table, consider adding an auto-generated key.
+>
 
-### Use a view
+## Use a view
 
 A *view* is a saved query that displays as a single table of data.
 
@@ -65,7 +70,7 @@ BOOKLENDINGVIEW
 
 You can also replace other create, update, and delete formulas with a view data source and stored procedure calls.  
 
-### Use stored procedures
+## Use stored procedures
 
 When you add a SQL Server connection to your app, you can add stored procedures and call them directly in Power Fx.
 
@@ -97,7 +102,7 @@ If you check a stored procedure as safe, you can assign your stored procedure as
 >
 > The structure of the results also need to be static. For example, if the schema of the results are *dynamic*, then results are untyped and you must provide a type in order to use them in Power Apps. For more information, see [Untyped results](sql-connection-view-results.md#untyped-results).
 
-#### SQL namespace prepended to stored procedure name
+### SQL namespace prepended to stored procedure name
 
 The SQL Server namespace name, where you store the procedure, is prepended to the stored procedure name. For example, all stored procedures in the **'DBO'** SQL Server namespace have **'dbo'** at the start of the name.
 
@@ -125,7 +130,7 @@ Here's an example of what stored procedures could look like when assigning them 
 
 :::image type="content" source="media/sql-connection/stored-procedures.png" alt-text="Screenshot that shows how to call stored procedures directly using key/value pairs and dot notation.":::
 
-## Variables and all stored procedures
+### Variables and all stored procedures
 
 You can access a stored procedure for the **Items** property of a gallery after you declare it safe for the UI. Reference the data source name and the name of the stored procedure followed by `ResultSets`. You can access multiple results by referencing the set of tables returned such as Table 1, Table 2, etc.
 
@@ -165,7 +170,7 @@ Paruntimedb.dbonewlibrarybook({
 Set(SP_Books, Paruntimedb.dbospshowalllibrarybooks().ResultSets.Table1);
 ```
 
-## Use Power Automate to call stored procedures
+### Use Power Automate to call stored procedures
 
 Power Automate handles asynchronous actions best. You can call stored procedures as part of a series of calls in a business process.
 

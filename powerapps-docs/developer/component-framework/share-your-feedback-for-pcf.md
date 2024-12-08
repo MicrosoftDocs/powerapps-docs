@@ -1,8 +1,8 @@
 ---
 title: Share your feedback for Power Apps component framework  | Microsoft Docs
 description: Capabilities and limitations for canvas apps
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
