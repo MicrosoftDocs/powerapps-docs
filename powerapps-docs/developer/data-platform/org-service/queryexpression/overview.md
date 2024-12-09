@@ -74,7 +74,7 @@ Examples in this documentation will use a combination of object initialization a
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount). Without setting the `TopCount` property, Dataverse returns up to 5,000 rows.
+To limit the number of rows returned, use the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount). Without setting the `TopCount` property, Dataverse returns up to 5,000 rows for standard tables, 500 for elastic tables.
 
 Alternatively, specify a number of records to return using paging. Don't use the `TopCount` property when you request pages of data. [Learn how to request paged results](page-results.md)
 

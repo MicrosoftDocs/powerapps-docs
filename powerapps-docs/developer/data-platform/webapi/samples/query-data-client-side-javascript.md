@@ -494,12 +494,12 @@ Sdk.startSample = function () {
         // 1) Get a count of a collection without the data.
         // 2) Get a count along with the data.
         // HINT: Use count together with the "odata.maxpagesize" to calculate the number of pages in the query.
-        // NOTE: CRM has a max record limit of 5000 records per response.
+        // NOTE: CRM has a max record limit of 5,000 records per response.
         console.log("\n-- Result Count --");
         return Sdk.request("GET", "/contacts/$count"); // Count is returned in response body.
     })
     .then(function (request) {
-        console.log("The contacts collection has %s contacts.", request.response); // Count maximum is 5000.
+        console.log("The contacts collection has %s contacts.", request.response); // Count maximum is 5,000.
 
         // 2) Get filtered result with a count
         var filter = "&$filter=contains(jobtitle,'senior') or contains(jobtitle, 'manager')&$count=true";

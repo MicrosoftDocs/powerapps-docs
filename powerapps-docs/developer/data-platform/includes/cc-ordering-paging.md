@@ -68,7 +68,7 @@ Because this query orders unique column values, the order is consistent.
 > [!NOTE]
 > When possible, queries should order on the primary key for the table because Dataverse is optimized for ordering on the primary key by default. Ordering by non-unique or complex fields cause excess overhead and slower queries.
 
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data, you need to page the results. The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5,000 rows of data ([500 for elastic tables](../use-elastic-tables.md#query-rows-of-an-elastic-table)), you need to page the results. The choices you make in determining the order of the results can determine whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent the same record from appearing in more than one page, apply the following best practices:
 

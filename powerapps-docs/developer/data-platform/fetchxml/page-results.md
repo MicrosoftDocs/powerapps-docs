@@ -110,7 +110,7 @@ After each request, the method checks the [EntityCollection.MoreRecords property
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
 /// <param name="fetchXml">The fetchXml Query string</param>
-/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <param name="pageSize">The page size to use. Default is 5,000</param>
 /// <returns>All the records that match the criteria</returns>
 static EntityCollection RetrieveAll(IOrganizationService service, string fetchXml, int pageSize = 5000)
 {
@@ -424,7 +424,7 @@ When using C# with [HttpClient](xref:System.Net.Http.HttpClient), the following 
 /// <param name="client">The authenticated HttpClient instance.</param>
 /// <param name="entitySetName">The EntitySetName for the table used in the fetchXml</param>
 /// <param name="fetchXml">The FetchXml query string</param>
-/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <param name="pageSize">The page size to use. Default is 5,000</param>
 /// <returns>All the records that match the criteria</returns>
 /// <exception cref="Exception"></exception>
 static async Task<List<JsonObject>> RetrieveAll(HttpClient client, 

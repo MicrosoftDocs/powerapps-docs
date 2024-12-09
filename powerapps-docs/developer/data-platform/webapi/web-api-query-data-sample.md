@@ -1125,7 +1125,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ## Section 4: Limit and count results
 
-As a best practice, don't return more data than you need. To protect performance, the server returns a maximum of 5,000 table rows per request.
+As a best practice, don't return more data than you need. To protect performance, the server returns a maximum of 5,000 standard table rows per request, or 500 rows for elastic tables.
 
 To limit the number of results returned, [use the `$top` query option](query/overview.md#limit-the-number-of-rows) or add [`odata.maxpagesize`](#bkmk_filterPagination) in the request header. The `$top` query option returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows to return per page with an `@odata.nextLink` property to get the results of the next page. [Learn more about page results](query/page-results.md).
   
@@ -1238,7 +1238,7 @@ Contacts top 5 results:
 
 ### Collection count
 
-If you just want the number of records in a collection, append `/$count` to the collection URL. The maximum value is 5,000.
+If you just want the number of records in a collection, append `/$count` to the collection URL. The maximum value is 5,000 for standard tables, 500 for elastic tables.
 
 **Request:**
 
@@ -1269,7 +1269,7 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns 5,000 as the maximum count even if the result may have more.
+You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns a maximum count even if the result may have more. For standard tables the maximum count is 5,000, 500 for elastic tables.
 
 In this example, we build a filter where `jobtitle` contains either `Senior` or `Manager` and we also request a `$count` of the result. The response contains the count in the `@odata.count` property along with the results of the query.
   

@@ -713,9 +713,9 @@ The app uses a flow to send notifications to end users whenever there is a new c
   If this occurs, please open the card with the unauthorized connection and reauthorize.
 
 
-### Optional: Sending notifications to more than 5000 users
+### Optional: Sending notifications to more than 5,000 users
 
-The current **Get group members** action is limited to pulling 5000 users for the Office license of Power Automate. Even for the premium license, you may hit throttling limits with the Teams connector if you try to send notifications to too many users. To distribute to more users, you can alter to the flow to send an email to a distribution list instead.
+The current **Get group members** action is limited to pulling 5,000 users for the Office license of Power Automate. Even for the premium license, you may hit throttling limits with the Teams connector if you try to send notifications to too many users. To distribute to more users, you can alter to the flow to send an email to a distribution list instead.
 
 1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
 
