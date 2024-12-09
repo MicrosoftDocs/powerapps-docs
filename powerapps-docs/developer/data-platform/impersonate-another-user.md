@@ -1,7 +1,7 @@
 ---
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 12/09/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: MicroSri
@@ -37,7 +37,7 @@ The actual set of privileges that is used to modify data is the intersection of 
 In other words, the *impersonator* is allowed to do something *if and only if* the *impersonator* and the *impersonated user* have the privilege necessary for the action.
 
 > [!NOTE]
-> Intersection of privileges donot apply to field level security. The *impersonated user's* field level security will be honored.
+> Intersection of privileges do not apply to field level security. The impersonated user's field level security will be honored.
 
 ### Direct assignment required
 
