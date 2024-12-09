@@ -24,6 +24,7 @@ You can customize the Teams experience by adding Power Apps model-driven apps to
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 > - Running model-driven apps on the Microsoft Teams mobile app is currently not supported.
+> - Opening or downloading file attachments in a model-driven app is not supported when the app is embedded in Teams as a tab.
 
 ## Embed a model-driven app
 
