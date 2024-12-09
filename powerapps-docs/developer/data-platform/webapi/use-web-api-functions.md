@@ -62,7 +62,7 @@ Certain functions require passing a reference to an existing record. For example
 When you pass a reference to an existing record, use the `@odata.id` annotation to the Uri for the record. For example if you're using the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function you can use the following Uri to specify retrieving access to a specific contact record:  
   
 ```http
-GET [Organization URI]/api/data/v9.2/systemusers(af9b3cf6-f654-4cd9-97a6-cf9526662797)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@tid)?@tid={'@odata.id':'contacts(9f3162f6-804a-e611-80d1-00155d4333fa)'}
+GET [Organization URI]/api/data/v9.2/systemusers(af9b3cf6-f654-4cd9-97a6-cf9526662797)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@tid)?@tid={'@odata.id':'contacts(aaaabbbb-0000-cccc-1111-dddd2222eeee)'}
 ```  
   
 The `@odata.id` annotation can be either the full URI or a relative URI.
@@ -181,9 +181,9 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 {  
  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
- "BusinessUnitId": "ded5a64f-f06d-e511-80d0-00155db07cb1",  
- "UserId": "d96e9f55-f06d-e511-80d0-00155db07cb1",  
- "OrganizationId": "4faf1f34-f06d-e511-80d0-00155db07cb1"  
+ "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",  
+ "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",  
+ "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"  
 }  
 ```  
   

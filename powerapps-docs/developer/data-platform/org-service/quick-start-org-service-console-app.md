@@ -113,7 +113,7 @@ Read the following important information about using a connection string or user
 Press **F5** to run the program. The output should look something like this:
 
 ```console
-User ID is 969effb0-98ae-478c-b547-53a2968c2e75
+User ID is 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 Press any key to exit.
 ```
 
@@ -164,9 +164,9 @@ To see and understand the `IOrganizationService` interface a little better, try 
 1. Run the sample again and you should see something like:
 
    ```console
-   OrganizationId:883278f5-07af-45eb-a0bc-3fea67caa544
-   BusinessUnitId:38e0dbe4-131b-e111-ba7e-78e7d1620f5e
-   UserId:4026be43-6b69-e111-8f65-78e7d1620f5e
+   OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+   BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+   UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    Press the <Enter> key to exit.
    ```
 
