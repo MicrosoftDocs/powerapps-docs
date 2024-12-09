@@ -4,7 +4,7 @@ description: Learn how to turn on Copilot chat in model-driven apps to help app 
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
-ms.author: kaagar
+ms.author: yogupt
 ms.reviewer: matp
 ms.date: 12/05/2024
 ms.topic: how-to
@@ -14,7 +14,6 @@ search.audienceType:
   - maker
 contributors:
   - makolomi
-  - Kavishi
 ms.collection: bap-ai-copilot
 ---
 
