@@ -1,9 +1,8 @@
 ---
 title: "Webpage (HTML) Web Resources (model-driven apps)"
 description: "This topic covers how to implement HTML web resources and its capabilities and limitations"
-author: sriharibs-msft
-ms.author: srihas
-
+author: anushisharma
+ms.author: anushikhas96
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -28,7 +27,7 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 
 ## Limitations of HTML web resources  
 
-- An HTML web resource can’t contain any code that must be executed on the server. ASP.NET pages can’t be uploaded as HTML web resources.
+- An HTML web resource can't contain any code that must be executed on the server. ASP.NET pages can't be uploaded as HTML web resources.
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
 
@@ -71,13 +70,13 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 
 ## Prevent editing of web resources for managed solutions
 
-Because of the capability for the HTML in web resources to be changed by using the text editor, it’s recommended that you use managed properties to set complex HTML web resources as not customizable for managed solutions. When viewing web resources in the solutions window, open the **Managed Properties** dialog box to set the **Customizable** property to `false`.  
+Because of the capability for the HTML in web resources to be changed by using the text editor, it's recommended that you use managed properties to set complex HTML web resources as not customizable for managed solutions. When viewing web resources in the solutions window, open the **Managed Properties** dialog box to set the **Customizable** property to `false`.  
 
 <a name="BKMK_ReferencingOtherWebResources"></a>
 
 ## Reference other web resources from an HTML web resource
 
- You can create a set of related files outside of Model Driven Apps that use any of the web resource file types. If you’re careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, you’ll find that the HTML web resource will maintain links to related CSS, XML, JScript, image, and Silverlight files that have been imported as web resources.  
+ You can create a set of related files outside of Model Driven Apps that use any of the web resource file types. If you're careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, you'll find that the HTML web resource will maintain links to related CSS, XML, JScript, image, and Silverlight files that have been imported as web resources.  
 
  For example, if you create a web application project that uses the following [folder]/file structure:  
 
@@ -91,7 +90,7 @@ Because of the capability for the HTML in web resources to be changed by using t
   
     -   script.js
   
- When you import these files as web resources, you can name where your solution publisher customization prefix is “new” in the following manner:  
+ When you import these files as web resources, you can name where your solution publisher customization prefix is "new" in the following manner:  
   
 -   `new_/page.htm`  
   
@@ -106,13 +105,13 @@ Because of the capability for the HTML in web resources to be changed by using t
 <link href="Styles/style.css" rel="stylesheet" type="text/css" />
 ```
 
- The solution publisher customization prefix becomes a virtual root folder for all the web resources in your solution. If you change your customization prefix, the relative paths within your HTML web resources won’t be changed.  
+ The solution publisher customization prefix becomes a virtual root folder for all the web resources in your solution. If you change your customization prefix, the relative paths within your HTML web resources won't be changed.  
   
 > [!NOTE]
->  - An HTML web resource added to a form can’t use global objects defined by the JavaScript library loaded in the form. An HTML web resource may interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts won’t be accessible using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they’re not dependent on scripts loaded in the form.  
-> - References included in code between web resources aren’t tracked as solution dependencies.  
+>  - An HTML web resource added to a form can't use global objects defined by the JavaScript library loaded in the form. An HTML web resource may interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts won't be accessible using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they're not dependent on scripts loaded in the form.  
+> - References included in code between web resources aren't tracked as solution dependencies.  
 
- Because web resources are also downloaded for users of Dynamics 365 for Microsoft Office Outlook with Offline Access, users will have access to web resource content while they’re working offline.  
+ Because web resources are also downloaded for users of Dynamics 365 for Microsoft Office Outlook with Offline Access, users will have access to web resource content while they're working offline.  
 
 <a name="BKMK_PassingParametersToWebResources"></a>
 
@@ -130,7 +129,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 |orglcid|Organization Language Code|The language code identifier that represents the base language for the organization.|
 |data|Optional Data Parameter|An optional value that may be passed.|
 |formid|Form Id|The GUID that represents a form ID.|
-|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for a table. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
+|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for a table. When enabled, the custom help URL will include a value of either "form" or "hierarchychart".|
 |pagemode||For internal use only.|
 |security||For internal use only.|
 |tabSet||For internal use only.|

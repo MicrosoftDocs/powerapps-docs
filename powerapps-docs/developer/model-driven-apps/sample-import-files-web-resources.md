@@ -1,9 +1,8 @@
 ---
 title: "Sample: Import files as web resources(model-driven apps)"
 description: "The sample provides a simplified example of importing files as web resources."
-author: JimDaly
-ms.author: jdaly
-
+author: anushisharma
+ms.author: anushikhas96
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -41,7 +40,7 @@ The sample code included in the SDK download package includes the following file
   > [!NOTE]
   >
   > - Each of these names begin with an underscore character. The customization prefix of the solution publisher will be prepended to the name when the Web resource is created. Rather than hard-coding a specific customization prefix, this sample will detect the current customization prefix for a publisher record that may already exist in the organization.
-  >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash “/” characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.
+  >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash "/" characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.
 
 - **type:** Specifies the type of Web Resource to create using the integer values found in [Web Resource Types](web-resources.md#BKMK_WebResourceTypes).
 
@@ -102,7 +101,7 @@ The ImportJob.xml file demonstrates how the data about the files being imported 
 
 The following portion of the ImportWebResources.cs file expects the following variables:
 
-- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.
+- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of "sample".
 - `_ImportWebResourcesSolutionUniqueName` : The unique name of the **Import Web Resources Sample Solution** created in this sample. The value is `ImportWebResourcesSample`.
 
 ```C#

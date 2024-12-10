@@ -1,9 +1,8 @@
 ---
 title: "String (RESX) web resources (model-driven apps)"
 description: "Learn about using string web resources to make localized strings available for use"
-author: sriharibs-msft
-ms.author: srihas
-
+author: anushisharma
+ms.author: anushikhas96
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -29,12 +28,12 @@ When you create RESX web resources you must explicitly set the language value an
 > [!NOTE]
 > If you have multiple RESX web resources with the same name for multiple languages, ensure there is a localized string value for each resource key.
 
-The appropriate string value will be determined by the individual user’s language preference and the languages available in the organization. This is done in two steps.
+The appropriate string value will be determined by the individual user's language preference and the languages available in the organization. This is done in two steps.
 
-1. Determining the right RESX web resource: If there is a RESX web resource for user’s preferred language, that RESX will be used. If a RESX web resource for user’s preferred language is not found, then the RESX web resource for base language is chosen.
-2. Returning the string value: Within the chosen RESX web resource in Step 1, the string corresponding to the resource key is returned. If the RESX web resource that matches the user’s preferred language does not have the resource key, a null response is returned.
+1. Determining the right RESX web resource: If there is a RESX web resource for user's preferred language, that RESX will be used. If a RESX web resource for user's preferred language is not found, then the RESX web resource for base language is chosen.
+2. Returning the string value: Within the chosen RESX web resource in Step 1, the string corresponding to the resource key is returned. If the RESX web resource that matches the user's preferred language does not have the resource key, a null response is returned.
  
-For example, `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello")` will return the localized string value for the resource key hello within the `new_/strings/MyAppResources.1033.resx` web resource if the user’s preferred language is English. If the user’s preferred language is Spanish/Spain, then the localized string value for the resource key hello within the `new_/strings/MyAppResources.1034.resx` web resource is returned. If there is no resource key hello in `new_/strings/MyAppResources.1034.resx` web resource, then a null response is returned. You can see that the function doesn’t refer to any specific language or full name of any RESX web resource. This functionality depends on the RESX web resource being associated to the calling JavaScript web resource as a dependency. More information: [Web resource dependencies](web-resource-dependencies.md)
+For example, `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello")` will return the localized string value for the resource key hello within the `new_/strings/MyAppResources.1033.resx` web resource if the user's preferred language is English. If the user's preferred language is Spanish/Spain, then the localized string value for the resource key hello within the `new_/strings/MyAppResources.1034.resx` web resource is returned. If there is no resource key hello in `new_/strings/MyAppResources.1034.resx` web resource, then a null response is returned. You can see that the function doesn't refer to any specific language or full name of any RESX web resource. This functionality depends on the RESX web resource being associated to the calling JavaScript web resource as a dependency. More information: [Web resource dependencies](web-resource-dependencies.md)
 
 
 ### See also

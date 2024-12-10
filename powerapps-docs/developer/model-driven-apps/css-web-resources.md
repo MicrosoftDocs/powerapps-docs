@@ -1,8 +1,8 @@
 ---
 title: "CSS web resources (model-driven apps)"
 description: "Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources. "
-author: sriharibs-msft
-ms.author: srihas
+author: anushisharma
+ms.author: anushikhas96
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
