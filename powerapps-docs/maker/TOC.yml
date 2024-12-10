@@ -1721,7 +1721,7 @@
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Customize Copilot chat
+      - name: Customize Copilot chat (Preview)
         href: ./model-driven-apps/customize-copilot-chat.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
