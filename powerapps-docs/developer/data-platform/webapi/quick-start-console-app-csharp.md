@@ -198,7 +198,7 @@ Follow these next steps to add code for the main program.
 1. Look at the console application window. The output should look something like this:
 
    ```
-   Your user ID is 4026be43-6b69-e111-8f65-78e7d1620f5e
+   Your user ID is 22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    
    C:\Projects\webapi-quickstart\bin\Debug\net6.0\webapi-quickstart.exe (process 21524) exited with code 0.
    To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
