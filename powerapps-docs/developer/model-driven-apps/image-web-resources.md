@@ -1,8 +1,8 @@
 ---
 title: "Image web resources (model-driven apps)"
 description: "Learn about using image web resources to make images available for use."
-author: anushisharma
-ms.author: anushikhas96
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/26/2024
 ms.reviewer: jdaly
 ms.topic: article

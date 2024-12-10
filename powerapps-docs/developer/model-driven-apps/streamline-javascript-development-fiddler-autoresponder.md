@@ -1,8 +1,8 @@
 ---
 title: "Script web resource development using Fiddler AutoResponder (model-driven apps)"
 description: "Learn about how to setup and use AutoResponder in Fiddler for local debugging of JavaScript web resources."
-author: anushisharma
-ms.author: anushikhas96
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 12/04/2022
 ms.reviewer: jdaly
 ms.topic: article

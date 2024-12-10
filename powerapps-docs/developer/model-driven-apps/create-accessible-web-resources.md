@@ -1,8 +1,8 @@
 ---
 title: "Create accessible web resources (model-driven apps)"
 description: "The topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities."
-author: anushisharma
-ms.author: anushikhas96
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

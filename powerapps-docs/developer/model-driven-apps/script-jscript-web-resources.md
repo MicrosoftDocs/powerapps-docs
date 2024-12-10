@@ -1,8 +1,8 @@
 ---
 title: "JavaScript web resources (model-driven apps)"
 description: "Learn about using JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere."
-author: anushisharma
-ms.author: anushikhas96
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

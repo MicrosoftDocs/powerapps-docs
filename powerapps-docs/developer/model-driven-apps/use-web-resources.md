@@ -2,8 +2,8 @@
 title: Use web resources
 description: Learn how developers use web resources within model-driven apps.
 suite: powerapps
-author: anushisharma
-ms.author: anushikhas96
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 10/28/2024
 ms.reviewer: jdaly
 ms.topic: article
