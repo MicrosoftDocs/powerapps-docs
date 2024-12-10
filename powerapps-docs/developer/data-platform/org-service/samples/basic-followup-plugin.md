@@ -20,7 +20,7 @@ contributors:
 This sample shows how to write a simple plug-in that creates a follow-up activity.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create a basic plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin)
+> [SDK for .NET: Create a basic plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FollowupPlugin)
 
 ## How to run this sample
 

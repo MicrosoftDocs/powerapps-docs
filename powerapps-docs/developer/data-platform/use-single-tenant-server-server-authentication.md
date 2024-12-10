@@ -93,7 +93,7 @@ More information: [Activate or deactivate an application user](/power-platform/a
 
 Follow these steps to download, build, and execute the sample application. The sample calls the Web API to return a list of the top 3 accounts (by name) in the organization.
 
-1. Download the Visual Studio 2017 SingleTenantS2S [sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/SingleTenantS2S).
+1. Download the Visual Studio 2017 SingleTenantS2S [sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/SingleTenantS2S).
 2. Update the App.config file with your app registration and server key values.
 3. Build and run the application.
 

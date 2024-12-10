@@ -25,7 +25,7 @@ A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Mess
 must detect the type of query and implement the appropriate type of filter.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Modify query in PreOperation stage sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveMultipleAccountPreOperation)
+> [SDK for .NET: Modify query in PreOperation stage sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveMultipleAccountPreOperation)
 
 ## How to run this sample
 
