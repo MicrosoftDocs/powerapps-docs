@@ -1,8 +1,8 @@
 ---
 title: "Client API Xrm object for model-driven apps "
 description: "Describes the client API Xrm object"
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"

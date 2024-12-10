@@ -1,8 +1,8 @@
 ---
 title: "StandardControl.destroy (Power Apps component framework API reference) | MicrosoftDocs"
 description: This method is invoked when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
