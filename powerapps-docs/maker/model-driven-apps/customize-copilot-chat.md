@@ -40,7 +40,7 @@ You can add Copilot chat customizations using [Microsoft Copilot Studio](/micros
 
 > [!NOTE]
 >
-> This feature is only available in standalone model-driven apps and not in Dynamics 365 apps. Configure in copilot studio button will only be shown in app designer accordingly.
+> This feature is only available in standalone model-driven apps and is not supported in Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
 
 ## Bring your knowledge to Copilot chat
 
