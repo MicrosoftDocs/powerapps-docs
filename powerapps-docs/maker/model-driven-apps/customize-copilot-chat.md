@@ -28,6 +28,10 @@ Customize Copilot chat and make it even more intelligent and relevant for your o
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
+> [!NOTE]
+>
+> This feature is only available in standalone model-driven apps and is not supported in Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
+
 You can add Copilot chat customizations using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and enhance your chat copilot capabiltities beyond just app tables QnA and OOB skills.
 
 1. Open your model driven app in edit mode to start customizing your copilot chat. Make sure copilot chat is enabled for this environment.  
@@ -38,9 +42,6 @@ You can add Copilot chat customizations using [Microsoft Copilot Studio](/micros
 1. **Publish** your model-driven app after the Copilot is created for your app for the first time.
 1. **Publish** the copilot anytime you make customizations to the Copilot to make changes available to users.
 
-> [!NOTE]
->
-> This feature is only available in standalone model-driven apps and is not supported in Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
 
 ## Bring your knowledge to Copilot chat
 
