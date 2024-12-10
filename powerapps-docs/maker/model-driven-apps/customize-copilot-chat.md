@@ -32,15 +32,15 @@ Customize Copilot chat and make it even more intelligent and relevant for your o
 >
 > This feature is only available in standalone model-driven apps and is not supported in Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
 
-You can add Copilot chat customizations using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and enhance your chat copilot capabiltities beyond just app tables QnA and OOB skills.
+You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling Dataverse tables Q&A and out-of-the-box skills. Make sure [copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot?branch=pr-en-us-10663#enable-copilot-for-model-driven-apps-in-your-environment) for this environment.  
 
-1. Open your model driven app in edit mode to start customizing your copilot chat. Make sure [copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot?branch=pr-en-us-10663#enable-copilot-for-model-driven-apps-in-your-environment) for this environment.  
-1. Select **Configure in Copilot Studio**. Once you select it, you're taken to Microsoft Copilot Studio where your app’s copilot is set up. Note that every stand alone model-driven app has its own unique copilot instance available for customizations. Setting up the Copilot for the firt time takes only a few seconds. 
+1. Open your model driven app in edit mode to start customizing your copilot chat. 
+1. Select **Configure in Copilot Studio**. Once you select it, you're taken to Microsoft Copilot Studio where your app’s copilot is set up. Note that every standalone model-driven app has its own deidcated copilot available for customizations. Setting up the Copilot for the firt time takes only a few seconds. 
    :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer" lightbox="media/mda-command-copilot-studio.png":::
 1. Customize your copilot by adding [knowledge sources](#bring-your-knowledge-to-copilot-chat) or [topics](#add-new-ai-skills-to-copilot-chat) to extend the intelligence of your app’s copilot chat. Customizing this Copilot only impacts the Copilot chat of your app.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
 1. **Publish** your model-driven app after the Copilot is created for your app for the first time.
-1. **Publish** the copilot anytime you make customizations to the Copilot to make changes available to users.
+1. **Publish** the copilot whenever you make customizations to the Copilot to ensure changes available to users.
 
 
 ## Bring your knowledge to Copilot chat
