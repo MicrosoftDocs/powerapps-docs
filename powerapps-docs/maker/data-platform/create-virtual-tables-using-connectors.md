@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 10/28/2024
+ms.date: 12/10/2024
 ms.reviewer: matp
 ms.topic: article
 author: mkannapiran
@@ -210,10 +210,6 @@ To create a connection reference, when you're creating the connection for the vi
 ### Environment variable
 
 Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable. To take advantage of this functionality, expand **Advanced options**, and then select **Use environment variables** when choosing a connection for your data source during a virtual table create.
-
-> [!IMPORTANT]
->
-> - To enable this feature you must append `?powerappsEntities.enableEnvironmentVariablesForVirtualTables=true` to the URL when you create or update the virtual table.
 
 #### Environment variables with virtual tables recommendations
 
