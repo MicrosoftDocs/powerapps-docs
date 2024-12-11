@@ -39,19 +39,19 @@ Using the suggestion and/or the sentence the user provided for what the desired 
 **image 3**
 
 # Known Limitations
-We are unable to extract actions for apps if a data source connection was not found for some reason or a connection is not found. For these apps we will still proceed with creating the agent with the actions we can convert or none if we cannot convert any.  
+  - We are unable to extract actions for apps if a data source connection was not found for some reason or a connection is not found. For these apps we will still proceed with creating the agent with the actions we can convert or none if we cannot convert any.  
 
-We do not support the deprecated excel connector. However, we do support the following two excel connectors: 
+  - We do not support the deprecated excel connector. However, we do support the following two excel connectors: 
 
-  - https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/ 
+    - https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/ 
 
-  - https://learn.microsoft.com/en-us/connectors/excelonline/ 
+    - https://learn.microsoft.com/en-us/connectors/excelonline/ 
 
-Agent builder is only available in regions where MCS generative agents are available. 
+  - Agent builder is only available in regions where MCS generative agents are available. 
 
-This feature is only currently available for Power Apps canvas applications.  
+  - This feature is only currently available for Power Apps canvas applications.  
 
-This language currently supported is English (US). 
+  - This language currently supported is English (US). 
 
 #Provide Feedback
 
