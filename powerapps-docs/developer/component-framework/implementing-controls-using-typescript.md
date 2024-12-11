@@ -1,8 +1,8 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/06/2023
 ms.reviewer: jdaly
 ms.topic: article

@@ -114,7 +114,7 @@ var pageInput = {
     pageType: "entityrecord",
     entityName: "account",
     formType: 2,
-    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706" //replace with actual ID
+    entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" //replace with actual ID
 };
 var navigationOptions = {
     target: 2,

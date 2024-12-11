@@ -2,8 +2,8 @@
 title: Get tooling for Power Apps component framework | Microsoft Docs
 description: "Get Microsoft Power Platform CLI to create, debug, and deploy code components using Power Apps component framework."
 keywords: Power Apps component framework, code components, Component Framework
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article

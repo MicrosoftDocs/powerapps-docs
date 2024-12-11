@@ -4,8 +4,8 @@ description: "Explains how to debug JavaScript code for model-driven apps"
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 08/07/2024
 ms.reviewer: jdaly
 search.audienceType: 
@@ -51,7 +51,7 @@ If you select the **Show Details** link, you can find the details that include: 
 ```
 Xrm.Navigation.openalertDialog is not a function
 Session Id: 53febd7c-3388-4ea5-a195-d84cf5883c30
-Correlation Id: d154420e-5999-4250-b140-081f04a8e264
+Correlation Id: aaaa0000-bb11-2222-33cc-444444dddddd
 Event Name: onsave
 Function Name: Example.formOnSave
 Web Resource Name: example_example-form-script

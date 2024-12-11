@@ -1,8 +1,8 @@
 ---
 title: Event Element | Microsoft Docs
 description: Defines a Power FX expression that can be configured within Power Apps Studio, then triggered within the component code.
-ms.author: olidum
-author: OliverDumrique
+author: anuitz
+ms.author: anuitz
 ms.reviewer: jdaly
 ms.date: 11/20/2023
 ms.topic: reference
