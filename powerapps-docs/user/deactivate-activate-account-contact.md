@@ -30,7 +30,7 @@ If later you need to reactivate a deactivated account, it's easy to do so.
 2.  Select the active account or contact that you want to deactivate, on the command bar select **Deactivate**, and then confirm the deactivation.
 
     > [!div class="mx-imgBorder"]
-    > ![Deactivate an account in Power Apps.](media/DeactiveAccountsUpdated.png "Deactivate an account in Power Apps")
+    > ![Deactivate contact in Power Apps.](media/DeactiveContact.png "Deactivate contact in Power Apps")
 
 
 ## Activate an account or contact  
@@ -46,7 +46,7 @@ If later you need to reactivate a deactivated account, it's easy to do so.
 5.  Select **Activate**, and then confirm the activation.  
 
     > [!div class="mx-imgBorder"]
-    > ![Activate an account in Power Apps.](media/ActiveAccountsUpdated.png "Activate an account in Power Apps")  
+    > ![Activate contact in Power Apps.](media/ActivateContacts.png "Activate contact in Power Apps")  
 
 
 
