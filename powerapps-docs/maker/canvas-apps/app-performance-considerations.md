@@ -4,7 +4,7 @@ description: Other performance considerations for Power Apps
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 12/01/2023
+ms.date: 12/10/2024
 ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType:
@@ -75,13 +75,15 @@ The Excel connector allows a canvas app to connect to a table in an Excel file. 
 
 You can optionally preload your app to increase performance.
 
-1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. Select **More actions** (...) for the app you want to share, and then select **Settings**.
+2. On the left navigation pane, select **Apps**.
 
-3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load.
+3. Select the app and then select **Settings** on the command bar.
+
+4. In the **App settings** pance, set the **Preload app for enhanced performance** to **Yes**. The app will then pre-load.
  
-4. For the changes to take effect for apps embedded in Teams, remove and add your app into Teams again.
+5. For the changes to take effect for apps embedded in Teams, remove and add your app into Teams again.
 
     > [!NOTE]
     > This makes the compiled app assets accessible via unauthenticated endpoints to enable loading them before authentication. However, users can still only use your app to access data via connectors only after authentication and authorization completes. This behavior ensures that the data an app retrieves from data sources won’t be available to unauthorized users. Compiled app assets include a collection of JavaScript files containing text authored in app controls (such as PCF controls), media assets (such as images), the app name, and the environment URL the app resides in.
