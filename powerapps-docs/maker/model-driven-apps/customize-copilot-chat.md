@@ -47,7 +47,11 @@ You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copil
 
 Extend your app’s Copilot chat intelligence by adding additional knowledge in Copilot Studio. Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported. Learn how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot)
 
-For example, you could add a link to an external travel website to enable your Copilot chat to respond to questions related to travel news. Another example is to add your organization’s internal knowledge sources to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
+For example, you could add a link to an external website like Power Apps documentation to enable your Copilot chat to respond to questions related to Power Apps. Another example is to add your organization’s internal knowledge sources to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
+
+> [!NOTE]
+>
+> Copilot studio [Generative AI orchestraion](/microsoft-copilot-studio/advanced-generative-actions) is not supported currently. You can use classic orchestration topic whose trigger phrases match most closely the user's query for given skill. 
 
 ## Add new topics to Copilot chat
 
