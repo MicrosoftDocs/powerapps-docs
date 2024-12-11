@@ -39,15 +39,14 @@ You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copil
    :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer" lightbox="media/mda-command-copilot-studio.png":::
 1. Customize your copilot by adding [knowledge sources](#add-knowledge-to-copilot-chat) or [topics](#add-new-topic-to-copilot-chat) to extend the intelligence of your app’s copilot chat. Customizing this Copilot only impacts the Copilot chat of your app.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
-1. **Publish** your model-driven app after the Copilot is created for your app for the first time.
 1. **Publish** the copilot whenever you make customizations to the Copilot to ensure changes available to users.
 
 
 ## Add knowledge to Copilot chat
 
-Extend your app’s Copilot chat intelligence by adding additional knowledge in Copilot Studio. Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported. Learn how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot)
+You can extend your app’s Copilot chat intelligence by adding additional knowledge in Copilot Studio. For example, you could add a link to an external website like Power Apps documentation to enable your Copilot chat to respond to questions related to Power Apps. Another example is to add your organization’s internal knowledge sources to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
 
-For example, you could add a link to an external website like Power Apps documentation to enable your Copilot chat to respond to questions related to Power Apps. Another example is to add your organization’s internal knowledge sources to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
+Learn how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported.
 
 > [!NOTE]
 >
