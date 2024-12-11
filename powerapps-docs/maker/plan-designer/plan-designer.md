@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-In this article, you'll learn how to use the Plan designer, an AI-driven tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and Power Automate flows. Follow the steps in this article to create a business solution using the Plan designer and refine your requirements to achieve precise and customized outputs.
+In this article, you'll learn how to use the Plan designer, a copilot first development tool, to create comprehensive business solutions quickly and efficiently. By simply describing your business problem in natural language and providing relevant images, the Plan designer generates a complete Power Platform solution tailored to your needs. This includes Dataverse tables, canvas app, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution using the Plan designer and refine your requirements to achieve precise and customized outputs.
 
 Accessible from the Power Apps home page, the Plan designer guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -30,7 +30,6 @@ Accessible from the Power Apps home page, the Plan designer guides you through a
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - This capability is only available in the US region during preview. 
 
 ## Prerequisite
 
@@ -105,7 +104,7 @@ In this example, it generated two roles: Employee and Manager, along with their 
 
 ## Generate user experiences
 
-The Plan designer proposes a set of user experiences tailored to solve your business problem. For our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
+The Plan designer proposes a set of user experiences tailored to solve your business problem. In our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
 :::image type="content" source="media/pd-12-generate-user-exp.png" alt-text="Screenshot of the proposed user experiences in the Plan designer.":::
 
@@ -130,7 +129,7 @@ For canvas apps, you’ll see a preview of the canvas app with a welcome screen 
 - **Inline editing user roles and user stories**: Currently, you can't inline edit the content directly. All changes must be prompted in copilot first to regenerate iterations.
 - **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
 - **Add existing tables in Data workspace**: Adding existing tables in data workspace in the Plan designer isn't currently supported.
-- **Supported user experiences**: Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
+- **Supported user experiences**: Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows. 
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
 - **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
 
