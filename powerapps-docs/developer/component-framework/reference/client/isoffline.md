@@ -1,8 +1,8 @@
 ---
 title: isOffline (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the information whether the server is online or offline.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

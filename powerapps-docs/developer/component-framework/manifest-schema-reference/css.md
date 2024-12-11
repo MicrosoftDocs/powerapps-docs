@@ -1,8 +1,8 @@
 ---
 title: CSS Element | Microsoft Docs
 description: CSS describes how code components are to be displayed on UI.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
