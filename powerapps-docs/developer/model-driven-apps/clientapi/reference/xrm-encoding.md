@@ -1,8 +1,8 @@
 ---
 title: "Xrm.Encoding"
 description: "Xrm.Encoding provides Client API methods to encode and decode strings."
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

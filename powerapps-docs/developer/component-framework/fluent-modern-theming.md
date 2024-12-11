@@ -2,8 +2,8 @@
 title: "Style components with modern theming (preview) | Microsoft Docs"
 description: You can style your components based on the modern theme used in the app."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: hemantg
-author: HemantGaur
+author: jasongre
+ms.author: jasongre
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.custom:

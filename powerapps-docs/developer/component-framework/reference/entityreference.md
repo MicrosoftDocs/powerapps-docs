@@ -1,8 +1,8 @@
 ---
 title: EntityReference (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityReference in Power Apps component framework.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

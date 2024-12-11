@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 10/31/2024
+ms.date: 12/11/2024
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -98,6 +98,7 @@ If an environment variable is used in a flow and the display name of the environ
 - Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
 - To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
 - Environment variables are limited to a maximum of 2,000 characters.
+- Environment variables for SharePoint must have matching metadata. SharePoint has internal identifiers that might not match between target envronments. For example, if you simply create a list with the same name and columns in a target environment, the internal names will likely not match. The metadata always matches if you duplicate a SharePoint site and copy it to your target environment. 
 
 ## Frequently asked questions
 

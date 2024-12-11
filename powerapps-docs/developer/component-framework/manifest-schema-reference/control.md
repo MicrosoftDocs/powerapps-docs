@@ -1,8 +1,8 @@
 ---
 title: Control Element | Microsoft Docs
 description: Defines the component's namespace, version and display information.
-ms.author: hemantg
-author: HemantGaur
+ms.author: anuitz
+author: anuitz
 ms.date: 12/04/2023
 ms.reviewer: jdaly
 ms.topic: reference
