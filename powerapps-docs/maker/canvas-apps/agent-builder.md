@@ -40,7 +40,7 @@ Agent Builder lets you create an agent from an existing canvas app. It streamlin
 
     :::image type="content" source="media/agent-builder/ab-select-next-to-regenerate-instructions.png" alt-text="Select next to generate instructions":::
 
-    When you choose a suggestion, the text box will automatically fill in. You can edit and add more details about what you want the agent to do. To improve the agent's accuracy, use simple, everyday language and be specific, such as:
+    When you choose a suggestion, the text box is automatically filled in. You can edit and add more details about what you want the agent to do. To improve the agent's accuracy, use simple, everyday language and be specific, such as:
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
@@ -56,11 +56,11 @@ You can also revise the description to better represent the process you want to 
 
 When editing the instructions, follow these suggestions:
 
-- Use clear and specific wording in the instructions. For example, "Filter the claims data using the approval status" rather than "Filter the data".
+- Use clear and specific wording in the instructions. For example, "Filter the claims data using the approval status" rather than "Filter the data."
 
-- Verify the instructions to ensure their goal is met by the generated/modified instructions.
+- Verify the instructions to ensure they meet their goal.
 
-- Keep each of the sentences for the instructions relatively simple. If there are too many details and conditions in one of the sentences it might not work as intended.
+- Keep each of the sentences for the instructions relatively simple. If there are too many details and conditions in one of the sentences, it might not work as intended.
 
 - Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the whole instruction set, we suggest moving instructions in line to ensure a logical flow. For Example:
 
@@ -72,13 +72,13 @@ When editing the instructions, follow these suggestions:
 
     - Update the table with new status
 
-    - And if the amount is more than $50 but less than $500 check to see if it is an approved item
+    - And if the amount is more than $50 but less than $500 check to see if it's an approved item
 
     - Additionally if the amount is more than $500 update the status to manual review.
 
 ## Limitations
 
-- We can't extract actions for apps if a data source connection isn't found. For these apps, Agent Builder will still create the agent with the actions it can convert or none if it can't convert any.
+- We can't extract actions for apps if a data source connection isn't found. For these apps, Agent Builder still creates an agent with the actions it can convert or none if it can't convert any.
 
 - We don't support the deprecated Excel connector. However, we do support the following two Excel connectors:
 
@@ -93,7 +93,7 @@ When editing the instructions, follow these suggestions:
 
 ## Feedback
 
-Unless your admin has disabled the feedback feature, each step of Agent Builder includes a **Like** button (a "thumbs up" icon) and a **Dislike** button (a "thumbs down" icon). Use these icons to provide feedback on each response, helping us improve Agent Builder. Select the "thumbs up" or "thumbs down" icon as appropriate. Additionally, you can provide feedback in your own words about what you liked or didn't like about the response. When you're finished, select **Submit**.
+Unless feedback  is disabled by your admin, each step of Agent Builder includes a **Like** button (a "thumbs up" icon) and a **Dislike** button (a "thumbs down" icon). Use these icons to provide feedback on each response, helping us improve Agent Builder. Select the "thumbs up" or "thumbs down" icon as appropriate. Additionally, you can provide feedback in your own words about what you liked or didn't like about the response. When you're finished, select **Submit**.
 
 ## Related information
 
