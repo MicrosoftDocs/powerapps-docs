@@ -31,7 +31,7 @@ and in any choices that are defined in organizations where your managed solution
 see [Merge choice options](/power-platform/alm/how-managed-solutions-merged).
 
 
-You can download the code sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets).
+You can download the code sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkWithOptionSets).
 
 ## Message request classes
 

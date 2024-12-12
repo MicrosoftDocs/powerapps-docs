@@ -18,7 +18,7 @@ contributors:
 This sample shows how to write a `Azure Service Bus` listener for a one-way endpoint contract.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: One-way listener sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OneWayListeners)
+> [SDK for .NET: One-way listener sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/OneWayListeners)
 
 This sample listener application registers a remote service plug-in that executes whenever a message is posted to a one-way endpoint on the `Azure Service Bus`. When the plug-in executes, it outputs to the console the contents of the execution context contained in the message.
 

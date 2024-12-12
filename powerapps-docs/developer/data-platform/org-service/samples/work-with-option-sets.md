@@ -37,7 +37,7 @@ Use the following message request classes with choices:
 - <xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with choices sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets)
+> [SDK for .NET: Work with choices sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkWithOptionSets)
 
 ## How to run this sample
 

@@ -25,7 +25,7 @@ This sample shows how to create and retrieve table relationships. The following 
 - [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships)
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateRetrieveEntityRelationships)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

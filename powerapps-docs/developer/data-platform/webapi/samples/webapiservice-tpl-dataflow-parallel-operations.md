@@ -30,7 +30,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Locate the [/dataverse/webapi/C#-NETx/TPLDataFlowParallelOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/TPLDataFlowParallelOperations) folder.
+1. Locate the [/dataverse/webapi/C#-NETx/TPLDataFlowParallelOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/TPLDataFlowParallelOperations) folder.
 1. Open the `TPLDataFlowParallelOperations.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
@@ -45,7 +45,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/TPLDataFlowParallelOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/TPLDataFlowParallelOperations/Program.cs)
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/TPLDataFlowParallelOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/TPLDataFlowParallelOperations/Program.cs)
 
 ## Demonstrates
 

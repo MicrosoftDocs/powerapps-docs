@@ -20,7 +20,7 @@ contributors:
 This sample shows how to write a plug-in that can access web (network) resources like a web service or feed. It also demonstrates how to limit the time duration allowed for this call.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Web access from a plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WebAccessPlugin)
+> [SDK for .NET: Web access from a plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WebAccessPlugin)
 
 ## How to run this sample
 
