@@ -40,6 +40,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account must be created in the same Microsoft Entra tenant as your Power Apps tenant.
 > - To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access from selected IP addresses, you must create an Azure Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable public network access for Azure resources for both initial setup and delta sync.)
+> - It is highly recommended that you enable [soft delete feature](https://learn.microsoft.com/azure/storage/blobs/soft-delete-container-enable?tabs=azure-portal) on the storage account selected for this purpose. Enabling soft delete will enable you to recover from accidental data deletes much faster. 
 > - You must have **Reader** role access to the resource group with the storage account.  
 > - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
