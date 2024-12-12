@@ -97,4 +97,6 @@ Unless feedback  is disabled by your admin, each step of Agent Builder includes 
 
 ## Related information
 
-[FAQ about Agent Builder](../canvas-apps/agent-builder.md)
+[FAQ for Agent Builder in canvas apps](../common/faq-agent-builder.md)
+
+
