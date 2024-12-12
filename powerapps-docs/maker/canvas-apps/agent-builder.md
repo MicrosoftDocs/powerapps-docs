@@ -4,7 +4,7 @@ description: How to create an agent to help automate business processes with Age
 author: noazarur-microsoft
 
 ms.topic: article
-ms.date: 11/6/2024
+ms.date: 12/12/2024
 ms.subservice: canvas-maker
 ms.author: noazarur
 ms.reviewer: mkaur
@@ -52,7 +52,7 @@ You can also revise the description to better represent the process you want to 
 
 :::image type="content" source="media/agent-builder/ab-regenerate-instructions.png" alt-text="regenerate instructions":::
 
-## Best Practice
+## Best practices
 
 When editing the instructions, follow these suggestions:
 
