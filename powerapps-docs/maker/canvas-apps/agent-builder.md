@@ -28,7 +28,7 @@ Agent Builder helps users create copilot agents to automate processes from exist
 
 ## Create an agent
 
-Use Agent Builder to streamlines the process by generating an agent that replicates the steps you would take to complete the task.
+Use Agent Builder to streamline your manual process by generating an agent that replicates the steps you would take to complete the task.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** in the left navigation pane.
