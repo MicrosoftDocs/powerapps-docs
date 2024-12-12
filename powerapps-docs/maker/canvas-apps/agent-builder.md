@@ -44,7 +44,30 @@ Agent Builder lets you to create an agent from an existing canvas app. It stream
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
-    Based on the suggestion or the information that you provide for the agent's goal and your app metadata, Agent Builder generates step-by-step instructions for your current process. Review the instructions for accuracy and make any necessary edits.
+1. Based on the suggestion or the information that you provide for the agent's goal and your app metadata, Agent Builder generates step-by-step instructions for your current process. Review the instructions for accuracy and make any necessary edits.
+
+  **Image of instructions**
+  
+ When editing the instructions we suggest the following: 
+
+  - Use clear and specific wording in the instructions. For example, "Filter the claims data using the approval status" rather than "Filter the data". 
+
+  - Verify the instructions to ensure their goal is met by the generated / modified instructions. 
+
+  - Keep each of the sentences for the instructions relatively simple. If there are too many details and conditions in one of the sentences it might not work as intended. 
+
+  - Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the whole instruction set, we suggest moving instructions in line to ensure a logical flow. 
+ 
+     For Example:  
+       1. Read the data from the Table 
+       2. Process the data with pending status 
+       3. If amount is less than $50 auto approve it and mark it as Approved 
+       4. Update the Table with new status 
+       
+       5. And if the amount is more than $50 but less than $500 check to see if it is an approved item 
+       6. Additionally if the amount is more than $500 update the status to manual review. 
+       
+       This could potentially cause some issues since the logic is not straight forward for the LLM, we suggest moving instructions #5 and #6 to be in between 3 and 4. 
 
 1. You can also revise the description to better represent the process you want to automate. When you're done, select the **Regenerate instructions** to receive updated instructions that match the new goal of the agent.
 
