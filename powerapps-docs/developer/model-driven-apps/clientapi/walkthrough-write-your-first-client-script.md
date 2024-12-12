@@ -1,8 +1,8 @@
 ---
-title: "Walkthrough: Write your first client script in model-driven apps| MicrosoftDocs"
+title: "Walkthrough: Write your first client script in model-driven apps"
 description: "This walkthrough will help you write your first client script in model-driven apps."
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 10/18/2022
 ms.reviewer: jdaly
 ms.topic: how-to

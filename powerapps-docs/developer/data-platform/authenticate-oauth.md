@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 09/25/2024
+ms.date: 12/04/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -241,6 +241,9 @@ class Program
 }
 ```
 
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
+
 The configuration string values have been moved into an App.config file connection string, and the Http client is configured in the `GetHttpClient` method.
 
 ```csharp
@@ -340,7 +343,7 @@ If you are connecting using a client secret and using the <xref:Microsoft.Xrm.To
 
 ```csharp
 string SecretID = "00000000-0000-0000-0000-000000000000";
-string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string AppID = "00001111-aaaa-2222-bbbb-3333cccc4444";
 string InstanceUri = "https://yourorg.crm.dynamics.com";
 
 string ConnectionStr = $@"AuthType=ClientSecret;
@@ -364,7 +367,7 @@ If you are connecting using a certificate and using the <xref:Microsoft.Xrm.Tool
 
 ```csharp
 string CertThumbPrintId = "DC6C689022C905EA5F812B51F1574ED10F256FF6";
-string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string AppID = "00001111-aaaa-2222-bbbb-3333cccc4444";
 string InstanceUri = "https://yourorg.crm.dynamics.com";
 
 string ConnectionStr = $@"AuthType=Certificate;

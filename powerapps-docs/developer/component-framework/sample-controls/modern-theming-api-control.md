@@ -1,8 +1,8 @@
 ---
 title: "Modern theming API component | Microsoft Docs"
 description: "This sample component demonstrates various ways to use the modern theming API capabilities to style your component."
-author: lesyk
-ms.author: vilesyk
+author: jasongre
+ms.author: jasongre
 ms.date: 03/12/2023
 ms.reviewer: jdaly
 ms.topic: sample

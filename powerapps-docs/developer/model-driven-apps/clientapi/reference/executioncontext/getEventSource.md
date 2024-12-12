@@ -1,8 +1,8 @@
 ---
-title: "getEventSource (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEventSource (Client API reference) in model-driven apps"
 description: "Learn about the getEventSource method that returns a reference to the object that the event occurred on." 
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 05/15/2024
 ms.reviewer: jdaly
 ms.topic: reference

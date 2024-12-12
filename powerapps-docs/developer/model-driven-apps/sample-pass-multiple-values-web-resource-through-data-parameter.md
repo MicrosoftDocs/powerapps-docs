@@ -1,8 +1,8 @@
 ---
-title: "Sample: Pass multiple values to a  web resource through the data parameter (model-driven apps) | Microsoft Docs"
+title: "Sample: Pass multiple values to a  web resource through the data parameter (model-driven apps)"
 description: "The sample represents a technique to pass the additional values within a single parameter and then process them within your web resource."
-author: JimDaly
-ms.author: jdaly
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 11/01/2023
 ms.reviewer: jdaly
 ms.topic: sample

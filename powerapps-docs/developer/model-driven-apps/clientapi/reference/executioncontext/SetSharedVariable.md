@@ -1,8 +1,8 @@
 ---
-title: "setSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setSharedVariable (Client API reference) in model-driven apps"
 description: "Learn about the getEventSource method that returns a reference to the form or an item on the form depending on where the method was called." 
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
 ---
 # setSharedVariable (Client API reference)
 
-
-
 Sets the value of a variable to be used by a handler after the current handler completes.
 
 ## Syntax
@@ -26,8 +24,6 @@ Sets the value of a variable to be used by a handler after the current handler c
 
 - **`key`**: String: The name of the variable
 - **`value`**: Object. The values to set
-
-
 
 ## Return value
 

@@ -1,9 +1,8 @@
 ---
-title: "Stylesheet (XSL) web resources  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using Stylesheet (XSL) Web resources to transform XML data." # 115-145 characters including spaces. This abstract displays in the search result.
-author: sriharibs-msft
-ms.author: srihas
-
+title: "Stylesheet (XSL) web resources  (model-driven apps)"
+description: "Learn about using Stylesheet (XSL) Web resources to transform XML data."
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

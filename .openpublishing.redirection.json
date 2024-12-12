@@ -9271,6 +9271,21 @@
     "redirect_document_id": "false"
    },
    {
+    "source_path": "powerapps-docs/maker/model-driven-apps/power-bi-content-management-power-apps-solutions.md",
+    "redirect_url": "/power-apps/maker/model-driven-apps/create-edit-powerbi-embedded-page",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/model-driven-apps/create-edit-powerbi-report-dataset-components.md",
+    "redirect_url": "power-apps/maker/model-driven-apps/create-edit-powerbi-embedded-page",
+    "redirect_document_id": "false"
+   },
+   {
+    "source_path": "powerapps-docs/maker/model-driven-apps/customize-manage-powerbi-components.md",
+    "redirect_url": "/power-apps/maker/model-driven-apps/create-edit-powerbi-embedded-page",
+    "redirect_document_id": "false"
+   },
+   {
     "source_path": "powerapps-docs/user/find-admin.md",
     "redirect_url": "/power-apps/user/navigation",
     "redirect_document_id": "false"

@@ -306,7 +306,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(00000000-0000-0000-0000-000000000001)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1)
 
 ```
 
@@ -329,7 +329,7 @@ Accept: application/json
     "iscustomizable": {
         "Value": false
     },
-    "ParentCatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000001)"
+    "ParentCatalogId@odata.bind": "catalogs(a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1)"
 }
 
 ```
@@ -338,7 +338,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000002)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2)
 
 ```
 
@@ -361,7 +361,7 @@ Accept: application/json
     "iscustomizable": {
         "Value": false
     },
-    "CatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000002)"
+    "CatalogId@odata.bind": "catalogs(b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2)"
 }
 
 ```
@@ -370,7 +370,7 @@ Accept: application/json
 
 ```http
 HTTP/1.1 204 No Content
-OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000003)
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3)
 
 ```
 

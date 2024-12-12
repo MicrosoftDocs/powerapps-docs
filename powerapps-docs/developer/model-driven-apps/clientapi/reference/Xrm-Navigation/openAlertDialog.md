@@ -1,8 +1,8 @@
 ---
-title: "openAlertDialog (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "openAlertDialog (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openAlertDialog method.
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 09/18/2023
 ms.reviewer: jdaly
 ms.topic: reference

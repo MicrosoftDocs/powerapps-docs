@@ -1,8 +1,8 @@
 ---
-title: "Xrm.Navigation (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.Navigation (Client API reference) in model-driven apps"
 description: "Xrm.Navigation provides navigation-related methods. "
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

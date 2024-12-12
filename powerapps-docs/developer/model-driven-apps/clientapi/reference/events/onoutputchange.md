@@ -1,8 +1,8 @@
 ---
-title: "onOutputChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "onOutputChange event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.OnOutputChange event.
-ms.author: noazarur
-author: noazarur-microsoft
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 08/17/2022
 ms.reviewer: jdaly
 ms.topic: reference

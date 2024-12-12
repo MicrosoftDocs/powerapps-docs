@@ -1,5 +1,5 @@
 ---
-title: "getBarcodeValue| MicrosoftDocs"
+title: "getBarcodeValue (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getBarCodeValue method.
 author: adrianorth
 ms.author: aorth

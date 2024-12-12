@@ -1,6 +1,6 @@
 ---
-title: "xmlEncode| MicrosoftDocs"
-description: "The Client API method converts a string to an XML-encoded string."
+title: "xmlEncode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the xmlEncode method.
 author: adrianorth
 ms.author: aorth
 ms.date: 03/12/2022

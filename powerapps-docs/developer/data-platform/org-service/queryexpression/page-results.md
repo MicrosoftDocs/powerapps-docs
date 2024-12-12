@@ -1,7 +1,7 @@
 ---
 title: Page results using QueryExpression
 description: Learn how to use QueryExpression to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 08/09/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -185,6 +185,8 @@ static void Main(string[] args)
 > [!IMPORTANT]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
 
 <!-- ## Ordering and paging -->
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
