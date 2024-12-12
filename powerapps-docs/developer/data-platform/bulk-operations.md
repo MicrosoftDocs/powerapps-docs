@@ -302,7 +302,7 @@ Whether a record is created or updated in this example depends on whether record
 
 #### SDK examples
 
-Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
+Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/UpsertMultiple/README.md)
 
 ##### [Web API](#tab/webapi)
 

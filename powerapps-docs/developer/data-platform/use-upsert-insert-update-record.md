@@ -237,7 +237,7 @@ The <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated?text=UpsertRes
 
 ### SDK for .NET Sample code
 
-The [SampleMethod.cs](https://github.com/microsoft/PowerApps-Samples/blob/a8d905be7a041794c1bd9045434701acffea791f/cds/orgsvc/C%23/InsertRecordUsingUpsert/InsertRecordUsingUpsert/SampleMethod.cs#L145) file in the [Insert record using Upsert](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InsertRecordUsingUpsert/InsertRecordUsingUpsert) sample contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.
+The [SampleMethod.cs](https://github.com/microsoft/PowerApps-Samples/blob/a8d905be7a041794c1bd9045434701acffea791f/cds/orgsvc/CSharp/InsertRecordUsingUpsert/InsertRecordUsingUpsert/SampleMethod.cs#L145) file in the [Insert record using Upsert](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/InsertRecordUsingUpsert/InsertRecordUsingUpsert) sample contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.
 
 ```csharp
 public static void ProcessUpsert(CrmServiceClient service, String Filename)

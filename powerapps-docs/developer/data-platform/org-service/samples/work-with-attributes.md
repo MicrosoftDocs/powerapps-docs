@@ -18,7 +18,7 @@ contributors:
 This sample shows how to perform various actions on columns.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with columns definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes)
+> [SDK for .NET: Work with columns definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkWithAttributes)
 
 ## How to run this sample
 

@@ -15,7 +15,7 @@ contributors:
 
 # Sample: Audit table data changes
 
-This sample shows how to enable and disable auditing on a table and its columns, retrieve the data change history of the audited table, and delete the audit records. You can view the sample [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AuditEntityData).
+This sample shows how to enable and disable auditing on a table and its columns, retrieve the data change history of the audited table, and delete the audit records. You can view the sample [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AuditEntityData).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

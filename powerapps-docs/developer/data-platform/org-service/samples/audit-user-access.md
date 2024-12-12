@@ -18,7 +18,7 @@ contributors:
 This sample code shows how to audit user access.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Audit user access sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AuditUserAccess)
+> [SDK for .NET: Audit user access sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AuditUserAccess)
 
 ## How to run this sample
 

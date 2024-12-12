@@ -19,7 +19,7 @@ contributors:
 This sample shows how to write a plug-in that supports a custom API 
 named `sample_ExportDataUsingFetchXmlToAnnotation`.
 You can access the sample code from 
-[PowerApps-Samples/dataverse/orgsvc/C#/ExportDataUsingFetchXmlToAnnotation/](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
+[PowerApps-Samples/dataverse/orgsvc/C#/ExportDataUsingFetchXmlToAnnotation/](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportDataUsingFetchXmlToAnnotation).
 
 The plug-in provides logic for the main operation of the custom API. 
 The `sample_ExportDataUsingFetchXmlToAnnotation` custom api retrieves data using 
