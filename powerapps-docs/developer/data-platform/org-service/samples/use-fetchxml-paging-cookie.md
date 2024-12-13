@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Use FetchXML with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseFetchXMLWithPaging)
+> [SDK for .NET: Use FetchXML with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseFetchXMLWithPaging)
 
 ## How to run this sample
 

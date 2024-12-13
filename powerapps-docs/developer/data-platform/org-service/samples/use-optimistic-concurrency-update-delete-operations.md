@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use optimistic concurrency for update and delete operations.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Use optimistic concurrency with update and delete operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OptimisticConcurrency)
+> [SDK for .NET: Use optimistic concurrency with update and delete operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/OptimisticConcurrency)
 
 ## How to run this sample
 
