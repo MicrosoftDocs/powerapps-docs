@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 10/10/2024
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 12/5/2024
+ms.date: 12/16/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -67,7 +67,7 @@ The following articles can help you build various apps in different scenarios us
 - [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
 - [Use field suggestions by Copilot](ai-field-suggestions.md)
 - [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
-- [Automate your business process in a canavs app (preview)](agent-builder.md)
+- [Automate your business process in a canvas app (preview)](agent-builder.md)
 
 ### Copilot in model-driven apps
 
