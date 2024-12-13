@@ -1,7 +1,7 @@
 ---
 title: FAQ about agent builder in canvas apps (preview)
 description: This FAQ provides information about the AI technology used in agent builder with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 11/19/2024
+ms.date: 12/16/2024
 author: noazarur-microsoft
 ms.author: noazarur
 ms.reviewer: mkaur
@@ -58,6 +58,6 @@ Follow these procedures to make the most out of the feature:
 
 ## Related information
 
-[Automate your business process in a canavs app](../canvas-apps/agent-builder.md)
+[Automate your business process in a canvas app](../canvas-apps/agent-builder.md)
 
 
