@@ -19,7 +19,7 @@ contributors:
 
 Agent builder in Power Apps enables organizations to transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and optimize overall business efficiency.
 
- Makers can effortlessly create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process. This process is then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions and actions.
+ Makers can easily create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process. This process is then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions and actions.
 
 Once the agent is created, makers can add triggers, make edits, conduct testing, and publish the agent in Microsoft Copilot Studio.
 
@@ -79,18 +79,18 @@ When you edit the instructions, follow these suggestions:
 
 ## Limitations
 
-- If a data source connection isn't found, it isn't possible to extract actions for app. In such cases, agent builder still generates an agent, including the actions that can be converted, or none if no actions can be converted.
+- If a data source connection isn't found, it's not possible to extract actions for app. In such cases, agent builder still generates an agent, including the actions that can be converted, or none if no actions can be converted.
 
-- Deprecated Excel connectors aren't supported but the following Excel connectors are supported:
+- Deprecated Excel connectors aren't supported, but the following Excel connectors are supported:
 
   - [Excel Online (Business)](connections/connection-excel.md)
   - [Excel Online](connections/connection-excel.md)
 
 - Agent builder is only available in regions where Microsoft Copilot Studio generative agents are available.
 
-- This feature is only currently available for canvas apps.
+- This feature is currently available only for canvas apps.
 
-- This feature is only available in English (en-US).
+- This feature is available only in English (en-US).
 
 ## Provide feedback
 
