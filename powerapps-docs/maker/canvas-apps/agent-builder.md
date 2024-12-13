@@ -44,7 +44,7 @@ Use Agent Builder to streamline your manual process by generating an agent that 
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
-Based on the suggestion or the information that you provide for the agent's goal and your app metadata, Agent Builder generates step-by-step instructions for your current process. Review the instructions for accuracy and make any necessary edits.
+   Based on the suggestion or the information that you provide for the agent's goal and your app metadata, Agent Builder generates step-by-step instructions for your current process. Review the instructions for accuracy and make   any necessary edits.
 
 ### Regenerate instructions
 
