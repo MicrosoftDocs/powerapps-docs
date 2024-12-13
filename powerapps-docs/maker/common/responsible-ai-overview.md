@@ -46,5 +46,5 @@ ms.collection:
 - [Use field suggestions by Copilot](../canvas-apps/ai-field-suggestions.md)
 - [FAQs for field suggestions by Copilot](faq-field-suggestions.md)
 - [FAQ about filtering, sorting, and searching canvas galleries with Copilot](faq-filter-with-copilot.md)
-- [FAQ about Agent Builder in canvas apps](faq-agent-builder.md)
-- [Automate your business process with Agent Builder](../canvas-apps/agent-builder.md)
+- [FAQ about agent builder in canvas apps](faq-agent-builder.md)
+- [Automate your business process in a canavs app (preview)](../canvas-apps/agent-builder.md)

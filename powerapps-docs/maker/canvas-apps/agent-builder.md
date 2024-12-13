@@ -1,6 +1,6 @@
 ---
-title: Automate your business processes with agent builder in canvas apps
-description: How to create an agent to help automate business processes with agent builder.
+title: Automate your business processes with agent builder in a canvas app
+description: How to create an agent to help automate business processes in a canvas app using agent builder.
 author: noazarur-microsoft
 ms.topic: article
 ms.date: 12/16/2024
@@ -13,7 +13,7 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Automate your business process in canavs apps (preview) 
+# Automate your business process in a canavs app (preview) 
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
