@@ -93,7 +93,9 @@ When editing the instructions, follow these suggestions:
 
 ## Provide feedback
 
-Unless feedback  is disabled by your admin, each step of Agent Builder includes a **Like** button (a "thumbs up" icon) and a **Dislike** button (a "thumbs down" icon). Use these icons to provide feedback on each response, helping us improve Agent Builder. Select the "thumbs up" or "thumbs down" icon as appropriate. Additionally, you can provide feedback in your own words about what you liked or didn't like about the response. When you're finished, select **Submit**.
+Unless feedback  is disabled by your admin, each step in Agent Builder includes a **Like** (thumbs up) and **Dislike** button (thumbs down).
+
+You can also submint feedback in your own words about the response. When you're done, select **Submit**.
 
 ## Related information
 
