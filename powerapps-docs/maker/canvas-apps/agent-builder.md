@@ -13,7 +13,7 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Automate your business process with agent builder (preview) 
+# Automate your business process in canavs apps (preview) 
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
@@ -100,6 +100,6 @@ After reviewing the agent's responses, you can also provide feedback in your own
 
 ## Related information
 
-[FAQ for Agent Builder in canvas apps](../common/faq-agent-builder.md)
+[FAQ for agent builder in canvas apps](../common/faq-agent-builder.md)
 
 
