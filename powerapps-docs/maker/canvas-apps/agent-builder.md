@@ -13,7 +13,7 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Automate your business process in a canvas app (preview) 
+# Build an Agent to automate your business process (preview) 
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
