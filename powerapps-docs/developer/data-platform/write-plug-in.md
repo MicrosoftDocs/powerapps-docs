@@ -238,7 +238,7 @@ public class MyPlugin : IPlugin
 
 ---
 
-You can review these two methods of plug-in implementations in our [FollowupPlugin](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin) code sample. For more information about handling exceptions in plug-ins see [Handle exceptions in plug-ins](handle-exceptions.md).
+You can review these two methods of plug-in implementations in our [FollowupPlugin](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FollowupPlugin) code sample. For more information about handling exceptions in plug-ins see [Handle exceptions in plug-ins](handle-exceptions.md).
 
 ## Plug-in design impacts performance
 

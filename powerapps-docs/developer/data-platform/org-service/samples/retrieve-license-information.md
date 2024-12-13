@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use the [IDeploymentService.RetrieveDeploymentLicenseTypeRequest](/dotnet/api/microsoft.crm.sdk.messages.retrievedeploymentlicensetyperequest) message and the [IOrganizationService.RetrieveLicenseInfoRequest](/dotnet/api/microsoft.crm.sdk.messages.retrievelicenseinforequest) message to retrieve information about licenses.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve license information sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveLicenseInformation)
+> [SDK for .NET: Retrieve license information sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveLicenseInformation)
 
 ## How to run this sample
 

@@ -18,7 +18,7 @@ contributors:
 This sample shows how to merge two record.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Merge two records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MergeTwoRecords)
+> [SDK for .NET: Merge two records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/MergeTwoRecords)
 
 ## How to run this sample
 

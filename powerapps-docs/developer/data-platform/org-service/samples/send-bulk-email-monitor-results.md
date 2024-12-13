@@ -18,7 +18,7 @@ contributors:
 This sample shows how to send bulk email using the <xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest> and monitor the results by retrieving records from the `AsyncOperation` table.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Send bulk email and monitor results sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BulkEmail)
+> [SDK for .NET: Send bulk email and monitor results sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/BulkEmail)
 
 ## How to run this sample
 

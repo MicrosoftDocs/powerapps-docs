@@ -20,7 +20,7 @@ contributors:
 This sample shows how to enable field security for a table.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Enable field security for a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FieldSecurity)
+> [SDK for .NET: Enable field security for a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FieldSecurity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

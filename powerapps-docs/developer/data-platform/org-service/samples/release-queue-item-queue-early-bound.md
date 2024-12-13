@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use [ReleaseToQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.releasetoqueuerequest) to dissociate a user from a queue item that they worked on and release a queue item back to the queue.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Release a queue item to the queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ReleaseQueueItems)
+> [SDK for .NET: Release a queue item to the queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ReleaseQueueItems)
 
 ## How to run this sample
 
