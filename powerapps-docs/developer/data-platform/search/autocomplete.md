@@ -96,7 +96,7 @@ The following examples show how to use the autocomplete operation. These example
 
 #### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputAutoComplete` method accepts a value for the [search parameter](#search-parameter).
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputAutoComplete` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -205,7 +205,7 @@ This class is the same `QueryContext` class used for the [query example](query.m
 
 Use the [searchautocomplete action](xref:Microsoft.Dynamics.CRM.searchautocomplete) to receive a [searchautocompleteResponse complex type](xref:Microsoft.Dynamics.CRM.searchautocompleteResponse).
 
-This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/Search) on GitHub.
 
 The unescaped, formatted JSON passed to the string `entities` parameter looks like this:
 
