@@ -46,7 +46,8 @@ To streamline your manual process, generate an agent that replicates the steps y
      - Generate reports for claims filed within a specific date range.
 
 1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process. Review the instructions for accuracy and make any necessary edits.
-:::image type="content" source="media/agent-builder/ab-regenerate-instructions-1.png" alt-text="regen-agent":::
+
+    :::image type="content" source="media/agent-builder/ab-regenerate-instructions-1.png" alt-text="regen-agent":::
 
 ### Regenerate instructions to improve response
 
