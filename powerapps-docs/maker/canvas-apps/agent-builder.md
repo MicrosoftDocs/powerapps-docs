@@ -29,7 +29,7 @@ Once the agent is created, makers can add triggers, make edits, conduct testing,
 
 ## Create an agent
 
-To streamline your manual process, generate an agent that replicates the steps you typically follow to complete the task.
+To streamline your manual process, generate an agent that replicates the steps you typically follow to complete tasks.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** in the left navigation pane.
