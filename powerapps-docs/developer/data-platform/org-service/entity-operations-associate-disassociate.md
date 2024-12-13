@@ -48,10 +48,10 @@ More information:
 
 The following example will create a relationship and associate a primary entity with a collection of related entities.
 
-:::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs" range="12-52":::
+:::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs" id="AssociateDisassociate":::
 Complete code sample: [AssociateDisassociate](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs)
 
-Although there is no particular advantage in doing so, if you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest>, you would use this code:
+If you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest>, you would use the following code. A benefit of using the request instead of the service client method is that the request supports the [use of optional parameters](../optional-parameters.md).
 
 ```csharp
 AssociateRequest request = new AssociateRequest()
