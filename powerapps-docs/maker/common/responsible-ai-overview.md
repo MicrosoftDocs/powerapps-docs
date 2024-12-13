@@ -6,7 +6,7 @@ ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
   - ai-gen-desc
-  - ai-seo-date:10/26/2023
+  - ai-seo-date:12/16/2024
   - bap-template
 ms.topic: overview
 author: mduelae
@@ -47,4 +47,4 @@ ms.collection:
 - [FAQs for field suggestions by Copilot](faq-field-suggestions.md)
 - [FAQ about filtering, sorting, and searching canvas galleries with Copilot](faq-filter-with-copilot.md)
 - [FAQ about agent builder in canvas apps](faq-agent-builder.md)
-- [Automate your business process in a canavs app (preview)](../canvas-apps/agent-builder.md)
+- [Automate your business process in a canvas app (preview)](../canvas-apps/agent-builder.md)
