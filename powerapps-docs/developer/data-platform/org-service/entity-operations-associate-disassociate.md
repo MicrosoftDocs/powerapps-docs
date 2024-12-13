@@ -1,7 +1,7 @@
 ---
 title: "Associate and disassociate table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to associate and disassociate table rows using the SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 12/13/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: MicroSri
@@ -72,48 +72,17 @@ If you examine the properties of the relationship columns, you can see that the 
 
 The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method are just the reverse of the way that you associate table rows.
 
-The following code reverses the associations made in the sample above.
+You can view an example Disassociate() method call in the previously shown code sample. If you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>, the code would look like this:
 
 ```csharp
-// Retrieve the accounts
-var query = new QueryByAttribute("account")
-{
-ColumnSet = new ColumnSet("name")
-};
-query.AddAttributeValue("address1_city", "Redmond");
-
-EntityCollection accounts = svc.RetrieveMultiple(query);
-
-//Convert the EntityCollection to a EntityReferenceCollection
-var accountReferences = new EntityReferenceCollection();
-
-accounts.Entities.ToList().ForEach(x => {
-accountReferences.Add(x.ToEntityReference());
-});
-
-// The contact to associate to the accounts
-var jimGlynn = new EntityReference("contact", 
-new Guid("cf76763a-ba1c-e811-a954-000d3af451d6"));
-
-// The relationship to use
-var relationship = new Relationship("account_primary_contact");
-
-// Use the Disassociate method
-svc.Disassociate(jimGlynn.LogicalName, jimGlynn.Id, relationship, accountReferences);
-```
-
-Although there is no particular advantage in doing so, if you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>, you can replace the last line with this:
-
-```csharp
-// Use DisassociateRequest
 DisassociateRequest request = new DisassociateRequest()
 {
-RelatedEntities = accountReferences,
-Relationship = relationship,
-Target = jimGlynn
+RelatedEntities = relatedEntities,
+Relationship = relation,
+Target = primaryEntity
 };
 
-svc.Execute(request);
+service.Execute(request);
 ```
 
 ### See also
