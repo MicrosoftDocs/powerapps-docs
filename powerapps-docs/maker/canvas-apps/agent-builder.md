@@ -1,10 +1,9 @@
 ---
-title: Automate your business processes with Agent Builder in canvas apps
-description: How to create an agent to help automate business processes with Agent Builder.
+title: Automate your business processes with agent builder in canvas apps
+description: How to create an agent to help automate business processes with agent builder.
 author: noazarur-microsoft
-
 ms.topic: article
-ms.date: 12/12/2024
+ms.date: 12/16/2024
 ms.subservice: canvas-maker
 ms.author: noazarur
 ms.reviewer: mkaur
@@ -14,13 +13,15 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Automate your business process with Agent Builder (preview) 
+# Automate your business process with agent builder (preview) 
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent Builder in canvas apps helps organizations transition into the AI-first era. Using existing knowledge, logic, and actions in their apps, makers can develop agents to handle tasks, eliminate repetitive processes, boost productivity, and enhance business efficiency.
+Agent builder in Power Apps enables organizations to transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and optimize overall business efficiency.
 
-Agent Builder helps users create copilot agents to automate processes from existing canvas apps. It uses your app metadata and the desired agent goal to generate a step-by-step process. This process is combined with extracted skills from the app to create a Copilot Studio copilot with instructions and actions. Once created, you can add a trigger, edit, test, and publish the agent in Microsoft Copilot Studio.
+ Makers can effortlessly create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process. This process is then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions and actions.
+
+Once the agent is created, makers can add triggers, make edits, conduct testing, and publish the agent in Microsoft Copilot Studio.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -28,7 +29,7 @@ Agent Builder helps users create copilot agents to automate processes from exist
 
 ## Create an agent
 
-Use Agent Builder to streamline your manual process by generating an agent that replicates the steps you would take to complete the task.
+To streamline your manual process, generate an agent that replicates the steps you typically follow to complete the task.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** in the left navigation pane.
@@ -36,7 +37,7 @@ Use Agent Builder to streamline your manual process by generating an agent that 
 
     :::image type="content" source="media/agent-builder/ab-create-agent-from-app.png" alt-text="Create agent from app":::
 
-1. Select a suggestion or in the text box describe the process you want the agent to automate and then select **Next**.
+1. Select a suggestion or in the text box describe the process you want to automate and then select **Next**.
 
     :::image type="content" source="media/agent-builder/ab-select-next-to-regenerate-instructions.png" alt-text="Select next to generate instructions":::
 
@@ -44,7 +45,7 @@ Use Agent Builder to streamline your manual process by generating an agent that 
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
-   Based on the suggestion or the information that you provide for the agent's goal and your app metadata, Agent Builder generates step-by-step instructions for your current process. Review the instructions for accuracy and make   any necessary edits.
+   Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process. Review the instructions for accuracy and make any necessary edits.
 
 ### Regenerate instructions
 
@@ -54,7 +55,7 @@ You can also revise the description to better represent the process you want to 
 
 ## Best practices
 
-When editing the instructions, follow these suggestions:
+When you edit the instructions, follow these suggestions:
 
 - Use clear and specific wording in the instructions. For example, "Filter the claims data using the approval status" rather than "Filter the data."
 
@@ -78,9 +79,9 @@ When editing the instructions, follow these suggestions:
 
 ## Limitations
 
-- We can't extract actions for apps if a data source connection isn't found. For these apps, Agent Builder still creates an agent with the actions it can convert or none if it can't convert any.
+- If a data source connection isn't found, it isn't possible to extract actions for app. In such cases, agent builder still generates an agent, including the actions that can be converted, or none if no actions can be converted.
 
-- We don't support the deprecated Excel connector. However, we do support the following two Excel connectors:
+- Deprecated Excel connectors aren't supported but the following Excel connectors are supported:
 
   - [Excel Online (Business)](connections/connection-excel.md)
   - [Excel Online](connections/connection-excel.md)
@@ -89,13 +90,13 @@ When editing the instructions, follow these suggestions:
 
 - This feature is only currently available for canvas apps.
 
-- This feature is only available in English (US).
+- This feature is only available in English (en-US).
 
 ## Provide feedback
 
-Unless feedback  is disabled by your admin, each step in Agent Builder includes a **Like** (thumbs up) and **Dislike** button (thumbs down).
+Unless feedback is disabled by your admin, each step in agent builder includes a **Like** (thumbs up) and **Dislike** button (thumbs down).
 
-You can also submint feedback in your own words about the response. When you're done, select **Submit**.
+After reviewing the agent's responses, you can also provide feedback in your own words. When you're done, select **Submit**.
 
 ## Related information
 
