@@ -45,15 +45,16 @@ To streamline your manual process, generate an agent that replicates the steps y
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
-   Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process. Review the instructions for accuracy and make any necessary edits.
+1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process. Review the instructions for accuracy and make any necessary edits.
+:::image type="content" source="media/agent-builder/ab-regenerate-instructions-1.png" alt-text="regen-agent":::
 
-### Regenerate instructions
+### Regenerate instructions to improve response
 
 You can also revise the description to better represent the process you want to automate. When you're done, select the **Regenerate instructions** to receive updated instructions that match the new goal of the agent.
 
 :::image type="content" source="media/agent-builder/ab-regenerate-instructions.png" alt-text="regenerate instructions":::
 
-## Best practices
+### Best practices
 
 When you edit the instructions, follow these suggestions:
 
@@ -63,19 +64,21 @@ When you edit the instructions, follow these suggestions:
 
 - Keep each of the sentences for the instructions relatively simple. If there are too many details and conditions in one of the sentences, it might not work as intended.
 
-- Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the whole instruction set, we suggest moving instructions in line to ensure a logical flow. For Example:
+- Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the instruction set, we suggest moving instructions in line to ensure a logical flow. For Example:
 
-    - Read the data from the table.
+    1. Read the data from the table.
 
-    - Process the data with pending status.
+    2. Process the data with pending status.
 
-    - If amount is less than $50 auto approve it and mark it as approved.
+    3. If amount is less than $50 auto approve it and mark it as approved.
 
-    - Update the table with new status.
+    4. Update the table with new status.
 
-    - And if the amount is more than $50 but less than $500 check to see if it's an approved item.
+    5. And if the amount is more than $50 but less than $500 check to see if it's an approved item.
 
-    - Additionally if the amount is more than $500 update the status to manual review.
+    6. Additionally if the amount is more than $500 update the status to manual review.
+     
+    In this example to make thia a logical flow we suggest moving instructions #5 and #6 in between #3 and #4.
 
 ## Limitations
 
