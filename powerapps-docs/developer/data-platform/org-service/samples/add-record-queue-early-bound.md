@@ -18,7 +18,7 @@ contributors:
 This sample shows how to add a record to a queue. It creates source and destination queues. It adds a letter activity to the source queue and then moves it to the destination queue.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Add a record to a queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RecordToQueue)
+> [SDK for .NET: Add a record to a queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RecordToQueue)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

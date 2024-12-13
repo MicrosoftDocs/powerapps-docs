@@ -29,7 +29,7 @@ This sample shows how to how to perform the following actions with solutions:
 - Delete a solution.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with solutions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkwithSolutions)
+> [SDK for .NET: Work with solutions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkwithSolutions)
 
 ## How to run this sample
 

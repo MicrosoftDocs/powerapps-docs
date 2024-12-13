@@ -17,7 +17,7 @@ search.audienceType:
 This sample shows how to roll up goal data for a fiscal period against stretch target count, representing a number of completed phone calls.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Rollup goal data for a fiscal period against the stretch target count sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GoalDataForFiscalYear)
+> [SDK for .NET: Rollup goal data for a fiscal period against the stretch target count sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/GoalDataForFiscalYear)
 
 This sample requires additional users that are not in your system. Create the three required users **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the organization name.
 
