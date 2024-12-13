@@ -64,7 +64,9 @@ When you edit the instructions, follow these suggestions:
 
 - Keep each of the sentences for the instructions relatively simple. If there are too many details and conditions in one of the sentences, it might not work as intended.
 
-- Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the instruction set, we suggest moving instructions in line to ensure a logical flow. For Example:
+- Ensure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the instruction set. Instead, move instructions in line to maintain a logical sequence. 
+  
+  Here's example instructions:
 
     1. Read the data from the table.
 
@@ -77,8 +79,8 @@ When you edit the instructions, follow these suggestions:
     5. And if the amount is more than $50 but less than $500 check to see if it's an approved item.
 
     6. Additionally if the amount is more than $500 update the status to manual review.
-     
-    In this example to make thia a logical flow we suggest moving instructions #5 and #6 in between #3 and #4.
+
+    To improve the logical flow in this example, move steps #5 and #6 after step #3.
 
 ## Limitations
 
