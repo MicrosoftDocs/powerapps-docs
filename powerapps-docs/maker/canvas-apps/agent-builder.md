@@ -64,15 +64,15 @@ When editing the instructions, follow these suggestions:
 
 - Make sure the logical flow of the instructions is easy to follow. Avoid adding new instructions at the end of the whole instruction set, we suggest moving instructions in line to ensure a logical flow. For Example:
 
-    - Read the data from the Table
+    - Read the data from the table.
 
-    - Process the data with pending status
+    - Process the data with pending status.
 
-    - If amount is less than $50 auto approve it and mark it as Approved
+    - If amount is less than $50 auto approve it and mark it as approved.
 
-    - Update the table with new status
+    - Update the table with new status.
 
-    - And if the amount is more than $50 but less than $500 check to see if it's an approved item
+    - And if the amount is more than $50 but less than $500 check to see if it's an approved item.
 
     - Additionally if the amount is more than $500 update the status to manual review.
 
