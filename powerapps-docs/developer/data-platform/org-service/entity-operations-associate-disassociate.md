@@ -48,7 +48,7 @@ More information:
 
 The following example will create a relationship and associate a primary entity with a collection of related entities.
 
-:::code language="csharp" source="PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs" id="AssociateDisassociate":::
+:::code language="csharp" source="PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs" id="AssociateDisassociate":::
 Complete code sample: [AssociateDisassociate](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs)
 
 Although there is no particular advantage in doing so, if you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest>, you would use this code:
