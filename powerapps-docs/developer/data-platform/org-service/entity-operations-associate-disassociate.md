@@ -19,7 +19,7 @@ contributors:
 
 Table rows are associated to each other using lookup columns on the related table row. The simplest way to associate two rows in a one-to-many relationship is to use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup column on the related row.
 
-The simplest way to disassociate two rows in a one-to-many relationship is to set the value of the lookup column to null.
+The simplest way to disassociate two rows in a one-to-many relationship is to set the value of the lookup column to `null`.
 
 Relationships using a many-to-many relationship also depend on lookup columns on the *intersect entity* that supports the many-to-many relationship. Relationship are defined by the existence of rows in that intersect entity. While you can interact with the intersect entity directly, it's much easier to use the API to do this task for you.
 
@@ -46,7 +46,7 @@ More information:
 - [Create and edit many-to-many (N:N) table row relationships](../../../maker/data-platform/create-edit-nn-relationships.md)
 - [Browse the metadata for your environment](../browse-your-metadata.md)
 
-The following example creates a relationship and associate a primary entity with a collection of related entities.
+The following example creates a relationship and associates a primary entity with a collection of related entities.
 
 :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs" id="AssociateDisassociate":::
 Complete code sample: [AssociateDisassociate](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Relationships/AssociateDisassociate/Program.cs)
@@ -64,7 +64,7 @@ Target = primaryEntity
 service.Execute(request);
 ```
 
-This operation is the same as three separate update operations to the [Account](../reference/entities/account.md).[PrimaryContactId](../reference/entities/account.md#BKMK_PrimaryContactId) lookup column, but it's using the [account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) relationship, which is a many-to-one entity relationship on the account and a one-to-many entity relationship on the contact.
+Let's say we are associating a primary entity (a contact) with three related entities (accounts). This single association operation shown above is the same as three separate update operations where the [Account](../reference/entities/account.md).[PrimaryContactId](../reference/entities/account.md#BKMK_PrimaryContactId) lookup column is set. Instead, the simpler service client method or request call is using the [account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) relationship which establishes a many-to-one entity relationship on each related account and a one-to-many entity relationship on the contact.
 
 If you examine the properties of the relationship columns, you can see that the `ReferencingEntity` value is `account` and the `ReferencingAttribute` value is `primarycontactid`.
 
@@ -72,7 +72,7 @@ If you examine the properties of the relationship columns, you can see that the 
 
 The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method are just the reverse of the way that you associate table rows.
 
-You can view an example Disassociate() method call in the previously shown code sample. If you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>, the code would look like this:
+You can view an example `Disassociate` method call in the previously shown code sample. If you wanted to use the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>, the code would look like this:
 
 ```csharp
 DisassociateRequest request = new DisassociateRequest()
