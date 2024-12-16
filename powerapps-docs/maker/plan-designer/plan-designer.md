@@ -23,7 +23,7 @@ Learn how to use the Plan designer, a copilot-first development tool, to quickly
 
 Access the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer.":::
+:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer." lightbox="media/pd-1-enter-problem.png":::
 
 > [!IMPORTANT]
 >
