@@ -121,7 +121,7 @@ In this example, you can let users change the color of the screen by adjusting o
 
 1. Select the screen to unselect any control, and then set the screen's **[Fill](controls/properties-color-border.md)** property to this formula: **RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**. Your screen turns dark gray, which reflects the sliders' current positions.
 
-    In the formula, you can access control properties by using the [property selector](/power-fx/reference/operators). For example, **Slider1.Value** refers to the slider's **[Value](controls/properties-core.md)** property, which represents where the user placed the slider between the **Min** and **Max** values.
+    In the formula, you can access control properties by using the [property selector](/power-platform/power-fx/reference/operators). For example, **Slider1.Value** refers to the slider's **[Value](controls/properties-core.md)** property, which represents where the user placed the slider between the **Min** and **Max** values.
 
 1. **Preview the app** and adjust the sliders. You see how each control is color coded to change the background color of the screen.
 
