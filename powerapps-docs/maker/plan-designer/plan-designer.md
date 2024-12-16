@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Learn how to use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and provide relevant images. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps to create a business solution and refine your requirements for precise and customized outputs.
+Learn how to use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and provide relevant images. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise and customized outputs.
 
 Access the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -58,7 +58,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer.":::
 
-1. Review the user roles and stories. Then, choose one of the following options::
+1. Review the user roles and stories. Then, choose one of the following options:
 
     - Select **Accept** to generate a data model.
     - Select **Change** to provide feedback for the generated user roles or stories. You can select a specific user role and enter your feedback.
@@ -69,7 +69,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     - Add a user story for employees to view PTO blackout dates.
     - Remove the user story for managers for viewing vacation history of team members.
 
-1. Review the changes and select either **Keep** or **Undo**. Once you're satisfied, select **Accept** to move on to the next step and generate data tables.
+1. Review the changes and select **Keep** or **Undo**. When you're done, select **Accept** to move on to the next step and generate data tables.
 
     :::image type="content" source="media/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan designer showing updated user roles and stories."::: 
 
@@ -128,5 +128,5 @@ For canvas apps, a preview of the app is displayed with a welcome screen and oth
 - **Add existing tables in Data workspace**: Adding existing tables in the data workspace within the Plan designer isn't currently supported.
 - **Supported user experiences**: The Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
-- **Solution/ ALM support**: DData and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
+- **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
 
