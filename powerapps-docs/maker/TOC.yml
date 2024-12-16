@@ -1334,6 +1334,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
+    - name: Use Monitor to get insights and recommendations (preview)
+      href: ./canvas-apps/monitor-app-performance.md  
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
