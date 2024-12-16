@@ -1,7 +1,7 @@
 ---
 title: "Sample: File operations with Attachments and Notes using the Dataverse SDK for .NET | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to work with file data within attachment and note tables." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/04/2023
+ms.date: 12/04/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -32,7 +32,7 @@ This sample uses the [Microsoft.PowerPlatform.Dataverse.Client.ServiceClient Cla
 
    - **ActivityMimeAttachmentOperations**: Demonstrates using Attachments.
    - **AnnotationOperations**: Demonstrates using Annotations.
-   
+
    In **Solution Explorer**, right-click the project you want to run and choose **Set as Startup Project**.
 
 1. In either project, edit the *appsettings.json* file. Set the connection string `Url` and `Username` parameters as appropriate for your test environment.
@@ -51,14 +51,18 @@ When the sample runs, you will be prompted in the default browser to select an e
 }
 ```
 
->**Tip**: You can set a user environment variable named `DATAVERSE_APPSETTINGS` to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take affect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
+
+> [!TIP]
+> You can set a user environment variable named `DATAVERSE_APPSETTINGS` to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take affect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
 
 ## Demonstrates
 
 This sample is a solution with two projects. See the respective README files for details on each project.
 
-- [SDK for .NET Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
-- [SDK for .NET Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
+- [SDK for .NET Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
+- [SDK for .NET Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
 
 ## Utility class
 

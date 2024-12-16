@@ -20,7 +20,7 @@ contributors:
 This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Send an email using a template sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SendEmailUsingTemp)
+> [SDK for .NET: Send an email using a template sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SendEmailUsingTemp)
 
 ## How to run this sample
 

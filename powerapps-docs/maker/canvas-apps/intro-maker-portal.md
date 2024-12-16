@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 5/2/2024
+ms.date: 11/19/2024
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -17,7 +17,6 @@ contributors:
 ms.collection: 
     - bap-ai-copilot
 ---
-
 
 # Get started with Power Apps
 
@@ -157,7 +156,7 @@ Start building apps, which provide rich business logic and workflow capabilities
 
 To create an app, select from the following options:
 
-- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
+- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/sql-connection-overview.md) to start building your app.
   
   > [!NOTE]
   > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).

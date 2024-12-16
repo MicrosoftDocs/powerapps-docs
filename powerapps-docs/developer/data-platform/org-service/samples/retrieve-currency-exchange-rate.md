@@ -20,7 +20,7 @@ contributors:
 This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve currency exchange rate sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveCurrencyExchangeRate)
+> [SDK for .NET: Retrieve currency exchange rate sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveCurrencyExchangeRate)
 
 ## How to run this sample
 

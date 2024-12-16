@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to disassociate a role from a user by using the [IOrganizationService.Disassociate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate) method.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Remove a role for a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RemoveRoleFromUser)
+> [SDK for .NET: Remove a role for a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RemoveRoleFromUser)
 
 This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below.
 

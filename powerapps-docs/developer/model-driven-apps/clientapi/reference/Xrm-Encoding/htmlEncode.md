@@ -1,6 +1,6 @@
 ---
-title: "htmlEncode| MicrosoftDocs"
-description: "The Client API method converts a string to an HTML-encoded string."
+title: "htmlEncode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the htmlEncode method.
 author: adrianorth
 ms.author: aorth
 ms.date: 03/12/2022

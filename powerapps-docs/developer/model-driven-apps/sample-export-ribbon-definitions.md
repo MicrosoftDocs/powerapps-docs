@@ -1,15 +1,16 @@
 ---
-title: "Sample: Export ribbon definitions  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbon and RetrieveEntityRibbon messages." # 115-145 characters including spaces. This abstract displays in the search result.
-author: JimDaly
-ms.author: jdaly
-
+title: "Sample: Export ribbon definitions  (model-driven apps)"
+description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbon and RetrieveEntityRibbon messages."
+author: clromano
+ms.author: clromano
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType:
   - developer
+contributors:
+ - JimDaly
 ---
 
 # Sample: Export ribbon definitions
@@ -17,7 +18,7 @@ search.audienceType:
 This sample shows how to export ribbon definitions. It uses the SDK for .NET <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Export ribbon definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions)
+> [SDK for .NET: Export ribbon definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportRibbonDefinitions)
 
 ## How to run this sample
 
@@ -38,7 +39,7 @@ Checks for the current version of the org.
 ### Demonstrate
 
 1. The `RetrieveApplicationRibbon` message retrieves the application ribbon.
-2. The `RetrieveEntityRibbon` message retrieves the system table ribbons
+1. The `RetrieveEntityRibbon` message retrieves the system table ribbons
 
 ### Clean up
 
@@ -46,12 +47,12 @@ No clean up is required for this sample
 
 ### See also
 
-[Customize commands and the ribbon](customize-commands-ribbon.md)<br />
-[Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)<br />
-[Ribbon core schema](ribbon-core-schema.md)<br />
-[Ribbon types schema](ribbon-types-schema.md)<br />
-[Ribbon WSS schema](ribbon-wss-schema.md)<br />
-<xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest><br />
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)   
+[Ribbon core schema](ribbon-core-schema.md)   
+[Ribbon types schema](ribbon-types-schema.md)   
+[Ribbon WSS schema](ribbon-wss-schema.md)   
+<xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest>   
 <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

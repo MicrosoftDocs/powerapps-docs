@@ -5,7 +5,7 @@ author: hemantgaur
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 07/12/2024
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -94,3 +94,4 @@ Tab order first proceeds through the containers and controls with TabIndex value
 - [Use the Accessibility checker](accessibility-checker.md)
 - [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
 - [Accessibility properties](controls/properties-accessibility.md)
+- [Improved canvas keyboard navigation in canvas apps (video)](https://youtu.be/p_tCI6Kpj68?feature=shared)

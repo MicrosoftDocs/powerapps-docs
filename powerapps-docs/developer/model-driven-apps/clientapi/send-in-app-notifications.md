@@ -6,8 +6,8 @@ ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
 ms.topic: article
-author: adrianorth
-ms.author: aorth 
+author: sriharibs-msft
+ms.author: srihas
 search.audienceType: 
   - maker
   - developer

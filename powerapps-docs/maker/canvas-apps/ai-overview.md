@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 10/10/2024
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 06/11/2024
+ms.date: 12/5/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -81,7 +81,9 @@ The following articles can help you build various apps in different scenarios us
 
 ### Microsoft Dataverse
 
-- [Add knowledge to an existing copilot: Dataverse](/microsoft-copilot-studio/knowledge-add-existing-copilot#dataverse)
+
+
+- [Add knowledge to an existing copilot: Dataverse](../data-platform/data-platform-copilot.md)
 
 ## Disable Copilot in Power Apps
 

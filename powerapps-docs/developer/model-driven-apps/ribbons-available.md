@@ -1,9 +1,8 @@
 ---
-title: "Ribbons available in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The article describes where ribbons are defined and modified" # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-
+title: "Ribbons available in model-driven apps"
+description: "The article describes where ribbons are defined and modified"
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -32,7 +31,7 @@ When you write your change definitions, you will frequently need to reference th
 
 Because of this requirement to reference the definitions of existing ribbon elements, it is important to understand the current ribbon definitions in your organization. There are two messages you can use to export XML files representing the current state of your ribbons. These definitions include any customizations that have already been applied to your system so that you can customize any custom ribbons that were previously applied. For more information, see [Export Ribbon Definitions](export-ribbon-definitions.md).
 
-To help you get started, you can download the default ribbon definitions for model-driven apps from [Export Ribbon Definitions sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions). `The ExportedRibbonXml` file includes the output files you would have for an organization.
+To help you get started, you can download the default ribbon definitions for model-driven apps from [Export Ribbon Definitions sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportRibbonDefinitions). `The ExportedRibbonXml` file includes the output files you would have for an organization.
 
 Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific table. These correspond to the **Application Ribbons** solution component. For each table, you will find an *table name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each table. If you want to edit the ribbon for a specific table, you should locate the ribbon XML file for that table.
 
@@ -185,6 +184,6 @@ It is not possible to use a `<PageRule>` to enable or display custom ribbon comp
 ### See also
 
 [Customize the ribbon](customize-commands-ribbon.md)  
- [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
+[Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

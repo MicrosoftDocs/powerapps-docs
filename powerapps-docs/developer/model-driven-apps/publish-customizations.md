@@ -1,6 +1,6 @@
 ---
-title: "Publish customizations (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Publishing customizations makes the Web application aware of changes to the data that affects the user interface." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Publish customizations (model-driven apps)"
+description: "Publishing customizations makes the Web application aware of changes to the data that affects the user interface."
 author: caburk
 ms.author: caburk
 

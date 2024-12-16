@@ -1,8 +1,8 @@
 ---
-title: "Xrm.Panel| MicrosoftDocs"
+title: "Xrm.Panel"
 description: "Provides the loadPanel method to display a web page in the side pane of model-driven apps form."
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

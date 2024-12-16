@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Image Version (flowmachineimageversion) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Image Version (flowmachineimageversion) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -69,7 +69,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ProvisioningError](#BKMK_ProvisioningError)
 - [reference](#BKMK_reference)
+- [sourcemachineid](#BKMK_sourcemachineid)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [statuserrormessage](#BKMK_statuserrormessage)
@@ -188,6 +190,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_ProvisioningError"></a> ProvisioningError
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Flow machine image provisioning error**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`provisioningerror`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
+
 ### <a name="BKMK_reference"></a> reference
 
 |Property|Value|
@@ -204,6 +223,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2048|
+
+### <a name="BKMK_sourcemachineid"></a> sourcemachineid
+
+|Property|Value|
+|---|---|
+|Description|**The Hosted Machine which the image was created from**|
+|DisplayName|**Source machine**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sourcemachineid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|flowmachine|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -247,6 +279,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Label: **Active**<br />State:0<br />TransitionData: None|
 |2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 |3|Label: **Error**<br />State:1<br />TransitionData: None|
+|4|Label: **Provisioning**<br />State:0<br />TransitionData: None|
+|5|Label: **ProvisioningFailed**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_statuserrormessage"></a> statuserrormessage
 
@@ -627,6 +661,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
 - [flowmachineimage_flowmachineimageversion](#BKMK_flowmachineimage_flowmachineimageversion)
+- [flowmachineimageversion_flowmachine](#BKMK_flowmachineimageversion_flowmachine)
 - [lk_flowmachineimageversion_createdby](#BKMK_lk_flowmachineimageversion_createdby)
 - [lk_flowmachineimageversion_createdonbehalfby](#BKMK_lk_flowmachineimageversion_createdonbehalfby)
 - [lk_flowmachineimageversion_modifiedby](#BKMK_lk_flowmachineimageversion_modifiedby)
@@ -660,6 +695,19 @@ One-To-Many Relationship: [flowmachineimage flowmachineimage_flowmachineimagever
 |ReferencingEntityNavigationPropertyName|`flowmachineimage`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_flowmachineimageversion_flowmachine"></a> flowmachineimageversion_flowmachine
+
+One-To-Many Relationship: [flowmachine flowmachineimageversion_flowmachine](flowmachine.md#BKMK_flowmachineimageversion_flowmachine)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowmachine`|
+|ReferencedAttribute|`flowmachineid`|
+|ReferencingAttribute|`sourcemachineid`|
+|ReferencingEntityNavigationPropertyName|`sourcemachineid_flowmachine`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_flowmachineimageversion_createdby"></a> lk_flowmachineimageversion_createdby
 

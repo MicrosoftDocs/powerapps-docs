@@ -1,8 +1,8 @@
 ---
-title: "Grid OnRecordSelect event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Grid OnRecordSelect event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the grid OnRecordSelect event.
-author: fikaradz
-ms.author: fikaradz
+author: clromano
+ms.author: clromano
 ms.date: 06/29/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -48,8 +48,8 @@ More information: [Create or edit model-driven app web resources](../../../../..
 
 Follow these steps to enable the **Power Apps grid control** as the main grid (table view) or within a model-driven form subgrid:
 
-- [Use as main grid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-views-for-an-entity)
-- [Use as subgrid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-a-subgrid)
+- [Use as main grid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-views-for-a-table)
+- [Use as subgrid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-a-subgrid-on-a-form)
 
 ### Step 3: Register the custom behavior on OnRecordSelect Event
 

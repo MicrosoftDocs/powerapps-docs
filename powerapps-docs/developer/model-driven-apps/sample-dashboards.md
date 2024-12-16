@@ -1,8 +1,8 @@
 ---
-title: "Sample dashboards (model-driven apps) | Microsoft Docs"
+title: "Sample dashboards (model-driven apps)"
 description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard."
-author: sriharibs-msft
-ms.author: srihas
+author: jasongre
+ms.author: jasongre
 ms.reviewer: jdaly
 ms.date: 04/01/2022
 ms.topic: article
@@ -205,10 +205,8 @@ This topic contains sample dashboards along with the respective FormXML strings.
 </form>  
 ```  
   
-### See also  
+### See also
+
 [Dashboards](analyze-data-with-dashboards.md)   
  
-
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

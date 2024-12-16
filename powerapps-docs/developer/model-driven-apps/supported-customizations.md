@@ -1,9 +1,8 @@
 ---
-title: "Get started with model-driven apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-
+title: "Get started with model-driven apps customization using code"
+description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. "
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
@@ -28,9 +27,7 @@ There are a variety of tools included with model-driven apps that you can use to
 The following customization methods can be used to produce fully supported customizations:
 
 - Customization in Power Apps or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
-
 - Settings in the web application. For more information, see [Administer model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md).
-
 - Reporting Services. For more information, see [Reporting and analytics guide for model-driven apps](../../maker/model-driven-apps/add-reporting-to-app.md).
 
 > [!NOTE]
@@ -47,9 +44,7 @@ The documentation on this site for developers, technical articles, sample code p
 You can use JavaScript within model-driven apps in three areas:
 
 - **Form Script event handlers**: You can configure form event handlers to call functions defined in JavaScript web resources.
-
 - **Command bar (ribbon) commands**: You can use the `<CustomRule>` or `<JavaScriptFunction>` elements to define actions that call functions defined within JavaScript web resources.
-
 - **Web resources and IFRAMEs**: You can use JavaScript web resources within HTML web resources. IFRAMES configured to allow cross-site scripting, or scripts within HTML web resources included in a form may interact with the documented `Xrm.Page` or `Xrm.Utility` methods within the form via the parent reference.
 
 All interaction with the application pages must only be performed through the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any Model-driven apps page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](client-scripting.md).

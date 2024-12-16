@@ -72,7 +72,7 @@ In addition to creating and managing connections in [powerapps.com](https://make
    For example, these connectors require additional information before you can use them.
    
    * [SharePoint](connections/connection-sharepoint-online.md)
-   * [SQL Server](connections/connection-azure-sqldatabase.md)
+   * [SQL Server](connections/sql-connection-overview.md)
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
@@ -106,8 +106,8 @@ Microsoft’s Azure API connectors service is used by all Power Apps using conne
 A tenant admin must run the following PowerShell commands:
 
 ```Powershell
- Connect-AzureAD -TenantId <target tenant id>
- New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
+ Connect-MgGraph -Scope Application.ReadWrite.All -TenantId <target tenant id>
+ New-MgServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
 ```
 
 Example successful output:

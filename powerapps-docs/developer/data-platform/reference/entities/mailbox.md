@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -1202,6 +1202,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
+- [EmailAddressApprovedBy](#BKMK_EmailAddressApprovedBy)
+- [EmailAddressApprovedOn](#BKMK_EmailAddressApprovedOn)
 - [EntityImage_Timestamp](#BKMK_EntityImage_Timestamp)
 - [EntityImage_URL](#BKMK_EntityImage_URL)
 - [EntityImageId](#BKMK_EntityImageId)
@@ -1241,6 +1243,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ReceivingPostponedUntilForACT](#BKMK_ReceivingPostponedUntilForACT)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [TestAndEnableLastAttemptedBy](#BKMK_TestAndEnableLastAttemptedBy)
+- [TestAndEnableLastAttemptedOn](#BKMK_TestAndEnableLastAttemptedOn)
 - [TransientFailureCount](#BKMK_TransientFailureCount)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -1300,6 +1304,36 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_EmailAddressApprovedBy"></a> EmailAddressApprovedBy
+
+|Property|Value|
+|---|---|
+|Description|**The user who approved the email address for synchronization.**|
+|DisplayName|**Email Address Approved By**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`emailaddressapprovedby`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
+### <a name="BKMK_EmailAddressApprovedOn"></a> EmailAddressApprovedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time the mailbox's email address was approved.**|
+|DisplayName|**Email Address Approved On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`emailaddressapprovedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_EntityImage_Timestamp"></a> EntityImage_Timestamp
 
@@ -1897,6 +1931,36 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|EntityName|
 
+### <a name="BKMK_TestAndEnableLastAttemptedBy"></a> TestAndEnableLastAttemptedBy
+
+|Property|Value|
+|---|---|
+|Description|**The user who last attempted to Test and Enable the mailbox.**|
+|DisplayName|**Test and Enable Last Attempted By**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`testandenablelastattemptedby`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
+### <a name="BKMK_TestAndEnableLastAttemptedOn"></a> TestAndEnableLastAttemptedOn
+
+|Property|Value|
+|---|---|
+|Description|**The date and time of the last test and enable attempt.**|
+|DisplayName|**Test and Enable Last Attempted On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`testandenablelastattemptedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
+
 ### <a name="BKMK_TransientFailureCount"></a> TransientFailureCount
 
 |Property|Value|
@@ -1936,8 +2000,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_mailbox_createdonbehalfby](#BKMK_lk_mailbox_createdonbehalfby)
 - [lk_mailbox_modifiedby](#BKMK_lk_mailbox_modifiedby)
 - [lk_mailbox_modifiedonbehalfby](#BKMK_lk_mailbox_modifiedonbehalfby)
+- [mailbox_emailaddressapprovedby_systemuser](#BKMK_mailbox_emailaddressapprovedby_systemuser)
 - [mailbox_regarding_queue](#BKMK_mailbox_regarding_queue)
 - [mailbox_regarding_systemuser](#BKMK_mailbox_regarding_systemuser)
+- [mailbox_testandenablelastattemptedby_systemuser](#BKMK_mailbox_testandenablelastattemptedby_systemuser)
 - [organization_mailbox](#BKMK_organization_mailbox)
 - [owner_mailbox](#BKMK_owner_mailbox)
 - [team_mailbox](#BKMK_team_mailbox)
@@ -2034,6 +2100,19 @@ One-To-Many Relationship: [systemuser lk_mailbox_modifiedonbehalfby](systemuser.
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_mailbox_emailaddressapprovedby_systemuser"></a> mailbox_emailaddressapprovedby_systemuser
+
+One-To-Many Relationship: [systemuser mailbox_emailaddressapprovedby_systemuser](systemuser.md#BKMK_mailbox_emailaddressapprovedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`emailaddressapprovedby`|
+|ReferencingEntityNavigationPropertyName|`emailaddressapprovedby_mailbox`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_mailbox_regarding_queue"></a> mailbox_regarding_queue
 
 One-To-Many Relationship: [queue mailbox_regarding_queue](queue.md#BKMK_mailbox_regarding_queue)
@@ -2059,6 +2138,19 @@ One-To-Many Relationship: [systemuser mailbox_regarding_systemuser](systemuser.m
 |ReferencingEntityNavigationPropertyName|`regardingobjectid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mailbox_testandenablelastattemptedby_systemuser"></a> mailbox_testandenablelastattemptedby_systemuser
+
+One-To-Many Relationship: [systemuser mailbox_testandenablelastattemptedby_systemuser](systemuser.md#BKMK_mailbox_testandenablelastattemptedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`testandenablelastattemptedby`|
+|ReferencingEntityNavigationPropertyName|`testandenablelastattemptedby_mailbox`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_mailbox"></a> organization_mailbox
 

@@ -1,7 +1,7 @@
 ---
 title: "Work Queue (workqueue) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Work Queue (workqueue) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -63,6 +63,7 @@ The following table lists selected properties for the Work Queue (workqueue) tab
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [allowupdateinputwhileprocessing](#BKMK_allowupdateinputwhileprocessing)
 - [defaultitemtimetoliveinminutes](#BKMK_defaultitemtimetoliveinminutes)
 - [description](#BKMK_description)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -83,6 +84,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [workqueueId](#BKMK_workqueueId)
 - [workqueuekey](#BKMK_workqueuekey)
 - [WorkQueueType](#BKMK_WorkQueueType)
+
+### <a name="BKMK_allowupdateinputwhileprocessing"></a> allowupdateinputwhileprocessing
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether updating the input while the item is in processing is allowed. Default value is NotSet.**|
+|DisplayName|**Allow update item input while in processing.**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`allowupdateinputwhileprocessing`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workqueue_allowupdateinputwhileprocessing`|
+
+#### allowupdateinputwhileprocessing Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**NotSet**|
+|1|**No**|
+|2|**Yes**|
 
 ### <a name="BKMK_defaultitemtimetoliveinminutes"></a> defaultitemtimetoliveinminutes
 

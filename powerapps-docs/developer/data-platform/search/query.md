@@ -327,7 +327,7 @@ The following examples show how to use the query operation. These examples perfo
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -678,7 +678,7 @@ public sealed class QueryContext
 
 Use the [searchquery action](xref:Microsoft.Dynamics.CRM.searchquery) to receive a [searchqueryResponse complex type](xref:Microsoft.Dynamics.CRM.searchqueryResponse).
 
-This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/Search) on GitHub.
 
 The formatted JSON passed to the string `entities` parameter looks like this:
 

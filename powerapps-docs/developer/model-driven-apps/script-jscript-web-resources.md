@@ -1,8 +1,8 @@
 ---
-title: "JavaScript web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere." # 115-145 characters including spaces. This abstract displays in the search result.
-author: sriharibs-msft
-ms.author: srihas
+title: "JavaScript web resources (model-driven apps)"
+description: "Learn about using JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere."
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -30,7 +30,7 @@ With JavaScript web resources, you can more efficiently manage code used in form
  Like all web resources, JavaScript web resources use the model-driven apps security context. Only licensed users who have the necessary privileges can access them.  
   
 > [!NOTE]
->  References included in code between web resources aren’t tracked as solution dependencies.  
+>  References included in code between web resources aren't tracked as solution dependencies.  
   
 <a name="BKMK_Using"></a>
 

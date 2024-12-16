@@ -1,8 +1,8 @@
 ---
-title: "getInitialValue (Client API reference)| MicrosoftDocs"
+title: "getInitialValue (Client API reference)"
 description: Includes description and supported parameters for the getInitialValue method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,7 +14,6 @@ contributors:
   - JimDaly
 ---
 # getInitialValue (Client API reference)
-
 
 
 Returns a value that represents the value set for a **Yes/No**, **Choice** or **Choices** column when the form is opened.
@@ -32,8 +31,6 @@ Yes/No, Choice, Choices
 **Type**: Number
 
 **Description**: The initial value for the column.
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

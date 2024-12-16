@@ -127,7 +127,7 @@ The following examples show how to use the suggest operation. Each of these exam
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method returns the top three suggestions for any search term.
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method returns the top three suggestions for any search term.
 
 ```csharp
 /// <summary>
@@ -180,21 +180,21 @@ OutputSearchSuggest START
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9335eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Yvonne McKay (sample)
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9535eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: bbbbbbbb-1111-2222-3333-cccccccccccc
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Susanna Stubberod (sample)
 
         Text:{crmhit}cont{/crmhit}act
         Document:
-                @search.objectid: 9735eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.objectid: cccccccc-2222-3333-4444-dddddddddddd
                 @search.entityname: contact
                 @search.objecttypecode: 2
                 fullname: Nancy Anderson (sample)
@@ -269,7 +269,7 @@ This class is the same `QueryContext` class used for the [query example](query.m
 
 Use the [searchsuggest action](xref:Microsoft.Dynamics.CRM.searchsuggest) to receive a [searchsuggestResponse complex type](xref:Microsoft.Dynamics.CRM.searchsuggestResponse).
 
-This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/Search) on GitHub.
 
 **Request**
 
@@ -302,7 +302,7 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchsuggestResponse",
-  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9335eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9535eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9735eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
+  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"bbbbbbbb-1111-2222-3333-cccccccccccc\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"cccccccc-2222-3333-4444-dddddddddddd\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
 }
 ```
 
@@ -315,7 +315,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9335eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Yvonne McKay (sample)"
@@ -324,7 +324,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9535eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "bbbbbbbb-1111-2222-3333-cccccccccccc",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Susanna Stubberod (sample)"
@@ -333,7 +333,7 @@ The unescaped JSON data in the response property looks like this:
     {
       "Text": "{crmhit}cont{/crmhit}act",
       "Document": {
-        "@search.objectid": "9735eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.objectid": "cccccccc-2222-3333-4444-dddddddddddd",
         "@search.entityname": "contact",
         "@search.objecttypecode": 2,
         "fullname": "Nancy Anderson (sample)"

@@ -1,6 +1,6 @@
 ---
-title: "pickFile| MicrosoftDocs"
-description: Opens a dialog box to select files for the upload
+title: "pickFile (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the pickFile method.
 author: adrianorth
 ms.author: aorth
 ms.date: 03/12/2022
@@ -29,7 +29,7 @@ This method is supported for both web and mobile clients.
 
 | Parameter Name  | Type     | Required | Description|
 | --------------- | -------- | -------- | -----------|
-| `pickFileOptions` | Object   | No       | An object with the following values:<br/>- **`accept`**: Image file types to select. Valid values are "audio", "video", or "image". String.<br/>- **`allowMultipleFiles`**: Indicates whether to allow selecting multiple files. Boolean.<br/>- **`maximumAllowedFileSize`**: Maximum size of the files(s) to be selected. Number.                          |
+| `pickFileOptions` | Object   | No       | An object with the following values:<br/>- **`accept`**: Image file types to select. Valid values are `audio`, `video`, or `image`. String.<br/>- **`allowMultipleFiles`**: Indicates whether to allow selecting multiple files. Boolean.<br/>- **`maximumAllowedFileSize`**: Maximum size of the files(s) to be selected. Number.|
 | `successCallback` | Function | Yes      | A function to call when selected files are returned. An array of objects with _each_ object having the following values is passed to the function:<br/>- **`fileContent`**: Contents of the file. String <br/>- **`fileName`**: Name of the file. String.<br/>- **`fileSize`**: Size of the file in KB. Number.<br/>- **`mimeType`**: File MIME type. String. |
 | `errorCallback`   | Function | Yes      | A function to call when the operation fails.|
 

@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 10/14/2024
+ms.date: 12/11/2024
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -98,6 +98,7 @@ If an environment variable is used in a flow and the display name of the environ
 - Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
 - To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
 - Environment variables are limited to a maximum of 2,000 characters.
+- Environment variables for SharePoint must have matching metadata. SharePoint has internal identifiers that might not match between target envronments. For example, if you simply create a list with the same name and columns in a target environment, the internal names will likely not match. The metadata always matches if you duplicate a SharePoint site and copy it to your target environment. 
 
 ## Frequently asked questions
 
@@ -155,9 +156,11 @@ Yes.
 
 Yes if your configuration data isn't relational. Environment variables should be used for key: value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
-### Why is a different connection value than the one I want assigned automatically when importing?
+### Why isn't my connection saved for data source environment variables?
 
-In some cases where there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections available for the environment variable. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
+Connections are only used to generate the user interface. For example, to retrieve friendly names for SharePoint lists associated with a site. When editing a data source environment variable, be sure to select a connection with access to the data source. If you no longer have access to the connection, you can manually enter a value. For example, enter the SharePoint site URL or unique identifier (GUID) for a list.
+
+When there are multiple connections available for a single (data source-type) environment variable, there's a by-design implementation to select the first connection in the list of connections. Because there's usually only one connection associated with an environment variable, this isn't something that usually needs to be validated. Additionally, with recent changes to environment variable value visibility, this is easier to validate upon import.
 
 ### How do I remove a value from an environment variable?
 

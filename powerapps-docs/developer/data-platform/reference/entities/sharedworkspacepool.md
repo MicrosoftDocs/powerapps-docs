@@ -1,7 +1,7 @@
 ---
 title: "Shared Workspace Pool (sharedworkspacepool) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Shared Workspace Pool (sharedworkspacepool) table/entity with Microsoft Dataverse."
-ms.date: 08/30/2024
+ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -178,7 +178,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Shared Workspace Pool**|
+|Description|**Status of the workspace**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
