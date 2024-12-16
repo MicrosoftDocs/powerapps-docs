@@ -17,7 +17,7 @@ contributors:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent builder in Power Apps enables organizations to transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and optimize overall business efficiency.
+Agent builder in Power Apps enables organizations to transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and optimize overall business efficiency. Watch this brief video to see how to build an agent:
 
 > [!VIDEO 284820d9-7fbc-4c8f-bf20-e8678614ed3d]
 
