@@ -58,6 +58,6 @@ Follow these procedures to make the most out of the feature:
 
 ## Related information
 
-[Automate your business process in a canvas app](../canvas-apps/agent-builder.md)
+[Build an agent to automate your business process (preview)](../canvas-apps/agent-builder.md)
 
 
