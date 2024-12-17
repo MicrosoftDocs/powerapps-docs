@@ -92,6 +92,11 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 1. Select **Save**.
 
+> [!IMPORTANT]
+> Arguments that pass from a Power App to Power Automate are visible as network traffic and can be intercepted. Most of this traffic is likely harmless data that makes no sense outside of the context of the application (e.g., "yes", "Redmond", etc.) Evaluate the parameters that are passed to Power Automate and ask the question "What could happen if they were changed by an exernal actor?"  To mitigate any risks that you might find, take the extra step in Power Automate to validate the parameter values that are passed in.  
+
+>For example, if as part of your Power App you use Power Automate to send sensitive data to an person in your organization via e-mail (e.g., someuser@contoso.com) be sure to validate that fact in Power Automate. In this example you could check the incoming arguemtent to make sure it has an organization ending (e.g., @contoso.com) and only allow the Flow to proceed if it passes the test.
+
 ## Add a flow to an app
 
 In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected list.
