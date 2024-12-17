@@ -63,7 +63,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     - Select **Accept** to generate a data model.
     - Select **Change** to provide feedback for the generated user roles or stories. You can select a specific user role and enter your feedback.
 
-1. If you need to make any changes, provide a brief description of what you want to modify. Here is examples of what you can ask Copilot to do:
+1. If you need to make any changes, provide a brief description of what you want to modify. Here are examples of what you can ask Copilot to do:
 
     - Add a user role for HR admin to monitor PTO across teams to manage payroll.
     - Add a user story for employees to view PTO blackout dates.
