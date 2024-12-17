@@ -34,7 +34,7 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 
 On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
-:::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." lightbox="media/pd-4-enter-sample-problem.png":::
+:::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." lightbox="media/pd-4-enter-sample-problem.png":::
 
 ## Create a plan
 
@@ -44,7 +44,7 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-   :::image type="content" source="media/pd-3-enable-setting.png" alt-text="Screenshot of the Plan designer with a sample scenario input." lightbox="media/pd-3-enable-setting.png":::
+   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." lightbox="media/pd-3-enable-setting.png":::
 
    Copilot opens the Plan designer and begins creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
