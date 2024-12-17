@@ -35,18 +35,17 @@ By default, the new [Power Automate pane](working-with-flows.md) is enabled by d
 
 1. Select **Upcoming features**.
 
-1. Under the **Retired** tab, select **Enable Classic Power Automate pane** to set the toggle to **On**. 
-
+1. Under the **Retired** tab, select **Enable Classic Power Automate pane** to set the toggle to **On**.
 
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for Power Apps.
 - Learn how to [configure a control](add-configure-controls.md).
 - A SharePoint site with two lists.
-    - List **RepairShop** contains Title, and ContactEmail columns. 
-    - List **Assets** contains Title, AssetType, and RepairShop columns. The AssetType column is a choice column with choices such as "Desktop", "Laptop".
-    - The RepairShop column in Assets list is a lookup column that gets values from the ContactEmail column in RepairShop list.
-    - Create a few items in the **RepairShop** list for sample contacts.
+  - List **RepairShop** contains Title, and ContactEmail columns. 
+  - List **Assets** contains Title, AssetType, and RepairShop columns. The AssetType column is a choice column with choices such as "Desktop", "Laptop".
+  - The RepairShop column in Assets list is a lookup column that gets values from the ContactEmail column in RepairShop list.
+  - Create a few items in the **RepairShop** list for sample contacts.
 
 ## Create a flow
 
@@ -93,9 +92,11 @@ In this section, you'll create a flow using Power Automate that creates an item 
 1. Select **Save**.
 
 > [!IMPORTANT]
-> Arguments that pass from a Power App to Power Automate are visible as network traffic and can be intercepted. Most of this traffic is likely harmless data that makes no sense outside of the context of the application (e.g., "yes", "Redmond", etc.) Evaluate the parameters that are passed to Power Automate and ask the question "What could happen if they were changed by an exernal actor?"  To mitigate any risks that you might find, take the extra step in Power Automate to validate the parameter values that are passed in.  
-
->For example, if as part of your Power App you use Power Automate to send sensitive data to an person in your organization via e-mail (e.g., someuser@contoso.com) be sure to validate that fact in Power Automate. In this example you could check the incoming arguemtent to make sure it has an organization ending (e.g., @contoso.com) and only allow the Flow to proceed if it passes the test.
+> Arguments that pass from Power Apps to Power Automate are visible as network traffic and can be intercepted. Most traffic is likely harmless data that are irrelevant outside the application, for example arguments like "yes" or "Redmond".
+>
+> Evaluate the parameters passed to Power Automate and consider the consequences (if any) if they're changed by an exernal actor. To mitigate risks, validate the parameter values passed.  
+>
+> For example, if you send sensitive data to a person in your organization through email, for example `someuser@contoso.com`, validate the address in Power Automate. You can check the incoming arguments to confirm the organization, `@contoso.com`, and only allow the flow to proceed if the right organization is present.
 
 ## Add a flow to an app
 

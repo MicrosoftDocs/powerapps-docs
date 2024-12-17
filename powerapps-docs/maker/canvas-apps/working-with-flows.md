@@ -21,16 +21,17 @@ contributors:
 Create new flows or add and edit existing flows using the Power Automate pane within Power Apps Studio. The Power Automate pane is enabled by default.
 
 > [!IMPORTANT]
-> Arguments that pass from a Power App to Power Automate are visible as network traffic and can be intercepted. Most of this traffic is likely harmless data that makes no sense outside of the context of the application (e.g., "yes", "Redmond", etc.) Evaluate the parameters that are passed to Power Automate and ask the question "What could happen if they were changed by an exernal actor?"  To mitigate any risks that you might find, take the extra step in Power Automate to validate the parameter values that are passed in.  
-
->For example, if as part of your Power App you use Power Automate to send sensitive data to an person in your organization via e-mail (e.g., someuser@contoso.com) be sure to validate that fact in Power Automate. In this example you could check the incoming arguemtent to make sure it has an organization ending (e.g., @contoso.com) and only allow the Flow to proceed if it passes the test.
-
+> Arguments that pass from Power Apps to Power Automate are visible as network traffic and can be intercepted. Most traffic is likely harmless data that are irrelevant outside the application, for example arguments like "yes" or "Redmond".
+>
+> Evaluate the parameters passed to Power Automate and consider the consequences (if any) if they're changed by an exernal actor. To mitigate risks, validate the parameter values passed.  
+>
+> For example, if you send sensitive data to a person in your organization through email, for example `someuser@contoso.com`, validate the address in Power Automate. You can check the incoming arguments to confirm the organization, `@contoso.com`, and only allow the flow to proceed if the right organization is present.
 
 ## Create a new flow
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
-2. On the app authoring menu, select **Power Automate**. 
+2. On the app authoring menu, select **Power Automate**.
 
    :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane.":::
 
