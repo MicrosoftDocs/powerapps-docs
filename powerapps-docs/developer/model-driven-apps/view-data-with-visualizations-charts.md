@@ -17,6 +17,9 @@ Visualizations let you see your business data graphically. A visualization is at
   
 You can use a chart or a web resource as a visualization in Dataverse. For charts, you can use the chart designer in model-driven apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into model-driven apps.
 
+> [!IMPORTANT]
+> The XML of an imported chart when encoded to a base64 string has a maximum length of 4000 characters. This translates to roughly 3000 characters before that encoding is done. 
+
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 <a name="VisualizationTypes"></a> 
