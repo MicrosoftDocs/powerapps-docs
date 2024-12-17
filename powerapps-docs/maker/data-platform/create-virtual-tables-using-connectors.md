@@ -24,6 +24,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
 - Salesforce (preview)
 - Oracle (preview)
+- Snowflake (preview)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -34,6 +35,7 @@ To learn more about supported actions and limitations with the connector, go to:
 - [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
 - [Connector reference for the Salesforce connector](/connectors/salesforce/)
 - [Connector reference for the Oracle connector](/connectors/oracle/)
+- [Connector reference for the Snowflake connector](/connectors/snowflakev2/)
 
 ## Overview
 
@@ -74,7 +76,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Create a virtual table in Power Apps for SQL, SharePoint, Fabric or Salesforce
+## Create a virtual table in Power Apps for SQL, SharePoint, Fabric, Salesforce or Snowflake
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -172,6 +174,25 @@ Select Add connection:
 For Oracle connections, you must provide a server, authentication type, username, password, and a gateway.
 
 Server should be provided in **Server:Port/SID**-format. Notice that the server name or IP-address needs to be accessible from the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem).
+
+# [Snowflake (preview)](#tab/snowflake)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+- **Snowflake SaaS URL**. The URL associated with the Snowflake account for which virtual tables need to be created. For example, `organization.account.snowflakecomputing.com`. Don't add *https* to the URL.
+- **Snowflake database**. Database where tables are virtualized in Dataverse.
+- **Warehouse name**. Snowflake warehouse which the role has USAGE privileges.
+- **Role**. Snowflake role assigned to the Service Account role.
+- **Schema**. Schema which has the tables that Dataverse needs access to virtualize the data.
+- **Tenant ID**. Microsoft Entra ID tenant.
+- **Client ID**. Entra client ID for the Power Platform tenant.
+- **Client Secret**. Entra ID client secret for the Power Platform client. 
+- **Resource URL**. Entra ID resource application ID. Don't add `api://` for the URL.
 
 ---
 
