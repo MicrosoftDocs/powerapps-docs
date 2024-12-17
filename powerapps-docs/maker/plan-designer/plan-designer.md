@@ -54,7 +54,7 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
 Copilot shows you the user roles and stories that it generated based on your description.
 
-In this scenario, two roles were generated: employee and manager. Each role comes with its own descriptions and user stories. On the left side, the user roles and stories are presented in a bullet list, while a visual diagram is shown on the right side.de.
+In this scenario, two roles were generated: employee and manager. Each role comes with its own descriptions and user stories. On the left side, the user roles and stories are presented in a bullet list, while a visual diagram is shown on the right side.
 
 :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer." lightbox="media/pd-6-generate-roles-stories.png":::
 
@@ -63,7 +63,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     - Select **Accept** to generate a data model.
     - Select **Change** to provide feedback for the generated user roles or stories. You can select a specific user role and enter your feedback.
 
-1. If you need to make any changes, provide a brief description of what you want to modify. Here are a few examples of requests you can make to Copilot:
+1. If you need to make any changes, provide a brief description of what you want to modify. Here is examples of what you can ask Copilot to do:
 
     - Add a user role for HR admin to monitor PTO across teams to manage payroll.
     - Add a user story for employees to view PTO blackout dates.
@@ -101,7 +101,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 ### Generate user experiences
 
-The Plan designer proposes a set of user experiences tailored to solve your business problem. In our sample scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
+The Plan designer proposes a set of user experiences tailored to solve your business problem. In this scenario, a canvas app, a model-driven app, and two Power Automate flows are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
 :::image type="content" source="media/pd-12-generate-user-exp.png" alt-text="Screenshot of the proposed user experiences in the Plan designer." lightbox="media/pd-12-generate-user-exp.png":::
 
@@ -109,7 +109,7 @@ To view details of the proposed user experiences, hover over the **information i
 
 :::image type="content" source="media/pd-13-more-info-about-plan.png" alt-text="Screenshot of the information icon pop-up with user experience details." lightbox="media/pd-13-more-info-about-plan.png":::
 
-To make changes, select **Change** and follow the steps as mentioned above. Or select **Accept** to create the assets.
+To make changes, select **Change** and follow the steps above. Or select **Accept** to create the assets.
 
 ### Accept user experiences
 
