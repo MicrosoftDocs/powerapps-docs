@@ -18,7 +18,7 @@ contributors:
 This sample code shows how to work with activity party records.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with activity party records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ActivityPartyRecords)
+> [SDK for .NET: Work with activity party records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Activities/ActivityParty)
 
 ## How to run this sample
 

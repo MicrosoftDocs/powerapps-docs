@@ -14,13 +14,13 @@ search.audienceType:
 
 This sample demonstrates how to perform a number of workflow operations such as create, delete, activate, set state , and more.
 
-Download the sample: [Workflow](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Workflow)
+Download the sample: [Workflow](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Workflow)
 
 ## How to run this sample
 
 See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for general information about how to run this sample.
 
-Notice that there are five separate samples, each in it's own C# file, in the solution's [project](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Workflow/Workflow). To run each sample, set it as the startup object in the project's properties prior to executing the sample.
+Notice that there are five separate samples, each in it's own C# file, in the solution's [project](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Workflow/Workflow). To run each sample, set it as the startup object in the project's properties prior to executing the sample.
 
 > [!IMPORTANT]
 > Some operations described in these samples are not supported by Dataverse. In Dataverse, workflows must be created and updated using the Workflow designer. With Dynamics 365 Customer Engagement on-premises you can create Workflows using the XAML definitions with code. This is not supported with Dataverse.

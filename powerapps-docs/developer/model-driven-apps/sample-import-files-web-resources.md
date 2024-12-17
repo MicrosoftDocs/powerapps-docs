@@ -17,7 +17,7 @@ When you develop a large number of files to use as Web resources, you can save y
 
 This sample provides a simplified example of this process.
 
-Download the sample: [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources).
+Download the sample: [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ImportWebResources).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 

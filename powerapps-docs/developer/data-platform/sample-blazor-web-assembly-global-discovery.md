@@ -16,7 +16,7 @@ contributors:
 
 This sample shows how to use the Global Discovery service from a Blazor WebAssembly application.
 
-You can download the sample from [https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C#/BlazorCDS](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)
+You can download the sample from [https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C#/BlazorCDS](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/BlazorCDS)
 
 This sample is a modification of the steps in the [Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse](walkthrough-blazor-webassembly-single-tenant.md)
 
