@@ -184,7 +184,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Authentication type**. Ensures Snowflake is accessed only by those with approved permission. Choose **Service Principal** authentication for this option.
+- **Authentication type**. Ensures Snowflake is accessed only by those with approved permission. Select **Service principal (Microsoft Entra ID application)** for this option.
 - **Snowflake SaaS URL**. The URL associated with the Snowflake account for which virtual tables are to be created. For example, `organization.account.snowflakecomputing.com`. Don't add *https* to the URL.
 - **Snowflake database**. Database where Snowflake data tables are virtualized in Dataverse.
 - **Warehouse name**. Snowflake warehouse which the role has USAGE privileges.
