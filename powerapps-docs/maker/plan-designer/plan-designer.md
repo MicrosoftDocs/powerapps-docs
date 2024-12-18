@@ -124,11 +124,11 @@ For canvas apps, a preview of the app is displayed with a welcome screen and oth
 
 ## View and edit plans
 
-When you start using the Plan designer, the **Plans** menu appears in the left navigation pane. You can access all of your plans and make any necessary edits.
+You start using the Plan designer, the left navigation pane will display the **Plans** menu. This menu allows you to easily access your plans and make any  necessary edits.
 
 :::image type="content" source="media/pd-your-plans.png" alt-text="View or edit your plans." lightbox="media/pd-your-plans.png" :::
 
-1. **Plans**: Menu to access all your plans
+1. **Plans**: Menu to access your plans.
 1. **Your plans**: View your plans.
 1. **Edit**: Edit the selected plan.
 1. **Edit or Delete**: Edit or delete the selected plan.
