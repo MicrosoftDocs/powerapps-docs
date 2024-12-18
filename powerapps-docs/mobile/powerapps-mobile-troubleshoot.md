@@ -243,19 +243,17 @@ If you're an admin, you can avoid users getting this error by making sure all mo
 3. On the command bar, select **Set as Home**.  
   
 
-#### Or, you can create a personal dashboard through the web app and enable it for mobile:  
+#### Or, you can create a personal dashboard through the web app:  
   
 1. In the web app, go to **Sales > Dashboards**.  
   
-2. Select **New**.  
+1. Select **New**.  
   
-3. Select **Properties**.  
-
-4. Enter a name for your dashboard and select **Enable for mobile**.  
+1. Select **Properties**.  
   
-5. Add the components you want on your dashboard and select **Save**.  
+1. Add the components you want on your dashboard and select **Save**.  
   
-6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
+1. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
    
 
 ## Network requests fail when Power Apps mobile app is running in the background
