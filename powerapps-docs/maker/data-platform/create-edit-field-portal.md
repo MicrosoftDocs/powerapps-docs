@@ -55,7 +55,7 @@ You can set other options depending on your choice of **Data type**.
 
 There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-fields.md).
 
-When you creat a column, **Data type** provides the following choices:
+When you create a column, **Data type** provides the following choices:
 
 ### Text 
 
