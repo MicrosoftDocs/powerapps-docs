@@ -121,6 +121,17 @@ The proposed apps open in a new tab, fully functioning with the added data table
 
 For canvas apps, a preview of the app is displayed with a welcome screen and other screens connected to tables. When you open a model-driven app, it launches the modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published for use.
 
+## View and edit plans
+
+When you start using the Plan designer, the **Plans** menu appears in the left navigation pane. You can access all of your plans and make any necessary edits.
+
+:::image type="content" source="media/pd-your-plans.png" alt-text="View or edit your plans." lightbox="media/pd-your-plans.png:::
+
+1. **Plans**: Menu to access all your plans
+1. **Your plans**: View your your plans.1.
+1. **Edit**: Edit the selected plan.
+1. **Edit or Delete**: Edit or delete the selected plan.
+
 ## Known limitations
 
 - **Inline editing user roles and user stories**: Direct inline editing of content isn't supported. All changes must be prompted in Copilot first to regenerate iterations.
@@ -129,4 +140,3 @@ For canvas apps, a preview of the app is displayed with a welcome screen and oth
 - **Supported user experiences**: The Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
 - **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
-
