@@ -121,13 +121,6 @@ While some relationships might be automatically created, you can still review an
 
 ## Troubleshooting 
 
-### Error message: Return records size can't exceed 83886080
-
-This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
-
-:::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message.":::
-To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
-
 #### Workaround for very large number of lookups or choice columns
 
 If the error message occurs in Power BI when you try to connect to a table with a very large number of lookups or choice columns, the following manual workaround might allow you to connect to the table. The  account, contact, and opportunity table might encounter this issue when they're extensively customized with additional lookups or choice columns.
