@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: MitiJ
 ms.author: mijosh
-ms.date: 09/24/2024
+ms.date: 12/18/2024
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: article
@@ -20,6 +20,7 @@ contributors:
 This article has information to help fix some of the common issues you might encounter while working with model-driven app forms.
 
 > [!IMPORTANT]
+>
 > - The tools described in this article are designed for troubleshooting purposes; they aren't meant to be used in day-to-day production scenarios, even though you can use them for troubleshooting issues in production environments.
 > - These troubleshooting tools only affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
 > - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
@@ -607,14 +608,23 @@ Verify where the change is coming from and if the behavior is expected or not. I
 
 ## Business required column doesn't block saving
 
-Business required columns prevent saving a form when their values are empty. However, this only works when users can see the columns on the form. It's possible for users to save records with empty values for business required columns in these scenarios:
+<!-- Business required columns prevent saving a form when their values are empty. However, this only works when users can see the columns on the form. It's possible for users to save records with empty values for business required columns in these scenarios:
 
 - The column is hidden from the form, either with [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or [setVisible Client API](./clientapi/reference/controls/setvisible.md).
 - The column is on a different form tab that isn't visible.
 - The user or app maker changes the column's required level with [setRequiredLevel Client API](./clientapi/reference/controls/setvisible.md).
 - The user is not using model-driven apps or Power Pages to create the record. For example, they may use Web APIs.
 
-Business required columns are a usability feature, not a data integrity feature. They are easily bypassed. If having a column with a value is critical to your business process, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead.
+Business required columns are a usability feature, not a data integrity feature. They are easily bypassed. If having a column with a value is critical to your business process, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead. -->
+
+Business required columns are a usability feature that help prevent users from saving a record with an empty value in that column. In model-driven apps and Power Pages, the following scenarios don't block saving a record when a required column has an empty value:
+
+- The column is hidden from the form, either because of  [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or a client-side script using the [control.setVisible Client API](clientapi/reference/controls/setVisible.md) .
+- The column is on a hidden form tab.
+- A client-side script changes the column's required level using the [setRequiredLevel Client API](clientapi/reference/attributes/setRequiredLevel.md).
+- The user isn't using model-driven apps or Power Pages to create the record. Client applications using Dataverse APIs aren't blocked from saving records when column [AttributeMetadata.RequirementLevel](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.requiredlevel) is set to [AttributeRequiredLevel.ApplicationRequired](/dotnet/api/microsoft.xrm.sdk.metadata.attributerequiredlevel).[Learn more about column requirement level](../data-platform/entity-attribute-metadata.md#column-requirement-level)
+
+When you need to enforce data integrity, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead, such as [synchronous plug-ins](../data-platform/plug-ins.md).
 
 
 ### How to troubleshoot
@@ -639,17 +649,18 @@ This might lead to another troubleshooting scenario such as [Why a control is di
 
 ## Cannot create a record because of insufficient permissions to a secured field, even though that field is not in the form
 
-This may happen when users create a record (row) from a different form. They get the error message "The user does not have create permissions to a secured field" even though they haven't entered a value for that field (column) or that field isn't even on the form.
+This may happen when users create a record (row) from a different form. They get the error message **The user does not have create permissions to a secured field** even though they haven't entered a value for that field (column), or that field isn't on the form.
 
-When table A has a lookup field to table B, creating a record A from record B may automatically set lookup fields on it to B, even if those fields are not on the form.
+When table **A** has a lookup field to table **B**, creating a record **A** from record **B** automatically sets lookup fields on it to **B**, even if those fields are not on the form.
 
-For example,
-1. Account table has a lookup field, `primarycontactid`, to the Contact table.
-2. User opens a Contact form for **Reed Smith**.
-3. User opens the lookup field, `parentaccountid`, on the form and selects the button to create a new account.
-4. New Account form opens, with the `primarycontactid` field automatically set to **Reed Smith**.
+For example:
 
-If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they will get an error when they try to save the new Account. They can clear the field before saving it. However, if that field is not on the form, they can't clear it. A workaround is to create the Account from the Accounts page instead of from a Contact form.
+1. Account table has a lookup field, `primarycontactid`, to the contact table.
+1. User opens a contact form for **Robin Danielsen**.
+1. User opens the lookup field, `parentaccountid`, on the form and selects the button to create a new account.
+1. New account form opens, with the `primarycontactid` field automatically set to **Robin Danielsen**.
+
+If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they will get an error when they try to save the new account. They can clear the field before saving it. However, if that field is not on the form, they can't clear it. A workaround is to create the account from the account page instead of from a contact form.
 
 ## Some columns aren't displayed on the merge dialog
 
