@@ -45,7 +45,7 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." lightbox="media/pd-3-enable-setting.png":::
+   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." lightbox="media/pd-4-enter-sample-problem.png":::
 
    Copilot opens the Plan designer and begins creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
