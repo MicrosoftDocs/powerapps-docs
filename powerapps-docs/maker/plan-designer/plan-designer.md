@@ -23,7 +23,7 @@ Learn how to use the Plan designer, a copilot-first development tool, to quickly
 
 Access the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer." lightbox="media/pd-1-enter-problem.png":::
+:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer." :::
 
 > [!IMPORTANT]
 >
@@ -34,7 +34,7 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 
 On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
-:::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." lightbox="media/pd-4-enter-sample-problem.png":::
+:::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." :::
 
 
 ## Create a plan
@@ -45,7 +45,7 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
 1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." lightbox="media/pd-4-enter-sample-problem.png":::
+   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." :::
 
    Copilot opens the Plan designer and begins creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
@@ -72,7 +72,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 1. Review the changes and select **Keep** or **Undo**. When you're done, select **Accept** to move on to the next step and generate data tables.
 
-    :::image type="content" source="media/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan designer showing updated user roles and stories." lightbox="media/pd-7-keep-or-undo.png"::: 
+    :::image type="content" source="media/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan designer showing updated user roles and stories." ::: 
 
 ### Generate data tables
 
@@ -108,7 +108,7 @@ The Plan designer proposes a set of user experiences tailored to solve your busi
 
 To view details of the proposed user experiences, hover over the **information icon**. The pop-up info card displays the name, description, targeted user role, and the included data tables.
 
-:::image type="content" source="media/pd-13-more-info-about-plan.png" alt-text="Screenshot of the information icon pop-up with user experience details." lightbox="media/pd-13-more-info-about-plan.png":::
+:::image type="content" source="media/pd-13-more-info-about-plan.png" alt-text="Screenshot of the information icon pop-up with user experience details." :::
 
 To make changes, select **Change** and follow the steps above. Or select **Accept** to create the assets.
 
