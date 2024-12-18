@@ -605,21 +605,28 @@ The following screenshot shows the root cause of the issue. You can see that the
 
 Verify where the change is coming from and if the behavior is expected or not. If a script causes the change, the original web resource can be traced back in the call stack. In most cases, it's a script. Make a decision based on the web resource itself.
 
+## Business required column doesn't block saving
 
-## Business required column validation doesn't behave as expected
+Business required columns prevent saving a form when their values are empty. However, this only works when users can see the columns on the form. It's possible for users to save records with empty values for business required columns in these scenarios:
 
-Business required columns by default block the form save operation if the value is empty. However, in many by-design scenarios, a business-required column might not block the save operation when the value is empty or block the save when you don't believe it should.
+- The column is hidden from the form, either with [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or [setVisible Client API](./clientapi/reference/controls/setvisible.md).
+- The column is on a different form tab that isn't visible.
+- The user or app maker changes the column's required level with [setRequiredLevel Client API](./clientapi/reference/controls/setvisible.md).
+- The user is not using model-driven apps or Power Pages to create the record. For example, they may use Web APIs.
+
+Business required columns are a usability feature, not a data integrity feature. They are easily bypassed. If having a column with a value is critical to your business process, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead.
+
 
 ### How to troubleshoot
 
-The `RequiredFieldValidation` operation is logged when a save is attempted, regardless of whether save is successful or not. This operation explains why each business-required column blocks or doesn't block the save operation.
+The `RequiredFieldValidation` operation is logged when a save is attempted, regardless of whether save is successful or not. This operation explains why each business required column blocks or doesn't block the save operation.
 
 The following image is an example of this operation. The message explains how to read the detailed reports of each required column. In this example, `fax` column is bound to one control, and the control of the same name is read-only. Therefore it won't trigger required column validation.
 
 > [!div class="mx-imgBorder"]
 > ![Column validation](media/required-field-validation.png "Column validation")
 
-The following image is another example that `jobtitle` is a business-required column on the business process flow but not on the form, and the column isn't modified. Thus it doesn't block the save operation even when it's empty.
+The following image is another example that `jobtitle` is a business required column on the business process flow but not on the form, and the column isn't modified. Thus it doesn't block the save operation even when it's empty.
 
 > [!div class="mx-imgBorder"]
 > ![Required column validation](media/required-field-validation-bpf-only-field.png "Required column validation")
@@ -630,6 +637,19 @@ Most times, the behavior is by design, and the `RequiredFieldValidation` operati
 
 This might lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
 
+## Cannot create a record because of insufficient permissions to a secured field, even though that field is not in the form
+
+This may happen when users create a record (row) from a different form. They get the error message "The user does not have create permissions to a secured field" even though they haven't entered a value for that field (column) or that field isn't even on the form.
+
+When table A has a lookup field to table B, creating a record A from record B may automatically set lookup fields on it to B, even if those fields are not on the form.
+
+For example,
+1. Account table has a lookup field, `primarycontactid`, to the Contact table.
+2. User opens a Contact form for **Reed Smith**.
+3. User opens the lookup field, `parentaccountid`, on the form and selects the button to create a new account.
+4. New Account form opens, with the `primarycontactid` field automatically set to **Reed Smith**.
+
+If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they will get an error when they try to save the new Account. They can clear the field before saving it. However, if that field is not on the form, they can't clear it. A workaround is to create the Account from the Accounts page instead of from a Contact form.
 
 ## Some columns aren't displayed on the merge dialog
 

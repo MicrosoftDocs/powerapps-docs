@@ -44,7 +44,7 @@ Initially, just three column properties are available:
  |**Display Name**|The text to be displayed for the column in the user interface.|
  |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Dataverse Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type with the exception of converting text columns to autonumber columns.|
- |**Required**| A record can't be saved without data in this column. Notice that required columns on a hidden tab or section don’t block saving the record unless the same column is also in a visible tab or section on the same form. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
+ |**Required**| A record can't be saved without data in this column. Note that required columns on a hidden tab or section don’t block saving the record unless the same column is also in a visible tab or section on the same form. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
@@ -138,7 +138,7 @@ Every column has the following properties you can change:
 
 |Property|Description|
 |--|--|
-|**Required**|When this is selected a row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
+|**Required**|A record can't be saved without data in this column. Note that required columns on a hidden tab or section don’t block saving the record unless the same column is also in a visible tab or section on the same form. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
 |**Searchable**|De-select this for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
