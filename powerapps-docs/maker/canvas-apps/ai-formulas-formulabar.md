@@ -41,7 +41,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 
    Alternatively, you can select a subset of a formula and then select the dropdown near the **fx** field label and choose **Explain this selection** to explain only that part.
 
-   :::image type="content" source="media/copilot/copilot-explain-section.png" alt-text="Screenshot of Copilot's explanation of a formula." lightbox="media/copilot/copilot-explain-section.png":::
+   :::image type="content" source="media/copilot/copilot-explain-section.png" alt-text="Screenshot of Copilot's option to Explain this section, showing part of the formula highlighted by the user." lightbox="media/copilot/copilot-explain-section.png":::
 
     Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app. When explaining a selection, Copilot may also provide additional context if it is important for the explanation.
 
