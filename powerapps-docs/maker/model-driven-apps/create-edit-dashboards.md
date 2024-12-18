@@ -52,6 +52,10 @@ Dashboards can be standard or interactive.
     :::image type="content" source="media/create-new-dashboard-layouts.png" alt-text="{alt-text}":::
 
 1. In the **Dashboard: New** page, enter a name for the dashboard.
+
+   > [!NOTE]
+   > The **Enable for mobile** option on the Dashboard properties window only works with the legacy web client and has no effect on the Unified Interface. All dashboards are available on mobile and browser.  
+
 1. Select one of the component areas and then select the icon for a chart or a list.  
   
      Up to six components can be included in a dashboard.  
