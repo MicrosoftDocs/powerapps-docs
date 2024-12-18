@@ -115,7 +115,7 @@ To make changes, select **Change** and follow the steps above. Or select **Accep
 
 Once you accept the proposed user experiences, they're created. To open a canvas app or model-driven app, select the plus icon (**+**).  Opening precreated Power Automate flows isn't supported; it navigates to the Power Automate page within your solution.
 
-:::image type="content" source="media/pd-14-open-app.png" alt-text="Screenshot of the Plan designer with the option to open created apps." lightbox="media/pd-14-open-app.png":::
+:::image type="content" source="media/pd-14-open-app.png" alt-text="Screenshot of the Plan designer with the option to open created apps.":::
 
 The proposed apps open in a new tab, fully functioning with the added data tables.
 
@@ -128,7 +128,7 @@ When you start using the Plan designer, the **Plans** menu appears in the left n
 :::image type="content" source="media/pd-your-plans.png" alt-text="View or edit your plans." lightbox="media/pd-your-plans.png:::
 
 1. **Plans**: Menu to access all your plans
-1. **Your plans**: View your your plans.1.
+1. **Your plans**: View your your plans.
 1. **Edit**: Edit the selected plan.
 1. **Edit or Delete**: Edit or delete the selected plan.
 
