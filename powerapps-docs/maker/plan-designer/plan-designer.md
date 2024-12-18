@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Learn how to use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and provide relevant images such as business process flow or screenshot of a legacy app. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise and customized outputs.
+Learn how to use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and provide relevant images such as business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise and customized outputs.
 
 Access the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -35,6 +35,7 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
 
 :::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." lightbox="media/pd-4-enter-sample-problem.png":::
+
 
 ## Create a plan
 
@@ -128,7 +129,7 @@ When you start using the Plan designer, the **Plans** menu appears in the left n
 :::image type="content" source="media/pd-your-plans.png" alt-text="View or edit your plans." lightbox="media/pd-your-plans.png" :::
 
 1. **Plans**: Menu to access all your plans
-1. **Your plans**: View your your plans.
+1. **Your plans**: View your plans.
 1. **Edit**: Edit the selected plan.
 1. **Edit or Delete**: Edit or delete the selected plan.
 
