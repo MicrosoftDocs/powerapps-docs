@@ -75,9 +75,12 @@ Dashboards can be standard or interactive.
 
 1. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
-1. In the **Set Properties** dialog box, make changes to a chart or list such as change the table, default view, add a chart selector, or make the dashboard available on the mobile apps. When done, select **OK**.  
+1. In the **Set Properties** dialog box, make changes to a chart or list such as change the table, default view, or add a chart selector. When done, select **OK**.  
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
+
+     > [!NOTE]
+     > The **Available on phone** option in the Availability section only works with the legacy web client and has no effect on the Unified Interface. All dashboard sections are available on mobile and browser.  
   
 1. When the changes are complete select **Save** and then select **Close**.
 
