@@ -22,7 +22,7 @@ To effectively define changes to the default RibbonXml, you must be able to refe
 
 ## Access the ribbon definitions for your organization
 
-If the Ribbon for your organization has been modified, you should export the current definitions if you intend to work with the customized ribbon elements. To do this, use the [Export ribbon xml](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions) sample.
+If the Ribbon for your organization has been modified, you should export the current definitions if you intend to work with the customized ribbon elements. To do this, use the [Export ribbon xml](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportRibbonDefinitions) sample.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 

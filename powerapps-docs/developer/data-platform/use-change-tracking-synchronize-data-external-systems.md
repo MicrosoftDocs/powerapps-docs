@@ -194,7 +194,7 @@ You should be aware of the following constraints when retrieving changes for a t
 
 ### .NET SDK Sample code
 
-The following code snippet shows how the `RetrieveEntityChanges` message is used to retrieve the changes for a table. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Changetracking).
+The following code snippet shows how the `RetrieveEntityChanges` message is used to retrieve the changes for a table. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Changetracking).
 
 ```csharp
 string token;

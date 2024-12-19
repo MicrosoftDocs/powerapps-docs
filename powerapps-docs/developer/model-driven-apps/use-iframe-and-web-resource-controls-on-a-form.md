@@ -1,8 +1,8 @@
 ---
 title: "Use IFRAME and web resource controls on a form (model-driven apps)"
 description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  "
-author: sriharibs-msft
-ms.author: srihas
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: article

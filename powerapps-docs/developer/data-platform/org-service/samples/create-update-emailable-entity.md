@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to create and update a table using the [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEmailableEntity)
+> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEmailableEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

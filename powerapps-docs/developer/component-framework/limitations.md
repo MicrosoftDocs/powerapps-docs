@@ -1,8 +1,8 @@
 ---
 title: "Limitations of Power Apps component framework | MicrosoftDocs"
 description: "Limitations using Power Apps component framework"
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: article

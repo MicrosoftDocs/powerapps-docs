@@ -23,7 +23,7 @@ This sample shows how to create, retrieve, update, and delete operations on an a
 - <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Early-bound table operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/EarlyBoundEntityOperations)
+> [SDK for .NET: Early-bound table operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/EarlyBoundEntityOperations)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

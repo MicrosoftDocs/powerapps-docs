@@ -389,13 +389,13 @@ and bring it into your flow. More information about creating a Teams team: [Crea
 
     ![Copy the team link.](media/sample-crisis-communication-app/18-Copy-link.png)
 
-1. Extract the **Team ID**, which is everything after `groupId=` and before `&tenantId=`. <br> For example, in the following URL, the group ID is <br>`8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`
+1. Extract the **Team ID**, which is everything after `groupId=` and before `&tenantId=`. <br> For example, in the following URL, the group ID is <br>`aaaabbbb-0000-cccc-1111-dddd2222eeee`
    
-   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=aaaabbbb-0000-cccc-1111-dddd2222eeee&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
    
 1. Extract the **Channel ID**, which is everything after `https://teams.microsoft.com/l/channel/` and before `/General`. <br> For example, in the following URL, the channel ID is<br> `19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2`
    
-   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
+   `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=aaaabbbb-0000-cccc-1111-dddd2222eeee&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
 
 1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 
