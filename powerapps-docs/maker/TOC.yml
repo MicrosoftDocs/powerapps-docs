@@ -2609,7 +2609,7 @@
     href: ./common/faq-agent-builder.md  
 - name: Resources
   items:
-  - name: Microsoft Credentials: Microsoft Power Platform
+  - name: "Microsoft Credentials: Microsoft Power Platform"
     href: https://learn.microsoft.com/credentials/browse/?products=power-platform
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
