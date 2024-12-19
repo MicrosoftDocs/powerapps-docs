@@ -20,7 +20,7 @@ To create and edit tables in Dataverse, you need the following:
 
 - A Power Platform environment with Dataverse.
 - The system customizer security role or equivalent privileges in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database), or
-- The environment maker security role with a custom security role that has Create, Read, and Write privileges to the [Entity](https://learn.microsoft.com/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the environment maker to create and edit tables in Dataverse, however a Power Platform admin must grant them data access to these tables. 
+- The environment maker security role with a custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the environment maker to create and edit tables in Dataverse, however a Power Platform admin must grant them data access to these tables. 
 
 ## View tables
 
