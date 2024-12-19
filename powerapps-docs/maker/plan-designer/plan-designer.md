@@ -141,3 +141,7 @@ When the Plan designer is turned on, you'll see the **Plans** menu in the left n
 - **Supported user experiences**: The Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
 - **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
+
+## Related information
+
+[FAQ for the Plan designer](../common/faq-plan-designer.md)
