@@ -25,7 +25,7 @@ This sample requires an additional user that isn't available in your system. Cre
 **UserName**: dpark@yourorg.onmicrosoft.com<br/>
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssociateSecurityRoleToUser)
+> [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssociateSecurityRoleToUser)
 
 ## How to run this sample
 

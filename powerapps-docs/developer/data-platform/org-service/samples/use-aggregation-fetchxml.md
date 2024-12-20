@@ -20,7 +20,7 @@ contributors:
 This sample shows how to retrieve aggregate record data using FetchXML.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Use aggregation in FetchXML sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseAggregationInFetchXML)
+> [SDK for .NET: Use aggregation in FetchXML sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseAggregationInFetchXML)
 
 ## What this sample does
 

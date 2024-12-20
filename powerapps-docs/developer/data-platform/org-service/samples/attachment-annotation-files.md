@@ -61,8 +61,8 @@ Read the following important information about using a connection string in appl
 
 This sample is a solution with two projects. See the respective README files for details on each project.
 
-- [SDK for .NET Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
-- [SDK for .NET Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
+- [SDK for .NET Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
+- [SDK for .NET Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
 
 ## Utility class
 

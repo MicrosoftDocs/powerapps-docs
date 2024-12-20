@@ -23,12 +23,12 @@ These sample applications on GitHub show how to perform bulk create and update o
 This sample is a Visual Studio .NET 6.0 solution that contains five different projects that perform the same operations in different ways so that you can compare the performance of each method.
 
 > [!NOTE]
-> This solution also contains an [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md) that demonstrates the use of the [UpsertMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest)
+> This solution also contains an [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/UpsertMultiple/README.md) that demonstrates the use of the [UpsertMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest)
 
 See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET bulk operations sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/README.md)
+> [SDK for .NET bulk operations sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/README.md)
 
 ### See Also
 

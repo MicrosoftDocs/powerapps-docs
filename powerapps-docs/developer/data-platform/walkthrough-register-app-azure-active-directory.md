@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 12/04/2024
+ms.date: 12/16/2024
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -17,8 +17,6 @@ search.audienceType:
 
 This tutorial describes how to register an application (desktop, mobile, or Web) with Microsoft Entra ID. App registration is required before an application can authenticate with Microsoft Dataverse and access business data.
 
-The included instructions in this article are specific to app registration in Microsoft Entra ID for Dataverse access. For expanded Microsoft Entra ID app registration information, see [Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
-
 ## About app registration and authentication
 
 There are several authentication flows that Dataverse supports: username/password, client secret, certificate, and managed identity. App registration and authentication is slightly different for each of these flows. This article covers the username/password and client secret authentication flows. Certificate flows are planned to be documented in a future article.
@@ -27,6 +25,8 @@ Read the following important information about using username/password authentic
 [!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
 For an app to authenticate with Dataverse and gain access to business data, you must first register the app in Microsoft Entra ID. That app registration is then used during the authentication process.
+
+The included instructions in this article are specific to app registration in Microsoft Entra ID for Dataverse access. For general Microsoft Entra ID app registration information, see [Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
 
 ### Public and confidential clients
 
@@ -139,7 +139,7 @@ Follow these steps to create an app user and bind it to your app registration.
 
 ## Use an app registration in code
 
-To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart) Web API sample.
+To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart) Web API sample.
 
 The sample code contains example public and confidential client connection strings for use with the `ServiceClient` class.
 

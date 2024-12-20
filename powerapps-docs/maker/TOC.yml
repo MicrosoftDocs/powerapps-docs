@@ -231,6 +231,8 @@
   items:
   - name: Overview
     href: index.md
+  - name: Use the Plan designer (preview)
+    href: ./plan-designer/plan-designer.md  
   - name: Use the learn hub
     href: ./common/learn-hub.md
   - name: Find it with unified search
@@ -680,6 +682,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Build an agent to automate your business process (preview)
+          href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
         - name: Understand variables
@@ -1334,6 +1338,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
+    - name: Use Monitor to get insights and recommendations (preview)
+      href: ./canvas-apps/monitor-app-performance.md  
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
@@ -2601,6 +2607,10 @@
     href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
+  - name:  FAQ about agent builder in canvas apps 
+    href: ./common/faq-agent-builder.md  
+  - name: FAQ about the Plan designer
+    href: ./common/faq-plan-designer.md
 - name: Resources
   items:
   - name: Blog

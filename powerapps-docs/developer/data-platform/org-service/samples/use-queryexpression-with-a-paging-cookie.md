@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use the paging cookie in a QueryExpression query to retrieve successive pages of query results. It uses the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Use QueryExpression with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseQueryExpressionwithPaging)
+> [SDK for .NET: Use QueryExpression with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseQueryExpressionwithPaging)
 
 ## How to run this sample
 
