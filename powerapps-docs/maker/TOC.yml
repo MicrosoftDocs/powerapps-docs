@@ -2613,6 +2613,8 @@
     href: ./common/faq-plan-designer.md
 - name: Resources
   items:
+  - name: Microsoft Credentials for Power Platform
+    href: /credentials/browse/?products=power-platform&wt.mc_id=appliedskills_AppliedSkillsPowerPlatformProductDoc_webpage_wwl
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums
