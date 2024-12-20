@@ -20,7 +20,7 @@ This sample shows how to perform the following actions with solutions:
 - Import the staged solution using an asynchronous job and check for job completion
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Solution staging with asynchronous import sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionStagingAndImport)
+> [SDK for .NET: Solution staging with asynchronous import sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SolutionStagingAndImport)
 
 ## How to run this sample
 
