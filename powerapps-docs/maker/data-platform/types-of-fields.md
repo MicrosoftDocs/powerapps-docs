@@ -126,6 +126,12 @@ Use floating point numbers when you store data that represents fractions or valu
 
 Big integers (Big or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It's used to store very large numbers that exceed the capabilities of Whole Number and Decimal. Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
 
+> [!NOTE]
+> The precision and limits of number types described here apply to database capabilities. If you're working with currency and numbers in Power Apps apps, other limitations may apply.
+> - Only up to 15 digits can be handled precisely. For example, the 15-digit number 99999.0000000089 can be entered in the app and stored in the database as is. However, the 16-digit number 999999.0000000089 will be processed imprecisely as 999999.0000000088 by the app. Longer numbers may be truncated, even if they haven't reached Dataverse limits. This is an inherent limitation of number processing in browsers.
+> - Big and BigInt aren't supported in canvas and model-driven apps.
+> - [Canvas apps don't support Decimal type yet](/power-platform/power-fx/data-types#numbers).
+
 ## Using currency columns
 
 Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to a table that has no other currency columns, two additional columns are added:  
