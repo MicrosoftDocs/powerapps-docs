@@ -9,6 +9,8 @@ Don't include columns you don't need in your query. Queries that return all colu
 
 This practice is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
+Learn more about [Large number of columns requested](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/query-timeout-errors#LargeAmountOfAttributes)
+
 
 ### Avoid leading wild cards in filter conditions
 
@@ -48,6 +50,8 @@ If you find yourself using leading wild card queries, look into these options:
 - Use [Dataverse search](../search/overview.md) instead.
 - Change your data model to help people avoid needing leading wild cards.
 
+Learn more about [Leading wild card issues](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/query-timeout-errors#PerformanceLeadingWildCard)
+
 #### Other wildcard characters
 
 As described in [Use wildcard characters in conditions for string values](../wildcard-characters.md), other characters beyond the percent sign ('%') character can act like a wildcard. Following are two example query strings that also behave like leading wildcards:
@@ -82,7 +86,7 @@ When you use [FetchXml](../fetchxml/order-rows.md#choice-columns) or [QueryExpre
 > [!NOTE]
 > OData is different. With the Dataverse Web API, `$orderby` sorts rows using the integer value of the choice column rather than the localized label.
 
-
+Learn more about [issues when ordering on choice columns](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/query-timeout-errors#OrderOnEnumAttribute)
 
 ### Avoid ordering by columns in related tables
 
@@ -93,6 +97,8 @@ Ordering by related tables should only be done when needed to as described here:
 - [Order rows using FetchXml](../fetchxml/order-rows.md)
 - [Order rows using QueryExpression](../org-service/queryexpression/order-rows.md)
 - [Order rows using OData](../webapi/query/order-rows.md)
+
+Learn more about [Ordering on columns in related tables](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/query-timeout-errors#OrderOnPropertiesFromJoinedTables)
 
 ### Avoid using conditions on large text columns
 
