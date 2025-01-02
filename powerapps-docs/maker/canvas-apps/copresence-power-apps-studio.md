@@ -75,7 +75,6 @@ To use coauthoring, you need to turn it on for each app. If you turn on coauthor
 - When more than one maker is editing an app, the following actions aren't available:
 
   - Search
-  - Save as
   - Open another or new app
   - Undo and redo
   - Switch authoring versions
