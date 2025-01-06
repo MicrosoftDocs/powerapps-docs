@@ -61,7 +61,7 @@ For more details, see how to add knowledge to copilot: [Add knowledge to an exis
    
 Once knowledge is enabled, End users can ask questions relevant questions and get response along with the knowledge references.
 
-   :::image type="content" source="media/mda-copilot-chat-knowledge-referencee.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
+   :::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
 
 ## Add new topic to Copilot chat
 
