@@ -1,7 +1,7 @@
 ---
 title: "Data Lake Workspace (datalakeworkspace) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Data Lake Workspace (datalakeworkspace) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -263,7 +263,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Application Id that is allow listed in AAD Tenant ID to access the Graph API.**|
+|Description|**Application Id that is white listed in AAD Tenant ID to access the Graph API.**|
 |DisplayName|**Whitelisted App Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|

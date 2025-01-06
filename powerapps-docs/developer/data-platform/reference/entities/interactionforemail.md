@@ -1,7 +1,7 @@
 ---
 title: "Interaction for Email (InteractionForEmail) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Interaction for Email (InteractionForEmail) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -780,6 +780,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [interactionforemail_adx_portalcomments](#BKMK_interactionforemail_adx_portalcomments)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
 - [interactionforemail_chats](#BKMK_interactionforemail_chats)
+- [interactionforemail_msfp_alerts](#BKMK_interactionforemail_msfp_alerts)
+- [interactionforemail_msfp_surveyinvites](#BKMK_interactionforemail_msfp_surveyinvites)
+- [interactionforemail_msfp_surveyresponses](#BKMK_interactionforemail_msfp_surveyresponses)
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
 
@@ -838,6 +841,42 @@ Many-To-One Relationship: [chat interactionforemail_chats](chat.md#BKMK_interact
 |ReferencingEntity|`chat`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`interactionforemail_chats`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_interactionforemail_msfp_alerts"></a> interactionforemail_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert interactionforemail_msfp_alerts](msfp_alert.md#BKMK_interactionforemail_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_interactionforemail_msfp_surveyinvites"></a> interactionforemail_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite interactionforemail_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_interactionforemail_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_interactionforemail_msfp_surveyresponses"></a> interactionforemail_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse interactionforemail_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_interactionforemail_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_surveyresponses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
