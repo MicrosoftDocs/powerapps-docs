@@ -18,7 +18,8 @@ contributors:
 ---
 # Optimize performance using FetchXml
 
-For guidance about things to avoid when composing Dataverse queries, see [Query anti-patterns](../query-antipatterns.md). The following sections are specific to FetchXml.
+> [!NOTE]
+> For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../query-antipatterns.md). The following sections are specific to FetchXml.
 
 ## Late Materialize query
 

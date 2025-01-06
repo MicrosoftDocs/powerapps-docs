@@ -14,9 +14,7 @@ contributors:
 ---
 # Optimize performance using QueryExpression
 
-This article describes ways you can optimize performance when retrieving data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
-
-For guidance about things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md). The following sections are specific to [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
+For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md). The following sections are specific to [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
 
 ## Query Hints
 

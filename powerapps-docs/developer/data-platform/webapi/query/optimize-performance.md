@@ -14,7 +14,7 @@ contributors:
 ---
 # Optimize performance using OData
 
-For general guidance about things to avoid when composing Dataverse queries, see [Query anti-patterns](../query-antipatterns.md).
+For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md).
 
 You can [use FetchXml with the Dataverse Web API](../../fetchxml/retrieve-data.md). In that case, see [Optimize performance using FetchXml](../../fetchxml/optimize-performance.md)
 
