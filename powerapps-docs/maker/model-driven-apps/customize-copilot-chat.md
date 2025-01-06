@@ -30,7 +30,8 @@ Customize Copilot chat to make it even more intelligent and relevant for your or
 
 > [!NOTE]
 >
->  Copilot studio License and agent editing permissions are required to customize Copilot chat. This feature is only available in standalone model-driven apps and is not yet supported for Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
+> - Copilot studio License and agent editing permissions are required to customize Copilot chat. 
+> - This feature is only available in standalone model-driven apps and is not yet supported for Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
 
 You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling Dataverse tables Q&A and out-of-the-box skills. Before customizing, make sure [copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot?branch=pr-en-us-10663#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.  
 
