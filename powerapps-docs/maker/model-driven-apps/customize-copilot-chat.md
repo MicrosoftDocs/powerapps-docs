@@ -88,45 +88,58 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
 1. Add an appropriate priotrity value so that the trigger is fired after the higher priority topics. Priority values can have 0 to 10k range with 0 being highest. We will use 200 for this example.
 1. Add a next step for variable management parsevalue.
    :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Add variable" lightbox="media/mda-copilot-promptguide-variable.png":::
-1. Set the parse value to following Fx and data type to table. 
+1. Set the parse value to following Fx and data type to table.
 
-> [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"PromptText"},{displayName:"How can I use the record picker?",type:"PromptText"},{displayName:"What types of questions can I ask Copilot?",type:"PromptText"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}]}]
+   ```powerappsfl
+   [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"PromptText"},{displayName:"How can I use the record picker?",type:"PromptText"},{displayName:"What types of questions can I ask Copilot?",type:"PromptText"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}]}]
+   ```
 
    :::image type="content" source="media/mda-copilot-promptguide-parsevalue.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-parsevalue.png":::
+
 1. Click on edit schema above and paste the following schema
 
->kind: Table
-properties:
-  displayName: String
-  displaySubtitle: String
-  iconName: String
-  sparks:
-    type:
-      kind: Table
-      properties:
-        displayName: String
-        eventName: String
-        iconName: String
-        payload: String
-        type: String
+  ```yml
+   kind: Table
+   properties:
+     displayName: String
+     displaySubtitle: String
+     iconName: String
+     sparks:
+       type:
+         kind: Table
+         properties:
+           displayName: String
+           eventName: String
+           iconName: String
+           payload: String
+           type: String
+   ```
+1.	Set “Save as” to a new custom variable and name it as appropriate say  SparkGroupCustom
 
-1.	Set “Save as” to a new custom variable and name it as appropriate say  SparkGroupCustom 
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
+
 1. Sparks definition is saved in a global variable so you need to set the variable Global.PA_Copilot_Sparks.sparkGroups and/or Global.PA_Copilot_Sparks.sparks, which will populate the flyout with your prompts. Next we add a step to set variable value
+
    :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
+
 1. Search for Global.PA_Copilot_Sparks.sparkGroups  and set the value to the following power fx merge function
+   
    :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::
 
-> ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
+   ```powerappsfl
+   ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
+   ```
 
-Replace the variable name above with the variable name you have used for the custom prompts. 
+   Replace the variable name above with the variable name you have used for the custom prompts. 
 
 1. Publish the agent and launch the the app 
+
    :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-chat-screens.png":::
 
 Here is the full topic code which can be copiled directly into the new Topic
 
-> kind: AdaptiveDialog
+```yml
+kind: AdaptiveDialog
 beginDialog:
   kind: OnEventActivity
   id: main
@@ -151,7 +164,6 @@ beginDialog:
                 iconName: String
                 payload: String
                 type: String
-
       value: |-
         =[{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",
         sparks:[
@@ -165,7 +177,7 @@ beginDialog:
       id: setVariable_pDu9cr
       variable: Global.PA_Copilot_Sparks.sparkGroups
       value: =ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
-
+```
       
 > [!NOTE]
 >
