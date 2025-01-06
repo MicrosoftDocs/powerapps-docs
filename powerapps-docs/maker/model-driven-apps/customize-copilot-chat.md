@@ -45,7 +45,11 @@ You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copil
 
 You can extend your app’s Copilot chat intelligence by adding additional knowledge in Copilot Studio. For example, you could add a link to an external website like Power Apps documentation to enable your Copilot chat to respond to questions related to Power Apps. Another example is to add your organization’s internal knowledge sources to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
 
-Learn how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported.
+Learn how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
+> [!NOTE]
+>
+> Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported.
+
    :::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
 
 > [!NOTE]
@@ -69,7 +73,7 @@ A prompt library is a collection of pre-written, tested, and optimized prompts d
 The following steps detail how to add a specific queries to the prompt guide. We will add “Power Apps Help” section to the existing OOB copilot prompt guide. You can choose to completely replace OOB prompt guide. All the prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
 
 1. Open the agent backing the app in copilot studio and add a new blank topic.
-   :::image type="content" source="media/mda-copilot-promptguide-addtopic" alt-text="Add black topic" lightbox="media/mda-copilot-promptguide-addtopic":::
+   :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blanck topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::
 1. Rename the topic to “custom prompt” and change the topic trigger to “Event received”
    :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event recevied for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
 1. Click on edit for Event received and set the event name as Microsoft.PowerApps.Copilot.RequestSparks which is reserved name for prompt guide.
