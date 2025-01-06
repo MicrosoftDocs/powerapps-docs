@@ -56,7 +56,6 @@ For more details, see how to add knowledge to copilot: [Add knowledge to an exis
 >
 > Copilot studio [Generative AI orchestraion](/microsoft-copilot-studio/advanced-generative-actions) is not supported currently. You can use classic orchestration topic whose trigger phrases match most closely the user's query for given skill. 
 
-
    :::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
    
 Once knowledge is enabled, End users can ask questions relevant questions and get response along with the knowledge references.
