@@ -71,7 +71,7 @@ Once knowledge is enabled, end users can ask questions relevant questions and ge
 > 
 > [!NOTE]
 >
-> Copilot studio's inline capability to "Test your agent" can be used to validate topics as they are added. However  topics using OOB model apps custom variables like  
+> Copilot studio's inline capability to "Test your agent" can be used to validate topics as they are added. However  topics using out of the box model apps custom variables like  
 Global.PA__Copilot_Model_PageContext.pageContext.id can only be tested in the published copilot. 
 
 ## Prompt guide customizations
