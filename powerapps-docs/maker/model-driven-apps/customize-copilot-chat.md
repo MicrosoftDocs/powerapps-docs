@@ -54,5 +54,15 @@ Learn how to add knowledge to copilot: [Add knowledge to an existing agent – M
 
 ## Add new topics to Copilot chat
 
-You can make your app’s copilot chat more intelligent by extending it with additional AI capabilities that are relevant for users’ day to day tasks. You do so by adding topics to your app’s copilot in Copilot Studio. Learn about AI topics and how to add AI skills: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp)
+Enhance your app’s copilot chat by integrating additional AI capabilities that cater to users’ daily tasks. In Copilot Studio, you can add topics to your app’s copilot. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, generative answers, and can also initiate actions like flows, connectors, and plugins. Learn more about topics and how to add AI skills: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
+   :::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
+> 
+> [!NOTE]
+>
+> Copilot studio's inline capability to "Test your agent" can be used to validate topics as they are added. However  topics using OOB model apps custom variables like  
+Global.PA__Copilot_Model_PageContext.pageContext.id can only be tested in the published copilot. 
+
+
+
+
 
