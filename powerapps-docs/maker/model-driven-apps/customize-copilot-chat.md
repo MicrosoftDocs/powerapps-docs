@@ -127,7 +127,7 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
    :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
 
 1. Search for Global.PA_Copilot_Sparks.sparkGroups  and set the value to the following power fx merge function
-   
+
    :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::
 
    ```powerappsfl
