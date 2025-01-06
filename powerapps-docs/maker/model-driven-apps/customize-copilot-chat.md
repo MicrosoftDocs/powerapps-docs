@@ -120,7 +120,7 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
            type: String
    ```
    
-1.	Set “Save as” to a new custom variable and name it as appropriate say  SparkGroupCustom
+1.	Set “Save as” to a new custom variable and name it as appropriate say SparkGroupCustom
 
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
 
