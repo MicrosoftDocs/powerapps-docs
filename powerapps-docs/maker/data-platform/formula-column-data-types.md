@@ -5,7 +5,7 @@ author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 11/13/2024
+ms.date: 01/06/2025
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -113,11 +113,11 @@ Create a formula column that returns choice using a local choice of a simple cho
 - A choice used by a formula column can't be updated.
 - Options of a choice can't be passed as an argument to string functions. Value function can be used to return the numeric value of an option.
 - Formula column's dependent local choice column or global choice can't be deleted.
-- For using related entity's local optionset field's options in formula column definition, first use optionset and then use options of that local optionset.
+- For using a related table local choices (optionset) column's options in the formula column definition, first use optionset and then use options of that local optionset.
   
-  For eg., OptionSet field - Color on Account entity having options - Red, Yellow, Green.
+  For example, OptionSet field - Color on Account table having options - Red, Yellow, Green.
   
-  For a formula column on Opportunity entity using Color optionset, it should follow below order -
+  For a formula column on Opportunity table using Color optionset, it should follow below order -
   
   **Recommended** - If(ParentAccount.Color == 'Color (Accounts)'.Red, 1, 2)
   
