@@ -65,7 +65,7 @@ Once knowledge is enabled, end users can ask questions relevant questions and ge
 
 ## Add new topic to Copilot chat
 
- In Copilot Studio, you can add topics to your app’s copilot. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards or generative answer. Additionally topics can also initiate actions like flows, connectors, and plugins enabling seamless point in time integration with external systems. Learn more about topics and how to add AI skills: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
+ In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards or generative answer. Additionally, topics can also initiate actions like flows, connectors, and plugins enabling seamless point in time integration with external systems. Learn more about topics and how to add AI skills: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
  
    :::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
 > 
