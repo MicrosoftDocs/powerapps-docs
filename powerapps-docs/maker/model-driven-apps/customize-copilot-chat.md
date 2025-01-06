@@ -85,10 +85,10 @@ The following steps detail how to add a specific queries to the prompt guide. We
    :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
 1. Optionally you can set the conditions to prompt entries in case they are specific to app name, page context etc.  
 condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName" or Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"
- 1. Add an appropriate priotrity value so that the trigger is fired after the higher priority topics. Priority values can have 0 to 10k range with 0 being highest. We will use 200 for this example.
- 1. Add a next step for variable management and parsing prompt guide entries JSON.
+1. Add an appropriate priotrity value so that the trigger is fired after the higher priority topics. Priority values can have 0 to 10k range with 0 being highest. We will use 200 for this example.
+1. Add a next step for variable management and parsing prompt guide entries JSON.
    :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-variable.png":::
- 1. 
+1. 
 
 
 
