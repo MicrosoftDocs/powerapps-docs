@@ -21,7 +21,7 @@ ms.collection: bap-ai-copilot
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Customize Copilot chat to make it even more intelligent and relevant for your organization by adding additional topics, knowledge sources and more. 
+Customize Copilot chat to make it even more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. 
 
 > [!IMPORTANT]
 >
@@ -30,23 +30,24 @@ Customize Copilot chat to make it even more intelligent and relevant for your or
 
 > [!NOTE]
 >
-> - Copilot studio License and agent editing permissions are required to customize Copilot chat. 
+> - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
+
 > - This feature is only available in standalone model-driven apps and is not yet supported for Dynamics 365 apps. Consequently, the **Configure in Copilot Studio** button will only be displayed in the app designer for standalone model-driven apps.
 
-You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling Dataverse tables Q&A and out-of-the-box skills. Before customizing, make sure [copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot?branch=pr-en-us-10663#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.  
+You can customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling Dataverse tables Q&A and out-of-the-box skills. Before customizing, make sure [Copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot?branch=pr-en-us-10663#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.  
 
 1. Open your model driven app in edit mode to start customizing your copilot chat. 
-1. Select triple dot "..." and then select **Configure in Copilot Studio**. You will be taken to Microsoft Copilot Studio where your app’s agent is set up. Note that every standalone model-driven app copilot has its own dedicated agent available for customizations. Setting up the agent for the firt time takes only a few seconds. 
-   :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer" lightbox="media/mda-command-copilot-studio.png":::
+1. Select triple dot "..." and then select **Configure in Copilot Studio**. You will be taken to Microsoft Copilot Studio where your app’s agent is set up. Note that every standalone model-driven app copilot has its own dedicated agent available for customizations. Setting up the agent for the first time takes only a few seconds. 
+   :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer." lightbox="media/mda-command-copilot-studio.png":::
 1. Customize your agent by adding [knowledge sources](#add-knowledge-to-copilot-chat) or [topics](#add-new-topic-to-copilot-chat). Customizing this agent only impacts the Copilot chat of the specific app it was provisioned for.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
-1. **Publish** the agent after you make customizations to ensure changes available to users.
+1. **Publish** the agent after you make customizations to ensure changes are available to users.
 
 ## Add knowledge to Copilot chat
 
 You can extend your app’s Copilot chat intelligence by adding additional knowledge sources in Copilot Studio. For example, you could add a link to an external public facing website like Power Apps documentation to enable your Copilot chat to respond to questions related to Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data. 
 
-For more details, see how to add knowledge to copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
+For more details, see how to add knowledge to Copilot: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
 
 > [!NOTE]
 >
@@ -54,11 +55,11 @@ For more details, see how to add knowledge to copilot: [Add knowledge to an exis
 
 > [!NOTE]
 >
-> Copilot studio [Generative AI orchestraion](/microsoft-copilot-studio/advanced-generative-actions) is not supported currently. You can use classic orchestration topic whose trigger phrases match most closely the user's query for given skill. 
+> Copilot studio [Generative AI orchestration](/microsoft-copilot-studio/advanced-generative-actions) is not supported currently. You can use classic orchestration topic whose trigger phrases match most closely the user's query for given skill. 
 
    :::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
    
-Once knowledge is enabled, End users can ask questions relevant questions and get response along with the knowledge references.
+Once knowledge is enabled, end users can ask questions relevant questions and get response along with the knowledge references.
 
    :::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
 
