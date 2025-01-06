@@ -1,7 +1,7 @@
 ---
 title: Optimize performance using FetchXml
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using FetchXml.
-ms.date: 02/29/2024
+ms.date: 01/06/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -18,9 +18,7 @@ contributors:
 ---
 # Optimize performance using FetchXml
 
-This article describes ways you can optimize performance when retrieving data using FetchXml.
-
-[!INCLUDE [cc-query-antipatterns](../includes/cc-query-antipatterns.md)]
+For guidance about things to avoid when composing Dataverse queries, see [Query anti-patterns](../query-antipatterns.md). The following sections are specific to FetchXml.
 
 ## Late Materialize query
 
