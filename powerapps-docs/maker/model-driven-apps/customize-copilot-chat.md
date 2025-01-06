@@ -121,15 +121,12 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
    ```
    
 1.	Set “Save as” to a new custom variable and name it as appropriate say SparkGroupCustom
-
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
 
 1. Sparks definition is saved in a global variable so you need to set the variable Global.PA_Copilot_Sparks.sparkGroups and/or Global.PA_Copilot_Sparks.sparks, which will populate the flyout with your prompts. Next we add a step to set variable value
-
    :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
 
 1. Search for Global.PA_Copilot_Sparks.sparkGroups  and set the value to the following power fx merge function
-
    :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::
 
    ```powerappsfl
