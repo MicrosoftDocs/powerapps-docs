@@ -2,7 +2,7 @@
 title: "Configure header properties in the form designer | MicrosoftDocs"
 description: Learn how to configure form header properties for a model-driven app
 ms.custom: ""
-ms.date: 02/08/2023
+ms.date: 01/06/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -75,9 +75,9 @@ Columns set to these controls can be displayed in the main body of a high-densit
 - `ticker`
 - `timezonepicklist`
 
-These controls are replaced with a simplified version in the header. Thus, not all control features are available. For example, for lookup controls, just a link is rendered and control options like **Use Main Form Dialog for Edit** are not supported.
+These controls are replaced with a simplified version in the header. Thus, not all control features are available. For example, for lookup controls, just a link is rendered and control options like **Use Main Form Dialog for Edit** aren't supported.
 
-Any other type of control, including custom Power Apps Component Framework controls or web resources, won't be displayed.
+Any other type of control, including custom Power Apps Component Framework controls or web resources, aren't displayed.
 
 To show these unsupported controls or have full functionality of controls, add them to the form header flyout instead of the form header.
 
