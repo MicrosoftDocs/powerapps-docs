@@ -79,7 +79,7 @@ A prompt library is a collection of pre-written, tested, and optimized prompts d
 
    :::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
 >
-The following steps detail how to add a specific queries to the prompt guide. We will append “Power Apps Help” section to the existing OOB copilot prompt guide. Alternatively, you can choose to completely replace OOB prompt guide. All these prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
+The following steps detail how to add a specific queries to the prompt guide. We will append “Power Apps Help” section to the existing out of the box copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from  [promt guide sample](#Prompt-guide-customizations-topic-sample). All these prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
 
 1. Open the agent backing the app in copilot studio and add a new blank topic.
    :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blanck topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::
@@ -140,7 +140,9 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
 
    :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-chat-screens.png":::
 
-Here is the full topic code which can be copiled directly into the new Topic
+## Prompt guide customizations topic sample
+
+Here is the full topic code which can be copiled directly into the new Topic.
 
 ```yml
 kind: AdaptiveDialog
