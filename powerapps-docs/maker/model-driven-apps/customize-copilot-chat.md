@@ -98,7 +98,7 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
 
 1. Click on edit schema above and paste the following schema
 
-  ```yml
+   ```yml
    kind: Table
    properties:
      displayName: String
@@ -114,7 +114,6 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
            payload: String
            type: String
    ```
-   
 1.	Set “Save as” to a new custom variable and name it as appropriate say  SparkGroupCustom
 
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
