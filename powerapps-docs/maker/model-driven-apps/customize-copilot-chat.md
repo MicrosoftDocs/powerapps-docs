@@ -62,6 +62,12 @@ Enhance your app’s copilot chat by integrating additional AI capabilities that
 > Copilot studio's inline capability to "Test your agent" can be used to validate topics as they are added. However  topics using OOB model apps custom variables like  
 Global.PA__Copilot_Model_PageContext.pageContext.id can only be tested in the published copilot. 
 
+## Prompt guide customizations
+A prompt library is a collection of pre-written, tested, and optimized prompts designed to help shape the responses and interactions of the copilot chat. They ensure that the AI provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
+   :::image type="content" source="media/mda-copilot-chat-prompt-guide" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide":::
+>
+
+
 
 
 
