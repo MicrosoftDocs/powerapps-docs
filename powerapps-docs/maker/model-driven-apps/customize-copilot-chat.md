@@ -64,8 +64,26 @@ Global.PA__Copilot_Model_PageContext.pageContext.id can only be tested in the pu
 
 ## Prompt guide customizations
 A prompt library is a collection of pre-written, tested, and optimized prompts designed to help shape the responses and interactions of the copilot chat. They ensure that the AI provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
-   :::image type="content" source="media/mda-copilot-chat-prompt-guide" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide":::
+   :::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
 >
+The following steps detail how to add a specific queries to the prompt guide. We will add “Power Apps Help” section to the existing OOB copilot prompt guide. You can choose to completely replace OOB prompt guide. All the prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
+
+1. Open the agent backing the app in copilot studio and add a new blank topic.
+   :::image type="content" source="media/mda-copilot-promptguide-addtopic" alt-text="Add black topic" lightbox="media/mda-copilot-promptguide-addtopic":::
+1. Rename the topic to “custom prompt” and change the topic trigger to “Event received”
+   :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event recevied for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
+1. Click on edit for Event received and set the event name as Microsoft.PowerApps.Copilot.RequestSparks which is reserved name for prompt guide.
+   :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
+1. Next you can set the conditions if the prompt entries are specific to app name, page context like app page etc.  
+condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName" or Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName
+ = "Entity name"
+ 1. You can add an appropriate priotrity value so that the trigger is fired after higher priority topics. Priority values can have 0 to 10k range with 0 being highest. We will use 10.
+ 1. Add a next step for variable management and parsing prompt guide entries 
+   :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-variable.png":::
+
+
+
+
 
 
 
