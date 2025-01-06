@@ -58,6 +58,10 @@ For more details, see how to add knowledge to copilot: [Add knowledge to an exis
 
    :::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
 
+Once knowledge is enabled, End users can ask questions relevant questions and get response along with the knowledge references. 
+
+    :::image type="content" source="media/mda-copilot-chat-knowledge-referencee.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
+
 
 ## Add new topic to Copilot chat
 
@@ -185,5 +189,14 @@ beginDialog:
 
 
 ## Known Limitations
+
 1. ALM - Solution dependecies from App to corresponsind agent is not suupported for preview. As a workaround you can package the app and agent manually.
 2. **Configure in Copilot Studio** action can fail if there are App with same initial characters in their name. Please rename the app and try again.
+
+
+## Related information
+
+- [Add Copilot chat to model-driven apps](../model-driven-apps/add-ai-copilot.md)
+- [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
+- [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+- [Enable copilots and generative AI features in Power Apps](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
