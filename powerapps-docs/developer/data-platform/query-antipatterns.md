@@ -145,6 +145,29 @@ All memo columns or string columns with a `MaxLength` greater than 850 are defin
 
 [Dataverse search](search/overview.md) is a better choice to query data in these kinds of columns.
 
+## <a name="PerformanceValidationIssuesCauseTimeout"></a> Dataverse error for query time out caused by anti-patterns
+
+When a query times out and the query is using one of the anti-patterns detailed on this page, Dataverse returns a unique error to help identify which anti-patterns the query is using. The error that Dataverse throws is below:
+
+> Name: `PerformanceValidationIssuesCauseTimeout`<br />
+> Code: `0x80048575`<br />
+> Number: `-2147187340`<br />
+> Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
+
+The "{0}" part of the exception message will list the anti-patterns that the query is using. For example, if the query is filtering on a wide column, the exception message will contain the string "PerformanceLargeColumnSearch". A full list of the anti-patterns and their explanation is below:
+
+|Error string|Explanation link|
+|---|---|
+|`PerformanceLeadingWildCard`|`TODO`|
+|`PerformanceLargeColumnSearch`|`TODO`|
+|`OrderOnEnumAttribute`|`TODO`|
+|`OrderOnPropertiesFromJoinedTables`|`TODO`|
+|`LargeAmountOfAttributes`|`TODO`|
+|`LargeAmountOfLogicalAttributes`|`TODO`|
+|`FilteringOnCalculatedColumns`|`TODO`|
+
+Please use the guidance on this page to understand the anti-patterns in the query and change the query to avoid usage of these anti-patterns.
+
 ### Related articles
 
 [Query throttling](query-throttling.md)   
