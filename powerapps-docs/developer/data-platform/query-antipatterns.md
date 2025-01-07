@@ -158,7 +158,7 @@ The `{0}` part of the exception message will list the anti-pattern that the quer
 
 |Anti-pattern identifier|Explanation link|
 |---|---|
-|`PerformanceLeadingWildCard`|`#PerformanceLeadingWildCard`|
+|`PerformanceLeadingWildCard`|(#PerformanceLeadingWildCard)|
 |`PerformanceLargeColumnSearch`|`TODO`|
 |`OrderOnEnumAttribute`|`TODO`|
 |`OrderOnPropertiesFromJoinedTables`|`TODO`|
