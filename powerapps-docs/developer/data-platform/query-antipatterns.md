@@ -151,10 +151,10 @@ When a query times out and the query is using one of the anti-patterns detailed 
 
 > Name: `PerformanceValidationIssuesCauseTimeout`<br />
 > Code: `0x80048575`<br />
-> Number: `-2147187340`<br />
+> Number: `-2147187339`<br />
 > Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
 
-The "{0}" part of the exception message will list the anti-patterns that the query is using. For example, if the query is filtering on a wide column, the exception message will contain the string "PerformanceLargeColumnSearch". A full list of the anti-patterns and their explanation is below:
+The "{0}" part of the exception message will list the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they will be comma separated. For example, if the query is selecting a large number of columns and is using a leading wild card, the exception message will contain the string "PerformanceLeadingWildCard,LargeAmountOfAttributes". A full list of the anti-patterns and their explanation is below:
 
 |Error string|Explanation link|
 |---|---|
