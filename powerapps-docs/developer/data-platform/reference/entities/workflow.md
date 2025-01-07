@@ -1,7 +1,7 @@
 ---
 title: "Process (Workflow) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process (Workflow) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -31,6 +31,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `InitializeModernFlowFromAsyncWorkflow`<br />Event: False |<xref:Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.InitializeModernFlowFromAsyncWorkflowRequest>|
 | `install`<br />Event: False |<xref:Microsoft.Dynamics.CRM.install?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ListChildDesktopFlows`<br />Event: False |**ListChildDesktopFlows action** |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ListConnectionReferences`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListConnectionReferences?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -315,7 +316,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|1048576|
+|MaxLength|16777216|
 
 ### <a name="BKMK_DeleteStage"></a> DeleteStage
 

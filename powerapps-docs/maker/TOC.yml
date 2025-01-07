@@ -1893,6 +1893,8 @@
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
+    - name: Configure a row summary (preview)
+      href: ./data-platform/configure-form-row-summary.md  
     - name: Import and export table data
       items:
       - name: Import data from Excel and export to CSV
@@ -1924,6 +1926,14 @@
         href: ./data-platform/limits-tshoot-virtual-tables.md
     - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
+    - name: Table customizations
+      items:
+      - name: Create business rules
+        href: ./data-platform/data-platform-create-business-rule.md
+      - name: Edit a command bar
+        href: ./model-driven-apps/command-designer-overview.md
+      - name: Edit messages for a system table
+        href: ./data-platform/edit-system-entity-messages.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps

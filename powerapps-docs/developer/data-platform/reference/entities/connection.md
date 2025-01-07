@@ -1,7 +1,7 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Connection table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -223,7 +223,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`record1id`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
+|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
 
 ### <a name="BKMK_Record1IdObjectTypeCode"></a> Record1IdObjectTypeCode
 
@@ -261,7 +261,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`record2id`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
+|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
 
 ### <a name="BKMK_Record2IdObjectTypeCode"></a> Record2IdObjectTypeCode
 
@@ -661,11 +661,14 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10330|**Invitation**|
-|10331|**Invite Redemption**|
-|10350|**Publishing State Transition Rule**|
-|10352|**Shortcut**|
-|10364|**Website**|
+|10332|**Invitation**|
+|10333|**Invite Redemption**|
+|10352|**Publishing State Transition Rule**|
+|10354|**Shortcut**|
+|10366|**Website**|
+|10618|**Customer Voice alert**|
+|10619|**Customer Voice survey invite**|
+|10620|**Customer Voice survey response**|
 
 ### <a name="BKMK_Record2ObjectTypeCode"></a> Record2ObjectTypeCode
 
@@ -706,11 +709,14 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10330|**Invitation**|
-|10331|**Invite Redemption**|
-|10350|**Publishing State Transition Rule**|
-|10352|**Shortcut**|
-|10364|**Website**|
+|10332|**Invitation**|
+|10333|**Invite Redemption**|
+|10352|**Publishing State Transition Rule**|
+|10354|**Shortcut**|
+|10366|**Website**|
+|10618|**Customer Voice alert**|
+|10619|**Customer Voice survey invite**|
+|10620|**Customer Voice survey response**|
 
 ### <a name="BKMK_RelatedConnectionId"></a> RelatedConnectionId
 
@@ -775,6 +781,12 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_connectionbase_createdonbehalfby](#BKMK_lk_connectionbase_createdonbehalfby)
 - [lk_connectionbase_modifiedonbehalfby](#BKMK_lk_connectionbase_modifiedonbehalfby)
 - [modifiedby_connection](#BKMK_modifiedby_connection)
+- [msfp_alert_connections1](#BKMK_msfp_alert_connections1)
+- [msfp_alert_connections2](#BKMK_msfp_alert_connections2)
+- [msfp_surveyinvite_connections1](#BKMK_msfp_surveyinvite_connections1)
+- [msfp_surveyinvite_connections2](#BKMK_msfp_surveyinvite_connections2)
+- [msfp_surveyresponse_connections1](#BKMK_msfp_surveyresponse_connections1)
+- [msfp_surveyresponse_connections2](#BKMK_msfp_surveyresponse_connections2)
 - [mspp_publishingstatetransitionrule_connections1](#BKMK_mspp_publishingstatetransitionrule_connections1)
 - [mspp_publishingstatetransitionrule_connections2](#BKMK_mspp_publishingstatetransitionrule_connections2)
 - [mspp_shortcut_connections1](#BKMK_mspp_shortcut_connections1)
@@ -1219,6 +1231,84 @@ One-To-Many Relationship: [systemuser modifiedby_connection](systemuser.md#BKMK_
 |ReferencingEntityNavigationPropertyName|`modifiedby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_connections1"></a> msfp_alert_connections1
+
+One-To-Many Relationship: [msfp_alert msfp_alert_connections1](msfp_alert.md#BKMK_msfp_alert_connections1)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record1id`|
+|ReferencingEntityNavigationPropertyName|`record1id_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_connections2"></a> msfp_alert_connections2
+
+One-To-Many Relationship: [msfp_alert msfp_alert_connections2](msfp_alert.md#BKMK_msfp_alert_connections2)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record2id`|
+|ReferencingEntityNavigationPropertyName|`record2id_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_connections1"></a> msfp_surveyinvite_connections1
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_connections1](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_connections1)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record1id`|
+|ReferencingEntityNavigationPropertyName|`record1id_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_connections2"></a> msfp_surveyinvite_connections2
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_connections2](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_connections2)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record2id`|
+|ReferencingEntityNavigationPropertyName|`record2id_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_connections1"></a> msfp_surveyresponse_connections1
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_connections1](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_connections1)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record1id`|
+|ReferencingEntityNavigationPropertyName|`record1id_msfp_surveyresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_connections2"></a> msfp_surveyresponse_connections2
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_connections2](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_connections2)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`record2id`|
+|ReferencingEntityNavigationPropertyName|`record2id_msfp_surveyresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_publishingstatetransitionrule_connections1"></a> mspp_publishingstatetransitionrule_connections1
 

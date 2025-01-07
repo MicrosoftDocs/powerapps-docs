@@ -1,7 +1,7 @@
 ---
 title: "Activity Party (ActivityParty) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Activity Party (ActivityParty) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -490,6 +490,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [knowledgearticle_activity_parties](#BKMK_knowledgearticle_activity_parties)
 - [letter_activity_parties](#BKMK_letter_activity_parties)
+- [msfp_alert_activity_parties](#BKMK_msfp_alert_activity_parties)
+- [msfp_surveyinvite_activity_parties](#BKMK_msfp_surveyinvite_activity_parties)
+- [msfp_surveyresponse_activity_parties](#BKMK_msfp_surveyresponse_activity_parties)
 - [phonecall_activity_parties](#BKMK_phonecall_activity_parties)
 - [queue_activity_parties](#BKMK_queue_activity_parties)
 - [recurringappointmentmaster_activity_parties](#BKMK_recurringappointmentmaster_activity_parties)
@@ -637,6 +640,45 @@ One-To-Many Relationship: [letter letter_activity_parties](letter.md#BKMK_letter
 |ReferencedAttribute|`activityid`|
 |ReferencingAttribute|`activityid`|
 |ReferencingEntityNavigationPropertyName|`activityid_letter`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_activity_parties"></a> msfp_alert_activity_parties
+
+One-To-Many Relationship: [msfp_alert msfp_alert_activity_parties](msfp_alert.md#BKMK_msfp_alert_activity_parties)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`activityid`|
+|ReferencingEntityNavigationPropertyName|`activityid_msfp_alert_activityparty`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_activity_parties"></a> msfp_surveyinvite_activity_parties
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_activity_parties](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_activity_parties)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`activityid`|
+|ReferencingEntityNavigationPropertyName|`activityid_msfp_surveyinvite_activityparty`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_activity_parties"></a> msfp_surveyresponse_activity_parties
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_activity_parties](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_activity_parties)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`activityid`|
+|ReferencingEntityNavigationPropertyName|`activityid_msfp_surveyresponse_activityparty`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

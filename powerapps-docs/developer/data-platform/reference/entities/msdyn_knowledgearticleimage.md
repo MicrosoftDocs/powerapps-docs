@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Article Image (msdyn_knowledgearticleimage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Article Image (msdyn_knowledgearticleimage) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_FileName](#BKMK_msdyn_FileName)
 - [msdyn_knowledgearticleimageId](#BKMK_msdyn_knowledgearticleimageId)
 - [msdyn_ParentEntityRecordID](#BKMK_msdyn_ParentEntityRecordID)
+- [msdyn_parententityrecordidIdType](#BKMK_msdyn_parententityrecordidIdType)
 - [msdyn_ParentKnowledgeArticleID](#BKMK_msdyn_ParentKnowledgeArticleID)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -128,7 +129,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_parententityrecordid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets||
+|Targets|msdyn_knowledgearticletemplate|
+
+### <a name="BKMK_msdyn_parententityrecordidIdType"></a> msdyn_parententityrecordidIdType
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_parententityrecordididtype`|
+|RequiredLevel|None|
+|Type|EntityName|
 
 ### <a name="BKMK_msdyn_ParentKnowledgeArticleID"></a> msdyn_ParentKnowledgeArticleID
 
@@ -489,6 +502,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_knowledgearticleimage_modifiedby](#BKMK_lk_msdyn_knowledgearticleimage_modifiedby)
 - [lk_msdyn_knowledgearticleimage_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgearticleimage_modifiedonbehalfby)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
+- [msdyn_knowledgearticleimage_parentknowledgetemplateid](#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
 - [owner_msdyn_knowledgearticleimage](#BKMK_owner_msdyn_knowledgearticleimage)
 - [team_msdyn_knowledgearticleimage](#BKMK_team_msdyn_knowledgearticleimage)
 - [user_msdyn_knowledgearticleimage](#BKMK_user_msdyn_knowledgearticleimage)
@@ -581,6 +595,19 @@ One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticleimage_parentkn
 |ReferencedAttribute|`knowledgearticleid`|
 |ReferencingAttribute|`msdyn_parentknowledgearticleid`|
 |ReferencingEntityNavigationPropertyName|`msdyn_parentknowledgearticleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid"></a> msdyn_knowledgearticleimage_parentknowledgetemplateid
+
+One-To-Many Relationship: [msdyn_knowledgearticletemplate msdyn_knowledgearticleimage_parentknowledgetemplateid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_knowledgearticletemplate`|
+|ReferencedAttribute|`msdyn_knowledgearticletemplateid`|
+|ReferencingAttribute|`msdyn_parententityrecordid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_parententityrecordid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

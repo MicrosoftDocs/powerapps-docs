@@ -400,6 +400,9 @@ items:
 - name: "Copilot component collection (botcomponentcollection)"
   displayName: "botcomponentcollection entity"
   href: botcomponentcollection.md
+- name: "Copilot Interactions (msdyn_CopilotInteractions)"
+  displayName: "msdyn_CopilotInteractions entity"
+  href: msdyn_copilotinteractions.md
 - name: "CopilotExampleQuestion"
   displayName: "CopilotExampleQuestion entity"
   href: copilotexamplequestion.md
@@ -436,6 +439,48 @@ items:
 - name: "Custom Control Resource (CustomControlResource)"
   displayName: "CustomControlResource entity"
   href: customcontrolresource.md
+- name: "Customer Voice alert (msfp_alert)"
+  displayName: "msfp_alert entity"
+  href: msfp_alert.md
+- name: "Customer Voice alert rule (msfp_alertrule)"
+  displayName: "msfp_alertrule entity"
+  href: msfp_alertrule.md
+- name: "Customer Voice file response (msfp_fileresponse)"
+  displayName: "msfp_fileresponse entity"
+  href: msfp_fileresponse.md
+- name: "Customer Voice localized survey email template (msfp_localizedemailtemplate)"
+  displayName: "msfp_localizedemailtemplate entity"
+  href: msfp_localizedemailtemplate.md
+- name: "Customer Voice project (msfp_project)"
+  displayName: "msfp_project entity"
+  href: msfp_project.md
+- name: "Customer Voice satisfaction metric (msfp_satisfactionmetric)"
+  displayName: "msfp_satisfactionmetric entity"
+  href: msfp_satisfactionmetric.md
+- name: "Customer Voice survey (msfp_survey)"
+  displayName: "msfp_survey entity"
+  href: msfp_survey.md
+- name: "Customer Voice survey email template (msfp_emailtemplate)"
+  displayName: "msfp_emailtemplate entity"
+  href: msfp_emailtemplate.md
+- name: "Customer Voice survey invite (msfp_surveyinvite)"
+  displayName: "msfp_surveyinvite entity"
+  href: msfp_surveyinvite.md
+- name: "Customer Voice survey question (msfp_question)"
+  displayName: "msfp_question entity"
+  href: msfp_question.md
+- name: "Customer Voice survey question response (msfp_questionresponse)"
+  displayName: "msfp_questionresponse entity"
+  href: msfp_questionresponse.md
+- name: "Customer Voice survey reminder (msfp_surveyreminder)"
+  displayName: "msfp_surveyreminder entity"
+  href: msfp_surveyreminder.md
+- name: "Customer Voice survey response (msfp_surveyresponse)"
+  displayName: "msfp_surveyresponse entity"
+  href: msfp_surveyresponse.md
+- name: "Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient)"
+  displayName: "msfp_unsubscribedrecipient entity"
+  href: msfp_unsubscribedrecipient.md
 - name: "Data Import (Import)"
   displayName: "Import entity"
   href: import.md
@@ -685,6 +730,9 @@ items:
 - name: "Form Step (mspp_webformstep)"
   displayName: "mspp_webformstep entity"
   href: mspp_webformstep.md
+- name: "Function (msdyn_function)"
+  displayName: "msdyn_function entity"
+  href: msdyn_function.md
 - name: "fxexpression"
   displayName: "fxexpression entity"
   href: fxexpression.md
@@ -1150,6 +1198,9 @@ items:
 - name: "Publishing State Transition Rule (mspp_publishingstatetransitionrule)"
   displayName: "mspp_publishingstatetransitionrule entity"
   href: mspp_publishingstatetransitionrule.md
+- name: "QnA (msdyn_qna)"
+  displayName: "msdyn_qna entity"
+  href: msdyn_qna.md
 - name: "Quarterly Fiscal Calendar (QuarterlyFiscalCalendar)"
   displayName: "QuarterlyFiscalCalendar entity"
   href: quarterlyfiscalcalendar.md
@@ -1336,6 +1387,9 @@ items:
 - name: "sideloadedaiplugin"
   displayName: "sideloadedaiplugin entity"
   href: sideloadedaiplugin.md
+- name: "signal"
+  displayName: "signal entity"
+  href: signal.md
 - name: "Similarity Rule (SimilarityRule)"
   displayName: "SimilarityRule entity"
   href: similarityrule.md
@@ -1432,6 +1486,9 @@ items:
 - name: "Staged Metadata Async Operation (StagedMetadataAsyncOperation)"
   displayName: "StagedMetadataAsyncOperation entity"
   href: stagedmetadataasyncoperation.md
+- name: "Staged Source Control Component (StagedSourceControlComponent)"
+  displayName: "StagedSourceControlComponent entity"
+  href: stagedsourcecontrolcomponent.md
 - name: "StageSolutionUpload"
   displayName: "StageSolutionUpload entity"
   href: stagesolutionupload.md
@@ -1510,6 +1567,9 @@ items:
 - name: "Territory"
   displayName: "Territory entity"
   href: territory.md
+- name: "Text Analytics Entity Mapping (TextAnalyticsEntityMapping)"
+  displayName: "TextAnalyticsEntityMapping entity"
+  href: textanalyticsentitymapping.md
 - name: "Theme"
   displayName: "Theme entity"
   href: theme.md
@@ -1534,6 +1594,9 @@ items:
 - name: "Trace (TraceLog)"
   displayName: "TraceLog entity"
   href: tracelog.md
+- name: "trait"
+  displayName: "trait entity"
+  href: trait.md
 - name: "Transformation Mapping (TransformationMapping)"
   displayName: "TransformationMapping entity"
   href: transformationmapping.md
