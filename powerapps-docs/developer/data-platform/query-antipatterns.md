@@ -169,7 +169,8 @@ The "{0}" part of the exception message will list the anti-pattern that the quer
 Please use the guidance on this page to understand the anti-patterns in the query and change the query to avoid usage of these anti-patterns.
 
 > [!NOTE]
-> If a query contains either the PerformanceLeadingWildCard or the FilteringOnCalculatedColumns anti-pattern, a different dedicated Dataverse error is thrown. Queries that use the PerformanceLeadingWildCard anti-pattern will throw the LeadingWildcardCauseTimeout error mentioned on this page, and the FilteringOnCalculatedColumns anti-pattern will throw the ComputedColumnCauseTimeout error mentioned on this page. 
+> If a query contains either the PerformanceLeadingWildCard or the FilteringOnCalculatedColumns anti-pattern, a different Dataverse error is thrown. Queries that use the PerformanceLeadingWildCard anti-pattern will throw the LeadingWildcardCauseTimeout error mentioned on this page, and queries that use the FilteringOnCalculatedColumns anti-pattern will throw the ComputedColumnCauseTimeout error mentioned on this page. 
+> 
 > The LeadingWildcardCauseTimeout and ComputedColumnCauseTimeout errors predate the PerformanceValidationIssuesCauseTimeout error; LeadingWildcardCauseTimeout and ComputedColumnCauseTimeout continue to be thrown to maintain backward compatibility.  
 
 ### Related articles
