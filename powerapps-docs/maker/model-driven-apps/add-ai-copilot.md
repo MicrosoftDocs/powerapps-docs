@@ -99,7 +99,7 @@ To provide feedback to help us improve Copilot's responses, app users can select
 1. **Copilot for app users** isn't supported with the Power Apps mobile app.
 
 ## Related information
-
+- [Customize Copilot chat in model-driven apps](../model-driven-apps/customize-copilot-chat.md)
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
