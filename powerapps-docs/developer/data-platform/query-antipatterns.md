@@ -15,7 +15,7 @@ contributors:
 
 # Query anti-patterns
 
-Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. Learn about patterns to avoid when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). This guidance also applies when sending a `GET` request against a collection of records using OData. 
+Composing optimized queries for Dataverse is vital to ensure applications provide a fast, responsive, and reliable experience. Learn about patterns to avoid when composing queries for standard tables using the `RetrieveMultiple` message, or messages that have a parameter that inherits from the [QueryBase class](/dotnet/api/microsoft.xrm.sdk.query.querybase). [This guidance also applies when sending a `GET` request against a collection of records using OData](webapi/query/overview.md). 
 
 > [!NOTE]
 > The guidance here might not apply for [Elastic tables](elastic-tables.md) or when using [Dataverse Search](search/overview.md).
@@ -25,7 +25,7 @@ Composing optimized queries for Dataverse is vital to ensure applications provid
 
 Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset or complexity of the query.
 
-## <a name="LargeAmountOfLogicalAttributes"></a> Minimize the number of selected Logical columns
+## <a name="LargeAmountOfLogicalAttributes"></a> Minimize the number of selected logical columns
 
 You should avoid requesting too many columns, but this is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
@@ -147,4 +147,8 @@ All memo columns or string columns with a `MaxLength` greater than 850 are defin
 
 ### Related articles
 
-[Query throttling](query-throttling.md)
+[Query throttling](query-throttling.md)   
+[Use wildcard characters in conditions for string values](wildcard-characters.md)   
+[Query data using FetchXml](fetchxml/overview.md)   
+[Query data using QueryExpression](org-service/queryexpression/overview.md)   
+[Use OData to query data](webapi/query/overview.md)
