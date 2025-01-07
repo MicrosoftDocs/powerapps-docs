@@ -184,8 +184,8 @@ beginDialog:
 
 ## Known Limitations
 
-1. ALM solution dependencies from app to corresponding backing agent isn't supported during the preview. As a workaround you can package the app and agent manually.
-2. **Configure in Copilot Studio** action can create agents with the same display name for apps that have the same initial characters in the app name. When this occurs, rename the agent while publishing to avoid confusion.
+- Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
+- **Configure in Copilot Studio** action can create agents with the same display name for apps that have the same initial characters in the app name. When this occurs, rename the agent while publishing to avoid confusion.
 
 ## Related information
 
