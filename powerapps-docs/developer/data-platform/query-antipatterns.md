@@ -167,7 +167,6 @@ The `{0}` part of the exception message will list the anti-pattern that the quer
 |`FilteringOnCalculatedColumns`|[FilteringOnCalculatedColumns](#FilteringOnCalculatedColumns)|
 
 Please use the guidance on this page to understand the anti-patterns in the query, and to modify the query to avoid usage of these anti-patterns.
-[Test]()
 
 > [!NOTE]
 > If a query contains either the PerformanceLeadingWildCard or the FilteringOnCalculatedColumns anti-pattern, a different Dataverse error is thrown. Queries that use the PerformanceLeadingWildCard anti-pattern will throw the LeadingWildcardCauseTimeout error mentioned on this page, and queries that use the FilteringOnCalculatedColumns anti-pattern will throw the ComputedColumnCauseTimeout error mentioned on this page. 
