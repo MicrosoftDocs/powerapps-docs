@@ -1,7 +1,7 @@
 ---
 title: "Action Card (ActionCard) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Action Card (ActionCard) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -346,7 +346,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_inviteredemption, adx_portalcomment, appointment, chat, contact, email, fax, letter, phonecall, recurringappointmentmaster, task|
+|Targets|account, adx_inviteredemption, adx_portalcomment, appointment, chat, contact, email, fax, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, phonecall, recurringappointmentmaster, task|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -693,6 +693,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_actioncardbase_createdonbehalfby](#BKMK_lk_actioncardbase_createdonbehalfby)
 - [lk_actioncardbase_modifiedby](#BKMK_lk_actioncardbase_modifiedby)
 - [lk_actioncardbase_modifiedonbehalfby](#BKMK_lk_actioncardbase_modifiedonbehalfby)
+- [msfp_alert_ActionCards](#BKMK_msfp_alert_ActionCards)
+- [msfp_surveyinvite_ActionCards](#BKMK_msfp_surveyinvite_ActionCards)
+- [msfp_surveyresponse_ActionCards](#BKMK_msfp_surveyresponse_ActionCards)
 - [owner_actioncards](#BKMK_owner_actioncards)
 - [phonecall_actioncard](#BKMK_phonecall_actioncard)
 - [recurringappointmentmaster_actioncard](#BKMK_recurringappointmentmaster_actioncard)
@@ -880,6 +883,45 @@ One-To-Many Relationship: [systemuser lk_actioncardbase_modifiedonbehalfby](syst
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_ActionCards"></a> msfp_alert_ActionCards
+
+One-To-Many Relationship: [msfp_alert msfp_alert_ActionCards](msfp_alert.md#BKMK_msfp_alert_ActionCards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_ActionCards"></a> msfp_surveyinvite_ActionCards
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_ActionCards](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_ActionCards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_ActionCards"></a> msfp_surveyresponse_ActionCards
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_ActionCards](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_ActionCards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_owner_actioncards"></a> owner_actioncards
 

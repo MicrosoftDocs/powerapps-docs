@@ -1,7 +1,7 @@
 ---
 title: "Field Sharing (PrincipalObjectAttributeAccess) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Field Sharing (PrincipalObjectAttributeAccess) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -81,7 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
-|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, attributeimageconfig, attributemaskingrule, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessunit, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, channelaccessprofile, chat, comment, connection, connectioninstance, connectionreference, connector, contact, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, enablearchivalrequest, entityanalyticsconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fabricaiskill, fax, featurecontrolsetting, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, feedback, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, fxexpression, goal, governanceconfiguration, holidaywrapper, indexattributes, internalcatalogassignment, kbarticle, keyvaultreference, knowledgearticle, knowledgearticleviews, knowledgebaserecord, letter, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_apirequestcache, msdyn_apirequestfolder, msdyn_appinsightsmetadata, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_helppage, msdyn_historicalcaseharvestbatch, msdyn_historicalcaseharvestrun, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeharvestjobrecord, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, position, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processstageparameter, provisionlanguageforuser, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshipattribute, reportcategory, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointsite, sideloadedaiplugin, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, systemuserauthorizationchangetracker, task, tdsmetadata, team, teammobileofflineprofilemembership, territory, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, attributeimageconfig, attributemaskingrule, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessunit, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, channelaccessprofile, chat, comment, connection, connectioninstance, connectionreference, connector, contact, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, enablearchivalrequest, entityanalyticsconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fabricaiskill, fax, featurecontrolsetting, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, feedback, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, fxexpression, goal, governanceconfiguration, holidaywrapper, indexattributes, internalcatalogassignment, kbarticle, keyvaultreference, knowledgearticle, knowledgearticleviews, knowledgebaserecord, letter, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_apirequestcache, msdyn_apirequestfolder, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_historicalcaseharvestbatch, msdyn_historicalcaseharvestrun, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeharvestjobrecord, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msfp_alert, msfp_alertrule, msfp_emailtemplate, msfp_fileresponse, msfp_localizedemailtemplate, msfp_project, msfp_question, msfp_questionresponse, msfp_satisfactionmetric, msfp_survey, msfp_surveyinvite, msfp_surveyreminder, msfp_surveyresponse, msfp_unsubscribedrecipient, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, position, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processstageparameter, provisionlanguageforuser, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshipattribute, reportcategory, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointsite, sideloadedaiplugin, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, systemuserauthorizationchangetracker, task, tdsmetadata, team, teammobileofflineprofilemembership, territory, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workqueue, workqueueitem|
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
 
@@ -338,6 +338,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_apirequestcache_PrincipalObjectAttributeAccesses](#BKMK_msdyn_apirequestcache_PrincipalObjectAttributeAccesses)
 - [msdyn_apirequestfolder_PrincipalObjectAttributeAccesses](#BKMK_msdyn_apirequestfolder_PrincipalObjectAttributeAccesses)
 - [msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses](#BKMK_msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses)
+- [msdyn_copilotinteractions_PrincipalObjectAttributeAccesses](#BKMK_msdyn_copilotinteractions_PrincipalObjectAttributeAccesses)
 - [msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](#BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses)
 - [msdyn_dataflow_datalakefolder_PrincipalObjectAttributeAccesses](#BKMK_msdyn_dataflow_datalakefolder_PrincipalObjectAttributeAccesses)
 - [msdyn_dataflow_PrincipalObjectAttributeAccesses](#BKMK_msdyn_dataflow_PrincipalObjectAttributeAccesses)
@@ -364,6 +365,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_flow_basicapprovalmodel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_flow_basicapprovalmodel_PrincipalObjectAttributeAccesses)
 - [msdyn_flow_flowapproval_PrincipalObjectAttributeAccesses](#BKMK_msdyn_flow_flowapproval_PrincipalObjectAttributeAccesses)
 - [msdyn_formmapping_PrincipalObjectAttributeAccesses](#BKMK_msdyn_formmapping_PrincipalObjectAttributeAccesses)
+- [msdyn_function_PrincipalObjectAttributeAccesses](#BKMK_msdyn_function_PrincipalObjectAttributeAccesses)
 - [msdyn_helppage_PrincipalObjectAttributeAccesses](#BKMK_msdyn_helppage_PrincipalObjectAttributeAccesses)
 - [msdyn_historicalcaseharvestbatch_PrincipalObjectAttributeAccesses](#BKMK_msdyn_historicalcaseharvestbatch_PrincipalObjectAttributeAccesses)
 - [msdyn_historicalcaseharvestrun_PrincipalObjectAttributeAccesses](#BKMK_msdyn_historicalcaseharvestrun_PrincipalObjectAttributeAccesses)
@@ -398,6 +400,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_pmsimulation_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmsimulation_PrincipalObjectAttributeAccesses)
 - [msdyn_pmtemplate_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmtemplate_PrincipalObjectAttributeAccesses)
 - [msdyn_pmview_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmview_PrincipalObjectAttributeAccesses)
+- [msdyn_qna_PrincipalObjectAttributeAccesses](#BKMK_msdyn_qna_PrincipalObjectAttributeAccesses)
 - [msdyn_richtextfile_PrincipalObjectAttributeAccesses](#BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses)
 - [msdyn_salesforcestructuredobject_PrincipalObjectAttributeAccesses](#BKMK_msdyn_salesforcestructuredobject_PrincipalObjectAttributeAccesses)
 - [msdyn_salesforcestructuredqnaconfig_PrincipalObjectAttributeAccesses](#BKMK_msdyn_salesforcestructuredqnaconfig_PrincipalObjectAttributeAccesses)
@@ -411,6 +414,20 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_virtualtablecolumncandidate_PrincipalObjectAttributeAccesses](#BKMK_msdyn_virtualtablecolumncandidate_PrincipalObjectAttributeAccesses)
 - [msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses](#BKMK_msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses)
 - [msdynce_botcontent_PrincipalObjectAttributeAccesses](#BKMK_msdynce_botcontent_PrincipalObjectAttributeAccesses)
+- [msfp_alert_PrincipalObjectAttributeAccesses](#BKMK_msfp_alert_PrincipalObjectAttributeAccesses)
+- [msfp_alertrule_PrincipalObjectAttributeAccesses](#BKMK_msfp_alertrule_PrincipalObjectAttributeAccesses)
+- [msfp_emailtemplate_PrincipalObjectAttributeAccesses](#BKMK_msfp_emailtemplate_PrincipalObjectAttributeAccesses)
+- [msfp_fileresponse_PrincipalObjectAttributeAccesses](#BKMK_msfp_fileresponse_PrincipalObjectAttributeAccesses)
+- [msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses](#BKMK_msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses)
+- [msfp_project_PrincipalObjectAttributeAccesses](#BKMK_msfp_project_PrincipalObjectAttributeAccesses)
+- [msfp_question_PrincipalObjectAttributeAccesses](#BKMK_msfp_question_PrincipalObjectAttributeAccesses)
+- [msfp_questionresponse_PrincipalObjectAttributeAccesses](#BKMK_msfp_questionresponse_PrincipalObjectAttributeAccesses)
+- [msfp_satisfactionmetric_PrincipalObjectAttributeAccesses](#BKMK_msfp_satisfactionmetric_PrincipalObjectAttributeAccesses)
+- [msfp_survey_PrincipalObjectAttributeAccesses](#BKMK_msfp_survey_PrincipalObjectAttributeAccesses)
+- [msfp_surveyinvite_PrincipalObjectAttributeAccesses](#BKMK_msfp_surveyinvite_PrincipalObjectAttributeAccesses)
+- [msfp_surveyreminder_PrincipalObjectAttributeAccesses](#BKMK_msfp_surveyreminder_PrincipalObjectAttributeAccesses)
+- [msfp_surveyresponse_PrincipalObjectAttributeAccesses](#BKMK_msfp_surveyresponse_PrincipalObjectAttributeAccesses)
+- [msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses](#BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses)
 - [msgraphresourcetosubscription_PrincipalObjectAttributeAccesses](#BKMK_msgraphresourcetosubscription_PrincipalObjectAttributeAccesses)
 - [mspcat_catalogsubmissionfiles_PrincipalObjectAttributeAccesses](#BKMK_mspcat_catalogsubmissionfiles_PrincipalObjectAttributeAccesses)
 - [mspcat_packagestore_PrincipalObjectAttributeAccesses](#BKMK_mspcat_packagestore_PrincipalObjectAttributeAccesses)
@@ -2259,6 +2276,19 @@ One-To-Many Relationship: [msdyn_appinsightsmetadata msdyn_appinsightsmetadata_P
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_copilotinteractions_PrincipalObjectAttributeAccesses"></a> msdyn_copilotinteractions_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msdyn_copilotinteractions msdyn_copilotinteractions_PrincipalObjectAttributeAccesses](msdyn_copilotinteractions.md#BKMK_msdyn_copilotinteractions_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_copilotinteractions`|
+|ReferencedAttribute|`msdyn_copilotinteractionsid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_copilotinteractions`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses"></a> msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses
 
 One-To-Many Relationship: [msdyn_customcontrolextendedsettings msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](msdyn_customcontrolextendedsettings.md#BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses)
@@ -2594,6 +2624,19 @@ One-To-Many Relationship: [msdyn_formmapping msdyn_formmapping_PrincipalObjectAt
 |ReferencedAttribute|`msdyn_formmappingid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_formmapping`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_function_PrincipalObjectAttributeAccesses"></a> msdyn_function_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msdyn_function msdyn_function_PrincipalObjectAttributeAccesses](msdyn_function.md#BKMK_msdyn_function_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_function`|
+|ReferencedAttribute|`msdyn_functionid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_function`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3039,6 +3082,19 @@ One-To-Many Relationship: [msdyn_pmview msdyn_pmview_PrincipalObjectAttributeAcc
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_qna_PrincipalObjectAttributeAccesses"></a> msdyn_qna_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msdyn_qna msdyn_qna_PrincipalObjectAttributeAccesses](msdyn_qna.md#BKMK_msdyn_qna_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_qna`|
+|ReferencedAttribute|`msdyn_qnaid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_qna`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses"></a> msdyn_richtextfile_PrincipalObjectAttributeAccesses
 
 One-To-Many Relationship: [msdyn_richtextfile msdyn_richtextfile_PrincipalObjectAttributeAccesses](msdyn_richtextfile.md#BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses)
@@ -3205,6 +3261,188 @@ One-To-Many Relationship: [msdynce_botcontent msdynce_botcontent_PrincipalObject
 |ReferencedAttribute|`msdynce_botcontentid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdynce_botcontent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_PrincipalObjectAttributeAccesses"></a> msfp_alert_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_alert msfp_alert_PrincipalObjectAttributeAccesses](msfp_alert.md#BKMK_msfp_alert_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alertrule_PrincipalObjectAttributeAccesses"></a> msfp_alertrule_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_alertrule msfp_alertrule_PrincipalObjectAttributeAccesses](msfp_alertrule.md#BKMK_msfp_alertrule_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alertrule`|
+|ReferencedAttribute|`msfp_alertruleid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_alertrule`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_emailtemplate_PrincipalObjectAttributeAccesses"></a> msfp_emailtemplate_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_emailtemplate msfp_emailtemplate_PrincipalObjectAttributeAccesses](msfp_emailtemplate.md#BKMK_msfp_emailtemplate_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_emailtemplate`|
+|ReferencedAttribute|`msfp_emailtemplateid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_emailtemplate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_fileresponse_PrincipalObjectAttributeAccesses"></a> msfp_fileresponse_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_fileresponse msfp_fileresponse_PrincipalObjectAttributeAccesses](msfp_fileresponse.md#BKMK_msfp_fileresponse_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_fileresponse`|
+|ReferencedAttribute|`msfp_fileresponseid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_fileresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses"></a> msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_localizedemailtemplate msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses](msfp_localizedemailtemplate.md#BKMK_msfp_localizedemailtemplate_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_localizedemailtemplate`|
+|ReferencedAttribute|`msfp_localizedemailtemplateid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_localizedemailtemplate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_project_PrincipalObjectAttributeAccesses"></a> msfp_project_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_project msfp_project_PrincipalObjectAttributeAccesses](msfp_project.md#BKMK_msfp_project_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_project`|
+|ReferencedAttribute|`msfp_projectid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_project`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_question_PrincipalObjectAttributeAccesses"></a> msfp_question_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_question msfp_question_PrincipalObjectAttributeAccesses](msfp_question.md#BKMK_msfp_question_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_question`|
+|ReferencedAttribute|`msfp_questionid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_question`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_questionresponse_PrincipalObjectAttributeAccesses"></a> msfp_questionresponse_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_questionresponse msfp_questionresponse_PrincipalObjectAttributeAccesses](msfp_questionresponse.md#BKMK_msfp_questionresponse_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_questionresponse`|
+|ReferencedAttribute|`msfp_questionresponseid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_questionresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_satisfactionmetric_PrincipalObjectAttributeAccesses"></a> msfp_satisfactionmetric_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_satisfactionmetric msfp_satisfactionmetric_PrincipalObjectAttributeAccesses](msfp_satisfactionmetric.md#BKMK_msfp_satisfactionmetric_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_satisfactionmetric`|
+|ReferencedAttribute|`msfp_satisfactionmetricid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_satisfactionmetric`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_survey_PrincipalObjectAttributeAccesses"></a> msfp_survey_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_survey msfp_survey_PrincipalObjectAttributeAccesses](msfp_survey.md#BKMK_msfp_survey_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_survey`|
+|ReferencedAttribute|`msfp_surveyid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_survey`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_PrincipalObjectAttributeAccesses"></a> msfp_surveyinvite_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_PrincipalObjectAttributeAccesses](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyreminder_PrincipalObjectAttributeAccesses"></a> msfp_surveyreminder_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_surveyreminder msfp_surveyreminder_PrincipalObjectAttributeAccesses](msfp_surveyreminder.md#BKMK_msfp_surveyreminder_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyreminder`|
+|ReferencedAttribute|`msfp_surveyreminderid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyreminder`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_PrincipalObjectAttributeAccesses"></a> msfp_surveyresponse_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_PrincipalObjectAttributeAccesses](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses"></a> msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses
+
+One-To-Many Relationship: [msfp_unsubscribedrecipient msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses](msfp_unsubscribedrecipient.md#BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_unsubscribedrecipient`|
+|ReferencedAttribute|`msfp_unsubscribedrecipientid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_unsubscribedrecipient`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

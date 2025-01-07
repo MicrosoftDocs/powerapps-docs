@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Note (Annotation) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -212,7 +212,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
+|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, msfp_alert, msfp_question, msfp_surveyinvite, msfp_surveyresponse, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -659,6 +659,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
 - [msdyn_flow_approval_Annotations](#BKMK_msdyn_flow_approval_Annotations)
+- [msfp_alert_Annotations](#BKMK_msfp_alert_Annotations)
+- [msfp_question_Annotations](#BKMK_msfp_question_Annotations)
+- [msfp_surveyinvite_Annotations](#BKMK_msfp_surveyinvite_Annotations)
+- [msfp_surveyresponse_Annotations](#BKMK_msfp_surveyresponse_Annotations)
 - [mspcat_catalogsubmissionfiles_Annotations](#BKMK_mspcat_catalogsubmissionfiles_Annotations)
 - [owner_annotations](#BKMK_owner_annotations)
 - [PhoneCall_Annotation](#BKMK_PhoneCall_Annotation)
@@ -1030,6 +1034,58 @@ One-To-Many Relationship: [msdyn_flow_approval msdyn_flow_approval_Annotations](
 |ReferencedAttribute|`msdyn_flow_approvalid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_flow_approval`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_msfp_alert_Annotations"></a> msfp_alert_Annotations
+
+One-To-Many Relationship: [msfp_alert msfp_alert_Annotations](msfp_alert.md#BKMK_msfp_alert_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_msfp_question_Annotations"></a> msfp_question_Annotations
+
+One-To-Many Relationship: [msfp_question msfp_question_Annotations](msfp_question.md#BKMK_msfp_question_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_question`|
+|ReferencedAttribute|`msfp_questionid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_question`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_msfp_surveyinvite_Annotations"></a> msfp_surveyinvite_Annotations
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_Annotations](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_msfp_surveyresponse_Annotations"></a> msfp_surveyresponse_Annotations
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_Annotations](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyresponse`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 

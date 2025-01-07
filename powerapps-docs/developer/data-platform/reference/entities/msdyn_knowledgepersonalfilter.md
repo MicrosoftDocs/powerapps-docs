@@ -1,7 +1,7 @@
 ---
 title: "Knowledge search personal filter config (msdyn_knowledgepersonalfilter) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge search personal filter config (msdyn_knowledgepersonalfilter) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -118,7 +118,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_enabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-|GlobalChoiceName|`msdyn_knowledgepersonalfilter_enabled`|
+|GlobalChoiceName|`msdyn_knowledgepersonalfilter_Enabled`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
