@@ -158,13 +158,13 @@ The `{0}` part of the exception message will list the anti-pattern that the quer
 
 |Anti-pattern identifier|Explanation link|
 |---|---|
-|`PerformanceLeadingWildCard`|[PerformanceLeadingWildCard](#PerformanceLeadingWildCard)|
-|`PerformanceLargeColumnSearch`|[PerformanceLargeColumnSearch](#PerformanceLargeColumnSearch)|
-|`OrderOnEnumAttribute`|[OrderOnEnumAttribute](#OrderOnEnumAttribute)|
-|`OrderOnPropertiesFromJoinedTables`|[OrderOnPropertiesFromJoinedTables](#OrderOnPropertiesFromJoinedTables)|
-|`LargeAmountOfAttributes`|[LargeAmountOfAttributes](#LargeAmountOfAttributes)|
-|`LargeAmountOfLogicalAttributes`|[LargeAmountOfLogicalAttributes](#LargeAmountOfLogicalAttributes)|
-|`FilteringOnCalculatedColumns`|[FilteringOnCalculatedColumns](#FilteringOnCalculatedColumns)|
+|`PerformanceLeadingWildCard`|[Avoid leading wild cards in filter conditions](#PerformanceLeadingWildCard)|
+|`PerformanceLargeColumnSearch`|[Avoid using conditions on large text columns](#PerformanceLargeColumnSearch)|
+|`OrderOnEnumAttribute`|[Avoid ordering by choice columns](#OrderOnEnumAttribute)|
+|`OrderOnPropertiesFromJoinedTables`|[Avoid ordering by columns in related tables](#OrderOnPropertiesFromJoinedTables)|
+|`LargeAmountOfAttributes`|[Minimize the number of selected columns](#LargeAmountOfAttributes)|
+|`LargeAmountOfLogicalAttributes`|[Minimize the number of selected logical columns](#LargeAmountOfLogicalAttributes)|
+|`FilteringOnCalculatedColumns`|[Avoid using formula or calculated columns in filter conditions](#FilteringOnCalculatedColumns)|
 
 Please use the guidance on this page to understand the anti-patterns in the query, and to modify the query to avoid usage of these anti-patterns.
 
