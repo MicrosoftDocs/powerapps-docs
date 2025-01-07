@@ -50,7 +50,7 @@ For more details, see how to add knowledge to Copilot: [Add knowledge to an exis
 
 > [!NOTE]
 >
-> Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website) and [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) knowledge source types are supported.
+> Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website), [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) and [SharePoint](/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive) knowledge source types are supported. Dataverse knowledge is not part of this preview.
 
 > [!NOTE]
 >
