@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to retrieve all the organization-owned visualizations attached to a table by using the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve all charts attached to a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveChartsAttachedToEntity)
+> [SDK for .NET: Retrieve all charts attached to a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveChartsAttachedToEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

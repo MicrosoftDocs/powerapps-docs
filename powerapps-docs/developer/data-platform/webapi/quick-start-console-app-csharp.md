@@ -20,7 +20,7 @@ This program will authenticate and use an <xref:System.Net.Http.HttpClient> to s
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. 
 
-You can find the complete Visual Studio solution for this .NET 6 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart). There is also a .NET Framework version of the sample under `dataverse/webapi/`[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart).
+You can find the complete Visual Studio solution for this .NET 6 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart). There is also a .NET Framework version of the sample under `dataverse/webapi/`[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/QuickStart).
 
 ## Prerequisites
 
@@ -198,7 +198,7 @@ Follow these next steps to add code for the main program.
 1. Look at the console application window. The output should look something like this:
 
    ```
-   Your user ID is 4026be43-6b69-e111-8f65-78e7d1620f5e
+   Your user ID is 22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    
    C:\Projects\webapi-quickstart\bin\Debug\net6.0\webapi-quickstart.exe (process 21524) exited with code 0.
    To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.

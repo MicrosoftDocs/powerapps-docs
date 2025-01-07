@@ -231,6 +231,8 @@
   items:
   - name: Overview
     href: index.md
+  - name: Use the Plan designer (preview)
+    href: ./plan-designer/plan-designer.md  
   - name: Use the learn hub
     href: ./common/learn-hub.md
   - name: Find it with unified search
@@ -680,6 +682,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Build an agent to automate your business process (preview)
+          href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
         - name: Understand variables
@@ -1334,6 +1338,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
+    - name: Use Monitor to get insights and recommendations (preview)
+      href: ./canvas-apps/monitor-app-performance.md  
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
@@ -1892,6 +1898,8 @@
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
+    - name: Configure a row summary (preview)
+      href: ./data-platform/configure-form-row-summary.md  
     - name: Import and export table data
       items:
       - name: Import data from Excel and export to CSV
@@ -1923,6 +1931,14 @@
         href: ./data-platform/limits-tshoot-virtual-tables.md
     - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
+    - name: Table customizations
+      items:
+      - name: Create business rules
+        href: ./data-platform/data-platform-create-business-rule.md
+      - name: Edit a command bar
+        href: ./model-driven-apps/command-designer-overview.md
+      - name: Edit messages for a system table
+        href: ./data-platform/edit-system-entity-messages.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
@@ -2606,8 +2622,14 @@
     href: ./common/faq-field-suggestions.md
   - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
     href: ./common/faq-filter-with-copilot.md
+  - name:  FAQ about agent builder in canvas apps 
+    href: ./common/faq-agent-builder.md  
+  - name: FAQ about the Plan designer
+    href: ./common/faq-plan-designer.md
 - name: Resources
   items:
+  - name: Microsoft Credentials for Power Platform
+    href: /credentials/browse/?products=power-platform&wt.mc_id=appliedskills_AppliedSkillsPowerPlatformProductDoc_webpage_wwl
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums

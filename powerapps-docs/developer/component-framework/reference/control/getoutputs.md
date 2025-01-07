@@ -1,8 +1,8 @@
 ---
 title: "StandardControl.getOutputs (Power Apps component framework API reference) | MicrosoftDocs"
 description: This method is called by the framework before a component receives the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

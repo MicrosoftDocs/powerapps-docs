@@ -1,7 +1,7 @@
 ---
 title: "Copilot component (botcomponent) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Copilot component (botcomponent) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -310,6 +310,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1034|**Spanish**|
 |1035|**Finnish**|
 |1036|**French**|
+|1037|**Hebrew**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|

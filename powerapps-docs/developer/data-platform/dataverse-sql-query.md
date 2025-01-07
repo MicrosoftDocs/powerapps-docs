@@ -1,12 +1,12 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/22/2024
+ms.date: 12/06/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "RichdiMSFT" # GitHub ID
+author: "pnghub" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "richdi" # MSFT alias of Microsoft employees only
+ms.author: "gned" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
@@ -21,6 +21,8 @@ The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endp
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
+
+To prevent data exfiltration, turn on the [user level access control for TDS endpoint](/power-platform/admin/control-tds-settings#enable-user-level-control). Assign a least privilege security role with data access permission to only the tables that your users need to access, and grant the **Allow user to access TDS endpoint** miscellaneous privilege.
 
 ## Applications support
 

@@ -122,6 +122,8 @@
           href: fetchxml/sample.md
     - name: Query using wildcard characters
       href: wildcard-characters.md
+    - name: Query anti-patterns
+      href: query-antipatterns.md
     - name: Query throttling
       href: query-throttling.md
     - name: Query Hierarchical data

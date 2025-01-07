@@ -69,7 +69,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/publishers(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
 
    **Console output:**
@@ -97,7 +97,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    "uniquename": "examplesolution",
    "description": "An example solution for samples",
    "version": "1.0.0.0",
-   "publisherid@odata.bind": "publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)"
+   "publisherid@odata.bind": "publishers(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)"
    }
    ```
 
@@ -106,7 +106,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/solutions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
    ```
 
    **Console output:**
@@ -254,7 +254,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
    ```
 
    **Console output:**
@@ -367,7 +367,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    "OwnerId": null,
    "OwnerIdType": 8,
    "OwningBusinessUnit": null,
-   "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2",
+   "MetadataId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
    "HasChanged": null,
    "Description": {
       "LocalizedLabels": [
@@ -1009,7 +1009,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    "Settings": [],
    "SyncToExternalSearchIndex": false,
    "UsesBusinessDataLabelTable": false,
-   "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa"
    }
    ```
 
@@ -1145,7 +1145,7 @@ This section creates and retrieves a selected group of column definitions. Each 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(73f33b3d-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
    ```
 
 1. Retrieve the Boolean column including `$expand=OptionSet` so that the options can be retrieved.
@@ -1172,7 +1172,7 @@ This section creates and retrieves a selected group of column definitions. Each 
 
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(OptionSet())/$entity",
-   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
+   "MetadataId": "33dd33dd-ee44-ff55-aa66-77bb77bb77bb",
    "HasChanged": null,
    "AttributeOf": null,
    "AttributeType": "Boolean",
@@ -1668,7 +1668,7 @@ This section creates and retrieves a selected group of column definitions. Each 
    },
    "SchemaName": "sample_Boolean",
    "SourceType": 0,
-   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "33dd33dd-ee44-ff55-aa66-77bb77bb77bb"
    }
    ```
 
@@ -1868,13 +1868,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f1db3d43-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
    ```
 
    **Console output:**
 
    ```
-   Created DateTime column with id:f1db3d43-112a-ed11-9db1-00224804f8e2
+   Created DateTime column with id:44ee44ee-ff55-aa66-bb77-88cc88cc88cc
    ```
 
 1. Retrieve selected values of the DateTime column.
@@ -1901,7 +1901,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata(SchemaName,Format,DateTimeBehavior)/$entity",
    "SchemaName": "sample_DateTime",
    "Format": "DateOnly",
-   "MetadataId": "f1db3d43-112a-ed11-9db1-00224804f8e2",
+   "MetadataId": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
    "DateTimeBehavior": {
       "Value": "DateOnly"
     }
@@ -1987,13 +1987,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f2db3d43-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
    ```
 
    **Console output:**
 
    ```
-   Created Decimal column with id:f2db3d43-112a-ed11-9db1-00224804f8e2
+   Created Decimal column with id:55ff55ff-aa66-bb77-cc88-99dd99dd99dd
    ```
 
 1. Retrieve selected values of the Decimal column.
@@ -2021,7 +2021,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    "MaxValue": 100,
    "MinValue": 0,
    "Precision": 1,
-   "MetadataId": "f2db3d43-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "55ff55ff-aa66-bb77-cc88-99dd99dd99dd"
    }
    ```
 
@@ -2106,13 +2106,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f5db3d43-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
    ```
 
    **Console output:**
 
    ```
-   Created Integer column with id:f5db3d43-112a-ed11-9db1-00224804f8e2
+   Created Integer column with id:66aa66aa-bb77-cc88-dd99-00ee00ee00ee
    ```
 
 1. Retrieve selected values of the Integer column.
@@ -2140,7 +2140,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    "MaxValue": 100,
    "MinValue": 0,
    "Format": "None",
-   "MetadataId": "f5db3d43-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "66aa66aa-bb77-cc88-dd99-00ee00ee00ee"
    }
    ```
 
@@ -2225,13 +2225,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f6db3d43-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
 
    **Console output:**
 
    ```
-   Created Memo column with id:f6db3d43-112a-ed11-9db1-00224804f8e2
+   Created Memo column with id:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
    ```
 
 1. Retrieve selected values of the Memo Column.
@@ -2259,7 +2259,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    "Format": "TextArea",
    "ImeMode": "Disabled",
    "MaxLength": 500,
-   "MetadataId": "f6db3d43-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
    }
    ```
 
@@ -2347,13 +2347,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fddb3d43-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
    ```
 
    **Console output:**
 
    ```
-   Created Money column with id:fddb3d43-112a-ed11-9db1-00224804f8e2
+   Created Money column with id:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
    ```
 
 1. Retrieve selected values of the Money Column.
@@ -2383,7 +2383,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    "Precision": 1,
    "PrecisionSource": 1,
    "ImeMode": "Disabled",
-   "MetadataId": "fddb3d43-112a-ed11-9db1-00224804f8e2"
+   "MetadataId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
    }
    ```
 
@@ -2574,13 +2574,13 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(4a154e49-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
    ```
 
    **Console output:**
 
    ```
-   Created Choice column with id:4a154e49-112a-ed11-9db1-00224804f8e2
+   Created Choice column with id:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    ```
 
 1. Retrieve options of the choice column using `$select=SchemaName&$expand=OptionSet`.
@@ -2605,7 +2605,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
    "SchemaName": "sample_Choice",
-   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
+   "MetadataId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
    "OptionSet": {
       "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
       "HasChanged": null,
@@ -3127,14 +3127,14 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(2c1c3050-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
    ```
 
    **Console output:**
 
    ```
    Creating a MultiSelect Choice column...
-   Created MultiSelect Choice column with id:2c1c3050-112a-ed11-9db1-00224804f8e2
+   Created MultiSelect Choice column with id:33dd33dd-ee44-ff55-aa66-77bb77bb77bb
    ```
 
 1. Retrieve the multi-select choice column options using `GET EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet`
@@ -3333,13 +3333,13 @@ Created new Status value:727000000
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
    ```
 
    **Console output:**
 
    ```
-   Created a new global option set with id:7cfd8c56-112a-ed11-9db1-00224804f8e2
+   Created a new global option set with id:44ee44ee-ff55-aa66-bb77-88cc88cc88cc
    ```
 
 1. Retrieve the global choice options.
@@ -3347,7 +3347,7 @@ Created new Status value:727000000
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OptionSetMetadata HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)/Microsoft.Dynamics.CRM.OptionSetMetadata HTTP/1.1
    Consistency: Strong
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -3371,7 +3371,7 @@ Created new Status value:727000000
    "ExternalTypeName": null,
    "OptionSetType": "Picklist",
    "IntroducedVersion": "1.0.0.0",
-   "MetadataId": "7cfd8c56-112a-ed11-9db1-00224804f8e2",
+   "MetadataId": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
    "HasChanged": null,
    "Options": [
       {
@@ -3521,7 +3521,7 @@ Created new Status value:727000000
    Value: 727000002 Label:Green
    ```
 
-1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using: `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)"`.
+1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using: `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)"`.
 
    **Request:**
 
@@ -3540,7 +3540,7 @@ Created new Status value:727000000
       "Value": "PicklistType"
    },
    "SourceTypeMask": 0,
-   "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)",
+   "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)",
    "Description": {
       "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
@@ -3589,13 +3589,13 @@ Created new Status value:727000000
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(81fd8c56-112a-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
    ```
 
    **Console output:**
 
    ```
-   Created Choice column with id:81fd8c56-112a-ed11-9db1-00224804f8e2 using colors global optionset.
+   Created Choice column with id:55ff55ff-aa66-bb77-cc88-99dd99dd99dd using colors global optionset.
    ```
 
 ## Section 4: Create Customer Relationship
@@ -4221,7 +4221,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2)
+OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
 ```
 
 
@@ -4230,7 +4230,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5
 
 ```
 Creating a one-to-many relationship...
-Created one-to-many relationship: RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2)
+Created one-to-many relationship: RelationshipDefinitions(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
 ```
 
 ### Retrieve 1:N relationship
@@ -4244,7 +4244,7 @@ The following request retrieves the relationship created by the previous request
 **Request:**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
 Consistency: Strong
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -4279,7 +4279,7 @@ OData-Version: 4.0
   "IsManaged": false,
   "RelationshipType": "OneToManyRelationship",
   "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "991efd5f-112a-ed11-9db1-00224804f8e2",
+  "MetadataId": "66aa66aa-bb77-cc88-dd99-00ee00ee00ee",
   "HasChanged": null,
   "AssociatedMenuConfiguration": {
     "Behavior": "UseLabel",
@@ -4446,13 +4446,13 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)
+OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 **Console output:**
 
 ```
-Created many-to-one relationship: RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)
+Created many-to-one relationship: RelationshipDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ### Retrieve N:1 relationship
@@ -4460,7 +4460,7 @@ Created many-to-one relationship: RelationshipDefinitions(0901c466-112a-ed11-9db
 **Request:**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
 Consistency: Strong
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -4495,7 +4495,7 @@ OData-Version: 4.0
   "IsManaged": false,
   "RelationshipType": "OneToManyRelationship",
   "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "0901c466-112a-ed11-9db1-00224804f8e2",
+  "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
   "HasChanged": null,
   "AssociatedMenuConfiguration": {
     "Behavior": "UseLabel",
@@ -4875,13 +4875,13 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
+OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 ```
 
 **Console output:**
 
 ```
-Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
+Created Many-to-Many relationship at: RelationshipDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 ```
 
 ### Retrieve N:N relationship
@@ -4895,7 +4895,7 @@ This request retrieves the many-to-many relationship created by the previous req
 **Request:**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata HTTP/1.1
 Consistency: Strong
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -4925,7 +4925,7 @@ OData-Version: 4.0
   "IsManaged": false,
   "RelationshipType": "ManyToManyRelationship",
   "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "55c9f86c-112a-ed11-9db1-00224804f8e2",
+  "MetadataId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
   "HasChanged": null,
   "Entity1AssociatedMenuConfiguration": {
     "Behavior": "UseLabel",
@@ -5066,7 +5066,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 136
 
-DELETE /api/data/v9.2/RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/RelationshipDefinitions(66aa66aa-bb77-cc88-dd99-00ee00ee00ee) HTTP/1.1
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5074,7 +5074,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 130
 
-DELETE /api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/EntityDefinitions(22cc22cc-dd33-ee44-ff55-66aa66aa66aa) HTTP/1.1
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5082,7 +5082,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 122
 
-DELETE /api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/solutions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff) HTTP/1.1
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5090,7 +5090,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 123
 
-DELETE /api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/publishers(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5098,7 +5098,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 139
 
-DELETE /api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/GlobalOptionSetDefinitions(44ee44ee-ff55-aa66-bb77-88cc88cc88cc) HTTP/1.1
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a--

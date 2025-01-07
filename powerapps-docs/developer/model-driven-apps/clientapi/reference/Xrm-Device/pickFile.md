@@ -1,6 +1,6 @@
 ---
-title: "pickFile"
-description: Opens a dialog box to select files for the upload
+title: "pickFile (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the pickFile method.
 author: adrianorth
 ms.author: aorth
 ms.date: 03/12/2022

@@ -76,7 +76,7 @@ Leave your application projects and code as is. Continue using the Microsoft.Crm
 
 ## Code samples
 
-Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/ServiceClient)
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ServiceClient)
 
 ## Timeline
 

@@ -3215,7 +3215,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/userqueries(f76e86e2-a228-ed11-9db1-000d3a320482)
+OData-EntityId: [Organization Uri]/api/data/v9.2/userqueries(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 This user query asks for any contacts where `fullname` contains `(sample)`, `jobtitle` contains `manager`, and `annualincome` is greater than `55000`. Our sample data has two contacts that match the query.
@@ -3246,7 +3246,7 @@ Content-Length: 246
       {   
          "@odata.etag":"W/\"621698\"",  
          "name":"My User Query",  
-         "userqueryid":"f76e86e2-a228-ed11-9db1-000d3a320482"  
+         "userqueryid":"00aa00aa-bb11-cc22-dd33-44ee44ee44ee"  
       }  
    ]  
 }  
@@ -3257,7 +3257,7 @@ This example passes the GUID value with the `userQuery` parameter to get the use
 **Request:**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?userQuery=f76e86e2-a228-ed11-9db1-000d3a320482 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?userQuery=00aa00aa-bb11-cc22-dd33-44ee44ee44ee HTTP/1.1
 Prefer: odata.maxpagesize=3; odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -3416,7 +3416,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 124
 
-DELETE /api/data/v9.2/userqueries(f76e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+DELETE /api/data/v9.2/userqueries(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 
 
 --batch_23ea682f-a60a-412a-b37d-7df10a976508--

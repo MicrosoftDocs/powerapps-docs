@@ -18,7 +18,7 @@ contributors:
 This sample shows how to retrieve the working hours of a user by using the [QueryScheduleRequest](/dotnet/api/microsoft.crm.sdk.messages.queryschedulerequest) message
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Query the working hours of a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryWorkingHours)
+> [SDK for .NET: Query the working hours of a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/QueryWorkingHours)
 
 ## How to run this sample
 

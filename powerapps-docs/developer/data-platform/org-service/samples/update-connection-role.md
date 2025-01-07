@@ -18,7 +18,7 @@ contributors:
 This sample shows how to modify the properties of the connection role, such as a role name, description, and category.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Update a connection role (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UpdateConnectionRole)
+> [SDK for .NET: Update a connection role (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UpdateConnectionRole)
 
 ## How to run this sample
 

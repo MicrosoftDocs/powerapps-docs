@@ -1,7 +1,7 @@
 ---
 title: "Currency (TransactionCurrency) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Currency (TransactionCurrency) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -55,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CurrencyName](#BKMK_CurrencyName)
 - [CurrencyPrecision](#BKMK_CurrencyPrecision)
 - [CurrencySymbol](#BKMK_CurrencySymbol)
+- [CurrencyType](#BKMK_CurrencyType)
 - [EntityImage](#BKMK_EntityImage)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -111,6 +112,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|10|
+
+### <a name="BKMK_CurrencyType"></a> CurrencyType
+
+|Property|Value|
+|---|---|
+|Description|**Currency type that can be used for new currency.**|
+|DisplayName|**Currency Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`currencytype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`transactioncurrency_currencytype`|
+
+#### CurrencyType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**System**|
+|1|**Custom**|
 
 ### <a name="BKMK_EntityImage"></a> EntityImage
 
@@ -518,6 +540,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [adx_portalcomment_transactioncurrency_transactioncurrencyid](#BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid)
 - [basecurrency_organization](#BKMK_basecurrency_organization)
 - [chat_transactioncurrency_transactioncurrencyid](#BKMK_chat_transactioncurrency_transactioncurrencyid)
+- [msfp_alert_transactioncurrency_transactioncurrencyid](#BKMK_msfp_alert_transactioncurrency_transactioncurrencyid)
+- [msfp_surveyinvite_transactioncurrency_transactioncurrencyid](#BKMK_msfp_surveyinvite_transactioncurrency_transactioncurrencyid)
+- [msfp_surveyresponse_transactioncurrency_transactioncurrencyid](#BKMK_msfp_surveyresponse_transactioncurrency_transactioncurrencyid)
 - [transactioncurrency_account](#BKMK_transactioncurrency_account)
 - [transactioncurrency_actioncard](#BKMK_transactioncurrency_actioncard)
 - [TransactionCurrency_ActionCardUserState](#BKMK_TransactionCurrency_ActionCardUserState)
@@ -621,6 +646,42 @@ Many-To-One Relationship: [chat chat_transactioncurrency_transactioncurrencyid](
 |ReferencingEntity|`chat`|
 |ReferencingAttribute|`transactioncurrencyid`|
 |ReferencedEntityNavigationPropertyName|`chat_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_alert_transactioncurrency_transactioncurrencyid"></a> msfp_alert_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [msfp_alert msfp_alert_transactioncurrency_transactioncurrencyid](msfp_alert.md#BKMK_msfp_alert_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`msfp_alert_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyinvite_transactioncurrency_transactioncurrencyid"></a> msfp_surveyinvite_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [msfp_surveyinvite msfp_surveyinvite_transactioncurrency_transactioncurrencyid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyinvite_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyresponse_transactioncurrency_transactioncurrencyid"></a> msfp_surveyresponse_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [msfp_surveyresponse msfp_surveyresponse_transactioncurrency_transactioncurrencyid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyresponse_transactioncurrency_transactioncurrencyid`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

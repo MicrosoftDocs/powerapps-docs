@@ -1,10 +1,10 @@
 ---
 title: "Sample: Work with activity party records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with activity party records" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/06/2022
-author: mayadumesh
-ms.author: mayadu
-ms.reviewer: pehecke
+ms.date: 12/17/2024
+author: phecke
+ms.author: pehecke
+ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
@@ -15,36 +15,50 @@ contributors:
 
 # Sample: Work with activity party records
 
-This sample code shows how to work with activity party records.
+This sample code shows how to work with activity party records. Learn how to create a letter activity addressed to multiple contacts.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with activity party records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ActivityPartyRecords)
+> [SDK for .NET: Work with activity party records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Activities/ActivityParty)
 
-## How to run this sample
+Related article: [Activity tables](../../activity-entities.md)
 
-[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
+## About the sample code
 
-## What this sample does
+|Sample|Description|Build target|
+|---|---|---|
+|ActivityParty|Demonstrates creating a letter activity.|.NET 9|
 
-This sample creates some sample data, to work with activity party records.
+The code sample demonstrates how to create a letter activity. Specifically, the samples demonstrate how to:
 
-## How this sample works
+1. Connect to Dataverse using a [connection string](../../xrm-tooling/use-connection-strings-xrm-tooling-connect.md) that defines required connection information
+1. Create a [letter activity](../../reference/entities/letter.md) to send to multiple [contacts](../../reference/entities/contact.md)
+1. Use the Dataverse [organization service context](../organizationservicecontext.md) to process the data changes
+1. Use [early-bound](../early-bound-programming.md#early-bound) entity types
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+The code being demonstrated can be found in the `Program.CreateLetter()` method invoked by `Program.Run()`.
 
-### Setup
+The early-bound entity files in the *DataModel* project were generated using the following PAC CLI command:
+`pac modelbuilder build`. More information: [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder)
 
-1. Checks for the current version of the org.
-1. Creates three contact records which are required for this sample.
+More general information can be found in [README-code-design](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/README-code-design.md) file.
 
-### Demonstrate
+## How to build and run the code sample
 
-1. Retrieves the contact records that are created in the [Setup](#setup).
-2. Creates the activity party records for each contact.
-3. Also creates Letter activity and set **From** and **To** columns to the respective Activity Party tables.
+1. Clone the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
+1. Locate the sample folder.
+1. Open the solution file (*.sln) in Visual Studio.
+1. Edit the project's appsettings.json file and set the `Url`value as appropriate for your Dataverse test environment.
+1. Build and run the project [F5].
+1. You are prompted in a browser window for account sign-in credentials to the target environment.
 
-### Clean up
+## Expected program output
 
-Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+For a successful run, the program's console output should look similar to the following example.
+Otherwise, any errors or exceptions are displayed.
+
+```console
+CreateLetter(): letter activity created with ID < >
+Press any key to undo environment data changes.
+```
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

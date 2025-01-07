@@ -18,7 +18,7 @@ contributors:
 This sample shows how to execute multiple organization message requests by using a single web service method call, passing [ExecuteMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.executemultiplerequest) as a parameter. Reducing the number of message requests that must be transmitted over the network results in increased message processing performance.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Execute multiple requests sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecuteMultipleRequests)
+> [SDK for .NET: Execute multiple requests sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExecuteMultipleRequests)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
