@@ -145,7 +145,7 @@ All memo columns or string columns with a `MaxLength` greater than 850 are defin
 
 [Dataverse search](search/overview.md) is a better choice to query data in these kinds of columns.
 
-## <a name="PerformanceValidationIssuesCauseTimeout"></a> Dataverse error for query time out caused by anti-patterns
+## <a name="PerformanceValidationIssuesCauseTimeout"></a> Dataverse error for query time outs caused by anti-patterns
 
 When a query times out and the query is using one of the anti-patterns detailed on this page, Dataverse returns a unique error to help identify which anti-patterns the query is using. The error that Dataverse throws is below:
 
@@ -156,7 +156,7 @@ When a query times out and the query is using one of the anti-patterns detailed 
 
 The "{0}" part of the exception message will list the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they will be comma separated. For example, if the query is selecting a large number of columns and is using a leading wild card, the exception message will contain the string "PerformanceLeadingWildCard,LargeAmountOfAttributes". A full list of the anti-patterns and their explanation is below:
 
-|Error string|Explanation link|
+|Anti-pattern identifier|Explanation link|
 |---|---|
 |`PerformanceLeadingWildCard`|`TODO`|
 |`PerformanceLargeColumnSearch`|`TODO`|
