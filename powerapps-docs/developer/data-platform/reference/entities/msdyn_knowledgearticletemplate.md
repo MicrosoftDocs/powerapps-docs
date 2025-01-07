@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Article Template (msdyn_knowledgearticletemplate) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Article Template (msdyn_knowledgearticletemplate) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -693,6 +693,7 @@ One-To-Many Relationship: [systemuser user_msdyn_knowledgearticletemplate](syste
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [msdyn_knowledgearticleimage_parentknowledgetemplateid](#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
 - [msdyn_knowledgearticletemplate_AsyncOperations](#BKMK_msdyn_knowledgearticletemplate_AsyncOperations)
 - [msdyn_knowledgearticletemplate_BulkDeleteFailures](#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures)
 - [msdyn_knowledgearticletemplate_DuplicateBaseRecord](#BKMK_msdyn_knowledgearticletemplate_DuplicateBaseRecord)
@@ -703,6 +704,18 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
 - [msdyn_knowledgearticletemplate_SharePointDocumentLocations](#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations)
 - [msdyn_knowledgearticletemplate_SyncErrors](#BKMK_msdyn_knowledgearticletemplate_SyncErrors)
+
+### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid"></a> msdyn_knowledgearticleimage_parentknowledgetemplateid
+
+Many-To-One Relationship: [msdyn_knowledgearticleimage msdyn_knowledgearticleimage_parentknowledgetemplateid](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgearticleimage`|
+|ReferencingAttribute|`msdyn_parententityrecordid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticleimage_parentknowledgetemplateid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_knowledgearticletemplate_AsyncOperations"></a> msdyn_knowledgearticletemplate_AsyncOperations
 

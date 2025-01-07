@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Network (flowmachinenetwork) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Network (flowmachinenetwork) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -65,12 +65,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [CredentialId](#BKMK_CredentialId)
 - [description](#BKMK_description)
+- [DomainName](#BKMK_DomainName)
 - [DomainPassword](#BKMK_DomainPassword)
 - [DomainUsername](#BKMK_DomainUsername)
 - [flowmachinenetworkId](#BKMK_flowmachinenetworkId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
+- [OrganizationalUnit](#BKMK_OrganizationalUnit)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -113,6 +115,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_DomainName"></a> DomainName
+
+|Property|Value|
+|---|---|
+|Description|**The DNS name of the Active Directory domain that will be used in hybrid Entra join configurations.**|
+|DisplayName|**AD domain name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`domainname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|64|
 
 ### <a name="BKMK_DomainPassword"></a> DomainPassword
 
@@ -194,6 +213,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_OrganizationalUnit"></a> OrganizationalUnit
+
+|Property|Value|
+|---|---|
+|Description|**If provided, the organizational unit (OU) that will be used in hybrid Entra join configurations.**|
+|DisplayName|**Organizational unit**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`organizationalunit`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|260|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
