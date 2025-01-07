@@ -24,11 +24,11 @@ contributors:
 
 ## Prerequisites
 
-Before you can use this feature, make sure it's turned on in your app settings.
+Before you can use this feature, it needs to be turned on in your app settings.
 
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 
-1. On the **Preview** tab, find and turn on the **Enhanced componet properties** settings.
+1. On the **Preview** tab, find and turn on the **Enhanced component properties** settings.
 
 ## Types of properties
 
@@ -92,6 +92,6 @@ There are many common **Event**-type properties, effectively input behavior func
 
 ## Default values for properties or arguments
 
-Default values can provide a default value for an argument or property in case none is set. This does not makes sense for some types of properties. However, in some cases they can be used to provide an expected schema for a record. By providing a default record, a record type is established as the expected schema.
+Default values can provide a default value for an argument or property in case none is set. This doesn't makes sense for some types of properties. However, in some cases they can be used to provide an expected schema for a record. By providing a default record, a record type is established as the expected schema.
 
 For example, an **Action** property named `AddRecord` accepts a record to be added to a local collection. To provide the schema of the expected record, a maker has to add a default value for this `AddRecord` property's argument.
