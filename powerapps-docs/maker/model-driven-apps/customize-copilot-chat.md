@@ -190,7 +190,7 @@ beginDialog:
 ## Known Limitations
 
 1. ALM - Solution dependecies from App to corresponding backing agent is not suupported for preview. As a workaround you can package the app and agent manually.
-2. **Configure in Copilot Studio** action can fail if there are App with same initial characters in their name. Please rename the app and try again.
+2. **Configure in Copilot Studio** action can create agents with same display name for Apps with same initial characters in their name. Please rename the agent while publishing for such cases to avoid confusion.
 
 
 ## Related information
