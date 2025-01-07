@@ -117,5 +117,6 @@ linkToContact.EntityAlias = "co";
 [Page results using QueryExpression](page-results.md)   
 [Aggregate data using QueryExpression](aggregate-data.md)   
 [Count rows using QueryExpression](count-rows.md)
+[Query anti-patterns](../../query-antipatterns.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

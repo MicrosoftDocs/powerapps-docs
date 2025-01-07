@@ -110,5 +110,6 @@ The following example sets a filter with the `union` hint on the `telephone1` co
 [Count rows using FetchXml](count-rows.md)  
 [FetchXml reference](reference/index.md)   
 [FetchXml sample code](sample.md)
+[Query anti-patterns](../query-antipatterns.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

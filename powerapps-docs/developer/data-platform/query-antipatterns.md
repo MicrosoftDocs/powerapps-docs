@@ -25,9 +25,9 @@ Composing optimized queries for Dataverse is vital to ensure applications provid
 
 Don't include columns you don't need in your query. Queries that return all columns or include a large number of columns can encounter performance issues due to the size of the dataset or complexity of the query.
 
-## <a name="LargeAmountOfLogicalAttributes"></a> LargeAmountOfLogicalAttributes
+## <a name="LargeAmountOfLogicalAttributes"></a> Minimize the number of selected Logical columns
 
-You should avoid requestin too many columns, but this is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
+You should avoid requesting too many columns, but this is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
 
 ## <a name="PerformanceLeadingWildCard"></a> Avoid leading wild cards in filter conditions

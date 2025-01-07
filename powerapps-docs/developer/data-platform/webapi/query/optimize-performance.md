@@ -27,6 +27,7 @@ You can [use FetchXml with the Dataverse Web API](../../fetchxml/retrieve-data.m
 [Filter rows using OData](filter-rows.md)  
 [Page results using OData](page-results.md)   
 [Aggregate data using OData](aggregate-data.md)   
-[Count rows using OData](count-rows.md)  
+[Count rows using OData](count-rows.md) 
+[Query anti-patterns](../../query-antipatterns.md) 
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
