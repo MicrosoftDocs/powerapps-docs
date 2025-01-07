@@ -66,7 +66,7 @@ Once knowledge is enabled, app users can ask relevant questions to get responses
 
 > [!NOTE]
 > Copilot Studio has inline capability to "Test your agent" and can be used to validate topics as they are added. However, topics using out-of-the-box model-driven app custom variables like  
-G`lobal.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
+`Global.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
 
 ## Prompt guide customizations
 
@@ -115,7 +115,7 @@ The following steps detail how to add specific queries to the prompt guide. A *P
            type: String
    ```
 
-1. Set **Save as** to save as new custom variable and name it something meaningful such as *SparkGroupCustom*.
+1. Set **Save as** to save as a new custom variable and name it something meaningful such as *SparkGroupCustom*.
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
 
 1. The sparks definition is saved in a global variable so you need to set the variable **Global** and name it `PA_Copilot_Sparks.sparkGroups` and/or `Global.PA_Copilot_Sparks.sparks`. This populates the flyout with your prompts. Next, add a step to set variable value.
