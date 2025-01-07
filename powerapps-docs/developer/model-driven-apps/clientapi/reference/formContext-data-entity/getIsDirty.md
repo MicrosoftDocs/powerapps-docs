@@ -1,8 +1,8 @@
 ---
 title: entity.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any attributes of the entity have been modified.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

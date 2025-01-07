@@ -1,8 +1,8 @@
 ---
 title: Popup (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to get all the information about the popup.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

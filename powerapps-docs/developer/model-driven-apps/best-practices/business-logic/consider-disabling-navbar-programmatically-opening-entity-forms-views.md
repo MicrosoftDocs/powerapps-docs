@@ -2,8 +2,8 @@
 title: "Consider disabling NavBar when programmatically opening forms or views "
 description: "When you programmatically open forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
 suite: powerapps
-author: jowells
-ms.author: jowells
+author: sriharibs-msft
+ms.author: srihas
 ms.reviewer: jdaly
 ms.topic: article
 ms.date: 04/14/2021
@@ -36,7 +36,7 @@ When constructing URLs to open up forms or views, implement `navbar=off` within 
 ```JavaScript
 function disableNavBar() {
     var globalContext = Xrm.Utility.getGlobalContext();
-    return globalContext.getClientUrl() + "/main.aspx?appid=9411ee28-4310-e811-a839-000d3a33a7cb&etc=1&id={00000000-0000-0000-00AA-000010001004}&pagetype=entityrecord&navbar=off";
+    return globalContext.getClientUrl() + "/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&etc=1&id={11112222-bbbb-3333-cccc-4444dddd5555}&pagetype=entityrecord&navbar=off";
 }
 ```
 
@@ -58,13 +58,13 @@ An example of a constructed URL with the NavBar enabled is as follows
 function enabledNavBar() {
     var globalContext = Xrm.Utility.getGlobalContext();
     // By default, NavBar is set to true if you do not include the parameter in the query string:
-    return globalContext.getClientUrl() + "/main.aspx?appid=9411ee28-4310-e811-a839-000d3a33a7cb&etc=1&id={00000000-0000-0000-00AA-000010001004}&pagetype=entityrecord";
+    return globalContext.getClientUrl() + "/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&etc=1&id={11112222-bbbb-3333-cccc-4444dddd5555}&pagetype=entityrecord";
 }
 
 function enabledNavBarExplicit() {
     var globalContext = Xrm.Utility.getGlobalContext();
     // Explicitly defining that the NavBar will be enabled
-    return globalContext.getClientUrl() + "/main.aspx?appid=9411ee28-4310-e811-a839-000d3a33a7cb&etc=1&id={00000000-0000-0000-00AA-000010001004}&pagetype=entityrecord&navbar=on";
+    return globalContext.getClientUrl() + "/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&etc=1&id={11112222-bbbb-3333-cccc-4444dddd5555}&pagetype=entityrecord&navbar=on";
 }
 ```
 

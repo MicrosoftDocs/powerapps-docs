@@ -5,8 +5,8 @@ ms.date: 04/17/2022
 ms.service: powerapps
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

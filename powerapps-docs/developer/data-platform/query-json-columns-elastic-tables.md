@@ -87,7 +87,7 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: hj23ad#1543
-OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ---

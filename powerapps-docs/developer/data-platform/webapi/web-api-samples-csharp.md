@@ -52,7 +52,7 @@ The following samples demonstrate methods to add parallelism and concurrency to 
 
 ## How to download and run the samples
 
-The source code for each sample is available on GitHub at: [PowerApps-Samples/dataverse/webapi/C#-NETx/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx). You can download the repository as a zip file that contains the solution files for the samples. For more information, see the **How to run this sample** section in each sample article.
+The source code for each sample is available on GitHub at: [PowerApps-Samples/dataverse/webapi/C#-NETx/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx). You can download the repository as a zip file that contains the solution files for the samples. For more information, see the **How to run this sample** section in each sample article.
 
 ### See also
 

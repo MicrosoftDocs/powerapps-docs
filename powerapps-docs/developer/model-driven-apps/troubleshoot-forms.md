@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 09/24/2024
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
@@ -177,11 +177,8 @@ Follow up with the script owner to further troubleshoot the issue.
 The most common cause of intermittent or random form errors is using unsupported [client API](./clientapi/reference.md) methods. These errors have the following characteristics:
 
 - They occur only for specific records, users, regions, or browsers, or only during periods when the network or service load is high.
-
 - They rarely occur in support instances.
-
 - They might occur once on a computer, and the same error might occur again after you clear the browser cache.
-
 - [formContext.getControl](./clientapi/reference/controls/getcontrol.md) or [formContext.getControl(arg).getAttribute()](./clientapi/reference/controls/getattribute.md) randomly returns null for a valid control or column.
 
 There are many ways to write unsupported client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script executes before the form is fully ready to be accessed via the client API. Many factors can cause a race condition:

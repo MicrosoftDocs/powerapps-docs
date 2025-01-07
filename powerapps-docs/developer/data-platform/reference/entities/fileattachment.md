@@ -1,7 +1,7 @@
 ---
 title: "FileAttachment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the FileAttachment table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -101,7 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|activityfileattachment, activitypointer, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_analysisjob, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, webresource, workflowbinary, workflowlog|
+|Targets|activityfileattachment, activitypointer, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_analysisjob, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_pminferredtask, msdyn_richtextfile, msfp_fileresponse, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, webresource, workflowbinary, workflowlog|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -316,6 +316,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_mobileapp_FileAttachments](#BKMK_msdyn_mobileapp_FileAttachments)
 - [msdyn_pminferredtask_FileAttachments](#BKMK_msdyn_pminferredtask_FileAttachments)
 - [msdyn_richtextfile_FileAttachments](#BKMK_msdyn_richtextfile_FileAttachments)
+- [msfp_fileresponse_FileAttachments](#BKMK_msfp_fileresponse_FileAttachments)
 - [mspcat_catalogsubmissionfiles_FileAttachments](#BKMK_mspcat_catalogsubmissionfiles_FileAttachments)
 - [mspcat_packagestore_FileAttachments](#BKMK_mspcat_packagestore_FileAttachments)
 - [package_FileAttachments](#BKMK_package_FileAttachments)
@@ -659,6 +660,19 @@ One-To-Many Relationship: [msdyn_richtextfile msdyn_richtextfile_FileAttachments
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msfp_fileresponse_FileAttachments"></a> msfp_fileresponse_FileAttachments
+
+One-To-Many Relationship: [msfp_fileresponse msfp_fileresponse_FileAttachments](msfp_fileresponse.md#BKMK_msfp_fileresponse_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_fileresponse`|
+|ReferencedAttribute|`msfp_fileresponseid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msfp_fileresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_FileAttachments"></a> mspcat_catalogsubmissionfiles_FileAttachments
 
 One-To-Many Relationship: [mspcat_catalogsubmissionfiles mspcat_catalogsubmissionfiles_FileAttachments](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_FileAttachments)
@@ -937,6 +951,16 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_msdyn_mobileapp_msdyn_tenantWelcomeImage](#BKMK_FileAttachment_msdyn_mobileapp_msdyn_tenantWelcomeImage)
 - [FileAttachment_msdyn_pminferredtask_msdyn_lasterrorsreport](#BKMK_FileAttachment_msdyn_pminferredtask_msdyn_lasterrorsreport)
 - [FileAttachment_msdyn_richtextfile_msdyn_fileblob](#BKMK_FileAttachment_msdyn_richtextfile_msdyn_fileblob)
+- [FileAttachment_msfp_fileresponse_msfp_file1](#BKMK_FileAttachment_msfp_fileresponse_msfp_file1)
+- [FileAttachment_msfp_fileresponse_msfp_file10](#BKMK_FileAttachment_msfp_fileresponse_msfp_file10)
+- [FileAttachment_msfp_fileresponse_msfp_file2](#BKMK_FileAttachment_msfp_fileresponse_msfp_file2)
+- [FileAttachment_msfp_fileresponse_msfp_file3](#BKMK_FileAttachment_msfp_fileresponse_msfp_file3)
+- [FileAttachment_msfp_fileresponse_msfp_file4](#BKMK_FileAttachment_msfp_fileresponse_msfp_file4)
+- [FileAttachment_msfp_fileresponse_msfp_file5](#BKMK_FileAttachment_msfp_fileresponse_msfp_file5)
+- [FileAttachment_msfp_fileresponse_msfp_file6](#BKMK_FileAttachment_msfp_fileresponse_msfp_file6)
+- [FileAttachment_msfp_fileresponse_msfp_file7](#BKMK_FileAttachment_msfp_fileresponse_msfp_file7)
+- [FileAttachment_msfp_fileresponse_msfp_file8](#BKMK_FileAttachment_msfp_fileresponse_msfp_file8)
+- [FileAttachment_msfp_fileresponse_msfp_file9](#BKMK_FileAttachment_msfp_fileresponse_msfp_file9)
 - [FileAttachment_mspcat_CatalogSubmissionFiles_mspcat_File](#BKMK_FileAttachment_mspcat_CatalogSubmissionFiles_mspcat_File)
 - [FileAttachment_mspcat_PackageStore_mspcat_PackageFile](#BKMK_FileAttachment_mspcat_PackageStore_mspcat_PackageFile)
 - [FileAttachment_package_DeploymentLog](#BKMK_FileAttachment_package_DeploymentLog)
@@ -1582,6 +1606,126 @@ Many-To-One Relationship: [msdyn_richtextfile FileAttachment_msdyn_richtextfile_
 |ReferencingEntity|`msdyn_richtextfile`|
 |ReferencingAttribute|`msdyn_fileblob`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_richtextfile_msdyn_fileblob`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file1"></a> FileAttachment_msfp_fileresponse_msfp_file1
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file1](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file1)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file1`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file1`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file10"></a> FileAttachment_msfp_fileresponse_msfp_file10
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file10](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file10)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file10`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file10`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file2"></a> FileAttachment_msfp_fileresponse_msfp_file2
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file2](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file2)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file2`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file2`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file3"></a> FileAttachment_msfp_fileresponse_msfp_file3
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file3](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file3)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file3`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file3`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file4"></a> FileAttachment_msfp_fileresponse_msfp_file4
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file4](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file4)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file4`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file4`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file5"></a> FileAttachment_msfp_fileresponse_msfp_file5
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file5](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file5)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file5`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file5`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file6"></a> FileAttachment_msfp_fileresponse_msfp_file6
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file6](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file6)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file6`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file6`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file7"></a> FileAttachment_msfp_fileresponse_msfp_file7
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file7](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file7)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file7`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file7`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file8"></a> FileAttachment_msfp_fileresponse_msfp_file8
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file8](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file8)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file8`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file8`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msfp_fileresponse_msfp_file9"></a> FileAttachment_msfp_fileresponse_msfp_file9
+
+Many-To-One Relationship: [msfp_fileresponse FileAttachment_msfp_fileresponse_msfp_file9](msfp_fileresponse.md#BKMK_FileAttachment_msfp_fileresponse_msfp_file9)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`msfp_file9`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msfp_fileresponse_msfp_file9`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
