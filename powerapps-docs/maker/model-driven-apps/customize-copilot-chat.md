@@ -78,7 +78,7 @@ A prompt library is a collection of pre-written, tested, and optimized prompts d
 
    :::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
 >
-The following steps detail how to add a specific queries to the prompt guide. We will append “Power Apps Help” section to the existing out of the box copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from  [promt guide sample](#Prompt-guide-customizations-topic-sample). All these prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
+The following steps detail how to add a specific queries to the prompt guide. We will append “Power Apps Help” section to the existing out of the box copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from  [promt guide sample](#prompt-guide-customizations-topic-sample). All these prompts shown via prompt guide to the end users are stored in the Copilot Studio agent backing the app. 
 
 1. Open the agent backing the app in copilot studio and add a new blank topic.
    :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blanck topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::
@@ -125,7 +125,7 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
    :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
 
 1. Search for Global.PA_Copilot_Sparks.sparkGroups  and set the value to the following power fx merge function
-   :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::
+   :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text=" Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::Merge
 
    ```powerappsfl
    ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
@@ -135,7 +135,7 @@ condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName"
 
 1. Publish the agent and launch the the app 
 
-   :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Merge global sparks" lightbox="media/mda-copilot-promptguide-chat-screens.png":::
+   :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Prompt guide using global sparks" lightbox="media/mda-copilot-promptguide-chat-screen.png":::
 
 ## Prompt guide customizations topic sample
 
