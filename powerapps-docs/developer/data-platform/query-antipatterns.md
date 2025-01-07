@@ -154,7 +154,7 @@ When a query times out and the query is using one of the anti-patterns detailed 
 > Number: `-2147187339`<br />
 > Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
 
-The "{0}" part of the exception message will list the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they will be comma separated. For example, if the query is selecting a large number of columns and is using a leading wild card, the exception message will contain the string "PerformanceLeadingWildCard,LargeAmountOfAttributes". A full list of the anti-patterns and their explanation is below:
+The `{0}` part of the exception message will list the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they will be comma separated. For example, if a query is filtering on a wide column and is also selecting a large number of columns, the exception message will contain the string `PerformanceLargeColumnSearch,LargeAmountOfAttributes`. A full list of the anti-patterns and their explanation is below:
 
 |Anti-pattern identifier|Explanation link|
 |---|---|
@@ -166,7 +166,7 @@ The "{0}" part of the exception message will list the anti-pattern that the quer
 |`LargeAmountOfLogicalAttributes`|`TODO`|
 |`FilteringOnCalculatedColumns`|`TODO`|
 
-Please use the guidance on this page to understand the anti-patterns in the query and change the query to avoid usage of these anti-patterns.
+Please use the guidance on this page to understand the anti-patterns in the query, and to modify the query to avoid usage of these anti-patterns.
 
 > [!NOTE]
 > If a query contains either the PerformanceLeadingWildCard or the FilteringOnCalculatedColumns anti-pattern, a different Dataverse error is thrown. Queries that use the PerformanceLeadingWildCard anti-pattern will throw the LeadingWildcardCauseTimeout error mentioned on this page, and queries that use the FilteringOnCalculatedColumns anti-pattern will throw the ComputedColumnCauseTimeout error mentioned on this page. 
