@@ -1,7 +1,7 @@
 ---
 title: "Feedback table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Feedback table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -356,7 +356,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|contact, feedback, knowledgearticle|
+|Targets|contact, feedback, knowledgearticle, msfp_alert, msfp_surveyinvite, msfp_surveyresponse|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -740,6 +740,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_feedback_modifiedby](#BKMK_lk_feedback_modifiedby)
 - [lk_feedback_modifiedonbehalfby](#BKMK_lk_feedback_modifiedonbehalfby)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
+- [msfp_alert_Feedback](#BKMK_msfp_alert_Feedback)
+- [msfp_surveyinvite_Feedback](#BKMK_msfp_surveyinvite_Feedback)
+- [msfp_surveyresponse_Feedback](#BKMK_msfp_surveyresponse_Feedback)
 - [owner_feedback](#BKMK_owner_feedback)
 - [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
 
@@ -898,6 +901,45 @@ One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticle_feedback_cont
 |ReferencingEntityNavigationPropertyName|`msdyn_ContextObjectId_knowledgearticle`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_alert_Feedback"></a> msfp_alert_Feedback
+
+One-To-Many Relationship: [msfp_alert msfp_alert_Feedback](msfp_alert.md#BKMK_msfp_alert_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_alert`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alert`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyinvite_Feedback"></a> msfp_surveyinvite_Feedback
+
+One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_Feedback](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyinvite`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyinvite`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msfp_surveyresponse_Feedback"></a> msfp_surveyresponse_Feedback
+
+One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_Feedback](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msfp_surveyresponse`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyresponse`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_owner_feedback"></a> owner_feedback
 
