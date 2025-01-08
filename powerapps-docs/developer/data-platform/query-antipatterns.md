@@ -69,7 +69,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187341`<br />
 > Message: `The database operation timed out; this may be due to a leading wildcard value being used in a filter condition. Please consider removing filter conditions on leading wildcard values, as these filter conditions are expensive and may cause timeouts.`
 
-Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) leading wild card queries that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineLeadingWildcardQueryThrottling`<br />
+> Code: `0x80048644`<br />
+> Number: `-2147187132`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -100,7 +105,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187340`<br />
 > Message: `The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.`
 
-To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) queries that have filters on calculated columns that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineComputedColumnQueryThrottling`<br />
+> Code: `0x80048744`<br />
+> Number: `-2147186876`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
 
 ## <a name="OrderOnEnumAttribute"></a> Avoid ordering by choice columns
 
