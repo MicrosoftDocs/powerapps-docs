@@ -2,7 +2,7 @@
 title: "Manage access to public system views"
 description: "Learn how to managed access with security roles to public system views for model-driven apps in Microsoft Power Apps"
 ms.custom: ""
-ms.date: 10/30/2024
+ms.date: 01/08/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,8 +24,10 @@ search.audienceType:
 Admins can manage views that users can access in model-driven apps with security roles. When using a model-driven app, the user only has access to the system views that apply to the security roles that they're assigned to.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - From January 15 through January 31, 2025 the public preview for managing system views with security roles will be made available.
 
 System views are special views that model-driven apps depend on, which exist for system tables or are automatically created when you create custom tables. These views have specific purposes and some additional capabilities. When a Power Platform admin manages a list of views with a security role, only those views—and the system, default view—are available in the view selector for users who are assigned to that security role. The other system views are filtered from the dropdown list. Users can still see the filtered views when they navigate to the Manage and share views option.
 
