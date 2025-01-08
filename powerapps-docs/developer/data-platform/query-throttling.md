@@ -1,7 +1,7 @@
 ---
 title: "Query throttling (Microsoft Dataverse)"
-description: "Read about how the server can throttle a query to reduce system performance impact and what you can do about it."
-ms.date: 06/04/2024
+description: "Read about how the server can throttle a query to reduce system performance and what you can do about it."
+ms.date: 01/08/2025
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,10 +15,10 @@ search.audienceType:
 
 # Query throttling
 
-If a specific query creates a disproportional load on the database storing Microsoft Dataverse data, it can starve the database of resources and negatively impact performance of all data operations. When this happens, Dataverse starts throttling that particular query to allow all other scenarios to perform normally.
+If a query creates a disproportional load on the database storing Microsoft Dataverse data, it can starve the database of resources and negatively impact performance of all data operations. When this happens, Dataverse starts throttling that query to allow all other scenarios to perform normally.
 
 The primary way in which *query throttling* is different from [Service protection API limits](api-limits.md) is
-query throttling targets a specific query that causes a performance degradation while leaving the rest of the traffic unaffected. If the throttled query originates from a non-interactive application, throttling is likely to not be noticeable for end-users. If the query originates from an interactive application, it affects users that exercise that particular scenario.
+query throttling targets a query that causes a performance degradation while leaving the rest of the traffic unaffected. If the throttled query originates from a non-interactive application, throttling is likely to not be noticeable for end-users. If the query originates from an interactive application, it affects users that exercise that particular scenario.
 
 ## Query throttling behavior
 
@@ -27,12 +27,12 @@ Throttling can manifest in three ways:
 - A delay is introduced before each execution of the query, making the scenario that uses it slower
 - Some fraction of attempts to execute the query are failing with any of the following errors:
 
-|Error code|Hex code|Name|Message|
-|---|---|---|---|
-|`-2147187388`|`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.`|
-|`-2147187132`|`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
-|`-2147186876`|`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
-|`-2147186875`|`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
+|Error code<br />Hex code|Name|Message|
+|---|---|---|
+|`-2147187388`<br />`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.`|
+|`-2147187132`<br />`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186876`<br />`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
+|`-2147186875`<br />`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
 
 ## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
 
