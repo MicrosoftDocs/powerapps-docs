@@ -36,7 +36,7 @@ Throttling can manifest in three ways:
 
 ## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
 
-Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they're identified as a risk to the health of the org to help prevent outages.
+Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they're identified as a risk to the health of the environment to help prevent outages.
 
 When a query fails due to throttling and the query is using one of the anti-patterns, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
 
