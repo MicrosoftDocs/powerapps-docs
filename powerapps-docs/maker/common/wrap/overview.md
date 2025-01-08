@@ -110,6 +110,9 @@ Container in App Center to store the built packages for mobile app distribution.
 | **iOS** (for distribution using Apple Store)                                                         | Custom                    |  \*.zip                       |
 | **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
 
+> [!NOTE]
+> App center is going to discontinue their service from 31st March 2025. [Details here](https://learn.microsoft.com/en-us/appcenter/retirement) The product team is working to provide our customers with azure blob storage as an alternative service. We will keep our customers updated accordingly. 
+
 ### App platform(s)
 
 Intended platforms for the app that you want to go through the build process for publication. You can create builds for mobile app for iOS, Android, or Google Play Store.
