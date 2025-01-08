@@ -69,7 +69,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187341`<br />
 > Message: `The database operation timed out; this may be due to a leading wildcard value being used in a filter condition. Please consider removing filter conditions on leading wildcard values, as these filter conditions are expensive and may cause timeouts.`
 
-Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) leading wild card queries that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineLeadingWildcardQueryThrottling`<br />
+> Code: `0x80048644`<br />
+> Number: `-2147187132`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -100,7 +105,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187340`<br />
 > Message: `The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.`
 
-To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) queries that have filters on calculated columns that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineComputedColumnQueryThrottling`<br />
+> Code: `0x80048744`<br />
+> Number: `-2147186876`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
 
 ## <a name="OrderOnEnumAttribute"></a> Avoid ordering by choice columns
 
@@ -154,17 +164,7 @@ When a query times out and the query is using one of the anti-patterns detailed 
 > Number: `-2147187339`<br />
 > Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
 
-The `{0}` part of the exception message lists the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they're comma separated. For example, if a query is filtering on a large text column and is also selecting a large number of columns, the exception message contains the string `PerformanceLargeColumnSearch,LargeAmountOfAttributes`. The following table lists the anti-patterns with links to explanations:
-
-|Anti-pattern identifier|Explanation link|
-|---|---|
-|`PerformanceLeadingWildCard`|[Avoid leading wild cards in filter conditions](#PerformanceLeadingWildCard)|
-|`PerformanceLargeColumnSearch`|[Avoid using conditions on large text columns](#PerformanceLargeColumnSearch)|
-|`OrderOnEnumAttribute`|[Avoid ordering by choice columns](#OrderOnEnumAttribute)|
-|`OrderOnPropertiesFromJoinedTables`|[Avoid ordering by columns in related tables](#OrderOnPropertiesFromJoinedTables)|
-|`LargeAmountOfAttributes`|[Minimize the number of selected columns](#LargeAmountOfAttributes)|
-|`LargeAmountOfLogicalAttributes`|[Minimize the number of selected logical columns](#LargeAmountOfLogicalAttributes)|
-|`FilteringOnCalculatedColumns`|[Avoid using formula or calculated columns in filter conditions](#FilteringOnCalculatedColumns)|
+[!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
 
 Use the guidance on this page to understand the anti-patterns and modify the query to avoid usage of these anti-patterns.
 
