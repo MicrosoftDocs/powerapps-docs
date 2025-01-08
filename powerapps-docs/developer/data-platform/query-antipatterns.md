@@ -154,17 +154,7 @@ When a query times out and the query is using one of the anti-patterns detailed 
 > Number: `-2147187339`<br />
 > Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
 
-The `{0}` part of the exception message lists the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they're comma separated. For example, if a query is filtering on a large text column and is also selecting a large number of columns, the exception message contains the string `PerformanceLargeColumnSearch,LargeAmountOfAttributes`. The following table lists the anti-patterns with links to explanations:
-
-|Anti-pattern identifier|Explanation link|
-|---|---|
-|`PerformanceLeadingWildCard`|[Avoid leading wild cards in filter conditions](#PerformanceLeadingWildCard)|
-|`PerformanceLargeColumnSearch`|[Avoid using conditions on large text columns](#PerformanceLargeColumnSearch)|
-|`OrderOnEnumAttribute`|[Avoid ordering by choice columns](#OrderOnEnumAttribute)|
-|`OrderOnPropertiesFromJoinedTables`|[Avoid ordering by columns in related tables](#OrderOnPropertiesFromJoinedTables)|
-|`LargeAmountOfAttributes`|[Minimize the number of selected columns](#LargeAmountOfAttributes)|
-|`LargeAmountOfLogicalAttributes`|[Minimize the number of selected logical columns](#LargeAmountOfLogicalAttributes)|
-|`FilteringOnCalculatedColumns`|[Avoid using formula or calculated columns in filter conditions](#FilteringOnCalculatedColumns)|
+[!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
 
 Use the guidance on this page to understand the anti-patterns and modify the query to avoid usage of these anti-patterns.
 
