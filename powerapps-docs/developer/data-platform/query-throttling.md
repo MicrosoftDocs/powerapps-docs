@@ -36,7 +36,7 @@ Throttling can manifest in three ways:
 
 ## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
 
-Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they are identified as a risk to the health of the org to help prevent outages.
+Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they're identified as a risk to the health of the org to help prevent outages.
 
 When a query fails due to throttling and the query is using one of the anti-patterns, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
 
@@ -56,13 +56,15 @@ When a query fails due to throttling and the query is using one of the anti-patt
 
 Most of the situations when query throttling is necessary fall into one of these two broad categories:
 
-- Some query in a common interactive scenario, for example a saved query used in a grid or a query executed by a plug-in, is inefficient and requires a lot of database resources for each execution
+- Some query in a common interactive scenario is inefficient and requires a lot of database resources for each execution
+  - Common examples are a saved query used in a grid or a query executed by a plug-in
 
-- An automated operation, for example data integration involving moving a large amount of data into or out of Dataverse, executes a query at a high rate that consumes a lot of database resources in aggregate even if each execution is less expensive
+- An automated operation executes a query at a high rate that consumes a lot of database resources in aggregate even if each execution is less expensive
+  - A common example is data integration that moves a large amount of data into or out of Dataverse
 
 ## How to avoid query throttling
 
-Query throttling depends on the query and the scenario where it's executed but there are some common guidelines:
+Query throttling depends on the query and the scenario where it runs but there are some common guidelines:
 
 - For slow low-frequency queries, typically used in interactive applications, the query structure needs to be changed to make it more efficient
 
