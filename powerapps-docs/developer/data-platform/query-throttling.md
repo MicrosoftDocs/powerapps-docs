@@ -32,8 +32,25 @@ Throttling can manifest in three ways:
 |`-2147187388`|`0x80048544`| `This query cannot be executed because it conflicts with query throttling.`|
 |`-2147187132`|`0x80048644`| `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
 |`-2147186876`|`0x80048744`| `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
+|`-2147186875`|`0x80048745`| `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
 
-For more information about more aggressively throttled query patterns like leading wild cards can be found in [Optimize performance using FetchXml](fetchxml/optimize-performance.md) and [Optimize performance using QueryExpression](org-service/queryexpression/optimize-performance.md)
+## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
+
+Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they are identified as a risk to the health of the org to help prevent outages.
+
+When a query fails due to throttling and the query is using one of the anti-patterns, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
+
+> Name: `DataEnginePerformanceValidationIssuesQueryThrottling`<br />
+> Code: `0x80048745`<br />
+> Number: `-2147186875`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
+
+[!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
+
+> [!NOTE]
+> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `DataEngineLeadingWildcardQueryThrottling` error (`0x80048644`) mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `DataEngineComputedColumnQueryThrottling` error (`0x80048744`) mentioned on this page. 
+> 
+> The `DataEngineLeadingWildcardQueryThrottling` (`0x80048644`) and `DataEngineComputedColumnQueryThrottling` (`0x80048744`) errors predate the `DataEnginePerformanceValidationIssuesQueryThrottling` error; `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` continue to be thrown to maintain backward compatibility.  
 
 ## Common causes
 
@@ -56,3 +73,9 @@ Query throttling depends on the query and the scenario where it's executed but t
   - When using [ExecuteMultiple](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) (or another batching mechanism), reduce the size of the batch
   - If the application is multi-threaded, reduce the number of concurrent threads
   - If you aren't using batching or concurrent requests, add a delay between requests to reduce the request rate
+ 
+### See also
+[Query anti-patterns](query-antipatterns.md)  
+[Optimize performance using FetchXml](fetchxml/optimize-performance.md)  
+[Optimize performance using QueryExpression](org-service/queryexpression//optimize-performance.md)  
+[Service protection API limits](api-limits.md)
