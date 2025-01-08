@@ -1,7 +1,7 @@
 ---
 title: "Copilot (bot) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Copilot (bot) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -82,6 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Language](#BKMK_Language)
 - [name](#BKMK_name)
+- [Origin](#BKMK_Origin)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -119,6 +120,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**Any**|
 |1|**Copilot readers**|
 |2|**Group membership**|
+|3|**Any (multi-tenant)**|
 
 ### <a name="BKMK_applicationmanifestinformation"></a> applicationmanifestinformation
 
@@ -316,6 +318,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1034|**Spanish**|
 |1035|**Finnish**|
 |1036|**French**|
+|1037|**Hebrew**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|
@@ -351,6 +354,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_Origin"></a> Origin
+
+|Property|Value|
+|---|---|
+|Description|**Used to identify the origin used to create the bot.**|
+|DisplayName|**Origin**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`origin`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -548,6 +568,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1034|**Spanish**|
 |1035|**Finnish**|
 |1036|**French**|
+|1037|**Hebrew**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|

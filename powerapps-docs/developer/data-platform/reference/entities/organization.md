@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -101,9 +101,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AzureSchedulerJobCollectionName](#BKMK_AzureSchedulerJobCollectionName)
 - [BaseCurrencyId](#BKMK_BaseCurrencyId)
 - [BingMapsApiKey](#BKMK_BingMapsApiKey)
+- [BlockAccessToSessionTranscriptsForCopilotStudio](#BKMK_BlockAccessToSessionTranscriptsForCopilotStudio)
+- [BlockCopilotAuthorAuthentication](#BKMK_BlockCopilotAuthorAuthentication)
 - [BlockedApplicationsForDVAccess](#BKMK_BlockedApplicationsForDVAccess)
 - [BlockedAttachments](#BKMK_BlockedAttachments)
 - [BlockedMimeTypes](#BKMK_BlockedMimeTypes)
+- [BlockTranscriptRecordingForCopilotStudio](#BKMK_BlockTranscriptRecordingForCopilotStudio)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
 - [BulkOperationPrefix](#BKMK_BulkOperationPrefix)
 - [BusinessCardOptions](#BKMK_BusinessCardOptions)
@@ -164,6 +167,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableAsyncMergeAPIForUCI](#BKMK_EnableAsyncMergeAPIForUCI)
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
+- [EnableEnvironmentSettingsApp](#BKMK_EnableEnvironmentSettingsApp)
 - [EnableFlowsInSolutionByDefault](#BKMK_EnableFlowsInSolutionByDefault)
 - [EnableFlowsInSolutionByDefaultGracePeriod](#BKMK_EnableFlowsInSolutionByDefaultGracePeriod)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
@@ -1357,6 +1361,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1024|
 
+### <a name="BKMK_BlockAccessToSessionTranscriptsForCopilotStudio"></a> BlockAccessToSessionTranscriptsForCopilotStudio
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to prevent makers from accessing and downloading session transcripts**|
+|DisplayName|**Block access to session transcripts for Copilot Studio**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blockaccesstosessiontranscriptsforcopilotstudio`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_BlockCopilotAuthorAuthentication"></a> BlockCopilotAuthorAuthentication
+
+|Property|Value|
+|---|---|
+|Description|**Prevent makers from allowing end-users to use their credentials during authentication to use connectors, actions, flows, and triggers that are connected to an agent**|
+|DisplayName|**Block makers from allowing end-users to use their credentials during authentication to use connectors, actions, flows, and triggers that are connected to an agent**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blockcopilotauthorauthentication`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_BlockedApplicationsForDVAccess"></a> BlockedApplicationsForDVAccess
 
 |Property|Value|
@@ -1407,6 +1443,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1073741823|
+
+### <a name="BKMK_BlockTranscriptRecordingForCopilotStudio"></a> BlockTranscriptRecordingForCopilotStudio
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to block access to session transcripts and conversational transcripts from being written to Dataverse for an individual environment**|
+|DisplayName|**Block access to session transcripts and conversational transcript recording for Copilot Studio**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blocktranscriptrecordingforcopilotstudio`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_BoundDashboardDefaultCardExpanded"></a> BoundDashboardDefaultCardExpanded
 
@@ -2373,6 +2425,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|`enablecanvasappsinsolutionsbydefault`|
 |RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_EnableEnvironmentSettingsApp"></a> EnableEnvironmentSettingsApp
+
+|Property|Value|
+|---|---|
+|Description|**Enables the Environment Settings App**|
+|DisplayName|**Enable Environment Settings App**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`enableenvironmentsettingsapp`|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
@@ -8254,6 +8322,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_appconfig](#BKMK_organization_appconfig)
 - [organization_appconfiginstance](#BKMK_organization_appconfiginstance)
 - [organization_appconfigmaster](#BKMK_organization_appconfigmaster)
+- [organization_application](#BKMK_organization_application)
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [Organization_AsyncOperations](#BKMK_Organization_AsyncOperations)
 - [Organization_BulkDeleteFailures](#BKMK_Organization_BulkDeleteFailures)
@@ -8357,6 +8426,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
 - [organization_teams](#BKMK_organization_teams)
 - [organization_territories](#BKMK_organization_territories)
+- [organization_textanalyticsentitymapping](#BKMK_organization_textanalyticsentitymapping)
 - [organization_theme](#BKMK_organization_theme)
 - [organization_tracelog](#BKMK_organization_tracelog)
 - [organization_transactioncurrencies](#BKMK_organization_transactioncurrencies)
@@ -8631,6 +8701,18 @@ Many-To-One Relationship: [appconfigmaster organization_appconfigmaster](appconf
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_appconfigmaster`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_application"></a> organization_application
+
+Many-To-One Relationship: [application organization_application](application.md#BKMK_organization_application)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`application`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_application`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_organization_appmodule"></a> organization_appmodule
@@ -9866,6 +9948,18 @@ Many-To-One Relationship: [territory organization_territories](territory.md#BKMK
 |ReferencingEntity|`territory`|
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_territories`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_textanalyticsentitymapping"></a> organization_textanalyticsentitymapping
+
+Many-To-One Relationship: [textanalyticsentitymapping organization_textanalyticsentitymapping](textanalyticsentitymapping.md#BKMK_organization_textanalyticsentitymapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`textanalyticsentitymapping`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_textanalyticsentitymapping`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
