@@ -1,6 +1,6 @@
 ---
 title: "Query throttling (Microsoft Dataverse)"
-description: "Read about how the server can throttle a query to reduce system performance and what you can do about it."
+description: "Read about how the server can throttle a query that reduces system performance and what you can do about it."
 ms.date: 01/08/2025
 ms.topic: article
 applies_to: 
