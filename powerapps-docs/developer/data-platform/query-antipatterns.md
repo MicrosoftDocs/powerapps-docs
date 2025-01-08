@@ -27,7 +27,7 @@ Don't include columns you don't need in your query. Queries that return all colu
 
 ## <a name="LargeAmountOfLogicalAttributes"></a> Minimize the number of selected logical columns
 
-You should avoid requesting too many columns, but this is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
+You should avoid requesting too many columns, especially *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
 
 ## <a name="PerformanceLeadingWildCard"></a> Avoid leading wild cards in filter conditions
@@ -144,6 +144,34 @@ You can use conditions on string columns that have a `MaxLength` configured for 
 All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 
 [Dataverse search](search/overview.md) is a better choice to query data in these kinds of columns.
+
+## <a name="PerformanceValidationIssuesCauseTimeout"></a> Dataverse error for query time outs caused by anti-patterns
+
+When a query times out and the query is using one of the anti-patterns detailed on this page, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
+
+> Name: `PerformanceValidationIssuesCauseTimeout`<br />
+> Code: `0x80048575`<br />
+> Number: `-2147187339`<br />
+> Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
+
+The `{0}` part of the exception message lists the anti-pattern that the query is using. If there are multiple anti-patterns used by the query, they're comma separated. For example, if a query is filtering on a large text column and is also selecting a large number of columns, the exception message contains the string `PerformanceLargeColumnSearch,LargeAmountOfAttributes`. The following table lists the anti-patterns with links to explanations:
+
+|Anti-pattern identifier|Explanation link|
+|---|---|
+|`PerformanceLeadingWildCard`|[Avoid leading wild cards in filter conditions](#PerformanceLeadingWildCard)|
+|`PerformanceLargeColumnSearch`|[Avoid using conditions on large text columns](#PerformanceLargeColumnSearch)|
+|`OrderOnEnumAttribute`|[Avoid ordering by choice columns](#OrderOnEnumAttribute)|
+|`OrderOnPropertiesFromJoinedTables`|[Avoid ordering by columns in related tables](#OrderOnPropertiesFromJoinedTables)|
+|`LargeAmountOfAttributes`|[Minimize the number of selected columns](#LargeAmountOfAttributes)|
+|`LargeAmountOfLogicalAttributes`|[Minimize the number of selected logical columns](#LargeAmountOfLogicalAttributes)|
+|`FilteringOnCalculatedColumns`|[Avoid using formula or calculated columns in filter conditions](#FilteringOnCalculatedColumns)|
+
+Use the guidance on this page to understand the anti-patterns and modify the query to avoid usage of these anti-patterns.
+
+> [!NOTE]
+> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `LeadingWildcardCauseTimeout` error mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `ComputedColumnCauseTimeout` error mentioned on this page. 
+> 
+> The `LeadingWildcardCauseTimeout` and `ComputedColumnCauseTimeout` errors predate the `PerformanceValidationIssuesCauseTimeout` error; `LeadingWildcardCauseTimeout` and `ComputedColumnCauseTimeout` continue to be thrown to maintain backward compatibility.  
 
 ### Related articles
 
