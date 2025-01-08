@@ -27,12 +27,12 @@ Throttling can manifest in three ways:
 - A delay is introduced before each execution of the query, making the scenario that uses it slower
 - Some fraction of attempts to execute the query are failing with any of the following errors:
 
-|Error code|Hex code|Message|
-|---|---|---|
-|`-2147187388`|`0x80048544`| `This query cannot be executed because it conflicts with query throttling.`|
-|`-2147187132`|`0x80048644`| `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
-|`-2147186876`|`0x80048744`| `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
-|`-2147186875`|`0x80048745`| `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
+|Error code|Hex code|Name|Message|
+|---|---|---|---|
+|`-2147187388`|`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.`|
+|`-2147187132`|`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186876`|`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
+|`-2147186875`|`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
 
 ## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
 
@@ -48,9 +48,9 @@ When a query fails due to throttling and the query is using one of the anti-patt
 [!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
 
 > [!NOTE]
-> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `DataEngineLeadingWildcardQueryThrottling` error (`0x80048644`) mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `DataEngineComputedColumnQueryThrottling` error (`0x80048744`) mentioned on this page. 
+> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `DataEngineLeadingWildcardQueryThrottling` error mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `DataEngineComputedColumnQueryThrottling` error mentioned on this page. 
 > 
-> The `DataEngineLeadingWildcardQueryThrottling` (`0x80048644`) and `DataEngineComputedColumnQueryThrottling` (`0x80048744`) errors predate the `DataEnginePerformanceValidationIssuesQueryThrottling` error; `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` continue to be thrown to maintain backward compatibility.  
+> The `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` errors predate the `DataEnginePerformanceValidationIssuesQueryThrottling` error; `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` continue to be thrown to maintain backward compatibility.  
 
 ## Common causes
 
