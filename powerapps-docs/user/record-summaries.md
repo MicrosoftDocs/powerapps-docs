@@ -2,8 +2,6 @@
 title: Use record summaries in model-driven apps 
 description: Learn how to access and utilize AI-generated record summaries in main form.
 ms.date: 12/17/2024
-ms.custom: 
-  - responsible-ai-faqs
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -28,7 +26,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
-Copilot assistance is available for all model-driven apps where the [AI insight cards](../../power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
+Copilot assistance is available for all model-driven apps where the [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
 
 ## Limitations
 Summaries are only currently supported in the English language.
