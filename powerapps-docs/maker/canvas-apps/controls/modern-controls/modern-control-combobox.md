@@ -14,23 +14,22 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - noazarur-microsoft
   
 ---
-# Combobox modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
-
-A control that allows users to make selections from provided choices and supports search and multiple selections. 
+# Combobox modern control in Power Apps
+A control that allows users to make selections from provided choices, supports search and multiple selections. 
 
 ## Description
 
-A **Combobox** control allows you to search for items that you select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
+A **Combobox** control allows you to present collections of items for user to select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
 
 ## General
 
 **Items** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show. 
+- Use the control's SearchText property within a PowerFX function to dynamically filter large datasets. For example: Filter(<dataset>,StartsWith(<column name>, Combobox.SearchText))
 
 **AccessibleLabel** – Label for screen readers.
 
