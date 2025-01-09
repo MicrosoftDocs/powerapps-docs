@@ -37,7 +37,7 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 -  LongAbbreviated - Thurs, Feb 1, 2024 
 
 -  YearMonth - February 2024
--  Custom - users are able to specify a valid format in a string format, i.e.: "MM/YY", "dd/mm/yyyy"
+-  Custom - users are able to specify a valid date format using a string, i.e.: "MM/YY", "dd/mm/yyyy"
 
 **AccessibleLabel** – Label for screen readers.
 
