@@ -29,7 +29,8 @@ A **Combobox** control allows you to present collections of items for user to se
 ## General
 
 **Items** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show. 
-- Use the control's SearchText property within a PowerFX function to dynamically filter large datasets. For example: Filter(<dataset>,StartsWith(<column name>, Combobox.SearchText))
+Use the control's SearchText property within a PowerFX function to dynamically filter large datasets. 
+For example: Items = Filter(<dataset>,StartsWith(<column name>, Combobox.SearchText))
 
 **AccessibleLabel** – Label for screen readers.
 
