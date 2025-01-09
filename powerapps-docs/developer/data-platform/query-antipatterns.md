@@ -27,7 +27,7 @@ Don't include columns you don't need in your query. Queries that return all colu
 
 ## <a name="LargeAmountOfLogicalAttributes"></a> Minimize the number of selected logical columns
 
-You should avoid requesting too many columns, but this is especially true for *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
+You should avoid requesting too many columns, especially *logical columns*. A logical column contains values that are stored in different database tables. The [AttributeMetadata.IsLogical property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.islogical) tells you whether a column is a logical column. Queries that contain many logical columns are slower because Dataverse needs to combine the data from other database tables.
 
 
 ## <a name="PerformanceLeadingWildCard"></a> Avoid leading wild cards in filter conditions
@@ -69,7 +69,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187341`<br />
 > Message: `The database operation timed out; this may be due to a leading wildcard value being used in a filter condition. Please consider removing filter conditions on leading wildcard values, as these filter conditions are expensive and may cause timeouts.`
 
-Dataverse heavily throttles leading wild card queries that are identified as a risk to the health of the org to help prevent outages. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) leading wild card queries that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineLeadingWildcardQueryThrottling`<br />
+> Code: `0x80048644`<br />
+> Number: `-2147187132`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -100,7 +105,12 @@ When queries time out and this pattern is detected, Dataverse returns a unique e
 > Number: `-2147187340`<br />
 > Message: `The database operation timed out; this may be due to a computed column being used in a filter condition. Please consider removing filter conditions on computed columns, as these filter conditions are expensive and may cause timeouts.`
 
-To help prevent outages, Dataverse applies throttles on queries that have filters on calculated columns that are identified as a risk to the health of the environment. [Learn more about query throttling](query-throttling.md)
+Dataverse [heavily throttles](query-throttling.md) queries that have filters on calculated columns that are identified as a risk to the health of the environment to help prevent outages. When a query fails due to throttling and this pattern is detected, Dataverse returns a unique error:
+
+> Name: `DataEngineComputedColumnQueryThrottling`<br />
+> Code: `0x80048744`<br />
+> Number: `-2147186876`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
 
 ## <a name="OrderOnEnumAttribute"></a> Avoid ordering by choice columns
 
@@ -144,6 +154,24 @@ You can use conditions on string columns that have a `MaxLength` configured for 
 All memo columns or string columns with a `MaxLength` greater than 850 are defined in Dataverse as large text columns. Large text columns are too large to effectively index, which leads to bad performance when included in a filter condition.
 
 [Dataverse search](search/overview.md) is a better choice to query data in these kinds of columns.
+
+## <a name="PerformanceValidationIssuesCauseTimeout"></a> Dataverse error for query time outs caused by anti-patterns
+
+When a query times out and the query is using one of the anti-patterns detailed on this page, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
+
+> Name: `PerformanceValidationIssuesCauseTimeout`<br />
+> Code: `0x80048575`<br />
+> Number: `-2147187339`<br />
+> Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`
+
+[!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
+
+Use the guidance on this page to understand the anti-patterns and modify the query to avoid usage of these anti-patterns.
+
+> [!NOTE]
+> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `LeadingWildcardCauseTimeout` error mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `ComputedColumnCauseTimeout` error mentioned on this page. 
+> 
+> The `LeadingWildcardCauseTimeout` and `ComputedColumnCauseTimeout` errors predate the `PerformanceValidationIssuesCauseTimeout` error; `LeadingWildcardCauseTimeout` and `ComputedColumnCauseTimeout` continue to be thrown to maintain backward compatibility.  
 
 ### Related articles
 
