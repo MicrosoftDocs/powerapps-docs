@@ -14,16 +14,15 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Text modern control in Power Apps (preview)
+# Text modern control in Power Apps
 
-[This article is pre-release document and is subject to change.]
-
-Display text on the app. This can also be used as a label for fields.
+Display text on the app. This control can also be used as a label for fields.
 
 ## Description
 Use this versatile **Text** control to display text, messages, information on the app. The key properties for this control are **Text**, **Size**, and **FontColor**.
