@@ -111,7 +111,7 @@ Container in App Center to store the built packages for mobile app distribution.
 | **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
 
 > [!NOTE]
-> App center is going to discontinue their service from 31st March 2025. [Details here](https://learn.microsoft.com/en-us/appcenter/retirement) The product team is working to provide our customers with Azure blob storage as an alternative service. We'll keep our customers updated accordingly.
+> App Center will be discontinued from 31st March 2025. Going forward, the app binaries will be stored in your tenant's Azure Blob Storage from which you can access and distribute them through your preferred channels. The details of linking Azure Blob Storage with wrap process will be updated soon. In the interim, back up your latest APK/IPA files (if needed) and keep your Azure Blob Storage details and target location for app binaries handy.
 
 ### App platform(s)
 
