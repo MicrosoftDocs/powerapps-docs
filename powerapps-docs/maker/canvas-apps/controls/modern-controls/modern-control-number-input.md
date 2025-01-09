@@ -14,13 +14,12 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - noazarur-microsoft
   
 ---
-# Number Input modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Number Input modern control in Power Apps
 
 A number input control the user can modify. 
 
