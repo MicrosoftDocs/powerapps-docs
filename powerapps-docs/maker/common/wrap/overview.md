@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 06/08/2022
+ms.date: 01/09/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -21,7 +21,7 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
-You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
+You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app startup experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
 
 You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
 
@@ -54,7 +54,7 @@ The following section explains steps involved in using the wrap feature to creat
 1. Select **App Center location** to store your mobile app. Use an existing **App Center location** or create a new one in the wrap wizard. 
 1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
 1. Download your mobile app from the **App Center location**.
-1. If **automatically code sign** is not chosen in the wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+1. If **automatically code sign** isn't chosen in the wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
 1. Test the app package.
 1. Distribute the app package to mobile users.
 
@@ -62,7 +62,7 @@ The following section explains steps involved in using the wrap feature to creat
 
 You can wrap more than one canvas apps as a single mobile app package. The mobile app package still needs a home app, called as the primary app. This app becomes the entry point for all other canvas apps included in the mobile app package, which are called as secondary apps.
 
-Secondary apps are optional. When you wrap only one canvas app, the included app is still designated as a primary app, but the mobile app package would have no secondary apps.
+Secondary apps are optional. When you wrap only one canvas app, the included app is still chosen as a primary app, but the mobile app package would have no secondary apps.
 
 As the following illustration explains, a primary app can have links to multiple secondary apps. The movement between primary and secondary apps inside such mobile app wrapped together can be managed with the [Launch()](../../canvas-apps/functions/function-param.md) function.
 
@@ -110,6 +110,9 @@ Container in App Center to store the built packages for mobile app distribution.
 | **iOS** (for distribution using Apple Store)                                                         | Custom                    |  \*.zip                       |
 | **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
 
+> [!NOTE]
+> App center is going to discontinue their service from 31st March 2025. [Details here](https://learn.microsoft.com/en-us/appcenter/retirement) The product team is working to provide our customers with Azure blob storage as an alternative service. We'll keep our customers updated accordingly.
+
 ### App platform(s)
 
 Intended platforms for the app that you want to go through the build process for publication. You can create builds for mobile app for iOS, Android, or Google Play Store.
@@ -132,7 +135,7 @@ Code signing is the process of finalizing a mobile app prior to distribution to 
 
 ### Primary app
 
-A primary app is the entry point or the home app for the mobile app experience when wrapping more than one canvas apps together. All additional apps are considered [secondary apps](#secondary-app). If only one canvas app is wrapped and built, it's also considered the primary app.
+A primary app is the entry point or the home app for the mobile app experience when wrapping more than one canvas apps together. All other apps are considered [secondary apps](#secondary-app). If only one canvas app is wrapped and built, it's also considered the primary app.
 
 ### Redirect URI
 
@@ -142,7 +145,7 @@ More information: [Redirect URI](/azure/active-directory/develop/reply-url)
 
 ### Secondary app
 
-Optional additional canvas apps that you're wrapping in the same build for mobile app distribution along with the [primary app](#primary-app).
+Optional more canvas apps that you're wrapping in the same build for mobile app distribution along with the [primary app](#primary-app).
 
 ## Next steps
 
