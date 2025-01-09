@@ -14,15 +14,13 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Date picker control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
-
+# Date picker control in Power Apps
 A control that the user can select to specify a date.
 
 ## Description
@@ -32,13 +30,14 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 **PlaceHolder** - Instructional text that appears if no dates are entered. 
 
-**Format** – The text format in which the control shows the date the user specified. The format of the date can be short, LongAbbreviated, or YearMonth. For example: 
+**Format** – The text format in which the control shows the date the user specified. The format of the date can be short, LongAbbreviated, YearMonth, or Custom. For example: 
 
 -  Short - 2/1/2024 
 
 -  LongAbbreviated - Thurs, Feb 1, 2024 
 
--  YearMonth - February 2024 
+-  YearMonth - February 2024
+-  Custom - users are able to specify a valid format in a string format, i.e.: "MM/YY", "dd/mm/yyyy"
 
 **AccessibleLabel** – Label for screen readers.
 
