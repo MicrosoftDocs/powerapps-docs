@@ -18,7 +18,7 @@ Visualizations let you see your business data graphically. A visualization is at
 You can use a chart or a web resource as a visualization in Dataverse. For charts, you can use the chart designer in model-driven apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into model-driven apps.
 
 > [!IMPORTANT]
-> The XML of an imported chart when encoded to a base64 string has a maximum length of 4000 characters. This translates to roughly 3000 characters before that encoding is done. 
+> The XML of an imported chart when encoded to a base64 string has a maximum length of 16,000 characters. This translates to roughly 12,000 characters before that encoding is done. 
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -69,9 +69,9 @@ You can use the following types of web resources in a visualization: [Webpage (H
 
 You can create and attach visualizations to only those tables in Dataverse that support the new ribbon interface. This is because all of the chart controls are only present in the ribbon interface of Dataverse. Custom tables are also supported for visualizations. You can turn off the visualization support for custom tables if you want to. However, you cannot disable visualization support for the default tables.  
   
- The following lists the default tables that are supported for visualizations.  
+The following lists the default tables that are supported for visualizations.  
   
- Account  
+Account  
 ActivityPointer  
 Appointment  
 BulkOperation  
