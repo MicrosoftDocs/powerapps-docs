@@ -1,7 +1,7 @@
 ---
 title: "Restore Deleted Records Configuration (RecycleBinConfig) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Restore Deleted Records Configuration (RecycleBinConfig) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke

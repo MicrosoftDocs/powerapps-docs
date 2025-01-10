@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ItemsFailedForLastSync](#BKMK_ItemsFailedForLastSync)
 - [ItemsProcessedForLastSync](#BKMK_ItemsProcessedForLastSync)
 - [LastAutoDiscoveredOn](#BKMK_LastAutoDiscoveredOn)
+- [LastIncomingEmailsRequestedFromEmailServerOn](#BKMK_LastIncomingEmailsRequestedFromEmailServerOn)
 - [LastMessageId](#BKMK_LastMessageId)
 - [LastSuccessfulSyncCompletedOn](#BKMK_LastSuccessfulSyncCompletedOn)
 - [LastSyncError](#BKMK_LastSyncError)
@@ -383,7 +384,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`incomingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`mailbox_incomingemaildeliverymethod`|
 
 #### IncomingEmailDeliveryMethod Choices/Options
@@ -392,7 +393,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**Microsoft Dynamics 365 for Outlook**|
-|2|**Server-Side Synchronization or Email Router**|
+|2|**Server-Side Synchronization**|
 |3|**Forward Mailbox**|
 
 ### <a name="BKMK_IncomingEmailStatus"></a> IncomingEmailStatus
@@ -492,6 +493,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|
+|SourceTypeMask|0|
+
+### <a name="BKMK_LastIncomingEmailsRequestedFromEmailServerOn"></a> LastIncomingEmailsRequestedFromEmailServerOn
+
+|Property|Value|
+|---|---|
+|Description|**The timestamp when last set of incoming emails were requested from external email server. For internal use only.**|
+|DisplayName|**Last Incoming Emails Requested From Email Server On**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`lastincomingemailsrequestedfromemailserveron`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
 |SourceTypeMask|0|
 
 ### <a name="BKMK_LastMessageId"></a> LastMessageId
@@ -818,7 +836,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`outgoingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`mailbox_outgoingemaildeliverymethod`|
 
 #### OutgoingEmailDeliveryMethod Choices/Options
@@ -827,7 +845,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**Microsoft Dynamics 365 for Outlook**|
-|2|**Server-Side Synchronization or Email Router**|
+|2|**Server-Side Synchronization**|
 
 ### <a name="BKMK_OutgoingEmailStatus"></a> OutgoingEmailStatus
 
@@ -2221,6 +2239,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Mailbox_MailboxTrackingFolder](#BKMK_Mailbox_MailboxTrackingFolder)
 - [mailbox_processsessions](#BKMK_mailbox_processsessions)
 - [Mailbox_SyncErrors](#BKMK_Mailbox_SyncErrors)
+- [msfp_alert_mailbox_sendermailboxid](#BKMK_msfp_alert_mailbox_sendermailboxid)
+- [msfp_surveyinvite_mailbox_sendermailboxid](#BKMK_msfp_surveyinvite_mailbox_sendermailboxid)
+- [msfp_surveyresponse_mailbox_sendermailboxid](#BKMK_msfp_surveyresponse_mailbox_sendermailboxid)
 - [queue_defaultmailbox_mailbox](#BKMK_queue_defaultmailbox_mailbox)
 - [systemuser_defaultmailbox_mailbox](#BKMK_systemuser_defaultmailbox_mailbox)
 - [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
@@ -2366,6 +2387,42 @@ Many-To-One Relationship: [syncerror Mailbox_SyncErrors](syncerror.md#BKMK_Mailb
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`Mailbox_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_alert_mailbox_sendermailboxid"></a> msfp_alert_mailbox_sendermailboxid
+
+Many-To-One Relationship: [msfp_alert msfp_alert_mailbox_sendermailboxid](msfp_alert.md#BKMK_msfp_alert_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`msfp_alert_mailbox_sendermailboxid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyinvite_mailbox_sendermailboxid"></a> msfp_surveyinvite_mailbox_sendermailboxid
+
+Many-To-One Relationship: [msfp_surveyinvite msfp_surveyinvite_mailbox_sendermailboxid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyinvite_mailbox_sendermailboxid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyresponse_mailbox_sendermailboxid"></a> msfp_surveyresponse_mailbox_sendermailboxid
+
+Many-To-One Relationship: [msfp_surveyresponse msfp_surveyresponse_mailbox_sendermailboxid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyresponse_mailbox_sendermailboxid`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

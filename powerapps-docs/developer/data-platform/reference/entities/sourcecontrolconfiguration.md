@@ -1,7 +1,7 @@
 ---
 title: "Source Control Configuration (SourceControlConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Source Control Configuration (SourceControlConfiguration) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke

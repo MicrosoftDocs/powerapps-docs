@@ -1,7 +1,7 @@
 ---
 title: "Application table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Application table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -352,7 +352,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`organizationid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets||
+|Targets|organization|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
@@ -394,6 +394,24 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+## Many-to-One relationships
+
+These relationships are many-to-one. Listed by **SchemaName**.
+
+### <a name="BKMK_organization_application"></a> organization_application
+
+One-To-Many Relationship: [organization organization_application](organization.md#BKMK_organization_application)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 
 ## One-to-Many relationships
 

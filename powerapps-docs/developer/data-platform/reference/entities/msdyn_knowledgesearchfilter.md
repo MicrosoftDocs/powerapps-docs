@@ -1,7 +1,7 @@
 ---
 title: "Knowledge search filter (msdyn_knowledgesearchfilter) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge search filter (msdyn_knowledgesearchfilter) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -152,7 +152,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_enabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-|GlobalChoiceName|`msdyn_knowledgesearchfilter_enabled`|
+|GlobalChoiceName|`msdyn_knowledgesearchfilter_Enabled`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
@@ -185,7 +185,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_iscustom`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-|GlobalChoiceName|`msdyn_knowledgesearchfilter_iscustom`|
+|GlobalChoiceName|`msdyn_knowledgesearchfilter_IsCustom`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
