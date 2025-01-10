@@ -247,16 +247,24 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Explore sample apps
-    items:
-    - name: Create a canvas app from a sample
-      href: ./canvas-apps/open-and-run-a-sample-app.md
-    - name: Expense Report app
-      href: ./canvas-apps/expense-report-install.md
-    - name: Help Desk app
-      href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
+    - name: Create an app using Copilot
+      items:
+      - name: Create an app from conversations
+        href: ./canvas-apps/ai-conversations-create-app.md
+      - name: Edit your app with Copilot (preview)
+        href: ./canvas-apps/ai-edit-app.md
+      - name: Use field suggestions by Copilot
+        href: ./canvas-apps/ai-field-suggestions.md
+    - name: Create an app using data
+      items:
+      - name: From Microsoft Dataverse
+        href: ./canvas-apps/data-platform-create-app.md
+      - name: From SharePoint
+        href: ./canvas-apps/app-from-sharepoint.md
+      - name: From Excel
+        href: ./canvas-apps/get-started-create-from-data.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -280,22 +288,6 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using Copilot
-      items:
-      - name: Create an app from conversations
-        href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Edit your app with Copilot (preview)
-        href: ./canvas-apps/ai-edit-app.md
-      - name: Use field suggestions by Copilot
-        href: ./canvas-apps/ai-field-suggestions.md
-    - name: Create an app using data
-      items:
-      - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
-      - name: From SharePoint
-        href: ./canvas-apps/app-from-sharepoint.md
-      - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
     - name: Make basic customizations
       items:
       - name: Galleries
