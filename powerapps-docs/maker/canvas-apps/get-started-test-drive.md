@@ -18,38 +18,48 @@ contributors:
 
 # Create a canvas app from a template
 
-Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
+You can create a canvas app using a sample template. Once the app is created, you can explore design possibilities and concepts that you can apply to develop your own canvas app.
 
-To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
+The available templates are based on real-world scenarios but uses fictitious data.
 
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
-If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-
-## Create an app
+## Create a three screen mobile app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with an app template**. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
-2. Select one of the following options:
-    - To create a three screen mobile app using data stored in Dataverse, select **From Dataverse**.
-    - To create a three screen mobile app by connecting to an external data source, select one of these data sources:
+1. From the home screen select, **Start with an app template** tile.
+1. If your data is stored in Dataverse, select **From Dataverse**. Or choose from one of the external data sources:
       - **From SharePoint**
       - **From Excel**
       - **From SQL**
-    - To use other templates, select a template from the list of **other app templates**.
-5. After you select a template, you can update the app name and select the layout for your app. 
-6. When you're done, select **Next**.
+
+1. Select the data that will appear in your app. When you're ready, select **Create app**.
+
+## Use a template to create an app
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+1. On the home screen, select the **Start from template** tile.
+
+1. Select a template from the list of **other app templates**.
+
+1. Update the **App name** and then select **Next**.
+
+1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
+
+    :::image type="content" source="media/open-and-run-a-sample-app/make-my-own-app.png" alt-text="Make my own app.":::
+
+1. After you select or connect to storage from the available choices, select **Done**.
+
+1. Preview the app, by pressing F5, or select the play button near the upper-right corner.
+
+1. When you're ready [save and publish](save-publish-app.md) the app.
 
 
 ## Run the app
 
-An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in [Preview](preview-app.md) mode.
+The app you created opens in Power Apps Studio, where you can customize it. Before you make any changes to the app, explore how the app works in [Preview](preview-app.md) mode.
 
 1. Press F5 to open the app in preview mode. Alternatively, you can also select the play button on the top-right corner of the screen to [preview the app](preview-app.md).
-
-    :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
-
-    The app is populated with sample data to demonstrate the functionality of the app.
 
 1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
 
