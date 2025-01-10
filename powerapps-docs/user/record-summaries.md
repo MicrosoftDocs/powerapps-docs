@@ -1,6 +1,6 @@
 ---
-title: Use record summaries in model-driven apps 
-description: Learn how to access and utilize AI-generated record summaries in main form.
+title: Use row summaries in model-driven apps 
+description: Learn how to access and utilize AI-generated row summaries in main forms.
 ms.date: 12/17/2024
 ms.topic: article
 ms.component: pa-user
@@ -15,8 +15,8 @@ search.audienceType:
 contributors:
 ---
 
-# Use record summaries in model-driven apps
-The **Record summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record. Displayed within the **AI assistance** area at the top of main forms, the summary helps users quickly understand essential information without manually scanning through fields, related records, or activity timelines. Summaries are presented in either a paragraph or bullet point format, ensuring clarity and ease of consumption.
+# Use row summaries in model-driven apps
+The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record (row). Displayed within the **AI assistance** area at the top of main forms, the summary helps users quickly understand essential information without manually scanning through fields, related records, or activity timelines. Summaries are presented in either a paragraph or bullet point format, ensuring clarity and ease of consumption.
 
 The feature enhances user efficiency by delivering context-rich insights directly within the form. Users can interact with summaries to copy content, regenerate updated information, and provide feedback on their relevance, improving both usability and accuracy.
 
@@ -41,13 +41,13 @@ Summaries are only currently supported in the English language.
 > Record summaries only appear after a new record has been successfully saved. For unsaved records, the summary area remains hidden.
 
 ::insert image::
-:::image type="content" source="media/record_summary.png" alt-text="Screenshot that shows a record summary card in the AI assistance area on a form.":::
+:::image type="content" source="media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the AI assistance area on a form.":::
 
 ### Expanding and collapsing the summary
 - Users can **expand** or **collapse** the summary section as needed. The system remembers the expanded/collapsed state for each user across sessions per device, ensuring a consistent experience when revisiting records.
 - Summaries are currently expanded by default. 
 
-:::image type="content" source="media/record_summary.png" alt-text="Screenshot that shows a collapsed record summary.":::
+:::image type="content" source="media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary.":::
 
 ### Acting on the summary
 - **Copy**: Users can click the **Copy** button to copy the summary content directly to their clipboard for easy sharing or documentation.
