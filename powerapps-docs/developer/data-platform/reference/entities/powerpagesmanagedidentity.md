@@ -1,7 +1,7 @@
 ---
 title: "PowerPagesManagedIdentity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PowerPagesManagedIdentity table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -621,7 +621,7 @@ Many-To-One Relationship: [certificatecredential ComponentId_CertificateCredenti
 |ReferencingAttribute|`componentid`|
 |ReferencedEntityNavigationPropertyName|`ComponentId_CertificateCredential_PowerPagesManagedIdentity`|
 |IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10001<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_powerpagesmanagedidentity_AsyncOperations"></a> powerpagesmanagedidentity_AsyncOperations
 

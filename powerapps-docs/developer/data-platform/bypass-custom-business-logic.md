@@ -152,7 +152,7 @@ OData-Version: 4.0
 OData-MaxVersion: 4.0
 Content-Type: application/json
 Accept: application/json
-MSCRM.BypassBusinessLogicExecutionStepIds: "45e0c603-0d0b-466e-a286-d7fc1cda8361, d5370603-e4b9-4b92-b765-5966492a4fd7"
+MSCRM.BypassBusinessLogicExecutionStepIds: 45e0c603-0d0b-466e-a286-d7fc1cda8361,d5370603-e4b9-4b92-b765-5966492a4fd7
 {
   "name":"Sample Account"
 }
