@@ -30,7 +30,7 @@ In this article, we'll learn how to add a **Priority** tag to an idea in the Man
 > Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
 
 Watch this video to learn how to add a tag to mark prioritized ideas:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9D]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=50df516b-65a5-436b-83be-da737271ed28]
 
 ## Prerequisites
 
