@@ -24,7 +24,7 @@ In Power Apps, create a blank canvas app that you can then use to customize furt
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 Watch this short video that shows you how to create a blank canvas app.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YnKM]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=bf419d9e-8021-47d1-8eeb-7d4278d9d2b6]
 
 ## Prerequisites
 

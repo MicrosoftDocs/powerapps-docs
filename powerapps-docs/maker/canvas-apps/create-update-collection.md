@@ -26,7 +26,7 @@ Use a collection to store data that users can manage in your app. A collection i
 - Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 Watch this video to learn how to create and update a collection:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=b709db8a-7d9c-4869-b2f7-76027df3bee0]
 
 ## Create a multicolumn collection
 
