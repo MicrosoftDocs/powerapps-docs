@@ -20,7 +20,7 @@ contributors:
 
 You can create a canvas app using a sample template. Once the app is created, you can explore design possibilities and concepts that you can apply to develop your own canvas app.
 
-The available templates are based on real-world scenarios but uses fictitious data.
+You can create a mobile app with three screens or use one of available templates that are based on real-world scenarios but uses fictitious data.
 
 
 ## Create a three screen mobile app
