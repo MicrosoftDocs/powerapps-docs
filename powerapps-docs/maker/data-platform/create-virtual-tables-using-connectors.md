@@ -100,7 +100,7 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 Watch a short video showing how to create a virtual table with the virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE5e1m9]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=130f38be-01d0-4321-8681-a7780231b94e]
 
 1. In the **New table from external data** wizard you can either select an existing connection if you have one or choose to create a new connection.  
 
@@ -307,7 +307,7 @@ Once the table is created, you're taken directly to your new virtual table where
 
 Watch a short video showing how to create a virtual table with the Excel virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d418205f-afcd-4a54-903d-9ac975868f5c]
 
 1.	Go to Power Apps (make.powerapps.com), and select the environment in which you would like to set up the virtual table.
 1.	In the left navigation pane, select **Connections**, and then select **New connection**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]

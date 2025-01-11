@@ -15,7 +15,7 @@ search.audienceType:
 The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
 Watch this video for a quick overview about data types in Dataverse:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWJ4Su]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d64c0198-42de-4dd0-8cec-14e3008442e6]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
@@ -74,7 +74,7 @@ There are some columns used by the system that you can't add using the designer.
 Text columns can contain text characters. This column type has several format options that change the presentation of the text.
 
 Watch this video for a quick overview about text columns:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7j0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=58cc0b9e-1fd3-4d9f-8e62-1514e3c9bc4d]
 
 There are three basic text column types. All values indicated here are in number of characters.
 
@@ -116,7 +116,7 @@ You can use global choices that are defined in your organization to configure va
 When choosing the correct type of number column to use, the decision to use a **Whole Number** or **Currency** type should be straightforward. The choice between using **Floating Point** or **Decimal** numbers requires more thought.  
 
 Watch this video to help you decide what number column type to use:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEmPd]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=85ab223e-8fe5-4d61-8715-c9a675ade6ad]
   
 Decimal numbers are stored in the database exactly as specified. Floating point numbers store an extremely close approximation of the value. Why choose extremely close approximation when you can have the exact value? The answer is that you get different system performance.  
   

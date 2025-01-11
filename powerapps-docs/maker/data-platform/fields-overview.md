@@ -25,7 +25,7 @@ search.audienceType:
 Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app.
 
 Watch this short video that shows you how to quickly create a column.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWJ4Sh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f0015291-5024-4427-a669-dd230cf5c0c8]
 
 ## See also
 [Types of columns](types-of-fields.md)
