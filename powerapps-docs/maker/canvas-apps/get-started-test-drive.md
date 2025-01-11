@@ -53,7 +53,9 @@ Create a mobile app with three screens or use one of the available templates bas
 
 1. When ready, [save and publish](save-publish-app.md) the app.
 
-The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it. Before making any changes, explore how the app works in [preview mode](preview-app.md).
+## Run the app
+
+The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it. Before making any changes, see how the app works in [preview mode](preview-app.md).
 
 ### See also
 
