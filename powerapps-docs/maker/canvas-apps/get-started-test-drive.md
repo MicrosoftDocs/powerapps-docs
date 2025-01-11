@@ -55,23 +55,10 @@ The available templates are based on real-world scenarios but uses fictitious da
 1. When you're ready [save and publish](save-publish-app.md) the app.
 
 
-## Run the app
+The app you created opens in [Power Apps Studio](power-apps-studio.md), where you can customize it. Before you make any changes to the app, explore how the app works in [preview mode](preview-app.md).
 
-The app you created opens in Power Apps Studio, where you can customize it. Before you make any changes to the app, explore how the app works in [Preview](preview-app.md) mode.
+### See also
 
-1. Press F5 to open the app in preview mode. Alternatively, you can also select the play button on the top-right corner of the screen to [preview the app](preview-app.md).
-
-1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
-
-1. Return to the default workspace by pressing Esc (or by selecting **X** icon near the upper-right corner).
-
-## Next steps
-
-1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
-
-1. [Share your app](share-app.md) with other people in your organization.
-
-> [!IMPORTANT]
-> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+[Share a canvas app](share-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
