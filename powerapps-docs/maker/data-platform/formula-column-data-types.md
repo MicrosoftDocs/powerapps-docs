@@ -115,13 +115,13 @@ Create a formula column that returns choice using a local choice of a simple cho
 - Formula column's dependent local choice column or global choice can't be deleted.
 - For using a related table local choices (optionset) column's options in the formula column definition, first use optionset and then use options of that local optionset.
   
-  For example, OptionSet field - Color on Account table having options - Red, Yellow, Green.
+  For example, OptionSet field - Color on Contact table having options - Red, Yellow, Green.
   
-  For a formula column on Opportunity table using Color optionset, it should follow below order -
+  For a formula column on Account table using Color optionset, it should follow below order -
   
-  **Recommended** - If(ParentAccount.Color == 'Color (Accounts)'.Red, 1, 2)
+  **Recommended** - If('Primary Contact'.Color = 'Color (Contacts)'.Green, 1, 2)
   
-  **Not Recommended** - If( 'Color (Accounts)'.Red == ParentAccount.Color, 1, 2)
+  **Not Recommended** - If( 'Color (Contacts)'.Green = 'Primary Contact'.Color, 1, 2)
 
 ## See also
 
