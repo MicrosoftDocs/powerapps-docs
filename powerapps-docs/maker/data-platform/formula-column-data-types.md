@@ -113,15 +113,18 @@ Create a formula column that returns choice using a local choice of a simple cho
 - A choice used by a formula column can't be updated.
 - Options of a choice can't be passed as an argument to string functions. Value function can be used to return the numeric value of an option.
 - Formula column's dependent local choice column or global choice can't be deleted.
-- For using a related table local choices (optionset) column's options in the formula column definition, first use optionset and then use options of that local optionset.
+- For using a related table local choices (optionset) column's options in the formula column definition, first use choice and then use options of that local choice.
   
-  For example, OptionSet field - Color on Account table having options - Red, Yellow, Green.
+  For example, a choice column named *Color* on the **Contact** table.
+  :::image type="content" source="../model-driven-apps/media/choice-column-sample1.png" alt-text="Choice column for related contact table named color.":::
+  The choice column has options Red, Yellow, and Green.
+  :::image type="content" source="../model-driven-apps/media/choice-column-sample2.png" alt-text="Choice column with options red, yellow, and green.":::
+  For a formula column on the account table using the *Color* choice column, the formula appears like this:
   
-  For a formula column on Opportunity table using Color optionset, it should follow below order -
+  **Recommended** - `If(ParentAccount.Color == 'Color (Accounts)'.Red, 1, 2)`
   
-  **Recommended** - If(ParentAccount.Color == 'Color (Accounts)'.Red, 1, 2)
-  
-  **Not Recommended** - If( 'Color (Accounts)'.Red == ParentAccount.Color, 1, 2)
+  **Not Recommended** - `If( 'Color (Accounts)'.Red == ParentAccount.Color, 1, 2)`
+  :::image type="content" source="../model-driven-apps/media/choice-column-sample3.png" alt-text="Formula for choice column":::
 
 ## See also
 
