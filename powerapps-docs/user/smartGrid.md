@@ -68,7 +68,7 @@ This feature provides five main benefits:
 
 ## Turn off gallery filtering in the web player
 
-You can turn off gallery filtering for an app or environment by using a PowerShell cmdlet.
+You can turn off gallery filtering for an app or an environment.
 
 > [!NOTE]
 > - When you use PowerShell cmdlets, you must use the latest Power Apps admin PowerShell module version. To learn more, go to [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
@@ -77,6 +77,11 @@ You can turn off gallery filtering for an app or environment by using a PowerShe
 > - This feature isn't yet available, but rollout is expected to begin in late June. When the feature is released, it will be turned on by default. However, you can turn the feature off before the release. In this case, it should remain turned off when it's rolled out to you.
 
 ### Turn off gallery filtering for an app
+
+You can turn off this setting for an app through the maker portal.
+1. In the app list, click the three dots to the right of the app that you want to change the setting for.
+2. Select **Settings**.
+3. Turn off the switch titled **Filter assistance in the web player (preview)**.
 
 To turn off gallery filtering for an app, run the following PowerShell cmdlet.
 
