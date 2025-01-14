@@ -22,7 +22,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 > [!IMPORTANT]
 > - This feature is in public preview for Dynamics 365 apps.
->   - Preview features aren’t meant for production use and may have restricted functionality.
+>   - Preview features aren’t meant for production use and might have restricted functionality.
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
@@ -34,13 +34,12 @@ Summaries are only currently supported in the English language.
 ## Feature details
 
 ### Viewing the record summary
-- When a [table has been configured to display summaries](../../maker/data-platform/configure-form-row-summary.md#create-a-row-summary), the record summary will appear in the **AI assistance** area at the top of the main form.
+- When a [table has been configured to display summaries](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary), the record summary will appear in the **AI assistance** area at the top of the main form.
 - The summary content is dynamically generated and presented in a clear paragraph or bullet point format, emphasizing key details about the record.
 
 > [!NOTE]
 > Record summaries only appear after a new record has been successfully saved. For unsaved records, the summary area remains hidden.
 
-::insert image::
 :::image type="content" source="media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the AI assistance area on a form.":::
 
 ### Expanding and collapsing the summary
@@ -50,8 +49,8 @@ Summaries are only currently supported in the English language.
 :::image type="content" source="media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary.":::
 
 ### Acting on the summary
-- **Copy**: Users can click the **Copy** button to copy the summary content directly to their clipboard for easy sharing or documentation.
-- **Refresh**: Users can click the **Refresh** button to regenerate the summary content, ensuring the displayed information reflects the latest updates to the record.
+- **Copy**: Users can select the **Copy** button to copy the summary content directly to their clipboard for easy sharing or documentation.
+- **Refresh**: Users can select the **Refresh** button to regenerate the summary content, ensuring the displayed information reflects the latest updates to the record.
 
 ### Providing feedback
 - To improve the usefulness of summaries, users are encouraged to rate the feature using the **thumbs up** or **thumbs down** icons.
