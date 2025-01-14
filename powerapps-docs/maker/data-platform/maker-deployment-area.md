@@ -43,4 +43,4 @@ In order to view others' solution deployments, you must have the Deployment Pipe
 
 [Use pipelines in Power Platform to deploy solutions](use-pipelines.md)
 
-[View solution deployments on the deployment page](/power-platform/alm/admin-deployment-hub)
+[View solution deployments on the deployment page for admins](/power-platform/alm/admin-deployment-hub)
