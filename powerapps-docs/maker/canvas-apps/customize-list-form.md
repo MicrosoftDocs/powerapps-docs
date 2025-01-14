@@ -31,7 +31,7 @@ To follow the steps in this article, you'll create a list so that you can see ho
 > - To access custom form, users must have access to the list.
 
 Watch this video to learn how to customize a list form:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=63bb74da-0828-403f-9005-8f1d74cbea35]
 
 ## Requirements
 
