@@ -20,7 +20,7 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 > Customers who don't meet this requirement can continue to create data retention policies, but the policies are disabled.
 
 Watch this video to learn about Dataverse long term data retention.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c34fea68-46b2-4486-b9c1-a3ef9d01b4f9]
 
 ## Business application data lifecycle
 
