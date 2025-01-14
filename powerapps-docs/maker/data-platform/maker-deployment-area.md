@@ -1,6 +1,6 @@
 ---
-title: View solution deployments on the Deployment page (preview)
-description: Learn how to view pipeline deployments in the Deployment Hub.
+title: View solution deployments on the deployment page (preview)
+description: Learn how to view pipeline deployments on the deployment page.
 author: asheehi1
 ms.author: matp
 ms.topic: how-to
