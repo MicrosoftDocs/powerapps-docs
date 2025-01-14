@@ -71,7 +71,7 @@ This configuration can be considered a bootstrap step for average use cases.
 - Number of nodes: 5 to 10
 - Automatic pausing: Enabled
 - Number of minutes idle: 5
-- Apache Spark: 3.3
+- Apache Spark: 3.4
 - Dynamically allocate executors: Enabled
 - Default number of executors: 1 to 9
 
@@ -121,7 +121,7 @@ bar.
 ### Prerequisites
 
 1. You must have an existing Azure Synapse Link for Dataverse Delta Lake profile running with a Synapse Spark version 3.3.
-2. You must create a new Synapse Spark pool with Spark version 3.4, using the same or higher nodes hardware configuration within the same Synapse workspace. For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.3 pool.
+2. You must create a new Synapse Spark pool with Spark version 3.4, **using the same or higher nodes hardware configuration within the same Synapse workspace**. For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.3 pool.
 
 ### In-place upgrade to Spark 3.4:
 
