@@ -34,7 +34,7 @@ Summaries are only currently supported in the English language.
 ## Feature details
 
 ### Viewing the record summary
-- When a [table has been configured to display summaries](../../maker/data-platform/configure-form-row-summary#create-a-row-summary), the record summary will appear in the **AI assistance** area at the top of the main form.
+- When a [table has been configured to display summaries](../../maker/data-platform/configure-form-row-summary.md#create-a-row-summary), the record summary will appear in the **AI assistance** area at the top of the main form.
 - The summary content is dynamically generated and presented in a clear paragraph or bullet point format, emphasizing key details about the record.
 
 > [!NOTE]
