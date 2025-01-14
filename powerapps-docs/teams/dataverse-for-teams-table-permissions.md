@@ -30,7 +30,7 @@ For example, if there's a table that the users should only be able to modify for
 > Only team owners have the ability to edit table permissions currently.
 
 Watch this video to learn how to configure table permissions:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6P]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=23f33cc0-7db3-40fc-85e9-d6c3057b2489]
 
 ## Understanding team roles
 

@@ -37,7 +37,7 @@ For Microsoft Dataverse-based canvas apps, you must use the offline capability b
 This section includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
 Watch this video to learn how to create offline enabled canvas apps which don't use Dataverse data:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=60fd9b60-80a9-445b-bd4e-b7f4f068431e]
 
 ## Limitations
 
