@@ -41,32 +41,10 @@ The first step to creating a custom modern theme is to create an XML file with y
 - `HueTorsion` – An optional parameter that impacts the tint, shade, or tone of the palette, especially the lighter colors. The allowed values are between -100 and 100, with a default value of 0. This option is only applicable when lockPrimary="true".
 
 #### Override the palette
-Overriding individual slots in the theme palette provides the creator with full control over the slot colors, which is particularly useful when additional modifications are required beyond the standard theme parameters mentioned above. To override a specific slot, simply assign a value to the desired slot by its name. For instance, you can specify the HEX code for darker70, primary, or lighter10 to tailor the appearance precisely to your preference. It’s important to note that setting values for all 16 slots will completely override all the palette options described in the previous section, allowing for a highly customized and unique color scheme.
-The slot names for the palette from darkest to lightest are: darker70, darker60, …, darker10, primary, lighter10, lighter20, …, lighter80. 
+Overriding individual slots in the theme palette provides the creator with full control over the slot colors, which is particularly useful when additional modifications are required beyond the standard theme parameters mentioned above. To override a specific slot, simply assign a value to the desired slot by its name. For instance, you can specify the HEX code for darker70, primary, or lighter10 to tailor the appearance precisely to your preference. Setting values for all 16 slots will completely override all the palette options described in the previous section, allowing for a highly customized and unique color scheme.
+The slot names for the palette from darkest to lightest are: darker70, darker60, …, darker10, primary, lighter10, lighter20, …, lighter80. Please refer to the Fluent theme designer to 
 
 <image of names with color slots>
-
-When overriding individual slots in the palette, you may refer to this general guidance on how each slot is utilized in the native Fluent controls. Note that deviations may be present in how individual controls inside Power Apps utilize the modern theme palette.
-
-| Slot | Description |
-|---------|----------|
-| Darker70 | **Primary text, key icons, and high-emphasis borders.** <br><br>Darker70 is the darkest in the palette and provides maximum contrast for primary text, important icons, and high-emphasis borders. It is frequently used in headers, key labels, and elements requiring strong focus. This color ensures critical content remains legible and visually distinct, enhancing accessibility and user clarity in Fluent designs.| 
-| Darker60 | **Secondary headings and selected states.** <br><br> Darker60 provides strong contrast while being slightly lighter than Darker70. It’s used for secondary headings, selected states, and visible borders that complement primary elements. This color balances emphasis and subtlety, appearing in elements like selected text highlights, secondary button text, and focused states around interactive components. |
-| Darker50 | **Placeholder text, secondary icons, and inactive elements.** <br><br> Darker50 is lighter than Darker60 and is primarily applied to placeholder text, secondary icons, and inactive elements. It supports visual hierarchy by clearly differentiating less emphasized elements from primary content. Typical uses include text field hints, inactive radio buttons, and dimmed icons for features not currently available. |
-| Darker40 | **Pressed states.** <br><br> Darker40 is used for pressed states in interactive elements such as buttons, list items, or menu options. It provides a darker, more pronounced feedback when users engage with a control, ensuring clarity about active interactions. This color is also used for elements like pressed backgrounds in dropdown menus or for accentuating highly interactive components where the user’s focus is required. |
-| Darker30 | **Hover states of secondary elements and lightly emphasized content.** <br><br> Darker30 is designed for hover states on secondary elements, such as inactive menu items or lightly emphasized content like subtle dividers. |
-| Darker20 | **Borders and tertiary button hover states.** <br><br> Darker20 provides subtle definition for borders and is also used in tertiary button hover states. Its contrast ensures secondary and tertiary interactive elements remain clear without dominating the UI. This color often appears in list item dividers and other light boundary markers. |
-| Darker10 | **Hover states for primary buttons and interactive elements.** <br><br> Darker10 is applied to hover states for primary buttons and other interactive components, providing visual feedback to indicate interactivity. It ensures these elements stand out momentarily as users navigate, enhancing clarity and engagement. |
-| PrimaryColor | **Backgrounds of active buttons and selected states.** <br><br> PrimaryColor is used for backgrounds in active button states, such as primary buttons, as well as for selected states in checkboxes, radio buttons, and dropdowns. This color ensures active elements are easily distinguishable while maintaining a cohesive visual design. |
-| Lighter10 | **Hover backgrounds in buttons, lists, and dropdowns.** <br><br> Lighter10 serves as the hover background for interactive elements, such as buttons, list items, and dropdown menus. Its slightly lighter tone provides subtle visual feedback, enhancing interactivity without overwhelming the design. |
-| Lighter20 | **Backgrounds of text input fields.** <br><br> Lighter20 is used for backgrounds of editable input fields in their default states. It ensures a neutral yet modern appearance, supporting text and icon clarity while seamlessly integrating into Fluent’s overall design language. |
-| Lighter30 | **Backgrounds of secondary buttons and inactive input fields.** <br><br> Lighter30 is applied to the backgrounds of secondary buttons and inactive input fields, providing subtle contrast to differentiate these elements from primary or active states. It’s also used for disabled elements, ensuring visual consistency across less interactive UI components. |
-| Lighter40 | **Tertiary button backgrounds and subtle surfaces.** <br><br> Lighter40 is used for tertiary button backgrounds and other subtle UI surfaces, such as light panels or cards. It provides understated contrast to support a layered, visually distinct hierarchy in Fluent designs. |
-| Lighter50 | **Light borders and inactive outlines.** <br><br> Lighter50 is used for light borders and inactive outlines on elements such as cards, dropdowns, and inactive input fields. Its subtle definition enhances structural clarity while maintaining a clean, modern aesthetic. |
-| Lighter60 | **Hover states for lighter interactive elements.** <br><br> Lighter60 is used for hover states on lighter interactive elements, such as dropdown items, inactive list entries, or tertiary buttons. It provides subtle feedback, ensuring users can identify interactivity without disrupting the overall design. |
-| Lighter70 | **Backgrounds of non-editable fields and subtle focus states.** <br><br> Lighter70 is applied to backgrounds of non-editable fields and subtle focus states, helping differentiate these elements from editable or interactive ones. It provides a neutral, understated treatment that preserves the design’s clarity and hierarchy. |
-| Lighter80 | **Lightest backgrounds in panels, cards, and overlays.** <br><br> Lighter80 is the lightest shade in the palette, used for backgrounds in panels, cards, and overlays. It provides a neutral canvas that highlights content while minimizing visual distractions. This color is ideal for creating an open, spacious feel in UI designs. |
-
 
 #### Example XML for a custom theme
 As an example, this XML specifies a custom theme that is green with a different font.  
@@ -160,8 +138,6 @@ With the [example colors](#example-xml-for-a-modern-theme), the app header shoul
 ### Verifying new app header colors
 
 After publishing your custom theme, you'll want to validate the application of the theme in the app to ensure everything appears as you expect. 
-
-
 
 
 ## Modify the app header colors only
