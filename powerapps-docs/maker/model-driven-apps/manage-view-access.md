@@ -27,7 +27,7 @@ Admins can manage views that users can access in model-driven apps with security
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - From January 15 through January 31, 2025 the public preview for managing system views with security roles will be made available.
+> - From January 15 through January 31, 2025 the public preview for managing system views with security roles will be deployed to environments to make available.
 
 System views are special views that model-driven apps depend on, which exist for system tables or are automatically created when you create custom tables. These views have specific purposes and some additional capabilities. When a Power Platform admin manages a list of views with a security role, only those views—and the system, default view—are available in the view selector for users who are assigned to that security role. The other system views are filtered from the dropdown list. Users can still see the filtered views when they navigate to the Manage and share views option.
 
