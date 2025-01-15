@@ -1,13 +1,12 @@
+---
 title: Combobox modern control in Power Apps
 description: Learn about the details, properties, and examples of the combobox modern control in Power Apps.
-author: noazarur-microsoft
-
+author: clromano
 ms.topic: reference
 ms.component: canvas
 ms.date: 1/15/2025
 ms.subservice: canvas-maker
-ms.author: noazarur
-
+ms.author: clromano
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
@@ -17,7 +16,9 @@ contributors:
   - noazarur-microsoft
   
 ---
+
 # Combobox modern control in Power Apps
+
 A control that lets users select from provided choices, supports search, and multiple selections. 
 
 ## Description
