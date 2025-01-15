@@ -247,16 +247,24 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Explore sample apps
-    items:
-    - name: Create a canvas app from a sample
-      href: ./canvas-apps/open-and-run-a-sample-app.md
-    - name: Expense Report app
-      href: ./canvas-apps/expense-report-install.md
-    - name: Help Desk app
-      href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
+    - name: Create an app using Copilot
+      items:
+      - name: Create an app from conversations
+        href: ./canvas-apps/ai-conversations-create-app.md
+      - name: Edit your app with Copilot (preview)
+        href: ./canvas-apps/ai-edit-app.md
+      - name: Use field suggestions by Copilot
+        href: ./canvas-apps/ai-field-suggestions.md
+    - name: Create an app using data
+      items:
+      - name: From Microsoft Dataverse
+        href: ./canvas-apps/data-platform-create-app.md
+      - name: From SharePoint
+        href: ./canvas-apps/app-from-sharepoint.md
+      - name: From Excel
+        href: ./canvas-apps/get-started-create-from-data.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -280,22 +288,6 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using Copilot
-      items:
-      - name: Create an app from conversations
-        href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Edit your app with Copilot (preview)
-        href: ./canvas-apps/ai-edit-app.md
-      - name: Use field suggestions by Copilot
-        href: ./canvas-apps/ai-field-suggestions.md
-    - name: Create an app using data
-      items:
-      - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
-      - name: From SharePoint
-        href: ./canvas-apps/app-from-sharepoint.md
-      - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
     - name: Make basic customizations
       items:
       - name: Galleries
@@ -500,6 +492,8 @@
               href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
             - name: List of modern controls and properties
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
+            - name:  Rename controls with Copilot (preview) 
+              href: ./canvas-apps/controls/copilot-rename-controls.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
             - name: Badge
@@ -1332,7 +1326,7 @@
           href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
-        - name: Canvas component properties (experimental)
+        - name: Canvas component properties (preview)
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
@@ -1722,8 +1716,13 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-    - name: Add Copilot to apps
-      href: ./model-driven-apps/add-ai-copilot.md
+    - name: Copilot chat for the apps
+      href:
+      items:
+      - name: Add Copilot chat to your app
+        href: ./model-driven-apps/add-ai-copilot.md
+      - name: Customize Copilot chat (Preview)
+        href: ./model-driven-apps/customize-copilot-chat.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
@@ -1893,6 +1892,8 @@
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
+    - name: Configure a row summary (preview)
+      href: ./data-platform/configure-form-row-summary.md  
     - name: Import and export table data
       items:
       - name: Import data from Excel and export to CSV
@@ -1924,6 +1925,14 @@
         href: ./data-platform/limits-tshoot-virtual-tables.md
     - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
+    - name: Table customizations
+      items:
+      - name: Create business rules
+        href: ./data-platform/data-platform-create-business-rule.md
+      - name: Edit a command bar
+        href: ./model-driven-apps/command-designer-overview.md
+      - name: Edit messages for a system table
+        href: ./data-platform/edit-system-entity-messages.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
@@ -2081,6 +2090,8 @@
         href: ./data-platform/import-update-export-solutions.md
       - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
+      - name: View solution deployments (preview)
+        href: ./data-platform/maker-deployment-area.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
@@ -2611,6 +2622,8 @@
     href: ./common/faq-agent-builder.md  
   - name: FAQ about the Plan designer
     href: ./common/faq-plan-designer.md
+  - name: FAQ about renaming controls with Copilot
+    href: ./common/faq-rename-control.md
 - name: Resources
   items:
   - name: Microsoft Credentials for Power Platform

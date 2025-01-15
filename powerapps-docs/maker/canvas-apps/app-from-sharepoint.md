@@ -39,7 +39,7 @@ The principles of generating an app won't change even if you create a list that'
 > Power Apps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 Watch this video to learn how to create a canvas app from a list:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3n]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de3b0fbc-f5b6-4958-855e-109f9c3692ac]
 
 
 ## Create an app from within Power Apps

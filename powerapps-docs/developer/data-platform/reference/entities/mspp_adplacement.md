@@ -1,7 +1,7 @@
 ---
 title: "Ad Placement (mspp_adplacement) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Ad Placement (mspp_adplacement) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -311,6 +311,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [mspp_adplacement_Emails](#BKMK_mspp_adplacement_Emails)
 - [mspp_adplacement_Faxes](#BKMK_mspp_adplacement_Faxes)
 - [mspp_adplacement_Letters](#BKMK_mspp_adplacement_Letters)
+- [mspp_adplacement_msfp_alerts](#BKMK_mspp_adplacement_msfp_alerts)
+- [mspp_adplacement_msfp_surveyinvites](#BKMK_mspp_adplacement_msfp_surveyinvites)
+- [mspp_adplacement_msfp_surveyresponses](#BKMK_mspp_adplacement_msfp_surveyresponses)
 - [mspp_adplacement_PhoneCalls](#BKMK_mspp_adplacement_PhoneCalls)
 - [mspp_adplacement_RecurringAppointmentMasters](#BKMK_mspp_adplacement_RecurringAppointmentMasters)
 - [mspp_adplacement_SocialActivities](#BKMK_mspp_adplacement_SocialActivities)
@@ -409,6 +412,42 @@ Many-To-One Relationship: [letter mspp_adplacement_Letters](letter.md#BKMK_mspp_
 |ReferencingEntity|`letter`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`mspp_adplacement_Letters`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_adplacement_msfp_alerts"></a> mspp_adplacement_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert mspp_adplacement_msfp_alerts](msfp_alert.md#BKMK_mspp_adplacement_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_adplacement_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_adplacement_msfp_surveyinvites"></a> mspp_adplacement_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite mspp_adplacement_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_adplacement_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_adplacement_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_adplacement_msfp_surveyresponses"></a> mspp_adplacement_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse mspp_adplacement_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_adplacement_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_adplacement_msfp_surveyresponses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

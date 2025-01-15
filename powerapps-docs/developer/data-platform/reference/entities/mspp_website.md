@@ -1,7 +1,7 @@
 ---
 title: "Website (mspp_website) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Website (mspp_website) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -444,6 +444,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [mspp_website_entitylist](#BKMK_mspp_website_entitylist)
 - [mspp_website_Faxes](#BKMK_mspp_website_Faxes)
 - [mspp_website_Letters](#BKMK_mspp_website_Letters)
+- [mspp_website_msfp_alerts](#BKMK_mspp_website_msfp_alerts)
+- [mspp_website_msfp_surveyinvites](#BKMK_mspp_website_msfp_surveyinvites)
+- [mspp_website_msfp_surveyresponses](#BKMK_mspp_website_msfp_surveyresponses)
 - [mspp_website_mspp_entitypermission](#BKMK_mspp_website_mspp_entitypermission)
 - [mspp_website_mspp_webtemplate](#BKMK_mspp_website_mspp_webtemplate)
 - [mspp_website_pagetemplate](#BKMK_mspp_website_pagetemplate)
@@ -657,6 +660,42 @@ Many-To-One Relationship: [letter mspp_website_Letters](letter.md#BKMK_mspp_webs
 |ReferencingEntity|`letter`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`mspp_website_Letters`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_website_msfp_alerts"></a> mspp_website_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert mspp_website_msfp_alerts](msfp_alert.md#BKMK_mspp_website_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_website_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_website_msfp_surveyinvites"></a> mspp_website_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite mspp_website_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_website_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_website_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_website_msfp_surveyresponses"></a> mspp_website_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse mspp_website_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_website_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_website_msfp_surveyresponses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

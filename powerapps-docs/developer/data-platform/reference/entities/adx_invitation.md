@@ -1,7 +1,7 @@
 ---
 title: "Invitation (adx_invitation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Invitation (adx_invitation) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -829,6 +829,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [adx_invitation_Faxes](#BKMK_adx_invitation_Faxes)
 - [adx_invitation_Letters](#BKMK_adx_invitation_Letters)
 - [adx_invitation_MailboxTrackingFolders](#BKMK_adx_invitation_MailboxTrackingFolders)
+- [adx_invitation_msfp_alerts](#BKMK_adx_invitation_msfp_alerts)
+- [adx_invitation_msfp_surveyinvites](#BKMK_adx_invitation_msfp_surveyinvites)
+- [adx_invitation_msfp_surveyresponses](#BKMK_adx_invitation_msfp_surveyresponses)
 - [adx_invitation_PhoneCalls](#BKMK_adx_invitation_PhoneCalls)
 - [adx_invitation_PrincipalObjectAttributeAccesses](#BKMK_adx_invitation_PrincipalObjectAttributeAccesses)
 - [adx_invitation_ProcessSession](#BKMK_adx_invitation_ProcessSession)
@@ -1026,6 +1029,42 @@ Many-To-One Relationship: [mailboxtrackingfolder adx_invitation_MailboxTrackingF
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`adx_invitation_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_invitation_msfp_alerts"></a> adx_invitation_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert adx_invitation_msfp_alerts](msfp_alert.md#BKMK_adx_invitation_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_invitation_msfp_surveyinvites"></a> adx_invitation_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite adx_invitation_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_adx_invitation_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_invitation_msfp_surveyresponses"></a> adx_invitation_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse adx_invitation_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_adx_invitation_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_surveyresponses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

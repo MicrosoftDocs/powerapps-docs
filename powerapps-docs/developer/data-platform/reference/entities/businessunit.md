@@ -1,7 +1,7 @@
 ---
 title: "Business Unit (BusinessUnit) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Business Unit (BusinessUnit) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -1528,7 +1528,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_email_activities](#BKMK_business_unit_email_activities)
 - [business_unit_emailserverprofile](#BKMK_business_unit_emailserverprofile)
 - [business_unit_environmentvariabledefinition](#BKMK_business_unit_environmentvariabledefinition)
-- [business_unit_environmentvariablevalue](#BKMK_business_unit_environmentvariablevalue)
 - [business_unit_exchangesyncidmapping](#BKMK_business_unit_exchangesyncidmapping)
 - [business_unit_exportedexcel](#BKMK_business_unit_exportedexcel)
 - [business_unit_exportsolutionupload](#BKMK_business_unit_exportsolutionupload)
@@ -1581,6 +1580,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
 - [business_unit_msdyn_apirequestcache](#BKMK_business_unit_msdyn_apirequestcache)
 - [business_unit_msdyn_apirequestfolder](#BKMK_business_unit_msdyn_apirequestfolder)
+- [business_unit_msdyn_copilotinteractions](#BKMK_business_unit_msdyn_copilotinteractions)
 - [business_unit_msdyn_customcontrolextendedsettings](#BKMK_business_unit_msdyn_customcontrolextendedsettings)
 - [business_unit_msdyn_dataflow](#BKMK_business_unit_msdyn_dataflow)
 - [business_unit_msdyn_dataflow_datalakefolder](#BKMK_business_unit_msdyn_dataflow_datalakefolder)
@@ -1606,6 +1606,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_flow_basicapprovalmodel](#BKMK_business_unit_msdyn_flow_basicapprovalmodel)
 - [business_unit_msdyn_flow_flowapproval](#BKMK_business_unit_msdyn_flow_flowapproval)
 - [business_unit_msdyn_formmapping](#BKMK_business_unit_msdyn_formmapping)
+- [business_unit_msdyn_function](#BKMK_business_unit_msdyn_function)
 - [business_unit_msdyn_historicalcaseharvestbatch](#BKMK_business_unit_msdyn_historicalcaseharvestbatch)
 - [business_unit_msdyn_historicalcaseharvestrun](#BKMK_business_unit_msdyn_historicalcaseharvestrun)
 - [business_unit_msdyn_integratedsearchprovider](#BKMK_business_unit_msdyn_integratedsearchprovider)
@@ -1635,6 +1636,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_pmsimulation](#BKMK_business_unit_msdyn_pmsimulation)
 - [business_unit_msdyn_pmtemplate](#BKMK_business_unit_msdyn_pmtemplate)
 - [business_unit_msdyn_pmview](#BKMK_business_unit_msdyn_pmview)
+- [business_unit_msdyn_qna](#BKMK_business_unit_msdyn_qna)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
 - [business_unit_msdyn_salesforcestructuredobject](#BKMK_business_unit_msdyn_salesforcestructuredobject)
 - [business_unit_msdyn_salesforcestructuredqnaconfig](#BKMK_business_unit_msdyn_salesforcestructuredqnaconfig)
@@ -1645,6 +1647,17 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_solutionhealthruleargument](#BKMK_business_unit_msdyn_solutionhealthruleargument)
 - [business_unit_msdyn_virtualtablecolumncandidate](#BKMK_business_unit_msdyn_virtualtablecolumncandidate)
 - [business_unit_msdynce_botcontent](#BKMK_business_unit_msdynce_botcontent)
+- [business_unit_msfp_alertrule](#BKMK_business_unit_msfp_alertrule)
+- [business_unit_msfp_emailtemplate](#BKMK_business_unit_msfp_emailtemplate)
+- [business_unit_msfp_fileresponse](#BKMK_business_unit_msfp_fileresponse)
+- [business_unit_msfp_localizedemailtemplate](#BKMK_business_unit_msfp_localizedemailtemplate)
+- [business_unit_msfp_project](#BKMK_business_unit_msfp_project)
+- [business_unit_msfp_question](#BKMK_business_unit_msfp_question)
+- [business_unit_msfp_questionresponse](#BKMK_business_unit_msfp_questionresponse)
+- [business_unit_msfp_satisfactionmetric](#BKMK_business_unit_msfp_satisfactionmetric)
+- [business_unit_msfp_survey](#BKMK_business_unit_msfp_survey)
+- [business_unit_msfp_surveyreminder](#BKMK_business_unit_msfp_surveyreminder)
+- [business_unit_msfp_unsubscribedrecipient](#BKMK_business_unit_msfp_unsubscribedrecipient)
 - [business_unit_mspcat_catalogsubmissionfiles](#BKMK_business_unit_mspcat_catalogsubmissionfiles)
 - [business_unit_mspcat_packagestore](#BKMK_business_unit_mspcat_packagestore)
 - [business_unit_nlsqregistration](#BKMK_business_unit_nlsqregistration)
@@ -1688,6 +1701,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_sharepointdocumentlocation](#BKMK_business_unit_sharepointdocumentlocation)
 - [business_unit_sharepointsites](#BKMK_business_unit_sharepointsites)
 - [business_unit_sideloadedaiplugin](#BKMK_business_unit_sideloadedaiplugin)
+- [business_unit_signal](#BKMK_business_unit_signal)
 - [business_unit_slabase](#BKMK_business_unit_slabase)
 - [business_unit_slakpiinstance](#BKMK_business_unit_slakpiinstance)
 - [business_unit_socialactivity](#BKMK_business_unit_socialactivity)
@@ -1699,6 +1713,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_task_activities](#BKMK_business_unit_task_activities)
 - [business_unit_teams](#BKMK_business_unit_teams)
 - [business_unit_templates](#BKMK_business_unit_templates)
+- [business_unit_trait](#BKMK_business_unit_trait)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
 - [business_unit_userform](#BKMK_business_unit_userform)
 - [business_unit_userquery](#BKMK_business_unit_userquery)
@@ -1724,6 +1739,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [BusinessUnit_SyncError](#BKMK_BusinessUnit_SyncError)
 - [BusinessUnit_SyncErrors](#BKMK_BusinessUnit_SyncErrors)
 - [chat_businessunit_owningbusinessunit](#BKMK_chat_businessunit_owningbusinessunit)
+- [msfp_alert_businessunit_owningbusinessunit](#BKMK_msfp_alert_businessunit_owningbusinessunit)
+- [msfp_surveyinvite_businessunit_owningbusinessunit](#BKMK_msfp_surveyinvite_businessunit_owningbusinessunit)
+- [msfp_surveyresponse_businessunit_owningbusinessunit](#BKMK_msfp_surveyresponse_businessunit_owningbusinessunit)
 - [Owning_businessunit_processsessions](#BKMK_Owning_businessunit_processsessions)
 
 ### <a name="BKMK_adx_inviteredemption_businessunit_owningbusinessunit"></a> adx_inviteredemption_businessunit_owningbusinessunit
@@ -2410,18 +2428,6 @@ Many-To-One Relationship: [environmentvariabledefinition business_unit_environme
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_business_unit_environmentvariablevalue"></a> business_unit_environmentvariablevalue
-
-Many-To-One Relationship: [environmentvariablevalue business_unit_environmentvariablevalue](environmentvariablevalue.md#BKMK_business_unit_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`environmentvariablevalue`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_environmentvariablevalue`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
 
 Many-To-One Relationship: [exchangesyncidmapping business_unit_exchangesyncidmapping](exchangesyncidmapping.md#BKMK_business_unit_exchangesyncidmapping)
@@ -3046,6 +3052,18 @@ Many-To-One Relationship: [msdyn_apirequestfolder business_unit_msdyn_apirequest
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_msdyn_copilotinteractions"></a> business_unit_msdyn_copilotinteractions
+
+Many-To-One Relationship: [msdyn_copilotinteractions business_unit_msdyn_copilotinteractions](msdyn_copilotinteractions.md#BKMK_business_unit_msdyn_copilotinteractions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_copilotinteractions`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_copilotinteractions`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_msdyn_customcontrolextendedsettings"></a> business_unit_msdyn_customcontrolextendedsettings
 
 Many-To-One Relationship: [msdyn_customcontrolextendedsettings business_unit_msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md#BKMK_business_unit_msdyn_customcontrolextendedsettings)
@@ -3343,6 +3361,18 @@ Many-To-One Relationship: [msdyn_formmapping business_unit_msdyn_formmapping](ms
 |ReferencingEntity|`msdyn_formmapping`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_formmapping`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_function"></a> business_unit_msdyn_function
+
+Many-To-One Relationship: [msdyn_function business_unit_msdyn_function](msdyn_function.md#BKMK_business_unit_msdyn_function)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_function`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_function`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3694,6 +3724,18 @@ Many-To-One Relationship: [msdyn_pmview business_unit_msdyn_pmview](msdyn_pmview
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_msdyn_qna"></a> business_unit_msdyn_qna
+
+Many-To-One Relationship: [msdyn_qna business_unit_msdyn_qna](msdyn_qna.md#BKMK_business_unit_msdyn_qna)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_qna`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_qna`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_msdyn_richtextfile"></a> business_unit_msdyn_richtextfile
 
 Many-To-One Relationship: [msdyn_richtextfile business_unit_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_business_unit_msdyn_richtextfile)
@@ -3811,6 +3853,138 @@ Many-To-One Relationship: [msdynce_botcontent business_unit_msdynce_botcontent](
 |ReferencingEntity|`msdynce_botcontent`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdynce_botcontent`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_alertrule"></a> business_unit_msfp_alertrule
+
+Many-To-One Relationship: [msfp_alertrule business_unit_msfp_alertrule](msfp_alertrule.md#BKMK_business_unit_msfp_alertrule)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alertrule`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_alertrule`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_emailtemplate"></a> business_unit_msfp_emailtemplate
+
+Many-To-One Relationship: [msfp_emailtemplate business_unit_msfp_emailtemplate](msfp_emailtemplate.md#BKMK_business_unit_msfp_emailtemplate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_emailtemplate`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_emailtemplate`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_fileresponse"></a> business_unit_msfp_fileresponse
+
+Many-To-One Relationship: [msfp_fileresponse business_unit_msfp_fileresponse](msfp_fileresponse.md#BKMK_business_unit_msfp_fileresponse)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_fileresponse`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_fileresponse`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_localizedemailtemplate"></a> business_unit_msfp_localizedemailtemplate
+
+Many-To-One Relationship: [msfp_localizedemailtemplate business_unit_msfp_localizedemailtemplate](msfp_localizedemailtemplate.md#BKMK_business_unit_msfp_localizedemailtemplate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_localizedemailtemplate`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_localizedemailtemplate`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_project"></a> business_unit_msfp_project
+
+Many-To-One Relationship: [msfp_project business_unit_msfp_project](msfp_project.md#BKMK_business_unit_msfp_project)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_project`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_project`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_question"></a> business_unit_msfp_question
+
+Many-To-One Relationship: [msfp_question business_unit_msfp_question](msfp_question.md#BKMK_business_unit_msfp_question)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_question`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_question`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_questionresponse"></a> business_unit_msfp_questionresponse
+
+Many-To-One Relationship: [msfp_questionresponse business_unit_msfp_questionresponse](msfp_questionresponse.md#BKMK_business_unit_msfp_questionresponse)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_questionresponse`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_questionresponse`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_satisfactionmetric"></a> business_unit_msfp_satisfactionmetric
+
+Many-To-One Relationship: [msfp_satisfactionmetric business_unit_msfp_satisfactionmetric](msfp_satisfactionmetric.md#BKMK_business_unit_msfp_satisfactionmetric)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_satisfactionmetric`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_satisfactionmetric`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_survey"></a> business_unit_msfp_survey
+
+Many-To-One Relationship: [msfp_survey business_unit_msfp_survey](msfp_survey.md#BKMK_business_unit_msfp_survey)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_survey`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_survey`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_surveyreminder"></a> business_unit_msfp_surveyreminder
+
+Many-To-One Relationship: [msfp_surveyreminder business_unit_msfp_surveyreminder](msfp_surveyreminder.md#BKMK_business_unit_msfp_surveyreminder)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyreminder`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_surveyreminder`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msfp_unsubscribedrecipient"></a> business_unit_msfp_unsubscribedrecipient
+
+Many-To-One Relationship: [msfp_unsubscribedrecipient business_unit_msfp_unsubscribedrecipient](msfp_unsubscribedrecipient.md#BKMK_business_unit_msfp_unsubscribedrecipient)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_unsubscribedrecipient`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msfp_unsubscribedrecipient`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -4330,6 +4504,18 @@ Many-To-One Relationship: [sideloadedaiplugin business_unit_sideloadedaiplugin](
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_signal"></a> business_unit_signal
+
+Many-To-One Relationship: [signal business_unit_signal](signal.md#BKMK_business_unit_signal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`signal`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_signal`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_slabase"></a> business_unit_slabase
 
 Many-To-One Relationship: [sla business_unit_slabase](sla.md#BKMK_business_unit_slabase)
@@ -4460,6 +4646,18 @@ Many-To-One Relationship: [template business_unit_templates](template.md#BKMK_bu
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_templates`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_trait"></a> business_unit_trait
+
+Many-To-One Relationship: [trait business_unit_trait](trait.md#BKMK_business_unit_trait)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`trait`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_trait`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
@@ -4759,6 +4957,42 @@ Many-To-One Relationship: [chat chat_businessunit_owningbusinessunit](chat.md#BK
 |ReferencingEntity|`chat`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`chat_businessunit_owningbusinessunit`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_alert_businessunit_owningbusinessunit"></a> msfp_alert_businessunit_owningbusinessunit
+
+Many-To-One Relationship: [msfp_alert msfp_alert_businessunit_owningbusinessunit](msfp_alert.md#BKMK_msfp_alert_businessunit_owningbusinessunit)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`msfp_alert_businessunit_owningbusinessunit`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyinvite_businessunit_owningbusinessunit"></a> msfp_surveyinvite_businessunit_owningbusinessunit
+
+Many-To-One Relationship: [msfp_surveyinvite msfp_surveyinvite_businessunit_owningbusinessunit](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_businessunit_owningbusinessunit)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyinvite_businessunit_owningbusinessunit`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msfp_surveyresponse_businessunit_owningbusinessunit"></a> msfp_surveyresponse_businessunit_owningbusinessunit
+
+Many-To-One Relationship: [msfp_surveyresponse msfp_surveyresponse_businessunit_owningbusinessunit](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_businessunit_owningbusinessunit)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`msfp_surveyresponse_businessunit_owningbusinessunit`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
