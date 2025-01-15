@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preview)
 description: Learn how to use Copilot to quickly generate well-written text that can be used in text boxes in apps made with Power Apps.
-ms.date: 11/26/2024
+ms.date: 01/15/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -70,8 +70,12 @@ You can turn off text assistance for an app or an environment using a PowerShell
 > - The PowerShell cmdlets might take up to two hours to take effect.
 
 ### Turn off text assistance for an app
+You can turn off this setting for an app through the maker portal.
+1. In the app list, select the three dots to the right of the app that you want to change the setting for.
+2. Select **Settings**.
+3. Turn off the switch titled **Text assistance in the web player (preview)**.
 
-You can use a PowerShell cmdlet to turn off this setting for an app.
+You can also use a PowerShell cmdlet to turn off this setting for an app.
 
 To turn off for an app using PowerShell:
 

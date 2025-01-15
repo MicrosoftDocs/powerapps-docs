@@ -21,7 +21,7 @@ contributors:
 This article covers how to export your ideas data from your Microsoft Teams database to another location so you can archive and report on it.
 
 Watch this video to learn how to export ideas for reporting:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvT]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=cff4e3a1-ad8d-4a4c-b050-0430ff9420d6]
 
 ## Prerequisites
 
