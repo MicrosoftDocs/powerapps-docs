@@ -40,7 +40,7 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 -  Custom - users are able to specify a valid date format using a string, i.e.: "MM/YY", "dd/mm/yyyy"
 
 ### Limitation
-Short, LongAbbreviated, and YearMonth options are currently experiencing issues. No changes on the maker's end are needed to resolve the problem, the control will resume its regular functionality once the fix is completed. If needed, the same formatting can be achieved using the custom format option.
+Short and YearMonth options are currently experiencing issues. No changes on the maker's end are needed to resolve the problem, the control will resume its regular functionality once the fix is completed. If needed, the same formatting can be achieved using the custom format option.
 
 **AccessibleLabel** – Label for screen readers.
 
