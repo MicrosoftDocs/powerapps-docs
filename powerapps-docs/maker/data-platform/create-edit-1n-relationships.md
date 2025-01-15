@@ -27,7 +27,7 @@ In Microsoft Dataverse a one-to-many (1:N) or many-to-one (N:1) relationship def
 Before you create a custom table relationship, evaluate whether using an existing table relationship would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
 Watch this video for a quick overview about how to create a table, a table relationship, and columns:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLPQb]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=19b21a48-4a49-4163-8506-7fb79f3290ef]
 
 You create and edit table relationships, including one-to-many and many-to-one relationships, in Power Apps.
 

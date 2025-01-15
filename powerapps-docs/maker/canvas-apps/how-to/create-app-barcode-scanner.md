@@ -29,7 +29,7 @@ Some of the common uses of barcode reader control in a canvas app are:
 In this article, we'll create a canvas app with barcode reader and display scanned items in a gallery.
 
 Watch this video to learn how to create an app with barcode reader:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=8714cb52-ce37-452c-bc47-1af24b1f6b93]
 
 ## Prerequisites
 

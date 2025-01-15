@@ -4,9 +4,9 @@ description: Learn how to turn on Copilot chat in model-driven apps to help app 
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
-ms.author: mijosh
+ms.author: yogupt
 ms.reviewer: matp
-ms.date: 09/16/2024
+ms.date: 12/05/2024
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -96,10 +96,10 @@ To provide feedback to help us improve Copilot's responses, app users can select
 1. **Copilot for app users** allows users to retrieve information from Dataverse through read-only operations. This means that users can only view data that matches their queries and can't make any changes to the data.
 1. Create, update, or other generic actions such as enable or disable Copilot and create a memo aren't supported.
 1. [Summarization](/dynamics365/sales/copilot-overview#record-summarization) skill feature is available in [Dynamics 365 Sales copilot](/dynamics365/sales/copilot-overview) and not in **Copilot for app user**.
-1. **Copilot for app users** is not supported with the Power Apps mobile app.
+1. **Copilot for app users** isn't supported with the Power Apps mobile app.
 
 ## Related information
-
+- [Customize Copilot chat in model-driven apps](../model-driven-apps/customize-copilot-chat.md)
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)

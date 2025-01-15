@@ -1,7 +1,7 @@
 ---
 title: "Account table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Account table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -3123,6 +3123,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Account_Letters](#BKMK_Account_Letters)
 - [Account_MailboxTrackingFolder](#BKMK_Account_MailboxTrackingFolder)
 - [account_master_account](#BKMK_account_master_account-one-to-many)
+- [account_msfp_alerts](#BKMK_account_msfp_alerts)
+- [account_msfp_surveyinvites](#BKMK_account_msfp_surveyinvites)
+- [account_msfp_surveyresponses](#BKMK_account_msfp_surveyresponses)
 - [account_parent_account](#BKMK_account_parent_account-one-to-many)
 - [Account_Phonecalls](#BKMK_Account_Phonecalls)
 - [account_PostFollows](#BKMK_account_PostFollows)
@@ -3406,6 +3409,42 @@ Many-To-One Relationship: [account account_master_account](#BKMK_account_master_
 |ReferencedEntityNavigationPropertyName|`account_master_account`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_account_msfp_alerts"></a> account_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert account_msfp_alerts](msfp_alert.md#BKMK_account_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`account_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_account_msfp_surveyinvites"></a> account_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite account_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_account_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`account_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_account_msfp_surveyresponses"></a> account_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse account_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_account_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`account_msfp_surveyresponses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
 
 ### <a name="BKMK_account_parent_account-one-to-many"></a> account_parent_account
 

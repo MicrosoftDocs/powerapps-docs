@@ -25,7 +25,7 @@ This integration can also be used to grant access to app functionality based on 
 In this article, we'll create a Power Apps app with a button with administrative access on it. The visibility of the button will depend on whether the user is a member of the admin group or not.
 
 Watch this video to learn how to integrate Power Apps app with Azure Active Directory:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DW]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9fabda9a-e9b5-43af-addd-a27d3f381f18]
 
 ## Prerequisites
 

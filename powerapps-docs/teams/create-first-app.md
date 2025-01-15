@@ -28,7 +28,7 @@ Creating an app in Microsoft Teams is a quick and easy 3-step process.
 ![Create your first app in 3 steps.](media/create-your-first-app.png "Create your first app in 3 steps")
 
 Watch this video to learn how to create your first app.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEmEP]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=3e63d41c-d4eb-411e-b99a-7cc87bb2992d]
 Ensure you refer to the [latest steps](#create-your-first-table) when creating the table.
 
 Now let's go through each step in detail.
