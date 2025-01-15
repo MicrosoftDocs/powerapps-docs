@@ -40,7 +40,7 @@ Adding a Date Picker control instead of a Text input control ensures the user sp
 - Custom - users are able to specify a valid date format using a string, i.e.: "MM/YY", "dd/mm/yyyy"
 
   > [!NOTE]
-  > There are issues with the Short and YearMonth options. The problem is resolved without requiring any changes from the maker's end. Once fixed, the control resumes its regular functionality. If necessary, use the custom format option to achieve the same formatting.
+  > There are issues with the **Short** and **YearMonth** options. The problem is resolved without requiring any changes from the maker's end. Once fixed, the control resumes its regular functionality. If necessary, use the custom format option to achieve the same formatting.
 
 **AccessibleLabel** – Label for screen readers.
 
