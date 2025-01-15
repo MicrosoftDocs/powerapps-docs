@@ -1,7 +1,7 @@
 ---
 title: "card table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the card table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -858,6 +858,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [card_PrincipalObjectAttributeAccesses](#BKMK_card_PrincipalObjectAttributeAccesses)
 - [card_ProcessSession](#BKMK_card_ProcessSession)
 - [card_SyncErrors](#BKMK_card_SyncErrors)
+- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
 
 ### <a name="BKMK_card_AsyncOperations"></a> card_AsyncOperations
 
@@ -954,6 +955,18 @@ Many-To-One Relationship: [syncerror card_SyncErrors](syncerror.md#BKMK_card_Syn
 |ReferencedEntityNavigationPropertyName|`card_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
+
+Many-To-One Relationship: [msdyn_formmapping msdyn_formmapping_cardid](msdyn_formmapping.md#BKMK_msdyn_formmapping_cardid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_formmapping`|
+|ReferencingAttribute|`cardid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_formmapping_cardid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 ## Many-to-Many relationships

@@ -27,7 +27,7 @@ Components are reusable building blocks for canvas apps so that app makers can c
 Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. Components also reduce duplication of efforts by eliminating the need to copy/paste controls and improve performance. Components also help create collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
 
 Watch this video to learn how to use components in canvas apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLlkO]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7ec063b0-df8e-4cf8-b407-72ce6132115f]
 
 ## Components in canvas apps
 

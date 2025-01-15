@@ -29,7 +29,7 @@ Teams and Power Platform give you many options in the ways that you can notify p
 - Channel posts
 
 Watch this video to learn how to add notifications to make your apps collaborative:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLaWd]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c17e7bd1-aa38-434e-8120-e26b90cb3618]
 
 ## Choose the right notification type
 

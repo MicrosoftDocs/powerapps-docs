@@ -1,7 +1,7 @@
 ---
 title: "Data Lake Workspace (datalakeworkspace) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Data Lake Workspace (datalakeworkspace) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -270,7 +270,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`whitelistedappid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ## Read-only columns/attributes
 
@@ -651,7 +650,6 @@ One-To-Many Relationship: [organization organization_datalakeworkspace](organiza
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-
 ## One-to-Many relationships
 
 These relationships are one-to-many. Listed by **SchemaName**.
@@ -774,10 +772,8 @@ Many-To-One Relationship: [datalakeworkspacepermission datalakeworkspace_workspa
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-
-
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)
 <xref:Microsoft.Dynamics.CRM.datalakeworkspace?displayProperty=fullName>

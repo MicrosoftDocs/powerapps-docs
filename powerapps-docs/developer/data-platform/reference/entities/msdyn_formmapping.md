@@ -1,7 +1,7 @@
 ---
 title: "Form Mapping (msdyn_FormMapping) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Form Mapping (msdyn_FormMapping) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -129,7 +129,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`cardid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets||
+|Targets|card|
 
 ### <a name="BKMK_CustomApiId"></a> CustomApiId
 
@@ -664,6 +664,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_formmapping_createdonbehalfby](#BKMK_lk_msdyn_formmapping_createdonbehalfby)
 - [lk_msdyn_formmapping_modifiedby](#BKMK_lk_msdyn_formmapping_modifiedby)
 - [lk_msdyn_formmapping_modifiedonbehalfby](#BKMK_lk_msdyn_formmapping_modifiedonbehalfby)
+- [msdyn_formmapping_cardid](#BKMK_msdyn_formmapping_cardid)
 - [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
 - [team_msdyn_formmapping](#BKMK_team_msdyn_formmapping)
@@ -733,6 +734,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_formmapping_modifiedonbehalfby](s
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_formmapping_cardid"></a> msdyn_formmapping_cardid
+
+One-To-Many Relationship: [card msdyn_formmapping_cardid](card.md#BKMK_msdyn_formmapping_cardid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`card`|
+|ReferencedAttribute|`cardid`|
+|ReferencingAttribute|`cardid`|
+|ReferencingEntityNavigationPropertyName|`cardid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_formmapping_customapiid"></a> msdyn_formmapping_customapiid
 

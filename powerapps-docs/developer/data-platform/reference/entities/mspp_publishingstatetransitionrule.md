@@ -1,7 +1,7 @@
 ---
 title: "Publishing State Transition Rule (mspp_publishingstatetransitionrule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Publishing State Transition Rule (mspp_publishingstatetransitionrule) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -341,6 +341,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [mspp_publishingstatetransitionrule_Emails](#BKMK_mspp_publishingstatetransitionrule_Emails)
 - [mspp_publishingstatetransitionrule_Faxes](#BKMK_mspp_publishingstatetransitionrule_Faxes)
 - [mspp_publishingstatetransitionrule_Letters](#BKMK_mspp_publishingstatetransitionrule_Letters)
+- [mspp_publishingstatetransitionrule_msfp_alerts](#BKMK_mspp_publishingstatetransitionrule_msfp_alerts)
+- [mspp_publishingstatetransitionrule_msfp_surveyinvites](#BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites)
+- [mspp_publishingstatetransitionrule_msfp_surveyresponses](#BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses)
 - [mspp_publishingstatetransitionrule_PhoneCalls](#BKMK_mspp_publishingstatetransitionrule_PhoneCalls)
 - [mspp_publishingstatetransitionrule_RecurringAppointmentMasters](#BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters)
 - [mspp_publishingstatetransitionrule_SocialActivities](#BKMK_mspp_publishingstatetransitionrule_SocialActivities)
@@ -463,6 +466,42 @@ Many-To-One Relationship: [letter mspp_publishingstatetransitionrule_Letters](le
 |ReferencingEntity|`letter`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`mspp_publishingstatetransitionrule_Letters`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_alerts"></a> mspp_publishingstatetransitionrule_msfp_alerts
+
+Many-To-One Relationship: [msfp_alert mspp_publishingstatetransitionrule_msfp_alerts](msfp_alert.md#BKMK_mspp_publishingstatetransitionrule_msfp_alerts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_alert`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_publishingstatetransitionrule_msfp_alerts`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites"></a> mspp_publishingstatetransitionrule_msfp_surveyinvites
+
+Many-To-One Relationship: [msfp_surveyinvite mspp_publishingstatetransitionrule_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_publishingstatetransitionrule_msfp_surveyinvites)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyinvite`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_publishingstatetransitionrule_msfp_surveyinvites`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses"></a> mspp_publishingstatetransitionrule_msfp_surveyresponses
+
+Many-To-One Relationship: [msfp_surveyresponse mspp_publishingstatetransitionrule_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_publishingstatetransitionrule_msfp_surveyresponses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msfp_surveyresponse`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mspp_publishingstatetransitionrule_msfp_surveyresponses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

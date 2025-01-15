@@ -1,7 +1,7 @@
 ---
 title: "Custom API (CustomAPI) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Custom API (CustomAPI) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
+ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -957,6 +957,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [customapi_MailboxTrackingFolders](#BKMK_customapi_MailboxTrackingFolders)
+- [customapi_msdyn_function_customapi](#BKMK_customapi_msdyn_function_customapi)
 - [customapi_plugin_CustomAPI](#BKMK_customapi_plugin_CustomAPI)
 - [customapi_PrincipalObjectAttributeAccesses](#BKMK_customapi_PrincipalObjectAttributeAccesses)
 - [customapi_ProcessSession](#BKMK_customapi_ProcessSession)
@@ -1051,6 +1052,18 @@ Many-To-One Relationship: [mailboxtrackingfolder customapi_MailboxTrackingFolder
 |ReferencedEntityNavigationPropertyName|`customapi_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_customapi_msdyn_function_customapi"></a> customapi_msdyn_function_customapi
+
+Many-To-One Relationship: [msdyn_function customapi_msdyn_function_customapi](msdyn_function.md#BKMK_customapi_msdyn_function_customapi)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_function`|
+|ReferencingAttribute|`customapi`|
+|ReferencedEntityNavigationPropertyName|`customapi_msdyn_function_customapi`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_customapi_plugin_CustomAPI"></a> customapi_plugin_CustomAPI
 

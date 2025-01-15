@@ -26,7 +26,7 @@ There are four different types of table ownership. When you create a table, the 
 ## Create a table
 
 Watch this video for a quick overview about how to create a table in Dataverse for Teams:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NNw1]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a7b07bc4-1e08-4ed9-8675-b700a8e1a6a3]
 
 1. Sign in to Teams, and then select the link for **Power Apps**.
    > [!div class="mx-imgBorder"] 
