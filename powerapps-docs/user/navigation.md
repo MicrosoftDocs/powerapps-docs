@@ -66,6 +66,10 @@ Legend
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows. This is limited to displaying the last 10 rows of pages most recently loaded across apps for the user within this organization.
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list. The number of pinned rows displayed is limited to 25, but no more than 15 rows from a single table are displayed. 
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
+
+    > [!NOTE]
+    > When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigations to dashboards will take the user to the default dashboard, which may be a differet dashboard than the named dashboard the user selected.   
+
 6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
