@@ -68,7 +68,7 @@ Legend
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
 
     > [!NOTE]
-    > When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigations to dashboards will take the user to the default dashboard, which may be a differet dashboard than the named dashboard the user selected.   
+    > When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigations to dashboards will take the user to the default dashboard, which may be a different dashboard than the named dashboard the user selected.   
 
 6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
