@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/15/2024
+ms.date: 01/15/2025
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -54,12 +54,11 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 >
-> By selecting **Link to Microsoft Fabric**, the system adds all non-system Dataverse tables that have the **Track changes** property enabled. You can add more tables later.
+> By selecting **Link to Microsoft Fabric**, the system adds all nonsystem Dataverse tables that have the **Track changes** property enabled. You can add more tables later.
 >
-> If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and re-link existing environments), all tables will be added.  
->  
-> Enabling this feature might result in an increase in *Dataverse database* storage consumption. View additional storage consumption in Power Platform admin center.
+> If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and relink existing environments), all tables are added.  
 >
+> Enabling this feature results in an increase in *Dataverse database* storage consumption. You can view additional storage consumption as additional files in the [environment storage capacity details view](/power-platform/admin/capacity-storage#environment-storage-capacity-details) in Power Platform admin center. For an example, you notice an additional file `Account-Amalytics` if you selected the `Account` table for Fabric link. Also note that the chart only displays tables consuming hightest storage. You can get a list of tables using the menu on top right of the chart.
 
 ## Comparing Link to Fabric with Azure Synapse Link for Dataverse
 
@@ -96,7 +95,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
    >
 
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
-4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or country as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
+4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
 5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
 6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
 7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](#troubleshooting-common-issues) if you don't see the desired workspace.  
@@ -168,7 +167,7 @@ When you select **Link to Microsoft Fabric**, a Dataverse generated Azure Synaps
 
 ### Explore the Dataverse generated Azure Synapse Analytics lakehouse
 
-The tables you selected are added to the Azure Synapse Analytics lakehouse and displayed in Power BI as shown below. These tables are linked to your Power Platform environment using **Dataverse shortcuts**. As data changes in Dataverse, the Dataverse shortcuts in Fabric reflect the latest data.
+The tables you selected are added to the Azure Synapse Analytics lakehouse and displayed in Power BI as shown here. These tables are linked to your Power Platform environment using **Dataverse shortcuts**. As data changes in Dataverse, the Dataverse shortcuts in Fabric reflect the latest data.
 
 ![Dataverse generated Synapse lakehouse](media/fabric/fabric-with-dv-shortcuts-shown.png)
 
