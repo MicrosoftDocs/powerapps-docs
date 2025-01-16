@@ -14,14 +14,13 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Text input modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Text input modern control in Power Apps
 
 A box in which the user can type text, numbers, and other data.
 
