@@ -25,7 +25,6 @@ You can use Copilot to quickly generate well-written text to use as input text i
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly write a prompt to generate content or jot down some ideas and have Copilot refine the grammar and flow. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
-
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected. Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -64,7 +63,6 @@ When trying to quickly input text into multiline text boxes or rich text editors
 You can turn off text assistance for an app or an environment using a PowerShell cmdlet.
 
 > [!NOTE]
-
 > - When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 > - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
 > - The PowerShell cmdlets might take up to two hours to take effect.
