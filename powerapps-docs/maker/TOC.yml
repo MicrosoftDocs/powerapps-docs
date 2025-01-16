@@ -522,7 +522,7 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Text 
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
-             name: Text input
+            - name: Text input
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
