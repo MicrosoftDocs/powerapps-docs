@@ -127,12 +127,16 @@ You can create more complex filter expressions by looking at examples from [Cons
 - Opening this form in the Power Apps form designer won't show the control in a meaningful way. This is because the control is customized outside of the form designer.
 - Users will be authenticated into Power BI automatically with their Power Apps username and password. If a Power BI account with matching credentials doesn’t exist, a sign-in prompt is displayed as illustrated here. 
 
-> [!div class="mx-imgBorder"] 
-  ```
-  No data will display if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
-  ```
-> [!div class="mx-imgBorder"] 
-> [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"] 
+   > ![Power BI sign in prompt.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-1.png "Power BI sign in prompt")
+   
+    No data will display if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
+  
+   > [!div class="mx-imgBorder"] 
+   > ![Sign in to Power BI service.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-2.png "Sign in to Power BI service")
+   
+   > [!div class="mx-imgBorder"] 
+   > ![User that is signed in doesn't have appropriate permission.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "User that is signed in doesn't have appropriate permission")
 
 - The view of the report data shown inside Power Apps is the same as Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
