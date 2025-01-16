@@ -69,7 +69,7 @@ To save without publishing, on the app designer command bar, select **Save**.
 
 To save and publish, on the app designer command bar, select **Publish**.
 
-### Create an app description with Copilot (preview)
+## Create an app description with Copilot (preview)
 
 [This section is prerelease documentation and is subject to change.]
 
@@ -90,6 +90,16 @@ When you save and publish your app, on the **Publish** dialog box select, **Crea
 You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
 
 For information that describes the AI impact of Power Apps generate app descriptions with Copilot feature, go to [FAQ for generate app descriptions with Copilot](../common/ai-app-descriptions-faq.md).
+
+### Enable or disable AI-generated app descriptions
+The app AI-generated descriptions are managed by an independent setting in the Power Platform Admin Center.
+   1. Open https://admin.powerplatform.microsoft.com/environments
+   1. Select an environment
+   1. Click **Edit managed environments**
+   1. Under the section titled "Enable AI-generated app descriptions (preview)", check or uncheck **AI-generated app descriptions**
+   1. Click **Save**
+
+Clear browser cache and close any active maker portal browser windows. Now the feature should be enabled or disabled as desired.
 
 ## Run your app on a desktop computer
 
