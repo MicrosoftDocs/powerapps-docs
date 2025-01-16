@@ -522,6 +522,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Text 
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
+            - name: Text input
+              href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
             - name: Avatar (preview)
@@ -538,8 +540,6 @@
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-table.md
-            - name: Text input (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
             - name: List of controls and properties
