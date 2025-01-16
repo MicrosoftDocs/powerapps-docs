@@ -4,7 +4,7 @@ description: " Learn how to add a custom page to a model-driven app"
 ms.date: 01/16/2025
 ms.reviewer: "matp"
 ms.subservice: mda-maker
-ms.topic: "How-to"
+ms.topic: "how-to"
 author: "aorth"
 ms.author: "aorth"
 search.audienceType: 
