@@ -28,7 +28,7 @@ To learn more about Power BI reports and dashboards, go to [Create reports and d
 
 This procedure shows you how to set up a Power BI embedded page for a single environment connected to a Power BI workspace.
 
-1. Select **Solutions** on the left navigation pane in [Power Apps](make.powerapps.com), and then create or open an existing solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Solutions** on the left navigation pane in Power Apps (make.powerapps.com), and then create or open an existing solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select **New** > **Dashboards** > **Power BI embedded**.
 
