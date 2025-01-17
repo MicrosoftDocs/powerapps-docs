@@ -87,22 +87,22 @@ The canvas app control looks for the canvas app first by using the *unique* name
 4. In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5. Using the column pane, add a required column, such as **Account Name**.
    > [!IMPORTANT]
-   > Always use a required column that is guaranteed to have a value. If your column does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
+   > Always use a required column that is guaranteed to have a value. If your column doesn't have a value, your embedded canvas app won't refresh in response to any change in data on the host model-driven form.
 6. With the column selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
 7. On the **Column Properties** dialog box, select the **Controls** tab.
 8. On the **Controls** tab, select **Add Control**.
 9. On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 10. On the **Column Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 11. In the section below the controls list, the lists of properties available to the canvas app control are displayed.
-    - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that contains the column you added in an earlier step.
+    - The **Table name** property specifies the table that provides the data to your embedded canvas app. It is set to the table that contains the column you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It's meant only to serve as a reference for you.
-    - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
+    - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control uses the App ID to load the canvas app. Enter the App Name for an existing canvas app.
     - The **App ID** property specifies the ID of the embedded canvas app. You can enter an App ID for an existing canvas app or an App ID will be automatically generated and filled-in for you when you create or edit a canvas app by selecting **Customize**. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
 
      > [!NOTE]
      > Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
      >
-     > If neither the App Name or App ID match an existing canvas app, the form displays the message "Sorry, we didn't find that app."
+     > If neither the App Name or App ID matches an existing canvas app, the form displays the message "Sorry, we didn't find that app."
 
 12. Go to step 20 if you're adding a completed canvas app. If you're creating a new or editing an existing canvas app, continue to follow these steps. Select **Customize** to create or edit a canvas app. This opens Power Apps Studio in a new tab.
    > [!NOTE]
@@ -127,7 +127,7 @@ The canvas app control looks for the canvas app first by using the *unique* name
   > [!IMPORTANT]
   >
   > - The form designer has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
-  > - Make sure the App name has a value similar to the screenshot below. The App name property specifies the unique name that will be used to reference the canvas app at runtime. If this name isn’t set, the App ID property will be used to reference the canvas app, which may cause issues when you import the canvas app as part of a solution. We recommend that you set this name to ensure proper canvas app referencing between environments. To set it, go back to step 12 and follow the steps to create the canvas app to embed.
+  > - Make sure the App name has a value similar to the screenshot here. The App name property specifies the unique name that is used to reference the canvas app at runtime. If this name isn’t set, the App ID property is used to reference the canvas app, which might cause issues when you import the canvas app as part of a solution. We recommend that you set this name to ensure proper canvas app referencing between environments. To set it, go back to step 12 and follow the steps to create the canvas app to embed.
 
    <img src="media/embed-canvas-field-properties.png" alt="App name and App Id properties" height="600" width="400">
 
