@@ -10,16 +10,12 @@ ms.author: "aorth"
 search.audienceType: 
   - maker
 ---
-# Add a custom page to your model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add a custom page to your model-driven app
 
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
 > [!IMPORTANT]
->
-> - This is a preview feature.
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 This article walks you through opening a model-driven apps in the app designer, which you use to add a custom page to a model-driven app. If you need to create a new model-driven app, go to [Create a model-driven app with the app designer](create-model-driven-app.md).
 
