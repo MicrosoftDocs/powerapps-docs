@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/12/2023
+ms.date: 01/16/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -44,10 +44,7 @@ Before you can send system-generated logs from an app, you need to create an App
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation pane. From your list of apps, select any app and open it.
-
-   > [!NOTE]
-   > You can also [create](open-and-run-a-sample-app.md) a new app.
+1. Open an app for [editing](edit-app.md).
 
 1. Select the **App** object in the left navigation tree view and paste the **Connection string** from your Application Insights resource:
 
