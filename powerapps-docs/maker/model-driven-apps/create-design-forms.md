@@ -94,7 +94,7 @@ By default all forms are made available to users. However, through the app desig
 
 ### Change the forms displayed and form order
 
-Makers change the forms displayed in an app from the app designer. More information: [Manage forms](create-add-remove-forms-views-dashboards.md#manage-forms)
+Makers change the forms displayed in an app from the app designer. More information: [Add or remove forms from an app](create-add-remove-forms-views-dashboards.md#add-or-remove-forms-from-an-app)
 
 Makers can also change the form order, fallback forms, and the default form for a table from the Forms area. More information:  [Set the form order](assign-form-order.md#set-the-form-order)
 
