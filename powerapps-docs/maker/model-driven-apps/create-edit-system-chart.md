@@ -51,6 +51,9 @@ In this article you learn how to create a system chart. System charts are organi
 
 The **Number of employees by account** chart is now displayed in the app designer list of charts available for the account table.
 
+> [!Note]
+> When creating a chart, you have the option to preview it with a selected view. The view is not permanently associated with the chart. The next time you open the chart, it will be displayed using the configured default view. You can change the view to see the chart for the data from a different view.
+
 ## View your visualization in a model-driven app
 
 Now that the chart has been created, it can be used to visualize table data in the model-driven app. Follow these steps to view the chart:
