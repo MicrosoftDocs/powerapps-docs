@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 6/13/2024
+ms.date: 01/20/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -72,35 +72,38 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
    - **Secondary app(s)**: Optional other apps that you can bundle the same build for mobile app package along with the Primary app.
 
      > [!div class="mx-imgBorder"] 
-     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps.png "Choose the apps to wrap")
+     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps-updated.png "Choose the apps to wrap")
   
      > [!NOTE]
-     > You can use the same Primary app in multiple wrap projects.
+     > - You can use the same Primary app in multiple wrap projects.
+     > - In the wrap wizard, if the **Primary app** name appears incorrect, proceed to the next step and then return to see the correct name.
 
 2.  Select **Next**.
 
-### Step 2: Target platform 
+### Step 2: Register app
 
-1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
+On the **Register your app** screen, register your application manually in Azure to establish a trust relationship between your app and the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
+
+Your app must be registered in Microsoft Entra so that your app users can sign in. If you have already registered, find your registration in the owned registration field.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
+
+#### Alternative way to register app
+
+- Select **New app registration** to create a new registration for your app automatically.
+- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you selected Android as one of the platforms while creating and building your wrap project.
 
     > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
+    > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
 
-2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
+   > [!div class="mx-imgBorder"]
+   > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
 
-3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
+The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
-
-You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
-  
-   - [Code sign for iOS](code-sign-ios.md)
-   - [Code sign for Android](code-sign-android.md) 
-   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-
-4.  Select **Next**.
+> [!NOTE]
+> In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
 
 ### Step 3: Configure branding
 
@@ -109,31 +112,37 @@ You can also code sign your mobile app package manually instead of using automat
      > [!NOTE]
      > All the images must be in .png format. A default image will be used if no custom images are selected.
    
-   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024px by 1024px .png image or larger. Recommended image size for Android: 432px by 432px .png image or larger. 
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger. 
    - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
    - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
    
-
-
 3.  Select **Next**.
 
-### Step 4: Register app
+### Step 4: Target platform 
 
-On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Microsoft Entra so that your app users can sign in. 
+1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
-#### New app registration
+    > [!NOTE]
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
 
-Select **New app registration** to create a new registration for your app automatically.
+2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Create a new app registration.](media/how-to-v2/new-app-reg.png "New app registration")
+3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and select **Next**. 
+If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
 
-You can also create a **new app registration** manually. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
+     > [!div class="mx-imgBorder"] 
+     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms-updated.png "Select target platforms")
 
-The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
+  
+   - [Code sign for iOS](code-sign-ios.md)
+   - [Code sign for Android](code-sign-android.md) 
+   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+
+4.  Select **Next**.
 
 ### Step 5: Manage output
 
@@ -173,7 +182,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 
 > [!IMPORTANT]
-> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
+> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type isn't yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
 ## Configure the API permissions for your app manually (optional)
