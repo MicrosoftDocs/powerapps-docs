@@ -36,7 +36,7 @@ You can customize a main form XML `controls` node so that it can host an embedde
     - Update the label and name of your subgrid in the form designer.
 
     >  [!div class="mx-imgBorder"] 
-    >  ![Power BI embed placeholder](media/embed-powerbi-report-in-system-form/{c492b074-894e-466d-b607-f66f11c0f5a5}.png "Power BI embed placeholder")
+    >  ![Power BI embed placeholder](media/embed-powerbi-report-in-system-form/embed-powerbi-report-placeholder.png "Power BI embed placeholder")
 
 3. Export the solution as unmanaged and extract all files in the solution package zip file. Then, edit the customizations.xml file and find the name of your subgrid. Replace the XML code provided inside the `<control>` block in the customizations.xml file. The `rowspan` in the parent `cell` node can be adjusted to change the size of the embedded Power BI report.
 
