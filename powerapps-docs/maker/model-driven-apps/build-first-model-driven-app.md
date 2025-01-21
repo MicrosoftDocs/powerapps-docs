@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app with Power Apps"
 description: "Learn how to build your first model driven app with Power Apps"
-ms.date: 10/01/2024
+ms.date: 01/21/2025
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -78,11 +78,11 @@ If your app is in a [managed environment](/power-platform/admin/managed-environm
 > [!IMPORTANT]
 >
 > - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability  may be subject to usage limits or capacity throttling.
+> - This capability is in process of rolling out, and might not be available in your region yet.
+> - This capability  might be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
 When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.
@@ -92,14 +92,15 @@ You can also generate an app description by going to, **Settings** > **General**
 For information that describes the AI impact of Power Apps generate app descriptions with Copilot feature, go to [FAQ for generate app descriptions with Copilot](../common/ai-app-descriptions-faq.md).
 
 ### Enable or disable AI-generated app descriptions
-The app AI-generated descriptions are managed by an independent setting in the Power Platform Admin Center.
-   1. Open https://admin.powerplatform.microsoft.com/environments
-   1. Select an environment
-   1. Click **Edit managed environments**
-   1. Under the section titled "Enable AI-generated app descriptions (preview)", check or uncheck **AI-generated app descriptions**
-   1. Click **Save**
 
-Clear browser cache and close any active maker portal browser windows. Now the feature should be enabled or disabled as desired.
+App AI-generated descriptions are managed by a setting in the Power Platform admin center.
+
+   1. Open https://admin.powerplatform.microsoft.com/environments
+   1. Select an environment, and then select **Edit managed environments**.
+   1. Under the section titled **Enable AI-generated app descriptions**, select or clear **AI-generated app descriptions**
+   1. Select **Save**.
+
+Clear the browser cache and close any active Power Apps (make.powerapps.com) browser windows. The feature is now be enabled or disabled.
 
 ## Run your app on a desktop computer
 
