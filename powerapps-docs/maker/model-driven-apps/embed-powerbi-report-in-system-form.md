@@ -1,12 +1,13 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 08/08/2024
+ms.date: 01/21/2025
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
 ms.author: "srihas"
 ms.reviewer: "matp"
+contributors: jasongre
 search.audienceType: 
   - maker
 ---
@@ -18,7 +19,7 @@ You can use Power BI reports in Power Apps model-driven apps to bring rich repor
 
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
-This feature requires exporting a solution, modifying it to replace the XML snippet, and then importing back into the environment. Be sure to import the changes on your development environment via an unmanaged solution only. See [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing unmanaged solution.
+This feature requires exporting a solution, modifying it to replace the XML snippet, and then importing back into the environment. Be sure to import the changes on your development environment via an unmanaged solution only. Go to [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing unmanaged solution.
 
 ## Embed without contextual filtering
 
@@ -31,12 +32,11 @@ You can customize a main form XML `controls` node so that it can host an embedde
 
 1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display. Choose the **Select components** option when you add the table to the solution. Then, add just the table's main form.
 
-2. Edit the table's main form in your solution and add a placeholder subgrid where you want to embed your PowerBI report.
+2. Edit the table's main form in your solution and add a placeholder subgrid where you want to embed your Power BI report.
 
     - Update the label and name of your subgrid in the form designer.
 
-    >  [!div class="mx-imgBorder"] 
-    >  ![Power BI embed placeholder](media/embed-powerbi/embed-powerbi-report-placeholder.png "Power BI embed placeholder")
+    > :::image type="content" source="media/embed-powerbi/embed-powerbi-report-placeholder.png" alt-text="Power BI embed placeholder" lightbox="media/embed-powerbi/embed-powerbi-report-placeholder.png":::
 
 3. Export the solution as unmanaged and extract all files in the solution package zip file. Then, edit the customizations.xml file and find the name of your subgrid. Replace the XML code provided inside the `<control>` block in the customizations.xml file. The `rowspan` in the parent `cell` node can be adjusted to change the size of the embedded Power BI report.
 
@@ -62,7 +62,7 @@ You can customize a main form XML `controls` node so that it can host an embedde
 
     | Property              | Description                        |
     |-------------------------|-----------------------------------|
-    |  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in My workspace,** then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
+    |  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in **My workspace**, then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
     |   **PowerBIReportId**       |    The Power BI report ID. Replace this with the report that you want to embed. You can find the ID of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
     |   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report ID (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 
@@ -134,7 +134,7 @@ You can create more complex filter expressions by looking at examples from [Cons
    > [!div class="mx-imgBorder"] 
    > ![Power BI sign in prompt.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-1.png "Power BI sign in prompt")
    
-    No data will display if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
+    No data displays if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
   
    > [!div class="mx-imgBorder"] 
    > ![Sign in to Power BI service.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-2.png "Sign in to Power BI service")
