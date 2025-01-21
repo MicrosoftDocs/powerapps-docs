@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer | MicrosoftDocs"
 description: Learn how to create a model-driven app.
 ms.custom: ""
-ms.date: 04/13/2023
+ms.date: 01/21/2025
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: get-started
@@ -15,7 +15,10 @@ ms.subservice: mda-maker
 ms.author: "emcoope"
 ms.reviewer: "matp"
 search.audienceType: 
+ms.collection: bap-ai-copilot
   - maker
+contributors:
+  - asheehi1
 ---
 # Create a model-driven app with the app designer
 
@@ -30,9 +33,9 @@ Verify the availability of the following prerequisites before you start to creat
 
 For more information, go to the following articles:
 
-- [Create an environment](/power-platform/admin/create-environment).
-- [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles).
+- [Create an environment](/power-platform/admin/create-environment)
+- [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm)
+- [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create an app
 
@@ -53,12 +56,47 @@ On the **Pages** left pane, under **Navigation** the layout for the app is displ
 
    :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane":::
 
-Notice the preview pane displays your app. Selecting a component, such as the **Accounts form**, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
+Notice the preview pane displays your app. When you select a component, such as the **Accounts form**, it affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
 :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables." lightbox="media/create-app.png":::
 
 To save and publish the app, select **Save**, and then select **Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
+
+## Create an app description with Copilot (preview)
+
+[This section is prerelease documentation and is subject to change.]
+
+If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help create a description for your app.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
+> - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability is in process of rolling out, and might not be available in your region yet.
+> - This capability  might be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+
+When you save and publish your app, on the **Publish** dialog box select **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.
+
+You can also generate an app description in app designer by going to, **Settings** > **General** tab. Under **Description** select, **Create descriptions using AI**.
+
+For information that describes the AI impact of Power Apps generate app descriptions with Copilot feature, go to [FAQ for generate app descriptions with Copilot](../common/ai-app-descriptions-faq.md).
+
+### Enable or disable AI-generated app descriptions
+
+The app AI-generated descriptions are managed by a setting in the Power Platform admin center.
+
+1. Go to https://admin.powerplatform.microsoft.com/environments.
+1. Select an environment, and then select **Edit managed environments**.
+1. Under the section titled **Enable AI-generated app descriptions**, select or clear **AI-generated app descriptions**
+1. Select **Save**.
+
+Clear the browser cache and close any activePower Apps (make.powerapps.com) browser windows. The feature is now be enabled or disabled.
 
 ## Next steps
 
