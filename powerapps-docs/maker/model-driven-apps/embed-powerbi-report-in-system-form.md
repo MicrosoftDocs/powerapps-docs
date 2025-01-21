@@ -58,6 +58,7 @@ You can customize a main form XML `controls` node so that it can host an embedde
     > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
     - Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
+   </br>
 
     | Property              | Description                        |
     |-------------------------|-----------------------------------|
