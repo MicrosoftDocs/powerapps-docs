@@ -77,9 +77,10 @@ If your app is in a [managed environment](/power-platform/admin/managed-environm
 
 > [!IMPORTANT]
 >
-> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
+> - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and might not be available in your region yet.
 > - This capability  might be subject to usage limits or capacity throttling.
