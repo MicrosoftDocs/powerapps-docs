@@ -31,7 +31,7 @@ You need the following information to get started:
 ## Generate keys
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-4-register-app).
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-2-register-app).
 
 We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
@@ -67,7 +67,7 @@ Example:
 ## Generate signature hash
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-4-register-app).
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-2-register-app).
 
 After generating the key, the **exportcert** command is used in **keytool** to export the keystore certificate.
 
@@ -80,7 +80,7 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
-Add the generated signature hash in the **Redirect URI** while [registering the app](wrap-how-to.md#step-4-register-app).
+Add the generated signature hash in the **Redirect URI** while [registering the app](wrap-how-to.md#step-2-register-app).
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 
@@ -95,7 +95,7 @@ When this error appears, try to generate the signature hash using the following 
     <br> For example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
 1. Use any available "Hexadecimal to Base64" converter to convert the copied certificate fingerprint hexadecimal value into Base64 encoded value.
     <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
-1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-4-register-app).
+1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-2-register-app).
 
 ## Sign the APK package
 

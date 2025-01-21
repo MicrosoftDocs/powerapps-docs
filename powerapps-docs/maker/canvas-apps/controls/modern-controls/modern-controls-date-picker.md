@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 1/15/2024
+ms.date: 1/16/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -40,7 +40,7 @@ Adding a Date Picker control instead of a Text input control ensures the user sp
 - Custom - Users are able to specify a valid date format using a string such as: "MM/YY", "dd/mm/yyyy"
 
   > [!NOTE]
-  > There are issues with the **Short** and **YearMonth** options. The problem is resolved without requiring any changes from the maker's end. Once fixed, the control resumes its regular functionality. If necessary, use the custom format option to achieve the same formatting.
+  > Currently there are issues with the **Short** and **YearMonth** options. We are actively working on a fix, so no action is needed from makers at this time. Once the fix is deployed, the functions will operate normally. In the meantime, you can use the custom format option to achieve the same formatting. 
 
 **AccessibleLabel** – Label for screen readers.
 
