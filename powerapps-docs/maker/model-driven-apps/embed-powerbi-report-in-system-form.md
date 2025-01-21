@@ -33,12 +33,15 @@ You can customize a main form XML `controls` node so that it can host an embedde
 
 2. Edit the table's main form in your solution and add a placeholder subgrid where you want to embed your PowerBI report.
 
-  - Update the label and name of your subgrid in the form designer.![{DE3553CE-0615-498C-AB3F-2917E66B2249}](media/embed-powerbi-report-in-system-form/{c492b074-894e-466d-b607-f66f11c0f5a5}.png)
+    - Update the label and name of your subgrid in the form designer.
+
+    >  [!div class="mx-imgBorder"] 
+    >  ![Power BI embed placeholder](media/embed-powerbi-report-in-system-form/{c492b074-894e-466d-b607-f66f11c0f5a5}.png "Power BI embed placeholder")
 
 3. Export the solution as unmanaged and extract all files in the solution package zip file. Then, edit the customizations.xml file and find the name of your subgrid. Replace the XML code provided inside the `<control>` block in the customizations.xml file. The `rowspan` in the parent `cell` node can be adjusted to change the size of the embedded Power BI report.
 
-```xml
-<cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
+    ```xml
+    <cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
 	<labels>
 		<label languagecode="1033" description="Accounts (Parent Account)"/>
 	</labels>
@@ -49,18 +52,18 @@ You can customize a main form XML `controls` node so that it can host an embedde
 			<TileUrl>https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
 		</parameters>
 	</control>
-</cell>
-```
-   > [!IMPORTANT]
-   > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
+    </cell>
+    ```
+    > [!IMPORTANT]
+    > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
-    Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
+    - Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
 
-| Property              | Description                        |
-|-------------------------|-----------------------------------|
-|  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in My workspace,** then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
-|   **PowerBIReportId**       |    The Power BI report ID. Replace this with the report that you want to embed. You can find the ID of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
-|   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report ID (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
+    | Property              | Description                        |
+    |-------------------------|-----------------------------------|
+    |  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in My workspace,** then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
+    |   **PowerBIReportId**       |    The Power BI report ID. Replace this with the report that you want to embed. You can find the ID of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
+    |   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report ID (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 
 4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the development environment.
 
