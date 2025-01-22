@@ -1,7 +1,6 @@
 ---
 title: "Mailbox Auto Tracking Folder (MailboxTrackingFolder) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox Auto Tracking Folder (MailboxTrackingFolder) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Mailbox Auto Tracking Folder (MailboxTrackingFolder) table/entity reference
+# Mailbox Auto Tracking Folder (MailboxTrackingFolder) table/entity reference (Microsoft Dataverse)
 
 Stores data about what folders for a mailbox are auto tracked
 
@@ -21,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /mailboxtrackingfolders<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /mailboxtrackingfolders(*mailboxtrackingfolderid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /mailboxtrackingfolders(*mailboxtrackingfolderid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /mailboxtrackingfolders<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: False |`PATCH` /mailboxtrackingfolders(*mailboxtrackingfolderid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -155,7 +156,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, asyncoperation, attributeimageconfig, attributemaskingrule, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, chat, comment, connectioninstance, connectionreference, connector, contact, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, enablearchivalrequest, entityanalyticsconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fabricaiskill, featurecontrolsetting, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, fxexpression, governanceconfiguration, holidaywrapper, indexattributes, internalcatalogassignment, keyvaultreference, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_apirequestcache, msdyn_apirequestfolder, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_historicalcaseharvestbatch, msdyn_historicalcaseharvestrun, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeharvestjobrecord, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msfp_alert, msfp_alertrule, msfp_emailtemplate, msfp_fileresponse, msfp_localizedemailtemplate, msfp_project, msfp_question, msfp_questionresponse, msfp_satisfactionmetric, msfp_survey, msfp_surveyinvite, msfp_surveyreminder, msfp_surveyresponse, msfp_unsubscribedrecipient, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processstageparameter, provisionlanguageforuser, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recyclebinconfig, relationshipattribute, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sideloadedaiplugin, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuserauthorizationchangetracker, tdsmetadata, teammobileofflineprofilemembership, territory, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiinsightcard, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, asyncoperation, attributeimageconfig, attributemaskingrule, attributepicklistvalue, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, chat, comment, connectioninstance, connectionreference, connector, contact, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, enablearchivalrequest, entityanalyticsconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fabricaiskill, featurecontrolsetting, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, fxexpression, governanceconfiguration, holidaywrapper, indexattributes, internalcatalogassignment, keyvaultreference, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processorregistration, processstageparameter, provisionlanguageforuser, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recyclebinconfig, relationshipattribute, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointmanagedidentity, sideloadedaiplugin, signalregistration, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuserauthorizationchangetracker, tdsmetadata, teammobileofflineprofilemembership, territory, traitregistration, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workqueue, workqueueitem|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -364,6 +365,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [adx_setting_MailboxTrackingFolders](#BKMK_adx_setting_MailboxTrackingFolders)
 - [adx_webformsession_MailboxTrackingFolders](#BKMK_adx_webformsession_MailboxTrackingFolders)
 - [aicopilot_MailboxTrackingFolders](#BKMK_aicopilot_MailboxTrackingFolders)
+- [aiinsightcard_MailboxTrackingFolders](#BKMK_aiinsightcard_MailboxTrackingFolders)
 - [aiplugin_MailboxTrackingFolders](#BKMK_aiplugin_MailboxTrackingFolders)
 - [aipluginauth_MailboxTrackingFolders](#BKMK_aipluginauth_MailboxTrackingFolders)
 - [aipluginconversationstarter_MailboxTrackingFolders](#BKMK_aipluginconversationstarter_MailboxTrackingFolders)
@@ -378,7 +380,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_MailboxTrackingFolders](#BKMK_aipluginoperationresponsetemplate_MailboxTrackingFolders)
 - [aiplugintitle_MailboxTrackingFolders](#BKMK_aiplugintitle_MailboxTrackingFolders)
 - [aipluginusersetting_MailboxTrackingFolders](#BKMK_aipluginusersetting_MailboxTrackingFolders)
-- [aiskillconfig_MailboxTrackingFolders](#BKMK_aiskillconfig_MailboxTrackingFolders)
 - [appaction_MailboxTrackingFolders](#BKMK_appaction_MailboxTrackingFolders)
 - [appactionmigration_MailboxTrackingFolders](#BKMK_appactionmigration_MailboxTrackingFolders)
 - [appactionrule_MailboxTrackingFolders](#BKMK_appactionrule_MailboxTrackingFolders)
@@ -387,6 +388,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [AsyncOperation_MailboxTrackingFolder](#BKMK_AsyncOperation_MailboxTrackingFolder)
 - [attributeimageconfig_MailboxTrackingFolders](#BKMK_attributeimageconfig_MailboxTrackingFolders)
 - [attributemaskingrule_MailboxTrackingFolders](#BKMK_attributemaskingrule_MailboxTrackingFolders)
+- [attributepicklistvalue_MailboxTrackingFolders](#BKMK_attributepicklistvalue_MailboxTrackingFolders)
 - [bot_MailboxTrackingFolders](#BKMK_bot_MailboxTrackingFolders)
 - [botcomponent_MailboxTrackingFolders](#BKMK_botcomponent_MailboxTrackingFolders)
 - [botcomponentcollection_MailboxTrackingFolders](#BKMK_botcomponentcollection_MailboxTrackingFolders)
@@ -479,8 +481,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_analysisoverride_MailboxTrackingFolders](#BKMK_msdyn_analysisoverride_MailboxTrackingFolders)
 - [msdyn_analysisresult_MailboxTrackingFolders](#BKMK_msdyn_analysisresult_MailboxTrackingFolders)
 - [msdyn_analysisresultdetail_MailboxTrackingFolders](#BKMK_msdyn_analysisresultdetail_MailboxTrackingFolders)
-- [msdyn_apirequestcache_MailboxTrackingFolders](#BKMK_msdyn_apirequestcache_MailboxTrackingFolders)
-- [msdyn_apirequestfolder_MailboxTrackingFolders](#BKMK_msdyn_apirequestfolder_MailboxTrackingFolders)
 - [msdyn_appinsightsmetadata_MailboxTrackingFolders](#BKMK_msdyn_appinsightsmetadata_MailboxTrackingFolders)
 - [msdyn_copilotinteractions_MailboxTrackingFolders](#BKMK_msdyn_copilotinteractions_MailboxTrackingFolders)
 - [msdyn_customcontrolextendedsettings_MailboxTrackingFolders](#BKMK_msdyn_customcontrolextendedsettings_MailboxTrackingFolders)
@@ -511,8 +511,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_formmapping_MailboxTrackingFolders](#BKMK_msdyn_formmapping_MailboxTrackingFolders)
 - [msdyn_function_MailboxTrackingFolders](#BKMK_msdyn_function_MailboxTrackingFolders)
 - [msdyn_helppage_MailboxTrackingFolders](#BKMK_msdyn_helppage_MailboxTrackingFolders)
-- [msdyn_historicalcaseharvestbatch_MailboxTrackingFolders](#BKMK_msdyn_historicalcaseharvestbatch_MailboxTrackingFolders)
-- [msdyn_historicalcaseharvestrun_MailboxTrackingFolders](#BKMK_msdyn_historicalcaseharvestrun_MailboxTrackingFolders)
 - [msdyn_insightsstorevirtualentity_MailboxTrackingFolders](#BKMK_msdyn_insightsstorevirtualentity_MailboxTrackingFolders)
 - [msdyn_integratedsearchprovider_MailboxTrackingFolders](#BKMK_msdyn_integratedsearchprovider_MailboxTrackingFolders)
 - [msdyn_kalanguagesetting_MailboxTrackingFolders](#BKMK_msdyn_kalanguagesetting_MailboxTrackingFolders)
@@ -523,7 +521,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_knowledgearticletemplate_MailboxTrackingFolders](#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders)
 - [msdyn_knowledgeassetconfiguration_MailboxTrackingFolders](#BKMK_msdyn_knowledgeassetconfiguration_MailboxTrackingFolders)
 - [msdyn_knowledgeconfiguration_MailboxTrackingFolders](#BKMK_msdyn_knowledgeconfiguration_MailboxTrackingFolders)
-- [msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders](#BKMK_msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders)
 - [msdyn_knowledgeinteractioninsight_MailboxTrackingFolders](#BKMK_msdyn_knowledgeinteractioninsight_MailboxTrackingFolders)
 - [msdyn_knowledgemanagementsetting_MailboxTrackingFolders](#BKMK_msdyn_knowledgemanagementsetting_MailboxTrackingFolders)
 - [msdyn_knowledgepersonalfilter_MailboxTrackingFolders](#BKMK_msdyn_knowledgepersonalfilter_MailboxTrackingFolders)
@@ -558,20 +555,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_virtualtablecolumncandidate_MailboxTrackingFolders](#BKMK_msdyn_virtualtablecolumncandidate_MailboxTrackingFolders)
 - [msdyn_workflowactionstatus_MailboxTrackingFolders](#BKMK_msdyn_workflowactionstatus_MailboxTrackingFolders)
 - [msdynce_botcontent_MailboxTrackingFolders](#BKMK_msdynce_botcontent_MailboxTrackingFolders)
-- [msfp_alert_MailboxTrackingFolders](#BKMK_msfp_alert_MailboxTrackingFolders)
-- [msfp_alertrule_MailboxTrackingFolders](#BKMK_msfp_alertrule_MailboxTrackingFolders)
-- [msfp_emailtemplate_MailboxTrackingFolders](#BKMK_msfp_emailtemplate_MailboxTrackingFolders)
-- [msfp_fileresponse_MailboxTrackingFolders](#BKMK_msfp_fileresponse_MailboxTrackingFolders)
-- [msfp_localizedemailtemplate_MailboxTrackingFolders](#BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders)
-- [msfp_project_MailboxTrackingFolders](#BKMK_msfp_project_MailboxTrackingFolders)
-- [msfp_question_MailboxTrackingFolders](#BKMK_msfp_question_MailboxTrackingFolders)
-- [msfp_questionresponse_MailboxTrackingFolders](#BKMK_msfp_questionresponse_MailboxTrackingFolders)
-- [msfp_satisfactionmetric_MailboxTrackingFolders](#BKMK_msfp_satisfactionmetric_MailboxTrackingFolders)
-- [msfp_survey_MailboxTrackingFolders](#BKMK_msfp_survey_MailboxTrackingFolders)
-- [msfp_surveyinvite_MailboxTrackingFolders](#BKMK_msfp_surveyinvite_MailboxTrackingFolders)
-- [msfp_surveyreminder_MailboxTrackingFolders](#BKMK_msfp_surveyreminder_MailboxTrackingFolders)
-- [msfp_surveyresponse_MailboxTrackingFolders](#BKMK_msfp_surveyresponse_MailboxTrackingFolders)
-- [msfp_unsubscribedrecipient_MailboxTrackingFolders](#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders)
 - [msgraphresourcetosubscription_MailboxTrackingFolders](#BKMK_msgraphresourcetosubscription_MailboxTrackingFolders)
 - [mspcat_catalogsubmissionfiles_MailboxTrackingFolders](#BKMK_mspcat_catalogsubmissionfiles_MailboxTrackingFolders)
 - [mspcat_packagestore_MailboxTrackingFolders](#BKMK_mspcat_packagestore_MailboxTrackingFolders)
@@ -603,6 +586,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [privilegecheckerlog_MailboxTrackingFolders](#BKMK_privilegecheckerlog_MailboxTrackingFolders)
 - [privilegecheckerrun_MailboxTrackingFolders](#BKMK_privilegecheckerrun_MailboxTrackingFolders)
 - [privilegesremovalsetting_MailboxTrackingFolders](#BKMK_privilegesremovalsetting_MailboxTrackingFolders)
+- [processorregistration_MailboxTrackingFolders](#BKMK_processorregistration_MailboxTrackingFolders)
 - [processstageparameter_MailboxTrackingFolders](#BKMK_processstageparameter_MailboxTrackingFolders)
 - [provisionlanguageforuser_MailboxTrackingFolders](#BKMK_provisionlanguageforuser_MailboxTrackingFolders)
 - [recordfilter_MailboxTrackingFolders](#BKMK_recordfilter_MailboxTrackingFolders)
@@ -625,7 +609,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [sharedobject_MailboxTrackingFolders](#BKMK_sharedobject_MailboxTrackingFolders)
 - [sharedworkspace_MailboxTrackingFolders](#BKMK_sharedworkspace_MailboxTrackingFolders)
 - [sharedworkspacepool_MailboxTrackingFolders](#BKMK_sharedworkspacepool_MailboxTrackingFolders)
+- [sharepointmanagedidentity_MailboxTrackingFolders](#BKMK_sharepointmanagedidentity_MailboxTrackingFolders)
 - [sideloadedaiplugin_MailboxTrackingFolders](#BKMK_sideloadedaiplugin_MailboxTrackingFolders)
+- [signalregistration_MailboxTrackingFolders](#BKMK_signalregistration_MailboxTrackingFolders)
 - [solutioncomponentattributeconfiguration_MailboxTrackingFolders](#BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders)
 - [solutioncomponentbatchconfiguration_MailboxTrackingFolders](#BKMK_solutioncomponentbatchconfiguration_MailboxTrackingFolders)
 - [solutioncomponentconfiguration_MailboxTrackingFolders](#BKMK_solutioncomponentconfiguration_MailboxTrackingFolders)
@@ -645,6 +631,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [team_mailboxtrackingfolder](#BKMK_team_mailboxtrackingfolder)
 - [teammobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders)
 - [territory_MailboxTrackingFolders](#BKMK_territory_MailboxTrackingFolders)
+- [traitregistration_MailboxTrackingFolders](#BKMK_traitregistration_MailboxTrackingFolders)
 - [usermobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders)
 - [userrating_MailboxTrackingFolders](#BKMK_userrating_MailboxTrackingFolders)
 - [viewasexamplequestion_MailboxTrackingFolders](#BKMK_viewasexamplequestion_MailboxTrackingFolders)
@@ -767,6 +754,19 @@ One-To-Many Relationship: [aicopilot aicopilot_MailboxTrackingFolders](aicopilot
 |ReferencedAttribute|`aicopilotid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aicopilot`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_aiinsightcard_MailboxTrackingFolders"></a> aiinsightcard_MailboxTrackingFolders
+
+One-To-Many Relationship: [aiinsightcard aiinsightcard_MailboxTrackingFolders](aiinsightcard.md#BKMK_aiinsightcard_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`aiinsightcard`|
+|ReferencedAttribute|`aiinsightcardid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiinsightcard`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -952,19 +952,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_MailboxTracki
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_aiskillconfig_MailboxTrackingFolders"></a> aiskillconfig_MailboxTrackingFolders
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_MailboxTrackingFolders](aiskillconfig.md#BKMK_aiskillconfig_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiskillconfig`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_appaction_MailboxTrackingFolders"></a> appaction_MailboxTrackingFolders
 
 One-To-Many Relationship: [appaction appaction_MailboxTrackingFolders](appaction.md#BKMK_appaction_MailboxTrackingFolders)
@@ -1066,6 +1053,19 @@ One-To-Many Relationship: [attributemaskingrule attributemaskingrule_MailboxTrac
 |ReferencedAttribute|`attributemaskingruleid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_attributemaskingrule`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_attributepicklistvalue_MailboxTrackingFolders"></a> attributepicklistvalue_MailboxTrackingFolders
+
+One-To-Many Relationship: [attributepicklistvalue attributepicklistvalue_MailboxTrackingFolders](attributepicklistvalue.md#BKMK_attributepicklistvalue_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`attributepicklistvalue`|
+|ReferencedAttribute|`attributepicklistvalueid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_attributepicklistvalue`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -2265,32 +2265,6 @@ One-To-Many Relationship: [msdyn_analysisresultdetail msdyn_analysisresultdetail
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msdyn_apirequestcache_MailboxTrackingFolders"></a> msdyn_apirequestcache_MailboxTrackingFolders
-
-One-To-Many Relationship: [msdyn_apirequestcache msdyn_apirequestcache_MailboxTrackingFolders](msdyn_apirequestcache.md#BKMK_msdyn_apirequestcache_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_apirequestcache`|
-|ReferencedAttribute|`msdyn_apirequestcacheid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_apirequestcache`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_apirequestfolder_MailboxTrackingFolders"></a> msdyn_apirequestfolder_MailboxTrackingFolders
-
-One-To-Many Relationship: [msdyn_apirequestfolder msdyn_apirequestfolder_MailboxTrackingFolders](msdyn_apirequestfolder.md#BKMK_msdyn_apirequestfolder_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_apirequestfolder`|
-|ReferencedAttribute|`msdyn_apirequestfolderid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_apirequestfolder`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_msdyn_appinsightsmetadata_MailboxTrackingFolders"></a> msdyn_appinsightsmetadata_MailboxTrackingFolders
 
 One-To-Many Relationship: [msdyn_appinsightsmetadata msdyn_appinsightsmetadata_MailboxTrackingFolders](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_MailboxTrackingFolders)
@@ -2681,32 +2655,6 @@ One-To-Many Relationship: [msdyn_helppage msdyn_helppage_MailboxTrackingFolders]
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msdyn_historicalcaseharvestbatch_MailboxTrackingFolders"></a> msdyn_historicalcaseharvestbatch_MailboxTrackingFolders
-
-One-To-Many Relationship: [msdyn_historicalcaseharvestbatch msdyn_historicalcaseharvestbatch_MailboxTrackingFolders](msdyn_historicalcaseharvestbatch.md#BKMK_msdyn_historicalcaseharvestbatch_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_historicalcaseharvestbatch`|
-|ReferencedAttribute|`msdyn_historicalcaseharvestbatchid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_historicalcaseharvestbatch`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_historicalcaseharvestrun_MailboxTrackingFolders"></a> msdyn_historicalcaseharvestrun_MailboxTrackingFolders
-
-One-To-Many Relationship: [msdyn_historicalcaseharvestrun msdyn_historicalcaseharvestrun_MailboxTrackingFolders](msdyn_historicalcaseharvestrun.md#BKMK_msdyn_historicalcaseharvestrun_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_historicalcaseharvestrun`|
-|ReferencedAttribute|`msdyn_historicalcaseharvestrunid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_historicalcaseharvestrun`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_msdyn_insightsstorevirtualentity_MailboxTrackingFolders"></a> msdyn_insightsstorevirtualentity_MailboxTrackingFolders
 
 One-To-Many Relationship: [msdyn_insightsstorevirtualentity msdyn_insightsstorevirtualentity_MailboxTrackingFolders](msdyn_insightsstorevirtualentity.md#BKMK_msdyn_insightsstorevirtualentity_MailboxTrackingFolders)
@@ -2834,19 +2782,6 @@ One-To-Many Relationship: [msdyn_knowledgeconfiguration msdyn_knowledgeconfigura
 |ReferencedAttribute|`msdyn_knowledgeconfigurationid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_knowledgeconfiguration`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders"></a> msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders
-
-One-To-Many Relationship: [msdyn_knowledgeharvestjobrecord msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders](msdyn_knowledgeharvestjobrecord.md#BKMK_msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_knowledgeharvestjobrecord`|
-|ReferencedAttribute|`msdyn_knowledgeharvestjobrecordid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_knowledgeharvestjobrecord`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3292,188 +3227,6 @@ One-To-Many Relationship: [msdynce_botcontent msdynce_botcontent_MailboxTracking
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_MailboxTrackingFolders"></a> msfp_alert_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_alert msfp_alert_MailboxTrackingFolders](msfp_alert.md#BKMK_msfp_alert_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_alertrule_MailboxTrackingFolders"></a> msfp_alertrule_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_alertrule msfp_alertrule_MailboxTrackingFolders](msfp_alertrule.md#BKMK_msfp_alertrule_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alertrule`|
-|ReferencedAttribute|`msfp_alertruleid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alertrule`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_emailtemplate_MailboxTrackingFolders"></a> msfp_emailtemplate_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_emailtemplate msfp_emailtemplate_MailboxTrackingFolders](msfp_emailtemplate.md#BKMK_msfp_emailtemplate_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_emailtemplate`|
-|ReferencedAttribute|`msfp_emailtemplateid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_emailtemplate`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_fileresponse_MailboxTrackingFolders"></a> msfp_fileresponse_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_fileresponse msfp_fileresponse_MailboxTrackingFolders](msfp_fileresponse.md#BKMK_msfp_fileresponse_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_fileresponse`|
-|ReferencedAttribute|`msfp_fileresponseid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_fileresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders"></a> msfp_localizedemailtemplate_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_localizedemailtemplate msfp_localizedemailtemplate_MailboxTrackingFolders](msfp_localizedemailtemplate.md#BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_localizedemailtemplate`|
-|ReferencedAttribute|`msfp_localizedemailtemplateid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_localizedemailtemplate`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_project_MailboxTrackingFolders"></a> msfp_project_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_project msfp_project_MailboxTrackingFolders](msfp_project.md#BKMK_msfp_project_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_project`|
-|ReferencedAttribute|`msfp_projectid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_project`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_question_MailboxTrackingFolders"></a> msfp_question_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_question msfp_question_MailboxTrackingFolders](msfp_question.md#BKMK_msfp_question_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_question`|
-|ReferencedAttribute|`msfp_questionid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_question`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_questionresponse_MailboxTrackingFolders"></a> msfp_questionresponse_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_questionresponse msfp_questionresponse_MailboxTrackingFolders](msfp_questionresponse.md#BKMK_msfp_questionresponse_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_questionresponse`|
-|ReferencedAttribute|`msfp_questionresponseid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_questionresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_satisfactionmetric_MailboxTrackingFolders"></a> msfp_satisfactionmetric_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_satisfactionmetric msfp_satisfactionmetric_MailboxTrackingFolders](msfp_satisfactionmetric.md#BKMK_msfp_satisfactionmetric_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_satisfactionmetric`|
-|ReferencedAttribute|`msfp_satisfactionmetricid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_satisfactionmetric`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_survey_MailboxTrackingFolders"></a> msfp_survey_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_survey msfp_survey_MailboxTrackingFolders](msfp_survey.md#BKMK_msfp_survey_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_survey`|
-|ReferencedAttribute|`msfp_surveyid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_survey`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_MailboxTrackingFolders"></a> msfp_surveyinvite_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_MailboxTrackingFolders](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyreminder_MailboxTrackingFolders"></a> msfp_surveyreminder_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_surveyreminder msfp_surveyreminder_MailboxTrackingFolders](msfp_surveyreminder.md#BKMK_msfp_surveyreminder_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyreminder`|
-|ReferencedAttribute|`msfp_surveyreminderid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyreminder`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_MailboxTrackingFolders"></a> msfp_surveyresponse_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_MailboxTrackingFolders](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders"></a> msfp_unsubscribedrecipient_MailboxTrackingFolders
-
-One-To-Many Relationship: [msfp_unsubscribedrecipient msfp_unsubscribedrecipient_MailboxTrackingFolders](msfp_unsubscribedrecipient.md#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_unsubscribedrecipient`|
-|ReferencedAttribute|`msfp_unsubscribedrecipientid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_unsubscribedrecipient`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_msgraphresourcetosubscription_MailboxTrackingFolders"></a> msgraphresourcetosubscription_MailboxTrackingFolders
 
 One-To-Many Relationship: [msgraphresourcetosubscription msgraphresourcetosubscription_MailboxTrackingFolders](msgraphresourcetosubscription.md#BKMK_msgraphresourcetosubscription_MailboxTrackingFolders)
@@ -3877,6 +3630,19 @@ One-To-Many Relationship: [privilegesremovalsetting privilegesremovalsetting_Mai
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_processorregistration_MailboxTrackingFolders"></a> processorregistration_MailboxTrackingFolders
+
+One-To-Many Relationship: [processorregistration processorregistration_MailboxTrackingFolders](processorregistration.md#BKMK_processorregistration_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processorregistration`|
+|ReferencedAttribute|`processorregistrationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_processorregistration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_processstageparameter_MailboxTrackingFolders"></a> processstageparameter_MailboxTrackingFolders
 
 One-To-Many Relationship: [processstageparameter processstageparameter_MailboxTrackingFolders](processstageparameter.md#BKMK_processstageparameter_MailboxTrackingFolders)
@@ -4163,6 +3929,19 @@ One-To-Many Relationship: [sharedworkspacepool sharedworkspacepool_MailboxTracki
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_sharepointmanagedidentity_MailboxTrackingFolders"></a> sharepointmanagedidentity_MailboxTrackingFolders
+
+One-To-Many Relationship: [sharepointmanagedidentity sharepointmanagedidentity_MailboxTrackingFolders](sharepointmanagedidentity.md#BKMK_sharepointmanagedidentity_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sharepointmanagedidentity`|
+|ReferencedAttribute|`sharepointmanagedidentityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_sharepointmanagedidentity`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_sideloadedaiplugin_MailboxTrackingFolders"></a> sideloadedaiplugin_MailboxTrackingFolders
 
 One-To-Many Relationship: [sideloadedaiplugin sideloadedaiplugin_MailboxTrackingFolders](sideloadedaiplugin.md#BKMK_sideloadedaiplugin_MailboxTrackingFolders)
@@ -4173,6 +3952,19 @@ One-To-Many Relationship: [sideloadedaiplugin sideloadedaiplugin_MailboxTracking
 |ReferencedAttribute|`sideloadedaipluginid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_sideloadedaiplugin`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_signalregistration_MailboxTrackingFolders"></a> signalregistration_MailboxTrackingFolders
+
+One-To-Many Relationship: [signalregistration signalregistration_MailboxTrackingFolders](signalregistration.md#BKMK_signalregistration_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`signalregistration`|
+|ReferencedAttribute|`signalregistrationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_signalregistration`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -4423,6 +4215,19 @@ One-To-Many Relationship: [territory territory_MailboxTrackingFolders](territory
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_traitregistration_MailboxTrackingFolders"></a> traitregistration_MailboxTrackingFolders
+
+One-To-Many Relationship: [traitregistration traitregistration_MailboxTrackingFolders](traitregistration.md#BKMK_traitregistration_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`traitregistration`|
+|ReferencedAttribute|`traitregistrationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_traitregistration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders"></a> usermobileofflineprofilemembership_MailboxTrackingFolders
 
 One-To-Many Relationship: [usermobileofflineprofilemembership usermobileofflineprofilemembership_MailboxTrackingFolders](usermobileofflineprofilemembership.md#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders)
@@ -4518,6 +4323,6 @@ One-To-Many Relationship: [workqueueitem workqueueitem_MailboxTrackingFolders](w
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mailboxtrackingfolder?displayProperty=fullName>

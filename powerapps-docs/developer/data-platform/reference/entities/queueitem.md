@@ -1,7 +1,6 @@
 ---
 title: "Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Queue Item (QueueItem) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Queue Item (QueueItem) table/entity reference
+# Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)
 
 A specific item in a queue, such as a case record or an activity record.
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `AddToQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.AddToQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /queueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `PickFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.PickFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
 | `ReleaseToQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ReleaseToQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
 | `RemoveFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemoveFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
@@ -101,7 +102,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
-|Targets|activitypointer, adx_inviteredemption, adx_portalcomment, appointment, chat, email, fax, knowledgearticle, letter, msdyn_knowledgearticletemplate, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, phonecall, recurringappointmentmaster, socialactivity, task|
+|Targets|activitypointer, adx_inviteredemption, adx_portalcomment, appointment, chat, email, fax, knowledgearticle, letter, msdyn_knowledgearticletemplate, phonecall, recurringappointmentmaster, socialactivity, task|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -528,13 +529,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4216|**Social Activity**|
 |4251|**Recurring Appointment**|
 |9953|**Knowledge Article**|
-|10198|**Teams chat**|
-|10214|**Knowledge Article Template**|
-|10333|**Invite Redemption**|
-|10334|**Portal Comment**|
-|10618|**Customer Voice alert**|
-|10619|**Customer Voice survey invite**|
-|10620|**Customer Voice survey response**|
+|10200|**Teams chat**|
+|10216|**Knowledge Article Template**|
+|10332|**Invite Redemption**|
+|10333|**Portal Comment**|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
@@ -650,9 +648,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_queueitembase_modifiedby](#BKMK_lk_queueitembase_modifiedby)
 - [lk_queueitembase_workerid](#BKMK_lk_queueitembase_workerid)
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
-- [msfp_alert_QueueItems](#BKMK_msfp_alert_QueueItems)
-- [msfp_surveyinvite_QueueItems](#BKMK_msfp_surveyinvite_QueueItems)
-- [msfp_surveyresponse_QueueItems](#BKMK_msfp_surveyresponse_QueueItems)
 - [organization_queueitems](#BKMK_organization_queueitems)
 - [PhoneCall_QueueItem](#BKMK_PhoneCall_QueueItem)
 - [queue_entries](#BKMK_queue_entries)
@@ -857,45 +852,6 @@ One-To-Many Relationship: [msdyn_knowledgearticletemplate msdyn_knowledgearticle
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_QueueItems"></a> msfp_alert_QueueItems
-
-One-To-Many Relationship: [msfp_alert msfp_alert_QueueItems](msfp_alert.md#BKMK_msfp_alert_QueueItems)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_QueueItems"></a> msfp_surveyinvite_QueueItems
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_QueueItems](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_QueueItems)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_QueueItems"></a> msfp_surveyresponse_QueueItems
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_QueueItems](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_QueueItems)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_organization_queueitems"></a> organization_queueitems
 
 One-To-Many Relationship: [organization organization_queueitems](organization.md#BKMK_organization_queueitems)
@@ -1075,6 +1031,6 @@ Many-To-One Relationship: [syncerror QueueItem_SyncErrors](syncerror.md#BKMK_Que
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.queueitem?displayProperty=fullName>

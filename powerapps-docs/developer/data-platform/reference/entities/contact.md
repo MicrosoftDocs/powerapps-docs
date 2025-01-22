@@ -1,7 +1,6 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Contact table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Contact table/entity reference
+# Contact table/entity reference (Microsoft Dataverse)
 
 Person with whom a business unit has a relationship, such as customer, supplier, and colleague.
 
@@ -22,9 +21,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /contacts(*contactid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /contacts<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /contacts(*contactid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: True |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Merge`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Merge?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
@@ -4507,9 +4508,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Contact_Letters](#BKMK_Contact_Letters)
 - [Contact_MailboxTrackingFolder](#BKMK_Contact_MailboxTrackingFolder)
 - [contact_master_contact](#BKMK_contact_master_contact-one-to-many)
-- [contact_msfp_alerts](#BKMK_contact_msfp_alerts)
-- [contact_msfp_surveyinvites](#BKMK_contact_msfp_surveyinvites)
-- [contact_msfp_surveyresponses](#BKMK_contact_msfp_surveyresponses)
 - [Contact_Phonecalls](#BKMK_Contact_Phonecalls)
 - [contact_PostFollows](#BKMK_contact_PostFollows)
 - [contact_PostRegardings](#BKMK_contact_PostRegardings)
@@ -4875,42 +4873,6 @@ Many-To-One Relationship: [contact contact_master_contact](#BKMK_contact_master_
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_contact_msfp_alerts"></a> contact_msfp_alerts
-
-Many-To-One Relationship: [msfp_alert contact_msfp_alerts](msfp_alert.md#BKMK_contact_msfp_alerts)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`contact_msfp_alerts`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
-
-### <a name="BKMK_contact_msfp_surveyinvites"></a> contact_msfp_surveyinvites
-
-Many-To-One Relationship: [msfp_surveyinvite contact_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_contact_msfp_surveyinvites)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`contact_msfp_surveyinvites`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
-
-### <a name="BKMK_contact_msfp_surveyresponses"></a> contact_msfp_surveyresponses
-
-Many-To-One Relationship: [msfp_surveyresponse contact_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_contact_msfp_surveyresponses)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`contact_msfp_surveyresponses`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RollupRelatedByParty`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
-
 ### <a name="BKMK_Contact_Phonecalls"></a> Contact_Phonecalls
 
 Many-To-One Relationship: [phonecall Contact_Phonecalls](phonecall.md#BKMK_Contact_Phonecalls)
@@ -5155,6 +5117,6 @@ See [powerpagecomponent powerpagecomponent_mspp_webrole_contact Many-To-Many Rel
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.contact?displayProperty=fullName>

@@ -1,7 +1,6 @@
 ---
 title: "Activity (ActivityPointer) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Activity (ActivityPointer) table/entity reference
+# Activity (ActivityPointer) table/entity reference (Microsoft Dataverse)
 
 Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.
 
@@ -21,6 +20,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /activitypointers<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Rollup`<br />Event: False |<xref:Microsoft.Dynamics.CRM.Rollup?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
@@ -1454,9 +1455,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [activity_pointer_email](#BKMK_activity_pointer_email)
 - [activity_pointer_fax](#BKMK_activity_pointer_fax)
 - [activity_pointer_letter](#BKMK_activity_pointer_letter)
-- [activity_pointer_msfp_alert](#BKMK_activity_pointer_msfp_alert)
-- [activity_pointer_msfp_surveyinvite](#BKMK_activity_pointer_msfp_surveyinvite)
-- [activity_pointer_msfp_surveyresponse](#BKMK_activity_pointer_msfp_surveyresponse)
 - [activity_pointer_phonecall](#BKMK_activity_pointer_phonecall)
 - [activity_pointer_recurrencerule](#BKMK_activity_pointer_recurrencerule)
 - [activity_pointer_recurringappointmentmaster](#BKMK_activity_pointer_recurringappointmentmaster)
@@ -1565,42 +1563,6 @@ Many-To-One Relationship: [letter activity_pointer_letter](letter.md#BKMK_activi
 |ReferencingAttribute|`activityid`|
 |ReferencedEntityNavigationPropertyName|`activity_pointer_letter`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_activity_pointer_msfp_alert"></a> activity_pointer_msfp_alert
-
-Many-To-One Relationship: [msfp_alert activity_pointer_msfp_alert](msfp_alert.md#BKMK_activity_pointer_msfp_alert)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`activityid`|
-|ReferencedEntityNavigationPropertyName|`activity_pointer_msfp_alert`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_activity_pointer_msfp_surveyinvite"></a> activity_pointer_msfp_surveyinvite
-
-Many-To-One Relationship: [msfp_surveyinvite activity_pointer_msfp_surveyinvite](msfp_surveyinvite.md#BKMK_activity_pointer_msfp_surveyinvite)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`activityid`|
-|ReferencedEntityNavigationPropertyName|`activity_pointer_msfp_surveyinvite`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_activity_pointer_msfp_surveyresponse"></a> activity_pointer_msfp_surveyresponse
-
-Many-To-One Relationship: [msfp_surveyresponse activity_pointer_msfp_surveyresponse](msfp_surveyresponse.md#BKMK_activity_pointer_msfp_surveyresponse)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`activityid`|
-|ReferencedEntityNavigationPropertyName|`activity_pointer_msfp_surveyresponse`|
-|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_activity_pointer_phonecall"></a> activity_pointer_phonecall
@@ -1763,6 +1725,6 @@ Many-To-One Relationship: [slakpiinstance slakpiinstance_activitypointer](slakpi
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.activitypointer?displayProperty=fullName>
