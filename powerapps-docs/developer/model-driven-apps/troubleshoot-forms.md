@@ -608,19 +608,10 @@ Verify where the change is coming from and if the behavior is expected or not. I
 
 ## Business required column doesn't block saving
 
-<!-- Business required columns prevent saving a form when their values are empty. However, this only works when users can see the columns on the form. It's possible for users to save records with empty values for business required columns in these scenarios:
-
-- The column is hidden from the form, either with [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or [setVisible Client API](./clientapi/reference/controls/setvisible.md).
-- The column is on a different form tab that isn't visible.
-- The user or app maker changes the column's required level with [setRequiredLevel Client API](./clientapi/reference/controls/setvisible.md).
-- The user is not using model-driven apps or Power Pages to create the record. For example, they may use Web APIs.
-
-Business required columns are a usability feature, not a data integrity feature. They are easily bypassed. If having a column with a value is critical to your business process, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead. -->
-
 Business required columns are a usability feature that help prevent users from saving a record with an empty value in that column. In model-driven apps and Power Pages, the following scenarios don't block saving a record when a required column has an empty value:
 
 - The column is hidden from the form, either because of  [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or a client-side script using the [control.setVisible Client API](clientapi/reference/controls/setVisible.md) .
-- The column is on a hidden form tab.
+- The column is on a hidden form tab or section.
 - A client-side script changes the column's required level using the [setRequiredLevel Client API](clientapi/reference/attributes/setRequiredLevel.md).
 - The user isn't using model-driven apps or Power Pages to create the record. Client applications using Dataverse APIs aren't blocked from saving records when column [AttributeMetadata.RequirementLevel](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.requiredlevel) is set to [AttributeRequiredLevel.ApplicationRequired](/dotnet/api/microsoft.xrm.sdk.metadata.attributerequiredlevel). [Learn more about column requirement level](../data-platform/entity-attribute-metadata.md#column-requirement-level)
 
