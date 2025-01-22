@@ -1,7 +1,6 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Mailbox table/entity reference
+# Mailbox table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: False |`PATCH` /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /mailboxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /mailboxes(*mailboxid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -2239,9 +2240,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Mailbox_MailboxTrackingFolder](#BKMK_Mailbox_MailboxTrackingFolder)
 - [mailbox_processsessions](#BKMK_mailbox_processsessions)
 - [Mailbox_SyncErrors](#BKMK_Mailbox_SyncErrors)
-- [msfp_alert_mailbox_sendermailboxid](#BKMK_msfp_alert_mailbox_sendermailboxid)
-- [msfp_surveyinvite_mailbox_sendermailboxid](#BKMK_msfp_surveyinvite_mailbox_sendermailboxid)
-- [msfp_surveyresponse_mailbox_sendermailboxid](#BKMK_msfp_surveyresponse_mailbox_sendermailboxid)
 - [queue_defaultmailbox_mailbox](#BKMK_queue_defaultmailbox_mailbox)
 - [systemuser_defaultmailbox_mailbox](#BKMK_systemuser_defaultmailbox_mailbox)
 - [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
@@ -2390,42 +2388,6 @@ Many-To-One Relationship: [syncerror Mailbox_SyncErrors](syncerror.md#BKMK_Mailb
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_alert_mailbox_sendermailboxid"></a> msfp_alert_mailbox_sendermailboxid
-
-Many-To-One Relationship: [msfp_alert msfp_alert_mailbox_sendermailboxid](msfp_alert.md#BKMK_msfp_alert_mailbox_sendermailboxid)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`sendermailboxid`|
-|ReferencedEntityNavigationPropertyName|`msfp_alert_mailbox_sendermailboxid`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msfp_surveyinvite_mailbox_sendermailboxid"></a> msfp_surveyinvite_mailbox_sendermailboxid
-
-Many-To-One Relationship: [msfp_surveyinvite msfp_surveyinvite_mailbox_sendermailboxid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_mailbox_sendermailboxid)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`sendermailboxid`|
-|ReferencedEntityNavigationPropertyName|`msfp_surveyinvite_mailbox_sendermailboxid`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msfp_surveyresponse_mailbox_sendermailboxid"></a> msfp_surveyresponse_mailbox_sendermailboxid
-
-Many-To-One Relationship: [msfp_surveyresponse msfp_surveyresponse_mailbox_sendermailboxid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_mailbox_sendermailboxid)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`sendermailboxid`|
-|ReferencedEntityNavigationPropertyName|`msfp_surveyresponse_mailbox_sendermailboxid`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 ### <a name="BKMK_queue_defaultmailbox_mailbox"></a> queue_defaultmailbox_mailbox
 
 Many-To-One Relationship: [queue queue_defaultmailbox_mailbox](queue.md#BKMK_queue_defaultmailbox_mailbox)
@@ -2466,6 +2428,6 @@ Many-To-One Relationship: [tracelog tracelog_Mailbox](tracelog.md#BKMK_tracelog_
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mailbox?displayProperty=fullName>

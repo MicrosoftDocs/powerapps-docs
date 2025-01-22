@@ -1,6 +1,6 @@
 ---
-title: "Entity Index (EntityIndex) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Entity Index (EntityIndex) table/entity with Microsoft Dataverse."
+title: "Option Set Value (AttributePicklistValue) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Option Set Value (AttributePicklistValue) table/entity with Microsoft Dataverse."
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -9,13 +9,13 @@ search.audienceType:
   - developer
 ---
 
-# Entity Index (EntityIndex) table/entity reference (Microsoft Dataverse)
+# Option Set Value (AttributePicklistValue) table/entity reference (Microsoft Dataverse)
 
-Metadata describing index of an entity
+Option Set Value
 
 ## Messages
 
-The following table lists the messages for the Entity Index (EntityIndex) table.
+The following table lists the messages for the Option Set Value (AttributePicklistValue) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
@@ -25,19 +25,18 @@ Messages represent operations that can be performed on the table. They may also 
 
 ## Properties
 
-The following table lists selected properties for the Entity Index (EntityIndex) table.
+The following table lists selected properties for the Option Set Value (AttributePicklistValue) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Entity Index** |
-| **DisplayCollectionName** | **Entity Indexes** |
-| **SchemaName** | `EntityIndex` |
-| **CollectionSchemaName** | `EntityIndexes` |
-| **EntitySetName** | `entityindexes`|
-| **LogicalName** | `entityindex` |
-| **LogicalCollectionName** | `entityindexes` |
-| **PrimaryIdAttribute** | `indexid` |
-| **PrimaryNameAttribute** |`name` |
+| **DisplayName** | **Option Set Value** |
+| **DisplayCollectionName** | **Option Set Values** |
+| **SchemaName** | `AttributePicklistValue` |
+| **CollectionSchemaName** | `AttributePicklistValues` |
+| **EntitySetName** | `AttributePicklistValues`|
+| **LogicalName** | `attributepicklistvalue` |
+| **LogicalCollectionName** | `AttributePicklistValues` |
+| **PrimaryIdAttribute** | `attributepicklistvalueid` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `None` |
 
@@ -45,52 +44,36 @@ The following table lists selected properties for the Entity Index (EntityIndex)
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [IndexId](#BKMK_IndexId)
-- [Name](#BKMK_Name)
-- [SequentialKeyStatus](#BKMK_SequentialKeyStatus)
+- [AttributePicklistValueId](#BKMK_AttributePicklistValueId)
+- [IsHidden](#BKMK_IsHidden)
 
-### <a name="BKMK_IndexId"></a> IndexId
+### <a name="BKMK_AttributePicklistValueId"></a> AttributePicklistValueId
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier of the index id**|
-|DisplayName|**Index Id**|
+|Description|**Unique identifier of the AttributePicklistValue**|
+|DisplayName|**AttributePicklistValue Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`indexid`|
+|LogicalName|`attributepicklistvalueid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-### <a name="BKMK_Name"></a> Name
+### <a name="BKMK_IsHidden"></a> IsHidden
 
 |Property|Value|
 |---|---|
-|Description|**Display Name**|
-|DisplayName|**Display Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`name`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|128|
-
-### <a name="BKMK_SequentialKeyStatus"></a> SequentialKeyStatus
-
-|Property|Value|
-|---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Sequential Key Status**|
+|Description|**Hides or shows the AttributePicklistValue**|
+|DisplayName|**IsHidden**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`sequentialkeystatus`|
-|RequiredLevel|None|
-|Type|Integer|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`ishidden`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`_attributepicklistvalue_ishidden`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 
 ## Read-only columns/attributes
@@ -99,7 +82,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 - [ComponentState](#BKMK_ComponentState)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [RecordId](#BKMK_RecordId)
 - [SolutionId](#BKMK_SolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -143,20 +125,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |ImeMode|Inactive|
 |SourceTypeMask|0|
 
-### <a name="BKMK_RecordId"></a> RecordId
-
-|Property|Value|
-|---|---|
-|Description|**The record id of this entity index.**|
-|DisplayName|**Record Id**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`recordid`|
-|RequiredLevel|SystemRequired|
-|Type|BigInt|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
@@ -173,7 +141,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The version number of this entity index.**|
+|Description|**The version number of this attribute picklist value.**|
 |DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -187,69 +155,69 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [entityindex_AsyncOperations](#BKMK_entityindex_AsyncOperations)
-- [entityindex_BulkDeleteFailures](#BKMK_entityindex_BulkDeleteFailures)
-- [entityindex_MailboxTrackingFolders](#BKMK_entityindex_MailboxTrackingFolders)
-- [entityindex_PrincipalObjectAttributeAccesses](#BKMK_entityindex_PrincipalObjectAttributeAccesses)
-- [entityindex_SyncErrors](#BKMK_entityindex_SyncErrors)
+- [attributepicklistvalue_AsyncOperations](#BKMK_attributepicklistvalue_AsyncOperations)
+- [attributepicklistvalue_BulkDeleteFailures](#BKMK_attributepicklistvalue_BulkDeleteFailures)
+- [attributepicklistvalue_MailboxTrackingFolders](#BKMK_attributepicklistvalue_MailboxTrackingFolders)
+- [attributepicklistvalue_PrincipalObjectAttributeAccesses](#BKMK_attributepicklistvalue_PrincipalObjectAttributeAccesses)
+- [attributepicklistvalue_SyncErrors](#BKMK_attributepicklistvalue_SyncErrors)
 
-### <a name="BKMK_entityindex_AsyncOperations"></a> entityindex_AsyncOperations
+### <a name="BKMK_attributepicklistvalue_AsyncOperations"></a> attributepicklistvalue_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation entityindex_AsyncOperations](asyncoperation.md#BKMK_entityindex_AsyncOperations)
+Many-To-One Relationship: [asyncoperation attributepicklistvalue_AsyncOperations](asyncoperation.md#BKMK_attributepicklistvalue_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`entityindex_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`attributepicklistvalue_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entityindex_BulkDeleteFailures"></a> entityindex_BulkDeleteFailures
+### <a name="BKMK_attributepicklistvalue_BulkDeleteFailures"></a> attributepicklistvalue_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure entityindex_BulkDeleteFailures](bulkdeletefailure.md#BKMK_entityindex_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure attributepicklistvalue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_attributepicklistvalue_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`entityindex_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`attributepicklistvalue_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entityindex_MailboxTrackingFolders"></a> entityindex_MailboxTrackingFolders
+### <a name="BKMK_attributepicklistvalue_MailboxTrackingFolders"></a> attributepicklistvalue_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder entityindex_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_entityindex_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder attributepicklistvalue_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_attributepicklistvalue_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`entityindex_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`attributepicklistvalue_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entityindex_PrincipalObjectAttributeAccesses"></a> entityindex_PrincipalObjectAttributeAccesses
+### <a name="BKMK_attributepicklistvalue_PrincipalObjectAttributeAccesses"></a> attributepicklistvalue_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess entityindex_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_entityindex_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess attributepicklistvalue_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_attributepicklistvalue_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`entityindex_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`attributepicklistvalue_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entityindex_SyncErrors"></a> entityindex_SyncErrors
+### <a name="BKMK_attributepicklistvalue_SyncErrors"></a> attributepicklistvalue_SyncErrors
 
-Many-To-One Relationship: [syncerror entityindex_SyncErrors](syncerror.md#BKMK_entityindex_SyncErrors)
+Many-To-One Relationship: [syncerror attributepicklistvalue_SyncErrors](syncerror.md#BKMK_attributepicklistvalue_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`entityindex_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`attributepicklistvalue_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -259,4 +227,4 @@ Many-To-One Relationship: [syncerror entityindex_SyncErrors](syncerror.md#BKMK_e
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.entityindex?displayProperty=fullName>
+
