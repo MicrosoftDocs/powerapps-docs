@@ -125,10 +125,10 @@ The following controls are available:
 
 |Grid control name  |Read-only or editable?  |Description  |
 |---------|---------|---------|
-|**Power Apps grid control (Preview)**     |  Read-only or editable   | Currently in preview, this grid control includes accessibility enhancements and will become the default grid control used in views and subgrids. This control will eventually replace all other grid controls. More information: [Power Apps grid control (preview)](the-power-apps-grid-control.md)       |
-|**Power Apps Read-Only Grid**     | Read-only    | Modern grid with accessibility enhancements released in October 2021 and became the default read-only grid experience in April 2022. More information: [Power Apps read-only grid control](power-apps-grid-control.md)       |
-|**Editable Grid**  |  Editable only    | Legacy grid control. More information: [Make model-driven app views editable using the editable grid control](make-grids-lists-editable-custom-control.md)        |
-|**Read-Only Grid**  | Read-only    |  Legacy grid control that is deprecated. More information: [ The legacy read-only grid in model-driven apps is deprecated](/power-platform/important-changes-coming#the-legacy-read-only-grid-in-model-driven-apps-is-deprecated)    |
+|**Power Apps grid control**     |  Read-only or editable   | This grid control includes accessibility enhancements and will become the default grid control used in views and subgrids. This control will eventually replace all other grid controls. More information: [Power Apps grid control](the-power-apps-grid-control.md)       |
+|**Power Apps read-only grid**     | Read-only    | Modern grid with accessibility enhancements released in October 2021 and became the default read-only grid experience in April 2022. More information: [Power Apps read-only grid control](power-apps-grid-control.md)       |
+|**Editable grid**  |  Editable only    | Legacy grid control. More information: [Make model-driven app views editable using the editable grid control](make-grids-lists-editable-custom-control.md)        |
+|**Read-only grid (deprecatd)**  | Read-only    |  Legacy grid control that is deprecated. More information: [ The legacy read-only grid in model-driven apps is deprecated](/power-platform/important-changes-coming#the-legacy-read-only-grid-in-model-driven-apps-is-deprecated)    |
 
 ## Next steps
 
