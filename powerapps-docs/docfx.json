@@ -125,6 +125,9 @@
           "PowerApps",
           "powerpages-docs"
         ]
+      },
+      "ms.date": {
+        "developer/data-platform/reference/entities/*.md": "01/21/2025"
       }
     },
     "template": [],

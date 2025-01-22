@@ -1,7 +1,6 @@
 ---
 title: "Knowledge Article Image (msdyn_knowledgearticleimage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Article Image (msdyn_knowledgearticleimage) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Knowledge Article Image (msdyn_knowledgearticleimage) table/entity reference
+# Knowledge Article Image (msdyn_knowledgearticleimage) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,9 +21,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /msdyn_knowledgearticleimages(*msdyn_knowledgearticleimageid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /msdyn_knowledgearticleimages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /msdyn_knowledgearticleimages(*msdyn_knowledgearticleimageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -65,7 +66,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_FileName](#BKMK_msdyn_FileName)
 - [msdyn_knowledgearticleimageId](#BKMK_msdyn_knowledgearticleimageId)
 - [msdyn_ParentEntityRecordID](#BKMK_msdyn_ParentEntityRecordID)
-- [msdyn_parententityrecordidIdType](#BKMK_msdyn_parententityrecordidIdType)
 - [msdyn_ParentKnowledgeArticleID](#BKMK_msdyn_ParentKnowledgeArticleID)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -129,19 +129,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_parententityrecordid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|msdyn_knowledgearticletemplate|
-
-### <a name="BKMK_msdyn_parententityrecordidIdType"></a> msdyn_parententityrecordidIdType
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`msdyn_parententityrecordididtype`|
-|RequiredLevel|None|
-|Type|EntityName|
+|Targets||
 
 ### <a name="BKMK_msdyn_ParentKnowledgeArticleID"></a> msdyn_ParentKnowledgeArticleID
 
@@ -502,7 +490,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_knowledgearticleimage_modifiedby](#BKMK_lk_msdyn_knowledgearticleimage_modifiedby)
 - [lk_msdyn_knowledgearticleimage_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgearticleimage_modifiedonbehalfby)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
-- [msdyn_knowledgearticleimage_parentknowledgetemplateid](#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
 - [owner_msdyn_knowledgearticleimage](#BKMK_owner_msdyn_knowledgearticleimage)
 - [team_msdyn_knowledgearticleimage](#BKMK_team_msdyn_knowledgearticleimage)
 - [user_msdyn_knowledgearticleimage](#BKMK_user_msdyn_knowledgearticleimage)
@@ -595,19 +582,6 @@ One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticleimage_parentkn
 |ReferencedAttribute|`knowledgearticleid`|
 |ReferencingAttribute|`msdyn_parentknowledgearticleid`|
 |ReferencingEntityNavigationPropertyName|`msdyn_parentknowledgearticleid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid"></a> msdyn_knowledgearticleimage_parentknowledgetemplateid
-
-One-To-Many Relationship: [msdyn_knowledgearticletemplate msdyn_knowledgearticleimage_parentknowledgetemplateid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticleimage_parentknowledgetemplateid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_knowledgearticletemplate`|
-|ReferencedAttribute|`msdyn_knowledgearticletemplateid`|
-|ReferencingAttribute|`msdyn_parententityrecordid`|
-|ReferencingEntityNavigationPropertyName|`msdyn_parententityrecordid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -777,6 +751,6 @@ Many-To-One Relationship: [syncerror msdyn_knowledgearticleimage_SyncErrors](syn
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_knowledgearticleimage?displayProperty=fullName>

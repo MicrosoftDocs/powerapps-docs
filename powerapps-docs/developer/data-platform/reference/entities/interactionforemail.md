@@ -1,7 +1,6 @@
 ---
 title: "Interaction for Email (InteractionForEmail) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Interaction for Email (InteractionForEmail) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Interaction for Email (InteractionForEmail) table/entity reference
+# Interaction for Email (InteractionForEmail) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,7 +20,9 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Delete`<br />Event: True |`DELETE` /interactionforemails(*interactionforemailid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RetrieveMultiple`<br />Event: True |`GET` /interactionforemails<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
@@ -780,9 +781,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [interactionforemail_adx_portalcomments](#BKMK_interactionforemail_adx_portalcomments)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
 - [interactionforemail_chats](#BKMK_interactionforemail_chats)
-- [interactionforemail_msfp_alerts](#BKMK_interactionforemail_msfp_alerts)
-- [interactionforemail_msfp_surveyinvites](#BKMK_interactionforemail_msfp_surveyinvites)
-- [interactionforemail_msfp_surveyresponses](#BKMK_interactionforemail_msfp_surveyresponses)
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
 
@@ -844,46 +842,10 @@ Many-To-One Relationship: [chat interactionforemail_chats](chat.md#BKMK_interact
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_interactionforemail_msfp_alerts"></a> interactionforemail_msfp_alerts
-
-Many-To-One Relationship: [msfp_alert interactionforemail_msfp_alerts](msfp_alert.md#BKMK_interactionforemail_msfp_alerts)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_alerts`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_interactionforemail_msfp_surveyinvites"></a> interactionforemail_msfp_surveyinvites
-
-Many-To-One Relationship: [msfp_surveyinvite interactionforemail_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_interactionforemail_msfp_surveyinvites)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_surveyinvites`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_interactionforemail_msfp_surveyresponses"></a> interactionforemail_msfp_surveyresponses
-
-Many-To-One Relationship: [msfp_surveyresponse interactionforemail_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_interactionforemail_msfp_surveyresponses)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`interactionforemail_msfp_surveyresponses`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.interactionforemail?displayProperty=fullName>

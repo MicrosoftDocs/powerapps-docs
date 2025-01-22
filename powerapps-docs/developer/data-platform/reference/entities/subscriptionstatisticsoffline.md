@@ -1,7 +1,6 @@
 ---
 title: "Subscription Statistic Offline (SubscriptionStatisticsOffline) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Subscription Statistic Offline (SubscriptionStatisticsOffline) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Subscription Statistic Offline (SubscriptionStatisticsOffline) table/entity reference
+# Subscription Statistic Offline (SubscriptionStatisticsOffline) table/entity reference (Microsoft Dataverse)
 
 Subscription Statistic Offline
 
@@ -86,6 +85,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.subscriptionstatisticsoffline?displayProperty=fullName>

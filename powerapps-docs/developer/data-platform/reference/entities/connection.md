@@ -1,7 +1,6 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Connection table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Connection table/entity reference
+# Connection table/entity reference (Microsoft Dataverse)
 
 Relationship between two entities.
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /connections(*connectionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /connections<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /connections(*connectionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: True |`GET` /connections(*connectionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -223,7 +224,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`record1id`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
+|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
 
 ### <a name="BKMK_Record1IdObjectTypeCode"></a> Record1IdObjectTypeCode
 
@@ -261,7 +262,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`record2id`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
+|Targets|account, activitypointer, adx_invitation, adx_inviteredemption, appointment, channelaccessprofilerule, contact, email, fax, goal, knowledgearticle, knowledgebaserecord, letter, mspp_publishingstatetransitionrule, mspp_shortcut, mspp_website, phonecall, position, processsession, recurringappointmentmaster, socialactivity, socialprofile, systemuser, task, team, territory|
 
 ### <a name="BKMK_Record2IdObjectTypeCode"></a> Record2IdObjectTypeCode
 
@@ -661,14 +662,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10332|**Invitation**|
-|10333|**Invite Redemption**|
-|10352|**Publishing State Transition Rule**|
-|10354|**Shortcut**|
-|10366|**Website**|
-|10618|**Customer Voice alert**|
-|10619|**Customer Voice survey invite**|
-|10620|**Customer Voice survey response**|
+|10331|**Invitation**|
+|10332|**Invite Redemption**|
+|10351|**Publishing State Transition Rule**|
+|10353|**Shortcut**|
+|10365|**Website**|
 
 ### <a name="BKMK_Record2ObjectTypeCode"></a> Record2ObjectTypeCode
 
@@ -709,14 +707,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10332|**Invitation**|
-|10333|**Invite Redemption**|
-|10352|**Publishing State Transition Rule**|
-|10354|**Shortcut**|
-|10366|**Website**|
-|10618|**Customer Voice alert**|
-|10619|**Customer Voice survey invite**|
-|10620|**Customer Voice survey response**|
+|10331|**Invitation**|
+|10332|**Invite Redemption**|
+|10351|**Publishing State Transition Rule**|
+|10353|**Shortcut**|
+|10365|**Website**|
 
 ### <a name="BKMK_RelatedConnectionId"></a> RelatedConnectionId
 
@@ -781,12 +776,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_connectionbase_createdonbehalfby](#BKMK_lk_connectionbase_createdonbehalfby)
 - [lk_connectionbase_modifiedonbehalfby](#BKMK_lk_connectionbase_modifiedonbehalfby)
 - [modifiedby_connection](#BKMK_modifiedby_connection)
-- [msfp_alert_connections1](#BKMK_msfp_alert_connections1)
-- [msfp_alert_connections2](#BKMK_msfp_alert_connections2)
-- [msfp_surveyinvite_connections1](#BKMK_msfp_surveyinvite_connections1)
-- [msfp_surveyinvite_connections2](#BKMK_msfp_surveyinvite_connections2)
-- [msfp_surveyresponse_connections1](#BKMK_msfp_surveyresponse_connections1)
-- [msfp_surveyresponse_connections2](#BKMK_msfp_surveyresponse_connections2)
 - [mspp_publishingstatetransitionrule_connections1](#BKMK_mspp_publishingstatetransitionrule_connections1)
 - [mspp_publishingstatetransitionrule_connections2](#BKMK_mspp_publishingstatetransitionrule_connections2)
 - [mspp_shortcut_connections1](#BKMK_mspp_shortcut_connections1)
@@ -1232,84 +1221,6 @@ One-To-Many Relationship: [systemuser modifiedby_connection](systemuser.md#BKMK_
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_connections1"></a> msfp_alert_connections1
-
-One-To-Many Relationship: [msfp_alert msfp_alert_connections1](msfp_alert.md#BKMK_msfp_alert_connections1)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record1id`|
-|ReferencingEntityNavigationPropertyName|`record1id_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_alert_connections2"></a> msfp_alert_connections2
-
-One-To-Many Relationship: [msfp_alert msfp_alert_connections2](msfp_alert.md#BKMK_msfp_alert_connections2)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record2id`|
-|ReferencingEntityNavigationPropertyName|`record2id_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_connections1"></a> msfp_surveyinvite_connections1
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_connections1](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_connections1)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record1id`|
-|ReferencingEntityNavigationPropertyName|`record1id_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_connections2"></a> msfp_surveyinvite_connections2
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_connections2](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_connections2)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record2id`|
-|ReferencingEntityNavigationPropertyName|`record2id_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_connections1"></a> msfp_surveyresponse_connections1
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_connections1](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_connections1)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record1id`|
-|ReferencingEntityNavigationPropertyName|`record1id_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_connections2"></a> msfp_surveyresponse_connections2
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_connections2](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_connections2)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`record2id`|
-|ReferencingEntityNavigationPropertyName|`record2id_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_mspp_publishingstatetransitionrule_connections1"></a> mspp_publishingstatetransitionrule_connections1
 
 One-To-Many Relationship: [mspp_publishingstatetransitionrule mspp_publishingstatetransitionrule_connections1](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_connections1)
@@ -1749,6 +1660,6 @@ Many-To-One Relationship: [syncerror Connection_SyncErrors](syncerror.md#BKMK_Co
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.connection?displayProperty=fullName>

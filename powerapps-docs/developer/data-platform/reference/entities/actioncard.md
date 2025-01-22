@@ -1,7 +1,6 @@
 ---
 title: "Action Card (ActionCard) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Action Card (ActionCard) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Action Card (ActionCard) table/entity reference
+# Action Card (ActionCard) table/entity reference (Microsoft Dataverse)
 
 Action card entity to show action cards.
 
@@ -21,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /actioncards<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /actioncards(*actioncardid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /actioncards(*actioncardid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /actioncards<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /actioncards(*actioncardid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -346,7 +347,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_inviteredemption, adx_portalcomment, appointment, chat, contact, email, fax, letter, msfp_alert, msfp_surveyinvite, msfp_surveyresponse, phonecall, recurringappointmentmaster, task|
+|Targets|account, adx_inviteredemption, adx_portalcomment, appointment, chat, contact, email, fax, letter, phonecall, recurringappointmentmaster, task|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -693,9 +694,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_actioncardbase_createdonbehalfby](#BKMK_lk_actioncardbase_createdonbehalfby)
 - [lk_actioncardbase_modifiedby](#BKMK_lk_actioncardbase_modifiedby)
 - [lk_actioncardbase_modifiedonbehalfby](#BKMK_lk_actioncardbase_modifiedonbehalfby)
-- [msfp_alert_ActionCards](#BKMK_msfp_alert_ActionCards)
-- [msfp_surveyinvite_ActionCards](#BKMK_msfp_surveyinvite_ActionCards)
-- [msfp_surveyresponse_ActionCards](#BKMK_msfp_surveyresponse_ActionCards)
 - [owner_actioncards](#BKMK_owner_actioncards)
 - [phonecall_actioncard](#BKMK_phonecall_actioncard)
 - [recurringappointmentmaster_actioncard](#BKMK_recurringappointmentmaster_actioncard)
@@ -884,45 +882,6 @@ One-To-Many Relationship: [systemuser lk_actioncardbase_modifiedonbehalfby](syst
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_ActionCards"></a> msfp_alert_ActionCards
-
-One-To-Many Relationship: [msfp_alert msfp_alert_ActionCards](msfp_alert.md#BKMK_msfp_alert_ActionCards)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_ActionCards"></a> msfp_surveyinvite_ActionCards
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_ActionCards](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_ActionCards)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_ActionCards"></a> msfp_surveyresponse_ActionCards
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_ActionCards](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_ActionCards)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_owner_actioncards"></a> owner_actioncards
 
 One-To-Many Relationship: [owner owner_actioncards](owner.md#BKMK_owner_actioncards)
@@ -1009,6 +968,6 @@ Many-To-One Relationship: [actioncarduserstate ActionCardUserState_ActionCard](a
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.actioncard?displayProperty=fullName>
