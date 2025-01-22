@@ -228,7 +228,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_PrincipalObjectAttributeAccesses](#BKMK_aipluginoperationresponsetemplate_PrincipalObjectAttributeAccesses)
 - [aiplugintitle_PrincipalObjectAttributeAccesses](#BKMK_aiplugintitle_PrincipalObjectAttributeAccesses)
 - [aipluginusersetting_PrincipalObjectAttributeAccesses](#BKMK_aipluginusersetting_PrincipalObjectAttributeAccesses)
-- [aiskillconfig_PrincipalObjectAttributeAccesses](#BKMK_aiskillconfig_PrincipalObjectAttributeAccesses)
 - [appaction_PrincipalObjectAttributeAccesses](#BKMK_appaction_PrincipalObjectAttributeAccesses)
 - [appactionmigration_PrincipalObjectAttributeAccesses](#BKMK_appactionmigration_PrincipalObjectAttributeAccesses)
 - [appactionrule_PrincipalObjectAttributeAccesses](#BKMK_appactionrule_PrincipalObjectAttributeAccesses)
@@ -818,19 +817,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_PrincipalObje
 |ReferencedAttribute|`aipluginusersettingid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_aipluginusersetting`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiskillconfig_PrincipalObjectAttributeAccesses"></a> aiskillconfig_PrincipalObjectAttributeAccesses
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_PrincipalObjectAttributeAccesses](aiskillconfig.md#BKMK_aiskillconfig_PrincipalObjectAttributeAccesses)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_aiskillconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

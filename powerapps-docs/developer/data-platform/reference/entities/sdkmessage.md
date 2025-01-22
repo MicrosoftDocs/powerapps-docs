@@ -622,23 +622,10 @@ One-To-Many Relationship: [organization organization_sdkmessage](organization.md
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [sdkmessage_aiskillconfig_sdkmessageid](#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [sdkmessage_serviceplanmapping](#BKMK_sdkmessage_serviceplanmapping)
 - [sdkmessageid_sdkmessagefilter](#BKMK_sdkmessageid_sdkmessagefilter)
 - [sdkmessageid_sdkmessageprocessingstep](#BKMK_sdkmessageid_sdkmessageprocessingstep)
-
-### <a name="BKMK_sdkmessage_aiskillconfig_sdkmessageid"></a> sdkmessage_aiskillconfig_sdkmessageid
-
-Many-To-One Relationship: [aiskillconfig sdkmessage_aiskillconfig_sdkmessageid](aiskillconfig.md#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`sdkmessageid`|
-|ReferencedEntityNavigationPropertyName|`sdkmessage_aiskillconfig_sdkmessageid`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_sdkmessage_customapi"></a> sdkmessage_customapi
 

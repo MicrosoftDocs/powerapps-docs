@@ -859,7 +859,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_aipluginoperationparameter](#BKMK_team_aipluginoperationparameter)
 - [team_aipluginoperationresponsetemplate](#BKMK_team_aipluginoperationresponsetemplate)
 - [team_aipluginusersetting](#BKMK_team_aipluginusersetting)
-- [team_aiskillconfig](#BKMK_team_aiskillconfig)
 - [team_annotations](#BKMK_team_annotations)
 - [team_appnotification](#BKMK_team_appnotification)
 - [team_appointment](#BKMK_team_appointment)
@@ -1366,18 +1365,6 @@ Many-To-One Relationship: [aipluginusersetting team_aipluginusersetting](aiplugi
 |ReferencingAttribute|`owningteam`|
 |ReferencedEntityNavigationPropertyName|`team_aipluginusersetting`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_team_aiskillconfig"></a> team_aiskillconfig
-
-Many-To-One Relationship: [aiskillconfig team_aiskillconfig](aiskillconfig.md#BKMK_team_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`owningteam`|
-|ReferencedEntityNavigationPropertyName|`team_aiskillconfig`|
-|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_team_annotations"></a> team_annotations

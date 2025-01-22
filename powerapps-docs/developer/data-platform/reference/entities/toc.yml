@@ -91,9 +91,6 @@ items:
 - name: "AI Plugin Governance Extended"
   displayName: "AIPluginGovernanceExt entity"
   href: aiplugingovernanceext.md
-- name: "AI Skill Config"
-  displayName: "aiskillconfig entity"
-  href: aiskillconfig.md
 - name: "AI Template"
   displayName: "msdyn_AITemplate entity"
   href: msdyn_aitemplate.md

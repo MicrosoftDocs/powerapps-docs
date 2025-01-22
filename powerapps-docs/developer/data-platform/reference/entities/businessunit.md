@@ -1495,7 +1495,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_aipluginoperationparameter](#BKMK_business_unit_aipluginoperationparameter)
 - [business_unit_aipluginoperationresponsetemplate](#BKMK_business_unit_aipluginoperationresponsetemplate)
 - [business_unit_aipluginusersetting](#BKMK_business_unit_aipluginusersetting)
-- [business_unit_aiskillconfig](#BKMK_business_unit_aiskillconfig)
 - [business_unit_annotations](#BKMK_business_unit_annotations)
 - [business_unit_applicationuser](#BKMK_business_unit_applicationuser)
 - [business_unit_appnotification](#BKMK_business_unit_appnotification)
@@ -2003,18 +2002,6 @@ Many-To-One Relationship: [aipluginusersetting business_unit_aipluginusersetting
 |ReferencingEntity|`aipluginusersetting`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_aipluginusersetting`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_aiskillconfig"></a> business_unit_aiskillconfig
-
-Many-To-One Relationship: [aiskillconfig business_unit_aiskillconfig](aiskillconfig.md#BKMK_business_unit_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_aiskillconfig`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

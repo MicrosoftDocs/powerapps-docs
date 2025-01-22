@@ -246,7 +246,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_BulkDeleteFailures](#BKMK_aipluginoperationresponsetemplate_BulkDeleteFailures)
 - [aiplugintitle_BulkDeleteFailures](#BKMK_aiplugintitle_BulkDeleteFailures)
 - [aipluginusersetting_BulkDeleteFailures](#BKMK_aipluginusersetting_BulkDeleteFailures)
-- [aiskillconfig_BulkDeleteFailures](#BKMK_aiskillconfig_BulkDeleteFailures)
 - [Annotation_BulkDeleteFailures](#BKMK_Annotation_BulkDeleteFailures)
 - [AnnualFiscalCalendar_BulkDeleteFailures](#BKMK_AnnualFiscalCalendar_BulkDeleteFailures)
 - [appaction_BulkDeleteFailures](#BKMK_appaction_BulkDeleteFailures)
@@ -880,19 +879,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_BulkDeleteFai
 |ReferencedAttribute|`aipluginusersettingid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aipluginusersetting`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiskillconfig_BulkDeleteFailures"></a> aiskillconfig_BulkDeleteFailures
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_BulkDeleteFailures](aiskillconfig.md#BKMK_aiskillconfig_BulkDeleteFailures)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiskillconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

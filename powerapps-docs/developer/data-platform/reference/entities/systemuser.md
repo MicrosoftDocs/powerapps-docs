@@ -2773,10 +2773,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_aipluginusersetting_createdonbehalfby](#BKMK_lk_aipluginusersetting_createdonbehalfby)
 - [lk_aipluginusersetting_modifiedby](#BKMK_lk_aipluginusersetting_modifiedby)
 - [lk_aipluginusersetting_modifiedonbehalfby](#BKMK_lk_aipluginusersetting_modifiedonbehalfby)
-- [lk_aiskillconfig_createdby](#BKMK_lk_aiskillconfig_createdby)
-- [lk_aiskillconfig_createdonbehalfby](#BKMK_lk_aiskillconfig_createdonbehalfby)
-- [lk_aiskillconfig_modifiedby](#BKMK_lk_aiskillconfig_modifiedby)
-- [lk_aiskillconfig_modifiedonbehalfby](#BKMK_lk_aiskillconfig_modifiedonbehalfby)
 - [lk_annotationbase_createdby](#BKMK_lk_annotationbase_createdby)
 - [lk_annotationbase_createdonbehalfby](#BKMK_lk_annotationbase_createdonbehalfby)
 - [lk_annotationbase_modifiedby](#BKMK_lk_annotationbase_modifiedby)
@@ -4433,7 +4429,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_aipluginoperationparameter](#BKMK_user_aipluginoperationparameter)
 - [user_aipluginoperationresponsetemplate](#BKMK_user_aipluginoperationresponsetemplate)
 - [user_aipluginusersetting](#BKMK_user_aipluginusersetting)
-- [user_aiskillconfig](#BKMK_user_aiskillconfig)
 - [user_appnotification](#BKMK_user_appnotification)
 - [user_appointment](#BKMK_user_appointment)
 - [user_bot](#BKMK_user_bot)
@@ -6276,54 +6271,6 @@ Many-To-One Relationship: [aipluginusersetting lk_aipluginusersetting_modifiedon
 |ReferencingEntity|`aipluginusersetting`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_aipluginusersetting_modifiedonbehalfby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_aiskillconfig_createdby"></a> lk_aiskillconfig_createdby
-
-Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_createdby](aiskillconfig.md#BKMK_lk_aiskillconfig_createdby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`createdby`|
-|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_createdby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_aiskillconfig_createdonbehalfby"></a> lk_aiskillconfig_createdonbehalfby
-
-Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_createdonbehalfby](aiskillconfig.md#BKMK_lk_aiskillconfig_createdonbehalfby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`createdonbehalfby`|
-|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_createdonbehalfby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_aiskillconfig_modifiedby"></a> lk_aiskillconfig_modifiedby
-
-Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_modifiedby](aiskillconfig.md#BKMK_lk_aiskillconfig_modifiedby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`modifiedby`|
-|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_modifiedby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_aiskillconfig_modifiedonbehalfby"></a> lk_aiskillconfig_modifiedonbehalfby
-
-Many-To-One Relationship: [aiskillconfig lk_aiskillconfig_modifiedonbehalfby](aiskillconfig.md#BKMK_lk_aiskillconfig_modifiedonbehalfby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`modifiedonbehalfby`|
-|ReferencedEntityNavigationPropertyName|`lk_aiskillconfig_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -26197,18 +26144,6 @@ Many-To-One Relationship: [aipluginusersetting user_aipluginusersetting](aiplugi
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_aipluginusersetting`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_user_aiskillconfig"></a> user_aiskillconfig
-
-Many-To-One Relationship: [aiskillconfig user_aiskillconfig](aiskillconfig.md#BKMK_user_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`owninguser`|
-|ReferencedEntityNavigationPropertyName|`user_aiskillconfig`|
-|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_user_appnotification"></a> user_appnotification

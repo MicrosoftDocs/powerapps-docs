@@ -155,7 +155,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_aipluginoperationparameter](#BKMK_owner_aipluginoperationparameter)
 - [owner_aipluginoperationresponsetemplate](#BKMK_owner_aipluginoperationresponsetemplate)
 - [owner_aipluginusersetting](#BKMK_owner_aipluginusersetting)
-- [owner_aiskillconfig](#BKMK_owner_aiskillconfig)
 - [owner_annotations](#BKMK_owner_annotations)
 - [owner_appnotification](#BKMK_owner_appnotification)
 - [owner_appointments](#BKMK_owner_appointments)
@@ -660,18 +659,6 @@ Many-To-One Relationship: [aipluginusersetting owner_aipluginusersetting](aiplug
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_aipluginusersetting`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_owner_aiskillconfig"></a> owner_aiskillconfig
-
-Many-To-One Relationship: [aiskillconfig owner_aiskillconfig](aiskillconfig.md#BKMK_owner_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`ownerid`|
-|ReferencedEntityNavigationPropertyName|`owner_aiskillconfig`|
-|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_owner_annotations"></a> owner_annotations

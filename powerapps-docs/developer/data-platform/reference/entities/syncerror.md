@@ -573,7 +573,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_SyncErrors](#BKMK_aipluginoperationresponsetemplate_SyncErrors)
 - [aiplugintitle_SyncErrors](#BKMK_aiplugintitle_SyncErrors)
 - [aipluginusersetting_SyncErrors](#BKMK_aipluginusersetting_SyncErrors)
-- [aiskillconfig_SyncErrors](#BKMK_aiskillconfig_SyncErrors)
 - [Annotation_SyncErrors](#BKMK_Annotation_SyncErrors)
 - [appaction_SyncErrors](#BKMK_appaction_SyncErrors)
 - [appactionmigration_SyncErrors](#BKMK_appactionmigration_SyncErrors)
@@ -1235,19 +1234,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_SyncErrors](a
 |ReferencedAttribute|`aipluginusersettingid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aipluginusersetting`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiskillconfig_SyncErrors"></a> aiskillconfig_SyncErrors
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_SyncErrors](aiskillconfig.md#BKMK_aiskillconfig_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiskillconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

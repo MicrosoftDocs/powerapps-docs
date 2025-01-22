@@ -447,7 +447,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
 - [entity_aiinsightcard_entityid](#BKMK_entity_aiinsightcard_entityid)
-- [entity_aiskillconfig_Entity](#BKMK_entity_aiskillconfig_Entity)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
@@ -520,18 +519,6 @@ Many-To-One Relationship: [aiinsightcard entity_aiinsightcard_entityid](aiinsigh
 |ReferencingEntity|`aiinsightcard`|
 |ReferencingAttribute|`entityid`|
 |ReferencedEntityNavigationPropertyName|`entity_aiinsightcard_entityid`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_entity_aiskillconfig_Entity"></a> entity_aiskillconfig_Entity
-
-Many-To-One Relationship: [aiskillconfig entity_aiskillconfig_Entity](aiskillconfig.md#BKMK_entity_aiskillconfig_Entity)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`entity`|
-|ReferencedEntityNavigationPropertyName|`entity_aiskillconfig_Entity`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

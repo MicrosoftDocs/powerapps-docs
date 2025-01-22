@@ -1166,7 +1166,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_AsyncOperations](#BKMK_aipluginoperationresponsetemplate_AsyncOperations)
 - [aiplugintitle_AsyncOperations](#BKMK_aiplugintitle_AsyncOperations)
 - [aipluginusersetting_AsyncOperations](#BKMK_aipluginusersetting_AsyncOperations)
-- [aiskillconfig_AsyncOperations](#BKMK_aiskillconfig_AsyncOperations)
 - [Annotation_AsyncOperations](#BKMK_Annotation_AsyncOperations)
 - [AnnualFiscalCalendar_AsyncOperations](#BKMK_AnnualFiscalCalendar_AsyncOperations)
 - [appaction_AsyncOperations](#BKMK_appaction_AsyncOperations)
@@ -1827,19 +1826,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_AsyncOperatio
 |ReferencedAttribute|`aipluginusersettingid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aipluginusersetting`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiskillconfig_AsyncOperations"></a> aiskillconfig_AsyncOperations
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_AsyncOperations](aiskillconfig.md#BKMK_aiskillconfig_AsyncOperations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiskillconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

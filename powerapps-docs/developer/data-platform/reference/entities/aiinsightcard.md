@@ -652,7 +652,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [aiskillconfig_aiinsightcard_aiskillid](#BKMK_aiskillconfig_aiinsightcard_aiskillid)
 - [business_unit_aiinsightcard](#BKMK_business_unit_aiinsightcard)
 - [entity_aiinsightcard_entityid](#BKMK_entity_aiinsightcard_entityid)
 - [lk_aiinsightcard_createdby](#BKMK_lk_aiinsightcard_createdby)
@@ -662,19 +661,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [owner_aiinsightcard](#BKMK_owner_aiinsightcard)
 - [team_aiinsightcard](#BKMK_team_aiinsightcard)
 - [user_aiinsightcard](#BKMK_user_aiinsightcard)
-
-### <a name="BKMK_aiskillconfig_aiinsightcard_aiskillid"></a> aiskillconfig_aiinsightcard_aiskillid
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_aiinsightcard_aiskillid](aiskillconfig.md#BKMK_aiskillconfig_aiinsightcard_aiskillid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`aiskillid`|
-|ReferencingEntityNavigationPropertyName|`aiskillid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_business_unit_aiinsightcard"></a> business_unit_aiinsightcard
 

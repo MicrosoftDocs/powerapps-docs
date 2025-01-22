@@ -721,7 +721,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginoperationresponsetemplate_ProcessSession](#BKMK_aipluginoperationresponsetemplate_ProcessSession)
 - [aiplugintitle_ProcessSession](#BKMK_aiplugintitle_ProcessSession)
 - [aipluginusersetting_ProcessSession](#BKMK_aipluginusersetting_ProcessSession)
-- [aiskillconfig_ProcessSession](#BKMK_aiskillconfig_ProcessSession)
 - [Annotation_ProcessSessions](#BKMK_Annotation_ProcessSessions)
 - [appaction_ProcessSession](#BKMK_appaction_ProcessSession)
 - [appactionmigration_ProcessSession](#BKMK_appactionmigration_ProcessSession)
@@ -1330,19 +1329,6 @@ One-To-Many Relationship: [aipluginusersetting aipluginusersetting_ProcessSessio
 |ReferencedAttribute|`aipluginusersettingid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aipluginusersetting`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiskillconfig_ProcessSession"></a> aiskillconfig_ProcessSession
-
-One-To-Many Relationship: [aiskillconfig aiskillconfig_ProcessSession](aiskillconfig.md#BKMK_aiskillconfig_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiskillconfig`|
-|ReferencedAttribute|`aiskillconfigid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiskillconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
