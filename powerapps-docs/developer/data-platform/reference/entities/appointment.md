@@ -21,12 +21,12 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /appointments(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Book`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Book?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.BookRequest>|
 | `Create`<br />Event: True |`POST` /appointments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateException`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateException?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CreateExceptionRequest>|
 | `Delete`<br />Event: True |`DELETE` /appointments(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ImmediateBook`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ImmediateBook?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ImmediateBookRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|

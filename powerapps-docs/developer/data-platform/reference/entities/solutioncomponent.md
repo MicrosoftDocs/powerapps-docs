@@ -21,8 +21,8 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `AddSolutionComponent`<br />Event: False |<xref:Microsoft.Dynamics.CRM.AddSolutionComponent?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest>|
-| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsComponentCustomizable`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsComponentCustomizable?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsComponentCustomizableRequest>|
 | `RemoveSolutionComponent`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RemoveSolutionComponent?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest>|
 | `Retrieve`<br />Event: False |`GET` /solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|

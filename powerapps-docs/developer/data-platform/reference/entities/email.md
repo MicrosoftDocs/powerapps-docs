@@ -21,7 +21,7 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `BackgroundSendEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.BackgroundSendEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
 | `CheckIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
 | `CheckPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
@@ -30,7 +30,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `DeliverImmediatePromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
 | `DeliverIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
 | `DeliverPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
-| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GetDecryptionKey`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.GetDecryptionKeyRequest>|
 | `GetTrackingTokenEmail`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|

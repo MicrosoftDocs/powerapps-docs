@@ -20,10 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `DeleteAuditData`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteAuditData?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
 | `DeleteRecordChangeHistory`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
-| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /audits(*auditid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveAttributeChangeHistory`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
 | `RetrieveAuditDetails`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|

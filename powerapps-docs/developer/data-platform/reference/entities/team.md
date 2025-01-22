@@ -21,11 +21,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `AddMembersTeam`<br />Event: True |<xref:Microsoft.Dynamics.CRM.AddMembersTeam?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddMembersTeamRequest>|
-| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `ConvertOwnerTeamToAccessTeam`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ConvertOwnerTeamToAccessTeam?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ConvertOwnerTeamToAccessTeamRequest>|
 | `Create`<br />Event: True |`POST` /teams<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /teams(*teamid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RemoveMembersTeam`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemoveMembersTeam?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemoveMembersTeamRequest>|
 | `Retrieve`<br />Event: True |`GET` /teams(*teamid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMembersTeam`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.RetrieveMembersTeamRequest>|
