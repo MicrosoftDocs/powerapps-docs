@@ -3,7 +3,6 @@ title: FAQ about Copilot visualizations on a view (preview)
 description: This FAQ provides information about the AI technology used in visualizing data in a view with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 01/23/2025
 author: sriharibs-msft
-ms.author: srihari.srinivasa
 reviewer: shwetamurkute
 ms.reviewer: smurkute
 ms.topic: article
@@ -43,4 +42,4 @@ To provide feedback about this feature, users can select the thumbs up or thumbs
 
 ## Related information
 
-[Visualize data in a view with Copilot](../user/visualize-data-in-copilot.md)
+[Visualize data in a view with Copilot](../user/visualize-data-in-copilot)   
