@@ -1,7 +1,6 @@
 ---
 title: "Feedback table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Feedback table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Feedback table/entity reference
+# Feedback table/entity reference (Microsoft Dataverse)
 
 Feedback and rating.
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /feedback(*feedbackid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /feedback<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /feedback(*feedbackid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: True |`GET` /feedback(*feedbackid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -356,7 +357,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|contact, feedback, knowledgearticle, msfp_alert, msfp_surveyinvite, msfp_surveyresponse|
+|Targets|contact, feedback, knowledgearticle|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -740,9 +741,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_feedback_modifiedby](#BKMK_lk_feedback_modifiedby)
 - [lk_feedback_modifiedonbehalfby](#BKMK_lk_feedback_modifiedonbehalfby)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
-- [msfp_alert_Feedback](#BKMK_msfp_alert_Feedback)
-- [msfp_surveyinvite_Feedback](#BKMK_msfp_surveyinvite_Feedback)
-- [msfp_surveyresponse_Feedback](#BKMK_msfp_surveyresponse_Feedback)
 - [owner_feedback](#BKMK_owner_feedback)
 - [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
 
@@ -902,45 +900,6 @@ One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticle_feedback_cont
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_Feedback"></a> msfp_alert_Feedback
-
-One-To-Many Relationship: [msfp_alert msfp_alert_Feedback](msfp_alert.md#BKMK_msfp_alert_Feedback)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_Feedback"></a> msfp_surveyinvite_Feedback
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_Feedback](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Feedback)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_Feedback"></a> msfp_surveyresponse_Feedback
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_Feedback](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Feedback)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_owner_feedback"></a> owner_feedback
 
 One-To-Many Relationship: [owner owner_feedback](owner.md#BKMK_owner_feedback)
@@ -1042,6 +1001,6 @@ Many-To-One Relationship: [syncerror Feedback_SyncErrors](syncerror.md#BKMK_Feed
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.feedback?displayProperty=fullName>

@@ -1,7 +1,6 @@
 ---
-title: "Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
+title: "Trait Registration (TraitRegistration) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Trait Registration (TraitRegistration) table/entity with Microsoft Dataverse."
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,39 +9,42 @@ search.audienceType:
   - developer
 ---
 
-# Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table/entity reference
+# Trait Registration (TraitRegistration) table/entity reference (Microsoft Dataverse)
 
-Email address of an unsubscribed respondent.
+
 
 ## Messages
 
-The following table lists the messages for the Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table.
+The following table lists the messages for the Trait Registration (TraitRegistration) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Create`<br />Event: True |`POST` /msfp_unsubscribedrecipients<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Assign`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /traitregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /traitregistrations(*traitregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /msfp_unsubscribedrecipients<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retrieve`<br />Event: True |`GET` /traitregistrations(*traitregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /traitregistrations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /msfp_unsubscribedrecipients(*msfp_unsubscribedrecipientid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /traitregistrations(*traitregistrationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table.
+The following table lists the events for the Trait Registration (TraitRegistration) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,19 +57,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Customer Voice unsubscribed recipient (msfp_unsubscribedrecipient) table.
+The following table lists selected properties for the Trait Registration (TraitRegistration) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Customer Voice unsubscribed recipient** |
-| **DisplayCollectionName** | **Customer Voice unsubscribed recipients** |
-| **SchemaName** | `msfp_unsubscribedrecipient` |
-| **CollectionSchemaName** | `msfp_unsubscribedrecipients` |
-| **EntitySetName** | `msfp_unsubscribedrecipients`|
-| **LogicalName** | `msfp_unsubscribedrecipient` |
-| **LogicalCollectionName** | `msfp_unsubscribedrecipients` |
-| **PrimaryIdAttribute** | `msfp_unsubscribedrecipientid` |
-| **PrimaryNameAttribute** |`msfp_name` |
+| **DisplayName** | **Trait Registration** |
+| **DisplayCollectionName** | **Trait Registrations** |
+| **SchemaName** | `TraitRegistration` |
+| **CollectionSchemaName** | `TraitRegistrations` |
+| **EntitySetName** | `traitregistrations`|
+| **LogicalName** | `traitregistration` |
+| **LogicalCollectionName** | `traitregistrations` |
+| **PrimaryIdAttribute** | `traitregistrationid` |
+| **PrimaryNameAttribute** |`traitname` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -76,15 +78,14 @@ The following table lists selected properties for the Customer Voice unsubscribe
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [msfp_emailaddress](#BKMK_msfp_emailaddress)
-- [msfp_name](#BKMK_msfp_name)
-- [msfp_unsubscribedrecipientId](#BKMK_msfp_unsubscribedrecipientId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [TraitName](#BKMK_TraitName)
+- [TraitRegistrationId](#BKMK_TraitRegistrationId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -100,52 +101,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
-
-### <a name="BKMK_msfp_emailaddress"></a> msfp_emailaddress
-
-|Property|Value|
-|---|---|
-|Description|**Email address of the unsubscribed recipient.**|
-|DisplayName|**Email address**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_emailaddress`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Email|
-|FormatName|Email|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_name"></a> msfp_name
-
-|Property|Value|
-|---|---|
-|Description|**The name of the custom entity.**|
-|DisplayName|**Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_name`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_unsubscribedrecipientId"></a> msfp_unsubscribedrecipientId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**Unsubscribed recipient**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`msfp_unsubscribedrecipientid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -193,7 +148,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Unsubscribed recipient**|
+|Description|**Status of the Trait Registration**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -201,7 +156,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`msfp_unsubscribedrecipient_statecode`|
+|GlobalChoiceName|`traitregistration_statecode`|
 
 #### statecode Choices/Options
 
@@ -214,7 +169,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Unsubscribed recipient**|
+|Description|**Reason for the status of the Trait Registration**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -222,7 +177,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`msfp_unsubscribedrecipient_statuscode`|
+|GlobalChoiceName|`traitregistration_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -244,6 +199,35 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_TraitName"></a> TraitName
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Trait Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`traitname`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_TraitRegistrationId"></a> TraitRegistrationId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**TraitRegistration**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`traitregistrationid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -406,7 +390,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -454,18 +438,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_msfp_unsubscribedrecipient](#BKMK_business_unit_msfp_unsubscribedrecipient)
-- [lk_msfp_unsubscribedrecipient_createdby](#BKMK_lk_msfp_unsubscribedrecipient_createdby)
-- [lk_msfp_unsubscribedrecipient_createdonbehalfby](#BKMK_lk_msfp_unsubscribedrecipient_createdonbehalfby)
-- [lk_msfp_unsubscribedrecipient_modifiedby](#BKMK_lk_msfp_unsubscribedrecipient_modifiedby)
-- [lk_msfp_unsubscribedrecipient_modifiedonbehalfby](#BKMK_lk_msfp_unsubscribedrecipient_modifiedonbehalfby)
-- [owner_msfp_unsubscribedrecipient](#BKMK_owner_msfp_unsubscribedrecipient)
-- [team_msfp_unsubscribedrecipient](#BKMK_team_msfp_unsubscribedrecipient)
-- [user_msfp_unsubscribedrecipient](#BKMK_user_msfp_unsubscribedrecipient)
+- [business_unit_traitregistration](#BKMK_business_unit_traitregistration)
+- [lk_traitregistration_createdby](#BKMK_lk_traitregistration_createdby)
+- [lk_traitregistration_createdonbehalfby](#BKMK_lk_traitregistration_createdonbehalfby)
+- [lk_traitregistration_modifiedby](#BKMK_lk_traitregistration_modifiedby)
+- [lk_traitregistration_modifiedonbehalfby](#BKMK_lk_traitregistration_modifiedonbehalfby)
+- [owner_traitregistration](#BKMK_owner_traitregistration)
+- [team_traitregistration](#BKMK_team_traitregistration)
+- [user_traitregistration](#BKMK_user_traitregistration)
 
-### <a name="BKMK_business_unit_msfp_unsubscribedrecipient"></a> business_unit_msfp_unsubscribedrecipient
+### <a name="BKMK_business_unit_traitregistration"></a> business_unit_traitregistration
 
-One-To-Many Relationship: [businessunit business_unit_msfp_unsubscribedrecipient](businessunit.md#BKMK_business_unit_msfp_unsubscribedrecipient)
+One-To-Many Relationship: [businessunit business_unit_traitregistration](businessunit.md#BKMK_business_unit_traitregistration)
 
 |Property|Value|
 |---|---|
@@ -476,9 +460,9 @@ One-To-Many Relationship: [businessunit business_unit_msfp_unsubscribedrecipient
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_unsubscribedrecipient_createdby"></a> lk_msfp_unsubscribedrecipient_createdby
+### <a name="BKMK_lk_traitregistration_createdby"></a> lk_traitregistration_createdby
 
-One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_createdby](systemuser.md#BKMK_lk_msfp_unsubscribedrecipient_createdby)
+One-To-Many Relationship: [systemuser lk_traitregistration_createdby](systemuser.md#BKMK_lk_traitregistration_createdby)
 
 |Property|Value|
 |---|---|
@@ -489,9 +473,9 @@ One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_createdby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_unsubscribedrecipient_createdonbehalfby"></a> lk_msfp_unsubscribedrecipient_createdonbehalfby
+### <a name="BKMK_lk_traitregistration_createdonbehalfby"></a> lk_traitregistration_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_createdonbehalfby](systemuser.md#BKMK_lk_msfp_unsubscribedrecipient_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_traitregistration_createdonbehalfby](systemuser.md#BKMK_lk_traitregistration_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -502,9 +486,9 @@ One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_createdonbeh
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_unsubscribedrecipient_modifiedby"></a> lk_msfp_unsubscribedrecipient_modifiedby
+### <a name="BKMK_lk_traitregistration_modifiedby"></a> lk_traitregistration_modifiedby
 
-One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_modifiedby](systemuser.md#BKMK_lk_msfp_unsubscribedrecipient_modifiedby)
+One-To-Many Relationship: [systemuser lk_traitregistration_modifiedby](systemuser.md#BKMK_lk_traitregistration_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -515,9 +499,9 @@ One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_modifiedby](
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_unsubscribedrecipient_modifiedonbehalfby"></a> lk_msfp_unsubscribedrecipient_modifiedonbehalfby
+### <a name="BKMK_lk_traitregistration_modifiedonbehalfby"></a> lk_traitregistration_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_modifiedonbehalfby](systemuser.md#BKMK_lk_msfp_unsubscribedrecipient_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_traitregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_traitregistration_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -528,9 +512,9 @@ One-To-Many Relationship: [systemuser lk_msfp_unsubscribedrecipient_modifiedonbe
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_msfp_unsubscribedrecipient"></a> owner_msfp_unsubscribedrecipient
+### <a name="BKMK_owner_traitregistration"></a> owner_traitregistration
 
-One-To-Many Relationship: [owner owner_msfp_unsubscribedrecipient](owner.md#BKMK_owner_msfp_unsubscribedrecipient)
+One-To-Many Relationship: [owner owner_traitregistration](owner.md#BKMK_owner_traitregistration)
 
 |Property|Value|
 |---|---|
@@ -541,9 +525,9 @@ One-To-Many Relationship: [owner owner_msfp_unsubscribedrecipient](owner.md#BKMK
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_msfp_unsubscribedrecipient"></a> team_msfp_unsubscribedrecipient
+### <a name="BKMK_team_traitregistration"></a> team_traitregistration
 
-One-To-Many Relationship: [team team_msfp_unsubscribedrecipient](team.md#BKMK_team_msfp_unsubscribedrecipient)
+One-To-Many Relationship: [team team_traitregistration](team.md#BKMK_team_traitregistration)
 
 |Property|Value|
 |---|---|
@@ -554,9 +538,9 @@ One-To-Many Relationship: [team team_msfp_unsubscribedrecipient](team.md#BKMK_te
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_msfp_unsubscribedrecipient"></a> user_msfp_unsubscribedrecipient
+### <a name="BKMK_user_traitregistration"></a> user_traitregistration
 
-One-To-Many Relationship: [systemuser user_msfp_unsubscribedrecipient](systemuser.md#BKMK_user_msfp_unsubscribedrecipient)
+One-To-Many Relationship: [systemuser user_traitregistration](systemuser.md#BKMK_user_traitregistration)
 
 |Property|Value|
 |---|---|
@@ -572,95 +556,95 @@ One-To-Many Relationship: [systemuser user_msfp_unsubscribedrecipient](systemuse
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [msfp_msfp_unsubscribedrecipient_msfp_surveyinvite](#BKMK_msfp_msfp_unsubscribedrecipient_msfp_surveyinvite)
-- [msfp_unsubscribedrecipient_AsyncOperations](#BKMK_msfp_unsubscribedrecipient_AsyncOperations)
-- [msfp_unsubscribedrecipient_BulkDeleteFailures](#BKMK_msfp_unsubscribedrecipient_BulkDeleteFailures)
-- [msfp_unsubscribedrecipient_MailboxTrackingFolders](#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders)
-- [msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses](#BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses)
-- [msfp_unsubscribedrecipient_ProcessSession](#BKMK_msfp_unsubscribedrecipient_ProcessSession)
-- [msfp_unsubscribedrecipient_SyncErrors](#BKMK_msfp_unsubscribedrecipient_SyncErrors)
+- [processorregistration_traitregistration_traitname](#BKMK_processorregistration_traitregistration_traitname)
+- [traitregistration_AsyncOperations](#BKMK_traitregistration_AsyncOperations)
+- [traitregistration_BulkDeleteFailures](#BKMK_traitregistration_BulkDeleteFailures)
+- [traitregistration_MailboxTrackingFolders](#BKMK_traitregistration_MailboxTrackingFolders)
+- [traitregistration_PrincipalObjectAttributeAccesses](#BKMK_traitregistration_PrincipalObjectAttributeAccesses)
+- [traitregistration_ProcessSession](#BKMK_traitregistration_ProcessSession)
+- [traitregistration_SyncErrors](#BKMK_traitregistration_SyncErrors)
 
-### <a name="BKMK_msfp_msfp_unsubscribedrecipient_msfp_surveyinvite"></a> msfp_msfp_unsubscribedrecipient_msfp_surveyinvite
+### <a name="BKMK_processorregistration_traitregistration_traitname"></a> processorregistration_traitregistration_traitname
 
-Many-To-One Relationship: [msfp_surveyinvite msfp_msfp_unsubscribedrecipient_msfp_surveyinvite](msfp_surveyinvite.md#BKMK_msfp_msfp_unsubscribedrecipient_msfp_surveyinvite)
+Many-To-One Relationship: [processorregistration processorregistration_traitregistration_traitname](processorregistration.md#BKMK_processorregistration_traitregistration_traitname)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`msfp_unsubscribedrecipientsurveyinviteid`|
-|ReferencedEntityNavigationPropertyName|`msfp_msfp_unsubscribedrecipient_msfp_surveyinvite`|
-|IsCustomizable|`True`|
+|ReferencingEntity|`processorregistration`|
+|ReferencingAttribute|`traitname`|
+|ReferencedEntityNavigationPropertyName|`processorregistration_traitregistration_traitname`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_AsyncOperations"></a> msfp_unsubscribedrecipient_AsyncOperations
+### <a name="BKMK_traitregistration_AsyncOperations"></a> traitregistration_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation msfp_unsubscribedrecipient_AsyncOperations](asyncoperation.md#BKMK_msfp_unsubscribedrecipient_AsyncOperations)
+Many-To-One Relationship: [asyncoperation traitregistration_AsyncOperations](asyncoperation.md#BKMK_traitregistration_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_BulkDeleteFailures"></a> msfp_unsubscribedrecipient_BulkDeleteFailures
+### <a name="BKMK_traitregistration_BulkDeleteFailures"></a> traitregistration_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure msfp_unsubscribedrecipient_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msfp_unsubscribedrecipient_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure traitregistration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_traitregistration_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders"></a> msfp_unsubscribedrecipient_MailboxTrackingFolders
+### <a name="BKMK_traitregistration_MailboxTrackingFolders"></a> traitregistration_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder msfp_unsubscribedrecipient_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder traitregistration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_traitregistration_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses"></a> msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses
+### <a name="BKMK_traitregistration_PrincipalObjectAttributeAccesses"></a> traitregistration_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess traitregistration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_traitregistration_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_ProcessSession"></a> msfp_unsubscribedrecipient_ProcessSession
+### <a name="BKMK_traitregistration_ProcessSession"></a> traitregistration_ProcessSession
 
-Many-To-One Relationship: [processsession msfp_unsubscribedrecipient_ProcessSession](processsession.md#BKMK_msfp_unsubscribedrecipient_ProcessSession)
+Many-To-One Relationship: [processsession traitregistration_ProcessSession](processsession.md#BKMK_traitregistration_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_unsubscribedrecipient_SyncErrors"></a> msfp_unsubscribedrecipient_SyncErrors
+### <a name="BKMK_traitregistration_SyncErrors"></a> traitregistration_SyncErrors
 
-Many-To-One Relationship: [syncerror msfp_unsubscribedrecipient_SyncErrors](syncerror.md#BKMK_msfp_unsubscribedrecipient_SyncErrors)
+Many-To-One Relationship: [syncerror traitregistration_SyncErrors](syncerror.md#BKMK_traitregistration_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_unsubscribedrecipient_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`traitregistration_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -668,6 +652,6 @@ Many-To-One Relationship: [syncerror msfp_unsubscribedrecipient_SyncErrors](sync
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 

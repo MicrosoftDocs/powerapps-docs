@@ -1,7 +1,6 @@
 ---
 title: "Redirect (mspp_redirect) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Redirect (mspp_redirect) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Redirect (mspp_redirect) table/entity reference
+# Redirect (mspp_redirect) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /mspp_redirects<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /mspp_redirects(*mspp_redirectid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /mspp_redirects(*mspp_redirectid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 | `RetrieveMultiple`<br />Event: True |`GET` /mspp_redirects<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -397,9 +398,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [mspp_redirect_Emails](#BKMK_mspp_redirect_Emails)
 - [mspp_redirect_Faxes](#BKMK_mspp_redirect_Faxes)
 - [mspp_redirect_Letters](#BKMK_mspp_redirect_Letters)
-- [mspp_redirect_msfp_alerts](#BKMK_mspp_redirect_msfp_alerts)
-- [mspp_redirect_msfp_surveyinvites](#BKMK_mspp_redirect_msfp_surveyinvites)
-- [mspp_redirect_msfp_surveyresponses](#BKMK_mspp_redirect_msfp_surveyresponses)
 - [mspp_redirect_PhoneCalls](#BKMK_mspp_redirect_PhoneCalls)
 - [mspp_redirect_RecurringAppointmentMasters](#BKMK_mspp_redirect_RecurringAppointmentMasters)
 - [mspp_redirect_SocialActivities](#BKMK_mspp_redirect_SocialActivities)
@@ -501,42 +499,6 @@ Many-To-One Relationship: [letter mspp_redirect_Letters](letter.md#BKMK_mspp_red
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_mspp_redirect_msfp_alerts"></a> mspp_redirect_msfp_alerts
-
-Many-To-One Relationship: [msfp_alert mspp_redirect_msfp_alerts](msfp_alert.md#BKMK_mspp_redirect_msfp_alerts)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`mspp_redirect_msfp_alerts`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_mspp_redirect_msfp_surveyinvites"></a> mspp_redirect_msfp_surveyinvites
-
-Many-To-One Relationship: [msfp_surveyinvite mspp_redirect_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_mspp_redirect_msfp_surveyinvites)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`mspp_redirect_msfp_surveyinvites`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_mspp_redirect_msfp_surveyresponses"></a> mspp_redirect_msfp_surveyresponses
-
-Many-To-One Relationship: [msfp_surveyresponse mspp_redirect_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_mspp_redirect_msfp_surveyresponses)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`mspp_redirect_msfp_surveyresponses`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 ### <a name="BKMK_mspp_redirect_PhoneCalls"></a> mspp_redirect_PhoneCalls
 
 Many-To-One Relationship: [phonecall mspp_redirect_PhoneCalls](phonecall.md#BKMK_mspp_redirect_PhoneCalls)
@@ -589,6 +551,6 @@ Many-To-One Relationship: [task mspp_redirect_Tasks](task.md#BKMK_mspp_redirect_
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mspp_redirect?displayProperty=fullName>

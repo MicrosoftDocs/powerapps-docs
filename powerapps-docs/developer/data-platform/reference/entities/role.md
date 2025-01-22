@@ -1,7 +1,6 @@
 ---
 title: "Security Role (Role) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Security Role (Role) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Security Role (Role) table/entity reference
+# Security Role (Role) table/entity reference (Microsoft Dataverse)
 
 Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system.
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `AddPrivilegesRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /roles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /roles(*roleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RemovePrivilegeRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemovePrivilegeRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemovePrivilegeRoleRequest>|
 | `ReplacePrivilegesRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ReplacePrivilegesRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ReplacePrivilegesRoleRequest>|
 | `Retrieve`<br />Event: False |`GET` /roles(*roleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -852,6 +853,6 @@ See [team teamroles_association Many-To-Many Relationship](team.md#BKMK_teamrole
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.role?displayProperty=fullName>

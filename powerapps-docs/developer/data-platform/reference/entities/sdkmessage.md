@@ -1,7 +1,6 @@
 ---
 title: "Sdk Message (SdkMessage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Sdk Message (SdkMessage) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Sdk Message (SdkMessage) table/entity reference
+# Sdk Message (SdkMessage) table/entity reference (Microsoft Dataverse)
 
 Message that is supported by the SDK.
 
@@ -21,6 +20,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /sdkmessages(*sdkmessageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /sdkmessages<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
@@ -621,10 +622,23 @@ One-To-Many Relationship: [organization organization_sdkmessage](organization.md
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [sdkmessage_aiskillconfig_sdkmessageid](#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [sdkmessage_serviceplanmapping](#BKMK_sdkmessage_serviceplanmapping)
 - [sdkmessageid_sdkmessagefilter](#BKMK_sdkmessageid_sdkmessagefilter)
 - [sdkmessageid_sdkmessageprocessingstep](#BKMK_sdkmessageid_sdkmessageprocessingstep)
+
+### <a name="BKMK_sdkmessage_aiskillconfig_sdkmessageid"></a> sdkmessage_aiskillconfig_sdkmessageid
+
+Many-To-One Relationship: [aiskillconfig sdkmessage_aiskillconfig_sdkmessageid](aiskillconfig.md#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiskillconfig`|
+|ReferencingAttribute|`sdkmessageid`|
+|ReferencedEntityNavigationPropertyName|`sdkmessage_aiskillconfig_sdkmessageid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_sdkmessage_customapi"></a> sdkmessage_customapi
 
@@ -678,6 +692,6 @@ Many-To-One Relationship: [sdkmessageprocessingstep sdkmessageid_sdkmessageproce
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.sdkmessage?displayProperty=fullName>

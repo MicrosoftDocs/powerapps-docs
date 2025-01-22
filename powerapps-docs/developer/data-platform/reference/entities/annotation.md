@@ -1,7 +1,6 @@
 ---
 title: "Note (Annotation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Note (Annotation) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Note (Annotation) table/entity reference
+# Note (Annotation) table/entity reference (Microsoft Dataverse)
 
 Note that is attached to one or more objects, including other notes.
 
@@ -22,8 +21,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /annotations(*annotationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /annotations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /annotations(*annotationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: True |`GET` /annotations(*annotationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -212,7 +213,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, msfp_alert, msfp_question, msfp_surveyinvite, msfp_surveyresponse, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
+|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -659,10 +660,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
 - [msdyn_flow_approval_Annotations](#BKMK_msdyn_flow_approval_Annotations)
-- [msfp_alert_Annotations](#BKMK_msfp_alert_Annotations)
-- [msfp_question_Annotations](#BKMK_msfp_question_Annotations)
-- [msfp_surveyinvite_Annotations](#BKMK_msfp_surveyinvite_Annotations)
-- [msfp_surveyresponse_Annotations](#BKMK_msfp_surveyresponse_Annotations)
 - [mspcat_catalogsubmissionfiles_Annotations](#BKMK_mspcat_catalogsubmissionfiles_Annotations)
 - [owner_annotations](#BKMK_owner_annotations)
 - [PhoneCall_Annotation](#BKMK_PhoneCall_Annotation)
@@ -1037,58 +1034,6 @@ One-To-Many Relationship: [msdyn_flow_approval msdyn_flow_approval_Annotations](
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
-### <a name="BKMK_msfp_alert_Annotations"></a> msfp_alert_Annotations
-
-One-To-Many Relationship: [msfp_alert msfp_alert_Annotations](msfp_alert.md#BKMK_msfp_alert_Annotations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_alert`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_msfp_question_Annotations"></a> msfp_question_Annotations
-
-One-To-Many Relationship: [msfp_question msfp_question_Annotations](msfp_question.md#BKMK_msfp_question_Annotations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_question`|
-|ReferencedAttribute|`msfp_questionid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_question`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_msfp_surveyinvite_Annotations"></a> msfp_surveyinvite_Annotations
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_Annotations](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Annotations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyinvite`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_msfp_surveyresponse_Annotations"></a> msfp_surveyresponse_Annotations
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_Annotations](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Annotations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msfp_surveyresponse`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_Annotations"></a> mspcat_catalogsubmissionfiles_Annotations
 
 One-To-Many Relationship: [mspcat_catalogsubmissionfiles mspcat_catalogsubmissionfiles_Annotations](mspcat_catalogsubmissionfiles.md#BKMK_mspcat_catalogsubmissionfiles_Annotations)
@@ -1268,6 +1213,6 @@ Many-To-One Relationship: [syncerror Annotation_SyncErrors](syncerror.md#BKMK_An
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.annotation?displayProperty=fullName>

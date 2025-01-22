@@ -1,7 +1,6 @@
 ---
 title: "Invitation (adx_invitation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Invitation (adx_invitation) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Invitation (adx_invitation) table/entity reference
+# Invitation (adx_invitation) table/entity reference (Microsoft Dataverse)
 
 Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.
 
@@ -22,9 +21,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /adx_invitations(*adx_invitationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /adx_invitations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /adx_invitations(*adx_invitationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -829,9 +830,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [adx_invitation_Faxes](#BKMK_adx_invitation_Faxes)
 - [adx_invitation_Letters](#BKMK_adx_invitation_Letters)
 - [adx_invitation_MailboxTrackingFolders](#BKMK_adx_invitation_MailboxTrackingFolders)
-- [adx_invitation_msfp_alerts](#BKMK_adx_invitation_msfp_alerts)
-- [adx_invitation_msfp_surveyinvites](#BKMK_adx_invitation_msfp_surveyinvites)
-- [adx_invitation_msfp_surveyresponses](#BKMK_adx_invitation_msfp_surveyresponses)
 - [adx_invitation_PhoneCalls](#BKMK_adx_invitation_PhoneCalls)
 - [adx_invitation_PrincipalObjectAttributeAccesses](#BKMK_adx_invitation_PrincipalObjectAttributeAccesses)
 - [adx_invitation_ProcessSession](#BKMK_adx_invitation_ProcessSession)
@@ -1032,42 +1030,6 @@ Many-To-One Relationship: [mailboxtrackingfolder adx_invitation_MailboxTrackingF
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_adx_invitation_msfp_alerts"></a> adx_invitation_msfp_alerts
-
-Many-To-One Relationship: [msfp_alert adx_invitation_msfp_alerts](msfp_alert.md#BKMK_adx_invitation_msfp_alerts)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_alerts`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_adx_invitation_msfp_surveyinvites"></a> adx_invitation_msfp_surveyinvites
-
-Many-To-One Relationship: [msfp_surveyinvite adx_invitation_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_adx_invitation_msfp_surveyinvites)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyinvite`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_surveyinvites`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_adx_invitation_msfp_surveyresponses"></a> adx_invitation_msfp_surveyresponses
-
-Many-To-One Relationship: [msfp_surveyresponse adx_invitation_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_adx_invitation_msfp_surveyresponses)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_surveyresponse`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`adx_invitation_msfp_surveyresponses`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 ### <a name="BKMK_adx_invitation_PhoneCalls"></a> adx_invitation_PhoneCalls
 
 Many-To-One Relationship: [phonecall adx_invitation_PhoneCalls](phonecall.md#BKMK_adx_invitation_PhoneCalls)
@@ -1204,6 +1166,6 @@ See [contact adx_invitation_redeemedcontacts Many-To-Many Relationship](contact.
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.adx_invitation?displayProperty=fullName>

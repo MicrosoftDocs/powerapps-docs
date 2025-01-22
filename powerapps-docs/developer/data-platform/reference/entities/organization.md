@@ -1,7 +1,6 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Organization table/entity reference
+# Organization table/entity reference (Microsoft Dataverse)
 
 Top level of the Microsoft Dynamics 365 business hierarchy. The organization can be a specific business, holding company, or corporation.
 
@@ -21,6 +20,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /organizations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -2440,7 +2441,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`enableenvironmentsettingsapp`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
@@ -8407,6 +8408,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 - [organization_serviceendpoint](#BKMK_organization_serviceendpoint)
 - [organization_sharedlinksetting](#BKMK_organization_sharedlinksetting)
+- [organization_sharepointmanagedidentity](#BKMK_organization_sharepointmanagedidentity)
 - [organization_similarityrule](#BKMK_organization_similarityrule)
 - [organization_sitemap](#BKMK_organization_sitemap)
 - [organization_solution](#BKMK_organization_solution)
@@ -9723,6 +9725,18 @@ Many-To-One Relationship: [sharedlinksetting organization_sharedlinksetting](sha
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_sharepointmanagedidentity"></a> organization_sharepointmanagedidentity
+
+Many-To-One Relationship: [sharepointmanagedidentity organization_sharepointmanagedidentity](sharepointmanagedidentity.md#BKMK_organization_sharepointmanagedidentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharepointmanagedidentity`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_sharepointmanagedidentity`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_similarityrule"></a> organization_similarityrule
 
 Many-To-One Relationship: [similarityrule organization_similarityrule](similarityrule.md#BKMK_organization_similarityrule)
@@ -10099,6 +10113,6 @@ Many-To-One Relationship: [webresource webresource_organization](webresource.md#
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.organization?displayProperty=fullName>

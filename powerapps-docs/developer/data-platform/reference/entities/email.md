@@ -1,7 +1,6 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Email table/entity reference
+# Email table/entity reference (Microsoft Dataverse)
 
 Activity that is delivered using email protocols.
 
@@ -22,6 +21,7 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `BackgroundSendEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.BackgroundSendEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
 | `CheckIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
 | `CheckPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
@@ -30,6 +30,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `DeliverImmediatePromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
 | `DeliverIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
 | `DeliverPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GetDecryptionKey`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.GetDecryptionKeyRequest>|
 | `GetTrackingTokenEmail`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
@@ -39,10 +40,10 @@ Messages represent operations that can be performed on the table. They may also 
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SendTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
 | `SendEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendEmailRequest>|
-| `SendFax`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
 | `SendEmailFromTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendEmailFromTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendEmailFromTemplateRequest>|
+| `SendFax`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
+| `SendTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
 | `SetState`<br />Event: True |`PATCH` /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: True |`PATCH` /emails(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `Upsert`<br />Event: False |`PATCH` /emails(*activityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
@@ -2677,6 +2678,6 @@ Many-To-One Relationship: [slakpiinstance slakpiinstance_email](slakpiinstance.m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.email?displayProperty=fullName>

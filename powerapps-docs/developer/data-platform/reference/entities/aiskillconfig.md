@@ -1,7 +1,6 @@
 ---
 title: "AI Skill Config (aiskillconfig) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Skill Config (aiskillconfig) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# AI Skill Config (aiskillconfig) table/entity reference
+# AI Skill Config (aiskillconfig) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,9 +21,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /aiskillconfigs(*aiskillconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True | |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /aiskillconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /aiskillconfigs(*aiskillconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True | |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -86,6 +87,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [scope](#BKMK_scope)
+- [sdkmessageid](#BKMK_sdkmessageid)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -248,6 +251,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+### <a name="BKMK_scope"></a> scope
+
+|Property|Value|
+|---|---|
+|Description|**The scope against which the skill is expected to give results.**|
+|DisplayName|**Scope**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`scope`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`aiskillconfig_scope`|
+
+#### scope Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Table**|
+|1|**Record**|
+
+### <a name="BKMK_sdkmessageid"></a> sdkmessageid
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**SdkMessage**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sdkmessageid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|sdkmessage|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -637,6 +674,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_aiskillconfig_modifiedonbehalfby](#BKMK_lk_aiskillconfig_modifiedonbehalfby)
 - [msdyn_aimodel_aiskillconfig_AIModel](#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
 - [owner_aiskillconfig](#BKMK_owner_aiskillconfig)
+- [sdkmessage_aiskillconfig_sdkmessageid](#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
 - [team_aiskillconfig](#BKMK_team_aiskillconfig)
 - [user_aiskillconfig](#BKMK_user_aiskillconfig)
 
@@ -744,6 +782,19 @@ One-To-Many Relationship: [owner owner_aiskillconfig](owner.md#BKMK_owner_aiskil
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_sdkmessage_aiskillconfig_sdkmessageid"></a> sdkmessage_aiskillconfig_sdkmessageid
+
+One-To-Many Relationship: [sdkmessage sdkmessage_aiskillconfig_sdkmessageid](sdkmessage.md#BKMK_sdkmessage_aiskillconfig_sdkmessageid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sdkmessage`|
+|ReferencedAttribute|`sdkmessageid`|
+|ReferencingAttribute|`sdkmessageid`|
+|ReferencingEntityNavigationPropertyName|`sdkmessageid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_team_aiskillconfig"></a> team_aiskillconfig
 
 One-To-Many Relationship: [team team_aiskillconfig](team.md#BKMK_team_aiskillconfig)
@@ -775,12 +826,25 @@ One-To-Many Relationship: [systemuser user_aiskillconfig](systemuser.md#BKMK_use
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [aiskillconfig_aiinsightcard_aiskillid](#BKMK_aiskillconfig_aiinsightcard_aiskillid)
 - [aiskillconfig_AsyncOperations](#BKMK_aiskillconfig_AsyncOperations)
 - [aiskillconfig_BulkDeleteFailures](#BKMK_aiskillconfig_BulkDeleteFailures)
 - [aiskillconfig_MailboxTrackingFolders](#BKMK_aiskillconfig_MailboxTrackingFolders)
 - [aiskillconfig_PrincipalObjectAttributeAccesses](#BKMK_aiskillconfig_PrincipalObjectAttributeAccesses)
 - [aiskillconfig_ProcessSession](#BKMK_aiskillconfig_ProcessSession)
 - [aiskillconfig_SyncErrors](#BKMK_aiskillconfig_SyncErrors)
+
+### <a name="BKMK_aiskillconfig_aiinsightcard_aiskillid"></a> aiskillconfig_aiinsightcard_aiskillid
+
+Many-To-One Relationship: [aiinsightcard aiskillconfig_aiinsightcard_aiskillid](aiinsightcard.md#BKMK_aiskillconfig_aiinsightcard_aiskillid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiinsightcard`|
+|ReferencingAttribute|`aiskillid`|
+|ReferencedEntityNavigationPropertyName|`aiskillconfig_aiinsightcard_aiskillid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_aiskillconfig_AsyncOperations"></a> aiskillconfig_AsyncOperations
 
@@ -858,6 +922,6 @@ Many-To-One Relationship: [syncerror aiskillconfig_SyncErrors](syncerror.md#BKMK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.aiskillconfig?displayProperty=fullName>
