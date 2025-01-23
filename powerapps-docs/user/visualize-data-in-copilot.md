@@ -41,7 +41,7 @@ When you navigate to a grid page, you can see the **Visualize** option on top of
 
 When you select **Visualize**, Copilot generates a visualization for the view considering the visible columns and the filters. The visualization is a chart aggregating the data in the view, and it appears side by side with the grid, complementing the table of rows.
 
-:::image type="content" source="media/visualize-data-chart.png" alt-text="Screenshot showing data visualization in the form of a chart on the page.":::
+:::image type="content" source="media/visualize-data-chart.png" alt-text="Screenshot showing data visualization in the form of a chart on the page." lightbox="media/visualize-data-chart.png":::
 
 You can select **Explain** to view a short AI-generated reasoning for the visualization that Copilot chose for this view. You can hover over the chart to examine data points or select chart elements to drill into the data. 
 
