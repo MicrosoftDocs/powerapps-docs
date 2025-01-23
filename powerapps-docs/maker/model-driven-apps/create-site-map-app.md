@@ -78,12 +78,9 @@ A default site map is created automatically as part of the model-driven app crea
     > [!NOTE]
     >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button.](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
 
-1.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
-  
-1.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
-  
-1. [Add a subarea to a group in the site map](create-site-map-app.md#bkmk_AddSubarea).  
-  
+1. [Add an area to the site map](#add-an-area-to-the-site-map).  
+1. [Add a group to the site map](#add-a-group-to-the-site-map).  
+1. [Add a subarea to a group in the site map](#add-a-subarea-to-a-group-in-the-site-map).  
 1. Select **Save**.  
   
     > [!NOTE]
@@ -97,7 +94,6 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
 
 :::image type="content" source="media/site-map-play-updated-app.gif" alt-text="Play updated model-driven app":::
 
-<a name="bkmk_AddArea"></a>   
 ## Add an area to the site map  
   
 1.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Area**.  
@@ -239,10 +235,10 @@ The following sections provide instructions describing how to work with Groups, 
 5.  Double-click to select the site map added that has the display name **Site Map** and is in a **Managed** state. The site map can be selected, and then on the toolbar, select **Edit**.  
   
      The site map opens in the site map designer.  
-6.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
-7.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
-8.  [Add a subarea to a group in the site map](create-site-map-app.md#bkmk_AddSubarea).
-9.  [Rearrange your areas, groups, and subareas as required](create-site-map-app.md#bkmk_OrganizeSite).
+6. [Add an area to the site map](#add-an-area-to-the-site-map).  
+7. [Add a group to the site map](#add-a-group-to-the-site-map).  
+8. [Add a subarea to a group in the site map](#add-a-subarea-to-a-group-in-the-site-map).  
+9. [Organize areas, groups, and subareas](#organize-areas-groups-and-subareas).
 10. Select **Save**.  
 11. Select **Publish**.
 12. Select **Save and Close**.
