@@ -64,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AccentColor](#BKMK_AccentColor)
 - [botcomponentId](#BKMK_botcomponentId)
+- [canmodifystate](#BKMK_canmodifystate)
 - [Category](#BKMK_Category)
 - [ComponentType](#BKMK_ComponentType)
 - [Content](#BKMK_Content)
@@ -116,6 +117,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`botcomponentid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_canmodifystate"></a> canmodifystate
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**canmodifystate**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`canmodifystate`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`botcomponent_canmodifystate`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Category"></a> Category
 
