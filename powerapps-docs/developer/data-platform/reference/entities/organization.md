@@ -2441,7 +2441,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`enableenvironmentsettingsapp`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
