@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 10/18/2024
+ms.date: 1/24/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
