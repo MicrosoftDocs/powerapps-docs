@@ -62,7 +62,9 @@ The following table lists selected properties for the Flow Machine Image (flowma
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [DeprecationDate](#BKMK_DeprecationDate)
 - [description](#BKMK_description)
+- [EndOfSupportDate](#BKMK_EndOfSupportDate)
 - [flowmachineimageId](#BKMK_flowmachineimageId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -75,6 +77,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_DeprecationDate"></a> DeprecationDate
+
+|Property|Value|
+|---|---|
+|Description|**Date at which the image will be deprecated, meaning it will not be selectable for Hosted Machine or Hosted Machine Group creation.**|
+|DisplayName|**Deprecation date**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`deprecationdate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_description"></a> description
 
@@ -92,6 +111,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_EndOfSupportDate"></a> EndOfSupportDate
+
+|Property|Value|
+|---|---|
+|Description|**Date at which the image will be not be supported anymore. At this date it will be impossible for a group using the image to create new bots.**|
+|DisplayName|**End of support date**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`endofsupportdate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_flowmachineimageId"></a> flowmachineimageId
 
