@@ -1,7 +1,6 @@
 ---
 title: "Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity reference
+# Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /solutioncomponentattributeconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: False |`GET` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /solutioncomponentattributeconfigurations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -53,6 +54,7 @@ The following table lists selected properties for the Solution Component Attribu
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AttributeId](#BKMK_AttributeId)
+- [CustomManagedBehaviorType](#BKMK_CustomManagedBehaviorType)
 - [DependencyRemovalCapability](#BKMK_DependencyRemovalCapability)
 - [EncodingFormat](#BKMK_EncodingFormat)
 - [FileExtension](#BKMK_FileExtension)
@@ -83,6 +85,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|attribute|
+
+### <a name="BKMK_CustomManagedBehaviorType"></a> CustomManagedBehaviorType
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Custom Managed Behavior Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`custommanagedbehaviortype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_custommanagedbehaviortype`|
+
+#### CustomManagedBehaviorType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**State Transition**|
 
 ### <a name="BKMK_DependencyRemovalCapability"></a> DependencyRemovalCapability
 
@@ -805,6 +828,6 @@ Many-To-One Relationship: [syncerror solutioncomponentattributeconfiguration_Syn
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.solutioncomponentattributeconfiguration?displayProperty=fullName>

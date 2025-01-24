@@ -1,7 +1,6 @@
 ---
 title: "Business Unit (BusinessUnit) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Business Unit (BusinessUnit) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Business Unit (BusinessUnit) table/entity reference
+# Business Unit (BusinessUnit) table/entity reference (Microsoft Dataverse)
 
 Business, division, or department in the Microsoft Dynamics 365 database.
 
@@ -21,15 +20,17 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /businessunits<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /businessunits(*businessunitid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /businessunits(*businessunitid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveBusinessHierarchyBusinessUnit`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveBusinessHierarchyBusinessUnit?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveBusinessHierarchyBusinessUnitRequest>|
 | `RetrieveMultiple`<br />Event: False |`GET` /businessunits<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrieveSubsidiaryTeamsBusinessUnit`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSubsidiaryTeamsBusinessUnitRequest>|
 | `RetrieveSubsidiaryUsersBusinessUnit`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSubsidiaryUsersBusinessUnitRequest>|
-| `SetParentSystemUser`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SetParentSystemUser?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|
 | `SetParentBusinessUnit`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.SetParentBusinessUnitRequest>|
+| `SetParentSystemUser`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SetParentSystemUser?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|
 | `SetParentTeam`<br />Event: False |<xref:Microsoft.Dynamics.CRM.SetParentTeam?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
 | `SetState`<br />Event: True |`PATCH` /businessunits(*businessunitid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: True |`PATCH` /businessunits(*businessunitid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -1480,6 +1481,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_activitypointer](#BKMK_business_unit_activitypointer)
 - [business_unit_adx_invitation](#BKMK_business_unit_adx_invitation)
 - [business_unit_adx_setting](#BKMK_business_unit_adx_setting)
+- [business_unit_aiinsightcard](#BKMK_business_unit_aiinsightcard)
 - [business_unit_aiplugin](#BKMK_business_unit_aiplugin)
 - [business_unit_aipluginauth](#BKMK_business_unit_aipluginauth)
 - [business_unit_aipluginconversationstarter](#BKMK_business_unit_aipluginconversationstarter)
@@ -1493,7 +1495,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_aipluginoperationparameter](#BKMK_business_unit_aipluginoperationparameter)
 - [business_unit_aipluginoperationresponsetemplate](#BKMK_business_unit_aipluginoperationresponsetemplate)
 - [business_unit_aipluginusersetting](#BKMK_business_unit_aipluginusersetting)
-- [business_unit_aiskillconfig](#BKMK_business_unit_aiskillconfig)
 - [business_unit_annotations](#BKMK_business_unit_annotations)
 - [business_unit_applicationuser](#BKMK_business_unit_applicationuser)
 - [business_unit_appnotification](#BKMK_business_unit_appnotification)
@@ -1528,7 +1529,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_email_activities](#BKMK_business_unit_email_activities)
 - [business_unit_emailserverprofile](#BKMK_business_unit_emailserverprofile)
 - [business_unit_environmentvariabledefinition](#BKMK_business_unit_environmentvariabledefinition)
-- [business_unit_environmentvariablevalue](#BKMK_business_unit_environmentvariablevalue)
 - [business_unit_exchangesyncidmapping](#BKMK_business_unit_exchangesyncidmapping)
 - [business_unit_exportedexcel](#BKMK_business_unit_exportedexcel)
 - [business_unit_exportsolutionupload](#BKMK_business_unit_exportsolutionupload)
@@ -1579,8 +1579,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_analysisoverride](#BKMK_business_unit_msdyn_analysisoverride)
 - [business_unit_msdyn_analysisresult](#BKMK_business_unit_msdyn_analysisresult)
 - [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
-- [business_unit_msdyn_apirequestcache](#BKMK_business_unit_msdyn_apirequestcache)
-- [business_unit_msdyn_apirequestfolder](#BKMK_business_unit_msdyn_apirequestfolder)
+- [business_unit_msdyn_copilotinteractions](#BKMK_business_unit_msdyn_copilotinteractions)
 - [business_unit_msdyn_customcontrolextendedsettings](#BKMK_business_unit_msdyn_customcontrolextendedsettings)
 - [business_unit_msdyn_dataflow](#BKMK_business_unit_msdyn_dataflow)
 - [business_unit_msdyn_dataflow_datalakefolder](#BKMK_business_unit_msdyn_dataflow_datalakefolder)
@@ -1606,8 +1605,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_flow_basicapprovalmodel](#BKMK_business_unit_msdyn_flow_basicapprovalmodel)
 - [business_unit_msdyn_flow_flowapproval](#BKMK_business_unit_msdyn_flow_flowapproval)
 - [business_unit_msdyn_formmapping](#BKMK_business_unit_msdyn_formmapping)
-- [business_unit_msdyn_historicalcaseharvestbatch](#BKMK_business_unit_msdyn_historicalcaseharvestbatch)
-- [business_unit_msdyn_historicalcaseharvestrun](#BKMK_business_unit_msdyn_historicalcaseharvestrun)
+- [business_unit_msdyn_function](#BKMK_business_unit_msdyn_function)
 - [business_unit_msdyn_integratedsearchprovider](#BKMK_business_unit_msdyn_integratedsearchprovider)
 - [business_unit_msdyn_kalanguagesetting](#BKMK_business_unit_msdyn_kalanguagesetting)
 - [business_unit_msdyn_kbattachment](#BKMK_business_unit_msdyn_kbattachment)
@@ -1615,7 +1613,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_knowledgearticleimage](#BKMK_business_unit_msdyn_knowledgearticleimage)
 - [business_unit_msdyn_knowledgearticletemplate](#BKMK_business_unit_msdyn_knowledgearticletemplate)
 - [business_unit_msdyn_knowledgeassetconfiguration](#BKMK_business_unit_msdyn_knowledgeassetconfiguration)
-- [business_unit_msdyn_knowledgeharvestjobrecord](#BKMK_business_unit_msdyn_knowledgeharvestjobrecord)
 - [business_unit_msdyn_knowledgeinteractioninsight](#BKMK_business_unit_msdyn_knowledgeinteractioninsight)
 - [business_unit_msdyn_knowledgemanagementsetting](#BKMK_business_unit_msdyn_knowledgemanagementsetting)
 - [business_unit_msdyn_knowledgepersonalfilter](#BKMK_business_unit_msdyn_knowledgepersonalfilter)
@@ -1635,6 +1632,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_pmsimulation](#BKMK_business_unit_msdyn_pmsimulation)
 - [business_unit_msdyn_pmtemplate](#BKMK_business_unit_msdyn_pmtemplate)
 - [business_unit_msdyn_pmview](#BKMK_business_unit_msdyn_pmview)
+- [business_unit_msdyn_qna](#BKMK_business_unit_msdyn_qna)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
 - [business_unit_msdyn_salesforcestructuredobject](#BKMK_business_unit_msdyn_salesforcestructuredobject)
 - [business_unit_msdyn_salesforcestructuredqnaconfig](#BKMK_business_unit_msdyn_salesforcestructuredqnaconfig)
@@ -1672,6 +1670,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_powerpagessiteaifeedback](#BKMK_business_unit_powerpagessiteaifeedback)
 - [business_unit_principalentitybusinessunitmap](#BKMK_business_unit_principalentitybusinessunitmap)
 - [business_unit_privilegecheckerrun](#BKMK_business_unit_privilegecheckerrun)
+- [business_unit_processorregistration](#BKMK_business_unit_processorregistration)
 - [business_unit_processstageparameter](#BKMK_business_unit_processstageparameter)
 - [business_unit_queues](#BKMK_business_unit_queues)
 - [business_unit_queues2](#BKMK_business_unit_queues2)
@@ -1688,6 +1687,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_sharepointdocumentlocation](#BKMK_business_unit_sharepointdocumentlocation)
 - [business_unit_sharepointsites](#BKMK_business_unit_sharepointsites)
 - [business_unit_sideloadedaiplugin](#BKMK_business_unit_sideloadedaiplugin)
+- [business_unit_signal](#BKMK_business_unit_signal)
+- [business_unit_signalregistration](#BKMK_business_unit_signalregistration)
 - [business_unit_slabase](#BKMK_business_unit_slabase)
 - [business_unit_slakpiinstance](#BKMK_business_unit_slakpiinstance)
 - [business_unit_socialactivity](#BKMK_business_unit_socialactivity)
@@ -1699,6 +1700,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_task_activities](#BKMK_business_unit_task_activities)
 - [business_unit_teams](#BKMK_business_unit_teams)
 - [business_unit_templates](#BKMK_business_unit_templates)
+- [business_unit_trait](#BKMK_business_unit_trait)
+- [business_unit_traitregistration](#BKMK_business_unit_traitregistration)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
 - [business_unit_userform](#BKMK_business_unit_userform)
 - [business_unit_userquery](#BKMK_business_unit_userquery)
@@ -1831,6 +1834,18 @@ Many-To-One Relationship: [adx_setting business_unit_adx_setting](adx_setting.md
 |ReferencingEntity|`adx_setting`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_adx_setting`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_aiinsightcard"></a> business_unit_aiinsightcard
+
+Many-To-One Relationship: [aiinsightcard business_unit_aiinsightcard](aiinsightcard.md#BKMK_business_unit_aiinsightcard)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`aiinsightcard`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_aiinsightcard`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1987,18 +2002,6 @@ Many-To-One Relationship: [aipluginusersetting business_unit_aipluginusersetting
 |ReferencingEntity|`aipluginusersetting`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_aipluginusersetting`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_aiskillconfig"></a> business_unit_aiskillconfig
-
-Many-To-One Relationship: [aiskillconfig business_unit_aiskillconfig](aiskillconfig.md#BKMK_business_unit_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_aiskillconfig`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -2407,18 +2410,6 @@ Many-To-One Relationship: [environmentvariabledefinition business_unit_environme
 |ReferencingEntity|`environmentvariabledefinition`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_environmentvariabledefinition`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_environmentvariablevalue"></a> business_unit_environmentvariablevalue
-
-Many-To-One Relationship: [environmentvariablevalue business_unit_environmentvariablevalue](environmentvariablevalue.md#BKMK_business_unit_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`environmentvariablevalue`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_environmentvariablevalue`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3022,27 +3013,15 @@ Many-To-One Relationship: [msdyn_analysisresultdetail business_unit_msdyn_analys
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_business_unit_msdyn_apirequestcache"></a> business_unit_msdyn_apirequestcache
+### <a name="BKMK_business_unit_msdyn_copilotinteractions"></a> business_unit_msdyn_copilotinteractions
 
-Many-To-One Relationship: [msdyn_apirequestcache business_unit_msdyn_apirequestcache](msdyn_apirequestcache.md#BKMK_business_unit_msdyn_apirequestcache)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_apirequestcache`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_apirequestcache`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_msdyn_apirequestfolder"></a> business_unit_msdyn_apirequestfolder
-
-Many-To-One Relationship: [msdyn_apirequestfolder business_unit_msdyn_apirequestfolder](msdyn_apirequestfolder.md#BKMK_business_unit_msdyn_apirequestfolder)
+Many-To-One Relationship: [msdyn_copilotinteractions business_unit_msdyn_copilotinteractions](msdyn_copilotinteractions.md#BKMK_business_unit_msdyn_copilotinteractions)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`msdyn_apirequestfolder`|
+|ReferencingEntity|`msdyn_copilotinteractions`|
 |ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_apirequestfolder`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_copilotinteractions`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3346,27 +3325,15 @@ Many-To-One Relationship: [msdyn_formmapping business_unit_msdyn_formmapping](ms
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_business_unit_msdyn_historicalcaseharvestbatch"></a> business_unit_msdyn_historicalcaseharvestbatch
+### <a name="BKMK_business_unit_msdyn_function"></a> business_unit_msdyn_function
 
-Many-To-One Relationship: [msdyn_historicalcaseharvestbatch business_unit_msdyn_historicalcaseharvestbatch](msdyn_historicalcaseharvestbatch.md#BKMK_business_unit_msdyn_historicalcaseharvestbatch)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_historicalcaseharvestbatch`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_msdyn_historicalcaseharvestrun"></a> business_unit_msdyn_historicalcaseharvestrun
-
-Many-To-One Relationship: [msdyn_historicalcaseharvestrun business_unit_msdyn_historicalcaseharvestrun](msdyn_historicalcaseharvestrun.md#BKMK_business_unit_msdyn_historicalcaseharvestrun)
+Many-To-One Relationship: [msdyn_function business_unit_msdyn_function](msdyn_function.md#BKMK_business_unit_msdyn_function)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingEntity|`msdyn_function`|
 |ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_historicalcaseharvestrun`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_function`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3451,18 +3418,6 @@ Many-To-One Relationship: [msdyn_knowledgeassetconfiguration business_unit_msdyn
 |ReferencingEntity|`msdyn_knowledgeassetconfiguration`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_knowledgeassetconfiguration`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_msdyn_knowledgeharvestjobrecord"></a> business_unit_msdyn_knowledgeharvestjobrecord
-
-Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord business_unit_msdyn_knowledgeharvestjobrecord](msdyn_knowledgeharvestjobrecord.md#BKMK_business_unit_msdyn_knowledgeharvestjobrecord)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_knowledgeharvestjobrecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3691,6 +3646,18 @@ Many-To-One Relationship: [msdyn_pmview business_unit_msdyn_pmview](msdyn_pmview
 |ReferencingEntity|`msdyn_pmview`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_pmview`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_qna"></a> business_unit_msdyn_qna
+
+Many-To-One Relationship: [msdyn_qna business_unit_msdyn_qna](msdyn_qna.md#BKMK_business_unit_msdyn_qna)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_qna`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_qna`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -4138,6 +4105,18 @@ Many-To-One Relationship: [privilegecheckerrun business_unit_privilegecheckerrun
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_processorregistration"></a> business_unit_processorregistration
+
+Many-To-One Relationship: [processorregistration business_unit_processorregistration](processorregistration.md#BKMK_business_unit_processorregistration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processorregistration`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_processorregistration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_processstageparameter"></a> business_unit_processstageparameter
 
 Many-To-One Relationship: [processstageparameter business_unit_processstageparameter](processstageparameter.md#BKMK_business_unit_processstageparameter)
@@ -4330,6 +4309,30 @@ Many-To-One Relationship: [sideloadedaiplugin business_unit_sideloadedaiplugin](
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_signal"></a> business_unit_signal
+
+Many-To-One Relationship: [signal business_unit_signal](signal.md#BKMK_business_unit_signal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`signal`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_signal`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_signalregistration"></a> business_unit_signalregistration
+
+Many-To-One Relationship: [signalregistration business_unit_signalregistration](signalregistration.md#BKMK_business_unit_signalregistration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`signalregistration`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_signalregistration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_slabase"></a> business_unit_slabase
 
 Many-To-One Relationship: [sla business_unit_slabase](sla.md#BKMK_business_unit_slabase)
@@ -4460,6 +4463,30 @@ Many-To-One Relationship: [template business_unit_templates](template.md#BKMK_bu
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_templates`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_trait"></a> business_unit_trait
+
+Many-To-One Relationship: [trait business_unit_trait](trait.md#BKMK_business_unit_trait)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`trait`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_trait`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_traitregistration"></a> business_unit_traitregistration
+
+Many-To-One Relationship: [traitregistration business_unit_traitregistration](traitregistration.md#BKMK_business_unit_traitregistration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`traitregistration`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_traitregistration`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
@@ -4778,6 +4805,6 @@ Many-To-One Relationship: [processsession Owning_businessunit_processsessions](p
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.businessunit?displayProperty=fullName>

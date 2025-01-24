@@ -1,7 +1,6 @@
 ---
 title: "Process (Workflow) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process (Workflow) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Process (Workflow) table/entity reference
+# Process (Workflow) table/entity reference (Microsoft Dataverse)
 
 Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed.
 
@@ -23,14 +22,17 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `AddRequiredDesktopFlowComponentsToSolutions`<br />Event: False |<xref:Microsoft.Dynamics.CRM.AddRequiredDesktopFlowComponentsToSolutions?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Assign`<br />Event: False |`PATCH` /workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `CancelAllCloudFlowRuns`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CancelAllCloudFlowRuns?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Create`<br />Event: False |`POST` /workflows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateWorkflowFromTemplate`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateWorkflowFromTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CreateWorkflowFromTemplateRequest>|
 | `Delete`<br />Event: False |`DELETE` /workflows(*workflowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `ExecuteWorkflow`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ExecuteWorkflow?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ExecuteWorkflowRequest>|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `InitializeModernFlowFromAsyncWorkflow`<br />Event: False |<xref:Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.InitializeModernFlowFromAsyncWorkflowRequest>|
 | `install`<br />Event: False |<xref:Microsoft.Dynamics.CRM.install?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ListChildDesktopFlows`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListChildDesktopFlows?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ListConnectionReferences`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListConnectionReferences?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -315,7 +317,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|1048576|
+|MaxLength|16777216|
 
 ### <a name="BKMK_DeleteStage"></a> DeleteStage
 
@@ -2258,6 +2260,6 @@ See [card workflow_card_connections Many-To-Many Relationship](card.md#BKMK_work
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.workflow?displayProperty=fullName>

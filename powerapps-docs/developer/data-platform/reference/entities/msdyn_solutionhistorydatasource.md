@@ -1,7 +1,6 @@
 ---
 title: "Solution History Data Source (msdyn_solutionhistorydatasource) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution History Data Source (msdyn_solutionhistorydatasource) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Solution History Data Source (msdyn_solutionhistorydatasource) table/entity reference
+# Solution History Data Source (msdyn_solutionhistorydatasource) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -88,6 +87,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_solutionhistorydatasource?displayProperty=fullName>

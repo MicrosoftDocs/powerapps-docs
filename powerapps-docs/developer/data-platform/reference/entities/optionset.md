@@ -1,7 +1,6 @@
 ---
 title: "OptionSet table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the OptionSet table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# OptionSet table/entity reference
+# OptionSet table/entity reference (Microsoft Dataverse)
 
 
 
@@ -133,6 +132,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.optionset?displayProperty=fullName>

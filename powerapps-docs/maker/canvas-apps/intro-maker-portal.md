@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 11/19/2024
+ms.date: 12/20/2024
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -44,17 +44,18 @@ Legend:
 Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
 > [!div class="mx-imgBorder"]
-> ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
+> ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane.")
 
 Legend:
 
 1. **Home**: Takes you to the Power Apps home page.
-2. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
-3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
-4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
-5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
-6. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
-7. **Power Platform**: Explore other Power Platform products or service.
+1. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
+1. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
+1. **Plans**: View and edit your plans. More information: [Use the Plan designer (preview)](../plan-designer/plan-designer.md).
+1. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+1. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
+1. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
+1. **Power Platform**: Explore other Power Platform products or service.
 
 ### Pin and unpin
 
