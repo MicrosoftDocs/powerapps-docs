@@ -24,7 +24,7 @@ Copilot enables you to visualize the data in the view in the form of a chart to 
 ## Prerequisites
 
 - Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on.
-- Your administrator must enable **Allow AI to generate charts to visualize the data in a view** setting in Power Platform Admin Center.
+- Your administrator must enable **Allow AI to generate charts to visualize the data in a view** setting in Power Platform admin center.
 
 [!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
