@@ -57,14 +57,14 @@ If you add or remove columns from the view, Copilot automatically regenerates th
 
 :::image type="content" source="media/visualize-data-chart-detail-annotations.png" alt-text="Screenshot showing detailed options present in the chart.":::
 
-1 **Chart title**: AI-generated title for the chart based on the data and columns visualized.
-1 **Explain**: AI-generated reasoning for the visualization that Copilot chose for this view.
-1 **Chart selector**: List of nine supported chart types – Pie, Donut, Bar, Column, Clustered Bar, Stacked Bar, Clustered Column, Stacked Column and Line.
-1 **Refresh**: Select **Refresh** to see the latest data behind the chart without changing chart type.
-1 **Expand**: Select **Expand** to expand the chart to full screen for a better view of the chart area.
-1 **Close**: Select **Close** to close the chart pane.
-1 **Copy**: Select **Copy** to copy the chart as a PNG file to the clipboard.
-1 **Feedback**: Select **Thumbs up** or **Thumbs Down** to provide feedback about the feature.
+1. **Chart title**: AI-generated title for the chart based on the data and columns visualized.
+1. **Explain**: AI-generated reasoning for the visualization that Copilot chose for this view.
+1. **Chart selector**: List of nine supported chart types – Pie, Donut, Bar, Column, Clustered Bar, Stacked Bar, Clustered Column, Stacked Column and Line.
+1. **Refresh**: Select **Refresh** to see the latest data behind the chart without changing chart type.
+1. **Expand**: Select **Expand** to expand the chart to full screen for a better view of the chart area.
+1. **Close**: Select **Close** to close the chart pane.
+1. **Copy**: Select **Copy** to copy the chart as a PNG file to the clipboard.
+1. **Feedback**: Select **Thumbs up** or **Thumbs Down** to provide feedback about the feature.
 
 To provide feedback about the feature, select the thumbs up or down button on the chart pane, and provide detailed comments to help improve the feature.
 
