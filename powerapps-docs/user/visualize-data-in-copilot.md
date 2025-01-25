@@ -19,8 +19,6 @@ search.audienceType:
 
 [!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-## Visualize data in a view
-
 Copilot enables you to visualize the data in the view in the form of a chart to help you understand trends, patterns and relations in your data easily. The visualization is interactive, based on the visible columns in the view, and can be personalized to support further data exploration.
 
 ## Prerequisites
@@ -29,6 +27,8 @@ Copilot enables you to visualize the data in the view in the form of a chart to 
 - Your administrator must enable **Allow AI to generate charts to visualize the data in a view** setting in Power Platform Admin Center.
 
 [!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+
+## Visualize data in a view
 
 To use this Copilot visualization, your administrator must enable it. For more information on how to enable Copilot visualization, see [Manage feature settings](/power-platform/admin/settings-features).
 
