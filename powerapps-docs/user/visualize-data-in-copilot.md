@@ -1,7 +1,7 @@
 ---
-title: Visualize data in a view with Copilot
+title: Visualize data in a view with Copilot (preview)
 description: Learn how to visualize your data in a view using Copilot in Power Apps.
-ms.date: 01/22/2025
+ms.date: 01/24/2025
 ms.topic: article
 ms.subservice: end-user
 author: sriharibs-msft
@@ -15,23 +15,20 @@ search.audienceType:
   - enduser
 ---
 
-# Visualize data in a view with Copilot
+# Visualize data in a view with Copilot (preview)
 
-[This article is prerelease documentation and is subject to change.]
-
-> [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-
-## Prerequisites
-
-- Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on.
-
-- Your administrator must enable **Allow AI to generate charts to visualize the data in a view** setting in Power Platform Admin Center.
+[!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 ## Visualize data in a view
 
 Copilot enables you to visualize the data in the view in the form of a chart to help you understand trends, patterns and relations in your data easily. The visualization is interactive, based on the visible columns in the view, and can be personalized to support further data exploration.
+
+## Prerequisites
+
+- Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on.
+- Your administrator must enable **Allow AI to generate charts to visualize the data in a view** setting in Power Platform Admin Center.
+
+[!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 To use this Copilot visualization, your administrator must enable it. For more information on how to enable Copilot visualization, see [Manage feature settings](/power-platform/admin/settings-features).
 
