@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 01/20/2025
+ms.date: 01/27/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -200,6 +200,10 @@ The following API permissions are required when manually configure API permissio
     - *PowerApps Service*
     - *Power BI* (only required if your canvas app(s) use Power BI data)
     - *Microsoft Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
+
+For more information about how to see and configure API permissions for the app, see the following screenshot.
+
+ :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:

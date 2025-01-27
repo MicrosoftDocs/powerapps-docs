@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 01/09/2025
+ms.date: 01/27/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -127,11 +127,11 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-A globally unique identity of the output mobile app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`.
+The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded.
 
 ### Code signing
 
-Code signing is the process of finalizing a mobile app prior to distribution to end users. An app that is code signed assures that it comes from a known source, and the app code hasn't changed since last time it was signed by the trusted source.
+Code signing is the process of completing a mobile app before distribution to end users. An app that is code signed assures that it comes from a known source, and the app code hasn't changed since last time it was signed by the trusted source.
 
 ### Primary app
 
