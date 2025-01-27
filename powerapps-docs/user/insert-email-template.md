@@ -68,7 +68,7 @@ The application displays the enhanced email template selection window only if yo
      - Regarding: User (global) and templates for the regarding entity are shown. By default, **Field Name** is set to **Regarding**.
  
 > [!Note] 
-> - Bookable Resource isn't supported.
+> - Bookable Resource Booking isn't supported.
 > - You can see the **Record** tab and switch between email template views only if your administrator has enabled the **Enable Email Template views** and **Skip Select Record dialog**. More information: [Customize the enhanced email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#customize-the-enhanced-email-template-selection-view)
 > - The enhanced email template selection view might vary based on the customizations your administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
 > - If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template only.
