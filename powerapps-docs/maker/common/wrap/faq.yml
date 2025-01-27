@@ -110,7 +110,7 @@ sections:
       - question: |
           Do we need a premium license to package the app?
         answer: |
-          Yes, you need a premium license to package the app. Specifically, packaging apps using premium connectors, Dataverse entities, on-premises data gateways, or custom APIs requires a premium license. You can check the app's license designation in the Power Apps maker portal to determine if it requires a premium license. More information: [How to check license designation for an app](../canvas-apps/license-designation.md)
+          Yes, you need a premium license to package the app. Specifically, packaging apps using premium connectors, Dataverse entities, on-premises data gateways, or custom APIs requires a premium license. You can check the app's license designation in the Power Apps maker portal to determine if it requires a premium license. More information: [How to check license designation for an app](canvas-apps/license-designation.md)
 
       - question: |
           Can I delete wrap projects?
