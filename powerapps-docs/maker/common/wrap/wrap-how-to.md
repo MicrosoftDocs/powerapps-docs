@@ -89,7 +89,7 @@ Your app must be registered in Microsoft Entra so that your app users can sign i
    > [!div class="mx-imgBorder"] 
    > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
 
-If you do not see your registered app name in the **Owned registrations** dropdown, follow these steps.
+If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
 - Select **New app registration** to create a new registration for your app automatically.
 - You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you selected Android as one of the platforms while creating and building your wrap project.
@@ -103,17 +103,21 @@ If you do not see your registered app name in the **Owned registrations** dropdo
 
 The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
-When you register the app, Azure admin needs to provide access to continue.Follow the steps below to grant access:
+When you register the app, Azure admin needs to provide access to continue. Follow these steps to grant access:
 - Open Windows PowerShell and run it as an administrator.
-- Execute the command: Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force.
-- Set the execution policy with: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned.
-- Import the module using: Import-Module -Name Microsoft.PowerApps.Administration.PowerShell.
-- Run Add-AdminAllowedThirdPartyApps and provide the App ID for which admin access is needed.
-- Run Get-AdminAllowedThirdPartyApps to verify if your app name appears in the list.
+- Execute the command- `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force`.
+- Set the execution policy with: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`.
+- Import the module using: `Import-Module -Name Microsoft.PowerApps.Administration.PowerShell`.
+- Run `Add-AdminAllowedThirdPartyApps` and provide the App ID for which admin access is needed.
+- Run `Get-AdminAllowedThirdPartyApps` to verify if your app name appears in the list.
 
-Once you complete the above steps the registration screen look like the following screenshot.
+Once you complete the preceding steps the registration screen look like the following screenshot.
 
  :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
+
+When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
+
+ :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
@@ -216,10 +220,6 @@ The following API permissions are required when manually configure API permissio
     - *PowerApps Service*
     - *Power BI* (only required if your canvas app(s) use Power BI data)
     - *Microsoft Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
-
-For more information about how to see and configure API permissions for the app, see the following screenshot.
-
- :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:

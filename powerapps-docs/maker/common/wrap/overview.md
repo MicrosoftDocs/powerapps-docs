@@ -119,8 +119,8 @@ Container in Azure Blob Storage helps store built packages for mobile app distri
 
 Input:
 
-- Account Name and Container Name
-- Access Key
+- [Account Name](#account-name) and [Container Name](#container-name)
+- [Access Key](#access-key)
 
 #### Account Name
 
