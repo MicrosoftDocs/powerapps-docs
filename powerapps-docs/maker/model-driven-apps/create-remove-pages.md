@@ -2,7 +2,7 @@
 title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
 ms.custom: ""
-ms.date: 07/10/2024
+ms.date: 01/27/2025
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: get-started

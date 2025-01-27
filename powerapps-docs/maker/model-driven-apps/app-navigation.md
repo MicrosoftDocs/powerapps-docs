@@ -1,5 +1,5 @@
 ---
-title: App navigation in model-driven apps | Microsoft Docs
+title: App navigation in model-driven apps
 description: Learn about app navigation in model-driven apps in Power Apps.
 documentationcenter: ''
 author: Mattp123
@@ -7,7 +7,7 @@ editor: ''
 tags: ''
 ms.topic: conceptual
 ms.component: model
-ms.date: 04/13/2023
+ms.date: 01/27/2025
 ms.author: matp
 search.audienceType: 
   - maker

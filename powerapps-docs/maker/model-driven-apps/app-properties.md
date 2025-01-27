@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 08/24/2024
+ms.date: 01/27/2025
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -28,11 +28,8 @@ App settings define important details about the app, like its title. You define 
 
 You must select **Publish** to activate an app settings change.
 
-1. In the app designer, on the left pane, select **App** under the **Pages** section. Or select **Settings** on the command bar.
+1. In the app designer select **Settings** on the command bar.
 
-    > [!div class="mx-imgBorder"]
-    > ![App designer Properties pane](media/model-driven-app-properties.png "App designer Properties pane")  
-  
 2. View and change the information, as required:
 
     |Area|Setting|Description|  
