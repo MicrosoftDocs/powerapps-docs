@@ -113,6 +113,27 @@ Container in App Center to store the built packages for mobile app distribution.
 > [!NOTE]
 > App Center will be discontinued from 31st March 2025. Going forward, the app binaries will be stored in your tenant's Azure Blob Storage from which you can access and distribute them through your preferred channels. The details of linking Azure Blob Storage with wrap process will be updated soon. In the interim, back up your latest APK/IPA files (if needed) and keep your Azure Blob Storage details and target location for app binaries handy.
 
+### Azure blob storage 
+
+Container in Azure Blob Storage helps store built packages for mobile app distribution. Build output types differ depending on the target platform you select. Details about the feature will be shared before March 31, 2025.
+
+Input:
+
+- Account Name and Container Name
+- Access Key
+
+#### Account Name
+
+The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account. For example, if your account name is `mystorageaccount`, the base URI would be `https://mystorageaccount.blob.core.windows.net/`
+
+#### Container Name
+
+The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. For example, if your container name is `mycontainer`, the URI for accessing blobs within this container would be `https://mystorageaccount.blob.core.windows.net/mycontainer/`
+
+#### Access Key
+
+The access key is a secret key that is used to authenticate and authorize access to your storage account. Azure generates two 512-bit storage account access keys when you create a storage account. These keys can be used to authorize access to data in your storage account via Shared Key authorization or via SAS tokens that are signed with the shared key. It's important to keep your access keys secure and rotate them regularly to maintain security.
+
 ### App platform(s)
 
 Intended platforms for the app that you want to go through the build process for publication. You can create builds for mobile app for iOS, Android, or Google Play Store.
@@ -127,7 +148,7 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded.
+The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded as mentioned in step 6.
 
 ### Code signing
 

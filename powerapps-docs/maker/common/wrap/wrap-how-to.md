@@ -89,18 +89,31 @@ Your app must be registered in Microsoft Entra so that your app users can sign i
    > [!div class="mx-imgBorder"] 
    > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
 
-#### Alternative way to register app
+If you do not see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
 - Select **New app registration** to create a new registration for your app automatically.
 - You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you selected Android as one of the platforms while creating and building your wrap project.
 
     > [!NOTE]
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
+    > The application name should be the same as the one used when creating the Android signature hash key.
 
    > [!div class="mx-imgBorder"]
    > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
 
 The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+
+When you register the app, Azure admin needs to provide access to continue.Follow the steps below to grant access:
+- Open Windows PowerShell and run it as an administrator.
+- Execute the command: Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force.
+- Set the execution policy with: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned.
+- Import the module using: Import-Module -Name Microsoft.PowerApps.Administration.PowerShell.
+- Run Add-AdminAllowedThirdPartyApps and provide the App ID for which admin access is needed.
+- Run Get-AdminAllowedThirdPartyApps to verify if your app name appears in the list.
+
+Once you complete the above steps the registration screen look like the following screenshot.
+
+ :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
 
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
@@ -142,6 +155,9 @@ You can also code sign your mobile app package manually instead of using automat
    - [Code sign for Android](code-sign-android.md) 
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
+> [!NOTE]
+> The Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+
 4.  Select **Next**.
 
 ### Step 5: Manage output
@@ -170,8 +186,6 @@ For testing and distribution, see [App center test](/appcenter/test-cloud/) and 
   
 ## Register your app on Azure portal manually (optional)
 You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-2-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
-
-Wrap wizard provides automatic sign-in through the Azure portal. However, developers familiar with mobile processes can manually sign-in for their Android or iOS applications, using different mechanisms for each platform.
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.

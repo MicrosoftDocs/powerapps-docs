@@ -115,4 +115,5 @@ sections:
       - question: |
           Can I delete wrap projects?
         answer: |
-          Yes, wrap projects can be deleted. The wrap APK, which belongs to the client's location, can indeed be deleted by the customer.
+          No, wrap projects cannot be deleted but you can delete the project APK files from your storage location.
+          
