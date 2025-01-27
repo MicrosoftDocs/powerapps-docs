@@ -171,6 +171,8 @@ For testing and distribution, see [App center test](/appcenter/test-cloud/) and 
 ## Register your app on Azure portal manually (optional)
 You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-2-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
+Wrap wizard provides automatic sign-in through the Azure portal. However, developers familiar with mobile processes can manually sign-in for their Android or iOS applications, using different mechanisms for each platform.
+
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
 
