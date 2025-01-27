@@ -229,7 +229,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|200|
+|MaxLength|250|
 
 ### <a name="BKMK_statecode"></a> statecode
 
