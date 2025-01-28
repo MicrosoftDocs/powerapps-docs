@@ -57,7 +57,7 @@ Next, you add a new page to the model-driven app in the app designer.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-Your app with the account table is displayed similarly to how it appears to users at run time when published. If your environment has sample data, the sample list of active accounts might appear in the **My Active Accounts** view.
+Your app with the account table is displayed similarly to how it appears to users at run time when published. If your environment has sample data, the sample list of active accounts might appear in the **All Accounts** view.
 
 :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="After adding a table to a new app, the app appears with the default view selected":::
 
