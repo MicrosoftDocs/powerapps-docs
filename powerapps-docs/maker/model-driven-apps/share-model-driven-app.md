@@ -1,12 +1,12 @@
 ---
 title: Sharing a model-driven app - assigning security roles and privileges
-description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data.
+description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data with Power Apps.
 author: Mattp123
 editor: ''
 tags: ''
 ms.topic: how-to
 ms.component: model
-ms.date: 06/28/2024
+ms.date: 01/28/2025
 ms.subservice: mda-maker
 ms.author: matp
 search.audienceType:
@@ -69,15 +69,10 @@ Unlike sharing canvas apps, sharing model-driven apps doesn't currently send an 
 
 To get the direct link to an app:
 
-1. Go to [Power Apps](https://make.powerapps.com).
-1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Open the solution that contains the model-driven app.
-1. Select the model-driven app, and then select **Edit** on the command bar.
-1. In the classic designer, select the **Properties** tab, and then copy the **Unified Interface URL.**
-
-    !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
-
-1. Paste the app URL in a location so that your users can access it, such as by posting it on a Teams channel, SharePoint site, or sending via email.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** on the left navigation pane.
+1. Select the model-driven app you want, and then select **Details** on the command bar.
+1. Copy the **Web link**. Alternatively, you can make a copy of the **Mobile QR code** for mobile users.
+1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
 ## App sharing privilege and licensing requirements
 
