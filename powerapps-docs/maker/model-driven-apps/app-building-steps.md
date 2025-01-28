@@ -41,7 +41,7 @@ For a simple walk-through of building a first app, go to [building a first model
 To model business data, you determine what data your app needs and how that data relates to other data. Model-driven design uses a metadata-driven architecture so that designers can customize the application without writing code. Metadata means “data about data” and it defines the structure of the data stored in the system.
 
 > [!NOTE]
-> Model-driven apps can't be created without Dataverse tables. However, Dataverse tables can be used by many Power Platform services, including canvas apps and Power Automate.
+> With the exception of model-driven apps that have a custom page, model-driven apps can't be created without Dataverse tables. However, Dataverse tables can be used by many Power Platform services, including canvas apps and Power Automate.
 
 [Tutorial: Create a custom table that has components in Power Apps](../data-platform/create-custom-entity.md)
 
