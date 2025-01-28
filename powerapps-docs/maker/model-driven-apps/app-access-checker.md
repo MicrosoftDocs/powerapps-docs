@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to
-ms.date: 06/23/2023
+ms.date: 01/27/2025
 ms.custom: template-how-to
 ---
 # App access checker for model-driven apps
@@ -61,3 +61,7 @@ If **Security** is **Yes** and **License** is **No** or **Unknown** contact Help
 ## Limitation
 
 - App access checker doesn't show details for the Outlook App. This is because that information is only visible to Power Platform administrators.
+
+## Related articles
+
+[Share a model-driven app](share-model-driven-app.md)
