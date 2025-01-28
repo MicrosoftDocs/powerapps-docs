@@ -116,4 +116,17 @@ sections:
           Can I delete wrap projects?
         answer: |
           No, wrap projects cannot be deleted but you can delete the project APK files from your storage location.
-          
+
+      - question: |
+          How can we ensure that customers outside the home tenant cannot access the app even if we enable multi-tenant access during registration?
+        answer: |
+          Users outside the home tenant cannot access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
+          The app ensures proper data separation across organizations by embedding the tenant identifier in the authentication token. 
+          This mechanism allows the app to verify the user's tenant and grant access only to data relevant to that tenant.
+
+      - question: |
+          Can we allow users from outside home tenant to access wrap projects?
+        answer: |
+          The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must take additional steps:
+          1. Add users from outside the home tenant as guests in Azure.
+          2. Include these guests in the Azure Conditional Access process. Additionally, the maker must share the app with these guest IDs within Power Apps.
