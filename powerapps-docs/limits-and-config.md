@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/04/2024
+ms.date: 1/30/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
