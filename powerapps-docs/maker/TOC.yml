@@ -2642,8 +2642,6 @@
     href: https://powerapps.microsoft.com/blog/
   - name: Forums
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
-  - name: Webinars
-    href: ../webinars.md
 - name: Troubleshoot
   items:
   - name: Debug Power Apps with Monitor
