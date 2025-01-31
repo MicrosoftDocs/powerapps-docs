@@ -84,15 +84,16 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::
 1. Rename the topic to reflect the topic intent and change the topic trigger to **Event received**.
    :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event received for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
-1. Select **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
+1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
    :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
 1. Optionally, you can set the conditions to prompt entries in case they're specific to the app name, page context, and so on. For example, this prompt entry checks if the current app's unique name or the page context's table type name matches specified values. If either condition is true, the Copilot chat is activated.
 
    `condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName" or Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
-1. Add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. 200 is the example used here.
-1. Add a next step for variable management parse value.
+1. Under **Priority**, add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. 10 is used in this example.
+1. Select **+** under **Event received**, and then select **Variable management** > **Parse value** to add a next step for variable management parse value.
+
    :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Add variable" lightbox="media/mda-copilot-promptguide-variable.png":::
-1. Set the parse value to following Power Fx formula and data type to table.
+1. Paste the following Power Fx formula into the **Parse value** box, and then select **Insert**.
 
    ```powerappsfl
    [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"PromptText"},{displayName:"How can I use the record picker?",type:"PromptText"},{displayName:"What types of questions can I ask Copilot?",type:"PromptText"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}]}]
@@ -100,7 +101,8 @@ The following steps detail how to add specific queries to the prompt guide. A *P
 
    :::image type="content" source="media/mda-copilot-promptguide-parsevalue.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-parsevalue.png":::
 
-1. Select **Edit schema** and paste the following schema.
+1. Set the **Data type** as **Table**. The **Edit schema** link appears.
+1. Select **Edit schema** and paste the following schema, and then select **Confirm**.
 
    ```yml
    kind: Table
@@ -122,25 +124,27 @@ The following steps detail how to add specific queries to the prompt guide. A *P
 1. Set **Save as** to save as a new custom variable and name it something meaningful such as *SparkGroupCustom*.
    :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
 
-1. The sparks definition is saved in a global variable so you need to set the variable **Global** and name it `PA_Copilot_Sparks.sparkGroups` and/or `Global.PA_Copilot_Sparks.sparks`. This populates the flyout with your prompts. Next, add a step to set variable value.
+1. Select **+** under the **Parse value** step, and then select **Variable management** > **Set a variable value**.
+1. The sparks definition is saved in a global variable so you need to set the variable **Global** and name it `PA_Copilot_Sparks.sparkGroups` and/or `Global.PA_Copilot_Sparks.sparks`. This populates the flyout with your prompts. Next, add a step to set variable value. <!-- Is this done somewhere in the Parse value step or do you create a new step to add this? Also, do you create a new variable or use an existing one? -->
+   
    :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
 
-1. Search for the sparks definition name, such as `Global.PA_Copilot_Sparks.sparkGroups`, and set the value to the following Power Fx merge function.
-   :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text=" Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::Merge
+1. Search for the sparks definition name from the previous step, such as `Global.PA_Copilot_Sparks.sparkGroups`, and set the value to the following Power Fx merge function.
 
    ```powerappsfl
    ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
    ```
+   :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text=" Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::Merge
 
-   Replace the variable name with the variable name you used for the custom prompts.
+   Replace the variable name with the variable name you used for the custom prompts. <!-- What was the example name for this used in this article? -->
 
-1. Publish the agent and play the app.
+1. **Publish** the agent and play the app.
 
    :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Prompt guide using global sparks" lightbox="media/mda-copilot-promptguide-chat-screen.png":::
 
 ## Prompt guide customizations topic sample
 
-Here is the full topic code, which can be copied directly into the new topic.
+Here is the full topic code, which can be copied directly into the new topic. <!--Where and instead of what? Where in the above procedure would you use this? -->
 
 ```yml
 kind: AdaptiveDialog
