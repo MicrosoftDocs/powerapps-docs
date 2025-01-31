@@ -39,7 +39,7 @@ Benefits of using environment variables:
 
 Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](/powerapps/developer/data-platform/work-with-data). They can also be imported to an environment via solutions. Once environment variables are present in an environment, they can be used as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, and many other places such as adding a Power BI dashboard to a model-driven app. When these types of objects use environment variables, the values are then derived from the environment variables, and can be changed when solutions are imported to other environments. 
 
-### Create an environment variable in a solution
+### Manually create an environment variable in a solution
 
 1. Sign in to Power Apps (make.powerapps.com), and then on the left pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution you want or create a new one.
@@ -50,7 +50,8 @@ Environment variables can be created and modified within the modern solution int
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, **Data source**, or **Secret**.
      >[!NOTE]
      > 
-     > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. However, the connection is not stored as part of the environment variable. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
+     > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. The connection is not stored as part of the environment variable. The environment variable stores information not in the connection that is necessary to connect Power Apps to the right server and table. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site. 
+          
      > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
    - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present, it's used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
    - **Default Value**. This column is part of the environment variable definition table and isn't required. The default value is used if there's no current value. 
@@ -63,6 +64,38 @@ Environment variables can be created and modified within the modern solution int
 
       >[!NOTE]
       > A value can't exist without a definition. The interface only allows creation of one value per definition.
+
+### Power Apps can automatically create environment variables
+In the "General tab" of Power Apps settings: 
+* Enable the "Automatically create environment variables when adding data sources"
+Now when you add a new data source to your app, it will automatically add an environment variable for you.   
+
+> [!div class="mx-imgBorder"] 
+      > ![Auto create environment variable.](media/enable-autocreate-env-vars.png)
+
+### Different data sources enable different types of environment variables
+#### Dataverse
+Power Apps connects natively to Dataverse. You do not need an environment variable for tables in your current environment. When you connect to Dataverse your application automatically looks for exactly the same table name in any environment it is ported to. As long as your table name structure is the same in the target environment as it is in the original environment, it will work. 
+
+If you use an external table from a different environment (via Change Environment) then Power Apps will assume you want to always refer to the exact same table. You will need an environment variable if you need that external table to be a different external table when you move from dev to test or to prod. It is easiest to allow Power Apps to automatically create the environment variable for you. (If you have previously added the table to your app, then turn on the settings switch, drop the external table and re-add it.) 
+
+When you add the external table to your app, choose the Advanced tab to select the environment variable.  
+
+> [!div class="mx-imgBorder"] 
+      > ![External environment Dataverse environment variable.](media/dataverse-environment-variable.png)
+
+#### SharePoint
+SharePoint only supports Entra connections. So, for SharePoint, in addition to a valid connection, a separate environment variable is required for Site and List. 
+- To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
+- Environment variables for SharePoint must have matching metadata. SharePoint has internal identifiers that might not match between target envronments. For example, if you simply create a list with the same name and columns in a target environment, the internal names will likely not match. The metadata always matches if you duplicate a SharePoint site and copy it to your target environment. 
+
+
+#### SQL Server
+SQL Server supports many different types of authentication and connections. Use environment variables for Entra connections. A separate environment variable is required for the server and the database. The applicaiton is bound to specific table names so they are assumed to be the same between environments. 
+
+Do not use environment variables for shared connections such as basic SQL authentication with SQL Server. Use connection references for information that is traditionally passed as part of the connection string. Basic SQL auth parameters are all part of the connection string. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
+
+Data source environment variables are used for connectors that rely on user based authentication such as Microsoft Entra ID because the parameters can't be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, won't use data source environment variables. 
 
 ## Enter new values while importing solutions
 
@@ -96,9 +129,7 @@ If an environment variable is used in a flow and the display name of the environ
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
-- To successfully use environment variables with SharePoint lists, the display name and the logical name for each corresponding column in the source and target environments must match.
 - Environment variables are limited to a maximum of 2,000 characters.
-- Environment variables for SharePoint must have matching metadata. SharePoint has internal identifiers that might not match between target envronments. For example, if you simply create a list with the same name and columns in a target environment, the internal names will likely not match. The metadata always matches if you duplicate a SharePoint site and copy it to your target environment. 
 
 ## Frequently asked questions
 
@@ -114,11 +145,6 @@ Either through selecting **Show dependencies** in the solution interface, while 
 
 No. Although they're related a connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection doesn't store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection and some additional parameters. 
 
-### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
-
-Generally no. Shared connections with SQL Server store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
-
-Data source environment variables are used for connectors that rely on user based authentication such as Microsoft Entra ID because the parameters can't be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, won't use data source environment variables. 
 
 ### Can my automated ALM pipeline use different values files for different environments?
 
