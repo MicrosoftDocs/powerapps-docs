@@ -70,8 +70,8 @@ On the **General** tab of Power Apps settings:
 - Enable the **Automatically create environment variables when adding data sources** option.
 Now, when you add a new data source to your app, it adds an environment variable for you.
 
-> [!div class="mx-imgBorder"] 
-> ![Auto create environment variable.](media/enable-autocreate-env-vars.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Auto create environment variable.](media/enable-autocreate-env-vars.png)
 
 ### Different data sources
 
