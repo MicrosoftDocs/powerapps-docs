@@ -41,8 +41,7 @@ For example, you might have an **Orders** list which has a lookup column that li
 
 Examples include data like Customer Status Code, Product Availability, State Codes; basically any fixed list that is relatively short. This data could in fact be implemented as separate lists, and then you would use a **Lookup** column to link to them, but it is usually easier and quicker to implement them as **Choice** column.
 
->[!TIP]
-> For more SharePoint and Power Apps integration tutorials, go to [SharePoint integration scenarios](sharepoint/scenarios-intro.md).
+Learn more in [Integrate SharePoint Online into Power Apps overview](sharepoint-list-integration-overview.md).
 
 ## Create the lists in SharePoint
 
@@ -135,10 +134,5 @@ Now you can [preview the app](preview-app.md) and see how the view details scree
 * [Performance, Refresh button, ForAll, and multiple column lookups](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
 * [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
 * [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

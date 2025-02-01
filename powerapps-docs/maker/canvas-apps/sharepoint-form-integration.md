@@ -17,7 +17,7 @@ contributors:
   - lancedMicrosoft
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any Microsoft Lists or SharePoint library form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
+You can now easily [customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
 
 If you've customized a form for a list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 
@@ -144,7 +144,5 @@ Now that you have a better understanding of the default generated form and the *
 
 - EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions - [form functions in Power Apps](functions/function-form.md)
 - [RequestHide function](functions/function-requesthide.md)
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

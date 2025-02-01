@@ -212,9 +212,4 @@ As a solution for such scenarios, store images on a CORS-enabled source such as 
 - Learn how to [view details and create or update records](../add-form.md).
 - See other types of [data sources](../connections-list.md) to which you can connect.
 
-### See also
-
-- [SharePoint integration scenarios](../sharepoint/scenarios-intro.md)
-
-
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

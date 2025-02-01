@@ -65,5 +65,5 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 1. There's a limitation on how many users can access an app in edit mode in Power Apps Studio. If you have an app open and tag someone, the user will receive an email  notification, but the user has to wait for you to exit the app in order to see the comment and resolve it. 
 2. Comments aren't supported when you're working on an app using Git. 
-3. @mention aren't supported for SharePoint custom Power Apps. For information: [Customize a Microsoft Lists or SharePoint form by using Power Apps](customize-list-form.md).
+3. @mention aren't supported for SharePoint custom Power Apps. For information: [Customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form).
 

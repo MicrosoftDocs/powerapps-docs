@@ -31,7 +31,7 @@ When you add data to a Power Apps app, you can choose a SharePoint list as a sou
 - Have a basic familiarity with SharePoint Online and Power Apps:
 
   - [Get started with SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
-  - [What is Power Apps?](/powerapps-docs/powerapps-overview.md)
+  - [What is Power Apps?](../../powerapps-overview.md)
 
 ## Create a SharePoint list
 
@@ -45,7 +45,7 @@ One way to work with a SharePoint list in your app is to connect to SharePoint t
 
 :::image type="content" source="media/sharepoint-integration/connect-to-sharepoint-through-data.png" alt-text="Screenshot showing where you can connect to a SharePoint list through the Data, Add data, and Connectors menu.":::
 
-Learn more in [Connect to SharePoint from a canvas app](connection-sharepoint-online.md).
+Learn more in [Connect to SharePoint from a canvas app](/connections/connection-sharepoint-online.md).
 
 ### Create an app based on a SharePoint list
 
@@ -103,7 +103,7 @@ The formula contains the following functions:
 
 ### Controls for the display
 
-- [Drop down control in Power Apps](/controls/control-drop-down.md)
+- [Drop down control in Power Apps](controls/control-drop-down.md)
 - [Controls and properties in canvas apps](reference-properties.md)
 
 ### List features

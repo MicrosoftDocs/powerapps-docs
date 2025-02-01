@@ -105,9 +105,5 @@ In this topic, you created an app to manage data in a list. As a next step, crea
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md)
 
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

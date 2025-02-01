@@ -9304,6 +9304,66 @@
       "source_path": "powerapps-docs/maker/canvas-apps/open-and-run-a-sample-app.md",
       "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/customize-list-form.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-alerts-flow.md",
+      "redirect_url": "/power-bi/collaborate-share/service-flow-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-approval-flow.md",
+      "redirect_url": "/power-automate/create-approval-response-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-app.md",
+      "redirect_url": "/powerapps-docs/maker/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-report.md",
+      "redirect_url": "/power-bi/create-reports/service-quick-create-sharepoint-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-embed-report.md",
+      "redirect_url": "/power-bi/collaborate-share/service-embed-report-spo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-generate-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-publish-report.md",
+      "redirect_url": "/power-bi/paginated-reports/paginated-reports-save-to-power-bi-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-setup.md",
+      "redirect_url": "/powerapps-docs/maker/canvas-apps/app-from-sharepoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-summary.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-choice-to-lookup.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
     }
   ]
 }
