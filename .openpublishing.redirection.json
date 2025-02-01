@@ -9364,6 +9364,31 @@
       "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-choice-to-lookup.md",
       "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-filter-search-list.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-lookup-list-permissions.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
     }
   ]
 }

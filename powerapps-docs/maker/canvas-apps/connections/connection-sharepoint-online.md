@@ -141,24 +141,6 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
     > [!div class="mx-imgBorder"]
     > ![Image list.](./media/connection-sharepoint-online/golden-honey.png "Image list")
 
-You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
-
-1. After you download the app, open [Power Apps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
-1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
-
-> [!NOTE]
-> By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
-
-In this one-screen app, the list in the lower-left corner shows all files in your library.
-
-- You can search for a file by typing or pasting one or more characters in the search box near the top.
-- If your library contains folders, you can filter the list of files by selecting a filter icon in the list of folders just under the title bar.
-
-When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
-
-> [!div class="mx-imgBorder"]
-> ![Sample image.](./media/connection-sharepoint-online/library-app.png "Sample image")
-
 ## Known issues
 
 **Sharing a Canvas apps using SharePoint connector**

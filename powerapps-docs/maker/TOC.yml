@@ -1262,20 +1262,6 @@
         href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
       - name: Walk through the completed scenario
         href: ./canvas-apps/sharepoint-scenario-summary.md
-      - name: SharePoint integration scenarios
-        items:
-        - name: SharePoint scenarios overview
-          href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: Filter a search list in an app
-          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: Use drop down list with choices from lookup column in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: Customize an app screen based on column status in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: Work with permissions in a lookup list from SharePoint site
-          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
-          href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights

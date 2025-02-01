@@ -45,7 +45,7 @@ One way to work with a SharePoint list in your app is to connect to SharePoint t
 
 :::image type="content" source="media/sharepoint-integration/connect-to-sharepoint-through-data.png" alt-text="Screenshot showing where you can connect to a SharePoint list through the Data, Add data, and Connectors menu.":::
 
-Learn more in [Connect to SharePoint from a canvas app](/connections/connection-sharepoint-online.md).
+Learn more in [Connect to SharePoint from a canvas app](connections/connection-sharepoint-online.md).
 
 ### Create an app based on a SharePoint list
 
